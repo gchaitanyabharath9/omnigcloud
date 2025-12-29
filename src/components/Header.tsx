@@ -56,7 +56,11 @@ const Header = () => {
                 {/* LOGO */}
                 <Link href={`/${locale}`} className={styles.logo}>
                     <div className={styles.logoIcon}>
-                        <Layers size={22} color="var(--primary)" />
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="var(--primary)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                            <path d="M2 17L12 22L22 17" stroke="var(--primary)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                            <path d="M2 12L12 17L22 12" stroke="var(--primary)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                        </svg>
                     </div>
                     <span className={styles.logoText}>OMNIG<span className="text-gradient">CLOUD</span></span>
                 </Link>
