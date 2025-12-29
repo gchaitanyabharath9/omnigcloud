@@ -1,8 +1,10 @@
 .header {
-    height: 65px;
+    height: 70px;
     border-bottom: 1px solid var(--card-border);
-    background: var(--background);
+    background: rgba(2, 6, 23, 0.85);
+    /* Slightly transparent for glassmorphism */
     backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
     position: fixed;
     top: 0;
     left: 0;
@@ -10,7 +12,7 @@
     z-index: 1500;
     display: flex;
     align-items: center;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
 }
 
 .headerContainer {
@@ -18,26 +20,32 @@
     align-items: center;
     justify-content: space-between;
     width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 2rem;
 }
 
 .logo {
     display: flex;
     align-items: center;
+    gap: 0.75rem;
     font-size: 1.5rem;
     font-weight: 800;
     color: var(--foreground);
     text-decoration: none;
+    letter-spacing: -0.5px;
 }
 
 .nav {
     display: flex;
     align-items: center;
+    margin-left: 2rem;
 }
 
 .navList {
     display: flex;
     align-items: center;
-    gap: 1.5rem;
+    gap: 2rem;
     list-style: none;
     margin: 0;
     padding: 0;
@@ -52,43 +60,135 @@
 }
 
 .navLink {
-    font-size: 0.8rem;
+    font-size: 0.85rem;
     font-weight: 600;
-    color: var(--foreground);
-    opacity: 0.8;
+    color: var(--muted-foreground);
     text-decoration: none;
-    transition: all 0.2s;
+    transition: all 0.2s ease;
     display: flex;
     align-items: center;
+    gap: 0.3rem;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
 }
 
 .navLink:hover {
-    opacity: 1;
     color: var(--primary);
+    background: rgba(59, 130, 246, 0.05);
+}
+
+/* Actions (Right Side) */
+.actions {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.themeToggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--muted-foreground);
+    padding: 0.5rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s;
+}
+
+.themeToggle:hover {
+    color: var(--foreground);
+    background: var(--card-bg);
+}
+
+.mobileMenuBtn {
+    display: none;
+    /* Hidden on desktop by default */
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--foreground);
+}
+
+/* Dropdown Styling */
+.dropdownContainer {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    padding-top: 1rem;
+    /* Gap buffer */
+    z-index: 1000;
+}
+
+.dropdownLabel {
+    font-size: 0.7rem;
+    font-weight: 800;
+    color: var(--muted-foreground);
+    margin-bottom: 0.5rem;
+    letter-spacing: 0.05em;
+    padding-left: 0.75rem;
 }
 
 .dropdownLink {
     padding: 0.6rem 0.75rem;
     color: var(--foreground);
     text-decoration: none;
-    font-size: 0.75rem;
-    font-weight: 700;
+    font-size: 0.85rem;
+    font-weight: 500;
     border-radius: 0.4rem;
     transition: all 0.2s;
-    display: block;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
 }
 
 .dropdownLink:hover {
     background: var(--primary-glow);
     color: var(--primary);
+    transform: translateX(2px);
 }
 
-.langIcon {
-    color: var(--muted);
-    transition: color 0.2s;
-    cursor: pointer;
+/* Mobile Navigation Overlay */
+.mobileNav {
+    position: fixed;
+    top: 70px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: var(--background);
+    z-index: 1400;
+    padding: 2rem;
+    border-top: 1px solid var(--card-border);
+    animation: fadeIn 0.2s ease-out;
 }
 
-.langIcon:hover {
-    color: var(--primary);
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Breakpoints */
+@media (max-width: 1024px) {
+    .nav {
+        display: none;
+        /* Hide main nav on tablet/mobile */
+    }
+
+    .mobileMenuBtn {
+        display: block;
+        /* Show hamburger */
+    }
+
+    .headerContainer {
+        padding: 0 1.5rem;
+    }
 }
