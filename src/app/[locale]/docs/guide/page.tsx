@@ -17,7 +17,7 @@ export default function GuidePage() {
                             Install the OmniGCloud CLI and authenticate with your global control plane.
                         </p>
                         <div style={{ background: '#050a14', padding: '1.5rem', borderRadius: '1rem', fontFamily: 'monospace', fontSize: '0.9rem', color: 'var(--primary)', marginBottom: '2rem' }}>
-                            curl -sSL https://get.omnigcloud.com | sh <br />
+                            curl -sSL https://get.sovereign.local | sh <br />
                             omnig login
                         </div>
 

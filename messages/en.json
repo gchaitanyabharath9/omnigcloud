@@ -8,12 +8,65 @@
             "docs": "Resources",
             "pricing": "Pricing",
             "company": "Company",
-            "onboarding": "Scale Now"
+            "onboarding": "Scale Now",
+            "pillars": "PLATFORM PILLARS",
+            "advanced": "ADVANCED OPS",
+            "industries": "INDUSTRIES",
+            "useCases": "USE CASES",
+            "documentation": "DOCUMENTATION",
+            "community": "COMMUNITY",
+            "products_links": {
+                "playground": "Sovereign Playground",
+                "workflows": "G-Workflows",
+                "guard": "Governance Guard",
+                "knowledge": "Sovereign Knowledge",
+                "deploy": "Obsidian Deploy",
+                "nexus": "Cross-Cloud Nexus"
+            },
+            "solutions_links": {
+                "financial": "Financial Services",
+                "insurance": "Insurance",
+                "telecom": "Telecommunications",
+                "healthcare": "Healthcare & Life Sciences",
+                "logistics": "Logistics & Supply Chain",
+                "finance_mod": "Global Finance Modernization",
+                "health_mod": "Sovereign Health Data",
+                "gov_trust": "Public Sector Digital Trust"
+            },
+            "trust_links": {
+                "compliance_maps": "Global Compliance Maps",
+                "transparency": "Transparency Report",
+                "certs": "Certifications",
+                "privacy": "Privacy Center"
+            },
+            "docs_links": {
+                "tech_docs": "Technical Docs",
+                "api": "API Reference",
+                "patterns": "Design Patterns",
+                "whitepaper": "Whitepaper",
+                "open_source": "Open Source",
+                "insights": "Sovereign Insights"
+            },
+            "pricing_links": {
+                "compare": "Compare Plans",
+                "developer": "Developer",
+                "professional": "Professional",
+                "business": "Business",
+                "sovereign": "Sovereign / Federal"
+            },
+            "company_links": {
+                "about": "About Us",
+                "leadership": "Leadership",
+                "operations": "Global Operations",
+                "newsroom": "Newsroom",
+                "contact": "Contact Office"
+            }
         }
     },
     "Footer": {
         "tagline": "Restoring Enterprise sovereignty through autonomous, AI-governed cloud modernization.",
         "directory": "GLOBAL DIRECTORY // TERMINAL_v4.2",
+        "status": "SECURE_CANVAS_SYNC: OK",
         "platform": {
             "label": "Platform",
             "control": "Control Plane",
@@ -40,7 +93,7 @@
             "security": "Security",
             "compliance": "Compliance",
             "privacy": "Privacy",
-            "sovereignty": "Sovereignty"
+            "terms": "Terms of Service"
         },
         "resources": {
             "label": "Resources",
@@ -60,11 +113,39 @@
         "footerText": "Governed, Global, and Generative infrastructure for sovereign organizations."
     },
     "Hero": {
-        "badge": "GOVERNANCE AS CODE",
-        "title": "Restoring Sovereignty",
-        "subtitle": "The G-Framework empowers global enterprises to automate multi-cloud infrastructure with zero-trust governance.",
-        "ctaPrimary": "Start Assessment",
-        "ctaSecondary": "Watch Demo"
+        "badge": "ENTERPRISE CLOUD GOVERNANCE",
+        "title": "Break Free from Vendor Lock-In",
+        "subtitle": "Unified control plane for regulated enterprises managing multi-cloud infrastructure. Automate compliance, reduce costs, and maintain sovereignty across AWS, Azure, GCP, and Oracle Cloud.",
+        "problem": "Multi-cloud complexity creates vendor lock-in, compliance drift, and operational overhead",
+        "solution": "AI-powered policy enforcement across any cloud provider",
+        "audience": "Built for regulated enterprises and government agencies",
+        "ctaPrimary": "Request Demo",
+        "ctaSecondary": "Download Whitepaper",
+        "systemStatus": {
+            "title": "System Status",
+            "live": "LIVE",
+            "sync": "Multi-Cloud Sync Active",
+            "policy": "Policy Engine",
+            "enforcing": "Enforcing",
+            "threat": "Threat Guard",
+            "monitoring": "Monitoring"
+        },
+        "stats": {
+            "assets": "ASSETS",
+            "drift": "DRIFT",
+            "nodes": "NODES"
+        },
+        "experts": {
+            "count": "20+ Experts",
+            "status": "Ready to Audit",
+            "cta": "Contact Sales"
+        },
+        "efficiency": "EFFICIENCY",
+        "impact": {
+            "label": "ENTERPRISE IMPACT",
+            "text": "Automate <span>compliance</span> across every cloud."
+        },
+        "trust": "TRUSTED BY REGULATED ENTERPRISES"
     },
     "Capabilities": {
         "tag": "THE G-FRAMEWORK ECOSYSTEM",
@@ -341,6 +422,552 @@
             "eb1aDesc": "\"The EABF (Economic Arbitrage & Billing Forecast) algorithm represents a significant advancement in the field of Distributed Economics. By decoupling resource cost from provider APIs, the petitioner has established a new standard for Cloud-Agnostic Financial Governance.\"",
             "auditor": "James Sterling",
             "auditorTitle": "Sovereign Systems Auditor"
+        },
+        "control": {
+            "title": "The Unified Control Plane",
+            "subtitle": "Manage thousands of distributed clusters from a single, high-fidelity interface with sub-millisecond propagation.",
+            "observability": {
+                "title": "Global Observability",
+                "desc": "Real-time telemetry across all AWS, Azure, and GCP regions."
+            },
+            "fleet": "Bulk Fleet Ops",
+            "healing": "Self-Healing",
+            "gitops": "GitOps Engine",
+            "audit": "Audit Logs"
+        },
+        "security": {
+            "title": "Governed Security",
+            "desc": "Every operation is audited. OmniGCloud enforces zero-trust identity across your estate.",
+            "cta": "Compliance Framework",
+            "zerotrust": "Zero Trust",
+            "features": {
+                "fips": {
+                    "title": "FIPS 140-2",
+                    "desc": "Validated encryption."
+                },
+                "rbac": {
+                    "title": "RBAC 2.0",
+                    "desc": "Granular control."
+                },
+                "vpc": {
+                    "title": "VPC Isolation",
+                    "desc": "Zero-egress LLM ops."
+                },
+                "audit": {
+                    "title": "Audit Logs",
+                    "desc": "Immutable trace logs."
+                }
+            }
+        },
+        "integrations": {
+            "title": "Native Integrations",
+            "subtitle": "Connect seamlessly with the tools your team already loves.",
+            "infra": "Infrastructure",
+            "obs": "Observability",
+            "delivery": "Delivery",
+            "identity": "Identity/Sec"
         }
+    },
+    "Visuals": {
+        "telemetry": {
+            "title": "GLOBAL LATENCY TELEMETRY",
+            "live": "LIVE",
+            "latency": "AVG LATENCY",
+            "throughput": "THROUGHPUT",
+            "loss": "PACKET LOSS"
+        },
+        "drift": {
+            "title": "COMPLIANCE DRIFT ANALYSIS",
+            "detected": "DRIFT DETECTED: +12%",
+            "remediate": "AUTO-REMEDIATE"
+        }
+    },
+    "HomeSections": {
+        "Pricing": {
+            "title": "Strategic Sovereign Editions",
+            "subtitle": "Select the operational model that matches your governance mandate.",
+            "core": {
+                "badge": "CORE",
+                "price": "4%",
+                "unit": "/ spend",
+                "desc": "For digitally native startups scaling across 2+ clouds.",
+                "cta": "Start Core",
+                "features": {
+                    "nodes": "Up to 500 Nodes",
+                    "drift": "Basic Drift Detection",
+                    "sla": "99.9% Control Plane SLA",
+                    "support": "Community Support"
+                }
+            },
+            "enterprise": {
+                "badge": "ENTERPRISE",
+                "popular": "MOST POPULAR",
+                "price": "Standard",
+                "desc": "Full platform governance for regulated industries.",
+                "cta": "Contact Sales",
+                "features": {
+                    "nodes": "Unlimited Nodes",
+                    "remediation": "Automated Remediation",
+                    "finops": "FinOps Arbitrage Engine",
+                    "rbac": "Role-Based Access (RBAC)",
+                    "support": "24/7 Dedicated Support"
+                }
+            },
+            "federal": {
+                "badge": "FEDERAL",
+                "price": "Custom",
+                "desc": "Air-gapped deployments for sovereign entities.",
+                "cta": "Inquire Federal",
+                "features": {
+                    "onprem": "On-Premise Control Plane",
+                    "byok": "Bring Your Own Key (BYOK)",
+                    "security": "Top Secret Clearance Support",
+                    "audit": "Custom Audit Trails"
+                }
+            }
+        },
+        "Cta": {
+            "title": "Ready to Restore Sovereign Control?",
+            "subtitle": "Join hundreds of global enterprises that have automated their cloud governance and restored digital sovereignty with OmniGCloud.",
+            "primary": "Scale Your Cloud",
+            "secondary": "Contact Sales",
+            "disclaimer": "NO CREDIT CARD REQUIRED. SOC-2 COMPLIANT ONBOARDING."
+        }
+    },
+    "Problem": {
+        "badge": "CRITICAL INFRASTRUCTURE ALERT",
+        "title": "The Sovereign Crisis",
+        "subtitle": "Global enterprises are facing a perfect storm of fragmentation, regulation, and opacity.",
+        "fragmentation": {
+            "title": "The Fragmentation Trap",
+            "desc": "Data sprawl across AWS, Azure, and On-Prem creates \"Zombie Infrastructure\" that nobody manages."
+        },
+        "regulatory": {
+            "title": "Regulatory Drift",
+            "desc": "Increase in GDPR & AI Act fines for cross-border data leakage in 2024. Your static compliance reports are obsolete.",
+            "score": "COMPLIANCE SCORE",
+            "risk": "AT RISK"
+        },
+        "vendor": {
+            "title": "The Vendor Ransom",
+            "desc": "Egress fees and proprietary APIs trap your data. Moving 1PB of data can cost over $50,000."
+        },
+        "opacity": {
+            "title": "Dark Data Opacity",
+            "desc": "52% of all enterprise data is \"Dark Data\"—unclassified, unknown, and unprotected.",
+            "scanning": "> SCANNING_ABANDONED_BUCKETS..."
+        }
+    },
+    "Ecosystem": {
+        "badge": "SYSTEM ARCHITECTURE",
+        "title": "Autonomous Modernization Ecosystem",
+        "subtitle": "A unified, horizontally integrated platform designed to manage the complexity of global, modern cloud portfolios with zero-trust precision.",
+        "governance": {
+            "title": "Governance Hub",
+            "desc": "Automated drift remediation and policy enforcement across all cloud providers. Ensure compliance with GDPR, HIPAA, and SOC2 in real-time.",
+            "status": "MODULE ACTIVE",
+            "link": "Explore"
+        },
+        "mesh": {
+            "title": "Global Mesh",
+            "desc": "Native intra-cloud routing with localized sovereignty. Connect OCI, AWS, and Azure clusters into a single, latency-optimized service mesh.",
+            "status": "NETWORK ONLINE",
+            "link": "View Topology"
+        },
+        "ai": {
+            "title": "AI Ops Kernel",
+            "desc": "Managed LLM orchestration within VPC boundaries. Deploy private GPT-4 equivalent models for intelligent automation without data leakage.",
+            "status": "MODELS READY",
+            "link": "Access Lab"
+        },
+        "vault": {
+            "title": "Sovereign Vault",
+            "desc": "Localized storage kernels with managed encryption and rigid data residency controls. Your data never leaves the jurisdiction you define.",
+            "status": "ENCRYPTION ON",
+            "link": "Secure Storage"
+        }
+    },
+    "DemoSection": {
+        "badge": "Live Experience",
+        "title": "See Omni<span>G</span>Cloud In Action",
+        "subtitle": "Witness autonomous cloud modernization. From discovery to sovereignty in seconds.",
+        "discovery": {
+            "title": "Instant Discovery",
+            "desc": "Zero-touch agent deployment maps 1,000+ assets in under 3 minutes.",
+            "code": "> SCAN_COMPLETE: 99.8%"
+        },
+        "iac": {
+            "title": "Generative IaC",
+            "desc": "LLM agents reverse-engineer legacy binaries into clean Terraform code.",
+            "code": "> GENERATING_MODULES..."
+        },
+        "sync": {
+            "title": "Active State Sync",
+            "desc": "Bi-directional state locking between AWS and Azure regions.",
+            "code": "> LATENCY: 12ms"
+        },
+        "drift": {
+            "title": "Drift Auto-Reversal",
+            "desc": "Unauthorized console changes are detected and reverted instantly.",
+            "code": "> THREAT_NEUTRALIZED"
+        }
+    },
+    "Community": {
+        "badge": "OPEN SCIENCE INITIATIVE",
+        "title": "Built by Experts, <br />Governed by the Community",
+        "subtitle": "The G-Framework is more than a platform—it's an open standard for sovereign infrastructure. Join 120+ global contributors building a resilient, provider-agnostic future.",
+        "join": "Join the Community",
+        "contribute": "Contribute to Core",
+        "cli": {
+            "title": "Sovereign CLI v4.2",
+            "cmd": "npm install -g @omnig/cli"
+        },
+        "plugins": {
+            "title": "200+ Plugins",
+            "desc": "Extensible provider architecture"
+        },
+        "maintainers": {
+            "title": "Global Maintainers",
+            "desc": "Sovereign-first review process"
+        }
+    },
+    "WhitePaper": {
+        "badge": "ENGINEERING PUBLICATION",
+        "contribution": "Original Contribution of Major Significance",
+        "title": "Autonomous Sovereign Orchestration (ASO)",
+        "description": "A formal framework for AI-driven, cloud-agnostic governance. This technical publication outlines the breakthrough methodologies used in the G-Framework to eliminate vendor lock-in and restore enterprise data sovereignty.",
+        "peerReview": "PEER-REVIEW READY",
+        "pageCount": "12 PAGE SCHOLARLY PAPER",
+        "downloadTitle": "Download the Technical White Paper",
+        "downloadSubtitle": "Essential reading for CIOs, Platform Architects, and Legal Counsel navigating the EU AI Act and global data residency requirements.",
+        "readOnline": "Read Online (Full Framework)",
+        "designPatterns": "View Design Patterns",
+        "footer": "Published under the OmniGCloud Open-Science Initiative 2025."
+    },
+    "Newsroom": {
+        "badge": "SOVEREIGN INSIGHTS",
+        "title": "Latest from the Lab",
+        "link": "ENTER THE IMPACT HUB",
+        "news": {
+            "bank": {
+                "date": "Dec 12, 2025",
+                "source": "OmniG Intelligence",
+                "title": "Scaling ASO across 2.5PB of cross-border data for Tier-1 Banks.",
+                "tag": "CASE STUDY"
+            },
+            "egress": {
+                "date": "Nov 28, 2025",
+                "source": "Cloud Sovereign Report",
+                "title": "How Autonomous Sovereign Orchestration reduces Egress Fees by 40%.",
+                "tag": "RESEARCH"
+            },
+            "integration": {
+                "date": "Nov 15, 2025",
+                "source": "Global Press Wire",
+                "title": "Universal integration for Oracle OKE and RedHat OpenShift announced.",
+                "tag": "PRODUCT"
+            }
+        }
+    },
+    "Services": {
+        "Hero": {
+            "badge": "AUTONOMOUS MODERNIZATION",
+            "title": "Modernize Azure & OCP <br /> <span>with Logic, Not Labor</span>",
+            "subtitle": "Leverage <span>Terraform</span> and <span>Ansible</span> to automate your enterprise cloud core.",
+            "cta": "Explore Solutions",
+            "velocity": "VELOCITY",
+            "errors": "ERRORS"
+        },
+        "Migration": {
+            "title": "The Migration Factory",
+            "subtitle": "Automated pipelines for massive scale cloud adoption.",
+            "azure": {
+                "title": "Azure Migration Factory",
+                "desc": "Rapidly migrate VMs and databases to Azure Landing Zones with pre-built policies."
+            },
+            "ocp": {
+                "title": "OCP Refactoring",
+                "desc": "Containerize legacy apps onto Red Hat OpenShift. Automated manifests for fast, consistent deployments across any infrastructure."
+            },
+            "provisioning": {
+                "title": "< 15m Provisioning",
+                "desc": "Spin up full environments from code commit to running infrastructure in minutes."
+            },
+            "drift": {
+                "title": "Zero Drift Cost",
+                "desc": "Eliminate shadow IT costs. Our continuous state enforcement ensures your bill matches your extensive IaC definitions perfectly."
+            }
+        },
+        "Stack": {
+            "badge": "The Engine",
+            "title": "The Automation Stack",
+            "subtitle": "Unified modernization engine powered by industry-standard open source tooling.",
+            "terraform": {
+                "title": "Terraform Blueprints",
+                "desc": "Pre-hardened IaC modules for Azure & AWS."
+            },
+            "ansible": {
+                "title": "Ansible Guardrails",
+                "desc": "Zero-trust config management & immutability."
+            }
+        },
+        "Operations": {
+            "title": "Managed Operations",
+            "subtitle": "24/7/365 SRE teams maintaining your modernization fabric.",
+            "sre": {
+                "title": "24/7 Follow-the-Sun",
+                "desc": "SRE hubs in US, EU, and APAC ensuring 15-minute response SLA."
+            },
+            "finops": {
+                "title": "Continuous FinOps",
+                "desc": "Real-time cost arbitrage engine shuffling workloads to optimal zones."
+            },
+            "healing": {
+                "title": "Proactive Healing",
+                "desc": "Automated drift detection and self-healing infrastructure."
+            },
+            "audit": {
+                "title": "Audit Ready",
+                "desc": "Monthly evidence trails automatically generated for SOC2 & GDPR."
+            }
+        },
+        "DataAI": {
+            "title": "Data & AI Fabric",
+            "subtitle": "Sovereign data planes for high-performance inference.",
+            "sovereignty": {
+                "title": "Data Sovereignty",
+                "desc": "Localized residency."
+            },
+            "fabric": {
+                "title": "AI Fabric",
+                "desc": "GPU Workloads."
+            },
+            "search": {
+                "title": "Vector Search",
+                "desc": "High-dim embedding."
+            },
+            "analytics": {
+                "title": "Real-time Analytics",
+                "desc": "Instant insights."
+            },
+            "uptime": "UPTIME SLA"
+        }
+    },
+    "Industries": {
+        "badge": "Target Industries",
+        "title": "Industry-Specific Solutions",
+        "subtitle": "Standardizing the digital core for the world's most complex and regulated sectors.",
+        "challenges": "Key Industry Challenges",
+        "solution": "OmniGCloud Solution",
+        "cta": {
+            "title": "Ready to Modernize Your Industry?",
+            "subtitle": "Join the world's leading organizations using OmniGCloud to redefine their digital future.",
+            "button": "Schedule an Industry Briefing"
+        },
+        "financial": {
+            "name": "Financial Services",
+            "desc": "Secure, compliant multi-cloud modernization for global banking and fintech institutions.",
+            "c1": "Legacy core banking monolithic architectures",
+            "c2": "Rigid regulatory compliance (SarbOx, GDPR)",
+            "c3": "Low-latency trading requirements",
+            "sol": "OmniGCloud Sovereign Control Plane ensures data residency while enabling AI-powered fraud detection and automated scaling."
+        },
+        "insurance": {
+            "name": "Insurance",
+            "desc": "Accelerating claims processing and actuarial modeling through automated cloud-native platforms.",
+            "c1": "Fragmented legacy policy systems",
+            "c2": "Data silos across hybrid environments",
+            "c3": "Scaling during peak catastrophic events",
+            "sol": "Multi-Infrastructure Registry provides unified visibility across on-prem and cloud, optimizing capacity for peak demand."
+        },
+        "telecom": {
+            "name": "Telecommunications & 5G",
+            "desc": "Orchestrating the distributed edge for high-frequency connectivity and MEC workloads.",
+            "c1": "Distributed edge orchestration",
+            "c2": "Network Function Virtualization (NFV)",
+            "c3": "5G latency mandates",
+            "sol": "Crossplane-powered edge management enables consistent deployment of telco stacks across thousands of localized nodes."
+        },
+        "healthcare": {
+            "name": "Healthcare & Life Sciences",
+            "desc": "Protecting patient lives with HIPAA-compliant, resilient data fabrics and AI-assisted research.",
+            "c1": "HIPAA/HITECH data sovereignty",
+            "c2": "Massive imaging data storage and retrieval",
+            "c3": "Scientific research compute scaling",
+            "sol": "OmniSource Marketplace provides pre-configured security guardrails and high-throughput data pipelines for research."
+        },
+        "logistics": {
+            "name": "Logistics & Supply Chain",
+            "desc": "Real-time visibility and predictive optimization across the global moving enterprise.",
+            "c1": "Global real-time tracking latency",
+            "c2": "Legacy ERP integration",
+            "c3": "Unpredictable global supply shocks",
+            "sol": "AI-Native modernization deconstructs monolithic ERPs into nimble microservices for rapid response to market shifts."
+        }
+    },
+    "Dashboard": {
+        "title": "Sovereign Command Center",
+        "welcome": "Welcome back",
+        "role": "Assigned Security Role",
+        "logicMeshStatus": "Logic-Mesh Status",
+        "active": "Synchronized"
+    },
+    "SecuritySettings": {
+        "title": "Security Configuration",
+        "description": "Manage your organization's identity providers and sovereign security policies.",
+        "ssoConfiguration": "SSO Providers",
+        "enabled": "Active",
+        "disabled": "Not Configured",
+        "clientId": "Client Application ID",
+        "tenantId": "Directory (Tenant) ID",
+        "callbackUrl": "Authorized Redirect URI",
+        "outboundEmail": "Sender (From) Address",
+        "advancedSecurity": "Enterprise Identity (SAML/SCIM)",
+        "advancedDescription": "Enable federated identity via SAML 2.0 and automated user provisioning via SCIM. Available for Sovereign Enterprise tiers.",
+        "requestSaml": "Request Early Access"
+    },
+    "Terms": {
+        "title": "Terms of Service",
+        "lastUpdated": "Last Updated",
+        "acceptance": "Acceptance of Terms",
+        "acceptanceText": "By accessing or using the OmniGCloud platform, you agree to be bound by these Terms of Service. If you do not agree to these terms, please do not use our services.",
+        "services": "Services Provided",
+        "servicesText": "OmniGCloud provides cloud-agnostic modernization and AI engineering services including:",
+        "service1": "Multi-cloud infrastructure orchestration and management",
+        "service2": "AI-powered platform engineering and automation",
+        "service3": "Enterprise security and compliance consulting",
+        "service4": "Cloud migration and modernization services",
+        "userResponsibilities": "User Responsibilities",
+        "userResponsibilitiesText": "As a user of our platform, you agree to:",
+        "responsibility1": "Maintain the confidentiality of your account credentials",
+        "responsibility2": "Use the platform in compliance with all applicable laws and regulations",
+        "responsibility3": "Not attempt to gain unauthorized access to our systems or other users' data",
+        "dataOwnership": "Data Ownership",
+        "dataOwnershipText": "You retain all rights, title, and interest in your data. OmniGCloud claims no ownership over your infrastructure metadata or application data. We process your data solely to provide our services.",
+        "termination": "Termination",
+        "terminationText": "Either party may terminate this agreement with 30 days written notice. Upon termination, you will retain access to export your data for 90 days.",
+        "disclaimer": "Disclaimer",
+        "disclaimerText": "Our services are provided 'as is' without warranties of any kind. We do not guarantee uninterrupted or error-free operation.",
+        "governingLaw": "Governing Law",
+        "governingLawText": "These terms are governed by the laws of the jurisdiction in which your organization is primarily located.",
+        "contact": "Contact",
+        "contactText": "For questions about these terms, please contact us"
+    },
+    "Privacy": {
+        "title": "Privacy Policy",
+        "lastUpdated": "Last Updated",
+        "commitment": "Our Commitment to Privacy",
+        "commitmentText": "At OmniGCloud, we are committed to protecting your privacy and handling your data with transparency and care. This policy explains how we collect, use, and safeguard your information.",
+        "dataCollection": "Data We Collect",
+        "dataCollectionText": "We collect only the data necessary to provide and improve our services:",
+        "accountData": "Account Information",
+        "accountDataText": "Name, email address, company name, and authentication credentials for SSO providers.",
+        "infrastructureData": "Infrastructure Metadata",
+        "infrastructureDataText": "Cloud resource configurations, performance metrics, and cost data (no application-level data).",
+        "usageData": "Usage Analytics",
+        "usageDataText": "Platform interaction logs, feature usage patterns, and anonymized performance metrics.",
+        "dataProtection": "How We Protect Your Data",
+        "dataProtectionText": "We implement industry-standard security measures:",
+        "protection1": "TLS 1.3 encryption for all data in transit",
+        "protection2": "AES-256 encryption for data at rest",
+        "protection3": "Regular security audits and penetration testing",
+        "protection4": "Role-based access controls and audit logging",
+        "dataRetention": "Data Retention",
+        "dataRetentionText": "We retain your data only as long as necessary to provide our services or as required by law. You may request deletion of your data at any time, subject to legal retention requirements.",
+        "yourRights": "Your Privacy Rights",
+        "yourRightsText": "You have the right to:",
+        "right1": "Access and export your data at any time",
+        "right2": "Request correction of inaccurate data",
+        "right3": "Request deletion of your data (subject to legal requirements)",
+        "right4": "Opt out of non-essential data processing",
+        "thirdParty": "Third-Party Services",
+        "thirdPartyText": "We use select third-party services (cloud providers, analytics tools) that may process your data. We ensure all third parties meet our security and privacy standards through contractual agreements.",
+        "cookies": "Cookies and Tracking",
+        "cookiesText": "We use essential cookies for authentication and session management. We do not use third-party advertising cookies. You can control cookie preferences in your browser settings.",
+        "changes": "Policy Changes",
+        "changesText": "We may update this policy periodically. We will notify you of material changes via email or platform notification at least 30 days before they take effect.",
+        "contact": "Contact",
+        "contactText": "For privacy-related questions or to exercise your rights, contact us"
+    },
+    "Security": {
+        "title": "Security & Trust Center",
+        "subtitle": "Our commitment to protecting your infrastructure and data with enterprise-grade security practices.",
+        "encryption": "End-to-End Encryption",
+        "encryptionText": "All data is encrypted in transit (TLS 1.3) and at rest (AES-256) with customer-managed encryption keys available for enterprise plans.",
+        "authentication": "Multi-Factor Authentication",
+        "authenticationText": "Enterprise SSO with support for SAML, OIDC, and passwordless magic links. Role-based access control (RBAC) for granular permissions.",
+        "responsibleDisclosure": "Responsible Disclosure Program",
+        "disclosureIntro": "We welcome security researchers to help us maintain the security of our platform. If you discover a vulnerability, please report it responsibly.",
+        "reportingProcess": "How to Report",
+        "step1": "Email security@sovereign.local with details of the vulnerability",
+        "step2": "Include steps to reproduce, potential impact, and any proof-of-concept code",
+        "step3": "Allow us reasonable time to investigate and remediate before public disclosure",
+        "step4": "We will acknowledge your report within 48 hours and provide updates on our progress",
+        "scope": "In Scope",
+        "scope1": "Authentication and authorization bypasses",
+        "scope2": "SQL injection, XSS, CSRF, and other injection vulnerabilities",
+        "scope3": "Server-side request forgery (SSRF) and remote code execution (RCE)",
+        "scope4": "Sensitive data exposure or insecure data storage",
+        "outOfScope": "Out of Scope",
+        "outOfScope1": "Social engineering attacks or phishing",
+        "outOfScope2": "Denial of service (DoS) attacks",
+        "outOfScope3": "Issues in third-party services we don't control",
+        "contactSecurity": "Security Contact",
+        "securityEmail": "Email",
+        "pgpKey": "PGP Key",
+        "securityPractices": "Security Practices",
+        "infrastructure": "Infrastructure Security",
+        "infra1": "Multi-region deployment with automatic failover",
+        "infra2": "Network segmentation and zero-trust architecture",
+        "infra3": "Regular vulnerability scanning and patching",
+        "monitoring": "Continuous Monitoring",
+        "monitor1": "24/7 security operations center (SOC)",
+        "monitor2": "Real-time threat detection and response",
+        "monitor3": "Comprehensive audit logging and SIEM integration"
+    },
+    "Compliance": {
+        "title": "Compliance & Certifications",
+        "subtitle": "Transparent reporting on our compliance journey and data handling practices.",
+        "transparency": "Transparency Notice",
+        "transparencyText": "We believe in honest communication about our compliance status. Below you'll find our current certifications, in-progress audits, and planned initiatives. We do not claim certifications we have not yet achieved.",
+        "active": "Active",
+        "inProgress": "In Progress",
+        "planned": "Planned 2026",
+        "gdpr": "GDPR Compliance",
+        "gdprText": "Fully compliant with EU General Data Protection Regulation. Data processing agreements available.",
+        "soc2": "SOC 2 Type II",
+        "soc2Text": "Currently undergoing SOC 2 Type II audit. Expected completion Q2 2026.",
+        "iso27001": "ISO 27001",
+        "iso27001Text": "Information security management system certification planned for 2026.",
+        "dataHandling": "Data Handling Practices",
+        "encryption": "Encryption Standards",
+        "encryption1": "TLS 1.3 for all data in transit",
+        "encryption2": "AES-256 encryption for data at rest",
+        "encryption3": "Customer-managed encryption keys (CMEK) available for enterprise plans",
+        "dataResidency": "Data Residency",
+        "dataResidencyText": "Customer data is stored in the geographic region of your choice. We support data residency requirements for EU, US, APAC, and other regions. Data does not leave your chosen region without explicit consent.",
+        "retention": "Data Retention Policies",
+        "operational": "Operational Data",
+        "operationalText": "Retained for the duration of your subscription plus 90 days",
+        "audit": "Audit Logs",
+        "auditText": "Retained for 7 years to meet regulatory requirements",
+        "backups": "Backups",
+        "backupsText": "Encrypted backups retained for 30 days with point-in-time recovery",
+        "accessControls": "Access Controls",
+        "authentication": "Authentication",
+        "auth1": "Multi-factor authentication (MFA) required for all users",
+        "auth2": "Enterprise SSO with SAML 2.0 and OIDC support",
+        "auth3": "Passwordless authentication options available",
+        "authorization": "Authorization",
+        "authz1": "Role-based access control (RBAC) with custom roles",
+        "authz2": "Principle of least privilege enforced",
+        "authz3": "Regular access reviews and automated deprovisioning",
+        "incidentResponse": "Incident Response",
+        "incidentResponseText": "We maintain a comprehensive incident response plan to quickly detect, respond to, and recover from security incidents.",
+        "responseProcess": "Our Response Process",
+        "response1": "Detection and triage within 1 hour of incident identification",
+        "response2": "Customer notification within 24 hours for incidents affecting customer data",
+        "response3": "Root cause analysis and remediation plan within 72 hours",
+        "response4": "Post-incident review and security improvements implemented within 30 days"
     }
 }

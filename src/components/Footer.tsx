@@ -1,10 +1,11 @@
 import Link from 'next/link';
-import { useTranslations } from 'next-intl';
+import { useTranslations, useLocale } from 'next-intl';
 import styles from './Footer.module.css';
 import ComplianceBadges from './ComplianceBadges';
 
 const Footer = () => {
     const t = useTranslations('Footer');
+    const locale = useLocale();
 
     return (
         <footer className={styles.footer}>
@@ -12,7 +13,7 @@ const Footer = () => {
                 <div style={{ borderTop: '1px solid var(--card-border)', borderBottom: '1px solid var(--card-border)', padding: '1.5rem 0', marginTop: '0.5rem' }}>
                     <div style={{ marginBottom: '1.5rem', display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start' }}>
                         <div>
-                            <Link href="/#hero" style={{ fontSize: '1.4rem', fontWeight: 900, textDecoration: 'none', color: 'var(--foreground)', letterSpacing: '-0.75px' }}>
+                            <Link href={`/${locale}#hero`} style={{ fontSize: '1.4rem', fontWeight: 900, textDecoration: 'none', color: 'var(--foreground)', letterSpacing: '-0.75px' }}>
                                 OmniG<span style={{ color: 'var(--primary)' }}>Cloud</span>
                             </Link>
                             <p style={{ marginTop: '0.3rem', color: 'var(--foreground)', opacity: 0.6, maxWidth: '350px', fontSize: '0.75rem' }}>
@@ -21,7 +22,7 @@ const Footer = () => {
                         </div>
                         <div style={{ textAlign: 'right' }}>
                             <div style={{ fontSize: '0.65rem', fontWeight: 800, color: 'var(--primary)', marginBottom: '0.2rem' }}>{t('directory')}</div>
-                            <div style={{ fontSize: '0.6rem', opacity: 0.4, fontFamily: 'monospace' }}>SECURE_CANVAS_SYNC: OK</div>
+                            <div style={{ fontSize: '0.6rem', opacity: 0.4, fontFamily: 'monospace' }}>{t('status')}</div>
                         </div>
                     </div>
 
@@ -56,7 +57,7 @@ const Footer = () => {
                                     { name: t('trust.security'), href: "/security" },
                                     { name: t('trust.compliance'), href: "/compliance" },
                                     { name: t('trust.privacy'), href: "/privacy" },
-                                    { name: t('trust.sovereignty'), href: "/docs/governance" }
+                                    { name: t('trust.terms'), href: "/terms" }
                                 ]
                             },
                             {
@@ -80,7 +81,7 @@ const Footer = () => {
                                 <h5 style={{ color: col.color, fontWeight: 900, marginBottom: '0.6rem', fontSize: '0.65rem', textTransform: 'uppercase' }}>{col.label}</h5>
                                 <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem', fontSize: '0.75rem' }}>
                                     {col.links.map((link, lIdx) => (
-                                        <Link key={lIdx} href={link.href} style={{ color: 'var(--foreground)', opacity: 0.6, textDecoration: 'none', transition: 'all 0.2s', fontWeight: 600 }}>{link.name}</Link>
+                                        <Link key={lIdx} href={`/${locale}${link.href}`} style={{ color: 'var(--foreground)', opacity: 0.6, textDecoration: 'none', transition: 'all 0.2s', fontWeight: 600 }}>{link.name}</Link>
                                     ))}
                                 </div>
                             </div>

@@ -46,7 +46,7 @@ export default function ContactPage() {
 
                         <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '2rem' }}>
                             {[
-                                { icon: <Mail color="#60efff" size={20} />, label: "Support", val: "architects@omnigcloud.com" },
+                                { icon: <Mail color="#60efff" size={20} />, label: "Support", val: "architects@sovereign.local" },
                                 { icon: <Phone color="#60efff" size={20} />, label: "Executive Line", val: "+1 (888) 555-2025" },
                                 { icon: <MapPin color="#60efff" size={20} />, label: "HQ", val: "New York Platinum District" },
                                 { icon: <Globe color="#60efff" size={20} />, label: "Coverage", val: "Global 24/7/365" }

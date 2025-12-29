@@ -1,22 +1,31 @@
 import { MetadataRoute } from 'next';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-    const baseUrl = 'https://omnigcloud.com';
-    const locales = ['en', 'fr', 'de', 'es']; // Add supported locales
+    const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://omnigcloud.com';
+    const locales = ['en', 'es', 'fr', 'de', 'zh', 'hi', 'ja'];
 
     const routes = [
         '',
         '/platform',
+        '/products',
         '/services',
         '/solutions',
+        '/industries',
         '/pricing',
         '/security',
         '/compliance',
+        '/privacy',
         '/use-cases',
         '/company',
         '/contact',
         '/docs',
         '/case-studies',
+        '/blog',
+        '/newsroom',
+        '/community',
+        '/onboarding',
+        '/demo',
+        '/partners'
     ];
 
     const sitemapEntries: MetadataRoute.Sitemap = [];

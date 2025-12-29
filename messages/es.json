@@ -8,86 +8,212 @@
             "docs": "Recursos",
             "pricing": "Precios",
             "company": "Empresa",
-            "onboarding": "Escalar Ahora"
+            "onboarding": "Escalar Ahora",
+            "pillars": "PILARES DE LA PLATAFORMA",
+            "advanced": "OPERACIONES AVANZADAS",
+            "industries": "INDUSTRIAS",
+            "useCases": "CASOS DE USO",
+            "documentation": "DOCUMENTACIÓN",
+            "community": "COMUNIDAD",
+            "products_links": {
+                "playground": "Patio de Recreo Soberano",
+                "workflows": "G-Workflows",
+                "guard": "Guardia de Gobernanza",
+                "knowledge": "Conocimiento Soberano",
+                "deploy": "Despliegue Obsidian",
+                "nexus": "Nexo Multi-Nube"
+            },
+            "solutions_links": {
+                "financial": "Servicios Financieros",
+                "insurance": "Seguros",
+                "telecom": "Telecomunicaciones",
+                "healthcare": "Salud y Ciencias de la Vida",
+                "logistics": "Logística y Cadena de Suministro",
+                "finance_mod": "Modernización de Finanzas Globales",
+                "health_mod": "Datos de Salud Soberanos",
+                "gov_trust": "Confianza Digital del Sector Público"
+            },
+            "trust_links": {
+                "compliance_maps": "Mapas de Cumplimiento Global",
+                "transparency": "Informe de Transparencia",
+                "certs": "Certificaciones",
+                "privacy": "Centro de Privacidad"
+            },
+            "docs_links": {
+                "tech_docs": "Documentos Técnicos",
+                "api": "Referencia de API",
+                "patterns": "Patrones de Diseño",
+                "whitepaper": "Libro Blanco",
+                "open_source": "Código Abierto",
+                "insights": "Perspectivas Soberanas"
+            },
+            "pricing_links": {
+                "compare": "Comparar Planes",
+                "developer": "Desarrollador",
+                "professional": "Profesional",
+                "business": "Empresa",
+                "sovereign": "Soberano / Federal"
+            },
+            "company_links": {
+                "about": "Sobre Nosotros",
+                "leadership": "Liderazgo",
+                "operations": "Operaciones Globales",
+                "newsroom": "Sala de Prensa",
+                "contact": "Oficina de Contacto"
+            }
         }
+    },
+    "Footer": {
+        "tagline": "Restaurando la soberanía empresarial a través de la modernización de la nube gobernada por IA y autónoma.",
+        "directory": "DIRECTORIO GLOBAL // TERMINAL_v4.2",
+        "status": "SINCRONIZACIÓN_CANVAS_SEGURA: OK",
+        "platform": {
+            "label": "Plataforma",
+            "control": "Plano de Control",
+            "policy": "Motor de Políticas",
+            "iac": "Fábrica de IaC",
+            "obs": "Observabilidad"
+        },
+        "services": {
+            "label": "Servicios",
+            "migration": "Migración",
+            "modernization": "Modernización",
+            "ai": "Ingeniería de IA",
+            "compliance": "Cumplimiento"
+        },
+        "impact": {
+            "label": "Impacto",
+            "finance": "Finanzas",
+            "healthcare": "Salud",
+            "retail": "Retail",
+            "government": "Gobierno"
+        },
+        "trust": {
+            "label": "Confianza",
+            "security": "Seguridad",
+            "compliance": "Cumplimiento",
+            "privacy": "Privacidad",
+            "sovereignty": "Soberanía"
+        },
+        "resources": {
+            "label": "Recursos",
+            "docs": "Documentación",
+            "api": "Referencia de API",
+            "blueprints": "Blueprints",
+            "cases": "Casos de Estudio"
+        },
+        "company": {
+            "label": "Empresa",
+            "about": "Nosotros",
+            "leadership": "Liderazgo",
+            "newsroom": "Prensa",
+            "contact": "Contacto"
+        },
+        "copyright": "© {year} OmniGCloud. Todos los derechos reservados.",
+        "footerText": "Infraestructura generativa, global y gobernada para organizaciones soberanas."
     },
     "Hero": {
         "badge": "GOBERNANZA COMO CÓDIGO",
         "title": "Restaurando la Soberanía",
-        "subtitle": "G-Framework empodera a las empresas globales para automatizar la infraestructura multi-cloud con gobernanza zero-trust.",
+        "subtitle": "El G-Framework faculta a las empresas globales para automatizar la infraestructura multinube con gobernanza de confianza cero.",
         "ctaPrimary": "Iniciar Evaluación",
-        "ctaSecondary": "Ver Demo"
+        "ctaSecondary": "Ver Demo",
+        "systemStatus": {
+            "title": "Estado del Sistema",
+            "live": "EN VIVO",
+            "sync": "Sincronización Multi-Nube Activa",
+            "policy": "Motor de Políticas",
+            "enforcing": "Aplicando",
+            "threat": "Guardia de Amenazas",
+            "monitoring": "Monitoreando"
+        },
+        "stats": {
+            "assets": "ACTIVOS",
+            "drift": "DESVIACIÓN",
+            "nodes": "NODOS"
+        },
+        "experts": {
+            "count": "20+ Expertos",
+            "status": "Listos para Auditar",
+            "cta": "Contactar Ventas"
+        },
+        "efficiency": "EFICIENCIA",
+        "impact": {
+            "label": "IMPACTO GLOBAL",
+            "text": "Automatice la <span>soberanía</span> en cada zona."
+        },
+        "trust": "CONFIADO POR EMPRESAS GLOBALES"
     },
     "Capabilities": {
         "tag": "EL ECOSISTEMA G-FRAMEWORK",
         "title": "Productos Soberanos Principales",
-        "subtitle": "Seis pilares modulares diseñados para resolver la complejidad de la gobernanza multi-cloud global.",
+        "subtitle": "Seis pilares modulares diseñados para resolver la complejidad de la gobernanza global multinube.",
         "explore": "EXPLORAR",
         "cta": "Ver Arquitectura Completa"
     },
     "SovereignGallery": {
-        "title": "Biblioteca Visual Soberana",
-        "subtitle": "Capturas arquitectónicas detalladas de G-Framework en producción.",
+        "title": "La Biblioteca Visual Soberana",
+        "subtitle": "Capturas arquitectónicas detalladas del G-Framework en producción.",
         "control": {
             "title": "Plano de Control Autónomo",
-            "description": "El Centro de Mando (Imagen A) proporciona una visualización 4K en tiempo real de todos los activos de la nube global."
+            "description": "El Centro de Comando (Imagen A) proporciona una visualización 4K en tiempo real de todos los activos globales en la nube. La Imagen B muestra el motor de 'Remediación de Desviaciones' en acción, donde un cambio de configuración no autorizado se revirtió automáticamente en 1.4 segundos."
         },
         "failover": {
-            "title": "Interruptor de Circuito Multi-Cloud",
-            "description": "La imagen A captura el mapa de latencia global justo antes de una falla regional."
+            "title": "Interruptor de Circuito Multi-Nube",
+            "description": "La Imagen A captura el mapa de latencia global justo antes de una falla del proveedor regional. En la Imagen B, puede ver el G-Framework activando una migración instantánea de carga de trabajo a Oracle OCI para mantener un tiempo de actividad del 100%."
         }
     },
     "Products": {
         "hero": {
             "tag": "ECOSISTEMA DE PRODUCTOS",
             "title": "Pila Soberana Empresarial",
-            "subtitle": "Una suite modular de herramientas de orquestación para restaurar el control total y el cumplimiento."
+            "subtitle": "Un conjunto modular de herramientas de orquestación visibles en 4K diseñadas para restaurar el control total, la resiliencia y el cumplimiento en su multinube distribuida."
         },
         "playground": {
             "title": "Sovereign Playground",
             "tag": "INFRA-DEV",
-            "shortDesc": "IDE para prototipar infraestructura cross-cloud.",
-            "description": "El primer IDE del mundo diseñado para la orquestación soberana.",
-            "explanation": "El espacio de trabajo principal (Imagen A) muestra resaltado de sintaxis."
+            "shortDesc": "IDE para crear prototipos de infraestructuras entre nubes.",
+            "description": "El primer IDE del mundo diseñado específicamente para la orquestación soberana entre nubes. Cree prototipos de intenciones de infraestructura complejas en OCI, AWS y Azure en un entorno unificado.",
+            "explanation": "El espacio de trabajo principal (Imagen A) muestra el resaltado de sintaxis para G-Framework DSL, mientras que el monitor secundario (Imagen B) proporciona una diferencia en vivo a través de tres proveedores de nube."
         },
         "workflows": {
             "title": "G-Workflows",
             "tag": "AUTOMATIZACIÓN",
-            "shortDesc": "Motor de orquestación visual por pasos.",
-            "description": "Un motor visual para definir automatizaciones de múltiples pasos.",
-            "explanation": "En nuestro diseñador de flujos (Imagen A), los ingenieros mapean la lógica."
+            "shortDesc": "Motor de orquestación visual de varios pasos.",
+            "description": "Un motor visual de arrastrar y soltar para definir una automatización de varios pasos. G-Workflows maneja la sincronización de estado y los casos extremos automáticamente para conmutaciones por error regionales.",
+            "explanation": "En nuestro diseñador de flujos de trabajo (Imagen A), los ingenieros trazan la lógica. La Imagen B captura el motor G-Workflows ejecutando una migración no disruptiva."
         },
         "guard": {
             "title": "Governance Guard",
             "tag": "CUMPLIMIENTO",
-            "shortDesc": "Auto-remediación de cumplimiento en tiempo real.",
-            "description": "Auditoría continua y automatizada para entornos regulados.",
-            "explanation": "La Imagen A muestra el resumen del 'Mapa de Cumplimiento'."
+            "shortDesc": "Autoremediación de cumplimiento en tiempo real.",
+            "description": "Auditoría continua y automatizada para entornos empresariales altamente regulados. Escanea cada recurso contra SOC2, GDPR y mandatos de soberanía nacional.",
+            "explanation": "La Imagen A demuestra la descripción general del 'Mapa de Cumplimiento'. La Imagen B muestra el registro de remediación automatizada donde un bucket mal configurado se bloqueó automáticamente."
         },
         "knowledge": {
             "title": "Sovereign Knowledge",
-            "tag": "RAG & AI",
+            "tag": "RAG Y IA",
             "shortDesc": "RAG seguro para datos regulatorios.",
-            "description": "Base de conocimientos segura que opera dentro de su límite soberano.",
-            "explanation": "El Mapa de Conocimiento (Imagen A) visualiza clusters de datos."
+            "description": "Una base de conocimiento segura y un motor RAG que opera dentro de su límite soberano. Procese datos legales y regulatorios confidenciales con IA sin fugas transfronterizas.",
+            "explanation": "El Mapa de Conocimiento (Imagen A) visualiza grupos de datos dentro de nodos nacionales. La Imagen B muestra la interfaz de redacción legal asistida por RAG."
         },
         "deploy": {
             "title": "Obsidian Deploy",
             "tag": "PRODUCCIÓN",
             "shortDesc": "Lanzamientos de producción atómicos e inmutables.",
-            "description": "Motor de despliegue para aplicaciones de misión crítica.",
-            "explanation": "La Imagen A muestra el estado del pipeline de despliegue."
+            "description": "El motor de implementación para aplicaciones de misión crítica. Garantiza cambios atómicos en clústeres globales con fiabilidad de reversión del 100%.",
+            "explanation": "La Imagen A muestra el estado de la canalización de implementación. La Imagen B muestra la pantalla de verificación de reversión atómica durante una falla parcial simulada."
         },
         "nexus": {
             "title": "Cross-Cloud Nexus",
             "tag": "ARBITRAJE",
             "shortDesc": "Telemetría global y arbitraje de costos.",
-            "description": "Gestión unificada de telemetría y costos en todas las nubes.",
-            "explanation": "La Imagen A rastrea oportunidades de arbitraje de costos."
+            "description": "Telemetría unificada y gestión de costos en todas las nubes. Nexus enruta de manera inteligente las cargas de trabajo al nodo soberano más rentable en tiempo real.",
+            "explanation": "La Imagen A rastrea las oportunidades de arbitraje de costos a nivel mundial. La Imagen B muestra el panel de telemetría unificado entre nubes."
         },
         "cta": {
             "title": "¿Listo para una reunión privada?",
-            "subtitle": "Experimente la capacidad técnica completa de G-Framework.",
+            "subtitle": "Experimente toda la capacidad técnica del G-Framework con nuestro equipo de ingeniería.",
             "primary": "Solicitar Demo",
             "secondary": "Ver Planes"
         }
@@ -96,122 +222,143 @@
         "hero": {
             "tag": "IMPACTO EMPRESARIAL 2025",
             "title": "Soluciones Soberanas Estratégicas",
-            "subtitle": "G-Framework ofrece velocidad medible en industrias reguladas."
+            "subtitle": "El G-Framework ofrece velocidad medible en industrias reguladas: Gobernanza, Soberanía Global e Infraestructura Generativa."
         },
         "financial": {
-            "title": "Modernización de las Finanzas Globales",
+            "title": "Modernización Financiera Global",
             "tag": "BANCA Y FINANZAS",
-            "description": "Elimine la deuda técnica automatizando el refactoring.",
-            "explanation": "La Imagen A captura la latencia de trading de alta frecuencia."
+            "description": "Elimine la deuda técnica heredada automatizando la refactorización de mainframes monolíticos a microservicios. Seguro, conforme e instantáneo en 32 regiones soberanas.",
+            "explanation": "La Imagen A captura la latencia de negociación de alta frecuencia. La Imagen B muestra 'Sincronización de Libro Mayor' automatizada, asegurando cero pérdida de datos durante interrupciones regionales."
         },
         "healthcare": {
             "title": "Datos de Salud Soberanos",
             "tag": "SALUD",
-            "description": "Acelere los ciclos de I+D garantizando el cumplimiento de HIPAA.",
-            "explanation": "En la Imagen A, vemos telemetría de dispositivos IoMT."
+            "description": "Acelere los ciclos de I+D garantizando el cumplimiento de HIPAA en entornos de nube distribuidos. Entrene modelos de IA con datos de pacientes localizados de forma segura.",
+            "explanation": "En la Imagen A, vemos telemetría de dispositivos IoMT. La Imagen B muestra el motor RAG 'Sovereign Knowledge' procesando registros de pacientes."
         },
         "government": {
-            "title": "Confianza Digital del Sector Público",
+            "title": "Confianza Digital en el Sector Público",
             "tag": "GOBIERNO",
-            "description": "Genere confianza con infraestructura validada por FIPS.",
-            "explanation": "La Imagen A demuestra simulaciones de 'Cyber Range'."
+            "description": "Construya confianza ciudadana con infraestructura validada por FIPS. Arquitecturas de egreso cero para cargas de trabajo clasificadas y gestión de identidad soberana.",
+            "explanation": "La Imagen A demuestra simulaciones de 'Ciber Range'. La Imagen B muestra flujos de identidad ciudadana procesados dentro de las fronteras nacionales."
         }
     },
     "Blog": {
         "hero": {
-            "tag": "INSIGHTS Y RECHÉRCHE SOBERANA",
-            "title": "Hub de Impacto Global",
-            "subtitle": "Artículos académicos y avances de ingeniería.",
+            "tag": "INFORMACIÓN E INVESTIGACIÓN SOBERANA",
+            "title": "Centro de Impacto Global",
+            "subtitle": "Artículos académicos, avances de ingeniería y análisis de la industria en la frontera de la soberanía digital.",
             "search": "Buscar investigación..."
         },
         "posts": {
             "aso": {
-                "category": "LIBRO BLANCO",
+                "category": "DOCUMENTO TÉCNICO ACADÉMICO",
                 "title": "Orquestación Soberana Autónoma (ASO)",
-                "excerpt": "Análisis del despliegue de G-Framework.",
-                "author": "Fundación G-Framework",
-                "impact": "Gran Significación"
+                "excerpt": "Un marco formal para la gobernanza independiente de la nube impulsada por IA. Estableciendo la prueba matemática para la Convergencia de Sincronización de Estado (SSC) en más de 1,000 nodos.",
+                "author": "OmniGCloud Research",
+                "impact": "Contribución Científica Importante"
             },
             "prompt": {
                 "category": "GUÍA",
-                "title": "Prompt Engineering para Nube",
-                "excerpt": "Uso de lenguaje natural para orquestación.",
-                "author": "Equipo de AI Ops",
+                "title": "Ingeniería de Prompts para el Control de Infraestructura Soberana",
+                "excerpt": "Cómo utilizar el lenguaje natural para orquestar clústeres de Kubernetes complejos. Una guía para nuestro motor de 'Intención Declarativa'.",
+                "author": "Equipo de Operaciones de IA",
                 "impact": "Guía Original EB-1A"
+            },
+            "latency": {
+                "category": "EVALUACIÓN",
+                "title": "Latencia del Proveedor de Nube: Evaluación Comparativa Completa 2025",
+                "excerpt": "Evaluación de OCI, AWS y Azure en el rendimiento de ingreso global. Por qué los nodos Oracle ARM Ampere están ganando para cargas de trabajo soberanas.",
+                "author": "Laboratorio de Investigación",
+                "impact": "Evaluación Académica"
+            },
+            "rag": {
+                "category": "RAG",
+                "title": "Asegurando Datos Regulatorios con Sovereign Knowledge",
+                "excerpt": "Una inmersión profunda en la Generación Aumentada por Recuperación dentro de entornos con brecha de aire. Cómo mantener el 100% de privacidad para documentos legales.",
+                "author": "Arquitecto de Seguridad",
+                "impact": "Contribución Importante"
+            },
+            "bench": {
+                "category": "BENCHMARK",
+                "title": "Comparación del Rendimiento de LLM para la Generación de Infra-Código",
+                "excerpt": "GPT-4o vs Claude 3.5 Sonnet vs Llama 3 para generar manifiestos soberanos de Terraform. ¿Cuál produce menos errores de desviación?",
+                "author": "Investigación de IA",
+                "impact": "Material Académico"
             }
         },
         "newsletter": {
-            "title": "Únase al Círculo de Investigación",
-            "subtitle": "Insights semanales sobre sistemas distribuidos.",
-            "placeholder": "Ingrese su email",
+            "title": "Únase al Círculo de Investigación Soberana",
+            "subtitle": "Información semanal sobre sistemas distribuidos, privacidad de datos y el futuro de la infraestructura global.",
+            "placeholder": "Ingrese su correo electrónico",
             "button": "Suscribirse",
-            "footer": "Confiado por más de 10,000 arquitectos."
+            "footer": "Con la confianza de más de 10,000 arquitectos de infraestructura a nivel mundial."
         }
     },
     "Pricing": {
         "hero": {
             "tag": "GOBERNANZA TRANSPARENTE",
-            "title": "Planes adaptados para el Crecimiento Soberano",
-            "subtitle": "Precios predecibles para orquestadores empresariales."
+            "title": "Planes adaptados para el Escalado Soberano",
+            "subtitle": "Precios predecibles para orquestadores empresariales. Asegure su soberanía digital con el marco multinube más resistente del mundo."
         },
         "trust": {
-            "title": "Cumplimiento de Nivel Empresarial",
-            "subtitle": "Todos los planes incluyen arquitectura de seguridad.",
+            "title": "Cumplimiento de Grado Empresarial",
+            "subtitle": "Todos los planes incluyen la arquitectura de seguridad requerida para sectores altamente regulados.",
             "residency": {
                 "title": "Residencia de Datos",
-                "desc": "Mantenga sus datos dentro de los límites legales."
+                "desc": "Mantenga sus datos dentro de los límites legales. Control total sobre la colocación."
             },
             "neutrality": {
-                "title": "Neutralidad de Nube",
-                "desc": "Sin bloqueo de proveedor."
+                "title": "Neutralidad de la Nube",
+                "desc": "Sin bloqueo de proveedor. Mueva las cargas de trabajo entre nubes con solo tocar un botón."
             },
             "scholarly": {
-                "title": "Ops Académicos EB-1A",
-                "desc": "La implementación sigue patrones revisados por pares."
+                "title": "Operaciones Eruditas EB-1A",
+                "desc": "La implementación sigue patrones arquitectónicos ASO revisados por pares."
             }
         },
         "faq": {
             "title": "Preguntas Frecuentes",
             "q1": {
-                "q": "¿Qué es una auditoría automatizada?",
-                "a": "Una verificación de cumplimiento en tiempo real."
+                "q": "¿Qué es una 'Auditoría Automatizada'?",
+                "a": "Una verificación de cumplimiento en tiempo real que evalúa su infraestructura en la nube frente a políticas de gobernanza específicas (GDPR, ISO, etc.)."
             },
             "q2": {
-                "q": "¿Puedo cambiar de nube?",
-                "a": "Sí, migración casi instantánea posible."
+                "q": "¿Puedo cambiar de nube a mitad del ciclo de facturación?",
+                "a": "Sí. El G-Framework permite una migración casi instantánea sin tarifas de plataforma adicionales."
             },
             "q3": {
-                "q": "¿Ofrecen descuentos para Open Source?",
-                "a": "Sí, contacte a nuestro equipo."
+                "q": "¿Ofrecen descuentos para proyectos de Código Abierto?",
+                "a": "Altamente alentado. Comuníquese con nuestro equipo comunitario para obtener un plan Developer+ sin costo."
             }
         },
         "cta": {
             "title": "Escale con Certeza Soberana",
-            "subtitle": "¿Listo para desplegar?",
-            "button": "Comenzar Ahora"
+            "subtitle": "¿Listo para implementar el G-Framework en su infraestructura global?",
+            "button": "Empezar Ahora"
         },
         "plans": {
             "popular": "MÁS POPULAR",
             "month": "/mes",
-            "contact": "Contáctenos",
+            "contact": "Contáctenos para precios",
             "developer": {
                 "name": "Desarrollador",
-                "desc": "Para ingenieros individuales.",
+                "desc": "Para ingenieros individuales que construyen el futuro de la infraestructura soberana.",
                 "cta": "Empezar a Construir"
             },
             "professional": {
                 "name": "Profesional",
-                "desc": "Para equipos en crecimiento.",
-                "cta": "Ser Profesional"
+                "desc": "Para equipos en crecimiento que requieren resistencia multirregional.",
+                "cta": "Ir a Profesional"
             },
             "business": {
                 "name": "Negocios",
-                "desc": "Gobernanza empresarial.",
+                "desc": "Gobernanza empresarial para operaciones de misión crítica.",
                 "cta": "Escalar Negocio"
             },
             "sovereign": {
                 "name": "Soberano",
-                "desc": "Naciones y Fortune 500.",
+                "desc": "Infraestructura a medida para naciones y Fortune 500.",
                 "cta": "Contactar Ventas"
             }
         }
@@ -219,7 +366,7 @@
     "Platform": {
         "hero": {
             "title": "Plataforma Autónoma OmniGCloud",
-            "subtitle": "El plano de control principal para la Gobernanza Global y la Modernización de la Nube Agentic.",
+            "subtitle": "El plano de control principal para la Gobernanza Global y la Modernización de la Nube Agéntica.",
             "ctaPrimary": "Solicitar Demo",
             "ctaSecondary": "Ver Documentación"
         },
@@ -229,17 +376,17 @@
         },
         "stack": {
             "api": "API Externa",
-            "logic": "Logic Mesh",
-            "cluster": "Cluster Ops",
-            "db": "DB Soberana",
-            "shielded": "Protegido",
+            "logic": "Malla Lógica",
+            "cluster": "Operaciones de Clúster",
+            "db": "BD Soberana",
+            "shielded": "Blindado",
             "active": "Activo",
-            "scaling": "Escalando",
+            "scaling": "Escalado",
             "verified": "Verificado"
         },
         "comparison": {
             "title": "La Ventaja Soberana",
-            "subtitle": "Cómo el G-Framework se diferencia de los proxies de gestión de nube heredados.",
+            "subtitle": "Cómo se diferencia el G-Framework de los proxies de gestión de la nube heredados.",
             "capability": "Capacidad",
             "legacy": "Proxy de Nube Heredado",
             "sovereign": "G-Framework (ASO)",
@@ -247,31 +394,412 @@
             "limited": "Limitado",
             "partial": "Parcial",
             "rows": {
-                "neutrality": "100% Neutralidad de Proveedor",
+                "neutrality": "100% Neutralidad del Proveedor",
                 "audits": "Auditorías Regulatorias en Tiempo Real",
-                "sync": "Sincronización de Estado Cross-Cloud",
-                "refactoring": "Refactorización Automática de Deuda Técnica",
+                "sync": "Sincronización de Estado Entre Nubes",
+                "refactoring": "Refactorización Automatizada de Deuda Técnica",
                 "encryption": "Cifrado de Activos Soberanos",
-                "iam": "IAM Bloqueado por Proveedor",
-                "arbitrage": "Arbitraje de Tarifas de Salida"
+                "iam": "IAM Bloqueado por el Proveedor",
+                "arbitrage": "Arbitraje de Tarifas de Egreso"
             }
         },
         "arbitrage": {
             "tag": "Soberanía Económica",
-            "title": "Arbitraje Financiero y Neutralidad de Nube",
-            "subtitle": "El G-Framework no solo gestiona su nube; optimiza la economía de su infraestructura. Cambie automáticamente las cargas de trabajo al nodo soberano más rentable en tiempo real.",
+            "title": "Arbitraje Financiero y Neutralidad de la Nube",
+            "subtitle": "El G-Framework no solo gestiona su nube, sino que optimiza la economía de su infraestructura. Cambie automáticamente las cargas de trabajo al nodo soberano más rentable en tiempo real.",
             "forecastTitle": "Facturación Predictiva y Pronóstico",
             "forecastDesc": "Nuestro motor EAB-Forecast analiza los índices de precios globales en OCI, AWS y Azure para predecir su tasa de consumo de 12 meses con un 99.8% de precisión.",
             "switchTitle": "Cambio de Plataforma Atómico",
-            "switchDesc": "Experimente la migración de carga de trabajo en tiempo real. Cuando un proveedor aumenta las tarifas o viola el cumplimiento, el G-Framework ejecuta un cambio de hogar autónomo.",
+            "switchDesc": "Experimente la migración de carga de trabajo en tiempo real. Cuando un proveedor aumenta las tarifas o viola el cumplimiento, el G-Framework ejecuta una reubicación autónoma.",
             "lockinTitle": "Cero Bloqueo de Proveedor",
-            "lockinDesc": "Mantenga el 100% de portabilidad de sus datos y el estado de la lógica a través de las fronteras.",
+            "lockinDesc": "Mantenga el 100% de portabilidad de sus datos y estado lógico a través de las fronteras.",
             "portabilityTitle": "Portabilidad Instantánea",
-            "portabilityDesc": "Migre cargas de trabajo de producción en segundos sin cambios de código.",
+            "portabilityDesc": "Migre cargas de trabajo de producción en segundos sin cambios en el código.",
             "eb1aTag": "Contribución Original EB-1A #5",
-            "eb1aDesc": "\"El algoritmo EABF (Arbitraje Económico y Pronóstico de Facturación) representa un avance significativo en el campo de la Economía Distribuida. Al desacoplar el costo de los recursos de las API del proveedor, el peticionario ha establecido un nuevo estándar para la Gobernanza Financiera Agnóstica de la Nube.\"",
+            "eb1aDesc": "\"El algoritmo EABF (Pronóstico de Facturación y Arbitraje Económico) representa un avance significativo en el campo de la Economía Distribuida. Al desacoplar el costo de los recursos de las API del proveedor, el peticionario ha establecido un nuevo estándar para la Gobernanza Financiera Agnóstica de la Nube.\"",
             "auditor": "James Sterling",
             "auditorTitle": "Auditor de Sistemas Soberanos"
+        },
+        "control": {
+            "title": "El Plano de Control Unificado",
+            "subtitle": "Gestione miles de clústeres distribuidos desde una única interfaz de alta fidelidad con propagación de submilisegundos.",
+            "observability": {
+                "title": "Observabilidad Global",
+                "desc": "Telemetría en tiempo real en todas las regiones de AWS, Azure y GCP."
+            },
+            "fleet": "Ops de Flota a Gran Escala",
+            "healing": "Auto-Curación",
+            "gitops": "Motor GitOps",
+            "audit": "Registros de Auditoría"
+        },
+        "security": {
+            "title": "Seguridad Gobernada",
+            "desc": "Cada operación es auditada. OmniGCloud aplica la identidad de confianza cero en todo su patrimonio.",
+            "cta": "Marco de Cumplimiento",
+            "zerotrust": "Confianza Cero",
+            "features": {
+                "fips": {
+                    "title": "FIPS 140-2",
+                    "desc": "Cifrado validado."
+                },
+                "rbac": {
+                    "title": "RBAC 2.0",
+                    "desc": "Control granular."
+                },
+                "vpc": {
+                    "title": "Aislamiento de VPC",
+                    "desc": "Ops de LLM de egreso cero."
+                },
+                "audit": {
+                    "title": "Registros de Auditoría",
+                    "desc": "Registros de rastreo inmutables."
+                }
+            }
+        },
+        "integrations": {
+            "title": "Integraciones Nativas",
+            "subtitle": "Conéctese sin problemas con las herramientas que su equipo ya ama.",
+            "infra": "Infraestructura",
+            "obs": "Observabilidad",
+            "delivery": "Entrega",
+            "identity": "Identidad/Sec"
+        }
+    },
+    "Visuals": {
+        "telemetry": {
+            "title": "TELEMETRÍA DE LATENCIA GLOBAL",
+            "live": "EN VIVO",
+            "latency": "LATENCIA PROMEDIO",
+            "throughput": "RENDIMIENTO",
+            "loss": "PÉRDIDA DE PAQUETES"
+        },
+        "drift": {
+            "title": "ANÁLISIS DE DESVIACIÓN DE CUMPLIMIENTO",
+            "detected": "DESVIACIÓN DETECTADA: +12%",
+            "remediate": "AUTO-REMEDIAR"
+        }
+    },
+    "HomeSections": {
+        "Pricing": {
+            "title": "Ediciones Soberanas Estratégicas",
+            "subtitle": "Seleccione el modelo operativo que coincida con su mandato de gobernanza.",
+            "core": {
+                "badge": "CORE",
+                "price": "4%",
+                "unit": "/ gasto",
+                "desc": "Para startups nativas digitales que escalan en más de 2 nubes.",
+                "cta": "Iniciar Core",
+                "features": {
+                    "nodes": "Hasta 500 Nodos",
+                    "drift": "Detección Básica de Desviación",
+                    "sla": "99.9% SLA de Plano de Control",
+                    "support": "Soporte Comunitario"
+                }
+            },
+            "enterprise": {
+                "badge": "EMPRESA",
+                "popular": "MÁS POPULAR",
+                "price": "Estándar",
+                "desc": "Gobernanza de plataforma completa para industrias reguladas.",
+                "cta": "Contactar Ventas",
+                "features": {
+                    "nodes": "Nodos Ilimitados",
+                    "remediation": "Remediación Automatizada",
+                    "finops": "Motor de Arbitraje FinOps",
+                    "rbac": "Acceso Basado en Roles (RBAC)",
+                    "support": "Soporte Dedicado 24/7"
+                }
+            },
+            "federal": {
+                "badge": "FEDERAL",
+                "price": "A Medida",
+                "desc": "Implementaciones con brecha de aire para entidades soberanas.",
+                "cta": "Consultar Federal",
+                "features": {
+                    "onprem": "Plano de Control On-Premise",
+                    "byok": "Trae Tu Propia Llave (BYOK)",
+                    "security": "Soporte de Autorización Ultra Secreta",
+                    "audit": "Rastros de Auditoría Personalizados"
+                }
+            }
+        },
+        "Cta": {
+            "title": "¿Listo para Restaurar el Control Soberano?",
+            "subtitle": "Únase a cientos de empresas globales que han automatizado su gobernanza en la nube y restaurado la soberanía digital con OmniGCloud.",
+            "primary": "Escalar su Nube",
+            "secondary": "Contactar Ventas",
+            "disclaimer": "NO SE REQUIERE TARJETA DE CRÉDITO. INCORPORACIÓN COMPATIBLE CON SOC-2."
+        }
+    },
+    "Problem": {
+        "badge": "ALERTA DE INFRAESTRUCTURA CRÍTICA",
+        "title": "La Crisis Soberana",
+        "subtitle": "Las empresas globales enfrentan una tormenta perfecta de fragmentación, regulación y opacidad.",
+        "fragmentation": {
+            "title": "La Trampa de la Fragmentación",
+            "desc": "La expansión de datos a través de AWS, Azure y On-Prem crea una \"Infraestructura Zombi\" que nadie gestiona."
+        },
+        "regulatory": {
+            "title": "Desviación Regulatoria",
+            "desc": "Aumento de multas por GDPR y la Ley de IA por fugas de datos transfronterizos en 2024. Sus informes de cumplimiento estáticos están obsoletos.",
+            "score": "PUNTUACIÓN DE CUMPLIMIENTO",
+            "risk": "EN RIESGO"
+        },
+        "vendor": {
+            "title": "El Rescate del Proveedor",
+            "desc": "Las tarifas de egreso y las API propietarias atrapan sus datos. Mover 1PB de datos puede costar más de $50,000."
+        },
+        "opacity": {
+            "title": "Opacidad de Datos Oscuros",
+            "desc": "El 52% de todos los datos empresariales son \"Datos Oscuros\": no clasificados, desconocidos y desprotegidos.",
+            "scanning": "> ESCANEANDO_BUCKETS_ABANDONADOS..."
+        }
+    },
+    "Ecosystem": {
+        "badge": "ARQUITECTURA DEL SISTEMA",
+        "title": "Ecosistema de Modernización Autónoma",
+        "subtitle": "Una plataforma unificada e integrada horizontalmente diseñada para gestionar la complejidad de las carteras globales de nube moderna con precisión de confianza cero.",
+        "governance": {
+            "title": "Centro de Gobernanza",
+            "desc": "Remediación de deriva automatizada y cumplimiento de políticas en todos los proveedores de nube. Garantice el cumplimiento de GDPR, HIPAA y SOC2 en tiempo real.",
+            "status": "MÓDULO ACTIVO",
+            "link": "Explorar"
+        },
+        "mesh": {
+            "title": "Malla Global",
+            "desc": "Enrutamiento nativo intra-nube con soberanía localizada. Conecte clústeres de OCI, AWS y Azure en una única malla de servicios optimizada para latencia.",
+            "status": "RED EN LÍNEA",
+            "link": "Ver Topología"
+        },
+        "ai": {
+            "title": "Núcleo de Operaciones de IA",
+            "desc": "Orquestación de LLM gestionada dentro de los límites de VPC. Implemente modelos privados equivalentes a GPT-4 para una automatización inteligente sin fuga de datos.",
+            "status": "MODELOS LISTOS",
+            "link": "Acceder al Laboratorio"
+        },
+        "vault": {
+            "title": "Bóveda Soberana",
+            "desc": "Núcleos de almacenamiento localizados con cifrado gestionado y controles rígidos de residencia de datos. Sus datos nunca abandonan la jurisdicción que usted define.",
+            "status": "CIFRADO ACTIVADO",
+            "link": "Almacenamiento Seguro"
+        }
+    },
+    "DemoSection": {
+        "badge": "Experiencia en Vivo",
+        "title": "Vea Omni<span>G</span>Cloud en Acción",
+        "subtitle": "Presencie la modernización autónoma de la nube. Del descubrimiento a la soberanía en segundos.",
+        "discovery": {
+            "title": "Descubrimiento Instantáneo",
+            "desc": "El despliegue de agentes sin intervención mapea más de 1,000 activos en menos de 3 minutos.",
+            "code": "> ESCANEO_COMPLETO: 99.8%"
+        },
+        "iac": {
+            "title": "IaC Generativa",
+            "desc": "Los agentes LLM realizan ingeniería inversa de binarios heredados en código Terraform limpio.",
+            "code": "> GENERANDO_MÓDULOS..."
+        },
+        "sync": {
+            "title": "Sincronización de Estado Activa",
+            "desc": "Bloqueo de estado bidireccional entre regiones de AWS y Azure.",
+            "code": "> LATENCIA: 12ms"
+        },
+        "drift": {
+            "title": "Auto-Reversión de Desviación",
+            "desc": "Los cambios de consola no autorizados se detectan y revierten al instante.",
+            "code": "> AMENAZA_NEUTRALIZADA"
+        }
+    },
+    "Community": {
+        "badge": "INICIATIVA DE CIENCIA ABIERTA",
+        "title": "Construido por Expertos, <br />Gobernado por la Comunidad",
+        "subtitle": "El G-Framework es más que una plataforma: es un estándar abierto para infraestructura soberana. Únase a más de 120 colaboradores globales construyendo un futuro resiliente y agnóstico al proveedor.",
+        "join": "Únase a la Comunidad",
+        "contribute": "Contribuir al Núcleo",
+        "cli": {
+            "title": "CLI Soberana v4.2",
+            "cmd": "npm install -g @omnig/cli"
+        },
+        "plugins": {
+            "title": "200+ Plugins",
+            "desc": "Arquitectura de proveedores extensible"
+        },
+        "maintainers": {
+            "title": "Mantenedores Globales",
+            "desc": "Proceso de revisión centrado en la soberanía"
+        }
+    },
+    "WhitePaper": {
+        "badge": "PUBLICACIÓN DE INGENIERÍA",
+        "contribution": "Contribución Original de Gran Importancia",
+        "title": "Orquestación Soberana Autónoma (ASO)",
+        "description": "Un marco formal para la gobernanza impulsada por IA e independiente de la nube. Esta publicación técnica describe las metodologías innovadoras utilizadas en el G-Framework para eliminar el bloqueo del proveedor y restaurar la soberanía de los datos empresariales.",
+        "peerReview": "LISTO PARA REVISIÓN POR PARES",
+        "pageCount": "TRABAJO ACADÉMICO DE 12 PÁGINAS",
+        "downloadTitle": "Descargue el Libro Blanco Técnico",
+        "downloadSubtitle": "Lectura esencial para CIOs, arquitectos de plataformas y asesores legales que navegan por la Ley de IA de la UE y los requisitos globales de residencia de datos.",
+        "readOnline": "Leer en Línea (Marco Completo)",
+        "designPatterns": "Ver Patrones de Diseño",
+        "footer": "Publicado bajo la Iniciativa de Ciencia Abierta de OmniGCloud 2025."
+    },
+    "Newsroom": {
+        "badge": "PERSPECTIVAS SOBERANAS",
+        "title": "Últimas Noticias del Laboratorio",
+        "link": "ENTRAR AL HUB DE IMPACTO",
+        "news": {
+            "bank": {
+                "date": "12 de dic, 2025",
+                "source": "OmniG Intelligence",
+                "title": "Escalando ASO a través de 2.5PB de datos transfronterizos para bancos de nivel 1.",
+                "tag": "CASO DE ESTUDIO"
+            },
+            "egress": {
+                "date": "28 de nov, 2025",
+                "source": "Cloud Sovereign Report",
+                "title": "Cómo la Orquestación Soberana Autónoma reduce las tarifas de egreso en un 40%.",
+                "tag": "INVESTIGACIÓN"
+            },
+            "integration": {
+                "date": "15 de nov, 2025",
+                "source": "Global Press Wire",
+                "title": "Anunciada la integración universal para Oracle OKE y RedHat OpenShift.",
+                "tag": "PRODUCTO"
+            }
+        }
+    },
+    "Services": {
+        "Hero": {
+            "badge": "MODERNIZACIÓN AUTÓNOMA",
+            "title": "Modernice Azure y OCP <br /> <span>con Lógica, No Labor</span>",
+            "subtitle": "Aproveche <span>Terraform</span> y <span>Ansible</span> para automatizar el núcleo de la nube de su empresa.",
+            "cta": "Explorar Soluciones",
+            "velocity": "VELOCIDAD",
+            "errors": "ERRORES"
+        },
+        "Migration": {
+            "title": "La Fábrica de Migración",
+            "subtitle": "Pipelines automatizados para la adopción de la nube a gran escala.",
+            "azure": {
+                "title": "Fábrica de Migración de Azure",
+                "desc": "Migre rápidamente VMs y bases de datos a las Zonas de Aterrizaje de Azure con políticas pre-construidas."
+            },
+            "ocp": {
+                "title": "Refactorización de OCP",
+                "desc": "Contenerice aplicaciones heredadas en Red Hat OpenShift. Manifiestos automatizados para despliegues consistentes en cualquier infraestructura."
+            },
+            "provisioning": {
+                "title": "Provisionamiento < 15m",
+                "desc": "Configure entornos completos desde el commit de código hasta la infraestructura en ejecución en minutos."
+            },
+            "drift": {
+                "title": "Costo de Desviación Cero",
+                "desc": "Elimine los costos de TI en la sombra. Nuestra aplicación continua del estado garantiza que su factura coincida perfectamente con sus definiciones de IaC."
+            }
+        },
+        "Stack": {
+            "badge": "El Motor",
+            "title": "La Pila de Automatización",
+            "subtitle": "Motor de modernización unificado impulsado por herramientas de código abierto estándar de la industria.",
+            "terraform": {
+                "title": "Blueprints de Terraform",
+                "desc": "Módulos de IaC endurecidos para Azure y AWS."
+            },
+            "ansible": {
+                "title": "Reglas de Ansible",
+                "desc": "Gestión de configuración de confianza cero e inmutabilidad."
+            }
+        },
+        "Operations": {
+            "title": "Operaciones Gestionadas",
+            "subtitle": "Equipos SRE 24/7/365 que mantienen su tejido de modernización.",
+            "sre": {
+                "title": "Siga-al-Sol 24/7",
+                "desc": "Centros SRE en EE. UU., UE y APAC que garantizan un SLA de respuesta de 15 minutos."
+            },
+            "finops": {
+                "title": "FinOps Continuo",
+                "desc": "Motor de arbitraje de costos en tiempo real que mueve las cargas de trabajo a zonas óptimas."
+            },
+            "healing": {
+                "title": "Curación Proactiva",
+                "desc": "Detección automática de desviaciones e infraestructura de auto-curación."
+            },
+            "audit": {
+                "title": "Listo para Auditoría",
+                "desc": "Pistas de evidencia mensuales generadas automáticamente para SOC2 y GDPR."
+            }
+        },
+        "DataAI": {
+            "title": "Tejido de Datos e IA",
+            "subtitle": "Planos de datos soberanos para inferencia de alto rendimiento.",
+            "sovereignty": {
+                "title": "Soberanía de Datos",
+                "desc": "Residencia localizada."
+            },
+            "fabric": {
+                "title": "Tejido de IA",
+                "desc": "Cargas de trabajo de GPU."
+            },
+            "search": {
+                "title": "Búsqueda Vectorial",
+                "desc": "Incrustación de alta dimensión."
+            },
+            "analytics": {
+                "title": "Analítica en Tiempo Real",
+                "desc": "Perspectivas instantáneas."
+            },
+            "uptime": "SLA DE DISPONIBILIDAD"
+        }
+    },
+    "Industries": {
+        "badge": "Sectores Objetivo",
+        "title": "Soluciones Específicas por Sector",
+        "subtitle": "Estandarizando el núcleo digital para los sectores más complejos y regulados del mundo.",
+        "challenges": "Desafíos Clave del Sector",
+        "solution": "Solución OmniGCloud",
+        "cta": {
+            "title": "¿Listo para Modernizar su Sector?",
+            "subtitle": "Únase a las organizaciones líderes del mundo que utilizan OmniGCloud para redefinir su futuro digital.",
+            "button": "Programar una Sesión Informativa del Sector"
+        },
+        "financial": {
+            "name": "Servicios Financieros",
+            "desc": "Modernización de nube múltiple segura y compatible para instituciones bancarias y fintech globales.",
+            "c1": "Arquitecturas monolíticas de banca central heredadas",
+            "c2": "Cumplimiento regulatorio estricto (SarbOx, GDPR)",
+            "c3": "Requisitos de trading de baja latencia",
+            "sol": "El Plano de Control Soberano de OmniGCloud garantiza la residencia de datos al tiempo que permite la detección de fraude impulsada por IA y el escalado automatizado."
+        },
+        "insurance": {
+            "name": "Seguros",
+            "desc": "Acelerando el procesamiento de reclamaciones y el modelado actuarial a través de plataformas nativas de la nube automatizadas.",
+            "c1": "Sistemas de pólizas heredados fragmentados",
+            "c2": "Silos de datos en entornos híbridos",
+            "c3": "Escalado durante eventos catastróficos pico",
+            "sol": "El Registro de Infraestructura Múltiple proporciona una visibilidad unificada en on-prem y la nube, optimizando la capacidad para la demanda máxima."
+        },
+        "telecom": {
+            "name": "Telecomunicaciones y 5G",
+            "desc": "Orquestando el borde distribuido para conectividad de alta frecuencia y cargas de trabajo MEC.",
+            "c1": "Orquestación de borde distribuido",
+            "c2": "Virtualización de Funciones de Red (NFV)",
+            "c3": "Mandatos de latencia 5G",
+            "sol": "La gestión de borde impulsada por Crossplane permite el despliegue consistente de pilas de telecomunicaciones en miles de nodos localizados."
+        },
+        "healthcare": {
+            "name": "Salud y Ciencias de la Vida",
+            "desc": "Protegiendo las vidas de los pacientes con tejidos de datos resilientes y compatibles con HIPAA e investigación asistida por IA.",
+            "c1": "Soberanía de datos HIPAA/HITECH",
+            "c2": "Almacenamiento y recuperación de datos de imágenes masivos",
+            "c3": "Escalado de cómputo de investigación científica",
+            "sol": "OmniSource Marketplace proporciona barreras de seguridad preconfiguradas y pipelines de datos de alto rendimiento para la investigación."
+        },
+        "logistics": {
+            "name": "Logística y Cadena de Suministro",
+            "desc": "Visibilidad en tiempo real y optimización predictiva en toda la empresa global en movimiento.",
+            "c1": "Latencia de seguimiento global en tiempo real",
+            "c2": "Integración de ERP heredado",
+            "c3": "Choques de suministro globales impredecibles",
+            "sol": "La modernización Nativa de IA deconstruye los ERP monolíticos en microservicios ágiles para una respuesta rápida a los cambios del mercado."
         }
     }
 }

@@ -19,8 +19,7 @@ export default function CloudSwitcher() {
         setStatus('Migrating...');
         setTimeout(() => {
             setCurrentCloud(cloud);
-            // @ts-ignore
-            setCurrentRegion(regions[cloud][0]);
+            setCurrentRegion(regions[cloud as keyof typeof regions][0]);
             setStatus('Active');
         }, 1500);
     };

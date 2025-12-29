@@ -1,6 +1,13 @@
 import { useTranslations } from 'next-intl';
 import { Check, X, Shield, Globe, Cpu, Zap, Award, HelpCircle, ArrowRight } from 'lucide-react';
 import Link from 'next/link';
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+    title: 'Pricing | OmniGCloud Enterprise Cloud Governance',
+    description: 'Transparent pricing for multi-cloud governance. From developer-friendly free tier to enterprise-grade sovereign plans. No hidden fees, no vendor lock-in.',
+    keywords: ['cloud governance pricing', 'enterprise cloud management cost', 'multi-cloud pricing', 'compliance automation pricing'],
+};
 
 export default function PricingPage() {
     const t = useTranslations('Pricing');
@@ -102,7 +109,7 @@ export default function PricingPage() {
                         alignItems: 'stretch'
                     }}>
                         {plans.map((plan, idx) => (
-                            <div key={idx} className={`glass-panel ${plan.highlight ? 'border-primary' : ''}`} style={{
+                            <div key={idx} id={plan.id} className={`glass-panel ${plan.highlight ? 'border-primary' : ''}`} style={{
                                 padding: '2.5rem',
                                 borderRadius: '2rem',
                                 display: 'flex',

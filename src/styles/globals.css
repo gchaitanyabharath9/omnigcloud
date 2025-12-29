@@ -66,8 +66,6 @@ body {
 
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 70px;
-  /* Match header height */
   scroll-snap-type: y mandatory;
 }
 
@@ -81,8 +79,31 @@ html {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: rgba(255, 255, 255, 0.1);
+  background: var(--primary);
   border-radius: 10px;
+}
+
+/* Accessibility: Focus states */
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+}
+
+/* Skip to content link for keyboard navigation */
+.skip-to-content {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: var(--primary);
+  color: white;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  z-index: 100;
+}
+
+.skip-to-content:focus {
+  top: 0;
 }
 
 ::-webkit-scrollbar-thumb:hover {

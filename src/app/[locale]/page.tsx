@@ -9,6 +9,13 @@ import WhitePaperSection from '@/components/sections/home/WhitePaperSection';
 import NewsroomSection from '@/components/sections/home/NewsroomSection';
 import CommunityCallout from '@/components/sections/home/CommunityCallout';
 import SovereignGallery from '@/components/sections/home/SovereignGallery';
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'OmniGCloud | Break Free from Vendor Lock-In',
+  description: 'Unified control plane for regulated enterprises managing multi-cloud infrastructure. Automate compliance, reduce costs, and maintain sovereignty across AWS, Azure, GCP, and Oracle Cloud.',
+  keywords: ['multi-cloud governance', 'cloud compliance automation', 'vendor lock-in solution', 'enterprise cloud management', 'sovereign cloud infrastructure'],
+};
 
 export default function Home() {
   return (

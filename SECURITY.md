@@ -21,6 +21,24 @@ If you discover a security vulnerability within the G-Framework or the OmniGClou
 
 We will acknowledge receipt of your report within 48 hours and provide a timeline for remediation.
 
+## Security Headers & Policies
+
+The following enterprise-grade security headers are enforced across all routes in `next.config.ts`:
+
+- **Content-Security-Policy (CSP)**: Implements a strict policy allowing only trusted sources for scripts, styles, and assets. Includes `frame-ancestors 'self'` to prevent clickjacking.
+- **Strict-Transport-Security (HSTS)**: Enforced for 2 years (`max-age=63072000`) including subdomains and preloading.
+- **X-Content-Type-Options**: Set to `nosniff` to prevent MIME-type sniffing.
+- **X-Frame-Options**: Set to `SAMEORIGIN` (layered with CSP `frame-ancestors`).
+- **Referrer-Policy**: Set to `strict-origin-when-cross-origin` to protect user privacy.
+- **Permissions-Policy**: Restricts access to sensitive browser features (camera, microphone, etc.).
+
+## Cookie Security
+
+All application cookies follow these mandatory security attributes:
+- **HttpOnly**: Prevents client-side scripts from accessing the cookie.
+- **Secure**: Ensures cookies are only transmitted over encrypted (HTTPS) connections.
+- **SameSite=Strict/Lax**: Protects against Cross-Site Request Forgery (CSRF) attacks.
+
 ## Our Security Architecture
 
 The platform architecture implements the **Sovereign Security Mesh (SSM)**, including:

@@ -1,99 +1,161 @@
-import { Shield, FileCheck, Lock, Globe, Award, CheckCircle } from "lucide-react";
+import { getTranslations } from "next-intl/server";
+import { FileCheck, Clock, Shield, AlertCircle, CheckCircle2, Loader } from "lucide-react";
 
-export default function CompliancePage() {
+export default async function CompliancePage() {
+    const t = await getTranslations("Compliance");
+
     return (
-        <div className="snap-container">
-            {/* Sec 1: Hero & Vision */}
-            <section id="trust-hero" className="snap-section container">
-                <div style={{ textAlign: 'center', maxWidth: '1000px', margin: '0 auto' }}>
-                    <h1 className="text-gradient" style={{ fontSize: '4rem', marginBottom: '1.5rem', fontWeight: 900 }}>
-                        Enterprise Sovereignty & Trust
-                    </h1>
-                    <p style={{ color: 'rgba(255, 255, 255, 0.9)', fontSize: '1.5rem', lineHeight: '1.6', marginBottom: '3rem' }}>
-                        The world's first cloud-agnostic platform built on <span style={{ color: '#60efff', fontWeight: 800 }}>Sovereign-by-Design</span> principles. We don't just secure your data; we guarantee your independence across AWS, Azure, and OCP.
-                    </p>
-                    <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '2rem' }}>
-                        <div className="glass-panel" style={{ padding: '2rem', borderRadius: '1.5rem' }}>
-                            <div style={{ fontSize: '2rem', fontWeight: 900, color: '#60efff' }}>100%</div>
-                            <div style={{ fontSize: '0.8rem', color: 'rgba(255,255,255,0.4)', textTransform: 'uppercase', letterSpacing: '0.1em' }}>Data Residency Control</div>
+        <div className="container" style={{ padding: '6rem 0', maxWidth: '1200px' }}>
+            <div style={{ marginBottom: '4rem', textAlign: 'center' }}>
+                <FileCheck className="w-20 h-20 mx-auto mb-4 text-purple-500" />
+                <h1 className="text-5xl font-bold mb-4">{t("title")}</h1>
+                <p className="text-xl text-zinc-600 dark:text-zinc-400 max-w-3xl mx-auto">
+                    {t("subtitle")}
+                </p>
+            </div>
+
+            <div className="bg-blue-50 dark:bg-blue-900/10 border border-blue-200 dark:border-blue-900/30 p-6 rounded-xl mb-8">
+                <div className="flex items-start gap-3">
+                    <AlertCircle className="w-6 h-6 text-blue-600 dark:text-blue-400 flex-shrink-0 mt-1" />
+                    <div>
+                        <h2 className="text-xl font-bold mb-2 text-blue-900 dark:text-blue-300">{t("transparency")}</h2>
+                        <p className="text-blue-800 dark:text-blue-200 leading-relaxed">
+                            {t("transparencyText")}
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div className="grid md:grid-cols-3 gap-6 mb-12">
+                <div className="glass-panel p-6 rounded-xl border-2 border-green-500/20">
+                    <div className="flex items-center gap-3 mb-4">
+                        <CheckCircle2 className="w-8 h-8 text-green-500" />
+                        <span className="px-3 py-1 bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-400 rounded-full text-sm font-semibold">
+                            {t("active")}
+                        </span>
+                    </div>
+                    <h3 className="text-xl font-bold mb-2">{t("gdpr")}</h3>
+                    <p className="text-zinc-600 dark:text-zinc-400 text-sm">{t("gdprText")}</p>
+                </div>
+
+                <div className="glass-panel p-6 rounded-xl border-2 border-amber-500/20">
+                    <div className="flex items-center gap-3 mb-4">
+                        <Loader className="w-8 h-8 text-amber-500" />
+                        <span className="px-3 py-1 bg-amber-100 dark:bg-amber-900/30 text-amber-700 dark:text-amber-400 rounded-full text-sm font-semibold">
+                            {t("inProgress")}
+                        </span>
+                    </div>
+                    <h3 className="text-xl font-bold mb-2">{t("soc2")}</h3>
+                    <p className="text-zinc-600 dark:text-zinc-400 text-sm">{t("soc2Text")}</p>
+                </div>
+
+                <div className="glass-panel p-6 rounded-xl border-2 border-blue-500/20">
+                    <div className="flex items-center gap-3 mb-4">
+                        <Clock className="w-8 h-8 text-blue-500" />
+                        <span className="px-3 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-400 rounded-full text-sm font-semibold">
+                            {t("planned")}
+                        </span>
+                    </div>
+                    <h3 className="text-xl font-bold mb-2">{t("iso27001")}</h3>
+                    <p className="text-zinc-600 dark:text-zinc-400 text-sm">{t("iso27001Text")}</p>
+                </div>
+            </div>
+
+            <section className="glass-panel p-8 rounded-xl mb-8">
+                <h2 className="text-3xl font-bold mb-6 flex items-center gap-3">
+                    <Shield className="w-8 h-8 text-purple-500" />
+                    {t("dataHandling")}
+                </h2>
+
+                <div className="space-y-6">
+                    <div>
+                        <h3 className="text-xl font-semibold mb-3">{t("encryption")}</h3>
+                        <div className="bg-zinc-100 dark:bg-zinc-800 p-4 rounded-lg">
+                            <ul className="space-y-2 text-zinc-700 dark:text-zinc-300">
+                                <li className="flex items-start gap-2">
+                                    <CheckCircle2 className="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" />
+                                    <span>{t("encryption1")}</span>
+                                </li>
+                                <li className="flex items-start gap-2">
+                                    <CheckCircle2 className="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" />
+                                    <span>{t("encryption2")}</span>
+                                </li>
+                                <li className="flex items-start gap-2">
+                                    <CheckCircle2 className="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" />
+                                    <span>{t("encryption3")}</span>
+                                </li>
+                            </ul>
                         </div>
-                        <div className="glass-panel" style={{ padding: '2rem', borderRadius: '1.5rem' }}>
-                            <div style={{ fontSize: '2rem', fontWeight: 900, color: '#10b981' }}>256-bit</div>
-                            <div style={{ fontSize: '0.8rem', color: 'rgba(255,255,255,0.4)', textTransform: 'uppercase', letterSpacing: '0.1em' }}>Hardened Encryption</div>
+                    </div>
+
+                    <div>
+                        <h3 className="text-xl font-semibold mb-3">{t("dataResidency")}</h3>
+                        <div className="bg-zinc-100 dark:bg-zinc-800 p-4 rounded-lg">
+                            <p className="text-zinc-700 dark:text-zinc-300 leading-relaxed">
+                                {t("dataResidencyText")}
+                            </p>
                         </div>
-                        <div className="glass-panel" style={{ padding: '2rem', borderRadius: '1.5rem' }}>
-                            <div style={{ fontSize: '2rem', fontWeight: 900, color: '#8b5cf6' }}>ZERO</div>
-                            <div style={{ fontSize: '0.8rem', color: 'rgba(255,255,255,0.4)', textTransform: 'uppercase', letterSpacing: '0.1em' }}>Vendor Lock-in Risk</div>
+                    </div>
+
+                    <div>
+                        <h3 className="text-xl font-semibold mb-3">{t("retention")}</h3>
+                        <div className="bg-zinc-100 dark:bg-zinc-800 p-4 rounded-lg">
+                            <ul className="space-y-2 text-zinc-700 dark:text-zinc-300">
+                                <li className="flex items-start gap-2">
+                                    <span className="font-semibold min-w-[140px]">{t("operational")}:</span>
+                                    <span>{t("operationalText")}</span>
+                                </li>
+                                <li className="flex items-start gap-2">
+                                    <span className="font-semibold min-w-[140px]">{t("audit")}:</span>
+                                    <span>{t("auditText")}</span>
+                                </li>
+                                <li className="flex items-start gap-2">
+                                    <span className="font-semibold min-w-[140px]">{t("backups")}:</span>
+                                    <span>{t("backupsText")}</span>
+                                </li>
+                            </ul>
                         </div>
                     </div>
                 </div>
             </section>
 
-            {/* Sec 2: SOC 2 Type II */}
-            <section id="soc2" className="snap-section container">
-                <div style={{ display: 'grid', gridTemplateColumns: '1.2fr 0.8fr', gap: '5rem', alignItems: 'center' }}>
-                    <div className="glass-panel" style={{ padding: '4rem', borderRadius: '3rem', border: '1px solid rgba(96, 239, 255, 0.3)' }}>
-                        <div style={{ display: 'flex', alignItems: 'center', gap: '1.5rem', marginBottom: '2rem' }}>
-                            <Shield size={48} color="#60efff" />
-                            <h2 style={{ fontSize: '3rem', fontWeight: 800 }}>SOC 2 Type II Certified</h2>
-                        </div>
-                        <p style={{ fontSize: '1.25rem', color: 'rgba(255,255,255,0.8)', marginBottom: '2.5rem', lineHeight: 1.8 }}>
-                            Our 2025 audit cycle confirms the highest efficacy for security, availability, and confidentiality. Every automation run within the <span style={{ color: '#60efff', fontWeight: 700 }}>OmniGCloud Control Plane</span> is logged and audited in real-time.
-                        </p>
-                        <ul style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1.5rem', listStyle: 'none', padding: 0 }}>
-                            {['Annual Third-Party Attestation', 'Real-time Control Monitoring', 'Automated Evidence Collection', 'Continuous Vulnerability Scans'].map((item, i) => (
-                                <li key={i} style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', color: 'white', fontWeight: 600 }}>
-                                    <CheckCircle size={20} color="#10b981" /> {item}
-                                </li>
-                            ))}
+            <section className="glass-panel p-8 rounded-xl mb-8">
+                <h2 className="text-3xl font-bold mb-6">{t("accessControls")}</h2>
+
+                <div className="grid md:grid-cols-2 gap-6">
+                    <div className="bg-zinc-100 dark:bg-zinc-800 p-6 rounded-lg">
+                        <h3 className="text-lg font-semibold mb-3">{t("authentication")}</h3>
+                        <ul className="space-y-2 text-sm text-zinc-700 dark:text-zinc-300">
+                            <li>• {t("auth1")}</li>
+                            <li>• {t("auth2")}</li>
+                            <li>• {t("auth3")}</li>
                         </ul>
                     </div>
-                    <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
-                        <div style={{ padding: '2rem', borderRadius: '1.5rem', background: '#0f172a', border: '1px solid #1e293b' }}>
-                            <div style={{ color: '#60efff', fontWeight: 800, fontSize: '0.8rem', marginBottom: '0.5rem' }}>AUDIT STATUS: 2025</div>
-                            <div style={{ color: 'white', fontSize: '1.2rem', fontWeight: 700 }}>PASSED WITH ZERO FINDINGS</div>
-                            <p style={{ fontSize: '0.8rem', color: 'rgba(255,255,255,0.4)', marginTop: '0.5rem' }}>Conducted by Global Tier-1 Professional Services Firms.</p>
-                        </div>
+
+                    <div className="bg-zinc-100 dark:bg-zinc-800 p-6 rounded-lg">
+                        <h3 className="text-lg font-semibold mb-3">{t("authorization")}</h3>
+                        <ul className="space-y-2 text-sm text-zinc-700 dark:text-zinc-300">
+                            <li>• {t("authz1")}</li>
+                            <li>• {t("authz2")}</li>
+                            <li>• {t("authz3")}</li>
+                        </ul>
                     </div>
                 </div>
             </section>
 
-            {/* Sec 3: GDPR & GDPR Sovereignty */}
-            <section id="gdpr" className="snap-section container">
-                <div style={{ display: 'grid', gridTemplateColumns: '0.8fr 1.2fr', gap: '5rem', alignItems: 'center' }}>
-                    <div style={{ position: 'relative' }}>
-                        <Globe size={300} color="rgba(96, 239, 255, 0.05)" style={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)' }} />
-                        <div className="glass-panel" style={{ padding: '3rem', borderRadius: '2rem', position: 'relative', zIndex: 1 }}>
-                            <h4 style={{ color: '#3b82f6', marginBottom: '1rem', fontWeight: 800 }}>EU Sovereignty Hub</h4>
-                            <p style={{ fontSize: '0.9rem', color: 'rgba(255,255,255,0.6)' }}>Deploy to Frankfurt, Paris, or Dublin with 100% guarantee that metadata never leaves the EU jurisdiction.</p>
-                        </div>
-                    </div>
-                    <div className="glass-panel" style={{ padding: '4rem', borderRadius: '3rem', border: '1px solid rgba(59, 130, 246, 0.3)' }}>
-                        <h2 style={{ fontSize: '3rem', fontWeight: 800, marginBottom: '1.5rem' }}>GDPR & Data Sovereignty</h2>
-                        <p style={{ fontSize: '1.2rem', color: 'rgba(255,255,255,0.8)', marginBottom: '2.5rem', lineHeight: 1.8 }}>
-                            We provide the technical tools for <span style={{ color: '#3b82f6', fontWeight: 800 }}>Sovereign Cloud</span> operations. This includes right-to-erasure automation, regional data fencing, and zero-visibility encryption for multi-cloud workloads.
-                        </p>
-                        <div className="glass-panel" style={{ background: 'rgba(59, 130, 246, 0.1)', border: '1px solid rgba(59, 130, 246, 0.2)' }}>
-                            <div style={{ display: 'flex', gap: '2rem' }}>
-                                <div>
-                                    <div style={{ fontSize: '1.5rem', fontWeight: 900, color: 'white' }}>100%</div>
-                                    <div style={{ fontSize: '0.7rem', color: 'rgba(255,255,255,0.5)' }}>Compliance Velocity</div>
-                                </div>
-                                <div>
-                                    <div style={{ fontSize: '1.5rem', fontWeight: 900, color: 'white' }}>42+</div>
-                                    <div style={{ fontSize: '0.7rem', color: 'rgba(255,255,255,0.5)' }}>Regional Data Fences</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            {/* SITEMAP SNAP SECTION */}
-            <section id="sitemap-trust" className="snap-section" style={{ minHeight: 'auto', height: 'auto', padding: '0 !important' }}>
-                <div style={{ borderTop: '1px solid rgba(255,255,255,0.1)', padding: '5rem 0', textAlign: 'center' }}>
-                    <h3 style={{ color: 'white', fontSize: '1.8rem', fontWeight: 800, marginBottom: '1rem' }}>Trust Center Sitemap</h3>
-                    <p style={{ color: 'rgba(255,255,255,0.4)', fontSize: '1rem' }}>Explore our full directory of security and governance documents</p>
+            <section className="glass-panel p-8 rounded-xl">
+                <h2 className="text-3xl font-bold mb-6">{t("incidentResponse")}</h2>
+                <p className="text-zinc-700 dark:text-zinc-300 leading-relaxed mb-4">
+                    {t("incidentResponseText")}
+                </p>
+                <div className="bg-zinc-100 dark:bg-zinc-800 p-6 rounded-lg">
+                    <h3 className="text-lg font-semibold mb-3">{t("responseProcess")}</h3>
+                    <ol className="list-decimal list-inside space-y-2 text-zinc-700 dark:text-zinc-300">
+                        <li>{t("response1")}</li>
+                        <li>{t("response2")}</li>
+                        <li>{t("response3")}</li>
+                        <li>{t("response4")}</li>
+                    </ol>
                 </div>
             </section>
         </div>

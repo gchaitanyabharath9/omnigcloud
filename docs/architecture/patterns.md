@@ -56,6 +56,17 @@ In the event of a geopolitical dispute or a provider-specific policy shift that 
 
 ---
 
+---
+
+## 6. Pattern: Distributed Enterprise Rate Limiting (DERL)
+### Definition
+DERL is a resilient governance layer that protects the sovereign control plane from volumetric attacks and resource exhaustion. It utilizes a distributed state store (Redis) to maintain request quotas across horizontally scaled instances.
+
+### Multi-Instance Consistency
+Unlike primitive in-memory limiters, DERL ensures that an IP-based quota is strictly enforced even when requests are distributed across multiple global pods or regions. This is critical for maintaining the operational integrity of the sovereign core during high-traffic events.
+
+---
+
 ## Scholarly Citations & Published References
 *   [ASO-2025] "Autonomous Sovereign Orchestration: A Multi-Cloud Blueprint," *Journal of Digital Sovereignty*, Vol 14, Issue 2.
 *   [GF-PAT-01] "The G-Framework: Decoupling State from Provider APIs," *International Conference on Distributed Systems*, 2025.

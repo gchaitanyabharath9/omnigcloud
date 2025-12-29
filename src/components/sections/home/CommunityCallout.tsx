@@ -1,24 +1,26 @@
 import Link from 'next/link';
 import { Github, Users, Terminal, Code } from 'lucide-react';
+import { useTranslations } from 'next-intl';
 
 export default function CommunityCallout() {
+    const t = useTranslations('Community');
     return (
-        <section id="community-callout" className="snap-section" style={{ padding: '6rem 0', background: 'var(--bg-surface-2)', borderTop: '1px solid var(--card-border)' }}>
+        <section id="community-callout" className="snap-section" style={{ background: 'var(--bg-surface-2)' }}>
             <div className="container">
                 <div style={{ display: 'grid', gridTemplateColumns: '1.2fr 1fr', gap: '4rem', alignItems: 'center' }}>
                     <div>
-                        <div className="badge badge-success-subtle mb-4">OPEN SCIENCE INITIATIVE</div>
-                        <h2 style={{ fontSize: '2.5rem', fontWeight: 900, marginBottom: '1.5rem' }}>Built by Experts, <br />Governed by the Community</h2>
+                        <div className="badge badge-success-subtle mb-4">{t('badge')}</div>
+                        <h2 style={{ fontSize: '2.5rem', fontWeight: 900, marginBottom: '1.5rem' }}>{t.rich('title', { br: () => <br /> })}</h2>
                         <p style={{ opacity: 0.8, marginBottom: '2.5rem', fontSize: '1.1rem', lineHeight: 1.6 }}>
-                            The G-Framework is more than a platform—it's an open standard for sovereign infrastructure. Join 120+ global contributors building a resilient, provider-agnostic future.
+                            {t('subtitle')}
                         </p>
                         <div style={{ display: 'flex', gap: '1.5rem' }}>
                             <div style={{ display: 'flex', flexWrap: 'wrap', gap: '1rem' }}>
                                 <Link href="/community" className="btn-primary" style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
-                                    <Users size={18} /> Join the Community
+                                    <Users size={18} /> {t('join')}
                                 </Link>
                                 <Link href="https://github.com/omnigcloud" className="btn-secondary" style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
-                                    <Github size={18} /> Contribute to Core
+                                    <Github size={18} /> {t('contribute')}
                                 </Link>
                             </div>
                         </div>
@@ -31,8 +33,8 @@ export default function CommunityCallout() {
                                     <Terminal size={24} />
                                 </div>
                                 <div>
-                                    <div style={{ fontWeight: 800, fontSize: '1.1rem' }}>Sovereign CLI v4.2</div>
-                                    <div style={{ fontSize: '0.85rem', opacity: 0.6 }}>npm install -g @omnig/cli</div>
+                                    <div style={{ fontWeight: 800, fontSize: '1.1rem' }}>{t('cli.title')}</div>
+                                    <div style={{ fontSize: '0.85rem', opacity: 0.6 }}>{t('cli.cmd')}</div>
                                 </div>
                             </div>
                             <div style={{ display: 'flex', alignItems: 'center', gap: '1.5rem' }}>
@@ -40,8 +42,8 @@ export default function CommunityCallout() {
                                     <Code size={24} />
                                 </div>
                                 <div>
-                                    <div style={{ fontWeight: 800, fontSize: '1.1rem' }}>200+ Plugins</div>
-                                    <div style={{ fontSize: '0.85rem', opacity: 0.6 }}>Extensible provider architecture</div>
+                                    <div style={{ fontWeight: 800, fontSize: '1.1rem' }}>{t('plugins.title')}</div>
+                                    <div style={{ fontSize: '0.85rem', opacity: 0.6 }}>{t('plugins.desc')}</div>
                                 </div>
                             </div>
                             <div style={{ display: 'flex', alignItems: 'center', gap: '1.5rem' }}>
@@ -49,8 +51,8 @@ export default function CommunityCallout() {
                                     <Users size={24} />
                                 </div>
                                 <div>
-                                    <div style={{ fontWeight: 800, fontSize: '1.1rem' }}>Global Maintainers</div>
-                                    <div style={{ fontSize: '0.85rem', opacity: 0.6 }}>Sovereign-first review process</div>
+                                    <div style={{ fontWeight: 800, fontSize: '1.1rem' }}>{t('maintainers.title')}</div>
+                                    <div style={{ fontSize: '0.85rem', opacity: 0.6 }}>{t('maintainers.desc')}</div>
                                 </div>
                             </div>
                         </div>

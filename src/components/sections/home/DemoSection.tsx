@@ -1,14 +1,18 @@
 import { Search, Code, RefreshCw, ShieldAlert } from 'lucide-react';
+import { useTranslations } from 'next-intl';
 
 export default function DemoSection() {
+    const t = useTranslations('DemoSection');
     return (
-        <section id="demo" className="snap-section" style={{ minHeight: '100vh', display: 'flex', alignItems: 'center', paddingTop: 'var(--section-pt)', paddingBottom: '4rem' }}>
+        <section id="demo" className="snap-section">
             <div className="container">
                 <div className="section-title-group">
-                    <div style={{ color: 'var(--primary)', fontWeight: 900, fontSize: '0.75rem', textTransform: 'uppercase', marginBottom: '0.5rem', letterSpacing: '0.15em' }}>Live Experience</div>
-                    <h2 className="mb-2">See Omni<span style={{ color: 'var(--primary)' }}>G</span>Cloud In Action</h2>
+                    <div style={{ color: 'var(--primary)', fontWeight: 900, fontSize: '0.75rem', textTransform: 'uppercase', marginBottom: '0.5rem', letterSpacing: '0.15em' }}>{t('badge')}</div>
+                    <h2 className="mb-2">{t.rich('title', {
+                        span: (chunks) => <span style={{ color: 'var(--primary)' }}>{chunks}</span>
+                    })}</h2>
                     <p className="text-section-lead">
-                        Witness autonomous cloud modernization. From discovery to sovereignty in seconds.
+                        {t('subtitle')}
                     </p>
                 </div>
 
@@ -19,13 +23,13 @@ export default function DemoSection() {
                             <Search color="var(--primary)" size={24} />
                         </div>
                         <div>
-                            <h3 className="card-title text-lg">Instant Discovery</h3>
+                            <h3 className="card-title text-lg">{t('discovery.title')}</h3>
                             <p className="card-body text-base">
-                                Zero-touch agent deployment maps 1,000+ assets in under 3 minutes.
+                                {t('discovery.desc')}
                             </p>
                         </div>
                         <div className="mt-auto pt-4 border-t border-white-05 text-mono text-tiny" style={{ borderTop: '1px solid rgba(255,255,255,0.05)', color: 'var(--primary)' }}>
-                            &gt; SCAN_COMPLETE: 99.8%
+                            {t('discovery.code')}
                         </div>
                     </div>
 
@@ -35,13 +39,13 @@ export default function DemoSection() {
                             <Code color="#8b5cf6" size={24} />
                         </div>
                         <div>
-                            <h3 className="card-title text-lg">Generative IaC</h3>
+                            <h3 className="card-title text-lg">{t('iac.title')}</h3>
                             <p className="card-body text-base">
-                                LLM agents reverse-engineer legacy binaries into clean Terraform code.
+                                {t('iac.desc')}
                             </p>
                         </div>
                         <div className="mt-auto pt-4 border-t border-white-05 text-mono text-tiny" style={{ borderTop: '1px solid rgba(255,255,255,0.05)', color: '#8b5cf6' }}>
-                            &gt; GENERATING_MODULES...
+                            {t('iac.code')}
                         </div>
                     </div>
 
@@ -51,13 +55,13 @@ export default function DemoSection() {
                             <RefreshCw color="#10b981" size={24} />
                         </div>
                         <div>
-                            <h3 className="card-title text-lg">Active State Sync</h3>
+                            <h3 className="card-title text-lg">{t('sync.title')}</h3>
                             <p className="card-body text-base">
-                                Bi-directional state locking between AWS and Azure regions.
+                                {t('sync.desc')}
                             </p>
                         </div>
                         <div className="mt-auto pt-4 border-t border-white-05 text-mono text-tiny" style={{ borderTop: '1px solid rgba(255,255,255,0.05)', color: '#10b981' }}>
-                            &gt; LATENCY: 12ms
+                            {t('sync.code')}
                         </div>
                     </div>
 
@@ -67,13 +71,13 @@ export default function DemoSection() {
                             <ShieldAlert color="#ef4444" size={24} />
                         </div>
                         <div>
-                            <h3 className="card-title text-lg">Drift Auto-Reversal</h3>
+                            <h3 className="card-title text-lg">{t('drift.title')}</h3>
                             <p className="card-body text-base">
-                                Unauthorized console changes are detected and reverted instantly.
+                                {t('drift.desc')}
                             </p>
                         </div>
                         <div className="mt-auto pt-4 border-t border-white-05 text-mono text-tiny" style={{ borderTop: '1px solid rgba(255,255,255,0.05)', color: '#ef4444' }}>
-                            &gt; THREAT_NEUTRALIZED
+                            {t('drift.code')}
                         </div>
                     </div>
                 </div>

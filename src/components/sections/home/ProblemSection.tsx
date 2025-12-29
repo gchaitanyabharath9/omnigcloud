@@ -1,18 +1,20 @@
 import { TriangleAlert, Layers, Globe, Lock, ShieldAlert } from 'lucide-react';
+import { useTranslations } from 'next-intl';
 
 export default function ProblemSection() {
+    const t = useTranslations('Problem');
     return (
-        <section className="snap-section" style={{ minHeight: '100vh', display: 'flex', flexDirection: 'column', justifyContent: 'flex-start', position: 'relative', paddingTop: '2rem', paddingBottom: '1rem', scrollMarginTop: '0' }}>
-            <div className="container h-full flex-col justify-center">
+        <section id="problem" className="snap-section">
+            <div className="container">
                 <div className="text-center mb-4 mt-0">
                     <div className="badge badge-warning-subtle mb-2 text-tiny">
-                        <TriangleAlert size={10} /> CRITICAL INFRASTRUCTURE ALERT
+                        <TriangleAlert size={10} /> {t('badge')}
                     </div>
                     <h2 className="mb-2" style={{ fontSize: '2.5rem' }}>
-                        The Sovereign Crisis
+                        {t('title')}
                     </h2>
                     <p className="text-lead text-small mx-auto w-full" style={{ maxWidth: '600px', fontSize: '1rem', marginBottom: '0' }}>
-                        Global enterprises are facing a perfect storm of fragmentation, regulation, and opacity.
+                        {t('subtitle')}
                     </p>
                 </div>
 
@@ -25,8 +27,8 @@ export default function ProblemSection() {
                             <div className="mb-2 p-2 rounded-lg w-fit backdrop-blur-md border" style={{ background: 'rgba(255,255,255,0.1)', borderColor: 'rgba(255,255,255,0.2)' }}>
                                 <Layers size={24} color="var(--primary)" />
                             </div>
-                            <h3 className="text-xl font-bold mb-2">The Fragmentation Trap</h3>
-                            <p className="opacity-80 text-sm">Data sprawl across AWS, Azure, and On-Prem creates "Zombie Infrastructure" that nobody manages.</p>
+                            <h3 className="text-xl font-bold mb-2">{t('fragmentation.title')}</h3>
+                            <p className="opacity-80 text-sm">{t('fragmentation.desc')}</p>
                         </div>
                     </div>
 
@@ -39,14 +41,14 @@ export default function ProblemSection() {
                                 <Globe size={20} color="var(--primary)" />
                                 <div style={{ fontSize: '1.4rem', fontWeight: 900, color: 'var(--primary)' }}>+300%</div>
                             </div>
-                            <h3 className="text-xl font-bold mb-2">Regulatory Drift</h3>
+                            <h3 className="text-xl font-bold mb-2">{t('regulatory.title')}</h3>
                             <p className="opacity-80 text-sm">
-                                Increase in GDPR & AI Act fines for cross-border data leakage in 2024. Your static compliance reports are obsolete.
+                                {t('regulatory.desc')}
                             </p>
                             <div className="dashboard-console mt-4 mb-0 p-2 text-tiny bg-black/50 border border-white/10 backdrop-blur-sm">
                                 <div className="flex justify-between mb-1 fontWeight-700">
-                                    <span>COMPLIANCE SCORE</span>
-                                    <span style={{ color: 'var(--color-warning)' }}>AT RISK</span>
+                                    <span>{t('regulatory.score')}</span>
+                                    <span style={{ color: 'var(--color-warning)' }}>{t('regulatory.risk')}</span>
                                 </div>
                                 <div className="w-full" style={{ height: '5px', background: 'rgba(255,255,255,0.1)', borderRadius: '3px' }}>
                                     <div style={{ width: '45%', height: '100%', background: 'var(--color-warning)', borderRadius: '3px' }}></div>
@@ -63,8 +65,8 @@ export default function ProblemSection() {
                             <div className="mb-2 p-2 rounded-lg bg-warning/10 w-fit backdrop-blur-md border border-warning/20">
                                 <Lock size={24} color="#fbbf24" />
                             </div>
-                            <h3 className="text-xl font-bold mb-2">The Vendor Ransom</h3>
-                            <p className="opacity-80 text-sm">Egress fees and proprietary APIs trap your data. Moving 1PB of data can cost over $50,000.</p>
+                            <h3 className="text-xl font-bold mb-2">{t('vendor.title')}</h3>
+                            <p className="opacity-80 text-sm">{t('vendor.desc')}</p>
                         </div>
                     </div>
 
@@ -76,12 +78,12 @@ export default function ProblemSection() {
                             <div className="mx-auto mb-2 p-2 rounded-full w-fit bg-black/40 backdrop-blur-md border border-emerald-500/30">
                                 <ShieldAlert size={28} color="var(--color-success)" />
                             </div>
-                            <h3 className="text-xl font-bold mb-2">Dark Data Opacity</h3>
+                            <h3 className="text-xl font-bold mb-2">{t('opacity.title')}</h3>
                             <p className="opacity-80 text-sm">
-                                52% of all enterprise data is "Dark Data"—unclassified, unknown, and unprotected.
+                                {t('opacity.desc')}
                             </p>
                             <div className="text-mono mt-2 p-2 bg-black/60 rounded border border-emerald-500/20 text-emerald-400" style={{ fontSize: '0.7rem' }}>
-                                &gt; SCANNING_ABANDONED_BUCKETS...
+                                {t('opacity.scanning')}
                             </div>
                         </div>
                     </div>

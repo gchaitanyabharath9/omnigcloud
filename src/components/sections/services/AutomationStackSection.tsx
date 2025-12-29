@@ -1,31 +1,33 @@
 import { Terminal, Settings } from "lucide-react";
+import { useTranslations } from 'next-intl';
 
 export default function AutomationStackSection() {
+    const t = useTranslations('Services.Stack');
     return (
         <section id="automation-stack" className="snap-section" style={{ background: 'var(--bg-surface-2)', minHeight: '100vh', display: 'flex', alignItems: 'center', paddingTop: 'var(--section-pt)', paddingBottom: '4rem' }}>
             <div className="container">
                 <div className="grid-2-strict items-center gap-10">
                     {/* Left: Text & Stack List */}
                     <div>
-                        <div style={{ color: '#60efff', fontWeight: 900, fontSize: '0.6rem', textTransform: 'uppercase', marginBottom: '0.4rem', letterSpacing: '0.15em' }}>The Engine</div>
-                        <h2 className="mb-6">The Automation Stack</h2>
+                        <div style={{ color: '#60efff', fontWeight: 900, fontSize: '0.6rem', textTransform: 'uppercase', marginBottom: '0.4rem', letterSpacing: '0.15em' }}>{t('badge')}</div>
+                        <h2 className="mb-6">{t('title')}</h2>
                         <p className="text-lead mb-8">
-                            Unified modernization engine powered by industry-standard open source tooling.
+                            {t('subtitle')}
                         </p>
 
                         <div className="flex-col gap-4">
                             <div className="glass-panel p-4 flex gap-4 items-center">
                                 <div className="icon-circle"><Terminal size={20} color="#60efff" /></div>
                                 <div>
-                                    <h4 className="font-bold text-white">Terraform Blueprints</h4>
-                                    <p className="text-sm opacity-70">Pre-hardened IaC modules for Azure & AWS.</p>
+                                    <h4 className="font-bold text-white">{t('terraform.title')}</h4>
+                                    <p className="text-sm opacity-70">{t('terraform.desc')}</p>
                                 </div>
                             </div>
                             <div className="glass-panel p-4 flex gap-4 items-center">
                                 <div className="icon-circle"><Settings size={20} color="#fff" /></div>
                                 <div>
-                                    <h4 className="font-bold text-white">Ansible Guardrails</h4>
-                                    <p className="text-sm opacity-70">Zero-trust config management & immutability.</p>
+                                    <h4 className="font-bold text-white">{t('ansible.title')}</h4>
+                                    <p className="text-sm opacity-70">{t('ansible.desc')}</p>
                                 </div>
                             </div>
                         </div>

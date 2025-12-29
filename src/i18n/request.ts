@@ -1,5 +1,27 @@
 import { getRequestConfig } from 'next-intl/server';
 
+function deepMerge(target: any, source: any) {
+    const output = { ...target };
+    if (isObject(target) && isObject(source)) {
+        Object.keys(source).forEach(key => {
+            if (isObject(source[key])) {
+                if (!(key in target)) {
+                    Object.assign(output, { [key]: source[key] });
+                } else {
+                    output[key] = deepMerge(target[key], source[key]);
+                }
+            } else {
+                Object.assign(output, { [key]: source[key] });
+            }
+        });
+    }
+    return output;
+}
+
+function isObject(item: any) {
+    return (item && typeof item === 'object' && !Array.isArray(item));
+}
+
 export default getRequestConfig(async ({ requestLocale }) => {
     let locale = await requestLocale;
 
@@ -16,14 +38,12 @@ export default getRequestConfig(async ({ requestLocale }) => {
             userMessages = (await import(`../../messages/${locale}.json`)).default;
         } catch (error) {
             console.error(`Could not load messages for locale: ${locale}`, error);
-            // If load fails, userMessages remains empty, effectively falling back to defaultMessages
         }
     }
 
-    // Shallow merge: user messages override defaults. 
-    // Note: For deep merging (nested objects), a library like lodash.merge would be ideal, 
-    // but this covers the requirement of preventing crashes and providing defaults for top-level keys.
-    const messages = { ...defaultMessages, ...userMessages };
+    // Deep merge: user messages override defaults. 
+    // This ensures nested keys (like Header.nav.links) fall back to English if missing.
+    const messages = deepMerge(defaultMessages, userMessages);
 
     return {
         locale,

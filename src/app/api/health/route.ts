@@ -1,12 +1,14 @@
-import { NextResponse } from 'next/server';
+import { withApiHarden, createSuccessResponse } from '@/lib/api-utils';
+import pkg from '../../../../package.json';
 
-export async function GET() {
-    return NextResponse.json(
-        {
+export async function GET(request: Request) {
+    return withApiHarden(request, async (req, { requestId }) => {
+        return createSuccessResponse(requestId, {
             status: 'ok',
-            timestamp: new Date().toISOString(),
+            version: pkg.version,
+            commit: process.env.NEXT_PUBLIC_GIT_COMMIT || 'development',
             uptime: process.uptime()
-        },
-        { status: 200 }
-    );
+        });
+    });
 }
+

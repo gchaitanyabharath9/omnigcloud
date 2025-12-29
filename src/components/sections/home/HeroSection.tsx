@@ -7,7 +7,7 @@ export default function HeroSection() {
     const locale = useLocale();
 
     return (
-        <section id="hero" className="snap-section" style={{ minHeight: '100vh', display: 'flex', alignItems: 'flex-start', paddingTop: '8rem', paddingBottom: '2.5rem', position: 'relative', overflow: 'hidden' }}>
+        <section id="hero" className="snap-section" style={{ position: 'relative' }}>
 
             {/* Premium Grid Background */}
             <div style={{
@@ -23,6 +23,7 @@ export default function HeroSection() {
                 backgroundSize: '40px 40px',
                 zIndex: 0,
                 pointerEvents: 'none',
+                WebkitMaskImage: 'linear-gradient(to bottom, black 40%, transparent 100%)',
                 maskImage: 'linear-gradient(to bottom, black 40%, transparent 100%)' /* Fade out at bottom */
             }}></div>
 
@@ -39,20 +40,13 @@ export default function HeroSection() {
                 pointerEvents: 'none'
             }}></div>
 
-            <div className="container" style={{ position: 'relative', zIndex: 1, height: '100%', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
+            <div className="container" style={{ position: 'relative', zIndex: 1 }}>
 
                 {/* 2x2 GRID CONTROL CENTER LAYOUT - HIGH DENSITY */}
-                <div style={{
-                    display: 'grid',
-                    gridTemplateColumns: '1fr 1.4fr', /* Increased Right Column Width for better 'table' presence */
-                    gridTemplateRows: 'auto auto', /* Let rows size naturally based on content */
-                    gap: '1.5rem',
-                    height: '100%',
-                    alignItems: 'stretch'
-                }}>
+                <div className="hero-grid-layout">
 
                     {/* Q1: Top-Left (Headline & Intro & CTA) - Tight & Top Aligned */}
-                    <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'flex-start', paddingTop: '0', height: '100%', gap: '2rem' }}>
+                    <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'flex-start', gap: '2rem' }}>
                         <div>
                             <div className="badge badge-primary-subtle mb-4 w-fit">
                                 <ShieldAlert size={14} color="var(--primary)" />
@@ -71,10 +65,10 @@ export default function HeroSection() {
 
                             {/* CTA Buttons */}
                             <div className="flex gap-4">
-                                <Link href={`/${locale}/onboarding`} className="btn-primary">
+                                <Link href={`/${locale}/contact`} className="btn-primary">
                                     {t('ctaPrimary')}
                                 </Link>
-                                <Link href={`/${locale}/demo`} className="btn-secondary">
+                                <Link href={`/${locale}/docs/whitepaper`} className="btn-secondary">
                                     <PlayCircle size={18} style={{ marginRight: '0.5rem' }} /> {t('ctaSecondary')}
                                 </Link>
                             </div>
@@ -94,21 +88,21 @@ export default function HeroSection() {
                                 maxWidth: '400px'
                             }}>
                                 <div style={{ fontSize: '0.7rem', textTransform: 'uppercase', letterSpacing: '0.05em', color: 'var(--muted)', marginBottom: '0.25rem', display: 'flex', justifyContent: 'space-between' }}>
-                                    <span>System Status</span>
-                                    <span style={{ color: '#10b981' }}>● LIVE</span>
+                                    <span>{t('systemStatus.title')}</span>
+                                    <span style={{ color: '#10b981' }}>● {t('systemStatus.live')}</span>
                                 </div>
 
                                 <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', fontFamily: 'monospace', fontSize: '0.85rem' }}>
                                     <CheckCircle size={14} color="#10b981" />
-                                    <span style={{ opacity: 0.9 }}>Multi-Cloud Sync Active</span>
+                                    <span style={{ opacity: 0.9 }}>{t('systemStatus.sync')}</span>
                                 </div>
                                 <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', fontFamily: 'monospace', fontSize: '0.85rem' }}>
                                     <CheckCircle size={14} color="#10b981" />
-                                    <span style={{ opacity: 0.9 }}>Policy Engine <span style={{ color: '#3b82f6' }}>Enforcing</span></span>
+                                    <span style={{ opacity: 0.9 }}>{t('systemStatus.policy')} <span style={{ color: '#3b82f6' }}>{t('systemStatus.enforcing')}</span></span>
                                 </div>
                                 <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', fontFamily: 'monospace', fontSize: '0.85rem' }}>
                                     <Activity size={14} color="#f59e0b" />
-                                    <span style={{ opacity: 0.9 }}>Threat Guard: <span style={{ color: '#f59e0b' }}>Monitoring</span></span>
+                                    <span style={{ opacity: 0.9 }}>{t('systemStatus.threat')}: <span style={{ color: '#f59e0b' }}>{t('systemStatus.monitoring')}</span></span>
                                 </div>
                             </div>
                         </div>
@@ -119,8 +113,8 @@ export default function HeroSection() {
                     <div style={{ position: 'relative', height: '100%', display: 'flex', flexDirection: 'column', justifyContent: 'flex-start' }}>
                         <div className="glass-panel" style={{
                             width: '100%',
-                            height: '55vh', /* Explicitly taller to push bottom row */
-                            maxHeight: '600px',
+                            height: '450px', /* Consistency */
+                            maxHeight: '450px',
                             padding: '0',
                             borderRadius: '1.25rem',
                             border: '1px solid var(--card-border)',
@@ -142,15 +136,15 @@ export default function HeroSection() {
                                 {/* Top Row Stats */}
                                 <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: '0.75rem', position: 'relative', zIndex: 2 }}>
                                     <div className="dashboard-stat-card" style={{ padding: '0.75rem' }}>
-                                        <div className="stat-label" style={{ fontSize: '0.6rem' }}>ASSETS</div>
+                                        <div className="stat-label" style={{ fontSize: '0.6rem' }}>{t('stats.assets')}</div>
                                         <div className="stat-value" style={{ fontSize: '1.1rem' }}>$2.4B</div>
                                     </div>
                                     <div className="dashboard-stat-card" style={{ padding: '0.75rem' }}>
-                                        <div className="stat-label" style={{ fontSize: '0.6rem' }}>DRIFT</div>
+                                        <div className="stat-label" style={{ fontSize: '0.6rem' }}>{t('stats.drift')}</div>
                                         <div className="stat-value" style={{ fontSize: '1.1rem', color: 'var(--color-success)' }}>0%</div>
                                     </div>
                                     <div className="dashboard-stat-card" style={{ padding: '0.75rem' }}>
-                                        <div className="stat-label" style={{ fontSize: '0.6rem' }}>NODES</div>
+                                        <div className="stat-label" style={{ fontSize: '0.6rem' }}>{t('stats.nodes')}</div>
                                         <div className="stat-value" style={{ fontSize: '1.1rem', color: 'var(--primary)' }}>4k+</div>
                                     </div>
                                 </div>
@@ -182,13 +176,13 @@ export default function HeroSection() {
                                         ))}
                                     </div>
                                     <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
-                                        <span style={{ fontSize: '0.95rem', fontWeight: 800, lineHeight: 1 }}>20+ Experts</span>
-                                        <span style={{ fontSize: '0.75rem', color: 'var(--muted)' }}>Ready to Audit</span>
+                                        <span style={{ fontSize: '0.95rem', fontWeight: 800, lineHeight: 1 }}>{t('experts.count')}</span>
+                                        <span style={{ fontSize: '0.75rem', color: 'var(--muted)' }}>{t('experts.status')}</span>
                                     </div>
                                 </div>
 
                                 <Link href="/contact" className="btn-secondary" style={{ padding: '0.75rem 1.5rem', fontSize: '0.9rem', height: 'auto' }}>
-                                    Contact Sales
+                                    {t('experts.cta')}
                                 </Link>
                             </div>
                         </div>
@@ -200,7 +194,7 @@ export default function HeroSection() {
                         {/* Interactive Graph Card */}
                         <div className="glass-panel" style={{ padding: '1.5rem', borderRadius: '1rem', border: '1px solid var(--card-border)', background: 'var(--bg-surface-2)', display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
                             <div>
-                                <div style={{ fontSize: '0.65rem', fontWeight: 700, opacity: 0.7, textTransform: 'uppercase', marginBottom: '0.25rem' }}>EFFICIENCY</div>
+                                <div style={{ fontSize: '0.65rem', fontWeight: 700, opacity: 0.7, textTransform: 'uppercase', marginBottom: '0.25rem' }}>{t('efficiency')}</div>
                                 <div style={{ fontSize: '1.5rem', fontWeight: 900, color: '#10b981' }}>+245%</div>
                             </div>
                             <div style={{ display: 'flex', alignItems: 'flex-end', gap: '3px', height: '60px', width: '100%', marginTop: '0.5rem' }}>
@@ -216,10 +210,12 @@ export default function HeroSection() {
                                 <div style={{ background: 'var(--primary)', width: '30px', height: '30px', borderRadius: '6px', display: 'flex', alignItems: 'center', justifyContent: 'center', boxShadow: '0 4px 10px rgba(59, 130, 246, 0.4)' }}>
                                     <Activity size={16} color="white" />
                                 </div>
-                                <div style={{ fontSize: '0.75rem', fontWeight: 800, letterSpacing: '0.05em' }}>GLOBAL IMPACT</div>
+                                <div style={{ fontSize: '0.75rem', fontWeight: 800, letterSpacing: '0.05em' }}>{t('impact.label')}</div>
                             </div>
                             <p style={{ fontSize: '0.8rem', opacity: 0.9, lineHeight: 1.4, fontWeight: 500 }}>
-                                "Automate <span style={{ color: 'var(--primary-light)', fontWeight: 700 }}>sovereignty</span> across every zone."
+                                {t.rich('impact.text', {
+                                    span: (chunks) => <span style={{ color: 'var(--primary-light)', fontWeight: 700 }}>{chunks}</span>
+                                })}
                             </p>
                         </div>
                     </div>
@@ -235,14 +231,12 @@ export default function HeroSection() {
                 padding: '0.75rem 0',
                 background: 'rgba(2, 6, 23, 0.3)',
                 backdropFilter: 'blur(10px)',
-                marginTop: 'auto', /* Push to bottom of section if using flex-col, but Hero is flex-col center. Actually, let's place it at specific bottom. */
-                position: 'absolute',
-                bottom: '1rem',
-                zIndex: 10
+                zIndex: 10,
+                marginTop: '4rem' /* Push away from grid */
             }}>
                 <div className="container" style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: '2rem' }}>
                     <div style={{ fontSize: '0.6rem', fontWeight: 800, color: 'var(--muted)', letterSpacing: '0.05em', whiteSpace: 'nowrap' }}>
-                        TRUSTED BY GLOBAL ENTERPRISES
+                        {t('trust')}
                     </div>
                     <div style={{ display: 'flex', flex: 1, justifyContent: 'space-around', alignItems: 'center', opacity: 0.5, filter: 'grayscale(100%) brightness(150%)' }}>
                         {/* Simulated Enterprise Logos with Text/Icons for high speed/aesthetics */}

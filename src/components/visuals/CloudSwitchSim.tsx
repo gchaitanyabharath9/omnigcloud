@@ -1,3 +1,5 @@
+"use client";
+
 import React, { useState } from 'react';
 import { RefreshCw, ArrowRight, Shield, Database, Cpu, Globe } from 'lucide-react';
 

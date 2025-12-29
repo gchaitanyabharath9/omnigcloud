@@ -1,7 +1,9 @@
 import Breadcrumb from "@/components/Breadcrumb";
 import { Cloud, BarChart } from "lucide-react";
+import { useTranslations } from 'next-intl';
 
 export default function ServicesHero() {
+    const t = useTranslations('Services.Hero');
     return (
         <section id="services-hero" className="snap-section" style={{ minHeight: '100vh', display: 'flex', flexDirection: 'column', paddingTop: '6rem' }}>
             <div style={{ flex: 1, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
@@ -12,18 +14,22 @@ export default function ServicesHero() {
                         <div>
                             <div className="badge badge-primary-subtle mb-4">
                                 <Cloud size={14} color="var(--primary)" />
-                                <span>AUTONOMOUS MODERNIZATION</span>
+                                <span>{t('badge')}</span>
                             </div>
                             <h1 className="mb-6" style={{ lineHeight: 1.1 }}>
-                                Modernize Azure & OCP <br />
-                                <span className="text-gradient">with Logic, Not Labor</span>
+                                {t.rich('title', {
+                                    br: () => <br />,
+                                    span: (chunks) => <span className="text-gradient">{chunks}</span>
+                                })}
                             </h1>
                             <p className="text-lead mb-8">
-                                Leverage <span style={{ color: 'var(--primary)', fontWeight: 800 }}>Terraform</span> and <span style={{ color: 'var(--primary)', fontWeight: 800 }}>Ansible</span> to automate your enterprise cloud core.
+                                {t.rich('subtitle', {
+                                    span: (chunks) => <span style={{ color: 'var(--primary)', fontWeight: 800 }}>{chunks}</span>
+                                })}
                             </p>
                             <div className="flex gap-4 mb-8">
                                 <button className="btn-primary">
-                                    Explore Solutions
+                                    {t('cta')}
                                 </button>
                             </div>
 
@@ -60,7 +66,7 @@ export default function ServicesHero() {
                                     <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400&q=80" alt="Stats" className="img-cover" />
                                     <div className="card-overlay" style={{ background: 'rgba(0,0,0,0.7)' }}></div>
                                     <div className="card-content-overlay justify-center items-center p-2">
-                                        <div className="stat-label mb-1">VELOCITY</div>
+                                        <div className="stat-label mb-1">{t('velocity')}</div>
                                         <div className="stat-value text-success">+400%</div>
                                     </div>
                                 </div>
@@ -68,7 +74,7 @@ export default function ServicesHero() {
                                     <img src="https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?w=400&q=80" alt="Stats" className="img-cover" />
                                     <div className="card-overlay" style={{ background: 'rgba(0,0,0,0.7)' }}></div>
                                     <div className="card-content-overlay justify-center items-center p-2">
-                                        <div className="stat-label mb-1">ERRORS</div>
+                                        <div className="stat-label mb-1">{t('errors')}</div>
                                         <div className="stat-value text-primary">0.01%</div>
                                     </div>
                                 </div>

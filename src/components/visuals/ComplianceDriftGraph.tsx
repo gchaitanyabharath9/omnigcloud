@@ -1,6 +1,10 @@
+"use client";
+
 import React from 'react';
+import { useTranslations } from 'next-intl';
 
 export default function ComplianceDriftGraph() {
+    const t = useTranslations('Visuals.drift');
     return (
         <div className="glass-panel" style={{
             padding: '2rem',
@@ -9,7 +13,7 @@ export default function ComplianceDriftGraph() {
             background: 'rgba(2, 6, 23, 0.4)',
             overflow: 'hidden'
         }}>
-            <h4 style={{ fontSize: '0.9rem', fontWeight: 800, color: '#f59e0b', marginBottom: '1.5rem' }}>COMPLIANCE DRIFT ANALYSIS</h4>
+            <h4 style={{ fontSize: '0.9rem', fontWeight: 800, color: '#f59e0b', marginBottom: '1.5rem' }}>{t('title')}</h4>
 
             <div style={{ position: 'relative', height: '180px' }}>
                 <svg viewBox="0 0 400 200" style={{ width: '100%', height: '100%' }}>
@@ -46,10 +50,10 @@ export default function ComplianceDriftGraph() {
 
             <div style={{ marginTop: '1rem', display: 'flex', justifyContent: 'space-between' }}>
                 <div style={{ padding: '0.5rem 1rem', borderRadius: '0.5rem', background: 'rgba(245, 158, 11, 0.1)', border: '1px solid rgba(245, 158, 11, 0.2)' }}>
-                    <span style={{ fontSize: '0.7rem', fontWeight: 900, color: '#f59e0b' }}>DRIFT DETECTED: +12%</span>
+                    <span style={{ fontSize: '0.7rem', fontWeight: 900, color: '#f59e0b' }}>{t('detected')}</span>
                 </div>
                 <button style={{ background: '#10b981', color: '#000', border: 'none', padding: '0.4rem 1rem', borderRadius: '0.5rem', fontSize: '0.75rem', fontWeight: 900, cursor: 'pointer' }}>
-                    AUTO-REMEDIATE
+                    {t('remediate')}
                 </button>
             </div>
 

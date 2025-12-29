@@ -6,18 +6,18 @@ export default function EcosystemSection() {
     const t = useTranslations('Ecosystem');
 
     return (
-        <section id="ecosystem" className="snap-section" style={{ background: 'var(--background)', minHeight: '100vh', display: 'flex', flexDirection: 'column', paddingTop: '2rem', paddingBottom: '0.5rem', position: 'relative' }}>
+        <section id="ecosystem" className="snap-section" style={{ background: 'var(--background)' }}>
             {/* Background Map Image - Reduced Opacity for text readiness */}
             <div className="bg-cover-overlay" style={{ backgroundImage: 'url(https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1600&fit=crop&q=80)', opacity: 0.15 }}></div>
 
-            <div className="container" style={{ position: 'relative', zIndex: 2, height: '100%', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
+            <div className="container" style={{ position: 'relative', zIndex: 2 }}>
                 <div style={{ textAlign: 'center', display: 'flex', flexDirection: 'column', alignItems: 'center', marginBottom: '1rem' }}>
                     <div className="badge badge-primary-subtle mb-2">
-                        <Activity size={14} /> SYSTEM ARCHITECTURE
+                        <Activity size={14} /> {t('badge')}
                     </div>
-                    <h2 className="mb-1" style={{ fontSize: '2.5rem', fontWeight: 900 }}>Autonomous Modernization Ecosystem</h2>
+                    <h2 className="mb-1" style={{ fontSize: '2.5rem', fontWeight: 900 }}>{t('title')}</h2>
                     <p className="text-section-lead" style={{ maxWidth: '800px', fontSize: '0.9rem', marginBottom: '0.5rem' }}>
-                        A unified, horizontally integrated platform designed to manage the complexity of global, modern cloud portfolios with zero-trust precision.
+                        {t('subtitle')}
                     </p>
                 </div>
 
@@ -30,14 +30,14 @@ export default function EcosystemSection() {
                             </div>
                             <div style={{ fontSize: '2rem', fontWeight: 900, opacity: 0.05, lineHeight: 0.8 }}>01</div>
                         </div>
-                        <h3 style={{ fontSize: '1.25rem', fontWeight: 800, marginBottom: '0.5rem' }}>Governance Hub</h3>
+                        <h3 style={{ fontSize: '1.25rem', fontWeight: 800, marginBottom: '0.5rem' }}>{t('governance.title')}</h3>
                         <p style={{ opacity: 0.7, fontSize: '0.85rem', lineHeight: 1.4, flex: 1, marginBottom: '1rem' }}>
-                            Automated drift remediation and policy enforcement across all cloud providers. Ensure compliance with GDPR, HIPAA, and SOC2 in real-time.
+                            {t('governance.desc')}
                         </p>
                         <div style={{ marginTop: 'auto', borderTop: '1px solid var(--card-border)', paddingTop: '0.75rem', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
-                            <span style={{ fontSize: '0.65rem', fontWeight: 700, letterSpacing: '0.05em', color: 'var(--muted)' }}>MODULE ACTIVE</span>
+                            <span style={{ fontSize: '0.65rem', fontWeight: 700, letterSpacing: '0.05em', color: 'var(--muted)' }}>{t('governance.status')}</span>
                             <Link href="/platform/governance" style={{ textDecoration: 'none', color: 'var(--primary)', fontWeight: 700, display: 'flex', alignItems: 'center', gap: '0.5rem', fontSize: '0.8rem' }}>
-                                Explore <ArrowRight size={14} />
+                                {t('governance.link')} <ArrowRight size={14} />
                             </Link>
                         </div>
                     </div>
@@ -50,14 +50,14 @@ export default function EcosystemSection() {
                             </div>
                             <div style={{ fontSize: '2rem', fontWeight: 900, opacity: 0.05, lineHeight: 0.8 }}>02</div>
                         </div>
-                        <h3 style={{ fontSize: '1.25rem', fontWeight: 800, marginBottom: '0.5rem' }}>Global Mesh</h3>
+                        <h3 style={{ fontSize: '1.25rem', fontWeight: 800, marginBottom: '0.5rem' }}>{t('mesh.title')}</h3>
                         <p style={{ opacity: 0.7, fontSize: '0.85rem', lineHeight: 1.4, flex: 1, marginBottom: '1rem' }}>
-                            Native intra-cloud routing with localized sovereignty. Connect OCI, AWS, and Azure clusters into a single, latency-optimized service mesh.
+                            {t('mesh.desc')}
                         </p>
                         <div style={{ marginTop: 'auto', borderTop: '1px solid var(--card-border)', paddingTop: '0.75rem', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
-                            <span style={{ fontSize: '0.65rem', fontWeight: 700, letterSpacing: '0.05em', color: 'var(--muted)' }}>NETWORK ONLINE</span>
+                            <span style={{ fontSize: '0.65rem', fontWeight: 700, letterSpacing: '0.05em', color: 'var(--muted)' }}>{t('mesh.status')}</span>
                             <Link href="/platform/mesh" style={{ textDecoration: 'none', color: '#818cf8', fontWeight: 700, display: 'flex', alignItems: 'center', gap: '0.5rem', fontSize: '0.8rem' }}>
-                                View Topology <ArrowRight size={14} />
+                                {t('mesh.link')} <ArrowRight size={14} />
                             </Link>
                         </div>
                     </div>
@@ -70,14 +70,14 @@ export default function EcosystemSection() {
                             </div>
                             <div style={{ fontSize: '2rem', fontWeight: 900, opacity: 0.05, lineHeight: 0.8 }}>03</div>
                         </div>
-                        <h3 style={{ fontSize: '1.25rem', fontWeight: 800, marginBottom: '0.5rem' }}>AI Ops Kernel</h3>
+                        <h3 style={{ fontSize: '1.25rem', fontWeight: 800, marginBottom: '0.5rem' }}>{t('ai.title')}</h3>
                         <p style={{ opacity: 0.7, fontSize: '0.85rem', lineHeight: 1.4, flex: 1, marginBottom: '1rem' }}>
-                            Managed LLM orchestration within VPC boundaries. Deploy private GPT-4 equivalent models for intelligent automation without data leakage.
+                            {t('ai.desc')}
                         </p>
                         <div style={{ marginTop: 'auto', borderTop: '1px solid var(--card-border)', paddingTop: '0.75rem', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
-                            <span style={{ fontSize: '0.65rem', fontWeight: 700, letterSpacing: '0.05em', color: 'var(--muted)' }}>MODELS READY</span>
+                            <span style={{ fontSize: '0.65rem', fontWeight: 700, letterSpacing: '0.05em', color: 'var(--muted)' }}>{t('ai.status')}</span>
                             <Link href="/platform/ai" style={{ textDecoration: 'none', color: '#c084fc', fontWeight: 700, display: 'flex', alignItems: 'center', gap: '0.5rem', fontSize: '0.8rem' }}>
-                                Access Lab <ArrowRight size={14} />
+                                {t('ai.link')} <ArrowRight size={14} />
                             </Link>
                         </div>
                     </div>
@@ -90,14 +90,14 @@ export default function EcosystemSection() {
                             </div>
                             <div style={{ fontSize: '2rem', fontWeight: 900, opacity: 0.05, lineHeight: 0.8 }}>04</div>
                         </div>
-                        <h3 style={{ fontSize: '1.25rem', fontWeight: 800, marginBottom: '0.5rem' }}>Sovereign Vault</h3>
+                        <h3 style={{ fontSize: '1.25rem', fontWeight: 800, marginBottom: '0.5rem' }}>{t('vault.title')}</h3>
                         <p style={{ opacity: 0.7, fontSize: '0.85rem', lineHeight: 1.4, flex: 1, marginBottom: '1rem' }}>
-                            Localized storage kernels with managed encryption and rigid data residency controls. Your data never leaves the jurisdiction you define.
+                            {t('vault.desc')}
                         </p>
                         <div style={{ marginTop: 'auto', borderTop: '1px solid var(--card-border)', paddingTop: '0.75rem', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
-                            <span style={{ fontSize: '0.65rem', fontWeight: 700, letterSpacing: '0.05em', color: 'var(--muted)' }}>ENCRYPTION ON</span>
+                            <span style={{ fontSize: '0.65rem', fontWeight: 700, letterSpacing: '0.05em', color: 'var(--muted)' }}>{t('vault.status')}</span>
                             <Link href="/platform/data" style={{ textDecoration: 'none', color: '#2dd4bf', fontWeight: 700, display: 'flex', alignItems: 'center', gap: '0.5rem', fontSize: '0.8rem' }}>
-                                Secure Storage <ArrowRight size={14} />
+                                {t('vault.link')} <ArrowRight size={14} />
                             </Link>
                         </div>
                     </div>

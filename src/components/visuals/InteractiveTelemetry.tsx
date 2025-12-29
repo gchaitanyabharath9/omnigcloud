@@ -1,6 +1,10 @@
+"use client";
+
 import React from 'react';
+import { useTranslations } from 'next-intl';
 
 export default function InteractiveTelemetry() {
+    const t = useTranslations('Visuals.telemetry');
     return (
         <div className="glass-panel" style={{
             padding: '2rem',
@@ -11,10 +15,10 @@ export default function InteractiveTelemetry() {
             position: 'relative'
         }}>
             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '1.5rem' }}>
-                <h4 style={{ fontSize: '0.9rem', fontWeight: 800, color: 'var(--primary)' }}>GLOBAL LATENCY TELEMETRY</h4>
+                <h4 style={{ fontSize: '0.9rem', fontWeight: 800, color: 'var(--primary)' }}>{t('title')}</h4>
                 <div style={{ display: 'flex', gap: '0.5rem' }}>
                     <div style={{ width: '8px', height: '8px', borderRadius: '50%', background: '#10b981', boxShadow: '0 0 10px #10b981' }}></div>
-                    <span style={{ fontSize: '0.7rem', opacity: 0.5 }}>LIVE</span>
+                    <span style={{ fontSize: '0.7rem', opacity: 0.5 }}>{t('live')}</span>
                 </div>
             </div>
 
@@ -46,15 +50,15 @@ export default function InteractiveTelemetry() {
 
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '1rem', marginTop: '1.5rem', borderTop: '1px solid rgba(255,255,255,0.05)', paddingTop: '1rem' }}>
                 <div>
-                    <div style={{ fontSize: '0.65rem', opacity: 0.5, marginBottom: '0.25rem' }}>AVG LATENCY</div>
+                    <div style={{ fontSize: '0.65rem', opacity: 0.5, marginBottom: '0.25rem' }}>{t('latency')}</div>
                     <div style={{ fontSize: '1.1rem', fontWeight: 900 }}>14ms</div>
                 </div>
                 <div>
-                    <div style={{ fontSize: '0.65rem', opacity: 0.5, marginBottom: '0.25rem' }}>THROUGHPUT</div>
+                    <div style={{ fontSize: '0.65rem', opacity: 0.5, marginBottom: '0.25rem' }}>{t('throughput')}</div>
                     <div style={{ fontSize: '1.1rem', fontWeight: 900 }}>2.4 GB/s</div>
                 </div>
                 <div>
-                    <div style={{ fontSize: '0.65rem', opacity: 0.5, marginBottom: '0.25rem' }}>PACKET LOSS</div>
+                    <div style={{ fontSize: '0.65rem', opacity: 0.5, marginBottom: '0.25rem' }}>{t('loss')}</div>
                     <div style={{ fontSize: '1.1rem', fontWeight: 900, color: '#10b981' }}>0.0001%</div>
                 </div>
             </div>

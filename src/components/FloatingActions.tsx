@@ -230,7 +230,7 @@ export default function FloatingActions() {
                         </div>
 
                         <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
-                            <a href="mailto:sales@omnigcloud.com" className="btn-secondary" style={{
+                            <a href="mailto:sales@sovereign.local" className="btn-secondary" style={{
                                 justifyContent: 'flex-start',
                                 gap: '1rem',
                                 padding: '1rem'
@@ -238,7 +238,7 @@ export default function FloatingActions() {
                                 <Mail size={20} color="var(--primary)" />
                                 <div>
                                     <div style={{ fontWeight: 600, fontSize: '0.9rem', color: 'var(--foreground)' }}>Email Sales</div>
-                                    <div style={{ fontSize: '0.8rem', color: 'var(--muted)' }}>sales@omnigcloud.com</div>
+                                    <div style={{ fontSize: '0.8rem', color: 'var(--muted)' }}>sales@sovereign.local</div>
                                 </div>
                             </a>
 

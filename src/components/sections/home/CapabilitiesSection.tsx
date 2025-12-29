@@ -8,7 +8,7 @@ export default function CapabilitiesSection() {
     const tp = useTranslations('Products');
 
     return (
-        <section className="snap-section" style={{ background: 'var(--bg-surface-2)', padding: '6rem 0 1rem 0', borderTop: '1px solid var(--card-border)', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
+        <section className="snap-section" style={{ background: 'var(--bg-surface-2)' }}>
             <div className="container">
                 <div style={{ textAlign: 'center', marginBottom: '2rem' }}>
                     <div className="badge badge-primary-subtle mb-3">{t('tag')}</div>

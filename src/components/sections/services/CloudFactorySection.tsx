@@ -1,12 +1,14 @@
 import { Cloud, Server, Zap, BarChart } from "lucide-react";
+import { useTranslations } from 'next-intl';
 
 export default function CloudFactorySection() {
+    const t = useTranslations('Services.Migration');
     return (
         <section id="cloud-factory" className="snap-section" style={{ minHeight: '100vh', display: 'flex', alignItems: 'center', paddingTop: 'var(--section-pt)' }}>
             <div className="container">
                 <div className="section-title-group">
-                    <h2 className="mb-2">The Migration Factory</h2>
-                    <p className="text-section-lead">Automated pipelines for massive scale cloud adoption.</p>
+                    <h2 className="mb-2">{t('title')}</h2>
+                    <p className="text-section-lead">{t('subtitle')}</p>
                 </div>
 
                 {/* Card 1: Azure - Image */}
@@ -17,8 +19,8 @@ export default function CloudFactorySection() {
                         <div className="mb-2 p-2 rounded-lg bg-blue-500/20 w-fit border border-blue-500/30">
                             <Cloud size={24} color="#3b82f6" />
                         </div>
-                        <h3 className="card-title">Azure Migration Factory</h3>
-                        <p className="card-body text-white/80">Rapidly migrate VMs and databases to Azure Landing Zones with pre-built policies.</p>
+                        <h3 className="card-title">{t('azure.title')}</h3>
+                        <p className="card-body text-white/80">{t('azure.desc')}</p>
                     </div>
                 </div>
 
@@ -33,8 +35,8 @@ export default function CloudFactorySection() {
                             <span className="text-red-400">$</span> ocp-install --dir=./config
                         </div>
                     </div>
-                    <h3 className="card-title relative z-10">OCP Refactoring</h3>
-                    <p className="card-body relative z-10">Containerize legacy apps onto Red Hat OpenShift. Automated manifests for fast, consistent deployments across any infrastructure.</p>
+                    <h3 className="card-title relative z-10">{t('ocp.title')}</h3>
+                    <p className="card-body relative z-10">{t('ocp.desc')}</p>
                 </div>
 
                 {/* Card 3: Provisioning - Image */}
@@ -48,8 +50,8 @@ export default function CloudFactorySection() {
                             </div>
                             <div className="text-mono text-tiny text-cyan-400 font-bold bg-black/50 px-2 py-1 rounded">AVG_TIME: 14m 32s</div>
                         </div>
-                        <h3 className="card-title">&lt; 15m Provisioning</h3>
-                        <p className="card-body text-white/80">Spin up full environments from code commit to running infrastructure in minutes.</p>
+                        <h3 className="card-title">{t('provisioning.title')}</h3>
+                        <p className="card-body text-white/80">{t('provisioning.desc')}</p>
                     </div>
                 </div>
 
@@ -62,8 +64,8 @@ export default function CloudFactorySection() {
                         </div>
                         <div className="text-2xl font-black text-emerald-500 tracking-tight">$0.00</div>
                     </div>
-                    <h3 className="card-title relative z-10">Zero Drift Cost</h3>
-                    <p className="card-body relative z-10">Eliminate shadow IT costs. Our continuous state enforcement ensures your bill matches your extensive IaC definitions perfectly.</p>
+                    <h3 className="card-title relative z-10">{t('drift.title')}</h3>
+                    <p className="card-body relative z-10">{t('drift.desc')}</p>
                 </div>
             </div>
         </section>
