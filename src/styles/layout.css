@@ -14,7 +14,11 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 8rem 0;
+    padding: 2rem 0;
+    /* Dense padding */
+    min-height: 100vh;
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
     border-bottom: 1px solid var(--card-border);
 }
 
