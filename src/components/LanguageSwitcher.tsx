@@ -58,8 +58,8 @@ export default function LanguageSwitcher() {
                     gap: '0.5rem',
                     fontSize: '0.85rem',
                     fontWeight: 700,
-                    border: '1px solid var(--card-border)',
-                    background: 'rgba(255,255,255,0.05)',
+                    border: '1px solid rgba(255,255,255,0.2)',
+                    background: 'rgba(255,255,255,0.1)',
                     opacity: isPending ? 0.5 : 1,
                     minWidth: '70px',
                     justifyContent: 'space-between'

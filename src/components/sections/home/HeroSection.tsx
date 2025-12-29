@@ -1,9 +1,11 @@
-import { useTranslations } from 'next-intl';
+import { useTranslations, useLocale } from 'next-intl';
 import Link from 'next/link';
 import { ShieldAlert, PlayCircle, CheckCircle, Globe, Activity, Layers } from 'lucide-react';
 
 export default function HeroSection() {
     const t = useTranslations('Hero');
+    const locale = useLocale();
+
     return (
         <section id="hero" className="snap-section" style={{ minHeight: '100vh', display: 'flex', alignItems: 'center', paddingTop: '2rem', paddingBottom: '2.5rem', position: 'relative', overflow: 'hidden' }}>
 
@@ -69,10 +71,10 @@ export default function HeroSection() {
 
                             {/* CTA Buttons */}
                             <div className="flex gap-4">
-                                <Link href="/onboarding" className="btn-primary">
+                                <Link href={`/${locale}/onboarding`} className="btn-primary">
                                     {t('ctaPrimary')}
                                 </Link>
-                                <Link href="/demo" className="btn-secondary">
+                                <Link href={`/${locale}/demo`} className="btn-secondary">
                                     <PlayCircle size={18} style={{ marginRight: '0.5rem' }} /> {t('ctaSecondary')}
                                 </Link>
                             </div>
