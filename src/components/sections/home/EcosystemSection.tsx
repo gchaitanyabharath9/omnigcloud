@@ -6,7 +6,7 @@ export default function EcosystemSection() {
     const t = useTranslations('Ecosystem');
 
     return (
-        <section id="ecosystem" className="snap-section" style={{ background: 'var(--background)', minHeight: '100vh', display: 'flex', alignItems: 'flex-start', paddingTop: '6rem', paddingBottom: '0.5rem', position: 'relative' }}>
+        <section id="ecosystem" className="snap-section" style={{ background: 'var(--background)', minHeight: '100vh', display: 'flex', alignItems: 'flex-start', paddingTop: '5.5rem', paddingBottom: '0.5rem', position: 'relative' }}>
             {/* Background Map Image - Reduced Opacity for text readiness */}
             <div className="bg-cover-overlay" style={{ backgroundImage: 'url(https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1600&fit=crop&q=80)', opacity: 0.15 }}></div>
 
