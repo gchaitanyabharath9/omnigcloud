@@ -18,7 +18,8 @@
     /* Dense padding */
     min-height: 100vh;
     scroll-snap-align: start;
-    scroll-snap-stop: always;
+    scroll-snap-stop: normal;
+    /* Allow scrolling past to hint next section */
     border-bottom: 1px solid var(--card-border);
 }
 

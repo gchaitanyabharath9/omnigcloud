@@ -61,13 +61,12 @@ export default function LanguageSwitcher() {
                     border: '1px solid var(--card-border)',
                     background: 'rgba(255,255,255,0.05)',
                     opacity: isPending ? 0.5 : 1,
-                    minWidth: '100px',
+                    minWidth: '70px',
                     justifyContent: 'space-between'
                 }}
             >
                 <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-                    <span>{currentLang.flag}</span>
-                    <span style={{ textTransform: 'uppercase' }}>{currentLang.code}</span>
+                    <span style={{ fontSize: '1.2rem' }}>{currentLang.flag}</span>
                 </div>
                 <ChevronDown size={14} style={{ transform: isOpen ? 'rotate(180deg)' : 'none', transition: 'transform 0.2s' }} />
             </button>
