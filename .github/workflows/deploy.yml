@@ -1,0 +1,101 @@
+name: Build and Deploy to Oracle Cloud (OKE)
+
+on:
+  push:
+    branches: ["main"]
+
+env:
+  OCI_CLI_USER: ${{ secrets.OCI_CLI_USER }}
+  OCI_CLI_TENANCY: ${{ secrets.OCI_CLI_TENANCY }}
+  OCI_CLI_FINGERPRINT: ${{ secrets.OCI_CLI_FINGERPRINT }}
+  OCI_CLI_KEY_CONTENT: ${{ secrets.OCI_CLI_KEY_CONTENT }}
+  OCI_REGION: ${{ secrets.OCI_REGION }}
+  # OCIR Configuration
+  OCIR_REPO: omnicloud-web
+  # Namespace is the tenancy naming string found in OCI Tenancy details
+  OCIR_NAMESPACE: ${{ secrets.OCI_TENANCY_NAMESPACE }}
+  # Cluster OCID for OKE deployment
+  OKE_CLUSTER_ID: ${{ secrets.OKE_CLUSTER_ID }}
+
+jobs:
+  build-and-push:
+    runs-on: ubuntu-latest
+    outputs:
+      image_tag: ${{ steps.meta.outputs.version }}
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v2
+
+      - name: Login to Oracle Cloud Infrastructure Registry (OCIR)
+        uses: docker/login-action@v2
+        with:
+          registry: ${{ env.OCI_REGION }}.ocir.io
+          # Username for OCIR is <tenancy-namespace>/<username>
+          username: ${{ env.OCIR_NAMESPACE }}/${{ secrets.OCI_USERNAME }}
+          password: ${{ secrets.OCI_AUTH_TOKEN }}
+
+      - name: Docker meta
+        id: meta
+        uses: docker/metadata-action@v4
+        with:
+          images: ${{ env.OCI_REGION }}.ocir.io/${{ env.OCIR_NAMESPACE }}/${{ env.OCIR_REPO }}
+          tags: |
+            type=sha,format=long
+            latest
+
+      - name: Build and push Docker image
+        uses: docker/build-push-action@v4
+        with:
+          context: .
+          push: true
+          # Build for ARM64 to utilize Oracle Free Tier Ampere nodes
+          platforms: linux/arm64
+          tags: ${{ steps.meta.outputs.tags }}
+          cache-from: type=gha
+          cache-to: type=gha,mode=max
+
+  deploy:
+    runs-on: ubuntu-latest
+    needs: build-and-push
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Install OCI CLI
+        run: |
+          mkdir -p ~/.oci
+          echo "$OCI_CLI_KEY_CONTENT" > ~/.oci/oci_api_key.pem
+          chmod 600 ~/.oci/oci_api_key.pem
+          cat <<EOF > ~/.oci/config
+          [DEFAULT]
+          user=$OCI_CLI_USER
+          fingerprint=$OCI_CLI_FINGERPRINT
+          tenancy=$OCI_CLI_TENANCY
+          region=$OCI_REGION
+          key_file=~/.oci/oci_api_key.pem
+          EOF
+
+      - name: Install kubectl
+        run: |
+          curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl"
+          chmod +x kubectl
+          sudo mv kubectl /usr/local/bin/
+
+      - name: Setup OKE Kubeconfig
+        run: |
+          oci ce cluster create-kubeconfig --cluster-id ${{ env.OKE_CLUSTER_ID }} --file $HOME/.kube/config --region ${{ env.OCI_REGION }} --token-version 2.0.0
+
+      - name: Deploy to OKE
+        run: |
+          # Use the latest image tag pushed in the previous job
+          IMAGE_PATH="${{ env.OCI_REGION }}.ocir.io/${{ env.OCIR_NAMESPACE }}/${{ env.OCIR_REPO }}:sha-${{ github.sha }}"
+
+          # Replace placeholder in deployment.yaml and apply
+          sed -i "s|\${IMAGE_PATH}|$IMAGE_PATH|g" k8s/deployment.yaml
+          kubectl apply -f k8s/deployment.yaml
+
+          # Rollout restart to ensure the new image is pulled even if tag is 'latest' (though we use SHA)
+          kubectl rollout status deployment/omnicloud-web

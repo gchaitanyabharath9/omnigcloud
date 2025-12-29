@@ -1,0 +1,51 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--font-inter), system-ui, -apple-system, sans-serif;
+    color: var(--foreground);
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.75em;
+}
+
+h1 {
+    font-weight: 700;
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    letter-spacing: -0.03em;
+    line-height: 1.05;
+}
+
+h2 {
+    font-weight: 700;
+    font-size: clamp(2rem, 4vw, 3rem);
+    letter-spacing: -0.025em;
+}
+
+h3 {
+    font-weight: 600;
+    font-size: clamp(1.5rem, 2.5vw, 2rem);
+}
+
+p {
+    line-height: 1.6;
+    color: var(--muted);
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+}
+
+.text-lead {
+    font-size: 1.25rem;
+    opacity: 0.8;
+    line-height: 1.6;
+}
+
+.text-gradient {
+    background: linear-gradient(135deg, #fff 0%, var(--primary) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    filter: drop-shadow(0 0 30px rgba(56, 189, 248, 0.2));
+}

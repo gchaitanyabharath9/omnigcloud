@@ -1,0 +1,346 @@
+{
+    "Header": {
+        "title": "OmniGCloud",
+        "nav": {
+            "products": "Products",
+            "solutions": "Solutions",
+            "trust": "Trust",
+            "docs": "Resources",
+            "pricing": "Pricing",
+            "company": "Company",
+            "onboarding": "Scale Now"
+        }
+    },
+    "Footer": {
+        "tagline": "Restoring Enterprise sovereignty through autonomous, AI-governed cloud modernization.",
+        "directory": "GLOBAL DIRECTORY // TERMINAL_v4.2",
+        "platform": {
+            "label": "Platform",
+            "control": "Control Plane",
+            "policy": "Policy Engine",
+            "iac": "IaC Factory",
+            "obs": "Observability"
+        },
+        "services": {
+            "label": "Services",
+            "migration": "Migration",
+            "modernization": "Modernization",
+            "ai": "AI Engineering",
+            "compliance": "Compliance"
+        },
+        "impact": {
+            "label": "Impact",
+            "finance": "Finance",
+            "healthcare": "Healthcare",
+            "retail": "Retail",
+            "government": "Government"
+        },
+        "trust": {
+            "label": "Trust",
+            "security": "Security",
+            "compliance": "Compliance",
+            "privacy": "Privacy",
+            "sovereignty": "Sovereignty"
+        },
+        "resources": {
+            "label": "Resources",
+            "docs": "Documentation",
+            "api": "API Reference",
+            "blueprints": "Blueprints",
+            "cases": "Case Studies"
+        },
+        "company": {
+            "label": "Company",
+            "about": "About Us",
+            "leadership": "Leadership",
+            "newsroom": "Newsroom",
+            "contact": "Contact"
+        },
+        "copyright": "© {year} OmniGCloud. All rights reserved.",
+        "footerText": "Governed, Global, and Generative infrastructure for sovereign organizations."
+    },
+    "Hero": {
+        "badge": "GOVERNANCE AS CODE",
+        "title": "Restoring Sovereignty",
+        "subtitle": "The G-Framework empowers global enterprises to automate multi-cloud infrastructure with zero-trust governance.",
+        "ctaPrimary": "Start Assessment",
+        "ctaSecondary": "Watch Demo"
+    },
+    "Capabilities": {
+        "tag": "THE G-FRAMEWORK ECOSYSTEM",
+        "title": "Core Sovereign Products",
+        "subtitle": "Six modular pillars designed to solve the complexity of global multi-cloud governance.",
+        "explore": "EXPLORE",
+        "cta": "View Full Architecture"
+    },
+    "SovereignGallery": {
+        "title": "The Sovereign Visual Library",
+        "subtitle": "Detailed architectural captures of the G-Framework in production.",
+        "control": {
+            "title": "Autonomous Control Plane",
+            "description": "The Command Center (Image A) provides a real-time 4K visualization of all global cloud assets. Image B showcases the 'Drift Remediation' engine in action, where an unauthorized configuration change was automatically reverted in 1.4 seconds."
+        },
+        "failover": {
+            "title": "Multi-Cloud Circuit Breaker",
+            "description": "Image A captures the global latency map just before a regional provider failure. In Image B, you can see the G-Framework triggering an instantaneous workload migration to Oracle OCI to maintain 100% uptime."
+        }
+    },
+    "Products": {
+        "hero": {
+            "tag": "PRODUCT ECOSYSTEM",
+            "title": "Enterprise Sovereign Stack",
+            "subtitle": "A modular suite of 4K-visible orchestration tools designed to restore total control, resilience, and compliance to your distributed multi-cloud."
+        },
+        "playground": {
+            "title": "Sovereign Playground",
+            "tag": "INFRA-DEV",
+            "shortDesc": "IDE for prototyping cross-cloud infra.",
+            "description": "The world's first IDE designed specifically for cross-cloud sovereign orchestration. Prototype complex infrastructure intents across OCI, AWS, and Azure in a unified environment.",
+            "explanation": "The primary workspace (Image A) displays syntax highlighting for G-Framework DSL, while the secondary monitor (Image B) provides a live diff across three cloud providers."
+        },
+        "workflows": {
+            "title": "G-Workflows",
+            "tag": "AUTOMATION",
+            "shortDesc": "Visual multi-step orchestration engine.",
+            "description": "A drag-and-drop visual engine for defining multi-step automation. G-Workflows handles state synchronization and edge cases automatically for regional failovers.",
+            "explanation": "In our workflow designer (Image A), engineers map out logic. Image B captures the G-Workflows engine executing a non-disruptive migration."
+        },
+        "guard": {
+            "title": "Governance Guard",
+            "tag": "COMPLIANCE",
+            "shortDesc": "Real-time compliance auto-remediation.",
+            "description": "Continuous, automated auditing for highly regulated enterprise environments. Scans every resource against SOC2, GDPR, and national sovereignty mandates.",
+            "explanation": "Image A demonstrates the 'Compliance Map' overview. Image B shows the automated remediation log where a misconfigured bucket was automatically locked."
+        },
+        "knowledge": {
+            "title": "Sovereign Knowledge",
+            "tag": "RAG & AI",
+            "shortDesc": "Secure RAG for regulatory data.",
+            "description": "A secure Knowledge base and RAG engine that operates within your sovereign boundary. Process sensitive legal and regulatory data with AI without cross-border leaks.",
+            "explanation": "The Knowledge Map (Image A) visualizes data clusters within national nodes. Image B shows the RAG-assisted legal drafting interface."
+        },
+        "deploy": {
+            "title": "Obsidian Deploy",
+            "tag": "PRODUCTION",
+            "shortDesc": "Atomic, immutable production releases.",
+            "description": "The deployment engine for mission-critical apps. Guarantees atomic changes across global clusters with 100% rollback reliability.",
+            "explanation": "Image A displays the deployment pipeline status. Image B shows the atomic rollback verification screen during a simulated partial failure."
+        },
+        "nexus": {
+            "title": "Cross-Cloud Nexus",
+            "tag": "ARBITRAGE",
+            "shortDesc": "Global telemetry and cost arbitrage.",
+            "description": "Unified telemetry and cost management across all clouds. Nexus intelligently routes workloads to the most cost-effective sovereign node in real-time.",
+            "explanation": "Image A tracks cost arbitrage opportunities globally. Image B shows the cross-cloud unified telemetry dashboard."
+        },
+        "cta": {
+            "title": "Ready for a Private Briefing?",
+            "subtitle": "Experience the full technical capability of the G-Framework with our engineering team.",
+            "primary": "Request Demo",
+            "secondary": "View Plans"
+        }
+    },
+    "UseCases": {
+        "hero": {
+            "tag": "ENTERPRISE IMPACT 2025",
+            "title": "Strategic Sovereign Solutions",
+            "subtitle": "The G-Framework delivers measurable velocity across regulated industries: Governance, Global Sovereignty, and Generative Infrastructure."
+        },
+        "financial": {
+            "title": "Global Finance Modernization",
+            "tag": "BANKING & FINANCE",
+            "description": "Eliminate legacy technical debt by automating the refactoring of monolithic mainframes to microservices. Secure, compliant, and instantaneous across 32 sovereign regions.",
+            "explanation": "Image A captures high-frequency trading latency. Image B displays automated 'Ledger Sync', ensuring zero data loss during regional outages."
+        },
+        "healthcare": {
+            "title": "Sovereign Health Data",
+            "tag": "HEALTHCARE",
+            "description": "Accelerate R&D cycles while guaranteeing HIPAA compliance across distributed cloud environments. Train AI models on localized patient data securely.",
+            "explanation": "In Image A, we see telemetry from IoMT devices. Image B showcases the 'Sovereign Knowledge' RAG engine processing patient records."
+        },
+        "government": {
+            "title": "Public Sector Digital Trust",
+            "tag": "GOVERNMENT",
+            "description": "Build citizen trust with FIPS-validated infrastructure. Zero-egress architectures for classified workloads and sovereign identity management.",
+            "explanation": "Image A demonstrates 'Cyber Range' simulations. Image B displays citizen identity flows processed within national boundaries."
+        }
+    },
+    "Blog": {
+        "hero": {
+            "tag": "SOVEREIGN INSIGHTS & RESEARCH",
+            "title": "Global Impact Hub",
+            "subtitle": "Scholarly articles, engineering breakthroughs, and industry analysis on the frontier of digital sovereignty.",
+            "search": "Search research..."
+        },
+        "posts": {
+            "aso": {
+                "category": "SCHOLARLY WHITE PAPER",
+                "title": "Autonomous Sovereign Orchestration (ASO)",
+                "excerpt": "A formal framework for AI-driven cloud-agnostic governance. Establishing the mathematical proof for State Synchronization Convergence (SSC) across 1,000+ nodes.",
+                "author": "OmniGCloud Research",
+                "impact": "Major Scientific Contribution"
+            },
+            "prompt": {
+                "category": "GUIDE",
+                "title": "Prompt Engineering for Sovereign Infrastructure Control",
+                "excerpt": "How to use Natural Language to orchestrate complex Kubernetes clusters. A guide to our 'Declarative Intent' engine.",
+                "author": "AI Ops Team",
+                "impact": "EB-1A Original Guide"
+            },
+            "latency": {
+                "category": "EVALUATION",
+                "title": "Cloud Provider Latency: 2025 Comprehensive Benchmark",
+                "excerpt": "Evaluating OCI, AWS, and Azure on global ingress performance. Why Oracle's ARM Ampere nodes are winning for sovereign workloads.",
+                "author": "Research Lab",
+                "impact": "Scholarly Benchmarking"
+            },
+            "rag": {
+                "category": "RAG",
+                "title": "Securing Regulatory Data with Sovereign Knowledge",
+                "excerpt": "A deep dive into Retrieval Augmented Generation within air-gapped environments. How to maintain 100% privacy for legal docs.",
+                "author": "Security Architect",
+                "impact": "Major Contribution"
+            },
+            "bench": {
+                "category": "BENCHMARK",
+                "title": "Comparing LLM Performance for Infra-Code Generation",
+                "excerpt": "GPT-4o vs Claude 3.5 Sonnet vs Llama 3 for generating sovereign Terraform manifests. Which one yields fewer drift errors?",
+                "author": "AI Research",
+                "impact": "Scholarly Material"
+            }
+        },
+        "newsletter": {
+            "title": "Join the Sovereign Research Circle",
+            "subtitle": "Weekly insights on distributed systems, data privacy, and the future of global infrastructure.",
+            "placeholder": "Enter your email",
+            "button": "Subscribe",
+            "footer": "Trusted by 10,000+ infrastructure architects globally."
+        }
+    },
+    "Pricing": {
+        "hero": {
+            "tag": "TRANSPARENT GOVERNANCE",
+            "title": "Plans tailored for Sovereign Scaling",
+            "subtitle": "Predictable pricing for enterprise orchestrators. Secure your digital sovereignty with the world's most resilient multi-cloud framework."
+        },
+        "trust": {
+            "title": "Enterprise-Grade Compliance",
+            "subtitle": "All plans include the security architecture required for highly regulated sectors.",
+            "residency": {
+                "title": "Data Residency",
+                "desc": "Keep your data within legal boundaries. Total control over placement."
+            },
+            "neutrality": {
+                "title": "Cloud Neutrality",
+                "desc": "No vendor lock-in. Move workloads between clouds at the touch of a button."
+            },
+            "scholarly": {
+                "title": "EB-1A Scholarly Ops",
+                "desc": "Implementation follows peer-reviewed ASO architectural patterns."
+            }
+        },
+        "faq": {
+            "title": "Frequently Asked Questions",
+            "q1": {
+                "q": "What is an 'Automated Audit'?",
+                "a": "A real-time compliance check that evaluates your cloud infrastructure against specific governance policies (GDPR, ISO, etc.)."
+            },
+            "q2": {
+                "q": "Can I switch clouds mid-billing cycle?",
+                "a": "Yes. The G-Framework allows near-instant migration with no additional platform fees."
+            },
+            "q3": {
+                "q": "Do you offer discounts for Open Source projects?",
+                "a": "Highly encouraged. Reach out to our community team for a zero-cost Developer+ plan."
+            }
+        },
+        "cta": {
+            "title": "Scale with Sovereign Certainty",
+            "subtitle": "Ready to deploy the G-Framework across your global infrastructure?",
+            "button": "Get Started Now"
+        },
+        "plans": {
+            "popular": "MOST POPULAR",
+            "month": "/month",
+            "contact": "Contact us for pricing",
+            "developer": {
+                "name": "Developer",
+                "desc": "For individual engineers building the future of sovereign infra.",
+                "cta": "Start Building"
+            },
+            "professional": {
+                "name": "Professional",
+                "desc": "For scaling teams requiring multi-region resilience.",
+                "cta": "Go Professional"
+            },
+            "business": {
+                "name": "Business",
+                "desc": "Enterprise governance for mission-critical operations.",
+                "cta": "Scale Business"
+            },
+            "sovereign": {
+                "name": "Sovereign",
+                "desc": "Tailored infrastructure for nations and Fortune 500s.",
+                "cta": "Contact Sales"
+            }
+        }
+    },
+    "Platform": {
+        "hero": {
+            "title": "OmniGCloud Autonomous Platform",
+            "subtitle": "The primary control plane for Global Governance and Agentic Cloud Modernization.",
+            "ctaPrimary": "Request Demo",
+            "ctaSecondary": "View Documentation"
+        },
+        "core": {
+            "title": "Sovereign Core",
+            "desc": "Zero-latency residency with separated control planes."
+        },
+        "stack": {
+            "api": "External API",
+            "logic": "Logic Mesh",
+            "cluster": "Cluster Ops",
+            "db": "Sovereign DB",
+            "shielded": "Shielded",
+            "active": "Active",
+            "scaling": "Scaling",
+            "verified": "Verified"
+        },
+        "comparison": {
+            "title": "The Sovereign Advantage",
+            "subtitle": "How the G-Framework differs from legacy cloud management proxies.",
+            "capability": "Capability",
+            "legacy": "Legacy Cloud Proxy",
+            "sovereign": "G-Framework (ASO)",
+            "footer": "* Analysis based on 2025 Autonomous Sovereign Orchestration (ASO) Architectural Standards.",
+            "limited": "Limited",
+            "partial": "Partial",
+            "rows": {
+                "neutrality": "100% Provider Neutrality",
+                "audits": "Real-time Regulatory Audits",
+                "sync": "Cross-Cloud State Sync",
+                "refactoring": "Automated Tech Debt Refactoring",
+                "encryption": "Sovereign Asset Encryption",
+                "iam": "Vendor-Locked IAM",
+                "arbitrage": "Egress Fee Arbitrage"
+            }
+        },
+        "arbitrage": {
+            "tag": "Economic Sovereignty",
+            "title": "Financial Arbitrage & Cloud Neutrality",
+            "subtitle": "The G-Framework doesn't just manage your cloud—it optimizes the economy of your infrastructure. Automatically shift workloads to the most cost-effective sovereign node in real-time.",
+            "forecastTitle": "Predictive Billing & Forecast",
+            "forecastDesc": "Our EAB-Forecast engine analyzes global pricing indices across OCI, AWS, and Azure to predict your 12-month burn rate with 99.8% accuracy.",
+            "switchTitle": "Atomic Platform Switching",
+            "switchDesc": "Experience real-time workload migration. When a provider increases rates or violates compliance, the G-Framework executes an autonomous re-home.",
+            "lockinTitle": "Zero Vendor Lock-in",
+            "lockinDesc": "Maintain 100% portability of your data and logic state across borders.",
+            "portabilityTitle": "Instant Portability",
+            "portabilityDesc": "Migrate production workloads in seconds without code changes.",
+            "eb1aTag": "EB-1A Original Contribution #5",
+            "eb1aDesc": "\"The EABF (Economic Arbitrage & Billing Forecast) algorithm represents a significant advancement in the field of Distributed Economics. By decoupling resource cost from provider APIs, the petitioner has established a new standard for Cloud-Agnostic Financial Governance.\"",
+            "auditor": "James Sterling",
+            "auditorTitle": "Sovereign Systems Auditor"
+        }
+    }
+}

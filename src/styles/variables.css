@@ -1,0 +1,58 @@
+:root {
+    /* Core Palette - Deep, Rich, Professional (Vellum/YourGPT Inspired) */
+    --primary: #3b82f6;
+    /* Royal Blue - Distinct Accent */
+    --primary-glow: rgba(59, 130, 246, 0.15);
+    --background: #020617;
+    /* Slate 950 - Deep/Cold Black */
+    --foreground: #ffffff;
+    /* Pure White for Headings */
+
+    /* Surface & Depth */
+    --card-bg: rgba(30, 41, 59, 0.4);
+    /* Slate 800 with transparency */
+    --card-border: rgba(255, 255, 255, 0.12);
+    /* Increased visibility */
+    --card-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3), 0 2px 4px -1px rgba(0, 0, 0, 0.15);
+    --card-shadow-hover: 0 20px 25px -5px rgba(0, 0, 0, 0.4), 0 10px 10px -5px rgba(0, 0, 0, 0.2);
+
+    --muted: #cbd5e1;
+    /* Slate 300 - High legibility body text */
+    --selection: rgba(59, 130, 246, 0.25);
+
+    /* Semantic Colors */
+    --color-success: #10b981;
+    --color-warning: #f59e0b;
+    --color-danger: #ef4444;
+    --color-info: #3b82f6;
+    --color-accent-purple: #8b5cf6;
+
+    /* Layout & Spacing */
+    --section-pt: 3.5rem;
+    --grid-gap: 1.5rem;
+    --container-max: 1800px;
+
+    /* Radius System */
+    --radius-sm: 0.375rem;
+    --radius-md: 0.75rem;
+    --radius-lg: 1rem;
+    --radius-xl: 1.5rem;
+}
+
+[data-theme='light'] {
+    --primary: #0284c7;
+    /* Sky 600 */
+    --primary-glow: rgba(2, 132, 199, 0.08);
+    --background: #ffffff;
+    --foreground: #0f172a;
+    /* Slate 900 */
+
+    --card-bg: rgba(255, 255, 255, 0.8);
+    --card-border: rgba(148, 163, 184, 0.2);
+    --card-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    --card-shadow-hover: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+
+    --muted: #64748b;
+    /* Slate 500 */
+    --selection: rgba(2, 132, 199, 0.1);
+}

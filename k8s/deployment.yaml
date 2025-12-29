@@ -1,0 +1,60 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: omnicloud-web
+  labels:
+    app: omnicloud-web
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: omnicloud-web
+  template:
+    metadata:
+      labels:
+        app: omnicloud-web
+    spec:
+      containers:
+        - name: omnicloud-web
+          # Placeholder image, will be updated by GitHub Actions
+          image: ${IMAGE_PATH}
+          ports:
+            - containerPort: 3000
+          env:
+            - name: NODE_ENV
+              value: "production"
+          # Resource limits optimized for OCI Free Tier Ampere nodes
+          resources:
+            limits:
+              cpu: "500m"
+              memory: "512Mi"
+            requests:
+              cpu: "100m"
+              memory: "256Mi"
+          livenessProbe:
+            httpGet:
+              path: /api/health
+              port: 3000
+            initialDelaySeconds: 15
+            periodSeconds: 20
+          readinessProbe:
+            httpGet:
+              path: /api/health
+              port: 3000
+            initialDelaySeconds: 5
+            periodSeconds: 10
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: omnicloud-web-service
+  annotations:
+    service.beta.kubernetes.io/oci-load-balancer-shape: "10Mbps"
+spec:
+  type: LoadBalancer
+  selector:
+    app: omnicloud-web
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 3000

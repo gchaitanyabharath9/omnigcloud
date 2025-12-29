@@ -1,0 +1,94 @@
+.header {
+    height: 65px;
+    border-bottom: 1px solid var(--card-border);
+    background: var(--background);
+    backdrop-filter: blur(12px);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1500;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.headerContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: var(--foreground);
+    text-decoration: none;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+}
+
+.navList {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+.navItem {
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+.navLink {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--foreground);
+    opacity: 0.8;
+    text-decoration: none;
+    transition: all 0.2s;
+    display: flex;
+    align-items: center;
+}
+
+.navLink:hover {
+    opacity: 1;
+    color: var(--primary);
+}
+
+.dropdownLink {
+    padding: 0.6rem 0.75rem;
+    color: var(--foreground);
+    text-decoration: none;
+    font-size: 0.75rem;
+    font-weight: 700;
+    border-radius: 0.4rem;
+    transition: all 0.2s;
+    display: block;
+}
+
+.dropdownLink:hover {
+    background: var(--primary-glow);
+    color: var(--primary);
+}
+
+.langIcon {
+    color: var(--muted);
+    transition: color 0.2s;
+    cursor: pointer;
+}
+
+.langIcon:hover {
+    color: var(--primary);
+}

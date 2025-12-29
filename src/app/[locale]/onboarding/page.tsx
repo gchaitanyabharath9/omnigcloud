@@ -1,0 +1,112 @@
+import { Rocket, Shield, Globe, Cpu, CheckCircle, ArrowRight, Zap, RefreshCcw, ArrowLeft } from "lucide-react";
+import Link from "next/link";
+
+export default function OnboardingPage() {
+    return (
+        <div className="animate-fade-in">
+            {/* Hero */}
+            <section className="container" style={{ padding: '2rem 0 4rem', textAlign: 'center', position: 'relative' }}>
+                <div style={{ position: 'absolute', top: '2rem', left: '0', zIndex: 10 }}>
+                    <Link href="/" style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem', color: 'var(--foreground)', opacity: 0.7, textDecoration: 'none', fontWeight: 600, fontSize: '0.9rem' }}>
+                        <ArrowLeft size={16} /> Back to Home
+                    </Link>
+                </div>
+
+                <div style={{ marginTop: '4rem', position: 'relative', borderRadius: '2rem', overflow: 'hidden', padding: '4rem 2rem', background: 'var(--card-bg)', border: '1px solid var(--card-border)' }}>
+                    <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=1600&fit=crop&q=80" alt="Team onboarding" style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', opacity: 0.15 }} />
+                    <div style={{ position: 'relative', zIndex: 1 }}>
+                        <div style={{
+                            display: 'inline-flex',
+                            alignItems: 'center',
+                            background: 'var(--primary-glow)',
+                            padding: '0.4rem 1rem',
+                            borderRadius: '2rem',
+                            border: '1px solid var(--primary)',
+                            color: 'var(--primary)',
+                            fontSize: '0.8rem',
+                            fontWeight: 900,
+                            marginBottom: '1rem',
+                            textTransform: 'uppercase'
+                        }}>
+                            Start Your Journey
+                        </div>
+                        <h1 style={{ fontSize: '3.5rem', fontWeight: 950, marginBottom: '1rem', letterSpacing: '-1.5px', color: 'var(--foreground)' }}>Get Started with Omni<span style={{ color: 'var(--primary)' }}>G</span>Cloud</h1>
+                        <p style={{ color: 'var(--foreground)', opacity: 0.8, fontSize: '1.25rem', maxWidth: '800px', margin: '0 auto', lineHeight: 1.6 }}>
+                            Standardizing your cloud-native onboarding through the world's first AI-powered Internal Cloud Foundation.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            {/* Onboarding Steps */}
+            <section className="container" style={{ padding: '0 0 6rem' }}>
+                <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '5rem', alignItems: 'center' }}>
+                    <div>
+                        <h2 style={{ fontSize: '2.5rem', fontWeight: 900, marginBottom: '2rem', color: 'var(--foreground)' }}>How we modernize <br /><span style={{ color: 'var(--primary)' }}>your workforce.</span></h2>
+                        <div style={{ display: 'flex', flexDirection: 'column', gap: '2rem' }}>
+                            {[
+                                { step: "01", title: "Infrastructure Assessment", desc: "Our AI scans your existing cloud footprint to identify migration pathways.", icon: <Globe color="var(--primary)" /> },
+                                { step: "02", title: "Registry Selection", desc: "Select pre-approved blueprints from our Foundation Core.", icon: <Cpu color="var(--primary)" /> },
+                                { step: "03", title: "Automated Provisioning", desc: "Deploy clusters in minutes with Crossplane-powered orchestration.", icon: <Zap color="var(--primary)" /> },
+                                { step: "04", title: "Enterprise Scaling", desc: "Onboard teams with self-service guardrails and FinOps monitoring.", icon: <Rocket color="var(--primary)" /> }
+                            ].map((s, i) => (
+                                <div key={i} style={{ display: 'flex', gap: '1.5rem' }}>
+                                    <div style={{ fontSize: '1.5rem', fontWeight: 950, color: 'var(--primary)', opacity: 0.2, width: '40px' }}>{s.step}</div>
+                                    <div>
+                                        <h4 style={{ color: 'var(--foreground)', fontSize: '1.25rem', fontWeight: 800, marginBottom: '0.5rem', display: 'flex', alignItems: 'center', gap: '0.75rem' }}>{s.icon} {s.title}</h4>
+                                        <p style={{ color: 'var(--foreground)', opacity: 0.7, fontSize: '1rem', lineHeight: 1.6 }}>{s.desc}</p>
+                                    </div>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+
+                    <div style={{ display: 'flex', flexDirection: 'column', gap: '2rem' }}>
+                        <div className="glass-panel" style={{ padding: '0', borderRadius: '2rem', overflow: 'hidden', height: '300px', position: 'relative' }}>
+                            <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?w=800&fit=crop" alt="Engineers collaborating" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                            <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to top, rgba(0,0,0,0.8), transparent)' }}></div>
+                            <div style={{ position: 'absolute', bottom: '2rem', left: '2rem' }}>
+                                <div style={{ fontWeight: 800, fontSize: '1.25rem' }}>Empowered Engineering Teams</div>
+                                <div style={{ opacity: 0.8 }}>Self-service without the friction.</div>
+                            </div>
+                        </div>
+
+                        <div className="glass-panel" style={{ padding: '3.5rem', borderRadius: '2.5rem', border: '1px solid rgba(255,255,255,0.1)' }}>
+                            <h3 style={{ fontSize: '1.8rem', color: 'white', marginBottom: '2rem', textAlign: 'center' }}>Create Your Account</h3>
+                            <form style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
+                                <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
+                                    <label style={{ color: 'rgba(255,255,255,0.7)', fontSize: '0.9rem' }}>Work Email</label>
+                                    <input type="email" placeholder="name@company.com" style={{ background: 'rgba(255,255,255,0.05)', border: '1px solid rgba(255,255,255,0.2)', padding: '0.75rem 1rem', borderRadius: '0.5rem', color: 'white' }} />
+                                </div>
+                                <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
+                                    <label style={{ color: 'rgba(255,255,255,0.7)', fontSize: '0.9rem' }}>Primary Cloud Provider</label>
+                                    <select style={{ background: '#0a2540', border: '1px solid rgba(255,255,255,0.2)', padding: '0.75rem 1rem', borderRadius: '0.5rem', color: 'white' }}>
+                                        <option>AWS</option>
+                                        <option>Azure</option>
+                                        <option>Google Cloud</option>
+                                        <option>Hybrid / Multi-Cloud</option>
+                                    </select>
+                                </div>
+                                <button type="submit" className="btn-primary" style={{ padding: '1rem', borderRadius: '0.5rem', fontWeight: 800, marginTop: '1rem' }}>
+                                    Request Access <ArrowRight size={18} style={{ marginLeft: '0.5rem' }} />
+                                </button>
+                                <p style={{ fontSize: '0.8rem', color: 'rgba(255,255,255,0.4)', textAlign: 'center', marginTop: '1rem' }}>
+                                    By signing up, you agree to our Terms of Service.
+                                </p>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* Trust Badges */}
+            <section className="container section-padding border-top" style={{ borderTop: '1px solid rgba(255,255,255,0.1)' }}>
+                <div style={{ display: 'flex', justifyContent: 'center', gap: '4rem', opacity: 0.6, flexWrap: 'wrap' }}>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', color: 'white', fontWeight: 700 }}><CheckCircle size={20} color="#60efff" /> SOC 2 Type II</div>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', color: 'white', fontWeight: 700 }}><Shield size={20} color="#60efff" /> GDPR Compliant</div>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', color: 'white', fontWeight: 700 }}><RefreshCcw size={20} color="#60efff" /> 99.99% Architecture SLA</div>
+                </div>
+            </section>
+        </div>
+    );
+}
