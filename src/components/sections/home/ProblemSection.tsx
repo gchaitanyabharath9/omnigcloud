@@ -2,16 +2,16 @@ import { TriangleAlert, Layers, Globe, Lock, ShieldAlert } from 'lucide-react';
 
 export default function ProblemSection() {
     return (
-        <section className="snap-section" style={{ minHeight: '100vh', display: 'flex', flexDirection: 'column', justifyContent: 'flex-start', position: 'relative', paddingTop: 'var(--section-pt)', scrollMarginTop: '0' }}>
+        <section className="snap-section" style={{ minHeight: '100vh', display: 'flex', flexDirection: 'column', justifyContent: 'flex-start', position: 'relative', paddingTop: '6rem', paddingBottom: '1rem', scrollMarginTop: '0' }}>
             <div className="container h-full flex-col justify-center">
-                <div className="text-center mb-2 mt-0">
+                <div className="text-center mb-4 mt-0">
                     <div className="badge badge-warning-subtle mb-2 text-tiny">
                         <TriangleAlert size={10} /> CRITICAL INFRASTRUCTURE ALERT
                     </div>
-                    <h2 className="mb-2">
+                    <h2 className="mb-2" style={{ fontSize: '2.5rem' }}>
                         The Sovereign Crisis
                     </h2>
-                    <p className="text-lead text-small mx-auto w-full" style={{ maxWidth: '600px' }}>
+                    <p className="text-lead text-small mx-auto w-full" style={{ maxWidth: '600px', fontSize: '1rem', marginBottom: '0' }}>
                         Global enterprises are facing a perfect storm of fragmentation, regulation, and opacity.
                     </p>
                 </div>
