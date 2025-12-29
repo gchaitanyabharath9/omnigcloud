@@ -11,7 +11,7 @@ export default function PricingSection() {
                     <p className="text-section-lead">Select the operational model that matches your governance mandate.</p>
                 </div>
 
-                <div className="grid-2 gap-6 items-stretch">
+                <div className="grid-3 gap-6 items-stretch">
                     {/* STARTER */}
                     <div className="card-pricing">
                         <div className="mb-6">

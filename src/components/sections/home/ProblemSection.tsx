@@ -22,7 +22,7 @@ export default function ProblemSection() {
                         <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800&q=80" alt="Data Fragmentation" className="img-cover" />
                         <div className="card-overlay"></div>
                         <div className="card-content-overlay p-8 flex-col justify-end">
-                            <div className="mb-2 p-2 rounded-lg bg-white/10 w-fit backdrop-blur-md border border-white/20">
+                            <div className="mb-2 p-2 rounded-lg w-fit backdrop-blur-md border" style={{ background: 'rgba(255,255,255,0.1)', borderColor: 'rgba(255,255,255,0.2)' }}>
                                 <Layers size={24} color="var(--primary)" />
                             </div>
                             <h3 className="text-xl font-bold mb-2">The Fragmentation Trap</h3>

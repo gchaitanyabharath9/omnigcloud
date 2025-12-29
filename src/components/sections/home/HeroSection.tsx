@@ -139,15 +139,15 @@ export default function HeroSection() {
 
                                 {/* Top Row Stats */}
                                 <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: '0.75rem', position: 'relative', zIndex: 2 }}>
-                                    <div className="dashboard-stat-card" style={{ padding: '0.75rem', background: 'rgba(0,0,0,0.5)' }}>
+                                    <div className="dashboard-stat-card" style={{ padding: '0.75rem' }}>
                                         <div className="stat-label" style={{ fontSize: '0.6rem' }}>ASSETS</div>
                                         <div className="stat-value" style={{ fontSize: '1.1rem' }}>$2.4B</div>
                                     </div>
-                                    <div className="dashboard-stat-card" style={{ padding: '0.75rem', background: 'rgba(0,0,0,0.5)' }}>
+                                    <div className="dashboard-stat-card" style={{ padding: '0.75rem' }}>
                                         <div className="stat-label" style={{ fontSize: '0.6rem' }}>DRIFT</div>
                                         <div className="stat-value" style={{ fontSize: '1.1rem', color: 'var(--color-success)' }}>0%</div>
                                     </div>
-                                    <div className="dashboard-stat-card" style={{ padding: '0.75rem', background: 'rgba(0,0,0,0.5)' }}>
+                                    <div className="dashboard-stat-card" style={{ padding: '0.75rem' }}>
                                         <div className="stat-label" style={{ fontSize: '0.6rem' }}>NODES</div>
                                         <div className="stat-value" style={{ fontSize: '1.1rem', color: 'var(--primary)' }}>4k+</div>
                                     </div>

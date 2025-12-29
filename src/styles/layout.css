@@ -21,12 +21,51 @@
 .grid-2 {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 3rem;
-    align-items: center;
+    gap: 2rem;
+    align-items: stretch;
+}
+
+.grid-3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    align-items: stretch;
+}
+
+.grid-4 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    align-items: stretch;
+}
+
+/* Strict 2x2 Grid for Feature Blocks */
+.grid-2x2-strict {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 2rem;
+    height: 100%;
+    min-height: 600px;
+}
+
+@media (max-width: 1200px) {
+    .grid-3 {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
 @media (max-width: 1024px) {
-    .grid-2 {
+
+    .grid-2,
+    .grid-2x2-strict {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        gap: 2rem;
+    }
+
+    .grid-3,
+    .grid-4 {
         grid-template-columns: 1fr;
         gap: 2rem;
     }
@@ -47,4 +86,32 @@
 
 .items-center {
     align-items: center;
+}
+
+.w-full {
+    width: 100%;
+}
+
+.h-full {
+    height: 100%;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.justify-end {
+    justify-content: flex-end;
+}
+
+.justify-between {
+    justify-content: space-between;
+}
+
+.relative {
+    position: relative;
 }

@@ -37,6 +37,8 @@
     --radius-md: 0.75rem;
     --radius-lg: 1rem;
     --radius-xl: 1.5rem;
+
+    --bg-surface-2: rgba(30, 41, 59, 0.5);
 }
 
 [data-theme='light'] {
@@ -55,4 +57,6 @@
     --muted: #64748b;
     /* Slate 500 */
     --selection: rgba(2, 132, 199, 0.1);
+
+    --bg-surface-2: rgba(241, 245, 249, 0.8);
 }
