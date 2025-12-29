@@ -15,7 +15,7 @@ export default function Home() {
     <div className="main-content">
       <HeroSection />
       <ProblemSection />
-      <SovereignGallery />
+      {/* <SovereignGallery /> */}
       <EcosystemSection />
       <CapabilitiesSection />
       <WhitePaperSection />
