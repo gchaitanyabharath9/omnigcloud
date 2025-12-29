@@ -6,11 +6,11 @@ export default function EcosystemSection() {
     const t = useTranslations('Ecosystem');
 
     return (
-        <section id="ecosystem" className="snap-section" style={{ background: 'var(--background)', minHeight: '100vh', display: 'flex', alignItems: 'flex-start', paddingTop: '2rem', paddingBottom: '0.5rem', position: 'relative' }}>
+        <section id="ecosystem" className="snap-section" style={{ background: 'var(--background)', minHeight: '100vh', display: 'flex', flexDirection: 'column', paddingTop: '2rem', paddingBottom: '0.5rem', position: 'relative' }}>
             {/* Background Map Image - Reduced Opacity for text readiness */}
             <div className="bg-cover-overlay" style={{ backgroundImage: 'url(https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1600&fit=crop&q=80)', opacity: 0.15 }}></div>
 
-            <div className="container" style={{ position: 'relative', zIndex: 2 }}>
+            <div className="container" style={{ position: 'relative', zIndex: 2, height: '100%', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
                 <div style={{ textAlign: 'center', display: 'flex', flexDirection: 'column', alignItems: 'center', marginBottom: '1rem' }}>
                     <div className="badge badge-primary-subtle mb-2">
                         <Activity size={14} /> SYSTEM ARCHITECTURE
