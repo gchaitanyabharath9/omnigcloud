@@ -58,15 +58,16 @@ export default function LanguageSwitcher() {
                     gap: '0.5rem',
                     fontSize: '0.85rem',
                     fontWeight: 700,
-                    border: '1px solid rgba(255,255,255,0.3)',
-                    background: 'rgba(255,255,255,0.15)',
+                    border: '1px solid rgba(255,255,255,0.6)',
+                    background: 'rgba(255,255,255,0.25)',
                     opacity: isPending ? 0.5 : 1,
-                    minWidth: '70px',
+                    minWidth: '90px',
                     justifyContent: 'space-between'
                 }}
             >
                 <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
                     <span style={{ fontSize: '1.2rem' }}>{currentLang.flag}</span>
+                    <span style={{ fontSize: '0.85rem', textTransform: 'uppercase' }}>{currentLang.code === 'en' ? 'US' : currentLang.code}</span>
                 </div>
                 <ChevronDown size={14} style={{ transform: isOpen ? 'rotate(180deg)' : 'none', transition: 'transform 0.2s' }} />
             </button>
