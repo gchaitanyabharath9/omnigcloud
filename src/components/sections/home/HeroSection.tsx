@@ -7,7 +7,7 @@ export default function HeroSection() {
     const locale = useLocale();
 
     return (
-        <section id="hero" className="snap-section" style={{ minHeight: '100vh', display: 'flex', alignItems: 'center', paddingTop: '8rem', paddingBottom: '2.5rem', position: 'relative', overflow: 'hidden' }}>
+        <section id="hero" className="snap-section" style={{ minHeight: '100vh', display: 'flex', alignItems: 'flex-start', paddingTop: '8rem', paddingBottom: '2.5rem', position: 'relative', overflow: 'hidden' }}>
 
             {/* Premium Grid Background */}
             <div style={{
