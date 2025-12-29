@@ -2,7 +2,7 @@ import { TriangleAlert, Layers, Globe, Lock, ShieldAlert } from 'lucide-react';
 
 export default function ProblemSection() {
     return (
-        <section className="snap-section" style={{ minHeight: '100vh', display: 'flex', flexDirection: 'column', justifyContent: 'flex-start', position: 'relative', paddingTop: '5.5rem', paddingBottom: '1rem', scrollMarginTop: '0' }}>
+        <section className="snap-section" style={{ minHeight: '100vh', display: 'flex', flexDirection: 'column', justifyContent: 'flex-start', position: 'relative', paddingTop: '6rem', paddingBottom: '1rem', scrollMarginTop: '0' }}>
             <div className="container h-full flex-col justify-center">
                 <div className="text-center mb-4 mt-0">
                     <div className="badge badge-warning-subtle mb-2 text-tiny">
