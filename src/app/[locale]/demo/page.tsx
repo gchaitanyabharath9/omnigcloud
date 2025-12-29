@@ -4,14 +4,18 @@ import Link from "next/link";
 import { PlayCircle, ShieldCheck, Zap, Cloud, Cpu, Terminal, Activity, BarChart, Settings, Globe, ArrowRight, ArrowLeft } from "lucide-react";
 import Footer from "@/components/Footer";
 
+import { useLocale } from 'next-intl';
+
 export default function DemoPage() {
+    const locale = useLocale();
+
     return (
         <div className="main-content">
-            <section className="snap-section" style={{ padding: '6rem 0', minHeight: '80vh' }}>
+            <section className="snap-section" style={{ padding: '7rem 0', minHeight: '100vh' }}>
                 <div className="container">
-                    <div style={{ marginBottom: '1rem' }}>
-                        <Link href="/" style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem', color: 'var(--foreground)', opacity: 0.7, textDecoration: 'none', fontWeight: 600, fontSize: '0.9rem' }}>
-                            <ArrowLeft size={16} /> Back to Home
+                    <div style={{ marginBottom: '2rem' }}>
+                        <Link href={`/${locale}`} className="btn-secondary" style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem', textDecoration: 'none', fontWeight: 600, fontSize: '0.9rem', padding: '0.5rem 1rem', borderRadius: '0.5rem' }}>
+                            <ArrowLeft size={16} /> Back to Mission Control
                         </Link>
                     </div>
 
