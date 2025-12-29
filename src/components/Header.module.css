@@ -1,10 +1,10 @@
 .header {
     height: 70px;
     border-bottom: 1px solid var(--card-border);
-    background: rgba(2, 6, 23, 0.85);
-    /* Slightly transparent for glassmorphism */
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
+    background: rgba(2, 6, 23, 0.95);
+    /* High opacity to prevent bleed-through */
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
     position: fixed;
     top: 0;
     left: 0;
@@ -91,6 +91,8 @@
     color: var(--muted-foreground);
     padding: 0.5rem;
     border-radius: 50%;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.05);
     display: flex;
     align-items: center;
     justify-content: center;

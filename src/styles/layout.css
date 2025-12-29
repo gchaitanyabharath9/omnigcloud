@@ -16,7 +16,12 @@
     justify-content: center;
     padding: 2rem 0;
     /* Dense padding */
+    padding: 2rem 0;
+    /* Dense padding */
+    height: 100vh;
     min-height: 100vh;
+    overflow: hidden;
+    /* Prevent bleed */
     scroll-snap-align: start;
     scroll-snap-stop: normal;
     /* Allow scrolling past to hint next section */
