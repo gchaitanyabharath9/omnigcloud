@@ -12,7 +12,7 @@ The OmniGCloud framework introduces a unified architecture for deploying soverei
 ### A. The Typed Configuration Assurance Protocol
 **The Innovation:** A strictly typed, fail-fast configuration layer that validates the entire application state before boot.
 - **Non-Triviality:** Implementing this requires intercepting the application startup cycle to inject a synchronous validation pass that merges static TypeScript definitions with dynamic environment variables. Standard frameworks do not support this level of granularity out-of-the-box.
-- **Enterprise Significance:** In large-scale distribute systems, "silent failure" (where an app starts with a missing key) causes millions in downtime. This protocol mathematically guarantees that **if the app is running, its configuration is valid**.
+- **Enterprise Significance:** In large-scale distribute systems, "silent failure" (where an app starts with a missing key) causes operational disruption. This protocol mathematically guarantees that **if the app is running, its configuration is valid**.
 - **Differentiation:** Most industry practices rely on `.env` files and hope for correctness. OmniGCloud *proves* correctness via Zod schema enforcement (`ConfigSchema`).
 
 ### B. Hybrid Secret Injection Strategy
@@ -28,4 +28,4 @@ The OmniGCloud framework introduces a unified architecture for deploying soverei
 
 ## 3. Industry Impact Statement
 
-The OmniGCloud framework does not merely assemble existing tools; it proposes a **new standard for configuration integrity**. By proving that strict typing and sovereign secret management can be implemented without sacrificing developer velocity, this work removes a primary barrier to the adoption of secure AI technologies in regulated industries. It serves as a reproducible reference architecture for engineers tasked with modernizing legacy infrastructure into cloud-native, AI-ready platforms.
+The OmniGCloud framework does not merely assemble existing tools; it proposes a **robust paradigm for configuration integrity**. By proving that strict typing and sovereign secret management can be implemented without sacrificing developer velocity, this work removes a primary barrier to the adoption of secure AI technologies in regulated industries. It serves as a reproducible reference architecture for engineers tasked with modernizing legacy infrastructure into cloud-native, AI-ready platforms.

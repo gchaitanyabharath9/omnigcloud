@@ -43,7 +43,7 @@ We developed a configuration loading mechanism that enforces type safety at the 
 2.  **Static Merge**: Overlays environment-specific TypeScript configuration files (e.g., `src/config/envs/prod.ts`) with runtime variables.
 3.  **Schema Validation**: Passes the merged object through a rigorous Zod schema (`ConfigSchema`).
 
-**Contribution:** This ensures that configuration errors are caught immediately at startup (Fail-Fast), reducing runtime anomalies by a projected factor of significant magnitude compared to untyped access.
+**Contribution:** This ensures that configuration errors are caught immediately at startup (Fail-Fast), eliminating a specific class of initialization errors compared to untyped access.
 
 ### 3.2 Hybrid Secret Injection Strategy
 To resolve the friction between local velocity and production security, we engineered a polymorphic secrets module (`src/secrets/index.ts`).
