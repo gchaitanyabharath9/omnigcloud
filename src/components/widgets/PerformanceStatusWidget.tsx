@@ -2,11 +2,10 @@
 
 import React, { useEffect, useState } from 'react';
 import { Activity, CheckCircle, AlertTriangle, AlertOctagon } from 'lucide-react';
-import { clsx } from 'clsx';
 import { twMerge } from 'tailwind-merge';
+import { safeFetch } from '@/lib/safe-fetch';
 
 interface MetricsData {
-    timestamp: string;
     latencyMs: {
         p50: number;
         p95: number;
@@ -22,17 +21,15 @@ export default function PerformanceStatusWidget() {
     const [loading, setLoading] = useState(true);
 
     const fetchMetrics = async () => {
-        try {
-            const res = await fetch('/api/metrics');
-            if (res.ok) {
-                const data = await res.json();
-                setMetrics(data);
-            }
-        } catch (error) {
-            console.error('Failed to fetch metrics', error);
-        } finally {
-            setLoading(false);
+        const data = await safeFetch<MetricsData>('/api/metrics', {
+            timeoutMs: 3000,
+            maxRetries: 1,
+        });
+
+        if (data) {
+            setMetrics(data);
         }
+        setLoading(false);
     };
 
     useEffect(() => {

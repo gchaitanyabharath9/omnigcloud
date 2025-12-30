@@ -65,7 +65,7 @@ Every external dependency call is wrapped in a strict timeout to prevent thread 
 ## 4. Client-Side Reliability
 
 - **Graceful Degradation:** UI widgets (like `LiveLatencyBadge` or status dashboards) handle API failures silently or show a "partially degraded" state without crashing the page.
-- **Safe Fetch:** Critical client-side calls use a wrapper that handles timeouts and network anomalies before bubbling up to React error boundaries.
+- **Safe Fetch:** Critical client-side calls use a wrapper located in `src/lib/safe-fetch.ts` that handles timeouts and network anomalies. It automatically returns a `fallbackData` (null by default) if retries fail, preventing UI crashes.
 
 ## 5. Observability
 
