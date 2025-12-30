@@ -6,6 +6,7 @@ import "../../styles/globals.css";
 import Header from "@/components/header";
 import Breadcrumb from "@/components/Breadcrumb";
 import FloatingActions from "@/components/FloatingActions";
+import ScrollManager from "@/components/ScrollManager";
 import SchemaOrg from "@/components/SchemaOrg";
 import { ThemeProvider } from "@/components/providers/ThemeProvider";
 import { SpeedInsights } from "@vercel/speed-insights/next";
@@ -148,6 +149,7 @@ export default async function RootLayout({
               <Breadcrumb />
               {children}
             </main>
+            <ScrollManager />
             <FloatingActions />
             <SpeedInsights />
             <Analytics />

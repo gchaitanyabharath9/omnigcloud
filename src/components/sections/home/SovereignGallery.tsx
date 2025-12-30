@@ -23,16 +23,18 @@ export default function SovereignGallery() {
     ];
 
     return (
-        <section className="snap-section" style={{ background: 'var(--background)' }}>
-            <div className="container">
-                <div style={{ textAlign: 'center', marginBottom: '4rem' }}>
-                    <h2 style={{ fontSize: 'var(--h2-size)', fontWeight: 950, marginBottom: '1rem' }}>{t('title')}</h2>
-                    <p style={{ opacity: 0.7, fontSize: 'var(--body-size)', maxWidth: '600px', margin: '0 auto' }}>{t('subtitle')}</p>
-                </div>
+        <>
+            {items.map((item, idx) => (
+                <section key={idx} className="snap-section" style={{ background: idx % 2 === 0 ? 'var(--background)' : 'var(--bg-surface-2)' }}>
+                    <div className="container">
+                        {idx === 0 && (
+                            <div style={{ textAlign: 'center', marginBottom: '4rem' }}>
+                                <h2 style={{ fontSize: 'var(--h2-size)', fontWeight: 950, marginBottom: '1rem' }}>{t('title')}</h2>
+                                <p style={{ opacity: 0.7, fontSize: 'var(--body-size)', maxWidth: '600px', margin: '0 auto' }}>{t('subtitle')}</p>
+                            </div>
+                        )}
 
-                <div style={{ display: 'flex', flexDirection: 'column', gap: '6rem' }}>
-                    {items.map((item, idx) => (
-                        <div key={idx} className="grid-2" style={{
+                        <div className="grid-2" style={{
                             gap: '3rem',
                             alignItems: 'center'
                         }}>
@@ -54,9 +56,9 @@ export default function SovereignGallery() {
                                 </div>
                             </div>
                         </div>
-                    ))}
-                </div>
-            </div>
-        </section>
+                    </div>
+                </section>
+            ))}
+        </>
     );
 }

@@ -3,6 +3,7 @@ import { Cpu } from 'lucide-react';
 import Link from 'next/link';
 import Grid2x2Section from '@/components/layout/Grid2x2Section';
 import { PRODUCTS } from '@/data/products';
+import Footer from '@/components/Footer';
 
 export default function ProductsPage() {
     const t = useTranslations('Products');
@@ -49,6 +50,11 @@ export default function ProductsPage() {
                         <Link href="/pricing" className="btn-secondary" style={{ padding: '1.25rem 3rem', fontSize: '1.1rem' }}>{t('cta.secondary')}</Link>
                     </div>
                 </div>
+            </section>
+
+            {/* SITEMAP / FOOTER SNAP SECTION */}
+            <section id="sitemap" className="snap-section" style={{ background: 'var(--background)', borderTop: '1px solid var(--card-border)' }}>
+                <Footer />
             </section>
         </div>
     );
