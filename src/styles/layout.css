@@ -102,11 +102,38 @@
 @media (max-width: 768px) {
     .container {
         padding: 0 1rem;
+        max-width: 100%;
     }
 
     .snap-section {
         padding: 6rem 0 3rem 0;
         min-height: auto;
+    }
+
+    /* Ensure all content stays within viewport */
+    * {
+        max-width: 100%;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+    }
+
+    /* Prevent images from causing overflow */
+    img,
+    video,
+    iframe {
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+/* Extra small mobile devices */
+@media (max-width: 480px) {
+    .container {
+        padding: 0 0.75rem;
+    }
+
+    .snap-section {
+        padding: 5rem 0 2rem 0;
     }
 }
 
