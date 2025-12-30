@@ -20,8 +20,9 @@
     /* Reduced from 5rem */
     min-height: calc(100vh - 70px);
     scroll-snap-align: start;
-    scroll-snap-stop: always;
     border-bottom: 1px solid var(--card-border);
+    /* Prevent content overlap */
+    isolation: isolate;
 }
 
 @media (max-width: 1024px) {
@@ -77,6 +78,9 @@
     gap: 1.5rem;
     width: 100%;
     margin-top: 2rem;
+    /* Prevent overlap */
+    isolation: isolate;
+    clear: both;
 }
 
 @media (max-width: 1200px) {

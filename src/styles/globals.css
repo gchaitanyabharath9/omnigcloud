@@ -86,8 +86,8 @@ html {
   /* Smooth scrolling */
   scroll-behavior: smooth;
 
-  /* Scroll Snapping */
-  scroll-snap-type: y mandatory;
+  /* Scroll Snapping - proximity for better page-down behavior */
+  scroll-snap-type: y proximity;
   scroll-padding-top: 70px;
 
   /* Prevent horizontal scroll */
