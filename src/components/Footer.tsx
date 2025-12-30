@@ -57,6 +57,7 @@ const Footer = () => {
                                 label: t('resources.label'), color: "#f59e0b", links: [
                                     { name: t('resources.docs'), href: "/docs" },
                                     { name: t('resources.api'), href: "/docs/api" },
+                                    { name: t('resources.visual_library'), href: "/visual-library" },
                                     { name: t('resources.blueprints'), href: "/docs/governance" },
                                     { name: t('resources.cases'), href: "/case-studies" }
                                 ]

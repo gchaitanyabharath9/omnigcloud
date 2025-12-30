@@ -8,7 +8,6 @@ import CtaSection from '@/components/sections/home/CtaSection';
 import WhitePaperSection from '@/components/sections/home/WhitePaperSection';
 import NewsroomSection from '@/components/sections/home/NewsroomSection';
 import CommunityCallout from '@/components/sections/home/CommunityCallout';
-import SovereignGallery from '@/components/sections/home/SovereignGallery';
 import InteractiveDashboardSection from '@/components/sections/home/InteractiveDashboardSection';
 
 import type { Metadata } from 'next';
@@ -25,7 +24,6 @@ export default function Home() {
       <HeroSection />
       <InteractiveDashboardSection />
       <ProblemSection />
-      <SovereignGallery />
       <EcosystemSection />
       <CapabilitiesSection />
 

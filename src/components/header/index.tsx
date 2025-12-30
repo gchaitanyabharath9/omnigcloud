@@ -26,7 +26,8 @@ import {
     BookOpen,
     FileText,
     Newspaper,
-    Lock
+    Lock,
+    Camera
 } from 'lucide-react';
 import LanguageSwitcher from '../LanguageSwitcher';
 import LiveLatencyBadge from '../observability/LiveLatencyBadge';
@@ -173,6 +174,8 @@ const Header = () => {
                                         <Link href={`/${locale}/docs`} className={styles.dropdownLink}><BookOpen size={14} /> {t('nav.docs_links.tech_docs')}</Link>
                                         <Link href={`/${locale}/docs/api`} className={styles.dropdownLink}><Terminal size={14} /> {t('nav.docs_links.api')}</Link>
                                         <Link href={`/${locale}/docs/architecture`} className={styles.dropdownLink}><Layers size={14} /> {t('nav.docs_links.patterns')}</Link>
+                                        <Link href={`/${locale}/visual-library`} className={styles.dropdownLink}><Camera size={14} /> {t('nav.docs_links.visual_library')}</Link>
+                                        <Link href={`/${locale}/visual-library#failover`} className={styles.dropdownLink}><Zap size={14} /> {t('nav.docs_links.mccb')}</Link>
                                         <Link href={`/${locale}#whitepaper`} className={styles.dropdownLink}><FileText size={14} /> {t('nav.docs_links.whitepaper')}</Link>
 
                                         <div className={styles.dropdownLabel} style={{ marginTop: '0.5rem' }}>{t('nav.community')}</div>
