@@ -3,6 +3,8 @@ import { Check, X, Shield, Globe, Cpu, Zap, Award, HelpCircle, ArrowRight } from
 import Link from 'next/link';
 import type { Metadata } from 'next';
 import Footer from '@/components/Footer';
+import { CloudCostComparison, StorageOptimization, LicenseOptimization } from '@/components/visuals/AdvancedMetrics';
+import { CostPerTransaction } from '@/components/visuals/PerformanceMetrics';
 
 export const metadata: Metadata = {
     title: 'Pricing | OmniGCloud Enterprise Cloud Governance',
@@ -181,6 +183,45 @@ export default function PricingPage() {
                                 </Link>
                             </div>
                         ))}
+                    </div>
+                </div>
+            </section>
+
+            {/* COST ANALYSIS METRICS */}
+            <section className="snap-section" style={{ background: 'var(--background)' }}>
+                <div className="container">
+                    <div style={{ textAlign: 'center', marginBottom: '3rem' }}>
+                        <div className="badge badge-primary-subtle mb-3">COST INTELLIGENCE</div>
+                        <h2 style={{ fontSize: '3rem', fontWeight: 950, marginBottom: '1rem' }}>Real Savings, Real Numbers</h2>
+                        <p style={{ opacity: 0.7, maxWidth: '700px', margin: '0 auto', fontSize: '1.1rem' }}>
+                            See how our platform delivers measurable cost optimization across your infrastructure
+                        </p>
+                    </div>
+
+                    <div className="grid-2x2-strict" style={{ gap: '1.5rem' }}>
+                        <div className="glass-panel" style={{ padding: '2rem', borderRadius: '1.5rem' }}>
+                            <h4 style={{ fontSize: '1.1rem', fontWeight: 900, marginBottom: '0.5rem' }}>Cloud Provider Cost Comparison</h4>
+                            <p style={{ fontSize: '0.75rem', opacity: 0.6, marginBottom: '1.5rem' }}>Monthly infrastructure costs across providers</p>
+                            <CloudCostComparison />
+                        </div>
+
+                        <div className="glass-panel" style={{ padding: '2rem', borderRadius: '1.5rem' }}>
+                            <h4 style={{ fontSize: '1.1rem', fontWeight: 900, marginBottom: '0.5rem' }}>Cost Per Transaction</h4>
+                            <p style={{ fontSize: '0.75rem', opacity: 0.6, marginBottom: '1.5rem' }}>Declining cost efficiency over time</p>
+                            <CostPerTransaction />
+                        </div>
+
+                        <div className="glass-panel" style={{ padding: '2rem', borderRadius: '1.5rem' }}>
+                            <h4 style={{ fontSize: '1.1rem', fontWeight: 900, marginBottom: '0.5rem' }}>Storage Optimization</h4>
+                            <p style={{ fontSize: '0.75rem', opacity: 0.6, marginBottom: '1.5rem' }}>Before and after optimization savings</p>
+                            <StorageOptimization />
+                        </div>
+
+                        <div className="glass-panel" style={{ padding: '2rem', borderRadius: '1.5rem' }}>
+                            <h4 style={{ fontSize: '1.1rem', fontWeight: 900, marginBottom: '0.5rem' }}>License Optimization</h4>
+                            <p style={{ fontSize: '0.75rem', opacity: 0.6, marginBottom: '1.5rem' }}>Unused, underused, and optimized licenses</p>
+                            <LicenseOptimization />
+                        </div>
                     </div>
                 </div>
             </section>

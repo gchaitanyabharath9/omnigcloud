@@ -1,5 +1,6 @@
 import { Cloud, Globe, Shield, Zap, TrendingUp, CheckCircle, Lock as LucideLock, BarChart, Cpu } from "lucide-react";
 import Footer from "@/components/Footer";
+import { ComplianceProgress, APIRequestHeatmap, IncidentResponseTime, NetworkLatencyMap } from '@/components/visuals/AdvancedMetrics';
 
 export default function SolutionsPage() {
     return (
@@ -208,6 +209,43 @@ export default function SolutionsPage() {
                                 ))}
                             </div>
                         </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* PERFORMANCE METRICS - Snap Section 8 */}
+            <section id="performance-metrics" className="snap-section container">
+                <div style={{ textAlign: 'center', marginBottom: '3rem' }}>
+                    <div style={{ background: 'rgba(96, 239, 255, 0.1)', padding: '0.5rem 1.5rem', borderRadius: '2rem', border: '1px solid rgba(96, 239, 255, 0.4)', color: '#60efff', fontSize: '0.75rem', fontWeight: 800, marginBottom: '1.5rem', display: 'inline-block' }}>REAL-TIME ANALYTICS</div>
+                    <h2 style={{ fontSize: '3.5rem', fontWeight: 900, marginBottom: '1rem' }}>Solution Performance Metrics</h2>
+                    <p style={{ color: 'rgba(255,255,255,0.6)', fontSize: '1.1rem', maxWidth: '700px', margin: '0 auto' }}>
+                        Live insights from production deployments across global infrastructure
+                    </p>
+                </div>
+
+                <div className="grid-2x2-strict" style={{ gap: '1.5rem' }}>
+                    <div className="glass-panel" style={{ padding: '2rem', borderRadius: '1.5rem' }}>
+                        <h4 style={{ fontSize: '1.1rem', fontWeight: 900, marginBottom: '0.5rem' }}>Compliance Framework Progress</h4>
+                        <p style={{ fontSize: '0.75rem', opacity: 0.6, marginBottom: '1.5rem' }}>Automated compliance across major frameworks</p>
+                        <ComplianceProgress />
+                    </div>
+
+                    <div className="glass-panel" style={{ padding: '2rem', borderRadius: '1.5rem' }}>
+                        <h4 style={{ fontSize: '1.1rem', fontWeight: 900, marginBottom: '0.5rem' }}>API Request Heatmap</h4>
+                        <p style={{ fontSize: '0.75rem', opacity: 0.6, marginBottom: '1.5rem' }}>24-hour request intensity distribution</p>
+                        <APIRequestHeatmap />
+                    </div>
+
+                    <div className="glass-panel" style={{ padding: '2rem', borderRadius: '1.5rem' }}>
+                        <h4 style={{ fontSize: '1.1rem', fontWeight: 900, marginBottom: '0.5rem' }}>Incident Response Time</h4>
+                        <p style={{ fontSize: '0.75rem', opacity: 0.6, marginBottom: '1.5rem' }}>Average response time trending down</p>
+                        <IncidentResponseTime />
+                    </div>
+
+                    <div className="glass-panel" style={{ padding: '2rem', borderRadius: '1.5rem' }}>
+                        <h4 style={{ fontSize: '1.1rem', fontWeight: 900, marginBottom: '0.5rem' }}>Network Latency by Region</h4>
+                        <p style={{ fontSize: '0.75rem', opacity: 0.6, marginBottom: '1.5rem' }}>Global network performance metrics</p>
+                        <NetworkLatencyMap />
                     </div>
                 </div>
             </section>
