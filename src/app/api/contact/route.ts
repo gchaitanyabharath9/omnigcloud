@@ -1,4 +1,5 @@
 import { z } from 'zod';
+import { NextRequest } from 'next/server';
 import { withApiHarden, createSuccessResponse, createErrorResponse } from '@/lib/api-utils';
 
 // Optional imports - only available after npm install resend @upstash/redis
@@ -38,7 +39,7 @@ const redis = Redis && process.env.REDIS_URL && process.env.REDIS_TOKEN
     })
     : null;
 
-export async function POST(request: Request) {
+export async function POST(request: NextRequest) {
     return withApiHarden(request, async (req, { requestId }) => {
         try {
             const body = await req.json();
