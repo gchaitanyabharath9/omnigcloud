@@ -1,7 +1,7 @@
 import { NextIntlClientProvider } from 'next-intl';
 import { getMessages } from 'next-intl/server';
 import type { Metadata } from "next";
-import { Inter, Outfit } from "next/font/google"; // Premium fonts
+import { Inter } from "next/font/google"; // Premium fonts
 import "../../styles/globals.css";
 import Header from "@/components/header";
 import Breadcrumb from "@/components/Breadcrumb";
@@ -13,11 +13,6 @@ import { Analytics } from "@vercel/analytics/react";
 
 const inter = Inter({
   variable: "--font-inter",
-  subsets: ["latin"],
-});
-
-const outfit = Outfit({
-  variable: "--font-outfit",
   subsets: ["latin"],
 });
 
@@ -134,7 +129,7 @@ export default async function RootLayout({
       <head>
         <link rel="icon" href="/logo.svg" type="image/svg+xml" sizes="any" />
       </head>
-      <body className={`${inter.variable} ${outfit.variable} `}>
+      <body className={`${inter.variable}`}>
         <SchemaOrg />
         <ThemeProvider
           attribute="data-theme"
