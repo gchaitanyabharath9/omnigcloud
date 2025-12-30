@@ -39,6 +39,10 @@
     --radius-lg: 1rem;
     --radius-xl: 1.5rem;
 
+    /* Header */
+    --header-bg: rgba(2, 6, 23, 0.95);
+    --muted-foreground: #94a3b8;
+
     --bg-surface-2: rgba(30, 41, 59, 0.5);
 }
 
@@ -58,6 +62,10 @@
     --muted: #64748b;
     /* Slate 500 */
     --selection: rgba(2, 132, 199, 0.1);
+
+    /* Header */
+    --header-bg: rgba(255, 255, 255, 0.95);
+    --muted-foreground: #64748b;
 
     --bg-surface-2: rgba(241, 245, 249, 0.8);
 }
