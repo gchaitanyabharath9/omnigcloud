@@ -20,12 +20,13 @@ The following items are critical for the completion of the OmniGCloud production
     - Ensure `AUTH_GITHUB_ID` and `AUTH_GITHUB_SECRET` are rotated and secure.
 
 ## 2. UI/UX Refinement
+- [x] **Font Uniformity**:
+    - Standardized `Outfit` and `Inter` usage across Global CSS and Tailwind variables.
 - [ ] **Mobile Responsiveness**:
     - Audit new "Command Center" dashboard on mobile breakpoints (< 768px).
-    - Ensure `SystemPulse` diagram scales or hides gracefully on small screens.
 - [ ] **Localization (i18n)**:
-    - Complete translation keys for German (de), Hindi (hi), Spanish (es), and French (fr).
-    - Verify `ASOSection` and `AnalyticsSection` text pulls from `messages/*.json`.
+    - Audit remaining languages (es, fr, ja) for missing keys.
+    - Verified `en`, `de`, `hi`, `zh` key consistency.
 
 ## 3. Security & Compliance
 - [ ] **CSP Headers**:

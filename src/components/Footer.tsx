@@ -14,7 +14,7 @@ const Footer = () => {
                 <div style={{ borderTop: '1px solid var(--card-border)', borderBottom: '1px solid var(--card-border)', padding: '1.5rem 0', marginTop: '0.5rem' }}>
                     <div style={{ marginBottom: '1.5rem', display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start' }}>
                         <div>
-                            <Link href={`/${locale}#hero`} style={{ fontSize: '1.4rem', fontWeight: 900, textDecoration: 'none', color: 'var(--foreground)', letterSpacing: '-0.75px' }}>
+                            <Link href={`/${locale}#hero`} style={{ fontSize: '1.4rem', fontWeight: 900, textDecoration: 'none', color: 'var(--foreground)', letterSpacing: '-0.75px', fontFamily: 'var(--font-heading)' }}>
                                 OmniG<span style={{ color: 'var(--primary)' }}>Cloud</span>
                             </Link>
                             <p style={{ marginTop: '0.3rem', color: 'var(--foreground)', opacity: 0.6, maxWidth: '350px', fontSize: '0.75rem' }}>

@@ -1,4 +1,5 @@
 import vault from 'node-vault';
+import { withRetry } from '@/lib/retry';
 
 // Initialize Vault client
 // Expects VAULT_ADDR and VAULT_TOKEN to be set in environment variables
@@ -25,7 +26,11 @@ export async function getVaultSecret(path: string): Promise<Record<string, any> 
         // but strictly standard Vault paths are explicit.
         // Let's support the standard `read` method which node-vault handles.
 
-        const response = await client.read(path);
+        const response = await withRetry(
+            () => client.read(path),
+            { maxAttempts: 3, timeoutMs: 3000 },
+            'VaultRead'
+        );
 
         // Vault KV v2 returns data in response.data.data
         if (response && response.data && response.data.data) {

@@ -1,4 +1,5 @@
 import { getRedis } from '@/lib/redis';
+import { withRetry } from '@/lib/retry';
 import { getSecret } from '@/secrets';
 
 // Optional imports
@@ -59,10 +60,14 @@ export class LeadService {
                     status: 'new',
                 };
 
-                await redis.set(`lead:${submissionId}`, JSON.stringify(leadData));
-                await redis.lpush('leads:all', submissionId);
-                await redis.set(`lead:email:${email}`, submissionId);
-                await redis.expire(`lead:${submissionId}`, 31536000); // 1 year
+                await withRetry(async () => {
+                    const pipe = redis.pipeline();
+                    pipe.set(`lead:${submissionId}`, JSON.stringify(leadData));
+                    pipe.lpush('leads:all', submissionId);
+                    pipe.set(`lead:email:${email}`, submissionId);
+                    pipe.expire(`lead:${submissionId}`, 31536000);
+                    await pipe.exec();
+                }, { maxAttempts: 3, timeoutMs: 2000 }, 'RedisSaveLead');
 
                 console.log(`[LeadService] Lead saved: ${submissionId}`);
                 saved = true;
@@ -75,12 +80,15 @@ export class LeadService {
         if (Resend && resendApiKey && resendFrom && resendTo) {
             try {
                 const resend = new Resend(resendApiKey);
-                await resend.emails.send({
-                    from: resendFrom,
-                    to: resendTo,
-                    subject: `🔔 New Lead: ${firstName} ${lastName} - ${submissionId}`,
-                    html: this.generateEmailHtml(data, submissionId, timestamp)
-                });
+                await withRetry(async () => {
+                    await resend.emails.send({
+                        from: resendFrom,
+                        to: resendTo,
+                        subject: `🔔 New Lead: ${firstName} ${lastName} - ${submissionId}`,
+                        html: this.generateEmailHtml(data, submissionId, timestamp)
+                    });
+                }, { maxAttempts: 3, timeoutMs: 5000 }, 'ResendEmail');
+
                 console.log(`[LeadService] Email sent for ${submissionId}`);
                 notified = true;
             } catch (err) {

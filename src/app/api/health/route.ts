@@ -2,6 +2,8 @@ import { NextRequest } from 'next/server';
 import { withApiHarden, createSuccessResponse } from '@/lib/api-utils';
 import pkg from '../../../../package.json';
 import { config } from '@/config';
+import { getRedis } from '@/lib/redis';
+import { getSecret } from '@/secrets';
 
 export async function GET(request: NextRequest) {
     return withApiHarden(request, async (req, { requestId }) => {
@@ -9,18 +11,36 @@ export async function GET(request: NextRequest) {
         const isLocal = config.env === 'local';
         const secretsProvider = isLocal ? 'process.env (Local .env)' : 'HashiCorp Vault (KV v2)';
 
-        // Determine active config "file" (logical)
-        const configFileMap = {
-            local: 'src/config/envs/local.ts',
-            dev: 'src/config/envs/dev.ts',
-            sit: 'src/config/envs/sit.ts (derived)', // sit/uat usually map to prod-like or allow empty fallbacks
-            uat: 'src/config/envs/uat.ts (derived)',
-            prod: 'src/config/envs/prod.ts'
+        // Check Dependencies
+        const dependencies: Record<string, any> = {
+            redis: { status: 'UNKNOWN' },
+            vault: { status: 'UNKNOWN' }
         };
-        const activeConfig = configFileMap[config.env] || 'unknown';
+
+        try {
+            const redis = await getRedis();
+            dependencies.redis.status = redis ? 'UP' : 'DEGRADED';
+        } catch (e) {
+            dependencies.redis.status = 'DOWN';
+        }
+
+        if (!isLocal) {
+            try {
+                // Try reading a known public or safe config key if any, or just check if it times out
+                const testSecret = await getSecret('SYSTEM_HEALTH_CHECK');
+                dependencies.vault.status = 'UP';
+            } catch (e) {
+                dependencies.vault.status = 'DOWN';
+            }
+        } else {
+            dependencies.vault.status = 'SKIPPED (Local)';
+        }
+
+        // Overall status
+        const isHealthy = Object.values(dependencies).every(d => d.status !== 'DOWN');
 
         return createSuccessResponse(requestId, {
-            status: 'ok',
+            status: isHealthy ? 'ok' : 'degraded',
             system: {
                 version: pkg.version,
                 nodeEnv: process.env.NODE_ENV,
@@ -30,9 +50,10 @@ export async function GET(request: NextRequest) {
             },
             configuration: {
                 secretsProvider,
-                configStrategy: activeConfig,
-                features: config.features, // Safe to expose boolean feature flags
-            }
+                features: config.features,
+            },
+            dependencies
         });
     });
 }
+

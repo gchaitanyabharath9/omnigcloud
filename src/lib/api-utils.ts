@@ -3,6 +3,7 @@ import { v4 as uuidv4 } from 'uuid';
 import { getRateLimiter } from './rate-limit';
 import { logger } from './logger';
 import { metricsHooks } from './metrics';
+import { AppError, normalizeError, RateLimitError } from './errors';
 
 export interface ApiResponse<T = any> {
     requestId: string;
@@ -13,6 +14,7 @@ export interface ApiResponse<T = any> {
         code: string;
         message: string;
         details?: any;
+        retryable?: boolean;
     };
 }
 
@@ -22,7 +24,7 @@ export async function withApiHarden(
     request: NextRequest,
     handler: (req: NextRequest, context: { requestId: string }) => Promise<NextResponse>
 ) {
-    const requestId = uuidv4();
+    const requestId = request.headers.get('x-request-id') || uuidv4();
     const startTime = Date.now();
     const method = request.method;
     const url = new URL(request.url);
