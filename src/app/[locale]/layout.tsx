@@ -11,6 +11,7 @@ import SchemaOrg from "@/components/SchemaOrg";
 import { ThemeProvider } from "@/components/providers/ThemeProvider";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Analytics } from "@vercel/analytics/react";
+import CookieConsent from "@/components/CookieConsent";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -152,6 +153,7 @@ export default async function RootLayout({
             </main>
             <ScrollManager />
             <FloatingActions />
+            <CookieConsent />
             <SpeedInsights />
             <Analytics />
           </NextIntlClientProvider>
