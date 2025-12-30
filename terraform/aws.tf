@@ -1,0 +1,135 @@
+resource "aws_vpc" "main" {
+  cidr_block           = "10.0.0.0/16"
+  enable_dns_hostnames = true
+  enable_dns_support   = true
+
+  tags = {
+    Name = "omnigcloud-vpc"
+  }
+}
+
+resource "aws_subnet" "public_1" {
+  vpc_id                  = aws_vpc.main.id
+  cidr_block              = "10.0.1.0/24"
+  availability_zone       = "us-east-1a"
+  map_public_ip_on_launch = true
+
+  tags = {
+    Name = "omnigcloud-public-1"
+  }
+}
+
+resource "aws_internet_gateway" "gw" {
+  vpc_id = aws_vpc.main.id
+
+  tags = {
+    Name = "omnigcloud-igw"
+  }
+}
+
+resource "aws_route_table" "public" {
+  vpc_id = aws_vpc.main.id
+
+  route {
+    cidr_block = "0.0.0.0/0"
+    gateway_id = aws_internet_gateway.gw.id
+  }
+}
+
+resource "aws_route_table_association" "public_1" {
+  subnet_id      = aws_subnet.public_1.id
+  route_table_id = aws_route_table.public.id
+}
+
+resource "aws_security_group" "app_sg" {
+  name        = "omnigcloud-app-sg"
+  description = "Allow HTTP inbound traffic"
+  vpc_id      = aws_vpc.main.id
+
+  ingress {
+    from_port   = 80
+    to_port     = 80
+    protocol    = "tcp"
+    cidr_blocks = ["0.0.0.0/0"]
+  }
+
+  ingress {
+    from_port   = 3000
+    to_port     = 3000
+    protocol    = "tcp"
+    cidr_blocks = ["0.0.0.0/0"]
+  }
+
+  egress {
+    from_port   = 0
+    to_port     = 0
+    protocol    = "-1"
+    cidr_blocks = ["0.0.0.0/0"]
+  }
+}
+
+resource "aws_ecs_cluster" "main" {
+  name = "omnigcloud-cluster"
+}
+
+resource "aws_ecs_task_definition" "app" {
+  family                   = "omnigcloud-task"
+  network_mode             = "awsvpc"
+  requires_compatibilities = ["FARGATE"]
+  cpu                      = 256
+  memory                   = 512
+  execution_role_arn       = aws_iam_role.ecs_task_execution_role.arn
+
+  container_definitions = jsonencode([
+    {
+      name      = "omnigcloud-app"
+      image     = "omnigcloud/omnigcloud-app:latest"
+      essential = true
+      portMappings = [
+        {
+          containerPort = 3000
+          hostPort      = 3000
+        }
+      ]
+      environment = [
+        { name = "NODE_ENV", value = "production" }
+      ]
+    }
+  ])
+}
+
+resource "aws_iam_role" "ecs_task_execution_role" {
+  name = "omnigcloud-ecs-task-execution-role"
+
+  assume_role_policy = jsonencode({
+    Version = "2012-10-17"
+    Statement = [
+      {
+        Action = "sts:AssumeRole"
+        Effect = "Allow"
+        Principal = {
+          Service = "ecs-tasks.amazonaws.com"
+        }
+      }
+    ]
+  })
+}
+
+resource "aws_iam_role_policy_attachment" "ecs_task_execution_role_policy" {
+  role       = aws_iam_role.ecs_task_execution_role.name
+  policy_arn = "arn:aws:iam::aws:policy/service-role/AmazonECSTaskExecutionRolePolicy"
+}
+
+resource "aws_ecs_service" "main" {
+  name            = "omnigcloud-service"
+  cluster         = aws_ecs_cluster.main.id
+  task_definition = aws_ecs_task_definition.app.arn
+  desired_count   = 1
+  launch_type     = "FARGATE"
+
+  network_configuration {
+    subnets          = [aws_subnet.public_1.id]
+    security_groups  = [aws_security_group.app_sg.id]
+    assign_public_ip = true
+  }
+}

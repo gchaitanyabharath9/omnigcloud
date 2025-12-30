@@ -9,7 +9,11 @@
     "lint": "eslint .",
     "typecheck": "tsc --noEmit",
     "test": "vitest run",
-    "format": "prettier --write ."
+    "format": "prettier --write .",
+    "deploy:aws": "bash scripts/push-to-clouds.sh aws",
+    "deploy:azure": "bash scripts/push-to-clouds.sh azure",
+    "deploy:gcp": "bash scripts/push-to-clouds.sh gcp",
+    "deploy:ocp": "bash scripts/push-to-clouds.sh ocp"
   },
   "dependencies": {
     "@auth/upstash-redis-adapter": "^2.11.1",

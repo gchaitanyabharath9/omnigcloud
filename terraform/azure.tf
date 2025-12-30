@@ -1,0 +1,47 @@
+resource "azurerm_resource_group" "main" {
+  name     = "omnigcloud-resources"
+  location = "East US"
+}
+
+resource "azurerm_virtual_network" "main" {
+  name                = "omnigcloud-vnet"
+  address_space       = ["10.0.0.0/16"]
+  location            = azurerm_resource_group.main.location
+  resource_group_name = azurerm_resource_group.main.name
+}
+
+resource "azurerm_subnet" "main" {
+  name                 = "omnigcloud-subnet"
+  resource_group_name  = azurerm_resource_group.main.name
+  virtual_network_name = azurerm_virtual_network.main.name
+  address_prefixes     = ["10.0.1.0/24"]
+}
+
+resource "azurerm_container_group" "main" {
+  name                = "omnigcloud-app"
+  location            = azurerm_resource_group.main.location
+  resource_group_name = azurerm_resource_group.main.name
+  ip_address_type     = "Public"
+  dns_name_label      = "omnigcloud-app"
+  os_type             = "Linux"
+
+  container {
+    name   = "omnigcloud-app"
+    image  = "omnigcloud/omnigcloud-app:latest"
+    cpu    = "0.5"
+    memory = "1.5"
+
+    ports {
+      port     = 3000
+      protocol = "TCP"
+    }
+
+    environment_variables = {
+      NODE_ENV = "production"
+    }
+  }
+
+  tags = {
+    environment = "production"
+  }
+}

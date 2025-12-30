@@ -39,3 +39,14 @@ The following items are critical for the completion of the OmniGCloud production
     - Generate OpenAPI/Swagger spec for public endpoints.
 - [ ] **Public Roadmap**:
     - Publish `ENHANCEMENT_ROADMAP.md` updates to the public docs site.
+## 5. Multi-Cloud Deployment
+- [x] **IaC Infrastructure**:
+    - Created Terraform configurations for AWS (ECS), Azure (ACI), and GCP (Cloud Run).
+- [x] **Containerization**:
+    - Optimized `Dockerfile` for production standalone builds.
+- [x] **OpenShift Integration**:
+    - Created specialized OCP deployment manifests with Route support.
+- [x] **Automation**:
+    - Implemented `push-to-clouds.sh` for streamlined registry uploads.
+- [x] **Documentation**:
+    - Published `DEPLOY_MULTI_CLOUD.md`.
