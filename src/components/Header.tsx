@@ -76,7 +76,17 @@ const Header = () => {
                             </Link>
                             {activeDropdown === 'products' && (
                                 <div className={styles.dropdownContainer}>
-                                    <div className="glass-panel p-6 animate-fade-in" style={{ width: '600px', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1.5rem', background: 'rgba(2, 6, 23, 0.98)', border: '1px solid var(--primary-glow)', boxShadow: '0 20px 40px rgba(0,0,0,0.4)' }}>
+                                    <div className="glass-panel p-6 animate-fade-in" style={{
+                                        width: '640px',
+                                        display: 'grid',
+                                        gridTemplateColumns: '1fr 1fr',
+                                        gap: '2rem',
+                                        background: 'var(--header-bg)',
+                                        opacity: 0.99,
+                                        border: '1px solid var(--primary-glow)',
+                                        boxShadow: '0 25px 50px -12px rgba(0, 0, 0, 0.5)',
+                                        backdropFilter: 'blur(32px)'
+                                    }}>
                                         <div style={{ display: 'flex', flexDirection: 'column', gap: '0.2rem' }}>
                                             <div className={styles.dropdownLabel}>{t('nav.pillars')}</div>
                                             <Link href={`/${locale}/products#playground`} className={styles.dropdownLink}><Terminal size={14} /> {t('nav.products_links.playground')}</Link>
@@ -101,7 +111,17 @@ const Header = () => {
                             </Link>
                             {activeDropdown === 'solutions' && (
                                 <div className={styles.dropdownContainer}>
-                                    <div className="glass-panel p-6 animate-fade-in" style={{ width: '550px', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1.5rem', background: 'rgba(2, 6, 23, 0.98)', border: '1px solid var(--primary-glow)', boxShadow: '0 20px 40px rgba(0,0,0,0.4)' }}>
+                                    <div className="glass-panel p-6 animate-fade-in" style={{
+                                        width: '580px',
+                                        display: 'grid',
+                                        gridTemplateColumns: '1fr 1fr',
+                                        gap: '2rem',
+                                        background: 'var(--header-bg)',
+                                        opacity: 0.99,
+                                        border: '1px solid var(--primary-glow)',
+                                        boxShadow: '0 25px 50px -12px rgba(0, 0, 0, 0.5)',
+                                        backdropFilter: 'blur(32px)'
+                                    }}>
                                         <div style={{ display: 'flex', flexDirection: 'column', gap: '0.2rem' }}>
                                             <div className={styles.dropdownLabel}>{t('nav.industries')}</div>
                                             <Link href={`/${locale}/industries#financial-services`} className={styles.dropdownLink}>{t('nav.solutions_links.financial')}</Link>
@@ -128,7 +148,17 @@ const Header = () => {
                             </Link>
                             {activeDropdown === 'docs' && (
                                 <div className={styles.dropdownContainer}>
-                                    <div className="glass-panel p-4 animate-fade-in" style={{ width: '280px', display: 'flex', flexDirection: 'column', gap: '0.2rem', background: 'rgba(2, 6, 23, 0.98)', border: '1px solid var(--primary-glow)', boxShadow: '0 20px 40px rgba(0,0,0,0.4)' }}>
+                                    <div className="glass-panel p-4 animate-fade-in" style={{
+                                        width: '300px',
+                                        display: 'flex',
+                                        flexDirection: 'column',
+                                        gap: '0.2rem',
+                                        background: 'var(--header-bg)',
+                                        opacity: 0.99,
+                                        border: '1px solid var(--primary-glow)',
+                                        boxShadow: '0 25px 50px -12px rgba(0, 0, 0, 0.5)',
+                                        backdropFilter: 'blur(32px)'
+                                    }}>
                                         <div className={styles.dropdownLabel}>{t('nav.documentation')}</div>
                                         <Link href={`/${locale}/docs`} className={styles.dropdownLink}><BookOpen size={14} /> {t('nav.docs_links.tech_docs')}</Link>
                                         <Link href={`/${locale}/docs/api`} className={styles.dropdownLink}><Terminal size={14} /> {t('nav.docs_links.api')}</Link>
@@ -150,7 +180,17 @@ const Header = () => {
                             </Link>
                             {activeDropdown === 'pricing' && (
                                 <div className={styles.dropdownContainer}>
-                                    <div className="glass-panel p-4 animate-fade-in" style={{ width: '240px', display: 'flex', flexDirection: 'column', gap: '0.2rem', background: 'rgba(2, 6, 23, 0.98)', border: '1px solid var(--primary-glow)', boxShadow: '0 20px 40px rgba(0,0,0,0.4)' }}>
+                                    <div className="glass-panel p-4 animate-fade-in" style={{
+                                        width: '260px',
+                                        display: 'flex',
+                                        flexDirection: 'column',
+                                        gap: '0.2rem',
+                                        background: 'var(--header-bg)',
+                                        opacity: 0.99,
+                                        border: '1px solid var(--primary-glow)',
+                                        boxShadow: '0 25px 50px -12px rgba(0, 0, 0, 0.5)',
+                                        backdropFilter: 'blur(32px)'
+                                    }}>
                                         <Link href={`/${locale}/pricing`} className={styles.dropdownLink}>{t('nav.pricing_links.compare')}</Link>
                                         <Link href={`/${locale}/pricing#developer`} className={styles.dropdownLink}>{t('nav.pricing_links.developer')}</Link>
                                         <Link href={`/${locale}/pricing#professional`} className={styles.dropdownLink}>{t('nav.pricing_links.professional')}</Link>
@@ -168,7 +208,17 @@ const Header = () => {
                             </Link>
                             {activeDropdown === 'company' && (
                                 <div className={styles.dropdownContainer}>
-                                    <div className="glass-panel p-6 animate-fade-in" style={{ width: '500px', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1.5rem', background: 'rgba(2, 6, 23, 0.98)', border: '1px solid var(--primary-glow)', boxShadow: '0 20px 40px rgba(0,0,0,0.4)' }}>
+                                    <div className="glass-panel p-6 animate-fade-in" style={{
+                                        width: '550px',
+                                        display: 'grid',
+                                        gridTemplateColumns: '1fr 1fr',
+                                        gap: '2rem',
+                                        background: 'var(--header-bg)',
+                                        opacity: 0.99,
+                                        border: '1px solid var(--primary-glow)',
+                                        boxShadow: '0 25px 50px -12px rgba(0, 0, 0, 0.5)',
+                                        backdropFilter: 'blur(32px)'
+                                    }}>
                                         <div style={{ display: 'flex', flexDirection: 'column', gap: '0.2rem' }}>
                                             <div className={styles.dropdownLabel}>{t('nav.organization')}</div>
                                             <Link href={`/${locale}/company#about`} className={styles.dropdownLink}>{t('nav.company_links.about')}</Link>

@@ -7,10 +7,14 @@ export default function CommunityCallout() {
     return (
         <section id="community-callout" className="snap-section" style={{ background: 'var(--bg-surface-2)' }}>
             <div className="container">
-                <div style={{ display: 'grid', gridTemplateColumns: '1.2fr 1fr', gap: '4rem', alignItems: 'center' }}>
+                <div className="grid-2" style={{ gap: '3rem', alignItems: 'center' }}>
                     <div>
                         <div className="badge badge-success-subtle mb-4">{t('badge')}</div>
-                        <h2 style={{ fontSize: '2.5rem', fontWeight: 900, marginBottom: '1.5rem' }}>{t.rich('title', { br: () => <br /> })}</h2>
+                        <h2 style={{ fontSize: 'clamp(1.75rem, 5vw, 2.5rem)', fontWeight: 950, marginBottom: '1.5rem', lineHeight: 1.1 }}>
+                            {t.rich('title', {
+                                br: () => <br />
+                            })}
+                        </h2>
                         <p style={{ opacity: 0.8, marginBottom: '2.5rem', fontSize: '1.1rem', lineHeight: 1.6 }}>
                             {t('subtitle')}
                         </p>
