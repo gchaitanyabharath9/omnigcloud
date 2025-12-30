@@ -30,12 +30,12 @@ export default function ProblemSection() {
                             sizes="(max-width: 768px) 100vw, 50vw"
                         />
                         <div className="card-overlay"></div>
-                        <div className="card-content-overlay p-8 flex-col justify-end">
-                            <div className="mb-2 p-2 rounded-lg w-fit backdrop-blur-md border" style={{ background: 'rgba(255,255,255,0.1)', borderColor: 'rgba(255,255,255,0.2)' }}>
-                                <Layers size={24} color="var(--primary)" />
+                        <div className="card-content-overlay p-6 flex-col justify-end">
+                            <div className="mb-2 p-1.5 rounded-lg w-fit backdrop-blur-md border" style={{ background: 'rgba(255,255,255,0.1)', borderColor: 'rgba(255,255,255,0.2)' }}>
+                                <Layers size={20} color="var(--primary)" />
                             </div>
-                            <h3 className="text-xl font-bold mb-2">{t('fragmentation.title')}</h3>
-                            <p className="opacity-80 text-sm">{t('fragmentation.desc')}</p>
+                            <h3 className="text-lg font-bold mb-1">{t('fragmentation.title')}</h3>
+                            <p className="opacity-70 text-xs leading-tight">{t('fragmentation.desc')}</p>
                         </div>
                     </div>
 
@@ -49,22 +49,22 @@ export default function ProblemSection() {
                             sizes="(max-width: 768px) 100vw, 50vw"
                         />
                         <div className="card-overlay" style={{ background: 'linear-gradient(0deg, rgba(2,6,23,0.95) 20%, rgba(2,6,23,0.5) 100%)' }}></div>
-                        <div className="card-content-overlay p-8 flex-col justify-end">
-                            <div className="flex justify-between items-end mb-2">
-                                <Globe size={20} color="var(--primary)" />
-                                <div style={{ fontSize: '1.4rem', fontWeight: 900, color: 'var(--primary)' }}>+300%</div>
+                        <div className="card-content-overlay p-6 flex-col justify-end">
+                            <div className="flex justify-between items-end mb-1">
+                                <Globe size={18} color="var(--primary)" />
+                                <div style={{ fontSize: '1.2rem', fontWeight: 900, color: 'var(--primary)' }}>+300%</div>
                             </div>
-                            <h3 className="text-xl font-bold mb-2">{t('regulatory.title')}</h3>
-                            <p className="opacity-80 text-sm">
+                            <h3 className="text-lg font-bold mb-1">{t('regulatory.title')}</h3>
+                            <p className="opacity-70 text-xs leading-tight">
                                 {t('regulatory.desc')}
                             </p>
-                            <div className="dashboard-console mt-4 mb-0 p-2 text-tiny bg-black/50 border border-white/10 backdrop-blur-sm">
-                                <div className="flex justify-between mb-1 fontWeight-700">
+                            <div className="dashboard-console mt-2 mb-0 p-1.5 text-tiny bg-black/50 border border-white/10 backdrop-blur-sm">
+                                <div className="flex justify-between mb-1 fontWeight-700" style={{ fontSize: '0.6rem' }}>
                                     <span>{t('regulatory.score')}</span>
                                     <span style={{ color: 'var(--color-warning)' }}>{t('regulatory.risk')}</span>
                                 </div>
-                                <div className="w-full" style={{ height: '5px', background: 'rgba(255,255,255,0.1)', borderRadius: '3px' }}>
-                                    <div style={{ width: '45%', height: '100%', background: 'var(--color-warning)', borderRadius: '3px' }}></div>
+                                <div className="w-full" style={{ height: '4px', background: 'rgba(255,255,255,0.1)', borderRadius: '2px' }}>
+                                    <div style={{ width: '45%', height: '100%', background: 'var(--color-warning)', borderRadius: '2px' }}></div>
                                 </div>
                             </div>
                         </div>
@@ -80,12 +80,12 @@ export default function ProblemSection() {
                             sizes="(max-width: 768px) 100vw, 50vw"
                         />
                         <div className="card-overlay"></div>
-                        <div className="card-content-overlay p-8 flex-col justify-end">
-                            <div className="mb-2 p-2 rounded-lg bg-warning/10 w-fit backdrop-blur-md border border-warning/20">
-                                <Lock size={24} color="#fbbf24" />
+                        <div className="card-content-overlay p-6 flex-col justify-end">
+                            <div className="mb-2 p-1.5 rounded-lg bg-warning/10 w-fit backdrop-blur-md border border-warning/20">
+                                <Lock size={20} color="#fbbf24" />
                             </div>
-                            <h3 className="text-xl font-bold mb-2">{t('vendor.title')}</h3>
-                            <p className="opacity-80 text-sm">{t('vendor.desc')}</p>
+                            <h3 className="text-lg font-bold mb-1">{t('vendor.title')}</h3>
+                            <p className="opacity-70 text-xs leading-tight">{t('vendor.desc')}</p>
                         </div>
                     </div>
 
@@ -99,15 +99,15 @@ export default function ProblemSection() {
                             sizes="(max-width: 768px) 100vw, 50vw"
                         />
                         <div className="card-overlay" style={{ background: 'linear-gradient(0deg, rgba(2,6,23,0.95) 30%, rgba(16, 185, 129, 0.2) 100%)' }}></div>
-                        <div className="card-content-overlay p-8 flex-col justify-center text-center">
-                            <div className="mx-auto mb-2 p-2 rounded-full w-fit bg-black/40 backdrop-blur-md border border-emerald-500/30">
-                                <ShieldAlert size={28} color="var(--color-success)" />
+                        <div className="card-content-overlay p-6 flex-col justify-center text-center">
+                            <div className="mx-auto mb-2 p-1.5 rounded-full w-fit bg-black/40 backdrop-blur-md border border-emerald-500/30">
+                                <ShieldAlert size={24} color="var(--color-success)" />
                             </div>
-                            <h3 className="text-xl font-bold mb-2">{t('opacity.title')}</h3>
-                            <p className="opacity-80 text-sm">
+                            <h3 className="text-lg font-bold mb-1">{t('opacity.title')}</h3>
+                            <p className="opacity-70 text-xs leading-tight">
                                 {t('opacity.desc')}
                             </p>
-                            <div className="text-mono mt-2 p-2 bg-black/60 rounded border border-emerald-500/20 text-emerald-400" style={{ fontSize: '0.7rem' }}>
+                            <div className="text-mono mt-2 p-1.5 bg-black/60 rounded border border-emerald-500/20 text-emerald-400" style={{ fontSize: '0.6rem' }}>
                                 {t('opacity.scanning')}
                             </div>
                         </div>
