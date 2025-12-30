@@ -27,7 +27,7 @@ const Footer = () => {
                         </div>
                     </div>
 
-                    <div style={{ display: 'grid', gridTemplateColumns: 'repeat(6, 1fr)', gap: '1rem' }}>
+                    <div style={{ display: 'grid', gridTemplateColumns: 'repeat(5, 1fr)', gap: '1rem' }}>
                         {[
                             {
                                 label: t('platform.label'), color: "#3b82f6", links: [
@@ -54,14 +54,6 @@ const Footer = () => {
                                 ]
                             },
                             {
-                                label: t('trust.label'), color: "var(--primary)", links: [
-                                    { name: t('trust.security'), href: "/security" },
-                                    { name: t('trust.compliance'), href: "/compliance" },
-                                    { name: t('trust.privacy'), href: "/privacy" },
-                                    { name: t('trust.terms'), href: "/terms" }
-                                ]
-                            },
-                            {
                                 label: t('resources.label'), color: "#f59e0b", links: [
                                     { name: t('resources.docs'), href: "/docs" },
                                     { name: t('resources.api'), href: "/docs/api" },
@@ -74,6 +66,8 @@ const Footer = () => {
                                     { name: t('company.about'), href: "/company#about" },
                                     { name: t('company.leadership'), href: "/company#leadership" },
                                     { name: t('company.newsroom'), href: "/company#newsroom" },
+                                    { name: t('trust.security'), href: "/security" },
+                                    { name: t('trust.privacy'), href: "/privacy" },
                                     { name: t('company.contact'), href: "/contact" }
                                 ]
                             }

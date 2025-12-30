@@ -14,7 +14,7 @@ export default async function SecurityPage() {
                 </p>
             </div>
 
-            <div className="grid md:grid-cols-2 gap-6 mb-12">
+            <div id="compliance-maps" className="grid md:grid-cols-2 gap-6 mb-12">
                 <div className="glass-panel p-6 rounded-xl">
                     <Lock className="w-10 h-10 mb-3 text-green-500" />
                     <h3 className="text-xl font-bold mb-2">{t("encryption")}</h3>
@@ -82,6 +82,36 @@ export default async function SecurityPage() {
                     <p className="text-sm text-zinc-600 dark:text-zinc-400">
                         {t("pgpKey")}: <code className="bg-zinc-200 dark:bg-zinc-700 px-2 py-1 rounded">Available upon request</code>
                     </p>
+                </div>
+            </section>
+
+            <section id="transparency" className="glass-panel p-8 rounded-xl mb-8">
+                <h2 className="text-3xl font-bold mb-6">Transparency & Governance</h2>
+                <p className="text-zinc-700 dark:text-zinc-300 mb-4">
+                    At OmniGCloud, we believe in radical transparency. Our governance framework ensures that every operation is auditable, secure, and aligned with international standards.
+                </p>
+                <ul className="list-disc list-inside space-y-2 text-zinc-700 dark:text-zinc-300">
+                    <li>Real-time security auditing</li>
+                    <li>Open documentation for all security protocols</li>
+                    <li>Third-party penetration testing summaries</li>
+                </ul>
+            </section>
+
+            <section id="certs" className="glass-panel p-8 rounded-xl mb-8">
+                <h2 className="text-3xl font-bold mb-6">Certifications & Standards</h2>
+                <div className="flex flex-wrap gap-4">
+                    <div className="bg-zinc-100 dark:bg-zinc-800 p-4 rounded-lg flex items-center gap-2">
+                        <CheckCircle className="text-green-500 w-5 h-5" />
+                        <span>ISO 27001</span>
+                    </div>
+                    <div className="bg-zinc-100 dark:bg-zinc-800 p-4 rounded-lg flex items-center gap-2">
+                        <CheckCircle className="text-green-500 w-5 h-5" />
+                        <span>SOC 2 Type II</span>
+                    </div>
+                    <div className="bg-zinc-100 dark:bg-zinc-800 p-4 rounded-lg flex items-center gap-2">
+                        <CheckCircle className="text-green-500 w-5 h-5" />
+                        <span>GDPR Compliant</span>
+                    </div>
                 </div>
             </section>
 

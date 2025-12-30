@@ -121,24 +121,7 @@ const Header = () => {
                             )}
                         </li>
 
-                        {/* 3. TRUST (Security + Compliance) */}
-                        <li className={styles.navItem} onMouseEnter={() => handleMouseEnter('trust')} onMouseLeave={handleMouseLeave}>
-                            <Link href={`/${locale}/security`} className={styles.navLink}>
-                                {t('nav.trust')} <ChevronDown size={14} />
-                            </Link>
-                            {activeDropdown === 'trust' && (
-                                <div className={styles.dropdownContainer}>
-                                    <div className="glass-panel p-4 animate-fade-in" style={{ width: '280px', display: 'flex', flexDirection: 'column', gap: '0.2rem', background: 'rgba(2, 6, 23, 0.98)', border: '1px solid var(--primary-glow)', boxShadow: '0 20px 40px rgba(0,0,0,0.4)' }}>
-                                        <Link href={`/${locale}/security#compliance-maps`} className={styles.dropdownLink}><Globe size={14} /> {t('nav.trust_links.compliance_maps')}</Link>
-                                        <Link href={`/${locale}/security#transparency`} className={styles.dropdownLink}><FileText size={14} /> {t('nav.trust_links.transparency')}</Link>
-                                        <Link href={`/${locale}/security#certs`} className={styles.dropdownLink}><ShieldCheck size={14} /> {t('nav.trust_links.certs')}</Link>
-                                        <Link href={`/${locale}/privacy`} className={styles.dropdownLink}><Lock size={14} /> {t('nav.trust_links.privacy')}</Link>
-                                    </div>
-                                </div>
-                            )}
-                        </li>
-
-                        {/* 4. DOCS (Resources) */}
+                        {/* 3. DOCS (Resources) */}
                         <li className={styles.navItem} onMouseEnter={() => handleMouseEnter('docs')} onMouseLeave={handleMouseLeave}>
                             <Link href={`/${locale}/docs`} className={styles.navLink}>
                                 {t('nav.docs')} <ChevronDown size={14} />
@@ -160,7 +143,7 @@ const Header = () => {
                             )}
                         </li>
 
-                        {/* 5. PRICING */}
+                        {/* 4. PRICING */}
                         <li className={styles.navItem} onMouseEnter={() => handleMouseEnter('pricing')} onMouseLeave={handleMouseLeave}>
                             <Link href={`/${locale}/pricing`} className={styles.navLink}>
                                 {t('nav.pricing')} <ChevronDown size={14} />
@@ -178,19 +161,29 @@ const Header = () => {
                             )}
                         </li>
 
-                        {/* 6. COMPANY */}
+                        {/* 5. COMPANY & TRUST */}
                         <li className={styles.navItem} onMouseEnter={() => handleMouseEnter('company')} onMouseLeave={handleMouseLeave}>
                             <Link href={`/${locale}/company`} className={styles.navLink}>
                                 {t('nav.company')} <ChevronDown size={14} />
                             </Link>
                             {activeDropdown === 'company' && (
                                 <div className={styles.dropdownContainer}>
-                                    <div className="glass-panel p-4 animate-fade-in" style={{ width: '240px', display: 'flex', flexDirection: 'column', gap: '0.2rem', background: 'rgba(2, 6, 23, 0.98)', border: '1px solid var(--primary-glow)', boxShadow: '0 20px 40px rgba(0,0,0,0.4)' }}>
-                                        <Link href={`/${locale}/company#about`} className={styles.dropdownLink}>{t('nav.company_links.about')}</Link>
-                                        <Link href={`/${locale}/company#leadership`} className={styles.dropdownLink}>{t('nav.company_links.leadership')}</Link>
-                                        <Link href={`/${locale}/company#global-operations`} className={styles.dropdownLink}>{t('nav.company_links.operations')}</Link>
-                                        <Link href={`/${locale}/company#newsroom`} className={styles.dropdownLink}><Newspaper size={14} /> {t('nav.company_links.newsroom')}</Link>
-                                        <Link href={`/${locale}/contact`} className={styles.dropdownLink}>{t('nav.company_links.contact')}</Link>
+                                    <div className="glass-panel p-6 animate-fade-in" style={{ width: '500px', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1.5rem', background: 'rgba(2, 6, 23, 0.98)', border: '1px solid var(--primary-glow)', boxShadow: '0 20px 40px rgba(0,0,0,0.4)' }}>
+                                        <div style={{ display: 'flex', flexDirection: 'column', gap: '0.2rem' }}>
+                                            <div className={styles.dropdownLabel}>{t('nav.organization')}</div>
+                                            <Link href={`/${locale}/company#about`} className={styles.dropdownLink}>{t('nav.company_links.about')}</Link>
+                                            <Link href={`/${locale}/company#leadership`} className={styles.dropdownLink}>{t('nav.company_links.leadership')}</Link>
+                                            <Link href={`/${locale}/company#global-operations`} className={styles.dropdownLink}>{t('nav.company_links.operations')}</Link>
+                                            <Link href={`/${locale}/company#newsroom`} className={styles.dropdownLink}><Newspaper size={14} /> {t('nav.company_links.newsroom')}</Link>
+                                            <Link href={`/${locale}/contact`} className={styles.dropdownLink}>{t('nav.company_links.contact')}</Link>
+                                        </div>
+                                        <div style={{ display: 'flex', flexDirection: 'column', gap: '0.2rem' }}>
+                                            <div className={styles.dropdownLabel}>{t('nav.trust')}</div>
+                                            <Link href={`/${locale}/security#compliance-maps`} className={styles.dropdownLink}><Globe size={14} /> {t('nav.trust_links.compliance_maps')}</Link>
+                                            <Link href={`/${locale}/security#transparency`} className={styles.dropdownLink}><FileText size={14} /> {t('nav.trust_links.transparency')}</Link>
+                                            <Link href={`/${locale}/security#certs`} className={styles.dropdownLink}><ShieldCheck size={14} /> {t('nav.trust_links.certs')}</Link>
+                                            <Link href={`/${locale}/privacy`} className={styles.dropdownLink}><Lock size={14} /> {t('nav.trust_links.privacy')}</Link>
+                                        </div>
                                     </div>
                                 </div>
                             )}
@@ -219,9 +212,9 @@ const Header = () => {
                     <div className="container p-8 flex-col gap-6">
                         <Link href={`/${locale}/products`} onClick={() => setIsMenuOpen(false)} className="text-xl font-bold">{t('nav.products')}</Link>
                         <Link href={`/${locale}/industries`} onClick={() => setIsMenuOpen(false)} className="text-xl font-bold">{t('nav.solutions')}</Link>
-                        <Link href={`/${locale}/security`} onClick={() => setIsMenuOpen(false)} className="text-xl font-bold">{t('nav.trust')}</Link>
+                        <Link href={`/${locale}/docs`} onClick={() => setIsMenuOpen(false)} className="text-xl font-bold">{t('nav.docs')}</Link>
                         <Link href={`/${locale}/pricing`} onClick={() => setIsMenuOpen(false)} className="text-xl font-bold">{t('nav.pricing')}</Link>
-                        <Link href={`/${locale}/blog`} onClick={() => setIsMenuOpen(false)} className="text-xl font-bold">{t('nav.company')}</Link>
+                        <Link href={`/${locale}/company`} onClick={() => setIsMenuOpen(false)} className="text-xl font-bold">{t('nav.company')}</Link>
                         <Link href={`/${locale}/onboarding`} onClick={() => setIsMenuOpen(false)} className="btn-primary text-center">{t('nav.onboarding')}</Link>
                     </div>
                 </div>
