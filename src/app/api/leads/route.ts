@@ -1,9 +1,17 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { Redis } from '@upstash/redis';
-import { auth } from '@/auth';
+
+// Optional import - only available after npm install @upstash/redis
+let Redis: any = null;
+
+try {
+    // @ts-ignore - Optional dependency
+    Redis = require('@upstash/redis').Redis;
+} catch (e) {
+    // Redis not installed yet
+}
 
 // Initialize Upstash Redis
-const redis = process.env.REDIS_URL && process.env.REDIS_TOKEN
+const redis = Redis && process.env.REDIS_URL && process.env.REDIS_TOKEN
     ? new Redis({
         url: process.env.REDIS_URL,
         token: process.env.REDIS_TOKEN,
@@ -43,7 +51,7 @@ export async function GET(req: NextRequest) {
 
         // Get lead details
         const leads = await Promise.all(
-            leadIds.map(async (id) => {
+            leadIds.map(async (id: string) => {
                 const data = await redis.get(`lead:${id}`);
                 return data ? JSON.parse(data as string) : null;
             })
