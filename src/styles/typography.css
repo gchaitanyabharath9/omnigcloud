@@ -6,27 +6,25 @@ h5,
 h6 {
     font-family: var(--font-heading);
     color: var(--foreground);
-    line-height: 1.02;
-    letter-spacing: -0.05em;
+    line-height: var(--leading-tight);
+    letter-spacing: var(--tracking-tighter);
     margin-bottom: 0.75rem;
 }
 
 h1 {
     font-weight: 800;
     font-size: var(--h1-size);
-    letter-spacing: -0.07em;
 }
 
 h2 {
     font-weight: 800;
     font-size: var(--h2-size);
-    letter-spacing: -0.06em;
 }
 
 h3 {
     font-weight: 700;
     font-size: var(--h3-size);
-    letter-spacing: -0.04em;
+    letter-spacing: var(--tracking-tight);
 }
 
 h4 {
@@ -35,11 +33,13 @@ h4 {
 }
 
 p {
-    line-height: 1.6;
+    line-height: var(--leading-normal);
     color: var(--muted);
     font-size: var(--body-size);
     margin-bottom: 1.25rem;
     font-family: var(--font-body);
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+    /* Inter premium settings */
 }
 
 .text-lead {

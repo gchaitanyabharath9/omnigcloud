@@ -41,20 +41,21 @@ export default function CookieConsent() {
             width: 'calc(100vw - 4rem)',
             animation: 'slideUp 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards',
         }}>
-            <div className="glass-panel" style={{
-                padding: '1.25rem',
+            <div className="cookie-glass" style={{
+                padding: '1.5rem',
                 borderRadius: '1.25rem',
-                border: '1px solid var(--card-border)',
-                background: 'var(--card-bg)',
-                backdropFilter: 'blur(32px)',
-                boxShadow: '0 20px 40px rgba(0,0,0,0.4)',
+                border: '1px solid rgba(59, 130, 246, 0.3)',
+                background: '#020617', // Solid background to hide what's behind
+                boxShadow: '0 30px 60px -12px rgba(0, 0, 0, 1)',
                 display: 'flex',
                 flexDirection: 'column',
-                gap: '1rem'
+                gap: '1.25rem',
+                position: 'relative',
+                zIndex: 100001
             }}>
-                <div style={{ display: 'flex', alignItems: 'flex-start', gap: '1rem' }}>
+                <div style={{ display: 'flex', alignItems: 'flex-start', gap: '1.25rem' }}>
                     <div style={{
-                        background: 'var(--primary-glow)',
+                        background: 'rgba(59, 130, 246, 0.1)',
                         padding: '0.75rem',
                         borderRadius: '0.75rem',
                         display: 'flex',
