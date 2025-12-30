@@ -1,3 +1,4 @@
+import { NextRequest } from 'next/server';
 import { z } from 'zod';
 import { withApiHarden, createSuccessResponse, createErrorResponse } from '@/lib/api-utils';
 
@@ -7,7 +8,7 @@ const BillingSchema = z.object({
     gpuUnits: z.number().min(0).optional().default(0),
 });
 
-export async function POST(request: Request) {
+export async function POST(request: NextRequest) {
     return withApiHarden(request, async (req, { requestId }) => {
         try {
             const body = await req.json();

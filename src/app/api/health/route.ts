@@ -1,7 +1,8 @@
+import { NextRequest } from 'next/server';
 import { withApiHarden, createSuccessResponse } from '@/lib/api-utils';
 import pkg from '../../../../package.json';
 
-export async function GET(request: Request) {
+export async function GET(request: NextRequest) {
     return withApiHarden(request, async (req, { requestId }) => {
         return createSuccessResponse(requestId, {
             status: 'ok',
