@@ -159,16 +159,30 @@
     left: 0;
     right: 0;
     bottom: 0;
+    background-color: var(--background);
+    /* Fallback */
     background: var(--background);
-    /* Ensure this variable resolves to an opaque color */
+    /* Improve contrast and readability */
+    color: var(--foreground);
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
-    z-index: 1400;
+    z-index: 9999;
+    /* Ensure it's above everything */
     padding: 2rem;
     border-top: 1px solid var(--card-border);
     animation: fadeIn 0.2s ease-out;
     display: flex;
     flex-direction: column;
+    overflow-y: auto;
+    /* Allow scrolling if menu is long */
+}
+
+/* Adjust top position for small screens where header height changes */
+@media (max-width: 480px) {
+    .mobileNav {
+        top: 60px;
+        /* Matched to .header height change */
+    }
 }
 
 @keyframes fadeIn {

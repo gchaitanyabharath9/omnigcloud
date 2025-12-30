@@ -16,13 +16,13 @@ export default function MobileMenuOverlay({ isOpen, onClose, locale, t }: Mobile
 
     return (
         <div className={styles.mobileNav}>
-            <div className="container p-8 flex-col gap-6">
-                <Link href={`/${locale}/products`} onClick={onClose} className="text-xl font-bold">{t('nav.products')}</Link>
-                <Link href={`/${locale}/industries`} onClick={onClose} className="text-xl font-bold">{t('nav.solutions')}</Link>
-                <Link href={`/${locale}/docs`} onClick={onClose} className="text-xl font-bold">{t('nav.docs')}</Link>
-                <Link href={`/${locale}/pricing`} onClick={onClose} className="text-xl font-bold">{t('nav.pricing')}</Link>
-                <Link href={`/${locale}/company`} onClick={onClose} className="text-xl font-bold">{t('nav.company')}</Link>
-                <Link href={`/${locale}/onboarding`} onClick={onClose} className="btn-primary text-center">{t('nav.onboarding')}</Link>
+            <div className="container p-8 flex-col gap-6" style={{ alignItems: 'flex-start' }}>
+                <Link href={`/${locale}/products`} onClick={onClose} className="text-xl font-bold" style={{ color: 'var(--foreground)' }}>{t('nav.products')}</Link>
+                <Link href={`/${locale}/industries`} onClick={onClose} className="text-xl font-bold" style={{ color: 'var(--foreground)' }}>{t('nav.solutions')}</Link>
+                <Link href={`/${locale}/docs`} onClick={onClose} className="text-xl font-bold" style={{ color: 'var(--foreground)' }}>{t('nav.docs')}</Link>
+                <Link href={`/${locale}/pricing`} onClick={onClose} className="text-xl font-bold" style={{ color: 'var(--foreground)' }}>{t('nav.pricing')}</Link>
+                <Link href={`/${locale}/company`} onClick={onClose} className="text-xl font-bold" style={{ color: 'var(--foreground)' }}>{t('nav.company')}</Link>
+                <Link href={`/${locale}/onboarding`} onClick={onClose} className="btn-primary text-center w-full">{t('nav.onboarding')}</Link>
             </div>
         </div>
     );
