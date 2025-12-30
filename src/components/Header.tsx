@@ -56,13 +56,14 @@ const Header = () => {
                 {/* LOGO */}
                 <Link href={`/${locale}`} className={styles.logo}>
                     <div className={styles.logoIcon}>
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="var(--primary)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                            <path d="M2 17L12 22L22 17" stroke="var(--primary)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                            <path d="M2 12L12 17L22 12" stroke="var(--primary)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="16" cy="16" r="14" stroke="var(--primary)" strokeWidth="1" strokeDasharray="4 4" opacity="0.4" />
+                            <path d="M22 16C22 19.3137 19.3137 22 16 22C12.6863 22 10 19.3137 10 16C10 12.6863 12.6863 10 16 10C17.6569 10 19.1569 10.6716 20.2426 11.7574L23.0711 8.92893C21.2553 7.11317 18.7553 6 16 6C10.4772 6 6 10.4772 6 16C6 21.5228 10.4772 26 16 26C21.5228 26 26 21.5228 26 16V14H16V18H22V16V16Z" fill="var(--primary)" />
+                            <path d="M16 14L16 2V6" stroke="var(--primary)" strokeWidth="2" strokeLinecap="round" />
+                            <path d="M12 14L4 14L8 14" stroke="var(--primary)" strokeWidth="2" strokeLinecap="round" opacity="0.5" />
                         </svg>
                     </div>
-                    <span className={styles.logoText}>Omni<span style={{ color: 'var(--primary)' }}>G</span><span className="text-gradient">Cloud</span></span>
+                    <span className={styles.logoText}>Omni<span style={{ color: 'var(--primary)', fontWeight: 900 }}>G</span><span className="text-gradient" style={{ fontWeight: 900 }}>Cloud</span></span>
                 </Link>
 
                 {/* DESKTOP NAV */}

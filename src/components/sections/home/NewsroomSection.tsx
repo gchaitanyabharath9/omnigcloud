@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { Newspaper, ArrowRight, ExternalLink } from 'lucide-react';
 import { useTranslations } from 'next-intl';
+import Image from 'next/image';
 
 export default function NewsroomSection() {
     const t = useTranslations('Newsroom');
@@ -43,7 +44,13 @@ export default function NewsroomSection() {
                             transition: 'transform 0.3s ease'
                         }}>
                             <div style={{ height: '180px', width: '100%', position: 'relative' }}>
-                                <img src={item.img} alt={t(`news.${item.id}.title`)} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                                <Image
+                                    src={item.img}
+                                    alt={t(`news.${item.id}.title`)}
+                                    fill
+                                    style={{ objectFit: 'cover' }}
+                                    sizes="(max-width: 768px) 100vw, 33vw"
+                                />
                                 <div style={{ position: 'absolute', top: '1rem', right: '1rem' }}>
                                     <span style={{ fontSize: '0.6rem', fontWeight: 900, background: 'rgba(59, 130, 246, 0.9)', color: 'white', padding: '0.2rem 0.6rem', borderRadius: '4px', backdropFilter: 'blur(10px)' }}>{t(`news.${item.id}.tag`)}</span>
                                 </div>

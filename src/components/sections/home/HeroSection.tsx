@@ -1,6 +1,7 @@
 import { useTranslations, useLocale } from 'next-intl';
 import Link from 'next/link';
 import { ShieldAlert, PlayCircle, CheckCircle, Globe, Activity, Layers, Cpu } from 'lucide-react';
+import Image from 'next/image';
 
 export default function HeroSection() {
     const t = useTranslations('Hero');
@@ -8,7 +9,6 @@ export default function HeroSection() {
 
     return (
         <section id="hero" className="snap-section" style={{ position: 'relative' }}>
-
             {/* Premium Grid Background */}
             <div style={{
                 position: 'absolute',
@@ -24,7 +24,7 @@ export default function HeroSection() {
                 zIndex: 0,
                 pointerEvents: 'none',
                 WebkitMaskImage: 'linear-gradient(to bottom, black 40%, transparent 100%)',
-                maskImage: 'linear-gradient(to bottom, black 40%, transparent 100%)' /* Fade out at bottom */
+                maskImage: 'linear-gradient(to bottom, black 40%, transparent 100%)'
             }}></div>
 
             {/* Ambient Glows */}
@@ -41,11 +41,8 @@ export default function HeroSection() {
             }}></div>
 
             <div className="container" style={{ position: 'relative', zIndex: 1 }}>
-
-                {/* 2x2 GRID CONTROL CENTER LAYOUT - HIGH DENSITY */}
                 <div className="hero-grid-layout">
-
-                    {/* Q1: Top-Left (Headline & Intro & CTA) - Tight & Top Aligned */}
+                    {/* Q1: Top-Left */}
                     <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'flex-start', gap: '2rem' }}>
                         <div>
                             <div className="badge badge-primary-subtle mb-4 w-fit">
@@ -63,7 +60,6 @@ export default function HeroSection() {
                                 {t('subtitle')}
                             </p>
 
-                            {/* CTA Buttons */}
                             <div style={{ display: 'flex', flexWrap: 'wrap', gap: '1rem' }}>
                                 <Link href={`/${locale}/contact`} className="btn-primary" style={{ flex: '1 1 auto', textAlign: 'center' }}>
                                     {t('ctaPrimary')}
@@ -74,10 +70,9 @@ export default function HeroSection() {
                             </div>
                         </div>
 
-                        {/* NEW: Console Style System Status */}
                         <div style={{ flex: 1, display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
                             <div style={{
-                                background: 'rgba(2, 6, 23, 0.5)', /* Dark Console BG */
+                                background: 'rgba(2, 6, 23, 0.5)',
                                 border: '1px solid rgba(255, 255, 255, 0.08)',
                                 borderRadius: '1rem',
                                 padding: '1.25rem',
@@ -108,12 +103,11 @@ export default function HeroSection() {
                         </div>
                     </div>
 
-                    {/* Q2: Top-Right (Main Dashboard Visual - The 'Table') */}
-                    {/* Size Increased to Push Bottom Row Down */}
+                    {/* Q2: Top-Right */}
                     <div style={{ position: 'relative', height: '100%', display: 'flex', flexDirection: 'column', justifyContent: 'flex-start' }}>
                         <div className="glass-panel" style={{
                             width: '100%',
-                            height: '450px', /* Consistency */
+                            height: '450px',
                             maxHeight: '450px',
                             padding: '0',
                             borderRadius: '1.25rem',
@@ -125,15 +119,21 @@ export default function HeroSection() {
                             display: 'flex',
                             flexDirection: 'column'
                         }}>
-                            {/* Dashboard Body */}
                             <div style={{ flex: 1, padding: '1.5rem', position: 'relative', display: 'flex', flexDirection: 'column', gap: '1rem' }}>
+                                {/* Dashboard Background Optimized */}
                                 <div style={{
                                     position: 'absolute', top: 0, right: 0, width: '100%', height: '100%',
-                                    backgroundImage: 'url(https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1600&fit=crop)',
-                                    backgroundSize: 'cover', opacity: 0.1, pointerEvents: 'none'
-                                }}></div>
+                                    opacity: 0.1, pointerEvents: 'none'
+                                }}>
+                                    <Image
+                                        src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1600&fit=crop"
+                                        alt="Dashboard Background"
+                                        fill
+                                        style={{ objectFit: 'cover' }}
+                                        priority
+                                    />
+                                </div>
 
-                                {/* Top Row Stats */}
                                 <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: '0.75rem', position: 'relative', zIndex: 2 }}>
                                     <div className="dashboard-stat-card" style={{ padding: '0.75rem' }}>
                                         <div className="stat-label" style={{ fontSize: '0.6rem' }}>{t('stats.assets')}</div>
@@ -149,9 +149,13 @@ export default function HeroSection() {
                                     </div>
                                 </div>
 
-                                {/* Main Visual */}
                                 <div style={{ flex: 1, borderRadius: '0.5rem', border: '1px solid var(--card-border)', position: 'relative', overflow: 'hidden', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80" className="img-cover" style={{ opacity: 0.4 }} alt="Data Graph" />
+                                    <Image
+                                        src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80"
+                                        alt="Data Graph"
+                                        fill
+                                        style={{ objectFit: 'cover', opacity: 0.4 }}
+                                    />
                                     <div style={{ width: '60px', height: '60px', borderRadius: '50%', background: 'rgba(59, 130, 246, 0.2)', display: 'flex', alignItems: 'center', justifyContent: 'center', boxShadow: '0 0 30px var(--primary-glow)', zIndex: 2, border: '1px solid rgba(59, 130, 246, 0.4)' }}>
                                         <Globe size={32} color="#60a5fa" strokeWidth={1.5} />
                                     </div>
@@ -160,7 +164,7 @@ export default function HeroSection() {
                         </div>
                     </div>
 
-                    {/* Q3: Bottom-Left (Expert Contact Panel) */}
+                    {/* Q3: Bottom-Left */}
                     <div style={{ display: 'flex', flexDirection: 'column', height: '100%', justifyContent: 'flex-start' }}>
                         <div className="glass-panel" style={{ height: '100%', padding: '1.5rem', borderRadius: '1rem', border: '1px solid var(--card-border)', background: 'var(--bg-surface-2)', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
                             <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
@@ -172,7 +176,9 @@ export default function HeroSection() {
                                             'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=64&h=64&q=80&fit=crop',
                                             'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=64&h=64&q=80&fit=crop'
                                         ].map((src, i) => (
-                                            <img key={i} src={src} style={{ width: '44px', height: '44px', borderRadius: '50%', border: '2px solid var(--bg-surface-2)', marginLeft: i > 0 ? '-16px' : 0 }} alt="Team" />
+                                            <div key={i} style={{ position: 'relative', width: '44px', height: '44px', borderRadius: '50%', border: '2px solid var(--bg-surface-2)', marginLeft: i > 0 ? '-16px' : 0, overflow: 'hidden' }}>
+                                                <Image src={src} alt="Team Member" fill style={{ objectFit: 'cover' }} />
+                                            </div>
                                         ))}
                                     </div>
                                     <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
@@ -180,7 +186,6 @@ export default function HeroSection() {
                                         <span style={{ fontSize: '0.75rem', color: 'var(--muted)' }}>{t('experts.status')}</span>
                                     </div>
                                 </div>
-
                                 <Link href="/contact" className="btn-secondary" style={{ padding: '0.75rem 1.5rem', fontSize: '0.9rem', height: 'auto' }}>
                                     {t('experts.cta')}
                                 </Link>
@@ -188,10 +193,8 @@ export default function HeroSection() {
                         </div>
                     </div>
 
-                    {/* Q4: Bottom-Right (Data Density) */}
+                    {/* Q4: Bottom-Right */}
                     <div className="grid-2" style={{ gap: '1rem', height: '100%' }}>
-
-                        {/* Interactive Graph Card */}
                         <div className="glass-panel" style={{ padding: '1.5rem', borderRadius: '1rem', border: '1px solid var(--card-border)', background: 'var(--bg-surface-2)', display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
                             <div>
                                 <div style={{ fontSize: '0.65rem', fontWeight: 700, opacity: 0.7, textTransform: 'uppercase', marginBottom: '0.25rem' }}>{t('efficiency')}</div>
@@ -204,7 +207,6 @@ export default function HeroSection() {
                             </div>
                         </div>
 
-                        {/* Impact Card */}
                         <div className="glass-panel" style={{ padding: '1.5rem', borderRadius: '1rem', border: '1px solid var(--primary-glow)', background: 'rgba(59, 130, 246, 0.05)', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
                             <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', marginBottom: '0.75rem' }}>
                                 <div style={{ background: 'var(--primary)', width: '30px', height: '30px', borderRadius: '6px', display: 'flex', alignItems: 'center', justifyContent: 'center', boxShadow: '0 4px 10px rgba(59, 130, 246, 0.4)' }}>
@@ -219,11 +221,10 @@ export default function HeroSection() {
                             </p>
                         </div>
                     </div>
-
                 </div>
             </div>
 
-            {/* ENTERPRISE TRUST BAR - HIGH DENSITY */}
+            {/* ENTERPRISE TRUST BAR */}
             <div style={{
                 width: '100%',
                 borderTop: '1px solid var(--card-border)',

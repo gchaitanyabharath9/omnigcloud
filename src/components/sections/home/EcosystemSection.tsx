@@ -1,14 +1,24 @@
 import { ShieldAlert, Globe, CpuIcon, Database, ArrowRight, Activity, Server, Lock } from 'lucide-react';
 import Link from 'next/link';
 import { useTranslations } from 'next-intl';
+import Image from 'next/image';
 
 export default function EcosystemSection() {
     const t = useTranslations('Ecosystem');
 
     return (
-        <section id="ecosystem" className="snap-section" style={{ background: 'var(--background)' }}>
-            {/* Background Map Image - Reduced Opacity for text readiness */}
-            <div className="bg-cover-overlay" style={{ backgroundImage: 'url(https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1600&fit=crop&q=80)', opacity: 0.15 }}></div>
+        <section id="ecosystem" className="snap-section" style={{ background: 'var(--background)', position: 'relative', overflow: 'hidden' }}>
+            {/* Background Map Image - Optimized with next/image */}
+            <div className="bg-cover-overlay" style={{ opacity: 0.15 }}>
+                <Image
+                    src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1600&fit=crop&q=80"
+                    alt="Global Network"
+                    fill
+                    className="img-cover"
+                    sizes="100vw"
+                    priority={false}
+                />
+            </div>
 
             <div className="container" style={{ position: 'relative', zIndex: 2 }}>
                 <div style={{ textAlign: 'center', display: 'flex', flexDirection: 'column', alignItems: 'center', marginBottom: '1rem' }}>
