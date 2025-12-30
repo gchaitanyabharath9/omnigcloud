@@ -1,6 +1,7 @@
 import Footer from "@/components/Footer";
 import PlatformHero from "@/components/sections/platform/PlatformHero";
 import ControlPlaneSection from "@/components/sections/platform/ControlPlaneSection";
+import ObservabilitySection from "@/components/sections/platform/ObservabilitySection";
 import ArbitrageSection from "@/components/sections/platform/ArbitrageSection";
 import SecuritySection from "@/components/sections/platform/SecuritySection";
 import IntegrationsSection from "@/components/sections/platform/IntegrationsSection";
@@ -17,6 +18,7 @@ export default function PlatformPage() {
         <div className="main-content">
             <PlatformHero />
             <ControlPlaneSection />
+            <ObservabilitySection />
             <ArbitrageSection />
             <ComparisonSection />
             <SecuritySection />
