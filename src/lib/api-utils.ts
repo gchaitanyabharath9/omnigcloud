@@ -1,4 +1,4 @@
-import { NextResponse } from 'next/server';
+import { NextResponse, NextRequest } from 'next/server';
 import { v4 as uuidv4 } from 'uuid';
 import { getRateLimiter } from './rate-limit';
 import { logger } from './logger';
@@ -19,8 +19,8 @@ export interface ApiResponse<T = any> {
 const limiter = getRateLimiter();
 
 export async function withApiHarden(
-    request: Request,
-    handler: (req: Request, context: { requestId: string }) => Promise<NextResponse>
+    request: NextRequest,
+    handler: (req: NextRequest, context: { requestId: string }) => Promise<NextResponse>
 ) {
     const requestId = uuidv4();
     const startTime = Date.now();
