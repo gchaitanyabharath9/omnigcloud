@@ -10,7 +10,7 @@ export default function UseCasesPage() {
     return (
         <div className="main-content">
             {/* HERO */}
-            <section style={{ padding: '8rem 0 4rem', background: 'var(--bg-surface-2)', borderBottom: '1px solid var(--card-border)' }}>
+            <section className="snap-section" style={{ background: 'var(--bg-surface-2)', borderBottom: '1px solid var(--card-border)' }}>
                 <div className="container">
                     <div className="badge badge-primary-subtle mb-4">
                         <Activity size={14} className="mr-2" /> {t('hero.tag')}
@@ -38,7 +38,10 @@ export default function UseCasesPage() {
                 />
             ))}
 
-            <Footer />
+            {/* SITEMAP / FOOTER SNAP SECTION */}
+            <section id="sitemap" className="snap-section" style={{ background: 'var(--background)', borderTop: '1px solid var(--card-border)' }}>
+                <Footer />
+            </section>
         </div>
     );
 }

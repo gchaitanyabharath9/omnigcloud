@@ -58,6 +58,10 @@ html {
   /* Smooth scrolling */
   scroll-behavior: smooth;
 
+  /* Scroll Snapping */
+  scroll-snap-type: y mandatory;
+  scroll-padding-top: 70px;
+
   /* Prevent horizontal scroll */
   overflow-x: hidden;
   width: 100%;

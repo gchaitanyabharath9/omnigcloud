@@ -237,7 +237,7 @@ export default function HeroSection() {
                 background: 'rgba(2, 6, 23, 0.3)',
                 backdropFilter: 'blur(10px)',
                 zIndex: 10,
-                marginTop: '4rem'
+                marginTop: '2rem'
             }}>
                 <div className="container" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '1.5rem' }}>
                     <div style={{ fontSize: '0.65rem', fontWeight: 800, color: 'var(--muted)', letterSpacing: '0.1em', textTransform: 'uppercase' }}>

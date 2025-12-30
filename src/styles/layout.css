@@ -13,11 +13,20 @@
     position: relative;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
-    padding: 6rem 0 4rem 0;
-    /* Clean flow without snapping */
-    min-height: auto;
+    justify-content: center;
+    padding: 5rem 0;
+    min-height: 100vh;
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
     border-bottom: 1px solid var(--card-border);
+}
+
+@media (max-width: 1024px) {
+    .snap-section {
+        min-height: auto;
+        scroll-snap-align: none;
+        padding: 4rem 0;
+    }
 }
 
 .hero-grid-layout {
@@ -61,7 +70,7 @@
 .grid-2x2-strict {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, minmax(200px, 1fr));
+    grid-template-rows: repeat(2, minmax(180px, 1fr));
     gap: 1.5rem;
     width: 100%;
     margin-top: 2rem;

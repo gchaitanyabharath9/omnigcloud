@@ -20,9 +20,10 @@ export default function ServicesPage() {
             <ManagedOperationsSection />
             <DataAiFabricSection />
 
-            <div className="container pb-10">
+            {/* SITEMAP / FOOTER SNAP SECTION */}
+            <section id="sitemap" className="snap-section" style={{ background: 'var(--background)', borderTop: '1px solid var(--card-border)' }}>
                 <Footer />
-            </div>
+            </section>
 
         </div>
     );

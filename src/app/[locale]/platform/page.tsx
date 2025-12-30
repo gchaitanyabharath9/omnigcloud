@@ -25,7 +25,7 @@ export default function PlatformPage() {
             <IntegrationsSection />
 
             {/* SITEMAP / FOOTER SNAP SECTION */}
-            <section id="sitemap" className="snap-section" style={{ minHeight: 'auto', background: 'var(--background)', borderTop: '1px solid var(--card-border)', paddingTop: '3rem' }}>
+            <section id="sitemap" className="snap-section" style={{ background: 'var(--background)', borderTop: '1px solid var(--card-border)' }}>
                 <Footer />
             </section>
         </div>

@@ -23,7 +23,7 @@ export default function SovereignGallery() {
     ];
 
     return (
-        <section style={{ padding: '6rem 0', background: 'var(--background)' }}>
+        <section className="snap-section" style={{ background: 'var(--background)' }}>
             <div className="container">
                 <div style={{ textAlign: 'center', marginBottom: '4rem' }}>
                     <h2 style={{ fontSize: 'var(--h2-size)', fontWeight: 950, marginBottom: '1rem' }}>{t('title')}</h2>
