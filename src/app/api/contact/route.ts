@@ -1,7 +1,23 @@
 import { z } from 'zod';
 import { withApiHarden, createSuccessResponse, createErrorResponse } from '@/lib/api-utils';
-import { Resend } from 'resend';
-import { Redis } from '@upstash/redis';
+
+// Optional imports - only available after npm install resend @upstash/redis
+let Resend: any = null;
+let Redis: any = null;
+
+try {
+    // @ts-ignore - Optional dependency
+    Resend = require('resend').Resend;
+} catch (e) {
+    // Resend not installed yet
+}
+
+try {
+    // @ts-ignore - Optional dependency
+    Redis = require('@upstash/redis').Redis;
+} catch (e) {
+    // Redis not installed yet
+}
 
 const ContactSchema = z.object({
     firstName: z.string().min(1, "First name is required"),
@@ -12,10 +28,10 @@ const ContactSchema = z.object({
 });
 
 // Initialize Resend (for email notifications)
-const resend = process.env.RESEND_API_KEY ? new Resend(process.env.RESEND_API_KEY) : null;
+const resend = Resend && process.env.RESEND_API_KEY ? new Resend(process.env.RESEND_API_KEY) : null;
 
 // Initialize Upstash Redis (for lead storage)
-const redis = process.env.REDIS_URL && process.env.REDIS_TOKEN
+const redis = Redis && process.env.REDIS_URL && process.env.REDIS_TOKEN
     ? new Redis({
         url: process.env.REDIS_URL,
         token: process.env.REDIS_TOKEN,
