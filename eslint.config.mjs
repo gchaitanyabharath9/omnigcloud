@@ -26,6 +26,7 @@ const eslintConfig = defineConfig([
       "react/jsx-no-comment-textnodes": "off",
       "@next/next/no-html-link-for-pages": "off",
       "react-hooks/purity": "off",
+      "@typescript-eslint/no-require-imports": "off", // Allow require() for optional dependencies
     },
   },
 ]);
