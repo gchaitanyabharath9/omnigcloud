@@ -1,0 +1,13 @@
+# EB-1A Evidence Mapping Table
+
+This table maps the technical artifacts and contributions of the OmniGCloud project to specific EB-1A evidentiary criteria. It is designed to assist legal counsel and adjudicators in identifying rigorous technical evidence within the petitioner's work.
+
+| EB-1A Criterion | Contribution / Evidence Item | Description & Significance | Location in Repository / Artifacts |
+| :--- | :--- | :--- | :--- |
+| **Original Contributions of Major Significance** | **Typed Configuration Assurance Protocol** | A novel framework ensuring compile-time safety for enterprise environment configurations. Prevents critical "drift" errors in scale-out cloud deployments. | `src/config/index.ts`<br>`src/config/schema.ts`<br>*Technical Preprint Section 3.1* |
+| **Original Contributions of Major Significance** | **Hybrid Secret Injection Strategy** | An architectural innovation allowing seamless polymorphism between local development (velocity) and sovereign Vault-backed production (security), abstracting complexity from developers. | `src/secrets/index.ts`<br>`src/secrets/vault.ts`<br>*Technical Preprint Section 3.2* |
+| **Original Contributions of Major Significance** | **Autonomous Sovereign Orchestration (ASO)** | A design pattern for observable, self-healing sovereign control planes that decouple frontend observability from backend volatility. | `src/components/sections/ASOSection.tsx`<br>*Technical Preprint Section 3.3* |
+| **Authorship of Scholarly Articles** | **"Architecting Sovereign AI Control Planes"** | An original industry research paper detailing the methodology, architecture, and validation of the OmniGCloud framework. Demonstrates ability to formalize and disseminate complex engineering concepts. | `docs/research/technical_preprint.md` |
+| **Critical Role in Distinguished Organizations** | **Lead Architect / Core Contributor** | Sole authorship and architectural ownership of the OmniGCloud reference platform, serving as a blueprint for enterprise cloud modernization strategies. | `CONTRIBUTING.md`<br>`package.json` (Commit history)<br>Project Architecture (`src/`) |
+| **Authorship of Technical Documentation** | **Sovereign Deployment Guides** | Comprehensive, engineer-focused guides for deploying secure AI infrastructure on OCI, Kubernetes, and Hybrid Cloud. Demonstrates deep domain expertise and thought leadership. | `docs/guides/DEPLOY_ORACLE_CLOUD.md`<br>`docs/guides/DEPLOY_NOW.md`<br>`docs/guides/LEAD_CAPTURE_SETUP.md` |
+| **High Salary / Remuneration** | *(Not applicable to code)* | *While code cannot prove salary, the "Critical Role" evidence supports high-level positioning often associated with top-tier compensation.* | *N/A* |
