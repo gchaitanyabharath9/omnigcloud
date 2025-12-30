@@ -190,7 +190,7 @@ export default function PricingPage() {
                 <div className="container">
                     <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '4rem', alignItems: 'start' }}>
                         {/* Trust Section */}
-                        <div>
+                        <div id="trust">
                             <h2 style={{ fontSize: '2rem', fontWeight: 900, marginBottom: '1.5rem' }}>{t('trust.title')}</h2>
                             <p style={{ opacity: 0.7, marginBottom: '3rem', fontSize: '1rem' }}>{t('trust.subtitle')}</p>
                             <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
@@ -208,7 +208,7 @@ export default function PricingPage() {
                         </div>
 
                         {/* FAQ Section */}
-                        <div>
+                        <div id="faq">
                             <h2 style={{ fontSize: '2rem', fontWeight: 900, marginBottom: '1.5rem' }}>{t('faq.title')}</h2>
                             <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
                                 {[

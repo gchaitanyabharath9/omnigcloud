@@ -87,7 +87,7 @@ const Header = () => {
                             </Link>
                             {activeDropdown === 'products' && (
                                 <div className={styles.dropdownContainer}>
-                                    <div className="glass-panel p-6 animate-fade-in" style={{
+                                    <div className="glass-panel p-6 animate-fade-in custom-scrollbar" style={{
                                         width: '640px',
                                         display: 'grid',
                                         gridTemplateColumns: '1fr 1fr',
@@ -96,7 +96,9 @@ const Header = () => {
                                         opacity: 0.99,
                                         border: '1px solid var(--primary-glow)',
                                         boxShadow: '0 25px 50px -12px rgba(0, 0, 0, 0.5)',
-                                        backdropFilter: 'blur(32px)'
+                                        backdropFilter: 'blur(32px)',
+                                        maxHeight: '70vh',
+                                        overflowY: 'auto'
                                     }}>
                                         <div style={{ display: 'flex', flexDirection: 'column', gap: '0.2rem' }}>
                                             <div className={styles.dropdownLabel}>{t('nav.pillars')}</div>
@@ -122,7 +124,7 @@ const Header = () => {
                             </Link>
                             {activeDropdown === 'solutions' && (
                                 <div className={styles.dropdownContainer}>
-                                    <div className="glass-panel p-6 animate-fade-in" style={{
+                                    <div className="glass-panel p-6 animate-fade-in custom-scrollbar" style={{
                                         width: '580px',
                                         display: 'grid',
                                         gridTemplateColumns: '1fr 1fr',
@@ -131,7 +133,9 @@ const Header = () => {
                                         opacity: 0.99,
                                         border: '1px solid var(--primary-glow)',
                                         boxShadow: '0 25px 50px -12px rgba(0, 0, 0, 0.5)',
-                                        backdropFilter: 'blur(32px)'
+                                        backdropFilter: 'blur(32px)',
+                                        maxHeight: '70vh',
+                                        overflowY: 'auto'
                                     }}>
                                         <div style={{ display: 'flex', flexDirection: 'column', gap: '0.2rem' }}>
                                             <div className={styles.dropdownLabel}>{t('nav.industries')}</div>
@@ -159,7 +163,7 @@ const Header = () => {
                             </Link>
                             {activeDropdown === 'docs' && (
                                 <div className={styles.dropdownContainer}>
-                                    <div className="glass-panel p-4 animate-fade-in" style={{
+                                    <div className="glass-panel p-4 animate-fade-in custom-scrollbar" style={{
                                         width: '300px',
                                         display: 'flex',
                                         flexDirection: 'column',
@@ -168,7 +172,9 @@ const Header = () => {
                                         opacity: 0.99,
                                         border: '1px solid var(--primary-glow)',
                                         boxShadow: '0 25px 50px -12px rgba(0, 0, 0, 0.5)',
-                                        backdropFilter: 'blur(32px)'
+                                        backdropFilter: 'blur(32px)',
+                                        maxHeight: '70vh',
+                                        overflowY: 'auto'
                                     }}>
                                         <div className={styles.dropdownLabel}>{t('nav.documentation')}</div>
                                         <Link href={`/${locale}/docs`} className={styles.dropdownLink}><BookOpen size={14} /> {t('nav.docs_links.tech_docs')}</Link>
@@ -193,7 +199,7 @@ const Header = () => {
                             </Link>
                             {activeDropdown === 'pricing' && (
                                 <div className={styles.dropdownContainer}>
-                                    <div className="glass-panel p-4 animate-fade-in" style={{
+                                    <div className="glass-panel p-4 animate-fade-in custom-scrollbar" style={{
                                         width: '260px',
                                         display: 'flex',
                                         flexDirection: 'column',
@@ -202,7 +208,9 @@ const Header = () => {
                                         opacity: 0.99,
                                         border: '1px solid var(--primary-glow)',
                                         boxShadow: '0 25px 50px -12px rgba(0, 0, 0, 0.5)',
-                                        backdropFilter: 'blur(32px)'
+                                        backdropFilter: 'blur(32px)',
+                                        maxHeight: '70vh',
+                                        overflowY: 'auto'
                                     }}>
                                         <Link href={`/${locale}/pricing`} className={styles.dropdownLink}>{t('nav.pricing_links.compare')}</Link>
                                         <Link href={`/${locale}/pricing#developer`} className={styles.dropdownLink}>{t('nav.pricing_links.developer')}</Link>
@@ -223,7 +231,7 @@ const Header = () => {
                             </Link>
                             {activeDropdown === 'company' && (
                                 <div className={styles.dropdownContainer}>
-                                    <div className="glass-panel p-6 animate-fade-in" style={{
+                                    <div className="glass-panel p-6 animate-fade-in custom-scrollbar" style={{
                                         width: '550px',
                                         display: 'grid',
                                         gridTemplateColumns: '1fr 1fr',
@@ -232,7 +240,9 @@ const Header = () => {
                                         opacity: 0.99,
                                         border: '1px solid var(--primary-glow)',
                                         boxShadow: '0 25px 50px -12px rgba(0, 0, 0, 0.5)',
-                                        backdropFilter: 'blur(32px)'
+                                        backdropFilter: 'blur(32px)',
+                                        maxHeight: '70vh',
+                                        overflowY: 'auto'
                                     }}>
                                         <div style={{ display: 'flex', flexDirection: 'column', gap: '0.2rem' }}>
                                             <div className={styles.dropdownLabel}>{t('nav.organization')}</div>
