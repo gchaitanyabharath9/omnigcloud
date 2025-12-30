@@ -1,6 +1,6 @@
 import { useTranslations, useLocale } from 'next-intl';
 import Link from 'next/link';
-import { ShieldAlert, PlayCircle, CheckCircle, Globe, Activity, Layers } from 'lucide-react';
+import { ShieldAlert, PlayCircle, CheckCircle, Globe, Activity, Layers, Cpu } from 'lucide-react';
 
 export default function HeroSection() {
     const t = useTranslations('Hero');
@@ -250,6 +250,9 @@ export default function HeroSection() {
                         </div>
                         <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', fontWeight: 900, fontSize: 'clamp(0.7rem, 2vw, 0.85rem)', whiteSpace: 'nowrap' }}>
                             <CheckCircle size={16} /> GLOBAL_SYS
+                        </div>
+                        <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', fontWeight: 900, fontSize: 'clamp(0.7rem, 2vw, 0.85rem)', whiteSpace: 'nowrap', color: '#e11d48' }}>
+                            <Cpu size={16} /> REDHAT_OCP
                         </div>
                         <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', fontWeight: 900, fontSize: 'clamp(0.7rem, 2vw, 0.85rem)', whiteSpace: 'nowrap' }}>
                             <Layers size={16} /> CORE_INFRA
