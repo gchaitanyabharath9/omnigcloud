@@ -43,6 +43,13 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
     description: "Accelerate enterprise transformation with OmniGCloud's AI-native modernization engine. Specialized in Azure, OCP, and Neo Cloud integration with universal cloud-agnostic discovery.",
     keywords: ["Cloud Modernization", "Azure Integration", "RedHat OCP", "Neo Cloud AI", "Cloud Agnostic Search", "Platform Engineering", "FinOps Intelligence"],
     authors: [{ name: "OmniGCloud Executive Office" }],
+    viewport: {
+      width: 'device-width',
+      initialScale: 1,
+      maximumScale: 5,
+      userScalable: true,
+      viewportFit: 'cover', // For notched devices (iPhone X+)
+    },
     alternates: {
       canonical: `${siteUrl}/${locale}`,
       languages: {
@@ -89,6 +96,14 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
       description: 'Eliminate cloud lock-in with AI-powered platform engineering.',
       creator: '@omnigcloud',
       images: ['/og-image.png'],
+    },
+    appleWebApp: {
+      capable: true,
+      statusBarStyle: 'black-translucent',
+      title: 'OmniGCloud',
+    },
+    formatDetection: {
+      telephone: false, // Prevent auto-detection of phone numbers
     },
   };
 }
