@@ -63,6 +63,18 @@
             }
         }
     },
+    "Company": {
+        "email": {
+            "architects": "architects@omnigcloud.com",
+            "support": "support@omnigcloud.com",
+            "legal": "legal@omnigcloud.com",
+            "press": "press@omnigcloud.com",
+            "admin": "admin@omnigcloud.com",
+            "security": "security@omnigcloud.com"
+        },
+        "name": "OmniGCloud HQ",
+        "location": "New York Platinum District"
+    },
     "Footer": {
         "tagline": "Restoring Enterprise sovereignty through autonomous, AI-governed cloud modernization.",
         "directory": "GLOBAL DIRECTORY // TERMINAL_v4.2",
@@ -110,7 +122,13 @@
             "contact": "Contact"
         },
         "copyright": "© {year} OmniGCloud. All rights reserved.",
-        "footerText": "Governed, Global, and Generative infrastructure for sovereign organizations."
+        "footerText": "Governed, Global, and Generative infrastructure for sovereign organizations.",
+        "social": {
+            "linkedin": "https://linkedin.com/company/omnigcloud",
+            "twitter": "https://x.com/omnigcloud",
+            "discord": "https://discord.gg/omnigcloud",
+            "github": "https://github.com/omnigcloud"
+        }
     },
     "Hero": {
         "badge": "ENTERPRISE CLOUD GOVERNANCE",
@@ -899,7 +917,7 @@
         "responsibleDisclosure": "Responsible Disclosure Program",
         "disclosureIntro": "We welcome security researchers to help us maintain the security of our platform. If you discover a vulnerability, please report it responsibly.",
         "reportingProcess": "How to Report",
-        "step1": "Email security@sovereign.local with details of the vulnerability",
+        "step1": "Email security@omnigcloud.com with details of the vulnerability",
         "step2": "Include steps to reproduce, potential impact, and any proof-of-concept code",
         "step3": "Allow us reasonable time to investigate and remediate before public disclosure",
         "step4": "We will acknowledge your report within 48 hours and provide updates on our progress",

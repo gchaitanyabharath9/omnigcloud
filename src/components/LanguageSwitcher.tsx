@@ -58,9 +58,7 @@ export default function LanguageSwitcher() {
                     gap: '0.5rem',
                     fontSize: '0.85rem',
                     fontWeight: 700,
-                    border: '1px solid rgba(255,255,255,0.1)',
-                    background: 'transparent',
-                    color: '#ffffff',
+                    color: 'var(--foreground)',
                     opacity: isPending ? 0.5 : 1,
                     minWidth: '70px',
                     justifyContent: 'space-between'
@@ -84,7 +82,7 @@ export default function LanguageSwitcher() {
                     display: 'flex',
                     flexDirection: 'column',
                     gap: '0.25rem',
-                    boxShadow: '0 20px 40px rgba(0,0,0,0.4)',
+                    boxShadow: 'var(--card-shadow)',
                     border: '1px solid var(--card-border)',
                     background: 'var(--background)'
                 }}>
@@ -108,7 +106,7 @@ export default function LanguageSwitcher() {
                                 transition: 'all 0.2s'
                             }}
                             onMouseEnter={(e) => {
-                                if (locale !== lang.code) e.currentTarget.style.background = 'rgba(255,255,255,0.05)';
+                                if (locale !== lang.code) e.currentTarget.style.background = 'var(--bg-surface-2)';
                             }}
                             onMouseLeave={(e) => {
                                 if (locale !== lang.code) e.currentTarget.style.background = 'transparent';

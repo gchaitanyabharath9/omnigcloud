@@ -204,7 +204,7 @@ const Header = () => {
                         {theme === 'dark' ? <Sun size={18} /> : <Moon size={18} />}
                     </button>
                     <LanguageSwitcher />
-                    <Link href={`/${locale}/onboarding`} className="btn-primary" style={{ padding: '0.6rem 1.5rem', borderRadius: '0.75rem', fontSize: '0.85rem' }}>
+                    <Link href={`/${locale}/onboarding`} className={`btn-primary ${styles.onboardingBtn}`} style={{ padding: '0.6rem 1.5rem', borderRadius: '0.75rem', fontSize: '0.85rem' }}>
                         {t('nav.onboarding')}
                     </Link>
                     <button className={styles.mobileMenuBtn} onClick={() => setIsMenuOpen(!isMenuOpen)}>

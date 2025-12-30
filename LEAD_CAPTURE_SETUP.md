@@ -191,8 +191,7 @@ Click **"Save"**
 **Add Variable 3:**
 ```
 Name: RESEND_TO_EMAIL
-Value: [your personal email where you want to receive lead notifications]
-Example: your-email@gmail.com
+Value: architects@omnigcloud.com
 Environments: ✅ Production ✅ Preview ✅ Development
 ```
 Click **"Save"**
@@ -254,7 +253,7 @@ git push
 2. Fill out the form:
    - **First Name**: Test
    - **Last Name**: User
-   - **Email**: test@example.com
+   - **Email**: test@omnigcloud.com
    - **Message**: Testing lead capture system - this is a test submission
 3. Click **"Submit"**
 4. You should see success message
@@ -294,7 +293,7 @@ git push
       "submissionId": "SOV-ABC1234",
       "firstName": "Test",
       "lastName": "User",
-      "email": "test@example.com",
+      "email": "test@omnigcloud.com",
       "message": "Testing lead capture system...",
       "timestamp": "2025-12-29T19:30:00.000Z",
       "source": "contact_form",
@@ -336,7 +335,7 @@ git push
   "submissionId": "SOV-ABC1234",
   "firstName": "John",
   "lastName": "Doe",
-  "email": "john@example.com",
+  "email": "john@omnigcloud.com",
   "message": "I'm interested in OmniGCloud...",
   "timestamp": "2025-12-29T19:30:00.000Z",
   "source": "contact_form",
@@ -378,7 +377,7 @@ OmniGCloud Contact Form
 Submission ID: SOV-ABC1234 [NEW]
 
 Name: John Doe
-Email: john@example.com
+Email: john@omnigcloud.com
 Message: I'm interested in learning more...
 
 Submitted At: December 29, 2025 at 7:30 PM EST

@@ -319,7 +319,7 @@ This codebase demonstrates:
 
 - **Documentation**: See `/docs` directory
 - **Issues**: GitHub Issues
-- **Security**: security@sovereign.local
+- **Security**: security@omnigcloud.com
 - **General**: research@omnigcloud.com
 
 ---

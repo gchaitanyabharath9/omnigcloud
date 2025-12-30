@@ -411,11 +411,11 @@ ENABLE_AUDIT_LOG=true
 
 # Magic Link (Optional)
 ENABLE_MAGIC_LINK=false
-EMAIL_SERVER_HOST=smtp.example.com
+EMAIL_SERVER_HOST=smtp.omnigcloud.com
 EMAIL_SERVER_PORT=587
 EMAIL_SERVER_USER=your_smtp_user
 EMAIL_SERVER_PASSWORD=your_smtp_password
-EMAIL_FROM=onboarding@sovereign.local
+EMAIL_FROM=onboarding@omnigcloud.com
 ```
 
 ---

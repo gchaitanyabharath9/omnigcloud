@@ -10,7 +10,7 @@ export default function ProblemSection() {
                     <div className="badge badge-warning-subtle mb-2 text-tiny">
                         <TriangleAlert size={10} /> {t('badge')}
                     </div>
-                    <h2 className="mb-2" style={{ fontSize: '2.5rem' }}>
+                    <h2 className="mb-2" style={{ fontSize: 'clamp(2rem, 5vw, 2.5rem)' }}>
                         {t('title')}
                     </h2>
                     <p className="text-lead text-small mx-auto w-full" style={{ maxWidth: '600px', fontSize: '1rem', marginBottom: '0' }}>

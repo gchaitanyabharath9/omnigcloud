@@ -53,7 +53,7 @@ logger.error('Payment processing failed', {
 ```
 
 **PII Protection:**
-- Emails automatically masked: `user@example.com` → `u***@example.com`
+- Emails automatically masked: `user@omnigcloud.com` → `u***@omnigcloud.com`
 - Sensitive fields removed: `password`, `token`, `secret`, `apiKey`
 
 ### 2. Metrics Collector (`src/lib/metrics.ts`)
@@ -127,8 +127,8 @@ ENABLE_METRICS=true  # Default: true
 import { auditLog, auditHooks } from '@/lib/audit';
 
 // Convenience hooks
-await auditHooks.logLogin('user_123', 'user@example.com', 'google', '192.168.1.1');
-await auditHooks.logFailedLogin('user@example.com', '192.168.1.1', 'Invalid password');
+await auditHooks.logLogin('user_123', 'user@omnigcloud.com', 'google', '192.168.1.1');
+await auditHooks.logFailedLogin('user@omnigcloud.com', '192.168.1.1', 'Invalid password');
 await auditHooks.logAccessDenied('user_123', '/admin', 'view');
 await auditHooks.logDataExport('user_123', 'customer_data.csv');
 

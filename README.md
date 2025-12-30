@@ -256,7 +256,7 @@ AUTH_ENTRA_TENANT_ID=your_tenant_id
 # RBAC Configuration
 AD_GROUP_ADMIN=azure_ad_group_object_id_for_admins
 AD_GROUP_BILLING=azure_ad_group_object_id_for_billing
-ADMIN_EMAILS=admin1@example.com,admin2@example.com
+ADMIN_EMAILS=admin@omnigcloud.com,architects@omnigcloud.com
 ```
 
 ### Rate Limiting (Optional - Falls back to no-op)
@@ -269,12 +269,12 @@ REDIS_TOKEN=your_redis_token
 ### Magic Link Login (Optional)
 ```env
 ENABLE_MAGIC_LINK=false
-EMAIL_SERVER_HOST=smtp.example.com
+EMAIL_SERVER_HOST=smtp.omnigcloud.com
 EMAIL_SERVER_PORT=587
 EMAIL_SERVER_USER=your_smtp_user
 EMAIL_SERVER_PASSWORD=your_smtp_password
-EMAIL_FROM=onboarding@sovereign.local
-MAGIC_LINK_DOMAIN_ALLOW=example.com,company.com
+EMAIL_FROM=onboarding@omnigcloud.com
+MAGIC_LINK_DOMAIN_ALLOW=omnigcloud.com,company.com
 MAGIC_LINK_DOMAIN_DENY=tempmail.com
 MAGIC_LINK_DISPOSABLE_DOMAINS=mailinator.com,guerrillamail.com
 ```
@@ -382,7 +382,7 @@ npm run build
 - **Rate Limiting**: IP-based with Redis backend
 - **Input Validation**: Zod schemas on all API endpoints
 - **Audit Logging**: All security events tracked
-- **Responsible Disclosure**: security@sovereign.local
+- **Responsible Disclosure**: security@omnigcloud.com
 
 ---
 
@@ -443,9 +443,9 @@ Contributions welcome! Please read CONTRIBUTING.md for guidelines.
 ## 📧 Contact
 
 - **Research**: research@omnigcloud.com
-- **Security**: security@sovereign.local
-- **Privacy**: privacy@sovereign.local
-- **Legal**: legal@sovereign.local
+- **Security**: security@omnigcloud.com
+- **Privacy**: privacy@omnigcloud.com
+- **Legal**: legal@omnigcloud.com
 
 ---
 

@@ -1,5 +1,6 @@
 import NextAuth, { type DefaultSession } from "next-auth";
 import Google from "next-auth/providers/google";
+import Github from "next-auth/providers/github";
 import Entra from "next-auth/providers/microsoft-entra-id";
 import Email from "next-auth/providers/email";
 import { UpstashRedisAdapter } from "@auth/upstash-redis-adapter";
@@ -40,6 +41,10 @@ const providers: any[] = [
         clientId: process.env.AUTH_ENTRA_ID,
         clientSecret: process.env.AUTH_ENTRA_SECRET,
         issuer: `https://login.microsoftonline.com/${process.env.AUTH_ENTRA_TENANT_ID}/v2.0`,
+    }),
+    Github({
+        clientId: process.env.AUTH_GITHUB_ID,
+        clientSecret: process.env.AUTH_GITHUB_SECRET,
     }),
 ];
 

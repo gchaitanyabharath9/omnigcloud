@@ -53,22 +53,22 @@ export default function HeroSection() {
                                 <span>{t('badge')}</span>
                             </div>
 
-                            <h1 className="mb-4" style={{ lineHeight: 1.1, fontSize: '2.5rem', letterSpacing: '-0.03em', fontWeight: 800 }}>
+                            <h1 className="mb-4" style={{ lineHeight: 1.1, fontSize: 'clamp(2rem, 5vw, 2.5rem)', letterSpacing: '-0.03em', fontWeight: 800 }}>
                                 Omni<span style={{ color: 'var(--primary)' }}>G</span>Cloud:
                                 <br />
                                 <span className="text-gradient">{t('title')}</span>
                             </h1>
 
-                            <p className="text-lead mb-8" style={{ fontSize: '1.1rem', maxWidth: '95%', lineHeight: 1.5 }}>
+                            <p className="text-lead mb-8" style={{ fontSize: 'clamp(1rem, 2vw, 1.1rem)', maxWidth: '95%', lineHeight: 1.5 }}>
                                 {t('subtitle')}
                             </p>
 
                             {/* CTA Buttons */}
-                            <div className="flex gap-4">
-                                <Link href={`/${locale}/contact`} className="btn-primary">
+                            <div style={{ display: 'flex', flexWrap: 'wrap', gap: '1rem' }}>
+                                <Link href={`/${locale}/contact`} className="btn-primary" style={{ flex: '1 1 auto', textAlign: 'center' }}>
                                     {t('ctaPrimary')}
                                 </Link>
-                                <Link href={`/${locale}/docs/whitepaper`} className="btn-secondary">
+                                <Link href={`/${locale}/docs/whitepaper`} className="btn-secondary" style={{ flex: '1 1 auto', textAlign: 'center', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                                     <PlayCircle size={18} style={{ marginRight: '0.5rem' }} /> {t('ctaSecondary')}
                                 </Link>
                             </div>
@@ -189,7 +189,7 @@ export default function HeroSection() {
                     </div>
 
                     {/* Q4: Bottom-Right (Data Density) */}
-                    <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem', height: '100%' }}>
+                    <div className="grid-2" style={{ gap: '1rem', height: '100%' }}>
 
                         {/* Interactive Graph Card */}
                         <div className="glass-panel" style={{ padding: '1.5rem', borderRadius: '1rem', border: '1px solid var(--card-border)', background: 'var(--bg-surface-2)', display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
@@ -228,31 +228,30 @@ export default function HeroSection() {
                 width: '100%',
                 borderTop: '1px solid var(--card-border)',
                 borderBottom: '1px solid var(--card-border)',
-                padding: '0.75rem 0',
+                padding: '1.5rem 0',
                 background: 'rgba(2, 6, 23, 0.3)',
                 backdropFilter: 'blur(10px)',
                 zIndex: 10,
-                marginTop: '4rem' /* Push away from grid */
+                marginTop: '4rem'
             }}>
-                <div className="container" style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: '2rem' }}>
-                    <div style={{ fontSize: '0.6rem', fontWeight: 800, color: 'var(--muted)', letterSpacing: '0.05em', whiteSpace: 'nowrap' }}>
+                <div className="container" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '1.5rem' }}>
+                    <div style={{ fontSize: '0.65rem', fontWeight: 800, color: 'var(--muted)', letterSpacing: '0.1em', textTransform: 'uppercase' }}>
                         {t('trust')}
                     </div>
-                    <div style={{ display: 'flex', flex: 1, justifyContent: 'space-around', alignItems: 'center', opacity: 0.5, filter: 'grayscale(100%) brightness(150%)' }}>
-                        {/* Simulated Enterprise Logos with Text/Icons for high speed/aesthetics */}
-                        <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', fontWeight: 900, fontSize: '0.9rem', letterSpacing: '-0.5px' }}>
+                    <div style={{ display: 'flex', flexWrap: 'wrap', width: '100%', justifyContent: 'center', alignItems: 'center', gap: 'clamp(1rem, 4vw, 3rem)', opacity: 0.5 }}>
+                        <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', fontWeight: 900, fontSize: 'clamp(0.7rem, 2vw, 0.85rem)', whiteSpace: 'nowrap' }}>
                             <Globe size={16} /> CLOUD_STRAT
                         </div>
-                        <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', fontWeight: 900, fontSize: '0.9rem', letterSpacing: '-0.5px' }}>
+                        <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', fontWeight: 900, fontSize: 'clamp(0.7rem, 2vw, 0.85rem)', whiteSpace: 'nowrap' }}>
                             <ShieldAlert size={16} /> SECURE_CAPITAL
                         </div>
-                        <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', fontWeight: 900, fontSize: '0.9rem', letterSpacing: '-0.5px' }}>
+                        <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', fontWeight: 900, fontSize: 'clamp(0.7rem, 2vw, 0.85rem)', whiteSpace: 'nowrap' }}>
                             <Activity size={16} /> DATA_CORP
                         </div>
-                        <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', fontWeight: 900, fontSize: '0.9rem', letterSpacing: '-0.5px' }}>
+                        <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', fontWeight: 900, fontSize: 'clamp(0.7rem, 2vw, 0.85rem)', whiteSpace: 'nowrap' }}>
                             <CheckCircle size={16} /> GLOBAL_SYS
                         </div>
-                        <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', fontWeight: 900, fontSize: '0.9rem', letterSpacing: '-0.5px' }}>
+                        <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', fontWeight: 900, fontSize: 'clamp(0.7rem, 2vw, 0.85rem)', whiteSpace: 'nowrap' }}>
                             <Layers size={16} /> CORE_INFRA
                         </div>
                     </div>

@@ -70,7 +70,7 @@ Value: onboarding@resend.dev  (or contact@omnigcloud.com if you verified domain)
 Environments: ✅ Production ✅ Preview ✅ Development
 
 Name: RESEND_TO_EMAIL
-Value: your-email@gmail.com  (where you want to receive notifications)
+Value: architects@omnigcloud.com  (where you want to receive notifications)
 Environments: ✅ Production ✅ Preview ✅ Development
 ```
 
@@ -116,7 +116,7 @@ New Contact Form Submission
 
 Submission ID: SOV-ABC1234
 Name: John Doe
-Email: john@example.com
+Email: john@omnigcloud.com
 Message:
 I'm interested in learning more about OmniGCloud...
 

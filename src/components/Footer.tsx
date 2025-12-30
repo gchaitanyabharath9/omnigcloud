@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { useTranslations, useLocale } from 'next-intl';
+import { Linkedin, Twitter, Github, MessageSquare } from 'lucide-react';
 import styles from './Footer.module.css';
 import ComplianceBadges from './ComplianceBadges';
 
@@ -89,12 +90,12 @@ const Footer = () => {
                     </div>
                 </div>
 
-                <div className={styles.bottom} style={{ padding: '1rem 0', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-                    <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
+                <div className={styles.bottom} style={{ padding: '2rem 0', display: 'flex', justifyContent: 'space-between', alignItems: 'center', gap: '2rem', flexWrap: 'wrap' }}>
+                    <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
                         <div style={{ fontSize: '0.75rem', opacity: 0.5 }}>{t('copyright', { year: new Date().getFullYear() })}</div>
                         <ComplianceBadges />
                     </div>
-                    <div style={{ fontSize: '0.6rem', opacity: 0.4, maxWidth: '400px', textAlign: 'right' }}>
+                    <div style={{ fontSize: '0.65rem', opacity: 0.4, maxWidth: '450px', textAlign: 'right', lineHeight: 1.6 }}>
                         {t('footerText')}
                     </div>
                 </div>

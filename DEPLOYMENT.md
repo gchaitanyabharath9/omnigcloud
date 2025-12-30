@@ -39,7 +39,7 @@ git commit -m "Initial commit - Production-ready marketing site"
 # Create GitHub repo at https://github.com/new
 # Repository name: omnigcloud
 # Then push:
-git remote add origin https://github.com/YOUR_USERNAME/omnigcloud.git
+git remote add origin https://github.com/omnigcloud/nascent-zodiac.git
 git branch -M main
 git push -u origin main
 ```
@@ -87,7 +87,7 @@ REDIS_TOKEN=your_upstash_redis_token
 
 # Email (Magic Link)
 ENABLE_MAGIC_LINK=false
-EMAIL_SERVER_HOST=smtp.example.com
+EMAIL_SERVER_HOST=smtp.omnigcloud.com
 EMAIL_SERVER_PORT=587
 EMAIL_SERVER_USER=your_smtp_user
 EMAIL_SERVER_PASSWORD=your_smtp_password
@@ -235,7 +235,7 @@ sudo apt install certbot python3-certbot-nginx
 3. **Deploy App**:
 ```bash
 # Clone repo
-git clone https://github.com/YOUR_USERNAME/omnigcloud.git
+git clone https://github.com/omnigcloud/nascent-zodiac.git
 cd omnigcloud
 
 # Install & build

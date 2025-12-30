@@ -77,7 +77,7 @@ export default async function SecurityPage() {
                         <h3 className="text-xl font-semibold">{t("contactSecurity")}</h3>
                     </div>
                     <p className="text-zinc-700 dark:text-zinc-300 mb-2">
-                        {t("securityEmail")}: <a href="mailto:security@sovereign.local" className="text-blue-500 hover:underline font-mono">security@sovereign.local</a>
+                        {t("securityEmail")}: <a href="mailto:security@omnigcloud.com" className="text-blue-500 hover:underline font-mono">security@omnigcloud.com</a>
                     </p>
                     <p className="text-sm text-zinc-600 dark:text-zinc-400">
                         {t("pgpKey")}: <code className="bg-zinc-200 dark:bg-zinc-700 px-2 py-1 rounded">Available upon request</code>

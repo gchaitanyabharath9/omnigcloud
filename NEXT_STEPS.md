@@ -17,7 +17,7 @@ git commit -m "Initial commit - Production-ready marketing site"
 # Create GitHub repo at https://github.com/new
 # Repository name: omnigcloud
 # Then:
-git remote add origin https://github.com/YOUR_USERNAME/omnigcloud.git
+git remote add origin https://github.com/omnigcloud/nascent-zodiac.git
 git branch -M main
 git push -u origin main
 ```
@@ -365,7 +365,7 @@ npm start
 git init
 git add .
 git commit -m "Initial commit"
-git remote add origin https://github.com/YOUR_USERNAME/omnigcloud.git
+git remote add origin https://github.com/omnigcloud/nascent-zodiac.git
 git push -u origin main
 
 # Then deploy via Vercel web UI

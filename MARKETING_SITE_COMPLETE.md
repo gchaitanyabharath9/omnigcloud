@@ -138,7 +138,7 @@ All routes support 7 locales (en, es, fr, de, zh, hi, ja):
 
 ### **Tertiary CTA**: "Contact Sales"
 - **Route**: `/contact`
-- **Email**: `sales@sovereign.local`
+- **Email**: `sales@omnigcloud.com`
 - **No**: Stripe integration
 
 ---
@@ -328,7 +328,7 @@ For questions or issues:
 - **Documentation**: `/docs` directory
 - **Research**: `/research` page
 - **Contact**: `/contact` form
-- **Security**: `security@sovereign.local`
+- **Security**: `security@omnigcloud.com`
 
 ---
 

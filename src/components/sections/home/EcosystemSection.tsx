@@ -15,7 +15,7 @@ export default function EcosystemSection() {
                     <div className="badge badge-primary-subtle mb-2">
                         <Activity size={14} /> {t('badge')}
                     </div>
-                    <h2 className="mb-1" style={{ fontSize: '2.5rem', fontWeight: 900 }}>{t('title')}</h2>
+                    <h2 className="mb-1" style={{ fontSize: 'clamp(2rem, 5vw, 2.5rem)', fontWeight: 900 }}>{t('title')}</h2>
                     <p className="text-section-lead" style={{ maxWidth: '800px', fontSize: '0.9rem', marginBottom: '0.5rem' }}>
                         {t('subtitle')}
                     </p>
