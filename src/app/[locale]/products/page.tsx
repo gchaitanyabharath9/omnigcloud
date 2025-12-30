@@ -10,7 +10,7 @@ export default function ProductsPage() {
     return (
         <div className="main-content">
             {/* HERO */}
-            <section style={{ padding: '8rem 0 6rem', background: 'var(--bg-surface-2)', borderBottom: '1px solid var(--card-border)' }}>
+            <section className="snap-section" style={{ background: 'var(--bg-surface-2)', borderBottom: '1px solid var(--card-border)' }}>
                 <div className="container">
                     <div className="badge badge-primary-subtle mb-4">
                         <Cpu size={14} className="mr-2" /> {t('hero.tag')}
@@ -38,7 +38,7 @@ export default function ProductsPage() {
             ))}
 
             {/* CALL TO ACTION */}
-            <section style={{ padding: '8rem 0', textAlign: 'center' }}>
+            <section className="snap-section" style={{ textAlign: 'center' }}>
                 <div className="container">
                     <h2 style={{ fontSize: '3rem', fontWeight: 950, marginBottom: '2rem' }}>{t('cta.title')}</h2>
                     <p style={{ opacity: 0.7, marginBottom: '4rem', maxWidth: '700px', margin: '0 auto 4rem', fontSize: '1.25rem' }}>

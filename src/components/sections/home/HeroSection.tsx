@@ -9,7 +9,7 @@ export default function HeroSection() {
     const locale = useLocale();
 
     return (
-        <section id="hero" className="snap-section" style={{ position: 'relative' }}>
+        <section id="hero" className="snap-section" style={{ position: 'relative', minHeight: '100vh', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
             {/* Premium Grid Background */}
             <div style={{
                 position: 'absolute',

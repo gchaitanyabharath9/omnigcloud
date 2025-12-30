@@ -16,7 +16,7 @@ export default function ComparisonSection() {
     ];
 
     return (
-        <section style={{ padding: '6rem 0', background: 'var(--bg-surface-2)' }}>
+        <section className="snap-section" style={{ background: 'var(--bg-surface-2)' }}>
             <div className="container">
                 <div style={{ textAlign: 'center', marginBottom: '4rem' }}>
                     <h2 style={{ fontSize: '2.5rem', fontWeight: 950, marginBottom: '1.5rem' }}>{t('title')}</h2>

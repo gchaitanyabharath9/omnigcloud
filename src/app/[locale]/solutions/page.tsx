@@ -3,7 +3,7 @@ import Footer from "@/components/Footer";
 
 export default function SolutionsPage() {
     return (
-        <div className="snap-container">
+        <div className="main-content">
             {/* HER0 - Snap Section 1 */}
             <section id="solutions-hero-section" className="snap-section container">
                 <div style={{ position: 'relative', borderRadius: '2rem', overflow: 'hidden', height: '600px', border: '1px solid rgba(255, 255, 255, 0.1)' }}>
@@ -212,14 +212,8 @@ export default function SolutionsPage() {
                 </div>
             </section>
 
-            {/* SITEMAP SNAP SECTION */}
-            <section id="sitemap" className="snap-section" style={{ minHeight: '100vh', display: 'flex', flexDirection: 'column', background: '#020617' }}>
-                <div style={{ flex: 1, display: 'flex', alignItems: 'center', justifyContent: 'center', borderBottom: '1px solid rgba(255,255,255,0.05)' }}>
-                    <div style={{ textAlign: 'center' }}>
-                        <div style={{ color: '#60efff', fontWeight: 800, fontSize: '0.8rem', letterSpacing: '0.2em', textTransform: 'uppercase', marginBottom: '1rem' }}>Global Solutions Sitemap</div>
-                        <h2 style={{ color: 'white', fontSize: '2.5rem', fontWeight: 900 }}>Solutions <span style={{ color: 'rgba(255,255,255,0.3)' }}>Index</span></h2>
-                    </div>
-                </div>
+            {/* SITEMAP / FOOTER SNAP SECTION */}
+            <section id="sitemap" className="snap-section" style={{ background: 'var(--background)', borderTop: '1px solid var(--card-border)' }}>
                 <Footer />
             </section>
         </div>

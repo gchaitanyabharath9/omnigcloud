@@ -1,7 +1,7 @@
 import { NextIntlClientProvider } from 'next-intl';
 import { getMessages } from 'next-intl/server';
 import type { Metadata } from "next";
-import { Inter, Outfit } from "next/font/google"; // Premium fonts
+import { Inter, Plus_Jakarta_Sans } from "next/font/google"; // Premium fonts
 import "../../styles/globals.css";
 import Header from "@/components/header";
 import Breadcrumb from "@/components/Breadcrumb";
@@ -16,8 +16,8 @@ const inter = Inter({
   subsets: ["latin"],
 });
 
-const outfit = Outfit({
-  variable: "--font-outfit",
+const jakarta = Plus_Jakarta_Sans({
+  variable: "--font-jakarta",
   subsets: ["latin"],
 });
 
@@ -134,7 +134,7 @@ export default async function RootLayout({
       <head>
         <link rel="icon" href="/logo.svg" type="image/svg+xml" sizes="any" />
       </head>
-      <body className={`${inter.variable} ${outfit.variable}`}>
+      <body className={`${inter.variable} ${jakarta.variable}`}>
         <SchemaOrg />
         <ThemeProvider
           attribute="data-theme"
