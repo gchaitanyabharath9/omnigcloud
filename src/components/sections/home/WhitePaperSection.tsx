@@ -7,21 +7,18 @@ export default function WhitePaperSection() {
     return (
         <section id="whitepaper" className="snap-section" style={{ background: 'var(--bg-surface-2)' }}>
             <div className="container">
-                <div style={{
-                    display: 'grid',
-                    gridTemplateColumns: '1.2fr 1fr',
-                    gap: '4rem',
-                    alignItems: 'center'
-                }}>
+                <div className="grid-2" style={{ gap: '2rem', alignItems: 'center' }}>
                     {/* Left side: Visual Representation of Paper */}
                     <div className="glass-panel" style={{
-                        padding: '3rem',
+                        padding: 'clamp(1.5rem, 5vw, 3rem)',
                         borderRadius: '2rem',
                         border: '1px solid rgba(59, 130, 246, 0.3)',
                         background: 'linear-gradient(135deg, rgba(2, 6, 23, 0.8) 0%, rgba(59, 130, 246, 0.05) 100%)',
                         boxShadow: '0 25px 50px -12px rgba(0, 0, 0, 0.5)',
                         position: 'relative',
-                        overflow: 'hidden'
+                        overflow: 'hidden',
+                        width: '100%',
+                        minWidth: '280px'
                     }}>
                         <div style={{ position: 'relative', zIndex: 2 }}>
                             <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', marginBottom: '2rem' }}>
@@ -30,7 +27,7 @@ export default function WhitePaperSection() {
                                     {t('contribution')}
                                 </div>
                             </div>
-                            <h2 style={{ fontSize: '2.5rem', fontWeight: 950, marginBottom: '1.5rem', lineHeight: '1.1' }}>
+                            <h2 style={{ fontSize: 'clamp(1.5rem, 6vw, 2.5rem)', fontWeight: 950, marginBottom: '1.5rem', lineHeight: '1.1' }}>
                                 {t('title')}
                             </h2>
                             <p style={{ fontSize: '1.1rem', opacity: 0.8, lineHeight: 1.6, marginBottom: '2rem' }}>

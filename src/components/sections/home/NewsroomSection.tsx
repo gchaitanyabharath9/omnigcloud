@@ -22,17 +22,17 @@ export default function NewsroomSection() {
     return (
         <section id="newsroom" className="snap-section">
             <div className="container">
-                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', marginBottom: '3rem' }}>
-                    <div>
+                <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'space-between', alignItems: 'flex-end', gap: '1rem', marginBottom: '3rem' }}>
+                    <div style={{ minWidth: '280px', flex: '1 0 0%' }}>
                         <div className="badge badge-primary-subtle mb-2">{t('badge')}</div>
-                        <h2 style={{ fontSize: '2.5rem', fontWeight: 950 }}>{t('title')}</h2>
+                        <h2 style={{ fontSize: 'clamp(1.75rem, 5vw, 2.5rem)', fontWeight: 950 }}>{t('title')}</h2>
                     </div>
                     <Link href="/blog" style={{ color: 'var(--primary)', fontWeight: 700, textDecoration: 'none', display: 'flex', alignItems: 'center', gap: '0.5rem', fontSize: '0.9rem' }}>
                         {t('link')} <ArrowRight size={16} />
                     </Link>
                 </div>
 
-                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '1.5rem' }}>
+                <div className="grid-3" style={{ gap: '1.5rem' }}>
                     {news.map((item, idx) => (
                         <div key={idx} className="glass-panel" style={{
                             borderRadius: '1.5rem',
