@@ -43,7 +43,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
       template: "%s | OmniGCloud"
     },
     description: "Accelerate enterprise transformation with OmniGCloud's AI-native modernization engine. Specialized in Azure, OCP, and Neo Cloud integration with universal cloud-agnostic discovery.",
-    keywords: ["Cloud Modernization", "Azure Integration", "RedHat OCP", "Neo Cloud AI", "Cloud Agnostic Search", "Platform Engineering", "FinOps Intelligence"],
+    keywords: ["Cloud Modernization", "Azure Integration", "RedHat OCP", "Neo Cloud AI", "Cloud Agnostic Search", "Platform Engineering", "FinOps Intelligence", "Sovereign Cloud", "Autonomous Orchestration", "Data Residency", "ASO Engine", "Zero-Trust Configuration"],
     authors: [{ name: "OmniGCloud Executive Office" }],
     viewport: {
       width: 'device-width',
@@ -132,7 +132,7 @@ export default async function RootLayout({
   return (
     <html lang={locale} suppressHydrationWarning>
       <head>
-        <link rel="icon" href="/logo.png" sizes="any" />
+        <link rel="icon" href="/logo.svg" type="image/svg+xml" sizes="any" />
       </head>
       <body className={`${inter.variable} ${outfit.variable} `}>
         <SchemaOrg />

@@ -4,13 +4,13 @@ import React, { useState, useEffect } from 'react';
 import { Zap } from 'lucide-react';
 
 export default function LiveLatencyBadge() {
-    const [latency, setLatency] = useState(24);
+    const [latency, setLatency] = useState(14);
 
     useEffect(() => {
         const interval = setInterval(() => {
             setLatency(prev => {
                 const jitter = Math.floor(Math.random() * 3) - 1;
-                return Math.max(12, prev + jitter);
+                return Math.max(8, prev + jitter);
             });
         }, 3000);
         return () => clearInterval(interval);

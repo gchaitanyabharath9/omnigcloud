@@ -59,15 +59,15 @@ const Header = () => {
                 <Link href={`/${locale}`} className={styles.logo}>
                     <div className={styles.logoIcon}>
                         <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M16 2L28.1244 9V23L16 30L3.87564 23V9L16 2Z" stroke="url(#logo-grad)" strokeWidth="2" strokeLinejoin="round" />
+                            <path d="M16 8L22 12V19L16 23L10 19V12L16 8Z" fill="url(#logo-grad)" fillOpacity="0.2" stroke="url(#logo-grad)" strokeWidth="1" />
+                            <circle cx="16" cy="16" r="3" fill="var(--primary)" className="animate-pulse" />
                             <defs>
-                                <linearGradient id="logo-grad" x1="0" y1="0" x2="32" y2="32" gradientUnits="userSpaceOnUse">
+                                <linearGradient id="logo-grad" x1="16" y1="2" x2="16" y2="30" gradientUnits="userSpaceOnUse">
                                     <stop stopColor="var(--primary)" />
-                                    <stop offset="1" stopColor="#1d4ed8" />
+                                    <stop offset="1" stopColor="#8b5cf6" />
                                 </linearGradient>
                             </defs>
-                            <circle cx="16" cy="16" r="14" stroke="url(#logo-grad)" strokeWidth="1.5" strokeDasharray="4 2" />
-                            <path d="M16 6C10.4772 6 6 10.4772 6 16C6 21.5228 10.4772 26 16 26C21.5228 26 26 21.5228 26 16V14H16V18H22C21.5 21 19 22 16 22C12.6863 22 10 19.3137 10 16C10 12.6863 12.6863 10 16 10C17.6569 10 19.1569 10.6716 20.2426 11.7574L23.0711 8.92893C21.2553 7.11317 18.7553 6 16 6Z" fill="url(#logo-grad)" />
-                            <circle cx="16" cy="16" r="3" fill="var(--primary)" className="animate-pulse" />
                         </svg>
                     </div>
                     <span className={styles.logoText}>
@@ -281,7 +281,7 @@ const Header = () => {
             <div style={{
                 position: 'fixed',
                 bottom: '1rem',
-                right: '1rem',
+                left: '1rem',
                 zIndex: 2000,
                 pointerEvents: 'none' // Allow clicking through if needed, but badge usually has hover
             }}>
