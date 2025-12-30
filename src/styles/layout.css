@@ -31,7 +31,7 @@
     width: 100%;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1200px) {
     .hero-grid-layout {
         grid-template-columns: 1fr;
         grid-template-rows: auto;
@@ -75,7 +75,7 @@
     }
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1200px) {
 
     .grid-2,
     .grid-2x2-strict {

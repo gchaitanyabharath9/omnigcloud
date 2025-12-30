@@ -178,13 +178,13 @@
 }
 
 /* Responsive Breakpoints */
-@media (max-width: 1024px) {
+@media (max-width: 1200px) {
     .nav {
-        display: none;
+        display: none !important;
     }
 
     .mobileMenuBtn {
-        display: flex;
+        display: flex !important;
         align-items: center;
         justify-content: center;
     }
