@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 import { useTranslations } from 'next-intl';
 
 export default function SovereignGallery() {
@@ -22,38 +23,34 @@ export default function SovereignGallery() {
     ];
 
     return (
-        <section style={{ padding: '8rem 0', background: 'var(--background)' }}>
+        <section style={{ padding: '6rem 0', background: 'var(--background)' }}>
             <div className="container">
-                <div style={{ textAlign: 'center', marginBottom: '5rem' }}>
-                    <h2 style={{ fontSize: '3rem', fontWeight: 950, marginBottom: '1.5rem' }}>{t('title')}</h2>
-                    <p style={{ opacity: 0.7, fontSize: '1.1rem' }}>{t('subtitle')}</p>
+                <div style={{ textAlign: 'center', marginBottom: '4rem' }}>
+                    <h2 style={{ fontSize: 'var(--h2-size)', fontWeight: 950, marginBottom: '1rem' }}>{t('title')}</h2>
+                    <p style={{ opacity: 0.7, fontSize: 'var(--body-size)', maxWidth: '600px', margin: '0 auto' }}>{t('subtitle')}</p>
                 </div>
 
-                <div style={{ display: 'flex', flexDirection: 'column', gap: '8rem' }}>
+                <div style={{ display: 'flex', flexDirection: 'column', gap: '6rem' }}>
                     {items.map((item, idx) => (
-                        <div key={idx} style={{
-                            display: 'grid',
-                            gridTemplateColumns: '1fr 1fr',
-                            gap: '4rem',
+                        <div key={idx} className="grid-2" style={{
+                            gap: '3rem',
                             alignItems: 'center'
                         }}>
                             <div style={{ order: idx % 2 === 0 ? 1 : 2 }}>
-                                <h3 style={{ fontSize: '2rem', fontWeight: 900, marginBottom: '2rem' }}>{t(`${item.id}.title`)}</h3>
-                                <p style={{ fontSize: '1.15rem', lineHeight: 1.8, opacity: 0.8, color: 'var(--foreground)' }}>
+                                <h3 style={{ fontSize: 'var(--h3-size)', fontWeight: 900, marginBottom: '1.5rem' }}>{t(`${item.id}.title`)}</h3>
+                                <p style={{ fontSize: 'var(--body-size)', lineHeight: 1.6, opacity: 0.8, color: 'var(--foreground)' }}>
                                     {t(`${item.id}.description`)}
                                 </p>
                             </div>
-                            <div style={{
-                                display: 'grid',
-                                gridTemplateColumns: '1fr 1fr',
-                                gap: '1.5rem',
+                            <div className="grid-2" style={{
+                                gap: '1rem',
                                 order: idx % 2 === 0 ? 2 : 1
                             }}>
-                                <div className="glass-panel" style={{ borderRadius: '1.5rem', overflow: 'hidden', height: '250px' }}>
-                                    <img src={item.images[0]} alt="Sovereign View A" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                                <div className="glass-panel" style={{ borderRadius: '1rem', overflow: 'hidden', height: '220px', position: 'relative' }}>
+                                    <Image src={item.images[0]} alt="Sovereign View A" fill style={{ objectFit: 'cover' }} />
                                 </div>
-                                <div className="glass-panel" style={{ borderRadius: '1.5rem', overflow: 'hidden', height: '250px' }}>
-                                    <img src={item.images[1]} alt="Sovereign View B" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                                <div className="glass-panel" style={{ borderRadius: '1rem', overflow: 'hidden', height: '220px', position: 'relative' }}>
+                                    <Image src={item.images[1]} alt="Sovereign View B" fill style={{ objectFit: 'cover' }} />
                                 </div>
                             </div>
                         </div>

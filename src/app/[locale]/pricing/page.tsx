@@ -84,81 +84,101 @@ export default function PricingPage() {
         }
     ];
 
+    const jsonLd = {
+        "@context": "https://schema.org",
+        "@type": "Product",
+        "name": "OmniGCloud Platform",
+        "description": t('hero.subtitle'),
+        "offers": plans.map(plan => ({
+            "@type": "Offer",
+            "name": t(`plans.${plan.id}.name`),
+            "price": plan.price === "Custom" ? "0" : plan.price,
+            "priceCurrency": "USD",
+            "description": t(`plans.${plan.id}.desc`),
+            "url": `https://omnigcloud.com/pricing#${plan.id}`
+        }))
+    };
+
     return (
         <div className="main-content">
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+            />
+
             {/* HERO */}
-            <section style={{ padding: '6rem 0 4rem', textAlign: 'center' }}>
+            <section style={{ padding: '4rem 0', textAlign: 'center' }}>
                 <div className="container">
                     <div className="badge badge-primary-subtle mb-4">{t('hero.tag')}</div>
-                    <h1 style={{ fontSize: '3.5rem', fontWeight: 950, marginBottom: '1.5rem' }}>
+                    <h1 style={{ fontSize: 'var(--h1-size)', fontWeight: 950, marginBottom: '1.5rem' }}>
                         {t('hero.title')}
                     </h1>
-                    <p style={{ fontSize: '1.25rem', opacity: 0.7, maxWidth: '700px', margin: '0 auto' }}>
+                    <p style={{ fontSize: '1.1rem', opacity: 0.7, maxWidth: '750px', margin: '0 auto' }}>
                         {t('hero.subtitle')}
                     </p>
                 </div>
             </section>
 
             {/* PRICING GRID */}
-            <section style={{ padding: '4rem 0' }}>
+            <section style={{ padding: '2rem 0 4rem' }}>
                 <div className="container">
                     <div style={{
                         display: 'grid',
                         gridTemplateColumns: 'repeat(4, 1fr)',
-                        gap: '1.5rem',
+                        gap: '1rem',
                         alignItems: 'stretch'
                     }}>
                         {plans.map((plan, idx) => (
                             <div key={idx} id={plan.id} className={`glass-panel ${plan.highlight ? 'border-primary' : ''}`} style={{
-                                padding: '2.5rem',
-                                borderRadius: '2rem',
+                                padding: '2rem',
+                                borderRadius: '1.5rem',
                                 display: 'flex',
                                 flexDirection: 'column',
                                 position: 'relative',
                                 background: plan.highlight ? 'rgba(59, 130, 246, 0.03)' : 'var(--card-bg)',
                                 border: plan.highlight ? '2px solid var(--primary)' : '1px solid var(--card-border)',
-                                transform: plan.highlight ? 'scale(1.05)' : 'none',
+                                transform: plan.highlight ? 'scale(1.02)' : 'none',
                                 zIndex: plan.highlight ? 10 : 1
                             }}>
                                 {plan.highlight && (
                                     <div style={{
                                         position: 'absolute',
-                                        top: '-15px',
+                                        top: '-12px',
                                         left: '50%',
                                         transform: 'translateX(-50%)',
                                         background: 'var(--primary)',
                                         color: 'white',
                                         padding: '4px 12px',
                                         borderRadius: '1rem',
-                                        fontSize: '0.75rem',
+                                        fontSize: '0.65rem',
                                         fontWeight: 900,
-                                        letterSpacing: '0.05em'
+                                        letterSpacing: '0.1em'
                                     }}>
                                         {t('plans.popular')}
                                     </div>
                                 )}
-                                <h3 style={{ fontSize: '1.5rem', fontWeight: 900, marginBottom: '0.5rem' }}>{t(`plans.${plan.id}.name`)}</h3>
-                                <p style={{ fontSize: '0.875rem', opacity: 0.6, marginBottom: '2rem', height: '3rem' }}>{t(`plans.${plan.id}.desc`)}</p>
+                                <h3 style={{ fontSize: '1.25rem', fontWeight: 900, marginBottom: '0.5rem' }}>{t(`plans.${plan.id}.name`)}</h3>
+                                <p style={{ fontSize: '0.85rem', opacity: 0.6, marginBottom: '1.5rem', height: '2.5rem', lineHeight: '1.4' }}>{t(`plans.${plan.id}.desc`)}</p>
 
-                                <div style={{ marginBottom: '2rem' }}>
-                                    <span style={{ fontSize: '2.5rem', fontWeight: 950 }}>{plan.price !== "Custom" ? `$${plan.price}` : plan.price}</span>
-                                    {plan.price !== "Custom" && <span style={{ opacity: 0.5, fontSize: '1rem' }}> {t('plans.month')}</span>}
+                                <div style={{ marginBottom: '1.5rem' }}>
+                                    <span style={{ fontSize: '2rem', fontWeight: 950 }}>{plan.price !== "Custom" ? `$${plan.price}` : plan.price}</span>
+                                    {plan.price !== "Custom" && <span style={{ opacity: 0.5, fontSize: '0.9rem' }}> {t('plans.month')}</span>}
                                 </div>
 
-                                <div style={{ flexGrow: 1, marginBottom: '2rem' }}>
-                                    <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '0.75rem' }}>
+                                <div style={{ flexGrow: 1, marginBottom: '1.5rem' }}>
+                                    <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '0.65rem' }}>
                                         {plan.features.map((feature, fidx) => (
-                                            <li key={fidx} style={{ display: 'flex', gap: '0.75rem', alignItems: 'center', fontSize: '0.9rem' }}>
+                                            <li key={fidx} style={{ display: 'flex', gap: '0.6rem', alignItems: 'center', fontSize: '0.85rem' }}>
                                                 <div style={{ background: 'rgba(16, 185, 129, 0.1)', color: '#10b981', borderRadius: '50%', padding: '2px' }}>
-                                                    <Check size={14} />
+                                                    <Check size={12} />
                                                 </div>
                                                 <span>{feature}</span>
                                             </li>
                                         ))}
                                         {plan.notIncluded && plan.notIncluded.map((feature, fidx) => (
-                                            <li key={fidx} style={{ display: 'flex', gap: '0.75rem', alignItems: 'center', fontSize: '0.9rem', opacity: 0.4 }}>
+                                            <li key={fidx} style={{ display: 'flex', gap: '0.6rem', alignItems: 'center', fontSize: '0.85rem', opacity: 0.4 }}>
                                                 <div style={{ background: 'rgba(255, 255, 255, 0.05)', color: 'rgba(255,255,255,0.4)', borderRadius: '50%', padding: '2px' }}>
-                                                    <X size={14} />
+                                                    <X size={12} />
                                                 </div>
                                                 <span style={{ textDecoration: 'line-through' }}>{feature}</span>
                                             </li>
@@ -166,7 +186,7 @@ export default function PricingPage() {
                                     </ul>
                                 </div>
 
-                                <Link href="/contact" className={plan.highlight ? 'btn-primary' : 'btn-secondary'} style={{ width: '100%', textAlign: 'center' }}>
+                                <Link href="/contact" className={plan.highlight ? 'btn-primary' : 'btn-secondary'} style={{ width: '100%', textAlign: 'center', padding: '0.6rem 1rem', fontSize: '0.9rem' }}>
                                     {t(`plans.${plan.id}.cta`)}
                                 </Link>
                             </div>
@@ -176,10 +196,10 @@ export default function PricingPage() {
             </section>
 
             {/* TRUSTED BY EB-1A NOTE */}
-            <section style={{ padding: '6rem 0', background: 'var(--bg-surface-2)' }}>
+            <section id="trust" style={{ padding: '6rem 0', background: 'var(--bg-surface-2)' }}>
                 <div className="container" style={{ textAlign: 'center' }}>
-                    <h2 style={{ fontSize: '2rem', fontWeight: 900, marginBottom: '1.5rem' }}>{t('trust.title')}</h2>
-                    <p style={{ opacity: 0.7, marginBottom: '4rem', maxWidth: '600px', margin: '0 auto 4rem' }}>
+                    <h2 style={{ fontSize: 'var(--h2-size)', fontWeight: 900, marginBottom: '1rem' }}>{t('trust.title')}</h2>
+                    <p style={{ opacity: 0.7, marginBottom: '4rem', maxWidth: '650px', margin: '0 auto 4rem', fontSize: '1.1rem' }}>
                         {t('trust.subtitle')}
                     </p>
                     <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '2rem' }}>
@@ -203,7 +223,7 @@ export default function PricingPage() {
             </section>
 
             {/* FAQ */}
-            <section style={{ padding: '6rem 0' }}>
+            <section id="faq" style={{ padding: '6rem 0' }}>
                 <div className="container" style={{ maxWidth: '800px' }}>
                     <h2 style={{ fontSize: '2rem', fontWeight: 900, marginBottom: '3rem', textAlign: 'center' }}>{t('faq.title')}</h2>
                     <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
@@ -227,12 +247,56 @@ export default function PricingPage() {
             {/* FINAL CTA */}
             <section style={{ padding: '6rem 0', textAlign: 'center' }}>
                 <div className="container">
-                    <div className="glass-panel" style={{ padding: '4rem', borderRadius: '3rem', background: 'linear-gradient(135deg, var(--primary) 0%, #1e40af 100%)', color: 'white' }}>
-                        <h2 style={{ fontSize: '2.5rem', fontWeight: 950, marginBottom: '1.5rem' }}>{t('cta.title')}</h2>
-                        <p style={{ opacity: 0.9, marginBottom: '2.5rem', fontSize: '1.1rem' }}>{t('cta.subtitle')}</p>
-                        <Link href="/contact" className="btn-primary" style={{ background: 'white', color: 'var(--primary)', display: 'inline-flex', alignItems: 'center', gap: '0.75rem' }}>
-                            {t('cta.button')} <ArrowRight size={18} />
-                        </Link>
+                    <div className="glass-panel" style={{
+                        padding: '5rem 2rem',
+                        borderRadius: '3rem',
+                        background: 'linear-gradient(135deg, var(--primary) 0%, #1e40af 100%)',
+                        color: 'white',
+                        border: 'none',
+                        boxShadow: '0 20px 50px rgba(59, 130, 246, 0.3)'
+                    }}>
+                        <h2 style={{ fontSize: 'var(--h2-size)', fontWeight: 950, marginBottom: '1.5rem', color: 'white' }}>
+                            {t('cta.title')}
+                        </h2>
+                        <p style={{ opacity: 0.9, marginBottom: '2.5rem', fontSize: '1.25rem', maxWidth: '600px', margin: '0 auto 2.5rem' }}>
+                            {t('cta.subtitle')}
+                        </p>
+                        <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '1.5rem' }}>
+                            <Link href="/contact" className="btn-primary" style={{
+                                background: 'white',
+                                color: '#1e40af',
+                                border: 'none',
+                                padding: '1rem 3rem',
+                                fontSize: '1.1rem',
+                                fontWeight: 900
+                            }}>
+                                {t('cta.button') || 'Get Started Now'} <ArrowRight size={20} className="ml-2" />
+                            </Link>
+                            <p style={{ fontSize: '0.75rem', opacity: 0.7, fontWeight: 700, letterSpacing: '0.1em' }}>
+                                NO CREDIT CARD REQUIRED • SOC-2 COMPLIANT ONBOARDING
+                            </p>
+                        </div>
+
+                        {/* ATTACHED CONTENT / TRUST BADGES */}
+                        <div style={{
+                            marginTop: '4rem',
+                            paddingTop: '3rem',
+                            borderTop: '1px solid rgba(255,255,255,0.1)',
+                            display: 'flex',
+                            justifyContent: 'center',
+                            gap: '3rem',
+                            flexWrap: 'wrap'
+                        }}>
+                            <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', opacity: 0.8 }}>
+                                <Shield size={16} /> <span style={{ fontSize: '0.8rem', fontWeight: 600 }}>Zero-Trust Architecture</span>
+                            </div>
+                            <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', opacity: 0.8 }}>
+                                <Globe size={16} /> <span style={{ fontSize: '0.8rem', fontWeight: 600 }}>Multi-Cloud Resiliency</span>
+                            </div>
+                            <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', opacity: 0.8 }}>
+                                <Zap size={16} /> <span style={{ fontSize: '0.8rem', fontWeight: 600 }}>Instant Sovereignty</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>

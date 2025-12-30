@@ -52,13 +52,16 @@
                 "developer": "Developer",
                 "professional": "Professional",
                 "business": "Business",
-                "sovereign": "Sovereign / Federal"
+                "sovereign": "Sovereign / Federal",
+                "trust": "Enterprise Trust",
+                "faq": "FAQ"
             },
             "company_links": {
                 "about": "About Us",
                 "leadership": "Leadership",
                 "operations": "Global Operations",
                 "newsroom": "Newsroom",
+                "executive": "Executive Office",
                 "contact": "Contact Office"
             }
         }
@@ -666,23 +669,27 @@
         "badge": "SOVEREIGN INSIGHTS",
         "title": "Latest from the Lab",
         "link": "ENTER THE IMPACT HUB",
+        "cta": "Read Analysis",
         "news": {
             "bank": {
                 "date": "Dec 12, 2025",
                 "source": "OmniG Intelligence",
                 "title": "Scaling ASO across 2.5PB of cross-border data for Tier-1 Banks.",
+                "desc": "How we achieved sub-40ms latency for global ledger synchronization using the new G-Mesh protocol.",
                 "tag": "CASE STUDY"
             },
             "egress": {
                 "date": "Nov 28, 2025",
                 "source": "Cloud Sovereign Report",
                 "title": "How Autonomous Sovereign Orchestration reduces Egress Fees by 40%.",
+                "desc": "A deep dive into our cost-arbitrage engine that routes traffic through the cheapest compliant pipes.",
                 "tag": "RESEARCH"
             },
             "integration": {
                 "date": "Nov 15, 2025",
                 "source": "Global Press Wire",
                 "title": "Universal integration for Oracle OKE and RedHat OpenShift announced.",
+                "desc": "Breaking down the new adapters that allow seamless workload portability between OCI and OCP.",
                 "tag": "PRODUCT"
             }
         }

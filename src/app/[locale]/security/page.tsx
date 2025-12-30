@@ -1,5 +1,6 @@
 import { getTranslations } from "next-intl/server";
 import { Shield, Bug, Lock, AlertTriangle, CheckCircle, Mail } from "lucide-react";
+import SecurityPerformanceSection from "@/components/sections/security/SecurityPerformanceSection";
 
 export default async function SecurityPage() {
     const t = await getTranslations("Security");
@@ -114,6 +115,8 @@ export default async function SecurityPage() {
                     </div>
                 </div>
             </section>
+
+            <SecurityPerformanceSection />
 
             <section className="glass-panel p-8 rounded-xl">
                 <h2 className="text-3xl font-bold mb-6">{t("securityPractices")}</h2>

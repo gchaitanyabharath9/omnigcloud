@@ -25,7 +25,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
         '/community',
         '/onboarding',
         '/demo',
-        '/partners'
+        '/partners',
+        '/staffing',
+        '/research',
+        '/terms',
+        '/ai-data'
     ];
 
     const sitemapEntries: MetadataRoute.Sitemap = [];

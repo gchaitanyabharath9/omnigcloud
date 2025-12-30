@@ -57,9 +57,17 @@ export default function NewsroomSection() {
                             </div>
                             <div style={{ padding: '1.5rem', flexGrow: 1, display: 'flex', flexDirection: 'column' }}>
                                 <div style={{ fontSize: '0.65rem', fontWeight: 800, color: 'var(--muted)', marginBottom: '0.75rem' }}>{t(`news.${item.id}.date`)}</div>
-                                <h4 style={{ fontSize: '1.1rem', fontWeight: 800, lineHeight: 1.4, marginBottom: '1.5rem', flexGrow: 1 }}>{t(`news.${item.id}.title`)}</h4>
-                                <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', color: 'var(--muted)', fontSize: '0.75rem', fontWeight: 600 }}>
-                                    <Newspaper size={14} /> {t(`news.${item.id}.source`)}
+                                <h4 style={{ fontSize: '1.1rem', fontWeight: 800, lineHeight: 1.4, marginBottom: '1rem', flexGrow: 0 }}>{t(`news.${item.id}.title`)}</h4>
+                                <p style={{ fontSize: '0.9rem', color: 'var(--muted)', marginBottom: '1.5rem', lineHeight: 1.6, flexGrow: 1 }}>
+                                    {t(`news.${item.id}.desc`)}
+                                </p>
+                                <div style={{ marginTop: 'auto', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
+                                    <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', color: 'var(--muted)', fontSize: '0.75rem', fontWeight: 600 }}>
+                                        <Newspaper size={14} /> {t(`news.${item.id}.source`)}
+                                    </div>
+                                    <Link href={`/news/${item.id}`} style={{ fontSize: '0.8rem', fontWeight: 700, color: 'var(--primary)', display: 'flex', alignItems: 'center', gap: '0.25rem', textDecoration: 'none' }}>
+                                        {t('cta')} <ArrowRight size={14} />
+                                    </Link>
                                 </div>
                             </div>
                         </div>

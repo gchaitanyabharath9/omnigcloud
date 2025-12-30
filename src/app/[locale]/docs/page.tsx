@@ -1,8 +1,13 @@
-"use client";
-
 import { BookOpen, Code, Cpu, ShieldCheck, Zap, Search, ChevronRight, Layers, Settings, Globe, FileText, Award } from "lucide-react";
 import Link from "next/link";
 import Footer from "@/components/Footer";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+    title: 'OmniGCloud Documentation | Scholarly Technical Compendium',
+    description: 'Evidence-based cloud-agnostic architecture documentation. Read the scholarly whitepaper and explore autonomous orchestration patterns.',
+    keywords: ['ASO framework', 'cloud governance patterns', 'autonomous orchestration', 'scholarly whitepaper'],
+};
 
 export default function DocsPage() {
     return (
@@ -53,11 +58,12 @@ export default function DocsPage() {
                         <main>
                             <div style={{ marginBottom: '2rem' }}>
                                 <div style={{ display: 'flex', alignItems: 'center', gap: '0.6rem', marginBottom: '0.75rem' }}>
-                                    <BookOpen size={20} color="var(--primary)" />
-                                    <h1 style={{ fontSize: '1.75rem', fontWeight: 900, letterSpacing: '-0.5px' }}>Documentation Hub</h1>
+                                    <Award size={20} color="var(--primary)" />
+                                    <h1 style={{ fontSize: '1.75rem', fontWeight: 950, letterSpacing: '-0.5px' }}>Scholarly Technical Compendium</h1>
                                 </div>
-                                <p style={{ fontSize: '0.8rem', opacity: 0.7, lineHeight: 1.4 }}>
-                                    Technical portal for OmniGCloud. Guides for designing, deploying, and governing multi-cloud infrastructure through architectural excellence.
+                                <div className="badge badge-primary-subtle mb-4">ORIGINAL CONTRIBUTION OF MAJOR SIGNIFICANCE</div>
+                                <p style={{ fontSize: '0.9rem', opacity: 0.8, lineHeight: 1.6 }}>
+                                    The following documentation formalizes the **Autonomous Sovereign Orchestration (ASO)** framework. This compendium serves as the primary technical evidence for scholarly review, demonstrating a significant breakthrough in cloud-agnostic governance and multi-infrastructure state synchronization.
                                 </p>
                             </div>
 
@@ -67,6 +73,7 @@ export default function DocsPage() {
                                         <Layers size={18} color="var(--primary)" />
                                     </div>
                                     <h3 style={{ fontSize: '1.1rem', fontWeight: 900, marginBottom: '0.4rem' }}>Design Patterns</h3>
+                                    <div style={{ fontSize: '0.65rem', fontWeight: 900, color: 'var(--primary)', marginBottom: '0.5rem' }}>EVIDENCE EXHIBIT 01</div>
                                     <p style={{ fontSize: '0.75rem', opacity: 0.6, marginBottom: '1rem', lineHeight: 1.4 }}>
                                         Sovereign patterns for EB-1A scholarly evidence.
                                     </p>
@@ -79,6 +86,7 @@ export default function DocsPage() {
                                         <Award size={18} color="var(--primary)" />
                                     </div>
                                     <h3 style={{ fontSize: '1.1rem', fontWeight: 900, marginBottom: '0.4rem' }}>Scholarly White Paper</h3>
+                                    <div style={{ fontSize: '0.65rem', fontWeight: 900, color: 'var(--primary)', marginBottom: '0.5rem' }}>EVIDENCE EXHIBIT 02</div>
                                     <p style={{ fontSize: '0.75rem', opacity: 0.6, marginBottom: '1rem', lineHeight: 1.4 }}>
                                         Autonomous Sovereign Orchestration (ASO) formalization.
                                     </p>
@@ -94,6 +102,7 @@ export default function DocsPage() {
                                         <Zap size={18} color="var(--primary)" />
                                     </div>
                                     <h3 style={{ fontSize: '1.1rem', fontWeight: 900, marginBottom: '0.4rem' }}>Quick Start Guide</h3>
+                                    <div style={{ fontSize: '0.65rem', fontWeight: 900, color: 'var(--primary)', marginBottom: '0.5rem' }}>EVIDENCE EXHIBIT 03</div>
                                     <p style={{ fontSize: '0.75rem', opacity: 0.6, marginBottom: '1rem', lineHeight: 1.4 }}>
                                         Get up and running with OmniGCloud in under 15 minutes.
                                     </p>
@@ -106,6 +115,7 @@ export default function DocsPage() {
                                         <Code size={18} color="var(--primary)" />
                                     </div>
                                     <h3 style={{ fontSize: '1.1rem', fontWeight: 900, marginBottom: '0.4rem' }}>API Reference</h3>
+                                    <div style={{ fontSize: '0.65rem', fontWeight: 900, color: 'var(--primary)', marginBottom: '0.5rem' }}>EVIDENCE EXHIBIT 04</div>
                                     <p style={{ fontSize: '0.75rem', opacity: 0.6, marginBottom: '1rem', lineHeight: 1.4 }}>
                                         Full documentation for our REST and GraphQL APIs.
                                     </p>

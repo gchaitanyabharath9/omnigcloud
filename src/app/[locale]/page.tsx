@@ -9,6 +9,8 @@ import WhitePaperSection from '@/components/sections/home/WhitePaperSection';
 import NewsroomSection from '@/components/sections/home/NewsroomSection';
 import CommunityCallout from '@/components/sections/home/CommunityCallout';
 import SovereignGallery from '@/components/sections/home/SovereignGallery';
+import AnalyticsSection from '@/components/sections/home/AnalyticsSection';
+import ASOSection from '@/components/sections/home/ASOSection';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -22,9 +24,11 @@ export default function Home() {
     <div className="main-content">
       <HeroSection />
       <ProblemSection />
-      {/* <SovereignGallery /> */}
+      <SovereignGallery />
       <EcosystemSection />
       <CapabilitiesSection />
+      <ASOSection />
+      <AnalyticsSection />
       <WhitePaperSection />
       <NewsroomSection />
       <CommunityCallout />

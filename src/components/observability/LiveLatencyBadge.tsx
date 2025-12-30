@@ -30,7 +30,7 @@ export default function LiveLatencyBadge() {
             color: 'var(--primary)',
             fontFamily: 'monospace'
         }}>
-            <Zap size={10} fill="var(--primary)" />
+            <Zap size={10} fill="var(--primary)" className="animate-pulse" />
             <span>MESH_RT: {latency}ms</span>
         </div>
     );

@@ -2,6 +2,7 @@ import { useTranslations, useLocale } from 'next-intl';
 import Link from 'next/link';
 import { ShieldAlert, PlayCircle, CheckCircle, Globe, Activity, Layers, Cpu } from 'lucide-react';
 import Image from 'next/image';
+import PerformanceStatusWidget from '@/components/widgets/PerformanceStatusWidget';
 
 export default function HeroSection() {
     const t = useTranslations('Hero');
@@ -82,6 +83,9 @@ export default function HeroSection() {
                                 backdropFilter: 'blur(8px)',
                                 maxWidth: '400px'
                             }}>
+                                <div className="mb-4">
+                                    <PerformanceStatusWidget />
+                                </div>
                                 <div style={{ fontSize: '0.7rem', textTransform: 'uppercase', letterSpacing: '0.05em', color: 'var(--muted)', marginBottom: '0.25rem', display: 'flex', justifyContent: 'space-between' }}>
                                     <span>{t('systemStatus.title')}</span>
                                     <span style={{ color: '#10b981' }}>● {t('systemStatus.live')}</span>
@@ -127,7 +131,7 @@ export default function HeroSection() {
                                 }}>
                                     <Image
                                         src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1600&fit=crop"
-                                        alt="Dashboard Background"
+                                        alt="OmniGCloud Enterprise Dashboard Interface"
                                         fill
                                         style={{ objectFit: 'cover' }}
                                         priority
@@ -152,7 +156,7 @@ export default function HeroSection() {
                                 <div style={{ flex: 1, borderRadius: '0.5rem', border: '1px solid var(--card-border)', position: 'relative', overflow: 'hidden', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                                     <Image
                                         src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80"
-                                        alt="Data Graph"
+                                        alt="Global Sovereign Data Visualization"
                                         fill
                                         style={{ objectFit: 'cover', opacity: 0.4 }}
                                     />

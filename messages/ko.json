@@ -1,0 +1,994 @@
+{
+    "Header": {
+        "title": "OmniGCloud",
+        "nav": {
+            "products": "제품",
+            "solutions": "솔루션",
+            "trust": "신뢰",
+            "docs": "리소스",
+            "pricing": "요금제",
+            "company": "회사",
+            "onboarding": "지금 확장하기",
+            "pillars": "플랫폼 핵심 요소",
+            "advanced": "고급 운영",
+            "industries": "산업",
+            "useCases": "사용 사례",
+            "documentation": "문서",
+            "community": "커뮤니티",
+            "products_links": {
+                "playground": "소버린 플레이그라운드",
+                "workflows": "G-워크플로우",
+                "guard": "거버넌스 가드",
+                "knowledge": "소버린 지식",
+                "deploy": "Obsidian 배포",
+                "nexus": "크로스 클라우드 넥서스"
+            },
+            "solutions_links": {
+                "financial": "금융 서비스",
+                "insurance": "보험",
+                "telecom": "통신",
+                "healthcare": "헬스케어 및 생명과학",
+                "logistics": "물류 및 공급망",
+                "finance_mod": "글로벌 금융 현대화",
+                "health_mod": "소버린 건강 데이터",
+                "gov_trust": "공공 부문 디지털 신뢰"
+            },
+            "trust_links": {
+                "compliance_maps": "글로벌 규정 준수 지도",
+                "transparency": "투명성 보고서",
+                "certs": "인증",
+                "privacy": "개인정보 보호 센터"
+            },
+            "docs_links": {
+                "tech_docs": "기술 문서",
+                "api": "API 참조",
+                "patterns": "디자인 패턴",
+                "whitepaper": "백서",
+                "open_source": "오픈 소스",
+                "insights": "소버린 인사이트"
+            },
+            "pricing_links": {
+                "compare": "요금제 비교",
+                "developer": "개발자",
+                "professional": "프로페셔널",
+                "business": "비즈니스",
+                "sovereign": "소버린 / 연방",
+                "trust": "엔터프라이즈 신뢰",
+                "faq": "자주 묻는 질문"
+            },
+            "company_links": {
+                "about": "회사 소개",
+                "leadership": "리더십",
+                "operations": "글로벌 운영",
+                "newsroom": "뉴스룸",
+                "executive": "임원실",
+                "contact": "문의하기"
+            }
+        }
+    },
+    "Company": {
+        "email": {
+            "architects": "architects@omnigcloud.com",
+            "support": "support@omnigcloud.com",
+            "legal": "legal@omnigcloud.com",
+            "press": "press@omnigcloud.com",
+            "admin": "admin@omnigcloud.com",
+            "security": "security@omnigcloud.com"
+        },
+        "name": "OmniGCloud 본사",
+        "location": "뉴욕 플래티넘 지구"
+    },
+    "Footer": {
+        "tagline": "AI 기반의 자율 클라우드 현대화를 통해 엔터프라이즈 주권을 회복합니다.",
+        "directory": "글로벌 디렉토리 // TERMINAL_v4.2",
+        "status": "보안 캔버스 동기화: 정상",
+        "platform": {
+            "label": "플랫폼",
+            "control": "컨트롤 플레인",
+            "policy": "정책 엔진",
+            "iac": "IaC 팩토리",
+            "obs": "관찰 가능성"
+        },
+        "services": {
+            "label": "서비스",
+            "migration": "마이그레이션",
+            "modernization": "현대화",
+            "ai": "AI 엔지니어링",
+            "compliance": "규정 준수"
+        },
+        "impact": {
+            "label": "영향",
+            "finance": "금융",
+            "healthcare": "헬스케어",
+            "retail": "유통",
+            "government": "정부"
+        },
+        "trust": {
+            "label": "신뢰",
+            "security": "보안",
+            "compliance": "규정 준수",
+            "privacy": "개인정보 보호",
+            "terms": "서비스 약관"
+        },
+        "resources": {
+            "label": "리소스",
+            "docs": "문서",
+            "api": "API 참조",
+            "blueprints": "블루프린트",
+            "cases": "사례 연구"
+        },
+        "company": {
+            "label": "회사",
+            "about": "회사 소개",
+            "leadership": "리더십",
+            "newsroom": "뉴스룸",
+            "contact": "문의"
+        },
+        "copyright": "© {year} OmniGCloud. All rights reserved.",
+        "footerText": "소버린 조직을 위한 관리형, 글로벌, 생성형 인프라.",
+        "social": {
+            "linkedin": "https://linkedin.com/company/omnigcloud",
+            "twitter": "https://x.com/omnigcloud",
+            "discord": "https://discord.gg/omnigcloud",
+            "github": "https://github.com/omnigcloud"
+        }
+    },
+    "Hero": {
+        "badge": "엔터프라이즈 클라우드 거버넌스",
+        "title": "공급업체 종속에서 해방되세요",
+        "subtitle": "멀티 클라우드 인프라를 관리하는 규제 대상 기업을 위한 통합 컨트롤 플레인입니다. AWS, Azure, GCP, OCP 및 Oracle Cloud 전반에서 규정 준수를 자동화하고 비용을 절감하며 주권을 유지하세요.",
+        "problem": "멀티 클라우드의 복잡성은 공급업체 종속, 규정 준수 드리프트 및 운영 오버헤드를 초래합니다.",
+        "solution": "모든 클라우드 제공업체 전반에 걸친 AI 기반 정책 시행",
+        "audience": "규제 대상 기업 및 정부 기관을 위해 구축됨",
+        "ctaPrimary": "데모 요청",
+        "ctaSecondary": "백서 다운로드",
+        "systemStatus": {
+            "title": "시스템 상태",
+            "live": "라이브",
+            "sync": "멀티 클라우드 동기화 활성",
+            "policy": "정책 엔진",
+            "enforcing": "시행 중",
+            "threat": "위협 가드",
+            "monitoring": "모니터링"
+        },
+        "stats": {
+            "assets": "자산",
+            "drift": "드리프트",
+            "nodes": "노드"
+        },
+        "experts": {
+            "count": "20명 이상의 전문가",
+            "status": "감사 준비 완료",
+            "cta": "영업팀 문의"
+        },
+        "efficiency": "효율성",
+        "impact": {
+            "label": "엔터프라이즈 영향",
+            "text": "모든 클라우드에서 <span>규정 준수</span>를 자동화합니다."
+        },
+        "trust": "규제 대상 기업의 신뢰를 받음"
+    },
+    "Capabilities": {
+        "tag": "G-프레임워크 생태계",
+        "title": "핵심 소버린 제품",
+        "subtitle": "글로벌 멀티 클라우드 거버넌스의 복잡성을 해결하기 위해 설계된 6개의 모듈식 핵심 요소.",
+        "explore": "탐색",
+        "cta": "전체 아키텍처 보기"
+    },
+    "SovereignGallery": {
+        "title": "소버린 비주얼 라이브러리",
+        "subtitle": "운영 중인 G-프레임워크의 상세 아키텍처 캡처.",
+        "control": {
+            "title": "자율 컨트롤 플레인",
+            "description": "커맨드 센터(이미지 A)는 모든 글로벌 클라우드 자산에 대한 실시간 4K 시각화를 제공합니다. 이미지 B는 승인되지 않은 구성 변경이 1.4초 만에 자동으로 복구되는 '드리프트 치료' 엔진의 작동 모습을 보여줍니다."
+        },
+        "failover": {
+            "title": "멀티 클라우드 회로 차단기",
+            "description": "이미지 A는 지역 제공업체 장애 직전의 글로벌 지연 시간 지도를 포착합니다. 이미지 B에서는 100% 가동 시간을 유지하기 위해 Oracle OCI로 즉각적인 워크로드 마이그레이션을 트리거하는 G-프레임워크를 볼 수 있습니다."
+        }
+    },
+    "Products": {
+        "hero": {
+            "tag": "제품 생태계",
+            "title": "엔터프라이즈 소버린 스택",
+            "subtitle": "분산된 멀티 클라우드에 대한 완전한 제어, 탄력성 및 규정 준수를 복원하도록 설계된 4K 가시성 오케스트레이션 도구 모음입니다."
+        },
+        "playground": {
+            "title": "소버린 플레이그라운드",
+            "tag": "인프라 개발",
+            "shortDesc": "크로스 클라우드 인프라 프로토타이핑을 위한 IDE.",
+            "description": "크로스 클라우드 소버린 오케스트레이션을 위해 특별히 설계된 세계 최초의 IDE입니다. 통합 환경에서 OCI, AWS 및 Azure 전반의 복잡한 인프라 의도를 프로토타입화하세요.",
+            "explanation": "기본 작업 공간(이미지 A)은 G-프레임워크 DSL에 대한 구문 강조 표시를 보여주며, 보조 모니터(이미지 B)는 세 가지 클라우드 제공업체 전반에 걸친 실시간 차이를 제공합니다."
+        },
+        "workflows": {
+            "title": "G-워크플로우",
+            "tag": "자동화",
+            "shortDesc": "시각적 다단계 오케스트레이션 엔진.",
+            "description": "다단계 자동화를 정의하기 위한 드래그 앤 드롭 시각적 엔진입니다. G-워크플로우는 지역 장애 조치를 위해 상태 동기화 및 엣지 케이스를 자동으로 처리합니다.",
+            "explanation": "워크플로우 디자이너(이미지 A)에서 엔지니어가 로직을 매핑합니다. 이미지 B는 중단 없는 마이그레이션을 실행하는 G-워크플로우 엔진을 포착합니다."
+        },
+        "guard": {
+            "title": "거버넌스 가드",
+            "tag": "규정 준수",
+            "shortDesc": "실시간 규정 준수 자동 치료.",
+            "description": "엄격한 규제를 받는 엔터프라이즈 환경을 위한 지속적이고 자동화된 감사입니다. SOC2, GDPR 및 국가 주권 의무에 대해 모든 리소스를 스캔합니다.",
+            "explanation": "이미지 A는 '규정 준수 지도' 개요를 보여줍니다. 이미지 B는 잘못 구성된 버킷이 자동으로 잠긴 자동 치료 로그를 보여줍니다."
+        },
+        "knowledge": {
+            "title": "소버린 지식",
+            "tag": "RAG 및 AI",
+            "shortDesc": "규제 데이터를 위한 보안 RAG.",
+            "description": "소버린 경계 내에서 작동하는 보안 지식 기반 및 RAG 엔진입니다. 국경 간 유출 없이 AI로 민감한 법률 및 규제 데이터를 처리하세요.",
+            "explanation": "지식 지도(이미지 A)는 국가 노드 내의 데이터 클러스터를 시각화합니다. 이미지 B는 RAG 지원 법률 초안 작성 인터페이스를 보여줍니다."
+        },
+        "deploy": {
+            "title": "Obsidian 배포",
+            "tag": "프로덕션",
+            "shortDesc": "원자적, 불변의 프로덕션 릴리스.",
+            "description": "미션 크리티컬 앱을 위한 배포 엔진입니다. 100% 롤백 신뢰성으로 글로벌 클러스터 전반에 걸쳐 원자적 변경을 보장합니다.",
+            "explanation": "이미지 A는 배포 파이프라인 상태를 표시합니다. 이미지 B는 시뮬레이션된 부분 장애 중의 원자적 롤백 확인 화면을 보여줍니다."
+        },
+        "nexus": {
+            "title": "크로스 클라우드 넥서스",
+            "tag": "차익 거래",
+            "shortDesc": "글로벌 원격 측정 및 비용 차익 거래.",
+            "description": "모든 클라우드 전반에 걸친 통합 원격 측정 및 비용 관리. Nexus는 실시간으로 가장 비용 효율적인 소버린 노드로 워크로드를 지능적으로 라우팅합니다.",
+            "explanation": "이미지 A는 전 세계적으로 비용 차익 거래 기회를 추적합니다. 이미지 B는 크로스 클라우드 통합 원격 측정 대시보드를 보여줍니다."
+        },
+        "cta": {
+            "title": "비공개 브리핑을 원하시나요?",
+            "subtitle": "엔지니어링 팀과 함께 G-프레임워크의 전체 기술 역량을 경험해 보세요.",
+            "primary": "데모 요청",
+            "secondary": "플랜 보기"
+        }
+    },
+    "UseCases": {
+        "hero": {
+            "tag": "엔터프라이즈 영향 2025",
+            "title": "전략적 소버린 솔루션",
+            "subtitle": "G-프레임워크는 규제 산업 전반에 걸쳐 측정 가능한 속도를 제공합니다: 거버넌스, 글로벌 주권 및 생성형 인프라."
+        },
+        "financial": {
+            "title": "글로벌 금융 현대화",
+            "tag": "은행 및 금융",
+            "description": "모놀리식 메인프레임을 마이크로서비스로 리팩토링하는 것을 자동화하여 레거시 기술 부채를 제거합니다. 32개 소버린 리전 전반에서 안전하고 규정을 준수하며 즉각적입니다.",
+            "explanation": "이미지 A는 고빈도 거래 지연 시간을 포착합니다. 이미지 B는 지역 중단 중 데이터 손실 제로를 보장하는 자동화된 '원장 동기화'를 표시합니다."
+        },
+        "healthcare": {
+            "title": "소버린 건강 데이터",
+            "tag": "헬스케어",
+            "description": "분산 클라우드 환경 전반에서 HIPAA 준수, 탄력적인 데이터 패브릭으로 환자의 생명을 보호하면서 R&D 주기를 가속화합니다. 현지화된 환자 데이터로 AI 모델을 안전하게 훈련하세요.",
+            "explanation": "이미지 A에서 IoMT 장치의 원격 측정을 볼 수 있습니다. 이미지 B는 환자 기록을 처리하는 '소버린 지식' RAG 엔진을 보여줍니다."
+        },
+        "government": {
+            "title": "공공 부문 디지털 신뢰",
+            "tag": "정부",
+            "description": "FIPS 검증 인프라로 시민의 신뢰를 구축합니다. 기밀 워크로드 및 소버린 ID 관리를 위한 제로-이그레스 아키텍처.",
+            "explanation": "이미지 A는 '사이버 훈련장' 시뮬레이션을 보여줍니다. 이미지 B는 국가 경계 내에서 처리되는 시민 ID 흐름을 표시합니다."
+        }
+    },
+    "Blog": {
+        "hero": {
+            "tag": "소버린 인사이트 및 연구",
+            "title": "글로벌 임팩트 허브",
+            "subtitle": "디지털 주권의 최전선에 있는 학술 기사, 엔지니어링 혁신 및 산업 분석.",
+            "search": "연구 검색..."
+        },
+        "posts": {
+            "aso": {
+                "category": "학술 백서",
+                "title": "자율 소버린 오케스트레이션 (ASO)",
+                "excerpt": "AI 기반 클라우드 불가지론적 거버넌스를 위한 공식 프레임워크. 1,000개 이상의 노드에서 상태 동기화 수렴(SSC)에 대한 수학적 증명 확립.",
+                "author": "OmniGCloud 연구소",
+                "impact": "주요 과학적 기여"
+            },
+            "prompt": {
+                "category": "가이드",
+                "title": "소버린 인프라 제어를 위한 프롬프트 엔지니어링",
+                "excerpt": "자연어를 사용하여 복잡한 Kubernetes 클러스터를 오케스트레이션하는 방법. '선언적 의도' 엔진에 대한 가이드.",
+                "author": "AI Ops 팀",
+                "impact": "EB-1A 오리지널 가이드"
+            },
+            "latency": {
+                "category": "평가",
+                "title": "클라우드 제공업체 지연 시간: 2025 종합 벤치마크",
+                "excerpt": "글로벌 인그레스 성능에 대한 OCI, AWS 및 Azure 평가. 소버린 워크로드에서 Oracle의 ARM Ampere 노드가 승리하는 이유.",
+                "author": "연구소",
+                "impact": "학술 벤치마킹"
+            },
+            "rag": {
+                "category": "RAG",
+                "title": "소버린 지식으로 규제 데이터 보안",
+                "excerpt": "에어갭 환경 내 검색 증강 생성에 대한 심층 분석. 법률 문서에 대해 100% 개인정보 보호를 유지하는 방법.",
+                "author": "보안 아키텍트",
+                "impact": "주요 기여"
+            },
+            "bench": {
+                "category": "벤치마크",
+                "title": "인프라 코드 생성을 위한 LLM 성능 비교",
+                "excerpt": "소버린 Terraform 매니페스트 생성을 위한 GPT-4o vs Claude 3.5 Sonnet vs Llama 3. 어떤 것이 드리프트 오류가 더 적은가?",
+                "author": "AI 연구",
+                "impact": "학술 자료"
+            }
+        },
+        "newsletter": {
+            "title": "소버린 연구 서클 가입",
+            "subtitle": "분산 시스템, 데이터 개인정보 보호 및 글로벌 인프라의 미래에 대한 주간 인사이트.",
+            "placeholder": "이메일 입력",
+            "button": "구독하기",
+            "footer": "전 세계 10,000명 이상의 인프라 아키텍트가 신뢰합니다."
+        }
+    },
+    "Pricing": {
+        "hero": {
+            "tag": "투명한 거버넌스",
+            "title": "소버린 확장에 맞춘 요금제",
+            "subtitle": "엔터프라이즈 오케스트레이터를 위한 예측 가능한 가격 책정. 세계에서 가장 탄력적인 멀티 클라우드 프레임워크로 디지털 주권을 확보하세요."
+        },
+        "trust": {
+            "title": "엔터프라이즈급 규정 준수",
+            "subtitle": "모든 요금제에는 엄격한 규제를 받는 부문에 필요한 보안 아키텍처가 포함되어 있습니다.",
+            "residency": {
+                "title": "데이터 거주",
+                "desc": "데이터를 법적 경계 내에 유지하세요. 배치에 대한 완전한 제어."
+            },
+            "neutrality": {
+                "title": "클라우드 중립성",
+                "desc": "공급업체 종속 없음. 버튼 하나로 클라우드 간에 워크로드를 이동하세요."
+            },
+            "scholarly": {
+                "title": "EB-1A 학술 운영",
+                "desc": "구현은 동료 검토를 거친 ASO 아키텍처 패턴을 따릅니다."
+            }
+        },
+        "faq": {
+            "title": "자주 묻는 질문",
+            "q1": {
+                "q": "'자동 감사'란 무엇입니까?",
+                "a": "특정 거버넌스 정책(GDPR, ISO 등)에 대해 클라우드 인프라를 평가하는 실시간 규정 준수 확인입니다."
+            },
+            "q2": {
+                "q": "결제 주기 중간에 클라우드를 전환할 수 있습니까?",
+                "a": "네. G-프레임워크는 추가 플랫폼 비용 없이 거의 즉각적인 마이그레이션을 허용합니다."
+            },
+            "q3": {
+                "q": "오픈 소스 프로젝트에 대한 할인을 제공합니까?",
+                "a": "적극 권장합니다. 무료 Developer+ 요금제에 대해 커뮤니티 팀에 문의하세요."
+            }
+        },
+        "cta": {
+            "title": "소버린 확실성으로 확장",
+            "subtitle": "글로벌 인프라 전반에 G-프레임워크를 배포할 준비가 되셨습니까?",
+            "button": "지금 시작하기"
+        },
+        "plans": {
+            "popular": "가장 인기",
+            "month": "/월",
+            "contact": "가격 문의",
+            "developer": {
+                "name": "개발자",
+                "desc": "미래의 소버린 인프라를 구축하는 개인 엔지니어용.",
+                "cta": "구축 시작"
+            },
+            "professional": {
+                "name": "프로페셔널",
+                "desc": "멀티 리전 탄력성이 필요한 확장 팀용.",
+                "cta": "프로페셔널로 이동"
+            },
+            "business": {
+                "name": "비즈니스",
+                "desc": "미션 크리티컬 운영을 위한 엔터프라이즈 거버넌스.",
+                "cta": "비즈니스 확장"
+            },
+            "sovereign": {
+                "name": "소버린",
+                "desc": "국가 및 포춘 500대 기업을 위한 맞춤형 인프라.",
+                "cta": "영업팀 문의"
+            }
+        }
+    },
+    "Platform": {
+        "hero": {
+            "title": "OmniGCloud 자율 플랫폼",
+            "subtitle": "글로벌 거버넌스 및 에이전트 클라우드 현대화를 위한 기본 컨트롤 플레인.",
+            "ctaPrimary": "데모 요청",
+            "ctaSecondary": "문서 보기"
+        },
+        "core": {
+            "title": "소버린 코어",
+            "desc": "분리된 컨트롤 플레인을 통한 제로 지연 거주."
+        },
+        "stack": {
+            "api": "외부 API",
+            "logic": "로직 메쉬",
+            "cluster": "클러스터 운영",
+            "db": "소버린 DB",
+            "shielded": "보호됨",
+            "active": "활성",
+            "scaling": "확장 중",
+            "verified": "검증됨"
+        },
+        "comparison": {
+            "title": "소버린의 장점",
+            "subtitle": "G-프레임워크가 레거시 클라우드 관리 프록시와 다른 점.",
+            "capability": "기능",
+            "legacy": "레거시 클라우드 프록시",
+            "sovereign": "G-프레임워크 (ASO)",
+            "footer": "* 2025 자율 소버린 오케스트레이션 (ASO) 아키텍처 표준에 기반한 분석.",
+            "limited": "제한됨",
+            "partial": "부분적",
+            "rows": {
+                "neutrality": "100% 공급업체 중립성",
+                "audits": "실시간 규제 감사",
+                "sync": "크로스 클라우드 상태 동기화",
+                "refactoring": "자동화된 기술 부채 리팩토링",
+                "encryption": "소버린 자산 암호화",
+                "iam": "공급업체 종속 IAM",
+                "arbitrage": "이그레스 비용 차익 거래"
+            }
+        },
+        "arbitrage": {
+            "tag": "경제적 주권",
+            "title": "재정적 차익 거래 및 클라우드 중립성",
+            "subtitle": "G-프레임워크는 단순히 클라우드를 관리하는 것이 아니라 인프라의 경제성을 최적화합니다. 실시간으로 가장 비용 효율적인 소버린 노드로 워크로드를 자동으로 이동하세요.",
+            "forecastTitle": "예측 청구 및 전망",
+            "forecastDesc": "당사의 EAB-Forecast 엔진은 OCI, AWS 및 Azure의 글로벌 가격 지수를 분석하여 99.8%의 정확도로 12개월 번 레이트를 예측합니다.",
+            "switchTitle": "원자적 플랫폼 전환",
+            "switchDesc": "실시간 워크로드 마이그레이션을 경험하세요. 공급업체가 요금을 인상하거나 규정을 위반할 때 G-프레임워크는 자율 리홈(re-home)을 실행합니다.",
+            "lockinTitle": "제로 공급업체 종속",
+            "lockinDesc": "국경을 넘어 데이터 및 로직 상태의 100% 이식성을 유지하세요.",
+            "portabilityTitle": "즉각적인 이식성",
+            "portabilityDesc": "코드 변경 없이 몇 초 만에 프로덕션 워크로드를 마이그레이션하세요.",
+            "eb1aTag": "EB-1A 오리지널 기여 #5",
+            "eb1aDesc": "\"EABF(Economic Arbitrage & Billing Forecast) 알고리즘은 분산 경제 분야에서 상당한 발전을 나타냅니다. 리소스 비용을 공급업체 API에서 분리함으로써 청원인은 클라우드 불가지론적 재정 거버넌스의 새로운 표준을 확립했습니다.\"",
+            "auditor": "James Sterling",
+            "auditorTitle": "소버린 시스템 감사관"
+        },
+        "control": {
+            "title": "통합 컨트롤 플레인",
+            "subtitle": "단일 고품질 인터페이스에서 수천 개의 분산 클러스터를 1밀리초 미만의 전파로 관리하세요.",
+            "observability": {
+                "title": "글로벌 관찰 가능성",
+                "desc": "모든 AWS, Azure, GCP 및 RedHat OpenShift (OCP) 환경에 걸친 실시간 원격 측정."
+            },
+            "fleet": "대량 플릿 운영",
+            "healing": "자가 치유",
+            "gitops": "GitOps 엔진",
+            "audit": "감사 로그"
+        },
+        "security": {
+            "title": "거버넌스 보안",
+            "desc": "모든 작업이 감사됩니다. OmniGCloud는 자산 전반에 걸쳐 제로 트러스트 ID를 시행합니다.",
+            "cta": "규정 준수 프레임워크",
+            "zerotrust": "제로 트러스트",
+            "features": {
+                "fips": {
+                    "title": "FIPS 140-2",
+                    "desc": "검증된 암호화."
+                },
+                "rbac": {
+                    "title": "RBAC 2.0",
+                    "desc": "세분화된 제어."
+                },
+                "vpc": {
+                    "title": "VPC 격리",
+                    "desc": "제로 이그레스 LLM 운영."
+                },
+                "audit": {
+                    "title": "감사 로그",
+                    "desc": "불변의 추적 로그."
+                }
+            }
+        },
+        "integrations": {
+            "title": "네이티브 통합",
+            "subtitle": "팀이 이미 좋아하는 도구와 원활하게 연결하세요.",
+            "infra": "인프라",
+            "obs": "관찰 가능성",
+            "delivery": "배포",
+            "identity": "ID/보안"
+        }
+    },
+    "Visuals": {
+        "telemetry": {
+            "title": "글로벌 지연 시간 원격 측정",
+            "live": "라이브",
+            "latency": "평균 지연 시간",
+            "throughput": "처리량",
+            "loss": "패킷 손실"
+        },
+        "drift": {
+            "title": "규정 준수 드리프트 분석",
+            "detected": "드리프트 감지됨: +12%",
+            "remediate": "자동 치료"
+        }
+    },
+    "HomeSections": {
+        "Pricing": {
+            "title": "전략적 소버린 에디션",
+            "subtitle": "거버넌스 의무에 맞는 운영 모델을 선택하세요.",
+            "core": {
+                "badge": "코어",
+                "price": "4%",
+                "unit": "/ 지출",
+                "desc": "2개 이상의 클라우드로 확장하는 디지털 네이티브 스타트업용.",
+                "cta": "코어 시작",
+                "features": {
+                    "nodes": "최대 500개 노드",
+                    "drift": "기본 드리프트 감지",
+                    "sla": "99.9% 컨트롤 플레인 SLA",
+                    "support": "커뮤니티 지원"
+                }
+            },
+            "enterprise": {
+                "badge": "엔터프라이즈",
+                "popular": "가장 인기",
+                "price": "표준",
+                "desc": "규제 산업을 위한 전체 플랫폼 거버넌스.",
+                "cta": "영업팀 문의",
+                "features": {
+                    "nodes": "무제한 노드",
+                    "remediation": "자동화된 치료",
+                    "finops": "FinOps 차익 거래 엔진",
+                    "rbac": "역할 기반 액세스 (RBAC)",
+                    "support": "24/7 전담 지원"
+                }
+            },
+            "federal": {
+                "badge": "연방",
+                "price": "맞춤형",
+                "desc": "소버린 기관을 위한 에어갭 배포.",
+                "cta": "연방 문의",
+                "features": {
+                    "onprem": "온프레미스 컨트롤 플레인",
+                    "byok": "자체 키 가져오기 (BYOK)",
+                    "security": "최고 기밀 취급 인가 지원",
+                    "audit": "맞춤형 감사 추적"
+                }
+            }
+        },
+        "Cta": {
+            "title": "소버린 제어권을 회복할 준비가 되셨나요?",
+            "subtitle": "클라우드 거버넌스를 자동화하고 OmniGCloud로 디지털 주권을 회복한 수백 개의 글로벌 기업에 합류하세요.",
+            "primary": "클라우드 확장",
+            "secondary": "영업팀 문의",
+            "disclaimer": "신용 카드 필요 없음. SOC-2 준수 온보딩."
+        }
+    },
+    "Problem": {
+        "badge": "중요 인프라 경고",
+        "title": "소버린 위기",
+        "subtitle": "글로벌 기업들은 파편화, 규제 및 불투명성의 완벽한 폭풍에 직면해 있습니다.",
+        "fragmentation": {
+            "title": "파편화 함정",
+            "desc": "AWS, Azure 및 온프레미스 전반의 데이터 확산은 아무도 관리하지 않는 \"좀비 인프라\"를 생성합니다."
+        },
+        "regulatory": {
+            "title": "규제 드리프트",
+            "desc": "2024년 국경 간 데이터 유출에 대한 GDPR 및 AI 법 벌금이 증가했습니다. 정적 규정 준수 보고서는 더 이상 유효하지 않습니다.",
+            "score": "규정 준수 점수",
+            "risk": "위험"
+        },
+        "vendor": {
+            "title": "공급업체 랜섬",
+            "desc": "이그레스 비용과 독점 API는 데이터를 가둡니다. 1PB의 데이터를 이동하는 데 50,000달러 이상이 들 수 있습니다."
+        },
+        "opacity": {
+            "title": "다크 데이터 불투명성",
+            "desc": "모든 기업 데이터의 52%는 분류되지 않고 알려지지 않았으며 보호되지 않은 \"다크 데이터\"입니다.",
+            "scanning": "> 버려진_버킷_스캔_중..."
+        }
+    },
+    "Ecosystem": {
+        "badge": "시스템 아키텍처",
+        "title": "자율 현대화 생태계",
+        "subtitle": "제로 트러스트 정밀도로 글로벌, 최신 클라우드 포트폴리오의 복잡성을 관리하도록 설계된 통합된 수평적 플랫폼입니다.",
+        "governance": {
+            "title": "거버넌스 허브",
+            "desc": "모든 클라우드 제공업체 전반에 걸친 자동화된 드리프트 치료 및 정책 시행. 실시간으로 GDPR, HIPAA 및 SOC2 준수를 보장합니다.",
+            "status": "모듈 활성",
+            "link": "탐색"
+        },
+        "mesh": {
+            "title": "글로벌 메쉬",
+            "desc": "현지화된 주권을 갖춘 네이티브 클라우드 내 라우팅. OCI, AWS 및 Azure 클러스터를 단일 지연 시간 최적화 서비스 메쉬로 연결합니다.",
+            "status": "네트워크 온라인",
+            "link": "토폴로지 보기"
+        },
+        "ai": {
+            "title": "AI Ops 커널",
+            "desc": "VPC 경계 내의 관리형 LLM 오케스트레이션. 데이터 유출 없이 지능형 자동화를 위해 프라이빗 GPT-4 동등 모델을 배포합니다.",
+            "status": "모델 준비 완료",
+            "link": "랩 액세스"
+        },
+        "vault": {
+            "title": "소버린 볼트",
+            "desc": "관리형 암호화 및 엄격한 데이터 거주 제어를 갖춘 현지화된 스토리지 커널. 데이터는 정의한 관할 구역을 절대 떠나지 않습니다.",
+            "status": "암호화 켜짐",
+            "link": "보안 스토리지"
+        }
+    },
+    "DemoSection": {
+        "badge": "라이브 경험",
+        "title": "Omni<span>G</span>Cloud 작동 모습 보기",
+        "subtitle": "자율 클라우드 현대화를 목격하세요. 발견에서 주권까지 몇 초 만에.",
+        "discovery": {
+            "title": "즉각적인 발견",
+            "desc": "제로 터치 에이전트 배포로 3분 이내에 1,000개 이상의 자산을 매핑합니다.",
+            "code": "> 스캔_완료: 99.8%"
+        },
+        "iac": {
+            "title": "생성형 IaC",
+            "desc": "LLM 에이전트가 레거시 바이너리를 깔끔한 Terraform 코드로 리버스 엔지니어링합니다.",
+            "code": "> 모듈_생성_중..."
+        },
+        "sync": {
+            "title": "활성 상태 동기화",
+            "desc": "AWS와 Azure 지역 간의 양방향 상태 잠금.",
+            "code": "> 지연_시간: 12ms"
+        },
+        "drift": {
+            "title": "드리프트 자동 역전",
+            "desc": "승인되지 않은 콘솔 변경이 감지되어 즉시 되돌려집니다.",
+            "code": "> 위협_무력화됨"
+        }
+    },
+    "Community": {
+        "badge": "오픈 사이언스 이니셔티브",
+        "title": "전문가가 구축하고, <br/>커뮤니티가 관리함",
+        "subtitle": "G-프레임워크는 플랫폼 그 이상입니다. 소버린 인프라를 위한 개방형 표준입니다. 탄력적이고 제공업체에 얽매이지 않는 미래를 구축하는 120명 이상의 글로벌 기여자와 함께하세요.",
+        "join": "커뮤니티 가입",
+        "contribute": "코어에 기여",
+        "cli": {
+            "title": "소버린 CLI v4.2",
+            "cmd": "npm install -g @omnig/cli"
+        },
+        "plugins": {
+            "title": "200개 이상의 플러그인",
+            "desc": "확장 가능한 제공업체 아키텍처"
+        },
+        "maintainers": {
+            "title": "글로벌 유지 관리자",
+            "desc": "소버린 우선 검토 프로세스"
+        }
+    },
+    "WhitePaper": {
+        "badge": "엔지니어링 출판물",
+        "contribution": "주요 의미의 오리지널 기여",
+        "title": "자율 소버린 오케스트레이션 (ASO)",
+        "description": "AI 기반 클라우드 불가지론적 거버넌스를 위한 공식 프레임워크. 이 기술 출판물은 공급업체 종속을 제거하고 엔터프라이즈 데이터 주권을 회복하기 위해 G-프레임워크에서 사용되는 획기적인 방법론을 설명합니다.",
+        "peerReview": "동료 검토 준비 완료",
+        "pageCount": "12페이지 학술 논문",
+        "downloadTitle": "기술 백서 다운로드",
+        "downloadSubtitle": "EU AI 법 및 글로벌 데이터 거주 요건을 탐색하는 CIO, 플랫폼 아키텍트 및 법률 고문을 위한 필독서.",
+        "readOnline": "온라인 읽기 (전체 프레임워크)",
+        "designPatterns": "디자인 패턴 보기",
+        "footer": "OmniGCloud 오픈 사이언스 이니셔티브 2025에 따라 게시됨."
+    },
+    "Newsroom": {
+        "badge": "소버린 인사이트",
+        "title": "연구소 최신 소식",
+        "link": "임팩트 허브 입장",
+        "news": {
+            "bank": {
+                "date": "2025년 12월 12일",
+                "source": "OmniG 인텔리전스",
+                "title": "1티어 은행을 위해 2.5PB의 국경 간 데이터에 걸친 ASO 확장.",
+                "tag": "사례 연구"
+            },
+            "egress": {
+                "date": "2025년 11월 28일",
+                "source": "클라우드 소버린 보고서",
+                "title": "자율 소버린 오케스트레이션이 이그레스 비용을 40% 절감하는 방법.",
+                "tag": "연구"
+            },
+            "integration": {
+                "date": "2025년 11월 15일",
+                "source": "글로벌 프레스 와이어",
+                "title": "Oracle OKE 및 RedHat OpenShift에 대한 범용 통합 발표.",
+                "tag": "제품"
+            }
+        }
+    },
+    "Services": {
+        "Hero": {
+            "badge": "자율 현대화",
+            "title": "노동이 아닌 <br /> <span>로직으로 Azure & OCP 현대화</span>",
+            "subtitle": "<span>Terraform</span> 및 <span>Ansible</span>을 활용하여 엔터프라이즈 클라우드 코어를 자동화하세요.",
+            "cta": "솔루션 탐색",
+            "velocity": "속도",
+            "errors": "오류"
+        },
+        "Migration": {
+            "title": "마이그레이션 팩토리",
+            "subtitle": "대규모 클라우드 도입을 위한 자동화된 파이프라인.",
+            "azure": {
+                "title": "Azure 마이그레이션 팩토리",
+                "desc": "사전 구축된 정책으로 VM 및 데이터베이스를 Azure 랜딩 존으로 신속하게 마이그레이션하세요."
+            },
+            "ocp": {
+                "title": "OCP 리팩토링",
+                "desc": "레거시 앱을 Red Hat OpenShift로 컨테이너화합니다. 모든 인프라 전반에서 빠르고 일관된 배포를 위한 자동화된 매니페스트."
+            },
+            "provisioning": {
+                "title": "< 15분 프로비저닝",
+                "desc": "코드 커밋에서 실행 중인 인프라까지 전체 환경을 몇 분 만에 구축하세요."
+            },
+            "drift": {
+                "title": "제로 드리프트 비용",
+                "desc": "섀도우 IT 비용을 제거하세요. 당사의 지속적인 상태 시행은 청구서가 광범위한 IaC 정의와 완벽하게 일치하도록 보장합니다."
+            }
+        },
+        "Stack": {
+            "badge": "엔진",
+            "title": "자동화 스택",
+            "subtitle": "업계 표준 오픈 소스 도구로 구동되는 통합 현대화 엔진.",
+            "terraform": {
+                "title": "Terraform 블루프린트",
+                "desc": "Azure 및 AWS를 위한 사전 강화된 IaC 모듈."
+            },
+            "ansible": {
+                "title": "Ansible 가드레일",
+                "desc": "제로 트러스트 구성 관리 및 불변성."
+            }
+        },
+        "Operations": {
+            "title": "관리형 운영",
+            "subtitle": "현대화 패브릭을 유지 관리하는 24/7/365 SRE 팀.",
+            "sre": {
+                "title": "24/7 Follow-the-Sun",
+                "desc": "미국, EU 및 APAC의 SRE 허브로 15분 응답 SLA 보장."
+            },
+            "finops": {
+                "title": "지속적 FinOps",
+                "desc": "워크로드를 최적의 영역으로 이동시키는 실시간 비용 차익 거래 엔진."
+            },
+            "healing": {
+                "title": "사전 예방적 치유",
+                "desc": "자동화된 드리프트 감지 및 자가 치유 인프라."
+            },
+            "audit": {
+                "title": "감사 준비 완료",
+                "desc": "SOC2 및 GDPR을 위해 자동으로 생성되는 월별 증거 추적."
+            }
+        },
+        "DataAI": {
+            "title": "데이터 & AI 패브릭",
+            "subtitle": "고성능 추론을 위한 소버린 데이터 플레인.",
+            "sovereignty": {
+                "title": "데이터 주권",
+                "desc": "현지화된 거주."
+            },
+            "fabric": {
+                "title": "AI 패브릭",
+                "desc": "GPU 워크로드."
+            },
+            "search": {
+                "title": "벡터 검색",
+                "desc": "고차원 임베딩."
+            },
+            "analytics": {
+                "title": "실시간 분석",
+                "desc": "즉각적인 인사이트."
+            },
+            "uptime": "가동 시간 SLA"
+        }
+    },
+    "Industries": {
+        "badge": "타겟 산업",
+        "title": "산업별 솔루션",
+        "subtitle": "세계에서 가장 복잡하고 규제된 부문을 위한 디지털 코어 표준화.",
+        "challenges": "주요 산업 과제",
+        "solution": "OmniGCloud 솔루션",
+        "cta": {
+            "title": "산업을 현대화할 준비가 되셨나요?",
+            "subtitle": "OmniGCloud를 사용하여 디지털 미래를 재정의하는 세계 최고의 조직에 합류하세요.",
+            "button": "산업 브리핑 예약"
+        },
+        "financial": {
+            "name": "금융 서비스",
+            "desc": "글로벌 뱅킹 및 핀테크 기관을 위한 안전하고 규정 준수 멀티 클라우드 현대화.",
+            "c1": "레거시 코어 뱅킹 모놀리식 아키텍처",
+            "c2": "엄격한 규제 준수 (SarbOx, GDPR)",
+            "c3": "지연 시간이 짧은 거래 요구 사항",
+            "sol": "OmniGCloud 소버린 컨트롤 플레인은 데이터 거주를 보장하면서 AI 기반 사기 감지 및 자동 확장을 가능하게 합니다."
+        },
+        "insurance": {
+            "name": "보험",
+            "desc": "자동화된 클라우드 네이티브 플랫폼을 통해 청구 처리 및 보험 수리 모델링을 가속화합니다.",
+            "c1": "파편화된 레거시 정책 시스템",
+            "c2": "하이브리드 환경 전반의 데이터 사일로",
+            "c3": "최고 재해 이벤트 중 확장",
+            "sol": "멀티 인프라 레지스트리는 온프레미스 및 클라우드 전반에 걸쳐 통합된 가시성을 제공하여 피크 수요에 대한 용량을 최적화합니다."
+        },
+        "telecom": {
+            "name": "통신 & 5G",
+            "desc": "고빈도 연결 및 MEC 워크로드를 위한 분산 엣지 오케스트레이션.",
+            "c1": "분산 엣지 오케스트레이션",
+            "c2": "네트워크 기능 가상화 (NFV)",
+            "c3": "5G 지연 시간 의무",
+            "sol": "Crossplane 기반 엣지 관리는 수천 개의 로컬 노드 전반에 걸쳐 통신 스택의 일관된 배포를 가능하게 합니다."
+        },
+        "healthcare": {
+            "name": "헬스케어 및 생명과학",
+            "desc": "HIPAA 준수, 탄력적인 데이터 패브릭 및 AI 지원 연구로 환자의 생명을 보호합니다.",
+            "c1": "HIPAA/HITECH 데이터 주권",
+            "c2": "대규모 영상 데이터 저장 및 검색",
+            "c3": "과학 연구 컴퓨팅 확장",
+            "sol": "OmniSource 마켓플레이스는 연구를 위해 사전 구성된 보안 가드레일 및 처리량이 높은 데이터 파이프라인을 제공합니다."
+        },
+        "logistics": {
+            "name": "물류 및 공급망",
+            "desc": "글로벌 이동 기업 전반에 걸친 실시간 가시성 및 예측 최적화.",
+            "c1": "글로벌 실시간 추적 지연 시간",
+            "c2": "레거시 ERP 통합",
+            "c3": "예측 불가능한 글로벌 공급 충격",
+            "sol": "AI-네이티브 현대화는 시장 변화에 신속하게 대응하기 위해 모놀리식 ERP를 민첩한 마이크로서비스로 해체합니다."
+        }
+    },
+    "Dashboard": {
+        "title": "소버린 커맨드 센터",
+        "welcome": "환영합니다",
+        "role": "할당된 보안 역할",
+        "logicMeshStatus": "로직 메쉬 상태",
+        "active": "동기화됨"
+    },
+    "SecuritySettings": {
+        "title": "보안 구성",
+        "description": "조직의 ID 공급자 및 소버린 보안 정책을 관리하십시오.",
+        "ssoConfiguration": "SSO 공급자",
+        "enabled": "활성",
+        "disabled": "구성되지 않음",
+        "clientId": "클라이언트 애플리케이션 ID",
+        "tenantId": "디렉터리(테넌트) ID",
+        "callbackUrl": "승인된 리디렉션 URI",
+        "outboundEmail": "발신자(보내는 사람) 주소",
+        "advancedSecurity": "엔터프라이즈 ID (SAML/SCIM)",
+        "advancedDescription": "SAML 2.0을 통한 연합 ID 및 SCIM을 통한 자동 사용자 프로비저닝 활성화. 소버린 엔터프라이즈 계층에서 사용 가능.",
+        "requestSaml": "조기 액세스 요청"
+    },
+    "Terms": {
+        "title": "서비스 약관",
+        "lastUpdated": "마지막 업데이트",
+        "acceptance": "약관 동의",
+        "acceptanceText": "OmniGCloud 플랫폼에 액세스하거나 사용함으로써 귀하는 본 서비스 약관을 준수할 것에 동의합니다. 본 약관에 동의하지 않으면 서비스를 사용하지 마십시오.",
+        "services": "제공되는 서비스",
+        "servicesText": "OmniGCloud는 다음을 포함한 클라우드 불가지론 현대화 및 AI 엔지니어링 서비스를 제공합니다:",
+        "service1": "멀티 클라우드 인프라 오케스트레이션 및 관리",
+        "service2": "AI 기반 플랫폼 엔지니어링 및 자동화",
+        "service3": "엔터프라이즈 보안 및 규정 준수 컨설팅",
+        "service4": "클라우드 마이그레이션 및 현대화 서비스",
+        "userResponsibilities": "사용자 책임",
+        "userResponsibilitiesText": "당사 플랫폼 사용자로서 귀하는 다음 사항에 동의합니다:",
+        "responsibility1": "계정 자격 증명의 기밀 유지",
+        "responsibility2": "모든 해당 법률 및 규정을 준수하여 플랫폼 사용",
+        "responsibility3": "당사 시스템 또는 다른 사용자의 데이터에 대한 무단 액세스 시도 금지",
+        "dataOwnership": "데이터 소유권",
+        "dataOwnershipText": "귀하는 귀하의 데이터에 대한 모든 권리, 소유권 및 이익을 보유합니다. OmniGCloud는 귀하의 인프라 메타데이터 또는 애플리케이션 데이터에 대한 소유권을 주장하지 않습니다. 당사는 서비스를 제공하기 위해서만 귀하의 데이터를 처리합니다.",
+        "termination": "해지",
+        "terminationText": "어느 당사자든 30일 서면 통지로 본 계약을 해지할 수 있습니다. 해지 시 귀하는 90일 동안 데이터를 내보낼 수 있는 액세스 권한을 유지합니다.",
+        "disclaimer": "면책 조항",
+        "disclaimerText": "당사의 서비스는 어떠한 종류의 보증 없이 '있는 그대로' 제공됩니다. 중단 없는 또는 오류 없는 작동을 보장하지 않습니다.",
+        "governingLaw": "준거법",
+        "governingLawText": "본 약관은 귀하의 조직이 주로 위치한 관할 구역의 법률을 따릅니다.",
+        "contact": "문의",
+        "contactText": "본 약관에 대한 질문은 당사에 문의하십시오"
+    },
+    "Privacy": {
+        "title": "개인정보 처리방침",
+        "lastUpdated": "마지막 업데이트",
+        "commitment": "개인정보 보호에 대한 당사의 약속",
+        "commitmentText": "OmniGCloud는 귀하의 개인정보를 보호하고 데이터를 투명하고 주의 깊게 처리하기 위해 최선을 다하고 있습니다. 본 정책은 당사가 귀하의 정보를 수집, 사용 및 보호하는 방법을 설명합니다.",
+        "dataCollection": "수집하는 데이터",
+        "dataCollectionText": "당사는 서비스를 제공하고 개선하기 위해 필요한 데이터만 수집합니다:",
+        "accountData": "계정 정보",
+        "accountDataText": "SSO 공급자를 위한 이름, 이메일 주소, 회사 이름 및 인증 자격 증명.",
+        "infrastructureData": "인프라 메타데이터",
+        "infrastructureDataText": "클라우드 리소스 구성, 성능 지표 및 비용 데이터(애플리케이션 수준 데이터 없음).",
+        "usageData": "사용 분석",
+        "usageDataText": "플랫폼 상호 작용 로그, 기능 사용 패턴 및 익명화된 성능 지표.",
+        "dataProtection": "데이터 보호 방법",
+        "dataProtectionText": "당사는 업계 표준 보안 조치를 구현합니다:",
+        "protection1": "전송 중인 모든 데이터에 대한 TLS 1.3 암호화",
+        "protection2": "유휴 데이터에 대한 AES-256 암호화",
+        "protection3": "정기적인 보안 감사 및 침투 테스트",
+        "protection4": "역할 기반 액세스 제어 및 감사 로깅",
+        "dataRetention": "데이터 보존",
+        "dataRetentionText": "당사는 서비스를 제공하는 데 필요하거나 법률에서 요구하는 기간 동안만 귀하의 데이터를 보존합니다. 귀하는 법적 보존 요건에 따라 언제든지 데이터 삭제를 요청할 수 있습니다.",
+        "yourRights": "귀하의 개인정보 권리",
+        "yourRightsText": "귀하는 다음과 같은 권리가 있습니다:",
+        "right1": "언제든지 데이터에 액세스하고 내보내기",
+        "right2": "부정확한 데이터 수정 요청",
+        "right3": "데이터 삭제 요청(법적 요건에 따름)",
+        "right4": "비필수 데이터 처리 거부",
+        "thirdParty": "제3자 서비스",
+        "thirdPartyText": "당사는 귀하의 데이터를 처리할 수 있는 엄선된 제3자 서비스(클라우드 제공업체, 분석 도구)를 사용합니다. 당사는 모든 제3자가 계약 계약을 통해 당사의 보안 및 개인정보 보호 표준을 충족하도록 보장합니다.",
+        "cookies": "쿠키 및 추적",
+        "cookiesText": "당사는 인증 및 세션 관리를 위해 필수 쿠키를 사용합니다. 당사는 제3자 광고 쿠키를 사용하지 않습니다. 브라우저 설정에서 쿠키 환경설정을 제어할 수 있습니다.",
+        "changes": "정책 변경",
+        "changesText": "당사는 주기적으로 본 정책을 업데이트할 수 있습니다. 중요한 변경 사항이 발효되기 최소 30일 전에 이메일이나 플랫폼 알림을 통해 알려드립니다.",
+        "contact": "문의",
+        "contactText": "개인정보 관련 질문이나 권리 행사를 위해 당사에 문의하십시오"
+    },
+    "Security": {
+        "title": "보안 및 신뢰 센터",
+        "subtitle": "엔터프라이즈급 보안 관행으로 인프라와 데이터를 보호하려는 당사의 약속.",
+        "encryption": "종단 간 암호화",
+        "encryptionText": "모든 데이터는 전송 중(TLS 1.3) 및 유휴 상태(AES-256)에서 암호화되며 엔터프라이즈 요금제에 고객 관리 암호화 키를 사용할 수 있습니다.",
+        "authentication": "다단계 인증",
+        "authenticationText": "SAML, OIDC 및 암호 없는 매직 링크를 지원하는 엔터프라이즈 SSO. 세분화된 권한을 위한 역할 기반 액세스 제어(RBAC).",
+        "responsibleDisclosure": "책임감 있는 공개 프로그램",
+        "disclosureIntro": "당사는 보안 연구원들이 당사 플랫폼의 보안을 유지하는 데 도움을 주는 것을 환영합니다. 취약점을 발견하면 책임감 있게 신고해 주십시오.",
+        "reportingProcess": "신고 방법",
+        "step1": "취약점 세부 정보와 함께 security@omnigcloud.com으로 이메일 전송",
+        "step2": "재현 단계, 잠재적 영향 및 개념 증명 코드 포함",
+        "step3": "공개 전에 조사 및 문제 해결을 위한 합리적인 시간 제공",
+        "step4": "48시간 이내에 보고서를 확인하고 진행 상황을 업데이트해 드립니다",
+        "scope": "범위 내",
+        "scope1": "인증 및 권한 부여 우회",
+        "scope2": "SQL 삽입, XSS, CSRF 및 기타 삽입 취약점",
+        "scope3": "서버 측 요청 위조(SSRF) 및 원격 코드 실행(RCE)",
+        "scope4": "민감한 데이터 노출 또는 안전하지 않은 데이터 저장",
+        "outOfScope": "범위 외",
+        "outOfScope1": "사회 공학적 공격 또는 피싱",
+        "outOfScope2": "서비스 거부(DoS) 공격",
+        "outOfScope3": "당사가 제어하지 않는 제3자 서비스 문제",
+        "contactSecurity": "보안 담당자",
+        "securityEmail": "이메일",
+        "pgpKey": "PGP 키",
+        "securityPractices": "보안 관행",
+        "infrastructure": "인프라 보안",
+        "infra1": "자동 장애 조치가 포함된 다중 지역 배포",
+        "infra2": "네트워크 세분화 및 제로 트러스트 아키텍처",
+        "infra3": "정기적인 취약점 스캔 및 패치 적용",
+        "monitoring": "지속적인 모니터링",
+        "monitor1": "24/7 보안 운영 센터(SOC)",
+        "monitor2": "실시간 위협 탐지 및 대응",
+        "monitor3": "포괄적인 감사 로깅 및 SIEM 통합"
+    },
+    "Compliance": {
+        "title": "규정 준수 및 인증",
+        "subtitle": "규정 준수 여정 및 데이터 처리 관행에 대한 투명한 보고.",
+        "transparency": "투명성 고지",
+        "transparencyText": "당사는 규정 준수 상태에 대한 정직한 소통을 믿습니다. 아래에서 현재 인증, 진행 중인 감사 및 계획된 이니셔티브를 찾을 수 있습니다. 당사는 아직 획득하지 않은 인증을 주장하지 않습니다.",
+        "active": "활성",
+        "inProgress": "진행 중",
+        "planned": "2026년 계획",
+        "gdpr": "GDPR 준수",
+        "gdprText": "EU 일반 데이터 보호 규정을 완전히 준수합니다. 데이터 처리 계약을 사용할 수 있습니다.",
+        "soc2": "SOC 2 Type II",
+        "soc2Text": "현재 SOC 2 Type II 감사를 진행 중입니다. 2026년 2분기에 완료 예정입니다.",
+        "iso27001": "ISO 27001",
+        "iso27001Text": "2026년 정보 보안 관리 시스템 인증 계획.",
+        "dataHandling": "데이터 처리 관행",
+        "encryption": "암호화 표준",
+        "encryption1": "전송 중인 모든 데이터에 대해 TLS 1.3",
+        "encryption2": "유휴 데이터에 대해 AES-256 암호화",
+        "encryption3": "엔터프라이즈 요금제에 고객 관리 암호화 키(CMEK) 사용 가능",
+        "dataResidency": "데이터 거주",
+        "dataResidencyText": "고객 데이터는 선택한 지리적 지역에 저장됩니다. 당사는 EU, 미국, APAC 및 기타 지역의 데이터 거주 요건을 지원합니다. 데이터는 명시적인 동의 없이 선택한 지역을 벗어나지 않습니다.",
+        "retention": "데이터 보존 정책",
+        "operational": "운영 데이터",
+        "operationalText": "구독 기간 + 90일 동안 보존",
+        "audit": "감사 로그",
+        "auditText": "규제 요건을 충족하기 위해 7년 동안 보존",
+        "backups": "백업",
+        "backupsText": "시점 복구 기능이 포함된 암호화된 백업이 30일 동안 보존됨",
+        "accessControls": "액세스 제어",
+        "authentication": "인증",
+        "auth1": "모든 사용자에게 다단계 인증(MFA) 필요",
+        "auth2": "SAML 2.0 및 OIDC를 지원하는 엔터프라이즈 SSO",
+        "auth3": "암호 없는 인증 옵션 사용 가능",
+        "authorization": "권한 부여",
+        "authz1": "사용자 지정 역할이 있는 역할 기반 액세스 제어(RBAC)",
+        "authz2": "최소 권한 원칙 시행",
+        "authz3": "정기적인 액세스 검토 및 자동 프로비저닝 해제",
+        "incidentResponse": "사고 대응",
+        "incidentResponseText": "당사는 보안 사고를 신속하게 탐지, 대응 및 복구하기 위해 포괄적인 사고 대응 계획을 유지합니다.",
+        "responseProcess": "당사의 대응 프로세스",
+        "response1": "사고 식별 후 1시간 이내에 탐지 및 분류",
+        "response2": "고객 데이터에 영향을 미치는 사고의 경우 24시간 이내에 고객에게 통지",
+        "response3": "72시간 이내에 근본 원인 분석 및 해결 계획",
+        "response4": "30일 이내에 사후 검토 및 보안 개선 구현"
+    }
+}

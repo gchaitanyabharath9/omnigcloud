@@ -3,7 +3,7 @@ import { getMessages } from 'next-intl/server';
 import type { Metadata } from "next";
 import { Inter, Outfit } from "next/font/google"; // Premium fonts
 import "../../styles/globals.css";
-import Header from "@/components/Header";
+import Header from "@/components/header";
 import Breadcrumb from "@/components/Breadcrumb";
 import FloatingActions from "@/components/FloatingActions";
 import SchemaOrg from "@/components/SchemaOrg";
@@ -106,6 +106,14 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
     },
     formatDetection: {
       telephone: false, // Prevent auto-detection of phone numbers
+    },
+    verification: {
+      google: "google-site-verification=YOUR_VERIFICATION_CODE",
+      yandex: "yandex-verification=YOUR_VERIFICATION_CODE",
+      yahoo: "yahoo-site-verification=YOUR_VERIFICATION_CODE",
+      other: {
+        me: ["my-email", "my-link"],
+      },
     },
   };
 }

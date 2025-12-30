@@ -25,7 +25,7 @@ function isObject(item: any) {
 export default getRequestConfig(async ({ requestLocale }) => {
     let locale = await requestLocale;
 
-    if (!locale || !['en', 'es', 'fr', 'de', 'zh', 'hi', 'ja'].includes(locale)) {
+    if (!locale || !['en', 'es', 'fr', 'de', 'zh', 'hi', 'ja', 'ko'].includes(locale)) {
         locale = 'en';
     }
 
