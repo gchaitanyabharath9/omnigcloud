@@ -133,6 +133,14 @@
             "github": "https://github.com/omnigcloud"
         }
     },
+    "CookieConsent": {
+        "title": "소버린 프라이버시 제어",
+        "message": "오케스트레이션 경험을 최적화하기 위해 영구 원격 측정 및 쿠키를 사용합니다. 귀하의 데이터는 당사의 소버린 보호 프로토콜 하에 관리됩니다.",
+        "policyLink": "정책 보기",
+        "accept": "쿠키 수락",
+        "decline": "표준 모드",
+        "sovereignNotice": "관리형_데이터_동기화 // v4.2"
+    },
     "Hero": {
         "badge": "엔터프라이즈 클라우드 거버넌스",
         "title": "공급업체 종속에서 해방되세요",
@@ -831,7 +839,10 @@
         "welcome": "환영합니다",
         "role": "할당된 보안 역할",
         "logicMeshStatus": "로직 메쉬 상태",
-        "active": "동기화됨"
+        "active": "동기화됨",
+        "badge": "실시간 소버린 원격 측정 // CORE_V4",
+        "liveTitle": "라이브 커맨드 및 컨트롤",
+        "liveSubtitle": "멀티 클라우드 클러스터 전반에서 글로벌 상태를 오케스트레이션하는 G-프레임워크를 확인하세요. 당사의 자율 컨트롤 플레인은 인프라 의도를 실시간 제공업체 원격 측정과 지속적으로 동기화하여 AWS, Azure, OCI 및 GCP 전반에서 100% 규정 준수 수렴 및 밀리초 미만의 드리프트 복구를 보장합니다."
     },
     "SecuritySettings": {
         "title": "보안 구성",

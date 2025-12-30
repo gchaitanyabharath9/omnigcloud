@@ -115,6 +115,14 @@
         "copyright": "© {year} OmniGCloud. 保留所有权利。",
         "footerText": "为全球主权组织打造的受控、全球化和生成式基础设施。"
     },
+    "CookieConsent": {
+        "title": "主权隐私控制",
+        "message": "我们使用持久化遥测和 Cookie 来优化您的编排体验。您的数据仍受我们的主权保护协议管辖。",
+        "policyLink": "查看政策",
+        "accept": "接受 Cookie",
+        "decline": "标准模式",
+        "sovereignNotice": "受控数据同步 // v4.2"
+    },
     "Hero": {
         "badge": "治理即代码",
         "title": "恢复主权",
@@ -815,7 +823,10 @@
         "welcome": "欢迎回来",
         "role": "分配的安全角色",
         "logicMeshStatus": "逻辑网格状态",
-        "active": "已同步"
+        "active": "已同步",
+        "badge": "实时主权遥测 // CORE_V4",
+        "liveTitle": "实时指挥与控制",
+        "liveSubtitle": "观看 G-Framework 跨多云集群编排全球状态。我们的自主控制平面将基础设施意图与实时提供商遥测持续同步，确保在 AWS、Azure、OCI 和 GCP 上实现 100% 的合规收敛和毫秒级漂移修复。"
     },
     "SecuritySettings": {
         "title": "安全配置",
