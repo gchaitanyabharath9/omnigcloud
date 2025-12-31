@@ -49,7 +49,7 @@ const fullAuthConfig = {
     // we add it here.
     callbacks: {
         ...authConfig.callbacks,
-        async signIn({ user, account }: { user: any; account: any }) {
+        async signIn({ user, account }: { user: any; account?: any }) {
             // Check for magic link specific restrictions
             if (account?.provider === "email") {
                 if (process.env.ENABLE_MAGIC_LINK !== "true") return false;
