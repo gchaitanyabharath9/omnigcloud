@@ -3,6 +3,7 @@ import { useTranslations, useLocale } from 'next-intl';
 import { Linkedin, Twitter, Github, MessageSquare } from 'lucide-react';
 import styles from './Footer.module.css';
 import ComplianceBadges from './ComplianceBadges';
+import BuildMetadata from './footer/BuildMetadata';
 
 const Footer = () => {
     const t = useTranslations('Footer');
@@ -90,6 +91,7 @@ const Footer = () => {
                     <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
                         <div style={{ fontSize: 'var(--small-size)', opacity: 0.6 }}>{t('copyright', { year: new Date().getFullYear() })}</div>
                         <ComplianceBadges />
+                        <BuildMetadata />
                     </div>
                     <div style={{ fontSize: 'var(--small-size)', opacity: 0.5, maxWidth: '500px', textAlign: 'right', lineHeight: 1.6 }}>
                         {t('footerText')}

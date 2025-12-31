@@ -3,7 +3,33 @@ import type { NextConfig } from "next";
 
 const withNextIntl = createNextIntlPlugin('./src/i18n/request.ts');
 
+// BUILD METADATA GENERATION
+import { execSync } from 'child_process';
+import fs from 'fs';
+import path from 'path';
+
+let version = '0.0.0';
+try {
+  const pkgPath = path.resolve(__dirname, 'package.json');
+  const pkg = JSON.parse(fs.readFileSync(pkgPath, 'utf-8'));
+  version = pkg.version;
+} catch (e) { console.warn('Failed to read package.json version'); }
+
+let commitHash = 'dev';
+try {
+  commitHash = execSync('git rev-parse --short HEAD').toString().trim();
+} catch (e) { /* ignore in non-git envs */ }
+
+const buildTime = new Date().toISOString();
+const appEnv = process.env.APP_ENV || 'local';
+
 const nextConfig: NextConfig = {
+  env: {
+    NEXT_PUBLIC_APP_VERSION: version,
+    NEXT_PUBLIC_GIT_COMMIT: commitHash,
+    NEXT_PUBLIC_BUILD_TIME: buildTime,
+    NEXT_PUBLIC_APP_ENV: appEnv,
+  },
   output: 'standalone',
   reactCompiler: true,
   async headers() {

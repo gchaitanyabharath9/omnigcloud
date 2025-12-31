@@ -56,6 +56,8 @@ jobs:
     # If variable is missing or 'false', this skips.
     if: vars.ENABLE_SIT_PIPELINE == 'true'
     environment: sit
+    env:
+      APP_ENV: sit
     steps:
       - uses: actions/checkout@v4
 
