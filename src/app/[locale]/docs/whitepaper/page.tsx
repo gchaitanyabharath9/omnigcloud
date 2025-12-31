@@ -95,7 +95,7 @@ export default function WhitePaperPage() {
                             </div>
                         </SchematicDiagram>
                         <p style={{ fontSize: '0.95rem', opacity: 0.8, marginTop: '1rem' }}>
-                            <strong>Architectural Judgment:</strong> Violation of this separation introduces "State Contamination," where the system cannot distinguish between accidental drift and authorized change.
+                            <strong>Architectural Judgment:</strong> The decision to strictly decouple these planes is non-trivial. While this separation increases initial integration complexity, it prevents the catastrophic "State Contamination" scenarios observed in coupled systems, where accidental drift becomes indistinguishable from authorized change—an <strong>irreversible error</strong> in regulated environments.
                         </p>
                     </div>
 
@@ -117,7 +117,7 @@ export default function WhitePaperPage() {
                     <div className="scholarly-section" style={{ marginBottom: '5rem' }}>
                         <h3 style={{ fontSize: '1.5rem', fontWeight: 800, marginBottom: '1.5rem', color: 'var(--foreground)' }}>7. Deterministic Decision Intelligence</h3>
                         <p style={{ marginBottom: '1.5rem' }}>
-                            For regulated environments, probabilistic AI is insufficient. AECP utilizes deterministic constraint solvers to guarantee decision explainability and policy adherence.
+                            <strong>Critical Design Trade-off:</strong> The architecture deliberately rejects the inclusion of probabilistic Large Language Models (LLMs) in the direct actuation loop. While LLMs offer generative flexibility, their stochastic nature introduces unacceptable non-determinism. AECP prioritizes <strong>auditability over flexibility</strong>, utilizing deterministic constraint solvers to guarantee that every decision is mathematically traceable to a specific policy mandate.
                         </p>
                         <SchematicDiagram title="Figure 5: Governed Decision Flow">
                             <div style={{ padding: '2rem', background: 'var(--bg-surface-2)', borderRadius: '0.5rem', display: 'flex', flexDirection: 'column', gap: '1rem' }}>
@@ -163,7 +163,7 @@ export default function WhitePaperPage() {
                     <div className="scholarly-section" style={{ marginBottom: '5rem' }}>
                         <h3 style={{ fontSize: '1.5rem', fontWeight: 800, marginBottom: '1.5rem', color: 'var(--foreground)' }}>9. Safe-Fail Autonomy Protocols</h3>
                         <p style={{ marginBottom: '1.5rem' }}>
-                            AECP dictates a "Safe-Fail" default. In the event of opaque system states, the engine defaults to isolation and containment rather than uncertain remediation.
+                            <strong>Risk Evaluation Strategy:</strong> In autonomous control, the cost of a "Hallucinated Remediation" (taking the wrong action) is existential. Therefore, AECP dictates a <strong>"Safe-Fail" protocol</strong>: in the event of any state ambiguity, the system chooses <strong>Isolation over Action</strong>, accepting reduced availability to preserve fatal integrity.
                         </p>
                         <SchematicDiagram title="Figure 7: Fault Isolation Logic">
                             <div style={{ display: 'flex', gap: '1rem', fontSize: '0.8rem', justifyContent: 'center' }}>
@@ -291,7 +291,7 @@ export default function WhitePaperPage() {
                     <div className="scholarly-section" style={{ marginBottom: '4rem', background: 'var(--bg-surface-2)', padding: '3rem', borderRadius: '1rem', border: '1px solid var(--border)' }}>
                         <h3 style={{ fontSize: '1.4rem', fontWeight: 900, marginBottom: '1.5rem', color: '#3b82f6' }}>13. Significance of the Contribution</h3>
                         <p style={{ marginBottom: '1.5rem', fontSize: '1.05rem', lineHeight: 1.8 }}>
-                            The formalization of the AECP represents a non-obvious leap in systems theory. By establishing the <strong>Decision Plane</strong> as an orthogonal, actuarial entity, this work distinguishes itself from standard engineering practice, creating a new capability class that does not exist in traditional DevOps frameworks.
+                            <strong>Judicial Weight:</strong> The formalization of AECP represents a shift from engineering implementation to <strong>architectural jurisprudence</strong>. By establishing the Decision Plane as an orthogonal, actuarial entity, this work demonstrates the expert judgment required to distinguish between <em>operational convenience</em> and <em>systemic integrity</em>—a distinction that defines the boundary between standard DevOps and high-assurance Control Planes.
                         </p>
                         <p style={{ marginBottom: '0', fontSize: '1.05rem', lineHeight: 1.8 }}>
                             This architecture changes enterprise platform thinking by asserting that <strong>Policy is Code</strong> and <strong>Decision is Actuarial</strong>. It establishes a foundational standard for the field, providing the mathematical basis for the next generation of autonomous infrastructure.
