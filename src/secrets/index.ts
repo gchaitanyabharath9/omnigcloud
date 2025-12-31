@@ -2,7 +2,7 @@ import { config } from '../config';
 import { getVaultSecret } from './vault';
 
 // In-memory cache for Vault secrets to prevent excessive network calls
-let vaultCache: Record<string, any> | null = null;
+let vaultCache: Record<string, string> | null = null;
 let cacheTimestamp = 0;
 const CACHE_TTL_MS = 60 * 1000; // 1 minute cache
 
@@ -47,5 +47,5 @@ export async function getSecret(key: string): Promise<string | undefined> {
         }
     }
 
-    return vaultCache && vaultCache[key];
+    return (vaultCache && vaultCache[key]) || undefined;
 }

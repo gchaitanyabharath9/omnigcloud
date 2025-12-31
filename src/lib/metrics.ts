@@ -125,7 +125,7 @@ class MetricsCollector {
     getPrometheusMetrics(): string {
         const lines: string[] = [];
 
-        for (const [_, metric] of this.metrics) {
+        for (const metric of this.metrics.values()) {
             const labelStr = metric.labels
                 ? Object.entries(metric.labels)
                     .map(([k, v]) => `${k}="${v}"`)

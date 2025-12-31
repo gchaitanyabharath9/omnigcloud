@@ -1,4 +1,4 @@
-import { AppError, TimeoutError, ExternalServiceError } from './errors';
+import { AppError, TimeoutError } from './errors';
 import { logger } from './logger';
 
 interface RetryOptions {
@@ -71,9 +71,9 @@ export async function withRetry<T>(
                     clearTimeout(timeoutId);
                     return result;
 
-                } catch (err) {
+                } catch (_e) {
                     clearTimeout(timeoutId);
-                    throw err;
+                    throw _e;
                 }
             } else {
                 return await operation();

@@ -9,10 +9,11 @@ import { withRetry } from '@/lib/retry';
  * @param path The path to the secret (e.g. "nascent-zodiac/prod")
  * @returns The secret data object
  */
-export async function getVaultSecret(path: string): Promise<Record<string, any> | null> {
+export async function getVaultSecret(path: string): Promise<Record<string, string> | null> {
     try {
         // Dynamically import node-vault to prevent Edge Runtime crashes
-        const vaultModule = await import('node-vault');
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+        const vaultModule: any = await import('node-vault');
         const vault = vaultModule.default;
 
         const client = vault({
@@ -28,7 +29,7 @@ export async function getVaultSecret(path: string): Promise<Record<string, any> 
         // but strictly standard Vault paths are explicit.
         // Let's support the standard `read` method which node-vault handles.
 
-        const response = await withRetry(
+        const response: any = await withRetry(
             () => client.read(path),
             { maxAttempts: 3, timeoutMs: 3000 },
             'VaultRead'
@@ -36,12 +37,12 @@ export async function getVaultSecret(path: string): Promise<Record<string, any> 
 
         // Vault KV v2 returns data in response.data.data
         if (response && response.data && response.data.data) {
-            return response.data.data;
+            return response.data.data as Record<string, string>;
         }
 
         // Fallback for KV v1 or direct read
         if (response && response.data) {
-            return response.data;
+            return response.data as Record<string, string>;
         }
 
         return null;

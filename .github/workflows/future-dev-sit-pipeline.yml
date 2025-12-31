@@ -39,7 +39,7 @@ jobs:
       - name: Build (Dev Profile)
         run: npm run build
         env:
-          APP_ENV: dev
+          APP_ENV: "sit"
 
       - name: QA Inventory Check
         run: npm run qa:inventory
@@ -54,7 +54,7 @@ jobs:
     needs: quality_gates
     # CRITICAL: This job only runs if the repo variable is explicitly 'true'
     # If variable is missing or 'false', this skips.
-    if: vars.ENABLE_SIT_PIPELINE == 'true'
+    if: ${{ vars.ENABLE_SIT_PIPELINE == 'true' }}
     environment: sit
     env:
       APP_ENV: sit

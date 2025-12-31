@@ -2,10 +2,10 @@
  * Client-side resilient fetch utility
  */
 
-export interface SafeFetchOptions extends RequestInit {
+export interface SafeFetchOptions<T = any> extends RequestInit {
     timeoutMs?: number;
     maxRetries?: number;
-    fallbackData?: any;
+    fallbackData?: T | null;
 }
 
 const DEFAULT_TIMEOUT = 5000;
@@ -13,7 +13,7 @@ const DEFAULT_RETRIES = 1;
 
 export async function safeFetch<T>(
     input: RequestInfo | URL,
-    options: SafeFetchOptions = {}
+    options: SafeFetchOptions<T> = {}
 ): Promise<T | null> {
     const {
         timeoutMs = DEFAULT_TIMEOUT,
@@ -52,19 +52,20 @@ export async function safeFetch<T>(
             }
             return json;
 
-        } catch (error: any) {
+        } catch (error: unknown) {
+            const err = error as Error;
             clearTimeout(id);
             attempt++;
 
-            const isTimeout = error.name === 'AbortError';
-            const isNetworkError = error.name === 'TypeError' || error.message.includes('network');
+            const isTimeout = err.name === 'AbortError';
+            const isNetworkError = err.name === 'TypeError' || err.message.includes('network');
 
             if (attempt <= maxRetries && (isTimeout || isNetworkError)) {
-                console.warn(`[SafeFetch] Attempt ${attempt} failed, retrying...`, error.message);
+                console.warn(`[SafeFetch] Attempt ${attempt} failed, retrying...`, err.message);
                 continue;
             }
 
-            console.error('[SafeFetch] All attempts failed:', error.message);
+            console.error('[SafeFetch] All attempts failed:', err.message);
             return fallbackData;
         }
     }
