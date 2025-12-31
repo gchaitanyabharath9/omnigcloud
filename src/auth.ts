@@ -1,4 +1,4 @@
-import NextAuth, { type DefaultSession } from "next-auth";
+import NextAuth, { type DefaultSession, type NextAuthConfig } from "next-auth";
 import Email from "next-auth/providers/email";
 import { UpstashRedisAdapter } from "@auth/upstash-redis-adapter";
 import { Redis } from "@upstash/redis";
@@ -49,7 +49,7 @@ const fullAuthConfig = {
     // we add it here.
     callbacks: {
         ...authConfig.callbacks,
-        async signIn({ user, account }: { user: any; account: any; profile?: any; email?: any }) {
+        async signIn({ user, account }: { user: any; account: any }) {
             // Check for magic link specific restrictions
             if (account?.provider === "email") {
                 if (process.env.ENABLE_MAGIC_LINK !== "true") return false;
@@ -82,8 +82,8 @@ const fullAuthConfig = {
         },
     },
     events: {
-        async signIn({ user, account, profile }) {
-            const maskedEmail = user.email?.replace(/^(.)(.*)(@.*)$/, (_, a, b, c) => a + b.replace(/./g, '*') + c);
+        async signIn({ user, account }) {
+            const maskedEmail = (user as any).email?.replace(/^(.)(.*)(@.*)$/, (_: any, a: any, b: any, c: any) => a + b.replace(/./g, '*') + c);
             console.log(`[AUTH_AUDIT] Login Success | User: ${maskedEmail} | Provider: ${account?.provider} | Timestamp: ${new Date().toISOString()}`);
         },
         async signOut(data: any) {
@@ -91,6 +91,6 @@ const fullAuthConfig = {
             console.log(`[AUTH_AUDIT] Logout | User: ${maskedEmail || 'Unknown'} | Timestamp: ${new Date().toISOString()}`);
         },
     },
-};
+} satisfies NextAuthConfig;
 
 export const { handlers, auth, signIn, signOut } = NextAuth(fullAuthConfig);
