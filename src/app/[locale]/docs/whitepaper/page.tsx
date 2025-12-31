@@ -1,54 +1,16 @@
 import React from 'react';
-import { Award, BookOpen, Quote, ChevronRight, Download, Share2, Printer, CheckCircle, XCircle, ArrowDown, Activity, Shield, Zap, Globe, Server, Database, Layers, Cpu, AlertTriangle, TrendingUp, Lock, Network, Scale } from 'lucide-react';
+import { Download, Share2, Printer, ArrowDown, Activity, Shield, Zap, Globe, Scale, Database } from 'lucide-react';
 import Link from 'next/link';
-
-// Internal Diagram Component for Schematic Visuals
-const SchematicDiagram = ({ title, children }: { title: string, children: React.ReactNode }) => (
-    <div style={{ margin: '3rem 0', border: '1px solid var(--border)', borderRadius: '0.5rem', overflow: 'hidden', boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.1)' }}>
-        <div style={{ background: 'var(--bg-surface-2)', padding: '1rem', borderBottom: '1px solid var(--border)', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-            <Layers size={16} className="text-blue-500" />
-            <span style={{ fontSize: '0.8rem', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.1em' }}>{title}</span>
-        </div>
-        <div style={{ padding: '2rem', background: 'var(--bg-surface)', position: 'relative' }}>
-            {children}
-        </div>
-    </div>
-);
+import { WhitepaperHeader } from './components/WhitepaperHeader';
+import { SchematicDiagram } from './components/SchematicDiagram';
+import { ImpactMetric } from './components/ImpactMetric';
+import { ComparisonTable } from './components/ComparisonTable';
+import { InfoSection } from './components/InfoSection';
 
 export default function WhitePaperPage() {
     return (
         <div style={{ background: 'var(--background)', color: 'var(--foreground)', fontFamily: 'var(--font-sans)', lineHeight: '1.7' }}>
-            {/* SCHOLARLY HEADER */}
-            <header style={{ padding: '5rem 0 4rem', background: 'var(--bg-surface-2)', borderBottom: '1px solid var(--card-border)' }}>
-                <div className="container" style={{ maxWidth: '900px' }}>
-                    <div style={{ display: 'flex', justifyContent: 'center', marginBottom: '2rem' }}>
-                        <div style={{ background: '#0f172a', color: 'white', padding: '0.5rem 1.5rem', borderRadius: '2rem', fontSize: '0.75rem', fontWeight: 800, textTransform: 'uppercase', letterSpacing: '0.1em', display: 'flex', alignItems: 'center', gap: '0.5rem', boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.1)' }}>
-                            <Award size={14} className="text-blue-400" />
-                            Peer-Reviewed Research Protocol
-                        </div>
-                    </div>
-
-                    <h1 style={{ fontSize: '2.5rem', fontWeight: 800, textAlign: 'center', lineHeight: 1.2, marginBottom: '2rem', color: 'var(--foreground)', letterSpacing: '-0.02em' }}>
-                        Autonomous Sovereign Orchestration (ASO): <br />
-                        <span style={{ fontWeight: 400, color: 'var(--muted)', fontSize: '1.5rem', display: 'block', marginTop: '0.75rem' }}>A Formal Framework for AI-Driven Cloud-Agnostic Governance</span>
-                    </h1>
-
-                    <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '2rem', fontSize: '0.85rem', color: 'var(--muted)', borderTop: '1px solid var(--card-border)', borderBottom: '1px solid var(--card-border)', padding: '1.5rem 0', textAlign: 'center' }}>
-                        <div>
-                            <div className="text-xs uppercase tracking-wider font-bold mb-1 text-blue-500">Principal Author</div>
-                            <div className="font-medium text-foreground">OmniGCloud Research</div>
-                        </div>
-                        <div>
-                            <div className="text-xs uppercase tracking-wider font-bold mb-1 text-blue-500">Publication Date</div>
-                            <div className="font-medium text-foreground">Q4 2024 (Rev. 4.0)</div>
-                        </div>
-                        <div>
-                            <div className="text-xs uppercase tracking-wider font-bold mb-1 text-blue-500">Exhibit Reference</div>
-                            <div className="font-medium text-foreground">USCIS-EB1A-EX-004</div>
-                        </div>
-                    </div>
-                </div>
-            </header>
+            <WhitepaperHeader />
 
             {/* PAPER CONTENT */}
             <main style={{ padding: '4rem 0' }}>
@@ -83,40 +45,17 @@ export default function WhitePaperPage() {
                             Modern global enterprises face a critical scalability chasm. As cloud adoption matures, the complexity of managing disparate environments grows exponentially. Our research across Fortune 500 implementations outlines three systemic failures:
                         </p>
 
-                        <div style={{ margin: '2rem 0', border: '1px solid var(--border)', borderRadius: '0.5rem', overflow: 'hidden' }}>
-                            <div style={{ background: 'var(--bg-surface-2)', padding: '1rem', fontWeight: 700, fontSize: '0.9rem', borderBottom: '1px solid var(--border)' }}>Table 1: Quantifiable Operational Inefficiencies (Before vs. After)</div>
-                            <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: '0.9rem' }}>
-                                <thead>
-                                    <tr style={{ textAlign: 'left', background: 'var(--bg-surface-2)' }}>
-                                        <th style={{ padding: '1rem' }}>Operational Metric</th>
-                                        <th style={{ padding: '1rem' }}>Legacy State (Manual/IaC)</th>
-                                        <th style={{ padding: '1rem', color: '#3b82f6' }}>Target State (ASO)</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr style={{ borderBottom: '1px solid var(--border)' }}>
-                                        <td style={{ padding: '1rem', fontWeight: 600 }}>Cloud Migration Timeline</td>
-                                        <td style={{ padding: '1rem' }}>18 - 36 Months</td>
-                                        <td style={{ padding: '1rem', fontWeight: 700 }}>&lt; 5 Days</td>
-                                    </tr>
-                                    <tr style={{ borderBottom: '1px solid var(--border)' }}>
-                                        <td style={{ padding: '1rem', fontWeight: 600 }}>Provisioning Latency</td>
-                                        <td style={{ padding: '1rem' }}>3 - 10 Days (Ticket-based)</td>
-                                        <td style={{ padding: '1rem', fontWeight: 700 }}>&lt; 2 Minutes</td>
-                                    </tr>
-                                    <tr style={{ borderBottom: '1px solid var(--border)' }}>
-                                        <td style={{ padding: '1rem', fontWeight: 600 }}>Mean-Time-To-Recovery (MTTR)</td>
-                                        <td style={{ padding: '1rem' }}>4+ Hours</td>
-                                        <td style={{ padding: '1rem', fontWeight: 700 }}>&lt; 500ms (Autonomous)</td>
-                                    </tr>
-                                    <tr>
-                                        <td style={{ padding: '1rem', fontWeight: 600 }}>Compliance FTE Burden</td>
-                                        <td style={{ padding: '1rem' }}>~2,000 Hours / Year</td>
-                                        <td style={{ padding: '1rem', fontWeight: 700 }}>~20 Hours / Year</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
+                        <ComparisonTable
+                            title="Table 1: Quantifiable Operational Inefficiencies (Before vs. After)"
+                            headers={['Operational Metric', 'Legacy State (Manual/IaC)', 'Target State (ASO)']}
+                            rows={[
+                                { label: 'Cloud Migration Timeline', legacy: '18 - 36 Months', aso: '< 5 Days' },
+                                { label: 'Provisioning Latency', legacy: '3 - 10 Days (Ticket-based)', aso: '< 2 Minutes' },
+                                { label: 'Mean-Time-To-Recovery (MTTR)', legacy: '4+ Hours', aso: '< 500ms (Autonomous)' },
+                                { label: 'Compliance FTE Burden', legacy: '~2,000 Hours / Year', aso: '~20 Hours / Year' },
+                            ]}
+                        />
+
                         <p style={{ fontSize: '0.95rem', opacity: 0.8 }}>
                             <strong>Analysis:</strong> Relying on human operators to maintain state consistency across 10,000+ nodes in real-time is mathematically impossible. A new architectural class is required.
                         </p>
@@ -180,18 +119,12 @@ export default function WhitePaperPage() {
 
                                 {/* EXECUTION PLANE */}
                                 <div style={{ display: 'flex', gap: '1rem', width: '100%', justifyContent: 'center' }}>
-                                    <div style={{ border: '1px solid #e2e8f0', padding: '1.5rem', flex: 1, borderRadius: '0.5rem', background: '#f1f5f9' }}>
-                                        <div style={{ fontWeight: 800, fontSize: '0.9rem', marginBottom: '0.5rem' }}>AWS</div>
-                                        <div style={{ fontSize: '0.75rem' }}>Execution Target A</div>
-                                    </div>
-                                    <div style={{ border: '1px solid #e2e8f0', padding: '1.5rem', flex: 1, borderRadius: '0.5rem', background: '#f1f5f9' }}>
-                                        <div style={{ fontWeight: 800, fontSize: '0.9rem', marginBottom: '0.5rem' }}>Azure</div>
-                                        <div style={{ fontSize: '0.75rem' }}>Execution Target B</div>
-                                    </div>
-                                    <div style={{ border: '1px solid #e2e8f0', padding: '1.5rem', flex: 1, borderRadius: '0.5rem', background: '#f1f5f9' }}>
-                                        <div style={{ fontWeight: 800, fontSize: '0.9rem', marginBottom: '0.5rem' }}>GCP</div>
-                                        <div style={{ fontSize: '0.75rem' }}>Execution Target C</div>
-                                    </div>
+                                    {['AWS (US-East)', 'Azure (EU-Central)', 'GCP (Asia-South)'].map((label, idx) => (
+                                        <div key={idx} style={{ border: '1px solid #e2e8f0', padding: '1.5rem', flex: 1, borderRadius: '0.5rem', background: '#f1f5f9' }}>
+                                            <div style={{ fontWeight: 800, fontSize: '0.9rem', marginBottom: '0.5rem' }}>{label.split(' ')[0]}</div>
+                                            <div style={{ fontSize: '0.75rem' }}>{label}</div>
+                                        </div>
+                                    ))}
                                 </div>
                             </div>
                         </SchematicDiagram>
@@ -215,26 +148,18 @@ export default function WhitePaperPage() {
                         <div style={{ background: 'var(--bg-surface-2)', padding: '2rem', borderRadius: '0.5rem', borderLeft: '4px solid #3b82f6', marginBottom: '2rem' }}>
                             <h4 style={{ fontWeight: 700, marginBottom: '1rem', fontSize: '0.9rem', textTransform: 'uppercase', letterSpacing: '0.1em' }}>Figure 2: The Cognitive Execution Cycle</h4>
                             <div style={{ fontFamily: 'monospace', fontSize: '0.9rem', display: 'flex', flexDirection: 'column', gap: '1rem' }}>
-                                <div style={{ display: 'grid', gridTemplateColumns: '80px 1fr', alignItems: 'center' }}>
-                                    <span style={{ color: '#ef4444', fontWeight: 800 }}>SIGNAL</span>
-                                    <span>Telemetry Ingest: Region 'us-east-1' latency &gt; 200ms</span>
-                                </div>
-                                <div style={{ display: 'grid', gridTemplateColumns: '80px 1fr', alignItems: 'center' }}>
-                                    <span style={{ color: '#f59e0b', fontWeight: 800 }}>DECIDE</span>
-                                    <span>Constraint Solver: Find lowest cost region in EU zone. Result: 'eu-west-1'.</span>
-                                </div>
-                                <div style={{ display: 'grid', gridTemplateColumns: '80px 1fr', alignItems: 'center' }}>
-                                    <span style={{ color: '#3b82f6', fontWeight: 800 }}>ACTION</span>
-                                    <span>Orchestrator: Drain 'us-east-1'. Scale up 'eu-west-1'. Update DNS.</span>
-                                </div>
-                                <div style={{ display: 'grid', gridTemplateColumns: '80px 1fr', alignItems: 'center' }}>
-                                    <span style={{ color: '#10b981', fontWeight: 800 }}>VALIDATE</span>
-                                    <span>Health Check: Latency now 45ms. State Equilibrium Restored.</span>
-                                </div>
-                                <div style={{ display: 'grid', gridTemplateColumns: '80px 1fr', alignItems: 'center' }}>
-                                    <span style={{ color: '#8b5cf6', fontWeight: 800 }}>LEARN</span>
-                                    <span>Model Update: Downgrade 'us-east-1' reliability score for 24 hours.</span>
-                                </div>
+                                {[
+                                    { label: 'SIGNAL', color: '#ef4444', text: "Telemetry Ingest: Region 'us-east-1' latency > 200ms" },
+                                    { label: 'DECIDE', color: '#f59e0b', text: "Constraint Solver: Find lowest cost region in EU zone. Result: 'eu-west-1'." },
+                                    { label: 'ACTION', color: '#3b82f6', text: "Orchestrator: Drain 'us-east-1'. Scale up 'eu-west-1'. Update DNS." },
+                                    { label: 'VALIDATE', color: '#10b981', text: "Health Check: Latency now 45ms. State Equilibrium Restored." },
+                                    { label: 'LEARN', color: '#8b5cf6', text: "Model Update: Downgrade 'us-east-1' reliability score for 24 hours." }
+                                ].map((step, idx) => (
+                                    <div key={idx} style={{ display: 'grid', gridTemplateColumns: '80px 1fr', alignItems: 'center' }}>
+                                        <span style={{ color: step.color, fontWeight: 800 }}>{step.label}</span>
+                                        <span>{step.text}</span>
+                                    </div>
+                                ))}
                             </div>
                         </div>
                     </div>
@@ -246,39 +171,16 @@ export default function WhitePaperPage() {
                             This architecture presents a solution that is <strong>non-obvious</strong> to skilled practitioners because it rejects the industry trend of "deep integration" in favor of "radical abstraction."
                         </p>
 
-                        <div style={{ margin: '2rem 0', border: '1px solid var(--border)', borderRadius: '0.5rem', overflow: 'hidden' }}>
-                            <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: '0.9rem' }}>
-                                <thead>
-                                    <tr style={{ textAlign: 'left', background: 'var(--bg-surface-2)' }}>
-                                        <th style={{ padding: '1rem', width: '30%' }}>Feature / Domain</th>
-                                        <th style={{ padding: '1rem', width: '35%' }}>Legacy Standard (Terraform/K8s)</th>
-                                        <th style={{ padding: '1rem', width: '35%', color: '#3b82f6' }}>ASO G-Framework (Novelty)</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr style={{ borderBottom: '1px solid var(--border)' }}>
-                                        <td style={{ padding: '1rem', fontWeight: 600 }}>Decision Intelligence</td>
-                                        <td style={{ padding: '1rem' }}>Human-Driven (Manual Scripts)</td>
-                                        <td style={{ padding: '1rem' }}><strong>Autonomous Goal-Seeking</strong></td>
-                                    </tr>
-                                    <tr style={{ borderBottom: '1px solid var(--border)' }}>
-                                        <td style={{ padding: '1rem', fontWeight: 600 }}>State Awareness</td>
-                                        <td style={{ padding: '1rem' }}>Siloed / Stateless</td>
-                                        <td style={{ padding: '1rem' }}><strong>Unified / Stateful</strong></td>
-                                    </tr>
-                                    <tr style={{ borderBottom: '1px solid var(--border)' }}>
-                                        <td style={{ padding: '1rem', fontWeight: 600 }}>Vendor Dependency</td>
-                                        <td style={{ padding: '1rem' }}>High (Native APIs)</td>
-                                        <td style={{ padding: '1rem' }}><strong>Zero (Provider Agnostic)</strong></td>
-                                    </tr>
-                                    <tr>
-                                        <td style={{ padding: '1rem', fontWeight: 600 }}>Compliance Model</td>
-                                        <td style={{ padding: '1rem' }}>Reactive ( Audit)</td>
-                                        <td style={{ padding: '1rem' }}><strong>Proactive (Enforcement)</strong></td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
+                        <ComparisonTable
+                            title="Table 2: Comparative Analysis of Architectural Novelty"
+                            headers={['Feature / Domain', 'Legacy Standard (Terraform/K8s)', 'ASO G-Framework (Novelty)']}
+                            rows={[
+                                { label: 'Decision Intelligence', legacy: 'Human-Driven (Manual Scripts)', aso: 'Autonomous Goal-Seeking' },
+                                { label: 'State Awareness', legacy: 'Siloed / Stateless', aso: 'Unified / Stateful' },
+                                { label: 'Vendor Dependency', legacy: 'High (Native APIs)', aso: 'Zero (Provider Agnostic)' },
+                                { label: 'Compliance Model', legacy: 'Reactive (Audit)', aso: 'Proactive (Enforcement)' }
+                            ]}
+                        />
                     </div>
 
                     {/* 9. MEASURED IMPACT */}
@@ -288,22 +190,10 @@ export default function WhitePaperPage() {
                             Deployment of the G-Framework in regulated financial services environments yielded statistically significant improvements.
                         </p>
                         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '1.5rem' }}>
-                            <div style={{ padding: '1.5rem', border: '1px solid var(--border)', borderRadius: '0.5rem', background: 'var(--bg-surface-2)' }}>
-                                <div style={{ fontSize: '2rem', fontWeight: 900, color: '#3b82f6', marginBottom: '0.25rem' }}>-40% TCO</div>
-                                <div style={{ fontSize: '0.85rem', opacity: 0.8 }}>Total Cost of Ownership reduced via autonomous spot-instance arbitrage.</div>
-                            </div>
-                            <div style={{ padding: '1.5rem', border: '1px solid var(--border)', borderRadius: '0.5rem', background: 'var(--bg-surface-2)' }}>
-                                <div style={{ fontSize: '2rem', fontWeight: 900, color: '#10b981', marginBottom: '0.25rem' }}>99.999%</div>
-                                <div style={{ fontSize: '0.85rem', opacity: 0.8 }}>Reliability achieved through automated multi-region failover (&lt; 500ms).</div>
-                            </div>
-                            <div style={{ padding: '1.5rem', border: '1px solid var(--border)', borderRadius: '0.5rem', background: 'var(--bg-surface-2)' }}>
-                                <div style={{ fontSize: '2rem', fontWeight: 900, color: '#f59e0b', marginBottom: '0.25rem' }}>~4 hrs</div>
-                                <div style={{ fontSize: '0.85rem', opacity: 0.8 }}>Compliance Audit time reduced from 4-6 weeks to mere hours.</div>
-                            </div>
-                            <div style={{ padding: '1.5rem', border: '1px solid var(--border)', borderRadius: '0.5rem', background: 'var(--bg-surface-2)' }}>
-                                <div style={{ fontSize: '2rem', fontWeight: 900, color: '#6366f1', marginBottom: '0.25rem' }}>10x Velocity</div>
-                                <div style={{ fontSize: '0.85rem', opacity: 0.8 }}>Deployment frequency increased by decoupling intent from config.</div>
-                            </div>
+                            <ImpactMetric value="-40% TCO" label="Infrastructure Cost" description="Total Cost of Ownership reduced via autonomous spot-instance arbitrage." color="#3b82f6" />
+                            <ImpactMetric value="99.999%" label="Uptime Reliability" description="Reliability achieved through automated multi-region failover (&lt; 500ms)." color="#10b981" />
+                            <ImpactMetric value="~4 hrs" label="Audit Time" description="Compliance Audit time reduced from 4-6 weeks to mere hours." color="#f59e0b" />
+                            <ImpactMetric value="10x Velocity" label="Release Velocity" description="Deployment frequency increased by decoupling intent from config." color="#6366f1" />
                         </div>
                     </div>
 
@@ -315,22 +205,10 @@ export default function WhitePaperPage() {
                         </p>
                         <SchematicDiagram title="Figure 3: Multi-Sector Adaptability">
                             <div style={{ display: 'grid', gridTemplateColumns: 'minmax(250px, 1fr) minmax(250px, 1fr)', gap: '2rem' }}>
-                                <div>
-                                    <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.5rem', fontWeight: 700 }}><Shield size={16} /> Defense & Intelligence</div>
-                                    <p style={{ fontSize: '0.85rem', opacity: 0.8 }}>Operates in disconnected (air-gapped) environments. State vectors are local and encrypted.</p>
-                                </div>
-                                <div>
-                                    <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.5rem', fontWeight: 700 }}><Database size={16} /> Financial Services (DeFi)</div>
-                                    <p style={{ fontSize: '0.85rem', opacity: 0.8 }}>Geofences transaction logs to specific legal jurisdictions automatically (e.g., GDPR/SEC).</p>
-                                </div>
-                                <div>
-                                    <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.5rem', fontWeight: 700 }}><Activity size={16} /> Healthcare (HIPAA)</div>
-                                    <p style={{ fontSize: '0.85rem', opacity: 0.8 }}>Dynamic data sharding and anonymization based on transit rules.</p>
-                                </div>
-                                <div>
-                                    <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.5rem', fontWeight: 700 }}><Globe size={16} /> Critical Telecom</div>
-                                    <p style={{ fontSize: '0.85rem', opacity: 0.8 }}>Ultra-low latency edge orchestration for 5G slicing and disaster response.</p>
-                                </div>
+                                <InfoSection title="Defense & Intelligence" icon={<Shield size={16} />} description="Operates in disconnected (air-gapped) environments. State vectors are local and encrypted." />
+                                <InfoSection title="Financial Services (DeFi)" icon={<Database size={16} />} description="Geofences transaction logs to specific legal jurisdictions automatically (e.g., GDPR/SEC)." />
+                                <InfoSection title="Healthcare (HIPAA)" icon={<Activity size={16} />} description="Dynamic data sharding and anonymization based on transit rules." />
+                                <InfoSection title="Critical Telecom" icon={<Globe size={16} />} description="Ultra-low latency edge orchestration for 5G slicing and disaster response." />
                             </div>
                         </SchematicDiagram>
                     </div>
