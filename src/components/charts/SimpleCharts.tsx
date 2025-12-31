@@ -109,7 +109,7 @@ export const CloudDistributionPie = ({ height = 180 }: { height?: number }) => {
                         cy="50%"
                         labelLine={false}
                         label={(entry) => `${entry.name}: ${entry.value}%`}
-                        outerRadius={height < 150 ? 45 : 100}
+                        outerRadius={height < 150 ? 45 : 70}
                         fill="#8884d8"
                         dataKey="value"
                     >

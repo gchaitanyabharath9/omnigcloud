@@ -73,7 +73,7 @@ export default function WhitePaperSection() {
                     <h3 style={{ fontSize: '1.5rem', fontWeight: 900, marginBottom: '1.5rem', textAlign: 'center' }}>
                         Research Impact & Citations
                     </h3>
-                    <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '1.5rem' }}>
+                    <div className="grid-3">
                         <div className="glass-panel" style={{ padding: '2rem', borderRadius: '1.5rem', textAlign: 'center' }}>
                             <TrendingUp size={28} color="#10b981" style={{ margin: '0 auto 1rem' }} />
                             <div style={{ fontSize: '2.5rem', fontWeight: 950, color: 'var(--primary)', marginBottom: '0.5rem' }}>847</div>
@@ -106,7 +106,7 @@ export default function WhitePaperSection() {
                     <h3 style={{ fontSize: '1.5rem', fontWeight: 900, marginBottom: '1.5rem', textAlign: 'center' }}>
                         Featured Implementation Case Studies
                     </h3>
-                    <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '1.5rem' }}>
+                    <div className="grid-2">
                         <div className="glass-panel" style={{ padding: '2rem', borderRadius: '1.5rem', borderLeft: '4px solid #10b981' }}>
                             <div style={{ fontSize: '0.7rem', fontWeight: 800, color: '#10b981', marginBottom: '0.75rem', letterSpacing: '0.05em' }}>
                                 FINANCIAL SERVICES
