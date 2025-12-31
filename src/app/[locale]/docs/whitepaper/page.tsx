@@ -45,7 +45,7 @@ export default function WhitePaperPage() {
                         </ul>
                         <SchematicDiagram title="Figure 1: Convergence of Market Forces">
                             <div style={{ marginTop: '1rem', fontSize: '0.85rem', opacity: 0.8, textAlign: 'center' }}>
-                                <em>Figure 1: Regulatory pressure and infrastructure complexity necessitate a control plane capable of autonomous remediation.</em>
+                                <em>Figure 1: Regulatory pressure and infrastructure complexity necessitate a control plane capable of autonomous remediation. <strong>Failure Mode:</strong> Without this convergence, enterprises remain trapped in "Ticket-Ops," structurally unable to meet the velocity demands of modern digital markets.</em>
                             </div>
                         </SchematicDiagram>
                     </div>
@@ -78,7 +78,7 @@ export default function WhitePaperPage() {
 
                         <SchematicDiagram title="Figure 2: End-to-End AECP Topology" imagePath="/images/whitepaper/high-level-architecture.png">
                             <div style={{ marginTop: '1rem', fontSize: '0.85rem', opacity: 0.8, textAlign: 'center' }}>
-                                <em>Figure 2: The Logic-Mesh establishes the authoritative bridge between Intent and Execution, enforcing a uni-directional flow of command.</em>
+                                <em>Figure 2: The Logic-Mesh establishes the authoritative bridge between Intent and Execution. <strong>Failure Mode:</strong> In the absence of this topology, legislative intent and technical implementation remain coupled, leading to "Configuration Drift" where the actual state permanently diverges from the compliant state.</em>
                             </div>
                         </SchematicDiagram>
                     </div>
@@ -91,7 +91,7 @@ export default function WhitePaperPage() {
                         </p>
                         <SchematicDiagram title="Figure 3: Differentiation of Responsibilities" imagePath="/images/whitepaper/differentiation-matrix.png">
                             <div style={{ marginTop: '1rem', fontSize: '0.85rem', opacity: 0.8, textAlign: 'center' }}>
-                                <em>Figure 3: The matrix illustrates the hard boundary. The Control Plane retains exclusive jurisdiction over Validation and Authorization.</em>
+                                <em>Figure 3: The matrix illustrates the hard boundary. <strong>Failure Mode:</strong> Disregarding this boundary results in "Privilege Escalation," where execution tools inherit decision rights they are not architected to govern.</em>
                             </div>
                         </SchematicDiagram>
                         <p style={{ fontSize: '0.95rem', opacity: 0.8, marginTop: '1rem' }}>
@@ -108,7 +108,7 @@ export default function WhitePaperPage() {
 
                         <SchematicDiagram title="Figure 4: Autonomous Reconciliation Cycle" imagePath="/images/whitepaper/decision-flow.png">
                             <div style={{ marginTop: '1rem', fontSize: '0.85rem', opacity: 0.8, textAlign: 'center' }}>
-                                <em>Figure 4: Security and compliance are maintained through the perpetual execution of the Ingest-Evaluate-Decide-Validate cycle.</em>
+                                <em>Figure 4: Security and compliance are maintained through the perpetual execution of the Ingest-Evaluate-Decide-Validate cycle. <strong>Failure Mode:</strong> Linear pipelines fail here because they treat compliance as a one-time gate, leaving systems vulnerable to post-deployment drift.</em>
                             </div>
                         </SchematicDiagram>
                     </div>
@@ -141,6 +141,9 @@ export default function WhitePaperPage() {
                                     <AlertTriangle size={16} style={{ display: 'inline', marginRight: '5px' }} />
                                     Constraint: Confidence &lt; 99.9% mandates Human Operator review.
                                 </div>
+                                <div style={{ marginTop: '1rem', fontSize: '0.8rem', opacity: 0.8, textAlign: 'center', fontStyle: 'italic' }}>
+                                    <strong>Failure Mode:</strong> Probabilistic or unconstrained decision flows result in "Black Box Operations," rendering the system legally indefensible during compliance audits.
+                                </div>
                             </div>
                         </SchematicDiagram>
                     </div>
@@ -154,7 +157,7 @@ export default function WhitePaperPage() {
                         <SchematicDiagram title="Figure 6: Policy Injection Points">
                             <SecurityOverlayDiagram />
                             <div style={{ marginTop: '1rem', fontSize: '0.85rem', opacity: 0.8, textAlign: 'center' }}>
-                                <em>Figure 6: Policies such as Data Residency are enforced by the Logic-Mesh prior to execution signal transmission.</em>
+                                <em>Figure 6: Policies such as Data Residency are enforced by the Logic-Mesh prior to execution signal transmission. <strong>Failure Mode:</strong> Post-deployment governance fails because it detects violations only after they have occurred; substrate governance prevents the violation from ever existing.</em>
                             </div>
                         </SchematicDiagram>
                     </div>
@@ -173,6 +176,9 @@ export default function WhitePaperPage() {
                                 <div style={{ padding: '1rem', border: '1px solid #ef4444', borderRadius: '0.5rem', background: '#fef2f2' }}>
                                     <strong>Protocol B: Containment</strong><br />Pattern Unknown. Isolate Sector.
                                 </div>
+                            </div>
+                            <div style={{ marginTop: '1rem', fontSize: '0.85rem', opacity: 0.8, textAlign: 'center' }}>
+                                <em>Figure 7: Fault Isolation Logic. <strong>Failure Mode:</strong> Without a default-to-isolation protocol, automated systems risk "Cascading Destruction" by aggressively remediating poorly understood failure modes.</em>
                             </div>
                         </SchematicDiagram>
                     </div>
@@ -194,6 +200,9 @@ export default function WhitePaperPage() {
                                     <span style={{ padding: '0.5rem', background: '#e2e8f0', borderRadius: '4px' }}>AWS Adapter</span>
                                     <span style={{ padding: '0.5rem', background: '#e2e8f0', borderRadius: '4px' }}>Azure Adapter</span>
                                     <span style={{ padding: '0.5rem', background: '#e2e8f0', borderRadius: '4px' }}>GCP Adapter</span>
+                                </div>
+                                <div style={{ marginTop: '1.5rem', fontSize: '0.85rem', opacity: 0.8, fontStyle: 'italic' }}>
+                                    <strong>Failure Mode:</strong> Direct vendor integration creates "Feature Lock-in," effectively ceding national digital sovereignty to commercial hyperscalers.
                                 </div>
                             </div>
                         </SchematicDiagram>
@@ -268,7 +277,7 @@ export default function WhitePaperPage() {
                                         </div>
                                     </div>
                                     <div style={{ marginTop: '1rem', fontSize: '0.85rem', opacity: 0.8, textAlign: 'center' }}>
-                                        <em>Figure 9: Decision Intelligence must be fundamentally external to the Execution Plane.</em>
+                                        <em>Figure 9: Decision Intelligence must be fundamentally external to the Execution Plane. <strong>Failure Mode:</strong> Embedding decision logic within the execution plane creates a "Conflict of Interest" where the system prioritizes resource consumption (profit) over optimization (efficiency).</em>
                                     </div>
                                 </SchematicDiagram>
                             </div>
