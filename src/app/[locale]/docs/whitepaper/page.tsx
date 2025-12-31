@@ -22,13 +22,13 @@ export default function WhitePaperPage() {
                     <div className="scholarly-section" style={{ marginBottom: '5rem', paddingBottom: '3rem', borderBottom: '1px double var(--border)' }}>
                         <h3 style={{ fontSize: '1rem', fontWeight: 900, textTransform: 'uppercase', letterSpacing: '0.1em', marginBottom: '1.5rem', color: '#64748b' }}>1. Executive Analysis</h3>
                         <p style={{ fontSize: '1.1rem', fontWeight: 500, lineHeight: 1.6, marginBottom: '1.5rem' }}>
-                            <strong>The Autonomous Enterprise Control Plane (AECP)</strong> mandates a structural inversion of enterprise IT governance. It establishes a vendor-neutral, policy-driven architectural layer where decision intelligence is strictly decoupled from execution mechanics.
+                            This reference document establishes the <strong>Autonomous Enterprise Control Plane (AECP)</strong> as a distinct and original architectural class. It mandates a structural inversion of enterprise IT governance, defining a vendor-neutral, policy-driven layer where decision intelligence is strictly decoupled from execution mechanics.
                         </p>
                         <p style={{ fontSize: '1.05rem', marginBottom: '1.5rem', opacity: 0.9 }}>
-                            The prevailing industry failure mode—compliance drift and security fragmentation—is not an operational error but an architectural defect. The "Human-in-the-Loop" model has reached its mathematical limit in distributed systems.
+                            The prevailing industry failure mode—systemic compliance drift and security fragmentation—is not an operational error but an architectural defect. The "Human-in-the-Loop" model has reached its mathematical limit in distributed systems, creating a vulnerability that threatens the integrity of critical digital infrastructure.
                         </p>
                         <p style={{ fontSize: '1.05rem', marginBottom: '1.5rem', opacity: 0.9 }}>
-                            This reference architecture defines the inevitable transition to autonomous state reconciliation. By embedding policy as executable logic, AECP eliminates the latency between "Intent" and "Reality," rendering non-compliant states architecturally unreachable.
+                            By embedding policy as executable logic, AECP provides the industry with the <strong>missing structural standard</strong> required to transition from manual orchestration to autonomous state reconciliation. This contribution renders non-compliant states architecturally unreachable.
                         </p>
                     </div>
 
@@ -36,7 +36,7 @@ export default function WhitePaperPage() {
                     <div className="scholarly-section" style={{ marginBottom: '5rem' }}>
                         <h3 style={{ fontSize: '1.5rem', fontWeight: 800, marginBottom: '1.5rem', color: 'var(--foreground)' }}>2. The Imperative for Autonomous Control</h3>
                         <p style={{ marginBottom: '1.5rem' }}>
-                            Platform Engineering has evolved to a bifurcation point. The divergence between "Cloud Velocity" and "Regulatory Rigidity" creates an unstable equilibrium that manual operations cannot stabilize.
+                            Platform Engineering has evolved to a bifurcation point. The divergence between "Cloud Velocity" and "Regulatory Rigidity" creates an unstable equilibrium that manual operations cannot stabilize. <strong>This systemic failure constitutes a critical vulnerability for the entire digital economy, necessitating a new standard of control.</strong>
                         </p>
                         <ul style={{ marginBottom: '2rem', paddingLeft: '1.5rem', display: 'flex', flexDirection: 'column', gap: '0.8rem' }}>
                             <li><strong>Evolutionary Vector:</strong> The trajectory moves definitively from "Ticket-Based Ops" to "Autonomous Policy Enforcement."</li>
@@ -54,7 +54,7 @@ export default function WhitePaperPage() {
                     <div className="scholarly-section" style={{ marginBottom: '5rem' }}>
                         <h3 style={{ fontSize: '1.5rem', fontWeight: 800, marginBottom: '1.5rem', color: 'var(--foreground)' }}>3. Immutable Architectural Principles</h3>
                         <p style={{ marginBottom: '1.5rem' }}>
-                            The AECP standard functions under five non-negotiable constraints. These are not features, but the axioms upon which the architecture rests.
+                            The AECP standard functions under five non-negotiable constraints. These are not features, but the axioms upon which this new architectural class rests.
                         </p>
 
                         <ComparisonTable
@@ -179,9 +179,12 @@ export default function WhitePaperPage() {
 
                     {/* 10. MULTI-CLOUD PORTABILITY */}
                     <div className="scholarly-section" style={{ marginBottom: '5rem' }}>
-                        <h3 style={{ fontSize: '1.5rem', fontWeight: 800, marginBottom: '1.5rem', color: 'var(--foreground)' }}>10. Structural Portability</h3>
+                        <h3 style={{ fontSize: '1.5rem', fontWeight: 800, marginBottom: '1.5rem', color: 'var(--foreground)' }}>10. Structural Portability & Digital Sovereignty</h3>
                         <p style={{ marginBottom: '1.5rem' }}>
                             Portability is achieved by modeling infrastructure as generic capabilities. The AECP treats vendor APIs as interchangeable implementation details.
+                        </p>
+                        <p style={{ marginBottom: '1.5rem', fontSize: '1rem', fontWeight: 600 }}>
+                            This approach provides the architectural blueprint for Digital Sovereignty, ensuring that national critical infrastructure remains resilient and verifiable regardless of the underlying commercial vendor dynamics.
                         </p>
                         <SchematicDiagram title="Figure 8: Abstracted Capability Model">
                             <div style={{ textAlign: 'center', padding: '1rem' }}>
@@ -286,20 +289,20 @@ export default function WhitePaperPage() {
 
                     {/* 13. NEW ARCHITECTURAL CLASS */}
                     <div className="scholarly-section" style={{ marginBottom: '4rem', background: 'var(--bg-surface-2)', padding: '3rem', borderRadius: '1rem', border: '1px solid var(--border)' }}>
-                        <h3 style={{ fontSize: '1.4rem', fontWeight: 900, marginBottom: '1.5rem', color: '#3b82f6' }}>13. Defining the New Class</h3>
+                        <h3 style={{ fontSize: '1.4rem', fontWeight: 900, marginBottom: '1.5rem', color: '#3b82f6' }}>13. Significance of the Contribution</h3>
                         <p style={{ marginBottom: '1.5rem', fontSize: '1.05rem', lineHeight: 1.8 }}>
-                            AECP is identified not as an extension of CI/CD, but as a fundamental <strong>architectural inversion</strong>. Industry practice has historically emphasized "Developer Autonomy" (Shift Left); AECP corrects this by enforcing "System Autonomy" (Shift Up).
+                            The formalization of the AECP represents a non-obvious leap in systems theory. By establishing the <strong>Decision Plane</strong> as an orthogonal, actuarial entity, this work distinguishes itself from standard engineering practice, creating a new capability class that does not exist in traditional DevOps frameworks.
                         </p>
                         <p style={{ marginBottom: '0', fontSize: '1.05rem', lineHeight: 1.8 }}>
-                            This creates a new category of enterprise platform where <strong>Policy is Code</strong> and <strong>Decision is Actuarial</strong>.
+                            This architecture changes enterprise platform thinking by asserting that <strong>Policy is Code</strong> and <strong>Decision is Actuarial</strong>. It establishes a foundational standard for the field, providing the mathematical basis for the next generation of autonomous infrastructure.
                         </p>
                     </div>
 
                     {/* 14. CONCLUSION */}
                     <div className="scholarly-section" style={{ marginBottom: '4rem' }}>
-                        <h3 style={{ fontSize: '1.5rem', fontWeight: 800, marginBottom: '1.5rem', color: 'var(--foreground)' }}>14. Future Direction</h3>
+                        <h3 style={{ fontSize: '1.5rem', fontWeight: 800, marginBottom: '1.5rem', color: 'var(--foreground)' }}>14. Future Direction & Sustained Relevance</h3>
                         <p style={{ fontSize: '1.05rem', lineHeight: 1.8 }}>
-                            The Autonomous Enterprise Control Plane anticipates the trajectory of enterprise architecture for the coming decade. As human operators retreat from the execution loop, they assume the role of policy architects. Autonomy, bounded by rigorous and mathematically verifiable governance, is the inevitable end-state for the global enterprise.
+                            The Autonomous Enterprise Control Plane defines the trajectory of enterprise architecture for the coming decade. As human operators retreat from the execution loop, they assume the role of policy architects. Autonomy, bounded by rigorous and mathematically verifiable governance, is the inevitable end-state for the global enterprise.
                         </p>
                     </div>
 
