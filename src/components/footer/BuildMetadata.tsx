@@ -19,7 +19,7 @@ const BuildMetadata = () => {
     // SIT: Cautionary/Visible
     // DEV: Informational
     let colorClass = 'text-zinc-600 opacity-50'; // Default PROD
-    let label = env;
+    const label = env;
 
     if (env === 'SIT') {
         colorClass = 'text-yellow-600 opacity-90 font-bold';
