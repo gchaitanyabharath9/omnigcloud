@@ -2,7 +2,8 @@ import React from 'react';
 import { BookOpen, Shield, Cpu, Zap, Globe, Lock, Share2, Award, Terminal, Code, ArrowRight, TrendingUp, RefreshCw } from 'lucide-react';
 import Link from 'next/link';
 
-export default function PatternsPage() {
+export default async function PatternsPage({ params }: { params: Promise<{ locale: string }> }) {
+    const { locale } = await params;
     const patterns = [
         {
             icon: <Globe size={40} />,
@@ -166,10 +167,10 @@ export default function PatternsPage() {
                     </div>
 
                     <div style={{ display: 'flex', gap: '2rem', justifyContent: 'center' }}>
-                        <Link href="/docs/whitepaper" className="btn-primary py-4 px-10 text-lg">
+                        <Link href={`/${locale}/docs/whitepaper`} className="btn-primary py-4 px-10 text-lg">
                             Access Scholarly White Paper
                         </Link>
-                        <Link href="/pricing" className="btn-secondary py-4 px-10 text-lg">
+                        <Link href={`/${locale}/pricing`} className="btn-secondary py-4 px-10 text-lg">
                             Scale Now
                         </Link>
                     </div>

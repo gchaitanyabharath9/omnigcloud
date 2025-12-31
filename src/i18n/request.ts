@@ -1,4 +1,5 @@
 import { getRequestConfig } from 'next-intl/server';
+import { logMissingKey } from '../lib/i18n-logger';
 
 function deepMerge(target: any, source: any) {
     const output = { ...target };
@@ -42,11 +43,28 @@ export default getRequestConfig(async ({ requestLocale }) => {
     }
 
     // Deep merge: user messages override defaults. 
-    // This ensures nested keys (like Header.nav.links) fall back to English if missing.
     const messages = deepMerge(defaultMessages, userMessages);
 
     return {
         locale,
-        messages
+        messages,
+        onError(error) {
+            if (error.code === 'MISSING_MESSAGE') {
+                const key = error.message.match(/key "([^"]+)"/)?.[1] || 'unknown';
+                logMissingKey(locale, key);
+            } else {
+                console.error(error);
+            }
+        },
+        getMessageFallback({ namespace, key, error }) {
+            const fullKey = namespace ? `${namespace}.${key}` : key;
+            // Fallback to English if possible, otherwise return the key
+            const path = fullKey.split('.');
+            let val: any = defaultMessages;
+            for (const k of path) {
+                val = val?.[k];
+            }
+            return typeof val === 'string' ? val : fullKey;
+        }
     };
 });

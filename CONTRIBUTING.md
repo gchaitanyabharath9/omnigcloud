@@ -1,35 +1,76 @@
-# Contributing to the Sovereign Community
+# Contributing to OmniGCloud
 
-Thank you for your interest in contributing to **OmniGCloud** and the **G-Framework**! By participating in this project, you are helping build the future of autonomous, sovereign multi-cloud engineering.
+## 🚀 Quick Start (Local Development)
 
-## The Scholarly Standard
+1. **Install Dependencies:**
+   ```bash
+   npm ci
+   ```
 
-This repository is part of a high-impact initiative recognizing **Extraordinary Ability** in Cloud Computing. We hold all contributions to a "Major Significance" standard of engineering excellence.
+2. **Environment Setup:**
+   - The app uses `src/config/local/app.json` by default.
+   - For secrets, create `.env.local` based on `.env.example` (if provided) or ask the team header.
 
-## How to Contribute
-
-### 1. Propose an Architectural Pattern
-If you have discovered a new sovereign design pattern (similar to our **Multi-Cloud Circuit Breaker** or **PALM**), please open an issue with the tag `pattern:proposal`.
-
-### 2. Implementation & Code
-- **Fork the Repository**: Work on your feature in a dedicated branch.
-- **Strict Logic Separation**: Ensure all cloud-specific code is abstracted into the `/adapters` layer. 
-- **Tests**: All logic-mesh code must include formal verification tests or state-convergence proofs.
-- **Linting**: Run `npm run lint` before submitting.
-
-### 3. Reporting a Bug
-- Use the Bug Report template.
-- Include the "Sovereign State Vector" or the specific infrastructure manifest where the drift occurred.
-
-## Code of Conduct
-
-We are committed to fostering an inclusive, professional community of architects and researchers. We follow the [Contributor Covenant](https://www.contribute.org/covenant).
-
-## License
-
-By contributing to this repository, you agree that your contributions will be licensed under the **Apache License 2.0**.
+3. **Run Development Server:**
+   ```bash
+   npm run dev
+   ```
+   Open [http://localhost:3000](http://localhost:3000).
 
 ---
 
-**OmniGCloud Research Group**  
-*Restoring Enterprise Sovereignty, One Node at a Time.*
+## 🏗️ Architecture & Conventions
+
+### Directory Structure
+- `src/app`: Next.js App Router pages (routes).
+- `src/components`: React components (shared).
+- `src/config`: Environment configuration (Dev/SIT/Prod).
+- `src/lib`: Shared utilities and logic (logging, formatting).
+- `qa-i18n`: QA automation suite (Playwright, scripts).
+
+### i18n Strategy
+- **Framework:** `next-intl`
+- **Translations:** Located in `messages/*.json`.
+- **Validation:** Run `npm run qa:i18n` before committing.
+- **Rule:** Fallback to English is automatic, but missing keys in PRODUCTION locales (es, fr, de) are blocking errors.
+
+### SEO Strategy
+- **Canonical:** Enforced at application layer (`proxy.ts`).
+- **Config:** `src/config/domains.ts` controls the definitive URL.
+- **Validation:** Run `npm run qa:seo`.
+
+---
+
+## 🧪 Quality Gates & Testing
+
+Before creating a Pull Request, verify your changes:
+
+```bash
+# 1. Static Analysis
+npm run lint
+npm run typecheck
+
+# 2. QA Checks
+npm run qa:inventory  # Detect route changes
+npm run qa:i18n       # Verify translation coverage
+npm run qa:seo        # Verify SEO foundations
+
+# 3. Automation
+npm run qa:test       # Run Playwright suite
+```
+
+---
+
+## 🛡️ Brand & Research Assets
+**EB-1A Evidence Protection:**
+- High-value research assets (PDFs, Diagrams) reside in `/public/research-assets` (or protected internal path).
+- Do NOT commit source files (PPT, AI/EPS) to this public repo.
+- Watermark all new exhibit diagrams with `© OmniGCloud [Year] - Exhibit [ID]`.
+
+---
+
+## 🚢 release Process
+- **Current:** Push to `main` deploys to PROD.
+- **Future:** PR -> `dev` -> `sit` -> `prod`.
+
+---

@@ -1,4 +1,5 @@
 import { MetadataRoute } from 'next'
+import { config } from '@/config'
 
 export default function robots(): MetadataRoute.Robots {
     return {
@@ -18,6 +19,6 @@ export default function robots(): MetadataRoute.Robots {
                 disallow: ['/docs/whitepaper'], // Protect research intellectual property from basic crawlers if required
             }
         ],
-        sitemap: `${process.env.NEXT_PUBLIC_SITE_URL || 'https://omnigcloud.com'}/sitemap.xml`,
+        sitemap: `${config.site.url}/sitemap.xml`,
     }
 }

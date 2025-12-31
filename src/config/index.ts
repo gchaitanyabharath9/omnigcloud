@@ -1,18 +1,32 @@
 import { AppEnvSchema, ConfigSchema, AppConfig } from './schema';
-import { localConfig } from './envs/local';
-import { devConfig } from './envs/dev';
-import { prodConfig } from './envs/prod';
+import localData from './local/app.json';
+import devData from './dev/app.json';
+import sitData from './sit/app.json';
+import prodData from './prod/app.json';
 
-// Load ENV variables
+// Determine Environment
+const rawEnv = process.env.APP_ENV || process.env.NODE_ENV || 'local';
+let currentEnv = AppEnvSchema.safeParse(rawEnv).success ? (rawEnv as any) : 'local';
+
+// If NODE_ENV is production but APP_ENV is default, assume prod to avoid serving local config
+if (process.env.NODE_ENV === 'production' && !process.env.APP_ENV) {
+    currentEnv = 'prod';
+}
+
+// Select Config Data
+let envSpecificConfig: any = {};
+switch (currentEnv) {
+    case 'dev': envSpecificConfig = devData; break;
+    case 'sit': envSpecificConfig = sitData; break;
+    case 'prod': envSpecificConfig = prodData; break;
+    default: envSpecificConfig = localData; break; // Covers 'local' and 'test'
+}
+
+// Build Final Config
+// Priority: Process ENV > JSON Config > Defaults (if any)
 const processEnv = {
-    env: (process.env.APP_ENV || process.env.NODE_ENV || 'local') as any, // Cast for basic validation
     site: {
-        url: process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000',
-        name: 'OmniGCloud',
-        description: 'Global Cloud-Agnostic Modernization',
-    },
-    api: {
-        url: process.env.NEXT_PUBLIC_API_URL,
+        url: process.env.NEXT_PUBLIC_SITE_URL, // Override if set
     },
     auth: {
         secret: process.env.AUTH_SECRET,
@@ -25,56 +39,22 @@ const processEnv = {
     database: {
         redisUrl: process.env.REDIS_URL,
         redisToken: process.env.REDIS_TOKEN,
-    },
-    features: {
-        enableMetrics: process.env.ENABLE_METRICS === 'true',
-        enableMagicLink: process.env.ENABLE_MAGIC_LINK === 'true',
-        enableRateLimit: process.env.ENABLE_REDIS_RATE_LIMIT === 'true',
     }
 };
-
-// Determine Environment
-const currentEnv = AppEnvSchema.safeParse(processEnv.env).success
-    ? processEnv.env
-    : 'local';
-
-// Merge strategy:
-// 1. Defaults (Empty/Base)
-// 2. Env-specific static config (local.ts, dev.ts, etc.) -> Overrides defaults
-// 3. Process.ENV -> Overrides everything (highest precedence for secrets)
-
-let envSpecificConfig = {};
-switch (currentEnv) {
-    case 'local': envSpecificConfig = localConfig; break;
-    case 'dev': envSpecificConfig = devConfig; break;
-    case 'prod': envSpecificConfig = prodConfig; break;
-    // Default to empty for others not explicitly defined yet
-    default: envSpecificConfig = {};
-}
-
-// Deep merge helper could be used here, but for now we'll do spread
-// Caution: Simple spread doesn't deep merge objects.
-// Since we built the `processEnv` object fully above, we mainly want to apply
-// the static overrides if they exist using a merge.
-
-// Actually, a better pattern for Typed Config is often:
-// Base Config + Env Overrides + Secrets from Env.
-
-// Let's refine the processEnv object construction to use the schema validation LAST.
 
 const rawConfig = {
     env: currentEnv,
     isProduction: currentEnv === 'prod',
     isDevelopment: currentEnv === 'local' || currentEnv === 'dev',
+    // isTest removed or kept based on usage, simplifying for now
     isTest: process.env.NODE_ENV === 'test',
 
     site: {
-        ...processEnv.site,
-        ...(envSpecificConfig as any).site,
+        ...envSpecificConfig.site,
+        ...removeEmpty(processEnv.site),
     },
     api: {
-        ...processEnv.api,
-        ...(envSpecificConfig as any).api,
+        ...envSpecificConfig.api,
     },
     auth: {
         ...processEnv.auth,
@@ -83,25 +63,30 @@ const rawConfig = {
         ...processEnv.database,
     },
     features: {
-        ...processEnv.features,
-        ...(envSpecificConfig as any).features,
+        ...envSpecificConfig.features,
     },
 };
+
+// Helper: Remove undefined/null/empty strings to avoid overwriting valid JSON config with empty envs
+function removeEmpty(obj: any) {
+    const newObj: any = {};
+    for (const key in obj) {
+        if (obj[key] !== undefined && obj[key] !== null && obj[key] !== '') {
+            newObj[key] = obj[key];
+        }
+    }
+    return newObj;
+}
 
 // Validate
 const parsed = ConfigSchema.safeParse(rawConfig);
 
 if (!parsed.success) {
     console.error('❌ Invalid Configuration:', parsed.error.format());
-    // In strict mode we might throw, but for dev robustness we might warn
-    // Since this is key infra, throwing is safer to prevent starting with bad config.
-    // However, during build time (e.g. CI), some envs might be missing.
-    // Check if we are in build context.
+    // Only warn in build to prevent failure if secrets are missing in CI
     if (process.env.NEXT_PHASE !== 'phase-production-build') {
-        // throw new Error('Invalid Configuration'); // Uncomment to enforce strictness
-        console.warn('⚠️  Config validation failed. Check .env');
+        console.warn('⚠️  Config validation failed. Check app.json and .env');
     }
 }
 
-// Export the valid config or the raw best-effort one (with type casting to satisfy TS if needed)
 export const config = (parsed.success ? parsed.data : rawConfig) as AppConfig;

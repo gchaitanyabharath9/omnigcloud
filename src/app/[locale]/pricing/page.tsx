@@ -1,4 +1,4 @@
-import { useTranslations } from 'next-intl';
+import { getTranslations } from 'next-intl/server';
 import { Check, X, Shield, Globe, Cpu, Zap, Award, HelpCircle, ArrowRight } from 'lucide-react';
 import Link from 'next/link';
 import type { Metadata } from 'next';
@@ -11,8 +11,9 @@ export const metadata: Metadata = {
     keywords: ['cloud governance pricing', 'enterprise cloud management cost', 'multi-cloud pricing', 'compliance automation pricing'],
 };
 
-export default function PricingPage() {
-    const t = useTranslations('Pricing');
+export default async function PricingPage({ params }: { params: Promise<{ locale: string }> }) {
+    const { locale } = await params;
+    const t = await getTranslations('Pricing');
 
     const plans = [
         {
@@ -97,7 +98,7 @@ export default function PricingPage() {
             "price": plan.price === "Custom" ? "0" : plan.price,
             "priceCurrency": "USD",
             "description": t(`plans.${plan.id}.desc`),
-            "url": `https://omnigcloud.com/pricing#${plan.id}`
+            "url": `https://omnigcloud.com/${locale}/pricing#${plan.id}`
         }))
     };
 
@@ -177,7 +178,7 @@ export default function PricingPage() {
                                     </ul>
                                 </div>
 
-                                <Link href="/contact" className={plan.highlight ? 'btn-primary' : 'btn-secondary'} style={{ width: '100%', textAlign: 'center', padding: '0.4rem', fontSize: '0.75rem' }}>
+                                <Link href={`/${locale}/contact`} className={plan.highlight ? 'btn-primary' : 'btn-secondary'} style={{ width: '100%', textAlign: 'center', padding: '0.4rem', fontSize: '0.75rem' }}>
                                     {t(`plans.${plan.id}.cta`)}
                                 </Link>
                             </div>
@@ -269,7 +270,7 @@ export default function PricingPage() {
                             {t('cta.subtitle')}
                         </p>
                         <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '1.5rem' }}>
-                            <Link href="/contact" className="btn-primary" style={{
+                            <Link href={`/${locale}/contact`} className="btn-primary" style={{
                                 background: 'white',
                                 color: '#1e40af',
                                 border: 'none',

@@ -1,8 +1,9 @@
+import { config } from '@/config';
 import { MetadataRoute } from 'next';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-    const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://omnigcloud.com';
-    const locales = ['en', 'es', 'fr', 'de', 'zh', 'hi', 'ja'];
+    const baseUrl = config.site.url;
+    const locales = ['en', 'es', 'fr', 'de', 'zh', 'hi', 'ja', 'ko'];
 
     const routes = [
         '',
@@ -37,7 +38,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
         '/demo',
         '/partners',
         '/staffing',
+        '/dashboard',
         '/research',
+        '/research/metrics',
+        '/research/architecture',
+        '/research/automated-multilingual-quality-assurance',
         '/terms',
         '/ai-data'
     ];

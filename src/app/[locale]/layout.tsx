@@ -13,6 +13,8 @@ import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Analytics } from "@vercel/analytics/react";
 import CookieConsent from "@/components/CookieConsent";
 
+import { config } from '@/config';
+
 const inter = Inter({
   variable: "--font-inter",
   subsets: ["latin"],
@@ -24,7 +26,7 @@ const jakarta = Plus_Jakarta_Sans({
   weight: ["400", "500", "600", "700", "800"],
 });
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://omnigcloud.com';
+const siteUrl = config.site.url;
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params;

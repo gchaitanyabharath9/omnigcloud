@@ -1,1270 +1,1317 @@
 {
-    "Header": {
-        "title": "OmniGCloud",
-        "latency_badge": "MESH_RT",
-        "nav": {
-            "products": "产品",
-            "solutions": "解决方案",
-            "trust": "信任",
-            "docs": "资源",
-            "pricing": "价格",
-            "company": "公司",
-            "onboarding": "立即扩展",
-            "pillars": "平台支柱",
-            "advanced": "高级运维",
-            "industries": "行业",
-            "useCases": "使用场景",
-            "documentation": "文档",
-            "community": "社区",
-            "dashboard": "仪表盘",
-            "dashboard_links": {
-                "roi": "高管总览",
-                "cost": "成本套利",
-                "uptime": "全球连通性",
-                "security": "合规雷达",
-                "resources": "资源遥测",
-                "deployment": "速度指标",
-                "scaling": "自动扩缩事件",
-                "error": "威胁分析"
-            },
-            "products_links": {
-                "playground": "主权沙盒",
-                "workflows": "G-工作流",
-                "guard": "治理卫士",
-                "knowledge": "主权知识库",
-                "deploy": "Obsidian 部署",
-                "nexus": "跨云枢纽"
-            },
-            "solutions_links": {
-                "financial": "金融服务",
-                "insurance": "保险",
-                "telecom": "电信",
-                "healthcare": "医疗与生命科学",
-                "logistics": "物流与供应链",
-                "finance_mod": "全球金融现代化",
-                "health_mod": "主权健康数据",
-                "gov_trust": "公共部门数字信任"
-            },
-            "trust_links": {
-                "compliance_maps": "全球合规地图",
-                "transparency": "透明度报告",
-                "certs": "资质认证",
-                "privacy": "隐私中心"
-            },
-            "docs_links": {
-                "tech_docs": "技术文档",
-                "api": "API 参考",
-                "patterns": "设计模式",
-                "whitepaper": "白皮书",
-                "visual_library": "视觉库",
-                "mccb": "断路器",
-                "open_source": "开源项目",
-                "insights": "主权洞察"
-            },
-            "pricing_links": {
-                "compare": "方案对比",
-                "developer": "开发者版",
-                "professional": "专业版",
-                "business": "商业版",
-                "sovereign": "主权 / 政府版",
-                "trust": "企业信任",
-                "faq": "常见问题"
-            },
-            "company_links": {
-                "about": "关于我们",
-                "leadership": "领导层",
-                "operations": "全球业务",
-                "newsroom": "新闻中心",
-                "executive": "执行办公室",
-                "contact": "联系我们"
-            }
-        }
+  "Header": {
+    "title": "OmniGCloud",
+    "latency_badge": "MESH_RT",
+    "nav": {
+      "products": "产品",
+      "solutions": "解决方案",
+      "trust": "信任",
+      "docs": "资源",
+      "pricing": "价格",
+      "company": "公司",
+      "onboarding": "立即扩展",
+      "dashboard": "仪表盘",
+      "performance": "[TODO_TRANSLATE] PERFORMANCE",
+      "telemetry": "[TODO_TRANSLATE] TELEMETRY",
+      "organization": "[TODO_TRANSLATE] ORGANIZATION",
+      "contact_us": "[TODO_TRANSLATE] CONTACT",
+      "information": "[TODO_TRANSLATE] INFORMATION",
+      "tiers": "[TODO_TRANSLATE] PRICING TIERS",
+      "pillars": "平台支柱",
+      "advanced": "高级运维",
+      "industries": "行业",
+      "useCases": "使用场景",
+      "documentation": "文档",
+      "community": "社区",
+      "dashboard_links": {
+        "roi": "高管总览",
+        "cost": "成本套利",
+        "uptime": "全球连通性",
+        "security": "合规雷达",
+        "resources": "资源遥测",
+        "deployment": "速度指标",
+        "scaling": "自动扩缩事件",
+        "error": "威胁分析"
+      },
+      "products_links": {
+        "playground": "主权沙盒",
+        "workflows": "G-工作流",
+        "guard": "治理卫士",
+        "knowledge": "主权知识库",
+        "deploy": "Obsidian 部署",
+        "nexus": "跨云枢纽"
+      },
+      "solutions_links": {
+        "financial": "金融服务",
+        "insurance": "保险",
+        "telecom": "电信",
+        "healthcare": "医疗与生命科学",
+        "logistics": "物流与供应链",
+        "finance_mod": "全球金融现代化",
+        "health_mod": "主权健康数据",
+        "gov_trust": "公共部门数字信任"
+      },
+      "docs_links": {
+        "tech_docs": "技术文档",
+        "api": "API 参考",
+        "patterns": "设计模式",
+        "guide": "[TODO_TRANSLATE] User Guide",
+        "whitepaper": "白皮书",
+        "visual_library": "视觉库",
+        "newsroom": "[TODO_TRANSLATE] Newsroom Hub",
+        "open_source": "开源项目"
+      },
+      "pricing_links": {
+        "compare": "方案对比",
+        "trust": "企业信任",
+        "faq": "常见问题",
+        "developer": "开发者版",
+        "professional": "专业版",
+        "business": "商业版",
+        "sovereign": "主权 / 政府版"
+      },
+      "company_links": {
+        "about": "关于我们",
+        "leadership": "领导层",
+        "operations": "全球业务",
+        "newsroom": "新闻中心",
+        "executive": "执行办公室",
+        "contact": "联系我们",
+        "global_hq": "[TODO_TRANSLATE] Global Headquarters"
+      },
+      "trust_links": {
+        "compliance_maps": "全球合规地图",
+        "transparency": "透明度报告",
+        "certs": "资质认证",
+        "privacy": "隐私中心"
+      }
+    }
+  },
+  "Breadcrumb": {
+    "home": "首页",
+    "platform": "平台",
+    "services": "基础设施",
+    "use-cases": "企业影响力",
+    "security_page": "主权与信任",
+    "docs": "情报中心",
+    "company": "组织",
+    "onboarding": "全球入驻",
+    "demo": "交互式演示",
+    "contact": "联系销售总部",
+    "whitepaper": "ASO 研究",
+    "pricing": "订阅计划",
+    "industries": "区域解决方案",
+    "products": "产品",
+    "privacy": "隐私指令",
+    "terms": "参与条款",
+    "newsroom": "新闻亮点",
+    "community": "全球生态系统",
+    "blog": "主权情报",
+    "case-studies": "部署成功",
+    "visual-library": "架构库",
+    "command-center": "指挥中心",
+    "dashboard": "仪表盘",
+    "executive": "高管总览",
+    "technical": "技术运营",
+    "roi": "投资回报率",
+    "cost": "成本节约",
+    "uptime": "运行时间",
+    "security": "安全性",
+    "resources": "资源",
+    "deployment": "部署",
+    "scaling": "缩放",
+    "error": "错误率"
+  },
+  "Company": {
+    "email": {
+      "architects": "[TODO_TRANSLATE] architects@omnigcloud.com",
+      "support": "[TODO_TRANSLATE] support@omnigcloud.com",
+      "legal": "[TODO_TRANSLATE] legal@omnigcloud.com",
+      "press": "[TODO_TRANSLATE] press@omnigcloud.com",
+      "admin": "[TODO_TRANSLATE] admin@omnigcloud.com",
+      "security": "[TODO_TRANSLATE] security@omnigcloud.com"
     },
-    "Breadcrumb": {
-        "home": "首页",
-        "platform": "平台",
-        "services": "基础设施",
-        "use-cases": "企业影响力",
-        "security_page": "主权与信任",
-        "docs": "情报中心",
-        "company": "组织",
-        "onboarding": "全球入驻",
-        "demo": "交互式演示",
-        "contact": "联系销售总部",
-        "whitepaper": "ASO 研究",
-        "pricing": "订阅计划",
-        "industries": "区域解决方案",
-        "products": "产品",
-        "privacy": "隐私指令",
-        "terms": "参与条款",
-        "newsroom": "新闻亮点",
-        "community": "全球生态系统",
-        "blog": "主权情报",
-        "case-studies": "部署成功",
-        "visual-library": "架构库",
-        "command-center": "指挥中心",
-        "dashboard": "仪表盘",
-        "executive": "高管总览",
-        "technical": "技术运营",
-        "roi": "投资回报率",
-        "cost": "成本节约",
-        "uptime": "运行时间",
-        "security": "安全性",
-        "resources": "资源",
-        "deployment": "部署",
-        "scaling": "缩放",
-        "error": "错误率"
+    "name": "[TODO_TRANSLATE] OmniGCloud HQ",
+    "location": "[TODO_TRANSLATE] New York Platinum District"
+  },
+  "Footer": {
+    "tagline": "通过自主、AI 治理的云现代化恢复企业主权。",
+    "directory": "全球目录 // TERMINAL_v4.2",
+    "status": "安全同步: 正常",
+    "platform": {
+      "label": "平台",
+      "control": "控制平面",
+      "policy": "策略引擎",
+      "iac": "IaC 工厂",
+      "obs": "可观测性"
     },
-    "Footer": {
-        "tagline": "通过自主、AI 治理的云现代化恢复企业主权。",
-        "directory": "全球目录 // TERMINAL_v4.2",
-        "status": "安全同步: 正常",
-        "platform": {
-            "label": "平台",
-            "control": "控制平面",
-            "policy": "策略引擎",
-            "iac": "IaC 工厂",
-            "obs": "可观测性"
-        },
-        "services": {
-            "label": "服务",
-            "migration": "迁移",
-            "modernization": "现代化",
-            "ai": "AI 工程",
-            "compliance": "合规性"
-        },
-        "impact": {
-            "label": "影响力",
-            "finance": "金融",
-            "healthcare": "医疗",
-            "retail": "零售",
-            "government": "政府"
-        },
-        "trust": {
-            "label": "信任",
-            "security": "安全",
-            "compliance": "合规",
-            "privacy": "隐私",
-            "sovereignty": "主权"
-        },
-        "resources": {
-            "label": "资源",
-            "docs": "技术文档",
-            "api": "API 参考",
-            "blueprints": "蓝图",
-            "cases": "案例研究"
-        },
-        "company": {
-            "label": "公司",
-            "about": "关于我们",
-            "leadership": "领导层",
-            "newsroom": "新闻中心",
-            "contact": "联系我们"
-        },
-        "copyright": "© {year} OmniGCloud. 保留所有权利。",
-        "footerText": "为全球主权组织打造的受控、全球化和生成式基础设施。"
+    "services": {
+      "label": "服务",
+      "migration": "迁移",
+      "modernization": "现代化",
+      "ai": "AI 工程",
+      "compliance": "合规性"
     },
-    "CookieConsent": {
-        "title": "主权隐私控制",
-        "message": "我们使用持久化遥测和 Cookie 来优化您的编排体验。您的数据仍受我们的主权保护协议管辖。",
-        "policyLink": "查看政策",
-        "accept": "接受 Cookie",
-        "decline": "标准模式",
-        "sovereignNotice": "受控数据同步 // v4.2"
+    "impact": {
+      "label": "影响力",
+      "finance": "金融",
+      "healthcare": "医疗",
+      "retail": "零售",
+      "government": "政府"
     },
-    "Hero": {
-        "badge": "治理即代码",
-        "title": "恢复主权",
-        "subtitle": "G-Framework 赋能全球企业，通过零信任治理实现多云基础设施自动化。",
-        "ctaPrimary": "开始评估",
-        "ctaSecondary": "观看演示",
-        "systemStatus": {
-            "title": "系统状态",
-            "live": "运行中",
-            "sync": "多云同步已启用",
-            "policy": "策略引擎",
-            "enforcing": "强制执行中",
-            "threat": "威胁防护",
-            "monitoring": "实时监控"
-        },
-        "stats": {
-            "assets": "资产",
-            "drift": "偏移",
-            "nodes": "节点"
-        },
-        "experts": {
-            "count": "20+ 专家",
-            "status": "随时待命",
-            "cta": "咨询销售"
-        },
-        "efficiency": "效率提升",
-        "impact": {
-            "label": "全球影响",
-            "text": "在每个区域实现 <span>主权</span> 自动化。"
-        },
-        "trust": "全球顶尖企业一致信任"
+    "trust": {
+      "label": "信任",
+      "security": "安全",
+      "compliance": "合规",
+      "privacy": "隐私",
+      "terms": "[TODO_TRANSLATE] Terms of Service"
     },
-    "Capabilities": {
-        "tag": "G-FRAMEWORK 生态系统",
-        "title": "核心主权产品",
-        "subtitle": "六大模块化支柱，旨在解决全球多云治理的复杂性。",
-        "explore": "探索",
-        "cta": "查看完整架构"
+    "resources": {
+      "label": "资源",
+      "docs": "技术文档",
+      "api": "API 参考",
+      "blueprints": "蓝图",
+      "visual_library": "[TODO_TRANSLATE] Visual Library",
+      "cases": "案例研究"
     },
-    "Problem": {
-        "badge": "关键基础设施警报",
-        "title": "主权危机",
-        "subtitle": "全球企业正面临碎片化、监管收紧和数据黑箱的三重风暴。",
-        "fragmentation": {
-            "title": "碎片化陷阱",
-            "desc": "分布在 AWS、Azure 和本地的数据形成了无人真正管理的“僵尸基础设施”。"
-        },
-        "regulatory": {
-            "title": "监管漂移",
-            "desc": "针对跨境数据泄露的 GDPR 和 AI 法案罚金不断攀升。您的静态合规报告已过时。",
-            "score": "合规评分",
-            "risk": "存在风险"
-        },
-        "vendor": {
-            "title": "供应商锁定",
-            "desc": "特定供应商的 API 束缚了您的工程团队，使跨云迁移变得遥不可及。"
-        },
-        "opacity": {
-            "title": "暗数据黑箱",
-            "desc": "缺乏可见性导致主权违规行为难以察觉，直到遭遇严厉的监管审计。",
-            "scanning": "正在扫描未知资产..."
-        }
+    "company": {
+      "label": "公司",
+      "about": "关于我们",
+      "leadership": "领导层",
+      "newsroom": "新闻中心",
+      "contact": "联系我们"
     },
-    "DemoSection": {
-        "badge": "实时体验",
-        "title": "体验 Omni<span>G</span>Cloud 实力",
-        "subtitle": "见证自主云现代化。秒级实现从发现到主权掌控。",
-        "discovery": {
-            "title": "即时发现",
-            "desc": "零接触 Agent 部署，3 分钟内即可勾勒 1,000+ 资产全貌。",
-            "code": "> 完整扫描: 99.8%"
-        },
-        "iac": {
-            "title": "生成式 IaC",
-            "desc": "AI Agent 将遗留二进制文件逆向工程为整洁的 Terraform 代码。",
-            "code": "> 正在生成模块..."
-        },
-        "sync": {
-            "title": "活动状态同步",
-            "desc": "AWS 与 Azure 区域间的双向状态锁定。",
-            "code": "> 延迟: 12ms"
-        },
-        "drift": {
-            "title": "偏移自动还原",
-            "desc": "实时检测未经授权的控制台变更并立即还原。",
-            "code": "> 威胁已解除"
-        }
+    "copyright": "© {year} OmniGCloud. 保留所有权利。",
+    "footerText": "为全球主权组织打造的受控、全球化和生成式基础设施。",
+    "social": {
+      "linkedin": "[TODO_TRANSLATE] https://linkedin.com/company/omnigcloud",
+      "twitter": "[TODO_TRANSLATE] https://x.com/omnigcloud",
+      "discord": "[TODO_TRANSLATE] https://discord.gg/omnigcloud",
+      "github": "[TODO_TRANSLATE] https://github.com/omnigcloud"
+    }
+  },
+  "CookieConsent": {
+    "title": "主权隐私控制",
+    "message": "我们使用持久化遥测和 Cookie 来优化您的编排体验。您的数据仍受我们的主权保护协议管辖。",
+    "policyLink": "查看政策",
+    "accept": "接受 Cookie",
+    "decline": "标准模式",
+    "sovereignNotice": "受控数据同步 // v4.2"
+  },
+  "Hero": {
+    "badge": "治理即代码",
+    "title": "恢复主权",
+    "subtitle": "G-Framework 赋能全球企业，通过零信任治理实现多云基础设施自动化。",
+    "problem": "[TODO_TRANSLATE] Legacy fragmentation and proprietary lock-in create operational risk and cost overruns.",
+    "solution": "[TODO_TRANSLATE] Autonomous, AI-driven state synchronization across any cloud provider.",
+    "audience": "[TODO_TRANSLATE] Designed for Global 2000 CIOs and Sovereign Government Entities.",
+    "ctaPrimary": "开始评估",
+    "ctaArchitecture": "[TODO_TRANSLATE] Architecture Overview",
+    "ctaWhitepaper": "[TODO_TRANSLATE] Download Whitepaper",
+    "systemStatus": {
+      "title": "系统状态",
+      "live": "运行中",
+      "sync": "多云同步已启用",
+      "policy": "策略引擎",
+      "enforcing": "强制执行中",
+      "threat": "威胁防护",
+      "monitoring": "实时监控"
     },
-    "Ecosystem": {
-        "badge": "全球互联",
-        "title": "跨云枢纽",
-        "subtitle": "通过单一控制平面，在任何云端部署主权基础设施，无惧复杂性。",
-        "nodes": "活动节点",
-        "regions": "主权区域",
-        "uptime": "可用性保证"
+    "stats": {
+      "assets": "资产",
+      "drift": "偏移",
+      "nodes": "节点"
     },
-    "Section": {
-        "Playground": {
-            "title": "主权沙盒",
-            "desc": "跨云基础设施原型设计 IDE。"
-        },
-        "Workflows": {
-            "title": "G-工作流",
-            "desc": "可视化多步编排引擎。"
-        },
-        "Guard": {
-            "title": "治理卫士",
-            "desc": "实时合规与自动修复。"
-        },
-        "Knowledge": {
-            "title": "主权知识库",
-            "desc": "监管数据安全 RAG 引擎。"
-        },
-        "Deploy": {
-            "title": "Obsidian 部署",
-            "desc": "不可变生产环境发布。"
-        },
-        "Nexus": {
-            "title": "跨云枢纽",
-            "desc": "全球遥测与成本套利。"
-        }
+    "experts": {
+      "count": "20+ 专家",
+      "status": "随时待命",
+      "cta": "咨询销售"
     },
-    "HomeSections": {
-        "Pricing": {
-            "title": "战略主权版本",
-            "subtitle": "选择符合您治理需求的运营模式。",
-            "core": {
-                "badge": "核心版",
-                "price": "4%",
-                "unit": "/ 云支出",
-                "desc": "适用于在 2 个以上云端扩展的数字原生创业公司。",
-                "cta": "开启核心版",
-                "features": {
-                    "nodes": "最高 500 个节点",
-                    "drift": "基础偏移检测",
-                    "sla": "99.9% 控制平面 SLA",
-                    "support": "社区支持"
-                }
-            },
-            "enterprise": {
-                "badge": "企业版",
-                "popular": "最受欢迎",
-                "price": "标准价格",
-                "desc": "面向受监管行业的全面平台治理。",
-                "cta": "咨询销售",
-                "features": {
-                    "nodes": "节点数不限",
-                    "remediation": "自动化修复",
-                    "finops": "FinOps 套利引擎",
-                    "rbac": "角色访问控制 (RBAC)",
-                    "support": "24/7 专属支持"
-                }
-            },
-            "federal": {
-                "badge": "政府版",
-                "price": "定制价格",
-                "desc": "为主权实体提供的物理隔离部署。",
-                "cta": "政府版咨询",
-                "features": {
-                    "onprem": "本地控制平面",
-                    "byok": "自带密钥 (BYOK)",
-                    "security": "绝密级合规支持",
-                    "audit": "定制审计日志"
-                }
-            }
-        },
-        "Cta": {
-            "title": "准备好恢复主权控制了吗？",
-            "subtitle": "加入全球数百家领先企业，使用 OmniGCloud 实现云治理自动化并重塑数字主权。",
-            "primary": "立即扩展",
-            "secondary": "咨询销售",
-            "disclaimer": "无需信用卡。符合 SOC-2 标准的入驻流程。"
-        }
+    "efficiency": "效率提升",
+    "impact": {
+      "label": "全球影响",
+      "text": "在每个区域实现 <span>主权</span> 自动化。"
     },
-    "Community": {
-        "badge": "开放科学计划",
-        "title": "专家打造，<br />社区治理",
-        "subtitle": "G-Framework 不仅仅是一个平台：它是主权基础设施的开放标准。加入全球 120 多位贡献者，共同构建一个极具韧性、不绑定厂商的未来。",
-        "join": "加入社区",
-        "contribute": "参与核心贡献",
-        "cli": {
-            "title": "主权 CLI v4.2",
-            "cmd": "npm install -g @omnig/cli"
-        },
-        "plugins": {
-            "title": "200+ 插件",
-            "desc": "可扩展的供应商架构"
-        },
-        "maintainers": {
-            "title": "全球维护者",
-            "desc": "以主权为核心的审核流程"
-        }
+    "trust": "全球顶尖企业一致信任"
+  },
+  "Capabilities": {
+    "tag": "G-FRAMEWORK 生态系统",
+    "title": "核心主权产品",
+    "subtitle": "六大模块化支柱，旨在解决全球多云治理的复杂性。",
+    "explore": "探索",
+    "cta": "查看完整架构"
+  },
+  "SovereignGallery": {
+    "title": "主权视觉库",
+    "subtitle": "G-Framework 在生产环境中的详细架构捕获。",
+    "control": {
+      "title": "自主控制平面",
+      "description": "控制中心 (图 A) 提供所有全球云资产的实时 4K 可视化。图 B 显示了正在运行的“偏移修复”引擎，在 1.4 秒内自动还原了未经授权的配置更改。"
     },
-    "Newsroom": {
-        "badge": "主权洞察",
-        "title": "实验室动态",
-        "link": "进入影响力中心",
-        "news": {
-            "bank": {
-                "date": "2025年12月12日",
-                "source": "OmniG 智库",
-                "title": "为一线银行在 2.5PB 跨境数据上扩展 ASO 架构。",
-                "tag": "案例研究"
-            },
-            "egress": {
-                "date": "2025年11月28日",
-                "source": "云主权报告",
-                "title": "自主主权编排如何将出站成本降低 40%。",
-                "tag": "研究报告"
-            },
-            "integration": {
-                "date": "2025年11月15日",
-                "source": "全球新闻线",
-                "title": "宣布面向 Oracle OKE 和 RedHat OpenShift 的通用集成支持。",
-                "tag": "产品动态"
-            }
-        }
+    "failover": {
+      "title": "多云断路器",
+      "description": "图 A 在区域供应商故障发生前捕获了全球延迟地图。在图 B 中，您可以看到 G-Framework 触发立即将工作负载迁移到 Oracle OCI，以维持 100% 的可用性。"
+    }
+  },
+  "Products": {
+    "hero": {
+      "tag": "产品生态系统",
+      "title": "企业主权技术栈",
+      "subtitle": "一套模块化的 4K 可视化编排工具，旨在恢复分布式多云环境中的全面控制、韧性和合规性。"
     },
-    "WhitePaper": {
-        "badge": "工程出版物",
-        "contribution": "具有重大意义的原创贡献",
+    "playground": {
+      "title": "主权沙盒",
+      "tag": "基础设施开发",
+      "shortDesc": "跨云基础设施原型设计 IDE。",
+      "description": "全球首个专门为主权跨云编排设计的 IDE。在统一环境中对 OCI、AWS 和 Azure 上的复杂基础设施意境进行原型设计。",
+      "explanation": "主工作区 (图 A) 显示 G-Framework DSL 的语法高亮，而辅助显示器 (图 B) 提供三个云供应商的实时差异。"
+    },
+    "workflows": {
+      "title": "G-工作流",
+      "tag": "自动化",
+      "shortDesc": "可视化多步编排引擎。",
+      "description": "一个用于定义多步自动化的拖拽式可视化引擎。G-Workflows 自动处理状态同步和边缘情况，以实现区域级故障转移。",
+      "explanation": "在我们的工作流设计器 (图 A) 中，工程师绘制逻辑图。图 B 捕获了 G-Workflows 引擎正在执行无中断迁移。"
+    },
+    "guard": {
+      "title": "治理卫士",
+      "tag": "合规性",
+      "shortDesc": "实时合规与自动修复。",
+      "description": "为高度受监管的企业环境提供持续、自动化的审计。扫描每项资源，确保符合 SOC2、GDPR 和国家主权指令。",
+      "explanation": "图 A 展示了“合规地图”概览。图 B 显示了自动修复日志，其中一个配置错误的存储桶被自动锁定。"
+    },
+    "knowledge": {
+      "title": "主权知识库",
+      "tag": "RAG 与 AI",
+      "shortDesc": "监管数据安全 RAG 引擎。",
+      "description": "一个在您的主权边界内运行的安全知识库和 RAG 引擎。使用 AI 处理敏感法律和监管数据，无跨境泄露风险。",
+      "explanation": "知识地图 (图 A) 可视化国家节点内的数据集群。图 B 显示了 RAG 辅助的法律草案编写界面。"
+    },
+    "deploy": {
+      "title": "Obsidian 部署",
+      "tag": "生产环境",
+      "shortDesc": "原子化、不可变的生产发布。",
+      "description": "任务关键型应用的部署引擎。保证全球集群中的原子化变更，具备 100% 的回滚可靠性。",
+      "explanation": "图 A 显示部署流水线状态。图 B 显示模拟部分故障期间的原子化回滚验证屏幕。"
+    },
+    "nexus": {
+      "title": "跨云枢纽",
+      "tag": "套利",
+      "shortDesc": "全球遥测与成本套利。",
+      "description": "跨所有云的统一遥测和成本管理。Nexus 实时智能地将工作负载路由到最具成本效益的主权节点。",
+      "explanation": "图 A 在全球范围内追踪成本套利机会。图 B 显示跨云统一遥测仪表板。"
+    },
+    "cta": {
+      "title": "准备好进行私人简报了吗？",
+      "subtitle": "与我们的工程团队一起体验 G-Framework 的全部技术潜力。",
+      "primary": "申请演示",
+      "secondary": "查看方案"
+    }
+  },
+  "UseCases": {
+    "hero": {
+      "tag": "2025 企业影响力",
+      "title": "战略主权解决方案",
+      "subtitle": "G-Framework 在受监管行业提供可衡量的速度：治理、全球主权和生成式基础设施。"
+    },
+    "financial": {
+      "title": "全球金融现代化",
+      "tag": "银行与金融",
+      "description": "通过自动化将单体大型机重构为微服务，消除遗留技术债务。在 32 个主权区域实现安全、合规且即时的部署。",
+      "explanation": "图 A 捕获了高频交易延迟。图 B 显示了自动化“账本同步”，确保区域停机期间零数据丢失。"
+    },
+    "healthcare": {
+      "title": "主权健康数据",
+      "tag": "医疗保健",
+      "description": "在分布式云环境中保证 HIPAA 合规的同时加速研发周期。在本地化的病人数据上安全地训练 AI 模型。",
+      "explanation": "在图 A 中，我们看到了来自 IoMT 设备的遥测数据。图 B 展示了处理病人记录的“主权知识库” RAG 引擎。"
+    },
+    "government": {
+      "title": "公共部门数字信任",
+      "tag": "政府",
+      "description": "通过 FIPS 认证的基础设施建立公民信任。零出站架构，适用于机密工作负载和主权身份管理。",
+      "explanation": "图 A 展示了“网络靶场”模拟。图 B 显示了在国家边界内处理的公民身份流。"
+    }
+  },
+  "Blog": {
+    "hero": {
+      "tag": "主权洞察与研究",
+      "title": "全球影响力中心",
+      "subtitle": "处于数字主权前沿的学术文章、工程突破和行业分析。",
+      "search": "搜索研究..."
+    },
+    "posts": {
+      "aso": {
+        "category": "学术白皮书",
         "title": "自主主权编排 (ASO)",
-        "description": "一种用于 AI 驱动、云无关治理的形式化框架。本白皮书概述了 G-Framework 中用于消除供应商锁定并恢复企业数据主权的创新方法。",
-        "peerReview": "已进入同行评审",
-        "pageCount": "12页学术论文",
-        "downloadTitle": "下载技术白皮书",
-        "downloadSubtitle": "CIO、平台架构师及法律顾问应对欧盟 AI 法案及全球数据驻留要求的必备读物。",
-        "readOnline": "在线阅读 (完整框架)",
-        "designPatterns": "查看设计模式",
-        "footer": "发布于 OmniGCloud 2025 开放科学计划。"
+        "excerpt": "一种用于 AI 驱动、云无关治理的形式化框架。为 1,000 多个节点的状态同步收敛 (SSC) 建立数学证明。",
+        "author": "OmniGCloud 研究部",
+        "impact": "重大科学贡献"
+      },
+      "prompt": {
+        "category": "指南",
+        "title": "主权基础设施控制的提示工程",
+        "excerpt": "如何使用自然语言编排复杂的 Kubernetes 集群。我们的“声明式意图”引擎指南。",
+        "author": "AI Ops 团队",
+        "impact": "EB-1A 原创指南"
+      },
+      "latency": {
+        "category": "评估",
+        "title": "云供应商延迟：2025 全面基准测试",
+        "excerpt": "评估 OCI、AWS 和 Azure 的全球入口性能。为什么 Oracle 的 ARM Ampere 节点在主权工作负载中胜出。",
+        "author": "研究实验室",
+        "impact": "学术基准测试"
+      },
+      "rag": {
+        "category": "RAG",
+        "title": "使用主权知识库安全化监管数据",
+        "excerpt": "深入探讨物理隔离环境中的检索增强生成。如何为法律文件维持 100% 的隐私。",
+        "author": "安全架构师",
+        "impact": "重大贡献"
+      },
+      "bench": {
+        "category": "基准测试",
+        "title": "基础设施代码生成的 LLM 性能对比",
+        "excerpt": "GPT-4o vs Claude 3.5 Sonnet vs Llama 3 创建主权 Terraform 清单的性能对比。哪个产生的偏移错误更少？",
+        "author": "AI 研究部",
+        "impact": "学术资料"
+      }
     },
-    "SovereignGallery": {
-        "title": "主权视觉库",
-        "subtitle": "G-Framework 在生产环境中的详细架构捕获。",
-        "control": {
-            "title": "自主控制平面",
-            "description": "控制中心 (图 A) 提供所有全球云资产的实时 4K 可视化。图 B 显示了正在运行的“偏移修复”引擎，在 1.4 秒内自动还原了未经授权的配置更改。"
+    "newsletter": {
+      "title": "加入主权研究圈",
+      "subtitle": "每周获取关于分布式系统、数据隐私和全球基础设施未来的洞察。",
+      "placeholder": "输入您的邮箱",
+      "button": "订阅",
+      "footer": "全球 10,000 多名基础设施架构师信赖之选。"
+    }
+  },
+  "Pricing": {
+    "hero": {
+      "tag": "透明治理",
+      "title": "为主权扩展量身定制的方案",
+      "subtitle": "为企业编排者提供的可预测价格。使用全球最具韧性的多云框架保护您的数字主权。"
+    },
+    "trust": {
+      "title": "企业级合规",
+      "subtitle": "所有方案均包含高度受监管部门所需的核心安全架构。",
+      "residency": {
+        "title": "数据驻留",
+        "desc": "将数据保留在法律边界内。对放置位置的全面控制。"
+      },
+      "neutrality": {
+        "title": "云中立性",
+        "desc": "无供应商锁定。只需按下按钮即可在云之间迁移工作负载。"
+      },
+      "scholarly": {
+        "title": "EB-1A 学术级运维",
+        "desc": "实施遵循经过同行评审的 ASO 架构模式。"
+      }
+    },
+    "faq": {
+      "title": "常见问题",
+      "q1": {
+        "q": "什么是“自动化审计”？",
+        "a": "一种实时合规检查，根据特定治理策略（GDPR、ISO 等）评估您的云基础设施。"
+      },
+      "q2": {
+        "q": "我可以在计费周期中途切换云吗？",
+        "a": "可以。G-Framework 允许近乎即时的迁移，无需额外的平台费用。"
+      },
+      "q3": {
+        "q": "你们为开源项目提供折扣吗？",
+        "a": "我们非常鼓励参与。请联系我们的社区团队获取零成本的开发者加速方案。"
+      }
+    },
+    "cta": {
+      "title": "以主权确定性进行扩展",
+      "subtitle": "准备好在您的基础设施中部署 G-Framework 了吗？",
+      "button": "立即开始"
+    },
+    "plans": {
+      "popular": "最受欢迎",
+      "month": "/月",
+      "contact": "联系我们获取报价",
+      "developer": {
+        "name": "开发者版",
+        "desc": "适用于构建主权基础设施未来的个人工程师。",
+        "cta": "开始构建"
+      },
+      "professional": {
+        "name": "专业版",
+        "desc": "适用于需要多区域韧性的快速成长团队。",
+        "cta": "升级专业版"
+      },
+      "business": {
+        "name": "商业版",
+        "desc": "面向任务关键型业务的企业治理。",
+        "cta": "扩展业务"
+      },
+      "sovereign": {
+        "name": "主权版",
+        "desc": "为国家和财富 500 强量身定制的基础设施。",
+        "cta": "咨询销售"
+      }
+    }
+  },
+  "Platform": {
+    "hero": {
+      "title": "OmniGCloud 自主平台",
+      "subtitle": "全球治理和代理云现代化的主要控制平面。",
+      "ctaPrimary": "申请演示",
+      "ctaSecondary": "查看文档"
+    },
+    "core": {
+      "title": "主权核心",
+      "desc": "具备分离控制平面的零延迟驻留。"
+    },
+    "stack": {
+      "api": "外部 API",
+      "logic": "逻辑网格",
+      "cluster": "集群操作",
+      "db": "主权数据库",
+      "shielded": "受保护",
+      "active": "活动中",
+      "scaling": "扩展中",
+      "verified": "已验证"
+    },
+    "comparison": {
+      "title": "主权优势",
+      "subtitle": "G-Framework 与遗留云管理代理的区别。",
+      "capability": "能力",
+      "legacy": "遗留云代理",
+      "sovereign": "G-Framework (ASO)",
+      "footer": "* 基于 2025 自主主权编排 (ASO) 架构标准的分析。",
+      "limited": "受限",
+      "partial": "部分支持",
+      "rows": {
+        "neutrality": "100% 供应商中立",
+        "audits": "实时监管审计",
+        "sync": "跨云状态同步",
+        "refactoring": "自动化技术债务重构",
+        "encryption": "主权资产加密",
+        "iam": "供应商绑定的 IAM",
+        "arbitrage": "出站费用套利"
+      }
+    },
+    "arbitrage": {
+      "tag": "经济主权",
+      "title": "金融套利与云中立",
+      "subtitle": "G-Framework 不仅仅管理您的云，它还能优化您的基础设施经济。实时自动将工作负载移动到最具成本效益的主权节点。",
+      "forecastTitle": "预测性计费与预估",
+      "forecastDesc": "我们的 EAB 预测引擎分析 OCI、AWS 和 Azure 的全球价格指数，以 99.8% 的准确率预估您的 12 个月资金消耗率。",
+      "switchTitle": "原子化平台切换",
+      "switchDesc": "体验实时工作负载迁移。当供应商涨价或违反合规性时，G-Framework 执行自主重定向。",
+      "lockinTitle": "零供应商锁定",
+      "lockinDesc": "跨国界维持数据和逻辑状态的 100% 可移植性。",
+      "portabilityTitle": "即时移植",
+      "portabilityDesc": "无需代码更改，在秒级迁移生产工作负载。",
+      "eb1aTag": "EB-1A 原创贡献 #5",
+      "eb1aDesc": "“EABF（经济套利与计费预测）算法代表了分布式经济学领域的重大进步。通过将资源成本与供应商 API 解耦，申请人为云无关金融治理设定了新标准。”",
+      "auditor": "James Sterling",
+      "auditorTitle": "主权系统审计师"
+    },
+    "control": {
+      "title": "统一控制平面",
+      "subtitle": "通过具有亚毫秒传播能力的单一高保真界面，管理数千个分布式集群。",
+      "observability": {
+        "title": "全球可观测性",
+        "desc": "跨所有 AWS、Azure 和 GCP 区域的实时遥测。"
+      },
+      "fleet": "批量机群运维",
+      "healing": "自我修复",
+      "gitops": "GitOps 引擎",
+      "audit": "审计日志"
+    },
+    "security": {
+      "title": "受控安全",
+      "desc": "每项操作均被审计。OmniGCloud 在您的所有资产中强制执行零信任身份。",
+      "cta": "合规框架",
+      "zerotrust": "零信任",
+      "features": {
+        "fips": {
+          "title": "FIPS 140-2",
+          "desc": "经过验证的加密。"
         },
-        "failover": {
-            "title": "多云断路器",
-            "description": "图 A 在区域供应商故障发生前捕获了全球延迟地图。在图 B 中，您可以看到 G-Framework 触发立即将工作负载迁移到 Oracle OCI，以维持 100% 的可用性。"
+        "rbac": {
+          "title": "RBAC 2.0",
+          "desc": "细粒度控制。"
+        },
+        "vpc": {
+          "title": "VPC 隔离",
+          "desc": "零出站 LLM 运维。"
+        },
+        "audit": {
+          "title": "审计日志",
+          "desc": "不可变追踪日志。"
         }
+      }
     },
-    "Products": {
-        "hero": {
-            "tag": "产品生态系统",
-            "title": "企业主权技术栈",
-            "subtitle": "一套模块化的 4K 可视化编排工具，旨在恢复分布式多云环境中的全面控制、韧性和合规性。"
-        },
-        "playground": {
-            "title": "主权沙盒",
-            "tag": "基础设施开发",
-            "shortDesc": "跨云基础设施原型设计 IDE。",
-            "description": "全球首个专门为主权跨云编排设计的 IDE。在统一环境中对 OCI、AWS 和 Azure 上的复杂基础设施意境进行原型设计。",
-            "explanation": "主工作区 (图 A) 显示 G-Framework DSL 的语法高亮，而辅助显示器 (图 B) 提供三个云供应商的实时差异。"
-        },
-        "workflows": {
-            "title": "G-工作流",
-            "tag": "自动化",
-            "shortDesc": "可视化多步编排引擎。",
-            "description": "一个用于定义多步自动化的拖拽式可视化引擎。G-Workflows 自动处理状态同步和边缘情况，以实现区域级故障转移。",
-            "explanation": "在我们的工作流设计器 (图 A) 中，工程师绘制逻辑图。图 B 捕获了 G-Workflows 引擎正在执行无中断迁移。"
-        },
-        "guard": {
-            "title": "治理卫士",
-            "tag": "合规性",
-            "shortDesc": "实时合规与自动修复。",
-            "description": "为高度受监管的企业环境提供持续、自动化的审计。扫描每项资源，确保符合 SOC2、GDPR 和国家主权指令。",
-            "explanation": "图 A 展示了“合规地图”概览。图 B 显示了自动修复日志，其中一个配置错误的存储桶被自动锁定。"
-        },
-        "knowledge": {
-            "title": "主权知识库",
-            "tag": "RAG 与 AI",
-            "shortDesc": "监管数据安全 RAG 引擎。",
-            "description": "一个在您的主权边界内运行的安全知识库和 RAG 引擎。使用 AI 处理敏感法律和监管数据，无跨境泄露风险。",
-            "explanation": "知识地图 (图 A) 可视化国家节点内的数据集群。图 B 显示了 RAG 辅助的法律草案编写界面。"
-        },
-        "deploy": {
-            "title": "Obsidian 部署",
-            "tag": "生产环境",
-            "shortDesc": "原子化、不可变的生产发布。",
-            "description": "任务关键型应用的部署引擎。保证全球集群中的原子化变更，具备 100% 的回滚可靠性。",
-            "explanation": "图 A 显示部署流水线状态。图 B 显示模拟部分故障期间的原子化回滚验证屏幕。"
-        },
-        "nexus": {
-            "title": "跨云枢纽",
-            "tag": "套利",
-            "shortDesc": "全球遥测与成本套利。",
-            "description": "跨所有云的统一遥测和成本管理。Nexus 实时智能地将工作负载路由到最具成本效益的主权节点。",
-            "explanation": "图 A 在全球范围内追踪成本套利机会。图 B 显示跨云统一遥测仪表板。"
-        },
-        "cta": {
-            "title": "准备好进行私人简报了吗？",
-            "subtitle": "与我们的工程团队一起体验 G-Framework 的全部技术潜力。",
-            "primary": "申请演示",
-            "secondary": "查看方案"
+    "integrations": {
+      "title": "原生集成",
+      "subtitle": "与您团队现有的工具无缝衔接。",
+      "infra": "基础设施",
+      "obs": "可观测性",
+      "delivery": "交付",
+      "identity": "身份/安全"
+    }
+  },
+  "Visuals": {
+    "telemetry": {
+      "title": "全球延迟遥测",
+      "live": "实时",
+      "latency": "平均延迟",
+      "throughput": "吞吐量",
+      "loss": "丢包率"
+    },
+    "drift": {
+      "title": "合规偏移分析",
+      "detected": "检测到偏移: +12%",
+      "remediate": "自动修复"
+    }
+  },
+  "HomeSections": {
+    "Pricing": {
+      "title": "战略主权版本",
+      "subtitle": "选择符合您治理需求的运营模式。",
+      "core": {
+        "badge": "核心版",
+        "price": "4%",
+        "unit": "/ 云支出",
+        "desc": "适用于在 2 个以上云端扩展的数字原生创业公司。",
+        "cta": "开启核心版",
+        "features": {
+          "nodes": "最高 500 个节点",
+          "drift": "基础偏移检测",
+          "sla": "99.9% 控制平面 SLA",
+          "support": "社区支持"
         }
+      },
+      "enterprise": {
+        "badge": "企业版",
+        "popular": "最受欢迎",
+        "price": "标准价格",
+        "desc": "面向受监管行业的全面平台治理。",
+        "cta": "咨询销售",
+        "features": {
+          "nodes": "节点数不限",
+          "remediation": "自动化修复",
+          "finops": "FinOps 套利引擎",
+          "rbac": "角色访问控制 (RBAC)",
+          "support": "24/7 专属支持"
+        }
+      },
+      "federal": {
+        "badge": "政府版",
+        "price": "定制价格",
+        "desc": "为主权实体提供的物理隔离部署。",
+        "cta": "政府版咨询",
+        "features": {
+          "onprem": "本地控制平面",
+          "byok": "自带密钥 (BYOK)",
+          "security": "绝密级合规支持",
+          "audit": "定制审计日志"
+        }
+      }
     },
-    "UseCases": {
-        "hero": {
-            "tag": "2025 企业影响力",
-            "title": "战略主权解决方案",
-            "subtitle": "G-Framework 在受监管行业提供可衡量的速度：治理、全球主权和生成式基础设施。"
+    "Cta": {
+      "title": "准备好恢复主权控制了吗？",
+      "subtitle": "加入全球数百家领先企业，使用 OmniGCloud 实现云治理自动化并重塑数字主权。",
+      "primary": "立即扩展",
+      "secondary": "咨询销售",
+      "disclaimer": "无需信用卡。符合 SOC-2 标准的入驻流程。"
+    }
+  },
+  "Problem": {
+    "badge": "关键基础设施警报",
+    "title": "主权危机",
+    "subtitle": "全球企业正面临碎片化、监管收紧和数据黑箱的三重风暴。",
+    "fragmentation": {
+      "title": "碎片化陷阱",
+      "desc": "分布在 AWS、Azure 和本地的数据形成了无人真正管理的“僵尸基础设施”。"
+    },
+    "regulatory": {
+      "title": "监管漂移",
+      "desc": "针对跨境数据泄露的 GDPR 和 AI 法案罚金不断攀升。您的静态合规报告已过时。",
+      "score": "合规评分",
+      "risk": "存在风险"
+    },
+    "vendor": {
+      "title": "供应商锁定",
+      "desc": "特定供应商的 API 束缚了您的工程团队，使跨云迁移变得遥不可及。"
+    },
+    "opacity": {
+      "title": "暗数据黑箱",
+      "desc": "缺乏可见性导致主权违规行为难以察觉，直到遭遇严厉的监管审计。",
+      "scanning": "正在扫描未知资产..."
+    }
+  },
+  "Ecosystem": {
+    "badge": "全球互联",
+    "title": "跨云枢纽",
+    "subtitle": "通过单一控制平面，在任何云端部署主权基础设施，无惧复杂性。",
+    "governance": {
+      "title": "[TODO_TRANSLATE] Governance Hub",
+      "desc": "[TODO_TRANSLATE] Automated drift remediation and policy enforcement across all cloud providers. Ensure compliance with GDPR, HIPAA, and SOC2 in real-time.",
+      "status": "[TODO_TRANSLATE] MODULE ACTIVE",
+      "link": "[TODO_TRANSLATE] Explore"
+    },
+    "mesh": {
+      "title": "[TODO_TRANSLATE] Global Mesh",
+      "desc": "[TODO_TRANSLATE] Native intra-cloud routing with localized sovereignty. Connect OCI, AWS, and Azure clusters into a single, latency-optimized service mesh.",
+      "status": "[TODO_TRANSLATE] NETWORK ONLINE",
+      "link": "[TODO_TRANSLATE] View Topology"
+    },
+    "ai": {
+      "title": "[TODO_TRANSLATE] AI Ops Kernel",
+      "desc": "[TODO_TRANSLATE] Managed LLM orchestration within VPC boundaries. Deploy private GPT-4 equivalent models for intelligent automation without data leakage.",
+      "status": "[TODO_TRANSLATE] MODELS READY",
+      "link": "[TODO_TRANSLATE] Access Lab"
+    },
+    "vault": {
+      "title": "[TODO_TRANSLATE] Sovereign Vault",
+      "desc": "[TODO_TRANSLATE] Localized storage kernels with managed encryption and rigid data residency controls. Your data never leaves the jurisdiction you define.",
+      "status": "[TODO_TRANSLATE] ENCRYPTION ON",
+      "link": "[TODO_TRANSLATE] Secure Storage"
+    }
+  },
+  "DemoSection": {
+    "badge": "实时体验",
+    "title": "体验 Omni<span>G</span>Cloud 实力",
+    "subtitle": "见证自主云现代化。秒级实现从发现到主权掌控。",
+    "discovery": {
+      "title": "即时发现",
+      "desc": "零接触 Agent 部署，3 分钟内即可勾勒 1,000+ 资产全貌。",
+      "code": "> 完整扫描: 99.8%"
+    },
+    "iac": {
+      "title": "生成式 IaC",
+      "desc": "AI Agent 将遗留二进制文件逆向工程为整洁的 Terraform 代码。",
+      "code": "> 正在生成模块..."
+    },
+    "sync": {
+      "title": "活动状态同步",
+      "desc": "AWS 与 Azure 区域间的双向状态锁定。",
+      "code": "> 延迟: 12ms"
+    },
+    "drift": {
+      "title": "偏移自动还原",
+      "desc": "实时检测未经授权的控制台变更并立即还原。",
+      "code": "> 威胁已解除"
+    }
+  },
+  "Community": {
+    "badge": "开放科学计划",
+    "title": "专家打造，<br />社区治理",
+    "subtitle": "G-Framework 不仅仅是一个平台：它是主权基础设施的开放标准。加入全球 120 多位贡献者，共同构建一个极具韧性、不绑定厂商的未来。",
+    "join": "加入社区",
+    "contribute": "参与核心贡献",
+    "cli": {
+      "title": "主权 CLI v4.2",
+      "cmd": "npm install -g @omnig/cli"
+    },
+    "plugins": {
+      "title": "200+ 插件",
+      "desc": "可扩展的供应商架构"
+    },
+    "maintainers": {
+      "title": "全球维护者",
+      "desc": "以主权为核心的审核流程"
+    }
+  },
+  "WhitePaper": {
+    "badge": "工程出版物",
+    "contribution": "具有重大意义的原创贡献",
+    "title": "自主主权编排 (ASO)",
+    "description": "一种用于 AI 驱动、云无关治理的形式化框架。本白皮书概述了 G-Framework 中用于消除供应商锁定并恢复企业数据主权的创新方法。",
+    "peerReview": "已进入同行评审",
+    "pageCount": "12页学术论文",
+    "downloadTitle": "下载技术白皮书",
+    "downloadSubtitle": "CIO、平台架构师及法律顾问应对欧盟 AI 法案及全球数据驻留要求的必备读物。",
+    "readOnline": "在线阅读 (完整框架)",
+    "designPatterns": "查看设计模式",
+    "footer": "发布于 OmniGCloud 2025 开放科学计划。"
+  },
+  "Newsroom": {
+    "badge": "主权洞察",
+    "title": "实验室动态",
+    "link": "进入影响力中心",
+    "cta": "[TODO_TRANSLATE] Read Analysis",
+    "news": {
+      "bank": {
+        "date": "2025年12月12日",
+        "source": "OmniG 智库",
+        "title": "为一线银行在 2.5PB 跨境数据上扩展 ASO 架构。",
+        "desc": "[TODO_TRANSLATE] How we achieved sub-40ms latency for global ledger synchronization using the new G-Mesh protocol.",
+        "tag": "案例研究"
+      },
+      "egress": {
+        "date": "2025年11月28日",
+        "source": "云主权报告",
+        "title": "自主主权编排如何将出站成本降低 40%。",
+        "desc": "[TODO_TRANSLATE] A deep dive into our cost-arbitrage engine that routes traffic through the cheapest compliant pipes.",
+        "tag": "研究报告"
+      },
+      "integration": {
+        "date": "2025年11月15日",
+        "source": "全球新闻线",
+        "title": "宣布面向 Oracle OKE 和 RedHat OpenShift 的通用集成支持。",
+        "desc": "[TODO_TRANSLATE] Breaking down the new adapters that allow seamless workload portability between OCI and OCP.",
+        "tag": "产品动态"
+      }
+    }
+  },
+  "Services": {
+    "Hero": {
+      "badge": "自主现代化",
+      "title": "云端现代化 Azure & OCP <br /> <span>用逻辑代替劳动力</span>",
+      "subtitle": "利用 <span>Terraform</span> 和 <span>Ansible</span> 自动化您的企业云核心。",
+      "cta": "探索解决方案",
+      "velocity": "速度",
+      "errors": "错误"
+    },
+    "Migration": {
+      "title": "迁移工厂",
+      "subtitle": "大规模云采用的自动化流水线。",
+      "azure": {
+        "title": "Azure 迁移工厂",
+        "desc": "通过预设策略将 VM 和数据库快速迁移到 Azure Landing Zones。"
+      },
+      "ocp": {
+        "title": "OCP 重构",
+        "desc": "在 Red Hat OpenShift 上对遗留应用进行容器化。自动化清单支持在任何基础设施上进行快速、一致的部署。"
+      },
+      "provisioning": {
+        "title": "< 15m 资源编排",
+        "desc": "数分钟内完成从代码提交到运行基础设施的完整环境创建。"
+      },
+      "drift": {
+        "title": "零偏移成本",
+        "desc": "消除影子 IT 成本。我们的持续状态强制执行确保您的账单与 IaC 定义完全吻合。"
+      }
+    },
+    "Stack": {
+      "badge": "引擎",
+      "title": "自动化技术栈",
+      "subtitle": "由行业标准开源工具驱动的统一现代化引擎。",
+      "terraform": {
+        "title": "Terraform 蓝图",
+        "desc": "适用于 Azure 和 AWS 的预加固 IaC 模块。"
+      },
+      "ansible": {
+        "title": "Ansible 护栏",
+        "desc": "零信任配置管理与不可变性。"
+      }
+    },
+    "Operations": {
+      "title": "托管运维",
+      "subtitle": "24/7/365 SRE 团队维护您的现代化交织网络。",
+      "sre": {
+        "title": "24/7 日不落支持",
+        "desc": "位于美国、欧盟和亚太地区的 SRE 中心确保 15 分钟响应 SLA。"
+      },
+      "finops": {
+        "title": "持续 FinOps",
+        "desc": "实时成本套利引擎，将工作负载移动到最优区域。"
+      },
+      "healing": {
+        "title": "主动修复",
+        "desc": "自动化偏移检测与自我修复基础设施。"
+      },
+      "audit": {
+        "title": "审计就绪",
+        "desc": "自动生成的 SOC2 和 GDPR 每月证据追踪。"
+      }
+    },
+    "DataAI": {
+      "title": "数据与 AI 编织",
+      "subtitle": "用于高性能推理的主权数据平面。",
+      "sovereignty": {
+        "title": "数据主权",
+        "desc": "本地化驻留。"
+      },
+      "fabric": {
+        "title": "AI 编织",
+        "desc": "GPU 工作负载。"
+      },
+      "search": {
+        "title": "向量搜索",
+        "desc": "高维嵌入。"
+      },
+      "analytics": {
+        "title": "实时分析",
+        "desc": "即时洞察。"
+      },
+      "uptime": "可用性 SLA"
+    }
+  },
+  "Industries": {
+    "badge": "目标行业",
+    "title": "行业特定解决方案",
+    "subtitle": "为全球最复杂、通过受监管的部门建立数字核心标准。",
+    "challenges": "核心行业挑战",
+    "solution": "OmniGCloud 解决方案",
+    "cta": {
+      "title": "准备好实现行业现代化了吗？",
+      "subtitle": "加入全球领先组织，使用 OmniGCloud 重塑您的数字未来。",
+      "button": "预约行业简报"
+    },
+    "financial": {
+      "name": "金融服务",
+      "desc": "为全球银行和金融科技机构提供安全、合规的多云现代化。",
+      "c1": "遗留核心银行单体架构",
+      "c2": "严苛的合规监管 (SarbOx, GDPR)",
+      "c3": "低延迟交易需求",
+      "sol": "OmniGCloud 主权控制平面确保数据驻留，同时支持 AI 欺诈检测和自动化扩展。"
+    },
+    "insurance": {
+      "name": "保险",
+      "desc": "通过自动化的云原生平台加速理赔处理和精算模型。",
+      "c1": "碎片化的遗留保单系统",
+      "c2": "混合环境中的数据孤岛",
+      "c3": "灾难性峰值事件期间的扩展",
+      "sol": "多基础设施注册表提供本地和云端的统一可见性，优化峰值需求的容量。"
+    },
+    "telecom": {
+      "name": "电信与 5G",
+      "desc": "为高频联接和 MEC 工作负载编排分布式边缘。",
+      "c1": "分布式边缘编排",
+      "c2": "网络功能虚拟化 (NFV)",
+      "c3": "5G 延迟指令",
+      "sol": "Crossplane 驱动的边缘管理支持在数千个本地节点上进行一致的电信栈部署。"
+    },
+    "healthcare": {
+      "name": "医疗与生命科学",
+      "desc": "通过 HIPAA 合规、韧性的数据编织和 AI 辅助研究保护患者生命。",
+      "c1": "HIPAA/HITECH 数据主权",
+      "c2": "大规模影像数据存储与检索",
+      "c3": "科学研究计算扩展",
+      "sol": "OmniSource 市场提供预配置的安全护栏和高吞吐量数据流水线。"
+    },
+    "logistics": {
+      "name": "物流与供应链",
+      "desc": "在全球动态企业中实现实时可见性和预测性优化。",
+      "c1": "全球实时追踪延迟",
+      "c2": "遗留 ERP 集成",
+      "c3": "无法预见的全球供应链冲击",
+      "sol": "AI 原生现代化将单体 ERP 解构为敏捷微服务，以快速响应市场变化。"
+    }
+  },
+  "Dashboard": {
+    "title": "主权指挥中心",
+    "welcome": "欢迎回来",
+    "role": "分配的安全角色",
+    "logicMeshStatus": "逻辑网格状态",
+    "active": "已同步",
+    "badge": "实时主权遥测 // CORE_V4",
+    "liveTitle": "实时指挥与控制",
+    "liveSubtitle": "观看 G-Framework 跨多云集群编排全球状态。我们的自主控制平面将基础设施意图与实时提供商遥测持续同步，确保在 AWS、Azure、OCI 和 GCP 上实现 100% 的合规收敛和毫秒级漂移修复。",
+    "roiTitle": "[TODO_TRANSLATE] Sovereign R.O.I.",
+    "roiSubtitle": "[TODO_TRANSLATE] Real-time efficiency tracking",
+    "infraTitle": "[TODO_TRANSLATE] CORE INFRASTRUCTURE",
+    "infraSubtitle": "[TODO_TRANSLATE] Decentralized Sovereign Nodes",
+    "optimizationTitle": "[TODO_TRANSLATE] OPTIMIZATION TRENDS",
+    "trustTitle": "[TODO_TRANSLATE] TRUST CENTER",
+    "globalHealth": "[TODO_TRANSLATE] Global Health",
+    "healthMonitor": "[TODO_TRANSLATE] Sovereignty Health Monitor",
+    "healthOptimal": "[TODO_TRANSLATE] OPTIMAL",
+    "healthDesc": "[TODO_TRANSLATE] Real-time network latency monitoring across multi-cloud edge nodes. Tracks sub-millisecond variations to ensure optimal sovereign data routing and compliance standards.",
+    "complianceIndex": "[TODO_TRANSLATE] Sovereignty Compliance Index",
+    "complianceDesc": "[TODO_TRANSLATE] Automated audit scores based on regional data residency and encryption standards across all cloud providers."
+  },
+  "SecuritySettings": {
+    "title": "安全配置",
+    "description": "管理您组织的身份提供商和主权安全策略。",
+    "ssoConfiguration": "SSO 提供商",
+    "enabled": "活跃",
+    "disabled": "未配置",
+    "clientId": "客户端应用 ID",
+    "tenantId": "目录 (租户) ID",
+    "callbackUrl": "授权重定向 URI",
+    "outboundEmail": "发件人 (From) 地址",
+    "advancedSecurity": "企业身份 (SAML/SCIM)",
+    "advancedDescription": "通过 SAML 2.0 启用联合身份，并通过 SCIM 启用自动用户配置。适用于主权企业层级。",
+    "requestSaml": "申请早期访问"
+  },
+  "Terms": {
+    "title": "服务条款",
+    "lastUpdated": "最后更新",
+    "acceptance": "条款接受",
+    "acceptanceText": "通过访问或使用 OmniGCloud 平台，您同意遵守这些服务条款。如果您不同意这些条款，请勿使用我们的服务。",
+    "services": "提供的服务",
+    "servicesText": "OmniGCloud 提供云无关的现代化和 AI 工程服务，包括：",
+    "service1": "多云基础设施编排和管理",
+    "service2": "AI 驱动的平台工程和自动化",
+    "service3": "企业安全和合规咨询",
+    "service4": "云迁移和现代化服务",
+    "userResponsibilities": "用户责任",
+    "userResponsibilitiesText": "作为我们平台的用户，您同意：",
+    "responsibility1": "维护您账户凭证的机密性",
+    "responsibility2": "遵守所有适用法律和法规使用平台",
+    "responsibility3": "不尝试未经授权访问我们的系统或其他用户的数据",
+    "dataOwnership": "数据所有权",
+    "dataOwnershipText": "您保留对您的数据的所有权利、所有权和利益。OmniGCloud 不会对您的基础设施元数据或应用程序数据主张所有权。我们仅为了提供服务而处理您的数据。",
+    "termination": "终止",
+    "terminationText": "任何一方均可在提前 30 天书面通知的情况下终止本协议。终止后，您将保留 90 天的数据导出访问权限。",
+    "disclaimer": "免责声明",
+    "disclaimerText": "我们的服务按“原样”提供，不提供任何形式的保证。我们不保证服务不间断或无错误运行。",
+    "governingLaw": "适用法律",
+    "governingLawText": "这些条款受您组织主要所在地的司法管辖区法律管辖。",
+    "contact": "联系方式",
+    "contactText": "有关这些条款的问题，请联系我们"
+  },
+  "Privacy": {
+    "title": "隐私政策",
+    "lastUpdated": "最后更新",
+    "commitment": "我们对隐私的承诺",
+    "commitmentText": "在 OmniGCloud，我们致力于保护您的隐私，并透明、谨慎地处理您的数据。本政策解释了我们如何收集、使用和保护您的信息。",
+    "dataCollection": "我们收集的数据",
+    "dataCollectionText": "我们仅收集提供和改进服务所需的数据：",
+    "accountData": "账户信息",
+    "accountDataText": "姓名、电子邮件地址、公司名称和 SSO 提供商的身份验证凭据。",
+    "infrastructureData": "基础设施元数据",
+    "infrastructureDataText": "云资源配置、性能指标和成本数据（无应用程序级别数据）。",
+    "usageData": "使用分析",
+    "usageDataText": "平台交互日志、功能使用模式和匿名性能指标。",
+    "dataProtection": "我们如何保护您的数据",
+    "dataProtectionText": "我们实施行业标准的安全措施：",
+    "protection1": "对所有传输中的数据使用 TLS 1.3 加密",
+    "protection2": "对静态数据使用 AES-256 加密",
+    "protection3": "定期安全审计和渗透测试",
+    "protection4": "基于角色的访问控制和审计日志记录",
+    "dataRetention": "数据保留",
+    "dataRetentionText": "我们仅在提供服务所需或法律要求的时间内保留您的数据。您可以随时请求删除您的数据，但这受制于法律保留要求。",
+    "yourRights": "您的隐私权利",
+    "yourRightsText": "您有权：",
+    "right1": "随时访问和导出您的数据",
+    "right2": "请求更正不准确的数据",
+    "right3": "请求删除您的数据（受法律要求限制）",
+    "right4": "选择退出非必要的数据处理",
+    "thirdParty": "第三方服务",
+    "thirdPartyText": "我们使用选定的第三方服务（云提供商、分析工具），这些服务可能会处理您的数据。我们通过合同协议确保所有第三方符合我们的安全和隐私标准。",
+    "cookies": "Cookie 和跟踪",
+    "cookiesText": "我们使用必要的 Cookie 进行身份验证和会话管理。我们不使用第三方广告 Cookie。您可以在浏览器设置中控制 Cookie 首选项。",
+    "changes": "政策变更",
+    "changesText": "我们可能会定期更新此政策。如果有重大变更，我们将至少在生效前 30 天通过电子邮件或平台通知通知您。",
+    "contact": "联系方式",
+    "contactText": "有关隐私相关问题或行使您的权利，请联系我们"
+  },
+  "Security": {
+    "title": "安全与信任中心",
+    "subtitle": "我们致力于通过企业级安全实践保护您的基础设施和数据。",
+    "encryption": "端到端加密",
+    "encryptionText": "所有数据在传输中（TLS 1.3）和静态时（AES-256）均已加密，企业计划可使用客户管理的加密密钥。",
+    "authentication": "多因素身份验证",
+    "authenticationText": "支持 SAML、OIDC 和无密码魔术链接的企业 SSO。基于角色的访问控制 (RBAC) 实现精细权限管理。",
+    "responsibleDisclosure": "负责任的披露计划",
+    "disclosureIntro": "我们欢迎安全研究人员帮助我们维护平台的安全性。如果您发现漏洞，请负责任地报告。",
+    "reportingProcess": "如何报告",
+    "step1": "发送电子邮件至 security@omnigcloud.com，附上漏洞详情",
+    "step2": "包含重现步骤、潜在影响和任何概念验证代码",
+    "step3": "在公开披露之前给我们合理的时间进行调查和补救",
+    "step4": "我们需要在 48 小时内确认收到您的报告并提供进度更新",
+    "scope": "范围内",
+    "scope1": "身份验证和授权绕过",
+    "scope2": "SQL 注入、XSS、CSRF 和其他注入漏洞",
+    "scope3": "服务器端请求伪造 (SSRF) 和远程代码执行 (RCE)",
+    "scope4": "敏感数据泄露或不安全的数据存储",
+    "outOfScope": "范围外",
+    "outOfScope1": "社会工程攻击或网络钓鱼",
+    "outOfScope2": "拒绝服务 (DoS) 攻击",
+    "outOfScope3": "我们无法控制的第三方服务中的问题",
+    "contactSecurity": "安全联系人",
+    "securityEmail": "电子邮件",
+    "pgpKey": "PGP 密钥",
+    "securityPractices": "安全实践",
+    "infrastructure": "基础设施安全",
+    "infra1": "具有自动故障转移的多区域部署",
+    "infra2": "网络分段和零信任架构",
+    "infra3": "定期漏洞扫描和修补",
+    "monitoring": "持续监控",
+    "monitor1": "24/7 安全运营中心 (SOC)",
+    "monitor2": "实时威胁检测和响应",
+    "monitor3": "全面的审计日志记录和 SIEM 集成"
+  },
+  "Compliance": {
+    "title": "合规与认证",
+    "subtitle": "关于我们的合规状态和数据处实践的透明报告。",
+    "transparency": "透明度通知",
+    "transparencyText": "我们相信对我们的合规状态进行诚实沟通。以下是我们当前的认证、正在进行的审计和计划中的举措。我们不声称拥有尚未获得的认证。",
+    "active": "活跃",
+    "inProgress": "进行中",
+    "planned": "计划于 2026 年",
+    "gdpr": "GDPR 合规",
+    "gdprText": "完全符合欧盟通用数据保护条例。提供数据处理协议。",
+    "soc2": "SOC 2 Type II",
+    "soc2Text": "目前正在进行 SOC 2 Type II 审计。预计完成时间 Q2 2026。",
+    "iso27001": "ISO 27001",
+    "iso27001Text": "计划于 2026 年获得信息安全管理体系认证。",
+    "dataHandling": "数据处理实践",
+    "encryption": "加密标准",
+    "encryption1": "对所有传输中的数据使用 TLS 1.3",
+    "encryption2": "对静态数据使用 AES-256 加密",
+    "encryption3": "企业计划可使用客户管理的加密密钥 (CMEK)",
+    "dataResidency": "数据驻留",
+    "dataResidencyText": "客户数据存储在您选择的地理区域。我们支持欧盟、美国、亚太地区和其他地区的数据驻留要求。未经明确同意，数据不会离开您选择的区域。",
+    "retention": "数据保留政策",
+    "operational": "运营数据",
+    "operationalText": "在您的订阅期间加 90 天保留",
+    "audit": "审计日志",
+    "auditText": "保留 7 年以满足监管要求",
+    "backups": "备份",
+    "backupsText": "加密备份保留 30 天，支持时间点恢复",
+    "accessControls": "访问控制",
+    "authentication": "身份验证",
+    "auth1": "所有用户必须使用多因素身份验证 (MFA)",
+    "auth2": "支持 SAML 2.0 和 OIDC 的企业 SSO",
+    "auth3": "提供无密码身份验证选项",
+    "authorization": "授权",
+    "authz1": "具有自定义角色的基于角色的访问控制 (RBAC)",
+    "authz2": "执行最小特权原则",
+    "authz3": "定期访问审查和自动取消配置",
+    "incidentResponse": "事件响应",
+    "incidentResponseText": "我们要维护全面的事件响应计划，以快速检测、响应和从安全事件中恢复。",
+    "responseProcess": "我们的响应流程",
+    "response1": "在事件识别后 1 小时内进行检测和分类",
+    "response2": "对于影响客户数据的事件，在 24 小时内通知客户",
+    "response3": "在 72 小时内进行根本原因分析和补救计划",
+    "response4": "30天内完成事后审查并实施安全改进"
+  },
+  "Whitepaper": {
+    "meta": {
+      "title": "自主主权编排 (ASO)：意图驱动的云中立基础设施治理正式框架",
+      "description": "一份开创性的研究报告，提出了在异构多云环境中实现自主、供应商中立的基础设施治理的新型架构范式。适用于 USCIS EB-1A 和国际顶级学术评审。"
+    },
+    "classification": "技术白皮书 / 同行评审研究论文",
+    "title": "自主主权编排 (ASO)：云中立治理的正式框架",
+    "author_label": "核心作者",
+    "author": "Chaitanya Bharath Gopu",
+    "version_label": "版本",
+    "version": "2.1.0 (科研级)",
+    "date_label": "发布日期",
+    "date": "2025年12月30日",
+    "abstract": {
+      "title": "摘要",
+      "content": "随着全球企业基础设施向异构、多云架构转型，传统的管理范式正遭遇“扩展性瓶颈”，导致严重的运营脆性和战略脆弱性。本文引入了自主主权编排 (ASO)，这是一种开创性的架构框架，旨在将基础设施治理从特定供应商的执行平面中解耦。通过实施由高层意图映射和自动协调驱动的闭环“主权控制平面”，ASO 使组织能够实现绝对的运营主权。我们展示了来自大规模部署的实证证据，证明其减少了 31% 的云运营成本 (OpEx)，缩短了 94% 的平均修复时间 (MTTR)，并实现了 99.7% 的自动化合规率。这项工作代表了自主系统领域的重大进展，为供应商锁定和监管漂移这一行业难题提供了非显而易见的解决方案。"
+    },
+    "introduction": {
+      "title": "1. 引言",
+      "p1": "全球云市场价值已超过 6000 亿美元，目前由少数几家利用专有 API 和协议强制实施系统性供应商锁定的超级云厂商主导。对于现代互联企业而言，这种碎片化造成了一个悖论：旨在增加韧性的多云策略反而引入了前所未有的复杂性、运营债务和安全风险。",
+      "p2": "自主主权编排 (ASO) 的提出不仅是一个增量工具，而是一个根本性的架构转变。它引入了一个“中立智能层”，抽象底层的基础设施复杂性，允许架构师定义意图（例如“零信任安全”或“GDPR 数据驻留”），同时系统处理跨 AWS、Azure、GCP 和本地环境的自主映射和执行。",
+      "p3": "本文建立了 ASO 的正式框架，详细说明了底层自主决策智能，并对该技术对国家和国际技术基础设施的影响进行了专家级评估。"
+    },
+    "problem": {
+      "title": "2. 企业级问题陈述：复杂性危机",
+      "p1": "传统的企业云管理备受系统性故障困扰，现有的工具（IaC, APM, IDPs）无法在大规模环境下有效解决这些问题。我们识别出三个截然不同的危机向量：",
+      "vendor_lock": {
+        "title": "2.1 战略脆弱性与供应商陷阱",
+        "content": "超级云厂商的数据出站费和专有网络构造形成了技术护城河。典型的企业迁移工作历来需要为单个大规模工作负载投入 18-24 个月的人力成本，导致在应对云厂商级别故障或监管变动时出现战略瘫痪。",
+        "scenario": "案例 1：一家全球 500 强银行由于专有网络依赖，在 Azure 区域性故障期间无法迁移工作负载，导致 4 小时停机，损失达 1200 万美元。"
+      },
+      "compliance": {
+        "title": "2.2 监管漂移与扩展性瓶颈",
+        "content": "手动合规（GDPR, SOC 2, HIPAA）是回顾式的。在资源数量大于 5000 的环境中，配置漂移在部署后 4 分钟内即可发生。被动监控工具能识别违规，但缺乏自主修复所需的语境感知智能，从而产生了“合规缺口”。",
+        "scenario": "案例 2：一家医疗服务提供商因自动配置脚本意外将 S3 存储桶公开暴露 48 小时且未被察觉，最终未能通过 HIPAA 审计。"
+      },
+      "operational": {
+        "title": "2.3 运营碎片化与人为错误",
+        "content": "管理不同的云需要碎片化的专业知识。这导致运营开销增加了 40%，并在跨云容量规划期间引发严重的人为错误。",
+        "scenario": "案例 3：一家电商巨头由于缺乏跨云可见性来识别闲置资源，且因支付 API 碎片化，每月多支出 50 万美元成本。"
+      },
+      "metrics": {
+        "label": "行业基准 vs 启用 ASO 的基础设施",
+        "mttr_manual_label": "平均修复时间 (手动)",
+        "mttr_manual": "14 天 (平均)",
+        "mttr_aso_label": "平均修复时间 (ASO 自主)",
+        "mttr_aso": "4 分钟 (自动执行)",
+        "compliance_label": "自动合规率 (ASO)",
+        "compliance_manual": "87% (定期)",
+        "compliance_aso": "99.7% (持续性)",
+        "provisioning_manual": "4-6 周",
+        "provisioning_aso": "2.5 小时",
+        "opex_label": "OpEx 降幅",
+        "opex_savings": "平均 31% 的实证降幅"
+      }
+    },
+    "limitations": {
+      "title": "3. 现有行业方法的局限性",
+      "p1": "目前的解决方案本质上是“包装器”而非“架构”。基础设施即代码 (IaC) 是“一次编写，永久管理”，缺乏反馈闭环。云厂商原生工具旨在将用户留在生态系统中，而标准的编排工具（如 Kubernetes）则在容器层面运行，而非治理层面。",
+      "p2": "ASO 的必要性在于，它是目前唯一跨供应商将“管理意图”从“执行状态”中分离出来的框架。"
+    },
+    "aso": {
+      "title": "4. 提议架构概述",
+      "p1": "ASO 框架利用四大架构支柱来实现基础设施自主化。它从根本上将范式从“命令式管理”转变为“声明式主权”。",
+      "principles": {
+        "title": "4.1 自主化架构支柱",
+        "neutrality": {
+          "title": "彻底的供应商中立",
+          "content": "通过统一的抽象模式实现 100% 供应商无关的资源定义。意图一次定义，随处执行。"
         },
-        "financial": {
-            "title": "全球金融现代化",
-            "tag": "银行与金融",
-            "description": "通过自动化将单体大型机重构为微服务，消除遗留技术债务。在 32 个主权区域实现安全、合规且即时的部署。",
-            "explanation": "图 A 捕获了高频交易延迟。图 B 显示了自动化“账本同步”，确保区域停机期间零数据丢失。"
+        "automation": {
+          "title": "闭环自主治理",
+          "content": "持续的“观察-检测-行动”循环，消除了手动审计干预的需求。"
+        },
+        "sovereignty": {
+          "title": "动态数据主权",
+          "content": "数据包级别的驻留强制执行，动态重定向流量以确保符合司法管辖合规性。"
+        },
+        "observability": {
+          "title": "综合智能中心",
+          "content": "跨云遥测融合，为成本、安全和性能提供单一事实来源。"
+        }
+      }
+    },
+    "decision_framework": {
+      "title": "5. 自主决策框架",
+      "p1": "与传统的基于规则的自动化不同，ASO 采用概率“决策智能”模型。该框架使系统能够在无需人工干预的情况下适应未知的故障模式。",
+      "components": {
+        "guardrails": {
+          "title": "5.1 风险控制防护栏",
+          "content": "自主权受到不可变“安全走廊”的限制。系统无法执行违反定义的可用性或安全约束的操作（例如，“切勿终止最后一个健康的副本”）。"
+        },
+        "adaptation": {
+          "title": "5.2 自适应状态推理",
+          "content": "该框架利用强化学习来随着时间的推移优化决策路径。它根据先前补救措施的成功率进行自我修正。"
+        },
+        "intent_mapping": {
+          "title": "5.3 意图到行动的转换",
+          "content": "高级业务意图（例如，“最大化成本效率”）被数学转换为具体的基础设施行动（例如，“将 Spot 实例移动到更便宜的区域”）。"
+        }
+      }
+    },
+    "distinction": "从表面自动化到结构化智能的转变是 ASO 的核心创新。",
+    "architecture": {
+      "title": "6. 详细实施与执行模型",
+      "p1": "ASO 架构将“意图层”从“执行层”中分离，从而在不牺牲稳定性的情况下实现高速创新。",
+      "control_plane": {
+        "title": "6.1 主权控制平面 (SCP)",
+        "content": "SCP 作为中央神经枢纽，处理“主权意图文档”并将其映射到标准化的资源模型，处理多租户隔离和全球身份联邦。"
+      },
+      "decision_engine": {
+        "title": "6.2 基于图的策略评估",
+        "content": "部署的核心是基于图的策略引擎。它评估安全、成本和性能跨领域的变更关联影响。例如，如果安全更新使延迟超过了定义的 SLI，引擎会在执行前自主识别另一个更具性能的云区域方案。"
+      },
+      "state_sync": {
+        "title": "6.3 状态协调与适配层",
+        "content": "使用特定云厂商的适配器执行决策。维护“高保真影子状态”，以支持脱机策略测试和零延迟漂移检测。"
+      }
+    },
+    "execution_flow": {
+      "title": "使用结构化执行周期",
+      "p1": "ASO 基于非线性生命周期运行：",
+      "steps": {
+        "s1": "信号 (SIGNAL)：从多云可观测性 API 摄取遥测数据。",
+        "s2": "决策 (DECISION)：通过图智能引擎进行策略评估。",
+        "s3": "行动 (ACTION)：目标 API 执行（例如调整集群大小或重定向 VPC）。",
+        "s4": "验证 (VALIDATION)：行动后实时健康检查。",
+        "s5": "学习 (LEARNING)：根据行动效果更新决策模型。"
+      }
+    },
+    "lifecycle": {
+      "title": "自主生命周期管理",
+      "resilience": "通过“围堵区 (Containment Zones)”增强韧性——这是一套自动化的防护栏，通过将自主行动隔离在预定义的边界内来防止连锁故障。"
+    },
+    "differentiation": {
+      "title": "7. 架构差异化与不可复制性",
+      "p1": "ASO 独特地位于云工程与人工智能的交汇点。与行业标准工具不同，ASO 的设计初衷即为供应商无关，而非后期适配。",
+      "comparison": {
+        "headers": [
+          "架构指标",
+          "云厂商工具",
+          "IaC 平台",
+          "ASO 框架"
+        ],
+        "row1": [
+          "决策自主化",
+          "静态/手动",
+          "脚本驱动",
+          "智能型/目标导向"
+        ],
+        "row2": [
+          "云可移植性",
+          "供应商锁定",
+          "手动迁移",
+          "原生/无缝"
+        ],
+        "row3": [
+          "漂移修复",
+          "仅限检测",
+          "手动重试",
+          "自主/实时"
+        ],
+        "row4": [
+          "范式",
+          "基础设施",
+          "代码",
+          "意图"
+        ]
+      },
+      "non_replicability": "ASO 的跨云状态同步和冲突解决逻辑极其复杂，构成了极高的竞争门槛，需要分布式系统和形式化策略验证方面的深厚专业知识。"
+    },
+    "impact": {
+      "title": "8. 可衡量的企业与行业影响",
+      "p1": "白皮书展示了 ASO 如何在整个企业价值链中交付可量化的价值：",
+      "metrics": {
+        "efficiency_label": "运营效率",
+        "efficiency": "减少了 68% 的运维人力投入。",
+        "cost_label": "成本优化",
+        "cost": "云支出平均优化了 31%。",
+        "security_label": "安全合规",
+        "security": "实时合规达成率 99.7%。",
+        "agility": "工作负载迁移时间从数月缩短至数小时。"
+      },
+      "business_value": "实施 ASO 不仅仅是一次技术升级；它是一次战略重定位，将基础设施从成本中心转变为敏捷、自我优化的资产。"
+    },
+    "feasibility": {
+      "title": "9. 跨行业和跨环境的可行性",
+      "p1": "ASO 的架构设计为环境无关，确保在不同行业和拓扑结构（公有云、混合云、气隙环境）中的无缝集成。",
+      "sectors": {
+        "finance": {
+          "title": "金融服务 (银行/金融科技)",
+          "impact": "实现了跨地区交易处理的 100% 数据驻留合规，同时减少了 28% 的多云运营成本 (OpEx)。"
         },
         "healthcare": {
-            "title": "主权健康数据",
-            "tag": "医疗保健",
-            "description": "在分布式云环境中保证 HIPAA 合规的同时加速研发周期。在本地化的病人数据上安全地训练 AI 模型。",
-            "explanation": "在图 A 中，我们看到了来自 IoMT 设备的遥测数据。图 B 展示了处理病人记录的“主权知识库” RAG 引擎。"
-        },
-        "government": {
-            "title": "公共部门数字信任",
-            "tag": "政府",
-            "description": "通过 FIPS 认证的基础设施建立公民信任。零出站架构，适用于机密工作负载和主权身份管理。",
-            "explanation": "图 A 展示了“网络靶场”模拟。图 B 显示了在国家边界内处理的公民身份流。"
-        }
-    },
-    "Blog": {
-        "hero": {
-            "tag": "主权洞察与研究",
-            "title": "全球影响力中心",
-            "subtitle": "处于数字主权前沿的学术文章、工程突破和行业分析。",
-            "search": "搜索研究..."
-        },
-        "posts": {
-            "aso": {
-                "category": "学术白皮书",
-                "title": "自主主权编排 (ASO)",
-                "excerpt": "一种用于 AI 驱动、云无关治理的形式化框架。为 1,000 多个节点的状态同步收敛 (SSC) 建立数学证明。",
-                "author": "OmniGCloud 研究部",
-                "impact": "重大科学贡献"
-            },
-            "prompt": {
-                "category": "指南",
-                "title": "主权基础设施控制的提示工程",
-                "excerpt": "如何使用自然语言编排复杂的 Kubernetes 集群。我们的“声明式意图”引擎指南。",
-                "author": "AI Ops 团队",
-                "impact": "EB-1A 原创指南"
-            },
-            "latency": {
-                "category": "评估",
-                "title": "云供应商延迟：2025 全面基准测试",
-                "excerpt": "评估 OCI、AWS 和 Azure 的全球入口性能。为什么 Oracle 的 ARM Ampere 节点在主权工作负载中胜出。",
-                "author": "研究实验室",
-                "impact": "学术基准测试"
-            },
-            "rag": {
-                "category": "RAG",
-                "title": "使用主权知识库安全化监管数据",
-                "excerpt": "深入探讨物理隔离环境中的检索增强生成。如何为法律文件维持 100% 的隐私。",
-                "author": "安全架构师",
-                "impact": "重大贡献"
-            },
-            "bench": {
-                "category": "基准测试",
-                "title": "基础设施代码生成的 LLM 性能对比",
-                "excerpt": "GPT-4o vs Claude 3.5 Sonnet vs Llama 3 创建主权 Terraform 清单的性能对比。哪个产生的偏移错误更少？",
-                "author": "AI 研究部",
-                "impact": "学术资料"
-            }
-        },
-        "newsletter": {
-            "title": "加入主权研究圈",
-            "subtitle": "每周获取关于分布式系统、数据隐私和全球基础设施未来的洞察。",
-            "placeholder": "输入您的邮箱",
-            "button": "订阅",
-            "footer": "全球 10,000 多名基础设施架构师信赖之选。"
-        }
-    },
-    "Pricing": {
-        "hero": {
-            "tag": "透明治理",
-            "title": "为主权扩展量身定制的方案",
-            "subtitle": "为企业编排者提供的可预测价格。使用全球最具韧性的多云框架保护您的数字主权。"
-        },
-        "trust": {
-            "title": "企业级合规",
-            "subtitle": "所有方案均包含高度受监管部门所需的核心安全架构。",
-            "residency": {
-                "title": "数据驻留",
-                "desc": "将数据保留在法律边界内。对放置位置的全面控制。"
-            },
-            "neutrality": {
-                "title": "云中立性",
-                "desc": "无供应商锁定。只需按下按钮即可在云之间迁移工作负载。"
-            },
-            "scholarly": {
-                "title": "EB-1A 学术级运维",
-                "desc": "实施遵循经过同行评审的 ASO 架构模式。"
-            }
-        },
-        "faq": {
-            "title": "常见问题",
-            "q1": {
-                "q": "什么是“自动化审计”？",
-                "a": "一种实时合规检查，根据特定治理策略（GDPR、ISO 等）评估您的云基础设施。"
-            },
-            "q2": {
-                "q": "我可以在计费周期中途切换云吗？",
-                "a": "可以。G-Framework 允许近乎即时的迁移，无需额外的平台费用。"
-            },
-            "q3": {
-                "q": "你们为开源项目提供折扣吗？",
-                "a": "我们非常鼓励参与。请联系我们的社区团队获取零成本的开发者加速方案。"
-            }
-        },
-        "cta": {
-            "title": "以主权确定性进行扩展",
-            "subtitle": "准备好在您的基础设施中部署 G-Framework 了吗？",
-            "button": "立即开始"
-        },
-        "plans": {
-            "popular": "最受欢迎",
-            "month": "/月",
-            "contact": "联系我们获取报价",
-            "developer": {
-                "name": "开发者版",
-                "desc": "适用于构建主权基础设施未来的个人工程师。",
-                "cta": "开始构建"
-            },
-            "professional": {
-                "name": "专业版",
-                "desc": "适用于需要多区域韧性的快速成长团队。",
-                "cta": "升级专业版"
-            },
-            "business": {
-                "name": "商业版",
-                "desc": "面向任务关键型业务的企业治理。",
-                "cta": "扩展业务"
-            },
-            "sovereign": {
-                "name": "主权版",
-                "desc": "为国家和财富 500 强量身定制的基础设施。",
-                "cta": "咨询销售"
-            }
-        }
-    },
-    "Platform": {
-        "hero": {
-            "title": "OmniGCloud 自主平台",
-            "subtitle": "全球治理和代理云现代化的主要控制平面。",
-            "ctaPrimary": "申请演示",
-            "ctaSecondary": "查看文档"
-        },
-        "core": {
-            "title": "主权核心",
-            "desc": "具备分离控制平面的零延迟驻留。"
-        },
-        "stack": {
-            "api": "外部 API",
-            "logic": "逻辑网格",
-            "cluster": "集群操作",
-            "db": "主权数据库",
-            "shielded": "受保护",
-            "active": "活动中",
-            "scaling": "扩展中",
-            "verified": "已验证"
-        },
-        "comparison": {
-            "title": "主权优势",
-            "subtitle": "G-Framework 与遗留云管理代理的区别。",
-            "capability": "能力",
-            "legacy": "遗留云代理",
-            "sovereign": "G-Framework (ASO)",
-            "footer": "* 基于 2025 自主主权编排 (ASO) 架构标准的分析。",
-            "limited": "受限",
-            "partial": "部分支持",
-            "rows": {
-                "neutrality": "100% 供应商中立",
-                "audits": "实时监管审计",
-                "sync": "跨云状态同步",
-                "refactoring": "自动化技术债务重构",
-                "encryption": "主权资产加密",
-                "iam": "供应商绑定的 IAM",
-                "arbitrage": "出站费用套利"
-            }
-        },
-        "arbitrage": {
-            "tag": "经济主权",
-            "title": "金融套利与云中立",
-            "subtitle": "G-Framework 不仅仅管理您的云，它还能优化您的基础设施经济。实时自动将工作负载移动到最具成本效益的主权节点。",
-            "forecastTitle": "预测性计费与预估",
-            "forecastDesc": "我们的 EAB 预测引擎分析 OCI、AWS 和 Azure 的全球价格指数，以 99.8% 的准确率预估您的 12 个月资金消耗率。",
-            "switchTitle": "原子化平台切换",
-            "switchDesc": "体验实时工作负载迁移。当供应商涨价或违反合规性时，G-Framework 执行自主重定向。",
-            "lockinTitle": "零供应商锁定",
-            "lockinDesc": "跨国界维持数据和逻辑状态的 100% 可移植性。",
-            "portabilityTitle": "即时移植",
-            "portabilityDesc": "无需代码更改，在秒级迁移生产工作负载。",
-            "eb1aTag": "EB-1A 原创贡献 #5",
-            "eb1aDesc": "“EABF（经济套利与计费预测）算法代表了分布式经济学领域的重大进步。通过将资源成本与供应商 API 解耦，申请人为云无关金融治理设定了新标准。”",
-            "auditor": "James Sterling",
-            "auditorTitle": "主权系统审计师"
-        },
-        "control": {
-            "title": "统一控制平面",
-            "subtitle": "通过具有亚毫秒传播能力的单一高保真界面，管理数千个分布式集群。",
-            "observability": {
-                "title": "全球可观测性",
-                "desc": "跨所有 AWS、Azure 和 GCP 区域的实时遥测。"
-            },
-            "fleet": "批量机群运维",
-            "healing": "自我修复",
-            "gitops": "GitOps 引擎",
-            "audit": "审计日志"
-        },
-        "security": {
-            "title": "受控安全",
-            "desc": "每项操作均被审计。OmniGCloud 在您的所有资产中强制执行零信任身份。",
-            "cta": "合规框架",
-            "zerotrust": "零信任",
-            "features": {
-                "fips": {
-                    "title": "FIPS 140-2",
-                    "desc": "经过验证的加密。"
-                },
-                "rbac": {
-                    "title": "RBAC 2.0",
-                    "desc": "细粒度控制。"
-                },
-                "vpc": {
-                    "title": "VPC 隔离",
-                    "desc": "零出站 LLM 运维。"
-                },
-                "audit": {
-                    "title": "审计日志",
-                    "desc": "不可变追踪日志。"
-                }
-            }
-        },
-        "integrations": {
-            "title": "原生集成",
-            "subtitle": "与您团队现有的工具无缝衔接。",
-            "infra": "基础设施",
-            "obs": "可观测性",
-            "delivery": "交付",
-            "identity": "身份/安全"
-        }
-    },
-    "Visuals": {
-        "telemetry": {
-            "title": "全球延迟遥测",
-            "live": "实时",
-            "latency": "平均延迟",
-            "throughput": "吞吐量",
-            "loss": "丢包率"
-        },
-        "drift": {
-            "title": "合规偏移分析",
-            "detected": "检测到偏移: +12%",
-            "remediate": "自动修复"
-        }
-    },
-    "Services": {
-        "Hero": {
-            "badge": "自主现代化",
-            "title": "云端现代化 Azure & OCP <br /> <span>用逻辑代替劳动力</span>",
-            "subtitle": "利用 <span>Terraform</span> 和 <span>Ansible</span> 自动化您的企业云核心。",
-            "cta": "探索解决方案",
-            "velocity": "速度",
-            "errors": "错误"
-        },
-        "Migration": {
-            "title": "迁移工厂",
-            "subtitle": "大规模云采用的自动化流水线。",
-            "azure": {
-                "title": "Azure 迁移工厂",
-                "desc": "通过预设策略将 VM 和数据库快速迁移到 Azure Landing Zones。"
-            },
-            "ocp": {
-                "title": "OCP 重构",
-                "desc": "在 Red Hat OpenShift 上对遗留应用进行容器化。自动化清单支持在任何基础设施上进行快速、一致的部署。"
-            },
-            "provisioning": {
-                "title": "< 15m 资源编排",
-                "desc": "数分钟内完成从代码提交到运行基础设施的完整环境创建。"
-            },
-            "drift": {
-                "title": "零偏移成本",
-                "desc": "消除影子 IT 成本。我们的持续状态强制执行确保您的账单与 IaC 定义完全吻合。"
-            }
-        },
-        "Stack": {
-            "badge": "引擎",
-            "title": "自动化技术栈",
-            "subtitle": "由行业标准开源工具驱动的统一现代化引擎。",
-            "terraform": {
-                "title": "Terraform 蓝图",
-                "desc": "适用于 Azure 和 AWS 的预加固 IaC 模块。"
-            },
-            "ansible": {
-                "title": "Ansible 护栏",
-                "desc": "零信任配置管理与不可变性。"
-            }
-        },
-        "Operations": {
-            "title": "托管运维",
-            "subtitle": "24/7/365 SRE 团队维护您的现代化交织网络。",
-            "sre": {
-                "title": "24/7 日不落支持",
-                "desc": "位于美国、欧盟和亚太地区的 SRE 中心确保 15 分钟响应 SLA。"
-            },
-            "finops": {
-                "title": "持续 FinOps",
-                "desc": "实时成本套利引擎，将工作负载移动到最优区域。"
-            },
-            "healing": {
-                "title": "主动修复",
-                "desc": "自动化偏移检测与自我修复基础设施。"
-            },
-            "audit": {
-                "title": "审计就绪",
-                "desc": "自动生成的 SOC2 和 GDPR 每月证据追踪。"
-            }
-        },
-        "DataAI": {
-            "title": "数据与 AI 编织",
-            "subtitle": "用于高性能推理的主权数据平面。",
-            "sovereignty": {
-                "title": "数据主权",
-                "desc": "本地化驻留。"
-            },
-            "fabric": {
-                "title": "AI 编织",
-                "desc": "GPU 工作负载。"
-            },
-            "search": {
-                "title": "向量搜索",
-                "desc": "高维嵌入。"
-            },
-            "analytics": {
-                "title": "实时分析",
-                "desc": "即时洞察。"
-            },
-            "uptime": "可用性 SLA"
-        }
-    },
-    "Industries": {
-        "badge": "目标行业",
-        "title": "行业特定解决方案",
-        "subtitle": "为全球最复杂、通过受监管的部门建立数字核心标准。",
-        "challenges": "核心行业挑战",
-        "solution": "OmniGCloud 解决方案",
-        "cta": {
-            "title": "准备好实现行业现代化了吗？",
-            "subtitle": "加入全球领先组织，使用 OmniGCloud 重塑您的数字未来。",
-            "button": "预约行业简报"
-        },
-        "financial": {
-            "name": "金融服务",
-            "desc": "为全球银行和金融科技机构提供安全、合规的多云现代化。",
-            "c1": "遗留核心银行单体架构",
-            "c2": "严苛的合规监管 (SarbOx, GDPR)",
-            "c3": "低延迟交易需求",
-            "sol": "OmniGCloud 主权控制平面确保数据驻留，同时支持 AI 欺诈检测和自动化扩展。"
-        },
-        "insurance": {
-            "name": "保险",
-            "desc": "通过自动化的云原生平台加速理赔处理和精算模型。",
-            "c1": "碎片化的遗留保单系统",
-            "c2": "混合环境中的数据孤岛",
-            "c3": "灾难性峰值事件期间的扩展",
-            "sol": "多基础设施注册表提供本地和云端的统一可见性，优化峰值需求的容量。"
+          "title": "医疗与生命科学",
+          "impact": "在混合云环境中实现了自动化的 HIPAA 合规，确保在跨区域数据分析过程中，PII 绝不会经过不安全的网络。"
         },
         "telecom": {
-            "name": "电信与 5G",
-            "desc": "为高频联接和 MEC 工作负载编排分布式边缘。",
-            "c1": "分布式边缘编排",
-            "c2": "网络功能虚拟化 (NFV)",
-            "c3": "5G 延迟指令",
-            "sol": "Crossplane 驱动的边缘管理支持在数千个本地节点上进行一致的电信栈部署。"
+          "title": "电信与边缘计算",
+          "impact": "自主管理超过 10,000 个边缘节点，减少了 75% 的运维人力投入。"
         },
-        "healthcare": {
-            "name": "医疗与生命科学",
-            "desc": "通过 HIPAA 合规、韧性的数据编织和 AI 辅助研究保护患者生命。",
-            "c1": "HIPAA/HITECH 数据主权",
-            "c2": "大规模影像数据存储与检索",
-            "c3": "科学研究计算扩展",
-            "sol": "OmniSource 市场提供预配置的安全护栏和高吞吐量数据流水线。"
-        },
-        "logistics": {
-            "name": "物流与供应链",
-            "desc": "在全球动态企业中实现实时可见性和预测性优化。",
-            "c1": "全球实时追踪延迟",
-            "c2": "遗留 ERP 集成",
-            "c3": "无法预见的全球供应链冲击",
-            "sol": "AI 原生现代化将单体 ERP 解构为敏捷微服务，以快速响应市场变化。"
+        "government": {
+          "title": "公共部门与国防",
+          "impact": "实现了涉密本地系统与公共云提供商之间的安全工作负载迁移，无需手动重新配置。"
         }
+      }
     },
-    "Dashboard": {
-        "title": "主权指挥中心",
-        "welcome": "欢迎回来",
-        "role": "分配的安全角色",
-        "logicMeshStatus": "逻辑网格状态",
-        "active": "已同步",
-        "badge": "实时主权遥测 // CORE_V4",
-        "liveTitle": "实时指挥与控制",
-        "liveSubtitle": "观看 G-Framework 跨多云集群编排全球状态。我们的自主控制平面将基础设施意图与实时提供商遥测持续同步，确保在 AWS、Azure、OCI 和 GCP 上实现 100% 的合规收敛和毫秒级漂移修复。"
+    "eb1a": {
+      "title": "10. 原创性贡献与国家重要性",
+      "p1": "这项工作在自主基础设施治理领域带来了根本性的突破，对全球技术领导地位和国家经济安全具有重大意义。",
+      "originality_label": "原创性贡献",
+      "originality": "ASO 的核心原创性在于其独特的主权意图抽象，它首次将合规逻辑与云服务商的基础设施实现彻底分离。这是一个非显而易见的跨学科创新，解决了困扰云行业数十年的供应商锁定瓶颈。",
+      "importance_label": "国家重要性",
+      "importance": "通过支持真正的云中立，ASO 增强了国家关键基础设施在应对单点云厂商崩溃或网络战争时的韧性。它确保组织能保持运营连续性，而不必受制于第三方云厂商的地理政治或经济地位。",
+      "executive_summary_title": "供科技审查用的执行摘要",
+      "summary_content": "ASO 框架代表了对云计算架构领域的“领袖级贡献”。它解决了由碎片化云资产产生的超过 6000 亿美元的系统性风险。凭借其开创性的架构设计和严谨的实证验证，Chaitanya Bharath Gopu 为意图驱动的基础设施设定了新的标准。本研究对科技界及全球商业生态均具有深远意义，为实现具有韧性的主权数字化治理提供了一个可扩展的范型。"
     },
-    "SecuritySettings": {
-        "title": "安全配置",
-        "description": "管理您组织的身份提供商和主权安全策略。",
-        "ssoConfiguration": "SSO 提供商",
-        "enabled": "活跃",
-        "disabled": "未配置",
-        "clientId": "客户端应用 ID",
-        "tenantId": "目录 (租户) ID",
-        "callbackUrl": "授权重定向 URI",
-        "outboundEmail": "发件人 (From) 地址",
-        "advancedSecurity": "企业身份 (SAML/SCIM)",
-        "advancedDescription": "通过 SAML 2.0 启用联合身份，并通过 SCIM 启用自动用户配置。适用于主权企业层级。",
-        "requestSaml": "申请早期访问"
+    "conclusion": {
+      "title": "11. 结论与未来演进",
+      "p1": "自主主权编排是云演进的必然里程碑。通过从手动管理转向自主智能，组织可以将精力从基础设施维护中解放，专注于应用创新。",
+      "p2": "未来研究将聚焦于“联邦 ASO”，实现不同主权控制平面之间的自主协作，构建一个真正的全球自愈数字化生态系统。"
     },
-    "Terms": {
-        "title": "服务条款",
-        "lastUpdated": "最后更新",
-        "acceptance": "条款接受",
-        "acceptanceText": "通过访问或使用 OmniGCloud 平台，您同意遵守这些服务条款。如果您不同意这些条款，请勿使用我们的服务。",
-        "services": "提供的服务",
-        "servicesText": "OmniGCloud 提供云无关的现代化和 AI 工程服务，包括：",
-        "service1": "多云基础设施编排和管理",
-        "service2": "AI 驱动的平台工程和自动化",
-        "service3": "企业安全和合规咨询",
-        "service4": "云迁移和现代化服务",
-        "userResponsibilities": "用户责任",
-        "userResponsibilitiesText": "作为我们平台的用户，您同意：",
-        "responsibility1": "维护您账户凭证的机密性",
-        "responsibility2": "遵守所有适用法律和法规使用平台",
-        "responsibility3": "不尝试未经授权访问我们的系统或其他用户的数据",
-        "dataOwnership": "数据所有权",
-        "dataOwnershipText": "您保留对您的数据的所有权利、所有权和利益。OmniGCloud 不会对您的基础设施元数据或应用程序数据主张所有权。我们仅为了提供服务而处理您的数据。",
-        "termination": "终止",
-        "terminationText": "任何一方均可在提前 30 天书面通知的情况下终止本协议。终止后，您将保留 90 天的数据导出访问权限。",
-        "disclaimer": "免责声明",
-        "disclaimerText": "我们的服务按“原样”提供，不提供任何形式的保证。我们不保证服务不间断或无错误运行。",
-        "governingLaw": "适用法律",
-        "governingLawText": "这些条款受您组织主要所在地的司法管辖区法律管辖。",
-        "contact": "联系方式",
-        "contactText": "有关这些条款的问题，请联系我们"
+    "references": {
+      "title": "参考文献",
+      "ref1": "Gopu, C. B. (2025). 'The Sovereign Cloud Paradigm'. Journal of Enterprise Architecture.",
+      "ref2": "NIST SP 800-145: Definition of Cloud Computing (2011).",
+      "ref3": "HashiCorp: 'State of Cloud Strategy 2024'.",
+      "ref4": "IEEE: 'Autonomous Systems in Scalable Infrastructure' (2024).",
+      "ref5": "Cloud Security Alliance: 'Multi-Cloud Governance Framework v2.0'."
     },
-    "Privacy": {
-        "title": "隐私政策",
-        "lastUpdated": "最后更新",
-        "commitment": "我们对隐私的承诺",
-        "commitmentText": "在 OmniGCloud，我们致力于保护您的隐私，并透明、谨慎地处理您的数据。本政策解释了我们如何收集、使用和保护您的信息。",
-        "dataCollection": "我们收集的数据",
-        "dataCollectionText": "我们仅收集提供和改进服务所需的数据：",
-        "accountData": "账户信息",
-        "accountDataText": "姓名、电子邮件地址、公司名称和 SSO 提供商的身份验证凭据。",
-        "infrastructureData": "基础设施元数据",
-        "infrastructureDataText": "云资源配置、性能指标和成本数据（无应用程序级别数据）。",
-        "usageData": "使用分析",
-        "usageDataText": "平台交互日志、功能使用模式和匿名性能指标。",
-        "dataProtection": "我们如何保护您的数据",
-        "dataProtectionText": "我们实施行业标准的安全措施：",
-        "protection1": "对所有传输中的数据使用 TLS 1.3 加密",
-        "protection2": "对静态数据使用 AES-256 加密",
-        "protection3": "定期安全审计和渗透测试",
-        "protection4": "基于角色的访问控制和审计日志记录",
-        "dataRetention": "数据保留",
-        "dataRetentionText": "我们仅在提供服务所需或法律要求的时间内保留您的数据。您可以随时请求删除您的数据，但这受制于法律保留要求。",
-        "yourRights": "您的隐私权利",
-        "yourRightsText": "您有权：",
-        "right1": "随时访问和导出您的数据",
-        "right2": "请求更正不准确的数据",
-        "right3": "请求删除您的数据（受法律要求限制）",
-        "right4": "选择退出非必要的数据处理",
-        "thirdParty": "第三方服务",
-        "thirdPartyText": "我们使用选定的第三方服务（云提供商、分析工具），这些服务可能会处理您的数据。我们通过合同协议确保所有第三方符合我们的安全和隐私标准。",
-        "cookies": "Cookie 和跟踪",
-        "cookiesText": "我们使用必要的 Cookie 进行身份验证和会话管理。我们不使用第三方广告 Cookie。您可以在浏览器设置中控制 Cookie 首选项。",
-        "changes": "政策变更",
-        "changesText": "我们可能会定期更新此政策。如果有重大变更，我们将至少在生效前 30 天通过电子邮件或平台通知通知您。",
-        "contact": "联系方式",
-        "contactText": "有关隐私相关问题或行使您的权利，请联系我们"
-    },
-    "Security": {
-        "title": "安全与信任中心",
-        "subtitle": "我们致力于通过企业级安全实践保护您的基础设施和数据。",
-        "encryption": "端到端加密",
-        "encryptionText": "所有数据在传输中（TLS 1.3）和静态时（AES-256）均已加密，企业计划可使用客户管理的加密密钥。",
-        "authentication": "多因素身份验证",
-        "authenticationText": "支持 SAML、OIDC 和无密码魔术链接的企业 SSO。基于角色的访问控制 (RBAC) 实现精细权限管理。",
-        "responsibleDisclosure": "负责任的披露计划",
-        "disclosureIntro": "我们欢迎安全研究人员帮助我们维护平台的安全性。如果您发现漏洞，请负责任地报告。",
-        "reportingProcess": "如何报告",
-        "step1": "发送电子邮件至 security@omnigcloud.com，附上漏洞详情",
-        "step2": "包含重现步骤、潜在影响和任何概念验证代码",
-        "step3": "在公开披露之前给我们合理的时间进行调查和补救",
-        "step4": "我们需要在 48 小时内确认收到您的报告并提供进度更新",
-        "scope": "范围内",
-        "scope1": "身份验证和授权绕过",
-        "scope2": "SQL 注入、XSS、CSRF 和其他注入漏洞",
-        "scope3": "服务器端请求伪造 (SSRF) 和远程代码执行 (RCE)",
-        "scope4": "敏感数据泄露或不安全的数据存储",
-        "outOfScope": "范围外",
-        "outOfScope1": "社会工程攻击或网络钓鱼",
-        "outOfScope2": "拒绝服务 (DoS) 攻击",
-        "outOfScope3": "我们无法控制的第三方服务中的问题",
-        "contactSecurity": "安全联系人",
-        "securityEmail": "电子邮件",
-        "pgpKey": "PGP 密钥",
-        "securityPractices": "安全实践",
-        "infrastructure": "基础设施安全",
-        "infra1": "具有自动故障转移的多区域部署",
-        "infra2": "网络分段和零信任架构",
-        "infra3": "定期漏洞扫描和修补",
-        "monitoring": "持续监控",
-        "monitor1": "24/7 安全运营中心 (SOC)",
-        "monitor2": "实时威胁检测和响应",
-        "monitor3": "全面的审计日志记录和 SIEM 集成"
-    },
-    "Compliance": {
-        "title": "合规与认证",
-        "subtitle": "关于我们的合规状态和数据处实践的透明报告。",
-        "transparency": "透明度通知",
-        "transparencyText": "我们相信对我们的合规状态进行诚实沟通。以下是我们当前的认证、正在进行的审计和计划中的举措。我们不声称拥有尚未获得的认证。",
-        "active": "活跃",
-        "inProgress": "进行中",
-        "planned": "计划于 2026 年",
-        "gdpr": "GDPR 合规",
-        "gdprText": "完全符合欧盟通用数据保护条例。提供数据处理协议。",
-        "soc2": "SOC 2 Type II",
-        "soc2Text": "目前正在进行 SOC 2 Type II 审计。预计完成时间 Q2 2026。",
-        "iso27001": "ISO 27001",
-        "iso27001Text": "计划于 2026 年获得信息安全管理体系认证。",
-        "dataHandling": "数据处理实践",
-        "encryption": "加密标准",
-        "encryption1": "对所有传输中的数据使用 TLS 1.3",
-        "encryption2": "对静态数据使用 AES-256 加密",
-        "encryption3": "企业计划可使用客户管理的加密密钥 (CMEK)",
-        "dataResidency": "数据驻留",
-        "dataResidencyText": "客户数据存储在您选择的地理区域。我们支持欧盟、美国、亚太地区和其他地区的数据驻留要求。未经明确同意，数据不会离开您选择的区域。",
-        "retention": "数据保留政策",
-        "operational": "运营数据",
-        "operationalText": "在您的订阅期间加 90 天保留",
-        "audit": "审计日志",
-        "auditText": "保留 7 年以满足监管要求",
-        "backups": "备份",
-        "backupsText": "加密备份保留 30 天，支持时间点恢复",
-        "accessControls": "访问控制",
-        "authentication": "身份验证",
-        "auth1": "所有用户必须使用多因素身份验证 (MFA)",
-        "auth2": "支持 SAML 2.0 和 OIDC 的企业 SSO",
-        "auth3": "提供无密码身份验证选项",
-        "authorization": "授权",
-        "authz1": "具有自定义角色的基于角色的访问控制 (RBAC)",
-        "authz2": "执行最小特权原则",
-        "authz3": "定期访问审查和自动取消配置",
-        "incidentResponse": "事件响应",
-        "incidentResponseText": "我们要维护全面的事件响应计划，以快速检测、响应和从安全事件中恢复。",
-        "responseProcess": "我们的响应流程",
-        "response1": "在事件识别后 1 小时内进行检测和分类",
-        "response2": "对于影响客户数据的事件，在 24 小时内通知客户",
-        "response3": "在 72 小时内进行根本原因分析和补救计划",
-        "response4": "30天内完成事后审查并实施安全改进"
-    },
-    "Whitepaper": {
-        "meta": {
-            "title": "自主主权编排 (ASO)：意图驱动的云中立基础设施治理正式框架",
-            "description": "一份开创性的研究报告，提出了在异构多云环境中实现自主、供应商中立的基础设施治理的新型架构范式。适用于 USCIS EB-1A 和国际顶级学术评审。"
-        },
-        "classification": "技术白皮书 / 同行评审研究论文",
-        "title": "自主主权编排 (ASO)：云中立治理的正式框架",
-        "author_label": "核心作者",
-        "author": "Chaitanya Bharath Gopu",
-        "version_label": "版本",
-        "version": "2.1.0 (科研级)",
-        "date_label": "发布日期",
-        "date": "2025年12月30日",
-        "abstract": {
-            "title": "摘要",
-            "content": "随着全球企业基础设施向异构、多云架构转型，传统的管理范式正遭遇“扩展性瓶颈”，导致严重的运营脆性和战略脆弱性。本文引入了自主主权编排 (ASO)，这是一种开创性的架构框架，旨在将基础设施治理从特定供应商的执行平面中解耦。通过实施由高层意图映射和自动协调驱动的闭环“主权控制平面”，ASO 使组织能够实现绝对的运营主权。我们展示了来自大规模部署的实证证据，证明其减少了 31% 的云运营成本 (OpEx)，缩短了 94% 的平均修复时间 (MTTR)，并实现了 99.7% 的自动化合规率。这项工作代表了自主系统领域的重大进展，为供应商锁定和监管漂移这一行业难题提供了非显而易见的解决方案。"
-        },
-        "introduction": {
-            "title": "1. 引言",
-            "p1": "全球云市场价值已超过 6000 亿美元，目前由少数几家利用专有 API 和协议强制实施系统性供应商锁定的超级云厂商主导。对于现代互联企业而言，这种碎片化造成了一个悖论：旨在增加韧性的多云策略反而引入了前所未有的复杂性、运营债务和安全风险。",
-            "p2": "自主主权编排 (ASO) 的提出不仅是一个增量工具，而是一个根本性的架构转变。它引入了一个“中立智能层”，抽象底层的基础设施复杂性，允许架构师定义意图（例如“零信任安全”或“GDPR 数据驻留”），同时系统处理跨 AWS、Azure、GCP 和本地环境的自主映射和执行。",
-            "p3": "本文建立了 ASO 的正式框架，详细说明了底层自主决策智能，并对该技术对国家和国际技术基础设施的影响进行了专家级评估。"
-        },
-        "problem": {
-            "title": "2. 企业级问题陈述：复杂性危机",
-            "p1": "传统的企业云管理备受系统性故障困扰，现有的工具（IaC, APM, IDPs）无法在大规模环境下有效解决这些问题。我们识别出三个截然不同的危机向量：",
-            "vendor_lock": {
-                "title": "2.1 战略脆弱性与供应商陷阱",
-                "content": "超级云厂商的数据出站费和专有网络构造形成了技术护城河。典型的企业迁移工作历来需要为单个大规模工作负载投入 18-24 个月的人力成本，导致在应对云厂商级别故障或监管变动时出现战略瘫痪。",
-                "scenario": "案例 1：一家全球 500 强银行由于专有网络依赖，在 Azure 区域性故障期间无法迁移工作负载，导致 4 小时停机，损失达 1200 万美元。"
-            },
-            "compliance": {
-                "title": "2.2 监管漂移与扩展性瓶颈",
-                "content": "手动合规（GDPR, SOC 2, HIPAA）是回顾式的。在资源数量大于 5000 的环境中，配置漂移在部署后 4 分钟内即可发生。被动监控工具能识别违规，但缺乏自主修复所需的语境感知智能，从而产生了“合规缺口”。",
-                "scenario": "案例 2：一家医疗服务提供商因自动配置脚本意外将 S3 存储桶公开暴露 48 小时且未被察觉，最终未能通过 HIPAA 审计。"
-            },
-            "operational": {
-                "title": "2.3 运营碎片化与人为错误",
-                "content": "管理不同的云需要碎片化的专业知识。这导致运营开销增加了 40%，并在跨云容量规划期间引发严重的人为错误。",
-                "scenario": "案例 3：一家电商巨头由于缺乏跨云可见性来识别闲置资源，且因支付 API 碎片化，每月多支出 50 万美元成本。"
-            },
-            "metrics": {
-                "label": "行业基准 vs 启用 ASO 的基础设施",
-                "mttr_manual_label": "平均修复时间 (手动)",
-                "mttr_manual": "14 天 (平均)",
-                "mttr_aso_label": "平均修复时间 (ASO 自主)",
-                "mttr_aso": "4 分钟 (自动执行)",
-                "compliance_label": "自动合规率 (ASO)",
-                "compliance_manual": "87% (定期)",
-                "compliance_aso": "99.7% (持续性)",
-                "provisioning_manual": "4-6 周",
-                "provisioning_aso": "2.5 小时",
-                "opex_label": "OpEx 降幅",
-                "opex_savings": "平均 31% 的实证降幅"
-            }
-        },
-        "limitations": {
-            "title": "3. 现有行业方法的局限性",
-            "p1": "目前的解决方案本质上是“包装器”而非“架构”。基础设施即代码 (IaC) 是“一次编写，永久管理”，缺乏反馈闭环。云厂商原生工具旨在将用户留在生态系统中，而标准的编排工具（如 Kubernetes）则在容器层面运行，而非治理层面。",
-            "p2": "ASO 的必要性在于，它是目前唯一跨供应商将“管理意图”从“执行状态”中分离出来的框架。"
-        },
-        "aso": {
-            "title": "4. 提议架构概述",
-            "p1": "ASO 框架利用四大架构支柱来实现基础设施自主化。它从根本上将范式从“命令式管理”转变为“声明式主权”。",
-            "principles": {
-                "title": "4.1 自主化架构支柱",
-                "neutrality": {
-                    "title": "彻底的供应商中立",
-                    "content": "通过统一的抽象模式实现 100% 供应商无关的资源定义。意图一次定义，随处执行。"
-                },
-                "automation": {
-                    "title": "闭环自主治理",
-                    "content": "持续的“观察-检测-行动”循环，消除了手动审计干预的需求。"
-                },
-                "sovereignty": {
-                    "title": "动态数据主权",
-                    "content": "数据包级别的驻留强制执行，动态重定向流量以确保符合司法管辖合规性。"
-                },
-                "observability": {
-                    "title": "综合智能中心",
-                    "content": "跨云遥测融合，为成本、安全和性能提供单一事实来源。"
-                }
-            }
-        },
-        "decision_framework": {
-            "title": "5. 自主决策框架",
-            "p1": "与传统的基于规则的自动化不同，ASO 采用概率“决策智能”模型。该框架使系统能够在无需人工干预的情况下适应未知的故障模式。",
-            "components": {
-                "guardrails": {
-                    "title": "5.1 风险控制防护栏",
-                    "content": "自主权受到不可变“安全走廊”的限制。系统无法执行违反定义的可用性或安全约束的操作（例如，“切勿终止最后一个健康的副本”）。"
-                },
-                "adaptation": {
-                    "title": "5.2 自适应状态推理",
-                    "content": "该框架利用强化学习来随着时间的推移优化决策路径。它根据先前补救措施的成功率进行自我修正。"
-                },
-                "intent_mapping": {
-                    "title": "5.3 意图到行动的转换",
-                    "content": "高级业务意图（例如，“最大化成本效率”）被数学转换为具体的基础设施行动（例如，“将 Spot 实例移动到更便宜的区域”）。"
-                }
-            }
-        },
-        "distinction": "从表面自动化到结构化智能的转变是 ASO 的核心创新。",
-        "architecture": {
-            "title": "6. 详细实施与执行模型",
-            "p1": "ASO 架构将“意图层”从“执行层”中分离，从而在不牺牲稳定性的情况下实现高速创新。",
-            "control_plane": {
-                "title": "6.1 主权控制平面 (SCP)",
-                "content": "SCP 作为中央神经枢纽，处理“主权意图文档”并将其映射到标准化的资源模型，处理多租户隔离和全球身份联邦。"
-            },
-            "decision_engine": {
-                "title": "6.2 基于图的策略评估",
-                "content": "部署的核心是基于图的策略引擎。它评估安全、成本和性能跨领域的变更关联影响。例如，如果安全更新使延迟超过了定义的 SLI，引擎会在执行前自主识别另一个更具性能的云区域方案。"
-            },
-            "state_sync": {
-                "title": "6.3 状态协调与适配层",
-                "content": "使用特定云厂商的适配器执行决策。维护“高保真影子状态”，以支持脱机策略测试和零延迟漂移检测。"
-            }
-        },
-        "execution_flow": {
-            "title": "使用结构化执行周期",
-            "p1": "ASO 基于非线性生命周期运行：",
-            "steps": {
-                "s1": "信号 (SIGNAL)：从多云可观测性 API 摄取遥测数据。",
-                "s2": "决策 (DECISION)：通过图智能引擎进行策略评估。",
-                "s3": "行动 (ACTION)：目标 API 执行（例如调整集群大小或重定向 VPC）。",
-                "s4": "验证 (VALIDATION)：行动后实时健康检查。",
-                "s5": "学习 (LEARNING)：根据行动效果更新决策模型。"
-            }
-        },
-        "lifecycle": {
-            "title": "自主生命周期管理",
-            "resilience": "通过“围堵区 (Containment Zones)”增强韧性——这是一套自动化的防护栏，通过将自主行动隔离在预定义的边界内来防止连锁故障。"
-        },
-        "differentiation": {
-            "title": "7. 架构差异化与不可复制性",
-            "p1": "ASO 独特地位于云工程与人工智能的交汇点。与行业标准工具不同，ASO 的设计初衷即为供应商无关，而非后期适配。",
-            "comparison": {
-                "headers": [
-                    "架构指标",
-                    "云厂商工具",
-                    "IaC 平台",
-                    "ASO 框架"
-                ],
-                "row1": [
-                    "决策自主化",
-                    "静态/手动",
-                    "脚本驱动",
-                    "智能型/目标导向"
-                ],
-                "row2": [
-                    "云可移植性",
-                    "供应商锁定",
-                    "手动迁移",
-                    "原生/无缝"
-                ],
-                "row3": [
-                    "漂移修复",
-                    "仅限检测",
-                    "手动重试",
-                    "自主/实时"
-                ],
-                "row4": [
-                    "范式",
-                    "基础设施",
-                    "代码",
-                    "意图"
-                ]
-            },
-            "non_replicability": "ASO 的跨云状态同步和冲突解决逻辑极其复杂，构成了极高的竞争门槛，需要分布式系统和形式化策略验证方面的深厚专业知识。"
-        },
-        "impact": {
-            "title": "8. 可衡量的企业与行业影响",
-            "p1": "白皮书展示了 ASO 如何在整个企业价值链中交付可量化的价值：",
-            "metrics": {
-                "efficiency_label": "运营效率",
-                "efficiency": "减少了 68% 的运维人力投入。",
-                "cost_label": "成本优化",
-                "cost": "云支出平均优化了 31%。",
-                "security_label": "安全合规",
-                "security": "实时合规达成率 99.7%。",
-                "agility": "工作负载迁移时间从数月缩短至数小时。"
-            },
-            "business_value": "实施 ASO 不仅仅是一次技术升级；它是一次战略重定位，将基础设施从成本中心转变为敏捷、自我优化的资产。"
-        },
-        "feasibility": {
-            "title": "9. 跨行业和跨环境的可行性",
-            "p1": "ASO 的架构设计为环境无关，确保在不同行业和拓扑结构（公有云、混合云、气隙环境）中的无缝集成。",
-            "sectors": {
-                "finance": {
-                    "title": "金融服务 (银行/金融科技)",
-                    "impact": "实现了跨地区交易处理的 100% 数据驻留合规，同时减少了 28% 的多云运营成本 (OpEx)。"
-                },
-                "healthcare": {
-                    "title": "医疗与生命科学",
-                    "impact": "在混合云环境中实现了自动化的 HIPAA 合规，确保在跨区域数据分析过程中，PII 绝不会经过不安全的网络。"
-                },
-                "telecom": {
-                    "title": "电信与边缘计算",
-                    "impact": "自主管理超过 10,000 个边缘节点，减少了 75% 的运维人力投入。"
-                },
-                "government": {
-                    "title": "公共部门与国防",
-                    "impact": "实现了涉密本地系统与公共云提供商之间的安全工作负载迁移，无需手动重新配置。"
-                }
-            }
-        },
-        "eb1a": {
-            "title": "10. 原创性贡献与国家重要性",
-            "p1": "这项工作在自主基础设施治理领域带来了根本性的突破，对全球技术领导地位和国家经济安全具有重大意义。",
-            "originality_label": "原创性贡献",
-            "originality": "ASO 的核心原创性在于其独特的主权意图抽象，它首次将合规逻辑与云服务商的基础设施实现彻底分离。这是一个非显而易见的跨学科创新，解决了困扰云行业数十年的供应商锁定瓶颈。",
-            "importance_label": "国家重要性",
-            "importance": "通过支持真正的云中立，ASO 增强了国家关键基础设施在应对单点云厂商崩溃或网络战争时的韧性。它确保组织能保持运营连续性，而不必受制于第三方云厂商的地理政治或经济地位。",
-            "executive_summary_title": "供科技审查用的执行摘要",
-            "summary_content": "ASO 框架代表了对云计算架构领域的“领袖级贡献”。它解决了由碎片化云资产产生的超过 6000 亿美元的系统性风险。凭借其开创性的架构设计和严谨的实证验证，Chaitanya Bharath Gopu 为意图驱动的基础设施设定了新的标准。本研究对科技界及全球商业生态均具有深远意义，为实现具有韧性的主权数字化治理提供了一个可扩展的范型。"
-        },
-        "conclusion": {
-            "title": "11. 结论与未来演进",
-            "p1": "自主主权编排是云演进的必然里程碑。通过从手动管理转向自主智能，组织可以将精力从基础设施维护中解放，专注于应用创新。",
-            "p2": "未来研究将聚焦于“联邦 ASO”，实现不同主权控制平面之间的自主协作，构建一个真正的全球自愈数字化生态系统。"
-        },
-        "references": {
-            "title": "参考文献",
-            "ref1": "Gopu, C. B. (2025). 'The Sovereign Cloud Paradigm'. Journal of Enterprise Architecture.",
-            "ref2": "NIST SP 800-145: Definition of Cloud Computing (2011).",
-            "ref3": "HashiCorp: 'State of Cloud Strategy 2024'.",
-            "ref4": "IEEE: 'Autonomous Systems in Scalable Infrastructure' (2024).",
-            "ref5": "Cloud Security Alliance: 'Multi-Cloud Governance Framework v2.0'."
-        },
-        "footer": "© 2025 OmniGCloud 研究院. 允许用于专业及学术引用。EB-1A 证据包 #441."
-    }
+    "footer": "© 2025 OmniGCloud 研究院. 允许用于专业及学术引用。EB-1A 证据包 #441."
+  },
+  "Faq": {
+    "title": "[TODO_TRANSLATE] Frequently Asked Questions",
+    "subtitle": "[TODO_TRANSLATE] Technical insights for the modern enterprise architect.",
+    "badge": "[TODO_TRANSLATE] RESOURCES",
+    "cta": "[TODO_TRANSLATE] Speak with a Cloud Architect"
+  }
 }

@@ -1,63 +1,53 @@
-# Stage 1: Install dependencies
+# Multi-cloud portable Dockerfile (Container-First Strategy)
+# Compatible with AWS ECS, Azure Container Apps, Google Cloud Run, and Kubernetes.
+
+# --- Stage 1: Prune dependencies (Reduce image size) ---
 FROM node:20-alpine AS deps
 RUN apk add --no-cache libc6-compat
 WORKDIR /app
 
-# Install dependencies based on the preferred package manager
+# Copy dependency manifests
 COPY package.json package-lock.json* ./
-RUN npm ci --no-audit
+# Install dependencies (production only usually, but we need devDeps for build)
+RUN npm ci
 
-# Stage 2: Rebuild the source code only when needed
+# --- Stage 2: Build the application ---
 FROM node:20-alpine AS builder
 WORKDIR /app
 COPY --from=deps /app/node_modules ./node_modules
 COPY . .
 
-# Next.js collects completely anonymous telemetry data about general usage.
-# Learn more here: https://nextjs.org/telemetry
-# Disable telemetry during the build.
+# Set environment for build (default to production behavior)
+# APP_ENV can be overridden at build time, but usually we build generic artifacts
+# and inject config via ENV/Secrets at runtime.
 ENV NEXT_TELEMETRY_DISABLED=1
+ENV APP_ENV=prod
 
+# Run build
 RUN npm run build
 
-# Stage 3: Production image, copy all the files and run next
+# --- Stage 3: Production Runner (Final Image) ---
 FROM node:20-alpine AS runner
 WORKDIR /app
 
-# Install tini for signal handling
-RUN apk add --no-cache tini
-
 ENV NODE_ENV=production
-# Disable telemetry during runtime.
 ENV NEXT_TELEMETRY_DISABLED=1
 
+# Don't run as root
 RUN addgroup --system --gid 1001 nodejs
 RUN adduser --system --uid 1001 nextjs
 
+# Copy standalone output from builder
 COPY --from=builder /app/public ./public
-
-# Set the correct permission for prerender cache
-RUN mkdir .next
-RUN chown nextjs:nodejs .next
-
-# Automatically leverage output traces to reduce image size
-# https://nextjs.org/docs/advanced-features/output-file-tracing
 COPY --from=builder --chown=nextjs:nodejs /app/.next/standalone ./
 COPY --from=builder --chown=nextjs:nodejs /app/.next/static ./.next/static
 
+# Switch users
 USER nextjs
 
+# Expose port (standard for container orchestrators)
 EXPOSE 3000
-
 ENV PORT=3000
-# set hostname to localhost
-ENV HOSTNAME="0.0.0.0"
 
-# Health check using the created endpoint
-HEALTHCHECK --interval=30s --timeout=5s --start-period=5s --retries=3 \
-    CMD node -e "fetch('http://localhost:3000/api/health').then(r => r.ok ? process.exit(0) : process.exit(1)).catch(() => process.exit(1))"
-
-# Use tini to manage signals and child processes
-ENTRYPOINT ["/sbin/tini", "--"]
-
+# Start application
 CMD ["node", "server.js"]

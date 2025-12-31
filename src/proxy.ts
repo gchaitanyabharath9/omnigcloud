@@ -2,36 +2,88 @@ import { auth } from "@/auth";
 import { coreMiddleware as proxy } from "@/core-middleware";
 import { NextResponse } from "next/server";
 import type { NextRequest } from "next/server";
+import { domains } from "@/config/domains";
+
+const SUPPORTED_LOCALES = ['en', 'es', 'fr', 'de', 'zh', 'hi', 'ja', 'ko'];
+const DEFAULT_LOCALE = 'en';
 
 export default auth(async (req) => {
   const { nextUrl } = req;
-  const isLoggedIn = !!req.auth;
+  const { pathname, search } = nextUrl;
 
-  // Define app routes (accounting for locale prefix)
-  const isAppRoute = nextUrl.pathname.startsWith('/app') ||
-    /^\/[a-z]{2}\/app/.test(nextUrl.pathname);
-
-  // Require login for app routes
-  if (isAppRoute) {
-    if (!isLoggedIn) {
-      console.warn(`[AUTH_AUDIT] Unauthorized Access Attempt | Path: ${nextUrl.pathname} | IP: ${req.headers.get('x-forwarded-for') || 'unknown'}`);
-      const signInUrl = new URL("/api/auth/signin", nextUrl);
-      signInUrl.searchParams.set("callbackUrl", nextUrl.pathname);
-      return NextResponse.redirect(signInUrl);
-    }
-    console.log(`[AUTH_AUDIT] Protected Access | User: ${req.auth?.user?.email} | Path: ${nextUrl.pathname}`);
+  // 1. Skip assets and internal Next.js paths
+  if (
+    pathname.startsWith('/_next') ||
+    pathname.startsWith('/api') ||
+    pathname.startsWith('/static') ||
+    pathname.startsWith('/images') ||
+    pathname.includes('.') ||
+    pathname === '/favicon.ico' ||
+    pathname === '/robots.txt' ||
+    pathname === '/sitemap.xml'
+  ) {
+    return NextResponse.next();
   }
 
-  // Pass to proxy for rate limiting and i18n
+  // 1a. Canonical Host Enforcement (Application Layer)
+  // Fixes: "www vs non-www" and "vercel.app" leakage without Cloudflare Proxy
+  if (process.env.NODE_ENV === 'production') {
+    const host = req.headers.get('host');
+    const canonicalUrl = new URL(domains.canonical);
+    const canonicalHost = canonicalUrl.host;
+
+    // If current host does not match canonical host (case-insensitive)
+    if (host && host.toLowerCase() !== canonicalHost.toLowerCase()) {
+      // Create new URL using canonical host but preserving path and query
+      const newUrl = new URL(req.url);
+      newUrl.hostname = canonicalHost;
+      newUrl.protocol = 'https:';
+      newUrl.port = ''; // Standard ports don't need explicit numbers
+
+      return NextResponse.redirect(newUrl, 301);
+    }
+  }
+
+  const segments = pathname.split('/');
+  const firstSegment = segments[1];
+
+  // A) Root path "/" -> "/en"
+  if (pathname === '/') {
+    return NextResponse.redirect(new URL(`/${DEFAULT_LOCALE}`, nextUrl));
+  }
+
+  // B) Check for locale prefix
+  const isSupportedLocale = SUPPORTED_LOCALES.includes(firstSegment);
+
+  if (!isSupportedLocale) {
+    // C) Handle unsupported 2-letter codes or bare paths
+    // If it looks like a locale (2 chars) but isn't supported, replace it
+    if (firstSegment.length === 2) {
+      const rest = segments.slice(2).join('/');
+      const newPath = rest ? `/${DEFAULT_LOCALE}/${rest}` : `/${DEFAULT_LOCALE}`;
+      return NextResponse.redirect(new URL(newPath + search, nextUrl));
+    }
+
+    // Otherwise it's a bare path like "/pricing" -> "/en/pricing"
+    return NextResponse.redirect(new URL(`/${DEFAULT_LOCALE}${pathname}${search}`, nextUrl));
+  }
+
+  // D) Authentication Logic for protected app routes
+  const isLoggedIn = !!req.auth;
+  const isAppRoute = pathname.startsWith('/app') || /^\/[a-z]{2}\/app/.test(pathname);
+
+  if (isAppRoute) {
+    if (!isLoggedIn) {
+      const signInUrl = new URL("/api/auth/signin", nextUrl);
+      signInUrl.searchParams.set("callbackUrl", pathname);
+      return NextResponse.redirect(signInUrl);
+    }
+  }
+
+  // Pass to core-middleware for rate limiting and final intl processing
   return proxy(req as unknown as NextRequest);
 });
 
 export const config = {
-  // Match all pathnames except for
-  // - /api
-  // - /_next (static files)
-  // - /_vercel (Vercel specifics)
-  // - /static (public files)
-  // - favicon.ico, logo.png, etc.
   matcher: ['/((?!api|_next|_vercel|.*\\..*).*)'],
 };

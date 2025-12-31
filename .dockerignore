@@ -1,42 +1,15 @@
-# Dependencies
-node_modules
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-.pnpm-debug.log*
-
-# Next.js
-.next
-out
-build
-
-# Environment
-.env
-.env*.local
-.env.development
-.env.test
-
-# Debug
-logs
-*.log
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-.pnpm-debug.log*
-
-# IDE/System
-.vscode
-.idea
-.DS_Store
-Thumbs.db
-*.swp
-
-# Docker/CI
+# Docker artifacts
 Dockerfile
 .dockerignore
+node_modules
+npm-debug.log
+README.md
+.next
 .git
 .github
-.gitignore
-README.md
-LICENSE
+.vscode
+qa-i18n/__test_results__
+qa-i18n/playwright-report
+qa-i18n/test-results
 coverage
+*.md

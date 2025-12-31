@@ -61,9 +61,7 @@ const nextConfig: NextConfig = {
             value: 'camera=(), microphone=(), geolocation=(), payment=(), usb=(), interest-cohort=()'
           },
           {
-            // CSP in Report-Only mode - monitor violations without breaking pages
-            // To enforce: change key to 'Content-Security-Policy'
-            key: 'Content-Security-Policy-Report-Only',
+            key: 'Content-Security-Policy',
             value: cspDirectives
           },
           {

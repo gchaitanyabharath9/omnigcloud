@@ -1,0 +1,69 @@
+name: Future Dev/SIT Pipeline
+
+on:
+  push:
+    branches:
+      - "dev"
+  pull_request:
+    branches:
+      - "dev"
+  workflow_dispatch:
+
+env:
+  APP_ENV: dev
+
+jobs:
+  # 1. QA/CI Gates - Always run for dev branch, regardless of deployment flag
+  quality_gates:
+    name: 🛡️ Quality Gates (CI)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: "npm"
+
+      - name: Install Dependencies
+        run: npm ci
+
+      - name: Lint
+        run: npm run lint
+
+      - name: Typecheck
+        run: npm run typecheck
+
+      # Builds with 'dev' config to verify it builds
+      - name: Build (Dev Profile)
+        run: npm run build
+        env:
+          APP_ENV: dev
+
+      - name: QA Inventory Check
+        run: npm run qa:inventory
+
+      - name: QA i18n Coverage
+        run: npm run qa:i18n
+
+  # 2. Deployment - Guarded by Repository Variable
+  deploy_sit:
+    name: 🚀 Deploy to SIT
+    runs-on: ubuntu-latest
+    needs: quality_gates
+    # CRITICAL: This job only runs if the repo variable is explicitly 'true'
+    # If variable is missing or 'false', this skips.
+    if: vars.ENABLE_SIT_PIPELINE == 'true'
+    environment: sit
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Deploy Information
+        run: |
+          echo "🚀 SIT Deployment Active"
+          echo "Environment: sit"
+          echo "Config Source: src/config/sit/app.json"
+
+      # Add real deployment steps here (e.g. Vercel, AWS)
+      # when ready to enable.
