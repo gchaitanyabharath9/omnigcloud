@@ -16,10 +16,10 @@
     "deploy:azure": "bash scripts/push-to-clouds.sh azure",
     "deploy:gcp": "bash scripts/push-to-clouds.sh gcp",
     "deploy:ocp": "bash scripts/push-to-clouds.sh ocp",
-    "qa:inventory": "npx ts-node qa-i18n/scripts/route-inventory.ts && npx ts-node qa-i18n/scripts/generate-urls.ts",
-    "qa:i18n": "npx ts-node qa-i18n/scripts/i18n-coverage.ts",
-    "qa:i18n:fill": "npx ts-node qa-i18n/scripts/i18n-fill-missing.ts",
-    "qa:seo": "npx ts-node qa-i18n/scripts/seo-check.ts",
+    "qa:inventory": "npx tsx qa-i18n/scripts/route-inventory.ts && npx tsx qa-i18n/scripts/generate-urls.ts",
+    "qa:i18n": "npx tsx qa-i18n/scripts/i18n-coverage.ts",
+    "qa:i18n:fill": "npx tsx qa-i18n/scripts/i18n-fill-missing.ts",
+    "qa:seo": "npx tsx qa-i18n/scripts/seo-check.ts",
     "qa:test": "npx playwright test -c qa-i18n/playwright.config.ts",
     "qa:full": "npm run qa:inventory && npm run qa:i18n && npm run qa:seo && npm run qa:test"
   },
@@ -63,6 +63,7 @@
     "jsdom": "^27.4.0",
     "playwright": "^1.57.0",
     "prettier": "^3.7.4",
+    "tsx": "^4.21.0",
     "typescript": "^5",
     "vitest": "^4.0.16"
   }
