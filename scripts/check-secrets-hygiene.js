@@ -33,6 +33,8 @@ const ALLOWED_EXCEPTIONS = [
     'NEXT_PUBLIC_RECAPTCHA_SITE_KEY',  // Public site key (not secret)
     'NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY', // Public publishable key
     'NEXT_PUBLIC_MAPBOX_TOKEN',        // Public access token
+    'NEXT_PUBLIC_GIT_COMMIT',          // Build Metadata (Public)
+    'NEXT_PUBLIC_VERCEL_GIT_COMMIT_SHA', // Vercel Build Metadata (Public)
 ];
 
 // Sensitive value patterns (actual secret-like values)
