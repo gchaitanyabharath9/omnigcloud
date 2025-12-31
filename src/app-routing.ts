@@ -92,6 +92,4 @@ export default auth(async (req) => {
   return proxy(req as unknown as NextRequest);
 });
 
-export const config = {
-  matcher: ['/((?!api|_next|_vercel|.*\\..*).*)'],
-};
+
