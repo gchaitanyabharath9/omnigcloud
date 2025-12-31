@@ -1,5 +1,5 @@
 import React from 'react';
-import { Download, Printer, Shield, Database, Activity, Globe, Lock, Cpu, Server, Layers, ArrowRight, CheckCircle, AlertTriangle, Network } from 'lucide-react';
+import { Download, Printer, Shield, Database, Activity, Globe, Lock, Cpu, Server, Layers, ArrowRight, ArrowDown, CheckCircle, AlertTriangle, Network } from 'lucide-react';
 import Link from 'next/link';
 import { WhitepaperHeader } from './components/WhitepaperHeader';
 import { SchematicDiagram } from './components/SchematicDiagram';
@@ -200,7 +200,7 @@ export default function WhitePaperPage() {
 
                     {/* 11. COMPARATIVE STRUCTURAL ANALYSIS */}
                     <div className="scholarly-section" style={{ marginBottom: '5rem' }}>
-                        <h3 style={{ fontSize: '1.5rem', fontWeight: 800, marginBottom: '1.5rem', color: 'var(--foreground)' }}>11. Comparative Structural Analysis</h3>
+                        <h3 style={{ fontSize: '1.5rem', fontWeight: 800, marginBottom: '1.5rem', color: 'var(--foreground)' }}>11. Comparative Structural Analysis & Impossibility Proof</h3>
                         <p style={{ marginBottom: '2rem' }}>
                             Understanding why existing platforms cannot simply "add" this capability requires structural analysis.
                         </p>
@@ -215,6 +215,62 @@ export default function WhitePaperPage() {
                                 { label: 'IDPs (Backstage)', legacy: 'Developer Focused', aso: 'Lacks operational authority' }
                             ]}
                         />
+
+                        {/* NEW SUBSECTION: IMPOSSIBILITY PROOF */}
+                        <div style={{ marginTop: '4rem', paddingTop: '3rem', borderTop: '1px dashed var(--border)' }}>
+                            <h4 style={{ fontSize: '1.2rem', fontWeight: 900, marginBottom: '1.5rem', color: '#ef4444' }}>Why Autonomous Enterprise Control Planes Cannot Emerge from Existing Platforms</h4>
+                            <p style={{ marginBottom: '1.5rem' }}>
+                                It is the determination of this architecture reference that the AECP <strong>cannot emerge through composition or extension</strong> of current tools. The limitation is not one of features (which can be added) but of <strong>architectural invariant constraints</strong> (which cannot be violated).
+                            </p>
+                            <p style={{ marginBottom: '2rem' }}>
+                                A system designed for <em>Execution</em> (e.g., Kubernetes, AWS) cannot structurally house the <em>Decision</em> logic required to govern itself. This would introduce a recursive dependency loop where the system is asked to audit its own state mutation instructions—an <strong>architectural impossibility</strong> for conflict-free governance.
+                            </p>
+
+                            <ComparisonTable
+                                title="Table 3: Hard-Constraint Analysis (The Inevitability Proof)"
+                                headers={['Platform Category', 'Immutable Architectural Constraint', 'Why Transition to AECP is Impossible']}
+                                rows={[
+                                    { label: 'Hyperscaler Control Planes', legacy: 'Profit mandate linked to resource consumption', aso: 'Cannot autonomously decide to reduce consumption or migrate to competitor (Conflict of Interest)' },
+                                    { label: 'Infrastructure-as-Code', legacy: 'Linear, user-initiated execution flow', aso: 'Cannot evolve into a cyclic, self-initiated reconciliation loop without ceasing to be IaC' },
+                                    { label: 'AIOps & Observability', legacy: 'Read-Only architectural permissions', aso: 'Structurally constrained from acting. Granting write-access violates specific "Observer Principle"' },
+                                    { label: 'Internal Developer Platforms', legacy: 'Scoped to "Application" layer', aso: 'Lacks jurisdiction over "Infrastructure" layer attributes (security groups, IAM, route tables)' }
+                                ]}
+                            />
+
+                            <div style={{ marginTop: '3rem' }}>
+                                <SchematicDiagram title="Figure 9: The Orthogonality of Decision and Execution">
+                                    <div style={{ padding: '2rem', background: 'var(--bg-surface-2)', display: 'grid', gridTemplateColumns: '1fr 1px 1fr', gap: '2rem', alignItems: 'center' }}>
+                                        <div style={{ opacity: 0.5, filter: 'grayscale(100%)' }}>
+                                            <div style={{ textAlign: 'center', fontWeight: 800, marginBottom: '1rem' }}>LEGACY: EMBEDDED LOGIC</div>
+                                            <div style={{ border: '2px solid #94a3b8', padding: '1.5rem', borderRadius: '0.5rem' }}>
+                                                <div>Execution Plane</div>
+                                                <div style={{ margin: '1rem', border: '1px dashed #94a3b8', padding: '0.5rem' }}>
+                                                    Embedded Policy?
+                                                    <div style={{ fontSize: '0.7rem', color: '#ef4444' }}>FAIL: Conflict of Interest</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div style={{ height: '100%', width: '1px', background: 'var(--border)' }}></div>
+                                        <div>
+                                            <div style={{ textAlign: 'center', fontWeight: 800, marginBottom: '1rem', color: '#3b82f6' }}>AECP: ORTHOGONAL LOGIC</div>
+                                            <div style={{ border: '2px solid #3b82f6', padding: '1.5rem', borderRadius: '0.5rem', position: 'relative' }}>
+                                                <div style={{ position: 'absolute', top: '-15px', left: '20px', background: '#3b82f6', color: 'white', padding: '0 0.5rem', fontSize: '0.7rem', fontWeight: 700 }}>DECISION PLANE</div>
+                                                <div>Policy Vector</div>
+                                            </div>
+                                            <div style={{ textAlign: 'center', margin: '0.5rem 0' }}>
+                                                <ArrowDown size={20} />
+                                            </div>
+                                            <div style={{ border: '2px solid #94a3b8', padding: '1.5rem', borderRadius: '0.5rem', opacity: 0.8 }}>
+                                                <div>Execution Plane</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div style={{ marginTop: '1rem', fontSize: '0.85rem', opacity: 0.8, textAlign: 'center' }}>
+                                        <em>Figure 9: Decision Intelligence must be structurally external to the Execution Plane. Embedding it creates a "Judge, Jury, and Executioner" paradox that violates governance separation.</em>
+                                    </div>
+                                </SchematicDiagram>
+                            </div>
+                        </div>
                     </div>
 
                     {/* 12. ENTERPRISE ADOPTION */}
