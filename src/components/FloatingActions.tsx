@@ -2,6 +2,8 @@
 
 import { MessageCircle, Mail, X } from "lucide-react";
 import { useState } from "react";
+import { twMerge } from "tailwind-merge";
+import styles from "./FloatingActions.module.css";
 
 export default function FloatingActions() {
     const [showChat, setShowChat] = useState(false);
@@ -9,17 +11,8 @@ export default function FloatingActions() {
 
     return (
         <>
-            {/* Floating Action Buttons - Bottom Right */}
-            <div style={{
-                position: 'fixed',
-                bottom: '2rem',
-                right: '2rem',
-                display: 'flex',
-                flexDirection: 'column',
-                gap: '1rem',
-                zIndex: 99999,
-                fontFamily: 'var(--font-inter)'
-            }}>
+            {/* Floating Action Buttons */}
+            <div className={styles.floatingContainer} style={{ fontFamily: 'var(--font-inter)' }}>
                 {/* Contact Us Button */}
                 <button
                     onClick={() => { setShowContact(!showContact); setShowChat(false); }}
@@ -27,7 +20,7 @@ export default function FloatingActions() {
                         width: '50px',
                         height: '50px',
                         borderRadius: '1rem',
-                        background: '#1e293b', /* Solid dark slate to ensure visibility */
+                        background: '#1e293b',
                         border: '1px solid rgba(255,255,255,0.1)',
                         color: '#ffffff',
                         cursor: 'pointer',
@@ -37,7 +30,7 @@ export default function FloatingActions() {
                         transition: 'all 0.2s ease',
                         fontFamily: 'inherit',
                         boxShadow: '0 4px 12px rgba(0,0,0,0.3)',
-                        padding: 0 /* Reset padding */
+                        padding: 0
                     }}
                     aria-label="Contact Support"
                 >
@@ -69,7 +62,6 @@ export default function FloatingActions() {
                 >
                     {showChat ? <X size={26} /> : <MessageCircle size={26} />}
 
-                    {/* Notification Dot (only if closed) */}
                     {!showChat && (
                         <div style={{
                             position: 'absolute',
@@ -87,25 +79,7 @@ export default function FloatingActions() {
 
             {/* Chat Widget */}
             {showChat && (
-                <div className="glass-panel" style={{
-                    position: 'fixed',
-                    bottom: '10rem', /* Raised to clear buttons */
-                    right: '2rem',
-                    width: '380px',
-                    maxWidth: 'calc(100vw - 4rem)',
-                    height: '600px',
-                    maxHeight: 'calc(100vh - 12rem)',
-                    borderRadius: '1.5rem',
-                    zIndex: 99999,
-                    display: 'flex',
-                    flexDirection: 'column',
-                    overflow: 'hidden',
-                    background: 'var(--card-bg)',
-                    backdropFilter: 'blur(20px)',
-                    border: '1px solid var(--card-border)',
-                    boxShadow: '0 25px 50px -12px rgba(0, 0, 0, 0.5)',
-                    fontFamily: 'var(--font-inter)'
-                }}>
+                <div className={twMerge("glass-panel", styles.widgetContainer)} style={{ fontFamily: 'var(--font-inter)' }}>
                     {/* Chat Header */}
                     <div style={{
                         padding: '1.5rem',
@@ -127,7 +101,6 @@ export default function FloatingActions() {
                         padding: '1.5rem',
                         overflowY: 'auto'
                     }}>
-                        {/* Welcome Message */}
                         <div style={{
                             background: 'var(--primary-glow)',
                             padding: '1rem',
@@ -141,7 +114,6 @@ export default function FloatingActions() {
                             </p>
                         </div>
 
-                        {/* Quick Actions */}
                         <div style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem' }}>
                             {[
                                 "💬 Connect with Sales",
@@ -194,21 +166,7 @@ export default function FloatingActions() {
 
             {/* Contact Widget */}
             {showContact && (
-                <div className="glass-panel" style={{
-                    position: 'fixed',
-                    bottom: '10rem', /* Raised */
-                    right: '2rem',
-                    width: '360px',
-                    maxWidth: 'calc(100vw - 4rem)',
-                    borderRadius: '1.5rem',
-                    zIndex: 99999,
-                    overflow: 'hidden',
-                    background: 'var(--card-bg)',
-                    backdropFilter: 'blur(20px)',
-                    border: '1px solid var(--card-border)',
-                    boxShadow: '0 25px 50px -12px rgba(0, 0, 0, 0.5)',
-                    fontFamily: 'var(--font-inter)'
-                }}>
+                <div className={twMerge("glass-panel", styles.widgetContainer)} style={{ height: 'auto', fontFamily: 'var(--font-inter)' }}>
                     {/* Contact Header */}
                     <div style={{
                         padding: '1.5rem',

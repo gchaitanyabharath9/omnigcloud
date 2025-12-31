@@ -153,48 +153,71 @@
     transform: translateX(2px);
 }
 
-/* Mobile Navigation Overlay */
-.mobileNav {
+/* Mobile Navigation Overlay - Slide-in Drawer */
+.mobileOverlay {
     position: fixed;
-    top: 70px;
+    top: 0;
     left: 0;
     right: 0;
     bottom: 0;
+    background: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(4px);
+    z-index: 9998;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+}
+
+.mobileOverlayShow {
+    opacity: 1;
+    visibility: visible;
+}
+
+.mobileNav {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 320px;
+    height: 100vh;
     background-color: var(--background);
-    /* Fallback */
-    background: var(--background);
-    /* Improve contrast and readability */
+    background-image: radial-gradient(circle at top right, var(--primary-glow), transparent);
     color: var(--foreground);
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
     z-index: 9999;
-    /* Ensure it's above everything */
-    padding: 2rem;
-    border-top: 1px solid var(--card-border);
-    animation: fadeIn 0.2s ease-out;
+    padding: 5rem 2rem 2rem;
+    border-left: 1px solid var(--card-border);
+    box-shadow: -10px 0 30px rgba(0, 0, 0, 0.5);
     display: flex;
     flex-direction: column;
+    gap: 1.5rem;
+    transition: right 0.4s cubic-bezier(0.16, 1, 0.3, 1);
     overflow-y: auto;
-    /* Allow scrolling if menu is long */
 }
 
-/* Adjust top position for small screens where header height changes */
+.mobileNavOpen {
+    right: 0;
+}
+
+.mobileNavLink {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--foreground);
+    text-decoration: none;
+    padding: 0.75rem 1rem;
+    border-radius: 0.75rem;
+    transition: all 0.2s;
+    border: 1px solid transparent;
+}
+
+.mobileNavLink:hover {
+    background: var(--primary-glow);
+    border-color: var(--card-border);
+    padding-left: 1.5rem;
+}
+
+/* Adjust top position for small screens */
 @media (max-width: 480px) {
     .mobileNav {
-        top: 60px;
-        /* Matched to .header height change */
-    }
-}
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(-10px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
+        width: 100%;
     }
 }
 
@@ -208,6 +231,9 @@
         display: flex !important;
         align-items: center;
         justify-content: center;
+        position: relative;
+        z-index: 10000;
+        /* Above drawer */
     }
 
     .headerContainer {

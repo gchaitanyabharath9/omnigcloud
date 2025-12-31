@@ -39,28 +39,28 @@ const Footer = () => {
                             },
                             {
                                 label: t('services.label'), color: "#10b981", links: [
-                                    { name: t('services.migration'), href: "/services#cloud-migration" },
-                                    { name: t('services.modernization'), href: "/services#app-modernization" },
-                                    { name: t('services.ai'), href: "/services#data-ai" },
-                                    { name: t('services.compliance'), href: "/compliance" }
+                                    { name: "Cloud Modernization", href: "/services/cloud-modernization" },
+                                    { name: "OpenShift Strategy", href: "/services/openshift-modernization" },
+                                    { name: "App Engineering", href: "/services/application-modernization" },
+                                    { name: "FinOps Intelligence", href: "/services/cloud-cost-optimization" },
+                                    { name: "AI Infrastructure", href: "/services/ai-cloud-platform" }
                                 ]
                             },
                             {
-                                label: t('impact.label'), color: "#8b5cf6", links: [
-                                    { name: t('impact.finance'), href: "/use-cases#financial" },
-                                    { name: t('impact.healthcare'), href: "/use-cases#healthcare" },
-                                    { name: t('impact.retail'), href: "/use-cases#retail" },
-                                    { name: t('impact.government'), href: "/use-cases#government" }
+                                label: "Authority", color: "#8b5cf6", links: [
+                                    { name: "Technical Founder", href: "/founder" },
+                                    { name: "System Architecture", href: "/architecture" },
+                                    { name: "Research Hub", href: "/research" },
+                                    { name: "Case Studies", href: "/case-studies" }
                                 ]
                             },
                             {
                                 label: t('resources.label'), color: "#f59e0b", links: [
                                     { name: t('resources.docs'), href: "/docs" },
-                                    { name: t('resources.api'), href: "/docs/api" },
-                                    { name: t('resources.visual_library'), href: "/visual-library" },
-                                    { name: t('resources.blueprints'), href: "/docs/governance" },
-                                    { name: "Whitepaper", href: "/resources/whitepaper" },
-                                    { name: t('resources.cases'), href: "/case-studies" }
+                                    { name: "Sovereign Whitepaper", href: "/docs/whitepaper" },
+                                    { name: "AECP Engine", href: "/platform/ai-engine" },
+                                    { name: "Observability", href: "/platform/observability" },
+                                    { name: t('resources.visual_library'), href: "/visual-library" }
                                 ]
                             },
                             {

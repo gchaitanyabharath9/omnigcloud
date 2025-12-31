@@ -1,4 +1,6 @@
 import Footer from "@/components/Footer";
+import Link from "next/link";
+import { ArrowRight } from "lucide-react";
 import PlatformHero from "@/components/sections/platform/PlatformHero";
 import ControlPlaneSection from "@/components/sections/platform/ControlPlaneSection";
 import ObservabilitySection from "@/components/sections/platform/ObservabilitySection";
@@ -17,6 +19,24 @@ export default function PlatformPage() {
     return (
         <>
             <PlatformHero />
+
+            <div className="container py-20">
+                <div className="grid md:grid-cols-2 gap-8">
+                    {[
+                        { title: "The AECP Engine", path: "/en/platform/ai-engine", desc: "Autonomous Enterprise Cloud Protocol: The neural core of our modernization platform." },
+                        { title: "Sovereign Observability", path: "/en/platform/observability", desc: "Unified visibility and audit trails across hybrid sovereign environments." }
+                    ].map((item, i) => (
+                        <Link href={item.path} key={i} className="glass-panel p-10 hover:border-primary/50 transition-colors group">
+                            <h3 className="text-2xl font-black mb-4 group-hover:text-primary transition-colors">{item.title}</h3>
+                            <p className="text-muted-foreground mb-6">{item.desc}</p>
+                            <div className="text-primary font-bold flex items-center gap-2">
+                                Deep Dive <ArrowRight size={18} />
+                            </div>
+                        </Link>
+                    ))}
+                </div>
+            </div>
+
             <ControlPlaneSection />
             <ObservabilitySection />
             <ArbitrageSection />
