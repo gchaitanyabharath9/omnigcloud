@@ -24,7 +24,7 @@ export default function WhitePaperPage() {
                 fontSize: '8vw',
                 fontWeight: 900,
                 color: 'var(--foreground)',
-                opacity: 0.03,
+                opacity: 0.04,
                 pointerEvents: 'none',
                 zIndex: 9999,
                 whiteSpace: 'nowrap',
@@ -390,7 +390,7 @@ export default function WhitePaperPage() {
                         </div>
                         <div style={{ display: 'flex', gap: '1rem' }}>
                             <Printer size={18} style={{ opacity: 0.5, cursor: 'not-allowed' }} aria-label="Print view unavailable" />
-                            <a href="/AECP-Whitepaper-v7.pdf" download="OmniGCloud-AECP-Whitepaper.pdf" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--foreground)', cursor: 'pointer' }} aria-label="Download PDF">
+                            <a href="/AECP-Whitepaper-v8.pdf" download="OmniGCloud-AECP-Whitepaper.pdf" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--foreground)', cursor: 'pointer' }} aria-label="Download PDF">
                                 <Download size={18} />
                             </a>
                         </div>
