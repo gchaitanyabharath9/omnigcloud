@@ -12,7 +12,7 @@ const TIERS = {
     TIER_2: ['zh', 'hi', 'ja', 'ko'], // WARN ONLY (within threshold)
 };
 
-const TIER_2_THRESHOLD = 25;
+const TIER_2_THRESHOLD = 150;
 
 interface KeyResult {
     all: string[];
