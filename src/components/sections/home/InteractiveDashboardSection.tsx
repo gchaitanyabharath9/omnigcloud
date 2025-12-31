@@ -62,13 +62,13 @@ export default function InteractiveDashboardSection() {
                         <div style={{ position: 'relative', zIndex: 2 }}>
                             <h4 style={{ margin: 0, fontSize: '1rem', fontWeight: 950, textShadow: '0 2px 4px rgba(0,0,0,0.5)' }}>{t('infraTitle')}</h4>
                             <p style={{ fontSize: '0.75rem', opacity: 0.9, marginTop: '0.25rem', fontWeight: 600 }}>{t('infraSubtitle')}</p>
-                            <div style={{ marginTop: '5rem', background: 'rgba(0,0,0,0.6)', backdropFilter: 'blur(8px)', padding: '0.75rem', borderRadius: '0.75rem', border: '1px solid rgba(255,255,255,0.1)' }}>
-                                <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '0.25rem' }}>
-                                    <span style={{ fontSize: '0.7rem' }}>{t('globalHealth')}</span>
-                                    <span style={{ fontSize: '0.7rem', color: '#10b981' }}>99.999%</span>
+                            <div style={{ marginTop: '5rem', background: 'rgba(2, 6, 23, 0.85)', backdropFilter: 'blur(12px)', padding: '1rem', borderRadius: '0.75rem', border: '1px solid rgba(255,255,255,0.15)', boxShadow: '0 4px 6px rgba(0,0,0,0.3)' }}>
+                                <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '0.5rem', alignItems: 'center' }}>
+                                    <span style={{ fontSize: '0.75rem', color: '#ffffff', fontWeight: 800, letterSpacing: '0.05em', textTransform: 'uppercase' }}>{t('globalHealth')}</span>
+                                    <span style={{ fontSize: '0.85rem', color: '#34d399', fontWeight: 900, textShadow: '0 0 10px rgba(52, 211, 153, 0.5)' }}>99.999%</span>
                                 </div>
-                                <div style={{ height: '4px', background: 'rgba(255,255,255,0.1)', borderRadius: '2px', overflow: 'hidden' }}>
-                                    <div style={{ width: '99%', height: '100%', background: '#10b981' }} />
+                                <div style={{ height: '6px', background: 'rgba(255,255,255,0.1)', borderRadius: '3px', overflow: 'hidden' }}>
+                                    <div style={{ width: '99%', height: '100%', background: 'linear-gradient(90deg, #10b981, #34d399)', borderRadius: '3px', boxShadow: '0 0 10px rgba(16, 185, 129, 0.5)' }} />
                                 </div>
                             </div>
                         </div>
