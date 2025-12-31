@@ -63,7 +63,7 @@ export default function Breadcrumb() {
                             {isLast ? (
                                 <span style={{ color: 'white', fontWeight: 700 }}>{name}</span>
                             ) : (
-                                <Link href={path} style={{ color: 'var(--foreground)', textDecoration: 'none', opacity: 0.6 }} className="hover:opacity-100 transition-opacity">
+                                <Link href={path} style={{ color: '#cbd5e1', textDecoration: 'none', opacity: 0.8 }} className="hover:text-white transition-colors">
                                     {name}
                                 </Link>
                             )}
