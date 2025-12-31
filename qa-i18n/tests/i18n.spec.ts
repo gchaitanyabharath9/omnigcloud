@@ -4,7 +4,7 @@ import path from 'path';
 
 const urlsFile = path.join(process.cwd(), 'qa-i18n/urls.json');
 const urls = fs.existsSync(urlsFile) ? JSON.parse(fs.readFileSync(urlsFile, 'utf-8')) as string[] : [];
-const LOCALES = ['en', 'es', 'fr', 'de', 'zh', 'hi', 'ja', 'ko'];
+// Unused LOCALES removed
 
 interface SEOResult {
     url: string;

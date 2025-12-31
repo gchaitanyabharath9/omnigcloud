@@ -37,10 +37,10 @@ function fillPlaceholders() {
         const filePath = path.join(MESSAGES_DIR, `${locale}.json`);
         if (!fs.existsSync(filePath)) return;
 
-        let content = fs.readFileSync(filePath, 'utf-8');
-        let data = JSON.parse(content);
+        const content = fs.readFileSync(filePath, 'utf-8');
+        const data = JSON.parse(content);
 
-        function recursiveFix(obj: any) {
+        function recursiveFix(obj: Record<string, any>) {
             for (const key in obj) {
                 if (typeof obj[key] === 'object' && obj[key] !== null) {
                     recursiveFix(obj[key]);

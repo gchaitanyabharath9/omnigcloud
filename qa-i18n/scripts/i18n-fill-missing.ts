@@ -41,11 +41,9 @@ function fillMissing() {
 
     LOCALES.forEach(locale => {
         const filePath = path.join(MESSAGES_DIR, `${locale}.json`);
-        let currentMessages = {};
-
-        if (fs.existsSync(filePath)) {
-            currentMessages = JSON.parse(fs.readFileSync(filePath, 'utf-8'));
-        }
+        const currentMessages = fs.existsSync(filePath)
+            ? JSON.parse(fs.readFileSync(filePath, 'utf-8'))
+            : {};
 
         const { merged, addedCount } = deepMergeAndFill({}, currentMessages, enMessages);
 

@@ -38,9 +38,6 @@ function audit() {
 
     const assignmentRegex = /(?:const|let|var)\s+(\w+)\s*=\s*(?:await\s+)?(?:useTranslations|getTranslations)\s*\(\s*(?:{\s*(?:locale,\s*)?namespace:\s*)?['"](.*?)['"](?:\s*})?\s*\)/g;
 
-    // Pattern for t("key") or t(`key`)
-    // We'll dynamic search for the variable names found above
-
     files.forEach(file => {
         const content = fs.readFileSync(file, 'utf-8');
         const fileNamespaces: Record<string, string> = {};
@@ -50,9 +47,6 @@ function audit() {
             fileNamespaces[match[1]] = match[2];
         }
 
-        // If no translation hook found, maybe it's using a global t? 
-        // Or maybe it's a sub-component.
-        // We look for all x("...") where x is in fileNamespaces or x is "t"
         const tVarNames = Object.keys(fileNamespaces).length > 0 ? Object.keys(fileNamespaces) : ['t'];
 
         tVarNames.forEach(varName => {
@@ -66,8 +60,6 @@ function audit() {
                 }
             }
 
-            // Also handle dynamic template literals t(`differentiation.comparison.headers.${key}`)
-            // We can't easily resolve these, but we can catch the prefix
             const tTemplateRegex = new RegExp(`${varName}\\s*\\(\\s*\`([^${'`'}]+)\\.\\\${`, 'g');
             let tTemplMatch;
             while ((tTemplMatch = tTemplateRegex.exec(content)) !== null) {
@@ -84,7 +76,7 @@ function audit() {
     const flatEnKeys = new Set<string>();
     const namespaces = new Set<string>();
 
-    function flatten(obj: any, prefix = '') {
+    function flatten(obj: Record<string, any>, prefix = '') {
         for (const key in obj) {
             const fullKey = prefix ? `${prefix}.${key}` : key;
             if (typeof obj[key] === 'object' && obj[key] !== null && !Array.isArray(obj[key])) {
@@ -98,16 +90,9 @@ function audit() {
     flatten(enMessages);
 
     const missingKeys = Array.from(usedKeys).filter(k => {
-        // If the key is already there, skip
         if (flatEnKeys.has(k)) return false;
-
-        // If it's a namespace itself (unlikely to be called as t("Namespace")), skip
         if (namespaces.has(k)) return false;
-
-        // Check if it's a partial key (from template literals)
-        // If en.json has keys starting with this prefix, it's likely covered
         if (Array.from(flatEnKeys).some(enK => enK.startsWith(k + '.'))) return false;
-
         return true;
     });
 

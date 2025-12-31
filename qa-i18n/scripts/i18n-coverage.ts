@@ -20,7 +20,7 @@ interface KeyResult {
     untranslated: string[];
 }
 
-function getKeysInfo(obj: any, prefix = ''): KeyResult {
+function getKeysInfo(obj: Record<string, any>, prefix = ''): KeyResult {
     let all: string[] = [];
     let untranslated: string[] = [];
 
@@ -102,14 +102,14 @@ function checkCoverage() {
     // 1. Audit Codebase for used keys
     const usedInCode = auditCodebaseKeys();
 
-    // 2. Load en.json
-    let enMessages;
-    try {
-        enMessages = JSON.parse(fs.readFileSync(path.join(MESSAGES_DIR, `${DEFAULT_LOCALE}.json`), 'utf-8'));
-    } catch (e) {
-        console.error('❌ Failed to load en.json');
-        process.exit(1);
-    }
+    const enMessages = (() => {
+        try {
+            return JSON.parse(fs.readFileSync(path.join(MESSAGES_DIR, `${DEFAULT_LOCALE}.json`), 'utf-8'));
+        } catch (_e) {
+            console.error('❌ Failed to load en.json');
+            process.exit(1);
+        }
+    })();
 
     const { all: enKeys, untranslated: enUntranslated } = getKeysInfo(enMessages);
     const enKeySet = new Set(enKeys);

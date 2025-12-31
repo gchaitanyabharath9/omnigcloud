@@ -3,7 +3,7 @@ import path from 'path';
 
 const MESSAGES_DIR = path.join(process.cwd(), 'messages');
 
-const TRANSLATIONS: Record<string, any> = {
+const TRANSLATIONS: Record<string, Record<string, any>> = {
     es: {
         Docs: {
             meta: {
@@ -426,7 +426,7 @@ const TRANSLATIONS: Record<string, any> = {
     }
 };
 
-function deepMerge(target: any, source: any) {
+function deepMerge(target: Record<string, any>, source: Record<string, any>) {
     for (const key in source) {
         if (typeof source[key] === 'object' && source[key] !== null) {
             if (!target[key]) target[key] = {};
@@ -442,19 +442,7 @@ function apply() {
         const filePath = path.join(MESSAGES_DIR, `${locale}.json`);
         if (!fs.existsSync(filePath)) return;
 
-        let data = JSON.parse(fs.readFileSync(filePath, 'utf-8'));
-
-        // Clean up TODOs first
-        function clean(obj: any) {
-            for (const key in obj) {
-                if (typeof obj[key] === 'object' && obj[key] !== null) {
-                    clean(obj[key]);
-                } else if (typeof obj[key] === 'string' && (obj[key].includes('[TODO') || obj[key] === '[TODO] news')) {
-                    // Delete if it starts with [TODO] or [TODO_TRANSLATE]
-                    // We'll replace it anyway if it's in our map
-                }
-            }
-        }
+        const data = JSON.parse(fs.readFileSync(filePath, 'utf-8'));
 
         deepMerge(data, TRANSLATIONS[locale]);
 

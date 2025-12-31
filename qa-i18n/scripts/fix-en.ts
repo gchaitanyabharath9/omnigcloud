@@ -4,21 +4,13 @@ import path from 'path';
 const EN_PATH = path.join(process.cwd(), 'messages/en.json');
 
 function cleanup() {
-    let en = JSON.parse(fs.readFileSync(EN_PATH, 'utf-8'));
+    const en = JSON.parse(fs.readFileSync(EN_PATH, 'utf-8'));
 
     // Remove false positives (at root)
     const rootKeysToRemove = ['nav', 'news', 'node-vault', 'rate_limit_checks_total', 'x-forwarded-for', 'x-request-id', 'api_errors_total', 'auth_events_total', 'base64url', 'content-length', 'content-type', 'REDIS_TOKEN', 'REDIS_URL', 'RESEND_API_KEY', 'RESEND_FROM_EMAIL', 'RESEND_TO_EMAIL', 'SYSTEM_HEALTH_CHECK'];
 
     rootKeysToRemove.forEach(k => {
-        if (en[k] && typeof en[k] === 'string' && en[k].startsWith('[TODO]')) {
-            delete en[k];
-        } else if (en[k] && typeof en[k] === 'object') {
-            // If it's the root 'nav' object that we accidentally added
-            if (k === 'nav' && !en['Header']) {
-                // Keep it if Header is missing? No, Header has its own nav.
-            }
-            delete en[k];
-        }
+        delete en[k];
     });
 
     // Fix Docs namespace
