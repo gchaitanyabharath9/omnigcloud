@@ -31,9 +31,15 @@ export default auth(async (req) => {
     const host = req.headers.get('host');
     const canonicalUrl = new URL(domains.canonical);
     const canonicalHost = canonicalUrl.host;
+    const rootDomain = 'omnigcloud.com';
 
-    // If current host does not match canonical host (case-insensitive)
-    if (host && host.toLowerCase() !== canonicalHost.toLowerCase()) {
+    // Allow both www and non-www of the main domain to pass to prevent infinite redirect loops
+    // if Vercel and App Config disagree on the primary.
+    // We still force redirects for vercel.app, omnig.ai, etc.
+    const isCanonical = host?.toLowerCase() === canonicalHost.toLowerCase();
+    const isRoot = host?.toLowerCase() === rootDomain;
+
+    if (host && !isCanonical && !isRoot) {
       // Create new URL using canonical host but preserving path and query
       const newUrl = new URL(req.url);
       newUrl.hostname = canonicalHost;
