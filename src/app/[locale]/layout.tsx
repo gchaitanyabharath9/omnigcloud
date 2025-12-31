@@ -1,6 +1,6 @@
 import { NextIntlClientProvider } from 'next-intl';
 import { getMessages } from 'next-intl/server';
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Inter, Plus_Jakarta_Sans } from "next/font/google"; // Premium fonts
 import "../../styles/globals.css";
 import Header from "@/components/header";
@@ -51,13 +51,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
     description: "OmniGCloud provides AI-native cloud modernization, RedHat OCP integration, and autonomous cloud governance. Scale your enterprise with our cloud-agnostic discovery engine.",
     keywords: ["Cloud Modernization", "Enterprise AI Architecture", "RedHat OpenShift Modernization", "Cloud Agnostic Discovery", "Azure Cloud Migration", "Cloud Cost Optimization", "AECP Engine", "Sovereign Cloud Governance"],
     authors: [{ name: "OmniGCloud Executive Office" }],
-    viewport: {
-      width: 'device-width',
-      initialScale: 1,
-      maximumScale: 5,
-      userScalable: true,
-      viewportFit: 'cover', // For notched devices (iPhone X+)
-    },
+    // Viewport moved to generateViewport
     alternates: {
       canonical: `${siteUrl}/${locale}`,
       languages: {
@@ -125,6 +119,19 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   };
 }
 
+export function generateViewport(): Viewport {
+  return {
+    width: 'device-width',
+    initialScale: 1,
+    maximumScale: 5,
+    userScalable: true,
+    viewportFit: 'cover',
+    themeColor: [
+      { media: '(prefers-color-scheme: light)', color: 'white' },
+      { media: '(prefers-color-scheme: dark)', color: 'black' },
+    ],
+  };
+}
 
 export default async function RootLayout({
   children,
