@@ -17,11 +17,16 @@ const CACHE_TTL_MS = 60 * 1000; // 1 minute cache
 export async function getSecret(key: string): Promise<string | undefined> {
     const env = config.env;
 
-    if (env === 'local') {
+    // 1. Priority: Check Environment Variables (Standard for Vercel/Local)
+    if (process.env[key]) {
         return process.env[key];
     }
 
-    // For non-local environments (dev, sit, uat, prod), fetch from Vault
+    if (env === 'local') {
+        return undefined;
+    }
+
+    // 2. Fallback: Fetch from Vault (for advanced non-local setups)
     if (!vaultCache || (Date.now() - cacheTimestamp > CACHE_TTL_MS)) {
         try {
             // Standardize path: secret/data/nascent-zodiac/<env>
@@ -42,6 +47,5 @@ export async function getSecret(key: string): Promise<string | undefined> {
         }
     }
 
-    // Return from cache if available, otherwise fallback to process.env (optional safety net)
-    return (vaultCache && vaultCache[key]) || process.env[key];
+    return vaultCache && vaultCache[key];
 }
