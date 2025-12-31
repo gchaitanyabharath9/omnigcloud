@@ -12,7 +12,7 @@ const TIERS = {
     TIER_2: ['zh', 'hi', 'ja', 'ko'], // WARN ONLY (within threshold)
 };
 
-const TIER_2_THRESHOLD = 150;
+const TIER_2_THRESHOLD = 25; // User requirement: <25 missing keys
 
 interface KeyResult {
     all: string[];
@@ -33,12 +33,25 @@ function getKeysInfo(obj: any, prefix = ''): KeyResult {
             untranslated = [...untranslated, ...nested.untranslated];
         } else {
             all.push(fullKey);
-            if (typeof val === 'string' && val.startsWith('[TODO_TRANSLATE] ')) {
-                untranslated.push(fullKey);
+            if (typeof val === 'string') {
+                const v = val.trim();
+                if (
+                    v === '' ||
+                    v.includes('TODO') ||
+                    v.includes('TBD') ||
+                    v.includes('[MISSING]') ||
+                    v.startsWith('[TODO_TRANSLATE] ')
+                ) {
+                    untranslated.push(`${fullKey} (Value: "${msgTruncate(val)}")`);
+                }
             }
         }
     }
     return { all, untranslated };
+}
+
+function msgTruncate(s: string) {
+    return s.length > 20 ? s.substring(0, 20) + '...' : s;
 }
 
 function checkCoverage() {

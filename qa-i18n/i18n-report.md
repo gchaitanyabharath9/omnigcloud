@@ -1,6 +1,6 @@
 # i18n Coverage Report
 
-Generated on 2025-12-31T19:07:19.360Z
+Generated on 2025-12-31T20:40:45.900Z
 
 **Base Locale:** en (896 keys)
 
@@ -16,7 +16,7 @@ Generated on 2025-12-31T19:07:19.360Z
 - **Tier:** 1 (Strict)
 - **Total Keys:** 896
 - **Missing/Untranslated Keys:** 0
-## ⚠️ zh - ⚠️ WARN (Within Threshold)
+## ❌ zh - ❌ FAIL (Tier 2 Exceeded Threshold 25)
 - **Tier:** 2 (Relaxed)
 - **Total Keys:** 896
 - **Missing/Untranslated Keys:** 64
@@ -24,74 +24,74 @@ Generated on 2025-12-31T19:07:19.360Z
 <details><summary>View Missing/Untranslated Keys</summary>
 
 ```
-Header.nav.performance
-Header.nav.telemetry
-Header.nav.organization
-Header.nav.contact_us
-Header.nav.information
-Header.nav.tiers
-Header.nav.docs_links.guide
-Header.nav.docs_links.newsroom
-Header.nav.company_links.global_hq
-Company.email.architects
-Company.email.support
-Company.email.legal
-Company.email.press
-Company.email.admin
-Company.email.security
-Company.name
-Company.location
-Footer.trust.terms
-Footer.resources.visual_library
-Footer.social.linkedin
-Footer.social.twitter
-Footer.social.discord
-Footer.social.github
-Hero.problem
-Hero.solution
-Hero.audience
-Hero.ctaArchitecture
-Hero.ctaWhitepaper
-Ecosystem.governance.title
-Ecosystem.governance.desc
-Ecosystem.governance.status
-Ecosystem.governance.link
-Ecosystem.mesh.title
-Ecosystem.mesh.desc
-Ecosystem.mesh.status
-Ecosystem.mesh.link
-Ecosystem.ai.title
-Ecosystem.ai.desc
-Ecosystem.ai.status
-Ecosystem.ai.link
-Ecosystem.vault.title
-Ecosystem.vault.desc
-Ecosystem.vault.status
-Ecosystem.vault.link
-Newsroom.cta
-Newsroom.news.bank.desc
-Newsroom.news.egress.desc
-Newsroom.news.integration.desc
-Dashboard.roiTitle
-Dashboard.roiSubtitle
-Dashboard.infraTitle
-Dashboard.infraSubtitle
-Dashboard.optimizationTitle
-Dashboard.trustTitle
-Dashboard.globalHealth
-Dashboard.healthMonitor
-Dashboard.healthOptimal
-Dashboard.healthDesc
-Dashboard.complianceIndex
-Dashboard.complianceDesc
-Faq.title
-Faq.subtitle
-Faq.badge
-Faq.cta
+Header.nav.performance (Value: "[TODO_TRANSLATE] PER...")
+Header.nav.telemetry (Value: "[TODO_TRANSLATE] TEL...")
+Header.nav.organization (Value: "[TODO_TRANSLATE] ORG...")
+Header.nav.contact_us (Value: "[TODO_TRANSLATE] CON...")
+Header.nav.information (Value: "[TODO_TRANSLATE] INF...")
+Header.nav.tiers (Value: "[TODO_TRANSLATE] PRI...")
+Header.nav.docs_links.guide (Value: "[TODO_TRANSLATE] Use...")
+Header.nav.docs_links.newsroom (Value: "[TODO_TRANSLATE] New...")
+Header.nav.company_links.global_hq (Value: "[TODO_TRANSLATE] Glo...")
+Company.email.architects (Value: "[TODO_TRANSLATE] arc...")
+Company.email.support (Value: "[TODO_TRANSLATE] sup...")
+Company.email.legal (Value: "[TODO_TRANSLATE] leg...")
+Company.email.press (Value: "[TODO_TRANSLATE] pre...")
+Company.email.admin (Value: "[TODO_TRANSLATE] adm...")
+Company.email.security (Value: "[TODO_TRANSLATE] sec...")
+Company.name (Value: "[TODO_TRANSLATE] Omn...")
+Company.location (Value: "[TODO_TRANSLATE] New...")
+Footer.trust.terms (Value: "[TODO_TRANSLATE] Ter...")
+Footer.resources.visual_library (Value: "[TODO_TRANSLATE] Vis...")
+Footer.social.linkedin (Value: "[TODO_TRANSLATE] htt...")
+Footer.social.twitter (Value: "[TODO_TRANSLATE] htt...")
+Footer.social.discord (Value: "[TODO_TRANSLATE] htt...")
+Footer.social.github (Value: "[TODO_TRANSLATE] htt...")
+Hero.problem (Value: "[TODO_TRANSLATE] Leg...")
+Hero.solution (Value: "[TODO_TRANSLATE] Aut...")
+Hero.audience (Value: "[TODO_TRANSLATE] Des...")
+Hero.ctaArchitecture (Value: "[TODO_TRANSLATE] Arc...")
+Hero.ctaWhitepaper (Value: "[TODO_TRANSLATE] Dow...")
+Ecosystem.governance.title (Value: "[TODO_TRANSLATE] Gov...")
+Ecosystem.governance.desc (Value: "[TODO_TRANSLATE] Aut...")
+Ecosystem.governance.status (Value: "[TODO_TRANSLATE] MOD...")
+Ecosystem.governance.link (Value: "[TODO_TRANSLATE] Exp...")
+Ecosystem.mesh.title (Value: "[TODO_TRANSLATE] Glo...")
+Ecosystem.mesh.desc (Value: "[TODO_TRANSLATE] Nat...")
+Ecosystem.mesh.status (Value: "[TODO_TRANSLATE] NET...")
+Ecosystem.mesh.link (Value: "[TODO_TRANSLATE] Vie...")
+Ecosystem.ai.title (Value: "[TODO_TRANSLATE] AI ...")
+Ecosystem.ai.desc (Value: "[TODO_TRANSLATE] Man...")
+Ecosystem.ai.status (Value: "[TODO_TRANSLATE] MOD...")
+Ecosystem.ai.link (Value: "[TODO_TRANSLATE] Acc...")
+Ecosystem.vault.title (Value: "[TODO_TRANSLATE] Sov...")
+Ecosystem.vault.desc (Value: "[TODO_TRANSLATE] Loc...")
+Ecosystem.vault.status (Value: "[TODO_TRANSLATE] ENC...")
+Ecosystem.vault.link (Value: "[TODO_TRANSLATE] Sec...")
+Newsroom.cta (Value: "[TODO_TRANSLATE] Rea...")
+Newsroom.news.bank.desc (Value: "[TODO_TRANSLATE] How...")
+Newsroom.news.egress.desc (Value: "[TODO_TRANSLATE] A d...")
+Newsroom.news.integration.desc (Value: "[TODO_TRANSLATE] Bre...")
+Dashboard.roiTitle (Value: "[TODO_TRANSLATE] Sov...")
+Dashboard.roiSubtitle (Value: "[TODO_TRANSLATE] Rea...")
+Dashboard.infraTitle (Value: "[TODO_TRANSLATE] COR...")
+Dashboard.infraSubtitle (Value: "[TODO_TRANSLATE] Dec...")
+Dashboard.optimizationTitle (Value: "[TODO_TRANSLATE] OPT...")
+Dashboard.trustTitle (Value: "[TODO_TRANSLATE] TRU...")
+Dashboard.globalHealth (Value: "[TODO_TRANSLATE] Glo...")
+Dashboard.healthMonitor (Value: "[TODO_TRANSLATE] Sov...")
+Dashboard.healthOptimal (Value: "[TODO_TRANSLATE] OPT...")
+Dashboard.healthDesc (Value: "[TODO_TRANSLATE] Rea...")
+Dashboard.complianceIndex (Value: "[TODO_TRANSLATE] Sov...")
+Dashboard.complianceDesc (Value: "[TODO_TRANSLATE] Aut...")
+Faq.title (Value: "[TODO_TRANSLATE] Fre...")
+Faq.subtitle (Value: "[TODO_TRANSLATE] Tec...")
+Faq.badge (Value: "[TODO_TRANSLATE] RES...")
+Faq.cta (Value: "[TODO_TRANSLATE] Spe...")
 ```
 </details>
 
-## ⚠️ hi - ⚠️ WARN (Within Threshold)
+## ❌ hi - ❌ FAIL (Tier 2 Exceeded Threshold 25)
 - **Tier:** 2 (Relaxed)
 - **Total Keys:** 896
 - **Missing/Untranslated Keys:** 77
@@ -99,87 +99,87 @@ Faq.cta
 <details><summary>View Missing/Untranslated Keys</summary>
 
 ```
-Header.nav.dashboard
-Header.nav.performance
-Header.nav.telemetry
-Header.nav.organization
-Header.nav.contact_us
-Header.nav.information
-Header.nav.tiers
-Header.nav.dashboard_links.roi
-Header.nav.dashboard_links.cost
-Header.nav.dashboard_links.uptime
-Header.nav.dashboard_links.security
-Header.nav.dashboard_links.resources
-Header.nav.dashboard_links.deployment
-Header.nav.dashboard_links.scaling
-Header.nav.dashboard_links.error
-Header.nav.docs_links.guide
-Header.nav.docs_links.visual_library
-Header.nav.docs_links.newsroom
-Header.nav.company_links.global_hq
-Breadcrumb.command-center
-Breadcrumb.dashboard
-Breadcrumb.executive
-Breadcrumb.technical
-Breadcrumb.roi
-Breadcrumb.cost
-Breadcrumb.uptime
-Breadcrumb.security
-Breadcrumb.deployment
-Breadcrumb.scaling
-Breadcrumb.error
-Footer.trust.terms
-Footer.resources.visual_library
-Footer.social.linkedin
-Footer.social.twitter
-Footer.social.discord
-Footer.social.github
-Hero.problem
-Hero.solution
-Hero.audience
-Hero.ctaArchitecture
-Hero.ctaWhitepaper
-Ecosystem.governance.title
-Ecosystem.governance.desc
-Ecosystem.governance.status
-Ecosystem.governance.link
-Ecosystem.mesh.title
-Ecosystem.mesh.desc
-Ecosystem.mesh.status
-Ecosystem.mesh.link
-Ecosystem.ai.title
-Ecosystem.ai.desc
-Ecosystem.ai.status
-Ecosystem.ai.link
-Ecosystem.vault.title
-Ecosystem.vault.desc
-Ecosystem.vault.status
-Ecosystem.vault.link
-Newsroom.cta
-Newsroom.news.bank.desc
-Newsroom.news.egress.desc
-Newsroom.news.integration.desc
-Dashboard.roiTitle
-Dashboard.roiSubtitle
-Dashboard.infraTitle
-Dashboard.infraSubtitle
-Dashboard.optimizationTitle
-Dashboard.trustTitle
-Dashboard.globalHealth
-Dashboard.healthMonitor
-Dashboard.healthOptimal
-Dashboard.healthDesc
-Dashboard.complianceIndex
-Dashboard.complianceDesc
-Faq.title
-Faq.subtitle
-Faq.badge
-Faq.cta
+Header.nav.dashboard (Value: "[TODO_TRANSLATE] Das...")
+Header.nav.performance (Value: "[TODO_TRANSLATE] PER...")
+Header.nav.telemetry (Value: "[TODO_TRANSLATE] TEL...")
+Header.nav.organization (Value: "[TODO_TRANSLATE] ORG...")
+Header.nav.contact_us (Value: "[TODO_TRANSLATE] CON...")
+Header.nav.information (Value: "[TODO_TRANSLATE] INF...")
+Header.nav.tiers (Value: "[TODO_TRANSLATE] PRI...")
+Header.nav.dashboard_links.roi (Value: "[TODO_TRANSLATE] Exe...")
+Header.nav.dashboard_links.cost (Value: "[TODO_TRANSLATE] Cos...")
+Header.nav.dashboard_links.uptime (Value: "[TODO_TRANSLATE] Glo...")
+Header.nav.dashboard_links.security (Value: "[TODO_TRANSLATE] Com...")
+Header.nav.dashboard_links.resources (Value: "[TODO_TRANSLATE] Res...")
+Header.nav.dashboard_links.deployment (Value: "[TODO_TRANSLATE] Vel...")
+Header.nav.dashboard_links.scaling (Value: "[TODO_TRANSLATE] Aut...")
+Header.nav.dashboard_links.error (Value: "[TODO_TRANSLATE] Thr...")
+Header.nav.docs_links.guide (Value: "[TODO_TRANSLATE] Use...")
+Header.nav.docs_links.visual_library (Value: "[TODO_TRANSLATE] Vis...")
+Header.nav.docs_links.newsroom (Value: "[TODO_TRANSLATE] New...")
+Header.nav.company_links.global_hq (Value: "[TODO_TRANSLATE] Glo...")
+Breadcrumb.command-center (Value: "[TODO_TRANSLATE] Com...")
+Breadcrumb.dashboard (Value: "[TODO_TRANSLATE] Das...")
+Breadcrumb.executive (Value: "[TODO_TRANSLATE] Exe...")
+Breadcrumb.technical (Value: "[TODO_TRANSLATE] Tec...")
+Breadcrumb.roi (Value: "[TODO_TRANSLATE] ROI...")
+Breadcrumb.cost (Value: "[TODO_TRANSLATE] Cos...")
+Breadcrumb.uptime (Value: "[TODO_TRANSLATE] Upt...")
+Breadcrumb.security (Value: "[TODO_TRANSLATE] Sec...")
+Breadcrumb.deployment (Value: "[TODO_TRANSLATE] Dep...")
+Breadcrumb.scaling (Value: "[TODO_TRANSLATE] Sca...")
+Breadcrumb.error (Value: "[TODO_TRANSLATE] Err...")
+Footer.trust.terms (Value: "[TODO_TRANSLATE] Ter...")
+Footer.resources.visual_library (Value: "[TODO_TRANSLATE] Vis...")
+Footer.social.linkedin (Value: "[TODO_TRANSLATE] htt...")
+Footer.social.twitter (Value: "[TODO_TRANSLATE] htt...")
+Footer.social.discord (Value: "[TODO_TRANSLATE] htt...")
+Footer.social.github (Value: "[TODO_TRANSLATE] htt...")
+Hero.problem (Value: "[TODO_TRANSLATE] Leg...")
+Hero.solution (Value: "[TODO_TRANSLATE] Aut...")
+Hero.audience (Value: "[TODO_TRANSLATE] Des...")
+Hero.ctaArchitecture (Value: "[TODO_TRANSLATE] Arc...")
+Hero.ctaWhitepaper (Value: "[TODO_TRANSLATE] Dow...")
+Ecosystem.governance.title (Value: "[TODO_TRANSLATE] Gov...")
+Ecosystem.governance.desc (Value: "[TODO_TRANSLATE] Aut...")
+Ecosystem.governance.status (Value: "[TODO_TRANSLATE] MOD...")
+Ecosystem.governance.link (Value: "[TODO_TRANSLATE] Exp...")
+Ecosystem.mesh.title (Value: "[TODO_TRANSLATE] Glo...")
+Ecosystem.mesh.desc (Value: "[TODO_TRANSLATE] Nat...")
+Ecosystem.mesh.status (Value: "[TODO_TRANSLATE] NET...")
+Ecosystem.mesh.link (Value: "[TODO_TRANSLATE] Vie...")
+Ecosystem.ai.title (Value: "[TODO_TRANSLATE] AI ...")
+Ecosystem.ai.desc (Value: "[TODO_TRANSLATE] Man...")
+Ecosystem.ai.status (Value: "[TODO_TRANSLATE] MOD...")
+Ecosystem.ai.link (Value: "[TODO_TRANSLATE] Acc...")
+Ecosystem.vault.title (Value: "[TODO_TRANSLATE] Sov...")
+Ecosystem.vault.desc (Value: "[TODO_TRANSLATE] Loc...")
+Ecosystem.vault.status (Value: "[TODO_TRANSLATE] ENC...")
+Ecosystem.vault.link (Value: "[TODO_TRANSLATE] Sec...")
+Newsroom.cta (Value: "[TODO_TRANSLATE] Rea...")
+Newsroom.news.bank.desc (Value: "[TODO_TRANSLATE] How...")
+Newsroom.news.egress.desc (Value: "[TODO_TRANSLATE] A d...")
+Newsroom.news.integration.desc (Value: "[TODO_TRANSLATE] Bre...")
+Dashboard.roiTitle (Value: "[TODO_TRANSLATE] Sov...")
+Dashboard.roiSubtitle (Value: "[TODO_TRANSLATE] Rea...")
+Dashboard.infraTitle (Value: "[TODO_TRANSLATE] COR...")
+Dashboard.infraSubtitle (Value: "[TODO_TRANSLATE] Dec...")
+Dashboard.optimizationTitle (Value: "[TODO_TRANSLATE] OPT...")
+Dashboard.trustTitle (Value: "[TODO_TRANSLATE] TRU...")
+Dashboard.globalHealth (Value: "[TODO_TRANSLATE] Glo...")
+Dashboard.healthMonitor (Value: "[TODO_TRANSLATE] Sov...")
+Dashboard.healthOptimal (Value: "[TODO_TRANSLATE] OPT...")
+Dashboard.healthDesc (Value: "[TODO_TRANSLATE] Rea...")
+Dashboard.complianceIndex (Value: "[TODO_TRANSLATE] Sov...")
+Dashboard.complianceDesc (Value: "[TODO_TRANSLATE] Aut...")
+Faq.title (Value: "[TODO_TRANSLATE] Fre...")
+Faq.subtitle (Value: "[TODO_TRANSLATE] Tec...")
+Faq.badge (Value: "[TODO_TRANSLATE] RES...")
+Faq.cta (Value: "[TODO_TRANSLATE] Spe...")
 ```
 </details>
 
-## ⚠️ ja - ⚠️ WARN (Within Threshold)
+## ❌ ja - ❌ FAIL (Tier 2 Exceeded Threshold 25)
 - **Tier:** 2 (Relaxed)
 - **Total Keys:** 896
 - **Missing/Untranslated Keys:** 141
@@ -187,151 +187,151 @@ Faq.cta
 <details><summary>View Missing/Untranslated Keys</summary>
 
 ```
-Breadcrumb.services
-Breadcrumb.demo
-Breadcrumb.contact
-Breadcrumb.whitepaper
-Breadcrumb.privacy
-Breadcrumb.terms
-Breadcrumb.newsroom
-Breadcrumb.community
-Breadcrumb.blog
-Breadcrumb.case-studies
-Breadcrumb.visual-library
-Breadcrumb.security
-Company.email.architects
-Company.email.support
-Company.email.legal
-Company.email.press
-Company.email.admin
-Company.email.security
-Company.name
-Company.location
-Footer.trust.terms
-Footer.resources.visual_library
-Footer.social.linkedin
-Footer.social.twitter
-Footer.social.discord
-Footer.social.github
-Hero.problem
-Hero.solution
-Hero.audience
-Hero.ctaArchitecture
-Hero.ctaWhitepaper
-Ecosystem.governance.title
-Ecosystem.governance.desc
-Ecosystem.governance.status
-Ecosystem.governance.link
-Ecosystem.mesh.title
-Ecosystem.mesh.desc
-Ecosystem.mesh.status
-Ecosystem.mesh.link
-Ecosystem.ai.title
-Ecosystem.ai.desc
-Ecosystem.ai.status
-Ecosystem.ai.link
-Ecosystem.vault.title
-Ecosystem.vault.desc
-Ecosystem.vault.status
-Ecosystem.vault.link
-Newsroom.cta
-Newsroom.news.bank.desc
-Newsroom.news.egress.desc
-Newsroom.news.integration.desc
-Dashboard.roiTitle
-Dashboard.roiSubtitle
-Dashboard.infraTitle
-Dashboard.infraSubtitle
-Dashboard.optimizationTitle
-Dashboard.trustTitle
-Dashboard.globalHealth
-Dashboard.healthMonitor
-Dashboard.healthOptimal
-Dashboard.healthDesc
-Dashboard.complianceIndex
-Dashboard.complianceDesc
-Whitepaper.problem.vendor_lock.scenario
-Whitepaper.problem.compliance.scenario
-Whitepaper.problem.operational.scenario
-Whitepaper.problem.metrics.label
-Whitepaper.problem.metrics.mttr_manual_label
-Whitepaper.problem.metrics.mttr_manual
-Whitepaper.problem.metrics.mttr_aso_label
-Whitepaper.problem.metrics.mttr_aso
-Whitepaper.problem.metrics.compliance_label
-Whitepaper.problem.metrics.compliance_manual
-Whitepaper.problem.metrics.compliance_aso
-Whitepaper.problem.metrics.provisioning_manual
-Whitepaper.problem.metrics.provisioning_aso
-Whitepaper.problem.metrics.opex_label
-Whitepaper.problem.metrics.opex_savings
-Whitepaper.limitations.title
-Whitepaper.limitations.p1
-Whitepaper.limitations.p2
-Whitepaper.decision_framework.title
-Whitepaper.decision_framework.p1
-Whitepaper.decision_framework.components.guardrails.title
-Whitepaper.decision_framework.components.guardrails.content
-Whitepaper.decision_framework.components.adaptation.title
-Whitepaper.decision_framework.components.adaptation.content
-Whitepaper.decision_framework.components.intent_mapping.title
-Whitepaper.decision_framework.components.intent_mapping.content
-Whitepaper.distinction
-Whitepaper.architecture.decision_engine.title
-Whitepaper.architecture.decision_engine.content
-Whitepaper.execution_flow.title
-Whitepaper.execution_flow.p1
-Whitepaper.execution_flow.steps.s1
-Whitepaper.execution_flow.steps.s2
-Whitepaper.execution_flow.steps.s3
-Whitepaper.execution_flow.steps.s4
-Whitepaper.execution_flow.steps.s5
-Whitepaper.lifecycle.title
-Whitepaper.lifecycle.resilience
-Whitepaper.differentiation.title
-Whitepaper.differentiation.p1
-Whitepaper.differentiation.comparison.headers
-Whitepaper.differentiation.comparison.row1
-Whitepaper.differentiation.comparison.row2
-Whitepaper.differentiation.comparison.row3
-Whitepaper.differentiation.comparison.row4
-Whitepaper.differentiation.non_replicability
-Whitepaper.impact.title
-Whitepaper.impact.p1
-Whitepaper.impact.metrics.efficiency_label
-Whitepaper.impact.metrics.efficiency
-Whitepaper.impact.metrics.cost_label
-Whitepaper.impact.metrics.cost
-Whitepaper.impact.metrics.security_label
-Whitepaper.impact.metrics.security
-Whitepaper.impact.metrics.agility
-Whitepaper.impact.business_value
-Whitepaper.feasibility.title
-Whitepaper.feasibility.p1
-Whitepaper.feasibility.sectors.finance.title
-Whitepaper.feasibility.sectors.finance.impact
-Whitepaper.feasibility.sectors.healthcare.title
-Whitepaper.feasibility.sectors.healthcare.impact
-Whitepaper.feasibility.sectors.telecom.title
-Whitepaper.feasibility.sectors.telecom.impact
-Whitepaper.feasibility.sectors.government.title
-Whitepaper.feasibility.sectors.government.impact
-Whitepaper.eb1a.title
-Whitepaper.eb1a.p1
-Whitepaper.eb1a.originality_label
-Whitepaper.eb1a.originality
-Whitepaper.eb1a.importance_label
-Whitepaper.eb1a.importance
-Whitepaper.eb1a.executive_summary_title
-Whitepaper.eb1a.summary_content
-Faq.title
-Faq.subtitle
-Faq.badge
-Faq.cta
+Breadcrumb.services (Value: "[TODO_TRANSLATE] Inf...")
+Breadcrumb.demo (Value: "[TODO_TRANSLATE] Int...")
+Breadcrumb.contact (Value: "[TODO_TRANSLATE] Con...")
+Breadcrumb.whitepaper (Value: "[TODO_TRANSLATE] AEC...")
+Breadcrumb.privacy (Value: "[TODO_TRANSLATE] Pri...")
+Breadcrumb.terms (Value: "[TODO_TRANSLATE] Ter...")
+Breadcrumb.newsroom (Value: "[TODO_TRANSLATE] Pre...")
+Breadcrumb.community (Value: "[TODO_TRANSLATE] Glo...")
+Breadcrumb.blog (Value: "[TODO_TRANSLATE] Sov...")
+Breadcrumb.case-studies (Value: "[TODO_TRANSLATE] Dep...")
+Breadcrumb.visual-library (Value: "[TODO_TRANSLATE] Arc...")
+Breadcrumb.security (Value: "[TODO_TRANSLATE] Sec...")
+Company.email.architects (Value: "[TODO_TRANSLATE] arc...")
+Company.email.support (Value: "[TODO_TRANSLATE] sup...")
+Company.email.legal (Value: "[TODO_TRANSLATE] leg...")
+Company.email.press (Value: "[TODO_TRANSLATE] pre...")
+Company.email.admin (Value: "[TODO_TRANSLATE] adm...")
+Company.email.security (Value: "[TODO_TRANSLATE] sec...")
+Company.name (Value: "[TODO_TRANSLATE] Omn...")
+Company.location (Value: "[TODO_TRANSLATE] New...")
+Footer.trust.terms (Value: "[TODO_TRANSLATE] Ter...")
+Footer.resources.visual_library (Value: "[TODO_TRANSLATE] Vis...")
+Footer.social.linkedin (Value: "[TODO_TRANSLATE] htt...")
+Footer.social.twitter (Value: "[TODO_TRANSLATE] htt...")
+Footer.social.discord (Value: "[TODO_TRANSLATE] htt...")
+Footer.social.github (Value: "[TODO_TRANSLATE] htt...")
+Hero.problem (Value: "[TODO_TRANSLATE] Leg...")
+Hero.solution (Value: "[TODO_TRANSLATE] Aut...")
+Hero.audience (Value: "[TODO_TRANSLATE] Des...")
+Hero.ctaArchitecture (Value: "[TODO_TRANSLATE] Arc...")
+Hero.ctaWhitepaper (Value: "[TODO_TRANSLATE] Dow...")
+Ecosystem.governance.title (Value: "[TODO_TRANSLATE] Gov...")
+Ecosystem.governance.desc (Value: "[TODO_TRANSLATE] Aut...")
+Ecosystem.governance.status (Value: "[TODO_TRANSLATE] MOD...")
+Ecosystem.governance.link (Value: "[TODO_TRANSLATE] Exp...")
+Ecosystem.mesh.title (Value: "[TODO_TRANSLATE] Glo...")
+Ecosystem.mesh.desc (Value: "[TODO_TRANSLATE] Nat...")
+Ecosystem.mesh.status (Value: "[TODO_TRANSLATE] NET...")
+Ecosystem.mesh.link (Value: "[TODO_TRANSLATE] Vie...")
+Ecosystem.ai.title (Value: "[TODO_TRANSLATE] AI ...")
+Ecosystem.ai.desc (Value: "[TODO_TRANSLATE] Man...")
+Ecosystem.ai.status (Value: "[TODO_TRANSLATE] MOD...")
+Ecosystem.ai.link (Value: "[TODO_TRANSLATE] Acc...")
+Ecosystem.vault.title (Value: "[TODO_TRANSLATE] Sov...")
+Ecosystem.vault.desc (Value: "[TODO_TRANSLATE] Loc...")
+Ecosystem.vault.status (Value: "[TODO_TRANSLATE] ENC...")
+Ecosystem.vault.link (Value: "[TODO_TRANSLATE] Sec...")
+Newsroom.cta (Value: "[TODO_TRANSLATE] Rea...")
+Newsroom.news.bank.desc (Value: "[TODO_TRANSLATE] How...")
+Newsroom.news.egress.desc (Value: "[TODO_TRANSLATE] A d...")
+Newsroom.news.integration.desc (Value: "[TODO_TRANSLATE] Bre...")
+Dashboard.roiTitle (Value: "[TODO_TRANSLATE] Sov...")
+Dashboard.roiSubtitle (Value: "[TODO_TRANSLATE] Rea...")
+Dashboard.infraTitle (Value: "[TODO_TRANSLATE] COR...")
+Dashboard.infraSubtitle (Value: "[TODO_TRANSLATE] Dec...")
+Dashboard.optimizationTitle (Value: "[TODO_TRANSLATE] OPT...")
+Dashboard.trustTitle (Value: "[TODO_TRANSLATE] TRU...")
+Dashboard.globalHealth (Value: "[TODO_TRANSLATE] Glo...")
+Dashboard.healthMonitor (Value: "[TODO_TRANSLATE] Sov...")
+Dashboard.healthOptimal (Value: "[TODO_TRANSLATE] OPT...")
+Dashboard.healthDesc (Value: "[TODO_TRANSLATE] Rea...")
+Dashboard.complianceIndex (Value: "[TODO_TRANSLATE] Sov...")
+Dashboard.complianceDesc (Value: "[TODO_TRANSLATE] Aut...")
+Whitepaper.problem.vendor_lock.scenario (Value: "[TODO_TRANSLATE] Sce...")
+Whitepaper.problem.compliance.scenario (Value: "[TODO_TRANSLATE] Sce...")
+Whitepaper.problem.operational.scenario (Value: "[TODO_TRANSLATE] Sce...")
+Whitepaper.problem.metrics.label (Value: "[TODO_TRANSLATE] Ind...")
+Whitepaper.problem.metrics.mttr_manual_label (Value: "[TODO_TRANSLATE] MTT...")
+Whitepaper.problem.metrics.mttr_manual (Value: "[TODO_TRANSLATE] 14 ...")
+Whitepaper.problem.metrics.mttr_aso_label (Value: "[TODO_TRANSLATE] MTT...")
+Whitepaper.problem.metrics.mttr_aso (Value: "[TODO_TRANSLATE] 4 M...")
+Whitepaper.problem.metrics.compliance_label (Value: "[TODO_TRANSLATE] Com...")
+Whitepaper.problem.metrics.compliance_manual (Value: "[TODO_TRANSLATE] 87%...")
+Whitepaper.problem.metrics.compliance_aso (Value: "[TODO_TRANSLATE] 99....")
+Whitepaper.problem.metrics.provisioning_manual (Value: "[TODO_TRANSLATE] 4-6...")
+Whitepaper.problem.metrics.provisioning_aso (Value: "[TODO_TRANSLATE] 2.5...")
+Whitepaper.problem.metrics.opex_label (Value: "[TODO_TRANSLATE] OpE...")
+Whitepaper.problem.metrics.opex_savings (Value: "[TODO_TRANSLATE] 31%...")
+Whitepaper.limitations.title (Value: "[TODO_TRANSLATE] 3. ...")
+Whitepaper.limitations.p1 (Value: "[TODO_TRANSLATE] Cur...")
+Whitepaper.limitations.p2 (Value: "[TODO_TRANSLATE] AEC...")
+Whitepaper.decision_framework.title (Value: "[TODO_TRANSLATE] 5. ...")
+Whitepaper.decision_framework.p1 (Value: "[TODO_TRANSLATE] Unl...")
+Whitepaper.decision_framework.components.guardrails.title (Value: "[TODO_TRANSLATE] 5.1...")
+Whitepaper.decision_framework.components.guardrails.content (Value: "[TODO_TRANSLATE] Aut...")
+Whitepaper.decision_framework.components.adaptation.title (Value: "[TODO_TRANSLATE] 5.2...")
+Whitepaper.decision_framework.components.adaptation.content (Value: "[TODO_TRANSLATE] The...")
+Whitepaper.decision_framework.components.intent_mapping.title (Value: "[TODO_TRANSLATE] 5.3...")
+Whitepaper.decision_framework.components.intent_mapping.content (Value: "[TODO_TRANSLATE] Hig...")
+Whitepaper.distinction (Value: "[TODO_TRANSLATE] Thi...")
+Whitepaper.architecture.decision_engine.title (Value: "[TODO_TRANSLATE] 6.2...")
+Whitepaper.architecture.decision_engine.content (Value: "[TODO_TRANSLATE] At ...")
+Whitepaper.execution_flow.title (Value: "[TODO_TRANSLATE] Usi...")
+Whitepaper.execution_flow.p1 (Value: "[TODO_TRANSLATE] AEC...")
+Whitepaper.execution_flow.steps.s1 (Value: "[TODO_TRANSLATE] SIG...")
+Whitepaper.execution_flow.steps.s2 (Value: "[TODO_TRANSLATE] DEC...")
+Whitepaper.execution_flow.steps.s3 (Value: "[TODO_TRANSLATE] ACT...")
+Whitepaper.execution_flow.steps.s4 (Value: "[TODO_TRANSLATE] VAL...")
+Whitepaper.execution_flow.steps.s5 (Value: "[TODO_TRANSLATE] LEA...")
+Whitepaper.lifecycle.title (Value: "[TODO_TRANSLATE] Aut...")
+Whitepaper.lifecycle.resilience (Value: "[TODO_TRANSLATE] Res...")
+Whitepaper.differentiation.title (Value: "[TODO_TRANSLATE] 7. ...")
+Whitepaper.differentiation.p1 (Value: "[TODO_TRANSLATE] AEC...")
+Whitepaper.differentiation.comparison.headers (Value: "[TODO_TRANSLATE] Arc...")
+Whitepaper.differentiation.comparison.row1 (Value: "[TODO_TRANSLATE] Dec...")
+Whitepaper.differentiation.comparison.row2 (Value: "[TODO_TRANSLATE] Clo...")
+Whitepaper.differentiation.comparison.row3 (Value: "[TODO_TRANSLATE] Dri...")
+Whitepaper.differentiation.comparison.row4 (Value: "[TODO_TRANSLATE] Par...")
+Whitepaper.differentiation.non_replicability (Value: "[TODO_TRANSLATE] The...")
+Whitepaper.impact.title (Value: "[TODO_TRANSLATE] 8. ...")
+Whitepaper.impact.p1 (Value: "[TODO_TRANSLATE] The...")
+Whitepaper.impact.metrics.efficiency_label (Value: "[TODO_TRANSLATE] Eff...")
+Whitepaper.impact.metrics.efficiency (Value: "[TODO_TRANSLATE] 68%...")
+Whitepaper.impact.metrics.cost_label (Value: "[TODO_TRANSLATE] Cos...")
+Whitepaper.impact.metrics.cost (Value: "[TODO_TRANSLATE] Ave...")
+Whitepaper.impact.metrics.security_label (Value: "[TODO_TRANSLATE] Sec...")
+Whitepaper.impact.metrics.security (Value: "[TODO_TRANSLATE] Rea...")
+Whitepaper.impact.metrics.agility (Value: "[TODO_TRANSLATE] Wor...")
+Whitepaper.impact.business_value (Value: "[TODO_TRANSLATE] Imp...")
+Whitepaper.feasibility.title (Value: "[TODO_TRANSLATE] 9. ...")
+Whitepaper.feasibility.p1 (Value: "[TODO_TRANSLATE] AEC...")
+Whitepaper.feasibility.sectors.finance.title (Value: "[TODO_TRANSLATE] Fin...")
+Whitepaper.feasibility.sectors.finance.impact (Value: "[TODO_TRANSLATE] Ach...")
+Whitepaper.feasibility.sectors.healthcare.title (Value: "[TODO_TRANSLATE] Hea...")
+Whitepaper.feasibility.sectors.healthcare.impact (Value: "[TODO_TRANSLATE] Aut...")
+Whitepaper.feasibility.sectors.telecom.title (Value: "[TODO_TRANSLATE] Tel...")
+Whitepaper.feasibility.sectors.telecom.impact (Value: "[TODO_TRANSLATE] Man...")
+Whitepaper.feasibility.sectors.government.title (Value: "[TODO_TRANSLATE] Pub...")
+Whitepaper.feasibility.sectors.government.impact (Value: "[TODO_TRANSLATE] Ena...")
+Whitepaper.eb1a.title (Value: "[TODO_TRANSLATE] 10....")
+Whitepaper.eb1a.p1 (Value: "[TODO_TRANSLATE] Thi...")
+Whitepaper.eb1a.originality_label (Value: "[TODO_TRANSLATE] Ori...")
+Whitepaper.eb1a.originality (Value: "[TODO_TRANSLATE] The...")
+Whitepaper.eb1a.importance_label (Value: "[TODO_TRANSLATE] Nat...")
+Whitepaper.eb1a.importance (Value: "[TODO_TRANSLATE] By ...")
+Whitepaper.eb1a.executive_summary_title (Value: "[TODO_TRANSLATE] Exe...")
+Whitepaper.eb1a.summary_content (Value: "[TODO_TRANSLATE] The...")
+Faq.title (Value: "[TODO_TRANSLATE] Fre...")
+Faq.subtitle (Value: "[TODO_TRANSLATE] Tec...")
+Faq.badge (Value: "[TODO_TRANSLATE] RES...")
+Faq.cta (Value: "[TODO_TRANSLATE] Spe...")
 ```
 </details>
 
-## ⚠️ ko - ⚠️ WARN (Within Threshold)
+## ❌ ko - ❌ FAIL (Tier 2 Exceeded Threshold 25)
 - **Tier:** 2 (Relaxed)
 - **Total Keys:** 896
 - **Missing/Untranslated Keys:** 66
@@ -339,71 +339,71 @@ Faq.cta
 <details><summary>View Missing/Untranslated Keys</summary>
 
 ```
-Header.nav.dashboard
-Header.nav.performance
-Header.nav.telemetry
-Header.nav.organization
-Header.nav.contact_us
-Header.nav.information
-Header.nav.tiers
-Header.nav.dashboard_links.roi
-Header.nav.dashboard_links.cost
-Header.nav.dashboard_links.uptime
-Header.nav.dashboard_links.security
-Header.nav.dashboard_links.resources
-Header.nav.dashboard_links.deployment
-Header.nav.dashboard_links.scaling
-Header.nav.dashboard_links.error
-Header.nav.docs_links.guide
-Header.nav.docs_links.visual_library
-Header.nav.docs_links.newsroom
-Header.nav.company_links.global_hq
-Breadcrumb.services
-Breadcrumb.security_page
-Breadcrumb.demo
-Breadcrumb.contact
-Breadcrumb.whitepaper
-Breadcrumb.privacy
-Breadcrumb.terms
-Breadcrumb.newsroom
-Breadcrumb.community
-Breadcrumb.blog
-Breadcrumb.case-studies
-Breadcrumb.visual-library
-Breadcrumb.command-center
-Breadcrumb.dashboard
-Breadcrumb.executive
-Breadcrumb.technical
-Breadcrumb.roi
-Breadcrumb.cost
-Breadcrumb.uptime
-Breadcrumb.security
-Breadcrumb.deployment
-Breadcrumb.scaling
-Breadcrumb.error
-Company.email.security
-Footer.resources.visual_library
-Hero.ctaArchitecture
-Hero.ctaWhitepaper
-Newsroom.cta
-Newsroom.news.bank.desc
-Newsroom.news.egress.desc
-Newsroom.news.integration.desc
-Dashboard.roiTitle
-Dashboard.roiSubtitle
-Dashboard.infraTitle
-Dashboard.infraSubtitle
-Dashboard.optimizationTitle
-Dashboard.trustTitle
-Dashboard.globalHealth
-Dashboard.healthMonitor
-Dashboard.healthOptimal
-Dashboard.healthDesc
-Dashboard.complianceIndex
-Dashboard.complianceDesc
-Faq.title
-Faq.subtitle
-Faq.badge
-Faq.cta
+Header.nav.dashboard (Value: "[TODO_TRANSLATE] Das...")
+Header.nav.performance (Value: "[TODO_TRANSLATE] PER...")
+Header.nav.telemetry (Value: "[TODO_TRANSLATE] TEL...")
+Header.nav.organization (Value: "[TODO_TRANSLATE] ORG...")
+Header.nav.contact_us (Value: "[TODO_TRANSLATE] CON...")
+Header.nav.information (Value: "[TODO_TRANSLATE] INF...")
+Header.nav.tiers (Value: "[TODO_TRANSLATE] PRI...")
+Header.nav.dashboard_links.roi (Value: "[TODO_TRANSLATE] Exe...")
+Header.nav.dashboard_links.cost (Value: "[TODO_TRANSLATE] Cos...")
+Header.nav.dashboard_links.uptime (Value: "[TODO_TRANSLATE] Glo...")
+Header.nav.dashboard_links.security (Value: "[TODO_TRANSLATE] Com...")
+Header.nav.dashboard_links.resources (Value: "[TODO_TRANSLATE] Res...")
+Header.nav.dashboard_links.deployment (Value: "[TODO_TRANSLATE] Vel...")
+Header.nav.dashboard_links.scaling (Value: "[TODO_TRANSLATE] Aut...")
+Header.nav.dashboard_links.error (Value: "[TODO_TRANSLATE] Thr...")
+Header.nav.docs_links.guide (Value: "[TODO_TRANSLATE] Use...")
+Header.nav.docs_links.visual_library (Value: "[TODO_TRANSLATE] Vis...")
+Header.nav.docs_links.newsroom (Value: "[TODO_TRANSLATE] New...")
+Header.nav.company_links.global_hq (Value: "[TODO_TRANSLATE] Glo...")
+Breadcrumb.services (Value: "[TODO_TRANSLATE] Inf...")
+Breadcrumb.security_page (Value: "[TODO_TRANSLATE] Sov...")
+Breadcrumb.demo (Value: "[TODO_TRANSLATE] Int...")
+Breadcrumb.contact (Value: "[TODO_TRANSLATE] Con...")
+Breadcrumb.whitepaper (Value: "[TODO_TRANSLATE] AEC...")
+Breadcrumb.privacy (Value: "[TODO_TRANSLATE] Pri...")
+Breadcrumb.terms (Value: "[TODO_TRANSLATE] Ter...")
+Breadcrumb.newsroom (Value: "[TODO_TRANSLATE] Pre...")
+Breadcrumb.community (Value: "[TODO_TRANSLATE] Glo...")
+Breadcrumb.blog (Value: "[TODO_TRANSLATE] Sov...")
+Breadcrumb.case-studies (Value: "[TODO_TRANSLATE] Dep...")
+Breadcrumb.visual-library (Value: "[TODO_TRANSLATE] Arc...")
+Breadcrumb.command-center (Value: "[TODO_TRANSLATE] Com...")
+Breadcrumb.dashboard (Value: "[TODO_TRANSLATE] Das...")
+Breadcrumb.executive (Value: "[TODO_TRANSLATE] Exe...")
+Breadcrumb.technical (Value: "[TODO_TRANSLATE] Tec...")
+Breadcrumb.roi (Value: "[TODO_TRANSLATE] ROI...")
+Breadcrumb.cost (Value: "[TODO_TRANSLATE] Cos...")
+Breadcrumb.uptime (Value: "[TODO_TRANSLATE] Upt...")
+Breadcrumb.security (Value: "[TODO_TRANSLATE] Sec...")
+Breadcrumb.deployment (Value: "[TODO_TRANSLATE] Dep...")
+Breadcrumb.scaling (Value: "[TODO_TRANSLATE] Sca...")
+Breadcrumb.error (Value: "[TODO_TRANSLATE] Err...")
+Company.email.security (Value: "[TODO_TRANSLATE] sec...")
+Footer.resources.visual_library (Value: "[TODO_TRANSLATE] Vis...")
+Hero.ctaArchitecture (Value: "[TODO_TRANSLATE] Arc...")
+Hero.ctaWhitepaper (Value: "[TODO_TRANSLATE] Dow...")
+Newsroom.cta (Value: "[TODO_TRANSLATE] Rea...")
+Newsroom.news.bank.desc (Value: "[TODO_TRANSLATE] How...")
+Newsroom.news.egress.desc (Value: "[TODO_TRANSLATE] A d...")
+Newsroom.news.integration.desc (Value: "[TODO_TRANSLATE] Bre...")
+Dashboard.roiTitle (Value: "[TODO_TRANSLATE] Sov...")
+Dashboard.roiSubtitle (Value: "[TODO_TRANSLATE] Rea...")
+Dashboard.infraTitle (Value: "[TODO_TRANSLATE] COR...")
+Dashboard.infraSubtitle (Value: "[TODO_TRANSLATE] Dec...")
+Dashboard.optimizationTitle (Value: "[TODO_TRANSLATE] OPT...")
+Dashboard.trustTitle (Value: "[TODO_TRANSLATE] TRU...")
+Dashboard.globalHealth (Value: "[TODO_TRANSLATE] Glo...")
+Dashboard.healthMonitor (Value: "[TODO_TRANSLATE] Sov...")
+Dashboard.healthOptimal (Value: "[TODO_TRANSLATE] OPT...")
+Dashboard.healthDesc (Value: "[TODO_TRANSLATE] Rea...")
+Dashboard.complianceIndex (Value: "[TODO_TRANSLATE] Sov...")
+Dashboard.complianceDesc (Value: "[TODO_TRANSLATE] Aut...")
+Faq.title (Value: "[TODO_TRANSLATE] Fre...")
+Faq.subtitle (Value: "[TODO_TRANSLATE] Tec...")
+Faq.badge (Value: "[TODO_TRANSLATE] RES...")
+Faq.cta (Value: "[TODO_TRANSLATE] Spe...")
 ```
 </details>
