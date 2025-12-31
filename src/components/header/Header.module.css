@@ -255,3 +255,23 @@
         display: none !important;
     }
 }
+
+@media print {
+    .header {
+        position: absolute !important;
+        background: transparent !important;
+        border: none !important;
+        box-shadow: none !important;
+        backdrop-filter: none !important;
+    }
+
+    .desktopNav,
+    .actions,
+    .mobileMenuBtn {
+        display: none !important;
+    }
+
+    .headerContainer {
+        justify-content: center !important;
+    }
+}

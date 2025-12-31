@@ -19,7 +19,7 @@ export const WhitepaperHeader = () => (
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '2rem', fontSize: '0.85rem', color: 'var(--muted)', borderTop: '1px solid var(--card-border)', borderBottom: '1px solid var(--card-border)', padding: '1.5rem 0', textAlign: 'center' }}>
                 <div>
                     <div className="text-xs uppercase tracking-wider font-bold mb-1 text-blue-500">Principal Author</div>
-                    <div className="font-medium text-foreground">OmniGCloud Research</div>
+                    <div className="font-medium text-foreground">CHAITANYA BHARATH GOPU</div>
                 </div>
                 <div>
                     <div className="text-xs uppercase tracking-wider font-bold mb-1 text-blue-500">Publication Date</div>
