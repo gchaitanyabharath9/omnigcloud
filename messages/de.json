@@ -1,1218 +1,1219 @@
 {
-  "Header": {
-    "title": "OmniGCloud",
-    "latency_badge": "MESH_RT",
-    "nav": {
-      "products": "Produkte",
-      "solutions": "Lösungen",
-      "trust": "Vertrauen",
-      "docs": "Ressourcen",
-      "pricing": "Preise",
-      "company": "Unternehmen",
-      "onboarding": "Jetzt skalieren",
-      "dashboard": "Dashboard",
-      "performance": "PERFORMANCE",
-      "telemetry": "TELEMETRIE",
-      "organization": "ORGANISATION",
-      "contact_us": "KONTAKT",
-      "information": "INFORMATION",
-      "tiers": "PREISSTUFEN",
-      "pillars": "PLATTFORM-SÄULEN",
-      "advanced": "ERWEITERTE OPS",
-      "industries": "BRANCHEN",
-      "useCases": "ANWENDUNGSFÄLLE",
-      "documentation": "DOKUMENTATION",
-      "community": "ÖKOSYSTEM",
-      "dashboard_links": {
-        "roi": "Executive-Übersicht",
-        "cost": "Kosten-Arbitrage",
-        "uptime": "Globale Konnektivität",
-        "security": "Compliance-Radar",
-        "resources": "Ressourcen-Telemetrie",
-        "deployment": "Geschwindigkeits-Metriken",
-        "scaling": "Auto-Scale-Ereignisse",
-        "error": "Bedrohungsanalyse"
+  "Blog": {
+    "hero": {
+      "search": "Forschung suchen...",
+      "subtitle": "Wissenschaftliche Artikel, technologische Durchbrüche und Branchenanalysen an der Grenze der digitalen Souveränität.",
+      "tag": "SOVEREIGN INSIGHTS & FORSCHUNG",
+      "title": "Global Impact Hub"
+    },
+    "newsletter": {
+      "button": "Abonnieren",
+      "footer": "Weltweit vertraut von 10.000+ Infrastruktur-Architekten.",
+      "placeholder": "Geben Sie Ihre E-Mail ein",
+      "subtitle": "Wöchentliche Einblicke in verteilte Systeme, Datenschutz und die Zukunft der globalen Infrastruktur.",
+      "title": "Tragen Sie sich in den Sovereign Research Circle ein"
+    },
+    "posts": {
+      "aso": {
+        "author": "OmniGCloud Research",
+        "category": "AKADEMISCHES WHITEPAPER",
+        "excerpt": "Ein formales Framework für KI-gesteuerte cloud-agnostische Governance. Erbringung des mathematischen Beweises für State Synchronization Convergence (SSC) über 1.000+ Knoten.",
+        "impact": "Bedeutender wissenschaftlicher Beitrag",
+        "title": "Autonome Souveräne Orchestrierung (ASO)"
       },
-      "products_links": {
-        "playground": "Sovereign Playground",
-        "workflows": "G-Workflows",
-        "guard": "Governance Guard",
-        "knowledge": "Sovereign Knowledge",
-        "deploy": "Obsidian Deploy",
-        "nexus": "Cross-Cloud Nexus"
+      "bench": {
+        "author": "KI-Forschung",
+        "category": "BENCHMARK",
+        "excerpt": "GPT-4o vs. Claude 3.5 Sonnet vs. Llama 3 für die Generierung souveräner Terraform-Manifeste. Welches Modell liefert weniger Drift-Fehler?",
+        "impact": "Wissenschaftliches Material",
+        "title": "Vergleich der LLM-Leistung für die Infrastruktur-Code-Generierung"
       },
-      "solutions_links": {
-        "financial": "Finanzdienstleistungen",
-        "insurance": "Versicherungen",
-        "telecom": "Telekommunikation",
-        "healthcare": "Gesundheitswesen & Biowissenschaften",
-        "logistics": "Logistik & Lieferkette",
-        "finance_mod": "Global Finance Modernisierung",
-        "health_mod": "Sovereign Health Daten",
-        "gov_trust": "Digitales Vertrauen im öffentlichen Sektor"
+      "latency": {
+        "author": "Research Lab",
+        "category": "EVALUIERUNG",
+        "excerpt": "Evaluierung von OCI, AWS und Azure in Bezug auf die globale Ingress-Performance. Warum Oracle ARM Ampere-Knoten bei souveränen Workloads gewinnen.",
+        "impact": "Akademisches Benchmarking",
+        "title": "Cloud-Provider-Latenz: Umfassender Benchmark 2025"
       },
-      "docs_links": {
-        "tech_docs": "Technische Dokumentation",
-        "api": "API-Referenz",
-        "patterns": "Design Patterns",
-        "guide": "Benutzerhandbuch",
-        "whitepaper": "Whitepaper",
-        "visual_library": "Visuelle Bibliothek",
-        "newsroom": "Newsroom Hub",
-        "open_source": "Community-Portal"
+      "prompt": {
+        "author": "AI Ops Team",
+        "category": "GUIDE",
+        "excerpt": "Wie man natürliche Sprache zur Orchestrierung komplexer Kubernetes-Cluster einsetzt. Ein Leitfaden für unsere 'Declarative Intent'-Engine.",
+        "impact": "EB-1A Original-Guide",
+        "title": "Prompt Engineering für souveräne Infrastrukturkontrolle"
       },
-      "pricing_links": {
-        "compare": "Pläne vergleichen",
-        "trust": "Unternehmensvertrauen",
-        "faq": "FAQ-Center",
-        "developer": "Entwickler",
-        "professional": "Professional",
-        "business": "Business",
-        "sovereign": "Sovereign"
-      },
-      "company_links": {
-        "about": "Über uns",
-        "leadership": "Unternehmensführung",
-        "operations": "Globale Operationen",
-        "newsroom": "Nachrichten",
-        "executive": "Vorstandsbüro",
-        "contact": "Kontakt",
-        "global_hq": "Hauptsitz"
-      },
-      "trust_links": {
-        "compliance_maps": "Compliance Maps",
-        "transparency": "Transparenz",
-        "certs": "Zertifizierungen",
-        "privacy": "Datenschutz-Center"
+      "rag": {
+        "author": "Security Architect",
+        "category": "RAG",
+        "excerpt": "Ein tiefer Einblick in Retrieval Augmented Generation in Air-Gapped-Umgebungen. Wie man 100% Datenschutz für Rechtsdokumente wahrt.",
+        "impact": "Bedeutender Beitrag",
+        "title": "Sicherung regulativer Daten mit Sovereign Knowledge"
       }
     }
   },
   "Breadcrumb": {
-    "home": "Start",
-    "platform": "Plattform",
-    "services": "Services",
-    "use-cases": "Anwendungsfälle",
-    "security_page": "Sicherheit",
-    "docs": "Ressourcen",
-    "company": "Unternehmen",
-    "onboarding": "Skalieren",
-    "demo": "Demo",
-    "contact": "Kontakt",
-    "whitepaper": "Whitepaper",
-    "pricing": "Preise",
-    "industries": "Branchen",
-    "products": "Produkte",
-    "privacy": "Privacy Mandate",
-    "terms": "Terms of Engagement",
-    "newsroom": "Newsroom",
-    "community": "Community",
     "blog": "Blog",
     "case-studies": "Deployment Success",
-    "visual-library": "Galerie",
     "command-center": "Kommandozentrale",
-    "dashboard": "Dashboard",
-    "executive": "Executive-Übersicht",
-    "technical": "Technische Operationen",
-    "roi": "ROI-Leistung",
+    "community": "Community",
+    "company": "Unternehmen",
+    "contact": "Kontakt",
     "cost": "Kosteneinsparungen",
-    "uptime": "Betriebszeit",
-    "security": "Sicherheit",
-    "resources": "Ressourcen",
+    "dashboard": "Dashboard",
+    "demo": "Demo",
     "deployment": "Bereitstellung",
+    "docs": "Ressourcen",
+    "error": "Fehlerraten",
+    "executive": "Executive-Übersicht",
+    "guide": "User Guide",
+    "home": "Start",
+    "industries": "Branchen",
+    "newsroom": "Newsroom",
+    "onboarding": "Skalieren",
+    "platform": "Plattform",
+    "pricing": "Preise",
+    "privacy": "Privacy Mandate",
+    "products": "Produkte",
+    "resources": "Ressourcen",
+    "roi": "ROI-Leistung",
     "scaling": "Skalierung",
-    "error": "Fehlerraten"
+    "security": "Sicherheit",
+    "security_page": "Sicherheit",
+    "services": "Services",
+    "technical": "Technische Operationen",
+    "terms": "Terms of Engagement",
+    "uptime": "Betriebszeit",
+    "use-cases": "Anwendungsfälle",
+    "visual-library": "Galerie",
+    "whitepaper": "Whitepaper"
+  },
+  "Capabilities": {
+    "cta": "Vollständige Architektur ansehen",
+    "explore": "ERKUNDEN",
+    "subtitle": "Sechs modulare Säulen, entwickelt um die Komplexität globaler Multi-Cloud-Governance zu lösen.",
+    "tag": "DAS G-FRAMEWORK ÖKOSYSTEM",
+    "title": "Zentrale Sovereign-Produkte"
+  },
+  "Community": {
+    "badge": "OPEN-SCIENCE-INITIATIVE",
+    "cli": {
+      "cmd": "npm install -g @omnig/cli",
+      "title": "Sovereign CLI v4.2"
+    },
+    "contribute": "Zu Core beitragen",
+    "join": "Community beitreten",
+    "maintainers": {
+      "desc": "Souveränitätsorientierter Review-Prozess",
+      "title": "Globale Maintainer"
+    },
+    "plugins": {
+      "desc": "Erweiterbare Anbieter-Architektur",
+      "title": "200+ Plugins"
+    },
+    "subtitle": "Das G-Framework ist mehr als eine Plattform: Es ist ein offener Standard für souveräne Infrastrukturen. Schließen Sie sich über 120 globalen Mitwirkenden an, die eine resiliente, anbieterunabhängige Zukunft aufbauen.",
+    "title": "Von Experten gebaut, <br />von der Community gesteuert"
   },
   "Company": {
     "email": {
+      "admin": "admin@omnigcloud.com",
       "architects": "architects@omnigcloud.com",
-      "support": "support@omnigcloud.com",
       "legal": "legal@omnigcloud.com",
       "press": "press@omnigcloud.com",
-      "admin": "admin@omnigcloud.com",
-      "security": "security@omnigcloud.com"
+      "security": "security@omnigcloud.com",
+      "support": "support@omnigcloud.com"
     },
-    "name": "OmniGCloud HQ",
-    "location": "New York Platinum District"
+    "location": "New York Platinum District",
+    "name": "OmniGCloud HQ"
   },
-  "Footer": {
-    "tagline": "Wiederherstellung der Unternehmenssouveränität durch autonome, KI-gesteuerte Cloud-Modernisierung.",
-    "directory": "GLOBAL DIRECTORY // TERMINAL_v4.2",
-    "status": "SECURE_CANVAS_SYNC: OK",
-    "platform": {
-      "label": "Plattform",
-      "control": "Control Plane",
-      "policy": "Policy Engine",
-      "iac": "IaC Factory",
-      "obs": "Observability"
-    },
-    "services": {
-      "label": "Services",
-      "migration": "Migration",
-      "modernization": "Modernisierung",
-      "ai": "KI-Engineering",
-      "compliance": "Compliance"
-    },
-    "impact": {
-      "label": "Impact",
-      "finance": "Finanzen",
-      "healthcare": "Gesundheitswesen",
-      "retail": "Einzelhandel",
-      "government": "Regierung"
-    },
-    "trust": {
-      "label": "Vertrauen",
-      "security": "Sicherheit",
-      "compliance": "Compliance",
-      "privacy": "Datenschutz",
-      "terms": "Terms of Service"
-    },
-    "resources": {
-      "label": "Ressourcen",
-      "docs": "Dokumentation",
-      "api": "API-Referenz",
-      "blueprints": "Blueprints",
-      "visual_library": "Visual Library",
-      "cases": "Fallstudien"
-    },
-    "company": {
-      "label": "Unternehmen",
-      "about": "Über uns",
-      "leadership": "Führung",
-      "newsroom": "Newsroom",
-      "contact": "Kontakt"
-    },
-    "copyright": "© {year} OmniGCloud. Alle Rechte vorbehalten.",
-    "footerText": "Gesteuerte, globale und generative Infrastruktur für souveräne Organisationen.",
-    "social": {
-      "linkedin": "https://linkedin.com/company/omnigcloud",
-      "twitter": "https://x.com/omnigcloud",
-      "discord": "https://discord.gg/omnigcloud",
-      "github": "https://github.com/omnigcloud"
-    }
+  "Compliance": {
+    "accessControls": "Zugriffskontrollen",
+    "active": "Aktiv",
+    "audit": "Audit-Protokolle",
+    "auditText": "7 Jahre aufbewahrt, um regulatorische Anforderungen zu erfüllen",
+    "auth1": "Multi-Faktor-Authentifizierung (MFA) für alle Benutzer erforderlich",
+    "auth2": "Enterprise-SSO mit SAML 2.0 und OIDC Unterstützung",
+    "auth3": "Passwortlose Authentifizierungsoptionen verfügbar",
+    "authentication": "Authentifizierung",
+    "authorization": "Autorisierung",
+    "authz1": "Rollenbasierte Zugriffskontrolle (RBAC) mit benutzerdefinierten Rollen",
+    "authz2": "Prinzip der geringsten Rechte durchgesetzt",
+    "authz3": "Regelmäßige Zugriffsüberprüfungen und automatisiertes Deprovisioning",
+    "backups": "Backups",
+    "backupsText": "Verschlüsselte Backups, die 30 Tage mit Point-in-Time-Recovery aufbewahrt werden",
+    "dataHandling": "Datenverarbeitungspraktiken",
+    "dataResidency": "Datenresidenz",
+    "dataResidencyText": "Kundendaten werden in der geografischen Region Ihrer Wahl gespeichert. Wir unterstützen Datenresidenzanforderungen für EU, USA, APAC und andere Regionen. Daten verlassen Ihre gewählte Region nicht ohne ausdrückliche Zustimmung.",
+    "encryption": "Verschlüsselungsstandards",
+    "encryption1": "TLS 1.3 für alle Daten während der Übertragung",
+    "encryption2": "AES-256 Verschlüsselung für ruhende Daten",
+    "encryption3": "Kundenseitig verwaltete Verschlüsselungsschlüssel (CMEK) für Enterprise-Pläne verfügbar",
+    "gdpr": "DSGVO-Konformität",
+    "gdprText": "Vollständig konform mit der EU-Datenschutz-Grundverordnung. Auftragsverarbeitungsverträge verfügbar.",
+    "inProgress": "In Bearbeitung",
+    "incidentResponse": "Reaktion auf Vorfälle",
+    "incidentResponseText": "Wir unterhalten einen umfassenden Reaktionsplan für Vorfälle, um Sicherheitsvorfälle schnell zu erkennen, darauf zu reagieren und uns davon zu erholen.",
+    "iso27001": "ISO 27001",
+    "iso27001Text": "Zertifizierung des Informationssicherheits-Managementsystems für 2026 geplant.",
+    "operational": "Betriebsdaten",
+    "operationalText": "Aufbewahrt für die Dauer Ihres Abonnements plus 90 Tage",
+    "planned": "Geplant 2026",
+    "response1": "Erkennung und Triage innerhalb von 1 Stunde nach Identifizierung des Vorfalls",
+    "response2": "Kundenbenachrichtigung innerhalb von 24 Stunden bei Vorfällen, die Kundendaten betreffen",
+    "response3": "Ursachenanalyse und Behebungsplan innerhalb von 72 Stunden",
+    "response4": "Überprüfung nach dem Vorfall und Implementierung von Sicherheitsverbesserungen innerhalb von 30 Tagen",
+    "responseProcess": "Unser Reaktionsprozess",
+    "retention": "Datenaufbewahrungsrichtlinien",
+    "soc2": "SOC 2 Typ II",
+    "soc2Text": "Derzeit im SOC 2 Typ II Audit. Erwartete Fertigstellung Q2 2026.",
+    "subtitle": "Transparente Berichterstattung über unseren Compliance-Status und Datenverarbeitungspraktiken.",
+    "title": "Compliance & Zertifizierungen",
+    "transparency": "Transparenzhinweis",
+    "transparencyText": "Wir glauben an ehrliche Kommunikation über unseren Compliance-Status. Unten finden Sie unsere aktuellen Zertifizierungen, laufende Audits und geplante Initiativen. Wir beanspruchen keine Zertifizierungen, die wir noch nicht erreicht haben."
   },
   "CookieConsent": {
-    "title": "Souveräne Datenschutzkontrolle",
-    "message": "Wir verwenden persistente Telemetrie und Cookies, um Ihr Orchestrierungserlebnis zu optimieren. Ihre Daten bleiben unter unserem souveränen Schutzprotokoll geschützt.",
-    "policyLink": "Richtlinie ansehen",
     "accept": "Cookies akzeptieren",
     "decline": "Standardmodus",
-    "sovereignNotice": "GOVERNED_DATA_SYNC // v4.2"
+    "message": "Wir verwenden persistente Telemetrie und Cookies, um Ihr Orchestrierungserlebnis zu optimieren. Ihre Daten bleiben unter unserem souveränen Schutzprotokoll geschützt.",
+    "policyLink": "Richtlinie ansehen",
+    "sovereignNotice": "GOVERNED_DATA_SYNC // v4.2",
+    "title": "Souveräne Datenschutzkontrolle"
+  },
+  "Dashboard": {
+    "active": "Synchronisiert",
+    "badge": "ECHTZEIT-SOUVERÄNE TELEMETRIE // CORE_V4",
+    "complianceDesc": "Automated audit scores based on regional data residency and encryption standards across all cloud providers.",
+    "complianceIndex": "Sovereignty Compliance Index",
+    "globalHealth": "Global Health",
+    "healthDesc": "Real-time network latency monitoring across multi-cloud edge nodes. Tracks sub-millisecond variations to ensure optimal sovereign data routing and compliance standards.",
+    "healthMonitor": "Sovereignty Health Monitor",
+    "healthOptimal": "OPTIMAL",
+    "infraSubtitle": "Decentralized Sovereign Nodes",
+    "infraTitle": "CORE INFRASTRUCTURE",
+    "liveSubtitle": "Erleben Sie, wie das G-Framework den globalen Status über Multi-Cloud-Cluster hinweg orchestriert. Unsere autonome Steuerungsebene synchronisiert kontinuierlich die Infrastrukturabsicht mit Echtzeit-Anbietertelemetrie und gewährleistet so eine 100-prozentige Compliance-Konvergenz und Drift-Behebung im Millisekundenbereich über AWS, Azure, OCI und GCP.",
+    "liveTitle": "Live-Kommando & Steuerung",
+    "logicMeshStatus": "Logic-Mesh Status",
+    "optimizationTitle": "OPTIMIZATION TRENDS",
+    "roiSubtitle": "Real-time efficiency tracking",
+    "roiTitle": "Sovereign R.O.I.",
+    "role": "Zugewiesene Sicherheitsrolle",
+    "title": "Souveränes Kommandozentrum",
+    "trustTitle": "TRUST CENTER",
+    "welcome": "Willkommen zurück"
+  },
+  "DemoSection": {
+    "badge": "LIVE-ERLEBNIS",
+    "discovery": {
+      "code": "> VOLLSTÄNDIGER SCAN: 99.8%",
+      "desc": "Zero-Touch-Agentenbereitstellung bildet 1.000+ Assets in weniger als 3 Minuten ab.",
+      "title": "Instant Discovery"
+    },
+    "drift": {
+      "code": "> BEDROHUNG BESEITIGT",
+      "desc": "Nicht autorisierte Konsolenänderungen werden erkannt und sofort rückgängig gemacht.",
+      "title": "Auto-Drift Reversion"
+    },
+    "iac": {
+      "code": "> MODULE GENERIEREN...",
+      "desc": "KI-Agenten rekonstruieren Legacy-Binärdateien in sauberen Terraform-Code.",
+      "title": "Generative IaC"
+    },
+    "subtitle": "Erleben Sie autonome Cloud-Modernisierung. Von der Entdeckung zur Souveränität in Sekunden.",
+    "sync": {
+      "code": "> LATENZ: 12ms",
+      "desc": "Bidirektionales State-Locking zwischen AWS- und Azure-Regionen.",
+      "title": "Active State Sync"
+    },
+    "title": "Omni<span>G</span>Cloud in Aktion erleben"
+  },
+  "Docs": {
+    "banner": {
+      "cta": "Blueprints erkunden",
+      "description": "Vorkonfigurierte Compliance-Blueprints für SOC 2, HIPAA und GDPR mit automatischer Drift-Korrektur.",
+      "title": "Governance-Blueprints"
+    },
+    "cards": {
+      "api": {
+        "cta": "API-Docs anzeigen",
+        "description": "Vollständige Dokumentation für unsere REST- und GraphQL-APIs.",
+        "exhibit": "BEWEISSTÜCK 04",
+        "title": "API-Referenz"
+      },
+      "architecture": {
+        "cta": "Muster anzeigen",
+        "description": "Souveräne Muster für EB-1A wissenschaftliche Belege.",
+        "exhibit": "BEWEISSTÜCK 01",
+        "title": "Designmuster"
+      },
+      "guide": {
+        "cta": "Guide lesen",
+        "description": "In weniger als 15 Minuten mit OmniGCloud startklar sein.",
+        "exhibit": "BEWEISSTÜCK 03",
+        "title": "Schnellstart-Anleitung"
+      },
+      "whitepaper": {
+        "cta": "Paper lesen",
+        "description": "Formalisierung der Autonomen Souveränen Orchestrierung (ASO).",
+        "exhibit": "BEWEISSTÜCK 02",
+        "title": "Wissenschaftliches Whitepaper"
+      }
+    },
+    "hero": {
+      "badge": "ORIGINALBEITRAG VON HOHER BEDEUTUNG",
+      "description": "Die folgende Dokumentation formalisiert das Framework für Autonome Souveräne Orchestrierung (ASO). Dieses Kompendium dient als primärer technischer Nachweis für die wissenschaftliche Überprüfung und demonstriert einen bedeutenden Durchbruch in der cloud-agnostischen Governance und Multi-Infrastruktur-Statussynchronisation.",
+      "title": "Wissenschaftliches Technisches Kompendium"
+    },
+    "meta": {
+      "description": "Evidenzbasierte cloud-agnostische Architektur-Dokumentation. Lesen Sie das wissenschaftliche Whitepaper und erkunden Sie autonome Orchestrierungsmuster.",
+      "title": "OmniGCloud Dokumentation | Wissenschaftliches Kompendium"
+    },
+    "sidebar": {
+      "blueprint_links": {
+        "aws": "AWS Modernisierung",
+        "azure": "Azure Sovereign Hub",
+        "hybrid": "Hybrid Mesh",
+        "openshift": "OpenShift auf GCP"
+      },
+      "blueprints": "Blueprints",
+      "documentation": "Dokumentation",
+      "links": {
+        "architecture": "Architektur",
+        "introduction": "Einführung",
+        "security": "Sicherheitsmodell",
+        "whitepaper": "Whitepaper"
+      }
+    }
+  },
+  "Ecosystem": {
+    "ai": {
+      "desc": "Managed LLM orchestration within VPC boundaries. Deploy private GPT-4 equivalent models for intelligent automation without data leakage.",
+      "link": "Access Lab",
+      "status": "MODELS READY",
+      "title": "AI Ops Kernel"
+    },
+    "badge": "GLOBALE KONNEKTIVITÄT",
+    "governance": {
+      "desc": "Automated drift remediation and policy enforcement across all cloud providers. Ensure compliance with GDPR, HIPAA, and SOC2 in real-time.",
+      "link": "Explore",
+      "status": "MODULE ACTIVE",
+      "title": "Governance Hub"
+    },
+    "mesh": {
+      "desc": "Native intra-cloud routing with localized sovereignty. Connect OCI, AWS, and Azure clusters into a single, latency-optimized service mesh.",
+      "link": "View Topology",
+      "status": "NETWORK ONLINE",
+      "title": "Global Mesh"
+    },
+    "subtitle": "Stellen Sie souveräne Infrastrukturen auf jeder Cloud bereit, ohne die Komplexität über eine einzige Steuerungsebene.",
+    "title": "Cross-Cloud Nexus",
+    "vault": {
+      "desc": "Localized storage kernels with managed encryption and rigid data residency controls. Your data never leaves the jurisdiction you define.",
+      "link": "Secure Storage",
+      "status": "ENCRYPTION ON",
+      "title": "Sovereign Vault"
+    }
+  },
+  "Faq": {
+    "badge": "RESOURCES",
+    "cta": "Speak with a Cloud Architect",
+    "subtitle": "Technical insights for the modern enterprise architect.",
+    "title": "Frequently Asked Questions"
+  },
+  "Footer": {
+    "company": {
+      "about": "Über uns",
+      "contact": "Kontakt",
+      "label": "Unternehmen",
+      "leadership": "Führung",
+      "newsroom": "Newsroom"
+    },
+    "copyright": "© {year} OmniGCloud. Alle Rechte vorbehalten.",
+    "directory": "GLOBAL DIRECTORY // TERMINAL_v4.2",
+    "footerText": "Gesteuerte, globale und generative Infrastruktur für souveräne Organisationen.",
+    "impact": {
+      "finance": "Finanzen",
+      "government": "Regierung",
+      "healthcare": "Gesundheitswesen",
+      "label": "Impact",
+      "retail": "Einzelhandel"
+    },
+    "platform": {
+      "control": "Control Plane",
+      "iac": "IaC Factory",
+      "label": "Plattform",
+      "obs": "Observability",
+      "policy": "Policy Engine"
+    },
+    "resources": {
+      "api": "API-Referenz",
+      "blueprints": "Blueprints",
+      "cases": "Fallstudien",
+      "docs": "Dokumentation",
+      "label": "Ressourcen",
+      "visual_library": "Visual Library"
+    },
+    "services": {
+      "ai": "KI-Engineering",
+      "compliance": "Compliance",
+      "label": "Services",
+      "migration": "Migration",
+      "modernization": "Modernisierung"
+    },
+    "social": {
+      "discord": "https://discord.gg/omnigcloud",
+      "github": "https://github.com/omnigcloud",
+      "linkedin": "https://linkedin.com/company/omnigcloud",
+      "twitter": "https://x.com/omnigcloud"
+    },
+    "status": "SECURE_CANVAS_SYNC: OK",
+    "tagline": "Wiederherstellung der Unternehmenssouveränität durch autonome, KI-gesteuerte Cloud-Modernisierung.",
+    "trust": {
+      "compliance": "Compliance",
+      "label": "Vertrauen",
+      "privacy": "Datenschutz",
+      "security": "Sicherheit",
+      "terms": "Terms of Service"
+    }
+  },
+  "Header": {
+    "latency_badge": "MESH_RT",
+    "nav": {
+      "advanced": "ERWEITERTE OPS",
+      "community": "ÖKOSYSTEM",
+      "company": "Unternehmen",
+      "company_links": {
+        "about": "Über uns",
+        "contact": "Kontakt",
+        "executive": "Vorstandsbüro",
+        "global_hq": "Hauptsitz",
+        "leadership": "Unternehmensführung",
+        "newsroom": "Nachrichten",
+        "operations": "Globale Operationen"
+      },
+      "contact_us": "KONTAKT",
+      "dashboard": "Dashboard",
+      "dashboard_links": {
+        "cost": "Kosten-Arbitrage",
+        "deployment": "Geschwindigkeits-Metriken",
+        "error": "Bedrohungsanalyse",
+        "resources": "Ressourcen-Telemetrie",
+        "roi": "Executive-Übersicht",
+        "scaling": "Auto-Scale-Ereignisse",
+        "security": "Compliance-Radar",
+        "uptime": "Globale Konnektivität"
+      },
+      "docs": "Ressourcen",
+      "docs_links": {
+        "api": "API-Referenz",
+        "guide": "Benutzerhandbuch",
+        "newsroom": "Newsroom Hub",
+        "open_source": "Community-Portal",
+        "patterns": "Design Patterns",
+        "tech_docs": "Technische Dokumentation",
+        "visual_library": "Visuelle Bibliothek",
+        "whitepaper": "Whitepaper"
+      },
+      "documentation": "DOKUMENTATION",
+      "industries": "BRANCHEN",
+      "information": "INFORMATION",
+      "onboarding": "Jetzt skalieren",
+      "organization": "ORGANISATION",
+      "performance": "PERFORMANCE",
+      "pillars": "PLATTFORM-SÄULEN",
+      "pricing": "Preise",
+      "pricing_links": {
+        "business": "Business",
+        "compare": "Pläne vergleichen",
+        "developer": "Entwickler",
+        "faq": "FAQ-Center",
+        "professional": "Professional",
+        "sovereign": "Sovereign",
+        "trust": "Unternehmensvertrauen"
+      },
+      "products": "Produkte",
+      "products_links": {
+        "deploy": "Obsidian Deploy",
+        "guard": "Governance Guard",
+        "knowledge": "Sovereign Knowledge",
+        "nexus": "Cross-Cloud Nexus",
+        "playground": "Sovereign Playground",
+        "workflows": "G-Workflows"
+      },
+      "solutions": "Lösungen",
+      "solutions_links": {
+        "finance_mod": "Global Finance Modernisierung",
+        "financial": "Finanzdienstleistungen",
+        "gov_trust": "Digitales Vertrauen im öffentlichen Sektor",
+        "health_mod": "Sovereign Health Daten",
+        "healthcare": "Gesundheitswesen & Biowissenschaften",
+        "insurance": "Versicherungen",
+        "logistics": "Logistik & Lieferkette",
+        "telecom": "Telekommunikation"
+      },
+      "telemetry": "TELEMETRIE",
+      "tiers": "PREISSTUFEN",
+      "trust": "Vertrauen",
+      "trust_links": {
+        "certs": "Zertifizierungen",
+        "compliance_maps": "Compliance Maps",
+        "privacy": "Datenschutz-Center",
+        "transparency": "Transparenz"
+      },
+      "useCases": "ANWENDUNGSFÄLLE"
+    },
+    "title": "OmniGCloud"
   },
   "Hero": {
+    "audience": "Designed for Global 2000 CIOs and Sovereign Government Entities.",
     "badge": "GOVERNANCE AS CODE",
-    "title": "Wiederherstellung der Souveränität",
-    "subtitle": "Das G-Framework befähigt globale Unternehmen, Multi-Cloud-Infrastrukturen mit Zero-Trust-Governance zu automatisieren.",
+    "ctaArchitecture": "Architecture Overview",
+    "ctaPrimary": "Assessment starten",
+    "ctaWhitepaper": "Download Whitepaper",
+    "efficiency": "EFFIZIENZ",
+    "experts": {
+      "count": "20+ Experten",
+      "cta": "Vertrieb kontaktieren",
+      "status": "Bereit für Audit"
+    },
+    "impact": {
+      "label": "GLOBALE AUSWIRKUNG",
+      "text": "Automatisieren Sie die <span>Souveränität</span> über jede Zone hinweg."
+    },
     "problem": "Legacy fragmentation and proprietary lock-in create operational risk and cost overruns.",
     "solution": "Autonomous, AI-driven state synchronization across any cloud provider.",
-    "audience": "Designed for Global 2000 CIOs and Sovereign Government Entities.",
-    "ctaPrimary": "Assessment starten",
-    "ctaArchitecture": "Architecture Overview",
-    "ctaWhitepaper": "Download Whitepaper",
-    "systemStatus": {
-      "title": "Systemstatus",
-      "live": "LIVE",
-      "sync": "Multi-Cloud-Sync Aktiv",
-      "policy": "Policy Engine",
-      "enforcing": "Erzwingt",
-      "threat": "Threat Guard",
-      "monitoring": "Überwachung"
-    },
     "stats": {
       "assets": "ASSETS",
       "drift": "DRIFT",
       "nodes": "NODES"
     },
-    "experts": {
-      "count": "20+ Experten",
-      "status": "Bereit für Audit",
-      "cta": "Vertrieb kontaktieren"
+    "subtitle": "Das G-Framework befähigt globale Unternehmen, Multi-Cloud-Infrastrukturen mit Zero-Trust-Governance zu automatisieren.",
+    "systemStatus": {
+      "enforcing": "Erzwingt",
+      "live": "LIVE",
+      "monitoring": "Überwachung",
+      "policy": "Policy Engine",
+      "sync": "Multi-Cloud-Sync Aktiv",
+      "threat": "Threat Guard",
+      "title": "Systemstatus"
     },
-    "efficiency": "EFFIZIENZ",
-    "impact": {
-      "label": "GLOBALE AUSWIRKUNG",
-      "text": "Automatisieren Sie die <span>Souveränität</span> über jede Zone hinweg."
-    },
+    "title": "Wiederherstellung der Souveränität",
     "trust": "VERTRAUT VON GLOBALEN UNTERNEHMEN"
   },
-  "Capabilities": {
-    "tag": "DAS G-FRAMEWORK ÖKOSYSTEM",
-    "title": "Zentrale Sovereign-Produkte",
-    "subtitle": "Sechs modulare Säulen, entwickelt um die Komplexität globaler Multi-Cloud-Governance zu lösen.",
-    "explore": "ERKUNDEN",
-    "cta": "Vollständige Architektur ansehen"
-  },
-  "SovereignGallery": {
-    "title": "Die Sovereign Visual Library",
-    "subtitle": "Detaillierte Architektur-Aufnahmen des G-Frameworks in der Produktion.",
-    "control": {
-      "title": "Autonome Steuerungsebene",
-      "description": "Das Command Center (Bild A) bietet eine 4K-Visualisierung aller globalen Cloud-Assets in Echtzeit. Bild B zeigt die 'Drift Remediation'-Engine in Aktion, bei der eine nicht autorisierte Konfigurationsänderung automatisch in 1,4 Sekunden rückgängig gemacht wurde."
-    },
-    "failover": {
-      "title": "Multi-Cloud Circuit Breaker",
-      "description": "Bild A erfasst die globale Latenzkarte kurz vor einem regionalen Provider-Ausfall. In Bild B sehen Sie, wie das G-Framework eine sofortige Workload-Migration zu Oracle OCI auslöst, um eine 100%ige Betriebszeit zu gewährleisten."
-    }
-  },
-  "Products": {
-    "hero": {
-      "tag": "PRODUKT-ÖKOSYSTEM",
-      "title": "Enterprise Sovereign Stack",
-      "subtitle": "Eine modulare Suite von in 4K-sichtbaren Orchestrierungswerkzeugen, die entwickelt wurden, um die volle Kontrolle, Resilienz und Compliance in Ihrer verteilten Multi-Cloud wiederherzustellen."
-    },
-    "playground": {
-      "title": "Sovereign Playground",
-      "tag": "INFRA-DEV",
-      "shortDesc": "IDE für Prototyping von Cross-Cloud Infra.",
-      "description": "Die weltweit erste IDE, die speziell für die souveräne Cross-Cloud-Orchestrierung entwickelt wurde. Erstellen Sie Prototypen für komplexe Infrastruktur-Intents über OCI, AWS und Azure hinweg in einer einheitlichen Umgebung.",
-      "explanation": "Der primäre Arbeitsbereich (Bild A) zeigt Syntax-Highlighting für das G-Framework DSL, während der sekundäre Monitor (Bild B) ein Live-Diff über drei Cloud-Anbieter liefert."
-    },
-    "workflows": {
-      "title": "G-Workflows",
-      "tag": "AUTOMATISIERUNG",
-      "shortDesc": "Visuelle mehrstufige Orchestrierungs-Engine.",
-      "description": "Eine visuelle Drag-and-Drop-Engine zur Definition mehrstufiger Automatisierung. G-Workflows übernimmt die Zustandssynchronisation und Edge-Cases automatisch für regionale Failover.",
-      "explanation": "In unserem Workflow-Designer (Bild A) planen Ingenieure die Logik. Bild B fängt die G-Workflows-Engine ein, die eine unterbrechungsfreie Migration durchführt."
-    },
-    "guard": {
-      "title": "Governance Guard",
-      "tag": "COMPLIANCE",
-      "shortDesc": "Real-time Compliance & Auto-Remediation.",
-      "description": "Kontinuierliche, automatisierte Auditierung für hochregulierte Unternehmensumgebungen. Scannt jede Ressource gegen SOC2, GDPR und nationale Souveränitätsmandate.",
-      "explanation": "Bild A demonstriert die 'Compliance Map'-Übersicht. Bild B zeigt das Protokoll der automatisierten Fehlerbehebung, bei dem ein falsch konfigurierter Bucket automatisch gesperrt wurde."
-    },
-    "knowledge": {
-      "title": "Sovereign Knowledge",
-      "tag": "RAG & KI",
-      "shortDesc": "Sicheres RAG für regulative Daten.",
-      "description": "Eine sichere Wissensdatenbank und RAG-Engine, die innerhalb Ihrer souveränen Grenzen operiert. Verarbeiten Sie sensible Rechts- und Regulierungsdaten mit KI ohne grenzüberschreitende Leaks.",
-      "explanation": "Die Knowledge Map (Bild A) visualisiert Datencluster innerhalb nationaler Knoten. Bild B zeigt die RAG-gestützte Schnittstelle für rechtliche Entwürfe."
-    },
-    "deploy": {
-      "title": "Obsidian Deploy",
-      "tag": "PRODUKTION",
-      "shortDesc": "Atomare, unveränderliche Produktions-Releases.",
-      "description": "Die Deployment-Engine für geschäftskritische Apps. Garantiert atomare Änderungen über globale Cluster hinweg mit 100% Rollback-Zuverlässigkeit.",
-      "explanation": "Bild A zeigt den Status der Deployment-Pipeline. Bild B zeigt den atomaren Rollback-Verifizierungsbildschirm während eines simulierten teilweisen Ausfalls."
-    },
-    "nexus": {
-      "title": "Cross-Cloud Nexus",
-      "tag": "ARBITRAGE",
-      "shortDesc": "Globale Telemetrie & Kostenarbitrage.",
-      "description": "Einheitliche Telemetrie und Kostenmanagement über alle Clouds hinweg. Nexus leitet Workloads intelligent in Echtzeit an den kosteneffizientesten souveränen Knoten weiter.",
-      "explanation": "Bild A verfolgt weltweit Möglichkeiten zur Kostenarbitrage. Bild B zeigt das plattformübergreifende Dashboard für einheitliche Telemetrie."
-    },
-    "cta": {
-      "title": "Bereit für ein privates Briefing?",
-      "subtitle": "Erleben Sie die volle technische Leistungsfähigkeit des G-Frameworks mit unserem Engineering-Team.",
-      "primary": "Demo anfordern",
-      "secondary": "Pläne ansehen"
-    }
-  },
-  "UseCases": {
-    "hero": {
-      "tag": "ENTERPRISE IMPACT 2025",
-      "title": "Strategische Sovereign-Lösungen",
-      "subtitle": "Das G-Framework liefert messbare Geschwindigkeit in regulierten Branchen: Governance, globale Souveränität und generative Infrastruktur."
-    },
-    "financial": {
-      "title": "Global Finance Modernisierung",
-      "tag": "BANKING & FINANZEN",
-      "description": "Eliminieren Sie Altlasten durch Automatisierung der Refaktorierung monolithischer Mainframes in Microservices. Sicher, konform und unverzüglich über 32 souveräne Regionen hinweg.",
-      "explanation": "Bild A erfasst die Latenz beim Hochfrequenzhandel. Bild B zeigt den automatisierten 'Ledger Sync', der den Datenverlust bei regionalen Ausfällen verhindert."
-    },
-    "healthcare": {
-      "title": "Sovereign Health Daten",
-      "tag": "GESUNDHEITSWESEN",
-      "description": "Beschleunigen Sie F&E-Zyklen und garantieren Sie gleichzeitig die HIPAA-Compliance in verteilten Cloud-Umgebungen. Trainieren Sie KI-Modelle auf lokalisierten Patientendaten sicher.",
-      "explanation": "In Bild A sehen wir Telemetrie von IoMT-Geräten. Bild B zeigt die 'Sovereign Knowledge' RAG-Engine bei der Verarbeitung von Patientenakten."
-    },
-    "government": {
-      "title": "Digitales Vertrauen im öffentlichen Sektor",
-      "tag": "REGIERUNG",
-      "description": "Schaffen Sie Bürgervertrauen mit FIPS-validierter Infrastruktur. Zero-Egress-Architekturen für klassifizierte Workloads und souveränes Identitätsmanagement.",
-      "explanation": "Bild A demonstriert 'Cyber Range'-Simulationen. Bild B zeigt Bürger-Identitätsflüsse, die innerhalb nationaler Grenzen verarbeitet werden."
-    }
-  },
-  "Blog": {
-    "hero": {
-      "tag": "SOVEREIGN INSIGHTS & FORSCHUNG",
-      "title": "Global Impact Hub",
-      "subtitle": "Wissenschaftliche Artikel, technologische Durchbrüche und Branchenanalysen an der Grenze der digitalen Souveränität.",
-      "search": "Forschung suchen..."
-    },
-    "posts": {
-      "aso": {
-        "category": "AKADEMISCHES WHITEPAPER",
-        "title": "Autonome Souveräne Orchestrierung (ASO)",
-        "excerpt": "Ein formales Framework für KI-gesteuerte cloud-agnostische Governance. Erbringung des mathematischen Beweises für State Synchronization Convergence (SSC) über 1.000+ Knoten.",
-        "author": "OmniGCloud Research",
-        "impact": "Bedeutender wissenschaftlicher Beitrag"
-      },
-      "prompt": {
-        "category": "GUIDE",
-        "title": "Prompt Engineering für souveräne Infrastrukturkontrolle",
-        "excerpt": "Wie man natürliche Sprache zur Orchestrierung komplexer Kubernetes-Cluster einsetzt. Ein Leitfaden für unsere 'Declarative Intent'-Engine.",
-        "author": "AI Ops Team",
-        "impact": "EB-1A Original-Guide"
-      },
-      "latency": {
-        "category": "EVALUIERUNG",
-        "title": "Cloud-Provider-Latenz: Umfassender Benchmark 2025",
-        "excerpt": "Evaluierung von OCI, AWS und Azure in Bezug auf die globale Ingress-Performance. Warum Oracle ARM Ampere-Knoten bei souveränen Workloads gewinnen.",
-        "author": "Research Lab",
-        "impact": "Akademisches Benchmarking"
-      },
-      "rag": {
-        "category": "RAG",
-        "title": "Sicherung regulativer Daten mit Sovereign Knowledge",
-        "excerpt": "Ein tiefer Einblick in Retrieval Augmented Generation in Air-Gapped-Umgebungen. Wie man 100% Datenschutz für Rechtsdokumente wahrt.",
-        "author": "Security Architect",
-        "impact": "Bedeutender Beitrag"
-      },
-      "bench": {
-        "category": "BENCHMARK",
-        "title": "Vergleich der LLM-Leistung für die Infrastruktur-Code-Generierung",
-        "excerpt": "GPT-4o vs. Claude 3.5 Sonnet vs. Llama 3 für die Generierung souveräner Terraform-Manifeste. Welches Modell liefert weniger Drift-Fehler?",
-        "author": "KI-Forschung",
-        "impact": "Wissenschaftliches Material"
-      }
-    },
-    "newsletter": {
-      "title": "Tragen Sie sich in den Sovereign Research Circle ein",
-      "subtitle": "Wöchentliche Einblicke in verteilte Systeme, Datenschutz und die Zukunft der globalen Infrastruktur.",
-      "placeholder": "Geben Sie Ihre E-Mail ein",
-      "button": "Abonnieren",
-      "footer": "Weltweit vertraut von 10.000+ Infrastruktur-Architekten."
-    }
-  },
-  "Pricing": {
-    "hero": {
-      "tag": "TRANSPARENTE GOVERNANCE",
-      "title": "Pläne zugeschnitten auf Sovereign Scaling",
-      "subtitle": "Vorhersehbare Preise für Unternehmens-Orchestratoren. Sichern Sie Ihre digitale Souveränität mit dem weltweit resilientesten Multi-Cloud-Framework."
-    },
-    "trust": {
-      "title": "Compliance auf Enterprise-Niveau",
-      "subtitle": "Alle Pläne enthalten die für hochregulierte Sektoren erforderliche Sicherheitsarchitektur.",
-      "residency": {
-        "title": "Datenresidenz",
-        "desc": "Halten Sie Ihre Daten innerhalb rechtlicher Grenzen. Volle Kontrolle über die Platzierung."
-      },
-      "neutrality": {
-        "title": "Cloud-Neutralität",
-        "desc": "Kein Vendor Lock-in. Verschieben Sie Workloads zwischen Clouds auf Knopfdruck."
-      },
-      "scholarly": {
-        "title": "EB-1A Scholarly Ops",
-        "desc": "Die Implementierung folgt peer-reviewed ASO-Architekturmustern."
-      }
-    },
-    "faq": {
-      "title": "Häufig gestellte Fragen",
-      "q1": {
-        "q": "Was ist ein 'automatisierter Audit'?",
-        "a": "Ein Echtzeit-Compliance-Check, der Ihre Cloud-Infrastruktur gegen spezifische Governance-Richtlinien (GDPR, ISO usw.) prüft."
-      },
-      "q2": {
-        "q": "Kann ich die Cloud mitten im Abrechnungszyklus wechseln?",
-        "a": "Ja. Das G-Framework ermöglicht eine nahezu sofortige Migration ohne zusätzliche Plattformgebühren."
-      },
-      "q3": {
-        "q": "Bieten Sie Rabatte für Open-Source-Projekte an?",
-        "a": "Wird ausdrücklich gefördert. Kontaktieren Sie unser Community-Team für einen kostenlosen Developer+-Plan."
-      }
-    },
-    "cta": {
-      "title": "Mit souveräner Gewissheit skalieren",
-      "subtitle": "Bereit, das G-Framework in Ihrer Infrastruktur einzusetzen?",
-      "button": "Jetzt starten"
-    },
-    "plans": {
-      "popular": "AM BELIEBTESTEN",
-      "month": "/Monat",
-      "contact": "Kontaktieren Sie uns für Preise",
-      "developer": {
-        "name": "Entwickler",
-        "desc": "Für einzelne Ingenieure, die die Zukunft souveräner Infrastruktur bauen.",
-        "cta": "Jetzt bauen starten"
-      },
-      "professional": {
-        "name": "Professional",
-        "desc": "Für schnell wachsende Teams, die Multi-Region-Resilienz benötigen.",
-        "cta": "Zu Professional wechseln"
-      },
-      "business": {
-        "name": "Business",
-        "desc": "Unternehmens-Governance für geschäftskritische Operationen.",
-        "cta": "Business skalieren"
-      },
-      "sovereign": {
-        "name": "Souverän",
-        "desc": "Maßgeschneiderte Infrastruktur für Nationen und Fortune 500.",
-        "cta": "Vertrieb kontaktieren"
-      }
-    }
-  },
-  "Platform": {
-    "hero": {
-      "title": "OmniGCloud Autonomous Platform",
-      "subtitle": "Die primäre Steuerungsebene für globale Governance und agentische Cloud-Modernisierung.",
-      "ctaPrimary": "Demo anfordern",
-      "ctaSecondary": "Dokumentation ansehen"
-    },
-    "core": {
-      "title": "Sovereign Core",
-      "desc": "Null-Latenz-Residenz mit getrennten Steuerungsebenen."
-    },
-    "stack": {
-      "api": "Externe API",
-      "logic": "Logic Mesh",
-      "cluster": "Cluster-Ops",
-      "db": "Sovereign DB",
-      "shielded": "Abgeschirmt",
-      "active": "Aktiv",
-      "scaling": "Skalierung",
-      "verified": "Verifiziert"
-    },
-    "comparison": {
-      "title": "Der Sovereign-Vorteil",
-      "subtitle": "Wie sich das G-Framework von herkömmlichen Cloud-Management-Proxies unterscheidet.",
-      "capability": "Fähigkeit",
-      "legacy": "Legacy Cloud-Proxy",
-      "sovereign": "G-Framework (ASO)",
-      "footer": "* Analyse basierend auf den Architectural Standards für Autonomous Sovereign Orchestration (ASO) 2025.",
-      "limited": "Begrenzt",
-      "partial": "Teilweise",
-      "rows": {
-        "neutrality": "100% Anbieterneutralität",
-        "audits": "Echtzeit-Regulierungsaudits",
-        "sync": "Cloud-übergreifender Status-Sync",
-        "refactoring": "Automatisierte Refaktorierung technischer Schulden",
-        "encryption": "Souveräne Asset-Verschlüsselung",
-        "iam": "Vendor-Locked IAM",
-        "arbitrage": "Egress-Gebühren-Arbitrage"
-      }
-    },
-    "arbitrage": {
-      "tag": "Ökonomische Souveränität",
-      "title": "Finanzarbitrage & Cloud-Neutralität",
-      "subtitle": "Das G-Framework verwaltet nicht nur Ihre Cloud – es optimiert die Ökonomie Ihrer Infrastruktur. Verschieben Sie Workloads automatisch in Echtzeit auf den kosteneffizientesten souveränen Knoten.",
-      "forecastTitle": "Predictive Billing & Forecast",
-      "forecastDesc": "Unsere EAB-Forecast-Engine analysiert globale Preisindizes über OCI, AWS und Azure hinweg, um Ihre 12-Monats-Burn-Rate mit einer Genauigkeit von 99,8 % vorherzusagen.",
-      "switchTitle": "Atomarer Plattformwechsel",
-      "switchDesc": "Erleben Sie Workload-Migration in Echtzeit. Wenn ein Anbieter die Tarife erhöht oder gegen Compliance-Regeln verstößt, führt das G-Framework ein autonomes Re-Home durch.",
-      "lockinTitle": "Null Vendor Lock-in",
-      "lockinDesc": "Behalten Sie 100% Portabilität Ihrer Daten und Logik über Grenzen hinweg.",
-      "portabilityTitle": "Sofortige Portabilität",
-      "portabilityDesc": "Migrieren Sie Produktions-Workloads in Sekunden ohne Codeänderungen.",
-      "eb1aTag": "EB-1A Original-Beitrag #5",
-      "eb1aDesc": "\"Der EABF-Algorithmus (Economic Arbitrage & Billing Forecast) stellt einen bedeutenden Fortschritt auf dem Gebiet der Distributed Economics dar. Durch die Entkopplung der Ressourcenkosten von den Provider-APIs hat der Antragsteller einen neuen Standard für cloud-agnostische Finanz-Governance gesetzt.\"",
-      "auditor": "James Sterling",
-      "auditorTitle": "Sovereign Systems Auditor"
-    },
-    "control": {
-      "title": "Die Unified Control Plane",
-      "subtitle": "Verwalten Sie Tausende von verteilten Clustern über eine einzige High-Fidelity-Schnittstelle mit Sub-Millisekunden-Übertragung.",
-      "observability": {
-        "title": "Globale Observability",
-        "desc": "Echtzeit-Telemetrie über alle AWS-, Azure- und GCP-Regionen hinweg."
-      },
-      "fleet": "Bulk Fleet Ops",
-      "healing": "Self-Healing",
-      "gitops": "GitOps-Engine",
-      "audit": "Audit-Logs"
-    },
-    "security": {
-      "title": "Gesteuerte Sicherheit",
-      "desc": "Jeder Vorgang wird auditiert. OmniGCloud erzwingt Zero-Trust-Identität in Ihrem gesamten Bestand.",
-      "cta": "Compliance-Framework",
-      "zerotrust": "Zero Trust",
-      "features": {
-        "fips": {
-          "title": "FIPS 140-2",
-          "desc": "Validierte Verschlüsselung."
-        },
-        "rbac": {
-          "title": "RBAC 2.0",
-          "desc": "Granulare Kontrolle."
-        },
-        "vpc": {
-          "title": "VPC-Isolierung",
-          "desc": "Egress-freier LLM-Betrieb."
-        },
-        "audit": {
-          "title": "Audit-Logs",
-          "desc": "Unveränderliche Trace-Logs."
-        }
-      }
-    },
-    "integrations": {
-      "title": "Native Integrationen",
-      "subtitle": "Verbinden Sie sich nahtlos mit den Tools, die Ihr Team bereits liebt.",
-      "infra": "Infrastruktur",
-      "obs": "Observability",
-      "delivery": "Delivery",
-      "identity": "Identität/Sec"
-    }
-  },
-  "Visuals": {
-    "telemetry": {
-      "title": "GLOBALE LATENZ-TELEMETRIE",
-      "live": "LIVE",
-      "latency": "DURCHSCHN. LATENZ",
-      "throughput": "DURCHSATZ",
-      "loss": "PAKETVERLUST"
-    },
-    "drift": {
-      "title": "COMPLIANCE-DRIFT-ANALYSE",
-      "detected": "DRIFT ERKANNT: +12%",
-      "remediate": "AUTO-REMEDIATE"
-    }
-  },
   "HomeSections": {
+    "Cta": {
+      "disclaimer": "KEINE KREDITKARTE ERFORDERLICH. SOC-2 KONFORMES ONBOARDING.",
+      "primary": "Cloud skalieren",
+      "secondary": "Vertrieb kontaktieren",
+      "subtitle": "Schließen Sie sich hunderten globalen Unternehmen an, die ihre Cloud-Governance automatisiert und ihre digitale Souveränität mit OmniGCloud wiederhergestellt haben.",
+      "title": "Bereit, die souveräne Kontrolle wiederherzustellen?"
+    },
     "Pricing": {
-      "title": "Strategische Sovereign-Editionen",
-      "subtitle": "Wählen Sie das Betriebsmodell, das Ihrem Governance-Mandat entspricht.",
       "core": {
         "badge": "CORE",
-        "price": "4%",
-        "unit": "/ Ausgaben",
-        "desc": "Für digital native Startups, die über 2+ Clouds skalieren.",
         "cta": "Core starten",
+        "desc": "Für digital native Startups, die über 2+ Clouds skalieren.",
         "features": {
-          "nodes": "Bis zu 500 Knoten",
           "drift": "Basis Drift-Erkennung",
+          "nodes": "Bis zu 500 Knoten",
           "sla": "99.9% Control Plane SLA",
           "support": "Community Support"
-        }
+        },
+        "price": "4%",
+        "unit": "/ Ausgaben"
       },
       "enterprise": {
         "badge": "ENTERPRISE",
-        "popular": "AM BELIEBTESTEN",
-        "price": "Standard",
-        "desc": "Vollständige Plattform-Governance für regulierte Branchen.",
         "cta": "Vertrieb kontaktieren",
+        "desc": "Vollständige Plattform-Governance für regulierte Branchen.",
         "features": {
-          "nodes": "Unbegrenzte Knoten",
-          "remediation": "Automatisierte Fehlerbehebung",
           "finops": "FinOps Arbitrage-Engine",
+          "nodes": "Unbegrenzte Knoten",
           "rbac": "Rollenbasierte Zugriffssteuerung (RBAC)",
+          "remediation": "Automatisierte Fehlerbehebung",
           "support": "24/7 Dedizierter Support"
-        }
+        },
+        "popular": "AM BELIEBTESTEN",
+        "price": "Standard"
       },
       "federal": {
         "badge": "FEDERAL",
-        "price": "Individuell",
-        "desc": "Air-Gapped-Deployments für souveräne Einheiten.",
         "cta": "Federal-Anfrage",
+        "desc": "Air-Gapped-Deployments für souveräne Einheiten.",
         "features": {
-          "onprem": "On-Premise Control Plane",
+          "audit": "Benutzerdefinierte Audit-Trails",
           "byok": "Bring Your Own Key (BYOK)",
-          "security": "Unterstützung für Top Secret Clearance",
-          "audit": "Benutzerdefinierte Audit-Trails"
-        }
-      }
-    },
-    "Cta": {
-      "title": "Bereit, die souveräne Kontrolle wiederherzustellen?",
-      "subtitle": "Schließen Sie sich hunderten globalen Unternehmen an, die ihre Cloud-Governance automatisiert und ihre digitale Souveränität mit OmniGCloud wiederhergestellt haben.",
-      "primary": "Cloud skalieren",
-      "secondary": "Vertrieb kontaktieren",
-      "disclaimer": "KEINE KREDITKARTE ERFORDERLICH. SOC-2 KONFORMES ONBOARDING."
-    }
-  },
-  "Problem": {
-    "badge": "KRITISCHE INFRASTRUKTUR-ALARM",
-    "title": "Die Souveränitätskrise",
-    "subtitle": "Globale Unternehmen stehen vor einem perfekten Sturm aus Fragmentierung, Regulierung und Opazität.",
-    "fragmentation": {
-      "title": "Die Fragmentierungsfalle",
-      "desc": "Über AWS, Azure und On-Prem verteilte Daten erzeugen eine 'Zombie-Infrastruktur', die niemand wirklich verwaltet."
-    },
-    "regulatory": {
-      "title": "Regulativer Drift",
-      "desc": "Steigende Strafen nach GDPR und AI Act für grenzüberschreitende Datenlecks. Ihre statischen Compliance-Berichte sind veraltet.",
-      "score": "Compliance Score",
-      "risk": "GEFÄHRDET"
-    },
-    "vendor": {
-      "title": "Vendor Lock-in",
-      "desc": "Anbieterspezifische APIs halten Ihr Engineering-Team gefangen und machen einen Cloud-Wechsel unmöglich."
-    },
-    "opacity": {
-      "title": "Dunkle Daten-Opazität",
-      "desc": "Ohne Transparenz bleiben Souveränitätsverletzungen unbemerkt, bis regulative Audits Strafen verhängen.",
-      "scanning": "Scannen nach unbekannten Assets..."
-    }
-  },
-  "Ecosystem": {
-    "badge": "GLOBALE KONNEKTIVITÄT",
-    "title": "Cross-Cloud Nexus",
-    "subtitle": "Stellen Sie souveräne Infrastrukturen auf jeder Cloud bereit, ohne die Komplexität über eine einzige Steuerungsebene.",
-    "governance": {
-      "title": "Governance Hub",
-      "desc": "Automated drift remediation and policy enforcement across all cloud providers. Ensure compliance with GDPR, HIPAA, and SOC2 in real-time.",
-      "status": "MODULE ACTIVE",
-      "link": "Explore"
-    },
-    "mesh": {
-      "title": "Global Mesh",
-      "desc": "Native intra-cloud routing with localized sovereignty. Connect OCI, AWS, and Azure clusters into a single, latency-optimized service mesh.",
-      "status": "NETWORK ONLINE",
-      "link": "View Topology"
-    },
-    "ai": {
-      "title": "AI Ops Kernel",
-      "desc": "Managed LLM orchestration within VPC boundaries. Deploy private GPT-4 equivalent models for intelligent automation without data leakage.",
-      "status": "MODELS READY",
-      "link": "Access Lab"
-    },
-    "vault": {
-      "title": "Sovereign Vault",
-      "desc": "Localized storage kernels with managed encryption and rigid data residency controls. Your data never leaves the jurisdiction you define.",
-      "status": "ENCRYPTION ON",
-      "link": "Secure Storage"
-    }
-  },
-  "DemoSection": {
-    "badge": "LIVE-ERLEBNIS",
-    "title": "Omni<span>G</span>Cloud in Aktion erleben",
-    "subtitle": "Erleben Sie autonome Cloud-Modernisierung. Von der Entdeckung zur Souveränität in Sekunden.",
-    "discovery": {
-      "title": "Instant Discovery",
-      "desc": "Zero-Touch-Agentenbereitstellung bildet 1.000+ Assets in weniger als 3 Minuten ab.",
-      "code": "> VOLLSTÄNDIGER SCAN: 99.8%"
-    },
-    "iac": {
-      "title": "Generative IaC",
-      "desc": "KI-Agenten rekonstruieren Legacy-Binärdateien in sauberen Terraform-Code.",
-      "code": "> MODULE GENERIEREN..."
-    },
-    "sync": {
-      "title": "Active State Sync",
-      "desc": "Bidirektionales State-Locking zwischen AWS- und Azure-Regionen.",
-      "code": "> LATENZ: 12ms"
-    },
-    "drift": {
-      "title": "Auto-Drift Reversion",
-      "desc": "Nicht autorisierte Konsolenänderungen werden erkannt und sofort rückgängig gemacht.",
-      "code": "> BEDROHUNG BESEITIGT"
-    }
-  },
-  "Community": {
-    "badge": "OPEN-SCIENCE-INITIATIVE",
-    "title": "Von Experten gebaut, <br />von der Community gesteuert",
-    "subtitle": "Das G-Framework ist mehr als eine Plattform: Es ist ein offener Standard für souveräne Infrastrukturen. Schließen Sie sich über 120 globalen Mitwirkenden an, die eine resiliente, anbieterunabhängige Zukunft aufbauen.",
-    "join": "Community beitreten",
-    "contribute": "Zu Core beitragen",
-    "cli": {
-      "title": "Sovereign CLI v4.2",
-      "cmd": "npm install -g @omnig/cli"
-    },
-    "plugins": {
-      "title": "200+ Plugins",
-      "desc": "Erweiterbare Anbieter-Architektur"
-    },
-    "maintainers": {
-      "title": "Globale Maintainer",
-      "desc": "Souveränitätsorientierter Review-Prozess"
-    }
-  },
-  "WhitePaper": {
-    "badge": "ENGINEERING-PUBLIKATION",
-    "contribution": "ORIGINALBEITRAG VON HOHER BEDEUTUNG",
-    "title": "Autonome Souveräne Orchestrierung (ASO)",
-    "description": "Ein formales Framework für KI-gesteuerte, cloud-agnostische Governance. Dieses Whitepaper skizziert die innovativen Methoden des G-Frameworks zur Eliminierung von Vendor Lock-in und zur Wiederherstellung der Datensouveränität in Unternehmen.",
-    "peerReview": "Bereit für Peer-Review",
-    "pageCount": "12-seitige akademische Arbeit",
-    "downloadTitle": "Technisches Whitepaper herunterladen",
-    "downloadSubtitle": "Pflichtlektüre für CIOs, Plattform-Architekten und Rechtsberater, die sich mit dem EU AI Act und globalen Anforderungen an die Datenresidenz befassen.",
-    "readOnline": "Online lesen (Vollständiges Framework)",
-    "designPatterns": "Design Patterns ansehen",
-    "footer": "Veröffentlicht unter der OmniGCloud Open Science Initiative 2025."
-  },
-  "Newsroom": {
-    "badge": "SOVEREIGN INSIGHTS",
-    "title": "Neuestes aus den Labs",
-    "link": "Impact Hub betreten",
-    "cta": "Read Analysis",
-    "news": {
-      "bank": {
-        "date": "12. Dez. 2025",
-        "source": "OmniG Intelligence",
-        "title": "Skalierung von ASO über 2,5 PB grenzüberschreitende Daten für Tier-1-Banken.",
-        "desc": "How we achieved sub-40ms latency for global ledger synchronization using the new G-Mesh protocol.",
-        "tag": "CASE STUDY"
+          "onprem": "On-Premise Control Plane",
+          "security": "Unterstützung für Top Secret Clearance"
+        },
+        "price": "Individuell"
       },
-      "egress": {
-        "date": "28. Nov. 2025",
-        "source": "Cloud Sovereign Report",
-        "title": "Wie autonomes Sovereign Orchestration die Egress-Kosten um 40% senkt.",
-        "desc": "A deep dive into our cost-arbitrage engine that routes traffic through the cheapest compliant pipes.",
-        "tag": "RESEARCH"
-      },
-      "integration": {
-        "date": "15. Nov. 2025",
-        "source": "Global Press Wire",
-        "title": "Universelle Integration für Oracle OKE und RedHat OpenShift angekündigt.",
-        "desc": "Breaking down the new adapters that allow seamless workload portability between OCI and OCP.",
-        "tag": "PRODUKT"
-      }
-    }
-  },
-  "Services": {
-    "Hero": {
-      "badge": "AUTONOME MODERNISIERUNG",
-      "title": "Modernisieren Sie Azure & OCP <br /> <span>mit Logik statt Arbeit</span>",
-      "subtitle": "Nutzen Sie <span>Terraform</span> und <span>Ansible</span>, um Ihren Enterprise-Cloud-Core zu automatisieren.",
-      "cta": "Lösungen erkunden",
-      "velocity": "GESCHWINDIGKEIT",
-      "errors": "FEHLER"
-    },
-    "Migration": {
-      "title": "Die Migration Factory",
-      "subtitle": "Automatisierte Pipelines für eine Cloud-Einführung im großen Maßstab.",
-      "azure": {
-        "title": "Azure Migration Factory",
-        "desc": "Migrieren Sie VMs und Datenbanken schnell in Azure Landing Zones mit vordefinierten Richtlinien."
-      },
-      "ocp": {
-        "title": "OCP Refaktorierung",
-        "desc": "Containerisieren Sie Legacy-Apps auf Red Hat OpenShift. Automatisierte Manifeste für schnelle, konsistente Deployments auf jeder Infrastruktur."
-      },
-      "provisioning": {
-        "title": "< 15m Provisionierung",
-        "desc": "Erstellen Sie vollständige Umgebungen vom Code-Commit bis zur laufenden Infrastruktur in wenigen Minuten."
-      },
-      "drift": {
-        "title": "Zero Drift Cost",
-        "desc": "Eliminieren Sie Schatten-IT-Kosten. Unsere kontinuierliche Statuserzwingung stellt sicher, dass Ihre Rechnung perfekt mit Ihren umfangreichen IaC-Definitionen übereinstimmt."
-      }
-    },
-    "Stack": {
-      "badge": "Die Engine",
-      "title": "Der Automation Stack",
-      "subtitle": "Einheitliche Modernisierungs-Engine, angetrieben durch industrieübliche Open-Source-Tools.",
-      "terraform": {
-        "title": "Terraform Blueprints",
-        "desc": "Vorgehärtete IaC-Module für Azure & AWS."
-      },
-      "ansible": {
-        "title": "Ansible Guardrails",
-        "desc": "Zero-Trust-Konfigurationsmanagement & Immutabilität."
-      }
-    },
-    "Operations": {
-      "title": "Managed Operations",
-      "subtitle": "24/7/365 SRE-Teams warten Ihr Modernisierungs-Gewebe.",
-      "sre": {
-        "title": "24/7 Follow-the-Sun",
-        "desc": "SRE-Hubs in den USA, der EU und APAC gewährleisten ein 15-Minuten-Antwort-SLA."
-      },
-      "finops": {
-        "title": "Kontinuierliches FinOps",
-        "desc": "Echtzeit-Kostenarbitrage-Engine, die Workloads in optimale Zonen verschiebt."
-      },
-      "healing": {
-        "title": "Proaktives Healing",
-        "desc": "Automatisierte Drift-Erkennung und selbstheilende Infrastruktur."
-      },
-      "audit": {
-        "title": "Audit-bereit",
-        "desc": "Monatliche Nachweise, die automatisch für SOC2 & GDPR generiert werden."
-      }
-    },
-    "DataAI": {
-      "title": "Data & KI Fabric",
-      "subtitle": "Souveräne Datenebenen für High-Performance-Inferenz.",
-      "sovereignty": {
-        "title": "Datensouveränität",
-        "desc": "Lokalisierte Residenz."
-      },
-      "fabric": {
-        "title": "KI-Fabric",
-        "desc": "GPU-Workloads."
-      },
-      "search": {
-        "title": "Vektorsuche",
-        "desc": "Hochdimensionale Einbettung."
-      },
-      "analytics": {
-        "title": "Echtzeit-Analytik",
-        "desc": "Sofortige Einblicke."
-      },
-      "uptime": "UPTIME SLA"
+      "subtitle": "Wählen Sie das Betriebsmodell, das Ihrem Governance-Mandat entspricht.",
+      "title": "Strategische Sovereign-Editionen"
     }
   },
   "Industries": {
     "badge": "Zielbranchen",
-    "title": "Branchenspezifische Lösungen",
-    "subtitle": "Standardisierung des digitalen Kerns für die weltweit komplexesten und reguliertesten Sektoren.",
     "challenges": "Zentrale Branchenherausforderungen",
-    "solution": "OmniGCloud-Lösung",
     "cta": {
-      "title": "Bereit, Ihre Branche zu modernisieren?",
+      "button": "Branchengespräch vereinbaren",
       "subtitle": "Schließen Sie sich weltweit führenden Organisationen an, die OmniGCloud nutzen, um ihre digitale Zukunft neu zu definieren.",
-      "button": "Branchengespräch vereinbaren"
+      "title": "Bereit, Ihre Branche zu modernisieren?"
     },
     "financial": {
-      "name": "Finanzdienstleistungen",
-      "desc": "Sichere, konforme Multi-Cloud-Modernisierung für globale Banken und Fintech-Institutionen.",
       "c1": "Veraltete Core-Banking-Monolithe",
       "c2": "Strenge Compliance-Vorgaben (SarbOx, GDPR)",
       "c3": "Anforderungen an den Hochfrequenzhandel",
+      "desc": "Sichere, konforme Multi-Cloud-Modernisierung für globale Banken und Fintech-Institutionen.",
+      "name": "Finanzdienstleistungen",
       "sol": "OmniGCloud Sovereign Control Plane gewährleistet die Datenresidenz und ermöglicht gleichzeitig KI-gestützte Betrugserkennung und automatisierte Skalierung."
     },
-    "insurance": {
-      "name": "Versicherungen",
-      "desc": "Beschleunigung der Schadenbearbeitung und aktuariellen Modellierung durch automatisierte Cloud-native Plattformen.",
-      "c1": "Fragmentierte Altsysteme für Policen",
-      "c2": "Datensilos in hybriden Umgebungen",
-      "c3": "Skalierung während katastrophaler Spitzenereignisse",
-      "sol": "Das Multi-Infrastructure Registry bietet einheitliche Sichtbarkeit in On-Prem- und Cloud-Umgebungen und optimiert die Kapazität für Spitzenlasten."
-    },
-    "telecom": {
-      "name": "Telekommunikation & 5G",
-      "desc": "Orchestrierung der verteilten Edge für Hochfrequenz-Konnektivität und MEC-Workloads.",
-      "c1": "Verteilte Edge-Orchestrierung",
-      "c2": "Network Function Virtualization (NFV)",
-      "c3": "5G-Latenzvorgaben",
-      "sol": "Crossplane-gestütztes Edge-Management ermöglicht die konsistente Bereitstellung von Telco-Stacks über Tausende von lokalisierten Knoten hinweg."
-    },
     "healthcare": {
-      "name": "Gesundheitswesen & Biowissenschaften",
-      "desc": "Schutz von Patientenleben durch HIPAA-konforme, resiliente Datenstrukturen und KI-gestützte Forschung.",
       "c1": "HIPAA/HITECH-Datensouveränität",
       "c2": "Speicherung und Abfrage massiver Bilddaten",
       "c3": "Skalierung von Compute-Ressourcen für die Forschung",
+      "desc": "Schutz von Patientenleben durch HIPAA-konforme, resiliente Datenstrukturen und KI-gestützte Forschung.",
+      "name": "Gesundheitswesen & Biowissenschaften",
       "sol": "Der OmniSource Marketplace bietet vorkonfigurierte Sicherheitsleitplanken und Hochdurchsatz-Datenpipelines für die Forschung."
     },
+    "insurance": {
+      "c1": "Fragmentierte Altsysteme für Policen",
+      "c2": "Datensilos in hybriden Umgebungen",
+      "c3": "Skalierung während katastrophaler Spitzenereignisse",
+      "desc": "Beschleunigung der Schadenbearbeitung und aktuariellen Modellierung durch automatisierte Cloud-native Plattformen.",
+      "name": "Versicherungen",
+      "sol": "Das Multi-Infrastructure Registry bietet einheitliche Sichtbarkeit in On-Prem- und Cloud-Umgebungen und optimiert die Kapazität für Spitzenlasten."
+    },
     "logistics": {
-      "name": "Logistik & Lieferkette",
-      "desc": "Echtzeit-Transparenz und prädiktive Optimierung im gesamten globalen beweglichen Unternehmen.",
       "c1": "Globale Echtzeit-Tracking-Latenz",
       "c2": "Legacy ERP-Integration",
       "c3": "Unvorhersehbare globale Erschütterungen der Lieferkette",
+      "desc": "Echtzeit-Transparenz und prädiktive Optimierung im gesamten globalen beweglichen Unternehmen.",
+      "name": "Logistik & Lieferkette",
       "sol": "KI-native Modernisierung dekonstruiert monolithische ERPs in agile Microservices für eine schnelle Reaktion auf Marktveränderungen."
+    },
+    "solution": "OmniGCloud-Lösung",
+    "subtitle": "Standardisierung des digitalen Kerns für die weltweit komplexesten und reguliertesten Sektoren.",
+    "telecom": {
+      "c1": "Verteilte Edge-Orchestrierung",
+      "c2": "Network Function Virtualization (NFV)",
+      "c3": "5G-Latenzvorgaben",
+      "desc": "Orchestrierung der verteilten Edge für Hochfrequenz-Konnektivität und MEC-Workloads.",
+      "name": "Telekommunikation & 5G",
+      "sol": "Crossplane-gestütztes Edge-Management ermöglicht die konsistente Bereitstellung von Telco-Stacks über Tausende von lokalisierten Knoten hinweg."
+    },
+    "title": "Branchenspezifische Lösungen"
+  },
+  "Newsroom": {
+    "badge": "SOVEREIGN INSIGHTS",
+    "cta": "Read Analysis",
+    "link": "Impact Hub betreten",
+    "news": {
+      "bank": {
+        "date": "12. Dez. 2025",
+        "desc": "How we achieved sub-40ms latency for global ledger synchronization using the new G-Mesh protocol.",
+        "source": "OmniG Intelligence",
+        "tag": "CASE STUDY",
+        "title": "Skalierung von ASO über 2,5 PB grenzüberschreitende Daten für Tier-1-Banken."
+      },
+      "egress": {
+        "date": "28. Nov. 2025",
+        "desc": "A deep dive into our cost-arbitrage engine that routes traffic through the cheapest compliant pipes.",
+        "source": "Cloud Sovereign Report",
+        "tag": "RESEARCH",
+        "title": "Wie autonomes Sovereign Orchestration die Egress-Kosten um 40% senkt."
+      },
+      "integration": {
+        "date": "15. Nov. 2025",
+        "desc": "Breaking down the new adapters that allow seamless workload portability between OCI and OCP.",
+        "source": "Global Press Wire",
+        "tag": "PRODUKT",
+        "title": "Universelle Integration für Oracle OKE und RedHat OpenShift angekündigt."
+      }
+    },
+    "title": "Neuestes aus den Labs"
+  },
+  "Platform": {
+    "arbitrage": {
+      "auditor": "James Sterling",
+      "auditorTitle": "Sovereign Systems Auditor",
+      "eb1aDesc": "\"Der EABF-Algorithmus (Economic Arbitrage & Billing Forecast) stellt einen bedeutenden Fortschritt auf dem Gebiet der Distributed Economics dar. Durch die Entkopplung der Ressourcenkosten von den Provider-APIs hat der Antragsteller einen neuen Standard für cloud-agnostische Finanz-Governance gesetzt.\"",
+      "eb1aTag": "EB-1A Original-Beitrag #5",
+      "forecastDesc": "Unsere EAB-Forecast-Engine analysiert globale Preisindizes über OCI, AWS und Azure hinweg, um Ihre 12-Monats-Burn-Rate mit einer Genauigkeit von 99,8 % vorherzusagen.",
+      "forecastTitle": "Predictive Billing & Forecast",
+      "lockinDesc": "Behalten Sie 100% Portabilität Ihrer Daten und Logik über Grenzen hinweg.",
+      "lockinTitle": "Null Vendor Lock-in",
+      "portabilityDesc": "Migrieren Sie Produktions-Workloads in Sekunden ohne Codeänderungen.",
+      "portabilityTitle": "Sofortige Portabilität",
+      "subtitle": "Das G-Framework verwaltet nicht nur Ihre Cloud – es optimiert die Ökonomie Ihrer Infrastruktur. Verschieben Sie Workloads automatisch in Echtzeit auf den kosteneffizientesten souveränen Knoten.",
+      "switchDesc": "Erleben Sie Workload-Migration in Echtzeit. Wenn ein Anbieter die Tarife erhöht oder gegen Compliance-Regeln verstößt, führt das G-Framework ein autonomes Re-Home durch.",
+      "switchTitle": "Atomarer Plattformwechsel",
+      "tag": "Ökonomische Souveränität",
+      "title": "Finanzarbitrage & Cloud-Neutralität"
+    },
+    "comparison": {
+      "capability": "Fähigkeit",
+      "footer": "* Analyse basierend auf den Architectural Standards für Autonomous Sovereign Orchestration (ASO) 2025.",
+      "legacy": "Legacy Cloud-Proxy",
+      "limited": "Begrenzt",
+      "partial": "Teilweise",
+      "rows": {
+        "arbitrage": "Egress-Gebühren-Arbitrage",
+        "audits": "Echtzeit-Regulierungsaudits",
+        "encryption": "Souveräne Asset-Verschlüsselung",
+        "iam": "Vendor-Locked IAM",
+        "neutrality": "100% Anbieterneutralität",
+        "refactoring": "Automatisierte Refaktorierung technischer Schulden",
+        "sync": "Cloud-übergreifender Status-Sync"
+      },
+      "sovereign": "G-Framework (ASO)",
+      "subtitle": "Wie sich das G-Framework von herkömmlichen Cloud-Management-Proxies unterscheidet.",
+      "title": "Der Sovereign-Vorteil"
+    },
+    "control": {
+      "audit": "Audit-Logs",
+      "fleet": "Bulk Fleet Ops",
+      "gitops": "GitOps-Engine",
+      "healing": "Self-Healing",
+      "observability": {
+        "desc": "Echtzeit-Telemetrie über alle AWS-, Azure- und GCP-Regionen hinweg.",
+        "title": "Globale Observability"
+      },
+      "subtitle": "Verwalten Sie Tausende von verteilten Clustern über eine einzige High-Fidelity-Schnittstelle mit Sub-Millisekunden-Übertragung.",
+      "title": "Die Unified Control Plane"
+    },
+    "core": {
+      "desc": "Null-Latenz-Residenz mit getrennten Steuerungsebenen.",
+      "title": "Sovereign Core"
+    },
+    "hero": {
+      "ctaPrimary": "Demo anfordern",
+      "ctaSecondary": "Dokumentation ansehen",
+      "subtitle": "Die primäre Steuerungsebene für globale Governance und agentische Cloud-Modernisierung.",
+      "title": "OmniGCloud Autonomous Platform"
+    },
+    "integrations": {
+      "delivery": "Delivery",
+      "identity": "Identität/Sec",
+      "infra": "Infrastruktur",
+      "obs": "Observability",
+      "subtitle": "Verbinden Sie sich nahtlos mit den Tools, die Ihr Team bereits liebt.",
+      "title": "Native Integrationen"
+    },
+    "security": {
+      "cta": "Compliance-Framework",
+      "desc": "Jeder Vorgang wird auditiert. OmniGCloud erzwingt Zero-Trust-Identität in Ihrem gesamten Bestand.",
+      "features": {
+        "audit": {
+          "desc": "Unveränderliche Trace-Logs.",
+          "title": "Audit-Logs"
+        },
+        "fips": {
+          "desc": "Validierte Verschlüsselung.",
+          "title": "FIPS 140-2"
+        },
+        "rbac": {
+          "desc": "Granulare Kontrolle.",
+          "title": "RBAC 2.0"
+        },
+        "vpc": {
+          "desc": "Egress-freier LLM-Betrieb.",
+          "title": "VPC-Isolierung"
+        }
+      },
+      "title": "Gesteuerte Sicherheit",
+      "zerotrust": "Zero Trust"
+    },
+    "stack": {
+      "active": "Aktiv",
+      "api": "Externe API",
+      "cluster": "Cluster-Ops",
+      "db": "Sovereign DB",
+      "logic": "Logic Mesh",
+      "scaling": "Skalierung",
+      "shielded": "Abgeschirmt",
+      "verified": "Verifiziert"
     }
   },
-  "Dashboard": {
-    "title": "Souveränes Kommandozentrum",
-    "welcome": "Willkommen zurück",
-    "role": "Zugewiesene Sicherheitsrolle",
-    "logicMeshStatus": "Logic-Mesh Status",
-    "active": "Synchronisiert",
-    "badge": "ECHTZEIT-SOUVERÄNE TELEMETRIE // CORE_V4",
-    "liveTitle": "Live-Kommando & Steuerung",
-    "liveSubtitle": "Erleben Sie, wie das G-Framework den globalen Status über Multi-Cloud-Cluster hinweg orchestriert. Unsere autonome Steuerungsebene synchronisiert kontinuierlich die Infrastrukturabsicht mit Echtzeit-Anbietertelemetrie und gewährleistet so eine 100-prozentige Compliance-Konvergenz und Drift-Behebung im Millisekundenbereich über AWS, Azure, OCI und GCP.",
-    "roiTitle": "Sovereign R.O.I.",
-    "roiSubtitle": "Real-time efficiency tracking",
-    "infraTitle": "CORE INFRASTRUCTURE",
-    "infraSubtitle": "Decentralized Sovereign Nodes",
-    "optimizationTitle": "OPTIMIZATION TRENDS",
-    "trustTitle": "TRUST CENTER",
-    "globalHealth": "Global Health",
-    "healthMonitor": "Sovereignty Health Monitor",
-    "healthOptimal": "OPTIMAL",
-    "healthDesc": "Real-time network latency monitoring across multi-cloud edge nodes. Tracks sub-millisecond variations to ensure optimal sovereign data routing and compliance standards.",
-    "complianceIndex": "Sovereignty Compliance Index",
-    "complianceDesc": "Automated audit scores based on regional data residency and encryption standards across all cloud providers."
-  },
-  "SecuritySettings": {
-    "title": "Sicherheitseinstellungen",
-    "description": "Verwalten Sie die Identitätsanbieter und souveränen Sicherheitsrichtlinien Ihrer Organisation.",
-    "ssoConfiguration": "SSO-Anbieter",
-    "enabled": "Aktiv",
-    "disabled": "Nicht konfiguriert",
-    "clientId": "Client-App-ID",
-    "tenantId": "Verzeichnis (Tenant) ID",
-    "callbackUrl": "Autorisierte Weiterleitungs-URI",
-    "outboundEmail": "Absenderadresse (From)",
-    "advancedSecurity": "Unternehmensidentität (SAML/SCIM)",
-    "advancedDescription": "Aktivieren Sie föderierte Identität via SAML 2.0 und automatisierte Benutzerbereitstellung via SCIM. Verfügbar für Sovereign Enterprise Tiers.",
-    "requestSaml": "Frühzugang anfordern"
-  },
-  "Terms": {
-    "title": "Nutzungsbedingungen",
-    "lastUpdated": "Zuletzt aktualisiert",
-    "acceptance": "Annahme der Bedingungen",
-    "acceptanceText": "Durch den Zugriff auf oder die Nutzung der OmniGCloud-Plattform stimmen Sie diesen Nutzungsbedingungen zu. Wenn Sie diesen Bedingungen nicht zustimmen, nutzen Sie unsere Dienste bitte nicht.",
-    "services": "Bereitgestellte Dienste",
-    "servicesText": "OmniGCloud bietet Cloud-agnostische Modernisierungs- und KI-Engineering-Dienste an, einschließlich:",
-    "service1": "Orchestrierung und Management von Multi-Cloud-Infrastruktur",
-    "service2": "KI-gestützte Plattform-Engineering und Automatisierung",
-    "service3": "Beratung zu Unternehmenssicherheit und Compliance",
-    "service4": "Cloud-Migrations- und Modernisierungsdienste",
-    "userResponsibilities": "Verantwortlichkeiten des Benutzers",
-    "userResponsibilitiesText": "Als Benutzer unserer Plattform stimmen Sie zu:",
-    "responsibility1": "Die Vertraulichkeit Ihrer Kontozugangsdaten zu wahren",
-    "responsibility2": "Die Plattform in Übereinstimmung mit allen geltenden Gesetzen und Vorschriften zu nutzen",
-    "responsibility3": "Nicht zu versuchen, unbefugten Zugriff auf unsere Systeme oder die Daten anderer Benutzer zu erhalten",
-    "dataOwnership": "Dateneigentum",
-    "dataOwnershipText": "Sie behalten alle Rechte, Titel und Interessen an Ihren Daten. OmniGCloud beansprucht kein Eigentum an Ihren Infrastruktur-Metadaten oder Anwendungsdaten. Wir verarbeiten Ihre Daten ausschließlich zur Erbringung unserer Dienste.",
-    "termination": "Kündigung",
-    "terminationText": "Jede Partei kann diesen Vertrag mit einer Frist von 30 Tagen schriftlich kündigen. Nach der Kündigung behalten Sie 90 Tage lang Zugriff zum Exportieren Ihrer Daten.",
-    "disclaimer": "Haftungsausschluss",
-    "disclaimerText": "Unsere Dienste werden 'wie besehen' ohne jegliche Gewährleistung bereitgestellt. Wir garantieren keinen ununterbrochenen oder fehlerfreien Betrieb.",
-    "governingLaw": "Geltendes Recht",
-    "governingLawText": "Diese Bedingungen unterliegen den Gesetzen der Gerichtsbarkeit, in der sich Ihre Organisation hauptsächlich befindet.",
-    "contact": "Kontakt",
-    "contactText": "Bei Fragen zu diesen Bedingungen kontaktieren Sie uns bitte"
+  "Pricing": {
+    "cta": {
+      "button": "Jetzt starten",
+      "subtitle": "Bereit, das G-Framework in Ihrer Infrastruktur einzusetzen?",
+      "title": "Mit souveräner Gewissheit skalieren"
+    },
+    "faq": {
+      "q1": {
+        "a": "Ein Echtzeit-Compliance-Check, der Ihre Cloud-Infrastruktur gegen spezifische Governance-Richtlinien (GDPR, ISO usw.) prüft.",
+        "q": "Was ist ein 'automatisierter Audit'?"
+      },
+      "q2": {
+        "a": "Ja. Das G-Framework ermöglicht eine nahezu sofortige Migration ohne zusätzliche Plattformgebühren.",
+        "q": "Kann ich die Cloud mitten im Abrechnungszyklus wechseln?"
+      },
+      "q3": {
+        "a": "Wird ausdrücklich gefördert. Kontaktieren Sie unser Community-Team für einen kostenlosen Developer+-Plan.",
+        "q": "Bieten Sie Rabatte für Open-Source-Projekte an?"
+      },
+      "title": "Häufig gestellte Fragen"
+    },
+    "hero": {
+      "subtitle": "Vorhersehbare Preise für Unternehmens-Orchestratoren. Sichern Sie Ihre digitale Souveränität mit dem weltweit resilientesten Multi-Cloud-Framework.",
+      "tag": "TRANSPARENTE GOVERNANCE",
+      "title": "Pläne zugeschnitten auf Sovereign Scaling"
+    },
+    "plans": {
+      "business": {
+        "cta": "Business skalieren",
+        "desc": "Unternehmens-Governance für geschäftskritische Operationen.",
+        "name": "Business"
+      },
+      "contact": "Kontaktieren Sie uns für Preise",
+      "developer": {
+        "cta": "Jetzt bauen starten",
+        "desc": "Für einzelne Ingenieure, die die Zukunft souveräner Infrastruktur bauen.",
+        "name": "Entwickler"
+      },
+      "month": "/Monat",
+      "popular": "AM BELIEBTESTEN",
+      "professional": {
+        "cta": "Zu Professional wechseln",
+        "desc": "Für schnell wachsende Teams, die Multi-Region-Resilienz benötigen.",
+        "name": "Professional"
+      },
+      "sovereign": {
+        "cta": "Vertrieb kontaktieren",
+        "desc": "Maßgeschneiderte Infrastruktur für Nationen und Fortune 500.",
+        "name": "Souverän"
+      }
+    },
+    "trust": {
+      "neutrality": {
+        "desc": "Kein Vendor Lock-in. Verschieben Sie Workloads zwischen Clouds auf Knopfdruck.",
+        "title": "Cloud-Neutralität"
+      },
+      "residency": {
+        "desc": "Halten Sie Ihre Daten innerhalb rechtlicher Grenzen. Volle Kontrolle über die Platzierung.",
+        "title": "Datenresidenz"
+      },
+      "scholarly": {
+        "desc": "Die Implementierung folgt peer-reviewed ASO-Architekturmustern.",
+        "title": "EB-1A Scholarly Ops"
+      },
+      "subtitle": "Alle Pläne enthalten die für hochregulierte Sektoren erforderliche Sicherheitsarchitektur.",
+      "title": "Compliance auf Enterprise-Niveau"
+    }
   },
   "Privacy": {
-    "title": "Datenschutzrichtlinie",
-    "lastUpdated": "Zuletzt aktualisiert",
-    "commitment": "Unser Engagement für den Datenschutz",
-    "commitmentText": "Bei OmniGCloud verpflichten wir uns, Ihre Privatsphäre zu schützen und Ihre Daten mit Transparenz und Sorgfalt zu behandeln. Diese Richtlinie erklärt, wie wir Ihre Informationen sammeln, verwenden und schützen.",
-    "dataCollection": "Daten, die wir sammeln",
-    "dataCollectionText": "Wir sammeln nur die Daten, die für die Bereitstellung und Verbesserung unserer Dienste erforderlich sind:",
     "accountData": "Kontoinformationen",
     "accountDataText": "Name, E-Mail-Adresse, Firmenname und Authentifizierungsdaten für SSO-Anbieter.",
-    "infrastructureData": "Infrastruktur-Metadaten",
-    "infrastructureDataText": "Cloud-Ressourcenkonfigurationen, Leistungskennzahlen und Kostendaten (keine Daten auf Anwendungsebene).",
-    "usageData": "Nutzungsanalysen",
-    "usageDataText": "Plattforminteraktionsprotokolle, Funktionsnutzungsmuster und anonymisierte Leistungskennzahlen.",
+    "changes": "Änderungen der Richtlinie",
+    "changesText": "Wir können diese Richtlinie regelmäßig aktualisieren. Wir werden Sie bei wesentlichen Änderungen per E-Mail oder über eine Plattformbenachrichtigung mindestens 30 Tage vor Inkrafttreten informieren.",
+    "commitment": "Unser Engagement für den Datenschutz",
+    "commitmentText": "Bei OmniGCloud verpflichten wir uns, Ihre Privatsphäre zu schützen und Ihre Daten mit Transparenz und Sorgfalt zu behandeln. Diese Richtlinie erklärt, wie wir Ihre Informationen sammeln, verwenden und schützen.",
+    "contact": "Kontakt",
+    "contactText": "Bei datenschutzbezogenen Fragen oder zur Ausübung Ihrer Rechte kontaktieren Sie uns bitte",
+    "cookies": "Cookies und Tracking",
+    "cookiesText": "Wir verwenden essentielle Cookies für Authentifizierung und Sitzungsmanagement. Wir verwenden keine Werbe-Cookies von Drittanbietern. Sie können die Cookie-Einstellungen in Ihren Browsereinstellungen steuern.",
+    "dataCollection": "Daten, die wir sammeln",
+    "dataCollectionText": "Wir sammeln nur die Daten, die für die Bereitstellung und Verbesserung unserer Dienste erforderlich sind:",
     "dataProtection": "Wie wir Ihre Daten schützen",
     "dataProtectionText": "Wir implementieren branchenübliche Sicherheitsmaßnahmen:",
+    "dataRetention": "Datenaufbewahrung",
+    "dataRetentionText": "Wir bewahren Ihre Daten nur so lange auf, wie es für die Bereitstellung unserer Dienste erforderlich ist oder wie gesetzlich vorgeschrieben. Sie können jederzeit die Löschung Ihrer Daten verlangen, vorbehaltlich gesetzlicher Aufbewahrungspflichten.",
+    "infrastructureData": "Infrastruktur-Metadaten",
+    "infrastructureDataText": "Cloud-Ressourcenkonfigurationen, Leistungskennzahlen und Kostendaten (keine Daten auf Anwendungsebene).",
+    "lastUpdated": "Zuletzt aktualisiert",
     "protection1": "TLS 1.3 Verschlüsselung für alle Daten während der Übertragung",
     "protection2": "AES-256 Verschlüsselung für ruhende Daten",
     "protection3": "Regelmäßige Sicherheitsaudits und Penetrationstests",
     "protection4": "Rollenbasierte Zugriffskontrollen und Audit-Protokollierung",
-    "dataRetention": "Datenaufbewahrung",
-    "dataRetentionText": "Wir bewahren Ihre Daten nur so lange auf, wie es für die Bereitstellung unserer Dienste erforderlich ist oder wie gesetzlich vorgeschrieben. Sie können jederzeit die Löschung Ihrer Daten verlangen, vorbehaltlich gesetzlicher Aufbewahrungspflichten.",
-    "yourRights": "Ihre Datenschutzrechte",
-    "yourRightsText": "Sie haben das Recht:",
     "right1": "Jederzeit auf Ihre Daten zuzugreifen und diese zu exportieren",
     "right2": "Die Korrektur ungenauer Daten zu verlangen",
     "right3": "Die Löschung Ihrer Daten zu verlangen (vorbehaltlich gesetzlicher Anforderungen)",
     "right4": "Der Verarbeitung nicht wesentlicher Daten zu widersprechen",
     "thirdParty": "Dienste von Drittanbietern",
     "thirdPartyText": "Wir nutzen ausgewählte Drittanbieterdienste (Cloud-Anbieter, Analysetools), die Ihre Daten verarbeiten können. Wir stellen sicher, dass alle Drittanbieter unsere Sicherheits- und Datenschutzstandards durch vertragliche Vereinbarungen erfüllen.",
-    "cookies": "Cookies und Tracking",
-    "cookiesText": "Wir verwenden essentielle Cookies für Authentifizierung und Sitzungsmanagement. Wir verwenden keine Werbe-Cookies von Drittanbietern. Sie können die Cookie-Einstellungen in Ihren Browsereinstellungen steuern.",
-    "changes": "Änderungen der Richtlinie",
-    "changesText": "Wir können diese Richtlinie regelmäßig aktualisieren. Wir werden Sie bei wesentlichen Änderungen per E-Mail oder über eine Plattformbenachrichtigung mindestens 30 Tage vor Inkrafttreten informieren.",
-    "contact": "Kontakt",
-    "contactText": "Bei datenschutzbezogenen Fragen oder zur Ausübung Ihrer Rechte kontaktieren Sie uns bitte"
+    "title": "Datenschutzrichtlinie",
+    "usageData": "Nutzungsanalysen",
+    "usageDataText": "Plattforminteraktionsprotokolle, Funktionsnutzungsmuster und anonymisierte Leistungskennzahlen.",
+    "yourRights": "Ihre Datenschutzrechte",
+    "yourRightsText": "Sie haben das Recht:"
+  },
+  "Problem": {
+    "badge": "KRITISCHE INFRASTRUKTUR-ALARM",
+    "fragmentation": {
+      "desc": "Über AWS, Azure und On-Prem verteilte Daten erzeugen eine 'Zombie-Infrastruktur', die niemand wirklich verwaltet.",
+      "title": "Die Fragmentierungsfalle"
+    },
+    "opacity": {
+      "desc": "Ohne Transparenz bleiben Souveränitätsverletzungen unbemerkt, bis regulative Audits Strafen verhängen.",
+      "scanning": "Scannen nach unbekannten Assets...",
+      "title": "Dunkle Daten-Opazität"
+    },
+    "regulatory": {
+      "desc": "Steigende Strafen nach GDPR und AI Act für grenzüberschreitende Datenlecks. Ihre statischen Compliance-Berichte sind veraltet.",
+      "risk": "GEFÄHRDET",
+      "score": "Compliance Score",
+      "title": "Regulativer Drift"
+    },
+    "subtitle": "Globale Unternehmen stehen vor einem perfekten Sturm aus Fragmentierung, Regulierung und Opazität.",
+    "title": "Die Souveränitätskrise",
+    "vendor": {
+      "desc": "Anbieterspezifische APIs halten Ihr Engineering-Team gefangen und machen einen Cloud-Wechsel unmöglich.",
+      "title": "Vendor Lock-in"
+    }
+  },
+  "Products": {
+    "cta": {
+      "primary": "Demo anfordern",
+      "secondary": "Pläne ansehen",
+      "subtitle": "Erleben Sie die volle technische Leistungsfähigkeit des G-Frameworks mit unserem Engineering-Team.",
+      "title": "Bereit für ein privates Briefing?"
+    },
+    "deploy": {
+      "description": "Die Deployment-Engine für geschäftskritische Apps. Garantiert atomare Änderungen über globale Cluster hinweg mit 100% Rollback-Zuverlässigkeit.",
+      "explanation": "Bild A zeigt den Status der Deployment-Pipeline. Bild B zeigt den atomaren Rollback-Verifizierungsbildschirm während eines simulierten teilweisen Ausfalls.",
+      "shortDesc": "Atomare, unveränderliche Produktions-Releases.",
+      "tag": "PRODUKTION",
+      "title": "Obsidian Deploy"
+    },
+    "guard": {
+      "description": "Kontinuierliche, automatisierte Auditierung für hochregulierte Unternehmensumgebungen. Scannt jede Ressource gegen SOC2, GDPR und nationale Souveränitätsmandate.",
+      "explanation": "Bild A demonstriert die 'Compliance Map'-Übersicht. Bild B zeigt das Protokoll der automatisierten Fehlerbehebung, bei dem ein falsch konfigurierter Bucket automatisch gesperrt wurde.",
+      "shortDesc": "Real-time Compliance & Auto-Remediation.",
+      "tag": "COMPLIANCE",
+      "title": "Governance Guard"
+    },
+    "hero": {
+      "subtitle": "Eine modulare Suite von in 4K-sichtbaren Orchestrierungswerkzeugen, die entwickelt wurden, um die volle Kontrolle, Resilienz und Compliance in Ihrer verteilten Multi-Cloud wiederherzustellen.",
+      "tag": "PRODUKT-ÖKOSYSTEM",
+      "title": "Enterprise Sovereign Stack"
+    },
+    "knowledge": {
+      "description": "Eine sichere Wissensdatenbank und RAG-Engine, die innerhalb Ihrer souveränen Grenzen operiert. Verarbeiten Sie sensible Rechts- und Regulierungsdaten mit KI ohne grenzüberschreitende Leaks.",
+      "explanation": "Die Knowledge Map (Bild A) visualisiert Datencluster innerhalb nationaler Knoten. Bild B zeigt die RAG-gestützte Schnittstelle für rechtliche Entwürfe.",
+      "shortDesc": "Sicheres RAG für regulative Daten.",
+      "tag": "RAG & KI",
+      "title": "Sovereign Knowledge"
+    },
+    "nexus": {
+      "description": "Einheitliche Telemetrie und Kostenmanagement über alle Clouds hinweg. Nexus leitet Workloads intelligent in Echtzeit an den kosteneffizientesten souveränen Knoten weiter.",
+      "explanation": "Bild A verfolgt weltweit Möglichkeiten zur Kostenarbitrage. Bild B zeigt das plattformübergreifende Dashboard für einheitliche Telemetrie.",
+      "shortDesc": "Globale Telemetrie & Kostenarbitrage.",
+      "tag": "ARBITRAGE",
+      "title": "Cross-Cloud Nexus"
+    },
+    "playground": {
+      "description": "Die weltweit erste IDE, die speziell für die souveräne Cross-Cloud-Orchestrierung entwickelt wurde. Erstellen Sie Prototypen für komplexe Infrastruktur-Intents über OCI, AWS und Azure hinweg in einer einheitlichen Umgebung.",
+      "explanation": "Der primäre Arbeitsbereich (Bild A) zeigt Syntax-Highlighting für das G-Framework DSL, während der sekundäre Monitor (Bild B) ein Live-Diff über drei Cloud-Anbieter liefert.",
+      "shortDesc": "IDE für Prototyping von Cross-Cloud Infra.",
+      "tag": "INFRA-DEV",
+      "title": "Sovereign Playground"
+    },
+    "workflows": {
+      "description": "Eine visuelle Drag-and-Drop-Engine zur Definition mehrstufiger Automatisierung. G-Workflows übernimmt die Zustandssynchronisation und Edge-Cases automatisch für regionale Failover.",
+      "explanation": "In unserem Workflow-Designer (Bild A) planen Ingenieure die Logik. Bild B fängt die G-Workflows-Engine ein, die eine unterbrechungsfreie Migration durchführt.",
+      "shortDesc": "Visuelle mehrstufige Orchestrierungs-Engine.",
+      "tag": "AUTOMATISIERUNG",
+      "title": "G-Workflows"
+    }
   },
   "Security": {
-    "title": "Sicherheits- & Vertrauenscenter",
-    "subtitle": "Unser Engagement zum Schutz Ihrer Infrastruktur und Daten mit Sicherheitsmethoden auf Unternehmensniveau.",
-    "encryption": "Ende-zu-Ende-Verschlüsselung",
-    "encryptionText": "Alle Daten werden während der Übertragung (TLS 1.3) und im Ruhezustand (AES-256) verschlüsselt, mit kundenseitig verwalteten Verschlüsselungsschlüsseln für Enterprise-Pläne.",
     "authentication": "Multi-Faktor-Authentifizierung",
     "authenticationText": "Enterprise-SSO mit Unterstützung für SAML, OIDC und passwortlose Magic Links. Rollenbasierte Zugriffskontrolle (RBAC) für granulare Berechtigungen.",
-    "responsibleDisclosure": "Verantwortungsvolle Offenlegung",
+    "contactSecurity": "Sicherheitskontakt",
     "disclosureIntro": "Wir begrüßen Sicherheitsforscher, die uns helfen, die Sicherheit unserer Plattform aufrechtzuerhalten. Wenn Sie eine Schwachstelle entdecken, melden Sie diese bitte verantwortungsvoll.",
+    "encryption": "Ende-zu-Ende-Verschlüsselung",
+    "encryptionText": "Alle Daten werden während der Übertragung (TLS 1.3) und im Ruhezustand (AES-256) verschlüsselt, mit kundenseitig verwalteten Verschlüsselungsschlüsseln für Enterprise-Pläne.",
+    "infra1": "Multi-Region-Dployment mit automatischem Failover",
+    "infra2": "Netzwerksegmentierung und Zero-Trust-Architektur",
+    "infra3": "Regelmäßige Schwachstellenscans und Patching",
+    "infrastructure": "Infrastruktursicherheit",
+    "monitor1": "24/7 Security Operations Center (SOC)",
+    "monitor2": "Erkennung und Reaktion auf Bedrohungen in Echtzeit",
+    "monitor3": "Umfassende Audit-Protokollierung und SIEM-Integration",
+    "monitoring": "Kontinuierliche Überwachung",
+    "outOfScope": "Außerhalb des Geltungsbereichs",
+    "outOfScope1": "Social Engineering-Angriffe oder Phishing",
+    "outOfScope2": "Denial-of-Service (DoS) Angriffe",
+    "outOfScope3": "Probleme in Diensten von Drittanbietern, die wir nicht kontrollieren",
+    "pgpKey": "PGP-Schlüssel",
     "reportingProcess": "Meldeverfahren",
-    "step1": "Senden Sie eine E-Mail an security@omnigcloud.com mit Details zur Schwachstelle",
-    "step2": "Fügen Sie Schritte zur Reproduktion, potenzielle Auswirkungen und Proof-of-Concept-Code bei",
-    "step3": "Geben Sie uns angemessene Zeit zur Untersuchung und Behebung vor der öffentlichen Bekanntgabe",
-    "step4": "Wir bestätigen Ihren Bericht innerhalb von 48 Stunden und informieren Sie über unseren Fortschritt",
+    "responsibleDisclosure": "Verantwortungsvolle Offenlegung",
     "scope": "Im Geltungsbereich",
     "scope1": "Umgehung von Authentifizierung und Autorisierung",
     "scope2": "SQL-Injection, XSS, CSRF und andere Injektionsschwachstellen",
     "scope3": "Server-Side Request Forgery (SSRF) und Remote Code Execution (RCE)",
     "scope4": "Offenlegung sensibler Daten oder unsichere Datenspeicherung",
-    "outOfScope": "Außerhalb des Geltungsbereichs",
-    "outOfScope1": "Social Engineering-Angriffe oder Phishing",
-    "outOfScope2": "Denial-of-Service (DoS) Angriffe",
-    "outOfScope3": "Probleme in Diensten von Drittanbietern, die wir nicht kontrollieren",
-    "contactSecurity": "Sicherheitskontakt",
     "securityEmail": "E-Mail",
-    "pgpKey": "PGP-Schlüssel",
     "securityPractices": "Sicherheitspraktiken",
-    "infrastructure": "Infrastruktursicherheit",
-    "infra1": "Multi-Region-Dployment mit automatischem Failover",
-    "infra2": "Netzwerksegmentierung und Zero-Trust-Architektur",
-    "infra3": "Regelmäßige Schwachstellenscans und Patching",
-    "monitoring": "Kontinuierliche Überwachung",
-    "monitor1": "24/7 Security Operations Center (SOC)",
-    "monitor2": "Erkennung und Reaktion auf Bedrohungen in Echtzeit",
-    "monitor3": "Umfassende Audit-Protokollierung und SIEM-Integration"
+    "step1": "Senden Sie eine E-Mail an security@omnigcloud.com mit Details zur Schwachstelle",
+    "step2": "Fügen Sie Schritte zur Reproduktion, potenzielle Auswirkungen und Proof-of-Concept-Code bei",
+    "step3": "Geben Sie uns angemessene Zeit zur Untersuchung und Behebung vor der öffentlichen Bekanntgabe",
+    "step4": "Wir bestätigen Ihren Bericht innerhalb von 48 Stunden und informieren Sie über unseren Fortschritt",
+    "subtitle": "Unser Engagement zum Schutz Ihrer Infrastruktur und Daten mit Sicherheitsmethoden auf Unternehmensniveau.",
+    "title": "Sicherheits- & Vertrauenscenter"
   },
-  "Compliance": {
-    "title": "Compliance & Zertifizierungen",
-    "subtitle": "Transparente Berichterstattung über unseren Compliance-Status und Datenverarbeitungspraktiken.",
-    "transparency": "Transparenzhinweis",
-    "transparencyText": "Wir glauben an ehrliche Kommunikation über unseren Compliance-Status. Unten finden Sie unsere aktuellen Zertifizierungen, laufende Audits und geplante Initiativen. Wir beanspruchen keine Zertifizierungen, die wir noch nicht erreicht haben.",
-    "active": "Aktiv",
-    "inProgress": "In Bearbeitung",
-    "planned": "Geplant 2026",
-    "gdpr": "DSGVO-Konformität",
-    "gdprText": "Vollständig konform mit der EU-Datenschutz-Grundverordnung. Auftragsverarbeitungsverträge verfügbar.",
-    "soc2": "SOC 2 Typ II",
-    "soc2Text": "Derzeit im SOC 2 Typ II Audit. Erwartete Fertigstellung Q2 2026.",
-    "iso27001": "ISO 27001",
-    "iso27001Text": "Zertifizierung des Informationssicherheits-Managementsystems für 2026 geplant.",
-    "dataHandling": "Datenverarbeitungspraktiken",
-    "encryption": "Verschlüsselungsstandards",
-    "encryption1": "TLS 1.3 für alle Daten während der Übertragung",
-    "encryption2": "AES-256 Verschlüsselung für ruhende Daten",
-    "encryption3": "Kundenseitig verwaltete Verschlüsselungsschlüssel (CMEK) für Enterprise-Pläne verfügbar",
-    "dataResidency": "Datenresidenz",
-    "dataResidencyText": "Kundendaten werden in der geografischen Region Ihrer Wahl gespeichert. Wir unterstützen Datenresidenzanforderungen für EU, USA, APAC und andere Regionen. Daten verlassen Ihre gewählte Region nicht ohne ausdrückliche Zustimmung.",
-    "retention": "Datenaufbewahrungsrichtlinien",
-    "operational": "Betriebsdaten",
-    "operationalText": "Aufbewahrt für die Dauer Ihres Abonnements plus 90 Tage",
-    "audit": "Audit-Protokolle",
-    "auditText": "7 Jahre aufbewahrt, um regulatorische Anforderungen zu erfüllen",
-    "backups": "Backups",
-    "backupsText": "Verschlüsselte Backups, die 30 Tage mit Point-in-Time-Recovery aufbewahrt werden",
-    "accessControls": "Zugriffskontrollen",
-    "authentication": "Authentifizierung",
-    "auth1": "Multi-Faktor-Authentifizierung (MFA) für alle Benutzer erforderlich",
-    "auth2": "Enterprise-SSO mit SAML 2.0 und OIDC Unterstützung",
-    "auth3": "Passwortlose Authentifizierungsoptionen verfügbar",
-    "authorization": "Autorisierung",
-    "authz1": "Rollenbasierte Zugriffskontrolle (RBAC) mit benutzerdefinierten Rollen",
-    "authz2": "Prinzip der geringsten Rechte durchgesetzt",
-    "authz3": "Regelmäßige Zugriffsüberprüfungen und automatisiertes Deprovisioning",
-    "incidentResponse": "Reaktion auf Vorfälle",
-    "incidentResponseText": "Wir unterhalten einen umfassenden Reaktionsplan für Vorfälle, um Sicherheitsvorfälle schnell zu erkennen, darauf zu reagieren und uns davon zu erholen.",
-    "responseProcess": "Unser Reaktionsprozess",
-    "response1": "Erkennung und Triage innerhalb von 1 Stunde nach Identifizierung des Vorfalls",
-    "response2": "Kundenbenachrichtigung innerhalb von 24 Stunden bei Vorfällen, die Kundendaten betreffen",
-    "response3": "Ursachenanalyse und Behebungsplan innerhalb von 72 Stunden",
-    "response4": "Überprüfung nach dem Vorfall und Implementierung von Sicherheitsverbesserungen innerhalb von 30 Tagen"
+  "SecuritySettings": {
+    "advancedDescription": "Aktivieren Sie föderierte Identität via SAML 2.0 und automatisierte Benutzerbereitstellung via SCIM. Verfügbar für Sovereign Enterprise Tiers.",
+    "advancedSecurity": "Unternehmensidentität (SAML/SCIM)",
+    "callbackUrl": "Autorisierte Weiterleitungs-URI",
+    "clientId": "Client-App-ID",
+    "description": "Verwalten Sie die Identitätsanbieter und souveränen Sicherheitsrichtlinien Ihrer Organisation.",
+    "disabled": "Nicht konfiguriert",
+    "enabled": "Aktiv",
+    "outboundEmail": "Absenderadresse (From)",
+    "requestSaml": "Frühzugang anfordern",
+    "ssoConfiguration": "SSO-Anbieter",
+    "tenantId": "Verzeichnis (Tenant) ID",
+    "title": "Sicherheitseinstellungen"
+  },
+  "Services": {
+    "DataAI": {
+      "analytics": {
+        "desc": "Sofortige Einblicke.",
+        "title": "Echtzeit-Analytik"
+      },
+      "fabric": {
+        "desc": "GPU-Workloads.",
+        "title": "KI-Fabric"
+      },
+      "search": {
+        "desc": "Hochdimensionale Einbettung.",
+        "title": "Vektorsuche"
+      },
+      "sovereignty": {
+        "desc": "Lokalisierte Residenz.",
+        "title": "Datensouveränität"
+      },
+      "subtitle": "Souveräne Datenebenen für High-Performance-Inferenz.",
+      "title": "Data & KI Fabric",
+      "uptime": "UPTIME SLA"
+    },
+    "Hero": {
+      "badge": "AUTONOME MODERNISIERUNG",
+      "cta": "Lösungen erkunden",
+      "errors": "FEHLER",
+      "subtitle": "Nutzen Sie <span>Terraform</span> und <span>Ansible</span>, um Ihren Enterprise-Cloud-Core zu automatisieren.",
+      "title": "Modernisieren Sie Azure & OCP <br /> <span>mit Logik statt Arbeit</span>",
+      "velocity": "GESCHWINDIGKEIT"
+    },
+    "Migration": {
+      "azure": {
+        "desc": "Migrieren Sie VMs und Datenbanken schnell in Azure Landing Zones mit vordefinierten Richtlinien.",
+        "title": "Azure Migration Factory"
+      },
+      "drift": {
+        "desc": "Eliminieren Sie Schatten-IT-Kosten. Unsere kontinuierliche Statuserzwingung stellt sicher, dass Ihre Rechnung perfekt mit Ihren umfangreichen IaC-Definitionen übereinstimmt.",
+        "title": "Zero Drift Cost"
+      },
+      "ocp": {
+        "desc": "Containerisieren Sie Legacy-Apps auf Red Hat OpenShift. Automatisierte Manifeste für schnelle, konsistente Deployments auf jeder Infrastruktur.",
+        "title": "OCP Refaktorierung"
+      },
+      "provisioning": {
+        "desc": "Erstellen Sie vollständige Umgebungen vom Code-Commit bis zur laufenden Infrastruktur in wenigen Minuten.",
+        "title": "< 15m Provisionierung"
+      },
+      "subtitle": "Automatisierte Pipelines für eine Cloud-Einführung im großen Maßstab.",
+      "title": "Die Migration Factory"
+    },
+    "Operations": {
+      "audit": {
+        "desc": "Monatliche Nachweise, die automatisch für SOC2 & GDPR generiert werden.",
+        "title": "Audit-bereit"
+      },
+      "finops": {
+        "desc": "Echtzeit-Kostenarbitrage-Engine, die Workloads in optimale Zonen verschiebt.",
+        "title": "Kontinuierliches FinOps"
+      },
+      "healing": {
+        "desc": "Automatisierte Drift-Erkennung und selbstheilende Infrastruktur.",
+        "title": "Proaktives Healing"
+      },
+      "sre": {
+        "desc": "SRE-Hubs in den USA, der EU und APAC gewährleisten ein 15-Minuten-Antwort-SLA.",
+        "title": "24/7 Follow-the-Sun"
+      },
+      "subtitle": "24/7/365 SRE-Teams warten Ihr Modernisierungs-Gewebe.",
+      "title": "Managed Operations"
+    },
+    "Stack": {
+      "ansible": {
+        "desc": "Zero-Trust-Konfigurationsmanagement & Immutabilität.",
+        "title": "Ansible Guardrails"
+      },
+      "badge": "Die Engine",
+      "subtitle": "Einheitliche Modernisierungs-Engine, angetrieben durch industrieübliche Open-Source-Tools.",
+      "terraform": {
+        "desc": "Vorgehärtete IaC-Module für Azure & AWS.",
+        "title": "Terraform Blueprints"
+      },
+      "title": "Der Automation Stack"
+    }
+  },
+  "SovereignGallery": {
+    "control": {
+      "description": "Das Command Center (Bild A) bietet eine 4K-Visualisierung aller globalen Cloud-Assets in Echtzeit. Bild B zeigt die 'Drift Remediation'-Engine in Aktion, bei der eine nicht autorisierte Konfigurationsänderung automatisch in 1,4 Sekunden rückgängig gemacht wurde.",
+      "title": "Autonome Steuerungsebene"
+    },
+    "failover": {
+      "description": "Bild A erfasst die globale Latenzkarte kurz vor einem regionalen Provider-Ausfall. In Bild B sehen Sie, wie das G-Framework eine sofortige Workload-Migration zu Oracle OCI auslöst, um eine 100%ige Betriebszeit zu gewährleisten.",
+      "title": "Multi-Cloud Circuit Breaker"
+    },
+    "subtitle": "Detaillierte Architektur-Aufnahmen des G-Frameworks in der Produktion.",
+    "title": "Die Sovereign Visual Library"
+  },
+  "Terms": {
+    "acceptance": "Annahme der Bedingungen",
+    "acceptanceText": "Durch den Zugriff auf oder die Nutzung der OmniGCloud-Plattform stimmen Sie diesen Nutzungsbedingungen zu. Wenn Sie diesen Bedingungen nicht zustimmen, nutzen Sie unsere Dienste bitte nicht.",
+    "contact": "Kontakt",
+    "contactText": "Bei Fragen zu diesen Bedingungen kontaktieren Sie uns bitte",
+    "dataOwnership": "Dateneigentum",
+    "dataOwnershipText": "Sie behalten alle Rechte, Titel und Interessen an Ihren Daten. OmniGCloud beansprucht kein Eigentum an Ihren Infrastruktur-Metadaten oder Anwendungsdaten. Wir verarbeiten Ihre Daten ausschließlich zur Erbringung unserer Dienste.",
+    "disclaimer": "Haftungsausschluss",
+    "disclaimerText": "Unsere Dienste werden 'wie besehen' ohne jegliche Gewährleistung bereitgestellt. Wir garantieren keinen ununterbrochenen oder fehlerfreien Betrieb.",
+    "governingLaw": "Geltendes Recht",
+    "governingLawText": "Diese Bedingungen unterliegen den Gesetzen der Gerichtsbarkeit, in der sich Ihre Organisation hauptsächlich befindet.",
+    "lastUpdated": "Zuletzt aktualisiert",
+    "responsibility1": "Die Vertraulichkeit Ihrer Kontozugangsdaten zu wahren",
+    "responsibility2": "Die Plattform in Übereinstimmung mit allen geltenden Gesetzen und Vorschriften zu nutzen",
+    "responsibility3": "Nicht zu versuchen, unbefugten Zugriff auf unsere Systeme oder die Daten anderer Benutzer zu erhalten",
+    "service1": "Orchestrierung und Management von Multi-Cloud-Infrastruktur",
+    "service2": "KI-gestützte Plattform-Engineering und Automatisierung",
+    "service3": "Beratung zu Unternehmenssicherheit und Compliance",
+    "service4": "Cloud-Migrations- und Modernisierungsdienste",
+    "services": "Bereitgestellte Dienste",
+    "servicesText": "OmniGCloud bietet Cloud-agnostische Modernisierungs- und KI-Engineering-Dienste an, einschließlich:",
+    "termination": "Kündigung",
+    "terminationText": "Jede Partei kann diesen Vertrag mit einer Frist von 30 Tagen schriftlich kündigen. Nach der Kündigung behalten Sie 90 Tage lang Zugriff zum Exportieren Ihrer Daten.",
+    "title": "Nutzungsbedingungen",
+    "userResponsibilities": "Verantwortlichkeiten des Benutzers",
+    "userResponsibilitiesText": "Als Benutzer unserer Plattform stimmen Sie zu:"
+  },
+  "UseCases": {
+    "financial": {
+      "description": "Eliminieren Sie Altlasten durch Automatisierung der Refaktorierung monolithischer Mainframes in Microservices. Sicher, konform und unverzüglich über 32 souveräne Regionen hinweg.",
+      "explanation": "Bild A erfasst die Latenz beim Hochfrequenzhandel. Bild B zeigt den automatisierten 'Ledger Sync', der den Datenverlust bei regionalen Ausfällen verhindert.",
+      "tag": "BANKING & FINANZEN",
+      "title": "Global Finance Modernisierung"
+    },
+    "government": {
+      "description": "Schaffen Sie Bürgervertrauen mit FIPS-validierter Infrastruktur. Zero-Egress-Architekturen für klassifizierte Workloads und souveränes Identitätsmanagement.",
+      "explanation": "Bild A demonstriert 'Cyber Range'-Simulationen. Bild B zeigt Bürger-Identitätsflüsse, die innerhalb nationaler Grenzen verarbeitet werden.",
+      "tag": "REGIERUNG",
+      "title": "Digitales Vertrauen im öffentlichen Sektor"
+    },
+    "healthcare": {
+      "description": "Beschleunigen Sie F&E-Zyklen und garantieren Sie gleichzeitig die HIPAA-Compliance in verteilten Cloud-Umgebungen. Trainieren Sie KI-Modelle auf lokalisierten Patientendaten sicher.",
+      "explanation": "In Bild A sehen wir Telemetrie von IoMT-Geräten. Bild B zeigt die 'Sovereign Knowledge' RAG-Engine bei der Verarbeitung von Patientenakten.",
+      "tag": "GESUNDHEITSWESEN",
+      "title": "Sovereign Health Daten"
+    },
+    "hero": {
+      "subtitle": "Das G-Framework liefert messbare Geschwindigkeit in regulierten Branchen: Governance, globale Souveränität und generative Infrastruktur.",
+      "tag": "ENTERPRISE IMPACT 2025",
+      "title": "Strategische Sovereign-Lösungen"
+    }
+  },
+  "Visuals": {
+    "drift": {
+      "detected": "DRIFT ERKANNT: +12%",
+      "remediate": "AUTO-REMEDIATE",
+      "title": "COMPLIANCE-DRIFT-ANALYSE"
+    },
+    "telemetry": {
+      "latency": "DURCHSCHN. LATENZ",
+      "live": "LIVE",
+      "loss": "PAKETVERLUST",
+      "throughput": "DURCHSATZ",
+      "title": "GLOBALE LATENZ-TELEMETRIE"
+    }
+  },
+  "WhitePaper": {
+    "badge": "ENGINEERING-PUBLIKATION",
+    "contribution": "ORIGINALBEITRAG VON HOHER BEDEUTUNG",
+    "description": "Ein formales Framework für KI-gesteuerte, cloud-agnostische Governance. Dieses Whitepaper skizziert die innovativen Methoden des G-Frameworks zur Eliminierung von Vendor Lock-in und zur Wiederherstellung der Datensouveränität in Unternehmen.",
+    "designPatterns": "Design Patterns ansehen",
+    "downloadSubtitle": "Pflichtlektüre für CIOs, Plattform-Architekten und Rechtsberater, die sich mit dem EU AI Act und globalen Anforderungen an die Datenresidenz befassen.",
+    "downloadTitle": "Technisches Whitepaper herunterladen",
+    "footer": "Veröffentlicht unter der OmniGCloud Open Science Initiative 2025.",
+    "pageCount": "12-seitige akademische Arbeit",
+    "peerReview": "Bereit für Peer-Review",
+    "readOnline": "Online lesen (Vollständiges Framework)",
+    "title": "Autonome Souveräne Orchestrierung (ASO)"
   },
   "Whitepaper": {
-    "meta": {
-      "title": "Autonomous Sovereign Orchestration: Ein Framework für Cloud-agnostische Governance",
-      "description": "Technisches Whitepaper, das ein formales Framework für KI-gesteuerte, Cloud-agnostische Infrastruktur-Governance vorstellt."
-    },
-    "classification": "Technisches Whitepaper / Branchenforschungsarbeit",
-    "title": "Autonomous Sovereign Orchestration (ASO): Ein Framework für Cloud-agnostische Governance",
-    "author_label": "Autor",
-    "author": "Chaitanya Bharath Gopu",
-    "version_label": "Version",
-    "version": "1.0",
-    "date_label": "Veröffentlichungsdatum",
-    "date": "30. Dezember 2025",
     "abstract": {
-      "title": "Zusammenfassung",
-      "content": "Moderne Unternehmen stehen vor beispiellosen Herausforderungen bei der Verwaltung von Multi-Cloud-Infrastrukturen unter Wahrung von gesetzlicher Compliance, Kosteneffizienz und operativer Souveränität. Dieses Paper stellt Autonomous Sovereign Orchestration (ASO) vor, ein neuartiges Framework, das Organisationen eine echte Cloud-agnostische Governance durch KI-gesteuerte Richtliniendurchsetzung, automatisierte Zustands-Synchronisation und anbieterneutrale Abstraktionsschichten ermöglicht. Wir präsentieren die Architekturprinzipien, die Implementierungsmethodik und empirische Ergebnisse, die signifikante Verbesserungen bei der Einhaltung der Compliance, der Kostenoptimierung und der operativen Geschwindigkeit zeigen."
+      "content": "Moderne Unternehmen stehen vor beispiellosen Herausforderungen bei der Verwaltung von Multi-Cloud-Infrastrukturen unter Wahrung von gesetzlicher Compliance, Kosteneffizienz und operativer Souveränität. Dieses Paper stellt Autonomous Sovereign Orchestration (ASO) vor, ein neuartiges Framework, das Organisationen eine echte Cloud-agnostische Governance durch KI-gesteuerte Richtliniendurchsetzung, automatisierte Zustands-Synchronisation und anbieterneutrale Abstraktionsschichten ermöglicht. Wir präsentieren die Architekturprinzipien, die Implementierungsmethodik und empirische Ergebnisse, die signifikante Verbesserungen bei der Einhaltung der Compliance, der Kostenoptimierung und der operativen Geschwindigkeit zeigen.",
+      "title": "Zusammenfassung"
     },
-    "introduction": {
-      "title": "1. Einleitung",
-      "p1": "Die Ausbreitung von Cloud Computing hat die IT-Infrastruktur von Unternehmen grundlegend verändert. Diese Transformation hat jedoch neue Herausforderungen mit sich gebracht: Anbieterbindung (Vendor Lock-in), Compliance-Komplexität und operative Fragmentierung. Organisationen, die über mehrere Cloud-Anbieter (AWS, Azure, GCP, Oracle Cloud Infrastructure) hinweg tätig sind, stehen vor der gewaltigen Aufgabe, konsistente Governance-, Sicherheits- und Compliance-Richtlinien in heterogenen Umgebungen aufrechtzuerhalten.",
-      "p2": "Herkömmliche Cloud-Management-Plattformen bieten nur begrenzte Abstraktion und verstärken oft Anbieterabhängigkeiten durch proprietäre APIs und Tools. Dies schafft strategische Risiken, schränkt die Verhandlungsmacht ein und erhöht die Gesamtbetriebskosten. Darüber hinaus stehen regulierte Branchen vor strengen Datenresidenzanforderungen, die eine feingranulare Kontrolle über die Platzierung und Bewegung von Daten erfordern.",
-      "p3": "Dieses Paper präsentiert Autonomous Sovereign Orchestration (ASO), ein umfassendes Framework, das entwickelt wurde, um diese Herausforderungen durch anbieterneutrale Abstraktionen, KI-gesteuerte Richtliniendurchsetzung und automatisierte Compliance-Verifizierung zu bewältigen. ASO ermöglicht es Organisationen, die volle operative Souveränität zu bewahren und gleichzeitig die Vorteile einer Multi-Cloud-Infrastruktur zu nutzen."
-    },
-    "problem": {
-      "title": "2. Problemstellung",
-      "p1": "Die Einführung der Cloud in Unternehmen hat drei kritische Herausforderungen offenbart, die bestehende Lösungen nicht angemessen adressieren:",
-      "vendor_lock": {
-        "title": "2.1 Anbieterbindung und strategisches Risiko",
-        "content": "Cloud-Anbieter gestalten ihre Dienste oft so, dass die Kundenbindung durch proprietäre APIs, spezialisierte Dienste und wirtschaftliche Anreize (z. B. Egress-Gebühren) maximiert wird. Die Migration von Workloads zwischen Anbietern erfordert erheblichen Engineering-Aufwand, was eine strategische Anfälligkeit schafft. Organisationen fehlt die Fähigkeit, schnell auf Preisänderungen, Serviceverschlechterungen oder Compliance-Bedenken zu reagieren.",
-        "scenario": "Scenario 1: A Global 500 bank prevented from shifting workloads during a regional Azure outage due to proprietary networking dependencies, resulting in 4 hours of downtime and $12M in lost revenue."
-      },
-      "compliance": {
-        "title": "2.2 Compliance-Abweichungen und regulatorische Belastung",
-        "content": "Regulatorische Frameworks wie DSGVO, HIPAA, SOC 2 und aufkommende KI-Governance-Gesetze stellen strenge Anforderungen an die Datenhandhabung, -residenz und -auditierbarkeit. Die manuelle Überprüfung der Compliance ist fehleranfällig und lässt sich nicht über Tausende von Cloud-Ressourcen hinweg skalieren. Konfigurationsabweichungen — wenn der tatsächliche Infrastrukturzustand von der beabsichtigten Richtlinie abweicht — schaffen Compliance-Lücken, die Organisationen regulatorischen Strafen und Reputationsschäden aussetzen.",
-        "scenario": "Scenario 2: A healthcare provider failing a HIPAA audit after an automated provisioning script accidentally exposed a S3 bucket to the public internet for 48 hours without detection."
-      },
-      "operational": {
-        "title": "2.3 Operative Komplexität und Kosteneffizienz",
-        "content": "Die Verwaltung der Infrastruktur über mehrere Cloud-Anbieter hinweg erfordert spezialisiertes Fachwissen für jede Plattform. Teams müssen separate Toolchains, Überwachungssysteme und Deployment-Pipelines unterhalten. Diese Fragmentierung erhöht den operativen Aufwand, verlangsamt die Deployment-Geschwindigkeit und schafft Möglichkeiten für menschliche Fehler. Darüber hinaus fehlt Organisationen die Transparenz über Cloud-übergreifende Kostenoptimierungspotenziale, was zu unnötigen Ausgaben führt.",
-        "scenario": "Scenario 3: An e-commerce leader overspending by $500k monthly due to lack of cross-cloud visibility into idle resources and fragmented billing APIs."
-      },
-      "metrics": {
-        "label": "Industrial Baseline vs. AECP-Enabled Infrastructure",
-        "mttr_manual_label": "MTTR (Manual)",
-        "mttr_manual": "14 Days (Avg)",
-        "mttr_aso_label": "MTTR (AECP Enabled)",
-        "mttr_aso": "4 Minutes (Autonomous)",
-        "compliance_label": "Compliance Rate (AECP)",
-        "compliance_manual": "87% (Periodic)",
-        "compliance_aso": "99.7% (Continuous)",
-        "provisioning_manual": "4-6 Weeks",
-        "provisioning_aso": "2.5 Hours",
-        "opex_label": "OpEx Reduction",
-        "opex_savings": "31% Average Verified Reduction"
-      }
-    },
-    "limitations": {
-      "title": "3. Limitations of Existing Industry Approaches",
-      "p1": "Current solutions are essentially 'Wrappers' rather than 'Architectures'. Infrastructure-as-Code (IaC) is 'Write-Once, Manage-Forever', lacking a feedback loop. Hyperscaler-native tools are designed to keep you in the ecosystem, and standard Orchestration tools (like Kubernetes) operate at the container level, not the governance level.",
-      "p2": "AECP is required because it is the only framework that separates the 'Governing Intent' from the 'Executable State' across providers."
-    },
-    "aso": {
-      "title": "3. Das ASO-Framework",
-      "p1": "Autonomous Sovereign Orchestration (ASO) ist ein umfassendes Framework, das die oben skizzierten Herausforderungen durch vier zentrale Architekturprinzipien adressiert: Anbieterneutralität, richtliniengesteuerte Automatisierung, Datensouveränität und kontinuierliche Observability.",
-      "principles": {
-        "title": "3.1 Kernprinzipien",
-        "neutrality": {
-          "title": "Anbieterneutralität",
-          "content": "Die gesamte Infrastruktur wird mit anbieteragnostischen Abstraktionen definiert. Das ASO-Framework unterhält Adapter für jeden Cloud-Anbieter, die High-Level-Ressourcendefinitionen in anbieterspezifische API-Aufrufe übersetzen. Dies ermöglicht eine nahtlose Portabilität von Workloads und eliminiert Anbieterbindungen."
-        },
-        "automation": {
-          "title": "Richtliniengesteuerte Automatisierung",
-          "content": "Governance-Richtlinien werden als Code definiert und automatisch auf der gesamten Infrastruktur durchgesetzt. Das System überwacht kontinuierlich auf Richtlinienverstöße und kann Abweichungen automatisch beheben, was Compliance ohne manuelles Eingreifen gewährleistet."
-        },
-        "sovereignty": {
-          "title": "Datensouveränität",
-          "content": "Organisationen behalten die vollständige Kontrolle über die Platzierung und Bewegung von Daten. Das Framework setzt Datenresidenzanforderungen auf Infrastrukturebene durch, verhindert versehentliche grenzüberschreitende Datentransfers und gewährleistet die Einhaltung regionaler Vorschriften."
-        },
-        "observability": {
-          "title": "Kontinuierliche Observability",
-          "content": "Einheitliche Telemetrie und Überwachung über alle Cloud-Anbieter hinweg bietet vollständige Transparenz über Infrastrukturzustand, Kosten, Leistung und Compliance-Status. Dies ermöglicht datengesteuerte Entscheidungsfindung und proaktive Problemlösung."
-        }
-      }
-    },
-    "decision_framework": {
-      "title": "5. Autonomous Decision-Making Framework",
-      "p1": "Unlike traditional rule-based automation, AECP employs a probabilistic 'Decision Intelligence' model. This framework enables the system to adapt to unseen failure modes without human intervention.",
-      "components": {
-        "guardrails": {
-          "title": "5.1 Risk Control Guardrails",
-          "content": "Autonomy is bounded by immutable 'Safety Corridors'. The system cannot execute actions that violate defined availability or security constraints (e.g., 'Never terminate the last healthy replica')."
-        },
-        "adaptation": {
-          "title": "5.2 Adaptive State Reasoning",
-          "content": "The framework utilizes reinforcement learning to optimize decision pathways over time. It self-corrects based on the success rate of previous remediation actions."
-        },
-        "intent_mapping": {
-          "title": "5.3 Intent-to-Action Translation",
-          "content": "High-level business intents (e.g., 'Maximize Cost Efficiency') are mathematically translated into concrete infrastructure actions (e.g., 'Moving Spot Instances to a cheaper region')."
-        }
-      }
-    },
-    "distinction": "This shift from cosmetic automation to structural intelligence is the core innovation of AECP.",
     "architecture": {
-      "title": "4. Systemarchitektur",
-      "p1": "Das ASO-Framework besteht aus drei Hauptkomponenten: dem Control Plane, der Policy Engine und der State Synchronization Layer.",
       "control_plane": {
-        "title": "4.1 Control Plane",
-        "content": "Der Control Plane dient als zentraler Orchestrierungs-Hub und bietet eine einheitliche API für das Infrastrukturmanagement. Er unterhält eine normalisierte Darstellung aller Cloud-Ressourcen und abstrahiert die anbieterspezifischen Details weg. Der Control Plane übernimmt Authentifizierung, Autorisierung und Audit-Protokollierung, um sicherzustellen, dass alle Infrastrukturänderungen nachvollziehbar und mit den Organisationsrichtlinien konform sind."
+        "content": "Der Control Plane dient als zentraler Orchestrierungs-Hub und bietet eine einheitliche API für das Infrastrukturmanagement. Er unterhält eine normalisierte Darstellung aller Cloud-Ressourcen und abstrahiert die anbieterspezifischen Details weg. Der Control Plane übernimmt Authentifizierung, Autorisierung und Audit-Protokollierung, um sicherzustellen, dass alle Infrastrukturänderungen nachvollziehbar und mit den Organisationsrichtlinien konform sind.",
+        "title": "4.1 Control Plane"
       },
       "decision_engine": {
-        "title": "6.2 Graph-Based Policy Evaluation",
-        "content": "At the heart of deployment is a Graph-based Policy Engine. It evaluates the relational impact of changes across security, cost, and performance. For example, if a security update increases latency beyond the defined SLI, the engine autonomously identifies a more performant alternative in a different cloud region before executing."
+        "content": "At the heart of deployment is a Graph-based Policy Engine. It evaluates the relational impact of changes across security, cost, and performance. For example, if a security update increases latency beyond the defined SLI, the engine autonomously identifies a more performant alternative in a different cloud region before executing.",
+        "title": "6.2 Graph-Based Policy Evaluation"
       },
+      "p1": "Das ASO-Framework besteht aus drei Hauptkomponenten: dem Control Plane, der Policy Engine und der State Synchronization Layer.",
       "state_sync": {
-        "title": "4.3 State Synchronization Layer",
-        "content": "Die State Synchronization Layer hält die Konsistenz zwischen dem gewünschten Infrastrukturzustand (wie in der Konfiguration definiert) und dem tatsächlichen Zustand bei allen Cloud-Anbietern aufrecht. Sie verwendet eine Abstimmungsschleife (Reconciliation Loop), die ständig den gewünschten und den tatsächlichen Zustand vergleicht und notwendige Änderungen vornimmt, um Abweichungen zu eliminieren. Diese Schicht übernimmt auch die Konfliktlösung, wenn mehrere Änderungen gleichzeitig angewendet werden."
-      }
+        "content": "Die State Synchronization Layer hält die Konsistenz zwischen dem gewünschten Infrastrukturzustand (wie in der Konfiguration definiert) und dem tatsächlichen Zustand bei allen Cloud-Anbietern aufrecht. Sie verwendet eine Abstimmungsschleife (Reconciliation Loop), die ständig den gewünschten und den tatsächlichen Zustand vergleicht und notwendige Änderungen vornimmt, um Abweichungen zu eliminieren. Diese Schicht übernimmt auch die Konfliktlösung, wenn mehrere Änderungen gleichzeitig angewendet werden.",
+        "title": "4.3 State Synchronization Layer"
+      },
+      "title": "4. Systemarchitektur"
     },
-    "execution_flow": {
-      "title": "Using Structured Execution Cycles",
-      "p1": "AECP operates on a non-linear lifecycle:",
-      "steps": {
-        "s1": "SIGNAL: Telemetry ingestion from multi-cloud observability APIs.",
-        "s2": "DECISION: Policy evaluation via Graph Intelligence Engine.",
-        "s3": "ACTION: Targeted API execution (e.g., resizing a cluster or rerouting a VPC).",
-        "s4": "VALIDATION: Real-time health check post-action.",
-        "s5": "LEARNING: Updating the decision model based on action efficacy."
-      }
+    "aso": {
+      "p1": "Autonomous Sovereign Orchestration (ASO) ist ein umfassendes Framework, das die oben skizzierten Herausforderungen durch vier zentrale Architekturprinzipien adressiert: Anbieterneutralität, richtliniengesteuerte Automatisierung, Datensouveränität und kontinuierliche Observability.",
+      "principles": {
+        "automation": {
+          "content": "Governance-Richtlinien werden als Code definiert und automatisch auf der gesamten Infrastruktur durchgesetzt. Das System überwacht kontinuierlich auf Richtlinienverstöße und kann Abweichungen automatisch beheben, was Compliance ohne manuelles Eingreifen gewährleistet.",
+          "title": "Richtliniengesteuerte Automatisierung"
+        },
+        "neutrality": {
+          "content": "Die gesamte Infrastruktur wird mit anbieteragnostischen Abstraktionen definiert. Das ASO-Framework unterhält Adapter für jeden Cloud-Anbieter, die High-Level-Ressourcendefinitionen in anbieterspezifische API-Aufrufe übersetzen. Dies ermöglicht eine nahtlose Portabilität von Workloads und eliminiert Anbieterbindungen.",
+          "title": "Anbieterneutralität"
+        },
+        "observability": {
+          "content": "Einheitliche Telemetrie und Überwachung über alle Cloud-Anbieter hinweg bietet vollständige Transparenz über Infrastrukturzustand, Kosten, Leistung und Compliance-Status. Dies ermöglicht datengesteuerte Entscheidungsfindung und proaktive Problemlösung.",
+          "title": "Kontinuierliche Observability"
+        },
+        "sovereignty": {
+          "content": "Organisationen behalten die vollständige Kontrolle über die Platzierung und Bewegung von Daten. Das Framework setzt Datenresidenzanforderungen auf Infrastrukturebene durch, verhindert versehentliche grenzüberschreitende Datentransfers und gewährleistet die Einhaltung regionaler Vorschriften.",
+          "title": "Datensouveränität"
+        },
+        "title": "3.1 Kernprinzipien"
+      },
+      "title": "3. Das ASO-Framework"
     },
-    "lifecycle": {
-      "title": "Autonomous Lifecycle Management",
-      "resilience": "Resilience is enforced through 'Containment Zones'—automated guardrails that prevent cascading failures by isolating autonomous actions within predefined security boundaries."
+    "author": "Chaitanya Bharath Gopu",
+    "author_label": "Autor",
+    "classification": "Technisches Whitepaper / Branchenforschungsarbeit",
+    "conclusion": {
+      "p1": "Autonomous Sovereign Orchestration stellt einen grundlegenden Wandel in der Art und Weise dar, wie Organisationen das Multi-Cloud-Infrastrukturmanagement angehen. Durch die Priorisierung von Anbieterneutralität, richtliniengesteuerater Automatisierung und Datensouveränität ermöglicht ASO es Unternehmen, die Vorteile von Cloud Computing zu nutzen, ohne die Kontrolle, Compliance oder strategische Flexibilität zu opfern.",
+      "p2": "Das Framework adressiert die kritischen Herausforderungen der Anbieterbindung, der Compliance-Abweichungen und der operativen Komplexität durch einen umfassenden Architekturansatz, der KI-gesteuerte Automatisierung mit robusten Governance-Mechanismen kombiniert. Empirische Ergebnisse zeigen signifikante Verbesserungen bei Compliance, Kosteneffizienz und operativer Geschwindigkeit und bestätigen den ASO-Ansatz als tragfähige Lösung für die Cloud-Governance in Unternehmen.",
+      "title": "7. Fazit"
+    },
+    "date": "30. Dezember 2025",
+    "date_label": "Veröffentlichungsdatum",
+    "decision_framework": {
+      "components": {
+        "adaptation": {
+          "content": "The framework utilizes reinforcement learning to optimize decision pathways over time. It self-corrects based on the success rate of previous remediation actions.",
+          "title": "5.2 Adaptive State Reasoning"
+        },
+        "guardrails": {
+          "content": "Autonomy is bounded by immutable 'Safety Corridors'. The system cannot execute actions that violate defined availability or security constraints (e.g., 'Never terminate the last healthy replica').",
+          "title": "5.1 Risk Control Guardrails"
+        },
+        "intent_mapping": {
+          "content": "High-level business intents (e.g., 'Maximize Cost Efficiency') are mathematically translated into concrete infrastructure actions (e.g., 'Moving Spot Instances to a cheaper region').",
+          "title": "5.3 Intent-to-Action Translation"
+        }
+      },
+      "p1": "Unlike traditional rule-based automation, AECP employs a probabilistic 'Decision Intelligence' model. This framework enables the system to adapt to unseen failure modes without human intervention.",
+      "title": "5. Autonomous Decision-Making Framework"
     },
     "differentiation": {
-      "title": "7. Architectural Differentiation & Non-Replicability",
-      "p1": "AECP is uniquely positioned at the intersection of Cloud Engineering and Artificial Intelligence. Unlike market standard tools, AECP's design is provider-agnostic by default, not by adaptation.",
       "comparison": {
         "headers": "Architectural Metric,Hyperscaler Tools,IaC Platforms,AECP Framework",
         "row1": "Decision Autonomy,Static/Manual,Script-Driven,Intelligent/Goal-Oriented",
@@ -1220,73 +1221,131 @@
         "row3": "Drift Remediation,Detection Only,Manual Re-run,Autonomous/Real-time",
         "row4": "Paradigm,Infrastructure,Code,Intent"
       },
-      "non_replicability": "The complexity of AECP's cross-cloud state synchronization and conflict resolution logic represents a significant barrier to entry, requiring deep expertise in distributed systems and formal policy verification."
+      "non_replicability": "The complexity of AECP's cross-cloud state synchronization and conflict resolution logic represents a significant barrier to entry, requiring deep expertise in distributed systems and formal policy verification.",
+      "p1": "AECP is uniquely positioned at the intersection of Cloud Engineering and Artificial Intelligence. Unlike market standard tools, AECP's design is provider-agnostic by default, not by adaptation.",
+      "title": "7. Architectural Differentiation & Non-Replicability"
     },
-    "impact": {
-      "title": "8. Measurable Enterprise & Industry Impact",
-      "p1": "The implementation of AECP delivers quantifiable value across the entire enterprise value chain:",
-      "metrics": {
-        "efficiency_label": "Efficiency",
-        "efficiency": "68% reduction in DevOps man-hours.",
-        "cost_label": "Cost Savings",
-        "cost": "Average cloud spend optimization of 31%.",
-        "security_label": "Security Compliance",
-        "security": "Real-time compliance adherence reaching 99.7%.",
-        "agility": "Workload migration time reduced from months to hours."
+    "distinction": "This shift from cosmetic automation to structural intelligence is the core innovation of AECP.",
+    "eb1a": {
+      "executive_summary_title": "Executive Summary for Scientific Evaluation",
+      "importance": "By enabling true cloud-agnosticism, AECP strengthens national infrastructure resilience against provider-level failures and cyber-warfare. It empowers organizations to maintain operational continuity regardless of the geopolitical or economic status of third-party cloud vendors.",
+      "importance_label": "National Importance",
+      "originality": "The originality of AECP lies in its unique 'Sovereign Intent' abstraction, which for the first time enables the separation of regulatory compliance from cloud-provider implementation. This is a non-obvious innovation that solves the multi-decade problem of vendor entrapment in cloud computing.",
+      "originality_label": "Original Contribution",
+      "p1": "This research provides a fundamental breakthrough in the field of autonomous infrastructure governance—a domain critical to international technological leadership and national economic security.",
+      "summary_content": "The AECP framework represents a 'Leadership-Level Contribution' to the field of Cloud Architecture. It addresses the systemic risk of $600B+ in fragmented cloud assets. Through original architectural design and rigorous empirical validation, Chaitanya Bharath Gopu has established a new standard for intent-driven infrastructure. The work is of extraordinary significance to both the scientific community and the global enterprise landscape, providing a scalable model for sovereign, autonomous digital governance.",
+      "title": "10. Original Contribution & National Importance"
+    },
+    "execution_flow": {
+      "p1": "AECP operates on a non-linear lifecycle:",
+      "steps": {
+        "s1": "SIGNAL: Telemetry ingestion from multi-cloud observability APIs.",
+        "s2": "DECISION: Policy evaluation via Graph Intelligence Engine.",
+        "s3": "ACTION: Targeted API execution (e.g., resizing a cluster or rerouting a VPC).",
+        "s4": "VALIDATION: Real-time health check post-action.",
+        "s5": "LEARNING: Updating the decision model based on action efficacy."
       },
-      "business_value": "Implementing AECP is not merely a technical upgrade; it is a strategic repositioning that transforms infrastructure from a cost center into an agile, self-optimizing asset."
+      "title": "Using Structured Execution Cycles"
     },
     "feasibility": {
-      "title": "9. Cross-Industry & Cross-Environment Feasibility",
       "p1": "AECP is architected to be environment-agnostic, ensuring seamless integration across diverse sectors and topologies (Public Cloud, Hybrid, Air-Gapped).",
       "sectors": {
         "finance": {
-          "title": "Financial Services (Banking/FinTech)",
-          "impact": "Achieved 100% data residency compliance for multi-region transaction processing while reducing multi-cloud OpEx by 28%."
-        },
-        "healthcare": {
-          "title": "Healthcare & Life Sciences",
-          "impact": "Automated HIPAA compliance across hybrid-cloud environments, ensuring that PII never traverses unsecured networks during cross-region data analysis."
-        },
-        "telecom": {
-          "title": "Telecommunications & Edge Computing",
-          "impact": "Managed 10,000+ edge nodes autonomously, reducing maintenance FTE hours by 75%."
+          "impact": "Achieved 100% data residency compliance for multi-region transaction processing while reducing multi-cloud OpEx by 28%.",
+          "title": "Financial Services (Banking/FinTech)"
         },
         "government": {
-          "title": "Public Sector & Defense",
-          "impact": "Enabled secure workload migration between classified on-prem systems and public cloud providers without manual re-configuration."
+          "impact": "Enabled secure workload migration between classified on-prem systems and public cloud providers without manual re-configuration.",
+          "title": "Public Sector & Defense"
+        },
+        "healthcare": {
+          "impact": "Automated HIPAA compliance across hybrid-cloud environments, ensuring that PII never traverses unsecured networks during cross-region data analysis.",
+          "title": "Healthcare & Life Sciences"
+        },
+        "telecom": {
+          "impact": "Managed 10,000+ edge nodes autonomously, reducing maintenance FTE hours by 75%.",
+          "title": "Telecommunications & Edge Computing"
         }
+      },
+      "title": "9. Cross-Industry & Cross-Environment Feasibility"
+    },
+    "footer": "© 2025 OmniGCloud. Veröffentlicht unter der Open Science Initiative.",
+    "impact": {
+      "business_value": "Implementing AECP is not merely a technical upgrade; it is a strategic repositioning that transforms infrastructure from a cost center into an agile, self-optimizing asset.",
+      "metrics": {
+        "agility": "Workload migration time reduced from months to hours.",
+        "cost": "Average cloud spend optimization of 31%.",
+        "cost_label": "Cost Savings",
+        "efficiency": "68% reduction in DevOps man-hours.",
+        "efficiency_label": "Efficiency",
+        "security": "Real-time compliance adherence reaching 99.7%.",
+        "security_label": "Security Compliance"
+      },
+      "p1": "The implementation of AECP delivers quantifiable value across the entire enterprise value chain:",
+      "title": "8. Measurable Enterprise & Industry Impact"
+    },
+    "introduction": {
+      "p1": "Die Ausbreitung von Cloud Computing hat die IT-Infrastruktur von Unternehmen grundlegend verändert. Diese Transformation hat jedoch neue Herausforderungen mit sich gebracht: Anbieterbindung (Vendor Lock-in), Compliance-Komplexität und operative Fragmentierung. Organisationen, die über mehrere Cloud-Anbieter (AWS, Azure, GCP, Oracle Cloud Infrastructure) hinweg tätig sind, stehen vor der gewaltigen Aufgabe, konsistente Governance-, Sicherheits- und Compliance-Richtlinien in heterogenen Umgebungen aufrechtzuerhalten.",
+      "p2": "Herkömmliche Cloud-Management-Plattformen bieten nur begrenzte Abstraktion und verstärken oft Anbieterabhängigkeiten durch proprietäre APIs und Tools. Dies schafft strategische Risiken, schränkt die Verhandlungsmacht ein und erhöht die Gesamtbetriebskosten. Darüber hinaus stehen regulierte Branchen vor strengen Datenresidenzanforderungen, die eine feingranulare Kontrolle über die Platzierung und Bewegung von Daten erfordern.",
+      "p3": "Dieses Paper präsentiert Autonomous Sovereign Orchestration (ASO), ein umfassendes Framework, das entwickelt wurde, um diese Herausforderungen durch anbieterneutrale Abstraktionen, KI-gesteuerte Richtliniendurchsetzung und automatisierte Compliance-Verifizierung zu bewältigen. ASO ermöglicht es Organisationen, die volle operative Souveränität zu bewahren und gleichzeitig die Vorteile einer Multi-Cloud-Infrastruktur zu nutzen.",
+      "title": "1. Einleitung"
+    },
+    "lifecycle": {
+      "resilience": "Resilience is enforced through 'Containment Zones'—automated guardrails that prevent cascading failures by isolating autonomous actions within predefined security boundaries.",
+      "title": "Autonomous Lifecycle Management"
+    },
+    "limitations": {
+      "p1": "Current solutions are essentially 'Wrappers' rather than 'Architectures'. Infrastructure-as-Code (IaC) is 'Write-Once, Manage-Forever', lacking a feedback loop. Hyperscaler-native tools are designed to keep you in the ecosystem, and standard Orchestration tools (like Kubernetes) operate at the container level, not the governance level.",
+      "p2": "AECP is required because it is the only framework that separates the 'Governing Intent' from the 'Executable State' across providers.",
+      "title": "3. Limitations of Existing Industry Approaches"
+    },
+    "meta": {
+      "description": "Technisches Whitepaper, das ein formales Framework für KI-gesteuerte, Cloud-agnostische Infrastruktur-Governance vorstellt.",
+      "title": "Autonomous Sovereign Orchestration: Ein Framework für Cloud-agnostische Governance"
+    },
+    "problem": {
+      "compliance": {
+        "content": "Regulatorische Frameworks wie DSGVO, HIPAA, SOC 2 und aufkommende KI-Governance-Gesetze stellen strenge Anforderungen an die Datenhandhabung, -residenz und -auditierbarkeit. Die manuelle Überprüfung der Compliance ist fehleranfällig und lässt sich nicht über Tausende von Cloud-Ressourcen hinweg skalieren. Konfigurationsabweichungen — wenn der tatsächliche Infrastrukturzustand von der beabsichtigten Richtlinie abweicht — schaffen Compliance-Lücken, die Organisationen regulatorischen Strafen und Reputationsschäden aussetzen.",
+        "scenario": "Scenario 2: A healthcare provider failing a HIPAA audit after an automated provisioning script accidentally exposed a S3 bucket to the public internet for 48 hours without detection.",
+        "title": "2.2 Compliance-Abweichungen und regulatorische Belastung"
+      },
+      "metrics": {
+        "compliance_aso": "99.7% (Continuous)",
+        "compliance_label": "Compliance Rate (AECP)",
+        "compliance_manual": "87% (Periodic)",
+        "label": "Industrial Baseline vs. AECP-Enabled Infrastructure",
+        "mttr_aso": "4 Minutes (Autonomous)",
+        "mttr_aso_label": "MTTR (AECP Enabled)",
+        "mttr_manual": "14 Days (Avg)",
+        "mttr_manual_label": "MTTR (Manual)",
+        "opex_label": "OpEx Reduction",
+        "opex_savings": "31% Average Verified Reduction",
+        "provisioning_aso": "2.5 Hours",
+        "provisioning_manual": "4-6 Weeks"
+      },
+      "operational": {
+        "content": "Die Verwaltung der Infrastruktur über mehrere Cloud-Anbieter hinweg erfordert spezialisiertes Fachwissen für jede Plattform. Teams müssen separate Toolchains, Überwachungssysteme und Deployment-Pipelines unterhalten. Diese Fragmentierung erhöht den operativen Aufwand, verlangsamt die Deployment-Geschwindigkeit und schafft Möglichkeiten für menschliche Fehler. Darüber hinaus fehlt Organisationen die Transparenz über Cloud-übergreifende Kostenoptimierungspotenziale, was zu unnötigen Ausgaben führt.",
+        "scenario": "Scenario 3: An e-commerce leader overspending by $500k monthly due to lack of cross-cloud visibility into idle resources and fragmented billing APIs.",
+        "title": "2.3 Operative Komplexität und Kosteneffizienz"
+      },
+      "p1": "Die Einführung der Cloud in Unternehmen hat drei kritische Herausforderungen offenbart, die bestehende Lösungen nicht angemessen adressieren:",
+      "title": "2. Problemstellung",
+      "vendor_lock": {
+        "content": "Cloud-Anbieter gestalten ihre Dienste oft so, dass die Kundenbindung durch proprietäre APIs, spezialisierte Dienste und wirtschaftliche Anreize (z. B. Egress-Gebühren) maximiert wird. Die Migration von Workloads zwischen Anbietern erfordert erheblichen Engineering-Aufwand, was eine strategische Anfälligkeit schafft. Organisationen fehlt die Fähigkeit, schnell auf Preisänderungen, Serviceverschlechterungen oder Compliance-Bedenken zu reagieren.",
+        "scenario": "Scenario 1: A Global 500 bank prevented from shifting workloads during a regional Azure outage due to proprietary networking dependencies, resulting in 4 hours of downtime and $12M in lost revenue.",
+        "title": "2.1 Anbieterbindung und strategisches Risiko"
       }
     },
-    "eb1a": {
-      "title": "10. Original Contribution & National Importance",
-      "p1": "This research provides a fundamental breakthrough in the field of autonomous infrastructure governance—a domain critical to international technological leadership and national economic security.",
-      "originality_label": "Original Contribution",
-      "originality": "The originality of AECP lies in its unique 'Sovereign Intent' abstraction, which for the first time enables the separation of regulatory compliance from cloud-provider implementation. This is a non-obvious innovation that solves the multi-decade problem of vendor entrapment in cloud computing.",
-      "importance_label": "National Importance",
-      "importance": "By enabling true cloud-agnosticism, AECP strengthens national infrastructure resilience against provider-level failures and cyber-warfare. It empowers organizations to maintain operational continuity regardless of the geopolitical or economic status of third-party cloud vendors.",
-      "executive_summary_title": "Executive Summary for Scientific Evaluation",
-      "summary_content": "The AECP framework represents a 'Leadership-Level Contribution' to the field of Cloud Architecture. It addresses the systemic risk of $600B+ in fragmented cloud assets. Through original architectural design and rigorous empirical validation, Chaitanya Bharath Gopu has established a new standard for intent-driven infrastructure. The work is of extraordinary significance to both the scientific community and the global enterprise landscape, providing a scalable model for sovereign, autonomous digital governance."
-    },
-    "conclusion": {
-      "title": "7. Fazit",
-      "p1": "Autonomous Sovereign Orchestration stellt einen grundlegenden Wandel in der Art und Weise dar, wie Organisationen das Multi-Cloud-Infrastrukturmanagement angehen. Durch die Priorisierung von Anbieterneutralität, richtliniengesteuerater Automatisierung und Datensouveränität ermöglicht ASO es Unternehmen, die Vorteile von Cloud Computing zu nutzen, ohne die Kontrolle, Compliance oder strategische Flexibilität zu opfern.",
-      "p2": "Das Framework adressiert die kritischen Herausforderungen der Anbieterbindung, der Compliance-Abweichungen und der operativen Komplexität durch einen umfassenden Architekturansatz, der KI-gesteuerte Automatisierung mit robusten Governance-Mechanismen kombiniert. Empirische Ergebnisse zeigen signifikante Verbesserungen bei Compliance, Kosteneffizienz und operativer Geschwindigkeit und bestätigen den ASO-Ansatz als tragfähige Lösung für die Cloud-Governance in Unternehmen."
-    },
     "references": {
-      "title": "Referenzen",
       "ref1": "NIST Sonderpublikation 800-145: Die NIST-Definition von Cloud Computing. National Institute of Standards and Technology, 2011.",
       "ref2": "Datenschutz-Grundverordnung (DSGVO). Europäisches Parlament und Rat der Europäischen Union, 2016.",
       "ref3": "Cloud Security Alliance: Security Guidance for Critical Areas of Focus in Cloud Computing v4.0, 2017.",
       "ref4": "Terraform: Infrastructure as Code. HashiCorp, https://www.terraform.io",
-      "ref5": "Kubernetes: Production-Grade Container Orchestration. Cloud Native Computing Foundation, https://kubernetes.io"
+      "ref5": "Kubernetes: Production-Grade Container Orchestration. Cloud Native Computing Foundation, https://kubernetes.io",
+      "title": "Referenzen"
     },
-    "footer": "© 2025 OmniGCloud. Veröffentlicht unter der Open Science Initiative."
-  },
-  "Faq": {
-    "title": "Frequently Asked Questions",
-    "subtitle": "Technical insights for the modern enterprise architect.",
-    "badge": "RESOURCES",
-    "cta": "Speak with a Cloud Architect"
+    "title": "Autonomous Sovereign Orchestration (ASO): Ein Framework für Cloud-agnostische Governance",
+    "version": "1.0",
+    "version_label": "Version"
   }
 }

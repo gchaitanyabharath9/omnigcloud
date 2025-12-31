@@ -9,12 +9,13 @@ interface MobileMenuOverlayProps {
     isOpen: boolean;
     onClose: () => void;
     locale: string;
-    t: (key: string) => string;
 }
 
 import clsx from 'clsx';
+import { useTranslations } from 'next-intl';
 
-export default function MobileMenuOverlay({ isOpen, onClose, locale, t }: MobileMenuOverlayProps) {
+export default function MobileMenuOverlay({ isOpen, onClose, locale }: MobileMenuOverlayProps) {
+    const t = useTranslations('Header');
     return (
         <>
             {/* Backdrop */}

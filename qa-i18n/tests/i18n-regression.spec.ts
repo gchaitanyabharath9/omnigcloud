@@ -1,9 +1,8 @@
-
 import { test, expect } from '@playwright/test';
 import fs from 'fs';
 import path from 'path';
 
-// Load routes
+// Load routes and URLs
 const routesPath = path.join(process.cwd(), 'qa-i18n/routes.json');
 const ROUTES = JSON.parse(fs.readFileSync(routesPath, 'utf-8'));
 
@@ -14,52 +13,65 @@ const VIEWPORTS = [
     { name: 'desktop', width: 1440, height: 900 }
 ];
 
-// Skip complex dynamic routes for basic crawl unless we mock params
-// This filter removes routes with [param] brackets
+// Skip dynamic routes for basic crawl unless mocked
 const TESTABLE_ROUTES = ROUTES.filter((r: string) => !r.includes('['));
 
-for (const locale of LOCALES) {
-    test.describe(`Locale: ${locale}`, () => {
+test.describe('i18n Regression Suite', () => {
 
-        for (const route of TESTABLE_ROUTES) {
-            const urlPath = `/${locale}${route === '/' ? '' : route}`;
+    for (const locale of LOCALES) {
+        test.describe(`Locale: ${locale}`, () => {
 
-            test.describe(`Route: ${urlPath}`, () => {
+            for (const route of TESTABLE_ROUTES) {
+                const urlPath = `/${locale}${route === '/' ? '' : route}`;
 
                 for (const viewport of VIEWPORTS) {
-                    test(`should render correctly on ${viewport.name}`, async ({ page }) => {
-                        // 1. Set Viewport
+                    test(`${urlPath} on ${viewport.name}`, async ({ page }) => {
+                        const consoleErrors: string[] = [];
+                        page.on('console', msg => {
+                            if (msg.type() === 'error') consoleErrors.push(msg.text());
+                        });
+                        page.on('pageerror', err => {
+                            consoleErrors.push(err.message);
+                        });
+
                         await page.setViewportSize({ width: viewport.width, height: viewport.height });
 
-                        // 2. Navigation
-                        const response = await page.goto(urlPath, { waitUntil: 'domcontentloaded' });
-                        expect(response?.status()).toBe(200);
+                        // Increase timeout for slow CI environments
+                        const response = await page.goto(urlPath, {
+                            waitUntil: 'networkidle',
+                            timeout: 60000
+                        });
 
-                        // 3. Check HTML Lang Attribute
-                        // Note: Some apps use 'en-US' vs 'en'. We check startsWith to be safe.
-                        const langHandle = await page.$('html');
-                        const lang = await langHandle?.getAttribute('lang');
-                        expect(lang).toBeTruthy();
-                        expect(lang?.startsWith(locale)).toBe(true);
+                        // 1. Basic Status Check
+                        expect(response?.status(), `Page ${urlPath} returned ${response?.status()}`).toBe(200);
 
-                        // 4. Check for Horizontal Overflow (Layout Shift/Broken CSS)
-                        const scrollWidth = await page.evaluate(() => document.documentElement.scrollWidth);
-                        const clientWidth = await page.evaluate(() => document.documentElement.clientWidth);
+                        // 2. HTML Lang attribute
+                        const lang = await page.getAttribute('html', 'lang');
+                        expect(lang?.startsWith(locale), `Expected lang to start with ${locale}, got ${lang}`).toBe(true);
 
-                        // Allow small sub-pixel differences
-                        expect(scrollWidth).toBeLessThanOrEqual(clientWidth + 2);
-
-                        // 5. Check for Soft 404 / Error Boundaries
+                        // 3. No generic "Not Found" text survival
                         const bodyText = await page.textContent('body');
-                        expect(bodyText).not.toContain('404 Not Found');
-                        expect(bodyText).not.toContain('Application Error');
-                        // Prevent hardcoded placeholders surviving in UI
-                        // expect(bodyText).not.toContain('[TODO]'); // Too strict if covered by unit test? strict is good.
+                        expect(bodyText).not.toContain('404');
+                        expect(bodyText).not.toContain('Not Found');
 
-                        // 6. Screenshot on failure (Implicit via playwright.config 'only-on-failure')
+                        // 4. No SSR/next-intl crash markings
+                        expect(bodyText).not.toContain('MISSING_MESSAGE');
+
+                        // 5. Horizontal Scroll Detection (Overflow)
+                        const isOverflowing = await page.evaluate(() => {
+                            return document.documentElement.scrollWidth > document.documentElement.clientWidth + 2;
+                        });
+                        expect(isOverflowing, `Horizontal overflow detected on ${urlPath} (${viewport.name})`).toBe(false);
+
+                        // 6. Console Error Check (Filtering out known external noise)
+                        const criticalErrors = consoleErrors.filter(err =>
+                            !err.includes('chrome-extension') &&
+                            !err.includes('favicon.ico')
+                        );
+                        expect(criticalErrors, `Console errors found on ${urlPath}:\n${criticalErrors.join('\n')}`).toHaveLength(0);
                     });
                 }
-            });
-        }
-    });
-}
+            }
+        });
+    }
+});

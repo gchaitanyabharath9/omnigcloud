@@ -1,22 +1,23 @@
+# Pull Request Template
 
-# Pull Request Checklist
+## Description
+[Provide a brief description of the changes introduced by this PR]
 
-## 🌍 i18n & Localization
-- [ ] **Translation Keys**: All new UI strings use `t('Key')` and are added to `messages/en.json`.
-- [ ] **Safe Fallbacks**: No hardcoded strings in `tsx` files (except build metadata).
-- [ ] **Coverage Check**: Run `npm run qa:i18n` locally. Zero errors allowed for Tier 1 languages (en, es, fr, de).
-- [ ] **Routing**: New pages include `[locale]` in the path. URL params are locale-safe.
+### 🌐 Internationalization (i18n)
+- [ ] New strings added to `messages/en.json`
+- [ ] Ran `npm run qa:fill` to sync all locales
+- [ ] All Tier 1 locales (EN, ES, FR, DE) have 100% translation coverage
+- [ ] Tier 2 locales (ZH, HI, JA, KO) are within the allowed threshold (< 25 missing)
+- [ ] Verified `html lang` and `hreflang` for new routes
 
-## 📱 UI & Responsiveness
-- [ ] **Mobile Check**: Verified layout on 390px width. No horizontal scroll/overflow.
-- [ ] **Tablet Check**: Verified layout on 768px width.
-- [ ] **RTL/Fonts**: Verified fonts load correctly for Asian languages (zh, ja, ko) if applicable.
+### 🧪 Quality Assurance
+- [ ] Ran `npm run qa:i18n` and it passed (Base check + Coverage)
+- [ ] Ran `npm run qa:test` (Playwright E2E Crawl) across all viewports
+- [ ] No horizontal scrolling or layout issues in any locale
+- [ ] No console errors or SSR hydration warnings
 
-## 🛡️ Quality Assurance
-- [ ] **Regression**: Run `npm run qa:test` (Playwright) to ensure no soft 404s or layout shifts.
-- [ ] **Linting**: No ESLint errors.
-- [ ] **Metadata**: Page title and description are dynamic/localized.
+## Screenshots (if applicable)
+[Attach screenshots or screen recordings here]
 
-## 🔒 Security
-- [ ] **Secrets**: No secrets exposed in client-side code (`NEXT_PUBLIC_`).
-- [ ] **Auth**: Protected routes are verified behind login.
+## Deployment Notes
+[List any special instructions or environment variables needed for deployment]

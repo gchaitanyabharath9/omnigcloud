@@ -342,7 +342,6 @@ const Header = () => {
                 isOpen={isMenuOpen}
                 onClose={() => setIsMenuOpen(false)}
                 locale={locale}
-                t={t}
             />
             {/* FIXED BOTTOM LATENCY BADGE (mesh_RT) */}
             <div style={{
