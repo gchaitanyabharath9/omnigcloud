@@ -1,55 +1,58 @@
 name: "i18n QA Release Gate"
 
 on:
-    push:
-        branches: ["main", "develop"]
-    pull_request:
-        branches: ["main"]
+  push:
+    branches: ["main", "develop"]
+  pull_request:
+    branches: ["main"]
 
 jobs:
-    qa-i18n:
-        runs-on: "ubuntu-latest"
+  qa-i18n:
+    runs-on: "ubuntu-latest"
 
-        steps:
-            - name: "Checkout Repository"
-              uses: "actions/checkout@v4"
+    steps:
+      - name: "Checkout Repository"
+        uses: "actions/checkout@v4"
 
-            - name: "Setup Node.js"
-              uses: "actions/setup-node@v4"
-              with:
-                  node-version: "20"
-                  cache: "npm"
+      - name: "Setup Node.js"
+        uses: "actions/setup-node@v4"
+        with:
+          node-version: "20"
+          cache: "npm"
 
-            - name: "Install Dependencies"
-              run: "npm ci"
+      - name: "Install Dependencies"
+        run: "npm ci"
 
-            - name: "Install Playwright Browsers"
-              run: "npx playwright install --with-deps chromium"
+      - name: "Install Playwright Browsers"
+        run: "npx playwright install --with-deps chromium"
 
-            - name: "Build Application"
-              run: "npm run build"
-              env:
-                  NEXT_PUBLIC_SITE_URL: "http://localhost:3000"
-                  AUTH_SECRET: ${{ secrets.AUTH_SECRET || 'dummy_secret_for_ci' }}
+      - name: "Build Application"
+        run: "npm run build"
+        env:
+          NEXT_PUBLIC_SITE_URL: "http://localhost:3000"
+          AUTH_SECRET: ${{ secrets.AUTH_SECRET || 'dummy_secret_for_ci' }}
 
-            - name: "Step 1: Build Route Inventory"
-              run: "npm run qa:inventory"
+      - name: "Step 1: Build Route Inventory"
+        run: "npm run qa:inventory"
 
-            - name: "Step 2: Verify i18n Coverage (Gating)"
-              run: "npm run qa:i18n"
+      - name: "Step 2: Verify i18n Coverage (Gating)"
+        run: "npm run qa:i18n"
 
-            - name: "Step 3: Run Playwright E2E Crawl"
-              run: "npm run qa:test"
-              env:
-                  CI: "true"
+      - name: "Step 3: Run Playwright E2E Crawl"
+        run: "npm run qa:test"
+        env:
+          CI: "true"
+          AUTH_TRUST_HOST: "true"
+          AUTH_SECRET: ${{ secrets.AUTH_SECRET || 'dummy_secret_for_ci' }}
+          NEXT_PUBLIC_SITE_URL: "http://localhost:3000"
 
-            - name: "Upload QA Artifacts"
-              if: "always()"
-              uses: "actions/upload-artifact@v4"
-              with:
-                  name: "i18n-qa-reports"
-                  path: |
-                      qa-i18n/i18n-report.md
-                      qa-i18n/failures/
-                      playwright-report/
-                  retention-days: 7
+      - name: "Upload QA Artifacts"
+        if: "always()"
+        uses: "actions/upload-artifact@v4"
+        with:
+          name: "i18n-qa-reports"
+          path: |
+            qa-i18n/i18n-report.md
+            qa-i18n/failures/
+            playwright-report/
+          retention-days: 7
