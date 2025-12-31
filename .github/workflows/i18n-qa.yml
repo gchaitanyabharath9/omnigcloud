@@ -45,7 +45,7 @@ jobs:
           CI: "true"
           APP_ENV: "local"
           AUTH_TRUST_HOST: "true"
-          AUTH_SECRET: "${{ secrets.AUTH_SECRET }}"
+          AUTH_SECRET: "${{ secrets.AUTH_SECRET || 'dummy_secret_for_ci_testing_only_32_chars' }}"
           NEXT_PUBLIC_SITE_URL: "${{ vars.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000' }}"
 
       - name: "Upload QA Artifacts"
