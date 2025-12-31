@@ -2,56 +2,50 @@ import React from 'react';
 import { Cloud, Server, Database, Shield, Lock, Globe, Layers, ArrowRight, User, Cpu, AlertTriangle, CheckCircle, Zap } from 'lucide-react';
 
 export const SystemContextDiagram = () => (
-    <div style={{ padding: '2rem', background: 'var(--bg-surface-2)', borderRadius: '0.5rem' }}>
+    <div style={{ padding: '2rem', background: 'var(--bg-surface-2)', borderRadius: '0.5rem', border: '1px solid var(--border)' }}>
         <div style={{ display: 'grid', gridTemplateColumns: '1fr 3fr 1fr', gap: '2rem', alignItems: 'center' }}>
             {/* Users */}
             <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem', alignItems: 'center' }}>
-                <div style={{ border: '1px dashed #94a3b8', padding: '1rem', borderRadius: '0.5rem', textAlign: 'center', width: '100%' }}>
-                    <User size={24} className="mx-auto mb-2 text-muted" />
+                <div style={{ border: '1px dashed var(--border)', padding: '1rem', borderRadius: '0.5rem', textAlign: 'center', width: '100%', background: 'var(--bg-surface)' }}>
+                    <User size={24} className="mx-auto mb-2 opacity-60" />
                     <div style={{ fontSize: '0.8rem', fontWeight: 700 }}>DevOps Team</div>
-                    <div style={{ fontSize: '0.7rem' }}>Define Policy</div>
+                    <div style={{ fontSize: '0.7rem', opacity: 0.7 }}>Define Policy</div>
                 </div>
-                <div style={{ border: '1px dashed #94a3b8', padding: '1rem', borderRadius: '0.5rem', textAlign: 'center', width: '100%' }}>
-                    <Shield size={24} className="mx-auto mb-2 text-muted" />
+                <div style={{ border: '1px dashed var(--border)', padding: '1rem', borderRadius: '0.5rem', textAlign: 'center', width: '100%', background: 'var(--bg-surface)' }}>
+                    <Shield size={24} className="mx-auto mb-2 opacity-60" />
                     <div style={{ fontSize: '0.8rem', fontWeight: 700 }}>Compliance</div>
-                    <div style={{ fontSize: '0.7rem' }}>Audit Logs</div>
+                    <div style={{ fontSize: '0.7rem', opacity: 0.7 }}>Audit Logs</div>
                 </div>
             </div>
 
             {/* AECP Core */}
             <div style={{ border: '2px solid #3b82f6', borderRadius: '1rem', padding: '1.5rem', background: 'var(--bg-surface)', position: 'relative' }}>
-                <div style={{ position: 'absolute', top: '-12px', left: '50%', transform: 'translateX(-50%)', background: '#3b82f6', color: 'white', padding: '0 1rem', fontSize: '0.8rem', fontWeight: 800, borderRadius: '1rem' }}>AECP CONTROL PLANE</div>
+                <div style={{ position: 'absolute', top: '-12px', left: '50%', transform: 'translateX(-50%)', background: '#3b82f6', color: 'white', padding: '0.1rem 1rem', fontSize: '0.75rem', fontWeight: 800, borderRadius: '1rem' }}>AECP CONTROL PLANE</div>
 
                 <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem', marginBottom: '1rem' }}>
-                    <div style={{ background: '#eff6ff', padding: '1rem', borderRadius: '0.5rem', textAlign: 'center' }}>
-                        <Layers size={20} className="mx-auto mb-2 text-blue-600" />
+                    <div style={{ background: 'rgba(59, 130, 246, 0.1)', padding: '1rem', borderRadius: '0.5rem', textAlign: 'center' }}>
+                        <Layers size={20} className="mx-auto mb-2 text-blue-500" />
                         <div style={{ fontSize: '0.8rem', fontWeight: 800 }}>Intent Interpreter</div>
                     </div>
-                    <div style={{ background: '#f0fdf4', padding: '1rem', borderRadius: '0.5rem', textAlign: 'center' }}>
-                        <Cpu size={20} className="mx-auto mb-2 text-green-600" />
+                    <div style={{ background: 'rgba(16, 185, 129, 0.1)', padding: '1rem', borderRadius: '0.5rem', textAlign: 'center' }}>
+                        <Cpu size={20} className="mx-auto mb-2 text-green-500" />
                         <div style={{ fontSize: '0.8rem', fontWeight: 800 }}>Decision Engine (AI)</div>
                     </div>
                 </div>
-                <div style={{ borderTop: '2px dashed #e2e8f0', margin: '1rem 0' }}></div>
-                <div style={{ background: '#f8fafc', padding: '0.8rem', borderRadius: '0.5rem', textAlign: 'center', fontSize: '0.8rem', color: '#64748b' }}>
+                <div style={{ borderTop: '2px dashed var(--border)', margin: '1rem 0' }}></div>
+                <div style={{ background: 'var(--bg-surface-2)', padding: '0.8rem', borderRadius: '0.5rem', textAlign: 'center', fontSize: '0.8rem', opacity: 0.8 }}>
                     <strong>State Reconciliation Loop</strong> (Current State $\rightarrow$ Target State)
                 </div>
             </div>
 
             {/* External Cloud */}
             <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
-                <div style={{ background: '#f1f5f9', padding: '1rem', borderRadius: '0.5rem', opacity: 0.8 }}>
-                    <Cloud size={20} className="mb-1" />
-                    <span style={{ fontSize: '0.75rem', fontWeight: 700 }}>AWS (US)</span>
-                </div>
-                <div style={{ background: '#f1f5f9', padding: '1rem', borderRadius: '0.5rem', opacity: 0.8 }}>
-                    <Cloud size={20} className="mb-1" />
-                    <span style={{ fontSize: '0.75rem', fontWeight: 700 }}>Azure (EU)</span>
-                </div>
-                <div style={{ background: '#f1f5f9', padding: '1rem', borderRadius: '0.5rem', opacity: 0.8 }}>
-                    <Cloud size={20} className="mb-1" />
-                    <span style={{ fontSize: '0.75rem', fontWeight: 700 }}>GCP (Asia)</span>
-                </div>
+                {['AWS (US)', 'Azure (EU)', 'GCP (Asia)'].map(name => (
+                    <div key={name} style={{ background: 'var(--bg-surface-2)', padding: '1rem', borderRadius: '0.5rem', opacity: 0.8, border: '1px solid var(--border)', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+                        <Cloud size={16} />
+                        <span style={{ fontSize: '0.75rem', fontWeight: 700 }}>{name}</span>
+                    </div>
+                ))}
             </div>
         </div>
     </div>
@@ -153,46 +147,46 @@ export const ImpactMetricsChart = () => (
 );
 
 export const FederationTopologyDiagram = () => (
-    <div style={{ padding: '2rem', background: '#0f172a', borderRadius: '0.5rem', color: 'white', position: 'relative', overflow: 'hidden' }}>
-        <div style={{ position: 'absolute', top: 0, left: 0, right: 0, bottom: 0, opacity: 0.1, backgroundImage: 'radial-gradient(#3b82f6 1px, transparent 1px)', backgroundSize: '20px 20px' }}></div>
+    <div style={{ padding: '2rem', background: 'var(--bg-surface-2)', borderRadius: '0.5rem', border: '1px solid var(--border)', position: 'relative', overflow: 'hidden' }}>
+        <div style={{ position: 'absolute', top: 0, left: 0, right: 0, bottom: 0, opacity: 0.05, backgroundImage: 'radial-gradient(var(--primary) 1px, transparent 1px)', backgroundSize: '15px 15px' }}></div>
 
-        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: '2rem', position: 'relative', zIndex: 2 }}>
+        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: '1.5rem', position: 'relative', zIndex: 2 }}>
             {/* Node 1 */}
             <div style={{ border: '1px solid #3b82f6', background: 'rgba(59, 130, 246, 0.1)', padding: '1rem', borderRadius: '0.5rem' }}>
                 <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.5rem' }}>
-                    <Shield size={16} className="text-blue-400" />
-                    <div style={{ fontWeight: 800, fontSize: '0.8rem' }}>US-EAST-SOVEREIGN</div>
+                    <Shield size={16} style={{ color: '#3b82f6' }} />
+                    <div style={{ fontWeight: 800, fontSize: '0.8rem', color: 'var(--foreground)' }}>US-EAST-SOVEREIGN</div>
                 </div>
-                <div style={{ fontSize: '0.7rem', opacity: 0.7 }}>Policy: FIPS-140-2</div>
+                <div style={{ fontSize: '0.7rem', opacity: 0.8, color: 'var(--foreground)' }}>Policy: FIPS-140-2</div>
                 <div style={{ marginTop: '0.5rem', height: '4px', background: '#3b82f6', borderRadius: '2px', width: '80%' }}></div>
             </div>
 
             {/* Node 2 */}
             <div style={{ border: '1px solid #10b981', background: 'rgba(16, 185, 129, 0.1)', padding: '1rem', borderRadius: '0.5rem' }}>
                 <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.5rem' }}>
-                    <Shield size={16} className="text-green-400" />
-                    <div style={{ fontWeight: 800, fontSize: '0.8rem' }}>EU-CENTRAL-PRIVACY</div>
+                    <Shield size={16} style={{ color: '#10b981' }} />
+                    <div style={{ fontWeight: 800, fontSize: '0.8rem', color: 'var(--foreground)' }}>EU-CENTRAL-PRIVACY</div>
                 </div>
-                <div style={{ fontSize: '0.7rem', opacity: 0.7 }}>Policy: GDPR-STRICT</div>
+                <div style={{ fontSize: '0.7rem', opacity: 0.8, color: 'var(--foreground)' }}>Policy: GDPR-STRICT</div>
                 <div style={{ marginTop: '0.5rem', height: '4px', background: '#10b981', borderRadius: '2px', width: '60%' }}></div>
             </div>
 
             {/* Node 3 */}
             <div style={{ border: '1px solid #f59e0b', background: 'rgba(245, 158, 11, 0.1)', padding: '1rem', borderRadius: '0.5rem' }}>
                 <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.5rem' }}>
-                    <Shield size={16} className="text-amber-400" />
-                    <div style={{ fontWeight: 800, fontSize: '0.8rem' }}>AP-SOUTH-SHARED</div>
+                    <Shield size={16} style={{ color: '#f59e0b' }} />
+                    <div style={{ fontWeight: 800, fontSize: '0.8rem', color: 'var(--foreground)' }}>AP-SOUTH-SHARED</div>
                 </div>
-                <div style={{ fontSize: '0.7rem', opacity: 0.7 }}>Policy: PERMISSIVE</div>
+                <div style={{ fontSize: '0.7rem', opacity: 0.8, color: 'var(--foreground)' }}>Policy: PERMISSIVE</div>
                 <div style={{ marginTop: '0.5rem', height: '4px', background: '#f59e0b', borderRadius: '2px', width: '90%' }}></div>
             </div>
         </div>
 
         {/* Connections */}
         <div style={{ textAlign: 'center', marginTop: '1.5rem', position: 'relative', zIndex: 2 }}>
-            <div style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem', background: '#1e293b', padding: '0.5rem 1rem', borderRadius: '2rem', border: '1px solid #334155' }}>
-                <Globe size={16} className="text-white" />
-                <span style={{ fontSize: '0.8rem', fontWeight: 600 }}>Federated Trust Protocol (FTP) Active</span>
+            <div style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem', background: 'var(--bg-surface)', padding: '0.5rem 1rem', borderRadius: '2rem', border: '1px solid var(--border)', boxShadow: 'var(--card-shadow)' }}>
+                <Globe size={16} style={{ color: 'var(--primary)' }} />
+                <span style={{ fontSize: '0.8rem', fontWeight: 700, color: 'var(--foreground)' }}>Federated Trust Protocol (FTP) Active</span>
             </div>
         </div>
     </div>

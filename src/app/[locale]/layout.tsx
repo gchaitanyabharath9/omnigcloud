@@ -47,7 +47,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
       template: "%s | OmniGCloud"
     },
     description: "Accelerate enterprise transformation with OmniGCloud's AI-native modernization engine. Specialized in Azure, OCP, and Neo Cloud integration with universal cloud-agnostic discovery.",
-    keywords: ["Cloud Modernization", "Azure Integration", "RedHat OCP", "Neo Cloud AI", "Cloud Agnostic Search", "Platform Engineering", "FinOps Intelligence", "Sovereign Cloud", "Autonomous Orchestration", "Data Residency", "ASO Engine", "Zero-Trust Configuration"],
+    keywords: ["Cloud Modernization", "Azure Integration", "RedHat OCP", "Neo Cloud AI", "Cloud Agnostic Search", "Platform Engineering", "FinOps Intelligence", "Sovereign Cloud", "Autonomous Orchestration", "Data Residency", "AECP Engine", "Zero-Trust Configuration"],
     authors: [{ name: "OmniGCloud Executive Office" }],
     viewport: {
       width: 'device-width',

@@ -232,7 +232,7 @@ const Header = () => {
                                         </div>
                                         <div style={{ display: 'flex', flexDirection: 'column', gap: '0.2rem' }}>
                                             <div className={styles.dropdownLabel}>{t('nav.community')}</div>
-                                            <Link href={`/${locale}/docs#whitepaper`} className={styles.dropdownLink}><FileText size={14} /> {t('nav.docs_links.whitepaper')}</Link>
+                                            <Link href={`/${locale}/docs/whitepaper`} className={styles.dropdownLink}><FileText size={14} /> {t('nav.docs_links.whitepaper')}</Link>
                                             <Link href={`/${locale}/visual-library`} className={styles.dropdownLink}><Camera size={14} /> {t('nav.docs_links.visual_library')}</Link>
                                             <Link href={`/${locale}/company#newsroom`} className={styles.dropdownLink}><Newspaper size={14} /> {t('nav.docs_links.newsroom')}</Link>
                                             <Link href={`/${locale}/community`} className={styles.dropdownLink}><Users size={14} /> {t('nav.docs_links.open_source')}</Link>

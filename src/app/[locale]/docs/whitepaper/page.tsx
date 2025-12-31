@@ -8,6 +8,26 @@ import { ComparisonTable } from './components/ComparisonTable';
 import { InfoSection } from './components/InfoSection';
 import { SystemContextDiagram, SecurityOverlayDiagram, GovernanceLoopDiagram, ImpactMetricsChart, FederationTopologyDiagram } from './components/DetailedDiagrams';
 import { ComplianceDriftChart, CostEfficiencyChart } from './components/WhitepaperCharts';
+import { Metadata } from 'next';
+
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+    const { locale } = await params;
+    return {
+        title: "Autonomous Enterprise Control Plane (AECP) — Reference Architecture",
+        description: "Official technical framework for AI-driven cloud-agnostic governance. This scholarly publication outlines the structural elimination of operational toil and the inversion of cloud sovereignty.",
+        keywords: ["AECP", "Cloud Sovereignty", "Autonomous Orchestration", "Logic Mesh", "Digital Governance", "Multi-Cloud Strategy"],
+        openGraph: {
+            title: "AECP Reference Architecture | OmniGCloud",
+            description: "Unified control plane for regulated enterprises. Formalizing AI-governed digital sovereignty.",
+            type: "article",
+            publishedTime: "2024-12-31T00:00:00.000Z",
+            authors: ["OmniGCloud Research Labs"],
+        },
+        alternates: {
+            canonical: `/docs/whitepaper`,
+        }
+    };
+}
 
 export default function WhitePaperPage() {
     return (
@@ -24,7 +44,7 @@ export default function WhitePaperPage() {
                 fontSize: '8vw',
                 fontWeight: 900,
                 color: 'var(--foreground)',
-                opacity: 0.04,
+                opacity: 0.015,
                 pointerEvents: 'none',
                 zIndex: 9999,
                 whiteSpace: 'nowrap',
@@ -40,12 +60,13 @@ export default function WhitePaperPage() {
 
                     {/* 1. EXECUTIVE OVERVIEW */}
                     <div className="scholarly-section" style={{ marginBottom: '5rem', paddingBottom: '3rem', borderBottom: '1px double var(--border)' }}>
-                        <h3 style={{ fontSize: '1rem', fontWeight: 900, textTransform: 'uppercase', letterSpacing: '0.1em', marginBottom: '1.5rem', color: '#64748b' }}>1. Executive Analysis</h3>
+                        <h3 id="executive-analysis" style={{ fontSize: '1rem', fontWeight: 900, textTransform: 'uppercase', letterSpacing: '0.1em', marginBottom: '1.5rem', color: '#64748b' }}>1. Executive Analysis</h3>
                         <p style={{ fontSize: '1.1rem', fontWeight: 500, lineHeight: 1.6, marginBottom: '1.5rem' }}>
                             This reference document establishes the <strong>Autonomous Enterprise Control Plane (AECP)</strong> as a distinct and original architectural class. It mandates a structural inversion of enterprise IT governance, defining a vendor-neutral, policy-driven layer where decision intelligence is strictly decoupled from execution mechanics.
                         </p>
-                        <div style={{ background: '#eff6ff', borderLeft: '4px solid #3b82f6', padding: '1rem', marginBottom: '1.5rem', fontSize: '0.95rem', color: '#1e40af' }}>
-                            <strong>Analysis of Non-Obviousness:</strong> In plain terms, existing systems attempt to manage complexity by adding more human managers; this architecture proves that approach is mathematically impossible at scale. Instead, it removes the human operator entirely from the safety loop—a counter-intuitive design choice that standard industry practices actively discourage.
+                        <div style={{ background: 'rgba(59, 130, 246, 0.04)', borderLeft: '4px solid #3b82f6', padding: '1.5rem', marginBottom: '1.5rem', fontSize: '1rem', color: 'var(--foreground)', borderRadius: '0 0.5rem 0.5rem 0', fontFamily: 'var(--font-jakarta), sans-serif' }}>
+                            <strong style={{ color: '#3b82f6', display: 'block', marginBottom: '0.5rem', textTransform: 'uppercase', fontSize: '0.85rem', letterSpacing: '0.05em' }}>Analysis of Non-Obviousness:</strong>
+                            <p style={{ margin: 0, lineHeight: 1.6 }}>In plain terms, existing systems attempt to manage complexity by adding more human managers; this architecture proves that approach is mathematically impossible at scale. Instead, it removes the human operator entirely from the safety loop—a counter-intuitive design choice that standard industry practices actively discourage.</p>
                         </div>
                         <p style={{ fontSize: '1.05rem', marginBottom: '1.5rem', opacity: 0.9 }}>
                             The prevailing industry failure mode—systemic compliance drift and security fragmentation—is not an operational error but an architectural defect. The "Human-in-the-Loop" model has reached its mathematical limit in distributed systems, creating a vulnerability that threatens the integrity of critical digital infrastructure.
@@ -57,7 +78,7 @@ export default function WhitePaperPage() {
 
                     {/* 2. INDUSTRY CONTEXT */}
                     <div className="scholarly-section" style={{ marginBottom: '5rem' }}>
-                        <h3 style={{ fontSize: '1.5rem', fontWeight: 800, marginBottom: '1.5rem', color: 'var(--foreground)' }}>2. The Imperative for Autonomous Control</h3>
+                        <h3 id="market-imperative" style={{ fontSize: '1.5rem', fontWeight: 800, marginBottom: '1.5rem', color: 'var(--foreground)' }}>2. The Imperative for Autonomous Control</h3>
                         <p style={{ marginBottom: '1.5rem' }}>
                             Platform Engineering has evolved to a bifurcation point. The divergence between "Cloud Velocity" and "Regulatory Rigidity" creates an unstable equilibrium that manual operations cannot stabilize. <strong>This systemic failure constitutes a critical vulnerability for the entire digital economy, necessitating a new standard of control.</strong>
                         </p>
@@ -75,7 +96,7 @@ export default function WhitePaperPage() {
 
                     {/* 3. ARCHITECTURAL PRINCIPLES */}
                     <div className="scholarly-section" style={{ marginBottom: '5rem' }}>
-                        <h3 style={{ fontSize: '1.5rem', fontWeight: 800, marginBottom: '1.5rem', color: 'var(--foreground)' }}>3. Immutable Architectural Principles</h3>
+                        <h3 id="architectural-principles" style={{ fontSize: '1.5rem', fontWeight: 800, marginBottom: '1.5rem', color: 'var(--foreground)' }}>3. Immutable Architectural Principles</h3>
                         <p style={{ marginBottom: '1.5rem' }}>
                             The AECP standard functions under five non-negotiable constraints. These are not features, but the axioms upon which this new architectural class rests.
                         </p>
@@ -94,7 +115,7 @@ export default function WhitePaperPage() {
 
                     {/* 4. HIGH-LEVEL REFERENCE ARCHITECTURE */}
                     <div className="scholarly-section" style={{ marginBottom: '5rem' }}>
-                        <h3 style={{ fontSize: '1.5rem', fontWeight: 800, marginBottom: '1.5rem', color: 'var(--foreground)' }}>4. Reference Architecture Topology</h3>
+                        <h3 id="topology" style={{ fontSize: '1.5rem', fontWeight: 800, marginBottom: '1.5rem', color: 'var(--foreground)' }}>4. Reference Architecture Topology</h3>
                         <p style={{ marginBottom: '1.5rem' }}>
                             The system topology partitions the enterprise into three orthogonal planes. The AECP asserts sovereignty solely within the Decision Plane, treating all Execution Planes as commoditized substrates.
                         </p>
@@ -108,7 +129,7 @@ export default function WhitePaperPage() {
 
                     {/* 5. CONTROL PLANE VS EXECUTION PLANE */}
                     <div className="scholarly-section" style={{ marginBottom: '5rem' }}>
-                        <h3 style={{ fontSize: '1.5rem', fontWeight: 800, marginBottom: '1.5rem', color: 'var(--foreground)' }}>5. Separation of Concerns: Decision vs. Execution</h3>
+                        <h3 id="separation-of-concerns" style={{ fontSize: '1.5rem', fontWeight: 800, marginBottom: '1.5rem', color: 'var(--foreground)' }}>5. Separation of Concerns: Decision vs. Execution</h3>
                         <p style={{ marginBottom: '1.5rem' }}>
                             The fundamental flaw in DevOps tooling is the conflation of "Goal" and "Method." AECP mandates strict separation. The Control Plane decides; the Execution Plane obeys.
                         </p>
@@ -121,14 +142,15 @@ export default function WhitePaperPage() {
                             <strong>Architectural Judgment:</strong> The decision to strictly decouple these planes is non-trivial. While this separation increases initial integration complexity, it prevents the catastrophic "State Contamination" scenarios observed in coupled systems, where accidental drift becomes indistinguishable from authorized change—an <strong>irreversible error</strong> in regulated environments.
 
                         </p>
-                        <div style={{ background: '#fff7ed', borderLeft: '4px solid #f97316', padding: '1rem', marginBottom: '1.5rem', fontSize: '0.95rem', color: '#9a3412' }}>
-                            <strong>Analysis of Design Difficulty:</strong> Standard engineering practice emphasizes "unification" (combining decision and execution into one tool for speed). This architecture explicitly rejects that trend, proving that "separation" is the only valid way to achieve safety. This is a difficult, contrarian design choice that prioritizes long-term stability over short-term convenience.
+                        <div style={{ background: 'rgba(249, 115, 22, 0.04)', borderLeft: '4px solid #f97316', padding: '1.5rem', marginBottom: '1.5rem', fontSize: '1rem', color: 'var(--foreground)', borderRadius: '0 0.5rem 0.5rem 0', fontFamily: 'var(--font-jakarta), sans-serif' }}>
+                            <strong style={{ color: '#f97316', display: 'block', marginBottom: '0.5rem', textTransform: 'uppercase', fontSize: '0.85rem', letterSpacing: '0.05em' }}>Analysis of Design Difficulty:</strong>
+                            <p style={{ margin: 0, lineHeight: 1.6 }}>Standard engineering practice emphasizes "unification" (combining decision and execution into one tool for speed). This architecture explicitly rejects that trend, proving that "separation" is the only valid way to achieve safety. This is a difficult, contrarian design choice that prioritizes long-term stability over short-term convenience.</p>
                         </div>
                     </div>
 
                     {/* 6. AUTONOMOUS DECISION LIFECYCLE */}
                     <div className="scholarly-section" style={{ marginBottom: '5rem' }}>
-                        <h3 style={{ fontSize: '1.5rem', fontWeight: 800, marginBottom: '1.5rem', color: 'var(--foreground)' }}>6. The Recursive Decision Loop</h3>
+                        <h3 id="decision-loop" style={{ fontSize: '1.5rem', fontWeight: 800, marginBottom: '1.5rem', color: 'var(--foreground)' }}>6. The Recursive Decision Loop</h3>
                         <p style={{ marginBottom: '1.5rem' }}>
                             AECP rejects linear pipelines in favor of recursive cognitive loops. The system state is not a destination but a continuous process of reconciliation.
                         </p>
@@ -142,13 +164,14 @@ export default function WhitePaperPage() {
 
                     {/* 7. AI-ASSISTED DECISION INTELLIGENCE */}
                     <div className="scholarly-section" style={{ marginBottom: '5rem' }}>
-                        <h3 style={{ fontSize: '1.5rem', fontWeight: 800, marginBottom: '1.5rem', color: 'var(--foreground)' }}>7. Deterministic Decision Intelligence</h3>
+                        <h3 id="decision-intelligence" style={{ fontSize: '1.5rem', fontWeight: 800, marginBottom: '1.5rem', color: 'var(--foreground)' }}>7. Deterministic Decision Intelligence</h3>
                         <p style={{ marginBottom: '1.5rem' }}>
                             <strong>Critical Design Trade-off:</strong> The architecture deliberately rejects the inclusion of probabilistic Large Language Models (LLMs) in the direct actuation loop. While LLMs offer generative flexibility, their stochastic nature introduces unacceptable non-determinism. AECP prioritizes <strong>auditability over flexibility</strong>, utilizing deterministic constraint solvers to guarantee that every decision is mathematically traceable to a specific policy mandate.
 
                         </p>
-                        <div style={{ background: '#fdf2f8', borderLeft: '4px solid #db2777', padding: '1rem', marginBottom: '1.5rem', fontSize: '0.95rem', color: '#9d174d' }}>
-                            <strong>Field-Level Impact:</strong> In an era where the entire industry is racing to integrate Generative AI (LLMs) into every product, this architecture stands apart by <strong>rejecting</strong> them for the control loop. This demonstrates the high level of expert judgment required to identify that "popular" technology (AI) is actually a "safety liability" in this specific context.
+                        <div style={{ background: 'rgba(219, 39, 119, 0.04)', borderLeft: '4px solid #db2777', padding: '1.5rem', marginBottom: '1.5rem', fontSize: '1rem', color: 'var(--foreground)', borderRadius: '0 0.5rem 0.5rem 0', fontFamily: 'var(--font-jakarta), sans-serif' }}>
+                            <strong style={{ color: '#db2777', display: 'block', marginBottom: '0.5rem', textTransform: 'uppercase', fontSize: '0.85rem', letterSpacing: '0.05em' }}>Field-Level Impact:</strong>
+                            <p style={{ margin: 0, lineHeight: 1.6 }}>In an era where the entire industry is racing to integrate Generative AI (LLMs) into every product, this architecture stands apart by <strong>rejecting</strong> them for the control loop. This demonstrates the high level of expert judgment required to identify that "popular" technology (AI) is actually a "safety liability" in this specific context.</p>
                         </div>
                         <SchematicDiagram title="Figure 6: Governed Decision Flow">
                             <div style={{ padding: '2rem', background: 'var(--bg-surface-2)', borderRadius: '0.5rem', display: 'flex', flexDirection: 'column', gap: '1rem' }}>
@@ -181,7 +204,7 @@ export default function WhitePaperPage() {
 
                     {/* 8. GOVERNANCE BY DESIGN */}
                     <div className="scholarly-section" style={{ marginBottom: '5rem' }}>
-                        <h3 style={{ fontSize: '1.5rem', fontWeight: 800, marginBottom: '1.5rem', color: 'var(--foreground)' }}>8. Substrate-Level Governance</h3>
+                        <h3 id="substrate-governance" style={{ fontSize: '1.5rem', fontWeight: 800, marginBottom: '1.5rem', color: 'var(--foreground)' }}>8. Substrate-Level Governance</h3>
                         <p style={{ marginBottom: '1.5rem' }}>
                             Governance is not a veneer; it is the system's substrate. Policy injection occurs at the decision layer, rendering non-compliant infrastructure instantiations impossible.
                         </p>
@@ -195,17 +218,19 @@ export default function WhitePaperPage() {
 
                     {/* 9. RESILIENCE & FAILURE HANDLING */}
                     <div className="scholarly-section" style={{ marginBottom: '5rem' }}>
-                        <h3 style={{ fontSize: '1.5rem', fontWeight: 800, marginBottom: '1.5rem', color: 'var(--foreground)' }}>9. Safe-Fail Autonomy Protocols</h3>
+                        <h3 id="resilience-protocols" style={{ fontSize: '1.5rem', fontWeight: 800, marginBottom: '1.5rem', color: 'var(--foreground)' }}>9. Safe-Fail Autonomy Protocols</h3>
                         <p style={{ marginBottom: '1.5rem' }}>
                             <strong>Risk Evaluation Strategy:</strong> In autonomous control, the cost of a "Hallucinated Remediation" (taking the wrong action) is existential. Therefore, AECP dictates a <strong>"Safe-Fail" protocol</strong>: in the event of any state ambiguity, the system chooses <strong>Isolation over Action</strong>, accepting reduced availability to preserve fatal integrity.
                         </p>
                         <SchematicDiagram title="Figure 8: Fault Isolation Logic">
-                            <div style={{ display: 'flex', gap: '1rem', fontSize: '0.8rem', justifyContent: 'center' }}>
-                                <div style={{ padding: '1rem', border: '1px solid #10b981', borderRadius: '0.5rem', background: '#ecfdf5' }}>
-                                    <strong>Protocol A: Remediation</strong><br />Pattern Match Confirmed. Execute.
+                            <div style={{ display: 'flex', gap: '1rem', fontSize: '0.85rem', justifyContent: 'center' }}>
+                                <div style={{ padding: '1rem', border: '1px solid #10b981', borderRadius: '0.5rem', background: 'rgba(16, 185, 129, 0.1)', flex: 1, textAlign: 'center' }}>
+                                    <strong style={{ color: '#10b981', display: 'block', marginBottom: '0.25rem' }}>Protocol A: Remediation</strong>
+                                    Pattern Match Confirmed. Execute.
                                 </div>
-                                <div style={{ padding: '1rem', border: '1px solid #ef4444', borderRadius: '0.5rem', background: '#fef2f2' }}>
-                                    <strong>Protocol B: Containment</strong><br />Pattern Unknown. Isolate Sector.
+                                <div style={{ padding: '1rem', border: '1px solid #ef4444', borderRadius: '0.5rem', background: 'rgba(239, 68, 68, 0.1)', flex: 1, textAlign: 'center' }}>
+                                    <strong style={{ color: '#ef4444', display: 'block', marginBottom: '0.25rem' }}>Protocol B: Containment</strong>
+                                    Pattern Unknown. Isolate Sector.
                                 </div>
                             </div>
                             <div style={{ marginTop: '1rem', fontSize: '0.85rem', opacity: 0.8, textAlign: 'center' }}>
@@ -216,24 +241,25 @@ export default function WhitePaperPage() {
 
                     {/* 10. MULTI-CLOUD PORTABILITY */}
                     <div className="scholarly-section" style={{ marginBottom: '5rem' }}>
-                        <h3 style={{ fontSize: '1.5rem', fontWeight: 800, marginBottom: '1.5rem', color: 'var(--foreground)' }}>10. Structural Portability & Digital Sovereignty</h3>
+                        <h3 id="portability" style={{ fontSize: '1.5rem', fontWeight: 800, marginBottom: '1.5rem', color: 'var(--foreground)' }}>10. Structural Portability & Digital Sovereignty</h3>
                         <p style={{ marginBottom: '1.5rem' }}>
                             Portability is achieved by modeling infrastructure as generic capabilities. The AECP treats vendor APIs as interchangeable implementation details.
                         </p>
                         <p style={{ marginBottom: '1.5rem', fontSize: '1rem', fontWeight: 600 }}>
                             This approach provides the architectural blueprint for Digital Sovereignty, ensuring that national critical infrastructure remains resilient and verifiable regardless of the underlying commercial vendor dynamics.
                         </p>
-                        <div style={{ background: '#f5f3ff', borderLeft: '4px solid #7c3aed', padding: '1rem', marginBottom: '1.5rem', fontSize: '0.95rem', color: '#5b21b6' }}>
-                            <strong>Inversion of Cloud Sovereignty:</strong> Typically, enterprises strive for "deep integration" with cloud providers to maximize performance. This architecture does the opposite: it treats the cloud provider as a commoditized utility (like electricity). This non-obvious inversion is the only structural way to guarantee that critical infrastructure is not held hostage by a single vendor's roadmap or pricing.
+                        <div style={{ background: 'rgba(124, 58, 237, 0.04)', borderLeft: '4px solid #7c3aed', padding: '1.5rem', marginBottom: '1.5rem', fontSize: '1rem', color: 'var(--foreground)', borderRadius: '0 0.5rem 0.5rem 0', fontFamily: 'var(--font-jakarta), sans-serif' }}>
+                            <strong style={{ color: '#7c3aed', display: 'block', marginBottom: '0.5rem', textTransform: 'uppercase', fontSize: '0.85rem', letterSpacing: '0.05em' }}>Inversion of Cloud Sovereignty:</strong>
+                            <p style={{ margin: 0, lineHeight: 1.6 }}>Typically, enterprises strive for "deep integration" with cloud providers to maximize performance. This architecture does the opposite: it treats the cloud provider as a commoditized utility (like electricity). This non-obvious inversion is the only structural way to guarantee that critical infrastructure is not held hostage by a single vendor's roadmap or pricing.</p>
                         </div>
                         <SchematicDiagram title="Figure 9: Abstracted Capability Model">
                             <div style={{ textAlign: 'center', padding: '1rem' }}>
                                 <p style={{ fontSize: '0.9rem', marginBottom: '1rem' }}><strong>Declarative Intent:</strong> "High-Availability Relational Store"</p>
                                 <ArrowRight size={20} className="mx-auto rotate-90" style={{ marginBottom: '1rem' }} />
-                                <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center' }}>
-                                    <span style={{ padding: '0.5rem', background: '#e2e8f0', borderRadius: '4px' }}>AWS Adapter</span>
-                                    <span style={{ padding: '0.5rem', background: '#e2e8f0', borderRadius: '4px' }}>Azure Adapter</span>
-                                    <span style={{ padding: '0.5rem', background: '#e2e8f0', borderRadius: '4px' }}>GCP Adapter</span>
+                                <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center', fontFamily: 'var(--font-jakarta), sans-serif' }}>
+                                    <span style={{ padding: '0.5rem 1rem', background: 'var(--bg-surface-2)', border: '1px solid var(--border)', borderRadius: '4px', fontSize: '0.8rem', fontWeight: 700 }}>AWS Adapter</span>
+                                    <span style={{ padding: '0.5rem 1rem', background: 'var(--bg-surface-2)', border: '1px solid var(--border)', borderRadius: '4px', fontSize: '0.8rem', fontWeight: 700 }}>Azure Adapter</span>
+                                    <span style={{ padding: '0.5rem 1rem', background: 'var(--bg-surface-2)', border: '1px solid var(--border)', borderRadius: '4px', fontSize: '0.8rem', fontWeight: 700 }}>GCP Adapter</span>
                                 </div>
                                 <div style={{ marginTop: '1.5rem', fontSize: '0.85rem', opacity: 0.8, fontStyle: 'italic' }}>
                                     <strong>Figure 9: Evidence of Vendor Neutrality:</strong> The model treats cloud provider APIs as interchangeable utility pipes, not foundational architecture. <strong>Failure Mode:</strong> Direct integration with vendor-native features creates "Feature Lock-in," structurally preventing the enterprise from migrating critical assets and effectively modifying its own sovereignty.
@@ -245,7 +271,7 @@ export default function WhitePaperPage() {
 
                     {/* 11. COMPARATIVE STRUCTURAL ANALYSIS */}
                     <div className="scholarly-section" style={{ marginBottom: '5rem' }}>
-                        <h3 style={{ fontSize: '1.5rem', fontWeight: 800, marginBottom: '1.5rem', color: 'var(--foreground)' }}>11. Comparative Structural Analysis & Impossibility Proof</h3>
+                        <h3 id="comparative-analysis" style={{ fontSize: '1.5rem', fontWeight: 800, marginBottom: '1.5rem', color: 'var(--foreground)' }}>11. Comparative Structural Analysis & Impossibility Proof</h3>
                         <p style={{ marginBottom: '2rem' }}>
                             The progression to AECP is not an incremental upgrade but a distinct architectural rupture.
                         </p>
@@ -267,8 +293,9 @@ export default function WhitePaperPage() {
                             <p style={{ marginBottom: '1.5rem' }}>
                                 This reference confirms that the AECP <strong>cannot emerge via the composition</strong> of existing tools. The limitation is derived from <strong>architectural invariant constraints</strong>, not feature deficits.
                             </p>
-                            <div style={{ background: '#fef2f2', borderLeft: '4px solid #ef4444', padding: '1rem', marginBottom: '2rem', fontSize: '0.95rem', color: '#991b1b' }}>
-                                <strong>Impossibility of Routine Engineering:</strong> To a non-expert, it might appear that this system could be built by connecting existing tools. This section proves that is structurally impossible. You cannot build a "Sovereign Control Plane" using today's market tools for the same reason you cannot build a secure bank vault using only cardboard; the structural materials themselves lack the necessary properties of "state isolation."
+                            <div style={{ background: 'rgba(239, 68, 68, 0.04)', borderLeft: '4px solid #ef4444', padding: '1.5rem', marginBottom: '2rem', fontSize: '1rem', color: 'var(--foreground)', borderRadius: '0 0.5rem 0.5rem 0', fontFamily: 'var(--font-jakarta), sans-serif' }}>
+                                <strong style={{ color: '#ef4444', display: 'block', marginBottom: '0.5rem', textTransform: 'uppercase', fontSize: '0.85rem', letterSpacing: '0.05em' }}>Impossibility of Routine Engineering:</strong>
+                                <p style={{ margin: 0, lineHeight: 1.6 }}>To a non-expert, it might appear that this system could be built by connecting existing tools. This section proves that is structurally impossible. You cannot build a "Sovereign Control Plane" using today's market tools for the same reason you cannot build a secure bank vault using only cardboard; the structural materials themselves lack the necessary properties of "state isolation."</p>
                             </div>
                             <p style={{ marginBottom: '2rem' }}>
                                 A system architected for <em>Execution</em> cannot structurally house the <em>Decision</em> logic required for its own governance. This introduces a recursive dependency ("Judge-Jury Paradox") that violates the fundamental requirement for conflict-free auditing.
@@ -323,7 +350,7 @@ export default function WhitePaperPage() {
 
                     {/* 12. ENTERPRISE ADOPTION */}
                     <div className="scholarly-section" style={{ marginBottom: '5rem' }}>
-                        <h3 style={{ fontSize: '1.5rem', fontWeight: 800, marginBottom: '1.5rem', color: 'var(--foreground)' }}>12. Structural Economics & Sector Application</h3>
+                        <h3 id="economics" style={{ fontSize: '1.5rem', fontWeight: 800, marginBottom: '1.5rem', color: 'var(--foreground)' }}>12. Structural Economics & Sector Application</h3>
                         <p style={{ marginBottom: '1.5rem' }}>
                             The metrics observed in AECP implementations are not merely performance improvements but <strong>emergent properties</strong> caused by the removal of human latency from the control loop. The following data illustrates the structural economic shift that occurs when operations are transitioned from "linear manual effort" to "logarithmic autonomous scaling."
                         </p>
@@ -343,12 +370,13 @@ export default function WhitePaperPage() {
 
                     {/* 13. NEW ARCHITECTURAL CLASS */}
                     <div className="scholarly-section" style={{ marginBottom: '4rem', background: 'var(--bg-surface-2)', padding: '3rem', borderRadius: '1rem', border: '1px solid var(--border)' }}>
-                        <h3 style={{ fontSize: '1.4rem', fontWeight: 900, marginBottom: '1.5rem', color: '#3b82f6' }}>13. Significance of the Contribution</h3>
+                        <h3 id="significance" style={{ fontSize: '1.4rem', fontWeight: 900, marginBottom: '1.5rem', color: '#3b82f6' }}>13. Significance of the Contribution</h3>
                         <p style={{ marginBottom: '1.5rem', fontSize: '1.05rem', lineHeight: 1.8 }}>
                             <strong>Judicial Weight:</strong> The formalization of AECP represents a shift from engineering implementation to <strong>architectural jurisprudence</strong>. By establishing the Decision Plane as an orthogonal, actuarial entity, this work demonstrates the expert judgment required to distinguish between <em>operational convenience</em> and <em>systemic integrity</em>—a distinction that defines the boundary between standard DevOps and high-assurance Control Planes.
                         </p>
-                        <div style={{ background: '#f0fdf4', borderLeft: '4px solid #22c55e', padding: '1rem', marginBottom: '1.5rem', fontSize: '0.95rem', color: '#166534' }}>
-                            <strong>Shift in Field Governance:</strong> Prior to this work, "Governance" was a legal document referenced by engineers. This architecture transforms Governance into a physical constraint of the software itself. This implies that the field must now treat code not just as instructions, but as a binding legal contract, fundamentally changing how enterprise software is audited.
+                        <div style={{ background: 'rgba(34, 197, 94, 0.04)', borderLeft: '4px solid #22c55e', padding: '1.5rem', marginBottom: '1.5rem', fontSize: '1rem', color: 'var(--foreground)', borderRadius: '0 0.5rem 0.5rem 0', fontFamily: 'var(--font-jakarta), sans-serif' }}>
+                            <strong style={{ color: '#22c55e', display: 'block', marginBottom: '0.5rem', textTransform: 'uppercase', fontSize: '0.85rem', letterSpacing: '0.05em' }}>Shift in Field Governance:</strong>
+                            <p style={{ margin: 0, lineHeight: 1.6 }}>Prior to this work, "Governance" was a legal document referenced by engineers. This architecture transforms Governance into a physical constraint of the software itself. This implies that the field must now treat code not just as instructions, but as a binding legal contract, fundamentally changing how enterprise software is audited.</p>
                         </div>
                         <p style={{ marginBottom: '0', fontSize: '1.05rem', lineHeight: 1.8 }}>
                             This architecture changes enterprise platform thinking by asserting that <strong>Policy is Code</strong> and <strong>Decision is Actuarial</strong>. It establishes a foundational standard for the field, providing the mathematical basis for the next generation of autonomous infrastructure. The significance is not in the optimization of existing workflows, but in the <strong>structural elimination</strong> of the entire category of "operational toil," effectively changing the economic basis of software delivery.
@@ -370,7 +398,7 @@ export default function WhitePaperPage() {
 
                     {/* 14. CONCLUSION */}
                     <div className="scholarly-section" style={{ marginBottom: '4rem' }}>
-                        <h3 style={{ fontSize: '1.5rem', fontWeight: 800, marginBottom: '1.5rem', color: 'var(--foreground)' }}>14. Future Direction & Sustained Relevance</h3>
+                        <h3 id="conclusion" style={{ fontSize: '1.5rem', fontWeight: 800, marginBottom: '1.5rem', color: 'var(--foreground)' }}>14. Future Direction & Sustained Relevance</h3>
                         <p style={{ fontSize: '1.05rem', lineHeight: 1.8 }}>
                             The Autonomous Enterprise Control Plane defines the trajectory of enterprise architecture for the coming decade. As human operators retreat from the execution loop, they assume the role of policy architects. Autonomy, bounded by rigorous and mathematically verifiable governance, is the inevitable end-state for the global enterprise.
                         </p>
