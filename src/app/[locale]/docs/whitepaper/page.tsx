@@ -201,7 +201,7 @@ export default function WhitePaperPage() {
                     <div className="scholarly-section" style={{ marginBottom: '5rem' }}>
                         <h3 style={{ fontSize: '1.5rem', fontWeight: 800, marginBottom: '1.5rem', color: 'var(--foreground)' }}>6. Autonomous Decision-Making Framework</h3>
                         <p style={{ marginBottom: '1.5rem' }}>
-                            The core innovation of ASO is <strong>Goal-Seeking Autonomy</strong>. The system targets a "Sovereign State Vector" ($S_{sov}$) and continuously solves for the optimal configuration to maintain that state, shifting from rule-based automation to intent-driven intelligence.
+                            The core innovation of ASO is <strong>Goal-Seeking Autonomy</strong>. The system targets a "Sovereign State Vector" ($S_&#123;sov&#125;$) and continuously solves for the optimal configuration to maintain that state, shifting from rule-based automation to intent-driven intelligence.
                         </p>
                     </div>
 
@@ -209,7 +209,7 @@ export default function WhitePaperPage() {
                     <div className="scholarly-section" style={{ marginBottom: '5rem' }}>
                         <h3 style={{ fontSize: '1.5rem', fontWeight: 800, marginBottom: '1.5rem', color: 'var(--foreground)' }}>7. Detailed Implementation & Execution Model</h3>
                         <p style={{ marginBottom: '1.5rem' }}>
-                            The system operates on a continuous Learning Loop (< 500ms cycle).
+                            The system operates on a continuous Learning Loop (&lt; 500ms cycle).
                         </p>
 
                         <div style={{ background: 'var(--bg-surface-2)', padding: '2rem', borderRadius: '0.5rem', borderLeft: '4px solid #3b82f6', marginBottom: '2rem' }}>
@@ -294,7 +294,7 @@ export default function WhitePaperPage() {
                             </div>
                             <div style={{ padding: '1.5rem', border: '1px solid var(--border)', borderRadius: '0.5rem', background: 'var(--bg-surface-2)' }}>
                                 <div style={{ fontSize: '2rem', fontWeight: 900, color: '#10b981', marginBottom: '0.25rem' }}>99.999%</div>
-                                <div style={{ fontSize: '0.85rem', opacity: 0.8 }}>Reliability achieved through automated multi-region failover (< 500ms).</div>
+                                <div style={{ fontSize: '0.85rem', opacity: 0.8 }}>Reliability achieved through automated multi-region failover (&lt; 500ms).</div>
                             </div>
                             <div style={{ padding: '1.5rem', border: '1px solid var(--border)', borderRadius: '0.5rem', background: 'var(--bg-surface-2)' }}>
                                 <div style={{ fontSize: '2rem', fontWeight: 900, color: '#f59e0b', marginBottom: '0.25rem' }}>~4 hrs</div>
