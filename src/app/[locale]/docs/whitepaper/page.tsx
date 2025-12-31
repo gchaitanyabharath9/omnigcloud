@@ -1,5 +1,5 @@
 import React from 'react';
-import { Download, Share2, Printer, ArrowDown, Activity, Shield, Zap, Globe, Scale, Database } from 'lucide-react';
+import { Download, Share2, Printer, ArrowDown, Activity, Shield, Zap, Globe, Scale, Database, Server, Cpu, Network, Lock, FileText, CheckCircle } from 'lucide-react';
 import Link from 'next/link';
 import { WhitepaperHeader } from './components/WhitepaperHeader';
 import { SchematicDiagram } from './components/SchematicDiagram';
@@ -9,7 +9,7 @@ import { InfoSection } from './components/InfoSection';
 
 export default function WhitePaperPage() {
     return (
-        <div style={{ background: 'var(--background)', color: 'var(--foreground)', fontFamily: 'var(--font-sans)', lineHeight: '1.7' }}>
+        <div style={{ background: 'var(--background)', color: 'var(--foreground)', fontFamily: 'var(--font-sans)', lineHeight: '1.8' }}>
             <WhitepaperHeader />
 
             {/* PAPER CONTENT */}
@@ -44,6 +44,17 @@ export default function WhitePaperPage() {
                         <p style={{ marginBottom: '1.5rem' }}>
                             Modern global enterprises face a critical scalability chasm. As cloud adoption matures, the complexity of managing disparate environments grows exponentially. Our research across Fortune 500 implementations outlines three systemic failures:
                         </p>
+                        <ul style={{ marginBottom: '2rem', paddingLeft: '1.5rem', display: 'flex', flexDirection: 'column', gap: '1rem' }}>
+                            <li>
+                                <strong>The "Sovereignty Gap":</strong> Legal requirements (e.g., GDPR, CCPA) change faster than infrastructure scripts can be updated.
+                            </li>
+                            <li>
+                                <strong>Vendor Gravity:</strong> Hyperscalers incentivize lock-in through proprietary APIs, making multi-cloud arbitrage operationally prohibitive.
+                            </li>
+                            <li>
+                                <strong>Cognitive Overload:</strong> The "cognitive load" of managing Kubernetes clusters across three different providers exceeds the capacity of human engineering teams.
+                            </li>
+                        </ul>
 
                         <ComparisonTable
                             title="Table 1: Quantifiable Operational Inefficiencies (Before vs. After)"
@@ -67,7 +78,14 @@ export default function WhitePaperPage() {
                         <p style={{ marginBottom: '1.5rem' }}>
                             The industry standard tools were designed for single-cloud optimization, not multi-cloud sovereignty.
                         </p>
-                        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '1.5rem' }}>
+
+                        <SchematicDiagram title="Figure 1: Comparison of Legacy vs. Autonomous Model" imagePath="/images/whitepaper/differentiation-matrix.png">
+                            <div style={{ marginTop: '1rem', fontSize: '0.9rem', opacity: 0.8, textAlign: 'center', maxWidth: '700px' }}>
+                                <em>Visualizing the shift from "Static Configuration" (Left) where drift accumulates, to "Dynamic State Reconciliation" (Right) where the system self-corrects.</em>
+                            </div>
+                        </SchematicDiagram>
+
+                        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '1.5rem', marginTop: '2rem' }}>
                             <div style={{ padding: '1.5rem', border: '1px solid var(--border)', borderRadius: '0.5rem' }}>
                                 <div style={{ fontWeight: 700, marginBottom: '0.5rem', color: '#ef4444' }}>Hyperscaler Tools (AWS/Azure)</div>
                                 <p style={{ fontSize: '0.9rem', opacity: 0.8 }}>Designed to maximize vendor lock-in. They lack the incentive to facilitate true portability or neutrality.</p>
@@ -86,82 +104,64 @@ export default function WhitePaperPage() {
                             We propose the <strong>Logic-Mesh</strong>, a roadmap to true sovereignty. This meta-orchestration layer acts as a "Universal Translator" between business intent and provider execution.
                         </p>
 
-                        <SchematicDiagram title="Figure 1: End-to-End System Architecture">
-                            <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '2rem', textAlign: 'center' }}>
-                                {/* INTENT PLANE */}
-                                <div style={{ border: '2px dashed #94a3b8', padding: '1.5rem', borderRadius: '0.5rem', background: '#f8fafc', width: '100%', maxWidth: '600px' }}>
-                                    <div style={{ fontWeight: 800, color: '#334155', marginBottom: '0.5rem', textTransform: 'uppercase', letterSpacing: '0.1em' }}>Tier 1: Intent Plane</div>
-                                    <div style={{ fontSize: '0.85rem', color: '#64748b' }}>defines "What must happen" (Policy, SLA, Cost Caps)</div>
-                                </div>
-
-                                <ArrowDown className="text-muted-foreground" size={24} />
-
-                                {/* LOGIC MESH */}
-                                <div style={{ background: '#0f172a', padding: '2rem', borderRadius: '1rem', color: 'white', width: '100%', maxWidth: '700px', boxShadow: '0 20px 40px -10px rgba(0,0,0,0.3)', position: 'relative' }}>
-                                    <div style={{ position: 'absolute', top: '-12px', left: '50%', transform: 'translateX(-50%)', background: '#3b82f6', padding: '0.25rem 1rem', borderRadius: '1rem', fontSize: '0.75rem', fontWeight: 800 }}>Tier 2: Logic-Mesh (The Brain)</div>
-                                    <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '1rem', marginTop: '1rem' }}>
-                                        <div style={{ background: 'rgba(255,255,255,0.1)', padding: '1rem', borderRadius: '0.5rem' }}>
-                                            <Shield size={24} className="mb-2 text-green-400 mx-auto" />
-                                            <div style={{ fontWeight: 700, fontSize: '0.9rem' }}>Governance Engine</div>
-                                        </div>
-                                        <div style={{ background: 'rgba(255,255,255,0.1)', padding: '1rem', borderRadius: '0.5rem' }}>
-                                            <Scale size={24} className="mb-2 text-yellow-400 mx-auto" />
-                                            <div style={{ fontWeight: 700, fontSize: '0.9rem' }}>State Solver</div>
-                                        </div>
-                                        <div style={{ background: 'rgba(255,255,255,0.1)', padding: '1rem', borderRadius: '0.5rem' }}>
-                                            <Activity size={24} className="mb-2 text-red-400 mx-auto" />
-                                            <div style={{ fontWeight: 700, fontSize: '0.9rem' }}>Self-Healing Core</div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <ArrowDown className="text-muted-foreground" size={24} />
-
-                                {/* EXECUTION PLANE */}
-                                <div style={{ display: 'flex', gap: '1rem', width: '100%', justifyContent: 'center' }}>
-                                    {['AWS (US-East)', 'Azure (EU-Central)', 'GCP (Asia-South)'].map((label, idx) => (
-                                        <div key={idx} style={{ border: '1px solid #e2e8f0', padding: '1.5rem', flex: 1, borderRadius: '0.5rem', background: '#f1f5f9' }}>
-                                            <div style={{ fontWeight: 800, fontSize: '0.9rem', marginBottom: '0.5rem' }}>{label.split(' ')[0]}</div>
-                                            <div style={{ fontSize: '0.75rem' }}>{label}</div>
-                                        </div>
-                                    ))}
-                                </div>
+                        <SchematicDiagram title="Figure 2: End-to-End System Architecture" imagePath="/images/whitepaper/high-level-architecture.png">
+                            <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '2rem', textAlign: 'center', width: '100%' }}>
+                                <p style={{ maxWidth: '600px', fontSize: '0.9rem', opacity: 0.8 }}>
+                                    The High-Level Architecture demonstrates the critical separation between the <strong>Intent Plane</strong> (Business Logic) and the <strong>Execution Plane</strong> (Cloud Providers). The Logic-Mesh serves as the intermediary, translating distinct policy requirements into specific API calls for AWS, Azure, and GCP.
+                                </p>
                             </div>
                         </SchematicDiagram>
                     </div>
 
-                    {/* 6. AUTONOMOUS DECISION FRAMEWORK */}
+                    {/* 6. MATHEMATICAL FORMALIZATION */}
                     <div className="scholarly-section" style={{ marginBottom: '5rem' }}>
-                        <h3 style={{ fontSize: '1.5rem', fontWeight: 800, marginBottom: '1.5rem', color: 'var(--foreground)' }}>6. Autonomous Decision-Making Framework</h3>
+                        <h3 style={{ fontSize: '1.5rem', fontWeight: 800, marginBottom: '1.5rem', color: 'var(--foreground)' }}>6. Mathematical Formalization of Sovereignty</h3>
                         <p style={{ marginBottom: '1.5rem' }}>
-                            The core innovation of ASO is <strong>Goal-Seeking Autonomy</strong>. The system targets a "Sovereign State Vector" ($S_&#123;sov&#125;$) and continuously solves for the optimal configuration to maintain that state, shifting from rule-based automation to intent-driven intelligence.
+                            To move beyond vague "best practices," we formalize the infrastructure state as a specific vector, $S_&#123;sov&#125;$.
+                        </p>
+                        <div style={{ background: '#f8fafc', padding: '2rem', borderRadius: '0.5rem', border: '1px solid #e2e8f0', fontFamily: 'serif', fontSize: '1.1rem', marginBottom: '1.5rem' }}>
+                            <p style={{ textAlign: 'center', marginBottom: '1rem' }}>
+                                $$S_&#123;total&#125; = S_&#123;infra&#125; + S_&#123;policy&#125; + S_&#123;cost&#125;$$
+                            </p>
+                            <p>
+                                Where the objective function of the Autonomy Engine is to minimize the delta ($\Delta$) between the <em>Target State</em> ($S_&#123;target&#125;$) and the <em>Observed Real-Time State</em> ($S_&#123;real&#125;$):
+                            </p>
+                            <p style={{ textAlign: 'center', marginTop: '1rem' }}>
+                                $$\min \sum (S_&#123;target&#125; - S_&#123;real&#125;)$$
+                            </p>
+                        </div>
+                        <p>
+                            This mathematical rigor ensures that "Sovereignty" is not just a qualitative goal, but a quantitative metrics that can be solved for using linear optimization techniques in real-time.
                         </p>
                     </div>
+
 
                     {/* 7. DETAILED IMPLEMENTATION */}
                     <div className="scholarly-section" style={{ marginBottom: '5rem' }}>
                         <h3 style={{ fontSize: '1.5rem', fontWeight: 800, marginBottom: '1.5rem', color: 'var(--foreground)' }}>7. Detailed Implementation & Execution Model</h3>
                         <p style={{ marginBottom: '1.5rem' }}>
-                            The system operates on a continuous Learning Loop (&lt; 500ms cycle).
+                            The system operates on a continuous Learning Loop (&lt; 500ms cycle). This is not a linear script; it is a recursive cognitive cycle.
                         </p>
 
-                        <div style={{ background: 'var(--bg-surface-2)', padding: '2rem', borderRadius: '0.5rem', borderLeft: '4px solid #3b82f6', marginBottom: '2rem' }}>
-                            <h4 style={{ fontWeight: 700, marginBottom: '1rem', fontSize: '0.9rem', textTransform: 'uppercase', letterSpacing: '0.1em' }}>Figure 2: The Cognitive Execution Cycle</h4>
-                            <div style={{ fontFamily: 'monospace', fontSize: '0.9rem', display: 'flex', flexDirection: 'column', gap: '1rem' }}>
-                                {[
-                                    { label: 'SIGNAL', color: '#ef4444', text: "Telemetry Ingest: Region 'us-east-1' latency > 200ms" },
-                                    { label: 'DECIDE', color: '#f59e0b', text: "Constraint Solver: Find lowest cost region in EU zone. Result: 'eu-west-1'." },
-                                    { label: 'ACTION', color: '#3b82f6', text: "Orchestrator: Drain 'us-east-1'. Scale up 'eu-west-1'. Update DNS." },
-                                    { label: 'VALIDATE', color: '#10b981', text: "Health Check: Latency now 45ms. State Equilibrium Restored." },
-                                    { label: 'LEARN', color: '#8b5cf6', text: "Model Update: Downgrade 'us-east-1' reliability score for 24 hours." }
-                                ].map((step, idx) => (
-                                    <div key={idx} style={{ display: 'grid', gridTemplateColumns: '80px 1fr', alignItems: 'center' }}>
-                                        <span style={{ color: step.color, fontWeight: 800 }}>{step.label}</span>
-                                        <span>{step.text}</span>
-                                    </div>
-                                ))}
+                        <SchematicDiagram title="Figure 3: Autonomous Decision Lifecycle" imagePath="/images/whitepaper/decision-flow.png">
+                            <div style={{ background: 'var(--bg-surface-2)', padding: '2rem', borderRadius: '0.5rem', borderLeft: '4px solid #3b82f6', marginBottom: '2rem', width: '100%' }}>
+                                <h4 style={{ fontWeight: 700, marginBottom: '1rem', fontSize: '0.9rem', textTransform: 'uppercase', letterSpacing: '0.1em' }}>Execution Trace: Latency Mitigation Scenario</h4>
+                                <div style={{ fontFamily: 'monospace', fontSize: '0.9rem', display: 'flex', flexDirection: 'column', gap: '1rem' }}>
+                                    {[
+                                        { label: 'SIGNAL', color: '#ef4444', text: "Telemetry Ingest: Region 'us-east-1' latency > 200ms" },
+                                        { label: 'DECIDE', color: '#f59e0b', text: "Constraint Solver: Find lowest cost region in EU zone. Result: 'eu-west-1'." },
+                                        { label: 'ACTION', color: '#3b82f6', text: "Orchestrator: Drain 'us-east-1'. Scale up 'eu-west-1'. Update DNS." },
+                                        { label: 'VALIDATE', color: '#10b981', text: "Health Check: Latency now 45ms. State Equilibrium Restored." },
+                                        { label: 'LEARN', color: '#8b5cf6', text: "Model Update: Downgrade 'us-east-1' reliability score for 24 hours." }
+                                    ].map((step, idx) => (
+                                        <div key={idx} style={{ display: 'grid', gridTemplateColumns: '80px 1fr', alignItems: 'center' }}>
+                                            <span style={{ color: step.color, fontWeight: 800 }}>{step.label}</span>
+                                            <span>{step.text}</span>
+                                        </div>
+                                    ))}
+                                </div>
                             </div>
-                        </div>
+                        </SchematicDiagram>
                     </div>
 
                     {/* 8. ARCHITECTURAL DIFFERENTIATION */}
@@ -203,7 +203,7 @@ export default function WhitePaperPage() {
                         <p style={{ marginBottom: '1.5rem' }}>
                             The Logic-Mesh is environment-agnostic, supporting models from public cloud to air-gapped defense systems.
                         </p>
-                        <SchematicDiagram title="Figure 3: Multi-Sector Adaptability">
+                        <SchematicDiagram title="Figure 4: Multi-Sector Adaptability">
                             <div style={{ display: 'grid', gridTemplateColumns: 'minmax(250px, 1fr) minmax(250px, 1fr)', gap: '2rem' }}>
                                 <InfoSection title="Defense & Intelligence" icon={<Shield size={16} />} description="Operates in disconnected (air-gapped) environments. State vectors are local and encrypted." />
                                 <InfoSection title="Financial Services (DeFi)" icon={<Database size={16} />} description="Geofences transaction logs to specific legal jurisdictions automatically (e.g., GDPR/SEC)." />
