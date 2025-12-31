@@ -14,16 +14,16 @@ const Footer = () => {
                 <div style={{ borderTop: '1px solid var(--card-border)', borderBottom: '1px solid var(--card-border)', padding: '1.5rem 0', marginTop: '0.5rem' }}>
                     <div style={{ marginBottom: '1.5rem', display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start' }}>
                         <div>
-                            <Link href={`/${locale}#hero`} style={{ fontSize: '1.4rem', fontWeight: 900, textDecoration: 'none', color: 'var(--foreground)', letterSpacing: '-0.75px', fontFamily: 'var(--font-heading)' }}>
+                            <Link href={`/${locale}#hero`} style={{ fontSize: '1.5rem', fontWeight: 900, textDecoration: 'none', color: 'var(--foreground)', letterSpacing: '-0.75px', fontFamily: 'var(--font-heading)' }}>
                                 OmniG<span style={{ color: 'var(--primary)' }}>Cloud</span>
                             </Link>
-                            <p style={{ marginTop: '0.3rem', color: 'var(--foreground)', opacity: 0.6, maxWidth: '350px', fontSize: '0.75rem' }}>
+                            <p style={{ marginTop: '0.5rem', color: 'var(--foreground)', opacity: 0.7, maxWidth: '400px', fontSize: 'var(--small-size)', lineHeight: '1.5' }}>
                                 {t('tagline')}
                             </p>
                         </div>
                         <div style={{ textAlign: 'right' }}>
-                            <div style={{ fontSize: '0.65rem', fontWeight: 800, color: 'var(--primary)', marginBottom: '0.2rem' }}>{t('directory')}</div>
-                            <div style={{ fontSize: '0.6rem', opacity: 0.4, fontFamily: 'monospace' }}>{t('status')}</div>
+                            <div style={{ fontSize: 'var(--tiny-size)', fontWeight: 800, color: 'var(--primary)', marginBottom: '0.3rem' }}>{t('directory')}</div>
+                            <div style={{ fontSize: 'var(--tiny-size)', opacity: 0.5, fontFamily: 'monospace' }}>{t('status')}</div>
                         </div>
                     </div>
 
@@ -59,6 +59,7 @@ const Footer = () => {
                                     { name: t('resources.api'), href: "/docs/api" },
                                     { name: t('resources.visual_library'), href: "/visual-library" },
                                     { name: t('resources.blueprints'), href: "/docs/governance" },
+                                    { name: "Whitepaper", href: "/resources/whitepaper" },
                                     { name: t('resources.cases'), href: "/case-studies" }
                                 ]
                             },
@@ -74,10 +75,10 @@ const Footer = () => {
                             }
                         ].map((col, idx) => (
                             <div key={idx}>
-                                <h5 style={{ color: col.color, fontWeight: 900, marginBottom: '0.6rem', fontSize: '0.65rem', textTransform: 'uppercase' }}>{col.label}</h5>
-                                <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem', fontSize: '0.75rem' }}>
+                                <h5 style={{ color: col.color, fontWeight: 900, marginBottom: '0.75rem', fontSize: 'var(--tiny-size)', textTransform: 'uppercase', letterSpacing: '0.05em' }}>{col.label}</h5>
+                                <div style={{ display: 'flex', flexDirection: 'column', gap: '0.6rem', fontSize: 'var(--small-size)' }}>
                                     {col.links.map((link, lIdx) => (
-                                        <Link key={lIdx} href={`/${locale}${link.href}`} style={{ color: 'var(--foreground)', opacity: 0.6, textDecoration: 'none', transition: 'all 0.2s', fontWeight: 600 }}>{link.name}</Link>
+                                        <Link key={lIdx} href={`/${locale}${link.href}`} style={{ color: 'var(--foreground)', opacity: 0.7, textDecoration: 'none', transition: 'all 0.2s', fontWeight: 600 }}>{link.name}</Link>
                                     ))}
                                 </div>
                             </div>
@@ -87,10 +88,10 @@ const Footer = () => {
 
                 <div className={styles.bottom} style={{ padding: '2rem 0', display: 'flex', justifyContent: 'space-between', alignItems: 'center', gap: '2rem', flexWrap: 'wrap' }}>
                     <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
-                        <div style={{ fontSize: '0.75rem', opacity: 0.5 }}>{t('copyright', { year: new Date().getFullYear() })}</div>
+                        <div style={{ fontSize: 'var(--small-size)', opacity: 0.6 }}>{t('copyright', { year: new Date().getFullYear() })}</div>
                         <ComplianceBadges />
                     </div>
-                    <div style={{ fontSize: '0.65rem', opacity: 0.4, maxWidth: '450px', textAlign: 'right', lineHeight: 1.6 }}>
+                    <div style={{ fontSize: 'var(--small-size)', opacity: 0.5, maxWidth: '500px', textAlign: 'right', lineHeight: 1.6 }}>
                         {t('footerText')}
                     </div>
                 </div>

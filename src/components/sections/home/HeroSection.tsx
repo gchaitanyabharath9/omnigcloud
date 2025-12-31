@@ -1,15 +1,14 @@
 import { useTranslations, useLocale } from 'next-intl';
 import Link from 'next/link';
-import { ShieldAlert, PlayCircle, CheckCircle, Globe, Activity, Layers, Cpu } from 'lucide-react';
+import { ShieldAlert, PlayCircle, Globe, Activity, Layers, Cpu, CheckCircle } from 'lucide-react';
 import Image from 'next/image';
-import PerformanceStatusWidget from '@/components/widgets/PerformanceStatusWidget';
 
 export default function HeroSection() {
     const t = useTranslations('Hero');
     const locale = useLocale();
 
     return (
-        <section id="hero" className="snap-section" style={{ position: 'relative', minHeight: '100vh', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
+        <section id="hero" className="snap-section" style={{ position: 'relative', minHeight: '100vh', display: 'flex', flexDirection: 'column', justifyContent: 'flex-start', paddingBottom: '2rem', overflow: 'hidden' }}>
             {/* Premium Grid Background */}
             <div style={{
                 position: 'absolute',
@@ -41,187 +40,139 @@ export default function HeroSection() {
                 pointerEvents: 'none'
             }}></div>
 
-            <div className="container" style={{ position: 'relative', zIndex: 1 }}>
-                <div className="hero-grid-layout">
-                    {/* Q1: Top-Left */}
-                    <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'flex-start', gap: '2rem' }}>
+            <div className="container" style={{ position: 'relative', zIndex: 1, display: 'flex', alignItems: 'flex-start', paddingTop: '1rem' }}>
+                <div style={{
+                    display: 'grid',
+                    gridTemplateColumns: 'minmax(0, 1fr) minmax(0, 1.2fr)',
+                    gap: '3rem',
+                    alignItems: 'center',
+                    width: '100%'
+                }} className="hero-split-layout">
+                    {/* Left Column: Messaging & Performance Monitor */}
+                    <div style={{ display: 'flex', flexDirection: 'column', gap: '2rem' }}>
                         <div>
                             <div className="badge badge-primary-subtle mb-4 w-fit">
                                 <ShieldAlert size={14} color="var(--primary)" />
                                 <span>{t('badge')}</span>
                             </div>
 
-                            <h1 className="mb-4" style={{ lineHeight: 1.1, fontSize: 'clamp(2rem, 5vw, 2.5rem)', letterSpacing: '-0.03em', fontWeight: 800 }}>
+                            <h1 className="mb-6" style={{ lineHeight: 1.2, fontSize: 'clamp(1.5rem, 3.5vw, 2.2rem)', letterSpacing: '-0.02em', fontWeight: 800 }}>
                                 Omni<span style={{ color: 'var(--primary)' }}>G</span>Cloud:
                                 <br />
-                                <span className="text-gradient">{t('title')}</span>
+                                <span className="text-gradient">Break Free from Vendor Lock-In</span>
                             </h1>
 
-                            <p className="text-lead mb-8" style={{ fontSize: 'clamp(1rem, 2vw, 1.1rem)', maxWidth: '95%', lineHeight: 1.5 }}>
+                            <p className="text-lead mb-8" style={{ fontSize: '1.2rem', maxWidth: '90%', lineHeight: 1.6, opacity: 0.9 }}>
                                 {t('subtitle')}
                             </p>
 
                             <div style={{ display: 'flex', flexWrap: 'wrap', gap: '1rem' }}>
-                                <Link href={`/${locale}/contact`} className="btn-primary" style={{ flex: '1 1 auto', textAlign: 'center' }}>
+                                <Link href={`/${locale}/contact`} className="btn-primary" style={{ padding: '1rem 2rem', fontSize: '1.1rem' }}>
                                     {t('ctaPrimary')}
                                 </Link>
-                                <Link href={`/${locale}/docs/whitepaper`} className="btn-secondary" style={{ flex: '1 1 auto', textAlign: 'center', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                                    <PlayCircle size={18} style={{ marginRight: '0.5rem' }} /> {t('ctaSecondary')}
+                                <Link href={`/${locale}/docs/whitepaper`} className="btn-secondary" style={{ padding: '1rem 2rem', fontSize: '1.1rem', display: 'flex', alignItems: 'center' }}>
+                                    <PlayCircle size={20} style={{ marginRight: '0.5rem' }} /> {t('ctaSecondary')}
                                 </Link>
                             </div>
                         </div>
 
-                        <div style={{ flex: 1, display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
-                            <div style={{
-                                background: 'rgba(2, 6, 23, 0.5)',
-                                border: '1px solid rgba(255, 255, 255, 0.08)',
-                                borderRadius: '1rem',
-                                padding: '1.25rem',
-                                display: 'flex',
-                                flexDirection: 'column',
-                                gap: '0.75rem',
-                                backdropFilter: 'blur(8px)',
-                                maxWidth: '400px'
-                            }}>
-                                <div className="mb-4">
-                                    <PerformanceStatusWidget />
+                        {/* Enhanced Health Monitor Widget */}
+                        <div style={{
+                            background: 'rgba(2, 6, 23, 0.4)',
+                            border: '1px solid rgba(255, 255, 255, 0.08)',
+                            borderRadius: '1.5rem',
+                            padding: '2rem',
+                            backdropFilter: 'blur(12px)',
+                            position: 'relative',
+                            overflow: 'hidden'
+                        }}>
+                            <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '1.5rem' }}>
+                                <div>
+                                    <h3 style={{ fontSize: '0.85rem', fontWeight: 800, textTransform: 'uppercase', color: 'var(--primary)', marginBottom: '0.5rem', letterSpacing: '0.1em' }}>Sovereignty Health Monitor</h3>
+                                    <div style={{ display: 'flex', alignItems: 'baseline', gap: '0.75rem' }}>
+                                        <span style={{ fontSize: '2.5rem', fontWeight: 900, color: 'white' }}>114ms</span>
+                                        <span style={{ fontSize: '1rem', color: '#10b981', fontWeight: 700 }}>● OPTIMAL</span>
+                                    </div>
                                 </div>
-                                <div style={{ fontSize: '0.7rem', textTransform: 'uppercase', letterSpacing: '0.05em', color: 'var(--muted)', marginBottom: '0.25rem', display: 'flex', justifyContent: 'space-between' }}>
-                                    <span>{t('systemStatus.title')}</span>
-                                    <span style={{ color: '#10b981' }}>● {t('systemStatus.live')}</span>
-                                </div>
-
-                                <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', fontFamily: 'monospace', fontSize: '0.85rem' }}>
-                                    <CheckCircle size={14} color="#10b981" />
-                                    <span style={{ opacity: 0.9 }}>{t('systemStatus.sync')}</span>
-                                </div>
-                                <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', fontFamily: 'monospace', fontSize: '0.85rem' }}>
-                                    <CheckCircle size={14} color="#10b981" />
-                                    <span style={{ opacity: 0.9 }}>{t('systemStatus.policy')} <span style={{ color: '#3b82f6' }}>{t('systemStatus.enforcing')}</span></span>
-                                </div>
-                                <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', fontFamily: 'monospace', fontSize: '0.85rem' }}>
-                                    <Activity size={14} color="#f59e0b" />
-                                    <span style={{ opacity: 0.9 }}>{t('systemStatus.threat')}: <span style={{ color: '#f59e0b' }}>{t('systemStatus.monitoring')}</span></span>
+                                <div style={{ width: '48px', height: '48px', background: 'rgba(59, 130, 246, 0.1)', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                                    <Activity size={24} color="var(--primary)" />
                                 </div>
                             </div>
+
+                            {/* Live Animation Graph */}
+                            <div style={{ height: '100px', position: 'relative', margin: '1rem 0' }}>
+                                <svg width="100%" height="100" viewBox="0 0 400 100" preserveAspectRatio="none">
+                                    <path d="M0 60 Q 40 50, 80 55 T 160 40 T 240 50 T 320 35 T 400 30" fill="none" stroke="var(--primary)" strokeWidth="4" />
+                                    <circle cx="400" cy="30" r="5" fill="var(--primary)">
+                                        <animate attributeName="r" from="5" to="8" dur="1s" repeatCount="indefinite" />
+                                        <animate attributeName="opacity" from="1" to="0" dur="1s" repeatCount="indefinite" />
+                                    </circle>
+                                </svg>
+                            </div>
+
+                            <p style={{ fontSize: '0.8rem', color: 'var(--muted)', lineHeight: 1.6 }}>
+                                Real-time network latency monitoring across multi-cloud edge nodes. Tracks sub-millisecond variations to ensure optimal sovereign data routing and compliance standards.
+                            </p>
                         </div>
                     </div>
 
-                    {/* Q2: Top-Right */}
-                    <div style={{ position: 'relative', height: '100%', display: 'flex', flexDirection: 'column', justifyContent: 'flex-start' }}>
+                    {/* Right Column: Dashboard Visualization & Compliance */}
+                    <div style={{ display: 'flex', flexDirection: 'column', gap: '2rem' }}>
                         <div className="glass-panel" style={{
-                            width: '100%',
-                            height: '450px',
-                            maxHeight: '450px',
                             padding: '0',
-                            borderRadius: '1.25rem',
+                            borderRadius: '1.5rem',
                             border: '1px solid var(--card-border)',
-                            boxShadow: '0 25px 50px -12px rgba(0, 0, 0, 0.5)',
                             overflow: 'hidden',
                             background: 'var(--bg-surface-2)',
-                            position: 'relative',
-                            display: 'flex',
-                            flexDirection: 'column'
+                            boxShadow: '0 30px 60px rgba(0,0,0,0.5)'
                         }}>
-                            <div style={{ flex: 1, padding: '1.5rem', position: 'relative', display: 'flex', flexDirection: 'column', gap: '1rem' }}>
-                                {/* Dashboard Background Optimized */}
-                                <div style={{
-                                    position: 'absolute', top: 0, right: 0, width: '100%', height: '100%',
-                                    opacity: 0.1, pointerEvents: 'none'
-                                }}>
-                                    <Image
-                                        src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1600&fit=crop"
-                                        alt="OmniGCloud Enterprise Dashboard Interface"
-                                        fill
-                                        style={{ objectFit: 'cover' }}
-                                        priority
-                                    />
+                            <div style={{ padding: '2rem', display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
+                                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '1rem' }}>
+                                    {[{ l: t('stats.assets'), v: '$2.4B' }, { l: t('stats.drift'), v: '0%', c: '#10b981' }, { l: t('stats.nodes'), v: '4k+', c: 'var(--primary)' }].map((s, i) => (
+                                        <div key={i} style={{ padding: '1rem', background: 'rgba(255,255,255,0.02)', borderRadius: '0.75rem', border: '1px solid var(--card-border)' }}>
+                                            <div style={{ fontSize: '0.7rem', color: 'var(--muted)', textTransform: 'uppercase' }}>{s.l}</div>
+                                            <div style={{ fontSize: '1.25rem', fontWeight: 900, color: s.c || 'white' }}>{s.v}</div>
+                                        </div>
+                                    ))}
                                 </div>
-
-                                <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: '0.75rem', position: 'relative', zIndex: 2 }}>
-                                    <div className="dashboard-stat-card" style={{ padding: '0.75rem' }}>
-                                        <div className="stat-label" style={{ fontSize: '0.6rem' }}>{t('stats.assets')}</div>
-                                        <div className="stat-value" style={{ fontSize: '1.1rem' }}>$2.4B</div>
-                                    </div>
-                                    <div className="dashboard-stat-card" style={{ padding: '0.75rem' }}>
-                                        <div className="stat-label" style={{ fontSize: '0.6rem' }}>{t('stats.drift')}</div>
-                                        <div className="stat-value" style={{ fontSize: '1.1rem', color: 'var(--color-success)' }}>0%</div>
-                                    </div>
-                                    <div className="dashboard-stat-card" style={{ padding: '0.75rem' }}>
-                                        <div className="stat-label" style={{ fontSize: '0.6rem' }}>{t('stats.nodes')}</div>
-                                        <div className="stat-value" style={{ fontSize: '1.1rem', color: 'var(--primary)' }}>4k+</div>
-                                    </div>
-                                </div>
-
-                                <div style={{ flex: 1, borderRadius: '0.5rem', border: '1px solid var(--card-border)', position: 'relative', overflow: 'hidden', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                                <div style={{ height: '280px', borderRadius: '1rem', border: '1px solid var(--card-border)', position: 'relative', overflow: 'hidden', background: '#020617' }}>
                                     <Image
                                         src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80"
-                                        alt="Global Sovereign Data Visualization"
+                                        alt="Global Sovereign Dashboard"
                                         fill
-                                        style={{ objectFit: 'cover', opacity: 0.4 }}
+                                        style={{ objectFit: 'cover', opacity: 0.3 }}
                                     />
-                                    <div style={{ width: '60px', height: '60px', borderRadius: '50%', background: 'rgba(59, 130, 246, 0.2)', display: 'flex', alignItems: 'center', justifyContent: 'center', boxShadow: '0 0 30px var(--primary-glow)', zIndex: 2, border: '1px solid rgba(59, 130, 246, 0.4)' }}>
-                                        <Globe size={32} color="#60a5fa" strokeWidth={1.5} />
+                                    <div style={{ position: 'absolute', inset: 0, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                                        <div style={{ width: '80px', height: '80px', borderRadius: '50%', background: 'rgba(59, 130, 246, 0.1)', border: '1px solid var(--primary)', display: 'flex', alignItems: 'center', justifyContent: 'center', boxShadow: '0 0 40px var(--primary-glow)' }}>
+                                            <Globe size={40} color="var(--primary)" />
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
 
-                    {/* Q3: Bottom-Left */}
-                    <div style={{ display: 'flex', flexDirection: 'column', height: '100%', justifyContent: 'flex-start' }}>
-                        <div className="glass-panel" style={{ height: '100%', padding: '1.5rem', borderRadius: '1rem', border: '1px solid var(--card-border)', background: 'var(--bg-surface-2)', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
-                            <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
-                                <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
-                                    <div style={{ display: 'flex', alignItems: 'center' }}>
-                                        {[
-                                            'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=64&h=64&q=80&fit=crop',
-                                            'https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=64&h=64&q=80&fit=crop',
-                                            'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=64&h=64&q=80&fit=crop',
-                                            'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=64&h=64&q=80&fit=crop'
-                                        ].map((src, i) => (
-                                            <div key={i} style={{ position: 'relative', width: '44px', height: '44px', borderRadius: '50%', border: '2px solid var(--bg-surface-2)', marginLeft: i > 0 ? '-16px' : 0, overflow: 'hidden' }}>
-                                                <Image src={src} alt="Team Member" fill style={{ objectFit: 'cover' }} />
-                                            </div>
-                                        ))}
+                        {/* Regional Compliance Widget */}
+                        <div className="glass-panel" style={{ padding: '2rem', borderRadius: '1.5rem', border: '1px solid var(--card-border)', background: 'rgba(59, 130, 246, 0.05)' }}>
+                            <h3 style={{ fontSize: '0.9rem', fontWeight: 900, textTransform: 'uppercase', marginBottom: '1.5rem', letterSpacing: '0.1em' }}>Sovereignty Compliance Index</h3>
+                            <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
+                                {[
+                                    { label: 'EU-West (GDPR Residency)', val: 98, color: '#10b981' },
+                                    { label: 'US-East (HIPAA Sovereignty)', val: 94, color: '#3b82f6' },
+                                    { label: 'Global (Threat Detection)', val: 89, color: '#f59e0b' }
+                                ].map((reg, idx) => (
+                                    <div key={idx} style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
+                                        <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: '0.8rem' }}>
+                                            <span style={{ fontWeight: 600 }}>{reg.label}</span>
+                                            <span style={{ fontWeight: 900 }}>{reg.val}%</span>
+                                        </div>
+                                        <div style={{ width: '100%', height: '6px', background: 'rgba(255,255,255,0.05)', borderRadius: '3px', overflow: 'hidden' }}>
+                                            <div style={{ width: `${reg.val}%`, height: '100%', background: reg.color, borderRadius: '3px' }}></div>
+                                        </div>
                                     </div>
-                                    <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
-                                        <span style={{ fontSize: '0.95rem', fontWeight: 800, lineHeight: 1 }}>{t('experts.count')}</span>
-                                        <span style={{ fontSize: '0.75rem', color: 'var(--muted)' }}>{t('experts.status')}</span>
-                                    </div>
-                                </div>
-                                <Link href="/contact" className="btn-secondary" style={{ padding: '0.75rem 1.5rem', fontSize: '0.9rem', height: 'auto' }}>
-                                    {t('experts.cta')}
-                                </Link>
-                            </div>
-                        </div>
-                    </div>
-
-                    {/* Q4: Bottom-Right */}
-                    <div className="grid-2" style={{ gap: '1rem', height: '100%' }}>
-                        <div className="glass-panel" style={{ padding: '1.5rem', borderRadius: '1rem', border: '1px solid var(--card-border)', background: 'var(--bg-surface-2)', display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
-                            <div>
-                                <div style={{ fontSize: '0.65rem', fontWeight: 700, opacity: 0.7, textTransform: 'uppercase', marginBottom: '0.25rem' }}>{t('efficiency')}</div>
-                                <div style={{ fontSize: '1.5rem', fontWeight: 900, color: '#10b981' }}>+245%</div>
-                            </div>
-                            <div style={{ display: 'flex', alignItems: 'flex-end', gap: '3px', height: '60px', width: '100%', marginTop: '0.5rem' }}>
-                                {[35, 45, 30, 60, 75, 50, 80, 100].map((h, i) => (
-                                    <div key={i} style={{ flex: 1, height: `${h}%`, background: i === 7 ? '#10b981' : 'var(--card-border)', borderRadius: '2px 2px 0 0', opacity: i === 7 ? 1 : 0.5 }}></div>
                                 ))}
                             </div>
-                        </div>
-
-                        <div className="glass-panel" style={{ padding: '1.5rem', borderRadius: '1rem', border: '1px solid var(--primary-glow)', background: 'rgba(59, 130, 246, 0.05)', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
-                            <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', marginBottom: '0.75rem' }}>
-                                <div style={{ background: 'var(--primary)', width: '30px', height: '30px', borderRadius: '6px', display: 'flex', alignItems: 'center', justifyContent: 'center', boxShadow: '0 4px 10px rgba(59, 130, 246, 0.4)' }}>
-                                    <Activity size={16} color="white" />
-                                </div>
-                                <div style={{ fontSize: '0.75rem', fontWeight: 800, letterSpacing: '0.05em' }}>{t('impact.label')}</div>
-                            </div>
-                            <p style={{ fontSize: '0.8rem', opacity: 0.9, lineHeight: 1.4, fontWeight: 500 }}>
-                                {t.rich('impact.text', {
-                                    span: (chunks) => <span style={{ color: 'var(--primary-light)', fontWeight: 700 }}>{chunks}</span>
-                                })}
+                            <p style={{ fontSize: '0.8rem', color: 'var(--muted)', marginTop: '1.5rem' }}>
+                                Automated audit scores based on regional data residency and encryption standards across all cloud providers.
                             </p>
                         </div>
                     </div>
@@ -232,36 +183,19 @@ export default function HeroSection() {
             <div style={{
                 width: '100%',
                 borderTop: '1px solid var(--card-border)',
-                borderBottom: '1px solid var(--card-border)',
+                background: 'rgba(2, 6, 23, 0.4)',
+                backdropFilter: 'blur(12px)',
                 padding: '1.5rem 0',
-                background: 'rgba(2, 6, 23, 0.3)',
-                backdropFilter: 'blur(10px)',
-                zIndex: 10,
-                marginTop: '2rem'
+                marginTop: 'auto'
             }}>
-                <div className="container" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '1.5rem' }}>
-                    <div style={{ fontSize: '0.65rem', fontWeight: 800, color: 'var(--muted)', letterSpacing: '0.1em', textTransform: 'uppercase' }}>
-                        {t('trust')}
-                    </div>
-                    <div style={{ display: 'flex', flexWrap: 'wrap', width: '100%', justifyContent: 'center', alignItems: 'center', gap: 'clamp(1rem, 4vw, 3rem)', opacity: 0.5 }}>
-                        <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', fontWeight: 900, fontSize: 'clamp(0.7rem, 2vw, 0.85rem)', whiteSpace: 'nowrap' }}>
-                            <Globe size={16} /> CLOUD_STRAT
-                        </div>
-                        <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', fontWeight: 900, fontSize: 'clamp(0.7rem, 2vw, 0.85rem)', whiteSpace: 'nowrap' }}>
-                            <ShieldAlert size={16} /> SECURE_CAPITAL
-                        </div>
-                        <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', fontWeight: 900, fontSize: 'clamp(0.7rem, 2vw, 0.85rem)', whiteSpace: 'nowrap' }}>
-                            <Activity size={16} /> DATA_CORP
-                        </div>
-                        <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', fontWeight: 900, fontSize: 'clamp(0.7rem, 2vw, 0.85rem)', whiteSpace: 'nowrap' }}>
-                            <CheckCircle size={16} /> GLOBAL_SYS
-                        </div>
-                        <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', fontWeight: 900, fontSize: 'clamp(0.7rem, 2vw, 0.85rem)', whiteSpace: 'nowrap', color: '#e11d48' }}>
-                            <Cpu size={16} /> REDHAT_OCP
-                        </div>
-                        <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', fontWeight: 900, fontSize: 'clamp(0.7rem, 2vw, 0.85rem)', whiteSpace: 'nowrap' }}>
-                            <Layers size={16} /> CORE_INFRA
-                        </div>
+                <div className="container" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '1rem' }}>
+                    <div style={{ fontSize: '0.65rem', fontWeight: 900, color: 'var(--muted)', letterSpacing: '0.2em', textTransform: 'uppercase' }}>{t('trust')}</div>
+                    <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: '3rem', opacity: 0.5 }}>
+                        {[Globe, ShieldAlert, Activity, CheckCircle, Cpu, Layers].map((Icon, i) => (
+                            <div key={i} style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', fontWeight: 900, fontSize: '0.8rem' }}>
+                                <Icon size={16} /> CLIENT_ENTITY_{i + 1}
+                            </div>
+                        ))}
                     </div>
                 </div>
             </div>

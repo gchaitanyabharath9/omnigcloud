@@ -8,17 +8,17 @@ export default function UseCasesPage() {
     const t = useTranslations('UseCases');
 
     return (
-        <div className="main-content">
+        <>
             {/* HERO */}
-            <section className="snap-section" style={{ background: 'var(--bg-surface-2)', borderBottom: '1px solid var(--card-border)' }}>
+            <section className="snap-section" style={{ background: 'var(--bg-surface-2)', borderBottom: '1px solid var(--card-border)', minHeight: 'calc(100vh - var(--header-height) - var(--breadcrumb-height))', display: 'flex', alignItems: 'center' }}>
                 <div className="container">
                     <div className="badge badge-primary-subtle mb-4">
                         <Activity size={14} className="mr-2" /> {t('hero.tag')}
                     </div>
-                    <h1 style={{ fontSize: '4rem', fontWeight: 950, marginBottom: '2rem' }}>
+                    <h1 style={{ fontSize: '3rem', fontWeight: 950, marginBottom: '1.5rem', letterSpacing: '-1.5px' }}>
                         {t('hero.title')}
                     </h1>
-                    <p style={{ fontSize: '1.25rem', opacity: 0.8, maxWidth: '800px', lineHeight: 1.6 }}>
+                    <p style={{ fontSize: '1.1rem', opacity: 0.8, maxWidth: '750px', lineHeight: 1.6 }}>
                         {t('hero.subtitle')}
                     </p>
                 </div>
@@ -42,6 +42,6 @@ export default function UseCasesPage() {
             <section id="sitemap" className="snap-section" style={{ background: 'var(--background)', borderTop: '1px solid var(--card-border)' }}>
                 <Footer />
             </section>
-        </div>
+        </>
     );
 }

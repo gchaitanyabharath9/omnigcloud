@@ -30,9 +30,9 @@ export default function VisualLibraryPage() {
     ];
 
     return (
-        <div className="main-content">
+        <>
             {/* HERO */}
-            <section style={{ padding: '8rem 0 4rem', background: 'var(--bg-surface-2)', borderBottom: '1px solid var(--card-border)' }}>
+            <section style={{ padding: '2rem 0', background: 'var(--bg-surface-2)', borderBottom: '1px solid var(--card-border)', minHeight: 'calc(100vh - var(--header-height) - var(--breadcrumb-height))', display: 'flex', alignItems: 'center' }}>
                 <div className="container">
                     <div className="badge badge-primary-subtle mb-4">
                         <Camera size={14} className="mr-2" /> 4K ARCHITECTURAL CAPTURES
@@ -49,7 +49,7 @@ export default function VisualLibraryPage() {
             {/* GALLERY ITEMS */}
             {items.map((item, idx) => (
                 <section key={item.id} id={item.id} style={{
-                    padding: '8rem 0',
+                    padding: '4rem 0',
                     background: idx % 2 === 0 ? 'transparent' : 'var(--bg-surface-2)',
                     borderBottom: '1px solid var(--card-border)'
                 }}>
@@ -116,6 +116,6 @@ export default function VisualLibraryPage() {
             <section id="sitemap" className="snap-section" style={{ background: 'var(--background)', borderTop: '1px solid var(--card-border)' }}>
                 <Footer />
             </section>
-        </div>
+        </>
     );
 }

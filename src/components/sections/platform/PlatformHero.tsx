@@ -5,7 +5,7 @@ export default function PlatformHero() {
     const t = useTranslations('Platform');
 
     return (
-        <section id="platform-hero" className="snap-section container" style={{ minHeight: '100vh', display: 'flex', flexDirection: 'column', justifyContent: 'center', paddingTop: 'var(--section-pt)', position: 'relative' }}>
+        <section id="platform-hero" className="snap-section container" style={{ minHeight: 'calc(100vh - var(--header-height) - var(--breadcrumb-height))', display: 'flex', flexDirection: 'column', justifyContent: 'center', position: 'relative' }}>
             {/* Background Image */}
             <div style={{
                 position: 'absolute',

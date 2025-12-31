@@ -37,6 +37,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
     zh: 'zh_CN',
     hi: 'hi_IN',
     ja: 'ja_JP',
+    ko: 'ko_KR',
   };
 
   return {
@@ -65,6 +66,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
         'zh': `${siteUrl}/zh`,
         'hi': `${siteUrl}/hi`,
         'ja': `${siteUrl}/ja`,
+        'ko': `${siteUrl}/ko`,
         'x-default': `${siteUrl}/en`,
       },
     },
@@ -147,7 +149,7 @@ export default async function RootLayout({
         >
           <NextIntlClientProvider messages={messages}>
             <Header />
-            <main>
+            <main className="main-content">
               <Breadcrumb />
               {children}
             </main>

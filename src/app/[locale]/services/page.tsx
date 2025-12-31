@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 
 export default function ServicesPage() {
     return (
-        <div className="main-content">
+        <>
             <ServicesHero />
             <CloudFactorySection />
             <AutomationStackSection />
@@ -24,7 +24,6 @@ export default function ServicesPage() {
             <section id="sitemap" className="snap-section" style={{ background: 'var(--background)', borderTop: '1px solid var(--card-border)' }}>
                 <Footer />
             </section>
-
-        </div>
+        </>
     );
 }

@@ -11,11 +11,10 @@ export const metadata: Metadata = {
 
 export default function DocsPage() {
     return (
-        <div className="main-content">
-            <section className="snap-section" style={{ minHeight: '80vh' }}>
+        <>
+            <section className="snap-section" style={{ minHeight: '80vh', display: 'flex', alignItems: 'center', paddingTop: '1rem' }}>
                 <div className="container">
-                    <div style={{ marginBottom: '1rem', paddingTop: '2rem' }}></div>
-                    <div style={{ display: 'grid', gridTemplateColumns: '220px 1fr', gap: '3rem', paddingTop: '80px' }}>
+                    <div style={{ display: 'grid', gridTemplateColumns: '220px 1fr', gap: '3rem', paddingTop: '20px' }}>
                         {/* Sidebar */}
                         <aside style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
                             <div>
@@ -68,7 +67,7 @@ export default function DocsPage() {
                             </div>
 
                             <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem', marginBottom: '1.5rem' }}>
-                                <div className="glass-panel" style={{ padding: '1.25rem', borderRadius: '1.25rem' }}>
+                                <div id="architecture" className="glass-panel" style={{ padding: '1.25rem', borderRadius: '1.25rem', scrollMarginTop: '120px' }}>
                                     <div style={{ background: 'var(--primary-glow)', padding: '0.5rem', borderRadius: '0.5rem', display: 'inline-block', marginBottom: '0.75rem' }}>
                                         <Layers size={18} color="var(--primary)" />
                                     </div>
@@ -81,7 +80,7 @@ export default function DocsPage() {
                                         View Patterns <ChevronRight size={14} />
                                     </Link>
                                 </div>
-                                <div className="glass-panel" style={{ padding: '1.25rem', borderRadius: '1.25rem' }}>
+                                <div id="whitepaper" className="glass-panel" style={{ padding: '1.25rem', borderRadius: '1.25rem', scrollMarginTop: '120px' }}>
                                     <div style={{ background: 'var(--primary-glow)', padding: '0.5rem', borderRadius: '0.5rem', display: 'inline-block', marginBottom: '0.75rem' }}>
                                         <Award size={18} color="var(--primary)" />
                                     </div>
@@ -97,7 +96,7 @@ export default function DocsPage() {
                             </div>
 
                             <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem' }}>
-                                <div className="glass-panel" style={{ padding: '1.25rem', borderRadius: '1.25rem' }}>
+                                <div id="guide" className="glass-panel" style={{ padding: '1.25rem', borderRadius: '1.25rem', scrollMarginTop: '120px' }}>
                                     <div style={{ background: 'var(--primary-glow)', padding: '0.5rem', borderRadius: '0.5rem', display: 'inline-block', marginBottom: '0.75rem' }}>
                                         <Zap size={18} color="var(--primary)" />
                                     </div>
@@ -110,7 +109,7 @@ export default function DocsPage() {
                                         Read Guide <ChevronRight size={14} />
                                     </Link>
                                 </div>
-                                <div className="glass-panel" style={{ padding: '1.25rem', borderRadius: '1.25rem' }}>
+                                <div id="api" className="glass-panel" style={{ padding: '1.25rem', borderRadius: '1.25rem', scrollMarginTop: '120px' }}>
                                     <div style={{ background: 'var(--primary-glow)', padding: '0.5rem', borderRadius: '0.5rem', display: 'inline-block', marginBottom: '0.75rem' }}>
                                         <Code size={18} color="var(--primary)" />
                                     </div>
@@ -143,6 +142,6 @@ export default function DocsPage() {
             <section id="sitemap" className="snap-section" style={{ minHeight: 'auto', background: 'var(--background)', borderTop: '1px solid var(--card-border)', paddingTop: '2.5rem' }}>
                 <Footer />
             </section>
-        </div>
+        </>
     );
 }

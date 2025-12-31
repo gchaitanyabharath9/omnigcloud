@@ -4,7 +4,7 @@ import { useTranslations } from 'next-intl';
 export default function DemoSection() {
     const t = useTranslations('DemoSection');
     return (
-        <section id="demo" className="snap-section">
+        <section id="demo" className="snap-section" style={{ minHeight: '100vh' }}>
             <div className="container">
                 <div className="section-title-group">
                     <div style={{ color: 'var(--primary)', fontWeight: 900, fontSize: '0.75rem', textTransform: 'uppercase', marginBottom: '0.5rem', letterSpacing: '0.15em' }}>{t('badge')}</div>

@@ -2,48 +2,153 @@
 
 ## Supported Versions
 
-Sovereign Modernization Engine (OmniGCloud) follows a rigorous security-first development lifecycle. We currently support the following versions for security updates:
+We release security updates for the following versions:
 
 | Version | Supported          |
 | ------- | ------------------ |
-| v0.1.x  | :white_check_mark: |
-| < v0.1  | :x:                |
+| 0.1.x   | :white_check_mark: |
 
 ## Reporting a Vulnerability
 
-As an **EB-1A Scholarly Initiative**, we take the integrity of the G-Framework seriously. We are committed to protecting the digital sovereignty of our users.
+We take the security of OmniGCloud seriously. If you believe you have found a security vulnerability, please report it to us as described below.
 
-If you discover a security vulnerability within the G-Framework or the OmniGCloud platform, please report it immediately:
+### Please Do NOT:
 
-1. **Do not open a public Issue.**
-2. Email your discovery to `security@omnigcloud.com`.
-3. Provide a detailed summary, including steps to reproduce and a proof-of-concept (PoC) if applicable.
+- Open a public GitHub issue
+- Disclose the vulnerability publicly before we've had a chance to address it
+- Exploit the vulnerability beyond what is necessary to demonstrate it
 
-We will acknowledge receipt of your report within 48 hours and provide a timeline for remediation.
+### Please DO:
 
-## Security Headers & Policies
+1. **Email us directly** at: security@omnigcloud.com
+2. **Include the following information**:
+   - Type of vulnerability (e.g., XSS, CSRF, SQL injection, etc.)
+   - Full paths of source file(s) related to the vulnerability
+   - Location of the affected source code (tag/branch/commit or direct URL)
+   - Step-by-step instructions to reproduce the issue
+   - Proof-of-concept or exploit code (if possible)
+   - Impact of the vulnerability and how an attacker might exploit it
 
-The following enterprise-grade security headers are enforced across all routes in `next.config.ts`:
+### What to Expect:
 
-- **Content-Security-Policy (CSP)**: Implements a strict policy allowing only trusted sources for scripts, styles, and assets. Includes `frame-ancestors 'self'` to prevent clickjacking.
-- **Strict-Transport-Security (HSTS)**: Enforced for 2 years (`max-age=63072000`) including subdomains and preloading.
-- **X-Content-Type-Options**: Set to `nosniff` to prevent MIME-type sniffing.
-- **X-Frame-Options**: Set to `SAMEORIGIN` (layered with CSP `frame-ancestors`).
-- **Referrer-Policy**: Set to `strict-origin-when-cross-origin` to protect user privacy.
-- **Permissions-Policy**: Restricts access to sensitive browser features (camera, microphone, etc.).
+- **Initial Response**: Within 48 hours, we will acknowledge receipt of your report
+- **Status Updates**: We will keep you informed about our progress
+- **Disclosure Timeline**: We aim to address critical vulnerabilities within 7 days
+- **Credit**: With your permission, we will credit you in our security advisories
 
-## Cookie Security
+### Disclosure Policy:
 
-All application cookies follow these mandatory security attributes:
-- **HttpOnly**: Prevents client-side scripts from accessing the cookie.
-- **Secure**: Ensures cookies are only transmitted over encrypted (HTTPS) connections.
-- **SameSite=Strict/Lax**: Protects against Cross-Site Request Forgery (CSRF) attacks.
+- We follow a **coordinated disclosure** approach
+- We will work with you to understand and resolve the issue
+- We will publicly disclose the vulnerability after a fix is released
+- We typically allow 90 days for fixes before public disclosure
 
-## Our Security Architecture
+## Security Update Process
 
-The platform architecture implements the **Sovereign Security Mesh (SSM)**, including:
-- **Zero-Trust Logic**: Mandatory verification for all cross-cloud intents.
-- **Deceptive Ingestion**: Intelligent shielding against prompt injection and model abuse.
-- **Atomic State Sovereignty**: Cryptographically signed infrastructure manifests.
+When a security vulnerability is identified:
 
-Thank you for helping us maintain the world's most resilient multi-cloud control plane.
+1. **Assessment**: We assess the severity and impact
+2. **Fix Development**: We develop and test a fix
+3. **Release**: We release a security update
+4. **Notification**: We notify affected users via:
+   - GitHub Security Advisories
+   - Email notifications
+   - Release notes
+
+## Security Best Practices
+
+When using OmniGCloud, please follow these security best practices:
+
+### Environment Variables
+
+- ✅ Never commit `.env` files to version control
+- ✅ Use strong, randomly generated secrets
+- ✅ Rotate secrets regularly
+- ✅ Never use `NEXT_PUBLIC_` prefix for secrets
+- ✅ See `docs/secrets-hygiene.md` for details
+
+### Authentication
+
+- ✅ Use strong passwords (minimum 12 characters)
+- ✅ Enable multi-factor authentication (MFA)
+- ✅ Rotate API keys regularly
+- ✅ Use least-privilege access principles
+
+### API Security
+
+- ✅ Always validate input on the server-side
+- ✅ Use HTTPS in production
+- ✅ Implement rate limiting
+- ✅ Monitor for suspicious activity
+
+### Dependencies
+
+- ✅ Keep dependencies up to date
+- ✅ Review Dependabot alerts promptly
+- ✅ Run `npm audit` regularly
+- ✅ Only use trusted packages
+
+## Known Security Features
+
+OmniGCloud implements the following security measures:
+
+### HTTP Security Headers
+- ✅ Strict-Transport-Security (HSTS)
+- ✅ Content-Security-Policy (CSP)
+- ✅ X-Content-Type-Options
+- ✅ Referrer-Policy
+- ✅ Permissions-Policy
+
+### API Protection
+- ✅ CSRF token validation
+- ✅ Rate limiting (endpoint-specific)
+- ✅ Input validation (Zod schemas)
+- ✅ Request size limits
+- ✅ Honeypot bot detection
+- ✅ Time-to-submit heuristics
+
+### Data Protection
+- ✅ Secure logging (no PII/secrets)
+- ✅ Safe error handling (no stack traces)
+- ✅ httpOnly cookies
+- ✅ SameSite cookie protection
+
+### Build-Time Security
+- ✅ Secrets hygiene validation
+- ✅ Dependency vulnerability scanning
+- ✅ TypeScript type checking
+
+## Security Audits
+
+We conduct regular security audits:
+
+- **Automated**: Daily via CI/CD pipeline
+- **Dependency Scanning**: Weekly via Dependabot
+- **Manual Review**: Quarterly by security team
+- **Penetration Testing**: Annually by third-party
+
+## Compliance
+
+OmniGCloud is designed to help meet:
+
+- **OWASP Top 10**: Protection against common vulnerabilities
+- **PCI DSS**: Secure handling of payment data
+- **SOC 2**: Security and availability controls
+- **GDPR**: Data protection and privacy
+
+## Security Contacts
+
+- **Security Issues**: security@omnigcloud.com
+- **General Support**: support@omnigcloud.com
+- **Bug Reports**: GitHub Issues (for non-security bugs)
+
+## Hall of Fame
+
+We recognize security researchers who responsibly disclose vulnerabilities:
+
+<!-- Security researchers will be listed here -->
+
+---
+
+**Last Updated**: 2025-12-30  
+**Version**: 1.0

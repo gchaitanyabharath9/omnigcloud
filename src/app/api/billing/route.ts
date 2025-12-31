@@ -1,6 +1,6 @@
 import { NextRequest } from 'next/server';
 import { z } from 'zod';
-import { withApiHarden, createSuccessResponse, createErrorResponse } from '@/lib/api-utils';
+import { withApiHarden, createSuccessResponse, createErrorResponse, handleZodError } from '@/lib/api-utils';
 
 const BillingSchema = z.object({
     vms: z.number().min(0),
@@ -15,12 +15,7 @@ export async function POST(request: NextRequest) {
             const validation = BillingSchema.safeParse(body);
 
             if (!validation.success) {
-                return createErrorResponse(
-                    requestId,
-                    'INVALID_PAYLOAD',
-                    'Invalid billing parameters',
-                    validation.error.format()
-                );
+                return handleZodError(validation.error, requestId);
             }
 
             const { vms, storage, gpuUnits } = validation.data;

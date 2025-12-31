@@ -1,12 +1,12 @@
 import React from 'react';
-import { Award, BookOpen, Quote, ChevronRight, Download, Share2, Printer } from 'lucide-react';
+import { Award, BookOpen, Quote, ChevronRight, Download, Share2, Printer, Home, ArrowLeft } from 'lucide-react';
 import Link from 'next/link';
 
 export default function WhitePaperPage() {
     return (
-        <div className="main-content" style={{ background: '#f8fafc', color: '#1e293b' }}>
+        <div style={{ background: 'var(--background)', color: 'var(--foreground)' }}>
             {/* SCHOLARLY HEADER */}
-            <header style={{ padding: '6rem 0', background: 'white', borderBottom: '1px solid #e2e8f0' }}>
+            <header style={{ padding: '2rem 0', background: 'var(--bg-surface-2)', borderBottom: '1px solid var(--card-border)', minHeight: 'calc(100vh - var(--header-height) - var(--breadcrumb-height))', display: 'flex', alignItems: 'center' }}>
                 <div className="container" style={{ maxWidth: '900px' }}>
                     <div style={{ display: 'flex', justifyContent: 'center', marginBottom: '3rem' }}>
                         <div style={{ background: '#3b82f6', color: 'white', padding: '0.5rem 1.5rem', borderRadius: '2rem', fontSize: '0.75rem', fontWeight: 900, textTransform: 'uppercase', letterSpacing: '0.2em' }}>
@@ -14,12 +14,12 @@ export default function WhitePaperPage() {
                         </div>
                     </div>
 
-                    <h1 style={{ fontSize: '3rem', fontWeight: 800, textAlign: 'center', lineHeight: 1.2, marginBottom: '2rem', color: '#0f172a' }}>
+                    <h1 style={{ fontSize: '3rem', fontWeight: 800, textAlign: 'center', lineHeight: 1.2, marginBottom: '2rem', color: 'var(--foreground)' }}>
                         Autonomous Sovereign Orchestration (ASO): <br />
-                        <span style={{ fontWeight: 400, color: '#64748b' }}>A Formal Framework for AI-Driven Cloud-Agnostic Governance</span>
+                        <span style={{ fontWeight: 400, color: 'var(--muted)' }}>A Formal Framework for AI-Driven Cloud-Agnostic Governance</span>
                     </h1>
 
-                    <div style={{ display: 'flex', justifyContent: 'center', gap: '3rem', fontSize: '0.9rem', color: '#64748b', borderTop: '1px solid #f1f5f9', borderBottom: '1px solid #f1f5f9', padding: '1.5rem 0' }}>
+                    <div style={{ display: 'flex', justifyContent: 'center', gap: '3rem', fontSize: '0.9rem', color: 'var(--muted)', borderTop: '1px solid var(--card-border)', borderBottom: '1px solid var(--card-border)', padding: '1.5rem 0' }}>
                         <div><strong>Author:</strong> OmniGCloud Research</div>
                         <div><strong>Date:</strong> 2024-2025</div>
                         <div><strong>Journal:</strong> IJDSCE Vol. 14</div>
@@ -28,7 +28,7 @@ export default function WhitePaperPage() {
             </header>
 
             {/* PAPER CONTENT */}
-            <main style={{ padding: '6rem 0' }}>
+            <main style={{ padding: '4rem 0' }}>
                 <div className="container" style={{ maxWidth: '850px', background: 'white', padding: '5rem', borderRadius: '1rem', boxShadow: '0 40px 100px -20px rgba(0,0,0,0.05)', border: '1px solid #e2e8f0' }}>
 
                     {/* ABSTRACT */}
@@ -124,7 +124,7 @@ export default function WhitePaperPage() {
             </main>
 
             {/* CTA FOOTER */}
-            <section style={{ padding: '6rem 0', background: 'white' }}>
+            <section style={{ padding: '4rem 0', background: 'white' }}>
                 <div className="container text-center">
                     <h2 style={{ fontSize: '2.5rem', fontWeight: 800, marginBottom: '2rem' }}>Adopt the Sovereign Standard</h2>
                     <div style={{ display: 'flex', justifyContent: 'center', gap: '2rem' }}>

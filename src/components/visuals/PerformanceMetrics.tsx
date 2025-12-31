@@ -5,11 +5,16 @@ import React from 'react';
 // 19. Auto-Scaling Events
 export const AutoScalingEvents = () => {
     const hours = Array.from({ length: 24 }, (_, i) => i);
-    const events = hours.map(h => {
-        if (h >= 8 && h <= 18) return Math.floor(Math.random() * 15) + 5;
-        return Math.floor(Math.random() * 5);
-    });
-    const maxEvents = Math.max(...events);
+    const [events, setEvents] = React.useState(() => hours.map(() => 0)); // Initialize with zeros
+    const maxEvents = Math.max(...events, 1); // Prevent division by zero
+
+    React.useEffect(() => {
+        // Generate random events only after mount (client-side only)
+        setEvents(hours.map(h => {
+            if (h >= 8 && h <= 18) return Math.floor(Math.random() * 15) + 5;
+            return Math.floor(Math.random() * 5);
+        }));
+    }, []); // Run once after mount
 
     return (
         <div style={{ width: '100%', height: '100%', display: 'flex', alignItems: 'flex-end', gap: '0.15rem', padding: '0.5rem 0' }}>

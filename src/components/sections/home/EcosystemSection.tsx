@@ -1,4 +1,4 @@
-import { ShieldAlert, Globe, CpuIcon, Database, ArrowRight, Activity, Server, Lock } from 'lucide-react';
+import { ShieldAlert, Globe, CpuIcon, Database, ArrowRight, Activity, Server, Lock, CheckCircle, Award } from 'lucide-react';
 import Link from 'next/link';
 import { useTranslations } from 'next-intl';
 import Image from 'next/image';
@@ -7,7 +7,7 @@ export default function EcosystemSection() {
     const t = useTranslations('Ecosystem');
 
     return (
-        <section id="ecosystem" className="snap-section" style={{ background: 'var(--background)', position: 'relative', overflow: 'hidden' }}>
+        <section id="ecosystem" className="snap-section" style={{ background: 'var(--background)', position: 'relative', overflow: 'hidden', paddingTop: '1rem', paddingBottom: '3rem' }}>
             {/* Background Map Image - Optimized with next/image */}
             <div className="bg-cover-overlay" style={{ opacity: 0.15 }}>
                 <Image
@@ -25,13 +25,13 @@ export default function EcosystemSection() {
                     <div className="badge badge-primary-subtle mb-2">
                         <Activity size={14} /> {t('badge')}
                     </div>
-                    <h2 className="mb-1" style={{ fontSize: 'clamp(2rem, 5vw, 2.5rem)', fontWeight: 900 }}>{t('title')}</h2>
+                    <h2 className="mb-1" style={{ fontSize: 'clamp(1.8rem, 4vw, 2.2rem)', fontWeight: 900 }}>{t('title')}</h2>
                     <p className="text-section-lead" style={{ maxWidth: '800px', fontSize: '0.9rem', marginBottom: '0.5rem' }}>
                         {t('subtitle')}
                     </p>
                 </div>
 
-                <div className="grid-2x2-strict" style={{ gap: '0.75rem' }}>
+                <div className="grid-2x2-strict" style={{ gap: '0.75rem', marginBottom: '3rem' }}>
                     {/* 1. Governance Hub */}
                     <div className="glass-panel" style={{ padding: '1.25rem', display: 'flex', flexDirection: 'column', height: '100%', borderTop: '4px solid var(--primary)' }}>
                         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: '0.25rem' }}>
@@ -109,6 +109,59 @@ export default function EcosystemSection() {
                             <Link href="/platform/data" style={{ textDecoration: 'none', color: '#2dd4bf', fontWeight: 700, display: 'flex', alignItems: 'center', gap: '0.4rem', fontSize: '0.7rem' }}>
                                 {t('vault.link')} <ArrowRight size={12} />
                             </Link>
+                        </div>
+                    </div>
+                </div>
+
+                {/* Integrations & Partners */}
+                <div style={{ marginBottom: '3rem' }}>
+                    <h3 style={{ fontSize: '1.5rem', fontWeight: 900, marginBottom: '1.5rem', textAlign: 'center' }}>
+                        Trusted Integrations & Partners
+                    </h3>
+                    <div className="glass-panel" style={{ padding: '2rem', borderRadius: '1.5rem' }}>
+                        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(150px, 1fr))', gap: '2rem', alignItems: 'center' }}>
+                            {['AWS', 'Azure', 'GCP', 'Oracle Cloud', 'HashiCorp', 'RedHat', 'VMware', 'Cisco'].map((partner) => (
+                                <div key={partner} style={{
+                                    textAlign: 'center',
+                                    padding: '1rem',
+                                    fontWeight: 700,
+                                    fontSize: '1.1rem',
+                                    opacity: 0.6,
+                                    transition: 'opacity 0.2s',
+                                    cursor: 'pointer'
+                                }}>
+                                    {partner}
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+                </div>
+
+                {/* Deployment Stats */}
+                <div>
+                    <h3 style={{ fontSize: '1.5rem', fontWeight: 900, marginBottom: '1.5rem', textAlign: 'center' }}>
+                        Global Deployment Statistics
+                    </h3>
+                    <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '1.5rem' }}>
+                        <div className="glass-panel" style={{ padding: '2rem', borderRadius: '1.5rem', textAlign: 'center' }}>
+                            <CheckCircle size={28} color="#10b981" style={{ margin: '0 auto 1rem' }} />
+                            <div style={{ fontSize: '2.5rem', fontWeight: 950, color: 'var(--primary)' }}>450+</div>
+                            <div style={{ fontSize: '0.9rem', opacity: 0.6 }}>Active Deployments</div>
+                        </div>
+                        <div className="glass-panel" style={{ padding: '2rem', borderRadius: '1.5rem', textAlign: 'center' }}>
+                            <Server size={28} color="#3b82f6" style={{ margin: '0 auto 1rem' }} />
+                            <div style={{ fontSize: '2.5rem', fontWeight: 950, color: 'var(--primary)' }}>12.5K</div>
+                            <div style={{ fontSize: '0.9rem', opacity: 0.6 }}>Cloud Accounts Managed</div>
+                        </div>
+                        <div className="glass-panel" style={{ padding: '2rem', borderRadius: '1.5rem', textAlign: 'center' }}>
+                            <Lock size={28} color="#8b5cf6" style={{ margin: '0 auto 1rem' }} />
+                            <div style={{ fontSize: '2.5rem', fontWeight: 950, color: 'var(--primary)' }}>99.98%</div>
+                            <div style={{ fontSize: '0.9rem', opacity: 0.6 }}>Compliance Rate</div>
+                        </div>
+                        <div className="glass-panel" style={{ padding: '2rem', borderRadius: '1.5rem', textAlign: 'center' }}>
+                            <Award size={28} color="#f59e0b" style={{ margin: '0 auto 1rem' }} />
+                            <div style={{ fontSize: '2.5rem', fontWeight: 950, color: 'var(--primary)' }}>45</div>
+                            <div style={{ fontSize: '0.9rem', opacity: 0.6 }}>Countries</div>
                         </div>
                     </div>
                 </div>

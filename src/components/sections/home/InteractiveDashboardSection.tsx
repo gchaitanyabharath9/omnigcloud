@@ -1,90 +1,116 @@
 "use client";
 
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { useTranslations } from 'next-intl';
-import { Activity, ShieldCheck, TrendingUp, Zap } from 'lucide-react';
-import { ROIGauge, CostSavingsChart, UptimeRing, SecurityScoreMeter } from '@/components/visuals/MetricsGraphs';
+import { Activity, ShieldCheck, TrendingUp, Zap, BarChart3, Cloud } from 'lucide-react';
+import { LiveROIGauge, EnhancedCostSavingsChart, PulsingSecurityScore } from '@/components/visuals/EnhancedGraphs';
+import { UptimeRing } from '@/components/visuals/MetricsGraphs';
+import { LatencyLineChart, CloudDistributionPie, RequestVolumeBar, ComplianceScoresBar } from '@/components/charts/SimpleCharts';
 
 export default function InteractiveDashboardSection() {
     const t = useTranslations('Dashboard');
+    const [isMounted, setIsMounted] = useState(false);
+
+    useEffect(() => {
+        setIsMounted(true);
+    }, []);
 
     return (
-        <section className="snap-section" style={{ background: 'var(--bg-surface-2)' }}>
+        <section className="snap-section" style={{ background: 'var(--bg-surface-2)', paddingTop: '0.5rem', paddingBottom: '0.5rem', minHeight: 'calc(100vh - var(--header-height) - var(--breadcrumb-height))', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
             <div className="container">
-                <div style={{ textAlign: 'center', marginBottom: '2.5rem' }}>
-                    <div className="badge badge-primary-subtle mb-3" style={{ fontSize: '0.6rem', letterSpacing: '0.1em' }}>
+                <div style={{ textAlign: 'center', marginBottom: '1rem' }}>
+                    <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-xs font-bold mb-3 uppercase tracking-wider backdrop-blur-sm">
+                        <Activity size={12} className="animate-pulse" />
                         {t('badge')}
                     </div>
-                    <h2 style={{ fontSize: 'var(--h2-size)', fontWeight: 800, marginBottom: '0.5rem', letterSpacing: '-0.05em' }}>
+                    <h2 className="text-3xl md:text-4xl font-black mb-2 tracking-tight gradient-text-primary">
                         {t('liveTitle')}
                     </h2>
-                    <p style={{ opacity: 0.7, maxWidth: '750px', margin: '0 auto', fontSize: '0.95rem', lineHeight: '1.5' }}>
+                    <p className="text-muted-foreground text-sm max-w-2xl mx-auto leading-relaxed">
                         {t('liveSubtitle')}
                     </p>
                 </div>
 
-                <div className="grid-2x2-strict" style={{ gap: '1rem', gridTemplateRows: 'repeat(2, minmax(280px, auto))' }}>
-                    {/* Panel 1: ROI Gauge */}
-                    <div className="glass-panel" style={{ padding: '1.5rem', borderRadius: '1.5rem', display: 'flex', flexDirection: 'column' }}>
-                        <div className="flex justify-between items-start mb-4">
+                {/* 2x2 Grid with mix of Content, Charts, and Images */}
+                <div style={{
+                    display: 'grid',
+                    gridTemplateColumns: 'repeat(2, 1fr)',
+                    gap: '1rem'
+                }}>
+                    {/* TOP LEFT: ROI & PERFORMANCE (Chart mix) */}
+                    <div className="glass-panel" style={{ padding: '1.25rem', borderRadius: '1.5rem', display: 'flex', flexDirection: 'column', minHeight: '260px' }}>
+                        <div className="flex justify-between items-start mb-2">
                             <div>
-                                <h4 style={{ margin: 0, fontSize: '1rem', fontWeight: 900 }}>Return on Investment</h4>
-                                <p style={{ fontSize: '0.7rem', opacity: 0.5, margin: 0 }}>Average ROI across all deployments</p>
+                                <h4 style={{ margin: 0, fontSize: '1rem', fontWeight: 900 }}>{t('roiTitle')}</h4>
+                                <p style={{ fontSize: '0.75rem', opacity: 0.6, margin: 0 }}>{t('roiSubtitle')}</p>
                             </div>
-                            <div className="badge badge-success-subtle" style={{ fontSize: '0.6rem' }}>
-                                <TrendingUp size={10} className="mr-1" /> GROWING
-                            </div>
+                            <TrendingUp size={16} color="var(--primary)" />
                         </div>
-                        <div style={{ flex: 1, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                            <ROIGauge value={342} />
+                        <div style={{ flex: 1, display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem', alignItems: 'center' }}>
+                            <div style={{ height: '140px' }}>
+                                {isMounted && <LiveROIGauge value={342} />}
+                            </div>
+                            <div>
+                                <LatencyLineChart height={110} />
+                            </div>
                         </div>
                     </div>
 
-                    {/* Panel 2: Cost Savings */}
-                    <div className="glass-panel" style={{ padding: '1.5rem', borderRadius: '1.5rem', display: 'flex', flexDirection: 'column' }}>
-                        <div className="flex justify-between items-start mb-4">
-                            <div>
-                                <h4 style={{ margin: 0, fontSize: '1rem', fontWeight: 900 }}>Monthly Cost Savings</h4>
-                                <p style={{ fontSize: '0.7rem', opacity: 0.5, margin: 0 }}>Infrastructure optimization impact</p>
+                    {/* TOP RIGHT: SYSTEM ARCHITECTURE (Image mix) */}
+                    <div className="glass-panel" style={{ padding: '1.25rem', borderRadius: '1.5rem', overflow: 'hidden', position: 'relative', minHeight: '260px' }}>
+                        <img
+                            src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=800"
+                            alt="Data Center"
+                            style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', objectFit: 'cover', opacity: 0.4 }}
+                        />
+                        <div style={{ position: 'relative', zIndex: 2 }}>
+                            <h4 style={{ margin: 0, fontSize: '1rem', fontWeight: 950, textShadow: '0 2px 4px rgba(0,0,0,0.5)' }}>{t('infraTitle')}</h4>
+                            <p style={{ fontSize: '0.75rem', opacity: 0.9, marginTop: '0.25rem', fontWeight: 600 }}>{t('infraSubtitle')}</p>
+                            <div style={{ marginTop: '5rem', background: 'rgba(0,0,0,0.6)', backdropFilter: 'blur(8px)', padding: '0.75rem', borderRadius: '0.75rem', border: '1px solid rgba(255,255,255,0.1)' }}>
+                                <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '0.25rem' }}>
+                                    <span style={{ fontSize: '0.7rem' }}>{t('globalHealth')}</span>
+                                    <span style={{ fontSize: '0.7rem', color: '#10b981' }}>99.999%</span>
+                                </div>
+                                <div style={{ height: '4px', background: 'rgba(255,255,255,0.1)', borderRadius: '2px', overflow: 'hidden' }}>
+                                    <div style={{ width: '99%', height: '100%', background: '#10b981' }} />
+                                </div>
                             </div>
-                            <Zap size={20} color="var(--color-warning)" />
-                        </div>
-                        <div style={{ flex: 1, minHeight: '180px' }}>
-                            <CostSavingsChart />
-                        </div>
-                        <div style={{ fontSize: '0.7rem', background: 'rgba(16, 185, 129, 0.05)', padding: '0.75rem', borderRadius: '0.75rem', border: '1px solid rgba(16, 185, 129, 0.1)', color: '#10b981', display: 'flex', alignItems: 'center', gap: '0.5rem', marginTop: '1rem' }}>
-                            <div className="animate-pulse" style={{ width: 6, height: 6, background: '#10b981', borderRadius: '50%' }}></div>
-                            $45K SAVED THIS MONTH • 275% INCREASE YOY
                         </div>
                     </div>
 
-                    {/* Panel 3: Uptime */}
-                    <div className="glass-panel" style={{ padding: '1.5rem', borderRadius: '1.5rem', display: 'flex', flexDirection: 'column' }}>
-                        <div className="flex justify-between items-start mb-4">
+                    {/* BOTTOM LEFT: COST & DISTRIBUTION (Mixed charts) */}
+                    <div className="glass-panel" style={{ padding: '1.25rem', borderRadius: '1.5rem', display: 'flex', flexDirection: 'column', minHeight: '260px' }}>
+                        <div className="flex justify-between items-start mb-2">
                             <div>
-                                <h4 style={{ margin: 0, fontSize: '1rem', fontWeight: 900 }}>Platform Uptime</h4>
-                                <p style={{ fontSize: '0.7rem', opacity: 0.5, margin: 0 }}>Last 30 days availability</p>
+                                <h4 style={{ margin: 0, fontSize: '1rem', fontWeight: 900 }}>{t('optimizationTitle')}</h4>
                             </div>
-                            <div className="badge badge-success-subtle" style={{ fontSize: '0.6rem' }}>
-                                <Activity size={10} className="mr-1" /> LIVE_SYNC
-                            </div>
+                            <Zap size={16} color="var(--color-warning)" />
                         </div>
-                        <div style={{ flex: 1, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                            <UptimeRing uptime={99.99} />
+                        <div style={{ flex: 1, display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem' }}>
+                            <div>
+                                {isMounted && <CloudDistributionPie height={110} />}
+                            </div>
+                            <div>
+                                {isMounted && <EnhancedCostSavingsChart height={110} />}
+                            </div>
                         </div>
                     </div>
 
-                    {/* Panel 4: Security Score */}
-                    <div className="glass-panel" style={{ padding: '1.5rem', borderRadius: '1.5rem', display: 'flex', flexDirection: 'column', background: 'linear-gradient(180deg, rgba(30, 41, 59, 0.4) 0%, rgba(2, 6, 23, 0.8) 100%)' }}>
-                        <div className="flex justify-between items-start mb-4">
+                    {/* BOTTOM RIGHT: SECURITY & COMPLIANCE (Metrics mix) */}
+                    <div className="glass-panel" style={{ padding: '1.25rem', borderRadius: '1.5rem', display: 'flex', flexDirection: 'column', minHeight: '260px' }}>
+                        <div className="flex justify-between items-start mb-2">
                             <div>
-                                <h4 style={{ margin: 0, fontSize: '1rem', fontWeight: 900 }}>Security Posture</h4>
-                                <p style={{ fontSize: '0.7rem', opacity: 0.5, margin: 0 }}>Compliance & threat protection</p>
+                                <h4 style={{ margin: 0, fontSize: '1rem', fontWeight: 900 }}>{t('trustTitle')}</h4>
                             </div>
-                            <ShieldCheck size={20} color="var(--color-success)" />
+                            <ShieldCheck size={16} color="var(--color-success)" />
                         </div>
-                        <div style={{ flex: 1, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                            <SecurityScoreMeter score={94} />
+                        <div style={{ flex: 1, display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem', alignItems: 'start' }}>
+                            <div style={{ height: '140px' }}>
+                                {isMounted && <PulsingSecurityScore score={94} />}
+                            </div>
+                            <div>
+                                {isMounted && <ComplianceScoresBar height={110} />}
+                            </div>
                         </div>
                     </div>
                 </div>

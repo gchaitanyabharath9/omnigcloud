@@ -1,103 +1,75 @@
-import { useTranslations } from 'next-intl';
-import { Cpu } from 'lucide-react';
+import { useTranslations, useLocale } from 'next-intl';
+import { Cpu, ArrowRight } from 'lucide-react';
 import Link from 'next/link';
-import Grid2x2Section from '@/components/layout/Grid2x2Section';
 import { PRODUCTS } from '@/data/products';
 import Footer from '@/components/Footer';
-import { DeploymentFrequency, ResourceUtilization } from '@/components/visuals/MetricsGraphs';
-import { MultiCloudDistribution } from '@/components/visuals/AdvancedMetrics';
-import { ContainerEfficiency } from '@/components/visuals/PerformanceMetrics';
+import ProductScroller from '@/components/products/ProductScroller';
+import {
+    LatencyLineChart,
+    CloudDistributionPie,
+    UptimeTrend,
+    ErrorRateArea,
+    FeatureUsageBar,
+    ComplianceScoresBar
+} from '@/components/charts/SimpleCharts';
 
 export default function ProductsPage() {
     const t = useTranslations('Products');
+    const locale = useLocale();
 
     return (
-        <div className="main-content">
+        <>
             {/* HERO */}
-            <section className="snap-section" style={{ background: 'var(--bg-surface-2)', borderBottom: '1px solid var(--card-border)' }}>
-                <div className="container">
-                    <div className="badge badge-primary-subtle mb-4">
-                        <Cpu size={14} className="mr-2" /> {t('hero.tag')}
+            <section className="relative w-full flex items-center justify-center overflow-hidden border-b border-white/10" style={{ minHeight: 'calc(100vh - var(--header-height) - var(--breadcrumb-height))' }}>
+                {/* Background Visual */}
+                <div className="absolute inset-0 z-0 select-none pointer-events-none">
+                    <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/60 to-black z-10" />
+                    <img
+                        src="https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=2070&auto=format&fit=crop"
+                        alt="Product Suite"
+                        className="w-full h-full object-cover opacity-40"
+                    />
+                    <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-20" />
+                </div>
+
+                <div className="container relative z-10 flex flex-col items-center py-20">
+                    <div className="animate-fade-in-up" style={{ animationDelay: '0.1s' }}>
+                        <div className="badge badge-primary-subtle mb-4">
+                            <Cpu size={14} className="mr-2" /> {t('hero.tag')}
+                        </div>
                     </div>
-                    <h1 style={{ fontSize: '4rem', fontWeight: 950, marginBottom: '2rem', lineHeight: '1.05' }}>
+                    <h1 className="text-center animate-fade-in-up" style={{
+                        fontSize: '4.5rem',
+                        fontWeight: 950,
+                        marginBottom: '1rem',
+                        letterSpacing: '-2px',
+                        lineHeight: 1.1,
+                        color: 'white',
+                        textShadow: '0 0 40px rgba(255,255,255,0.1)',
+                        animationDelay: '0.2s'
+                    }}>
                         {t('hero.title')}
                     </h1>
-                    <p style={{ fontSize: '1.4rem', opacity: 0.7, maxWidth: '800px', lineHeight: 1.6 }}>
+                    <p className="text-center animate-fade-in-up" style={{
+                        fontSize: '1.25rem',
+                        opacity: 0.7,
+                        maxWidth: '750px',
+                        margin: '0 auto 3rem',
+                        lineHeight: 1.6,
+                        animationDelay: '0.3s'
+                    }}>
                         {t('hero.subtitle')}
                     </p>
                 </div>
             </section>
 
-            {/* SECTIONS */}
-            {PRODUCTS.map((product, idx) => (
-                <Grid2x2Section
-                    key={product.id}
-                    {...product}
-                    title={t(`${product.id}.title`)}
-                    tag={t(`${product.id}.tag`)}
-                    description={t(`${product.id}.description`)}
-                    explanation={t(`${product.id}.explanation`)}
-                    darkBg={idx % 2 !== 0}
-                />
-            ))}
+            {/* PRODUCT STREAM */}
+            <ProductScroller activeProduct="" products={PRODUCTS} />
 
-            {/* PRODUCT METRICS */}
-            <section className="snap-section" style={{ background: 'var(--bg-surface-2)' }}>
-                <div className="container">
-                    <div style={{ textAlign: 'center', marginBottom: '3rem' }}>
-                        <div className="badge badge-primary-subtle mb-3">PLATFORM METRICS</div>
-                        <h2 style={{ fontSize: '3rem', fontWeight: 950, marginBottom: '1rem' }}>Performance at Scale</h2>
-                        <p style={{ opacity: 0.7, maxWidth: '700px', margin: '0 auto', fontSize: '1.1rem' }}>
-                            Real-time insights into platform efficiency and resource optimization
-                        </p>
-                    </div>
-
-                    <div className="grid-2x2-strict" style={{ gap: '1.5rem' }}>
-                        <div className="glass-panel" style={{ padding: '2rem', borderRadius: '1.5rem' }}>
-                            <h4 style={{ fontSize: '1.1rem', fontWeight: 900, marginBottom: '0.5rem' }}>Deployment Frequency</h4>
-                            <p style={{ fontSize: '0.75rem', opacity: 0.6, marginBottom: '1.5rem' }}>Weekly deployment activity across all environments</p>
-                            <DeploymentFrequency />
-                        </div>
-
-                        <div className="glass-panel" style={{ padding: '2rem', borderRadius: '1.5rem' }}>
-                            <h4 style={{ fontSize: '1.1rem', fontWeight: 900, marginBottom: '0.5rem' }}>Resource Utilization</h4>
-                            <p style={{ fontSize: '0.75rem', opacity: 0.6, marginBottom: '1.5rem' }}>Real-time infrastructure resource consumption</p>
-                            <ResourceUtilization />
-                        </div>
-
-                        <div className="glass-panel" style={{ padding: '2rem', borderRadius: '1.5rem' }}>
-                            <h4 style={{ fontSize: '1.1rem', fontWeight: 900, marginBottom: '0.5rem' }}>Multi-Cloud Distribution</h4>
-                            <p style={{ fontSize: '0.75rem', opacity: 0.6, marginBottom: '1.5rem' }}>Workload distribution across cloud providers</p>
-                            <MultiCloudDistribution />
-                        </div>
-
-                        <div className="glass-panel" style={{ padding: '2rem', borderRadius: '1.5rem' }}>
-                            <h4 style={{ fontSize: '1.1rem', fontWeight: 900, marginBottom: '0.5rem' }}>Container Efficiency</h4>
-                            <p style={{ fontSize: '0.75rem', opacity: 0.6, marginBottom: '1.5rem' }}>Resource optimization vs target thresholds</p>
-                            <ContainerEfficiency />
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            {/* CALL TO ACTION */}
-            <section className="snap-section" style={{ textAlign: 'center' }}>
-                <div className="container">
-                    <h2 style={{ fontSize: '3rem', fontWeight: 950, marginBottom: '2rem' }}>{t('cta.title')}</h2>
-                    <p style={{ opacity: 0.7, marginBottom: '4rem', maxWidth: '700px', margin: '0 auto 4rem', fontSize: '1.25rem' }}>
-                        {t('cta.subtitle')}
-                    </p>
-                    <div style={{ display: 'flex', justifyContent: 'center', gap: '2rem' }}>
-                        <Link href="/contact" className="btn-primary" style={{ padding: '1.25rem 3rem', fontSize: '1.1rem' }}>{t('cta.primary')}</Link>
-                        <Link href="/pricing" className="btn-secondary" style={{ padding: '1.25rem 3rem', fontSize: '1.1rem' }}>{t('cta.secondary')}</Link>
-                    </div>
-                </div>
-            </section>
-
-            {/* SITEMAP / FOOTER SNAP SECTION */}
+            {/* SITEMAP / FOOTER */}
             <section id="sitemap" className="snap-section" style={{ background: 'var(--background)', borderTop: '1px solid var(--card-border)' }}>
                 <Footer />
             </section>
-        </div>
+        </>
     );
 }

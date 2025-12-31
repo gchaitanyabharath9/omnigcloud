@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { z } from 'zod';
-import { withApiHarden, createSuccessResponse, createErrorResponse } from '@/lib/api-utils';
+import { withApiHarden, createSuccessResponse, createErrorResponse, handleZodError } from '@/lib/api-utils';
 
 // Validation schema
 const registerSchema = z.object({
@@ -20,12 +20,7 @@ export async function POST(request: NextRequest) {
             const validation = registerSchema.safeParse(body);
 
             if (!validation.success) {
-                return createErrorResponse(
-                    requestId,
-                    'INVALID_PAYLOAD',
-                    'Validation failed',
-                    validation.error.format()
-                );
+                return handleZodError(validation.error, requestId);
             }
 
             const validatedData = validation.data;

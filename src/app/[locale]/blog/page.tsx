@@ -14,9 +14,9 @@ export default function BlogPage() {
     ];
 
     return (
-        <div className="main-content">
+        <>
             {/* HERO */}
-            <section style={{ padding: '6rem 0 4rem', background: 'var(--bg-surface-2)', borderBottom: '1px solid var(--card-border)' }}>
+            <section style={{ padding: '2rem 0', background: 'var(--bg-surface-2)', borderBottom: '1px solid var(--card-border)', minHeight: 'calc(100vh - var(--header-height) - var(--breadcrumb-height))', display: 'flex', alignItems: 'center' }}>
                 <div className="container">
                     <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', marginBottom: '3rem' }}>
                         <div>
@@ -109,7 +109,7 @@ export default function BlogPage() {
             </section>
 
             {/* NEWSLETTER */}
-            <section style={{ padding: '6rem 0' }}>
+            <section style={{ padding: '4rem 0' }}>
                 <div className="container">
                     <div className="glass-panel" style={{ padding: '4rem', borderRadius: '3rem', textAlign: 'center', maxWidth: '900px', margin: '0 auto' }}>
                         <h2 style={{ fontSize: '2.5rem', fontWeight: 950, marginBottom: '1rem' }}>{t('newsletter.title')}</h2>
@@ -122,6 +122,6 @@ export default function BlogPage() {
                     </div>
                 </div>
             </section>
-        </div>
+        </>
     );
 }

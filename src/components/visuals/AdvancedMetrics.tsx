@@ -73,16 +73,21 @@ export const ComplianceProgress = () => {
 // 11. API Request Volume Heatmap
 export const APIRequestHeatmap = () => {
     const hours = Array.from({ length: 24 }, (_, i) => i);
-    const getIntensity = (hour: number) => {
-        if (hour >= 9 && hour <= 17) return Math.random() * 0.5 + 0.5;
-        if (hour >= 6 && hour <= 20) return Math.random() * 0.3 + 0.3;
-        return Math.random() * 0.2;
-    };
+    const [intensities, setIntensities] = React.useState(() => hours.map(() => 0));
+
+    React.useEffect(() => {
+        // Generate random intensities only after mount (client-side only)
+        setIntensities(hours.map(hour => {
+            if (hour >= 9 && hour <= 17) return Math.random() * 0.5 + 0.5;
+            if (hour >= 6 && hour <= 20) return Math.random() * 0.3 + 0.3;
+            return Math.random() * 0.2;
+        }));
+    }, []);
 
     return (
         <div style={{ width: '100%', height: '100%', display: 'grid', gridTemplateColumns: 'repeat(12, 1fr)', gap: '0.25rem', padding: '0.5rem 0' }}>
-            {hours.map((hour) => {
-                const intensity = getIntensity(hour);
+            {hours.map((hour, idx) => {
+                const intensity = intensities[idx];
                 return (
                     <div
                         key={hour}
@@ -93,7 +98,7 @@ export const APIRequestHeatmap = () => {
                             border: '1px solid rgba(59, 130, 246, 0.2)',
                             position: 'relative'
                         }}
-                        title={`${hour}:00 - ${Math.round(intensity * 1000)} req/s`}
+                        title={`${hour}:00 - ${Math.round((intensity || 0) * 1000)} req/s`}
                     />
                 );
             })}
@@ -274,7 +279,12 @@ export const LicenseOptimization = () => {
 // 17. Backup Success Rate
 export const BackupSuccessRate = () => {
     const days = Array.from({ length: 30 }, (_, i) => i + 1);
-    const successRate = days.map(() => Math.random() > 0.05 ? 1 : 0); // 95% success rate
+    const [successRate, setSuccessRate] = React.useState(() => days.map(() => 1)); // Default to all success
+
+    React.useEffect(() => {
+        // Generate random success rate only after mount (client-side only)
+        setSuccessRate(days.map(() => Math.random() > 0.05 ? 1 : 0)); // 95% success rate
+    }, []);
 
     return (
         <div style={{ width: '100%', height: '100%', display: 'flex', flexDirection: 'column', gap: '1rem' }}>

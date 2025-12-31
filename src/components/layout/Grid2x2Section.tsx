@@ -35,12 +35,12 @@ export default function Grid2x2Section({
                 <div style={{
                     display: 'grid',
                     gridTemplateColumns: 'repeat(2, 1fr)',
-                    gap: '4rem',
+                    gap: '2rem',
                     alignItems: 'start'
                 }}>
                     {/* Column 1: Text & Content */}
                     <div style={{ order: reverse ? 2 : 1 }}>
-                        <div className="glass-panel" style={{ padding: '2rem', borderRadius: '2rem', height: '100%', display: 'flex', flexDirection: 'column' }}>
+                        <div className="glass-panel" style={{ padding: '1.5rem', borderRadius: '1.5rem', height: '100%', display: 'flex', flexDirection: 'column' }}>
                             <div style={{ color: accentColor, marginBottom: '2rem' }}>{icon}</div>
                             <div style={{ fontSize: '0.8rem', fontWeight: 900, textTransform: 'uppercase', color: accentColor, letterSpacing: '0.1em', marginBottom: '1rem' }}>{tag}</div>
                             <h2 style={{ fontSize: '2rem', fontWeight: 950, marginBottom: '1rem' }}>{title}</h2>

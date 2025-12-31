@@ -1,4 +1,5 @@
 import HeroSection from '@/components/sections/home/HeroSection';
+import RealTimeOperationsSection from '@/components/sections/home/RealTimeOperationsSection';
 import ProblemSection from '@/components/sections/home/ProblemSection';
 import EcosystemSection from '@/components/sections/home/EcosystemSection';
 import CapabilitiesSection from '@/components/sections/home/CapabilitiesSection';
@@ -20,8 +21,9 @@ export const metadata: Metadata = {
 
 export default function Home() {
   return (
-    <div className="main-content">
+    <>
       <HeroSection />
+      <RealTimeOperationsSection />
       <InteractiveDashboardSection />
       <ProblemSection />
       <EcosystemSection />
@@ -33,7 +35,7 @@ export default function Home() {
       <DemoSection />
       <PricingSection />
       <CtaSection />
-    </div>
+    </>
   );
 }
 

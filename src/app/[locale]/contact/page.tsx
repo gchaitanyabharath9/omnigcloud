@@ -1,8 +1,9 @@
 "use client";
 
-import { Mail, Phone, MapPin, Send, MessageSquare, Globe, MessageCircle, Facebook, Instagram, Twitter, Linkedin, Github } from "lucide-react";
+import { Mail, Phone, MapPin, Send, MessageSquare, Globe, MessageCircle, Facebook, Instagram, Twitter, Linkedin, Github, Home, ArrowLeft, ChevronRight } from "lucide-react";
 import { useState } from "react";
 import { useTranslations } from 'next-intl';
+import Link from 'next/link';
 
 export default function ContactPage() {
     const t = useTranslations('Company');
@@ -37,9 +38,9 @@ export default function ContactPage() {
     };
 
     return (
-        <div className="snap-container">
+        <>
             {/* HQ HERO - Snap 1 */}
-            <section id="contact-hq" className="snap-section container">
+            <section id="contact-hq" className="snap-section container" style={{ minHeight: 'calc(100vh - var(--header-height) - var(--breadcrumb-height))', display: 'flex', alignItems: 'center' }}>
                 <div className="grid-2" style={{ alignItems: 'center', gap: '4rem' }}>
                     <div className="flex-col">
                         <div style={{ background: 'rgba(96, 239, 255, 0.1)', padding: '0.4rem 1.2rem', borderRadius: '2rem', border: '1px solid rgba(96, 239, 255, 0.3)', color: '#60efff', fontSize: '0.75rem', fontWeight: 800, width: 'fit-content', marginBottom: '1.5rem', letterSpacing: '0.1em' }}>2025 PARTNER ENGAGEMENT</div>
@@ -128,6 +129,6 @@ export default function ContactPage() {
                     <p style={{ color: 'rgba(255,255,255,0.4)', fontSize: '1rem' }}>Global office directory and media kit</p>
                 </div>
             </section>
-        </div>
+        </>
     );
 }

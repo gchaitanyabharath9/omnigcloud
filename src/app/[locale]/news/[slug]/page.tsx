@@ -43,7 +43,7 @@ export default async function NewsArticlePage({ params }: { params: Promise<{ lo
     };
 
     return (
-        <article className="min-h-screen pb-24">
+        <article className="main-content min-h-screen pb-24">
             {/* Header / Hero */}
             <div className="relative h-[60vh] min-h-[400px] w-full">
                 <Image
@@ -57,9 +57,7 @@ export default async function NewsArticlePage({ params }: { params: Promise<{ lo
 
                 <div className="absolute bottom-0 left-0 w-full p-8 md:p-16">
                     <div className="container mx-auto max-w-4xl">
-                        <Link href="/" className="inline-flex items-center text-slate-300 hover:text-white mb-8 transition-colors">
-                            <ArrowLeft size={20} className="mr-2" /> Back to Intelligence Hub
-                        </Link>
+
 
                         <div className="flex items-center gap-4 mb-6">
                             <span className="bg-blue-600 text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">

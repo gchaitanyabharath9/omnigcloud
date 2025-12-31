@@ -1,14 +1,12 @@
-import Breadcrumb from "@/components/Breadcrumb";
 import { Cloud, BarChart } from "lucide-react";
 import { useTranslations } from 'next-intl';
 
 export default function ServicesHero() {
     const t = useTranslations('Services.Hero');
     return (
-        <section id="services-hero" className="snap-section" style={{ minHeight: '100vh', display: 'flex', flexDirection: 'column', paddingTop: '6rem' }}>
-            <div style={{ flex: 1, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+        <section id="services-hero" className="snap-section" style={{ minHeight: 'calc(100vh - var(--header-height) - var(--breadcrumb-height))', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
+            <div style={{ flex: 1, display: 'flex', alignItems: 'center' }}>
                 <div className="container">
-                    <Breadcrumb />
                     <div className="grid-2-strict items-center">
                         {/* Text Content */}
                         <div>

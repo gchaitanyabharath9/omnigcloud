@@ -1,15 +1,16 @@
 import { Landmark, Shield, Phone, HeartPulse, Truck, Globe, CheckCircle } from "lucide-react";
 import Link from "next/link";
-import { useTranslations } from "next-intl";
+import { useTranslations, useLocale } from "next-intl";
 
 export default function IndustriesPage() {
     const t = useTranslations('Industries');
+    const locale = useLocale();
     const industries = [
         {
             id: "financial-services",
             name: t('financial.name'),
             description: t('financial.desc'),
-            icon: <Landmark size={40} />,
+            icon: <Landmark size={32} />,
             challenges: [t('financial.c1'), t('financial.c2'), t('financial.c3')],
             solution: t('financial.sol'),
             img: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=800&h=400&fit=crop"
@@ -18,7 +19,7 @@ export default function IndustriesPage() {
             id: "insurance",
             name: t('insurance.name'),
             description: t('insurance.desc'),
-            icon: <Shield size={40} />,
+            icon: <Shield size={32} />,
             challenges: [t('insurance.c1'), t('insurance.c2'), t('insurance.c3')],
             solution: t('insurance.sol'),
             img: "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=800&h=400&fit=crop"
@@ -27,7 +28,7 @@ export default function IndustriesPage() {
             id: "telecom",
             name: t('telecom.name'),
             description: t('telecom.desc'),
-            icon: <Phone size={40} />,
+            icon: <Phone size={32} />,
             challenges: [t('telecom.c1'), t('telecom.c2'), t('telecom.c3')],
             solution: t('telecom.sol'),
             img: "https://images.unsplash.com/photo-1526628953301-3e589a6a8b74?w=800&h=400&fit=crop"
@@ -36,7 +37,7 @@ export default function IndustriesPage() {
             id: "healthcare",
             name: t('healthcare.name'),
             description: t('healthcare.desc'),
-            icon: <HeartPulse size={40} />,
+            icon: <HeartPulse size={32} />,
             challenges: [t('healthcare.c1'), t('healthcare.c2'), t('healthcare.c3')],
             solution: t('healthcare.sol'),
             img: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=800&h=400&fit=crop"
@@ -45,7 +46,7 @@ export default function IndustriesPage() {
             id: "logistics",
             name: t('logistics.name'),
             description: t('logistics.desc'),
-            icon: <Truck size={40} />,
+            icon: <Truck size={32} />,
             challenges: [t('logistics.c1'), t('logistics.c2'), t('logistics.c3')],
             solution: t('logistics.sol'),
             img: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=800&h=400&fit=crop"
@@ -55,46 +56,107 @@ export default function IndustriesPage() {
     return (
         <div className="animate-fade-in">
             {/* Hero */}
-            <section className="container" style={{ padding: '2rem 0 1rem', textAlign: 'center' }}>
-                <div style={{
-                    display: 'inline-flex',
-                    alignItems: 'center',
-                    background: 'var(--primary-glow)',
-                    padding: '0.4rem 1rem',
-                    borderRadius: '2rem',
-                    border: '1px solid var(--primary)',
-                    color: 'var(--primary)',
-                    fontSize: '0.8rem',
-                    fontWeight: 900,
-                    marginBottom: '1rem',
-                    textTransform: 'uppercase'
-                }}>
-                    {t('badge')}
+            <section className="relative w-full flex items-center justify-center overflow-hidden border-b border-white/10" style={{ minHeight: 'calc(100vh - var(--header-height) - var(--breadcrumb-height))' }}>
+                {/* Background Visual */}
+                <div className="absolute inset-0 z-0 select-none pointer-events-none">
+                    <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/60 to-black z-10" />
+                    <img
+                        src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=2072&auto=format&fit=crop"
+                        alt="Global Network"
+                        className="w-full h-full object-cover opacity-40"
+                    />
+                    {/* Grid Overlay Pattern */}
+                    <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-20" />
                 </div>
-                <h1 style={{ fontSize: '3.5rem', fontWeight: 950, marginBottom: '0.75rem', letterSpacing: '-1.5px', color: 'var(--foreground)' }}>{t('title')}</h1>
-                <p style={{ color: 'var(--foreground)', opacity: 0.6, fontSize: '1.2rem', maxWidth: '800px', margin: '0 auto' }}>
-                    {t('subtitle')}
-                </p>
+
+                <div className="container relative z-10 flex flex-col items-center py-20">
+                    <div className="animate-fade-in-up" style={{ animationDelay: '0.1s' }}>
+                        <div style={{
+                            display: 'inline-flex',
+                            alignItems: 'center',
+                            background: 'rgba(96, 239, 255, 0.1)',
+                            padding: '0.5rem 1.25rem',
+                            borderRadius: '2rem',
+                            border: '1px solid rgba(96, 239, 255, 0.3)',
+                            color: '#60efff',
+                            fontSize: '0.75rem',
+                            fontWeight: 800,
+                            marginBottom: '1.5rem',
+                            textTransform: 'uppercase',
+                            letterSpacing: '0.05em',
+                            boxShadow: '0 0 20px rgba(96, 239, 255, 0.2)'
+                        }}>
+                            <Globe size={14} className="mr-2 animate-pulse" />
+                            {t('badge')}
+                        </div>
+                    </div>
+
+                    <h1 className="text-center animate-fade-in-up" style={{
+                        fontSize: '4.5rem',
+                        fontWeight: 950,
+                        marginBottom: '1rem',
+                        letterSpacing: '-2px',
+                        lineHeight: 1.1,
+                        color: 'white',
+                        textShadow: '0 0 40px rgba(255,255,255,0.1)',
+                        animationDelay: '0.2s'
+                    }}>
+                        {t('title')}
+                    </h1>
+
+                    <p className="text-center animate-fade-in-up" style={{
+                        color: 'rgba(255,255,255,0.7)',
+                        fontSize: '1.25rem',
+                        maxWidth: '750px',
+                        margin: '0 auto 3rem',
+                        lineHeight: 1.6,
+                        animationDelay: '0.3s'
+                    }}>
+                        {t('subtitle')}
+                    </p>
+
+                    {/* New Stats Grid to Utilize Space */}
+                    <div className="grid grid-cols-2 md:grid-cols-4 gap-4 w-full max-w-5xl animate-fade-in-up" style={{ animationDelay: '0.4s' }}>
+                        {[
+                            { label: "Global Markets", value: "140+", icon: <Globe className="text-blue-400" size={20} /> },
+                            { label: "Compliance Frameworks", value: "54", icon: <Shield className="text-emerald-400" size={20} /> },
+                            { label: "Daily Transactions", value: "12T", icon: <CheckCircle className="text-purple-400" size={20} /> },
+                            { label: "Uptime Guarantee", value: "99.99%", icon: <Landmark className="text-amber-400" size={20} /> }
+                        ].map((stat, idx) => (
+                            <div key={idx} className="glass-panel p-6 rounded-2xl border border-white/5 bg-white/5 backdrop-blur-sm hover:bg-white/10 transition-all duration-300 group">
+                                <div className="flex items-center justify-between mb-2">
+                                    <span className="text-[0.7rem] uppercase tracking-widest text-muted-foreground font-bold">{stat.label}</span>
+                                    <div className="opacity-50 group-hover:opacity-100 transition-opacity transform group-hover:scale-110 duration-300">
+                                        {stat.icon}
+                                    </div>
+                                </div>
+                                <div className="text-3xl font-mono font-bold text-white tracking-tight">{stat.value}</div>
+                                <div className="w-full lg:w-1/2 h-1 bg-white/10 rounded-full mt-3 overflow-hidden">
+                                    <div className="h-full bg-current opacity-50 w-[70%]" />
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+                </div>
             </section>
 
             {/* Industry Grid */}
-            <section className="container section-padding" style={{ paddingBottom: '8rem' }}>
-                <div style={{ display: 'flex', flexDirection: 'column', gap: '6rem' }}>
+            <section className="container section-padding" style={{ paddingBottom: '2rem', paddingTop: '0.5rem' }}>
+                <div style={{ display: 'flex', flexDirection: 'column', gap: '2rem' }}>
                     {industries.map((item, i) => (
-                        <div key={item.id} id={item.id} style={{ display: 'grid', gridTemplateColumns: i % 2 === 0 ? '1.2fr 0.8fr' : '0.8fr 1.2fr', gap: '4rem', alignItems: 'center' }}>
+                        <div key={item.id} id={item.id} style={{ display: 'grid', gridTemplateColumns: i % 2 === 0 ? '1.2fr 0.8fr' : '0.8fr 1.2fr', gap: '2rem', alignItems: 'center' }}>
                             {i % 2 === 0 ? (
-                                // EVEN: Text Left, Image Right
                                 <>
                                     <div>
-                                        <div style={{ color: '#60efff', marginBottom: '1.5rem' }}>{item.icon}</div>
-                                        <h2 style={{ fontSize: '2.5rem', color: 'white', marginBottom: '1.5rem', fontWeight: 800 }}>{item.name}</h2>
-                                        <p style={{ fontSize: '1.2rem', color: 'rgba(255,255,255,0.9)', marginBottom: '2rem', lineHeight: 1.6 }}>{item.description}</p>
+                                        <div style={{ color: '#60efff', marginBottom: '0.5rem' }}>{item.icon}</div>
+                                        <h2 style={{ fontSize: '2rem', color: 'white', marginBottom: '1rem', fontWeight: 800 }}>{item.name}</h2>
+                                        <p style={{ fontSize: '1rem', color: 'rgba(255,255,255,0.9)', marginBottom: '1rem', lineHeight: 1.5 }}>{item.description}</p>
 
-                                        <div className="glass-panel" style={{ padding: '2rem', borderRadius: '1.5rem', marginBottom: '2rem' }}>
-                                            <h4 style={{ color: '#60efff', fontSize: '0.9rem', fontWeight: 800, textTransform: 'uppercase', marginBottom: '1rem' }}>{t('challenges')}</h4>
-                                            <ul style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem' }}>
+                                        <div className="glass-panel" style={{ padding: '1rem', borderRadius: '1.25rem', marginBottom: '1rem' }}>
+                                            <h4 style={{ color: '#60efff', fontSize: '0.8rem', fontWeight: 800, textTransform: 'uppercase', marginBottom: '0.75rem' }}>{t('challenges')}</h4>
+                                            <ul style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
                                                 {item.challenges.map((c, j) => (
-                                                    <li key={j} style={{ display: 'flex', gap: '0.75rem', alignItems: 'center', color: 'rgba(255,255,255,0.7)', fontSize: '0.95rem' }}>
+                                                    <li key={j} style={{ display: 'flex', gap: '0.75rem', alignItems: 'center', color: 'rgba(255,255,255,0.7)', fontSize: '0.9rem' }}>
                                                         <div style={{ width: '6px', height: '6px', borderRadius: '50%', background: '#ec4899' }}></div>
                                                         {c}
                                                     </li>
@@ -103,37 +165,36 @@ export default function IndustriesPage() {
                                         </div>
 
                                         <div style={{ display: 'flex', gap: '1rem', alignItems: 'flex-start' }}>
-                                            <CheckCircle size={24} color="#10b981" style={{ flexShrink: 0, marginTop: '0.25rem' }} />
+                                            <CheckCircle size={20} color="#10b981" style={{ flexShrink: 0, marginTop: '0.25rem' }} />
                                             <div>
-                                                <h4 style={{ color: 'var(--foreground)', fontWeight: 800, marginBottom: '0.25rem' }}>{t('solution')}</h4>
-                                                <p style={{ color: 'var(--foreground)', opacity: 0.6, fontSize: '0.9rem' }}>{item.solution}</p>
+                                                <h4 style={{ color: 'var(--foreground)', fontWeight: 800, marginBottom: '0.25rem', fontSize: '1rem' }}>{t('solution')}</h4>
+                                                <p style={{ color: 'var(--foreground)', opacity: 0.6, fontSize: '0.85rem' }}>{item.solution}</p>
                                             </div>
                                         </div>
                                     </div>
                                     <div>
-                                        <div style={{ borderRadius: '2rem', overflow: 'hidden', boxShadow: '0 40px 80px rgba(0,0,0,0.5)', border: '1px solid rgba(255,255,255,0.1)' }}>
-                                            <img src={item.img} alt={item.name} style={{ width: '100%', height: '500px', objectFit: 'cover' }} />
+                                        <div style={{ borderRadius: '1.5rem', overflow: 'hidden', boxShadow: '0 20px 40px rgba(0,0,0,0.5)', border: '1px solid rgba(255,255,255,0.1)' }}>
+                                            <img src={item.img} alt={item.name} style={{ width: '100%', height: '320px', objectFit: 'cover' }} />
                                         </div>
                                     </div>
                                 </>
                             ) : (
-                                // ODD: Image Left, Text Right
                                 <>
                                     <div>
-                                        <div style={{ borderRadius: '2rem', overflow: 'hidden', boxShadow: '0 40px 80px rgba(0,0,0,0.5)', border: '1px solid rgba(255,255,255,0.1)' }}>
-                                            <img src={item.img} alt={item.name} style={{ width: '100%', height: '500px', objectFit: 'cover' }} />
+                                        <div style={{ borderRadius: '1.5rem', overflow: 'hidden', boxShadow: '0 20px 40px rgba(0,0,0,0.5)', border: '1px solid rgba(255,255,255,0.1)' }}>
+                                            <img src={item.img} alt={item.name} style={{ width: '100%', height: '320px', objectFit: 'cover' }} />
                                         </div>
                                     </div>
                                     <div>
-                                        <div style={{ color: '#60efff', marginBottom: '1.5rem' }}>{item.icon}</div>
-                                        <h2 style={{ fontSize: '2.5rem', color: 'white', marginBottom: '1.5rem', fontWeight: 800 }}>{item.name}</h2>
-                                        <p style={{ fontSize: '1.2rem', color: 'rgba(255,255,255,0.9)', marginBottom: '2rem', lineHeight: 1.6 }}>{item.description}</p>
+                                        <div style={{ color: '#60efff', marginBottom: '0.5rem' }}>{item.icon}</div>
+                                        <h2 style={{ fontSize: '2rem', color: 'white', marginBottom: '1rem', fontWeight: 800 }}>{item.name}</h2>
+                                        <p style={{ fontSize: '1rem', color: 'rgba(255,255,255,0.9)', marginBottom: '1rem', lineHeight: 1.5 }}>{item.description}</p>
 
-                                        <div className="glass-panel" style={{ padding: '2rem', borderRadius: '1.5rem', marginBottom: '2rem' }}>
-                                            <h4 style={{ color: '#60efff', fontSize: '0.9rem', fontWeight: 800, textTransform: 'uppercase', marginBottom: '1rem' }}>{t('challenges')}</h4>
-                                            <ul style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem' }}>
+                                        <div className="glass-panel" style={{ padding: '1rem', borderRadius: '1.25rem', marginBottom: '1rem' }}>
+                                            <h4 style={{ color: '#60efff', fontSize: '0.8rem', fontWeight: 800, textTransform: 'uppercase', marginBottom: '0.75rem' }}>{t('challenges')}</h4>
+                                            <ul style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
                                                 {item.challenges.map((c, j) => (
-                                                    <li key={j} style={{ display: 'flex', gap: '0.75rem', alignItems: 'center', color: 'rgba(255,255,255,0.7)', fontSize: '0.95rem' }}>
+                                                    <li key={j} style={{ display: 'flex', gap: '0.75rem', alignItems: 'center', color: 'rgba(255,255,255,0.7)', fontSize: '0.9rem' }}>
                                                         <div style={{ width: '6px', height: '6px', borderRadius: '50%', background: '#ec4899' }}></div>
                                                         {c}
                                                     </li>
@@ -142,10 +203,10 @@ export default function IndustriesPage() {
                                         </div>
 
                                         <div style={{ display: 'flex', gap: '1rem', alignItems: 'flex-start' }}>
-                                            <CheckCircle size={24} color="#10b981" style={{ flexShrink: 0, marginTop: '0.25rem' }} />
+                                            <CheckCircle size={20} color="#10b981" style={{ flexShrink: 0, marginTop: '0.25rem' }} />
                                             <div>
-                                                <h4 style={{ color: 'var(--foreground)', fontWeight: 800, marginBottom: '0.25rem' }}>{t('solution')}</h4>
-                                                <p style={{ color: 'var(--foreground)', opacity: 0.6, fontSize: '0.9rem' }}>{item.solution}</p>
+                                                <h4 style={{ color: 'var(--foreground)', fontWeight: 800, marginBottom: '0.25rem', fontSize: '1rem' }}>{t('solution')}</h4>
+                                                <p style={{ color: 'var(--foreground)', opacity: 0.6, fontSize: '0.85rem' }}>{item.solution}</p>
                                             </div>
                                         </div>
                                     </div>
@@ -163,7 +224,7 @@ export default function IndustriesPage() {
                     <p style={{ color: 'var(--foreground)', opacity: 0.7, fontSize: '1.1rem', marginBottom: '1.5rem', maxWidth: '600px', margin: '0 auto 1.5rem' }}>
                         {t('cta.subtitle')}
                     </p>
-                    <Link href="/contact" className="btn-primary" style={{ padding: '0.8rem 2.5rem', fontSize: '1rem', borderRadius: '0.5rem' }}>
+                    <Link href={`/${locale}/contact`} className="btn-primary" style={{ padding: '0.8rem 2.5rem', fontSize: '1rem', borderRadius: '0.5rem' }}>
                         {t('cta.button')}
                     </Link>
                 </div>

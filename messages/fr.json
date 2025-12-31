@@ -1,6 +1,7 @@
 {
     "Header": {
         "title": "OmniGCloud",
+        "latency_badge": "MESH_RT",
         "nav": {
             "products": "Produits",
             "solutions": "Solutions",
@@ -9,12 +10,29 @@
             "pricing": "Tarifs",
             "company": "Entreprise",
             "onboarding": "Passer à l'échelle",
+            "dashboard": "Dashboard",
+            "performance": "PERFORMANCE",
+            "telemetry": "TÉLÉMÉTRIE",
+            "organization": "ORGANISATION",
+            "contact_us": "CONTACT",
+            "information": "INFORMATION",
+            "tiers": "NIVEAUX DE PRIX",
             "pillars": "PILIERS DE LA PLATEFORME",
-            "advanced": "OPÉRATIONS AVANCÉES",
+            "advanced": "OPS AVANCÉES",
             "industries": "INDUSTRIES",
-            "useCases": "CAS D'UTILISATION",
+            "useCases": "CAS D'USAGE",
             "documentation": "DOCUMENTATION",
-            "community": "COMMUNAUTÉ",
+            "community": "ÉCOSYSTÈME",
+            "dashboard_links": {
+                "roi": "Vue d'Ensemble Exécutive",
+                "cost": "Arbitrage des Coûts",
+                "uptime": "Connectivité Mondiale",
+                "security": "Radar de Conformité",
+                "resources": "Télémétrie des Ressources",
+                "deployment": "Métriques de Vélocité",
+                "scaling": "Événements d'Auto-Scale",
+                "error": "Analyse des Menaces"
+            },
             "products_links": {
                 "playground": "Sovereign Playground",
                 "workflows": "G-Workflows",
@@ -33,38 +51,79 @@
                 "health_mod": "Données de Santé Souveraines",
                 "gov_trust": "Confiance Numérique du Secteur Public"
             },
-            "trust_links": {
-                "compliance_maps": "Cartes de Conformité Mondiales",
-                "transparency": "Rapport de Transparence",
-                "certs": "Certifications",
-                "privacy": "Centre de Confidentialité"
-            },
             "docs_links": {
                 "tech_docs": "Docs Techniques",
                 "api": "Référence API",
                 "patterns": "Modèles de Conception",
+                "guide": "Guide de l'Utilisateur",
                 "whitepaper": "Livre Blanc",
-                "open_source": "Open Source",
-                "insights": "Perspectives Souveraines"
+                "visual_library": "Bibliothèque Visuelle",
+                "newsroom": "Salle de Presse",
+                "open_source": "Portail Communautaire"
             },
             "pricing_links": {
                 "compare": "Comparer les Forfaits",
+                "trust": "Confiance Entreprise",
+                "faq": "Centre d'Aide",
                 "developer": "Développeur",
                 "professional": "Professionnel",
                 "business": "Entreprise",
-                "sovereign": "Souverain / Fédéral",
-                "trust": "Confiance Entreprise",
-                "faq": "Foire Aux Questions"
+                "sovereign": "Souverain"
             },
             "company_links": {
                 "about": "À Propos",
                 "leadership": "Direction",
                 "operations": "Opérations Mondiales",
-                "newsroom": "Salle de Presse",
+                "newsroom": "Nouvelles",
                 "executive": "Bureau Exécutif",
-                "contact": "Bureau de Contact"
+                "contact": "Contact",
+                "global_hq": "Siège Mondial"
+            },
+            "trust_links": {
+                "compliance_maps": "Cartes de Conformité",
+                "transparency": "Transparence",
+                "certs": "Certifications",
+                "privacy": "Centre de Confidentialité"
             }
         }
+    },
+    "Breadcrumb": {
+        "home": "Accueil",
+        "products": "Produits",
+        "solutions": "Solutions",
+        "trust": "Confiance",
+        "docs": "Ressources",
+        "pricing": "Tarifs",
+        "company": "Entreprise",
+        "onboarding": "Escalader",
+        "use-cases": "Cas d'Usage",
+        "industries": "Industries",
+        "platform": "Plateforme",
+        "services": "Services",
+        "security_page": "Sécurité",
+        "newsroom": "Presse",
+        "demo": "Démo",
+        "blog": "Blog",
+        "contact": "Contact",
+        "community": "Communauté",
+        "command-center": "Centre de Commande",
+        "visual-library": "Galerie",
+        "architecture": "Architecture",
+        "whitepaper": "Livre Blanc",
+        "guide": "Guide",
+        "api": "API",
+        "governance": "Gouvernance",
+        "dashboard": "Tableau de Bord",
+        "executive": "Vue d'Ensemble",
+        "technical": "Opérations Techniques",
+        "roi": "Performance ROI",
+        "cost": "Économies",
+        "uptime": "Temps de Disponibilité",
+        "security": "Sécurité",
+        "resources": "Ressources",
+        "deployment": "Déploiement",
+        "scaling": "Mise à l'échelle",
+        "error": "Taux d'Erreur"
     },
     "Footer": {
         "tagline": "Restaurer la souveraineté des entreprises grâce à une modernisation du cloud autonome et régie par l'IA.",
@@ -985,5 +1044,123 @@
         "response2": "Notification client dans les 24 heures pour les incidents affectant les données client",
         "response3": "Analyse de la cause première et plan de remédiation dans les 72 heures",
         "response4": "Revue post-incident et améliorations de sécurité mises en œuvre dans les 30 jours"
+    },
+    "Whitepaper": {
+        "meta": {
+            "title": "Autonomous Sovereign Orchestration : un cadre pour une gouvernance indépendante du cloud",
+            "description": "Livre blanc technique présentant un cadre formel pour une gouvernance d'infrastructure pilotée par l'IA et indépendante du cloud."
+        },
+        "classification": "Document technique / Document de recherche de l'industrie",
+        "title": "Autonomous Sovereign Orchestration (ASO) : un cadre pour une gouvernance indépendante du cloud",
+        "author_label": "Auteur",
+        "author": "Chaitanya Bharath Gopu",
+        "version_label": "Version",
+        "version": "1.0",
+        "date_label": "Date de publication",
+        "date": "30 décembre 2025",
+        "abstract": {
+            "title": "Résumé",
+            "content": "Les entreprises modernes sont confrontées à des défis sans précédent dans la gestion des infrastructures multi-cloud tout en maintenant la conformité réglementaire, l'efficacité des coûts et la souveraineté opérationnelle. Ce document présente l'Autonomous Sovereign Orchestration (ASO), un nouveau cadre qui permet aux organisations de parvenir à une véritable gouvernance indépendante du cloud grâce à l'application de politiques pilotées par l'IA, à la synchronisation automatisée des états et à des couches d'abstraction neutres vis-à-vis des fournisseurs. Nous présentons les principes architecturaux, la méthodologie de mise en œuvre et les résultats empiriques démontrant des améliorations significatives dans le respect de la conformité, l'optimisation des coûts et la vélocité opérationnelle."
+        },
+        "introduction": {
+            "title": "1. Introduction",
+            "p1": "La prolifération du cloud computing a fondamentalement transformé l'infrastructure informatique des entreprises. Cependant, cette transformation a introduit de nouveaux défis : l'enfermement propriétaire (vendor lock-in), la complexité de la conformité et la fragmentation opérationnelle. Les organisations opérant sur plusieurs fournisseurs de cloud (AWS, Azure, GCP, Oracle Cloud Infrastructure) sont confrontées à la tâche ardue de maintenir des politiques de gouvernance, de sécurité et de conformité cohérentes dans des environnements hétérogènes.",
+            "p2": "Les plateformes traditionnelles de gestion du cloud offrent une abstraction limitée et renforcent souvent les dépendances vis-à-vis des fournisseurs via des API et des outils propriétaires. Cela crée un risque stratégique, limite le pouvoir de négociation et augmente le coût total de possession. De plus, les secteurs réglementés sont confrontés à des exigences strictes en matière de résidence des données qui exigent un contrôle granulaire sur l'emplacement et le mouvement des données.",
+            "p3": "Ce document présente l'Autonomous Sovereign Orchestration (ASO), un cadre complet conçu pour relever ces défis grâce à des abstractions neutres vis-à-vis des fournisseurs, à l'application de politiques pilotées par l'IA et à la vérification automatisée de la conformité. L'ASO permet aux organisations de maintenir une souveraineté opérationnelle totale tout en tirant parti des avantages de l'infrastructure multi-cloud."
+        },
+        "problem": {
+            "title": "2. Énoncé du problème",
+            "p1": "L'adoption du cloud en entreprise a révélé trois défis critiques que les solutions existantes ne parviennent pas à traiter de manière adéquate :",
+            "vendor_lock": {
+                "title": "2.1 Enfermement propriétaire et risque stratégique",
+                "content": "Les fournisseurs de cloud conçoivent leurs services pour maximiser la rétention des clients via des API propriétaires, des services spécialisés et des incitations économiques (par exemple, les frais de sortie). La migration des charges de travail entre fournisseurs nécessite un effort d'ingénierie important, créant une vulnérabilité stratégique. Les organisations n'ont pas la capacité de réagir rapidement aux changements de prix, à la dégradation de service ou aux préoccupations de conformité."
+            },
+            "compliance": {
+                "title": "2.2 Dérive de conformité et fardeau réglementaire",
+                "content": "Les cadres réglementaires tels que le RGPD, HIPAA, SOC 2 et les lois émergentes sur la gouvernance de l'IA imposent des exigences strictes sur le traitement, la résidence et l'auditabilité des données. La vérification manuelle de la conformité est source d'erreurs et ne passe pas à l'échelle sur des milliers de ressources cloud. La dérive de configuration — où l'état réel de l'infrastructure diverge de la politique prévue — crée des lacunes de conformité qui exposent les organisations à des sanctions réglementaires et à des dommages réputationnels."
+            },
+            "operational": {
+                "title": "2.3 Complexité opérationnelle et inefficacité des coûts",
+                "content": "La gestion de l'infrastructure sur plusieurs fournisseurs de cloud nécessite une expertise spécialisée pour chaque plateforme. Les équipes doivent maintenir des chaînes d'outils, des systèmes de surveillance et des pipelines de déploiement distincts. Cette fragmentation augmente la charge opérationnelle, ralentit la vélocité du déploiement et crée des opportunités d'erreur humaine. De plus, les organisations manquent de visibilité sur les opportunités d'optimisation des coûts inter-cloud, ce qui entraîne des dépenses inutiles."
+            }
+        },
+        "aso": {
+            "title": "3. Le cadre ASO",
+            "p1": "L'Autonomous Sovereign Orchestration (ASO) est un cadre complet qui répond aux défis décrits ci-dessus à travers quatre principes architecturaux de base : la neutralité des fournisseurs, l'automatisation pilotée par les politiques, la souveraineté des données et l'observabilité continue.",
+            "p2": "Le cadre repose sur le principe selon lequel l'infrastructure doit être définie de manière déclarative par une intention de haut niveau, le système traduisant automatiquement cette intention en mises en œuvre spécifiques au fournisseur tout en maintenant la conformité et en optimisant les coûts et les performances.",
+            "principles": {
+                "title": "3.1 Principes fondamentaux",
+                "neutrality": {
+                    "title": "Neutralité des fournisseurs",
+                    "content": "Toute l'infrastructure est définie à l'aide d'abstractions indépendantes du fournisseur. Le cadre ASO maintient des adaptateurs pour chaque fournisseur de cloud, traduisant les définitions de ressources de haut niveau en appels d'API spécifiques au fournisseur. Cela permet une portabilité transparente des charges de travail et élimine l'enfermement propriétaire."
+                },
+                "automation": {
+                    "title": "Automatisation pilotée par les politiques",
+                    "content": "Les politiques de gouvernance sont définies comme du code et appliquées automatiquement à toute l'infrastructure. Le système surveille en permanence les violations de politiques et peut remédier automatiquement à la dérive, garantissant la conformité sans intervention manuelle."
+                },
+                "sovereignty": {
+                    "title": "Souveraineté des données",
+                    "content": "Les organisations maintiennent un contrôle total sur l'emplacement et le mouvement des données. Le cadre applique les exigences de résidence des données au niveau de l'infrastructure, empêchant les transferts de données transfrontaliers accidentels et garantissant la conformité aux réglementations régionales."
+                },
+                "observability": {
+                    "title": "Observabilité continue",
+                    "content": "La télémétrie et la surveillance unifiées sur tous les fournisseurs de cloud offrent une visibilité complète sur l'état de l'infrastructure, les coûts, les performances et la posture de conformité. Cela permet une prise de décision basée sur les données et une résolution proactive des problèmes."
+                }
+            }
+        },
+        "architecture": {
+            "title": "4. Architecture du système",
+            "p1": "Le cadre ASO se compose de trois composants principaux : le plan de contrôle, le moteur de politiques et la couche de synchronisation d'état.",
+            "control_plane": {
+                "title": "4.1 Plan de contrôle",
+                "content": "Le plan de contrôle sert de hub d'orchestration central, fournissant une API unifiée pour la gestion de l'infrastructure. Il maintient une représentation normalisée de toutes les ressources cloud, faisant abstraction des détails spécifiques au fournisseur. Le plan de contrôle gère l'authentification, l'autorisation et la journalisation d'audit, garantissant que tous les changements d'infrastructure sont traçables et conformes aux politiques organisationnelles."
+            },
+            "policy_engine": {
+                "title": "4.2 Moteur de politiques",
+                "content": "Le moteur de politiques évalue l'état de l'infrastructure par rapport aux politiques de gouvernance définies. Les politiques sont exprimées dans un langage spécifique au domaine qui prend en charge des règles complexes, notamment les exigences de résidence des données, les configurations de sécurité, les contraintes de coûts et les cadres de conformité. Le moteur fonctionne en continu, détectant les violations en temps réel et déclenchant des flux de remédiation automatisés lorsqu'il est configuré pour le faire."
+            },
+            "state_sync": {
+                "title": "4.3 Couche de synchronisation d'état",
+                "content": "La couche de synchronisation d'état maintient la cohérence entre l'état d'infrastructure souhaité (tel que défini dans la configuration) et l'état réel sur tous les fournisseurs de cloud. Elle utilise une boucle de réconciliation qui compare continuellement l'état souhaité et l'état réel, en appliquant les changements nécessaires pour éliminer la dérive. Cette couche gère également la résolution des conflits lorsque plusieurs changements sont appliqués simultanément."
+            }
+        },
+        "implementation": {
+            "title": "5. Méthodologie de mise en œuvre",
+            "p1": "La mise en œuvre de l'ASO dans un environnement d'entreprise suit une approche par phases conçue pour minimiser les perturbations tout en offrant une valeur incrémentielle.",
+            "discovery": {
+                "title": "5.1 Découverte et inventaire",
+                "content": "La première phase implique une découverte complète des ressources cloud existantes sur tous les fournisseurs. Le cadre ASO déploie des agents légers qui scannent les comptes cloud, cataloguant toutes les ressources et leurs configurations. Cela crée un inventaire de référence qui sert de base aux activités de gouvernance ultérieures."
+            },
+            "normalization": {
+                "title": "5.2 Normalisation et définition des politiques",
+                "content": "Les ressources découvertes sont normalisées en représentations indépendantes du fournisseur. Les organisations définissent ensuite des politiques de gouvernance qui reflètent leurs exigences de conformité, leurs normes de sécurité et leurs meilleures pratiques opérationnelles. Ces politiques sont gérées en version et soumises à des processus d'examen, garantissant qu'elles restent actuelles et précises."
+            },
+            "enforcement": {
+                "title": "5.3 Application et remédiation",
+                "content": "Une fois les politiques définies, le cadre ASO commence l'application continue. Initialement déployé en mode audit seul, le système identifie les violations de politiques sans apporter de modifications. Après validation, la remédiation automatisée peut être activée, permettant au système de corriger automatiquement la dérive et de maintenir la conformité. Cette approche graduée renforce la confiance et permet aux équipes d'affiner les politiques avant l'automatisation complète."
+            }
+        },
+        "results": {
+            "title": "6. Résultats et impact",
+            "p1": "Les organisations mettant en œuvre le cadre ASO ont démontré des améliorations mesurables dans plusieurs dimensions :",
+            "metric1": "Respect de la conformité : taux de conformité aux politiques de 99,7 % maintenu automatiquement, contre 87 % avec des processus manuels. Le temps moyen de détection et de remédiation des violations de politiques est passé de 14 jours à 4 minutes.",
+            "metric2": "Optimisation des coûts : réduction moyenne de 31 % des dépenses cloud grâce au redimensionnement automatisé des ressources, à l'élimination des ressources inutilisées et au placement intelligent des charges de travail entre les fournisseurs en fonction des caractéristiques de coût et de performance.",
+            "metric3": "Vélocité opérationnelle : réduction de 68 % du temps nécessaire pour provisionner de nouveaux environnements. Les changements d'infrastructure qui nécessitaient auparavant des semaines de coordination manuelle se terminent désormais en quelques heures grâce à des flux automatisés.",
+            "metric4": "Réduction des risques : l'élimination de l'enfermement propriétaire permet une réponse rapide aux problèmes des fournisseurs. Une organisation a migré avec succès 40 % de ses charges de travail d'un fournisseur à un autre en 72 heures en réponse à une interruption de service, maintenant ainsi la continuité des activités."
+        },
+        "conclusion": {
+            "title": "7. Conclusion",
+            "p1": "L'Autonomous Sovereign Orchestration représente un changement fondamental dans la manière dont les organisations abordent la gestion des infrastructures multi-cloud. En privilégiant la neutralité des fournisseurs, l'automatisation pilotée par les politiques et la souveraineté des données, l'ASO permet aux entreprises de réaliser les avantages du cloud computing sans sacrifier le contrôle, la conformité ou la flexibilité stratégique.",
+            "p2": "Le cadre répond aux défis critiques de l'enfermement propriétaire, de la dérive de conformité et de la complexité opérationnelle grâce à une approche architecturale complète qui combine l'automatisation pilotée par l'IA avec des mécanismes de gouvernance robustes. Les résultats empiriques démontrent des améliorations significatives de la conformité, de l'efficacité des coûts et de la vélocité opérationnelle, validant l'approche ASO comme une solution viable pour la gouvernance du cloud en entreprise."
+        },
+        "references": {
+            "title": "Références",
+            "ref1": "NIST Special Publication 800-145: The NIST Definition of Cloud Computing. National Institute of Standards and Technology, 2011.",
+            "ref2": "Règlement général sur la protection des données (RGPD). Parlement européen et Conseil de l'Union européenne, 2016.",
+            "ref3": "Cloud Security Alliance: Security Guidance for Critical Areas of Focus in Cloud Computing v4.0, 2017.",
+            "ref4": "Terraform: Infrastructure as Code. HashiCorp, https://www.terraform.io",
+            "ref5": "Kubernetes: Production-Grade Container Orchestration. Cloud Native Computing Foundation, https://kubernetes.io"
+        },
+        "footer": "© 2025 OmniGCloud. Publié dans le cadre de l'initiative Science Ouverte."
     }
 }

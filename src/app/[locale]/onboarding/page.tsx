@@ -3,16 +3,10 @@ import Link from "next/link";
 
 export default function OnboardingPage() {
     return (
-        <div className="animate-fade-in">
+        <div className="animate-fade-in" style={{ paddingBottom: '4rem' }}>
             {/* Hero */}
-            <section className="container" style={{ padding: '2rem 0 4rem', textAlign: 'center', position: 'relative' }}>
-                <div style={{ position: 'absolute', top: '2rem', left: '0', zIndex: 10 }}>
-                    <Link href="/" style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem', color: 'var(--foreground)', opacity: 0.7, textDecoration: 'none', fontWeight: 600, fontSize: '0.9rem' }}>
-                        <ArrowLeft size={16} /> Back to Home
-                    </Link>
-                </div>
-
-                <div style={{ marginTop: '4rem', position: 'relative', borderRadius: '2rem', overflow: 'hidden', padding: '4rem 2rem', background: 'var(--card-bg)', border: '1px solid var(--card-border)' }}>
+            <section className="container" style={{ padding: '0.5rem 0 2rem', textAlign: 'center', position: 'relative' }}>
+                <div style={{ marginTop: '1rem', position: 'relative', borderRadius: '1.5rem', overflow: 'hidden', padding: '3rem 2rem', background: 'var(--card-bg)', border: '1px solid var(--card-border)' }}>
                     <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=1600&fit=crop&q=80" alt="Team onboarding" style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', opacity: 0.15 }} />
                     <div style={{ position: 'relative', zIndex: 1 }}>
                         <div style={{
@@ -23,15 +17,15 @@ export default function OnboardingPage() {
                             borderRadius: '2rem',
                             border: '1px solid var(--primary)',
                             color: 'var(--primary)',
-                            fontSize: '0.8rem',
+                            fontSize: '0.75rem',
                             fontWeight: 900,
-                            marginBottom: '1rem',
+                            marginBottom: '0.75rem',
                             textTransform: 'uppercase'
                         }}>
                             Start Your Journey
                         </div>
-                        <h1 style={{ fontSize: '3.5rem', fontWeight: 950, marginBottom: '1rem', letterSpacing: '-1.5px', color: 'var(--foreground)' }}>Get Started with Omni<span style={{ color: 'var(--primary)' }}>G</span>Cloud</h1>
-                        <p style={{ color: 'var(--foreground)', opacity: 0.8, fontSize: '1.25rem', maxWidth: '800px', margin: '0 auto', lineHeight: 1.6 }}>
+                        <h1 style={{ fontSize: '3rem', fontWeight: 950, marginBottom: '0.5rem', letterSpacing: '-1.5px', color: 'var(--foreground)' }}>Get Started with Omni<span style={{ color: 'var(--primary)' }}>G</span>Cloud</h1>
+                        <p style={{ color: 'var(--foreground)', opacity: 0.8, fontSize: '1.1rem', maxWidth: '700px', margin: '0 auto', lineHeight: 1.5 }}>
                             Standardizing your cloud-native onboarding through the world's first AI-powered Internal Cloud Foundation.
                         </p>
                     </div>

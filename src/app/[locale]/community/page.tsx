@@ -4,12 +4,15 @@ import Link from 'next/link';
 
 export default function CommunityPage() {
     return (
-        <div className="main-content">
+        <>
             {/* HERO SECTION */}
             <section style={{
-                padding: '6rem 0 4rem',
+                padding: '2rem 0',
                 background: 'radial-gradient(circle at top right, rgba(59, 130, 246, 0.08), transparent 40%)',
-                position: 'relative'
+                position: 'relative',
+                minHeight: 'calc(100vh - var(--header-height) - var(--breadcrumb-height))',
+                display: 'flex',
+                alignItems: 'center'
             }}>
                 <div className="container">
                     <div style={{ maxWidth: '800px' }}>
@@ -82,7 +85,7 @@ export default function CommunityPage() {
             </section>
 
             {/* GETTING STARTED / CLI SECTION */}
-            <section style={{ padding: '6rem 0' }}>
+            <section style={{ padding: '4rem 0' }}>
                 <div className="container">
                     <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '4rem', alignItems: 'center' }}>
                         <div>
@@ -149,6 +152,6 @@ export default function CommunityPage() {
                     </div>
                 </div>
             </section>
-        </div>
+        </>
     );
 }

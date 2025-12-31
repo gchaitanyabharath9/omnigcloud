@@ -4,7 +4,7 @@ import createMiddleware from 'next-intl/middleware';
 
 import { getRateLimiter } from './lib/rate-limit';
 
-const locales = ['en', 'es', 'fr', 'de', 'zh', 'hi', 'ja'];
+const locales = ['en', 'es', 'fr', 'de', 'zh', 'hi', 'ja', 'ko'];
 const defaultLocale = 'en';
 
 const limiter = getRateLimiter();

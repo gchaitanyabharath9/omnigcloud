@@ -27,7 +27,14 @@ import {
     FileText,
     Newspaper,
     Lock,
-    Camera
+    Camera,
+    Server,
+    AlertTriangle,
+    HelpCircle,
+    Building2,
+    Briefcase,
+    TrendingUp,
+    Settings
 } from 'lucide-react';
 import LanguageSwitcher from '../LanguageSwitcher';
 import LiveLatencyBadge from '../observability/LiveLatencyBadge';
@@ -79,7 +86,47 @@ const Header = () => {
                 {/* DESKTOP NAV */}
                 <nav className={styles.desktopNav}>
                     <ul className={styles.navList}>
-                        {/* 1. PRODUCTS */}
+                        {/* 0. DASHBOARD */}
+                        <li className={styles.navItem} onMouseEnter={() => handleMouseEnter('dashboard')} onMouseLeave={handleMouseLeave}>
+                            <Link href={`/${locale}/dashboard#executive`} className={styles.navLink}>
+                                {t('nav.dashboard')} <ChevronDown size={14} />
+                            </Link>
+                            {activeDropdown === 'dashboard' && (
+                                <div className={styles.dropdownContainer}>
+                                    <div className="glass-panel p-6 animate-fade-in custom-scrollbar" style={{
+                                        width: '550px',
+                                        display: 'grid',
+                                        gridTemplateColumns: '1fr 1fr',
+                                        gap: '2rem',
+                                        background: 'var(--header-bg)',
+                                        opacity: 0.99,
+                                        border: '1px solid var(--primary-glow)',
+                                        boxShadow: '0 25px 50px -12px rgba(0, 0, 0, 0.5)',
+                                        backdropFilter: 'blur(32px)',
+                                        maxHeight: '70vh',
+                                        overflowY: 'auto'
+                                    }}>
+                                        <div style={{ display: 'flex', flexDirection: 'column', gap: '0.2rem' }}>
+                                            <div className={styles.dropdownLabel}>{t('nav.performance')}</div>
+                                            <Link href={`/${locale}/dashboard#executive`} className={styles.dropdownLink}><BarChart3 size={14} /> Executive Overview</Link>
+                                            <Link href={`/${locale}/dashboard#roi`} className={styles.dropdownLink}><TrendingUp size={14} /> ROI Performance</Link>
+                                            <Link href={`/${locale}/dashboard#cost`} className={styles.dropdownLink}><Zap size={14} /> Cost Savings</Link>
+                                            <Link href={`/${locale}/dashboard#uptime`} className={styles.dropdownLink}><Activity size={14} /> System Uptime</Link>
+                                            <Link href={`/${locale}/dashboard#security`} className={styles.dropdownLink}><Shield size={14} /> Security Posture</Link>
+                                        </div>
+                                        <div style={{ display: 'flex', flexDirection: 'column', gap: '0.2rem' }}>
+                                            <div className={styles.dropdownLabel}>{t('nav.telemetry')}</div>
+                                            <Link href={`/${locale}/dashboard#technical`} className={styles.dropdownLink}><Settings size={14} /> Technical Operations</Link>
+                                            <Link href={`/${locale}/dashboard#resources`} className={styles.dropdownLink}><Server size={14} /> Cluster Resources</Link>
+                                            <Link href={`/${locale}/dashboard#deployment`} className={styles.dropdownLink}><Activity size={14} /> CI/CD Velocity</Link>
+                                            <Link href={`/${locale}/dashboard#scaling`} className={styles.dropdownLink}><Layers size={14} /> Scaling Activity</Link>
+                                            <Link href={`/${locale}/dashboard#error`} className={styles.dropdownLink}><AlertTriangle size={14} /> Error & Anomalies</Link>
+                                        </div>
+                                    </div>
+                                </div>
+                            )}
+                        </li>
+
                         {/* 1. PRODUCTS */}
                         <li className={styles.navItem} onMouseEnter={() => handleMouseEnter('products')} onMouseLeave={handleMouseLeave}>
                             <Link href={`/${locale}/products`} className={styles.navLink}>
@@ -119,7 +166,7 @@ const Header = () => {
 
                         {/* 2. SOLUTIONS (Industries + Use Cases) */}
                         <li className={styles.navItem} onMouseEnter={() => handleMouseEnter('solutions')} onMouseLeave={handleMouseLeave}>
-                            <Link href={`/${locale}/industries`} className={styles.navLink}>
+                            <Link href={`/${locale}/solutions`} className={styles.navLink}>
                                 {t('nav.solutions')} <ChevronDown size={14} />
                             </Link>
                             {activeDropdown === 'solutions' && (
@@ -139,35 +186,35 @@ const Header = () => {
                                     }}>
                                         <div style={{ display: 'flex', flexDirection: 'column', gap: '0.2rem' }}>
                                             <div className={styles.dropdownLabel}>{t('nav.industries')}</div>
-                                            <Link href={`/${locale}/industries#financial-services`} className={styles.dropdownLink}>{t('nav.solutions_links.financial')}</Link>
-                                            <Link href={`/${locale}/industries#insurance`} className={styles.dropdownLink}>{t('nav.solutions_links.insurance')}</Link>
-                                            <Link href={`/${locale}/industries#telecom`} className={styles.dropdownLink}>{t('nav.solutions_links.telecom')}</Link>
-                                            <Link href={`/${locale}/industries#healthcare`} className={styles.dropdownLink}>{t('nav.solutions_links.healthcare')}</Link>
-                                            <Link href={`/${locale}/industries#logistics`} className={styles.dropdownLink}>{t('nav.solutions_links.logistics')}</Link>
+                                            <Link href={`/${locale}/industries#financial-services`} className={styles.dropdownLink}><Building2 size={14} /> {t('nav.solutions_links.financial')}</Link>
+                                            <Link href={`/${locale}/industries#insurance`} className={styles.dropdownLink}><ShieldCheck size={14} /> {t('nav.solutions_links.insurance')}</Link>
+                                            <Link href={`/${locale}/industries#telecom`} className={styles.dropdownLink}><Zap size={14} /> {t('nav.solutions_links.telecom')}</Link>
+                                            <Link href={`/${locale}/industries#healthcare`} className={styles.dropdownLink}><Activity size={14} /> {t('nav.solutions_links.healthcare')}</Link>
+                                            <Link href={`/${locale}/industries#logistics`} className={styles.dropdownLink}><Box size={14} /> {t('nav.solutions_links.logistics')}</Link>
                                         </div>
                                         <div style={{ display: 'flex', flexDirection: 'column', gap: '0.2rem' }}>
                                             <div className={styles.dropdownLabel}>{t('nav.useCases')}</div>
-                                            <Link href={`/${locale}/use-cases#financial`} className={styles.dropdownLink}>{t('nav.solutions_links.finance_mod')}</Link>
-                                            <Link href={`/${locale}/use-cases#healthcare`} className={styles.dropdownLink}>{t('nav.solutions_links.health_mod')}</Link>
-                                            <Link href={`/${locale}/use-cases#government`} className={styles.dropdownLink}>{t('nav.solutions_links.gov_trust')}</Link>
+                                            <Link href={`/${locale}/use-cases#financial`} className={styles.dropdownLink}><BarChart3 size={14} /> {t('nav.solutions_links.finance_mod')}</Link>
+                                            <Link href={`/${locale}/use-cases#healthcare`} className={styles.dropdownLink}><Activity size={14} /> {t('nav.solutions_links.health_mod')}</Link>
+                                            <Link href={`/${locale}/use-cases#government`} className={styles.dropdownLink}><Shield size={14} /> {t('nav.solutions_links.gov_trust')}</Link>
                                         </div>
                                     </div>
                                 </div>
                             )}
                         </li>
 
-                        {/* 3. DOCS (Resources) */}
+                        {/* 3. RESOURCES (Docs) */}
                         <li className={styles.navItem} onMouseEnter={() => handleMouseEnter('docs')} onMouseLeave={handleMouseLeave}>
                             <Link href={`/${locale}/docs`} className={styles.navLink}>
                                 {t('nav.docs')} <ChevronDown size={14} />
                             </Link>
                             {activeDropdown === 'docs' && (
                                 <div className={styles.dropdownContainer}>
-                                    <div className="glass-panel p-4 animate-fade-in custom-scrollbar" style={{
-                                        width: '300px',
-                                        display: 'flex',
-                                        flexDirection: 'column',
-                                        gap: '0.2rem',
+                                    <div className="glass-panel p-6 animate-fade-in custom-scrollbar" style={{
+                                        width: '580px',
+                                        display: 'grid',
+                                        gridTemplateColumns: '1fr 1fr',
+                                        gap: '2rem',
                                         background: 'var(--header-bg)',
                                         opacity: 0.99,
                                         border: '1px solid var(--primary-glow)',
@@ -176,17 +223,20 @@ const Header = () => {
                                         maxHeight: '70vh',
                                         overflowY: 'auto'
                                     }}>
-                                        <div className={styles.dropdownLabel}>{t('nav.documentation')}</div>
-                                        <Link href={`/${locale}/docs`} className={styles.dropdownLink}><BookOpen size={14} /> {t('nav.docs_links.tech_docs')}</Link>
-                                        <Link href={`/${locale}/docs/api`} className={styles.dropdownLink}><Terminal size={14} /> {t('nav.docs_links.api')}</Link>
-                                        <Link href={`/${locale}/docs/architecture`} className={styles.dropdownLink}><Layers size={14} /> {t('nav.docs_links.patterns')}</Link>
-                                        <Link href={`/${locale}/visual-library`} className={styles.dropdownLink}><Camera size={14} /> {t('nav.docs_links.visual_library')}</Link>
-                                        <Link href={`/${locale}/visual-library#failover`} className={styles.dropdownLink}><Zap size={14} /> {t('nav.docs_links.mccb')}</Link>
-                                        <Link href={`/${locale}#whitepaper`} className={styles.dropdownLink}><FileText size={14} /> {t('nav.docs_links.whitepaper')}</Link>
-
-                                        <div className={styles.dropdownLabel} style={{ marginTop: '0.5rem' }}>{t('nav.community')}</div>
-                                        <Link href={`/${locale}#community-callout`} className={styles.dropdownLink}><Users size={14} /> {t('nav.docs_links.open_source')}</Link>
-                                        <Link href={`/${locale}#newsroom`} className={styles.dropdownLink}><Newspaper size={14} /> {t('nav.docs_links.insights')}</Link>
+                                        <div style={{ display: 'flex', flexDirection: 'column', gap: '0.2rem' }}>
+                                            <div className={styles.dropdownLabel}>{t('nav.documentation')}</div>
+                                            <Link href={`/${locale}/docs`} className={styles.dropdownLink}><BookOpen size={14} /> {t('nav.docs_links.tech_docs')}</Link>
+                                            <Link href={`/${locale}/docs#api`} className={styles.dropdownLink}><Terminal size={14} /> {t('nav.docs_links.api')}</Link>
+                                            <Link href={`/${locale}/docs#architecture`} className={styles.dropdownLink}><Layers size={14} /> {t('nav.docs_links.patterns')}</Link>
+                                            <Link href={`/${locale}/docs#guide`} className={styles.dropdownLink}><BookOpen size={14} /> {t('nav.docs_links.guide')}</Link>
+                                        </div>
+                                        <div style={{ display: 'flex', flexDirection: 'column', gap: '0.2rem' }}>
+                                            <div className={styles.dropdownLabel}>{t('nav.community')}</div>
+                                            <Link href={`/${locale}/docs#whitepaper`} className={styles.dropdownLink}><FileText size={14} /> {t('nav.docs_links.whitepaper')}</Link>
+                                            <Link href={`/${locale}/visual-library`} className={styles.dropdownLink}><Camera size={14} /> {t('nav.docs_links.visual_library')}</Link>
+                                            <Link href={`/${locale}/company#newsroom`} className={styles.dropdownLink}><Newspaper size={14} /> {t('nav.docs_links.newsroom')}</Link>
+                                            <Link href={`/${locale}/community`} className={styles.dropdownLink}><Users size={14} /> {t('nav.docs_links.open_source')}</Link>
+                                        </div>
                                     </div>
                                 </div>
                             )}
@@ -199,11 +249,11 @@ const Header = () => {
                             </Link>
                             {activeDropdown === 'pricing' && (
                                 <div className={styles.dropdownContainer}>
-                                    <div className="glass-panel p-4 animate-fade-in custom-scrollbar" style={{
-                                        width: '260px',
-                                        display: 'flex',
-                                        flexDirection: 'column',
-                                        gap: '0.2rem',
+                                    <div className="glass-panel p-6 animate-fade-in custom-scrollbar" style={{
+                                        width: '520px',
+                                        display: 'grid',
+                                        gridTemplateColumns: '1fr 1fr',
+                                        gap: '2rem',
                                         background: 'var(--header-bg)',
                                         opacity: 0.99,
                                         border: '1px solid var(--primary-glow)',
@@ -212,13 +262,19 @@ const Header = () => {
                                         maxHeight: '70vh',
                                         overflowY: 'auto'
                                     }}>
-                                        <Link href={`/${locale}/pricing`} className={styles.dropdownLink}>{t('nav.pricing_links.compare')}</Link>
-                                        <Link href={`/${locale}/pricing#developer`} className={styles.dropdownLink}>{t('nav.pricing_links.developer')}</Link>
-                                        <Link href={`/${locale}/pricing#professional`} className={styles.dropdownLink}>{t('nav.pricing_links.professional')}</Link>
-                                        <Link href={`/${locale}/pricing#business`} className={styles.dropdownLink}>{t('nav.pricing_links.business')}</Link>
-                                        <Link href={`/${locale}/pricing#sovereign`} className={styles.dropdownLink}>{t('nav.pricing_links.sovereign')}</Link>
-                                        <Link href={`/${locale}/pricing#trust`} className={styles.dropdownLink}>{t('nav.pricing_links.trust')}</Link>
-                                        <Link href={`/${locale}/pricing#faq`} className={styles.dropdownLink}>{t('nav.pricing_links.faq')}</Link>
+                                        <div style={{ display: 'flex', flexDirection: 'column', gap: '0.2rem' }}>
+                                            <div className={styles.dropdownLabel}>{t('nav.tiers')}</div>
+                                            <Link href={`/${locale}/pricing#developer`} className={styles.dropdownLink}><Briefcase size={14} /> {t('nav.pricing_links.developer')}</Link>
+                                            <Link href={`/${locale}/pricing#professional`} className={styles.dropdownLink}><Zap size={14} /> {t('nav.pricing_links.professional')}</Link>
+                                            <Link href={`/${locale}/pricing#business`} className={styles.dropdownLink}><Building2 size={14} /> {t('nav.pricing_links.business')}</Link>
+                                            <Link href={`/${locale}/pricing#sovereign`} className={styles.dropdownLink}><Shield size={14} /> {t('nav.pricing_links.sovereign')}</Link>
+                                        </div>
+                                        <div style={{ display: 'flex', flexDirection: 'column', gap: '0.2rem' }}>
+                                            <div className={styles.dropdownLabel}>{t('nav.information')}</div>
+                                            <Link href={`/${locale}/pricing`} className={styles.dropdownLink}><Layers size={14} /> {t('nav.pricing_links.compare')}</Link>
+                                            <Link href={`/${locale}/pricing#trust`} className={styles.dropdownLink}><ShieldCheck size={14} /> {t('nav.pricing_links.trust')}</Link>
+                                            <Link href={`/${locale}/pricing#faq`} className={styles.dropdownLink}><HelpCircle size={14} /> {t('nav.pricing_links.faq')}</Link>
+                                        </div>
                                     </div>
                                 </div>
                             )}
@@ -246,19 +302,17 @@ const Header = () => {
                                     }}>
                                         <div style={{ display: 'flex', flexDirection: 'column', gap: '0.2rem' }}>
                                             <div className={styles.dropdownLabel}>{t('nav.organization')}</div>
-                                            <Link href={`/${locale}/company#about`} className={styles.dropdownLink}>{t('nav.company_links.about')}</Link>
-                                            <Link href={`/${locale}/company#leadership`} className={styles.dropdownLink}>{t('nav.company_links.leadership')}</Link>
-                                            <Link href={`/${locale}/company#global-operations`} className={styles.dropdownLink}>{t('nav.company_links.operations')}</Link>
+                                            <Link href={`/${locale}/company#about`} className={styles.dropdownLink}><Building2 size={14} /> {t('nav.company_links.about')}</Link>
+                                            <Link href={`/${locale}/company#leadership`} className={styles.dropdownLink}><Users size={14} /> {t('nav.company_links.leadership')}</Link>
+                                            <Link href={`/${locale}/company#global-operations`} className={styles.dropdownLink}><Globe size={14} /> {t('nav.company_links.operations')}</Link>
                                             <Link href={`/${locale}/company#newsroom`} className={styles.dropdownLink}><Newspaper size={14} /> {t('nav.company_links.newsroom')}</Link>
-                                            <Link href={`/${locale}/company#executive-office`} className={styles.dropdownLink}>{t('nav.company_links.executive')}</Link>
-                                            <Link href={`/${locale}/contact`} className={styles.dropdownLink}>{t('nav.company_links.contact')}</Link>
                                         </div>
                                         <div style={{ display: 'flex', flexDirection: 'column', gap: '0.2rem' }}>
-                                            <div className={styles.dropdownLabel}>{t('nav.trust')}</div>
-                                            <Link href={`/${locale}/security#compliance-maps`} className={styles.dropdownLink}><Globe size={14} /> {t('nav.trust_links.compliance_maps')}</Link>
-                                            <Link href={`/${locale}/security#transparency`} className={styles.dropdownLink}><FileText size={14} /> {t('nav.trust_links.transparency')}</Link>
-                                            <Link href={`/${locale}/security#certs`} className={styles.dropdownLink}><ShieldCheck size={14} /> {t('nav.trust_links.certs')}</Link>
-                                            <Link href={`/${locale}/privacy`} className={styles.dropdownLink}><Lock size={14} /> {t('nav.trust_links.privacy')}</Link>
+                                            <div className={styles.dropdownLabel}>{t('nav.contact_us')}</div>
+                                            <Link href={`/${locale}/company#executive-office`} className={styles.dropdownLink}><Briefcase size={14} /> {t('nav.company_links.executive')}</Link>
+                                            <Link href={`/${locale}/contact`} className={styles.dropdownLink}><FileText size={14} /> {t('nav.company_links.contact')}</Link>
+                                            <Link href={`/${locale}/contact#hq`} className={styles.dropdownLink}><Globe size={14} /> {t('nav.company_links.global_hq')}</Link>
+                                            <Link href={`/${locale}/security#compliance-maps`} className={styles.dropdownLink}><ShieldCheck size={14} /> {t('nav.trust_links.compliance_maps')}</Link>
                                         </div>
                                     </div>
                                 </div>

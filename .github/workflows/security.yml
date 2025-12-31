@@ -1,0 +1,100 @@
+name: Security CI
+
+on:
+    push:
+        branches: [main, develop]
+    pull_request:
+        branches: [main, develop]
+    schedule:
+        # Run security audit weekly on Mondays at 9 AM UTC
+        - cron: "0 9 * * 1"
+
+jobs:
+    security-checks:
+        name: Security Checks
+        runs-on: ubuntu-latest
+
+        steps:
+            - name: Checkout code
+              uses: actions/checkout@v4
+
+            - name: Setup Node.js
+              uses: actions/setup-node@v4
+              with:
+                  node-version: "20"
+                  cache: "npm"
+
+            - name: Install dependencies
+              run: npm ci
+
+            - name: Check secrets hygiene
+              run: npm run check:secrets
+
+            - name: Run TypeScript type check
+              run: npm run typecheck
+
+            - name: Build application
+              run: npm run build
+              env:
+                  # Minimal env vars needed for build
+                  SKIP_ENV_VALIDATION: true
+
+            - name: Run npm audit
+              run: npm audit --audit-level=moderate
+              continue-on-error: true
+
+            - name: Run npm audit (critical only)
+              run: npm audit --audit-level=critical
+
+            - name: Check for known vulnerabilities
+              run: |
+                  echo "Checking for critical vulnerabilities..."
+                  npm audit --json > audit-report.json || true
+
+            - name: Upload audit report
+              uses: actions/upload-artifact@v4
+              if: always()
+              with:
+                  name: security-audit-report
+                  path: audit-report.json
+                  retention-days: 30
+
+    dependency-review:
+        name: Dependency Review
+        runs-on: ubuntu-latest
+        if: github.event_name == 'pull_request'
+
+        steps:
+            - name: Checkout code
+              uses: actions/checkout@v4
+
+            - name: Dependency Review
+              uses: actions/dependency-review-action@v4
+              with:
+                  fail-on-severity: moderate
+                  deny-licenses: GPL-3.0, AGPL-3.0
+
+    security-scorecard:
+        name: Security Scorecard
+        runs-on: ubuntu-latest
+        permissions:
+            security-events: write
+            id-token: write
+
+        steps:
+            - name: Checkout code
+              uses: actions/checkout@v4
+              with:
+                  persist-credentials: false
+
+            - name: Run analysis
+              uses: ossf/scorecard-action@v2
+              with:
+                  results_file: results.sarif
+                  results_format: sarif
+                  publish_results: true
+
+            - name: Upload SARIF results
+              uses: github/codeql-action/upload-sarif@v3
+              with:
+                  sarif_file: results.sarif

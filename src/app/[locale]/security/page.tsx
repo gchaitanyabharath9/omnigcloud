@@ -7,28 +7,28 @@ export default async function SecurityPage() {
     const t = await getTranslations("Security");
 
     return (
-        <div className="main-content">
+        <>
             {/* SECTION 1: HERO & CORE CONCEPTS */}
-            <section className="snap-section" style={{ background: 'var(--bg-surface-2)' }}>
+            <section className="snap-section" style={{ background: 'var(--bg-surface-2)', minHeight: 'calc(100vh - var(--header-height) - var(--breadcrumb-height))', display: 'flex', alignItems: 'center' }}>
                 <div className="container" style={{ maxWidth: '1200px' }}>
-                    <div style={{ marginBottom: '4rem', textAlign: 'center' }}>
-                        <Shield className="w-20 h-20 mx-auto mb-4 text-blue-500" />
-                        <h1 className="text-5xl font-bold mb-4">{t("title")}</h1>
-                        <p className="text-xl text-zinc-600 dark:text-zinc-400 max-w-3xl mx-auto">
+                    <div style={{ marginBottom: '2rem', textAlign: 'center' }}>
+                        <Shield className="mx-auto mb-4 text-primary" size={60} />
+                        <h1 style={{ fontSize: '3.5rem', fontWeight: 950, marginBottom: '1rem', letterSpacing: '-1.5px' }}>{t("title")}</h1>
+                        <p style={{ fontSize: '1.2rem', opacity: 0.7, maxWidth: '750px', margin: '0 auto', lineHeight: 1.5 }}>
                             {t("subtitle")}
                         </p>
                     </div>
 
-                    <div id="compliance-maps" className="grid md:grid-cols-2 gap-6 mb-12">
-                        <div className="glass-panel p-6 rounded-xl">
-                            <Lock className="w-10 h-10 mb-3 text-green-500" />
-                            <h3 className="text-xl font-bold mb-2">{t("encryption")}</h3>
-                            <p className="text-zinc-600 dark:text-zinc-400">{t("encryptionText")}</p>
+                    <div id="compliance-maps" className="grid grid-cols-2 gap-4">
+                        <div className="glass-panel p-5 rounded-xl border border-white/5">
+                            <Lock className="w-8 h-8 mb-3 text-success" />
+                            <h3 className="text-lg font-bold mb-2">{t("encryption")}</h3>
+                            <p className="text-sm opacity-60 leading-tight">{t("encryptionText")}</p>
                         </div>
-                        <div className="glass-panel p-6 rounded-xl">
-                            <CheckCircle className="w-10 h-10 mb-3 text-blue-500" />
-                            <h3 className="text-xl font-bold mb-2">{t("authentication")}</h3>
-                            <p className="text-zinc-600 dark:text-zinc-400">{t("authenticationText")}</p>
+                        <div className="glass-panel p-5 rounded-xl border border-white/5">
+                            <CheckCircle className="w-8 h-8 mb-3 text-primary" />
+                            <h3 className="text-lg font-bold mb-2">{t("authentication")}</h3>
+                            <p className="text-sm opacity-60 leading-tight">{t("authenticationText")}</p>
                         </div>
                     </div>
                 </div>
@@ -175,6 +175,6 @@ export default async function SecurityPage() {
             <section id="sitemap" className="snap-section" style={{ background: 'var(--background)', borderTop: '1px solid var(--card-border)' }}>
                 <Footer />
             </section>
-        </div>
+        </>
     );
 }

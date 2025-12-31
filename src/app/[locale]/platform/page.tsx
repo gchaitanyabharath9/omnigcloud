@@ -15,7 +15,7 @@ export const metadata: Metadata = {
 
 export default function PlatformPage() {
     return (
-        <div className="main-content">
+        <>
             <PlatformHero />
             <ControlPlaneSection />
             <ObservabilitySection />
@@ -28,6 +28,6 @@ export default function PlatformPage() {
             <section id="sitemap" className="snap-section" style={{ background: 'var(--background)', borderTop: '1px solid var(--card-border)' }}>
                 <Footer />
             </section>
-        </div>
+        </>
     );
 }

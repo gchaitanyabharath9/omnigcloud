@@ -3,8 +3,7 @@ import { Check, X, Shield, Globe, Cpu, Zap, Award, HelpCircle, ArrowRight } from
 import Link from 'next/link';
 import type { Metadata } from 'next';
 import Footer from '@/components/Footer';
-import { CloudCostComparison, StorageOptimization, LicenseOptimization } from '@/components/visuals/AdvancedMetrics';
-import { CostPerTransaction } from '@/components/visuals/PerformanceMetrics';
+import { CostSavingsArea, CloudDistributionPie, FeatureUsageBar, ComplianceScoresBar } from '@/components/charts/SimpleCharts';
 
 export const metadata: Metadata = {
     title: 'Pricing | OmniGCloud Enterprise Cloud Governance',
@@ -103,21 +102,21 @@ export default function PricingPage() {
     };
 
     return (
-        <div className="main-content">
+        <>
             <script
                 type="application/ld+json"
                 dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
             />
 
             {/* HERO & PRICING GRID - Snap 1 */}
-            <section className="snap-section" style={{ minHeight: '100vh', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
+            <section className="snap-section" style={{ minHeight: 'calc(100vh - var(--header-height) - var(--breadcrumb-height))', display: 'flex', flexDirection: 'column', justifyContent: 'center', paddingTop: '1rem', paddingBottom: '1rem' }}>
                 <div className="container">
-                    <div style={{ textAlign: 'center', marginBottom: '3rem' }}>
-                        <div className="badge badge-primary-subtle mb-4">{t('hero.tag')}</div>
-                        <h1 style={{ fontSize: 'var(--h1-size)', fontWeight: 950, marginBottom: '1.5rem' }}>
+                    <div style={{ textAlign: 'center', marginBottom: '1.5rem' }}>
+                        <div className="badge badge-primary-subtle mb-3">{t('hero.tag')}</div>
+                        <h1 style={{ fontSize: '2.5rem', fontWeight: 950, marginBottom: '0.75rem', letterSpacing: '-1px' }}>
                             {t('hero.title')}
                         </h1>
-                        <p style={{ fontSize: '1.1rem', opacity: 0.7, maxWidth: '750px', margin: '0 auto' }}>
+                        <p style={{ fontSize: '0.95rem', opacity: 0.7, maxWidth: '650px', margin: '0 auto', lineHeight: '1.4' }}>
                             {t('hero.subtitle')}
                         </p>
                     </div>
@@ -125,13 +124,13 @@ export default function PricingPage() {
                     <div style={{
                         display: 'grid',
                         gridTemplateColumns: 'repeat(4, 1fr)',
-                        gap: '1rem',
+                        gap: '0.75rem',
                         alignItems: 'stretch'
                     }}>
                         {plans.map((plan, idx) => (
                             <div key={idx} id={plan.id} className={`glass-panel ${plan.highlight ? 'border-primary' : ''}`} style={{
-                                padding: '1.5rem',
-                                borderRadius: '1.5rem',
+                                padding: '1.25rem',
+                                borderRadius: '1.25rem',
                                 display: 'flex',
                                 flexDirection: 'column',
                                 position: 'relative',
@@ -143,34 +142,34 @@ export default function PricingPage() {
                                 {plan.highlight && (
                                     <div style={{
                                         position: 'absolute',
-                                        top: '-12px',
+                                        top: '-10px',
                                         left: '50%',
                                         transform: 'translateX(-50%)',
                                         background: 'var(--primary)',
                                         color: 'white',
-                                        padding: '4px 12px',
+                                        padding: '3px 10px',
                                         borderRadius: '1rem',
-                                        fontSize: '0.65rem',
+                                        fontSize: '0.6rem',
                                         fontWeight: 900,
                                         letterSpacing: '0.1em'
                                     }}>
                                         {t('plans.popular')}
                                     </div>
                                 )}
-                                <h3 style={{ fontSize: '1.1rem', fontWeight: 900, marginBottom: '0.25rem' }}>{t(`plans.${plan.id}.name`)}</h3>
-                                <p style={{ fontSize: '0.75rem', opacity: 0.6, marginBottom: '1rem', height: '2.5rem', lineHeight: '1.3' }}>{t(`plans.${plan.id}.desc`)}</p>
+                                <h3 style={{ fontSize: '1rem', fontWeight: 900, marginBottom: '0.2rem' }}>{t(`plans.${plan.id}.name`)}</h3>
+                                <p style={{ fontSize: '0.7rem', opacity: 0.6, marginBottom: '0.75rem', height: '2.2rem', lineHeight: '1.2' }}>{t(`plans.${plan.id}.desc`)}</p>
 
-                                <div style={{ marginBottom: '1rem' }}>
-                                    <span style={{ fontSize: '1.75rem', fontWeight: 950 }}>{plan.price !== "Custom" ? `$${plan.price}` : plan.price}</span>
-                                    {plan.price !== "Custom" && <span style={{ opacity: 0.5, fontSize: '0.8rem' }}> {t('plans.month')}</span>}
+                                <div style={{ marginBottom: '0.75rem' }}>
+                                    <span style={{ fontSize: '1.5rem', fontWeight: 950 }}>{plan.price !== "Custom" ? `$${plan.price}` : plan.price}</span>
+                                    {plan.price !== "Custom" && <span style={{ opacity: 0.5, fontSize: '0.7rem' }}> {t('plans.month')}</span>}
                                 </div>
 
-                                <div style={{ flexGrow: 1, marginBottom: '1rem' }}>
-                                    <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
+                                <div style={{ flexGrow: 1, marginBottom: '0.75rem' }}>
+                                    <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '0.4rem' }}>
                                         {plan.features.slice(0, 7).map((feature, fidx) => (
-                                            <li key={fidx} style={{ display: 'flex', gap: '0.5rem', alignItems: 'center', fontSize: '0.75rem' }}>
+                                            <li key={fidx} style={{ display: 'flex', gap: '0.4rem', alignItems: 'center', fontSize: '0.7rem' }}>
                                                 <div style={{ background: 'rgba(16, 185, 129, 0.1)', color: '#10b981', borderRadius: '50%', padding: '2px', flexShrink: 0 }}>
-                                                    <Check size={10} />
+                                                    <Check size={9} />
                                                 </div>
                                                 <span className="truncate">{feature}</span>
                                             </li>
@@ -178,7 +177,7 @@ export default function PricingPage() {
                                     </ul>
                                 </div>
 
-                                <Link href="/contact" className={plan.highlight ? 'btn-primary' : 'btn-secondary'} style={{ width: '100%', textAlign: 'center', padding: '0.5rem', fontSize: '0.8rem' }}>
+                                <Link href="/contact" className={plan.highlight ? 'btn-primary' : 'btn-secondary'} style={{ width: '100%', textAlign: 'center', padding: '0.4rem', fontSize: '0.75rem' }}>
                                     {t(`plans.${plan.id}.cta`)}
                                 </Link>
                             </div>
@@ -190,38 +189,18 @@ export default function PricingPage() {
             {/* COST ANALYSIS METRICS */}
             <section className="snap-section" style={{ background: 'var(--background)' }}>
                 <div className="container">
-                    <div style={{ textAlign: 'center', marginBottom: '3rem' }}>
+                    <div style={{ textAlign: 'center', marginBottom: '2rem' }}>
                         <div className="badge badge-primary-subtle mb-3">COST INTELLIGENCE</div>
-                        <h2 style={{ fontSize: '3rem', fontWeight: 950, marginBottom: '1rem' }}>Real Savings, Real Numbers</h2>
-                        <p style={{ opacity: 0.7, maxWidth: '700px', margin: '0 auto', fontSize: '1.1rem' }}>
-                            See how our platform delivers measurable cost optimization across your infrastructure
-                        </p>
+                        <h2 style={{ fontSize: '2.5rem', fontWeight: 950, marginBottom: '0.5rem' }}>Real Savings, Real Numbers</h2>
                     </div>
 
-                    <div className="grid-2x2-strict" style={{ gap: '1.5rem' }}>
-                        <div className="glass-panel" style={{ padding: '2rem', borderRadius: '1.5rem' }}>
-                            <h4 style={{ fontSize: '1.1rem', fontWeight: 900, marginBottom: '0.5rem' }}>Cloud Provider Cost Comparison</h4>
-                            <p style={{ fontSize: '0.75rem', opacity: 0.6, marginBottom: '1.5rem' }}>Monthly infrastructure costs across providers</p>
-                            <CloudCostComparison />
+                    <div className="grid-2x2-strict" style={{ gap: '1.5rem', gridTemplateRows: 'auto' }}>
+                        <CostSavingsArea />
+                        <div className="glass-panel" style={{ padding: 0, borderRadius: '1.5rem', overflow: 'hidden', height: '220px' }}>
+                            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop" style={{ width: '100%', height: '100%', objectFit: 'cover', opacity: 0.6 }} alt="Data" />
                         </div>
-
-                        <div className="glass-panel" style={{ padding: '2rem', borderRadius: '1.5rem' }}>
-                            <h4 style={{ fontSize: '1.1rem', fontWeight: 900, marginBottom: '0.5rem' }}>Cost Per Transaction</h4>
-                            <p style={{ fontSize: '0.75rem', opacity: 0.6, marginBottom: '1.5rem' }}>Declining cost efficiency over time</p>
-                            <CostPerTransaction />
-                        </div>
-
-                        <div className="glass-panel" style={{ padding: '2rem', borderRadius: '1.5rem' }}>
-                            <h4 style={{ fontSize: '1.1rem', fontWeight: 900, marginBottom: '0.5rem' }}>Storage Optimization</h4>
-                            <p style={{ fontSize: '0.75rem', opacity: 0.6, marginBottom: '1.5rem' }}>Before and after optimization savings</p>
-                            <StorageOptimization />
-                        </div>
-
-                        <div className="glass-panel" style={{ padding: '2rem', borderRadius: '1.5rem' }}>
-                            <h4 style={{ fontSize: '1.1rem', fontWeight: 900, marginBottom: '0.5rem' }}>License Optimization</h4>
-                            <p style={{ fontSize: '0.75rem', opacity: 0.6, marginBottom: '1.5rem' }}>Unused, underused, and optimized licenses</p>
-                            <LicenseOptimization />
-                        </div>
+                        <CloudDistributionPie />
+                        <FeatureUsageBar />
                     </div>
                 </div>
             </section>
@@ -229,40 +208,40 @@ export default function PricingPage() {
             {/* TRUSTED BY & FAQ - Snap 2 */}
             <section className="snap-section" style={{ background: 'var(--bg-surface-2)' }}>
                 <div className="container">
-                    <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '4rem', alignItems: 'start' }}>
+                    <div style={{ display: 'grid', gridTemplateColumns: '1.2fr 0.8fr', gap: '2rem', alignItems: 'start' }}>
                         {/* Trust Section */}
-                        <div id="trust">
-                            <h2 style={{ fontSize: '2rem', fontWeight: 900, marginBottom: '1.5rem' }}>{t('trust.title')}</h2>
-                            <p style={{ opacity: 0.7, marginBottom: '3rem', fontSize: '1rem' }}>{t('trust.subtitle')}</p>
-                            <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
-                                <div className="glass-panel" style={{ padding: '1.5rem', borderRadius: '1.5rem' }}>
-                                    <Shield color="var(--primary)" size={24} className="mb-2" />
-                                    <h4 style={{ fontWeight: 800, marginBottom: '0.5rem' }}>{t('trust.residency.title')}</h4>
-                                    <p style={{ fontSize: '0.8rem', opacity: 0.6 }}>{t('trust.residency.desc')}</p>
-                                </div>
-                                <div className="glass-panel" style={{ padding: '1.5rem', borderRadius: '1.5rem' }}>
-                                    <Globe color="var(--primary)" size={24} className="mb-2" />
-                                    <h4 style={{ fontWeight: 800, marginBottom: '0.5rem' }}>{t('trust.neutrality.title')}</h4>
-                                    <p style={{ fontSize: '0.8rem', opacity: 0.6 }}>{t('trust.neutrality.desc')}</p>
-                                </div>
+                        <div id="trust" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem' }}>
+                            <div style={{ gridColumn: 'span 2' }}>
+                                <h2 style={{ fontSize: '2rem', fontWeight: 900, marginBottom: '1rem' }}>{t('trust.title')}</h2>
+                                <p style={{ opacity: 0.7, marginBottom: '1.5rem', fontSize: '0.9rem' }}>{t('trust.subtitle')}</p>
+                            </div>
+                            <div className="glass-panel" style={{ padding: '1.25rem', borderRadius: '1.25rem' }}>
+                                <Shield color="var(--primary)" size={24} className="mb-2" />
+                                <h4 style={{ fontSize: '0.9rem', fontWeight: 800, marginBottom: '0.5rem' }}>{t('trust.residency.title')}</h4>
+                                <p style={{ fontSize: '0.75rem', opacity: 0.6 }}>{t('trust.residency.desc')}</p>
+                            </div>
+                            <div className="glass-panel" style={{ padding: '1.25rem', borderRadius: '1.25rem' }}>
+                                <Globe color="var(--primary)" size={24} className="mb-2" />
+                                <h4 style={{ fontSize: '0.9rem', fontWeight: 800, marginBottom: '0.5rem' }}>{t('trust.neutrality.title')}</h4>
+                                <p style={{ fontSize: '0.75rem', opacity: 0.6 }}>{t('trust.neutrality.desc')}</p>
                             </div>
                         </div>
 
                         {/* FAQ Section */}
                         <div id="faq">
-                            <h2 style={{ fontSize: '2rem', fontWeight: 900, marginBottom: '1.5rem' }}>{t('faq.title')}</h2>
-                            <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
+                            <h2 style={{ fontSize: '1.8rem', fontWeight: 900, marginBottom: '1.5rem' }}>FAQ</h2>
+                            <div style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem' }}>
                                 {[
                                     { q: t('faq.q1.q'), a: t('faq.q1.a') },
                                     { q: t('faq.q2.q'), a: t('faq.q2.a') },
                                     { q: t('faq.q3.q'), a: t('faq.q3.a') }
                                 ].map((faq, idx) => (
-                                    <div key={idx} className="glass-panel" style={{ padding: '1.25rem', borderRadius: '1rem' }}>
-                                        <div style={{ display: 'flex', gap: '0.75rem', alignItems: 'center', marginBottom: '0.5rem' }}>
-                                            <HelpCircle size={18} color="var(--primary)" />
-                                            <h4 style={{ fontWeight: 800, margin: 0, fontSize: '0.95rem' }}>{faq.q}</h4>
+                                    <div key={idx} className="glass-panel" style={{ padding: '1rem', borderRadius: '0.75rem' }}>
+                                        <div style={{ display: 'flex', gap: '0.5rem', alignItems: 'center', marginBottom: '0.5rem' }}>
+                                            <HelpCircle size={14} color="var(--primary)" />
+                                            <h4 style={{ fontWeight: 800, margin: 0, fontSize: '0.85rem' }}>{faq.q}</h4>
                                         </div>
-                                        <p style={{ fontSize: '0.8rem', opacity: 0.7, marginLeft: '2rem' }}>{faq.a}</p>
+                                        <p style={{ fontSize: '0.75rem', opacity: 0.7, marginLeft: '1.5rem' }}>{faq.a}</p>
                                     </div>
                                 ))}
                             </div>
@@ -312,6 +291,6 @@ export default function PricingPage() {
             <section id="sitemap" className="snap-section" style={{ background: 'var(--background)', borderTop: '1px solid var(--card-border)' }}>
                 <Footer />
             </section>
-        </div>
+        </>
     );
 }

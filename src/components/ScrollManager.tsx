@@ -1,12 +1,15 @@
 "use client";
 
 import { useEffect } from 'react';
+import { usePathname } from 'next/navigation';
 
 /**
  * ScrollManager ensures that Page Down / Page Up / Space keys 
  * navigate perfectly between .snap-section elements.
  */
 export default function ScrollManager() {
+    const pathname = usePathname();
+
     useEffect(() => {
         const handleKeyDown = (e: KeyboardEvent) => {
             // Only handle if not in an input/textarea
@@ -25,30 +28,35 @@ export default function ScrollManager() {
                 const sections = Array.from(document.querySelectorAll('.snap-section'));
                 if (sections.length === 0) return;
 
-                // Current scroll position + small buffer
-                const currentScroll = window.scrollY + 100;
+                // Detect if breadcrumb is present (not on home)
+                const isHome = pathname.split('/').filter(Boolean).length <= 1;
+                const headerHeight = 70;
+                const breadcrumbHeight = isHome ? 0 : 48;
+                const totalOffset = headerHeight + breadcrumbHeight;
+
+                // Current scroll position + buffer
+                const currentScroll = window.scrollY + totalOffset + 20;
 
                 let targetSection: Element | null = null;
 
                 if (isPageDown || isSpace) {
-                    // Find the first section whose top is below current scroll
+                    // Find the first section whose top is below current offset
                     targetSection = sections.find(section => {
                         const rect = section.getBoundingClientRect();
-                        return rect.top > 80; // Buffer for header
+                        return rect.top > (totalOffset + 10);
                     }) || null;
                 } else if (isPageUp || isShiftSpace) {
-                    // Find the last section whose top is above current scroll
+                    // Find the last section whose top is above current offset
                     const reversedSections = [...sections].reverse();
                     targetSection = reversedSections.find(section => {
                         const rect = section.getBoundingClientRect();
-                        return rect.top < -80; // Buffer for header
+                        return rect.top < -(totalOffset + 10);
                     }) || null;
                 }
 
                 if (targetSection) {
-                    const headerOffset = 70;
                     const elementPosition = targetSection.getBoundingClientRect().top;
-                    const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+                    const offsetPosition = elementPosition + window.pageYOffset - totalOffset;
 
                     window.scrollTo({
                         top: offsetPosition,
@@ -60,7 +68,7 @@ export default function ScrollManager() {
 
         window.addEventListener('keydown', handleKeyDown);
         return () => window.removeEventListener('keydown', handleKeyDown);
-    }, []);
+    }, [pathname]);
 
-    return null; // This component doesn't render anything
+    return null;
 }

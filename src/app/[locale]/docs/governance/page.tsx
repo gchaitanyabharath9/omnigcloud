@@ -7,8 +7,8 @@ import Footer from "@/components/Footer";
 
 export default function GovernanceDocsPage() {
     return (
-        <div className="main-content">
-            <section className="snap-section" style={{ padding: '6rem 0' }}>
+        <>
+            <section className="snap-section" style={{ minHeight: 'calc(100vh - var(--header-height) - var(--breadcrumb-height))', display: 'flex', alignItems: 'center' }}>
                 <div className="container">
                     <div style={{ marginBottom: '2rem' }}></div>
                     <h1 style={{ fontSize: '3rem', fontWeight: 950, marginBottom: '2rem' }}>Governance Blueprints</h1>
@@ -36,7 +36,9 @@ export default function GovernanceDocsPage() {
                     </div>
                 </div>
             </section>
-            <Footer />
-        </div>
+            <section id="sitemap" className="snap-section" style={{ background: 'var(--background)', borderTop: '1px solid var(--card-border)' }}>
+                <Footer />
+            </section>
+        </>
     );
 }

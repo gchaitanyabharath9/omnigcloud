@@ -62,9 +62,9 @@ export default function PatternsPage() {
     ];
 
     return (
-        <div className="main-content">
+        <>
             {/* HERO */}
-            <section style={{ padding: '8rem 0 4rem', background: 'var(--bg-surface-2)', borderBottom: '1px solid var(--card-border)' }}>
+            <section style={{ padding: '2rem 0', background: 'var(--bg-surface-2)', borderBottom: '1px solid var(--card-border)', minHeight: 'calc(100vh - var(--header-height) - var(--breadcrumb-height))', display: 'flex', alignItems: 'center' }}>
                 <div className="container text-center">
                     <div className="badge badge-primary-subtle mb-4 mx-auto">
                         <Award size={14} className="mr-2" /> EB-1A SCHOLARLY COMPENDIUM
@@ -80,7 +80,7 @@ export default function PatternsPage() {
 
             {/* EXPANDED PATTERNS (Alternate Layouts) */}
             {patterns.map((p, idx) => (
-                <section key={idx} style={{ padding: '10rem 0', borderBottom: '1px solid var(--card-border)', background: idx % 2 === 0 ? 'transparent' : 'var(--bg-surface-2)' }}>
+                <section key={idx} style={{ padding: '4rem 0', borderBottom: '1px solid var(--card-border)', background: idx % 2 === 0 ? 'transparent' : 'var(--bg-surface-2)' }}>
                     <div className="container">
                         <div style={{ display: 'grid', gridTemplateColumns: idx % 2 === 0 ? '1.2fr 0.8fr' : '0.8fr 1.2fr', gap: '6rem', alignItems: 'center' }}>
                             {idx % 2 === 0 ? (
@@ -175,6 +175,6 @@ export default function PatternsPage() {
                     </div>
                 </div>
             </section>
-        </div>
+        </>
     );
 }
