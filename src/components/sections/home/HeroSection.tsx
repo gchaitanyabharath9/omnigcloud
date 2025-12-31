@@ -41,13 +41,7 @@ export default function HeroSection() {
             }}></div>
 
             <div className="container" style={{ position: 'relative', zIndex: 1, display: 'flex', alignItems: 'flex-start', paddingTop: '1rem' }}>
-                <div style={{
-                    display: 'grid',
-                    gridTemplateColumns: 'minmax(0, 1fr) minmax(0, 1.2fr)',
-                    gap: '3rem',
-                    alignItems: 'center',
-                    width: '100%'
-                }} className="hero-split-layout">
+                <div className="hero-grid-layout">
                     {/* Left Column: Messaging & Performance Monitor */}
                     <div style={{ display: 'flex', flexDirection: 'column', gap: '2rem' }}>
                         <div>

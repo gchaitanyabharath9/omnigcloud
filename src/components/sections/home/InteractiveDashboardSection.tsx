@@ -32,11 +32,7 @@ export default function InteractiveDashboardSection() {
                 </div>
 
                 {/* 2x2 Grid with mix of Content, Charts, and Images */}
-                <div style={{
-                    display: 'grid',
-                    gridTemplateColumns: 'repeat(2, 1fr)',
-                    gap: '1rem'
-                }}>
+                <div className="grid-2" style={{ gap: '1rem' }}>
                     {/* TOP LEFT: ROI & PERFORMANCE (Chart mix) */}
                     <div className="glass-panel" style={{ padding: '1.25rem', borderRadius: '1.5rem', display: 'flex', flexDirection: 'column', minHeight: '260px' }}>
                         <div className="flex justify-between items-start mb-2">

@@ -5,6 +5,7 @@
 }
 
 .whitepaper {
+    width: 100%;
     max-width: 900px;
     margin: 0 auto;
     background: var(--card-bg);
@@ -12,6 +13,7 @@
     border-radius: 8px;
     padding: 4rem;
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    box-sizing: border-box;
 }
 
 .breadcrumbs {
@@ -69,6 +71,9 @@
     line-height: 1.2;
     margin-bottom: 2rem;
     font-family: var(--font-heading);
+    overflow-wrap: break-word;
+    word-break: break-word;
+    hyphens: auto;
 }
 
 .metadata {
