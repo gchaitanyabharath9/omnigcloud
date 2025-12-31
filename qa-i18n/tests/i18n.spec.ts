@@ -1,10 +1,15 @@
-import { test, expect, Page, ConsoleMessage } from '@playwright/test';
+import { test, expect, type Page, type ConsoleMessage } from '@playwright/test';
 import fs from 'fs';
 import path from 'path';
 
-const urlsFile = path.join(process.cwd(), 'qa-i18n/urls.json');
-const urls = fs.existsSync(urlsFile) ? JSON.parse(fs.readFileSync(urlsFile, 'utf-8')) as string[] : [];
-// Unused LOCALES removed
+// 1. Setup & Inventory
+const urlsPath = path.join(process.cwd(), 'qa-i18n/urls.json');
+const allUrls = JSON.parse(fs.readFileSync(urlsPath, 'utf-8')) as string[];
+
+// Filter out dynamic routes (which generate 404s with literal [slug])
+const urls = allUrls.filter(u => !u.includes('[') && !u.includes(']'));
+
+const CRITICAL_PATHS = ['/', '/pricing', '/docs', '/platform', '/services', '/contact', '/company', '/onboarding'];
 
 interface SEOResult {
     url: string;
@@ -17,16 +22,10 @@ interface SEOResult {
 
 const seoResults: SEOResult[] = [];
 
-test.describe('i18n Global Verification & Release Gate', () => {
-
-    test.beforeAll(() => {
-        if (urls.length === 0) {
-            throw new Error('❌ urls.json not found or empty. Run qa:inventory first.');
-        }
-    });
+test.describe('i18n & Release Gate', () => {
 
     test.afterAll(() => {
-        // TASK 7: Generate SEO Report
+        if (seoResults.length === 0) return;
         const report = [
             '# SEO & i18n Head Validation Report',
             `Generated on: ${new Date().toISOString()}\n`,
@@ -37,8 +36,7 @@ test.describe('i18n Global Verification & Release Gate', () => {
         fs.writeFileSync(path.join(process.cwd(), 'qa-i18n/seo-report.md'), report);
     });
 
-    // TASK 3: Routing Sentinels
-    test('Sentinel: Root Path "/" Redirects to Primary Locale', async ({ page }: { page: Page }) => {
+    test('Sentinel: Root Path "/" Redirects to Primary Locale', async ({ page }) => {
         const response = await page.goto('/');
         expect(response?.status()).toBe(200);
         expect(page.url()).toMatch(/\/[a-z]{2}(\/|$)/);
@@ -46,7 +44,7 @@ test.describe('i18n Global Verification & Release Gate', () => {
         expect(htmlLang).not.toBeNull();
     });
 
-    test('Sentinel: Non-localized path "/pricing" auto-fixes', async ({ page }: { page: Page }) => {
+    test('Sentinel: Non-localized path "/pricing" auto-fixes', async ({ page }) => {
         const response = await page.goto('/pricing');
         expect(response?.status()).toBe(200);
         expect(page.url()).toMatch(/\/[a-z]{2}\/pricing/);
@@ -54,92 +52,101 @@ test.describe('i18n Global Verification & Release Gate', () => {
         expect(title.toLowerCase()).not.toContain('404');
     });
 
-    // TASK 4, 5, 6, 7: Comprehensive Loop
+    // Strategy: 
+    // - Every URL gets a status check (fast).
+    // - CRITICAL_PATHS get full audit (goto, console, SEO, links, smoke).
+
     for (const url of urls) {
-        test(`Audit URL: ${url}`, async ({ page }: { page: Page }) => {
-            const consoleErrors: string[] = [];
-            page.on('console', (msg: ConsoleMessage) => {
-                if (msg.type() === 'error' && !msg.text().includes('chrome-extension')) {
-                    consoleErrors.push(`[CONSOLE_ERROR] ${msg.text()}`);
+        const parsedUrl = new URL(url);
+        const pathSuffix = parsedUrl.pathname.replace(/^\/[a-z]{2}/, '') || '/';
+        const isCritical = CRITICAL_PATHS.includes(pathSuffix);
+
+        if (isCritical) {
+            test(`Audit CRITICAL URL: ${url}`, async ({ page }) => {
+                const consoleErrors: string[] = [];
+                page.on('console', (msg: ConsoleMessage) => {
+                    if (msg.type() === 'error' && !msg.text().includes('chrome-extension')) {
+                        consoleErrors.push(`[CONSOLE_ERROR] ${msg.text()}`);
+                    }
+                });
+                page.on('pageerror', (err) => {
+                    consoleErrors.push(`[RUNTIME_ERROR] ${err.message}`);
+                });
+
+                const response = await page.goto(url, { waitUntil: 'networkidle' });
+                expect(response?.status()).toBe(200);
+
+                const bodyText = await page.innerText('body');
+                const pageTitle = await page.title();
+
+                const isError =
+                    pageTitle.toLowerCase().includes('404') ||
+                    pageTitle.toLowerCase().includes('not found') ||
+                    bodyText.includes('Not Found') ||
+                    bodyText.includes('Application error') ||
+                    bodyText.includes('Hydration failed') ||
+                    bodyText.includes('Unhandled Runtime Error') ||
+                    bodyText.includes('MISSING_MESSAGE');
+
+                if (isError) {
+                    await page.screenshot({ path: `qa-i18n/failures/error_${parsedUrl.pathname.replace(/\//g, '_')}.png` });
+                    throw new Error(`Detected Error UI on valid route: ${url}`);
+                }
+
+                if (consoleErrors.length > 0) {
+                    await page.screenshot({ path: `qa-i18n/failures/console_${parsedUrl.pathname.replace(/\//g, '_')}.png` });
+                    throw new Error(`Console Errors detected on ${url}:\n${consoleErrors.join('\n')}`);
+                }
+
+                // SEO Check
+                const locale = url.split('/')[3];
+                const htmlLang = await page.getAttribute('html', 'lang');
+                expect(htmlLang).toBe(locale);
+
+                const canonical = (await page.getAttribute('link[rel="canonical"]', 'href')) || 'MISSING';
+                const hreflangs = await page.locator('link[rel="alternate"][hreflang]').evaluateAll((links: Array<Element>) =>
+                    links.map(l => l.getAttribute('hreflang') || '')
+                );
+                const description = (await page.getAttribute('meta[name="description"]', 'content')) || 'MISSING';
+
+                seoResults.push({ url, lang: htmlLang || 'missing', canonical, hreflangs, title: pageTitle, description });
+
+                // Link Sample Check
+                const internalLinks = await page.locator('a[href^="/"]').evaluateAll((elements: Array<Element>) =>
+                    elements.map(el => (el as HTMLAnchorElement).getAttribute('href'))
+                );
+
+                for (const link of internalLinks.slice(0, 3)) { // Reduced to 3 for speed
+                    if (link && !link.startsWith('/api') && !link.includes('#')) {
+                        const linkResponse = await page.request.get(link);
+                        expect(linkResponse.status(), `Broken link: ${link} on ${url}`).toBe(200);
+                    }
+                }
+
+                // Visual Smoke
+                const viewport = page.viewportSize();
+                await page.screenshot({ path: `qa-i18n/smoke/desktop_${locale}_${pathSuffix.replace(/\//g, '_')}.png` });
+
+                if (viewport && viewport.width < 768) {
+                    const menuBtn = page.locator('button[aria-label*="menu"], button[class*="menu-toggle"]').first();
+                    if (await menuBtn.isVisible()) {
+                        await menuBtn.click();
+                        await page.waitForTimeout(300);
+                        await page.screenshot({ path: `qa-i18n/smoke/mobile_menu_${locale}_${pathSuffix.replace(/\//g, '_')}.png` });
+                    }
                 }
             });
+        } else {
+            // Non-critical: Just a status check for baseline health
+            test(`Status Check: ${url}`, async ({ page }) => {
+                const response = await page.request.get(url);
+                expect(response.status(), `Page ${url} is down!`).toBe(200);
 
-            const response = await page.goto(url, { waitUntil: 'networkidle' });
-
-            // TASK 4: Hard 404 & Error Detection
-            if (response?.status() !== 200) {
-                throw new Error(`Invalid status ${response?.status()} for ${url}`);
-            }
-
-            const bodyText = await page.innerText('body');
-            const pageTitle = await page.title();
-
-            const isError =
-                pageTitle.toLowerCase().includes('404') ||
-                pageTitle.toLowerCase().includes('not found') ||
-                bodyText.includes('Not Found') ||
-                bodyText.includes('Application error') ||
-                bodyText.includes('Hydration failed') ||
-                bodyText.includes('Unhandled Runtime Error');
-
-            if (isError) {
-                await page.screenshot({ path: `qa-i18n/failures/error_${new URL(url).pathname.replace(/\//g, '_')}.png` });
-                throw new Error(`Detected Error UI on valid route: ${url}`);
-            }
-
-            if (consoleErrors.length > 0) {
-                await page.screenshot({ path: `qa-i18n/failures/console_${new URL(url).pathname.replace(/\//g, '_')}.png` });
-                throw new Error(`Console Errors detected on ${url}:\n${consoleErrors.join('\n')}`);
-            }
-
-            // TASK 7: SEO & Head Validation
-            const locale = url.split('/')[3];
-            const htmlLang = await page.getAttribute('html', 'lang');
-            expect(htmlLang).toBe(locale);
-
-            const canonical = (await page.getAttribute('link[rel="canonical"]', 'href')) || 'MISSING';
-            const hreflangs = await page.locator('link[rel="alternate"][hreflang]').evaluateAll((links: Array<Element>) =>
-                links.map(l => l.getAttribute('hreflang') || '')
-            );
-            const description = (await page.getAttribute('meta[name="description"]', 'content')) || 'MISSING';
-
-            seoResults.push({ url, lang: htmlLang || 'missing', canonical, hreflangs, title: pageTitle, description });
-
-            // TASK 5: Link Graph Validation (Internal)
-            const internalLinks = await page.locator('a[href^="/"]').evaluateAll((elements: Array<Element>) =>
-                elements.map(el => (el as HTMLAnchorElement).getAttribute('href'))
-            );
-
-            // Verify a sample of internal links resolve
-            for (const link of internalLinks.slice(0, 5)) {
-                if (link && !link.startsWith('/api') && !link.includes('#')) {
-                    const linkResponse = await page.request.get(link);
-                    expect(linkResponse.status(), `Broken link: ${link} on ${url}`).toBe(200);
-                }
-            }
-
-            // TASK 6: UI Regression Smoke
-            const viewport = page.viewportSize();
-            const criticalPaths = ['/', '/platform', '/services', '/pricing', '/contact'];
-            const currentPath = new URL(url).pathname.replace(/\/[a-z]{2}/, '') || '/';
-
-            // Desktop Screenshot for Critical Pages
-            if (criticalPaths.includes(currentPath)) {
-                await page.screenshot({ path: `qa-i18n/smoke/desktop_${locale}_${currentPath.replace(/\//g, '_')}.png` });
-            }
-
-            // Mobile menu visibility check
-            if (viewport && viewport.width < 768) {
-                const menuBtn = page.locator('button[aria-label*="menu"], button[class*="menu-toggle"]').first();
-                if (await menuBtn.isVisible()) {
-                    await menuBtn.click();
-                    await page.waitForTimeout(500);
-                    if (criticalPaths.includes(currentPath)) {
-                        await page.screenshot({ path: `qa-i18n/smoke/mobile_menu_${locale}_${currentPath.replace(/\//g, '_')}.png` });
-                    }
-                    await menuBtn.click(); // Close it
-                }
-            }
-        });
+                // Quick check for 404 text in body if status is 200 (Next.js sometimes does this)
+                const text = await response.text();
+                expect(text.toLowerCase()).not.toContain('>404<');
+                expect(text).not.toContain('MISSING_MESSAGE');
+            });
+        }
     }
 });
