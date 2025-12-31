@@ -3,6 +3,7 @@
 
 import React from 'react';
 import { LineChart, Line, AreaChart, Area, BarChart, Bar, PieChart, Pie, Cell, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
+import NoSSR from '../visuals/NoSSR';
 
 const COLORS = ['#3b82f6', '#8b5cf6', '#10b981', '#f59e0b', '#ef4444'];
 
@@ -27,18 +28,20 @@ export const LatencyLineChart = ({ height = 180 }: { height?: number }) => {
 
     return (
         <ChartCard title="API Latency (ms)" height={height}>
-            <ResponsiveContainer width=\"100%\" height=\"100%\">
-                <LineChart data={data}>
-                    <CartesianGrid strokeDasharray="3 3" stroke="rgba(255,255,255,0.1)" />
-                    <XAxis dataKey="hour" stroke="#888" />
-                    <YAxis stroke="#888" />
-                    <Tooltip contentStyle={{ background: '#1e293b', border: '1px solid #334155' }} />
-                    <Legend />
-                    <Line type="monotone" dataKey="p50" stroke="#10b981" strokeWidth={2} />
-                    <Line type="monotone" dataKey="p95" stroke="#f59e0b" strokeWidth={2} />
-                    <Line type="monotone" dataKey="p99" stroke="#ef4444" strokeWidth={2} />
-                </LineChart>
-            </ResponsiveContainer>
+            <NoSSR>
+                <ResponsiveContainer width="100%" height="100%">
+                    <LineChart data={data}>
+                        <CartesianGrid strokeDasharray="3 3" stroke="rgba(255,255,255,0.1)" />
+                        <XAxis dataKey="hour" stroke="#888" />
+                        <YAxis stroke="#888" />
+                        <Tooltip contentStyle={{ background: '#1e293b', border: '1px solid #334155' }} />
+                        <Legend />
+                        <Line type="monotone" dataKey="p50" stroke="#10b981" strokeWidth={2} />
+                        <Line type="monotone" dataKey="p95" stroke="#f59e0b" strokeWidth={2} />
+                        <Line type="monotone" dataKey="p99" stroke="#ef4444" strokeWidth={2} />
+                    </LineChart>
+                </ResponsiveContainer>
+            </NoSSR>
         </ChartCard>
     );
 };
@@ -53,17 +56,19 @@ export const CostSavingsArea = ({ height = 180 }: { height?: number }) => {
 
     return (
         <ChartCard title="Monthly Cost Comparison ($)" height={height}>
-            <ResponsiveContainer width=\"100%\" height=\"100%\">
-                <AreaChart data={data}>
-                    <CartesianGrid strokeDasharray="3 3" stroke="rgba(255,255,255,0.1)" />
-                    <XAxis dataKey="month" stroke="#888" />
-                    <YAxis stroke="#888" />
-                    <Tooltip contentStyle={{ background: '#1e293b', border: '1px solid #334155' }} />
-                    <Legend />
-                    <Area type="monotone" dataKey="traditional" stackId="1" stroke="#ef4444" fill="#ef4444" fillOpacity={0.6} />
-                    <Area type="monotone" dataKey="optimized" stackId="2" stroke="#10b981" fill="#10b981" fillOpacity={0.6} />
-                </AreaChart>
-            </ResponsiveContainer>
+            <NoSSR>
+                <ResponsiveContainer width="100%" height="100%">
+                    <AreaChart data={data}>
+                        <CartesianGrid strokeDasharray="3 3" stroke="rgba(255,255,255,0.1)" />
+                        <XAxis dataKey="month" stroke="#888" />
+                        <YAxis stroke="#888" />
+                        <Tooltip contentStyle={{ background: '#1e293b', border: '1px solid #334155' }} />
+                        <Legend />
+                        <Area type="monotone" dataKey="traditional" stackId="1" stroke="#ef4444" fill="#ef4444" fillOpacity={0.6} />
+                        <Area type="monotone" dataKey="optimized" stackId="2" stroke="#10b981" fill="#10b981" fillOpacity={0.6} />
+                    </AreaChart>
+                </ResponsiveContainer>
+            </NoSSR>
         </ChartCard>
     );
 };
@@ -77,15 +82,17 @@ export const RequestVolumeBar = ({ height = 180 }: { height?: number }) => {
 
     return (
         <ChartCard title="Hourly Request Volume" height={height}>
-            <ResponsiveContainer width=\"100%\" height=\"100%\">
-                <BarChart data={data}>
-                    <CartesianGrid strokeDasharray="3 3" stroke="rgba(255,255,255,0.1)" />
-                    <XAxis dataKey="hour" stroke="#888" />
-                    <YAxis stroke="#888" />
-                    <Tooltip contentStyle={{ background: '#1e293b', border: '1px solid #334155' }} />
-                    <Bar dataKey="requests" fill="#3b82f6" radius={[8, 8, 0, 0]} />
-                </BarChart>
-            </ResponsiveContainer>
+            <NoSSR>
+                <ResponsiveContainer width="100%" height="100%">
+                    <BarChart data={data}>
+                        <CartesianGrid strokeDasharray="3 3" stroke="rgba(255,255,255,0.1)" />
+                        <XAxis dataKey="hour" stroke="#888" />
+                        <YAxis stroke="#888" />
+                        <Tooltip contentStyle={{ background: '#1e293b', border: '1px solid #334155' }} />
+                        <Bar dataKey="requests" fill="#3b82f6" radius={[8, 8, 0, 0]} />
+                    </BarChart>
+                </ResponsiveContainer>
+            </NoSSR>
         </ChartCard>
     );
 };
@@ -101,25 +108,27 @@ export const CloudDistributionPie = ({ height = 180 }: { height?: number }) => {
 
     return (
         <ChartCard title="Multi-Cloud Distribution (%)" height={height}>
-            <ResponsiveContainer width=\"100%\" height=\"100%\">
-                <PieChart>
-                    <Pie
-                        data={data}
-                        cx="50%"
-                        cy="50%"
-                        labelLine={false}
-                        label={(entry) => `${entry.name}: ${entry.value}%`}
-                        outerRadius={height < 150 ? 45 : 70}
-                        fill="#8884d8"
-                        dataKey="value"
-                    >
-                        {data.map((entry, index) => (
-                            <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
-                        ))}
-                    </Pie>
-                    <Tooltip contentStyle={{ background: '#1e293b', border: '1px solid #334155' }} />
-                </PieChart>
-            </ResponsiveContainer>
+            <NoSSR>
+                <ResponsiveContainer width="100%" height="100%">
+                    <PieChart>
+                        <Pie
+                            data={data}
+                            cx="50%"
+                            cy="50%"
+                            labelLine={false}
+                            label={(entry) => `${entry.name}: ${entry.value}%`}
+                            outerRadius={height < 150 ? 45 : 70}
+                            fill="#8884d8"
+                            dataKey="value"
+                        >
+                            {data.map((entry, index) => (
+                                <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
+                            ))}
+                        </Pie>
+                        <Tooltip contentStyle={{ background: '#1e293b', border: '1px solid #334155' }} />
+                    </PieChart>
+                </ResponsiveContainer>
+            </NoSSR>
         </ChartCard>
     );
 };
@@ -133,15 +142,17 @@ export const UptimeTrend = ({ height = 180 }: { height?: number }) => {
 
     return (
         <ChartCard title="30-Day Uptime (%)" height={height}>
-            <ResponsiveContainer width=\"100%\" height=\"100%\">
-                <LineChart data={data}>
-                    <CartesianGrid strokeDasharray="3 3" stroke="rgba(255,255,255,0.1)" />
-                    <XAxis dataKey="day" stroke="#888" />
-                    <YAxis domain={[99.5, 100]} stroke="#888" />
-                    <Tooltip contentStyle={{ background: '#1e293b', border: '1px solid #334155' }} />
-                    <Line type="monotone" dataKey="uptime" stroke="#10b981" strokeWidth={2} dot={false} />
-                </LineChart>
-            </ResponsiveContainer>
+            <NoSSR>
+                <ResponsiveContainer width="100%" height="100%">
+                    <LineChart data={data}>
+                        <CartesianGrid strokeDasharray="3 3" stroke="rgba(255,255,255,0.1)" />
+                        <XAxis dataKey="day" stroke="#888" />
+                        <YAxis domain={[99.5, 100]} stroke="#888" />
+                        <Tooltip contentStyle={{ background: '#1e293b', border: '1px solid #334155' }} />
+                        <Line type="monotone" dataKey="uptime" stroke="#10b981" strokeWidth={2} dot={false} />
+                    </LineChart>
+                </ResponsiveContainer>
+            </NoSSR>
         </ChartCard>
     );
 };
@@ -157,19 +168,21 @@ export const ComplianceScoresBar = ({ height = 180 }: { height?: number }) => {
 
     return (
         <ChartCard title="Compliance Framework Scores" height={height}>
-            <ResponsiveContainer width=\"100%\" height=\"100%\">
-                <BarChart data={data} layout="vertical">
-                    <CartesianGrid strokeDasharray="3 3" stroke="rgba(255,255,255,0.1)" />
-                    <XAxis type="number" domain={[0, 100]} stroke="#888" hide={height < 150} />
-                    <YAxis dataKey="name" type="category" stroke="#888" width={100} />
-                    <Tooltip contentStyle={{ background: '#1e293b', border: '1px solid #334155' }} />
-                    <Bar dataKey="score" radius={[0, 8, 8, 0]}>
-                        {data.map((entry, index) => (
-                            <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
-                        ))}
-                    </Bar>
-                </BarChart>
-            </ResponsiveContainer>
+            <NoSSR>
+                <ResponsiveContainer width="100%" height="100%">
+                    <BarChart data={data} layout="vertical">
+                        <CartesianGrid strokeDasharray="3 3" stroke="rgba(255,255,255,0.1)" />
+                        <XAxis type="number" domain={[0, 100]} stroke="#888" hide={height < 150} />
+                        <YAxis dataKey="name" type="category" stroke="#888" width={100} />
+                        <Tooltip contentStyle={{ background: '#1e293b', border: '1px solid #334155' }} />
+                        <Bar dataKey="score" radius={[0, 8, 8, 0]}>
+                            {data.map((entry, index) => (
+                                <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
+                            ))}
+                        </Bar>
+                    </BarChart>
+                </ResponsiveContainer>
+            </NoSSR>
         </ChartCard>
     );
 };
@@ -183,21 +196,23 @@ export const ErrorRateArea = ({ height = 180 }: { height?: number }) => {
 
     return (
         <ChartCard title="Error Rate Trend (%)" height={height}>
-            <ResponsiveContainer width=\"100%\" height=\"100%\">
-                <AreaChart data={data}>
-                    <defs>
-                        <linearGradient id="errorGrad" x1="0" y1="0" x2="0" y2="1">
-                            <stop offset="5%" stopColor="#ef4444" stopOpacity={0.8} />
-                            <stop offset="95%" stopColor="#ef4444" stopOpacity={0} />
-                        </linearGradient>
-                    </defs>
-                    <CartesianGrid strokeDasharray="3 3" stroke="rgba(255,255,255,0.1)" />
-                    <XAxis dataKey="day" stroke="#888" />
-                    <YAxis stroke="#888" />
-                    <Tooltip contentStyle={{ background: '#1e293b', border: '1px solid #334155' }} />
-                    <Area type="monotone" dataKey="errors" stroke="#ef4444" fill="url(#errorGrad)" />
-                </AreaChart>
-            </ResponsiveContainer>
+            <NoSSR>
+                <ResponsiveContainer width="100%" height="100%">
+                    <AreaChart data={data}>
+                        <defs>
+                            <linearGradient id="errorGrad" x1="0" y1="0" x2="0" y2="1">
+                                <stop offset="5%" stopColor="#ef4444" stopOpacity={0.8} />
+                                <stop offset="95%" stopColor="#ef4444" stopOpacity={0} />
+                            </linearGradient>
+                        </defs>
+                        <CartesianGrid strokeDasharray="3 3" stroke="rgba(255,255,255,0.1)" />
+                        <XAxis dataKey="day" stroke="#888" />
+                        <YAxis stroke="#888" />
+                        <Tooltip contentStyle={{ background: '#1e293b', border: '1px solid #334155' }} />
+                        <Area type="monotone" dataKey="errors" stroke="#ef4444" fill="url(#errorGrad)" />
+                    </AreaChart>
+                </ResponsiveContainer>
+            </NoSSR>
         </ChartCard>
     );
 };
@@ -213,19 +228,21 @@ export const FeatureUsageBar = ({ height = 180 }: { height?: number }) => {
 
     return (
         <ChartCard title="Feature Adoption Rate (%)" height={height}>
-            <ResponsiveContainer width=\"100%\" height=\"100%\">
-                <BarChart data={data}>
-                    <CartesianGrid strokeDasharray="3 3" stroke="rgba(255,255,255,0.1)" />
-                    <XAxis dataKey="feature" stroke="#888" />
-                    <YAxis domain={[0, 100]} stroke="#888" />
-                    <Tooltip contentStyle={{ background: '#1e293b', border: '1px solid #334155' }} />
-                    <Bar dataKey="usage" radius={[8, 8, 0, 0]}>
-                        {data.map((entry, index) => (
-                            <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
-                        ))}
-                    </Bar>
-                </BarChart>
-            </ResponsiveContainer>
+            <NoSSR>
+                <ResponsiveContainer width="100%" height="100%">
+                    <BarChart data={data}>
+                        <CartesianGrid strokeDasharray="3 3" stroke="rgba(255,255,255,0.1)" />
+                        <XAxis dataKey="feature" stroke="#888" />
+                        <YAxis domain={[0, 100]} stroke="#888" />
+                        <Tooltip contentStyle={{ background: '#1e293b', border: '1px solid #334155' }} />
+                        <Bar dataKey="usage" radius={[8, 8, 0, 0]}>
+                            {data.map((entry, index) => (
+                                <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
+                            ))}
+                        </Bar>
+                    </BarChart>
+                </ResponsiveContainer>
+            </NoSSR>
         </ChartCard>
     );
 };

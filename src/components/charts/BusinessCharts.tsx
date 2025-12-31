@@ -1,6 +1,7 @@
 // @ts-nocheck
 "use client";
 
+import NoSSR from '../visuals/NoSSR';
 import React from 'react';
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Cell, LineChart, Line, AreaChart, Area } from 'recharts';
 import ChartContainer from './ChartContainer';
@@ -13,25 +14,27 @@ export const ConversionFunnelChart: React.FC<{ data: FunnelDataPoint[] }> = ({ d
         description="User journey from visitor to paid customer"
         badge="MARKETING"
     >
-        <ResponsiveContainer width="100%" height={280}>
-            <BarChart data={data} layout="vertical">
-                <CartesianGrid strokeDasharray="3 3" stroke="rgba(255,255,255,0.1)" />
-                <XAxis type="number" stroke="rgba(255,255,255,0.5)" style={{ fontSize: '0.75rem' }} />
-                <YAxis dataKey="stage" type="category" stroke="rgba(255,255,255,0.5)" style={{ fontSize: '0.75rem' }} width={100} />
-                <Tooltip
-                    contentStyle={{ background: 'rgba(15, 23, 42, 0.95)', border: '1px solid rgba(96, 239, 255, 0.3)', borderRadius: '0.5rem' }}
-                    formatter={(value: number, name: string, props: any) => [
-                        `${value.toLocaleString()} (${props.payload.percentage}%)`,
-                        'Count'
-                    ]}
-                />
-                <Bar dataKey="value" radius={[0, 8, 8, 0]}>
-                    {data.map((entry, index) => (
-                        <Cell key={`cell-${index}`} fill={`hsl(${200 + index * 20}, 70%, 50%)`} />
-                    ))}
-                </Bar>
-            </BarChart>
-        </ResponsiveContainer>
+        <NoSSR>
+            <ResponsiveContainer width="100%" height={280}>
+                <BarChart data={data} layout="vertical">
+                    <CartesianGrid strokeDasharray="3 3" stroke="rgba(255,255,255,0.1)" />
+                    <XAxis type="number" stroke="rgba(255,255,255,0.5)" style={{ fontSize: '0.75rem' }} />
+                    <YAxis dataKey="stage" type="category" stroke="rgba(255,255,255,0.5)" style={{ fontSize: '0.75rem' }} width={100} />
+                    <Tooltip
+                        contentStyle={{ background: 'rgba(15, 23, 42, 0.95)', border: '1px solid rgba(96, 239, 255, 0.3)', borderRadius: '0.5rem' }}
+                        formatter={(value: number, name: string, props: any) => [
+                            `${value.toLocaleString()} (${props.payload.percentage}%)`,
+                            'Count'
+                        ]}
+                    />
+                    <Bar dataKey="value" radius={[0, 8, 8, 0]}>
+                        {data.map((entry, index) => (
+                            <Cell key={`cell-${index}`} fill={`hsl(${200 + index * 20}, 70%, 50%)`} />
+                        ))}
+                    </Bar>
+                </BarChart>
+            </ResponsiveContainer>
+        </NoSSR>
     </ChartContainer>
 );
 
@@ -42,25 +45,27 @@ export const PipelineChart: React.FC<{ data: FunnelDataPoint[] }> = ({ data }) =
         description="Current sales funnel stages and conversion rates"
         badge="SALES"
     >
-        <ResponsiveContainer width="100%" height={280}>
-            <BarChart data={data} layout="vertical">
-                <CartesianGrid strokeDasharray="3 3" stroke="rgba(255,255,255,0.1)" />
-                <XAxis type="number" stroke="rgba(255,255,255,0.5)" style={{ fontSize: '0.75rem' }} />
-                <YAxis dataKey="stage" type="category" stroke="rgba(255,255,255,0.5)" style={{ fontSize: '0.75rem' }} width={90} />
-                <Tooltip
-                    contentStyle={{ background: 'rgba(15, 23, 42, 0.95)', border: '1px solid rgba(16, 185, 129, 0.3)', borderRadius: '0.5rem' }}
-                    formatter={(value: number, name: string, props: any) => [
-                        `${value.toLocaleString()} (${props.payload.percentage}%)`,
-                        'Count'
-                    ]}
-                />
-                <Bar dataKey="value" radius={[0, 8, 8, 0]}>
-                    {data.map((entry, index) => (
-                        <Cell key={`cell-${index}`} fill={`hsl(${120 - index * 15}, 70%, 50%)`} />
-                    ))}
-                </Bar>
-            </BarChart>
-        </ResponsiveContainer>
+        <NoSSR>
+            <ResponsiveContainer width="100%" height={280}>
+                <BarChart data={data} layout="vertical">
+                    <CartesianGrid strokeDasharray="3 3" stroke="rgba(255,255,255,0.1)" />
+                    <XAxis type="number" stroke="rgba(255,255,255,0.5)" style={{ fontSize: '0.75rem' }} />
+                    <YAxis dataKey="stage" type="category" stroke="rgba(255,255,255,0.5)" style={{ fontSize: '0.75rem' }} width={90} />
+                    <Tooltip
+                        contentStyle={{ background: 'rgba(15, 23, 42, 0.95)', border: '1px solid rgba(16, 185, 129, 0.3)', borderRadius: '0.5rem' }}
+                        formatter={(value: number, name: string, props: any) => [
+                            `${value.toLocaleString()} (${props.payload.percentage}%)`,
+                            'Count'
+                        ]}
+                    />
+                    <Bar dataKey="value" radius={[0, 8, 8, 0]}>
+                        {data.map((entry, index) => (
+                            <Cell key={`cell-${index}`} fill={`hsl(${120 - index * 15}, 70%, 50%)`} />
+                        ))}
+                    </Bar>
+                </BarChart>
+            </ResponsiveContainer>
+        </NoSSR>
     </ChartContainer>
 );
 
@@ -71,23 +76,25 @@ export const AdoptionProgressChart: React.FC<{ data: TimeSeriesDataPoint[] }> = 
         description="Total active users over time"
         badge="GROWING"
     >
-        <ResponsiveContainer width="100%" height={280}>
-            <AreaChart data={data}>
-                <defs>
-                    <linearGradient id="adoptionGradient" x1="0" y1="0" x2="0" y2="1">
-                        <stop offset="5%" stopColor="#8b5cf6" stopOpacity={0.8} />
-                        <stop offset="95%" stopColor="#8b5cf6" stopOpacity={0} />
-                    </linearGradient>
-                </defs>
-                <CartesianGrid strokeDasharray="3 3" stroke="rgba(255,255,255,0.1)" />
-                <XAxis dataKey="timestamp" stroke="rgba(255,255,255,0.5)" style={{ fontSize: '0.75rem' }} />
-                <YAxis stroke="rgba(255,255,255,0.5)" style={{ fontSize: '0.75rem' }} />
-                <Tooltip
-                    contentStyle={{ background: 'rgba(15, 23, 42, 0.95)', border: '1px solid rgba(139, 92, 246, 0.3)', borderRadius: '0.5rem' }}
-                />
-                <Area type="monotone" dataKey="value" stroke="#8b5cf6" strokeWidth={2} fillOpacity={1} fill="url(#adoptionGradient)" />
-            </AreaChart>
-        </ResponsiveContainer>
+        <NoSSR>
+            <ResponsiveContainer width="100%" height={280}>
+                <AreaChart data={data}>
+                    <defs>
+                        <linearGradient id="adoptionGradient" x1="0" y1="0" x2="0" y2="1">
+                            <stop offset="5%" stopColor="#8b5cf6" stopOpacity={0.8} />
+                            <stop offset="95%" stopColor="#8b5cf6" stopOpacity={0} />
+                        </linearGradient>
+                    </defs>
+                    <CartesianGrid strokeDasharray="3 3" stroke="rgba(255,255,255,0.1)" />
+                    <XAxis dataKey="timestamp" stroke="rgba(255,255,255,0.5)" style={{ fontSize: '0.75rem' }} />
+                    <YAxis stroke="rgba(255,255,255,0.5)" style={{ fontSize: '0.75rem' }} />
+                    <Tooltip
+                        contentStyle={{ background: 'rgba(15, 23, 42, 0.95)', border: '1px solid rgba(139, 92, 246, 0.3)', borderRadius: '0.5rem' }}
+                    />
+                    <Area type="monotone" dataKey="value" stroke="#8b5cf6" strokeWidth={2} fillOpacity={1} fill="url(#adoptionGradient)" />
+                </AreaChart>
+            </ResponsiveContainer>
+        </NoSSR>
     </ChartContainer>
 );
 
@@ -98,19 +105,21 @@ export const RevenueProjectionChart: React.FC<{ data: MultiSeriesDataPoint[] }> 
         description="Historical and projected annual recurring revenue (illustrative)"
         badge="FORECAST"
     >
-        <ResponsiveContainer width="100%" height={280}>
-            <LineChart data={data}>
-                <CartesianGrid strokeDasharray="3 3" stroke="rgba(255,255,255,0.1)" />
-                <XAxis dataKey="timestamp" stroke="rgba(255,255,255,0.5)" style={{ fontSize: '0.75rem' }} />
-                <YAxis stroke="rgba(255,255,255,0.5)" style={{ fontSize: '0.75rem' }} />
-                <Tooltip
-                    contentStyle={{ background: 'rgba(15, 23, 42, 0.95)', border: '1px solid rgba(16, 185, 129, 0.3)', borderRadius: '0.5rem' }}
-                    formatter={(value: number) => `$${(value / 1000000).toFixed(1)}M`}
-                />
-                <Line type="monotone" dataKey="actual" stroke="#10b981" strokeWidth={3} dot={{ r: 5 }} name="Actual" />
-                <Line type="monotone" dataKey="projected" stroke="#60efff" strokeWidth={3} strokeDasharray="5 5" dot={{ r: 5 }} name="Projected" />
-            </LineChart>
-        </ResponsiveContainer>
+        <NoSSR>
+            <ResponsiveContainer width="100%" height={280}>
+                <LineChart data={data}>
+                    <CartesianGrid strokeDasharray="3 3" stroke="rgba(255,255,255,0.1)" />
+                    <XAxis dataKey="timestamp" stroke="rgba(255,255,255,0.5)" style={{ fontSize: '0.75rem' }} />
+                    <YAxis stroke="rgba(255,255,255,0.5)" style={{ fontSize: '0.75rem' }} />
+                    <Tooltip
+                        contentStyle={{ background: 'rgba(15, 23, 42, 0.95)', border: '1px solid rgba(16, 185, 129, 0.3)', borderRadius: '0.5rem' }}
+                        formatter={(value: number) => `$${(value / 1000000).toFixed(1)}M`}
+                    />
+                    <Line type="monotone" dataKey="actual" stroke="#10b981" strokeWidth={3} dot={{ r: 5 }} name="Actual" />
+                    <Line type="monotone" dataKey="projected" stroke="#60efff" strokeWidth={3} strokeDasharray="5 5" dot={{ r: 5 }} name="Projected" />
+                </LineChart>
+            </ResponsiveContainer>
+        </NoSSR>
     </ChartContainer>
 );
 
@@ -121,17 +130,19 @@ export const AvailabilityChart: React.FC<{ data: TimeSeriesDataPoint[] }> = ({ d
         description="30-day uptime percentage (target: 99.9%)"
         badge="99.95%"
     >
-        <ResponsiveContainer width="100%" height={280}>
-            <LineChart data={data}>
-                <CartesianGrid strokeDasharray="3 3" stroke="rgba(255,255,255,0.1)" />
-                <XAxis dataKey="timestamp" stroke="rgba(255,255,255,0.5)" style={{ fontSize: '0.75rem' }} />
-                <YAxis domain={[99.5, 100]} stroke="rgba(255,255,255,0.5)" style={{ fontSize: '0.75rem' }} />
-                <Tooltip
-                    contentStyle={{ background: 'rgba(15, 23, 42, 0.95)', border: '1px solid rgba(16, 185, 129, 0.3)', borderRadius: '0.5rem' }}
-                    formatter={(value: number) => `${value.toFixed(3)}%`}
-                />
-                <Line type="monotone" dataKey="value" stroke="#10b981" strokeWidth={2} dot={false} />
-            </LineChart>
-        </ResponsiveContainer>
+        <NoSSR>
+            <ResponsiveContainer width="100%" height={280}>
+                <LineChart data={data}>
+                    <CartesianGrid strokeDasharray="3 3" stroke="rgba(255,255,255,0.1)" />
+                    <XAxis dataKey="timestamp" stroke="rgba(255,255,255,0.5)" style={{ fontSize: '0.75rem' }} />
+                    <YAxis domain={[99.5, 100]} stroke="rgba(255,255,255,0.5)" style={{ fontSize: '0.75rem' }} />
+                    <Tooltip
+                        contentStyle={{ background: 'rgba(15, 23, 42, 0.95)', border: '1px solid rgba(16, 185, 129, 0.3)', borderRadius: '0.5rem' }}
+                        formatter={(value: number) => `${value.toFixed(3)}%`}
+                    />
+                    <Line type="monotone" dataKey="value" stroke="#10b981" strokeWidth={2} dot={false} />
+                </LineChart>
+            </ResponsiveContainer>
+        </NoSSR>
     </ChartContainer>
 );

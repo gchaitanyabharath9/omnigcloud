@@ -26,7 +26,8 @@ switch (currentEnv) {
 // Priority: Process ENV > JSON Config > Defaults (if any)
 const processEnv = {
     site: {
-        url: process.env.NEXT_PUBLIC_SITE_URL, // Override if set
+        url: process.env.NEXT_PUBLIC_SITE_URL,
+        name: process.env.NEXT_PUBLIC_SITE_NAME,
     },
     auth: {
         secret: process.env.AUTH_SECRET,
@@ -46,10 +47,10 @@ const rawConfig = {
     env: currentEnv,
     isProduction: currentEnv === 'prod',
     isDevelopment: currentEnv === 'local' || currentEnv === 'dev',
-    // isTest removed or kept based on usage, simplifying for now
     isTest: process.env.NODE_ENV === 'test',
 
     site: {
+        name: 'OmniGCloud', // Hard default to satisfy schema
         ...envSpecificConfig.site,
         ...removeEmpty(processEnv.site),
     },
@@ -82,7 +83,10 @@ function removeEmpty(obj: any) {
 const parsed = ConfigSchema.safeParse(rawConfig);
 
 if (!parsed.success) {
-    console.error('❌ Invalid Configuration:', parsed.error.format());
+    console.error('❌ Invalid Configuration:', JSON.stringify(parsed.error.format(), null, 2));
+    // Log the actual state of site to see what's missing
+    console.error('Current raw site config:', rawConfig.site);
+
     // Only warn in build to prevent failure if secrets are missing in CI
     if (process.env.NEXT_PHASE !== 'phase-production-build') {
         console.warn('⚠️  Config validation failed. Check app.json and .env');
