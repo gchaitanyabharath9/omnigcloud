@@ -20,14 +20,14 @@ export default function DashboardShell({ title, subtitle, children }: DashboardS
     }, []);
 
     return (
-        <div style={{ background: '#000000', minHeight: '100vh', color: 'white' }}>
+        <div style={{ background: 'var(--background)', minHeight: '100vh', color: 'var(--foreground)' }}>
             {/* COMMAND HEADER */}
             <div style={{
                 position: 'sticky',
                 top: 'var(--header-height)',
                 zIndex: 100,
-                background: 'linear-gradient(180deg, #0a0a0a 0%, #000000 100%)',
-                borderBottom: '1px solid rgba(96, 239, 255, 0.2)',
+                background: 'var(--bg-surface-2)',
+                borderBottom: '1px solid var(--card-border)',
                 padding: '1.5rem 0',
                 backdropFilter: 'blur(20px)',
                 marginTop: '0'
@@ -35,7 +35,7 @@ export default function DashboardShell({ title, subtitle, children }: DashboardS
                 <div className="container">
                     <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
                         <div>
-                            <h1 style={{ fontSize: '2.5rem', fontWeight: 950, margin: 0, color: '#60efff', letterSpacing: '-0.02em' }}>
+                            <h1 style={{ fontSize: '2.5rem', fontWeight: 950, margin: 0, color: 'var(--primary)', letterSpacing: '-0.02em' }}>
                                 {title}
                             </h1>
                             <div style={{ fontSize: '0.85rem', opacity: 0.6, marginTop: '0.5rem', fontFamily: 'var(--font-mono)' }}>

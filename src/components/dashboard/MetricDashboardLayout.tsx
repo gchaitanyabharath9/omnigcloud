@@ -23,12 +23,12 @@ export default function MetricDashboardLayout({
     return (
         <div className="w-full grid grid-cols-1 lg:grid-cols-2 gap-6 auto-rows-auto">
             {/* QUADRANT 1: Main Visual (Top-Left) */}
-            <div className="glass-panel p-6 rounded-2xl border border-white/5 bg-black/40 flex flex-col relative overflow-hidden group">
+            <div className="glass-panel p-6 rounded-2xl flex flex-col relative overflow-hidden group">
                 <div className="absolute top-0 right-0 p-4 opacity-50">
                     <div className="text-[10px] font-mono border border-white/20 px-2 py-1 rounded-full">LIVE VIEW</div>
                 </div>
                 <div className="mb-4">
-                    <h2 className="text-2xl font-black tracking-tight text-white">{title}</h2>
+                    <h2 className="text-2xl font-black tracking-tight text-foreground">{title}</h2>
                     <p className="text-sm text-muted-foreground">{subtitle}</p>
                 </div>
                 <div className="flex-1 flex items-center justify-center min-h-[250px]">
@@ -39,13 +39,13 @@ export default function MetricDashboardLayout({
             {/* QUADRANT 2: Key Stats (Top-Right) */}
             <div className="grid grid-rows-2 gap-4">
                 {/* Top Half of Right Col: Big Stats */}
-                <div className="glass-panel p-6 rounded-2xl border border-white/5 bg-black/40 flex flex-col justify-center">
+                <div className="glass-panel p-6 rounded-2xl flex flex-col justify-center">
                     <div className="grid grid-cols-2 gap-4 h-full">
                         {stats.map((stat, idx) => (
                             <div key={idx} className="bg-white/5 rounded-xl p-4 flex flex-col justify-center border border-white/5 hover:bg-white/10 transition-colors">
                                 <span className="text-xs text-muted-foreground uppercase tracking-widest font-bold mb-1">{stat.label}</span>
                                 <div className="flex items-end gap-2">
-                                    <span className="text-3xl font-mono font-bold text-white leading-none">{stat.value}</span>
+                                    <span className="text-3xl font-mono font-bold text-foreground leading-none">{stat.value}</span>
                                     {stat.trend && (
                                         <span className={`text-xs font-bold mb-1 ${stat.trendUp ? 'text-emerald-400' : 'text-rose-400'} flex items-center`}>
                                             {stat.trendUp ? '↑' : '↓'} {stat.trend}
@@ -70,7 +70,7 @@ export default function MetricDashboardLayout({
             </div>
 
             {/* QUADRANT 3: Secondary Visual (Bottom-Left) */}
-            <div className="glass-panel p-6 rounded-2xl border border-white/5 bg-black/40 flex flex-col min-h-[300px]">
+            <div className="glass-panel p-6 rounded-2xl flex flex-col min-h-[300px]">
                 <div className="mb-2 flex items-center justify-between">
                     <span className="text-xs font-bold uppercase text-muted-foreground">Historical Trend</span>
                     <div className="flex gap-1">
@@ -85,7 +85,7 @@ export default function MetricDashboardLayout({
             </div>
 
             {/* QUADRANT 4: Logs / Details (Bottom-Right) */}
-            <div className="glass-panel p-0 rounded-2xl border border-white/5 bg-black/40 flex flex-col overflow-hidden min-h-[300px]">
+            <div className="glass-panel p-0 rounded-2xl flex flex-col overflow-hidden min-h-[300px]">
                 <div className="p-4 border-b border-white/5 bg-white/5 flex items-center justify-between">
                     <span className="text-xs font-mono text-muted-foreground">SYSTEM_LOGS.tail</span>
                     <div className="flex gap-1.5">
