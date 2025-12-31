@@ -29,6 +29,7 @@ jobs:
       - name: "Build Application"
         run: "npm run build"
         env:
+          APP_ENV: "local"
           NEXT_PUBLIC_SITE_URL: "http://localhost:3000"
           AUTH_SECRET: ${{ secrets.AUTH_SECRET || 'dummy_secret_for_ci' }}
 
@@ -42,6 +43,7 @@ jobs:
         run: "npm run qa:test"
         env:
           CI: "true"
+          APP_ENV: "local"
           AUTH_TRUST_HOST: "true"
           AUTH_SECRET: ${{ secrets.AUTH_SECRET || 'dummy_secret_for_ci' }}
           NEXT_PUBLIC_SITE_URL: "http://localhost:3000"
