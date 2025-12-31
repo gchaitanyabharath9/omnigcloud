@@ -1,15 +1,8 @@
-import vault from 'node-vault';
 import { withRetry } from '@/lib/retry';
 
-// Initialize Vault client
+// Initialize Vault client lazily to avoid loading 'node-vault' in Edge Runtime
 // Expects VAULT_ADDR and VAULT_TOKEN to be set in environment variables
 // in non-local environments.
-const client = vault({
-    endpoint: process.env.VAULT_ADDR,
-    token: process.env.VAULT_TOKEN,
-});
-
-export const vaultClient = client;
 
 /**
  * Reads a secret from HashiCorp Vault KV v2 engine.
@@ -18,6 +11,15 @@ export const vaultClient = client;
  */
 export async function getVaultSecret(path: string): Promise<Record<string, any> | null> {
     try {
+        // Dynamically import node-vault to prevent Edge Runtime crashes
+        const vaultModule = await import('node-vault');
+        const vault = vaultModule.default;
+
+        const client = vault({
+            endpoint: process.env.VAULT_ADDR,
+            token: process.env.VAULT_TOKEN,
+        });
+
         // KV v2 requires adding "data/" after the mount point (usually "secret")
         // We assume the default mount point "secret" for simplicity, or the user
         // provides "secret/data/..."
