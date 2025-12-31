@@ -54,8 +54,8 @@ jobs:
     needs: quality_gates
     # CRITICAL: This job only runs if the repo variable is explicitly 'true'
     # If variable is missing or 'false', this skips.
-    if: ${{ vars.ENABLE_SIT_PIPELINE == 'true' }}
-    environment: sit
+    if: vars.ENABLE_SIT_PIPELINE == 'true'
+    environment: "sit"
     env:
       APP_ENV: sit
     steps:
