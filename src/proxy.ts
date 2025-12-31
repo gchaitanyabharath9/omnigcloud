@@ -26,7 +26,8 @@ export default auth(async (req) => {
   }
 
   // 1a. Canonical Host Enforcement (Application Layer)
-  // Fixes: "www vs non-www" and "vercel.app" leakage without Cloudflare Proxy
+  // TEMPORARILY DISABLED: Delegating to Vercel Edge configuration to resolve redirect loops.
+  /*
   if (process.env.NODE_ENV === 'production') {
     const host = req.headers.get('host');
     const canonicalUrl = new URL(domains.canonical);
@@ -49,6 +50,7 @@ export default auth(async (req) => {
       return NextResponse.redirect(newUrl, 301);
     }
   }
+  */
 
   const segments = pathname.split('/');
   const firstSegment = segments[1];
