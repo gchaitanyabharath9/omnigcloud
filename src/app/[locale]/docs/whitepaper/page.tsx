@@ -14,6 +14,26 @@ export default function WhitePaperPage() {
         <div style={{ background: 'var(--background)', color: 'var(--foreground)', fontFamily: 'var(--font-sans)', lineHeight: '1.8' }}>
             <WhitepaperHeader />
 
+            {/* WATERMARK OVERLAY */}
+            <div style={{
+                position: 'fixed',
+                top: '50%',
+                left: '50%',
+                transform: 'translate(-50%, -50%) rotate(-45deg)',
+                width: '150vw',
+                fontSize: '8vw',
+                fontWeight: 900,
+                color: 'var(--foreground)',
+                opacity: 0.03,
+                pointerEvents: 'none',
+                zIndex: 9999,
+                whiteSpace: 'nowrap',
+                textAlign: 'center',
+                userSelect: 'none'
+            }}>
+                OMNIGCLOUD RESEARCH  •  USCIS EVIDENCE  •  DO NOT DISTRIBUTE
+            </div>
+
             {/* PAPER CONTENT */}
             <main style={{ padding: '4rem 0' }}>
                 <div className="container" style={{ maxWidth: '900px', background: 'var(--bg-surface)', padding: '5rem', borderRadius: '0', borderLeft: '1px solid var(--border)', borderRight: '1px solid var(--border)' }}>
