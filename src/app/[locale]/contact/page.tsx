@@ -50,7 +50,7 @@ export default function ContactPage() {
                         <div className="grid-2" style={{ gap: '1rem' }}>
                             {[
                                 { icon: <Mail color="#60efff" size={20} />, label: "Support", val: t('email.support') },
-                                { icon: <Phone color="#60efff" size={20} />, label: "Executive Line", val: "+1 (888) 555-2025" },
+                                { icon: <Phone color="#60efff" size={20} />, label: "Executive Line", val: "+1 (850) 443-1481" },
                                 { icon: <MapPin color="#60efff" size={20} />, label: "HQ", val: t('location') },
                                 { icon: <Globe color="#60efff" size={20} />, label: "Coverage", val: "Global 24/7/365" }
                             ].map((item, i) => (

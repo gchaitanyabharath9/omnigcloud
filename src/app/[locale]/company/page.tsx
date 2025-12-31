@@ -40,22 +40,34 @@ export default function CompanyPage() {
             <section id="leadership" className="snap-section container">
                 <div style={{ textAlign: 'center', marginBottom: '3rem' }}>
                     <h2 style={{ fontSize: '3rem', fontWeight: 900 }}>Executive Leadership</h2>
-                    <p style={{ color: 'var(--foreground)', opacity: 0.6 }}>Leading the 2025 modernization frontier.</p>
+                    <p style={{ color: 'var(--foreground)', opacity: 0.6 }}>Visionaries defining the next era of sovereign cloud.</p>
                 </div>
-                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '2rem' }}>
+                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '3rem', maxWidth: '1000px', margin: '0 auto' }}>
                     {[
-                        { name: "Sarah Chen", role: "CEO", img: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=800&fit=crop", bio: "Ex-Google Cloud VP. Pioneer in autonomous infrastructure." },
-                        { name: "Marcus Thorne", role: "CTO", img: "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=800&fit=crop", bio: "Architect of Terraform Fabric. 15+ years in distributed systems." },
-                        { name: "Elena Rodriguez", role: "VP AI", img: "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=800&fit=crop", bio: "PhD in Neural Architecture Search. Leading Sovereign AI." }
+                        {
+                            name: "Jyothsna Devi Gopu",
+                            role: "Founder & Chief Executive Officer",
+                            bio: "Leading the strategic vision and global market direction. Jyothsna provides the foundational enterprise strategy required to steer the company towards becoming a global standard in sovereign cloud orchestration.",
+                            placeholder: "Founder portrait coming soon"
+                        },
+                        {
+                            name: "Chaitanya Bharath Gopu",
+                            role: "Founder & Chief Technology Officer",
+                            bio: "Distinguished Platform Architect providing the high-level technical direction for the G-Framework. Chaitanya defines the architectural standards and innovation roadmap that power the platform's autonomous capabilities.",
+                            placeholder: "Leadership profile image to be added"
+                        }
                     ].map((leader, i) => (
                         <div key={i} className="glass-panel" style={{ padding: '0', borderRadius: '2rem', overflow: 'hidden' }}>
-                            <div style={{ height: '300px', width: '100%', overflow: 'hidden' }}>
-                                <img src={leader.img} alt={leader.name} style={{ width: '100%', height: '100%', objectFit: 'cover', filter: 'grayscale(100%) brightness(0.9)' }} />
+                            <div style={{ height: '350px', width: '100%', overflow: 'hidden', background: '#1e293b', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                                <div style={{ textAlign: 'center', opacity: 0.5, padding: '2rem' }}>
+                                    <Users size={48} className="mx-auto mb-3" />
+                                    <div style={{ fontSize: '0.9rem', fontWeight: 600 }}>{leader.placeholder}</div>
+                                </div>
                             </div>
-                            <div style={{ padding: '2rem' }}>
-                                <div style={{ color: 'var(--primary)', fontSize: '0.7rem', fontWeight: 900, textTransform: 'uppercase', marginBottom: '0.5rem' }}>{leader.role}</div>
-                                <h4 style={{ marginBottom: '1rem', fontSize: '1.5rem', fontWeight: 800 }}>{leader.name}</h4>
-                                <p style={{ fontSize: '0.85rem', opacity: 0.6, lineHeight: 1.5 }}>{leader.bio}</p>
+                            <div style={{ padding: '2.5rem' }}>
+                                <div style={{ color: 'var(--primary)', fontSize: '0.75rem', fontWeight: 900, textTransform: 'uppercase', marginBottom: '0.5rem', letterSpacing: '0.05em' }}>{leader.role}</div>
+                                <h4 style={{ marginBottom: '1rem', fontSize: '1.8rem', fontWeight: 800 }}>{leader.name}</h4>
+                                <p style={{ fontSize: '1rem', opacity: 0.7, lineHeight: 1.6 }}>{leader.bio}</p>
                             </div>
                         </div>
                     ))}
@@ -75,16 +87,17 @@ export default function CompanyPage() {
                                 <h2 style={{ fontSize: '3rem', fontWeight: 900 }}>Global Ops</h2>
                             </div>
                             <p style={{ fontSize: '1.2rem', color: 'var(--foreground)', opacity: 0.7, lineHeight: 1.8, marginBottom: '1.5rem' }}>
-                                Operating 24/7/365 across 3 continents. Supporting $50B+ in mission-critical infrastructure modernizations.
+                                Headquartered in Florida with a distributed network of enterprise architects supporting mission-critical infrastructure modernizations globally.
                             </p>
-                            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '2rem' }}>
+                            <div style={{ display: 'grid', gridTemplateColumns: '1fr', gap: '2rem' }}>
                                 <div>
-                                    <div style={{ fontWeight: 800, fontSize: '0.9rem', marginBottom: '1rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}><MapPin size={16} color="var(--primary)" /> HQ: London</div>
-                                    <div style={{ opacity: 0.5, fontSize: '0.8rem' }}>Executive Office</div>
-                                </div>
-                                <div>
-                                    <div style={{ fontWeight: 800, fontSize: '0.9rem', marginBottom: '1rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}><MapPin size={16} color="var(--primary)" /> Singapore</div>
-                                    <div style={{ opacity: 0.5, fontSize: '0.8rem' }}>APAC Engineering</div>
+                                    <div style={{ fontWeight: 800, fontSize: '0.9rem', marginBottom: '1rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}><MapPin size={16} color="var(--primary)" /> Corporate Headquarters</div>
+                                    <div style={{ opacity: 0.7, fontSize: '0.9rem', lineHeight: 1.6 }}>
+                                        3354 Jasmine Hill Rd<br />
+                                        Tallahassee, Florida 32311<br />
+                                        United States
+                                    </div>
+                                    <div style={{ marginTop: '1rem', fontWeight: 800, fontSize: '0.9rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}><Phone size={16} color="var(--primary)" /> +1 (850) 443-1481</div>
                                 </div>
                             </div>
                         </div>
@@ -126,11 +139,11 @@ export default function CompanyPage() {
                     <div style={{ display: 'flex', justifyContent: 'center', gap: '3rem' }}>
                         <div style={{ textAlign: 'center' }}>
                             <div style={{ background: 'var(--primary)', color: 'var(--background)', width: '60px', height: '60px', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto 1rem' }}><Mail size={24} /></div>
-                            <div style={{ fontWeight: 800 }}>ceo-office@omnigcloud.com</div>
+                            <div style={{ fontWeight: 800 }}>office-of-ceo@omnigcloud.com</div>
                         </div>
                         <div style={{ textAlign: 'center' }}>
                             <div style={{ background: 'var(--primary)', color: 'var(--background)', width: '60px', height: '60px', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto 1rem' }}><Phone size={24} /></div>
-                            <div style={{ fontWeight: 800 }}>+44 20 7946 0123</div>
+                            <div style={{ fontWeight: 800 }}>+1 (850) 443-1481</div>
                         </div>
                     </div>
                 </div>
