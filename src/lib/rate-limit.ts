@@ -151,6 +151,11 @@ export class NoopRateLimiter implements RateLimiter {
  * Get appropriate rate limiter based on environment
  */
 export function getRateLimiter(): RateLimiter {
+    // Bypass in CI environments to prevent 429s during crawls/tests
+    if (process.env.CI === 'true') {
+        return new NoopRateLimiter();
+    }
+
     // Local development: use in-memory limiter (no Redis required)
     if (config.env === 'local' || process.env.NODE_ENV === 'development') {
         return new InMemoryRateLimiter();
