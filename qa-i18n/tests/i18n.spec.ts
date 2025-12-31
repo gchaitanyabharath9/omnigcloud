@@ -139,11 +139,21 @@ test.describe('i18n & Release Gate', () => {
         } else {
             // Non-critical: Just a status check for baseline health
             test(`Status Check: ${url}`, async ({ page }) => {
-                const response = await page.request.get(url);
-                expect(response.status(), `Page ${url} is down!`).toBe(200);
+                let response;
+                let attempt = 0;
+                const maxAttempts = 3;
+
+                while (attempt < maxAttempts) {
+                    response = await page.request.get(url);
+                    if (response.status() !== 429) break;
+                    attempt++;
+                    await new Promise(resolve => setTimeout(resolve, 1000 * attempt));
+                }
+
+                expect(response?.status(), `Page ${url} is down!`).toBe(200);
 
                 // Quick check for 404 text in body if status is 200 (Next.js sometimes does this)
-                const text = await response.text();
+                const text = await response?.text() || '';
                 expect(text.toLowerCase()).not.toContain('>404<');
                 expect(text).not.toContain('MISSING_MESSAGE');
             });
