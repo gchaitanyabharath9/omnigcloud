@@ -13,7 +13,7 @@ export const CloudDistributionChart: React.FC<{ data: DistributionDataPoint[] }>
         description="Active workloads across cloud providers"
         badge="BALANCED"
     >
-        <ResponsiveContainer width="100%" height={280}>
+        <ResponsiveContainer width="100%" height={280} minWidth={0}>
             <PieChart>
                 <Pie
                     data={data}
@@ -45,7 +45,7 @@ export const RegionDistributionChart: React.FC<{ data: DistributionDataPoint[] }
         description="Workload distribution across global regions"
         badge="GLOBAL"
     >
-        <ResponsiveContainer width="100%" height={280}>
+        <ResponsiveContainer width="100%" height={280} minWidth={0}>
             <BarChart data={data} layout="vertical">
                 <CartesianGrid strokeDasharray="3 3" stroke="rgba(255,255,255,0.1)" />
                 <XAxis type="number" stroke="rgba(255,255,255,0.5)" style={{ fontSize: '0.75rem' }} />
@@ -70,7 +70,7 @@ export const ComplianceScoresChart: React.FC<{ data: DistributionDataPoint[] }> 
         description="Current compliance status across all frameworks"
         badge="AUDITED"
     >
-        <ResponsiveContainer width="100%" height={280}>
+        <ResponsiveContainer width="100%" height={280} minWidth={0}>
             <BarChart data={data} layout="vertical">
                 <CartesianGrid strokeDasharray="3 3" stroke="rgba(255,255,255,0.1)" />
                 <XAxis type="number" domain={[0, 100]} stroke="rgba(255,255,255,0.5)" style={{ fontSize: '0.75rem' }} />
@@ -96,7 +96,7 @@ export const FeatureUsageChart: React.FC<{ data: DistributionDataPoint[] }> = ({
         description="Active usage of key platform features"
         badge="TRACKED"
     >
-        <ResponsiveContainer width="100%" height={280}>
+        <ResponsiveContainer width="100%" height={280} minWidth={0}>
             <BarChart data={data} layout="vertical">
                 <CartesianGrid strokeDasharray="3 3" stroke="rgba(255,255,255,0.1)" />
                 <XAxis type="number" stroke="rgba(255,255,255,0.5)" style={{ fontSize: '0.75rem' }} />
@@ -121,7 +121,7 @@ export const PerformanceScoresChart: React.FC<{ data: DistributionDataPoint[] }>
         description="Real-time system performance metrics"
         badge="OPTIMAL"
     >
-        <ResponsiveContainer width="100%" height={280}>
+        <ResponsiveContainer width="100%" height={280} minWidth={0}>
             <PieChart>
                 <Pie
                     data={data}

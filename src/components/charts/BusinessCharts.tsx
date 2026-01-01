@@ -15,7 +15,7 @@ export const ConversionFunnelChart: React.FC<{ data: FunnelDataPoint[] }> = ({ d
         badge="MARKETING"
     >
         <NoSSR>
-            <ResponsiveContainer width="100%" height={280}>
+            <ResponsiveContainer width="100%" height={280} minWidth={0}>
                 <BarChart data={data} layout="vertical">
                     <CartesianGrid strokeDasharray="3 3" stroke="rgba(255,255,255,0.1)" />
                     <XAxis type="number" stroke="rgba(255,255,255,0.5)" style={{ fontSize: '0.75rem' }} />
@@ -46,7 +46,7 @@ export const PipelineChart: React.FC<{ data: FunnelDataPoint[] }> = ({ data }) =
         badge="SALES"
     >
         <NoSSR>
-            <ResponsiveContainer width="100%" height={280}>
+            <ResponsiveContainer width="100%" height={280} minWidth={0}>
                 <BarChart data={data} layout="vertical">
                     <CartesianGrid strokeDasharray="3 3" stroke="rgba(255,255,255,0.1)" />
                     <XAxis type="number" stroke="rgba(255,255,255,0.5)" style={{ fontSize: '0.75rem' }} />
@@ -77,7 +77,7 @@ export const AdoptionProgressChart: React.FC<{ data: TimeSeriesDataPoint[] }> = 
         badge="GROWING"
     >
         <NoSSR>
-            <ResponsiveContainer width="100%" height={280}>
+            <ResponsiveContainer width="100%" height={280} minWidth={0}>
                 <AreaChart data={data}>
                     <defs>
                         <linearGradient id="adoptionGradient" x1="0" y1="0" x2="0" y2="1">
@@ -106,7 +106,7 @@ export const RevenueProjectionChart: React.FC<{ data: MultiSeriesDataPoint[] }> 
         badge="FORECAST"
     >
         <NoSSR>
-            <ResponsiveContainer width="100%" height={280}>
+            <ResponsiveContainer width="100%" height={280} minWidth={0}>
                 <LineChart data={data}>
                     <CartesianGrid strokeDasharray="3 3" stroke="rgba(255,255,255,0.1)" />
                     <XAxis dataKey="timestamp" stroke="rgba(255,255,255,0.5)" style={{ fontSize: '0.75rem' }} />
@@ -131,7 +131,7 @@ export const AvailabilityChart: React.FC<{ data: TimeSeriesDataPoint[] }> = ({ d
         badge="99.95%"
     >
         <NoSSR>
-            <ResponsiveContainer width="100%" height={280}>
+            <ResponsiveContainer width="100%" height={280} minWidth={0}>
                 <LineChart data={data}>
                     <CartesianGrid strokeDasharray="3 3" stroke="rgba(255,255,255,0.1)" />
                     <XAxis dataKey="timestamp" stroke="rgba(255,255,255,0.5)" style={{ fontSize: '0.75rem' }} />

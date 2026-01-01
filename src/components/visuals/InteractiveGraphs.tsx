@@ -29,7 +29,7 @@ export function PerformanceAreaChart() {
     return (
         <div style={{ width: '100%', height: 200 }}>
             <NoSSR>
-                <ResponsiveContainer width="100%" height="100%">
+                <ResponsiveContainer width="100%" height="100%" minWidth={0}>
                     <AreaChart data={data}>
                         <defs>
                             <linearGradient id="colorOci" x1="0" y1="0" x2="0" y2="1">
@@ -85,7 +85,7 @@ export function ComplianceBarChart() {
     return (
         <div style={{ width: '100%', height: 180 }}>
             <NoSSR>
-                <ResponsiveContainer width="100%" height="100%">
+                <ResponsiveContainer width="100%" height="100%" minWidth={0}>
                     <BarChart data={barData} layout="vertical">
                         <XAxis type="number" hide domain={[0, 100]} />
                         <YAxis

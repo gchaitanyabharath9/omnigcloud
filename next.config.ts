@@ -45,16 +45,16 @@ const nextConfig: NextConfig = {
     // To enforce: change 'Content-Security-Policy-Report-Only' to 'Content-Security-Policy'
     const cspDirectives = [
       "default-src 'self'",
-      // Scripts: Allow Next.js runtime, inline scripts (for hydration), and eval (for dev mode)
-      `script-src 'self' 'unsafe-inline' ${isDev ? "'unsafe-eval'" : ""}`,
+      // Scripts: Allow Next.js runtime, inline scripts (for hydration), and eval (for dev mode) + Vercel Live
+      `script-src 'self' 'unsafe-inline' https://vercel.live https://*.vercel.live ${isDev ? "'unsafe-eval'" : ""}`,
       // Styles: Allow inline styles (required for styled-jsx and CSS-in-JS), Google Fonts
       "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
       // Fonts: Allow self-hosted and Google Fonts
       "font-src 'self' https://fonts.gstatic.com data:",
-      // Images: Allow self, data URIs, blob, and Unsplash (for marketing images)
-      "img-src 'self' data: blob: https://images.unsplash.com https://*.unsplash.com",
-      // Connect: Allow API calls to self and any external APIs
-      "connect-src 'self' https://api.unsplash.com",
+      // Images: Allow self, data URIs, blob, Unsplash, and Vercel Live
+      "img-src 'self' data: blob: https://images.unsplash.com https://*.unsplash.com https://vercel.live https://*.vercel.live",
+      // Connect: Allow API calls to self, Unsplash, and Vercel Live
+      "connect-src 'self' https://api.unsplash.com https://vercel.live https://*.vercel.live wss://*.vercel.live",
       // Media: Restrict to self
       "media-src 'self'",
       // Objects: Disallow plugins
@@ -64,7 +64,9 @@ const nextConfig: NextConfig = {
       // Form actions: Restrict to self
       "form-action 'self'",
       // Frame ancestors: Prevent clickjacking (replaces X-Frame-Options)
-      "frame-ancestors 'self'",
+      "frame-ancestors 'self' https://vercel.live https://*.vercel.live",
+      // Frame src: Allow Vercel Live
+      "frame-src 'self' https://vercel.live https://*.vercel.live",
       // Upgrade insecure requests
       "upgrade-insecure-requests",
       // Block mixed content

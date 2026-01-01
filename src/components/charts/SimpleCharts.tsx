@@ -29,7 +29,7 @@ export const LatencyLineChart = ({ height = 180 }: { height?: number }) => {
     return (
         <ChartCard title="API Latency (ms)" height={height}>
             <NoSSR>
-                <ResponsiveContainer width="100%" height="100%">
+                <ResponsiveContainer width="100%" height="100%" minWidth={0}>
                     <LineChart data={data}>
                         <CartesianGrid strokeDasharray="3 3" stroke="rgba(255,255,255,0.1)" />
                         <XAxis dataKey="hour" stroke="#888" />
@@ -57,7 +57,7 @@ export const CostSavingsArea = ({ height = 180 }: { height?: number }) => {
     return (
         <ChartCard title="Monthly Cost Comparison ($)" height={height}>
             <NoSSR>
-                <ResponsiveContainer width="100%" height="100%">
+                <ResponsiveContainer width="100%" height="100%" minWidth={0}>
                     <AreaChart data={data}>
                         <CartesianGrid strokeDasharray="3 3" stroke="rgba(255,255,255,0.1)" />
                         <XAxis dataKey="month" stroke="#888" />
@@ -83,7 +83,7 @@ export const RequestVolumeBar = ({ height = 180 }: { height?: number }) => {
     return (
         <ChartCard title="Hourly Request Volume" height={height}>
             <NoSSR>
-                <ResponsiveContainer width="100%" height="100%">
+                <ResponsiveContainer width="100%" height="100%" minWidth={0}>
                     <BarChart data={data}>
                         <CartesianGrid strokeDasharray="3 3" stroke="rgba(255,255,255,0.1)" />
                         <XAxis dataKey="hour" stroke="#888" />
@@ -109,7 +109,7 @@ export const CloudDistributionPie = ({ height = 180 }: { height?: number }) => {
     return (
         <ChartCard title="Multi-Cloud Distribution (%)" height={height}>
             <NoSSR>
-                <ResponsiveContainer width="100%" height="100%">
+                <ResponsiveContainer width="100%" height="100%" minWidth={0}>
                     <PieChart>
                         <Pie
                             data={data}
@@ -143,7 +143,7 @@ export const UptimeTrend = ({ height = 180 }: { height?: number }) => {
     return (
         <ChartCard title="30-Day Uptime (%)" height={height}>
             <NoSSR>
-                <ResponsiveContainer width="100%" height="100%">
+                <ResponsiveContainer width="100%" height="100%" minWidth={0}>
                     <LineChart data={data}>
                         <CartesianGrid strokeDasharray="3 3" stroke="rgba(255,255,255,0.1)" />
                         <XAxis dataKey="day" stroke="#888" />
@@ -169,7 +169,7 @@ export const ComplianceScoresBar = ({ height = 180 }: { height?: number }) => {
     return (
         <ChartCard title="Compliance Framework Scores" height={height}>
             <NoSSR>
-                <ResponsiveContainer width="100%" height="100%">
+                <ResponsiveContainer width="100%" height="100%" minWidth={0}>
                     <BarChart data={data} layout="vertical">
                         <CartesianGrid strokeDasharray="3 3" stroke="rgba(255,255,255,0.1)" />
                         <XAxis type="number" domain={[0, 100]} stroke="#888" hide={height < 150} />
@@ -197,7 +197,7 @@ export const ErrorRateArea = ({ height = 180 }: { height?: number }) => {
     return (
         <ChartCard title="Error Rate Trend (%)" height={height}>
             <NoSSR>
-                <ResponsiveContainer width="100%" height="100%">
+                <ResponsiveContainer width="100%" height="100%" minWidth={0}>
                     <AreaChart data={data}>
                         <defs>
                             <linearGradient id="errorGrad" x1="0" y1="0" x2="0" y2="1">
@@ -229,7 +229,7 @@ export const FeatureUsageBar = ({ height = 180 }: { height?: number }) => {
     return (
         <ChartCard title="Feature Adoption Rate (%)" height={height}>
             <NoSSR>
-                <ResponsiveContainer width="100%" height="100%">
+                <ResponsiveContainer width="100%" height="100%" minWidth={0}>
                     <BarChart data={data}>
                         <CartesianGrid strokeDasharray="3 3" stroke="rgba(255,255,255,0.1)" />
                         <XAxis dataKey="feature" stroke="#888" />

@@ -15,7 +15,7 @@ export const LatencyChart: React.FC<{ data: MultiSeriesDataPoint[] }> = ({ data 
         badge="LIVE"
     >
         <NoSSR>
-            <ResponsiveContainer width="100%" height={280}>
+            <ResponsiveContainer width="100%" height={280} minWidth={0}>
                 <LineChart data={data}>
                     <CartesianGrid strokeDasharray="3 3" stroke="rgba(255,255,255,0.1)" />
                     <XAxis dataKey="timestamp" stroke="rgba(255,255,255,0.5)" style={{ fontSize: '0.75rem' }} />
@@ -42,7 +42,7 @@ export const ErrorRateChart: React.FC<{ data: TimeSeriesDataPoint[] }> = ({ data
         badge="DECREASING"
     >
         <NoSSR>
-            <ResponsiveContainer width="100%" height={280}>
+            <ResponsiveContainer width="100%" height={280} minWidth={0}>
                 <AreaChart data={data}>
                     <defs>
                         <linearGradient id="errorGradient" x1="0" y1="0" x2="0" y2="1">
@@ -71,7 +71,7 @@ export const ThroughputChart: React.FC<{ data: TimeSeriesDataPoint[] }> = ({ dat
         badge="REAL-TIME"
     >
         <NoSSR>
-            <ResponsiveContainer width="100%" height={280}>
+            <ResponsiveContainer width="100%" height={280} minWidth={0}>
                 <BarChart data={data}>
                     <CartesianGrid strokeDasharray="3 3" stroke="rgba(255,255,255,0.1)" />
                     <XAxis dataKey="timestamp" stroke="rgba(255,255,255,0.5)" style={{ fontSize: '0.75rem' }} />
@@ -94,7 +94,7 @@ export const CostSavingsChart: React.FC<{ data: MultiSeriesDataPoint[] }> = ({ d
         badge="PROJECTED"
     >
         <NoSSR>
-            <ResponsiveContainer width="100%" height={280}>
+            <ResponsiveContainer width="100%" height={280} minWidth={0}>
                 <LineChart data={data}>
                     <CartesianGrid strokeDasharray="3 3" stroke="rgba(255,255,255,0.1)" />
                     <XAxis dataKey="timestamp" stroke="rgba(255,255,255,0.5)" style={{ fontSize: '0.75rem' }} />
@@ -120,7 +120,7 @@ export const SLAComplianceChart: React.FC<{ data: TimeSeriesDataPoint[] }> = ({ 
         badge="✓ COMPLIANT"
     >
         <NoSSR>
-            <ResponsiveContainer width="100%" height={280}>
+            <ResponsiveContainer width="100%" height={280} minWidth={0}>
                 <AreaChart data={data}>
                     <defs>
                         <linearGradient id="slaGradient" x1="0" y1="0" x2="0" y2="1">
