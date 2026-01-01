@@ -3,24 +3,20 @@ import { authConfig } from "@/auth.config";
 import { coreMiddleware as coreProxy } from "@/core-middleware";
 import { NextResponse } from "next/server";
 import type { NextRequest } from "next/server";
-import { domains } from "@/config/domains";
 
 const { auth } = NextAuth(authConfig);
 
-const SUPPORTED_LOCALES = ['en', 'es', 'fr', 'de', 'zh', 'hi', 'ja', 'ko'];
+// MICRO-OPTIMIZATION: Use Set for O(1) lookups
+const SUPPORTED_LOCALES = new Set(['en', 'es', 'fr', 'de', 'zh', 'hi', 'ja', 'ko']);
 const DEFAULT_LOCALE = 'en';
 
 export default auth(async (req) => {
     const { nextUrl } = req;
     const { pathname, search } = nextUrl;
 
-    // 1. Skip assets and internal Next.js paths
+    // 3. REMOVE REDUNDANT SKIP LOGIC (PERF/COST)
+    // Matcher handles most exclusions, but redundant safety checks for specific files:
     if (
-        pathname.startsWith('/_next') ||
-        pathname.startsWith('/api') ||
-        pathname.startsWith('/static') ||
-        pathname.startsWith('/images') ||
-        pathname.includes('.') ||
         pathname === '/favicon.ico' ||
         pathname === '/robots.txt' ||
         pathname === '/sitemap.xml'
@@ -29,15 +25,15 @@ export default auth(async (req) => {
     }
 
     const segments = pathname.split('/');
-    const firstSegment = segments[1];
+    const firstSegment = segments[1]; // pathname starts with /
 
-    // A) Root path "/" -> "/en"
+    // A) Root path "/" -> "/en" (PRESERVE SEARCH)
     if (pathname === '/') {
-        return NextResponse.redirect(new URL(`/${DEFAULT_LOCALE}`, nextUrl));
+        return NextResponse.redirect(new URL(`/${DEFAULT_LOCALE}${search}`, nextUrl));
     }
 
-    // B) Check for locale prefix
-    const isSupportedLocale = SUPPORTED_LOCALES.includes(firstSegment);
+    // B) Check for locale prefix (USE SET HAS)
+    const isSupportedLocale = SUPPORTED_LOCALES.has(firstSegment);
 
     if (!isSupportedLocale) {
         // C) Handle unsupported 2-letter codes or bare paths
@@ -52,14 +48,17 @@ export default auth(async (req) => {
         return NextResponse.redirect(new URL(`/${DEFAULT_LOCALE}${pathname}${search}`, nextUrl));
     }
 
-    // D) Authentication Logic for protected app routes
-    const isLoggedIn = !!req.auth;
-    const isAppRoute = pathname.startsWith('/app') || /^\/[a-z]{2}\/app/.test(pathname);
+    // 1. FIX AUTH ROUTE DETECTION (BUG FIX) + 4. LOCALE AWARE
+    // Only gate routes if we are in a valid locale and the NEXT segment is 'app'
+    // Structure: /:locale/app/...
+    // segments: ['', 'en', 'app', ...] -> segments[2] is 'app'
+    const isAppRoute = segments[2] === 'app';
 
     if (isAppRoute) {
+        const isLoggedIn = !!req.auth;
         if (!isLoggedIn) {
             const signInUrl = new URL("/api/auth/signin", nextUrl);
-            signInUrl.searchParams.set("callbackUrl", pathname);
+            signInUrl.searchParams.set("callbackUrl", pathname + search);
             return NextResponse.redirect(signInUrl);
         }
     }
