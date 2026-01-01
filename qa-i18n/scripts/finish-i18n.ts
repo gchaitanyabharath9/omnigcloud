@@ -50,6 +50,7 @@ function finish() {
         // 2. Sync from en.json (add missing, replace TODOs)
         function sync(target: Record<string, any>, source: Record<string, any>) {
             for (const key in source) {
+                if (key === '__proto__' || key === 'constructor' || key === 'prototype') continue;
                 if (typeof source[key] === 'object' && source[key] !== null && !Array.isArray(source[key])) {
                     if (!target[key]) {
                         target[key] = {};

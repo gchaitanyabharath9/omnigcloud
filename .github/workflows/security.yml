@@ -9,6 +9,8 @@ on:
   schedule:
     - cron: "21 10 * * 5" # Run weekly on Friday
 
+permissions: read-all
+
 jobs:
   analyze:
     name: CodeQL Analysis
@@ -25,10 +27,10 @@ jobs:
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # v4.2.2
 
       - name: Initialize CodeQL
-        uses: github/codeql-action/init@v3
+        uses: github/codeql-action/init@c37a8b7cd97e31de3fcbd9d84c401870edeb8d34 # v3
         with:
           languages: ${{ matrix.language }}
           # If you wish to specify custom queries, you can do so here or in a config file.
@@ -36,9 +38,9 @@ jobs:
           # Prefix the list here with "+" to use these queries and those in the config file.
 
       - name: Autobuild
-        uses: github/codeql-action/autobuild@v3
+        uses: github/codeql-action/autobuild@c37a8b7cd97e31de3fcbd9d84c401870edeb8d34 # v3
 
       - name: Perform CodeQL Analysis
-        uses: github/codeql-action/analyze@v3
+        uses: github/codeql-action/analyze@c37a8b7cd97e31de3fcbd9d84c401870edeb8d34 # v3
         with:
           category: "/language:${{matrix.language}}"

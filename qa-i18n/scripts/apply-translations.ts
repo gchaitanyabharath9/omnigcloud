@@ -428,6 +428,7 @@ const TRANSLATIONS: Record<string, Record<string, any>> = {
 
 function deepMerge(target: Record<string, any>, source: Record<string, any>) {
     for (const key in source) {
+        if (key === '__proto__' || key === 'constructor' || key === 'prototype') continue;
         if (typeof source[key] === 'object' && source[key] !== null) {
             if (!target[key]) target[key] = {};
             deepMerge(target[key], source[key]);

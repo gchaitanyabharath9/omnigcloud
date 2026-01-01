@@ -19,6 +19,7 @@ function unblock() {
         function recursiveFix(target: Record<string, any>, source: Record<string, any>) {
             let fixedCount = 0;
             for (const key in source) {
+                if (key === '__proto__' || key === 'constructor' || key === 'prototype') continue;
                 if (typeof source[key] === 'object' && source[key] !== null && !Array.isArray(source[key])) {
                     if (!target[key]) target[key] = {};
                     fixedCount += recursiveFix(target[key], source[key]);
