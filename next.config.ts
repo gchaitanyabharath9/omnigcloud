@@ -15,10 +15,17 @@ try {
   version = pkg.version;
 } catch (e) { console.warn('Failed to read package.json version'); }
 
-let commitHash = 'dev';
-try {
-  commitHash = execSync('git rev-parse --short HEAD').toString().trim();
-} catch (e) { /* ignore in non-git envs */ }
+const isDev = process.env.NODE_ENV !== 'production';
+
+let commitHash = process.env.VERCEL_GIT_COMMIT_SHA?.slice(0, 7)
+  || process.env.GITHUB_SHA?.slice(0, 7)
+  || 'dev';
+
+if (commitHash === 'dev') {
+  try {
+    commitHash = execSync('git rev-parse --short HEAD').toString().trim();
+  } catch (e) { /* ignore in non-git envs */ }
+}
 
 const buildTime = new Date().toISOString();
 const appEnv = process.env.APP_ENV || 'local';
@@ -39,8 +46,7 @@ const nextConfig: NextConfig = {
     const cspDirectives = [
       "default-src 'self'",
       // Scripts: Allow Next.js runtime, inline scripts (for hydration), and eval (for dev mode)
-      // In production, consider removing 'unsafe-eval' if not needed
-      "script-src 'self' 'unsafe-inline' 'unsafe-eval'",
+      `script-src 'self' 'unsafe-inline' ${isDev ? "'unsafe-eval'" : ""}`,
       // Styles: Allow inline styles (required for styled-jsx and CSS-in-JS), Google Fonts
       "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
       // Fonts: Allow self-hosted and Google Fonts
@@ -66,6 +72,26 @@ const nextConfig: NextConfig = {
     ].join('; ');
 
     return [
+      {
+        // Cache Next.js static assets
+        source: '/_next/static/:path*',
+        headers: [
+          {
+            key: 'Cache-Control',
+            value: 'public, max-age=31536000, immutable'
+          }
+        ]
+      },
+      {
+        // Cache static assets (fonts, images) for 1 year
+        source: '/(fonts|images)/:path*',
+        headers: [
+          {
+            key: 'Cache-Control',
+            value: 'public, max-age=31536000, immutable'
+          }
+        ]
+      },
       {
         // Apply to all routes
         source: '/:path*',
@@ -99,16 +125,6 @@ const nextConfig: NextConfig = {
             // Deprecated XSS protection header (modern browsers use CSP)
             key: 'X-XSS-Protection',
             value: '1; mode=block'
-          }
-        ]
-      },
-      {
-        // Cache static assets (fonts, images) for 1 year
-        source: '/(fonts|images)/:path*',
-        headers: [
-          {
-            key: 'Cache-Control',
-            value: 'public, max-age=31536000, immutable'
           }
         ]
       }
