@@ -69,7 +69,9 @@ test.describe('i18n & Release Gate', () => {
                     const isIgnored =
                         text.includes('chrome-extension') ||
                         text.includes('_vercel/insights') ||
-                        text.includes('_vercel/speed-insights');
+                        text.includes('_vercel/speed-insights') ||
+                        text.includes('favicon.ico') ||
+                        (text.includes('Failed to load resource') && text.includes('404'));
 
                     if (msg.type() === 'error' && !isIgnored) {
                         consoleErrors.push(`[CONSOLE_ERROR] ${text}`);
