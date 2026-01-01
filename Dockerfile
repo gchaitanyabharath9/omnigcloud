@@ -2,7 +2,8 @@
 # Compatible with AWS ECS, Azure Container Apps, Google Cloud Run, and Kubernetes.
 
 # --- Stage 1: Prune dependencies (Reduce image size) ---
-FROM node:20-alpine AS deps
+# --- Stage 1: Prune dependencies (Reduce image size) ---
+FROM node:20-alpine@sha256:658d0f63e501824d6c23e06d4bb95c71e7d704537c9d9272f488ac03a370d448 AS deps
 RUN apk add --no-cache libc6-compat
 WORKDIR /app
 
@@ -12,7 +13,7 @@ COPY package.json package-lock.json* ./
 RUN npm ci
 
 # --- Stage 2: Build the application ---
-FROM node:20-alpine AS builder
+FROM node:20-alpine@sha256:658d0f63e501824d6c23e06d4bb95c71e7d704537c9d9272f488ac03a370d448 AS builder
 WORKDIR /app
 COPY --from=deps /app/node_modules ./node_modules
 COPY . .
@@ -27,7 +28,7 @@ ENV APP_ENV=prod
 RUN npm run build
 
 # --- Stage 3: Production Runner (Final Image) ---
-FROM node:20-alpine AS runner
+FROM node:20-alpine@sha256:658d0f63e501824d6c23e06d4bb95c71e7d704537c9d9272f488ac03a370d448 AS runner
 WORKDIR /app
 
 ENV NODE_ENV=production

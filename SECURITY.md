@@ -2,153 +2,53 @@
 
 ## Supported Versions
 
-We release security updates for the following versions:
-
 | Version | Supported          |
 | ------- | ------------------ |
-| 0.1.x   | :white_check_mark: |
+| 1.x     | :white_check_mark: |
+| < 1.0   | :x:                |
 
 ## Reporting a Vulnerability
 
-We take the security of OmniGCloud seriously. If you believe you have found a security vulnerability, please report it to us as described below.
+We take the security of OmniGCloud seriously. If you believe you have found a security vulnerability in OmniGCloud, please report it to us as described below.
 
-### Please Do NOT:
+**Please do not report security vulnerabilities through public GitHub issues.**
 
-- Open a public GitHub issue
-- Disclose the vulnerability publicly before we've had a chance to address it
-- Exploit the vulnerability beyond what is necessary to demonstrate it
+### How to Report
 
-### Please DO:
+Please report security vulnerabilities by emailing [security@omnigcloud.com](mailto:security@omnigcloud.com).
 
-1. **Email us directly** at: security@omnigcloud.com
-2. **Include the following information**:
-   - Type of vulnerability (e.g., XSS, CSRF, SQL injection, etc.)
-   - Full paths of source file(s) related to the vulnerability
-   - Location of the affected source code (tag/branch/commit or direct URL)
-   - Step-by-step instructions to reproduce the issue
-   - Proof-of-concept or exploit code (if possible)
-   - Impact of the vulnerability and how an attacker might exploit it
+You should expect to receive a response within 24 hours. If for some reason you do not, please follow up via email to ensure we received your original message.
 
-### What to Expect:
+### Preference
 
-- **Initial Response**: Within 48 hours, we will acknowledge receipt of your report
-- **Status Updates**: We will keep you informed about our progress
-- **Disclosure Timeline**: We aim to address critical vulnerabilities within 7 days
-- **Credit**: With your permission, we will credit you in our security advisories
+*   Written in English
+*   A Proof of Concept (PoC) or detailed steps to reproduce.
+*   The impact of the vulnerability.
 
-### Disclosure Policy:
+### Policy
 
-- We follow a **coordinated disclosure** approach
-- We will work with you to understand and resolve the issue
-- We will publicly disclose the vulnerability after a fix is released
-- We typically allow 90 days for fixes before public disclosure
+OmniGCloud follows a coordinated disclosure policy. We ask that you:
 
-## Security Update Process
+*   Give us reasonable time to investigate and mitigate an issue before making information about it public.
+*   Do not interact with or access data that is not your own.
+*   Act in good faith to avoid privacy violations, destruction of data, and interruption or degradation of our services.
 
-When a security vulnerability is identified:
+We will acknowledge receipt of your vulnerability report and will keep you informed of our progress towards a fix. We will notify you when the fix has been released.
 
-1. **Assessment**: We assess the severity and impact
-2. **Fix Development**: We develop and test a fix
-3. **Release**: We release a security update
-4. **Notification**: We notify affected users via:
-   - GitHub Security Advisories
-   - Email notifications
-   - Release notes
+## Security Features
 
-## Security Best Practices
+This project utilizes several security features:
 
-When using OmniGCloud, please follow these security best practices:
+*   **SAST**: GitHub CodeQL is run on every push to `main` and all Pull Requests.
+*   **Dependency Scanning**: We use Dependabot and Renovate to keep dependencies up to date.
+*   **Secret Scanning**: GitHub Secret Scanning is enabled.
+*   **SCA**: Software Composition Analysis via `npm audit` and build checks.
 
-### Environment Variables
+## Secure Coding Practices
 
-- ✅ Never commit `.env` files to version control
-- ✅ Use strong, randomly generated secrets
-- ✅ Rotate secrets regularly
-- ✅ Never use `NEXT_PUBLIC_` prefix for secrets
-- ✅ See `docs/secrets-hygiene.md` for details
+We follow secure coding practices to prevent common web application vulnerabilities (OWASP Top 10):
 
-### Authentication
-
-- ✅ Use strong passwords (minimum 12 characters)
-- ✅ Enable multi-factor authentication (MFA)
-- ✅ Rotate API keys regularly
-- ✅ Use least-privilege access principles
-
-### API Security
-
-- ✅ Always validate input on the server-side
-- ✅ Use HTTPS in production
-- ✅ Implement rate limiting
-- ✅ Monitor for suspicious activity
-
-### Dependencies
-
-- ✅ Keep dependencies up to date
-- ✅ Review Dependabot alerts promptly
-- ✅ Run `npm audit` regularly
-- ✅ Only use trusted packages
-
-## Known Security Features
-
-OmniGCloud implements the following security measures:
-
-### HTTP Security Headers
-- ✅ Strict-Transport-Security (HSTS)
-- ✅ Content-Security-Policy (CSP)
-- ✅ X-Content-Type-Options
-- ✅ Referrer-Policy
-- ✅ Permissions-Policy
-
-### API Protection
-- ✅ CSRF token validation
-- ✅ Rate limiting (endpoint-specific)
-- ✅ Input validation (Zod schemas)
-- ✅ Request size limits
-- ✅ Honeypot bot detection
-- ✅ Time-to-submit heuristics
-
-### Data Protection
-- ✅ Secure logging (no PII/secrets)
-- ✅ Safe error handling (no stack traces)
-- ✅ httpOnly cookies
-- ✅ SameSite cookie protection
-
-### Build-Time Security
-- ✅ Secrets hygiene validation
-- ✅ Dependency vulnerability scanning
-- ✅ TypeScript type checking
-
-## Security Audits
-
-We conduct regular security audits:
-
-- **Automated**: Daily via CI/CD pipeline
-- **Dependency Scanning**: Weekly via Dependabot
-- **Manual Review**: Quarterly by security team
-- **Penetration Testing**: Annually by third-party
-
-## Compliance
-
-OmniGCloud is designed to help meet:
-
-- **OWASP Top 10**: Protection against common vulnerabilities
-- **PCI DSS**: Secure handling of payment data
-- **SOC 2**: Security and availability controls
-- **GDPR**: Data protection and privacy
-
-## Security Contacts
-
-- **Security Issues**: security@omnigcloud.com
-- **General Support**: support@omnigcloud.com
-- **Bug Reports**: GitHub Issues (for non-security bugs)
-
-## Hall of Fame
-
-We recognize security researchers who responsibly disclose vulnerabilities:
-
-<!-- Security researchers will be listed here -->
-
----
-
-**Last Updated**: 2025-12-30  
-**Version**: 1.0
+*   **Injection**: We use ORMs, parameterized queries, and strict input validation.
+*   **XSS**: We rely on Next.js/React automatic escaping and use strict CSP.
+*   **Authentication**: We use NextAuth.js for secure authentication flows.
+*   **Dependencies**: We pin actions and dependencies to specific versions/hashes where critical.
