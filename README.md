@@ -452,3 +452,12 @@ Contributions welcome! Please read CONTRIBUTING.md for guidelines.
 **Last Updated**: December 29, 2025  
 **Version**: 1.0.0  
 **Status**: Production-Ready ✅
+**(Maintained**: This project is actively maintained. Last audit: 2026-01-01)
+
+## 🛠️ Maintenance
+
+This project is **Actively Maintained**.
+
+*   **Update Frequency**: We target weekly updates for dependencies and security patches.
+*   **Vulnerability Response**: See `SECURITY.md` for our 24-hour response policy.
+*   **Support**: Create a GitHub Issue for bugs or feature requests.

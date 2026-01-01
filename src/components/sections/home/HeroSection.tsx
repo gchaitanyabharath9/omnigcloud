@@ -138,6 +138,7 @@ export default function HeroSection() {
                                         alt="Global Sovereign Dashboard"
                                         fill
                                         style={{ objectFit: 'cover', opacity: 0.3 }}
+                                        unoptimized // Save Vercel Image Optimization usage (Unsplash is already CDN)
                                     />
                                     <div style={{ position: 'absolute', inset: 0, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                                         <div style={{ width: '80px', height: '80px', borderRadius: '50%', background: 'rgba(59, 130, 246, 0.1)', border: '1px solid var(--primary)', display: 'flex', alignItems: 'center', justifyContent: 'center', boxShadow: '0 0 40px var(--primary-glow)' }}>

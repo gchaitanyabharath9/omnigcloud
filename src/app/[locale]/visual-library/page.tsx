@@ -5,6 +5,9 @@ import { Camera, ArrowRight, Layers, Shield, Zap, Globe } from 'lucide-react';
 import Link from 'next/link';
 import Footer from '@/components/Footer';
 
+
+export const revalidate = 86400; // Cache for 24 hours (ISR)
+
 export default function VisualLibraryPage() {
     const t = useTranslations('SovereignGallery');
 
@@ -14,8 +17,8 @@ export default function VisualLibraryPage() {
             icon: <Globe size={32} />,
             badge: "CORE_TELEMETRY",
             images: [
-                "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=1200",
-                "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=1200"
+                "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=75&w=900",
+                "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=75&w=900"
             ]
         },
         {
@@ -23,8 +26,8 @@ export default function VisualLibraryPage() {
             icon: <Zap size={32} />,
             badge: "MCCB_ACTIVE",
             images: [
-                "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80&w=1200",
-                "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&q=80&w=1200"
+                "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=75&w=900",
+                "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&q=75&w=900"
             ]
         }
     ];
@@ -85,11 +88,11 @@ export default function VisualLibraryPage() {
                                 <>
                                     <div style={{ display: 'grid', gridTemplateColumns: '1fr', gap: '2rem' }}>
                                         <div className="glass-panel" style={{ borderRadius: '2rem', overflow: 'hidden', height: '320px', border: '1px solid var(--card-border)' }}>
-                                            <Image src={item.images[0]} alt="Schema A" fill style={{ objectFit: 'cover' }} />
+                                            <Image src={item.images[0]} alt="Schema A" fill style={{ objectFit: 'cover' }} unoptimized />
                                             <div style={{ position: 'absolute', top: '1.5rem', right: '1.5rem', background: 'rgba(2, 6, 23, 0.8)', padding: '0.5rem 1rem', borderRadius: '0.75rem', fontSize: '0.7rem', fontWeight: 900 }}>IMAGE A</div>
                                         </div>
                                         <div className="glass-panel" style={{ borderRadius: '2rem', overflow: 'hidden', height: '320px', border: '1px solid var(--card-border)' }}>
-                                            <Image src={item.images[1]} alt="Schema B" fill style={{ objectFit: 'cover' }} />
+                                            <Image src={item.images[1]} alt="Schema B" fill style={{ objectFit: 'cover' }} unoptimized />
                                             <div style={{ position: 'absolute', top: '1.5rem', right: '1.5rem', background: 'rgba(2, 6, 23, 0.8)', padding: '0.5rem 1rem', borderRadius: '0.75rem', fontSize: '0.7rem', fontWeight: 900 }}>IMAGE B</div>
                                         </div>
                                     </div>
@@ -110,8 +113,9 @@ export default function VisualLibraryPage() {
                             )}
                         </div>
                     </div>
-                </section>
-            ))}
+                </section >
+            ))
+            }
 
             <section id="sitemap" className="snap-section" style={{ background: 'var(--background)', borderTop: '1px solid var(--card-border)' }}>
                 <Footer />

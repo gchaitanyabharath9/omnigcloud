@@ -9,15 +9,15 @@ export default function SovereignGallery() {
         {
             id: "control",
             images: [
-                "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=1200",
-                "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=1200"
+                "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=75&w=900",
+                "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=75&w=900"
             ]
         },
         {
             id: "failover",
             images: [
-                "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80&w=1200",
-                "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&q=80&w=1200"
+                "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=75&w=900",
+                "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&q=75&w=900"
             ]
         }
     ];
@@ -49,10 +49,10 @@ export default function SovereignGallery() {
                                 order: idx % 2 === 0 ? 2 : 1
                             }}>
                                 <div className="glass-panel" style={{ borderRadius: '1rem', overflow: 'hidden', height: '220px', position: 'relative' }}>
-                                    <Image src={item.images[0]} alt="Sovereign View A" fill style={{ objectFit: 'cover' }} />
+                                    <Image src={item.images[0]} alt="Sovereign View A" fill style={{ objectFit: 'cover' }} unoptimized />
                                 </div>
                                 <div className="glass-panel" style={{ borderRadius: '1rem', overflow: 'hidden', height: '220px', position: 'relative' }}>
-                                    <Image src={item.images[1]} alt="Sovereign View B" fill style={{ objectFit: 'cover' }} />
+                                    <Image src={item.images[1]} alt="Sovereign View B" fill style={{ objectFit: 'cover' }} unoptimized />
                                 </div>
                             </div>
                         </div>

@@ -12,6 +12,8 @@ const CloudDistributionPie = dynamic(() => import('@/components/charts/SimpleCha
 const FeatureUsageBar = dynamic(() => import('@/components/charts/SimpleCharts').then(mod => mod.FeatureUsageBar));
 // ComplianceScoresBar is unused
 
+export const revalidate = 86400; // Cache for 24 hours (ISR)
+
 export const metadata: Metadata = {
     title: 'Pricing | OmniGCloud Enterprise Cloud Governance',
     description: 'Transparent pricing for multi-cloud governance. From developer-friendly free tier to enterprise-grade sovereign plans. No hidden fees, no vendor lock-in.',
@@ -211,6 +213,7 @@ export default async function PricingPage({ params }: { params: Promise<{ locale
                                 fill
                                 style={{ objectFit: 'cover', opacity: 0.6 }}
                                 sizes="(max-width: 768px) 100vw, 33vw"
+                                unoptimized // Save Vercel Image Optimization
                             />
                         </div>
                         <CloudDistributionPie />

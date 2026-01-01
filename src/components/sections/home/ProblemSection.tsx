@@ -23,11 +23,12 @@ export default function ProblemSection() {
                     {/* BOX 1: DATA FRAGMENTATION - IMAGE CARD */}
                     <div className="img-card-container">
                         <Image
-                            src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800&q=80"
+                            src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=900&auto=format&fit=crop&q=75"
                             alt="Data Fragmentation"
                             fill
                             className="img-cover"
                             sizes="(max-width: 768px) 100vw, 50vw"
+                            unoptimized
                         />
                         <div className="card-overlay"></div>
                         <div className="card-content-overlay p-6 flex-col justify-end">
@@ -42,11 +43,12 @@ export default function ProblemSection() {
                     {/* BOX 2: REGULATORY DRIFT - GRAPHIC CARD -> NOW IMAGE BG */}
                     <div className="img-card-container">
                         <Image
-                            src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80"
+                            src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=900&auto=format&fit=crop&q=75"
                             alt="Compliance Dashboard"
                             fill
                             className="img-cover"
                             sizes="(max-width: 768px) 100vw, 50vw"
+                            unoptimized
                         />
                         <div className="card-overlay" style={{ background: 'linear-gradient(0deg, rgba(2,6,23,0.95) 20%, rgba(2,6,23,0.5) 100%)' }}></div>
                         <div className="card-content-overlay p-6 flex-col justify-end">
@@ -73,11 +75,12 @@ export default function ProblemSection() {
                     {/* BOX 3: VENDOR LOCK-IN - PEOPLE IMAGE */}
                     <div className="img-card-container">
                         <Image
-                            src="https://images.unsplash.com/photo-1543269865-cbf427effbad?w=800&q=80"
+                            src="https://images.unsplash.com/photo-1543269865-cbf427effbad?w=900&auto=format&fit=crop&q=75"
                             alt="Meeting Room Crisis"
                             fill
                             className="img-cover"
                             sizes="(max-width: 768px) 100vw, 50vw"
+                            unoptimized
                         />
                         <div className="card-overlay"></div>
                         <div className="card-content-overlay p-6 flex-col justify-end">
@@ -92,11 +95,12 @@ export default function ProblemSection() {
                     {/* BOX 4: DARK DATA OPACITY - SCANNER VISUAL -> NOW IMAGE BG */}
                     <div className="img-card-container">
                         <Image
-                            src="https://images.unsplash.com/photo-1518186285589-2f7649de83e0?w=800&q=80"
+                            src="https://images.unsplash.com/photo-1518186285589-2f7649de83e0?w=900&auto=format&fit=crop&q=75"
                             alt="Dark Data"
                             fill
                             className="img-cover"
                             sizes="(max-width: 768px) 100vw, 50vw"
+                            unoptimized
                         />
                         <div className="card-overlay" style={{ background: 'linear-gradient(0deg, rgba(2,6,23,0.95) 30%, rgba(16, 185, 129, 0.2) 100%)' }}></div>
                         <div className="card-content-overlay p-6 flex-col justify-center text-center">

@@ -11,12 +11,13 @@ export default function EcosystemSection() {
             {/* Background Map Image - Optimized with next/image */}
             <div className="bg-cover-overlay" style={{ opacity: 0.15 }}>
                 <Image
-                    src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1600&fit=crop&q=80"
+                    src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1600&fit=crop&auto=format&q=75"
                     alt="Global Network"
                     fill
                     className="img-cover"
                     sizes="100vw"
                     priority={false}
+                    unoptimized
                 />
             </div>
 

@@ -117,12 +117,12 @@ export default function RealTimeOperationsSection() {
                                 <div style={{ display: 'flex', alignItems: 'center', gap: '1.5rem' }}>
                                     <div style={{ display: 'flex', alignItems: 'center' }}>
                                         {[
-                                            'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=128&h=128&q=80&fit=crop',
-                                            'https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=128&h=128&q=80&fit=crop',
-                                            'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=128&h=128&q=80&fit=crop'
+                                            'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=128&h=128&auto=format&fit=crop&q=75',
+                                            'https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=128&h=128&auto=format&fit=crop&q=75',
+                                            'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=128&h=128&auto=format&fit=crop&q=75'
                                         ].map((src, i) => (
                                             <div key={i} style={{ position: 'relative', width: '48px', height: '48px', borderRadius: '50%', border: '3px solid var(--bg-surface-2)', marginLeft: i > 0 ? '-16px' : 0, overflow: 'hidden', boxShadow: '0 4px 10px rgba(0,0,0,0.3)' }}>
-                                                <Image src={src} alt="Expert" fill style={{ objectFit: 'cover' }} />
+                                                <Image src={src} alt="Expert" fill style={{ objectFit: 'cover' }} unoptimized />
                                             </div>
                                         ))}
                                     </div>

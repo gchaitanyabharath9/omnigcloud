@@ -43,6 +43,10 @@ This project utilizes several security features:
 *   **Dependency Scanning**: We use Dependabot and Renovate to keep dependencies up to date.
 *   **Secret Scanning**: GitHub Secret Scanning is enabled.
 *   **SCA**: Software Composition Analysis via `npm audit` and build checks.
+*   **Branch Protection**: The `main` branch is protected. Direct commits are blocked, and Pull Requests require:
+    *   Approving reviews (1 or more).
+    *   Passing status checks (CI, Lint, CodeQL).
+    *   Signed commits (GPG/SSH).
 
 ## Secure Coding Practices
 

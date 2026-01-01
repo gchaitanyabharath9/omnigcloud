@@ -101,17 +101,31 @@ const nextConfig: NextConfig = {
             value: '1; mode=block'
           }
         ]
+      },
+      {
+        // Cache static assets (fonts, images) for 1 year
+        source: '/(fonts|images)/:path*',
+        headers: [
+          {
+            key: 'Cache-Control',
+            value: 'public, max-age=31536000, immutable'
+          }
+        ]
       }
     ]
   },
   images: {
     formats: ['image/avif', 'image/webp'],
+    minimumCacheTTL: 31536000, // 1 year cache for optimized images
+    // Unsplash is unoptimized={true} in code, but we keep this as fallback/safety
     remotePatterns: [
       {
         protocol: 'https',
         hostname: 'images.unsplash.com',
       },
     ],
+    // DISALLOW all other domains to prevent accidental optimization
+    unoptimized: false, // We manually opt-out per image to be safe
   },
 };
 
