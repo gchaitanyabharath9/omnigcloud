@@ -65,8 +65,14 @@ test.describe('i18n & Release Gate', () => {
             test(`Audit CRITICAL URL: ${url}`, async ({ page }) => {
                 const consoleErrors: string[] = [];
                 page.on('console', (msg: ConsoleMessage) => {
-                    if (msg.type() === 'error' && !msg.text().includes('chrome-extension')) {
-                        consoleErrors.push(`[CONSOLE_ERROR] ${msg.text()}`);
+                    const text = msg.text();
+                    const isIgnored =
+                        text.includes('chrome-extension') ||
+                        text.includes('_vercel/insights') ||
+                        text.includes('_vercel/speed-insights');
+
+                    if (msg.type() === 'error' && !isIgnored) {
+                        consoleErrors.push(`[CONSOLE_ERROR] ${text}`);
                     }
                 });
                 page.on('pageerror', (err) => {
