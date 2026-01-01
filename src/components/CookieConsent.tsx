@@ -38,7 +38,7 @@ export default function CookieConsent() {
             left: '2rem',
             zIndex: 100000,
             maxWidth: '420px',
-            width: 'calc(100vw - 4rem)',
+            width: 'calc(100% - 4rem)',
             animation: 'slideUp 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards',
         }}>
             <div className="cookie-glass" style={{

@@ -1,16 +1,18 @@
 import { NextRequest } from 'next/server';
 import { withApiHarden, createSuccessResponse } from '@/lib/api-utils';
 
+import { secureRandomInt } from '@/lib/security';
+
 export const dynamic = 'force-dynamic';
 
 export async function GET(request: NextRequest) {
     return withApiHarden(request, async (req, { requestId }) => {
-        // Simulate realistic data
-        const p50 = Math.floor(Math.random() * (45 - 25) + 25);
-        const p95 = Math.floor(Math.random() * (120 - 80) + 80);
-        const p99 = Math.floor(Math.random() * (250 - 150) + 150);
-        const rps = Math.floor(Math.random() * (2500 - 1800) + 1800);
-        const errorRate = Number((Math.random() * 0.05).toFixed(4));
+        // Simulate realistic data using crypto-secure randomness
+        const p50 = secureRandomInt(25, 45);
+        const p95 = secureRandomInt(80, 120);
+        const p99 = secureRandomInt(150, 250);
+        const rps = secureRandomInt(1800, 2500);
+        const errorRate = secureRandomInt(0, 500) / 10000; // 0 to 0.05
 
         // Status logic
         let status = 'ok';

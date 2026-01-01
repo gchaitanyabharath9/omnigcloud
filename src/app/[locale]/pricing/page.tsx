@@ -3,7 +3,14 @@ import { Check, X, Shield, Globe, Cpu, Zap, Award, HelpCircle, ArrowRight } from
 import Link from 'next/link';
 import type { Metadata } from 'next';
 import Footer from '@/components/Footer';
-import { CostSavingsArea, CloudDistributionPie, FeatureUsageBar, ComplianceScoresBar } from '@/components/charts/SimpleCharts';
+import dynamic from 'next/dynamic';
+import Image from 'next/image';
+import { safeJsonLd } from '@/lib/security';
+
+const CostSavingsArea = dynamic(() => import('@/components/charts/SimpleCharts').then(mod => mod.CostSavingsArea));
+const CloudDistributionPie = dynamic(() => import('@/components/charts/SimpleCharts').then(mod => mod.CloudDistributionPie));
+const FeatureUsageBar = dynamic(() => import('@/components/charts/SimpleCharts').then(mod => mod.FeatureUsageBar));
+// ComplianceScoresBar is unused
 
 export const metadata: Metadata = {
     title: 'Pricing | OmniGCloud Enterprise Cloud Governance',
@@ -106,7 +113,7 @@ export default async function PricingPage({ params }: { params: Promise<{ locale
         <>
             <script
                 type="application/ld+json"
-                dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+                dangerouslySetInnerHTML={{ __html: safeJsonLd(jsonLd) }}
             />
 
             {/* HERO & PRICING GRID - Snap 1 */}
@@ -197,8 +204,14 @@ export default async function PricingPage({ params }: { params: Promise<{ locale
 
                     <div className="grid-2x2-strict" style={{ gap: '1.5rem', gridTemplateRows: 'auto' }}>
                         <CostSavingsArea />
-                        <div className="glass-panel" style={{ padding: 0, borderRadius: '1.5rem', overflow: 'hidden', height: '220px' }}>
-                            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop" style={{ width: '100%', height: '100%', objectFit: 'cover', opacity: 0.6 }} alt="Data" />
+                        <div className="glass-panel" style={{ padding: 0, borderRadius: '1.5rem', overflow: 'hidden', height: '220px', position: 'relative' }}>
+                            <Image
+                                src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop"
+                                alt="Data Analysis"
+                                fill
+                                style={{ objectFit: 'cover', opacity: 0.6 }}
+                                sizes="(max-width: 768px) 100vw, 33vw"
+                            />
                         </div>
                         <CloudDistributionPie />
                         <FeatureUsageBar />

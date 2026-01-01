@@ -21,6 +21,7 @@
     "qa:i18n:fill": "npx tsx qa-i18n/scripts/i18n-fill-missing.ts",
     "qa:seo": "npx tsx qa-i18n/scripts/seo-check.ts",
     "qa:test": "npx playwright test -c qa-i18n/playwright.config.ts",
+    "qa:perf": "npx playwright test -c qa-perf/playwright.config.ts && npx tsx qa-perf/gate.ts",
     "qa:full": "npm run qa:inventory && npm run qa:i18n && npm run qa:seo && npm run qa:test"
   },
   "dependencies": {

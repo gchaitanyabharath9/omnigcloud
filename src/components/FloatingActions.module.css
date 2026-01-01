@@ -13,7 +13,7 @@
     bottom: 10rem;
     right: 2rem;
     width: 380px;
-    max-width: calc(100vw - 4rem);
+    max-width: calc(100% - 4rem);
     height: 600px;
     max-height: calc(100vh - 12rem);
     border-radius: 1.5rem;
@@ -37,7 +37,7 @@
     .widgetContainer {
         bottom: 5rem;
         right: 1rem;
-        width: calc(100vw - 2rem);
+        width: calc(100% - 2rem);
         max-width: 400px;
         height: 500px;
     }

@@ -35,12 +35,10 @@ function finish() {
                 const fullKey = prefix ? `${prefix}.${key}` : key;
                 if (typeof obj[key] === 'object' && obj[key] !== null && !Array.isArray(obj[key])) {
                     prune(obj[key], fullKey);
-                    // If object is now empty, delete it
                     if (Object.keys(obj[key]).length === 0) {
                         delete obj[key];
                     }
                 } else {
-                    // It's a leaf. Check if it's in en.json
                     if (!enKeys.has(fullKey)) {
                         delete obj[key];
                     }
@@ -53,7 +51,9 @@ function finish() {
         function sync(target: Record<string, any>, source: Record<string, any>) {
             for (const key in source) {
                 if (typeof source[key] === 'object' && source[key] !== null && !Array.isArray(source[key])) {
-                    if (!target[key]) target[key] = {};
+                    if (!target[key]) {
+                        target[key] = {};
+                    }
                     sync(target[key], source[key]);
                 } else {
                     if (target[key] === undefined || (typeof target[key] === 'string' && target[key].includes('[TODO'))) {

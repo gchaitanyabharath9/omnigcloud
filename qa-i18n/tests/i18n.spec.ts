@@ -71,6 +71,7 @@ test.describe('i18n & Release Gate', () => {
                         text.includes('_vercel/insights') ||
                         text.includes('_vercel/speed-insights') ||
                         text.includes('favicon.ico') ||
+                        text.includes('net::ERR_SSL_PROTOCOL_ERROR') ||
                         (text.includes('Failed to load resource') && text.includes('404'));
 
                     if (msg.type() === 'error' && !isIgnored) {

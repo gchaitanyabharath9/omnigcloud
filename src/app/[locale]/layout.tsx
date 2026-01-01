@@ -5,15 +5,16 @@ import { Inter, Plus_Jakarta_Sans } from "next/font/google"; // Premium fonts
 import "../../styles/globals.css";
 import Header from "@/components/header";
 import Breadcrumb from "@/components/Breadcrumb";
-import FloatingActions from "@/components/FloatingActions";
 import ScrollManager from "@/components/ScrollManager";
 import SchemaOrg from "@/components/SchemaOrg";
 import { ThemeProvider } from "@/components/providers/ThemeProvider";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Analytics } from "@vercel/analytics/react";
+import FloatingActions from "@/components/FloatingActions";
 import CookieConsent from "@/components/CookieConsent";
 
 import { config } from '@/config';
+
 
 const inter = Inter({
   variable: "--font-inter",
