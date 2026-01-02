@@ -42,7 +42,7 @@ export default function DashboardScroller({ activeMetric, configs, order }: Dash
                             minHeight: '100vh',
                             paddingTop: '2rem',
                             paddingBottom: '4rem',
-                            scrollMarginTop: '180px'
+                            scrollMarginTop: 'calc(var(--header-height) + var(--breadcrumb-height) + 1rem)'
                         }}
                     >
                         {config.component}
