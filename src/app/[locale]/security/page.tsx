@@ -9,7 +9,7 @@ export default async function SecurityPage() {
     return (
         <>
             {/* SECTION 1: HERO & CORE CONCEPTS */}
-            <section className="snap-section" style={{ background: 'var(--bg-surface-2)', minHeight: 'calc(100vh - var(--header-height) - var(--breadcrumb-height))', display: 'flex', alignItems: 'center' }}>
+            <section className="snap-section" style={{ background: 'var(--bg-surface-2)', padding: '4rem 0' }}>
                 <div className="container" style={{ maxWidth: '1200px' }}>
                     <div style={{ marginBottom: '2rem', textAlign: 'center' }}>
                         <Shield className="mx-auto mb-4 text-primary" size={60} />
@@ -19,7 +19,7 @@ export default async function SecurityPage() {
                         </p>
                     </div>
 
-                    <div id="compliance-maps" className="grid grid-cols-2 gap-4">
+                    <div id="compliance-maps" className="grid grid-cols-2 gap-4" style={{ scrollMarginTop: '150px' }}>
                         <div className="glass-panel p-5 rounded-xl border border-white/5">
                             <Lock className="w-8 h-8 mb-3 text-success" />
                             <h3 className="text-lg font-bold mb-2">{t("encryption")}</h3>
