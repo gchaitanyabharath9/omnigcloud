@@ -32,8 +32,8 @@ export const LatencyLineChart = ({ height = 180 }: { height?: number }) => {
                 <ResponsiveContainer width="100%" height="100%" minWidth={0}>
                     <LineChart data={data}>
                         <CartesianGrid strokeDasharray="3 3" stroke="rgba(255,255,255,0.1)" />
-                        <XAxis dataKey="hour" stroke="#888" />
-                        <YAxis stroke="#888" />
+                        <XAxis dataKey="hour" stroke="#888" style={{ fontSize: '10px' }} />
+                        <YAxis stroke="#888" style={{ fontSize: '10px' }} />
                         <Tooltip contentStyle={{ background: '#1e293b', border: '1px solid #334155' }} />
                         <Legend />
                         <Line type="monotone" dataKey="p50" stroke="#10b981" strokeWidth={2} />
@@ -60,8 +60,8 @@ export const CostSavingsArea = ({ height = 180 }: { height?: number }) => {
                 <ResponsiveContainer width="100%" height="100%" minWidth={0}>
                     <AreaChart data={data}>
                         <CartesianGrid strokeDasharray="3 3" stroke="rgba(255,255,255,0.1)" />
-                        <XAxis dataKey="month" stroke="#888" />
-                        <YAxis stroke="#888" />
+                        <XAxis dataKey="month" stroke="#888" style={{ fontSize: '10px' }} />
+                        <YAxis stroke="#888" style={{ fontSize: '10px' }} />
                         <Tooltip contentStyle={{ background: '#1e293b', border: '1px solid #334155' }} />
                         <Legend />
                         <Area type="monotone" dataKey="traditional" stackId="1" stroke="#ef4444" fill="#ef4444" fillOpacity={0.6} />
@@ -86,8 +86,8 @@ export const RequestVolumeBar = ({ height = 180 }: { height?: number }) => {
                 <ResponsiveContainer width="100%" height="100%" minWidth={0}>
                     <BarChart data={data}>
                         <CartesianGrid strokeDasharray="3 3" stroke="rgba(255,255,255,0.1)" />
-                        <XAxis dataKey="hour" stroke="#888" />
-                        <YAxis stroke="#888" />
+                        <XAxis dataKey="hour" stroke="#888" style={{ fontSize: '10px' }} />
+                        <YAxis stroke="#888" style={{ fontSize: '10px' }} />
                         <Tooltip contentStyle={{ background: '#1e293b', border: '1px solid #334155' }} />
                         <Bar dataKey="requests" fill="#3b82f6" radius={[8, 8, 0, 0]} />
                     </BarChart>
@@ -146,8 +146,8 @@ export const UptimeTrend = ({ height = 180 }: { height?: number }) => {
                 <ResponsiveContainer width="100%" height="100%" minWidth={0}>
                     <LineChart data={data}>
                         <CartesianGrid strokeDasharray="3 3" stroke="rgba(255,255,255,0.1)" />
-                        <XAxis dataKey="day" stroke="#888" />
-                        <YAxis domain={[99.5, 100]} stroke="#888" />
+                        <XAxis dataKey="day" stroke="#888" style={{ fontSize: '10px' }} />
+                        <YAxis domain={[99.5, 100]} stroke="#888" style={{ fontSize: '10px' }} />
                         <Tooltip contentStyle={{ background: '#1e293b', border: '1px solid #334155' }} />
                         <Line type="monotone" dataKey="uptime" stroke="#10b981" strokeWidth={2} dot={false} />
                     </LineChart>
@@ -172,8 +172,8 @@ export const ComplianceScoresBar = ({ height = 180 }: { height?: number }) => {
                 <ResponsiveContainer width="100%" height="100%" minWidth={0}>
                     <BarChart data={data} layout="vertical">
                         <CartesianGrid strokeDasharray="3 3" stroke="rgba(255,255,255,0.1)" />
-                        <XAxis type="number" domain={[0, 100]} stroke="#888" hide={height < 150} />
-                        <YAxis dataKey="name" type="category" stroke="#888" width={100} />
+                        <XAxis type="number" domain={[0, 100]} stroke="#888" hide={height < 150} style={{ fontSize: '10px' }} />
+                        <YAxis dataKey="name" type="category" stroke="#888" width={100} style={{ fontSize: '10px' }} />
                         <Tooltip contentStyle={{ background: '#1e293b', border: '1px solid #334155' }} />
                         <Bar dataKey="score" radius={[0, 8, 8, 0]}>
                             {data.map((entry, index) => (
