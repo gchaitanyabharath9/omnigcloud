@@ -43,11 +43,11 @@ export default function InteractiveDashboardSection() {
                             <TrendingUp size={16} color="var(--primary)" />
                         </div>
                         <div style={{ flex: 1, display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(140px, 1fr))', gap: '1rem', alignItems: 'center' }}>
-                            <div style={{ height: '140px' }}>
+                            <div style={{ height: '160px' }}>
                                 {isMounted && <LiveROIGauge value={342} />}
                             </div>
                             <div>
-                                <LatencyLineChart height={110} />
+                                <LatencyLineChart height={160} />
                             </div>
                         </div>
                     </div>
@@ -82,12 +82,12 @@ export default function InteractiveDashboardSection() {
                             </div>
                             <Zap size={16} color="var(--color-warning)" />
                         </div>
-                        <div style={{ flex: 1, display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem' }}>
+                        <div style={{ flex: 1, display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(140px, 1fr))', gap: '1rem' }}>
                             <div>
-                                {isMounted && <CloudDistributionPie height={110} />}
+                                {isMounted && <CloudDistributionPie height={160} />}
                             </div>
                             <div>
-                                {isMounted && <EnhancedCostSavingsChart height={110} />}
+                                {isMounted && <EnhancedCostSavingsChart height={160} />}
                             </div>
                         </div>
                     </div>
@@ -100,12 +100,12 @@ export default function InteractiveDashboardSection() {
                             </div>
                             <ShieldCheck size={16} color="var(--color-success)" />
                         </div>
-                        <div style={{ flex: 1, display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem', alignItems: 'start' }}>
-                            <div style={{ height: '140px' }}>
+                        <div style={{ flex: 1, display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(140px, 1fr))', gap: '1rem', alignItems: 'start' }}>
+                            <div style={{ height: '160px' }}>
                                 {isMounted && <PulsingSecurityScore score={94} />}
                             </div>
                             <div>
-                                {isMounted && <ComplianceScoresBar height={110} />}
+                                {isMounted && <ComplianceScoresBar height={160} />}
                             </div>
                         </div>
                     </div>
