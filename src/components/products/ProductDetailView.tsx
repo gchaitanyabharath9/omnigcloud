@@ -1,7 +1,7 @@
 "use client";
 
 import React from 'react';
-import { BadgeCheck, Terminal, Activity, Zap, Shield, Globe, Cpu, Server, Play, ChevronRight, BarChart } from 'lucide-react';
+import { BadgeCheck, Terminal, Activity, Zap, Shield, Globe, Cpu, Server, Play, ChevronRight, BarChart, Layers } from 'lucide-react';
 import Link from 'next/link';
 
 // Mock data for "dense" feel if real data is missing
@@ -27,114 +27,140 @@ const ProductDetailView: React.FC<ProductDetailProps> = ({
     id, icon, title, tag, description, explanation, images, visual
 }) => {
     return (
-        <div className="w-full h-full flex flex-col justify-center animate-fade-in">
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start lg:items-center">
-
-                {/* LEFT COLUMN: Content & Context (5 cols) */}
-                <div className="lg:col-span-5 flex flex-col gap-8 order-2 lg:order-1">
-                    {/* Header Group */}
+        <div className="animate-fade-in" style={{ paddingTop: '1rem' }}>
+            <div className="hero-grid-layout">
+                {/* LEFT COLUMN: Messaging & Performance Monitor (matches HeroSection left) */}
+                <div style={{ display: 'flex', flexDirection: 'column', gap: '2rem' }}>
                     <div>
-                        <div className="flex items-center gap-3 mb-6">
-                            <div className="p-3 bg-primary/10 rounded-xl border border-primary/20 text-primary shadow-[0_0_20px_-5px_rgba(var(--primary-rgb),0.3)]">
+                        <div className="badge badge-primary-subtle mb-4 w-fit">
+                            <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
                                 {icon}
+                                <span>{tag}</span>
                             </div>
-                            <span className="px-3 py-1 rounded-lg text-xs font-bold bg-primary/10 text-primary border border-primary/20 uppercase tracking-widest">
-                                {tag}
-                            </span>
                         </div>
 
-                        <h2 className="text-4xl md:text-5xl lg:text-6xl font-black tracking-tighter text-white mb-6 leading-[1.1]">
+                        <h1 className="mb-6" style={{ lineHeight: 1.2, fontSize: 'clamp(1.5rem, 3.5vw, 2.2rem)', letterSpacing: '-0.02em', fontWeight: 800 }}>
                             {title}
-                        </h2>
+                        </h1>
 
-                        <p className="text-lg text-muted-foreground leading-relaxed mb-8 max-w-xl">
+                        <p className="text-lead mb-8" style={{ fontSize: '1.2rem', maxWidth: '90%', lineHeight: 1.6, opacity: 0.9 }}>
                             {description}
                         </p>
 
-                        <div className="flex flex-wrap gap-4 mb-8">
-                            <button className="btn-primary px-8 py-4 text-base shadow-xl shadow-primary/20 hover:scale-105 transition-transform">
+                        <div style={{ display: 'flex', flexWrap: 'wrap', gap: '1rem' }}>
+                            <button className="btn-primary" style={{ padding: '0.8rem 1.8rem', fontSize: '1rem' }}>
                                 Explore Platform
                             </button>
-                            <button className="btn-secondary px-8 py-4 text-base flex items-center gap-2 hover:bg-white/5 transition-colors">
-                                <Terminal size={18} /> Architecture
+                            <button className="btn-secondary" style={{ padding: '0.8rem 1.8rem', fontSize: '1rem', display: 'flex', alignItems: 'center' }}>
+                                <Layers size={18} style={{ marginRight: '0.5rem' }} /> Architecture
+                            </button>
+                            <button className="btn-secondary" style={{ padding: '0.8rem 1.8rem', fontSize: '1rem', display: 'flex', alignItems: 'center', opacity: 0.8 }}>
+                                <Terminal size={18} style={{ marginRight: '0.5rem' }} /> Documentation
                             </button>
                         </div>
                     </div>
 
-                    {/* Mini Monitor Panel (Landing Page style) */}
-                    <div className="glass-panel p-6 rounded-2xl border-white/5 bg-white/5 backdrop-blur-xl">
-                        <div className="flex justify-between items-center mb-4">
-                            <h4 className="text-xs font-bold uppercase tracking-wider text-muted-foreground">Sovereignty Health Monitor</h4>
-                            <div className="flex items-center gap-2 text-emerald-400 text-xs font-bold bg-emerald-500/10 px-2 py-1 rounded">
-                                <Activity size={12} /> OPTIMAL
+                    {/* Enhanced Health Monitor Widget (matches HeroSection) */}
+                    <div style={{
+                        background: 'rgba(2, 6, 23, 0.4)',
+                        border: '1px solid rgba(255, 255, 255, 0.08)',
+                        borderRadius: '1.5rem',
+                        padding: '2rem',
+                        backdropFilter: 'blur(12px)',
+                        position: 'relative',
+                        overflow: 'hidden'
+                    }}>
+                        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '1.5rem' }}>
+                            <div>
+                                <h3 style={{ fontSize: '0.85rem', fontWeight: 800, textTransform: 'uppercase', color: 'var(--primary)', marginBottom: '0.5rem', letterSpacing: '0.1em' }}>Sovereignty Health Monitor</h3>
+                                <div style={{ display: 'flex', alignItems: 'baseline', gap: '0.75rem' }}>
+                                    <span style={{ fontSize: '2.5rem', fontWeight: 900, color: 'white' }}>114ms</span>
+                                    <span style={{ fontSize: '1rem', color: '#10b981', fontWeight: 700 }}>● OPTIMAL</span>
+                                </div>
+                            </div>
+                            <div style={{ width: '48px', height: '48px', background: 'rgba(59, 130, 246, 0.1)', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                                <Activity size={24} color="var(--primary)" />
                             </div>
                         </div>
-                        <div className="flex items-end gap-2 mb-4">
-                            <span className="text-4xl font-mono font-black text-white">114ms</span>
-                            <span className="text-xs text-muted-foreground pb-1">global latency</span>
+
+                        {/* Live Animation Graph */}
+                        <div style={{ height: '100px', position: 'relative', margin: '1rem 0' }}>
+                            <svg width="100%" height="100" viewBox="0 0 400 100" preserveAspectRatio="none">
+                                <path d="M0 60 Q 40 50, 80 55 T 160 40 T 240 50 T 320 35 T 400 30" fill="none" stroke="var(--primary)" strokeWidth="4" />
+                                <circle cx="400" cy="30" r="5" fill="var(--primary)">
+                                    <animate attributeName="r" from="5" to="8" dur="1s" repeatCount="indefinite" />
+                                    <animate attributeName="opacity" from="1" to="0" dur="1s" repeatCount="indefinite" />
+                                </circle>
+                            </svg>
                         </div>
-                        {/* CSS-only mini sparkline */}
-                        <div className="w-full h-12 flex items-end gap-1">
-                            {[40, 65, 45, 80, 55, 90, 70, 95, 60, 85, 50, 75, 60, 90, 100].map((h, i) => (
-                                <div key={i} className="flex-1 bg-primary/20 hover:bg-primary transition-colors rounded-t-sm" style={{ height: `${h}%` }} />
-                            ))}
-                        </div>
+
+                        <p style={{ fontSize: '0.8rem', color: 'var(--muted)', lineHeight: 1.6 }}>
+                            {explanation}
+                        </p>
                     </div>
                 </div>
 
-                {/* RIGHT COLUMN: Visuals Grid (7 cols) */}
-                <div className="lg:col-span-7 w-full flex flex-col gap-6 order-1 lg:order-2">
-
-                    {/* Top Row Stats */}
-                    <div className="grid grid-cols-3 gap-4">
-                        <div className="glass-panel p-4 rounded-xl bg-black/20 border-white/5">
-                            <div className="text-[10px] uppercase text-muted-foreground font-bold mb-1">Assets</div>
-                            <div className="text-xl font-mono font-bold text-white">$2.4B</div>
-                        </div>
-                        <div className="glass-panel p-4 rounded-xl bg-black/20 border-white/5">
-                            <div className="text-[10px] uppercase text-muted-foreground font-bold mb-1">Drift</div>
-                            <div className="text-xl font-mono font-bold text-emerald-400">0%</div>
-                        </div>
-                        <div className="glass-panel p-4 rounded-xl bg-black/20 border-white/5">
-                            <div className="text-[10px] uppercase text-muted-foreground font-bold mb-1">Nodes</div>
-                            <div className="text-xl font-mono font-bold text-blue-400">4k+</div>
+                {/* RIGHT COLUMN: Dashboard Visualization & Compliance (matches HeroSection right) */}
+                <div style={{ display: 'flex', flexDirection: 'column', gap: '2rem' }}>
+                    <div className="glass-panel" style={{
+                        padding: '0',
+                        borderRadius: '1.5rem',
+                        border: '1px solid var(--card-border)',
+                        overflow: 'hidden',
+                        background: 'var(--bg-surface-2)',
+                        boxShadow: '0 30px 60px rgba(0,0,0,0.5)'
+                    }}>
+                        <div style={{ padding: '2rem', display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
+                            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '1rem' }}>
+                                {[{ l: 'Assets', v: '$2.4B' }, { l: 'Drift', v: '0%', c: '#10b981' }, { l: 'Nodes', v: '4k+', c: 'var(--primary)' }].map((s, i) => (
+                                    <div key={i} style={{ padding: '1rem', background: 'rgba(255,255,255,0.02)', borderRadius: '0.75rem', border: '1px solid var(--card-border)' }}>
+                                        <div style={{ fontSize: '0.7rem', color: 'var(--muted)', textTransform: 'uppercase' }}>{s.l}</div>
+                                        <div style={{ fontSize: '1.25rem', fontWeight: 900, color: s.c || 'white' }}>{s.v}</div>
+                                    </div>
+                                ))}
+                            </div>
+                            <div style={{ height: '280px', borderRadius: '1rem', border: '1px solid var(--card-border)', position: 'relative', overflow: 'hidden', background: '#020617' }}>
+                                {visual ? (
+                                    <div style={{ width: '100%', height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '2rem' }}>
+                                        {visual}
+                                    </div>
+                                ) : (
+                                    <>
+                                        <div style={{ position: 'absolute', inset: 0, backgroundImage: `url(${images[0]})`, backgroundSize: 'cover', backgroundPosition: 'center', opacity: 0.3 }}></div>
+                                        <div style={{ position: 'absolute', inset: 0, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                                            <div style={{ width: '80px', height: '80px', borderRadius: '50%', background: 'rgba(59, 130, 246, 0.1)', border: '1px solid var(--primary)', display: 'flex', alignItems: 'center', justifyContent: 'center', boxShadow: '0 0 40px var(--primary-glow)' }}>
+                                                <Globe size={40} color="var(--primary)" />
+                                            </div>
+                                        </div>
+                                    </>
+                                )}
+                            </div>
                         </div>
                     </div>
 
-                    {/* Main Visual Panel */}
-                    <div className="glass-panel p-0 rounded-3xl overflow-hidden border border-white/10 bg-black/40 backdrop-blur-md relative h-[400px] shadow-2xl">
-                        {/* Toolbar decoration */}
-                        <div className="absolute top-0 inset-x-0 h-10 bg-white/5 border-b border-white/5 flex items-center px-4 justify-between z-20">
-                            <div className="flex gap-1.5">
-                                <div className="w-2.5 h-2.5 rounded-full bg-white/20" />
-                                <div className="w-2.5 h-2.5 rounded-full bg-white/20" />
-                            </div>
-                            <div className="text-[10px] font-mono opacity-50">CONFIDENTIAL // TOP SECRET</div>
-                        </div>
-
-                        {/* Visual Content */}
-                        <div className="w-full h-full pt-10">
-                            {visual ? visual : (
-                                <div className="w-full h-full flex items-center justify-center text-muted-foreground">
-                                    No Visual Data
+                    {/* Regional Compliance Widget (matches HeroSection) */}
+                    <div className="glass-panel" style={{ padding: '2rem', borderRadius: '1.5rem', border: '1px solid var(--card-border)', background: 'rgba(59, 130, 246, 0.05)' }}>
+                        <h3 style={{ fontSize: '0.9rem', fontWeight: 900, textTransform: 'uppercase', marginBottom: '1.5rem', letterSpacing: '0.1em' }}>Sovereignty Compliance Index</h3>
+                        <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
+                            {[
+                                { label: 'EU-West (GDPR Residency)', val: 98, color: '#10b981' },
+                                { label: 'US-East (HIPAA Sovereignty)', val: 94, color: '#3b82f6' },
+                                { label: 'Global (Threat Detection)', val: 89, color: '#f59e0b' }
+                            ].map((reg, idx) => (
+                                <div key={idx} style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
+                                    <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: '0.8rem' }}>
+                                        <span style={{ fontWeight: 600 }}>{reg.label}</span>
+                                        <span style={{ fontWeight: 900 }}>{reg.val}%</span>
+                                    </div>
+                                    <div style={{ width: '100%', height: '6px', background: 'rgba(255,255,255,0.05)', borderRadius: '3px', overflow: 'hidden' }}>
+                                        <div style={{ width: `${reg.val}%`, height: '100%', background: reg.color, borderRadius: '3px' }}></div>
+                                    </div>
                                 </div>
-                            )}
+                            ))}
                         </div>
-                    </div>
-
-                    {/* Secondary Info Panel / Explanation */}
-                    <div className="glass-panel p-6 rounded-2xl border-white/5 bg-white/5">
-                        <div className="flex items-start gap-4">
-                            <div className="p-2 bg-blue-500/10 rounded-lg text-blue-400 mt-1">
-                                <Zap size={18} />
-                            </div>
-                            <div>
-                                <h4 className="text-sm font-bold text-white mb-2 uppercase tracking-wide">System Logic</h4>
-                                <p className="text-sm text-muted-foreground/80 leading-relaxed">
-                                    {explanation}
-                                </p>
-                            </div>
-                        </div>
+                        <p style={{ fontSize: '0.8rem', color: 'var(--muted)', marginTop: '1.5rem' }}>
+                            Automated audit scores based on regional data residency and encryption standards across all cloud providers.
+                        </p>
                     </div>
                 </div>
             </div>
