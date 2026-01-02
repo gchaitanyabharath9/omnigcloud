@@ -32,7 +32,7 @@ export default function ProductsPage() {
                     <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-20" />
                 </div>
 
-                <div className="container relative z-10 flex flex-col items-center py-20">
+                <div className="container relative z-10 flex flex-col items-center pt-32 pb-20">
                     <div className="animate-fade-in-up" style={{ animationDelay: '0.1s' }}>
                         <div className="badge badge-primary-subtle mb-4">
                             <Cpu size={14} className="mr-2" /> {t('hero.tag')}
