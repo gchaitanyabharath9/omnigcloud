@@ -29,6 +29,9 @@ export default function LanguageSwitcher() {
             return;
         }
 
+        // Get current hash (if any)
+        const currentHash = typeof window !== 'undefined' ? window.location.hash : '';
+
         let newPath = pathname;
         if (pathname.startsWith(`/${locale}`)) {
             newPath = pathname.replace(`/${locale}`, `/${nextLocale}`);
@@ -36,8 +39,11 @@ export default function LanguageSwitcher() {
             newPath = `/${nextLocale}${pathname}`;
         }
 
+        // Append hash to preserve section
+        const fullPath = `${newPath}${currentHash}`;
+
         startTransition(() => {
-            router.replace(newPath);
+            router.replace(fullPath);
             setIsOpen(false);
         });
     };
