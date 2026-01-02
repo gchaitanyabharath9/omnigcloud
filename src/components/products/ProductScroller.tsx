@@ -2,6 +2,7 @@
 
 import React, { useEffect } from 'react';
 import ProductDetailView from './ProductDetailView';
+import { PageShell } from '@/components/layout/PageShell';
 
 interface ProductScrollerProps {
     activeProduct: string;
@@ -36,7 +37,9 @@ export default function ProductScroller({ activeProduct, products }: ProductScro
                             scrollMarginTop: '140px'
                         }}
                     >
-                        <ProductDetailView {...product} />
+                        <PageShell>
+                            <ProductDetailView {...product} />
+                        </PageShell>
                     </div>
                 );
             })}
