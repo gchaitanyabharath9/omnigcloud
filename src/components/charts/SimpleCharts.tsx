@@ -63,7 +63,7 @@ export const CostSavingsArea = ({ height = 180 }: { height?: number }) => {
                         <XAxis dataKey="month" stroke="#888" style={{ fontSize: '10px' }} />
                         <YAxis stroke="#888" style={{ fontSize: '10px' }} />
                         <Tooltip contentStyle={{ background: '#1e293b', border: '1px solid #334155' }} />
-                        <Legend />
+                        <Legend wrapperStyle={{ whiteSpace: 'nowrap' }} />
                         <Area type="monotone" dataKey="traditional" stackId="1" stroke="#ef4444" fill="#ef4444" fillOpacity={0.6} />
                         <Area type="monotone" dataKey="optimized" stackId="2" stroke="#10b981" fill="#10b981" fillOpacity={0.6} />
                     </AreaChart>
@@ -206,8 +206,8 @@ export const ErrorRateArea = ({ height = 180 }: { height?: number }) => {
                             </linearGradient>
                         </defs>
                         <CartesianGrid strokeDasharray="3 3" stroke="rgba(255,255,255,0.1)" />
-                        <XAxis dataKey="day" stroke="#888" />
-                        <YAxis stroke="#888" />
+                        <XAxis dataKey="day" stroke="#888" style={{ fontSize: '10px' }} />
+                        <YAxis stroke="#888" style={{ fontSize: '10px' }} />
                         <Tooltip contentStyle={{ background: '#1e293b', border: '1px solid #334155' }} />
                         <Area type="monotone" dataKey="errors" stroke="#ef4444" fill="url(#errorGrad)" />
                     </AreaChart>
@@ -232,8 +232,8 @@ export const FeatureUsageBar = ({ height = 180 }: { height?: number }) => {
                 <ResponsiveContainer width="99%" height="100%" minWidth={0} debounce={200}>
                     <BarChart data={data}>
                         <CartesianGrid strokeDasharray="3 3" stroke="rgba(255,255,255,0.1)" />
-                        <XAxis dataKey="feature" stroke="#888" />
-                        <YAxis domain={[0, 100]} stroke="#888" />
+                        <XAxis dataKey="feature" stroke="#888" style={{ fontSize: '10px' }} />
+                        <YAxis domain={[0, 100]} stroke="#888" style={{ fontSize: '10px' }} />
                         <Tooltip contentStyle={{ background: '#1e293b', border: '1px solid #334155' }} />
                         <Bar dataKey="usage" radius={[8, 8, 0, 0]}>
                             {data.map((entry, index) => (

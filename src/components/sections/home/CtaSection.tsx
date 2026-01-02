@@ -26,9 +26,9 @@ export default function CtaSection() {
                         </div>
 
                         {/* 2x2 Chart Grid - Horizontal Internal Layout */}
-                        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '1rem', marginBottom: '2rem' }}>
+                        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '1rem', marginBottom: '2rem' }}>
                             <div style={{ display: 'grid', gridTemplateColumns: '1.2fr 0.8fr', gap: '1rem', alignItems: 'center' }}>
-                                <ErrorRateArea height={120} />
+                                <ErrorRateArea height={180} />
                                 <div style={{ padding: '0.75rem', background: 'rgba(16, 185, 129, 0.05)', borderRadius: '0.75rem', border: '1px solid rgba(16, 185, 129, 0.2)' }}>
                                     <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.25rem' }}>
                                         <TrendingDown size={18} color="#10b981" />
@@ -41,7 +41,7 @@ export default function CtaSection() {
                             </div>
 
                             <div style={{ display: 'grid', gridTemplateColumns: '1.2fr 0.8fr', gap: '1rem', alignItems: 'center' }}>
-                                <UptimeTrend height={120} />
+                                <UptimeTrend height={180} />
                                 <div style={{ padding: '0.75rem', background: 'rgba(59, 130, 246, 0.05)', borderRadius: '0.75rem', border: '1px solid rgba(59, 130, 246, 0.2)' }}>
                                     <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.25rem' }}>
                                         <Shield size={18} color="#3b82f6" />
@@ -54,7 +54,7 @@ export default function CtaSection() {
                             </div>
 
                             <div style={{ display: 'grid', gridTemplateColumns: '1.2fr 0.8fr', gap: '1rem', alignItems: 'center' }}>
-                                <CostSavingsArea height={120} />
+                                <CostSavingsArea height={180} />
                                 <div style={{ padding: '0.75rem', background: 'rgba(245, 158, 11, 0.05)', borderRadius: '0.75rem', border: '1px solid rgba(245, 158, 11, 0.2)' }}>
                                     <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.25rem' }}>
                                         <DollarSign size={18} color="#f59e0b" />
@@ -67,7 +67,7 @@ export default function CtaSection() {
                             </div>
 
                             <div style={{ display: 'grid', gridTemplateColumns: '1.2fr 0.8fr', gap: '1rem', alignItems: 'center' }}>
-                                <FeatureUsageBar height={120} />
+                                <FeatureUsageBar height={180} />
                                 <div style={{ padding: '0.75rem', background: 'rgba(139, 92, 246, 0.05)', borderRadius: '0.75rem', border: '1px solid rgba(139, 92, 246, 0.2)' }}>
                                     <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.25rem' }}>
                                         <TrendingUp size={18} color="#8b5cf6" />
