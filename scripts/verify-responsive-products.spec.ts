@@ -5,7 +5,9 @@ test.describe('Responsive Layout & Overflow Regression', () => {
     const ROUTES = [
         '/en',
         '/en/products#playground',
-        '/en/security#compliance-maps'
+        '/en/security#compliance-maps',
+        '/en/dashboard',
+        '/en/pricing'
     ];
 
     const VIEWPORTS = [

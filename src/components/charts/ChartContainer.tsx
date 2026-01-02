@@ -32,7 +32,7 @@ export const ChartContainer: React.FC<ChartContainerProps> = ({
                     </div>
                 )}
             </div>
-            <div className="w-full" style={{ minHeight: '280px' }}>
+            <div className="w-full h-full min-h-[280px] min-w-0 relative overflow-hidden">
                 {children}
             </div>
         </div>

@@ -82,7 +82,7 @@ export default function DashboardShell({ title, subtitle, children }: DashboardS
             </div>
 
             {/* MAIN CONTENT */}
-            <div className="container overflow-x-hidden" style={{ padding: '2rem', flex: 1 }}>
+            <div className="container min-w-0" style={{ padding: '2rem', flex: 1 }}>
 
                 {/* CRITICAL METRICS ROW - Always Visible for Context */}
                 <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '1rem', marginBottom: '2rem' }}>
