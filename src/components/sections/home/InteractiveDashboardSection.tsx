@@ -34,7 +34,7 @@ export default function InteractiveDashboardSection() {
                 {/* 2x2 Grid with mix of Content, Charts, and Images */}
                 <div className="grid-2" style={{ gap: '1rem' }}>
                     {/* TOP LEFT: ROI & PERFORMANCE (Chart mix) */}
-                    <div className="glass-panel" style={{ padding: '1.25rem', borderRadius: '1.5rem', display: 'flex', flexDirection: 'column', minHeight: '260px' }}>
+                    <div className="glass-panel" style={{ padding: '1.25rem', borderRadius: '1.5rem', display: 'flex', flexDirection: 'column', minHeight: '260px', minWidth: 0 }}>
                         <div className="flex justify-between items-start mb-2">
                             <div>
                                 <h4 style={{ margin: 0, fontSize: '1rem', fontWeight: 900 }}>{t('roiTitle')}</h4>
@@ -53,7 +53,7 @@ export default function InteractiveDashboardSection() {
                     </div>
 
                     {/* TOP RIGHT: SYSTEM ARCHITECTURE (Image mix) */}
-                    <div className="glass-panel" style={{ padding: '1.25rem', borderRadius: '1.5rem', overflow: 'hidden', position: 'relative', minHeight: '260px' }}>
+                    <div className="glass-panel" style={{ padding: '1.25rem', borderRadius: '1.5rem', overflow: 'hidden', position: 'relative', minHeight: '260px', minWidth: 0 }}>
                         <img
                             src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=800"
                             alt="Data Center"
@@ -75,7 +75,7 @@ export default function InteractiveDashboardSection() {
                     </div>
 
                     {/* BOTTOM LEFT: COST & DISTRIBUTION (Mixed charts) */}
-                    <div className="glass-panel" style={{ padding: '1.25rem', borderRadius: '1.5rem', display: 'flex', flexDirection: 'column', minHeight: '260px' }}>
+                    <div className="glass-panel" style={{ padding: '1.25rem', borderRadius: '1.5rem', display: 'flex', flexDirection: 'column', minHeight: '260px', minWidth: 0 }}>
                         <div className="flex justify-between items-start mb-2">
                             <div>
                                 <h4 style={{ margin: 0, fontSize: '1rem', fontWeight: 900 }}>{t('optimizationTitle')}</h4>
@@ -93,7 +93,7 @@ export default function InteractiveDashboardSection() {
                     </div>
 
                     {/* BOTTOM RIGHT: SECURITY & COMPLIANCE (Metrics mix) */}
-                    <div className="glass-panel" style={{ padding: '1.25rem', borderRadius: '1.5rem', display: 'flex', flexDirection: 'column', minHeight: '260px' }}>
+                    <div className="glass-panel" style={{ padding: '1.25rem', borderRadius: '1.5rem', display: 'flex', flexDirection: 'column', minHeight: '260px', minWidth: 0 }}>
                         <div className="flex justify-between items-start mb-2">
                             <div>
                                 <h4 style={{ margin: 0, fontSize: '1rem', fontWeight: 900 }}>{t('trustTitle')}</h4>

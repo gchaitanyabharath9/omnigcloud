@@ -23,6 +23,10 @@ export default defineConfig({
         {
             name: 'perf',
             testMatch: /perf-check\.spec\.ts/
+        },
+        {
+            name: 'responsive-products',
+            testMatch: /verify-responsive-products\.spec\.ts/
         }
     ]
 });

@@ -27,6 +27,7 @@
     "check:build": "node scripts/verify.mjs build",
     "check:smoke": "node scripts/verify.mjs smoke",
     "check:i18n": "node scripts/verify.mjs i18n",
+    "check:responsive": "npx playwright test scripts/verify-responsive-products.spec.ts -c playwright.gate.config.ts",
     "check:all": "node scripts/verify.mjs all"
   },
   "dependencies": {

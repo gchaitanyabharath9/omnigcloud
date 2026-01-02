@@ -72,7 +72,7 @@ const ProductDetailView: React.FC<ProductDetailProps> = ({
                                     <div className="w-2.5 h-2.5 rounded-full bg-green-500/20 border border-green-500/50" />
                                 </div>
                                 <div className="h-4 w-px bg-white/10 mx-2" />
-                                <div className="text-[10px] font-mono text-muted-foreground/50 flex-1 text-center">
+                                <div className="text-[10px] font-mono text-muted-foreground/50 flex-1 text-center truncate min-w-0">
                                     root@omnigcloud:~/{id}/instance-01
                                 </div>
                             </div>

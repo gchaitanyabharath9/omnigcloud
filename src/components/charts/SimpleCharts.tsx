@@ -11,7 +11,7 @@ const COLORS = ['#3b82f6', '#8b5cf6', '#10b981', '#f59e0b', '#ef4444'];
 const ChartCard = ({ title, children, height = 180 }: { title: string; children: React.ReactNode; height?: number }) => (
     <div className="glass-panel p-3 rounded-xl">
         <h3 className="text-xs font-black mb-2 uppercase opacity-60 letter-spacing-wider">{title}</h3>
-        <div style={{ width: '100%', height }}>
+        <div style={{ width: '100%', height, minWidth: '1px' }}>
             {children}
         </div>
     </div>

@@ -45,7 +45,7 @@ const CustomTooltip = ({ active, payload, label }: any) => {
 
 export function LatencyChart({ data }: { data: any[] }) {
     return (
-        <div className="w-full h-full min-h-[300px]">
+        <div className="w-full h-full min-h-[300px] min-w-[1px]">
             <NoSSR>
                 <ResponsiveContainer width="99%" height="100%" minWidth={0} debounce={200}>
                     <AreaChart data={data} margin={{ top: 10, right: 10, left: 0, bottom: 0 }}>
@@ -96,7 +96,7 @@ export function LatencyChart({ data }: { data: any[] }) {
 
 export function RpsChart({ data }: { data: any[] }) {
     return (
-        <div className="w-full h-full min-h-[300px]">
+        <div className="w-full h-full min-h-[300px] min-w-[1px]">
             <NoSSR>
                 <ResponsiveContainer width="99%" height="100%" minWidth={0} debounce={200}>
                     <BarChart data={data} margin={{ top: 10, right: 10, left: 0, bottom: 0 }}>
@@ -130,7 +130,7 @@ export function RpsChart({ data }: { data: any[] }) {
 
 export function ErrorRateChart({ data }: { data: any[] }) {
     return (
-        <div className="w-full h-full min-h-[200px]">
+        <div className="w-full h-full min-h-[200px] min-w-[1px]">
             <NoSSR>
                 <ResponsiveContainer width="99%" height="100%" minWidth={0} debounce={200}>
                     <LineChart data={data} margin={{ top: 10, right: 10, left: 0, bottom: 0 }}>

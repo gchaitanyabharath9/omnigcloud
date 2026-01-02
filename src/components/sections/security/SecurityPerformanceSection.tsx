@@ -56,20 +56,20 @@ export default function SecurityPerformanceSection() {
 
             <div className="grid md:grid-cols-2 gap-6 h-auto">
                 {/* Latency Card */}
-                <div className="bg-slate-900/40 border border-slate-800 rounded-xl p-6 flex flex-col h-[350px]">
+                <div className="bg-slate-900/40 border border-slate-800 rounded-xl p-6 flex flex-col min-h-[350px] min-w-0">
                     <div className="flex justify-between items-center mb-6">
                         <h3 className="font-bold text-slate-200 flex items-center gap-2">
                             <Activity size={18} className="text-blue-400" /> Cleaning Latency
                         </h3>
                         <span className="text-xs font-mono text-slate-500">Live</span>
                     </div>
-                    <div className="flex-grow">
+                    <div className="flex-1 min-w-0">
                         <LatencyChart data={data} />
                     </div>
                 </div>
 
                 {/* Error Rate Card */}
-                <div className="bg-slate-900/40 border border-slate-800 rounded-xl p-6 flex flex-col h-[350px]">
+                <div className="bg-slate-900/40 border border-slate-800 rounded-xl p-6 flex flex-col min-h-[350px] min-w-0">
                     <div className="flex justify-between items-center mb-6">
                         <h3 className="font-bold text-slate-200 flex items-center gap-2">
                             <ShieldAlert size={18} className="text-red-400" /> WAF Block Rate
