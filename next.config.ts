@@ -46,15 +46,15 @@ const nextConfig: NextConfig = {
     const cspDirectives = [
       "default-src 'self'",
       // Scripts: Allow Next.js runtime, inline scripts (for hydration), and eval (for dev mode) + Vercel Live
-      `script-src 'self' 'unsafe-inline' https://vercel.live https://*.vercel.live ${isDev ? "'unsafe-eval'" : ""}`,
+      `script-src 'self' 'unsafe-inline' https://vercel.live https://*.vercel.live https://vercel.com https://*.vercel.com ${isDev ? "'unsafe-eval'" : ""}`,
       // Styles: Allow inline styles (required for styled-jsx and CSS-in-JS), Google Fonts
-      "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
-      // Fonts: Allow self-hosted and Google Fonts
-      "font-src 'self' https://fonts.gstatic.com data:",
+      "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://vercel.live https://*.vercel.live",
+      // Fonts: Allow self-hosted and Google Fonts, Vercel Live
+      "font-src 'self' https://fonts.gstatic.com data: https://vercel.live https://*.vercel.live",
       // Images: Allow self, data URIs, blob, Unsplash, and Vercel Live
-      "img-src 'self' data: blob: https://images.unsplash.com https://*.unsplash.com https://vercel.live https://*.vercel.live",
+      "img-src 'self' data: blob: https://images.unsplash.com https://*.unsplash.com https://vercel.live https://*.vercel.live https://vercel.com https://*.vercel.com",
       // Connect: Allow API calls to self, Unsplash, and Vercel Live
-      "connect-src 'self' https://api.unsplash.com https://vercel.live https://*.vercel.live wss://*.vercel.live",
+      "connect-src 'self' https://api.unsplash.com https://vercel.live https://*.vercel.live wss://*.vercel.live https://vercel.com https://*.vercel.com",
       // Media: Restrict to self
       "media-src 'self'",
       // Objects: Disallow plugins
@@ -64,9 +64,9 @@ const nextConfig: NextConfig = {
       // Form actions: Restrict to self
       "form-action 'self'",
       // Frame ancestors: Prevent clickjacking (replaces X-Frame-Options)
-      "frame-ancestors 'self' https://vercel.live https://*.vercel.live",
+      "frame-ancestors 'self' https://vercel.live https://*.vercel.live https://vercel.com",
       // Frame src: Allow Vercel Live
-      "frame-src 'self' https://vercel.live https://*.vercel.live",
+      "frame-src 'self' https://vercel.live https://*.vercel.live https://vercel.com",
       // Upgrade insecure requests
       "upgrade-insecure-requests",
       // Block mixed content

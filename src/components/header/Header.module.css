@@ -122,6 +122,8 @@
     padding-top: 1rem;
     /* Gap buffer */
     z-index: 1000;
+    max-width: none;
+    width: max-content;
 }
 
 .dropdownLabel {

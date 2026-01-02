@@ -1,0 +1,23 @@
+{
+    "lighthouse": {
+        "performance": 0.7,
+        "accessibility": 0.9,
+        "best-practices": 0.9,
+        "seo": 0.9
+    },
+    "timings": {
+        "lcp": 3500,
+        "fcp": 1500,
+        "cls": 0.1,
+        "inp": 200
+    },
+    "resources": {
+        "js": 1048576,
+        "jsWarn": 614400,
+        "requestCount": 180,
+        "requestCountWarn": 120
+    },
+    "interaction": {
+        "longTaskThreshold": 50
+    }
+}
