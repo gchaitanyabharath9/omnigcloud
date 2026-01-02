@@ -12,6 +12,7 @@ import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Analytics } from "@vercel/analytics/react";
 import FloatingActions from "@/components/FloatingActions";
 import CookieConsent from "@/components/CookieConsent";
+import { HashScrollHandler } from "@/components/navigation/HashScrollHandler";
 
 import { config } from '@/config';
 
@@ -158,6 +159,7 @@ export default async function RootLayout({
           disableTransitionOnChange
         >
           <NextIntlClientProvider messages={messages}>
+            <HashScrollHandler />
             <Header />
             <main className="main-content">
               <Breadcrumb />
