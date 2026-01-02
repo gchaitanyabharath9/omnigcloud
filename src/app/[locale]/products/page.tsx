@@ -20,7 +20,7 @@ export default function ProductsPage() {
     return (
         <>
             {/* HERO */}
-            <section className="relative w-full flex items-center justify-center overflow-hidden border-b border-white/10" style={{ minHeight: 'calc(100vh - var(--header-height) - var(--breadcrumb-height))' }}>
+            <section className="relative w-full flex items-start justify-center overflow-hidden border-b border-white/10" style={{ minHeight: 'calc(100vh - var(--header-height) - var(--breadcrumb-height))' }}>
                 {/* Background Visual */}
                 <div className="absolute inset-0 z-0 select-none pointer-events-none">
                     <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/60 to-black z-10" />
@@ -32,7 +32,7 @@ export default function ProductsPage() {
                     <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-20" />
                 </div>
 
-                <div className="container relative z-10 flex flex-col items-center pt-32 pb-20">
+                <div className="container relative z-10 flex flex-col items-center pt-32 lg:pt-48 pb-20">
                     <div className="animate-fade-in-up" style={{ animationDelay: '0.1s' }}>
                         <div className="badge badge-primary-subtle mb-4">
                             <Cpu size={14} className="mr-2" /> {t('hero.tag')}
