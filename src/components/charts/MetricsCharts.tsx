@@ -45,9 +45,9 @@ const CustomTooltip = ({ active, payload, label }: any) => {
 
 export function LatencyChart({ data }: { data: any[] }) {
     return (
-        <div className="w-full h-full min-h-[300px] min-w-[1px]">
+        <div className="w-full h-full min-w-[1px] relative overflow-hidden">
             <NoSSR>
-                <ResponsiveContainer width="99%" height="100%" minWidth={0} debounce={200}>
+                <ResponsiveContainer width="99%" height="100%" minWidth={0} minHeight={0}>
                     <AreaChart data={data} margin={{ top: 10, right: 10, left: 0, bottom: 0 }}>
                         <defs>
                             <linearGradient id="colorLatency" x1="0" y1="0" x2="0" y2="1">
@@ -96,9 +96,9 @@ export function LatencyChart({ data }: { data: any[] }) {
 
 export function RpsChart({ data }: { data: any[] }) {
     return (
-        <div className="w-full h-full min-h-[300px] min-w-[1px]">
+        <div className="w-full h-full min-w-[1px] relative overflow-hidden">
             <NoSSR>
-                <ResponsiveContainer width="99%" height="100%" minWidth={0} debounce={200}>
+                <ResponsiveContainer width="99%" height="100%" minWidth={0} minHeight={0}>
                     <BarChart data={data} margin={{ top: 10, right: 10, left: 0, bottom: 0 }}>
                         <CartesianGrid strokeDasharray="3 3" stroke={themeColors.grid} vertical={false} />
                         <XAxis
@@ -130,9 +130,9 @@ export function RpsChart({ data }: { data: any[] }) {
 
 export function ErrorRateChart({ data }: { data: any[] }) {
     return (
-        <div className="w-full h-full min-h-[200px] min-w-[1px]">
+        <div className="w-full h-full min-w-[1px] relative overflow-hidden">
             <NoSSR>
-                <ResponsiveContainer width="99%" height="100%" minWidth={0} debounce={200}>
+                <ResponsiveContainer width="99%" height="100%" minWidth={0} minHeight={0}>
                     <LineChart data={data} margin={{ top: 10, right: 10, left: 0, bottom: 0 }}>
                         <CartesianGrid strokeDasharray="3 3" stroke={themeColors.grid} vertical={false} />
                         <XAxis

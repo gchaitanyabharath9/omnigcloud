@@ -11,7 +11,7 @@ const COLORS = ['#3b82f6', '#8b5cf6', '#10b981', '#f59e0b', '#ef4444'];
 const ChartCard = ({ title, children, height = 180 }: { title: string; children: React.ReactNode; height?: number }) => (
     <div className="glass-panel p-3 rounded-xl">
         <h3 className="text-xs font-black mb-2 uppercase opacity-60 letter-spacing-wider">{title}</h3>
-        <div style={{ width: '100%', height, minWidth: '1px' }}>
+        <div style={{ width: '100%', height, minWidth: '1px', position: 'relative', overflow: 'hidden' }}>
             {children}
         </div>
     </div>
@@ -29,7 +29,7 @@ export const LatencyLineChart = ({ height = 180 }: { height?: number }) => {
     return (
         <ChartCard title="API Latency (ms)" height={height}>
             <NoSSR>
-                <ResponsiveContainer width="99%" height="100%" minWidth={0} debounce={200}>
+                <ResponsiveContainer width="99%" height="100%" minWidth={0} minHeight={0}>
                     <LineChart data={data}>
                         <CartesianGrid strokeDasharray="3 3" stroke="rgba(255,255,255,0.1)" />
                         <XAxis dataKey="hour" stroke="#888" style={{ fontSize: '10px' }} />
@@ -57,7 +57,7 @@ export const CostSavingsArea = ({ height = 180 }: { height?: number }) => {
     return (
         <ChartCard title="Monthly Cost Comparison ($)" height={height}>
             <NoSSR>
-                <ResponsiveContainer width="99%" height="100%" minWidth={0} debounce={200}>
+                <ResponsiveContainer width="99%" height="100%" minWidth={0} minHeight={0}>
                     <AreaChart data={data}>
                         <CartesianGrid strokeDasharray="3 3" stroke="rgba(255,255,255,0.1)" />
                         <XAxis dataKey="month" stroke="#888" style={{ fontSize: '10px' }} />
@@ -83,7 +83,7 @@ export const RequestVolumeBar = ({ height = 180 }: { height?: number }) => {
     return (
         <ChartCard title="Hourly Request Volume" height={height}>
             <NoSSR>
-                <ResponsiveContainer width="99%" height="100%" minWidth={0} debounce={200}>
+                <ResponsiveContainer width="99%" height="100%" minWidth={0} minHeight={0}>
                     <BarChart data={data}>
                         <CartesianGrid strokeDasharray="3 3" stroke="rgba(255,255,255,0.1)" />
                         <XAxis dataKey="hour" stroke="#888" style={{ fontSize: '10px' }} />
@@ -109,7 +109,7 @@ export const CloudDistributionPie = ({ height = 180 }: { height?: number }) => {
     return (
         <ChartCard title="Multi-Cloud Distribution (%)" height={height}>
             <NoSSR>
-                <ResponsiveContainer width="99%" height="100%" minWidth={0} debounce={200}>
+                <ResponsiveContainer width="99%" height="100%" minWidth={0} minHeight={0}>
                     <PieChart>
                         <Pie
                             data={data}
@@ -143,7 +143,7 @@ export const UptimeTrend = ({ height = 180 }: { height?: number }) => {
     return (
         <ChartCard title="30-Day Uptime (%)" height={height}>
             <NoSSR>
-                <ResponsiveContainer width="99%" height="100%" minWidth={0} debounce={200}>
+                <ResponsiveContainer width="99%" height="100%" minWidth={0} minHeight={0}>
                     <LineChart data={data}>
                         <CartesianGrid strokeDasharray="3 3" stroke="rgba(255,255,255,0.1)" />
                         <XAxis dataKey="day" stroke="#888" style={{ fontSize: '10px' }} />
@@ -169,7 +169,7 @@ export const ComplianceScoresBar = ({ height = 180 }: { height?: number }) => {
     return (
         <ChartCard title="Compliance Framework Scores" height={height}>
             <NoSSR>
-                <ResponsiveContainer width="99%" height="100%" minWidth={0} debounce={200}>
+                <ResponsiveContainer width="99%" height="100%" minWidth={0} minHeight={0}>
                     <BarChart data={data} layout="vertical">
                         <CartesianGrid strokeDasharray="3 3" stroke="rgba(255,255,255,0.1)" />
                         <XAxis type="number" domain={[0, 100]} stroke="#888" hide={height < 150} style={{ fontSize: '10px' }} />
@@ -197,7 +197,7 @@ export const ErrorRateArea = ({ height = 180 }: { height?: number }) => {
     return (
         <ChartCard title="Error Rate Trend (%)" height={height}>
             <NoSSR>
-                <ResponsiveContainer width="99%" height="100%" minWidth={0} debounce={200}>
+                <ResponsiveContainer width="99%" height="100%" minWidth={0} minHeight={0}>
                     <AreaChart data={data}>
                         <defs>
                             <linearGradient id="errorGrad" x1="0" y1="0" x2="0" y2="1">
@@ -229,7 +229,7 @@ export const FeatureUsageBar = ({ height = 180 }: { height?: number }) => {
     return (
         <ChartCard title="Feature Adoption Rate (%)" height={height}>
             <NoSSR>
-                <ResponsiveContainer width="99%" height="100%" minWidth={0} debounce={200}>
+                <ResponsiveContainer width="99%" height="100%" minWidth={0} minHeight={0}>
                     <BarChart data={data}>
                         <CartesianGrid strokeDasharray="3 3" stroke="rgba(255,255,255,0.1)" />
                         <XAxis dataKey="feature" stroke="#888" style={{ fontSize: '10px' }} />

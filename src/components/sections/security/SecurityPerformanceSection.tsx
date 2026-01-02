@@ -63,7 +63,7 @@ export default function SecurityPerformanceSection() {
                         </h3>
                         <span className="text-xs font-mono text-slate-500">Live</span>
                     </div>
-                    <div className="flex-1 min-w-0">
+                    <div className="h-[300px] w-full min-w-0">
                         <LatencyChart data={data} />
                     </div>
                 </div>
@@ -76,7 +76,7 @@ export default function SecurityPerformanceSection() {
                         </h3>
                         <span className="text-xs font-mono text-slate-500">SLA Monitor</span>
                     </div>
-                    <div className="flex-grow">
+                    <div className="h-[300px] w-full min-w-0">
                         <ErrorRateChart data={data} />
                     </div>
                 </div>
