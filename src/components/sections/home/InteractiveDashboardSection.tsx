@@ -42,7 +42,7 @@ export default function InteractiveDashboardSection() {
                             </div>
                             <TrendingUp size={16} color="var(--primary)" />
                         </div>
-                        <div style={{ flex: 1, display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem', alignItems: 'center' }}>
+                        <div style={{ flex: 1, display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(140px, 1fr))', gap: '1rem', alignItems: 'center' }}>
                             <div style={{ height: '140px' }}>
                                 {isMounted && <LiveROIGauge value={342} />}
                             </div>
