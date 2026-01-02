@@ -2,7 +2,6 @@
 
 import React, { useEffect } from 'react';
 import ProductDetailView from './ProductDetailView';
-import { PageShell } from '@/components/layout/PageShell';
 
 interface ProductScrollerProps {
     activeProduct: string;
@@ -31,15 +30,15 @@ export default function ProductScroller({ activeProduct, products }: ProductScro
                         // Force each section to be at least a full viewport height for "page" feel
                         // scrollMarginTop accounts for the fixed header so content starts cleanly below it
                         style={{
-                            minHeight: '100vh',
+                            minHeight: 'calc(100vh - var(--header-height) - var(--breadcrumb-height))',
                             paddingTop: '2rem',
                             paddingBottom: '4rem',
-                            scrollMarginTop: '140px'
+                            scrollMarginTop: 'calc(var(--header-height) + var(--breadcrumb-height))'
                         }}
                     >
-                        <PageShell>
+                        <div className="container">
                             <ProductDetailView {...product} />
-                        </PageShell>
+                        </div>
                     </div>
                 );
             })}
