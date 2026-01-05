@@ -16,13 +16,17 @@ const InteractiveDashboardSection = dynamic(() => import('@/components/sections/
 const EcosystemSection = dynamic(() => import('@/components/sections/home/EcosystemSection'));
 const DemoSection = dynamic(() => import('@/components/sections/home/DemoSection'));
 
-import type { Metadata } from 'next';
+import { getTranslations } from 'next-intl/server';
 
-export const metadata: Metadata = {
-  title: 'Cloud Modernization & AI Governance | OmniGCloud Platform',
-  description: 'Break free from vendor lock-in with OmniGCloud. Our AI-driven, cloud-agnostic platform automates governance and reduces costs across AWS, Azure, and OpenShift.',
-  keywords: ['enterprise cloud modernization', 'AI cloud governance', 'cloud agnostic platform', 'RedHat OCP modernization', 'sovereign cloud infrastructure'],
-};
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params;
+  const tm = await getTranslations({ locale, namespace: 'Metadata.Home' });
+  return {
+    title: tm('title'),
+    description: tm('description'),
+    keywords: ['enterprise cloud modernization', 'AI cloud governance', 'cloud agnostic platform', 'RedHat OCP modernization', 'sovereign cloud infrastructure'],
+  };
+}
 
 export default function Home() {
   return (

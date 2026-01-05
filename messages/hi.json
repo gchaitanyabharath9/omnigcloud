@@ -52,11 +52,23 @@
     }
   },
   "Breadcrumb": {
+    "ai-cloud-platform": "AI Cloud Platform",
+    "ai-data": "AI Data",
+    "ai-engine": "AI Engine",
+    "api": "API",
+    "app": "Application",
+    "application-modernization": "App Modernization",
+    "architecture": "Architecture",
+    "automated-multilingual-quality-assurance": "Automated multilingual quality assurance",
     "blog": "संप्रभु इंटेलिजेंस",
+    "business-ideas": "Business Ideas",
     "case-studies": "परिनियोजन सफलता",
+    "cloud-cost-optimization": "Cost Optimization",
+    "cloud-modernization": "Cloud Modernization",
     "command-center": "커맨드 센터",
     "community": "ग्लोबल इकोसिस्टम",
     "company": "संगठन",
+    "compliance": "Compliance",
     "contact": "बिक्री मुख्यालय से संपर्क करें",
     "cost": "비용 절감",
     "dashboard": "대시보드",
@@ -65,51 +77,39 @@
     "docs": "इंटेलिजेंस हब",
     "error": "오류율",
     "executive": "경영진 개요",
+    "founder": "Founder",
+    "governance": "Governance",
     "guide": "यूज़र गाइड",
     "home": "होम",
     "industries": "क्षेत्रीय समाधान",
+    "metrics": "Metrics",
+    "news": "News",
     "newsroom": "प्रेस हाइलाइट्स",
+    "observability": "Observability",
     "onboarding": "ग्लोबल ऑनबोर्डिंग",
+    "openshift-modernization": "OpenShift Modernization",
+    "partners": "Partners",
     "platform": "प्लेटफार्म",
     "pricing": "सदस्यता योजनाएं",
     "privacy": "गोपनीयता जनादेश",
     "products": "उत्पाद",
+    "register": "Register",
+    "research": "Research",
     "resources": "संसाधन",
     "roi": "ROI 성과",
     "scaling": "스케일링",
     "security": "보안",
     "security_page": "संप्रभुता और विश्वास",
     "services": "बुनियादी ढांचा",
+    "settings": "Settings",
+    "solutions": "Solutions",
+    "staffing": "Staffing",
     "technical": "기술 운영",
     "terms": "जुड़ाव की शर्तें",
     "uptime": "가동 시간",
     "use-cases": "उद्यम प्रभाव",
     "visual-library": "वास्तुकला लाइब्रेरी",
-    "whitepaper": "ASO अनुसंधान",
-    "ai-data": "AI Data",
-    "app": "Application",
-    "settings": "Settings",
-    "architecture": "Architecture",
-    "business-ideas": "Business Ideas",
-    "compliance": "Compliance",
-    "api": "API",
-    "governance": "Governance",
-    "founder": "Founder",
-    "news": "News",
-    "partners": "Partners",
-    "ai-engine": "AI Engine",
-    "observability": "Observability",
-    "register": "Register",
-    "research": "Research",
-    "automated-multilingual-quality-assurance": "Automated multilingual quality assurance",
-    "metrics": "Metrics",
-    "ai-cloud-platform": "AI Cloud Platform",
-    "application-modernization": "App Modernization",
-    "cloud-cost-optimization": "Cost Optimization",
-    "cloud-modernization": "Cloud Modernization",
-    "openshift-modernization": "OpenShift Modernization",
-    "solutions": "Solutions",
-    "staffing": "Staffing"
+    "whitepaper": "ASO अनुसंधान"
   },
   "Capabilities": {
     "cta": "पूर्ण वास्तुकला देखें",
@@ -139,12 +139,12 @@
   },
   "Company": {
     "email": {
-      "admin": "admin@omnigcloud.com",
-      "architects": "architects@omnigcloud.com",
-      "legal": "legal@omnigcloud.com",
-      "press": "press@omnigcloud.com",
-      "security": "security@omnigcloud.com",
-      "support": "support@omnigcloud.com"
+      "admin": "omnigcloud@gmail.com",
+      "architects": "omnigcloud@gmail.com",
+      "legal": "omnigcloud@gmail.com",
+      "press": "omnigcloud@gmail.com",
+      "security": "omnigcloud@gmail.com",
+      "support": "omnigcloud@gmail.com"
     },
     "location": "न्यूयॉर्क प्लैटिनम जिला",
     "name": "OmniGCloud मुख्यालय"
@@ -408,41 +408,40 @@
         "about": "हमारे बारे में",
         "contact": "संपर्क कार्यालय",
         "executive": "कार्यकारी कार्यालय",
-        "global_hq": "Global Headquarters",
+        "global_hq": "वैश्विक मुख्यालय",
         "leadership": "नेतृत्व",
         "newsroom": "न्यूज़रूम",
         "operations": "ग्लोबल ऑपरेशंस"
       },
       "contact_us": "문의하기",
-      "dashboard": "대시보드",
+      "dashboard": "डैशबोर्ड",
       "dashboard_links": {
-        "executive": "कार्यकारी अवलोकन",
-        "roi": "ROI प्रदर्शन",
         "cost": "लागत बचत",
-        "uptime": "सिस्टम उपलब्धता",
+        "deployment": "CI/CD गति",
+        "error": "त्रुटियां और विसंगतियां",
+        "executive": "कार्यकारी अवलोकन",
+        "resources": "क्लस्टर संसाधन",
+        "roi": "ROI प्रदर्शन",
+        "scaling": "स्केलिंग गतिविधि",
         "security": "सुरक्षा स्थिति",
         "technical": "तकनीकी संचालन",
-        "resources": "क्लस्टर संसाधन",
-        "deployment": "CI/CD गति",
-        "scaling": "स्केलिंग गतिविधि",
-        "error": "त्रुटियां और विसंगतियां"
+        "uptime": "सिस्टम अपटाइम"
       },
       "docs": "संसाधन",
       "docs_links": {
         "api": "एपीआई संदर्भ",
-        "guide": "User Guide",
-        "newsroom": "Newsroom Hub",
+        "guide": "उपयोगकर्ता मार्गदर्शिका",
+        "newsroom": "समाचार केंद्र",
         "open_source": "ओपन सोर्स",
         "patterns": "डिजाइन पैटर्न",
         "tech_docs": "तकनीकी दस्तावेज",
-        "visual_library": "Visual Library",
+        "visual_library": "दृश्य पुस्तकालय",
         "whitepaper": "श्वेतपत्र"
       },
       "documentation": "दस्तावेज़ीकरण",
       "industries": "उद्योग",
-      "information": "정보",
       "onboarding": "अभी स्केल करें",
-      "organization": "조직",
+      "contactSales": "बिक्री से संपर्क करें",
       "performance": "성능",
       "pillars": "प्लेटफ़ॉर्म स्तंभ",
       "pricing": "मूल्य निर्धारण",
@@ -457,12 +456,12 @@
       },
       "products": "उत्पाद",
       "products_links": {
-        "deploy": "ऑब्सिडियन डिप्लॉय",
-        "guard": "गवर्नेंस गार्ड",
-        "knowledge": "सोवरेन नॉलेज",
+        "deploy": "ओब्सीडियन परिनियोजन",
+        "guard": "शासन गार्ड",
+        "knowledge": "संप्रभु ज्ञान",
         "nexus": "क्रॉस-क्लाउड नेक्सस",
-        "playground": "सोवरेन प्लेग्राउंड",
-        "workflows": "जी-वर्कफ्लो"
+        "playground": "संप्रभु खेल का मैदान",
+        "workflows": "जी-वर्कफ़्लो"
       },
       "solutions": "समाधान",
       "solutions_links": {
@@ -491,9 +490,9 @@
   "Hero": {
     "audience": "Designed for Global 2000 CIOs and Sovereign Government Entities.",
     "badge": "कोड के रूप में शासन",
-    "ctaArchitecture": "Architecture Overview",
-    "ctaPrimary": "आकलन शुरू करें",
-    "ctaWhitepaper": "Download Whitepaper",
+    "ctaArchitecture": "वास्तुकला अवलोकन",
+    "ctaPrimary": "प्लेटफ़ॉर्म एक्सप्लोर करें",
+    "ctaWhitepaper": "श्वेतपत्र डाउनलोड करें",
     "efficiency": "दक्षता",
     "experts": {
       "count": "20+ विशेषज्ञ",
@@ -527,7 +526,7 @@
   "HomeSections": {
     "Cta": {
       "disclaimer": "कोई क्रेडिट कार्ड आवश्यक नहीं। SOC-2 अनुरूप ऑनबोर्डिंग।",
-      "primary": "अपना क्लाउड स्केल करें",
+      "primary": "क्लाउड स्केल करें",
       "secondary": "बिक्री से संपर्क करें",
       "subtitle": "उन सैकड़ों वैश्विक उद्यमों में शामिल हों जिन्होंने अपने क्लाउड गवर्नेंस को स्वचालित किया है और OmniGCloud के साथ डिजिटल संप्रभुता बहाल की है।",
       "title": "संप्रभु नियंत्रण बहाल करने के लिए तैयार हैं?"
@@ -627,6 +626,24 @@
       "sol": "क्रॉसप्लेन-संचालित एज प्रबंधन हजारों स्थानीय नोड्स में टेल्को स्टैक के सुसंगत परिनियोजन को सक्षम बनाता है।"
     },
     "title": "उद्योग-विशिष्ट समाधान"
+  },
+  "Metadata": {
+    "Home": {
+      "description": "OmniGCloud के साथ वेंडर लॉक-इन से मुक्त हों। हमारा AI-संचालित प्लेटफ़ॉर्म शासन को स्वचालित करता है।",
+      "title": "क्लाउड आधुनिकीकरण और AI शासन | OmniGCloud प्लेटफ़ॉर्म"
+    },
+    "Pricing": {
+      "description": "मल्टी-क्लाउड गवर्नेंस के लिए पारदर्शी मूल्य निर्धारण। कोई छिपी हुई फीस नहीं।",
+      "title": "मूल्य निर्धारण | OmniGCloud एंटरप्राइज क्लाउड गवर्नेंस"
+    },
+    "Products": {
+      "description": "स्वायत्त क्लाउड संचालन के लिए OmniGCloud संप्रभुता सुइट देखें।",
+      "title": "उत्पाद | OmniGCloud संप्रभुता सुइट"
+    },
+    "default": {
+      "description": "OmniGCloud AI-नेटिव क्लाउड आधुनिकीकरण और स्वायत्त शासन प्रदान करता है।",
+      "title": "OmniGCloud | एंटरप्राइज क्लाउड आधुनिकीकरण"
+    }
   },
   "Newsroom": {
     "badge": "सोवरेन अंतर्दृष्टि",
@@ -787,7 +804,7 @@
     },
     "plans": {
       "business": {
-        "cta": "बिजनेस स्केल करें",
+        "cta": "व्यवसाय बढ़ाएं",
         "desc": "मिशन-क्रिटिकल ऑपरेशंस के लिए एंटरप्राइज गवर्नेंस।",
         "name": "बिजनेस"
       },
@@ -971,7 +988,7 @@
     "scope4": "संवेदनशील डेटा जोखिम या असुरक्षित डेटा भंडारण",
     "securityEmail": "ईमेल",
     "securityPractices": "सुरक्षा प्रथाएं",
-    "step1": "भेद्यता के विवरण के साथ security@omnigcloud.com पर ईमेल करें",
+    "step1": "भेद्यता के विवरण के साथ omnigcloud@gmail.com पर ईमेल करें",
     "step2": "पुनः पेश करने के लिए कदम, संभावित प्रभाव और कोई भी अवधारणा का प्रमाण कोड शामिल करें",
     "step3": "सार्वजनिक प्रकटीकरण से पहले जांच और समाधान के लिए हमें उचित समय दें",
     "step4": "हम 48 घंटों के भीतर आपकी रिपोर्ट को स्वीकार करेंगे और अपनी प्रगति पर अपडेट प्रदान करेंगे",
@@ -1398,5 +1415,15 @@
     "title": "ऑटोनॉमस सॉवरेन ऑर्केस्ट्रेशन (ASO): क्लाउड-अज्ञेयवादी शासन के लिए एक औपचारिक ढांचा",
     "version": "2.1.0 (अनुसंधान श्रेणी)",
     "version_label": "संस्करण"
+  },
+  "ContactSales": {
+    "subject": "बिक्री पूछताछ",
+    "bodyIntro": "नमस्ते OmniGCloud बिक्री टीम,",
+    "fallbackTitle": "बिक्री से संपर्क करें",
+    "fallbackInstruction": "आपका मेल ऐप नहीं खुला। आप हमें सीधे ईमेल कर सकते हैं।",
+    "copyLabel": "ईमेल कॉपी करें",
+    "whatsappLabel": "WhatsApp पर चैट करें",
+    "rateLimitMessage": "कृपया हमसे दोबारा संपर्क करने से पहले कुछ देर प्रतीक्षा करें।",
+    "copyToast": "ईमेल क्लिपबोर्ड पर कॉपी किया गया"
   }
 }

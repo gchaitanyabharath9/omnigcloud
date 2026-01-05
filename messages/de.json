@@ -52,11 +52,23 @@
     }
   },
   "Breadcrumb": {
+    "ai-cloud-platform": "AI Cloud Platform",
+    "ai-data": "AI Data",
+    "ai-engine": "AI Engine",
+    "api": "API",
+    "app": "Application",
+    "application-modernization": "App Modernization",
+    "architecture": "Architecture",
+    "automated-multilingual-quality-assurance": "Automated multilingual quality assurance",
     "blog": "Blog",
+    "business-ideas": "Business Ideas",
     "case-studies": "Deployment Success",
+    "cloud-cost-optimization": "Cost Optimization",
+    "cloud-modernization": "Cloud Modernization",
     "command-center": "Kommandozentrale",
     "community": "Community",
     "company": "Unternehmen",
+    "compliance": "Compliance",
     "contact": "Kontakt",
     "cost": "Kosteneinsparungen",
     "dashboard": "Dashboard",
@@ -65,51 +77,39 @@
     "docs": "Ressourcen",
     "error": "Fehlerraten",
     "executive": "Executive-Übersicht",
+    "founder": "Founder",
+    "governance": "Governance",
     "guide": "User Guide",
     "home": "Start",
     "industries": "Branchen",
+    "metrics": "Metrics",
+    "news": "News",
     "newsroom": "Newsroom",
+    "observability": "Observability",
     "onboarding": "Skalieren",
+    "openshift-modernization": "OpenShift Modernization",
+    "partners": "Partners",
     "platform": "Plattform",
     "pricing": "Preise",
     "privacy": "Privacy Mandate",
     "products": "Produkte",
+    "register": "Register",
+    "research": "Research",
     "resources": "Ressourcen",
     "roi": "ROI-Leistung",
     "scaling": "Skalierung",
     "security": "Sicherheit",
     "security_page": "Sicherheit",
     "services": "Services",
+    "settings": "Settings",
+    "solutions": "Solutions",
+    "staffing": "Staffing",
     "technical": "Technische Operationen",
     "terms": "Terms of Engagement",
     "uptime": "Betriebszeit",
     "use-cases": "Anwendungsfälle",
     "visual-library": "Galerie",
-    "whitepaper": "Whitepaper",
-    "ai-data": "AI Data",
-    "app": "Application",
-    "settings": "Settings",
-    "architecture": "Architecture",
-    "business-ideas": "Business Ideas",
-    "compliance": "Compliance",
-    "api": "API",
-    "governance": "Governance",
-    "founder": "Founder",
-    "news": "News",
-    "partners": "Partners",
-    "ai-engine": "AI Engine",
-    "observability": "Observability",
-    "register": "Register",
-    "research": "Research",
-    "automated-multilingual-quality-assurance": "Automated multilingual quality assurance",
-    "metrics": "Metrics",
-    "ai-cloud-platform": "AI Cloud Platform",
-    "application-modernization": "App Modernization",
-    "cloud-cost-optimization": "Cost Optimization",
-    "cloud-modernization": "Cloud Modernization",
-    "openshift-modernization": "OpenShift Modernization",
-    "solutions": "Solutions",
-    "staffing": "Staffing"
+    "whitepaper": "Whitepaper"
   },
   "Capabilities": {
     "cta": "Vollständige Architektur ansehen",
@@ -139,12 +139,12 @@
   },
   "Company": {
     "email": {
-      "admin": "admin@omnigcloud.com",
-      "architects": "architects@omnigcloud.com",
-      "legal": "legal@omnigcloud.com",
-      "press": "press@omnigcloud.com",
-      "security": "security@omnigcloud.com",
-      "support": "support@omnigcloud.com"
+      "admin": "omnigcloud@gmail.com",
+      "architects": "omnigcloud@gmail.com",
+      "legal": "omnigcloud@gmail.com",
+      "press": "omnigcloud@gmail.com",
+      "security": "omnigcloud@gmail.com",
+      "support": "omnigcloud@gmail.com"
     },
     "location": "New York Platinum District",
     "name": "OmniGCloud HQ"
@@ -414,29 +414,29 @@
         "operations": "Globale Operationen"
       },
       "contact_us": "KONTAKT",
-      "dashboard": "Dashboard",
+      "dashboard": "Instrumententafel",
       "dashboard_links": {
-        "executive": "Executive-Übersicht",
-        "roi": "ROI-Leistung",
         "cost": "Kosteneinsparungen",
-        "uptime": "Systemverfügbarkeit",
+        "deployment": "CI/CD-Geschwindigkeit",
+        "error": "Fehler & Anomalien",
+        "executive": "Vorstandsübersicht",
+        "resources": "Cluster-Ressourcen",
+        "roi": "ROI-Performance",
+        "scaling": "Skalierungsaktivität",
         "security": "Sicherheitslage",
         "technical": "Technische Operationen",
-        "resources": "Cluster-Ressourcen",
-        "deployment": "CI/CD-Geschwindigkeit",
-        "scaling": "Skalierungsaktivität",
-        "error": "Fehler & Anomalien"
+        "uptime": "Systemverfügbarkeit"
       },
       "docs": "Ressourcen",
       "docs_links": {
         "api": "API-Referenz",
         "guide": "Benutzerhandbuch",
-        "newsroom": "Newsroom Hub",
+        "newsroom": "Nachrichtenzentrum",
         "open_source": "Community-Portal",
-        "patterns": "Design Patterns",
+        "patterns": "Designmuster",
         "tech_docs": "Technische Dokumentation",
         "visual_library": "Visuelle Bibliothek",
-        "whitepaper": "Whitepaper"
+        "whitepaper": "Technisches Dokument"
       },
       "documentation": "DOKUMENTATION",
       "industries": "BRANCHEN",
@@ -447,22 +447,22 @@
       "pillars": "PLATTFORM-SÄULEN",
       "pricing": "Preise",
       "pricing_links": {
-        "business": "Business",
+        "business": "Unternehmen",
         "compare": "Pläne vergleichen",
         "developer": "Entwickler",
         "faq": "FAQ-Center",
-        "professional": "Professional",
-        "sovereign": "Sovereign",
+        "professional": "Professionell",
+        "sovereign": "Souverän",
         "trust": "Unternehmensvertrauen"
       },
       "products": "Produkte",
       "products_links": {
-        "deploy": "Obsidian Deploy",
-        "guard": "Governance Guard",
-        "knowledge": "Sovereign Knowledge",
-        "nexus": "Cross-Cloud Nexus",
-        "playground": "Sovereign Playground",
-        "workflows": "G-Workflows"
+        "deploy": "Obsidian Bereitstellung",
+        "guard": "Governance-Schutz",
+        "knowledge": "Souveränes Wissen",
+        "nexus": "Cloud-übergreifender Nexus",
+        "playground": "Sovereign Spielplatz",
+        "workflows": "G-Arbeitsabläufe"
       },
       "solutions": "Lösungen",
       "solutions_links": {
@@ -480,20 +480,21 @@
       "trust": "Vertrauen",
       "trust_links": {
         "certs": "Zertifizierungen",
-        "compliance_maps": "Compliance Maps",
+        "compliance_maps": "Compliance-Karten",
         "privacy": "Datenschutz-Center",
         "transparency": "Transparenz"
       },
-      "useCases": "ANWENDUNGSFÄLLE"
+      "useCases": "ANWENDUNGSFÄLLE",
+      "contactSales": "Vertrieb kontaktieren"
     },
     "title": "OmniGCloud"
   },
   "Hero": {
     "audience": "Designed for Global 2000 CIOs and Sovereign Government Entities.",
     "badge": "GOVERNANCE AS CODE",
-    "ctaArchitecture": "Architecture Overview",
-    "ctaPrimary": "Assessment starten",
-    "ctaWhitepaper": "Download Whitepaper",
+    "ctaArchitecture": "Architektur-Übersicht",
+    "ctaPrimary": "Plattform erkunden",
+    "ctaWhitepaper": "Technisches Dokument",
     "efficiency": "EFFIZIENZ",
     "experts": {
       "count": "20+ Experten",
@@ -627,6 +628,24 @@
       "sol": "Crossplane-gestütztes Edge-Management ermöglicht die konsistente Bereitstellung von Telco-Stacks über Tausende von lokalisierten Knoten hinweg."
     },
     "title": "Branchenspezifische Lösungen"
+  },
+  "Metadata": {
+    "Home": {
+      "description": "Befreien Sie sich von der Anbieterbindung mit OmniGCloud. Unsere KI-gesteuerte Plattform automatisiert die Governance.",
+      "title": "Cloud-Modernisierung & KI-Governance | OmniGCloud-Plattform"
+    },
+    "Pricing": {
+      "description": "Transparente Preise für Multi-Cloud-Governance. Keine versteckten Gebühren.",
+      "title": "Preise | OmniGCloud Enterprise Cloud Governance"
+    },
+    "Products": {
+      "description": "Entdecken Sie die OmniGCloud Souveränitäts-Suite für autonome Cloud-Operationen.",
+      "title": "Produkte | OmniGCloud Souveränitäts-Suite"
+    },
+    "default": {
+      "description": "OmniGCloud bietet KI-native Cloud-Modernisierung und autonome Governance.",
+      "title": "OmniGCloud | Cloud-Modernisierung für Unternehmen"
+    }
   },
   "Newsroom": {
     "badge": "SOVEREIGN INSIGHTS",
@@ -787,20 +806,20 @@
     },
     "plans": {
       "business": {
-        "cta": "Business skalieren",
+        "cta": "Geschäft skalieren",
         "desc": "Unternehmens-Governance für geschäftskritische Operationen.",
         "name": "Business"
       },
       "contact": "Kontaktieren Sie uns für Preise",
       "developer": {
-        "cta": "Jetzt bauen starten",
+        "cta": "Mit dem Bau beginnen",
         "desc": "Für einzelne Ingenieure, die die Zukunft souveräner Infrastruktur bauen.",
         "name": "Entwickler"
       },
       "month": "/Monat",
       "popular": "AM BELIEBTESTEN",
       "professional": {
-        "cta": "Zu Professional wechseln",
+        "cta": "Profi werden",
         "desc": "Für schnell wachsende Teams, die Multi-Region-Resilienz benötigen.",
         "name": "Professional"
       },
@@ -971,7 +990,7 @@
     "scope4": "Offenlegung sensibler Daten oder unsichere Datenspeicherung",
     "securityEmail": "E-Mail",
     "securityPractices": "Sicherheitspraktiken",
-    "step1": "Senden Sie eine E-Mail an security@omnigcloud.com mit Details zur Schwachstelle",
+    "step1": "Senden Sie eine E-Mail an omnigcloud@gmail.com mit Details zur Schwachstelle",
     "step2": "Fügen Sie Schritte zur Reproduktion, potenzielle Auswirkungen und Proof-of-Concept-Code bei",
     "step3": "Geben Sie uns angemessene Zeit zur Untersuchung und Behebung vor der öffentlichen Bekanntgabe",
     "step4": "Wir bestätigen Ihren Bericht innerhalb von 48 Stunden und informieren Sie über unseren Fortschritt",
@@ -1373,5 +1392,15 @@
     "title": "Autonomous Sovereign Orchestration (ASO): Ein Framework für Cloud-agnostische Governance",
     "version": "1.0",
     "version_label": "Version"
+  },
+  "ContactSales": {
+    "subject": "Verkaufsanfrage",
+    "bodyIntro": "Hallo OmniGCloud Vertriebsteam,",
+    "fallbackTitle": "Vertrieb kontaktieren",
+    "fallbackInstruction": "Ihre Mail-App wurde nicht geöffnet. Sie können uns direkt eine E-Mail senden.",
+    "copyLabel": "E-Mail kopieren",
+    "whatsappLabel": "Per WhatsApp chatten",
+    "rateLimitMessage": "Bitte warten Sie einen Moment, bevor Sie uns erneut kontaktieren.",
+    "copyToast": "E-Mail in die Zwischenablage kopiert"
   }
 }

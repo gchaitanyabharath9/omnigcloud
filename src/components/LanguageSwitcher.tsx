@@ -1,9 +1,9 @@
 "use client";
 
 import { useLocale } from 'next-intl';
-import { usePathname, useRouter } from 'next/navigation';
-import { useTransition, useState } from 'react';
-import { Globe, ChevronDown } from 'lucide-react';
+import { usePathname } from 'next/navigation';
+import { useState } from 'react';
+import { ChevronDown } from 'lucide-react';
 
 const languages = [
     { code: 'en', name: 'English', flag: '🇺🇸' },
@@ -18,9 +18,7 @@ const languages = [
 
 export default function LanguageSwitcher() {
     const locale = useLocale();
-    const router = useRouter();
     const pathname = usePathname();
-    const [isPending, startTransition] = useTransition();
     const [isOpen, setIsOpen] = useState(false);
 
     const switchLanguage = (nextLocale: string) => {
@@ -42,10 +40,11 @@ export default function LanguageSwitcher() {
         // Append hash to preserve section
         const fullPath = `${newPath}${currentHash}`;
 
-        startTransition(() => {
-            router.replace(fullPath);
-            setIsOpen(false);
-        });
+
+        // Using window.location.href for a full reload to ensure hash is preserved 
+        // and all locale-specific server-side logic is refreshed cleanly.
+        window.location.assign(fullPath);
+        setIsOpen(false);
     };
 
     const currentLang = languages.find(l => l.code === locale) || languages[0];
@@ -53,8 +52,8 @@ export default function LanguageSwitcher() {
     return (
         <div style={{ position: 'relative' }}>
             <button
+                id="language-switcher-btn"
                 onClick={() => setIsOpen(!isOpen)}
-                disabled={isPending}
                 className="glass-panel"
                 style={{
                     cursor: 'pointer',
@@ -66,7 +65,6 @@ export default function LanguageSwitcher() {
                     fontSize: '0.85rem',
                     fontWeight: 700,
                     color: 'var(--foreground)',
-                    opacity: isPending ? 0.5 : 1,
                     minWidth: '70px',
                     justifyContent: 'space-between'
                 }}
@@ -96,6 +94,7 @@ export default function LanguageSwitcher() {
                     {languages.map((lang) => (
                         <button
                             key={lang.code}
+                            id={`lang-switch-${lang.code}`}
                             onClick={() => switchLanguage(lang.code)}
                             style={{
                                 display: 'flex',

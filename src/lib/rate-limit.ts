@@ -151,8 +151,8 @@ export class NoopRateLimiter implements RateLimiter {
  * Get appropriate rate limiter based on environment
  */
 export function getRateLimiter(): RateLimiter {
-    // Bypass in CI environments to prevent 429s during crawls/tests
-    if (process.env.CI === 'true') {
+    // Bypass in CI or Quality Gate runs to prevent 429s
+    if (process.env.CI === 'true' || process.env.QUALITY_GATE === 'true') {
         return new NoopRateLimiter();
     }
 

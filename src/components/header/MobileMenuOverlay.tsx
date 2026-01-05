@@ -14,6 +14,7 @@ import { ChevronDown } from 'lucide-react';
 
 import { NAV_CONFIG } from '@/config/nav';
 import { NavLink } from '@/components/navigation/NavLink';
+import { useContactSales } from '@/hooks/useContactSales';
 import styles from './Header.module.css';
 
 interface MobileMenuOverlayProps {
@@ -24,6 +25,7 @@ interface MobileMenuOverlayProps {
 
 export default function MobileMenuOverlay({ isOpen, onClose, locale }: MobileMenuOverlayProps) {
     const t = useTranslations();
+    const { handleContactSales, translations } = useContactSales();
 
     return (
         <>
@@ -85,8 +87,15 @@ export default function MobileMenuOverlay({ isOpen, onClose, locale }: MobileMen
                         );
                     })}
 
-                    {/* CTA Button */}
-                    <div className="mt-8 pt-8 border-t border-slate-800">
+                    {/* CTA Buttons */}
+                    <div className="mt-8 pt-8 border-t border-slate-800 flex flex-col gap-4">
+                        <button
+                            onClick={handleContactSales}
+                            className="btn-secondary text-center w-full block py-4 rounded-xl font-bold tracking-wide"
+                            style={{ background: 'rgba(255,255,255,0.05)', border: '1px solid var(--card-border)' }}
+                        >
+                            {translations.ctaLabel}
+                        </button>
                         <NavLink
                             item={{
                                 id: 'onboarding',

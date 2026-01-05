@@ -1,4 +1,22 @@
 {
+  "Metadata": {
+    "default": {
+      "title": "OmniGCloud | Enterprise Cloud Modernization & AI Architecture",
+      "description": "OmniGCloud provides AI-native cloud modernization, RedHat OCP integration, and autonomous cloud governance. Scale your enterprise with our cloud-agnostic discovery engine."
+    },
+    "Home": {
+      "title": "Cloud Modernization & AI Governance | OmniGCloud Platform",
+      "description": "Break free from vendor lock-in with OmniGCloud. Our AI-driven, cloud-agnostic platform automates governance and reduces costs across AWS, Azure, and OpenShift."
+    },
+    "Pricing": {
+      "title": "Pricing | OmniGCloud Enterprise Cloud Governance",
+      "description": "Transparent pricing for multi-cloud governance. From developer-friendly free tier to enterprise-grade sovereign plans. No hidden fees, no vendor lock-in."
+    },
+    "Products": {
+      "title": "Industrial Products | OmniGCloud Sovereignty Suite",
+      "description": "Explore the OmniGCloud Sovereignty Suite: Sovereignty Playground, G-Workflows, Governance Guard, and more for autonomous cloud operations."
+    }
+  },
   "Header": {
     "title": "OmniGCloud",
     "latency_badge": "MESH_RT",
@@ -10,6 +28,7 @@
       "pricing": "Pricing",
       "company": "Company",
       "onboarding": "Scale Now",
+      "contactSales": "Contact Sales",
       "dashboard": "Dashboard",
       "performance": "PERFORMANCE",
       "telemetry": "TELEMETRY",
@@ -151,12 +170,12 @@
   },
   "Company": {
     "email": {
-      "architects": "architects@omnigcloud.com",
-      "support": "support@omnigcloud.com",
-      "legal": "legal@omnigcloud.com",
-      "press": "press@omnigcloud.com",
-      "admin": "admin@omnigcloud.com",
-      "security": "security@omnigcloud.com"
+      "architects": "omnigcloud@gmail.com",
+      "support": "omnigcloud@gmail.com",
+      "legal": "omnigcloud@gmail.com",
+      "press": "omnigcloud@gmail.com",
+      "admin": "omnigcloud@gmail.com",
+      "security": "omnigcloud@gmail.com"
     },
     "name": "OmniGCloud HQ",
     "location": "New York Platinum District"
@@ -1032,7 +1051,7 @@
     "responsibleDisclosure": "Responsible Disclosure Program",
     "disclosureIntro": "We welcome security researchers to help us maintain the security of our platform. If you discover a vulnerability, please report it responsibly.",
     "reportingProcess": "How to Report",
-    "step1": "Email security@omnigcloud.com with details of the vulnerability",
+    "step1": "Email omnigcloud@gmail.com with details of the vulnerability",
     "step2": "Include steps to reproduce, potential impact, and any proof-of-concept code",
     "step3": "Allow us reasonable time to investigate and remediate before public disclosure",
     "step4": "We will acknowledge your report within 48 hours and provide updates on our progress",
@@ -1398,5 +1417,15 @@
       "description": "Pre-configured compliance blueprints for SOC 2, HIPAA, and GDPR with automated drift remediation.",
       "cta": "Explore Blueprints"
     }
+  },
+  "ContactSales": {
+    "subject": "Sales Inquiry",
+    "bodyIntro": "Hello OmniGCloud Sales Team,",
+    "fallbackTitle": "Contact Sales",
+    "fallbackInstruction": "Your mail app didn't open. You can email us directly.",
+    "copyLabel": "Copy Email",
+    "whatsappLabel": "Chat on WhatsApp",
+    "rateLimitMessage": "Please wait a moment before contacting us again.",
+    "copyToast": "Email copied to clipboard"
   }
 }

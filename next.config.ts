@@ -36,8 +36,8 @@ const nextConfig: NextConfig = {
     NEXT_PUBLIC_GIT_COMMIT: commitHash,
     NEXT_PUBLIC_BUILD_TIME: buildTime,
     NEXT_PUBLIC_APP_ENV: appEnv,
+    QUALITY_GATE: process.env.QUALITY_GATE || 'false',
   },
-  output: 'standalone',
   reactCompiler: true,
   async headers() {
     // Content Security Policy

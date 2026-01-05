@@ -1,4 +1,5 @@
 import { Metadata } from 'next';
+import { SALES_EMAIL } from '@/config/emails';
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://omnigcloud.com';
 
@@ -116,7 +117,7 @@ export function generateOrganizationSchema() {
         contactPoint: {
             '@type': 'ContactPoint',
             contactType: 'Sales',
-            email: 'sales@omnigcloud.com',
+            email: SALES_EMAIL,
             availableLanguage: SUPPORTED_LOCALES,
         },
     };

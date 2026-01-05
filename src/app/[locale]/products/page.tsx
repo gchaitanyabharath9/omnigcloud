@@ -1,4 +1,14 @@
+import { getTranslations } from 'next-intl/server';
 import { useTranslations, useLocale } from 'next-intl';
+
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
+    const { locale } = await params;
+    const tm = await getTranslations({ locale, namespace: 'Metadata.Products' });
+    return {
+        title: tm('title'),
+        description: tm('description'),
+    };
+}
 import { Cpu, ArrowRight } from 'lucide-react';
 import Link from 'next/link';
 import { PRODUCTS } from '@/data/products';

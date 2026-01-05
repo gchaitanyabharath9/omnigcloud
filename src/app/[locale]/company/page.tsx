@@ -139,7 +139,7 @@ export default function CompanyPage() {
                     <div style={{ display: 'flex', justifyContent: 'center', gap: '3rem' }}>
                         <div style={{ textAlign: 'center' }}>
                             <div style={{ background: 'var(--primary)', color: 'var(--background)', width: '60px', height: '60px', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto 1rem' }}><Mail size={24} /></div>
-                            <div style={{ fontWeight: 800 }}>office-of-ceo@omnigcloud.com</div>
+                            <div style={{ fontWeight: 800 }}>omnigcloud@gmail.com</div>
                         </div>
                         <div style={{ textAlign: 'center' }}>
                             <div style={{ background: 'var(--primary)', color: 'var(--background)', width: '60px', height: '60px', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto 1rem' }}><Phone size={24} /></div>

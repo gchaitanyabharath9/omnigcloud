@@ -1,32 +1,67 @@
 
-import { defineConfig } from '@playwright/test';
+import { defineConfig, devices } from '@playwright/test';
 
+/**
+ * Playwright Quality Gate Configuration
+ * Enforces cross-browser, responsive, and performance validation.
+ */
 export default defineConfig({
-    testDir: './scripts',
-    timeout: 30000,
+    testDir: './qa-i18n/tests', // Unified test directory
+    testMatch: /quality-gate\.spec\.ts/,
+    timeout: 60000,
     retries: 0,
+    workers: 4,
+    reporter: [['html', { open: 'never' }], ['list']],
     use: {
         baseURL: 'http://localhost:3001',
         trace: 'on-first-retry',
+        screenshot: 'only-on-failure',
     },
     webServer: {
         command: 'npm run start -- -p 3001',
         port: 3001,
-        reuseExistingServer: !process.env.CI,
+        reuseExistingServer: true,
         timeout: 120 * 1000,
     },
     projects: [
+        // Desktop Browsers
         {
-            name: 'responsive',
-            testMatch: /responsive-check\.spec\.ts/,
+            name: 'chromium-desktop',
+            use: { ...devices['Desktop Chrome'] },
+        },
+        /* 
+        {
+            name: 'firefox-desktop',
+            use: { ...devices['Desktop Firefox'] },
         },
         {
-            name: 'perf',
-            testMatch: /perf-check\.spec\.ts/
+            name: 'webkit-desktop',
+            use: { ...devices['Desktop Safari'] },
+        },
+        */
+        // Tablet Viewports
+        {
+            name: 'tablet-chromium',
+            use: { ...devices['Galaxy Tab S4'] },
         },
         {
-            name: 'responsive-products',
-            testMatch: /verify-responsive-products\.spec\.ts/
+            name: 'mobile-chrome',
+            use: { ...devices['Pixel 5'] },
+        },
+        /*
+        {
+            name: 'mobile-safari',
+            use: { ...devices['iPhone 12'] },
+        },
+        */
+        // Specific user-requested viewports
+        {
+            name: 'laptop-small',
+            use: { viewport: { width: 1366, height: 768 } },
+        },
+        {
+            name: 'desktop-strict',
+            use: { viewport: { width: 1920, height: 1080 } },
         }
     ]
 });

@@ -52,11 +52,23 @@
     }
   },
   "Breadcrumb": {
+    "ai-cloud-platform": "AI Cloud Platform",
+    "ai-data": "AI Data",
+    "ai-engine": "AI Engine",
+    "api": "API",
+    "app": "Application",
+    "application-modernization": "App Modernization",
+    "architecture": "Architecture",
+    "automated-multilingual-quality-assurance": "Automated multilingual quality assurance",
     "blog": "主权情报",
+    "business-ideas": "Business Ideas",
     "case-studies": "部署成功",
+    "cloud-cost-optimization": "Cost Optimization",
+    "cloud-modernization": "Cloud Modernization",
     "command-center": "指挥中心",
     "community": "全球生态系统",
     "company": "组织",
+    "compliance": "Compliance",
     "contact": "联系销售总部",
     "cost": "成本节约",
     "dashboard": "仪表盘",
@@ -65,51 +77,39 @@
     "docs": "情报中心",
     "error": "错误率",
     "executive": "高管总览",
+    "founder": "Founder",
+    "governance": "Governance",
     "guide": "用户指南",
     "home": "首页",
     "industries": "区域解决方案",
+    "metrics": "Metrics",
+    "news": "News",
     "newsroom": "新闻亮点",
+    "observability": "Observability",
     "onboarding": "全球入驻",
+    "openshift-modernization": "OpenShift Modernization",
+    "partners": "Partners",
     "platform": "平台",
     "pricing": "订阅计划",
     "privacy": "隐私指令",
     "products": "产品",
+    "register": "Register",
+    "research": "Research",
     "resources": "资源",
     "roi": "投资回报率",
     "scaling": "缩放",
     "security": "安全性",
     "security_page": "主权与信任",
     "services": "基础设施",
+    "settings": "Settings",
+    "solutions": "Solutions",
+    "staffing": "Staffing",
     "technical": "技术运营",
     "terms": "参与条款",
     "uptime": "运行时间",
     "use-cases": "企业影响力",
     "visual-library": "架构库",
-    "whitepaper": "ASO 研究",
-    "ai-data": "AI Data",
-    "app": "Application",
-    "settings": "Settings",
-    "architecture": "Architecture",
-    "business-ideas": "Business Ideas",
-    "compliance": "Compliance",
-    "api": "API",
-    "governance": "Governance",
-    "founder": "Founder",
-    "news": "News",
-    "partners": "Partners",
-    "ai-engine": "AI Engine",
-    "observability": "Observability",
-    "register": "Register",
-    "research": "Research",
-    "automated-multilingual-quality-assurance": "Automated multilingual quality assurance",
-    "metrics": "Metrics",
-    "ai-cloud-platform": "AI Cloud Platform",
-    "application-modernization": "App Modernization",
-    "cloud-cost-optimization": "Cost Optimization",
-    "cloud-modernization": "Cloud Modernization",
-    "openshift-modernization": "OpenShift Modernization",
-    "solutions": "Solutions",
-    "staffing": "Staffing"
+    "whitepaper": "ASO 研究"
   },
   "Capabilities": {
     "cta": "查看完整架构",
@@ -139,12 +139,12 @@
   },
   "Company": {
     "email": {
-      "admin": "admin@omnigcloud.com",
-      "architects": "architects@omnigcloud.com",
-      "legal": "legal@omnigcloud.com",
-      "press": "press@omnigcloud.com",
+      "admin": "omnigcloud@gmail.com",
+      "architects": "omnigcloud@gmail.com",
+      "legal": "omnigcloud@gmail.com",
+      "press": "omnigcloud@gmail.com",
       "security": "보안",
-      "support": "support@omnigcloud.com"
+      "support": "omnigcloud@gmail.com"
     },
     "location": "New York Platinum District",
     "name": "OmniGCloud HQ"
@@ -408,30 +408,30 @@
         "about": "关于我们",
         "contact": "联系我们",
         "executive": "执行办公室",
-        "global_hq": "Global Headquarters",
+        "global_hq": "全球总部",
         "leadership": "领导层",
         "newsroom": "新闻中心",
         "operations": "全球业务"
       },
       "contact_us": "문의하기",
-      "dashboard": "仪表盘",
+      "dashboard": "仪表板",
       "dashboard_links": {
-        "executive": "高管总览",
-        "roi": "投资回报率表现",
         "cost": "成本节约",
-        "uptime": "系统可用性",
+        "deployment": "CI/CD 速度",
+        "error": "错误与异常",
+        "executive": "执行官概览",
+        "resources": "集群资源",
+        "roi": "投资回报表现",
+        "scaling": "扩展活动",
         "security": "安全态势",
         "technical": "技术运营",
-        "resources": "集群资源",
-        "deployment": "CI/CD 速度",
-        "scaling": "扩展活动",
-        "error": "错误与异常"
+        "uptime": "系统运行时间"
       },
       "docs": "资源",
       "docs_links": {
         "api": "API 参考",
-        "guide": "User Guide",
-        "newsroom": "Newsroom Hub",
+        "guide": "用户指南",
+        "newsroom": "新闻中心",
         "open_source": "开源项目",
         "patterns": "设计模式",
         "tech_docs": "技术文档",
@@ -442,6 +442,7 @@
       "industries": "行业",
       "information": "정보",
       "onboarding": "立即扩展",
+      "contactSales": "联系销售",
       "organization": "조직",
       "performance": "성능",
       "pillars": "平台支柱",
@@ -457,7 +458,7 @@
       },
       "products": "产品",
       "products_links": {
-        "deploy": "Obsidian 部署",
+        "deploy": "黑曜石部署",
         "guard": "治理卫士",
         "knowledge": "主权知识库",
         "nexus": "跨云枢纽",
@@ -491,9 +492,9 @@
   "Hero": {
     "audience": "Designed for Global 2000 CIOs and Sovereign Government Entities.",
     "badge": "治理即代码",
-    "ctaArchitecture": "Architecture Overview",
-    "ctaPrimary": "开始评估",
-    "ctaWhitepaper": "Download Whitepaper",
+    "ctaArchitecture": "架构概览",
+    "ctaPrimary": "探索平台",
+    "ctaWhitepaper": "下载白皮书",
     "efficiency": "效率提升",
     "experts": {
       "count": "20+ 专家",
@@ -527,8 +528,8 @@
   "HomeSections": {
     "Cta": {
       "disclaimer": "无需信用卡。符合 SOC-2 标准的入驻流程。",
-      "primary": "立即扩展",
-      "secondary": "咨询销售",
+      "primary": "扩展云规模",
+      "secondary": "联系销售",
       "subtitle": "加入全球数百家领先企业，使用 OmniGCloud 实现云治理自动化并重塑数字主权。",
       "title": "准备好恢复主权控制了吗？"
     },
@@ -627,6 +628,24 @@
       "sol": "Crossplane 驱动的边缘管理支持在数千个本地节点上进行一致的电信栈部署。"
     },
     "title": "行业特定解决方案"
+  },
+  "Metadata": {
+    "Home": {
+      "description": "利用 OmniGCloud 摆脱供应商锁定。我们的 AI 驱动平台自动执行治理。",
+      "title": "云现代化与 AI 治理 | OmniGCloud 平台"
+    },
+    "Pricing": {
+      "description": "多云治理的透明价格。无隐藏费用。",
+      "title": "价格 | OmniGCloud 企业云治理"
+    },
+    "Products": {
+      "description": "探索用于自主云运营的 OmniGCloud 主权套件。",
+      "title": "产品 | OmniGCloud 主权套件"
+    },
+    "default": {
+      "description": "OmniGCloud 提供 AI 原生云现代化和自主治理。",
+      "title": "OmniGCloud | 企业云现代化"
+    }
   },
   "Newsroom": {
     "badge": "主权洞察",
@@ -800,12 +819,12 @@
       "month": "/月",
       "popular": "最受欢迎",
       "professional": {
-        "cta": "升级专业版",
+        "cta": "成为专业版",
         "desc": "适用于需要多区域韧性的快速成长团队。",
         "name": "专业版"
       },
       "sovereign": {
-        "cta": "咨询销售",
+        "cta": "联系销售",
         "desc": "为国家和财富 500 强量身定制的基础设施。",
         "name": "主权版"
       }
@@ -971,7 +990,7 @@
     "scope4": "敏感数据泄露或不安全的数据存储",
     "securityEmail": "电子邮件",
     "securityPractices": "安全实践",
-    "step1": "发送电子邮件至 security@omnigcloud.com，附上漏洞详情",
+    "step1": "发送电子邮件至 omnigcloud@gmail.com，附上漏洞详情",
     "step2": "包含重现步骤、潜在影响和任何概念验证代码",
     "step3": "在公开披露之前给我们合理的时间进行调查和补救",
     "step4": "我们需要在 48 小时内确认收到您的报告并提供进度更新",
@@ -1398,5 +1417,15 @@
     "title": "自主主权编排 (ASO)：云中立治理的正式框架",
     "version": "2.1.0 (科研级)",
     "version_label": "版本"
+  },
+  "ContactSales": {
+    "subject": "销售咨询",
+    "bodyIntro": "您好 OmniGCloud 销售团队,",
+    "fallbackTitle": "联系销售",
+    "fallbackInstruction": "您的邮件应用未能打开。您可以直接向我们发送电子邮件。",
+    "copyLabel": "复制电子邮件",
+    "whatsappLabel": "在 WhatsApp 上聊天",
+    "rateLimitMessage": "再次联系我们之前，请稍等片刻。",
+    "copyToast": "电子邮件已复制到剪贴板"
   }
 }

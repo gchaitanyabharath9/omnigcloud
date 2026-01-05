@@ -52,11 +52,23 @@
     }
   },
   "Breadcrumb": {
+    "ai-cloud-platform": "AI Cloud Platform",
+    "ai-data": "AI Data",
+    "ai-engine": "AI Engine",
+    "api": "API",
+    "app": "Application",
+    "application-modernization": "App Modernization",
+    "architecture": "Architecture",
+    "automated-multilingual-quality-assurance": "Automated multilingual quality assurance",
     "blog": "Sovereign Intelligence",
+    "business-ideas": "Business Ideas",
     "case-studies": "Deployment Success",
+    "cloud-cost-optimization": "Cost Optimization",
+    "cloud-modernization": "Cloud Modernization",
     "command-center": "커맨드 센터",
     "community": "커뮤니티",
     "company": "회사",
+    "compliance": "Compliance",
     "contact": "Contact Sales HQ",
     "cost": "비용 절감",
     "dashboard": "대시보드",
@@ -65,51 +77,39 @@
     "docs": "리소스",
     "error": "오류율",
     "executive": "경영진 개요",
+    "founder": "Founder",
+    "governance": "Governance",
     "guide": "사용자 가이드",
     "home": "홈",
     "industries": "산업",
+    "metrics": "Metrics",
+    "news": "News",
     "newsroom": "Press Highlights",
+    "observability": "Observability",
     "onboarding": "온보딩",
+    "openshift-modernization": "OpenShift Modernization",
+    "partners": "Partners",
     "platform": "플랫폼",
     "pricing": "요금제",
     "privacy": "Privacy Mandate",
     "products": "제품",
+    "register": "Register",
+    "research": "Research",
     "resources": "리소스",
     "roi": "ROI 성과",
     "scaling": "스케일링",
     "security": "보안",
     "security_page": "Sovereignty & Trust",
     "services": "Infrastructure",
+    "settings": "Settings",
+    "solutions": "Solutions",
+    "staffing": "Staffing",
     "technical": "기술 운영",
     "terms": "Terms of Engagement",
     "uptime": "가동 시간",
     "use-cases": "사용 사례",
     "visual-library": "Architecture Library",
-    "whitepaper": "AECP Research",
-    "ai-data": "AI Data",
-    "app": "Application",
-    "settings": "Settings",
-    "architecture": "Architecture",
-    "business-ideas": "Business Ideas",
-    "compliance": "Compliance",
-    "api": "API",
-    "governance": "Governance",
-    "founder": "Founder",
-    "news": "News",
-    "partners": "Partners",
-    "ai-engine": "AI Engine",
-    "observability": "Observability",
-    "register": "Register",
-    "research": "Research",
-    "automated-multilingual-quality-assurance": "Automated multilingual quality assurance",
-    "metrics": "Metrics",
-    "ai-cloud-platform": "AI Cloud Platform",
-    "application-modernization": "App Modernization",
-    "cloud-cost-optimization": "Cost Optimization",
-    "cloud-modernization": "Cloud Modernization",
-    "openshift-modernization": "OpenShift Modernization",
-    "solutions": "Solutions",
-    "staffing": "Staffing"
+    "whitepaper": "AECP Research"
   },
   "Capabilities": {
     "cta": "전체 아키텍처 보기",
@@ -139,12 +139,12 @@
   },
   "Company": {
     "email": {
-      "admin": "admin@omnigcloud.com",
-      "architects": "architects@omnigcloud.com",
-      "legal": "legal@omnigcloud.com",
-      "press": "press@omnigcloud.com",
+      "admin": "omnigcloud@gmail.com",
+      "architects": "omnigcloud@gmail.com",
+      "legal": "omnigcloud@gmail.com",
+      "press": "omnigcloud@gmail.com",
       "security": "보안",
-      "support": "support@omnigcloud.com"
+      "support": "omnigcloud@gmail.com"
     },
     "location": "뉴욕 플래티넘 지구",
     "name": "OmniGCloud 본사"
@@ -408,7 +408,7 @@
         "about": "회사 소개",
         "contact": "문의하기",
         "executive": "임원실",
-        "global_hq": "Global Headquarters",
+        "global_hq": "글로벌 본사",
         "leadership": "리더십",
         "newsroom": "뉴스룸",
         "operations": "글로벌 운영"
@@ -416,36 +416,37 @@
       "contact_us": "문의하기",
       "dashboard": "대시보드",
       "dashboard_links": {
-        "executive": "경영진 개요",
-        "roi": "ROI 성과",
         "cost": "비용 절감",
-        "uptime": "시스템 가용성",
+        "deployment": "CI/CD 속도",
+        "error": "오류 및 이상",
+        "executive": "경영진 개요",
+        "resources": "클러스터 리소스",
+        "roi": "ROI 성과",
+        "scaling": "스케일링 활동",
         "security": "보안 태세",
         "technical": "기술 운영",
-        "resources": "클러스터 리소스",
-        "deployment": "CI/CD 속도",
-        "scaling": "스케일링 활동",
-        "error": "오류 및 이상"
+        "uptime": "시스템 가동 시간"
       },
       "docs": "리소스",
       "docs_links": {
         "api": "API 참조",
-        "guide": "User Guide",
-        "newsroom": "Newsroom Hub",
+        "guide": "사용자 가이드",
+        "newsroom": "뉴스룸 센터",
         "open_source": "오픈 소스",
         "patterns": "디자인 패턴",
         "tech_docs": "기술 문서",
-        "visual_library": "Visual Library",
+        "visual_library": "시각 자료 라이브러리",
         "whitepaper": "백서"
       },
       "documentation": "문서",
       "industries": "산업",
       "information": "정보",
       "onboarding": "지금 확장하기",
+      "contactSales": "영업 팀에 문의",
       "organization": "조직",
       "performance": "성능",
       "pillars": "플랫폼 핵심 요소",
-      "pricing": "요금제",
+      "pricing": "가격",
       "pricing_links": {
         "business": "비즈니스",
         "compare": "요금제 비교",
@@ -457,7 +458,7 @@
       },
       "products": "제품",
       "products_links": {
-        "deploy": "Obsidian 배포",
+        "deploy": "옵시디언 배포",
         "guard": "거버넌스 가드",
         "knowledge": "소버린 지식",
         "nexus": "크로스 클라우드 넥서스",
@@ -491,9 +492,9 @@
   "Hero": {
     "audience": "규제 대상 기업 및 정부 기관을 위해 구축됨",
     "badge": "엔터프라이즈 클라우드 거버넌스",
-    "ctaArchitecture": "Architecture Overview",
-    "ctaPrimary": "데모 요청",
-    "ctaWhitepaper": "Download Whitepaper",
+    "ctaArchitecture": "아키텍처 개요",
+    "ctaPrimary": "플랫폼 탐색",
+    "ctaWhitepaper": "화이트페이퍼 다운로드",
     "efficiency": "효율성",
     "experts": {
       "count": "20명 이상의 전문가",
@@ -528,7 +529,7 @@
     "Cta": {
       "disclaimer": "신용 카드 필요 없음. SOC-2 준수 온보딩.",
       "primary": "클라우드 확장",
-      "secondary": "영업팀 문의",
+      "secondary": "영업 문의",
       "subtitle": "클라우드 거버넌스를 자동화하고 OmniGCloud로 디지털 주권을 회복한 수백 개의 글로벌 기업에 합류하세요.",
       "title": "소버린 제어권을 회복할 준비가 되셨나요?"
     },
@@ -627,6 +628,24 @@
       "sol": "Crossplane 기반 엣지 관리는 수천 개의 로컬 노드 전반에 걸쳐 통신 스택의 일관된 배포를 가능하게 합니다."
     },
     "title": "산업별 솔루션"
+  },
+  "Metadata": {
+    "Home": {
+      "description": "OmniGCloud로 벤더 종속에서 벗어나십시오. AI 기반 플랫폼이 거버넌스를 자동화합니다.",
+      "title": "클라우드 현대화 및 AI 거버넌스 | OmniGCloud 플랫폼"
+    },
+    "Pricing": {
+      "description": "멀티 클라우드 거버넌스를 위한 투명한 가격 책정. 숨겨진 수수료 없음.",
+      "title": "가격 | OmniGCloud 엔터프라이즈 클라우드 거버넌스"
+    },
+    "Products": {
+      "description": "자율적인 클라우드 운영을 위한 OmniGCloud 소버린 스위트를 살펴보십시오.",
+      "title": "제품 | OmniGCloud 소버린 스위트"
+    },
+    "default": {
+      "description": "OmniGCloud는 AI 네이티브 클라우드 현대화 및 자율 거버넌스를 제공합니다.",
+      "title": "OmniGCloud | 엔터프라이즈 클라우드 현대화"
+    }
   },
   "Newsroom": {
     "badge": "소버린 인사이트",
@@ -793,19 +812,19 @@
       },
       "contact": "가격 문의",
       "developer": {
-        "cta": "구축 시작",
+        "cta": "빌드 시작하기",
         "desc": "미래의 소버린 인프라를 구축하는 개인 엔지니어용.",
         "name": "개발자"
       },
       "month": "/월",
       "popular": "가장 인기",
       "professional": {
-        "cta": "프로페셔널로 이동",
+        "cta": "프로로 업그레이드",
         "desc": "멀티 리전 탄력성이 필요한 확장 팀용.",
         "name": "프로페셔널"
       },
       "sovereign": {
-        "cta": "영업팀 문의",
+        "cta": "영업 문의",
         "desc": "국가 및 포춘 500대 기업을 위한 맞춤형 인프라.",
         "name": "소버린"
       }
@@ -971,7 +990,7 @@
     "scope4": "민감한 데이터 노출 또는 안전하지 않은 데이터 저장",
     "securityEmail": "이메일",
     "securityPractices": "보안 관행",
-    "step1": "취약점 세부 정보와 함께 security@omnigcloud.com으로 이메일 전송",
+    "step1": "취약점 세부 정보와 함께 omnigcloud@gmail.com으로 이메일 전송",
     "step2": "재현 단계, 잠재적 영향 및 개념 증명 코드 포함",
     "step3": "공개 전에 조사 및 문제 해결을 위한 합리적인 시간 제공",
     "step4": "48시간 이내에 보고서를 확인하고 진행 상황을 업데이트해 드립니다",
@@ -1398,5 +1417,15 @@
     "title": "자율 주권 오케스트레이션(ASO): 클라우드 불가지론적 거버넌스를 위한 정식 프레임워크",
     "version": "2.1.0 (연구용 등급)",
     "version_label": "버전"
+  },
+  "ContactSales": {
+    "subject": "영업 문의",
+    "bodyIntro": "안녕하세요 OmniGCloud 영업 팀 담당자님,",
+    "fallbackTitle": "영업 팀에 문의",
+    "fallbackInstruction": "메일 앱이 열리지 않았습니다. 직접 이메일을 보내실 수 있습니다.",
+    "copyLabel": "이메일 복사",
+    "whatsappLabel": "WhatsApp으로 채팅",
+    "rateLimitMessage": "다시 문의하시기 전에 잠시 기다려 주세요.",
+    "copyToast": "이메일이 클립보드에 복사되었습니다"
   }
 }

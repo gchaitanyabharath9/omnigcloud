@@ -52,11 +52,23 @@
     }
   },
   "Breadcrumb": {
+    "ai-cloud-platform": "AI Cloud Platform",
+    "ai-data": "AI Data",
+    "ai-engine": "AI Engine",
+    "api": "API",
+    "app": "Application",
+    "application-modernization": "App Modernization",
+    "architecture": "Architecture",
+    "automated-multilingual-quality-assurance": "Automated multilingual quality assurance",
     "blog": "Blog",
+    "business-ideas": "Business Ideas",
     "case-studies": "Deployment Success",
+    "cloud-cost-optimization": "Cost Optimization",
+    "cloud-modernization": "Cloud Modernization",
     "command-center": "Centre de Commande",
     "community": "Communauté",
     "company": "Entreprise",
+    "compliance": "Compliance",
     "contact": "Contact",
     "cost": "Économies",
     "dashboard": "Tableau de Bord",
@@ -65,51 +77,39 @@
     "docs": "Ressources",
     "error": "Taux d'Erreur",
     "executive": "Vue d'Ensemble",
+    "founder": "Founder",
+    "governance": "Governance",
     "guide": "Guide de l'Utilisateur",
     "home": "Accueil",
     "industries": "Industries",
+    "metrics": "Metrics",
+    "news": "News",
     "newsroom": "Presse",
+    "observability": "Observability",
     "onboarding": "Escalader",
+    "openshift-modernization": "OpenShift Modernization",
+    "partners": "Partners",
     "platform": "Plateforme",
     "pricing": "Tarifs",
     "privacy": "Privacy Mandate",
     "products": "Produits",
+    "register": "Register",
+    "research": "Research",
     "resources": "Ressources",
     "roi": "Performance ROI",
     "scaling": "Mise à l'échelle",
     "security": "Sécurité",
     "security_page": "Sécurité",
     "services": "Services",
+    "settings": "Settings",
+    "solutions": "Solutions",
+    "staffing": "Staffing",
     "technical": "Opérations Techniques",
     "terms": "Terms of Engagement",
     "uptime": "Temps de Disponibilité",
     "use-cases": "Cas d'Usage",
     "visual-library": "Galerie",
-    "whitepaper": "Livre Blanc",
-    "ai-data": "AI Data",
-    "app": "Application",
-    "settings": "Settings",
-    "architecture": "Architecture",
-    "business-ideas": "Business Ideas",
-    "compliance": "Compliance",
-    "api": "API",
-    "governance": "Governance",
-    "founder": "Founder",
-    "news": "News",
-    "partners": "Partners",
-    "ai-engine": "AI Engine",
-    "observability": "Observability",
-    "register": "Register",
-    "research": "Research",
-    "automated-multilingual-quality-assurance": "Automated multilingual quality assurance",
-    "metrics": "Metrics",
-    "ai-cloud-platform": "AI Cloud Platform",
-    "application-modernization": "App Modernization",
-    "cloud-cost-optimization": "Cost Optimization",
-    "cloud-modernization": "Cloud Modernization",
-    "openshift-modernization": "OpenShift Modernization",
-    "solutions": "Solutions",
-    "staffing": "Staffing"
+    "whitepaper": "Livre Blanc"
   },
   "Capabilities": {
     "cta": "Voir l'Architecture Complète",
@@ -139,12 +139,12 @@
   },
   "Company": {
     "email": {
-      "admin": "admin@omnigcloud.com",
-      "architects": "architects@omnigcloud.com",
-      "legal": "legal@omnigcloud.com",
-      "press": "press@omnigcloud.com",
-      "security": "security@omnigcloud.com",
-      "support": "support@omnigcloud.com"
+      "admin": "omnigcloud@gmail.com",
+      "architects": "omnigcloud@gmail.com",
+      "legal": "omnigcloud@gmail.com",
+      "press": "omnigcloud@gmail.com",
+      "security": "omnigcloud@gmail.com",
+      "support": "omnigcloud@gmail.com"
     },
     "location": "New York Platinum District",
     "name": "OmniGCloud HQ"
@@ -414,18 +414,18 @@
         "operations": "Opérations Mondiales"
       },
       "contact_us": "CONTACT",
-      "dashboard": "Dashboard",
+      "dashboard": "Tableau de bord",
       "dashboard_links": {
-        "executive": "Vue d'Ensemble Exécutive",
-        "roi": "Performance ROI",
         "cost": "Économies de Coûts",
-        "uptime": "Disponibilité du Système",
+        "deployment": "Vélocité CI/CD",
+        "error": "Erreurs et Anomalies",
+        "executive": "Aperçu Exécutif",
+        "resources": "Ressources du Cluster",
+        "roi": "Performance du ROI",
+        "scaling": "Activité de Mise à l'Échelle",
         "security": "Posture de Sécurité",
         "technical": "Opérations Techniques",
-        "resources": "Ressources du Cluster",
-        "deployment": "Vélocité CI/CD",
-        "scaling": "Activité de Mise à l'Échelle",
-        "error": "Erreurs et Anomalies"
+        "uptime": "Disponibilité Système"
       },
       "docs": "Ressources",
       "docs_links": {
@@ -442,6 +442,7 @@
       "industries": "INDUSTRIES",
       "information": "INFORMATION",
       "onboarding": "Passer à l'échelle",
+      "contactSales": "Contacter le service commercial",
       "organization": "ORGANISATION",
       "performance": "PERFORMANCE",
       "pillars": "PILIERS DE LA PLATEFORME",
@@ -457,14 +458,14 @@
       },
       "products": "Produits",
       "products_links": {
-        "deploy": "Obsidian Deploy",
-        "guard": "Governance Guard",
-        "knowledge": "Sovereign Knowledge",
-        "nexus": "Cross-Cloud Nexus",
-        "playground": "Sovereign Playground",
-        "workflows": "G-Workflows"
+        "deploy": "Déploiement Obsidian",
+        "guard": "Garde de Gouvernance",
+        "knowledge": "Savoir Souverain",
+        "nexus": "Nexus Multi-Cloud",
+        "playground": "Espace de Souveraineté",
+        "workflows": "Flux de Travail G"
       },
-      "solutions": "Solutions",
+      "solutions": "Nos Solutions",
       "solutions_links": {
         "finance_mod": "Modernisation de la Finance Mondiale",
         "financial": "Services Financiers",
@@ -491,9 +492,9 @@
   "Hero": {
     "audience": "Designed for Global 2000 CIOs and Sovereign Government Entities.",
     "badge": "LA GOUVERNANCE COMME CODE",
-    "ctaArchitecture": "Architecture Overview",
-    "ctaPrimary": "Démarrer l'Évaluation",
-    "ctaWhitepaper": "Download Whitepaper",
+    "ctaArchitecture": "Aperçu de l'Architecture",
+    "ctaPrimary": "Explorer la Plateforme",
+    "ctaWhitepaper": "Télécharger le Livre Blanc",
     "efficiency": "EFFICACITÉ",
     "experts": {
       "count": "20+ Experts",
@@ -527,7 +528,7 @@
   "HomeSections": {
     "Cta": {
       "disclaimer": "AUCUNE CARTE DE CRÉDIT REQUISE. ONBOARDING CONFORME SOC-2.",
-      "primary": "Mettez votre Cloud à l'Échelle",
+      "primary": "Passer à l'échelle",
       "secondary": "Contacter les Ventes",
       "subtitle": "Rejoignez des centaines d'entreprises mondiales qui ont automatisé leur gouvernance cloud et restauré leur souveraineté numérique avec OmniGCloud.",
       "title": "Prêt à restaurer le contrôle souverain ?"
@@ -627,6 +628,24 @@
       "sol": "La gestion de l'edge pilotée par Crossplane permet un déploiement cohérent des stacks télécoms sur des milliers de nœuds localisés."
     },
     "title": "Solutions Spécifiques à l'Industrie"
+  },
+  "Metadata": {
+    "Home": {
+      "description": "Libérez-vous de la dépendance vis-à-vis des fournisseurs avec OmniGCloud. Notre plateforme IA automatise la gouvernance.",
+      "title": "Modernisation Cloud et Gouvernance IA | OmniGCloud"
+    },
+    "Pricing": {
+      "description": "Tarification transparente pour la gouvernance multi-cloud. Pas de frais cachés.",
+      "title": "Tarifs | Gouvernance Cloud Entreprise OmniGCloud"
+    },
+    "Products": {
+      "description": "Explorez la Suite de Souveraineté OmniGCloud pour des opérations cloud autonomes.",
+      "title": "Produits | Suite de Souveraineté OmniGCloud"
+    },
+    "default": {
+      "description": "OmniGCloud propose une modernisation cloud native IA et une gouvernance autonome.",
+      "title": "OmniGCloud | Modernisation Cloud pour Entreprises"
+    }
   },
   "Newsroom": {
     "badge": "PERSPECTIVES SOUVERAINES",
@@ -787,25 +806,25 @@
     },
     "plans": {
       "business": {
-        "cta": "Mettre l'Entreprise à l'Échelle",
+        "cta": "Développer l'entreprise",
         "desc": "Gouvernance d'entreprise pour les opérations critiques.",
         "name": "Entreprise"
       },
       "contact": "Contactez-nous pour le tarif",
       "developer": {
-        "cta": "Commencer à construire",
+        "cta": "Commencer à bâtir",
         "desc": "Pour les ingénieurs individuels construisant l'avenir de l'infra souveraine.",
         "name": "Développeur"
       },
       "month": "/mois",
       "popular": "LE PLUS POPULAIRE",
       "professional": {
-        "cta": "Passer au Pro",
+        "cta": "Devenir professionnel",
         "desc": "Pour les équipes en croissance nécessitant une résilience multi-régions.",
         "name": "Professionnel"
       },
       "sovereign": {
-        "cta": "Contacter les Ventes",
+        "cta": "Contacter les ventes",
         "desc": "Infrastructure sur mesure pour les nations et le Fortune 500.",
         "name": "Souverain"
       }
@@ -971,7 +990,7 @@
     "scope4": "Exposition de données sensibles ou stockage de données non sécurisé",
     "securityEmail": "E-mail",
     "securityPractices": "Pratiques de Sécurité",
-    "step1": "Envoyez un e-mail à security@omnigcloud.com avec les détails de la vulnérabilité",
+    "step1": "Envoyez un e-mail à omnigcloud@gmail.com avec les détails de la vulnérabilité",
     "step2": "Incluez les étapes pour reproduire, l'impact potentiel et tout code de preuve de concept",
     "step3": "Accordez-nous un délai raisonnable pour enquêter et remédier avant la divulgation publique",
     "step4": "Nous accuserons réception de votre rapport dans les 48 heures et vous fournirons des mises à jour sur nos progrès",
@@ -1373,5 +1392,15 @@
     "title": "Autonomous Sovereign Orchestration (ASO) : un cadre pour une gouvernance indépendante du cloud",
     "version": "1.0",
     "version_label": "Version"
+  },
+  "ContactSales": {
+    "subject": "Demande commerciale",
+    "bodyIntro": "Bonjour l'équipe commerciale OmniGCloud,",
+    "fallbackTitle": "Contacter le service commercial",
+    "fallbackInstruction": "Votre application de messagerie ne s'est pas ouverte. Vous pouvez nous envoyer un e-mail directement.",
+    "copyLabel": "Copier l'e-mail",
+    "whatsappLabel": "Discuter sur WhatsApp",
+    "rateLimitMessage": "Veuillez patienter un moment avant de nous recontacter.",
+    "copyToast": "E-mail copié dans le presse-papiers"
   }
 }

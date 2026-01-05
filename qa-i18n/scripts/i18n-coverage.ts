@@ -9,11 +9,11 @@ const REPORT_PATH = path.join(process.cwd(), 'qa-i18n/i18n-report.md');
 
 // Tiers Definition
 const TIERS = {
-    TIER_1: ['en', 'es', 'fr', 'de'], // BLOCK RELEASE
-    TIER_2: ['zh', 'hi', 'ja', 'ko'], // WARN ONLY (within threshold)
+    TIER_1: ['en', 'es', 'fr', 'de', 'zh', 'hi', 'ja', 'ko'], // BLOCK RELEASE ALL
+    TIER_2: [], // EMPTY
 };
 
-const TIER_2_THRESHOLD = 25;
+const TIER_2_THRESHOLD = 0; // Strict across all 8 locales
 
 interface KeyResult {
     all: string[];

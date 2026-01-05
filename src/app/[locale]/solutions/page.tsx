@@ -1,3 +1,5 @@
+import { PageShell } from '@/components/layout/PageShell';
+import { Section } from '@/components/layout/Section';
 import React from 'react';
 import { Shield, Globe, Layers, ArrowRight, ChevronRight, Award } from 'lucide-react';
 import Link from 'next/link';
@@ -8,8 +10,8 @@ export default async function SolutionsPage({ params }: { params: Promise<{ loca
     return (
         <div className="min-h-screen">
             {/* HERO - Layer 1: Marketing */}
-            <section className="py-24 bg-gradient-to-b from-[#020617] to-[var(--background)]">
-                <div className="container">
+            <Section className="py-24 bg-gradient-to-b from-[#020617] to-[var(--background)]">
+                <PageShell>
                     <div className="grid md:grid-cols-2 gap-12 items-center">
                         <div>
                             <div className="badge badge-primary-subtle mb-6">ENTERPRISE SOLUTIONS</div>
@@ -31,12 +33,12 @@ export default async function SolutionsPage({ params }: { params: Promise<{ loca
                             </div>
                         </div>
                     </div>
-                </div>
-            </section>
+                </PageShell>
+            </Section>
 
             {/* PROBLEM / SOLUTION / OUTCOMES */}
             <section className="py-24 bg-[var(--bg-surface-2)]">
-                <div className="container">
+                <PageShell>
                     <div className="text-center mb-16">
                         <h2 className="text-4xl font-bold mb-4">A Framework of Reliability</h2>
                         <p className="opacity-60 max-w-2xl mx-auto">
@@ -76,12 +78,12 @@ export default async function SolutionsPage({ params }: { params: Promise<{ loca
                             </p>
                         </div>
                     </div>
-                </div>
+                </PageShell>
             </section>
 
             {/* CROSS-REFERENCE TO RESEARCH - Layer 2 Link */}
             <section className="py-24">
-                <div className="container">
+                <PageShell>
                     <div className="glass-panel p-16 rounded-[4rem] flex flex-col md:flex-row items-center justify-between gap-12 bg-gradient-to-r from-transparent to-[var(--primary-glow)] border border-[var(--primary-glow)]">
                         <div className="max-w-xl">
                             <div className="flex items-center gap-2 text-[var(--primary)] font-bold mb-4">
@@ -101,8 +103,9 @@ export default async function SolutionsPage({ params }: { params: Promise<{ loca
                             <Layers size={140} className="text-[var(--primary)] opacity-40" />
                         </div>
                     </div>
-                </div>
+                </PageShell>
             </section>
+
         </div>
     );
 }

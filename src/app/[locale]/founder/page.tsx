@@ -31,7 +31,7 @@ export default function FounderPage() {
                             <div className="mt-8 flex justify-center gap-4">
                                 <a href="#" className="p-3 bg-white/5 hover:bg-blue-500/10 rounded-full transition-colors"><Linkedin size={20} /></a>
                                 <a href="#" className="p-3 bg-white/5 hover:bg-blue-500/10 rounded-full transition-colors"><Twitter size={20} /></a>
-                                <a href="mailto:architects@omnigcloud.com" className="p-3 bg-white/5 hover:bg-blue-500/10 rounded-full transition-colors"><Mail size={20} /></a>
+                                <a href="mailto:omnigcloud@gmail.com" className="p-3 bg-white/5 hover:bg-blue-500/10 rounded-full transition-colors"><Mail size={20} /></a>
                             </div>
                         </div>
 

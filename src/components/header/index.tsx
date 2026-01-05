@@ -18,6 +18,8 @@ import { NavLink } from '@/components/navigation/NavLink';
 import LanguageSwitcher from '../LanguageSwitcher';
 import LiveLatencyBadge from '../observability/LiveLatencyBadge';
 import MobileMenuOverlay from './MobileMenuOverlay';
+import ContactSalesModal from '../ContactSalesModal';
+import { useContactSales } from '@/hooks/useContactSales';
 import styles from './Header.module.css';
 
 const Header = () => {
@@ -26,6 +28,7 @@ const Header = () => {
     const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
     const { theme, setTheme } = useTheme();
     const locale = useLocale();
+    const { handleContactSales, translations } = useContactSales();
     const [mounted, setMounted] = useState(false);
 
     useEffect(() => setMounted(true), []);
@@ -142,6 +145,13 @@ const Header = () => {
                         {theme === 'dark' ? <Sun size={18} /> : <Moon size={18} />}
                     </button>
                     <LanguageSwitcher />
+                    <button
+                        onClick={handleContactSales}
+                        className={`btn-secondary ${styles.contactBtn}`}
+                        style={{ padding: '0.6rem 1.25rem', borderRadius: '0.75rem', fontSize: '0.85rem', fontWeight: 700 }}
+                    >
+                        {translations.ctaLabel}
+                    </button>
                     <Link
                         href={`/${locale}/onboarding`}
                         className={`btn-primary ${styles.onboardingBtn}`}
@@ -174,6 +184,8 @@ const Header = () => {
                     <LiveLatencyBadge />
                 </div>
             </div>
+
+            <ContactSalesModal />
         </header>
     );
 };

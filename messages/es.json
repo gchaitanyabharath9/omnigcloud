@@ -52,64 +52,63 @@
     }
   },
   "Breadcrumb": {
+    "ai-cloud-platform": "AI Cloud Platform",
+    "ai-data": "AI Data",
+    "ai-engine": "AI Engine",
+    "api": "API",
+    "app": "Application",
+    "application-modernization": "App Modernization",
+    "architecture": "Architecture",
+    "automated-multilingual-quality-assurance": "Automated multilingual quality assurance",
     "blog": "Blog",
+    "business-ideas": "Business Ideas",
     "case-studies": "Deployment Success",
+    "cloud-cost-optimization": "Cost Optimization",
+    "cloud-modernization": "Cloud Modernization",
     "command-center": "Centro de Mando",
     "community": "Comunidad",
-    "company": "Empresa",
+    "company": "Compañía",
+    "compliance": "Compliance",
     "contact": "Contacto",
-    "cost": "Ahorro de Costos",
     "dashboard": "Panel de Control",
     "demo": "Demo",
     "deployment": "Despliegue",
     "docs": "Recursos",
     "error": "Tasas de Error",
     "executive": "Resumen Ejecutivo",
+    "founder": "Founder",
+    "governance": "Governance",
     "guide": "Guía de Usuario",
     "home": "Inicio",
     "industries": "Industrias",
+    "metrics": "Metrics",
+    "news": "News",
     "newsroom": "Prensa",
+    "observability": "Observability",
     "onboarding": "Escalar",
+    "openshift-modernization": "OpenShift Modernization",
+    "partners": "Partners",
     "platform": "Plataforma",
     "pricing": "Precios",
     "privacy": "Privacy Mandate",
     "products": "Productos",
+    "register": "Register",
+    "research": "Research",
     "resources": "Recursos",
     "roi": "Rendimiento ROI",
     "scaling": "Escalado",
     "security": "Seguridad",
     "security_page": "Seguridad",
     "services": "Servicios",
+    "settings": "Settings",
+    "solutions": "Solutions",
+    "staffing": "Staffing",
     "technical": "Operaciones Técnicas",
     "terms": "Terms of Engagement",
     "uptime": "Tiempo de Actividad",
     "use-cases": "Casos de Uso",
     "visual-library": "Galería",
-    "whitepaper": "Libro Blanco",
-    "ai-data": "AI Data",
-    "app": "Application",
-    "settings": "Settings",
-    "architecture": "Architecture",
-    "business-ideas": "Business Ideas",
-    "compliance": "Compliance",
-    "api": "API",
-    "governance": "Governance",
-    "founder": "Founder",
-    "news": "News",
-    "partners": "Partners",
-    "ai-engine": "AI Engine",
-    "observability": "Observability",
-    "register": "Register",
-    "research": "Research",
-    "automated-multilingual-quality-assurance": "Automated multilingual quality assurance",
-    "metrics": "Metrics",
-    "ai-cloud-platform": "AI Cloud Platform",
-    "application-modernization": "App Modernization",
-    "cloud-cost-optimization": "Cost Optimization",
-    "cloud-modernization": "Cloud Modernization",
-    "openshift-modernization": "OpenShift Modernization",
-    "solutions": "Solutions",
-    "staffing": "Staffing"
+    "whitepaper": "Libro Blanco"
   },
   "Capabilities": {
     "cta": "Ver Arquitectura Completa",
@@ -139,12 +138,12 @@
   },
   "Company": {
     "email": {
-      "admin": "admin@omnigcloud.com",
-      "architects": "architects@omnigcloud.com",
-      "legal": "legal@omnigcloud.com",
-      "press": "press@omnigcloud.com",
-      "security": "security@omnigcloud.com",
-      "support": "support@omnigcloud.com"
+      "admin": "omnigcloud@gmail.com",
+      "architects": "omnigcloud@gmail.com",
+      "legal": "omnigcloud@gmail.com",
+      "press": "omnigcloud@gmail.com",
+      "security": "omnigcloud@gmail.com",
+      "support": "omnigcloud@gmail.com"
     },
     "location": "New York Platinum District",
     "name": "OmniGCloud HQ"
@@ -414,18 +413,18 @@
         "operations": "Operaciones Globales"
       },
       "contact_us": "CONTACTO",
-      "dashboard": "Dashboard",
+      "dashboard": "Panel de control",
       "dashboard_links": {
+        "cost": "Ahorro de Costes",
+        "deployment": "Velocidad CI/CD",
+        "error": "Errores y Anomalías",
         "executive": "Resumen Ejecutivo",
-        "roi": "Rendimiento ROI",
-        "cost": "Ahorro de Costos",
-        "uptime": "Disponibilidad del Sistema",
+        "resources": "Recursos del Clúster",
+        "roi": "Rendimiento del ROI",
+        "scaling": "Actividad de Escalado",
         "security": "Postura de Seguridad",
         "technical": "Operaciones Técnicas",
-        "resources": "Recursos del Clúster",
-        "deployment": "Velocidad CI/CD",
-        "scaling": "Actividad de Escalado",
-        "error": "Errores y Anomalías"
+        "uptime": "Tiempo de Actividad"
       },
       "docs": "Recursos",
       "docs_links": {
@@ -442,6 +441,7 @@
       "industries": "INDUSTRIAS",
       "information": "INFORMACIÓN",
       "onboarding": "Escalar Ahora",
+      "contactSales": "Contactar Ventas",
       "organization": "ORGANIZACIÓN",
       "performance": "RENDIMIENTO",
       "pillars": "PILARES DE LA PLATAFORMA",
@@ -458,11 +458,11 @@
       "products": "Productos",
       "products_links": {
         "deploy": "Despliegue Obsidian",
-        "guard": "Guardia de Gobernanza",
+        "guard": "Protección de Gobernanza",
         "knowledge": "Conocimiento Soberano",
         "nexus": "Nexo Multi-Nube",
-        "playground": "Patio de Recreo Soberano",
-        "workflows": "G-Workflows"
+        "playground": "Espacio de Soberanía",
+        "workflows": "Flujos de Trabajo G"
       },
       "solutions": "Soluciones",
       "solutions_links": {
@@ -491,9 +491,9 @@
   "Hero": {
     "audience": "Designed for Global 2000 CIOs and Sovereign Government Entities.",
     "badge": "GOBERNANZA COMO CÓDIGO",
-    "ctaArchitecture": "Architecture Overview",
-    "ctaPrimary": "Iniciar Evaluación",
-    "ctaWhitepaper": "Download Whitepaper",
+    "ctaArchitecture": "Resumen de Arquitectura",
+    "ctaPrimary": "Explorar Plataforma",
+    "ctaWhitepaper": "Descargar Libro Blanco",
     "efficiency": "EFICIENCIA",
     "experts": {
       "count": "20+ Expertos",
@@ -527,7 +527,7 @@
   "HomeSections": {
     "Cta": {
       "disclaimer": "NO SE REQUIERE TARJETA DE CRÉDITO. INCORPORACIÓN COMPATIBLE CON SOC-2.",
-      "primary": "Escalar su Nube",
+      "primary": "Escalar Nube",
       "secondary": "Contactar Ventas",
       "subtitle": "Únase a cientos de empresas globales que han automatizado su gobernanza en la nube y restaurado la soberanía digital con OmniGCloud.",
       "title": "¿Listo para Restaurar el Control Soberano?"
@@ -627,6 +627,24 @@
       "sol": "La gestión de borde impulsada por Crossplane permite el despliegue consistente de pilas de telecomunicaciones en miles de nodos localizados."
     },
     "title": "Soluciones Específicas por Sector"
+  },
+  "Metadata": {
+    "Home": {
+      "description": "Libérese del bloqueo de proveedores con OmniGCloud. Nuestra plataforma de IA automatiza la gobernanza.",
+      "title": "Modernización de Nube y Gobernanza de IA | OmniGCloud"
+    },
+    "Pricing": {
+      "description": "Precios transparentes para la gobernanza multi-nube. Sin tarifas ocultas.",
+      "title": "Precios | Gobernanza de Nube Empresarial OmniGCloud"
+    },
+    "Products": {
+      "description": "Explore la Suite de Soberanía OmniGCloud para operaciones de nube autónomas.",
+      "title": "Productos | Suite de Soberanía OmniGCloud"
+    },
+    "default": {
+      "description": "OmniGCloud ofrece modernización de nube nativa de IA y gobernanza autónoma.",
+      "title": "OmniGCloud | Modernización de Nube para Empresas"
+    }
   },
   "Newsroom": {
     "badge": "PERSPECTIVAS SOBERANAS",
@@ -787,25 +805,25 @@
     },
     "plans": {
       "business": {
-        "cta": "Escalar Negocio",
+        "cta": "Escalar negocio",
         "desc": "Gobernanza empresarial para operaciones de misión crítica.",
         "name": "Negocios"
       },
       "contact": "Contáctenos para precios",
       "developer": {
-        "cta": "Empezar a Construir",
+        "cta": "Empezar a construir",
         "desc": "Para ingenieros individuales que construyen el futuro de la infraestructura soberana.",
         "name": "Desarrollador"
       },
       "month": "/mes",
       "popular": "MÁS POPULAR",
       "professional": {
-        "cta": "Ir a Profesional",
+        "cta": "Hazte profesional",
         "desc": "Para equipos en crecimiento que requieren resistencia multirregional.",
         "name": "Profesional"
       },
       "sovereign": {
-        "cta": "Contactar Ventas",
+        "cta": "Contactar ventas",
         "desc": "Infraestructura a medida para naciones y Fortune 500.",
         "name": "Soberano"
       }
@@ -971,7 +989,7 @@
     "scope4": "Exposición de datos confidenciales o almacenamiento inseguro de datos",
     "securityEmail": "Correo Electrónico",
     "securityPractices": "Prácticas de Seguridad",
-    "step1": "Envíe un correo electrónico a security@omnigcloud.com con los detalles de la vulnerabilidad",
+    "step1": "Envíe un correo electrónico a omnigcloud@gmail.com con los detalles de la vulnerabilidad",
     "step2": "Incluya pasos para reproducir, impacto potencial y cualquier código de prueba de concepto",
     "step3": "Permítanos un tiempo razonable para investigar y remediar antes de la divulgación pública",
     "step4": "Acusaremos recibo de su informe dentro de las 48 horas y proporcionaremos actualizaciones sobre nuestro progreso",
@@ -1373,5 +1391,15 @@
     "title": "Autonomous Sovereign Orchestration (ASO): A Framework for Cloud-Agnostic Governance",
     "version": "1.0",
     "version_label": "Versión"
+  },
+  "ContactSales": {
+    "subject": "Consulta de Ventas",
+    "bodyIntro": "Hola equipo de ventas de OmniGCloud,",
+    "fallbackTitle": "Contactar Ventas",
+    "fallbackInstruction": "Tu aplicación de correo no se abrió. Puedes enviarnos un correo electrónico directamente.",
+    "copyLabel": "Copiar correo",
+    "whatsappLabel": "Chatear por WhatsApp",
+    "rateLimitMessage": "Por favor, espera un momento antes de contactarnos de nuevo.",
+    "copyToast": "Correo copiado al portapapeles"
   }
 }

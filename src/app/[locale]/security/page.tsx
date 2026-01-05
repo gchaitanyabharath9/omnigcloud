@@ -160,7 +160,7 @@ export default async function SecurityPage() {
                             </p>
                             <div className="bg-zinc-100 dark:bg-zinc-800 p-6 rounded-lg">
                                 <p className="text-zinc-700 dark:text-zinc-300 mb-2">
-                                    {t("securityEmail")}: <a href="mailto:security@omnigcloud.com" className="text-blue-500 hover:underline font-bold">security@omnigcloud.com</a>
+                                    {t("securityEmail")}: <a href="mailto:omnigcloud@gmail.com" className="text-blue-500 hover:underline font-bold">omnigcloud@gmail.com</a>
                                 </p>
                                 <p className="text-sm text-zinc-600 dark:text-zinc-400">
                                     {t("pgpKey")}: <code className="bg-zinc-200 dark:bg-zinc-700 px-2 py-1 rounded">Available upon request</code>

@@ -1,3 +1,4 @@
+import { PageShell } from '@/components/layout/PageShell';
 import { getTranslations } from 'next-intl/server';
 import { Check, X, Shield, Globe, Cpu, Zap, Award, HelpCircle, ArrowRight } from 'lucide-react';
 import Link from 'next/link';
@@ -14,11 +15,15 @@ const FeatureUsageBar = dynamic(() => import('@/components/charts/SimpleCharts')
 
 export const revalidate = 86400; // Cache for 24 hours (ISR)
 
-export const metadata: Metadata = {
-    title: 'Pricing | OmniGCloud Enterprise Cloud Governance',
-    description: 'Transparent pricing for multi-cloud governance. From developer-friendly free tier to enterprise-grade sovereign plans. No hidden fees, no vendor lock-in.',
-    keywords: ['cloud governance pricing', 'enterprise cloud management cost', 'multi-cloud pricing', 'compliance automation pricing'],
-};
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
+    const { locale } = await params;
+    const tm = await getTranslations({ locale, namespace: 'Metadata.Pricing' });
+    return {
+        title: tm('title'),
+        description: tm('description'),
+        keywords: ['cloud governance pricing', 'enterprise cloud management cost', 'multi-cloud pricing', 'compliance automation pricing'],
+    };
+}
 
 export default async function PricingPage({ params }: { params: Promise<{ locale: string }> }) {
     const { locale } = await params;
@@ -120,10 +125,10 @@ export default async function PricingPage({ params }: { params: Promise<{ locale
 
             {/* HERO & PRICING GRID - Snap 1 */}
             <section className="snap-section" style={{ minHeight: 'calc(100vh - var(--header-height) - var(--breadcrumb-height))', display: 'flex', flexDirection: 'column', justifyContent: 'center', paddingTop: '1rem', paddingBottom: '1rem' }}>
-                <div className="container">
+                <PageShell>
                     <div style={{ textAlign: 'center', marginBottom: '1.5rem' }}>
                         <div className="badge badge-primary-subtle mb-3">{t('hero.tag')}</div>
-                        <h1 style={{ fontSize: '2.5rem', fontWeight: 950, marginBottom: '0.75rem', letterSpacing: '-1px' }}>
+                        <h1 style={{ fontSize: 'clamp(2rem, 5vw, 2.5rem)', fontWeight: 950, marginBottom: '0.75rem', letterSpacing: '-1px' }}>
                             {t('hero.title')}
                         </h1>
                         <p style={{ fontSize: '0.95rem', opacity: 0.7, maxWidth: '650px', margin: '0 auto', lineHeight: '1.4' }}>
@@ -131,12 +136,7 @@ export default async function PricingPage({ params }: { params: Promise<{ locale
                         </p>
                     </div>
 
-                    <div style={{
-                        display: 'grid',
-                        gridTemplateColumns: 'repeat(4, 1fr)',
-                        gap: '0.75rem',
-                        alignItems: 'stretch'
-                    }}>
+                    <div className="grid-4">
                         {plans.map((plan, idx) => (
                             <div key={idx} id={plan.id} className={`glass-panel ${plan.highlight ? 'border-primary' : ''}`} style={{
                                 padding: '1.25rem',
@@ -146,7 +146,7 @@ export default async function PricingPage({ params }: { params: Promise<{ locale
                                 position: 'relative',
                                 background: plan.highlight ? 'rgba(59, 130, 246, 0.03)' : 'var(--card-bg)',
                                 border: plan.highlight ? '2px solid var(--primary)' : '1px solid var(--card-border)',
-                                transform: plan.highlight ? 'scale(1.02)' : 'none',
+                                transform: plan.highlight && typeof window !== 'undefined' && window.innerWidth > 1024 ? 'scale(1.02)' : 'none',
                                 zIndex: plan.highlight ? 10 : 1
                             }}>
                                 {plan.highlight && (
@@ -193,7 +193,7 @@ export default async function PricingPage({ params }: { params: Promise<{ locale
                             </div>
                         ))}
                     </div>
-                </div>
+                </PageShell>
             </section>
 
             {/* COST ANALYSIS METRICS */}

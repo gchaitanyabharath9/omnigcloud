@@ -21,11 +21,14 @@ function log(msg, color = RESET) {
     console.log(`${color}${msg}${RESET}`);
 }
 
-function runStepSync(name, cmd) {
+function runStepSync(name, cmd, extraEnv = {}) {
     log(`\n🔹 [${name}] Running...`, YELLOW);
     const start = Date.now();
     try {
-        execSync(cmd, { stdio: 'inherit' });
+        execSync(cmd, {
+            stdio: 'inherit',
+            env: { ...process.env, ...extraEnv }
+        });
         const duration = ((Date.now() - start) / 1000).toFixed(2);
         log(`✅ [${name}] PASSED (${duration}s)`, GREEN);
         return true;
@@ -41,7 +44,8 @@ async function startServer() {
     const server = spawn('npm', ['run', 'start', '--', '-p', '3001'], {
         shell: true,
         stdio: ['ignore', 'pipe', 'pipe'],
-        detached: false // Keep attached to kill easier
+        detached: false,
+        env: { ...process.env, QUALITY_GATE: 'true' }
     });
 
     let output = '';
@@ -96,29 +100,34 @@ async function main() {
         if (!runStepSync('i18n Coverage', 'npm run qa:i18n')) success = false;
     }
 
-    // 4. Build Gate
+    // 5. Build Gate
     if (['all', 'build'].includes(MODE)) {
-        if (!runStepSync('Next Build', 'npm run build')) {
+        if (!runStepSync('Next Build', 'npx next build', { QUALITY_GATE: 'true' })) {
             log('🛑 Build Failed - Stopping further tests', RED);
             process.exit(1);
         }
     }
 
-    // 5. Runtime Gates (Smoke, Responsive, Perf)
-    if (['all', 'smoke', 'responsive', 'perf'].includes(MODE)) {
+    // 6. Runtime Gates (Smoke, Responsive, SEO, Perf)
+    if (['all', 'smoke', 'responsive', 'seo', 'perf'].includes(MODE)) {
         const server = await startServer();
         if (!server) process.exit(1);
 
         try {
             // Smoke Tests
             if (['all', 'smoke'].includes(MODE)) {
-                if (!runStepSync('Smoke Tests', 'node scripts/smoke-check.mjs')) success = false;
+                if (!runStepSync('Smoke Tests', 'node scripts/smoke-check.mjs', { QUALITY_GATE: 'true' })) success = false;
             }
 
-            // Playwright Tests (Responsive & Perf)
+            // SEO Sanity Check (Runtime)
+            if (['all', 'seo'].includes(MODE)) {
+                if (!runStepSync('SEO Head Tags Check', 'node scripts/seo-sanity.mjs', { QUALITY_GATE: 'true' })) success = false;
+            }
+
+            // Playwright Tests (E2E, Responsive & Multi-browser)
             if (['all', 'responsive', 'perf'].includes(MODE)) {
-                // We use reuseExistingServer in config, so it should latch onto port 3001
-                if (!runStepSync('Visual & Perf Gates', 'npx playwright test -c playwright.gate.config.ts')) success = false;
+                // Using the gate config which covers multiple viewports/browsers
+                if (!runStepSync('E2E Quality Gate (Multi-browser/Viewport)', 'npx playwright test -c playwright.gate.config.ts', { QUALITY_GATE: 'true' })) success = false;
             }
 
         } finally {
@@ -130,12 +139,12 @@ async function main() {
     }
 
     // Final Summary
-    console.log('\n────────────────────────────────────────');
+    console.log('\n──────────────────────────────────────────────────');
     if (success) {
-        log('🎉 ALL QUALITY GATES PASSED', GREEN);
+        log('🎉 LOCAL QUALITY GATE PASSED - READY FOR PRE-RELEASE', GREEN);
         process.exit(0);
     } else {
-        log('💥 SOME QUALITY GATES FAILED', RED);
+        log('💥 LOCAL QUALITY GATE FAILED - CHECK LOGS ABOVE', RED);
         process.exit(1);
     }
 }

@@ -13,6 +13,7 @@ import { Analytics } from "@vercel/analytics/react";
 import FloatingActions from "@/components/FloatingActions";
 import CookieConsent from "@/components/CookieConsent";
 import { HashScrollHandler } from "@/components/navigation/HashScrollHandler";
+import { ObservabilityProvider } from "@/components/ObservabilityProvider";
 
 import { config } from '@/config';
 
@@ -32,6 +33,13 @@ const siteUrl = config.site.url;
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params;
+  const messages = await getMessages({ locale });
+  const t = (key: string) => {
+    const parts = key.split('.');
+    let obj: any = messages;
+    for (const part of parts) obj = obj?.[part];
+    return obj || key;
+  };
 
   const localeMap: Record<string, string> = {
     en: 'en_US',
@@ -47,13 +55,12 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   return {
     metadataBase: new URL(siteUrl),
     title: {
-      default: "OmniGCloud | Enterprise Cloud Modernization & AI Architecture",
-      template: "%s | OmniGCloud Modernization"
+      default: t('Metadata.default.title'),
+      template: `%s | ${t('Header.title')}`
     },
-    description: "OmniGCloud provides AI-native cloud modernization, RedHat OCP integration, and autonomous cloud governance. Scale your enterprise with our cloud-agnostic discovery engine.",
+    description: t('Metadata.default.description'),
     keywords: ["Cloud Modernization", "Enterprise AI Architecture", "RedHat OpenShift Modernization", "Cloud Agnostic Discovery", "Azure Cloud Migration", "Cloud Cost Optimization", "AECP Engine", "Sovereign Cloud Governance"],
     authors: [{ name: "OmniGCloud Executive Office" }],
-    // Viewport moved to generateViewport
     alternates: {
       canonical: `${siteUrl}/${locale}`,
       languages: {
@@ -159,17 +166,19 @@ export default async function RootLayout({
           disableTransitionOnChange
         >
           <NextIntlClientProvider messages={messages}>
-            <HashScrollHandler />
-            <Header />
-            <main className="main-content">
-              <Breadcrumb />
-              {children}
-            </main>
-            <ScrollManager />
-            <FloatingActions />
-            <CookieConsent />
-            <SpeedInsights />
-            <Analytics />
+            <ObservabilityProvider locale={locale}>
+              <HashScrollHandler />
+              <Header />
+              <main className="main-content">
+                <Breadcrumb />
+                {children}
+              </main>
+              <ScrollManager />
+              <FloatingActions />
+              <CookieConsent />
+              <SpeedInsights />
+              <Analytics />
+            </ObservabilityProvider>
           </NextIntlClientProvider>
         </ThemeProvider>
       </body>

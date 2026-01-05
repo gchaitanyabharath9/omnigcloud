@@ -86,7 +86,7 @@ export default async function TermsPage() {
                 <section className="glass-panel p-6 rounded-xl">
                     <h2 className="text-2xl font-bold mb-4">{t("contact")}</h2>
                     <p className="text-zinc-700 dark:text-zinc-300 leading-relaxed">
-                        {t("contactText")}: <a href="mailto:legal@omnigcloud.com" className="text-blue-500 hover:underline">legal@omnigcloud.com</a>
+                        {t("contactText")}: <a href="mailto:omnigcloud@gmail.com" className="text-blue-500 hover:underline">omnigcloud@gmail.com</a>
                     </p>
                 </section>
             </div>
