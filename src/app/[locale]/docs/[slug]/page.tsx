@@ -131,10 +131,10 @@ export default async function DocDetailPage({ params }: { params: Promise<{ loca
 }
 
 export async function generateStaticParams() {
-    return [
-        { slug: 'architecture' },
-        { slug: 'guide' },
-        { slug: 'api' },
-        { slug: 'governance' }
-    ];
+    const locales = ['en', 'es', 'fr', 'de', 'zh', 'hi', 'ja', 'ko'];
+    const slugs = ['architecture', 'guide', 'api', 'governance'];
+
+    return locales.flatMap((locale) =>
+        slugs.map((slug) => ({ locale, slug }))
+    );
 }

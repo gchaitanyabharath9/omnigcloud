@@ -62,5 +62,8 @@ export default async function UseCaseDetailPage({ params }: { params: Promise<{ 
 }
 
 export async function generateStaticParams() {
-    return USE_CASES.map(uc => ({ slug: uc.id }));
+    const locales = ['en', 'es', 'fr', 'de', 'zh', 'hi', 'ja', 'ko'];
+    return locales.flatMap((locale) =>
+        USE_CASES.map((uc) => ({ locale, slug: uc.id }))
+    );
 }

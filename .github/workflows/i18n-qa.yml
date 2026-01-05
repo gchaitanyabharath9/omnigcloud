@@ -34,7 +34,7 @@ jobs:
         env:
           APP_ENV: "local"
           NEXT_PUBLIC_SITE_URL: "http://localhost:3000"
-          AUTH_SECRET: "${{ secrets.AUTH_SECRET || 'dummy_secret_for_ci' }}"
+          AUTH_SECRET: ${{ secrets.AUTH_SECRET || 'dummy_secret_for_ci' }}
 
       - name: "Step 1: Build Route Inventory"
         run: "npm run qa:inventory"

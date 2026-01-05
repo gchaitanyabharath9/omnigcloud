@@ -125,3 +125,11 @@ export default async function NewsArticlePage({ params }: { params: Promise<{ lo
         </article>
     );
 }
+export async function generateStaticParams() {
+    const locales = ['en', 'es', 'fr', 'de', 'zh', 'hi', 'ja', 'ko'];
+    const slugs = ['bank', 'egress', 'integration'];
+
+    return locales.flatMap((locale) =>
+        slugs.map((slug) => ({ locale, slug }))
+    );
+}

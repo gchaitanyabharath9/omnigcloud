@@ -207,8 +207,8 @@ const METRIC_CONFIG: Record<string, any> = {
     }
 };
 
-export default async function DashboardMetricPage({ params }: { params: Promise<{ metric: string }> }) {
-    const { metric } = await params;
+export default async function DashboardMetricPage({ params }: { params: Promise<{ locale: string; metric: string }> }) {
+    const { locale, metric } = await params;
 
     // Verify the metric exists
     if (!METRIC_CONFIG[metric]) {
@@ -232,5 +232,17 @@ export default async function DashboardMetricPage({ params }: { params: Promise<
         <DashboardShell title={activeConfig.title} subtitle={activeConfig.subtitle}>
             <DashboardScroller key={metric} activeMetric={metric} configs={METRIC_CONFIG} order={VALID_ORDER} />
         </DashboardShell>
+    );
+}
+
+export async function generateStaticParams() {
+    const locales = ['en', 'es', 'fr', 'de', 'zh', 'hi', 'ja', 'ko'];
+    const metrics = [
+        'executive', 'technical', 'roi', 'cost', 'uptime',
+        'security', 'resources', 'deployment', 'scaling', 'error'
+    ];
+
+    return locales.flatMap((locale) =>
+        metrics.map((metric) => ({ locale, metric }))
     );
 }

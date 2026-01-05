@@ -1,60 +1,146 @@
 import { Compass, Home, Search, ArrowRight } from 'lucide-react';
 import Link from 'next/link';
-import { useTranslations, useLocale } from 'next-intl';
+import { getTranslations, getLocale } from 'next-intl/server';
 
-export default function NotFound() {
-    const t = useTranslations('Metadata.default'); // Generic fallback
-    const locale = useLocale();
+export default async function NotFound() {
+    // In server component version, we use async translations
+    const t = await getTranslations('Metadata.Home');
+    const locale = await getLocale();
 
     return (
-        <div className="min-h-screen bg-[#020617] text-white flex flex-col items-center justify-center p-6 relative overflow-hidden">
-            {/* Premium Grid Background */}
-            <div className="absolute inset-0 z-0 opacity-10" style={{
-                backgroundImage: `
-          linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
-          linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px)
-        `,
-                backgroundSize: '80px 80px'
+        <div style={{
+            minHeight: '100vh',
+            background: 'var(--background)',
+            color: 'var(--foreground)',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            padding: '2rem',
+            position: 'relative',
+            overflow: 'hidden'
+        }}>
+            {/* Premium Background Visuals */}
+            <div style={{
+                position: 'absolute',
+                inset: 0,
+                opacity: 0.1,
+                backgroundImage: `linear-gradient(var(--card-border) 1px, transparent 1px), linear-gradient(90deg, var(--card-border) 1px, transparent 1px)`,
+                backgroundSize: '80px 80px',
+                pointerEvents: 'none'
             }}></div>
 
             {/* Radial Glow */}
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-primary/10 blur-[150px] rounded-full pointer-events-none z-0"></div>
+            <div style={{
+                position: 'absolute',
+                top: '50%',
+                left: '50%',
+                transform: 'translate(-50%, -50%)',
+                width: '800px',
+                height: '800px',
+                background: 'radial-gradient(circle, var(--primary-glow) 0%, transparent 70%)',
+                opacity: 0.1,
+                filter: 'blur(150px)',
+                zIndex: 0
+            }}></div>
 
-            <div className="relative z-10 w-full max-w-2xl text-center">
-                <div className="inline-flex items-center justify-center w-24 h-24 rounded-3xl bg-white/5 border border-white/10 mb-8 transform -rotate-12 hover:rotate-0 transition-transform duration-500 shadow-2xl">
-                    <Compass size={48} className="text-primary animate-pulse" />
+            <div style={{
+                position: 'relative',
+                zIndex: 1,
+                maxWidth: '650px',
+                width: '100%',
+                textAlign: 'center'
+            }}>
+                <div style={{
+                    display: 'inline-flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    width: '96px',
+                    height: '96px',
+                    borderRadius: '1.5rem',
+                    background: 'rgba(255, 255, 255, 0.05)',
+                    border: '1px solid var(--card-border)',
+                    marginBottom: '2rem',
+                    transform: 'rotate(-12deg)',
+                    boxShadow: '0 25px 50px -12px rgba(0, 0, 0, 0.5)'
+                }}>
+                    <Compass size={48} style={{ color: 'var(--primary)' }} />
                 </div>
 
-                <h1 className="text-7xl md:text-9xl font-black mb-6 tracking-tighter opacity-20 select-none">
+                <h1 style={{
+                    fontSize: 'clamp(5rem, 15vw, 10rem)',
+                    fontWeight: 900,
+                    marginBottom: '1.5rem',
+                    letterSpacing: '-0.05em',
+                    opacity: 0.1,
+                    userSelect: 'none',
+                    lineHeight: '1'
+                }}>
                     404
                 </h1>
 
-                <h2 className="text-3xl md:text-5xl font-black mb-6 tracking-tight mt-[-4rem]">
-                    PAGE_NOT_FOUND
+                <h2 style={{
+                    fontSize: 'clamp(1.5rem, 5vw, 3rem)',
+                    fontWeight: 900,
+                    marginBottom: '1.5rem',
+                    letterSpacing: '-0.02em',
+                    marginTop: '-4rem'
+                }}>
+                    COORD_NOT_FOUND
                 </h2>
 
-                <div className="badge badge-primary-subtle mb-8 mx-auto uppercase tracking-widest text-[0.7rem] font-black py-2 px-6 rounded-full">
+                <div className="badge badge-primary-subtle" style={{ marginBottom: '2rem' }}>
                     Resource Out of Sovereignty Scope
                 </div>
 
-                <p className="text-xl opacity-60 mb-12 leading-relaxed max-w-md mx-auto">
+                <p style={{
+                    fontSize: '1.1rem',
+                    opacity: 0.6,
+                    marginBottom: '3rem',
+                    lineHeight: '1.6',
+                    maxWidth: '450px',
+                    marginInline: 'auto'
+                }}>
                     The requested coordinate does not exist in our global infrastructure map. It may have been decommissioned or moved to a higher security tier.
                 </p>
 
-                <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
+                <div style={{ display: 'flex', gap: '1.5rem', justifyContent: 'center', flexWrap: 'wrap', alignItems: 'center' }}>
                     <Link
                         href={`/${locale}`}
-                        className="btn-primary w-full sm:w-auto px-10 py-4 rounded-2xl flex items-center justify-center gap-3 group"
+                        className="btn-primary"
+                        style={{ padding: '1rem 2rem', borderRadius: '1rem', display: 'flex', alignItems: 'center', gap: '0.75rem' }}
                     >
-                        <Home size={20} /> Return to Operations <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
+                        <Home size={20} /> Return to Operations <ArrowRight size={18} />
                     </Link>
-                    <button className="flex items-center gap-3 text-white/40 hover:text-white transition-colors font-bold text-sm uppercase tracking-widest">
-                        <Search size={18} /> Run Global Discovery
+                    <button style={{
+                        background: 'transparent',
+                        border: 'none',
+                        color: 'rgba(255, 255, 255, 0.4)',
+                        fontWeight: 900,
+                        fontSize: '0.75rem',
+                        textTransform: 'uppercase',
+                        letterSpacing: '0.15em',
+                        display: 'flex',
+                        alignItems: 'center',
+                        gap: '0.5rem',
+                        cursor: 'pointer'
+                    }}>
+                        <Search size={16} /> Run Global Discovery
                     </button>
                 </div>
 
-                {/* Ambient Terminal Snippet */}
-                <div className="mt-20 opacity-30 font-mono text-[10px] space-y-1 text-primary">
+                <div style={{
+                    marginTop: '5rem',
+                    opacity: 0.3,
+                    fontFamily: 'var(--font-mono)',
+                    fontSize: '10px',
+                    display: 'flex',
+                    flexDirection: 'column',
+                    gap: '0.25rem',
+                    color: 'var(--primary)',
+                    textAlign: 'left',
+                    width: 'fit-content',
+                    marginInline: 'auto'
+                }}>
                     <div>&gt; SCANNING_NETWORK_NODES... [FAILED]</div>
                     <div>&gt; RESOLVING_ROUTE_COORD: 40.7128 N, 74.0060 W [UNDEFINED]</div>
                     <div>&gt; INITIATING_SELF_CORRECTION...</div>

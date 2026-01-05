@@ -13,85 +13,114 @@ export default function Error({
 }) {
     useEffect(() => {
         // Log the error to an error reporting service
-        console.error('CRITICAL_SYSTEM_FAILURE:', error);
+        console.error('SYSTEM_CRITICAL_FAILURE:', error);
     }, [error]);
 
     return (
-        <div className="min-h-screen bg-[#020617] text-white flex flex-col items-center justify-center p-6 relative overflow-hidden">
-            {/* Premium Grid Background */}
-            <div className="absolute inset-0 z-0 opacity-20" style={{
-                backgroundImage: `
-          linear-gradient(rgba(59, 130, 246, 0.1) 1px, transparent 1px),
-          linear-gradient(90deg, rgba(59, 130, 246, 0.1) 1px, transparent 1px)
-        `,
-                backgroundSize: '40px 40px'
+        <div style={{
+            minHeight: '100vh',
+            background: 'var(--background)',
+            color: 'var(--foreground)',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            padding: '2rem',
+            position: 'relative',
+            overflow: 'hidden'
+        }}>
+            {/* Premium Background Visuals */}
+            <div style={{
+                position: 'absolute',
+                inset: 0,
+                opacity: 0.1,
+                backgroundImage: `linear-gradient(var(--card-border) 1px, transparent 1px), linear-gradient(90deg, var(--card-border) 1px, transparent 1px)`,
+                backgroundSize: '40px 40px',
+                pointerEvents: 'none'
             }}></div>
 
-            <div className="absolute inset-0 z-0 bg-gradient-to-b from-transparent via-blue-500/5 to-transparent pointer-events-none"></div>
+            <div style={{
+                position: 'absolute',
+                top: '50%',
+                left: '50%',
+                transform: 'translate(-50%, -50%)',
+                width: '600px',
+                height: '600px',
+                background: 'radial-gradient(circle, var(--primary-glow) 0%, transparent 70%)',
+                opacity: 0.2,
+                filter: 'blur(100px)',
+                zIndex: 0
+            }}></div>
 
-            {/* Error Card */}
-            <div className="relative z-10 w-full max-w-2xl">
-                <div className="glass-panel p-8 md:p-12 rounded-[2.5rem] border border-red-500/20 bg-red-500/5 backdrop-blur-xl shadow-2xl text-center">
-                    <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-red-500/10 border border-red-500/30 mb-8 animate-pulse">
-                        <ShieldAlert size={40} className="text-red-500" />
+            {/* Error Container */}
+            <div className="glass-panel" style={{
+                maxWidth: '600px',
+                width: '100%',
+                textAlign: 'center',
+                padding: '4rem 2rem',
+                borderRadius: '2.5rem',
+                borderColor: 'rgba(239, 68, 68, 0.3)',
+                background: 'rgba(239, 68, 68, 0.02)',
+                boxShadow: '0 0 40px rgba(239, 68, 68, 0.1)',
+                zIndex: 1
+            }}>
+                <div style={{
+                    width: '80px',
+                    height: '80px',
+                    margin: '0 auto 2rem',
+                    background: 'rgba(239, 68, 68, 0.1)',
+                    borderRadius: '50%',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    border: '1px solid rgba(239, 68, 68, 0.3)'
+                }}>
+                    <ShieldAlert size={40} style={{ color: '#ef4444' }} />
+                </div>
+
+                <h1 style={{ fontSize: '2.5rem', fontWeight: 900, marginBottom: '1rem', letterSpacing: '-0.02em' }}>
+                    KERNEL_PANIC_<span style={{ color: '#ef4444' }}>500</span>
+                </h1>
+
+                <div className="badge badge-primary-subtle" style={{
+                    background: 'rgba(239, 68, 68, 0.1)',
+                    color: '#ef4444',
+                    borderColor: 'rgba(239, 68, 68, 0.2)',
+                    marginBottom: '1.5rem'
+                }}>
+                    Integrity Breach Detected
+                </div>
+
+                <p style={{ fontSize: '1.1rem', opacity: 0.7, marginBottom: '2.5rem', lineHeight: 1.6 }}>
+                    A critical exception has occurred in the sovereign control plane. The G-Framework is attempting to isolate the affected node.
+                </p>
+
+                {/* Technical Snippet */}
+                <div style={{
+                    background: 'rgba(0, 0, 0, 0.4)',
+                    padding: '1.5rem',
+                    borderRadius: '1rem',
+                    border: '1px solid rgba(255, 255, 255, 0.05)',
+                    textAlign: 'left',
+                    fontFamily: 'var(--font-mono)',
+                    fontSize: '0.8rem',
+                    marginBottom: '2.5rem',
+                    color: 'rgba(239, 68, 68, 0.8)'
+                }}>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.5rem', opacity: 0.5 }}>
+                        <Terminal size={12} /> <span>ERROR_STUB_v4</span>
                     </div>
-
-                    <h1 className="text-4xl md:text-5xl font-black mb-4 tracking-tighter">
-                        SYSTEM_ERROR_<span className="text-red-500">500</span>
-                    </h1>
-
-                    <div className="badge badge-primary-subtle bg-red-500/10 text-red-400 border-red-500/20 mb-6 mx-auto uppercase tracking-widest text-[0.7rem] font-black py-2 px-4 rounded-full">
-                        Core Protocol Breach Detected
-                    </div>
-
-                    <p className="text-xl opacity-70 mb-10 leading-relaxed max-w-lg mx-auto">
-                        Our autonomous control plane encountered an unrecoverable state error. The G-Framework is currently stabilizing the environment.
-                    </p>
-
-                    {/* Technical Details */}
-                    <div className="bg-black/40 rounded-2xl p-6 border border-white/5 mb-10 text-left font-mono text-sm overflow-hidden relative group">
-                        <div className="flex items-center gap-2 mb-3 text-red-500/50">
-                            <Terminal size={14} />
-                            <span className="text-[0.65rem] uppercase tracking-widest font-black">Error Diagnostics</span>
-                        </div>
-                        <div className="text-red-400/80 break-all">
-                            {error.message || 'Unknown kernel exception occurred.'}
-                        </div>
-                        {error.digest && (
-                            <div className="mt-2 text-white/30 text-[0.6rem] uppercase tracking-tight">
-                                Digest: {error.digest}
-                            </div>
-                        )}
-                    </div>
-
-                    <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-                        <button
-                            onClick={() => reset()}
-                            className="btn-primary w-full sm:w-auto bg-red-600 hover:bg-red-500 border-red-400 shadow-[0_0_20px_rgba(239,68,68,0.3)] transition-all duration-300 flex items-center justify-center gap-2"
-                            style={{ padding: '1rem 2rem', borderRadius: '1rem' }}
-                        >
-                            <RefreshCcw size={18} /> Re-Initialize Session
-                        </button>
-                        <Link
-                            href="/"
-                            className="btn-secondary w-full sm:w-auto border-white/10 hover:bg-white/5 transition-all duration-300 flex items-center justify-center gap-2"
-                            style={{ padding: '1rem 2rem', borderRadius: '1rem' }}
-                        >
-                            <Home size={18} /> Return to Home
-                        </Link>
+                    <div style={{ wordBreak: 'break-all' }}>
+                        {error.message || 'RUNTIME_EXCEPTION_0x884'}
                     </div>
                 </div>
 
-                {/* Status Indicators */}
-                <div className="mt-8 flex justify-center gap-12 text-[0.65rem] font-black uppercase tracking-[0.2em] text-white/20">
-                    <div className="flex items-center gap-2">
-                        <div className="w-1.5 h-1.5 rounded-full bg-red-500 animate-pulse"></div>
-                        Sovereignty: Compromised
-                    </div>
-                    <div className="flex items-center gap-2">
-                        <div className="w-1.5 h-1.5 rounded-full bg-yellow-500"></div>
-                        Governance: Restoring
-                    </div>
+                <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap' }}>
+                    <button onClick={() => reset()} className="btn-primary" style={{ background: '#ef4444', border: 'none', boxShadow: '0 0 20px rgba(239, 68, 68, 0.3)' }}>
+                        <RefreshCcw size={18} style={{ marginRight: '0.5rem' }} /> Re-Initialize
+                    </button>
+                    <Link href="/" className="btn-secondary">
+                        <Home size={18} style={{ marginRight: '0.5rem' }} /> Operations
+                    </Link>
                 </div>
             </div>
         </div>

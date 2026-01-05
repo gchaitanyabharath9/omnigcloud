@@ -88,11 +88,16 @@ export default async function IndustryDetailPage({ params }: { params: Promise<{
 }
 
 export async function generateStaticParams() {
-    return [
-        { slug: 'financial-services' },
-        { slug: 'insurance' },
-        { slug: 'telecom' },
-        { slug: 'healthcare' },
-        { slug: 'logistics' }
+    const locales = ['en', 'es', 'fr', 'de', 'zh', 'hi', 'ja', 'ko'];
+    const slugs = [
+        'financial-services',
+        'insurance',
+        'telecom',
+        'healthcare',
+        'logistics'
     ];
+
+    return locales.flatMap((locale) =>
+        slugs.map((slug) => ({ locale, slug }))
+    );
 }
