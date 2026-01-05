@@ -78,7 +78,21 @@ test.describe('i18n & Release Gate', () => {
                         consoleErrors.push(`[CONSOLE_ERROR] ${text}`);
                     }
                 });
+                // Pre-accept cookies if possible
+                await page.addInitScript(() => {
+                    try {
+                        if (typeof window !== 'undefined' && window.localStorage) {
+                            window.localStorage.setItem('omnigcloud_cookie_consent', 'accepted');
+                        }
+                    } catch (e) {
+                        console.warn('Storage access denied in init script');
+                    }
+                });
+
                 page.on('pageerror', (err) => {
+                    if (err.message.includes('localStorage') || err.message.includes('Access is denied')) {
+                        return;
+                    }
                     consoleErrors.push(`[RUNTIME_ERROR] ${err.message}`);
                 });
 

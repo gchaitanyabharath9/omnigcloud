@@ -39,14 +39,6 @@ const nextConfig: any = {
     QUALITY_GATE: process.env.QUALITY_GATE || 'false',
   },
   reactCompiler: true,
-  eslint: {
-    // Redundant since verify.mjs already runs lint
-    ignoreDuringBuilds: process.env.QUALITY_GATE === 'true',
-  },
-  typescript: {
-    // Redundant since verify.mjs already runs typecheck
-    ignoreBuildErrors: process.env.QUALITY_GATE === 'true',
-  },
   async headers() {
     // Content Security Policy
     // Start in Report-Only mode to monitor violations without breaking functionality
