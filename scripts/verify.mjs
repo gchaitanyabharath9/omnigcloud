@@ -103,9 +103,13 @@ async function main() {
 
     // 5. Build Gate
     if (['all', 'build'].includes(MODE)) {
-        if (!runStepSync('Next Build', 'npx next build', { QUALITY_GATE: 'true' })) {
-            log('🛑 Build Failed - Stopping further tests', RED);
-            process.exit(1);
+        if (process.env.VERCEL || process.env.CI) {
+            log('\n⏭️ Skipping internal Next Build in CI/Vercel (platform handles this).', YELLOW);
+        } else {
+            if (!runStepSync('Next Build', 'npx next build', { QUALITY_GATE: 'true' })) {
+                log('🛑 Build Failed - Stopping further tests', RED);
+                process.exit(1);
+            }
         }
     }
 

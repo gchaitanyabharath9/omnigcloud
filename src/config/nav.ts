@@ -78,15 +78,15 @@ export const NAV_CONFIG: NavGroup[] = [
         mainRoute: '/solutions',
         items: [
             // Industries
-            { id: 'industries-financial', labelKey: 'Header.nav.solutions_links.financial', type: 'section', route: '/industries', hash: 'financial-services', icon: Building2 },
-            { id: 'industries-insurance', labelKey: 'Header.nav.solutions_links.insurance', type: 'section', route: '/industries', hash: 'insurance', icon: ShieldCheck },
-            { id: 'industries-telecom', labelKey: 'Header.nav.solutions_links.telecom', type: 'section', route: '/industries', hash: 'telecom', icon: Zap },
-            { id: 'industries-healthcare', labelKey: 'Header.nav.solutions_links.healthcare', type: 'section', route: '/industries', hash: 'healthcare', icon: Activity },
-            { id: 'industries-logistics', labelKey: 'Header.nav.solutions_links.logistics', type: 'section', route: '/industries', hash: 'logistics', icon: Box },
+            { id: 'industries-financial', labelKey: 'Header.nav.solutions_links.financial', type: 'page', route: '/industries/financial-services', icon: Building2 },
+            { id: 'industries-insurance', labelKey: 'Header.nav.solutions_links.insurance', type: 'page', route: '/industries/insurance', icon: ShieldCheck },
+            { id: 'industries-telecom', labelKey: 'Header.nav.solutions_links.telecom', type: 'page', route: '/industries/telecom', icon: Zap },
+            { id: 'industries-healthcare', labelKey: 'Header.nav.solutions_links.healthcare', type: 'page', route: '/industries/healthcare', icon: Activity },
+            { id: 'industries-logistics', labelKey: 'Header.nav.solutions_links.logistics', type: 'page', route: '/industries/logistics', icon: Box },
             // Use Cases
-            { id: 'use-cases-financial', labelKey: 'Header.nav.solutions_links.finance_mod', type: 'section', route: '/use-cases', hash: 'financial', icon: BarChart3 },
-            { id: 'use-cases-healthcare', labelKey: 'Header.nav.solutions_links.health_mod', type: 'section', route: '/use-cases', hash: 'healthcare', icon: Activity },
-            { id: 'use-cases-government', labelKey: 'Header.nav.solutions_links.gov_trust', type: 'section', route: '/use-cases', hash: 'government', icon: ShieldCheck },
+            { id: 'use-cases-financial', labelKey: 'Header.nav.solutions_links.finance_mod', type: 'page', route: '/use-cases/financial', icon: BarChart3 },
+            { id: 'use-cases-healthcare', labelKey: 'Header.nav.solutions_links.health_mod', type: 'page', route: '/use-cases/healthcare', icon: Activity },
+            { id: 'use-cases-government', labelKey: 'Header.nav.solutions_links.gov_trust', type: 'page', route: '/use-cases/government', icon: ShieldCheck },
         ]
     },
     {
@@ -96,13 +96,13 @@ export const NAV_CONFIG: NavGroup[] = [
         items: [
             // Documentation
             { id: 'docs-main', labelKey: 'Header.nav.docs_links.tech_docs', type: 'page', route: '/docs', icon: BookOpen },
-            { id: 'docs-api', labelKey: 'Header.nav.docs_links.api', type: 'section', route: '/docs', hash: 'api', icon: Terminal },
-            { id: 'docs-architecture', labelKey: 'Header.nav.docs_links.patterns', type: 'section', route: '/docs', hash: 'architecture', icon: Layers },
-            { id: 'docs-guide', labelKey: 'Header.nav.docs_links.guide', type: 'section', route: '/docs', hash: 'guide', icon: BookOpen },
-            // Community
+            { id: 'docs-architecture', labelKey: 'Header.nav.docs_links.patterns', type: 'page', route: '/docs/architecture', icon: Layers },
             { id: 'docs-whitepaper', labelKey: 'Header.nav.docs_links.whitepaper', type: 'page', route: '/docs/whitepaper', icon: FileText },
+            { id: 'docs-guide', labelKey: 'Header.nav.docs_links.guide', type: 'page', route: '/docs/guide', icon: BookOpen },
+            { id: 'docs-api', labelKey: 'Header.nav.docs_links.api', type: 'page', route: '/docs/api', icon: Terminal },
+            // Community
             { id: 'visual-library', labelKey: 'Header.nav.docs_links.visual_library', type: 'page', route: '/visual-library', icon: Camera },
-            { id: 'company-newsroom', labelKey: 'Header.nav.docs_links.newsroom', type: 'section', route: '/company', hash: 'newsroom', icon: Newspaper },
+            { id: 'company-newsroom', labelKey: 'Header.nav.docs_links.newsroom', type: 'page', route: '/company#newsroom', icon: Newspaper },
             { id: 'community', labelKey: 'Header.nav.docs_links.open_source', type: 'page', route: '/community', icon: Users },
         ]
     },

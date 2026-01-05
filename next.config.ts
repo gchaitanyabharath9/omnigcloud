@@ -30,7 +30,7 @@ if (commitHash === 'dev') {
 const buildTime = new Date().toISOString();
 const appEnv = process.env.APP_ENV || 'local';
 
-const nextConfig: NextConfig = {
+const nextConfig: any = {
   env: {
     NEXT_PUBLIC_APP_VERSION: version,
     NEXT_PUBLIC_GIT_COMMIT: commitHash,
@@ -39,6 +39,14 @@ const nextConfig: NextConfig = {
     QUALITY_GATE: process.env.QUALITY_GATE || 'false',
   },
   reactCompiler: true,
+  eslint: {
+    // Redundant since verify.mjs already runs lint
+    ignoreDuringBuilds: process.env.QUALITY_GATE === 'true',
+  },
+  typescript: {
+    // Redundant since verify.mjs already runs typecheck
+    ignoreBuildErrors: process.env.QUALITY_GATE === 'true',
+  },
   async headers() {
     // Content Security Policy
     // Start in Report-Only mode to monitor violations without breaking functionality

@@ -11,7 +11,7 @@
     "qa:inventory": "npx tsx qa-i18n/scripts/route-inventory.ts",
     "qa:test": "npx playwright test -c qa-i18n/playwright.config.ts",
     "quality": "node scripts/verify.mjs all",
-    "prebuild": "node scripts/check-secrets-hygiene.js && npm run quality",
+    "prebuild": "node scripts/check-secrets-hygiene.js && node scripts/verify.mjs quick",
     "build": "next build",
     "start": "next start",
     "lint": "eslint .",
