@@ -8,6 +8,8 @@
     "qa:i18n:fill": "npx tsx qa-i18n/scripts/i18n-fill-missing.ts",
     "qa:seo": "node scripts/seo-sanity.mjs",
     "qa:e2e": "npx playwright test -c playwright.gate.config.ts",
+    "qa:inventory": "npx tsx qa-i18n/scripts/route-inventory.ts",
+    "qa:test": "npx playwright test -c qa-i18n/playwright.config.ts",
     "quality": "node scripts/verify.mjs all",
     "prebuild": "node scripts/check-secrets-hygiene.js && npm run quality",
     "build": "next build",
