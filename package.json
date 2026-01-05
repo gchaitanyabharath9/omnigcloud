@@ -12,7 +12,7 @@
     "qa:test": "npx playwright test -c qa-i18n/playwright.config.ts",
     "gate:nav": "npx tsx scripts/quality-gates/validate-nav.ts",
     "gate:typecheck": "tsc --noEmit",
-    "gate:lint": "npm run lint",
+    "gate:lint": "eslint .",
     "gate": "npm run gate:nav && npm run gate:typecheck && npm run gate:lint",
     "prebuild": "node scripts/check-secrets-hygiene.js && node scripts/verify.mjs quick",
     "build": "npm run gate && next build",
@@ -30,6 +30,7 @@
     "check:build": "node scripts/verify.mjs build",
     "check:smoke": "node scripts/verify.mjs smoke",
     "check:i18n": "node scripts/verify.mjs i18n",
+    "quality": "node scripts/verify.mjs all",
     "check:all": "npm run quality"
   },
   "dependencies": {
@@ -47,6 +48,7 @@
     "node-vault": "^0.10.9",
     "react": "19.2.3",
     "react-dom": "19.2.3",
+    "react-is": "^19.2.3",
     "recharts": "^3.6.0",
     "resend": "^6.6.0",
     "tailwind-merge": "^3.4.0",
