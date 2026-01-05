@@ -1,5 +1,4 @@
 import { NextRequest } from 'next/server';
-import { createErrorResponse } from './api-utils';
 
 /**
  * Form security utilities for bot/spam protection

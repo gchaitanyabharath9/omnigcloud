@@ -12,7 +12,7 @@
     "qa:test": "npx playwright test -c qa-i18n/playwright.config.ts",
     "gate:nav": "npx tsx scripts/quality-gates/validate-nav.ts",
     "gate:typecheck": "tsc --noEmit",
-    "gate:lint": "next lint",
+    "gate:lint": "npm run lint",
     "gate": "npm run gate:nav && npm run gate:typecheck && npm run gate:lint",
     "prebuild": "node scripts/check-secrets-hygiene.js && node scripts/verify.mjs quick",
     "build": "npm run gate && next build",
