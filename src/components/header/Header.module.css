@@ -34,6 +34,7 @@
     text-decoration: none;
     letter-spacing: -0.5px;
     font-family: var(--font-heading);
+    white-space: nowrap;
 }
 
 .desktopNav {
@@ -45,7 +46,7 @@
 .navList {
     display: flex;
     align-items: center;
-    gap: 2rem;
+    gap: 1.5rem;
     list-style: none;
     margin: 0;
     padding: 0;
@@ -70,6 +71,7 @@
     gap: 0.3rem;
     padding: 0.5rem;
     border-radius: 0.5rem;
+    white-space: nowrap;
 }
 
 .navLink:hover {
@@ -81,7 +83,7 @@
 .actions {
     display: flex;
     align-items: center;
-    gap: 1.5rem;
+    gap: 1rem;
 }
 
 .themeToggle {

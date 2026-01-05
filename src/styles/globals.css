@@ -139,19 +139,16 @@ body {
   -webkit-tap-highlight-color: transparent;
 }
 
-/* Ensure long strings wrap */
+/* Ensure long strings wrap appropriately in content blocks */
 p,
 h1,
 h2,
 h3,
 h4,
 h5,
-h6,
-a,
-span,
-li {
-  overflow-wrap: anywhere;
-  word-break: break-word;
+h6 {
+  overflow-wrap: break-word;
+  word-wrap: break-word;
 }
 
 /* Prevent any element from causing horizontal scroll */
