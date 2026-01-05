@@ -78,15 +78,15 @@ export const NAV_CONFIG: NavGroup[] = [
         mainRoute: '/solutions',
         items: [
             // Industries
-            { id: 'industries-financial', labelKey: 'Header.nav.solutions_links.financial', type: 'page', route: '/industries/financial-services', icon: Building2 },
-            { id: 'industries-insurance', labelKey: 'Header.nav.solutions_links.insurance', type: 'page', route: '/industries/insurance', icon: ShieldCheck },
-            { id: 'industries-telecom', labelKey: 'Header.nav.solutions_links.telecom', type: 'page', route: '/industries/telecom', icon: Zap },
-            { id: 'industries-healthcare', labelKey: 'Header.nav.solutions_links.healthcare', type: 'page', route: '/industries/healthcare', icon: Activity },
-            { id: 'industries-logistics', labelKey: 'Header.nav.solutions_links.logistics', type: 'page', route: '/industries/logistics', icon: Box },
+            { id: 'industries-financial', labelKey: 'Header.nav.solutions_links.financial', type: 'section', route: '/solutions', hash: 'financial-services', icon: Building2 },
+            { id: 'industries-insurance', labelKey: 'Header.nav.solutions_links.insurance', type: 'section', route: '/solutions', hash: 'insurance', icon: ShieldCheck },
+            { id: 'industries-telecom', labelKey: 'Header.nav.solutions_links.telecom', type: 'section', route: '/solutions', hash: 'telecom', icon: Zap },
+            { id: 'industries-healthcare', labelKey: 'Header.nav.solutions_links.healthcare', type: 'section', route: '/solutions', hash: 'healthcare', icon: Activity },
+            { id: 'industries-logistics', labelKey: 'Header.nav.solutions_links.logistics', type: 'section', route: '/solutions', hash: 'logistics', icon: Box },
             // Use Cases
-            { id: 'use-cases-financial', labelKey: 'Header.nav.solutions_links.finance_mod', type: 'page', route: '/use-cases/financial', icon: BarChart3 },
-            { id: 'use-cases-healthcare', labelKey: 'Header.nav.solutions_links.health_mod', type: 'page', route: '/use-cases/healthcare', icon: Activity },
-            { id: 'use-cases-government', labelKey: 'Header.nav.solutions_links.gov_trust', type: 'page', route: '/use-cases/government', icon: ShieldCheck },
+            { id: 'use-cases-financial', labelKey: 'Header.nav.solutions_links.finance_mod', type: 'section', route: '/solutions', hash: 'financial', icon: BarChart3 },
+            { id: 'use-cases-healthcare', labelKey: 'Header.nav.solutions_links.health_mod', type: 'section', route: '/solutions', hash: 'healthcare', icon: Activity },
+            { id: 'use-cases-government', labelKey: 'Header.nav.solutions_links.gov_trust', type: 'section', route: '/solutions', hash: 'government', icon: ShieldCheck },
         ]
     },
     {
