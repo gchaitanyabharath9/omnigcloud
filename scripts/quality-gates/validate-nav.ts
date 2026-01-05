@@ -44,7 +44,7 @@ async function validate() {
     for (const item of items) {
         // 1. Validate Route
         const routeSegments = item.route.split('/').filter(Boolean);
-        let currentDir = APP_DIR;
+        const currentDir = APP_DIR;
         let routeFound = false;
 
         // Special case for dashboard dynamic route
