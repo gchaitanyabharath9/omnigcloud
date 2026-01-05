@@ -9,16 +9,7 @@ interface ProductScrollerProps {
 }
 
 export default function ProductScroller({ activeProduct, products }: ProductScrollerProps) {
-    useEffect(() => {
-        const element = document.getElementById(activeProduct);
-        if (element) {
-            // Add a small delay to ensure rendering is complete
-            setTimeout(() => {
-                element.scrollIntoView({ behavior: 'smooth', block: 'start' });
-            }, 100);
-        }
-    }, [activeProduct]);
-
+    // Rely on global HashScrollHandler
     return (
         <div className="flex flex-col w-full max-w-full mx-auto pb-32">
             {products.map((product) => {

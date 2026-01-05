@@ -235,12 +235,14 @@ export default async function DashboardMetricPage({ params }: { params: Promise<
     );
 }
 
+export const DASHBOARD_SECTION_IDS = [
+    'executive', 'technical', 'roi', 'cost', 'uptime',
+    'security', 'resources', 'deployment', 'scaling', 'error'
+];
+
 export async function generateStaticParams() {
     const locales = ['en', 'es', 'fr', 'de', 'zh', 'hi', 'ja', 'ko'];
-    const metrics = [
-        'executive', 'technical', 'roi', 'cost', 'uptime',
-        'security', 'resources', 'deployment', 'scaling', 'error'
-    ];
+    const metrics = DASHBOARD_SECTION_IDS;
 
     return locales.flatMap((locale) =>
         metrics.map((metric) => ({ locale, metric }))

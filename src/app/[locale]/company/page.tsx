@@ -4,6 +4,8 @@ import Footer from "@/components/Footer";
 
 import { Users, Globe, Target, Award, Briefcase, MapPin, Newspaper, Mail, Phone, ExternalLink } from "lucide-react";
 
+export const COMPANY_SECTION_IDS = ['about', 'leadership', 'global-operations', 'newsroom', 'executive-office'];
+
 export default function CompanyPage() {
     return (
         <div className="snap-container">

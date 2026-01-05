@@ -9,24 +9,8 @@ interface DashboardScrollerProps {
 }
 
 export default function DashboardScroller({ activeMetric, configs, order }: DashboardScrollerProps) {
-    useEffect(() => {
-        const element = document.getElementById(activeMetric);
-        if (element) {
-            // Immediate jump for better responsiveness
-            element.scrollIntoView({ behavior: 'auto', block: 'start' });
-
-            // Smooth correction after render paint
-            setTimeout(() => {
-                element.scrollIntoView({ behavior: 'smooth', block: 'start' });
-            }, 100);
-
-            // Backup retry in case of layout shifts
-            setTimeout(() => {
-                element.scrollIntoView({ behavior: 'smooth', block: 'start' });
-            }, 500);
-        }
-    }, [activeMetric]);
-
+    // We rely on the global HashScrollHandler for physical scrolling.
+    // This component now just focuses on rendering the segments.
     return (
         <div className="flex flex-col w-full max-w-full mx-auto pb-32">
             {order.map((key) => {

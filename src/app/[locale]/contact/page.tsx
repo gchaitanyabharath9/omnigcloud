@@ -2,6 +2,8 @@ import { Mail, Phone, MapPin, Globe } from "lucide-react";
 import { getTranslations, getLocale } from 'next-intl/server';
 import ContactForm from "@/components/forms/ContactForm";
 
+export const CONTACT_SECTION_IDS = ['hq'];
+
 export default async function ContactPage() {
     const t = await getTranslations('Company');
     const locale = await getLocale();
@@ -9,7 +11,7 @@ export default async function ContactPage() {
     return (
         <>
             {/* HQ HERO - Snap 1 */}
-            <section id="contact-hq" className="snap-section container" style={{ minHeight: 'calc(100vh - var(--header-height) - var(--breadcrumb-height))', display: 'flex', alignItems: 'center' }}>
+            <section id="hq" className="snap-section container" style={{ minHeight: 'calc(100vh - var(--header-height) - var(--breadcrumb-height))', display: 'flex', alignItems: 'center' }}>
                 <div className="grid-2" style={{ alignItems: 'center', gap: '4rem' }}>
                     <div className="flex-col">
                         <div style={{ background: 'rgba(96, 239, 255, 0.1)', padding: '0.4rem 1.2rem', borderRadius: '2rem', border: '1px solid rgba(96, 239, 255, 0.3)', color: '#60efff', fontSize: '0.75rem', fontWeight: 800, width: 'fit-content', marginBottom: '1.5rem', letterSpacing: '0.1em' }}>2025 PARTNER ENGAGEMENT</div>
