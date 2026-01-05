@@ -1,33 +1,19 @@
 import React from 'react';
-import { useTranslations } from 'next-intl';
 import Image from 'next/image';
 import Link from 'next/link';
-import { ArrowLeft, Clock, Calendar, Share2 } from 'lucide-react';
+import { notFound } from 'next/navigation';
+import { Clock, Calendar, Share2 } from 'lucide-react';
+import { getTranslations } from 'next-intl/server';
 
 export default async function NewsArticlePage({ params }: { params: Promise<{ locale: string; slug: string }> }) {
     const { slug, locale } = await params;
 
-    // In a real app, fetch data based on slug.
-    // For now, we mock it or fallback to generic content if the slug matches known IDs from en.json
-
-    // We can use the 't' function to try and get title if it exists in en.json news.{slug}.title
-    // But server components need getTranslations
-    const t = await import('next-intl/server').then(mod => mod.getTranslations({ locale, namespace: 'Newsroom' }));
-
-    // Check if translation exists (simple check: if key is same as output, it might be missing, 
-    // but next-intl usually returns key. However, we know 'bank', 'egress', 'integration' exist).
-
     const validSlugs = ['bank', 'egress', 'integration'];
-    const isValid = validSlugs.includes(slug);
-
-    if (!isValid) {
-        return (
-            <div className="container py-24 text-center">
-                <h1 className="text-4xl font-bold mb-4">Article Not Found</h1>
-                <Link href="/" className="text-blue-500 hover:align-baseline">Return Home</Link>
-            </div>
-        );
+    if (!validSlugs.includes(slug)) {
+        notFound();
     }
+
+    const t = await getTranslations({ locale, namespace: 'Newsroom' });
 
     // Determine content based on slug
     const title = t(`news.${slug}.title`);
@@ -57,8 +43,6 @@ export default async function NewsArticlePage({ params }: { params: Promise<{ lo
 
                 <div className="absolute bottom-0 left-0 w-full p-8 md:p-16">
                     <div className="container mx-auto max-w-4xl">
-
-
                         <div className="flex items-center gap-4 mb-6">
                             <span className="bg-blue-600 text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">
                                 {tag}
@@ -86,7 +70,6 @@ export default async function NewsArticlePage({ params }: { params: Promise<{ lo
             <div className="container mx-auto max-w-3xl px-6 py-16">
                 <div className="prose prose-lg prose-invert prose-blue max-w-none">
                     <p className="lead text-2xl text-slate-200 mb-10 leading-relaxed font-light">
-                        {/* Use the new desc we added or a generic lead if missing */}
                         {t(`news.${slug}.desc` as any) || "Detailed analysis of this sovereign cloud breakthrough."}
                     </p>
 
@@ -122,7 +105,7 @@ export default async function NewsArticlePage({ params }: { params: Promise<{ lo
                         The deployment of these new protocols is already underway with our Tier-1 partners. We expect full rollout to the public Sovereign Cloud regions by Q3 2026.
                     </p>
                     <p>
-                        For technical documentation on implementing these patterns, verify your credentials in the <Link href="/docs">Developer Portal</Link>.
+                        For technical documentation on implementing these patterns, verify your credentials in the <Link href={`/${locale}/docs`}>Developer Portal</Link>.
                     </p>
                 </div>
 
@@ -134,7 +117,7 @@ export default async function NewsArticlePage({ params }: { params: Promise<{ lo
                             <Share2 size={18} /> Share Analysis
                         </button>
                     </div>
-                    <Link href="/contact" className="btn-primary px-8 py-3 rounded-full text-sm font-bold">
+                    <Link href={`/${locale}/contact`} className="btn-primary px-8 py-3 rounded-full text-sm font-bold">
                         Talk to an Expert
                     </Link>
                 </div>

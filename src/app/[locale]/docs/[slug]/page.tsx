@@ -1,6 +1,6 @@
 import { Code, Layers, BookOpen, ShieldCheck, ArrowLeft, ChevronRight } from "lucide-react";
 import Link from "next/link";
-import { useTranslations, useLocale } from "next-intl";
+import { getTranslations, getLocale } from "next-intl/server";
 import { notFound } from "next/navigation";
 import Footer from "@/components/Footer";
 import { Section } from "@/components/layout/Section";
@@ -12,10 +12,10 @@ interface DocMetadata {
     icon: any;
 }
 
-export default function DocDetailPage({ params }: { params: { locale: string; slug: string } }) {
-    const t = useTranslations('Docs');
-    const locale = useLocale();
-    const { slug } = params;
+export default async function DocDetailPage({ params }: { params: Promise<{ locale: string; slug: string }> }) {
+    const t = await getTranslations('Docs');
+    const locale = await getLocale();
+    const { slug } = await params;
 
     const docs: DocMetadata[] = [
         { id: "architecture", key: "architecture", icon: <Layers size={40} /> },

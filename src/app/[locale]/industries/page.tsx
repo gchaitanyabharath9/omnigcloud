@@ -1,57 +1,31 @@
 import { Landmark, Shield, Phone, HeartPulse, Truck, Globe, CheckCircle } from "lucide-react";
 import Link from "next/link";
-import { useTranslations, useLocale } from "next-intl";
+import { getTranslations, getLocale } from "next-intl/server";
 
-export default function IndustriesPage() {
-    const t = useTranslations('Industries');
-    const locale = useLocale();
-    const industries = [
-        {
-            id: "financial-services",
-            name: t('financial.name'),
-            description: t('financial.desc'),
-            icon: <Landmark size={32} />,
-            challenges: [t('financial.c1'), t('financial.c2'), t('financial.c3')],
-            solution: t('financial.sol'),
-            img: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=800&h=400&fit=crop"
-        },
-        {
-            id: "insurance",
-            name: t('insurance.name'),
-            description: t('insurance.desc'),
-            icon: <Shield size={32} />,
-            challenges: [t('insurance.c1'), t('insurance.c2'), t('insurance.c3')],
-            solution: t('insurance.sol'),
-            img: "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=800&h=400&fit=crop"
-        },
-        {
-            id: "telecom",
-            name: t('telecom.name'),
-            description: t('telecom.desc'),
-            icon: <Phone size={32} />,
-            challenges: [t('telecom.c1'), t('telecom.c2'), t('telecom.c3')],
-            solution: t('telecom.sol'),
-            img: "https://images.unsplash.com/photo-1526628953301-3e589a6a8b74?w=800&h=400&fit=crop"
-        },
-        {
-            id: "healthcare",
-            name: t('healthcare.name'),
-            description: t('healthcare.desc'),
-            icon: <HeartPulse size={32} />,
-            challenges: [t('healthcare.c1'), t('healthcare.c2'), t('healthcare.c3')],
-            solution: t('healthcare.sol'),
-            img: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=800&h=400&fit=crop"
-        },
-        {
-            id: "logistics",
-            name: t('logistics.name'),
-            description: t('logistics.desc'),
-            icon: <Truck size={32} />,
-            challenges: [t('logistics.c1'), t('logistics.c2'), t('logistics.c3')],
-            solution: t('logistics.sol'),
-            img: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=800&h=400&fit=crop"
-        }
+export default async function IndustriesPage() {
+    const t = await getTranslations('Industries');
+    const locale = await getLocale();
+
+    const industryConfigs = [
+        { id: "financial-services", key: "financial", icon: <Landmark size={32} /> },
+        { id: "insurance", key: "insurance", icon: <Shield size={32} /> },
+        { id: "telecom", key: "telecom", icon: <Phone size={32} /> },
+        { id: "healthcare", key: "healthcare", icon: <HeartPulse size={32} /> },
+        { id: "logistics", key: "logistics", icon: <Truck size={32} /> }
     ];
+
+    const industries = industryConfigs.map(config => ({
+        ...config,
+        name: t(`${config.key}.name`),
+        description: t(`${config.key}.desc`),
+        challenges: [t(`${config.key}.c1`), t(`${config.key}.c2`), t(`${config.key}.c3`)],
+        solution: t(`${config.key}.sol`),
+        img: config.id === 'financial-services' ? "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=800&h=400&fit=crop" :
+            config.id === 'insurance' ? "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=800&h=400&fit=crop" :
+                config.id === 'telecom' ? "https://images.unsplash.com/photo-1526628953301-3e589a6a8b74?w=800&h=400&fit=crop" :
+                    config.id === 'healthcare' ? "https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=800&h=400&fit=crop" :
+                        "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=800&h=400&fit=crop"
+    }));
 
     return (
         <div className="animate-fade-in">

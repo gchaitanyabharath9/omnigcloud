@@ -1,11 +1,11 @@
-import { useTranslations } from 'next-intl';
+import { getTranslations } from 'next-intl/server';
 import { Activity } from 'lucide-react';
 import Footer from '@/components/Footer';
 import Grid2x2Section from '@/components/layout/Grid2x2Section';
 import { USE_CASES } from '@/data/use-cases';
 
-export default function UseCasesPage() {
-    const t = useTranslations('UseCases');
+export default async function UseCasesPage() {
+    const t = await getTranslations('UseCases');
 
     return (
         <>

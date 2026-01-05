@@ -1,15 +1,14 @@
-import React from 'react';
+import { getTranslations, getLocale } from 'next-intl/server';
 import Image from 'next/image';
-import { useTranslations } from 'next-intl';
 import { Camera, ArrowRight, Layers, Shield, Zap, Globe } from 'lucide-react';
 import Link from 'next/link';
 import Footer from '@/components/Footer';
 
-
 export const revalidate = 86400; // Cache for 24 hours (ISR)
 
-export default function VisualLibraryPage() {
-    const t = useTranslations('SovereignGallery');
+export default async function VisualLibraryPage() {
+    const t = await getTranslations('SovereignGallery');
+    const locale = await getLocale();
 
     const items = [
         {

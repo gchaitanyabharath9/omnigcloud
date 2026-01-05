@@ -16,8 +16,8 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
     };
 }
 
-export default function DocsPage() {
-    const t = useTranslations('Docs');
+export default async function DocsPage() {
+    const t = await getTranslations('Docs');
 
     return (
         <>

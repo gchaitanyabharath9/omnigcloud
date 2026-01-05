@@ -1,4 +1,4 @@
-import { useTranslations, useLocale } from 'next-intl';
+import { getTranslations, getLocale } from 'next-intl/server';
 import { ArrowLeft, CheckCircle } from 'lucide-react';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
@@ -8,10 +8,10 @@ import { PageShell } from '@/components/layout/PageShell';
 import { USE_CASES } from '@/data/use-cases';
 import Grid2x2Section from '@/components/layout/Grid2x2Section';
 
-export default function UseCaseDetailPage({ params }: { params: { locale: string; slug: string } }) {
-    const t = useTranslations('UseCases');
-    const locale = useLocale();
-    const { slug } = params;
+export default async function UseCaseDetailPage({ params }: { params: Promise<{ locale: string; slug: string }> }) {
+    const t = await getTranslations('UseCases');
+    const locale = await getLocale();
+    const { slug } = await params;
 
     const useCase = USE_CASES.find(uc => uc.id === slug);
 

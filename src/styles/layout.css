@@ -39,10 +39,9 @@ html {
 
 .hero-grid-layout {
     display: grid;
-    grid-template-columns: 1fr 1.2fr;
-    grid-template-rows: auto auto;
-    gap: 1.5rem;
-    align-items: start;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 3rem;
+    align-items: center;
     width: 100%;
 }
 

@@ -1,15 +1,15 @@
 import { Landmark, Shield, Phone, HeartPulse, Truck, CheckCircle, ArrowLeft } from "lucide-react";
 import Link from "next/link";
-import { useTranslations, useLocale } from "next-intl";
+import { getTranslations, getLocale } from "next-intl/server";
 import { notFound } from "next/navigation";
 import Footer from "@/components/Footer";
 import { Section } from "@/components/layout/Section";
 import { PageShell } from "@/components/layout/PageShell";
 
-export default function IndustryDetailPage({ params }: { params: { locale: string; slug: string } }) {
-    const t = useTranslations('Industries');
-    const locale = useLocale();
-    const { slug } = params;
+export default async function IndustryDetailPage({ params }: { params: Promise<{ locale: string; slug: string }> }) {
+    const t = await getTranslations('Industries');
+    const locale = await getLocale();
+    const { slug } = await params;
 
     const industries = [
         { id: "financial-services", key: "financial", icon: <Landmark size={48} /> },

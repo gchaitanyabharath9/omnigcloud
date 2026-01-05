@@ -1,9 +1,9 @@
-import { useTranslations } from 'next-intl';
+import { getTranslations } from 'next-intl/server';
 import { Calendar, ArrowRight, Share2, Bookmark, Search, Filter, BookOpen } from 'lucide-react';
 import Link from 'next/link';
 
-export default function BlogPage() {
-    const t = useTranslations('Blog');
+export default async function BlogPage() {
+    const t = await getTranslations('Blog');
 
     const posts = [
         { id: 'aso', date: "Dec 15, 2025", readTime: "25 min read", image: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=800" },

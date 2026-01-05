@@ -1,5 +1,11 @@
-import { getTranslations } from 'next-intl/server';
-import { useTranslations, useLocale } from 'next-intl';
+import { PageShell } from '@/components/layout/PageShell';
+import { Section } from '@/components/layout/Section';
+import { getTranslations, getLocale } from 'next-intl/server';
+import { Cpu, ArrowRight } from 'lucide-react';
+import Link from 'next/link';
+import { PRODUCTS } from '@/data/products';
+import Footer from '@/components/Footer';
+import ProductScroller from '@/components/products/ProductScroller';
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
     const { locale } = await params;
@@ -9,26 +15,10 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
         description: tm('description'),
     };
 }
-import { Cpu, ArrowRight } from 'lucide-react';
-import Link from 'next/link';
-import { PRODUCTS } from '@/data/products';
-import Footer from '@/components/Footer';
-import ProductScroller from '@/components/products/ProductScroller';
-import {
-    LatencyLineChart,
-    CloudDistributionPie,
-    UptimeTrend,
-    ErrorRateArea,
-    FeatureUsageBar,
-    ComplianceScoresBar
-} from '@/components/charts/SimpleCharts';
 
-import { PageShell } from '@/components/layout/PageShell';
-import { Section } from '@/components/layout/Section';
-
-export default function ProductsPage() {
-    const t = useTranslations('Products');
-    const locale = useLocale();
+export default async function ProductsPage() {
+    const t = await getTranslations('Products');
+    const locale = await getLocale();
 
     return (
         <>
@@ -77,13 +67,13 @@ export default function ProductsPage() {
 
                         {/* Right: Contained Image */}
                         <div className="animate-fade-in-up hidden md:block" style={{ animationDelay: '0.5s' }}>
-                            <div className="glass-panel p-2 rounded-[2.5rem] border border-white/10 overflow-hidden shadow-2xl relative aspect-square max-w-[500px] mx-auto">
+                            <div className="glass-panel p-3 rounded-[2.5rem] border border-white/20 overflow-hidden shadow-2xl relative aspect-[4/3] max-w-[600px] mx-auto transition-transform hover:scale-[1.02] duration-500">
                                 <img
                                     src="https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=2070&auto=format&fit=crop"
                                     alt="Sovereignty Suite"
-                                    className="w-full h-full object-cover rounded-[2rem] opacity-80"
+                                    className="w-full h-full object-cover rounded-[1.75rem] opacity-90"
                                 />
-                                <div className="absolute inset-0 bg-gradient-to-tr from-primary/30 to-transparent pointer-events-none" />
+                                <div className="absolute inset-0 bg-gradient-to-tr from-primary/20 to-transparent pointer-events-none" />
                             </div>
                         </div>
                     </div>
