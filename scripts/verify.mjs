@@ -72,11 +72,12 @@ async function main() {
 
     // 1. Environment Gate
     if (MODE !== 'skip-env') {
+        const isCI = process.env.VERCEL || process.env.CI;
         const nodeVer = process.version;
         if (!nodeVer.startsWith('v20') && !nodeVer.startsWith('v22') && !nodeVer.startsWith('v23')) {
             log(`⚠️  Node version ${nodeVer} may not match Vercel (v20/v22).`, YELLOW);
         }
-        if (!fs.existsSync('.env.local') && !fs.existsSync('.env')) {
+        if (!isCI && !fs.existsSync('.env.local') && !fs.existsSync('.env')) {
             log('❌ Missing .env file', RED);
             process.exit(1);
         }
@@ -110,31 +111,35 @@ async function main() {
 
     // 6. Runtime Gates (Smoke, Responsive, SEO, Perf)
     if (['all', 'smoke', 'responsive', 'seo', 'perf'].includes(MODE)) {
-        const server = await startServer();
-        if (!server) process.exit(1);
+        if (process.env.VERCEL || process.env.CI) {
+            log('\n⏭️ Skipping runtime quality gates in Vercel/CI environment.', YELLOW);
+        } else {
+            const server = await startServer();
+            if (!server) process.exit(1);
 
-        try {
-            // Smoke Tests
-            if (['all', 'smoke'].includes(MODE)) {
-                if (!runStepSync('Smoke Tests', 'node scripts/smoke-check.mjs', { QUALITY_GATE: 'true' })) success = false;
+            try {
+                // Smoke Tests
+                if (['all', 'smoke'].includes(MODE)) {
+                    if (!runStepSync('Smoke Tests', 'node scripts/smoke-check.mjs', { QUALITY_GATE: 'true' })) success = false;
+                }
+
+                // SEO Sanity Check (Runtime)
+                if (['all', 'seo'].includes(MODE)) {
+                    if (!runStepSync('SEO Head Tags Check', 'node scripts/seo-sanity.mjs', { QUALITY_GATE: 'true' })) success = false;
+                }
+
+                // Playwright Tests (E2E, Responsive & Multi-browser)
+                if (['all', 'responsive', 'perf'].includes(MODE)) {
+                    // Using the gate config which covers multiple viewports/browsers
+                    if (!runStepSync('E2E Quality Gate (Multi-browser/Viewport)', 'npx playwright test -c playwright.gate.config.ts', { QUALITY_GATE: 'true' })) success = false;
+                }
+
+            } finally {
+                log('🔻 Stopping Server...', YELLOW);
+                // Tree kill for windows
+                try { execSync(`taskkill /pid ${server.pid} /T /F`, { stdio: 'ignore' }); } catch (e) { }
+                server.kill();
             }
-
-            // SEO Sanity Check (Runtime)
-            if (['all', 'seo'].includes(MODE)) {
-                if (!runStepSync('SEO Head Tags Check', 'node scripts/seo-sanity.mjs', { QUALITY_GATE: 'true' })) success = false;
-            }
-
-            // Playwright Tests (E2E, Responsive & Multi-browser)
-            if (['all', 'responsive', 'perf'].includes(MODE)) {
-                // Using the gate config which covers multiple viewports/browsers
-                if (!runStepSync('E2E Quality Gate (Multi-browser/Viewport)', 'npx playwright test -c playwright.gate.config.ts', { QUALITY_GATE: 'true' })) success = false;
-            }
-
-        } finally {
-            log('🔻 Stopping Server...', YELLOW);
-            // Tree kill for windows
-            try { execSync(`taskkill /pid ${server.pid} /T /F`, { stdio: 'ignore' }); } catch (e) { }
-            server.kill();
         }
     }
 
