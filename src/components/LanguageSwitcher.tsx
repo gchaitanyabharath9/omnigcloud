@@ -1,9 +1,10 @@
-"use client";
+'use client';
 
-import { useLocale } from 'next-intl';
-import { usePathname } from 'next/navigation';
+import { Link, usePathname } from '@/navigation';
+import { useSearchParams } from 'next/navigation';
 import { useState } from 'react';
 import { ChevronDown } from 'lucide-react';
+import { useLocale } from 'next-intl';
 
 const languages = [
     { code: 'en', name: 'English', flag: '🇺🇸' },
@@ -19,34 +20,10 @@ const languages = [
 export default function LanguageSwitcher() {
     const locale = useLocale();
     const pathname = usePathname();
+    const searchParams = useSearchParams();
     const [isOpen, setIsOpen] = useState(false);
 
-    const switchLanguage = (nextLocale: string) => {
-        if (nextLocale === locale) {
-            setIsOpen(false);
-            return;
-        }
-
-        // Get current hash (if any)
-        const currentHash = typeof window !== 'undefined' ? window.location.hash : '';
-
-        let newPath = pathname;
-        if (pathname.startsWith(`/${locale}`)) {
-            newPath = pathname.replace(`/${locale}`, `/${nextLocale}`);
-        } else {
-            newPath = `/${nextLocale}${pathname}`;
-        }
-
-        // Append hash to preserve section
-        const fullPath = `${newPath}${currentHash}`;
-
-
-        // Using window.location.href for a full reload to ensure hash is preserved 
-        // and all locale-specific server-side logic is refreshed cleanly.
-        window.location.assign(fullPath);
-        setIsOpen(false);
-    };
-
+    const query = Object.fromEntries(searchParams.entries());
     const currentLang = languages.find(l => l.code === locale) || languages[0];
 
     return (
@@ -56,72 +33,87 @@ export default function LanguageSwitcher() {
                 onClick={() => setIsOpen(!isOpen)}
                 className="glass-panel"
                 style={{
-                    cursor: 'pointer',
-                    padding: '0.5rem 1rem',
-                    borderRadius: '0.75rem',
                     display: 'flex',
                     alignItems: 'center',
                     gap: '0.5rem',
-                    fontSize: '0.85rem',
+                    padding: '0.5rem 0.75rem',
+                    fontSize: '0.8rem',
                     fontWeight: 700,
-                    color: 'var(--foreground)',
-                    minWidth: '70px',
-                    justifyContent: 'space-between'
+                    borderRadius: '0.75rem',
+                    cursor: 'pointer',
+                    background: 'var(--header-bg)',
+                    border: '1px solid var(--card-border)',
+                    color: 'var(--foreground)'
                 }}
             >
-                <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-                    <span style={{ fontSize: '0.9rem', fontWeight: 800, textTransform: 'uppercase' }}>{currentLang.code === 'en' ? 'US' : currentLang.code}</span>
-                </div>
-                <ChevronDown size={14} style={{ transform: isOpen ? 'rotate(180deg)' : 'none', transition: 'transform 0.2s' }} />
+                <span style={{ fontSize: '1rem' }}>{currentLang.flag}</span>
+                <span style={{ opacity: 0.8 }}>{currentLang.code.toUpperCase()}</span>
+                <ChevronDown size={14} style={{
+                    transition: 'transform 0.2s',
+                    transform: isOpen ? 'rotate(180deg)' : 'rotate(0)'
+                }} />
             </button>
 
             {isOpen && (
-                <div className="glass-panel animate-fade-in" style={{
+                <div style={{
                     position: 'absolute',
-                    top: 'calc(100% + 0.5rem)',
+                    top: '100%',
                     right: 0,
-                    width: '180px',
-                    zIndex: 2000,
-                    padding: '0.5rem',
-                    borderRadius: '1rem',
-                    display: 'flex',
-                    flexDirection: 'column',
-                    gap: '0.25rem',
-                    boxShadow: 'var(--card-shadow)',
+                    marginTop: '0.5rem',
+                    background: 'var(--header-bg)',
                     border: '1px solid var(--card-border)',
-                    background: 'var(--background)'
+                    borderRadius: '1rem',
+                    padding: '0.5rem',
+                    minWidth: '180px',
+                    zIndex: 200,
+                    boxShadow: '0 20px 40px rgba(0,0,0,0.5)',
+                    backdropFilter: 'blur(20px)'
                 }}>
-                    {languages.map((lang) => (
-                        <button
-                            key={lang.code}
-                            id={`lang-switch-${lang.code}`}
-                            onClick={() => switchLanguage(lang.code)}
-                            style={{
-                                display: 'flex',
-                                alignItems: 'center',
-                                gap: '0.75rem',
-                                padding: '0.75rem 1rem',
-                                borderRadius: '0.5rem',
-                                border: 'none',
-                                background: locale === lang.code ? 'var(--primary-glow)' : 'transparent',
-                                color: locale === lang.code ? 'var(--primary)' : 'var(--foreground)',
-                                cursor: 'pointer',
-                                fontSize: '0.85rem',
-                                fontWeight: 600,
-                                textAlign: 'left',
-                                transition: 'all 0.2s'
-                            }}
-                            onMouseEnter={(e) => {
-                                if (locale !== lang.code) e.currentTarget.style.background = 'var(--bg-surface-2)';
-                            }}
-                            onMouseLeave={(e) => {
-                                if (locale !== lang.code) e.currentTarget.style.background = 'transparent';
-                            }}
-                        >
-                            <span>{lang.flag}</span>
-                            <span>{lang.name}</span>
-                        </button>
-                    ))}
+                    {languages.map(lang => {
+                        // In next-intl, Link handles the hash separately or as part of href object if supported
+                        // We use a safe check for window
+                        const currentHash = typeof window !== 'undefined' ? window.location.hash.replace('#', '') : '';
+
+                        return (
+                            <Link
+                                key={lang.code}
+                                id={`lang-switch-${lang.code}`}
+                                href={{
+                                    pathname: pathname,
+                                    query: query,
+                                    hash: currentHash
+                                }}
+                                locale={lang.code as any}
+                                onClick={() => setIsOpen(false)}
+                                scroll={false}
+                                style={{
+                                    display: 'flex',
+                                    alignItems: 'center',
+                                    justifyContent: 'space-between',
+                                    width: '100%',
+                                    padding: '0.75rem 1rem',
+                                    borderRadius: '0.75rem',
+                                    border: 'none',
+                                    background: locale === lang.code ? 'rgba(59, 130, 246, 0.1)' : 'transparent',
+                                    color: locale === lang.code ? 'var(--primary)' : 'var(--foreground)',
+                                    cursor: 'pointer',
+                                    textAlign: 'left',
+                                    transition: 'all 0.2s',
+                                    textDecoration: 'none',
+                                    fontWeight: 600,
+                                    fontSize: '0.85rem'
+                                }}
+                            >
+                                <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
+                                    <span style={{ fontSize: '1.1rem' }}>{lang.flag}</span>
+                                    <span>{lang.name}</span>
+                                </div>
+                                {locale === lang.code && (
+                                    <div style={{ width: '6px', height: '6px', borderRadius: '50%', background: 'var(--primary)' }} />
+                                )}
+                            </Link>
+                        );
+                    })}
                 </div>
             )}
         </div>

@@ -143,7 +143,7 @@ export default function EcosystemSection() {
                     <h3 style={{ fontSize: '1.5rem', fontWeight: 900, marginBottom: '1.5rem', textAlign: 'center' }}>
                         Global Deployment Statistics
                     </h3>
-                    <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '1.5rem' }}>
+                    <div className="grid-4" style={{ gap: '1.5rem' }}>
                         <div className="glass-panel" style={{ padding: '2rem', borderRadius: '1.5rem', textAlign: 'center' }}>
                             <CheckCircle size={28} color="#10b981" style={{ margin: '0 auto 1rem' }} />
                             <div style={{ fontSize: '2.5rem', fontWeight: 950, color: 'var(--primary)' }}>450+</div>

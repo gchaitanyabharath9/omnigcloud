@@ -6,6 +6,7 @@ import Link from 'next/link';
 import { PRODUCTS } from '@/data/products';
 import Footer from '@/components/Footer';
 import ProductScroller from '@/components/products/ProductScroller';
+import { HowItWorks, VisualSection, DeepDive } from '@/components/seo/Enrichment';
 
 export const PRODUCT_SECTION_IDS = ['playground', 'workflows', 'guard', 'knowledge', 'deploy', 'nexus'];
 
@@ -92,6 +93,24 @@ export default async function ProductsPage() {
 
             {/* PRODUCT STREAM */}
             <ProductScroller activeProduct="" products={PRODUCTS} />
+
+            <HowItWorks pageKey="Products" />
+
+            <VisualSection
+                pageKey="Products"
+                imageUrl="/images/seo/architecture.png"
+                alt="Product Orchestration Map"
+                description="Our product suite operates as a unified kernel, ensuring that every modernization action—from refactor to deploy—is governed by the same sovereign intent mesh."
+            />
+
+            <DeepDive
+                pageKey="Products"
+                relatedLinks={[
+                    { label: "Executive Dashboard", href: "/dashboard" },
+                    { label: "Sovereign Solutions", href: "/solutions" },
+                    { label: "Platform Deep Dive", href: "/platform" }
+                ]}
+            />
 
             {/* SITEMAP / FOOTER */}
             <section id="sitemap" className="snap-section" style={{ background: 'var(--background)', borderTop: '1px solid var(--card-border)' }}>

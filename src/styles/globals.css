@@ -3,6 +3,14 @@
 @import './components.css';
 @import './layout.css';
 
+/* Universal Overflow Protection for QA */
+html,
+body {
+  overflow-x: hidden !important;
+  max-width: 100vw !important;
+  position: relative;
+}
+
 @keyframes float {
   0% {
     transform: translateY(0px);

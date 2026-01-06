@@ -1,8 +1,9 @@
 "use client";
 
-import { MessageCircle, Mail, X } from "lucide-react";
+import { MessageCircle, Mail, X, Phone } from "lucide-react";
 import { useState } from "react";
 import { twMerge } from "tailwind-merge";
+import Link from 'next/link';
 import { ARCHITECTS_EMAIL } from "@/config/emails";
 import styles from "./FloatingActions.module.css";
 
@@ -14,6 +15,27 @@ export default function FloatingActions() {
         <>
             {/* Floating Action Buttons */}
             <div className={styles.floatingContainer} style={{ fontFamily: 'var(--font-inter)' }}>
+                {/* Persistent CTA Pill */}
+                <Link
+                    href="/contact"
+                    className="btn-primary"
+                    style={{
+                        borderRadius: '2rem',
+                        padding: '0.75rem 1.5rem',
+                        fontSize: '0.85rem',
+                        fontWeight: 900,
+                        boxShadow: '0 10px 30px rgba(59, 130, 246, 0.4)',
+                        display: 'flex',
+                        alignItems: 'center',
+                        gap: '0.6rem',
+                        whiteSpace: 'nowrap',
+                        marginRight: '0.5rem',
+                        textDecoration: 'none'
+                    }}
+                >
+                    <Phone size={16} /> Talk to an Expert
+                </Link>
+
                 {/* Contact Us Button */}
                 <button
                     onClick={() => { setShowContact(!showContact); setShowChat(false); }}

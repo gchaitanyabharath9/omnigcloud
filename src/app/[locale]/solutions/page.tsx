@@ -6,6 +6,8 @@ import Link from 'next/link';
 import { getTranslations } from 'next-intl/server';
 import { USE_CASES } from '@/data/use-cases';
 import Grid2x2Section from '@/components/layout/Grid2x2Section';
+import { HowItWorks, VisualSection, DeepDive, TopicalAuthority, TechnicalInsights, FAQSection } from '@/components/seo/Enrichment';
+import EnterprisePillars from "@/components/sections/enterprise/EnterpriseApproach";
 
 const industryConfigs = [
     { id: "financial-services", key: "financial", icon: <Landmark size={32} /> },
@@ -170,6 +172,30 @@ export default async function SolutionsPage({ params }: { params: Promise<{ loca
                     </div>
                 </PageShell>
             </section>
+
+            <HowItWorks pageKey="Solutions" />
+
+            <VisualSection
+                pageKey="Solutions"
+                imageUrl="/images/seo/architecture.png"
+                alt="Global Solution Fabric"
+                description="Our solutions are mapped to regional sovereign fabrics, ensuring that your modernization efforts are always in sync with local regulatory mandates."
+            />
+
+            <EnterprisePillars />
+
+            <DeepDive
+                pageKey="Solutions"
+                relatedLinks={[
+                    { label: "Financial Sovereignty", href: "/industries/finance" },
+                    { label: "Cloud Modernization", href: "/services/cloud-modernization" },
+                    { label: "Sovereign AI Deployment", href: "/products/playground" }
+                ]}
+            />
+
+            <TopicalAuthority pageKey="Solutions" />
+            <TechnicalInsights pageKey="Solutions" />
+            <FAQSection pageKey="Solutions" />
         </div>
     );
 }

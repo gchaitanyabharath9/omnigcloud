@@ -2,6 +2,7 @@ import { useTranslations, useLocale } from 'next-intl';
 import Link from 'next/link';
 import { ShieldAlert, PlayCircle, Globe, Activity, Layers, Cpu, CheckCircle } from 'lucide-react';
 import Image from 'next/image';
+import { AboveTheFoldDescription } from '@/components/seo/Enrichment';
 
 export default function HeroSection() {
     const t = useTranslations('Hero');
@@ -53,12 +54,14 @@ export default function HeroSection() {
                             <h1 className="mb-6" style={{ lineHeight: 1.2, fontSize: 'clamp(1.5rem, 3.5vw, 2.2rem)', letterSpacing: '-0.02em', fontWeight: 800 }}>
                                 Omni<span style={{ color: 'var(--primary)' }}>G</span>Cloud:
                                 <br />
-                                <span className="text-gradient">Break Free from Vendor Lock-In</span>
+                                <span className="text-gradient">{t('title')}</span>
                             </h1>
 
                             <p className="text-lead mb-8" style={{ fontSize: '1.2rem', maxWidth: '90%', lineHeight: 1.6, opacity: 0.9 }}>
                                 {t('subtitle')}
                             </p>
+
+                            <AboveTheFoldDescription pageKey="Home" />
 
                             <div style={{ display: 'flex', flexWrap: 'wrap', gap: '1rem' }}>
                                 <Link href={`/${locale}/platform`} className="btn-primary" style={{ padding: '0.8rem 1.8rem', fontSize: '1rem' }}>

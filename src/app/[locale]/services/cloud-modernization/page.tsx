@@ -153,7 +153,7 @@ export default async function CloudModernizationPage({ params }: { params: Promi
             {/* INTERNAL LINKS */}
             <Section className="py-24 border-t border-white/5">
                 <PageShell>
-                    <div className="grid md:grid-cols-2 gap-8">
+                    <div className="grid md:grid-cols-2 gap-8 mb-16">
                         <Link href={`/${locale}/services/devops`} className="glass-panel p-10 rounded-[2.5rem] group hover:border-primary/50 transition-all bg-gradient-to-br from-transparent to-primary/5">
                             <h4 className="text-2xl font-bold mb-4 group-hover:text-primary transition-colors">DevOps & Automation</h4>
                             <p className="opacity-60 text-sm mb-6">Integrate modernization with automated platform engineering for continuous, compliant delivery.</p>
@@ -165,8 +165,12 @@ export default async function CloudModernizationPage({ params }: { params: Promi
                             <div className="text-blue-400 font-bold flex items-center gap-2">Read Guide <ArrowRight size={14} /></div>
                         </Link>
                     </div>
+
+                    <EngagementBox />
                 </PageShell>
             </Section>
         </div>
     );
 }
+
+import EngagementBox from '@/components/EngagementBox';

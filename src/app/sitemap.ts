@@ -24,6 +24,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
         '/industries/healthcare',
         '/resources/blog/cloud-modernization-guide',
         '/resources/blog/devops-best-practices',
+        '/resources/blog/sovereignty-framework',
+        '/resources/blog/cio-exit-strategy',
         '/solutions',
         '/industries',
         '/pricing',

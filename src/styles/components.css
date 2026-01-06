@@ -108,10 +108,17 @@
     transition: all 0.3s ease;
 }
 
-.card-pricing.popular {
+.card-pricing.popular,
+.pricing-plan-highlight {
     border-color: var(--primary);
     box-shadow: 0 0 30px rgba(59, 130, 246, 0.15);
     background: linear-gradient(180deg, rgba(59, 130, 246, 0.05) 0%, var(--card-bg) 100%);
+}
+
+@media (min-width: 1025px) {
+    .pricing-plan-highlight {
+        transform: scale(1.02);
+    }
 }
 
 .card-pricing:hover {

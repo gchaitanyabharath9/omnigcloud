@@ -38,10 +38,30 @@ export default function PlatformPage() {
             </div>
 
             <ControlPlaneSection />
+            <HowItWorks pageKey="Platform" />
+
             <ObservabilitySection />
+
+            <VisualSection
+                pageKey="Platform"
+                imageUrl="/images/seo/architecture.png"
+                alt="OmniGCloud Platform Architecture"
+                description="The Platform architecture utilizes sovereign nodes connected via a global intent mesh, ensuring that policy is decoupled from infrastructure for maximum resilience."
+            />
+
             <ArbitrageSection />
             <ComparisonSection />
             <SecuritySection />
+
+            <DeepDive
+                pageKey="Platform"
+                relatedLinks={[
+                    { label: "AECP Engine Detail", href: "/platform/ai-engine" },
+                    { label: "Sovereign Observability", href: "/platform/observability" },
+                    { label: "Technical Reference", href: "/docs" }
+                ]}
+            />
+
             <IntegrationsSection />
 
             {/* SITEMAP / FOOTER SNAP SECTION */}
@@ -51,3 +71,5 @@ export default function PlatformPage() {
         </>
     );
 }
+
+import { HowItWorks, VisualSection, DeepDive } from '@/components/seo/Enrichment';

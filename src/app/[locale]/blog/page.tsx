@@ -8,6 +8,8 @@ export default async function BlogPage() {
     const posts = [
         { id: 'aso', date: "Dec 15, 2025", readTime: "25 min read", image: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=800" },
         { id: 'modernization-guide', date: "Jan 05, 2026", readTime: "12 min read", image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80&w=800", slug: '/resources/blog/cloud-modernization-guide' },
+        { id: 'sovereignty-framework', date: "Jan 08, 2026", readTime: "15 min read", image: "https://images.unsplash.com/photo-1639322537228-f710d846310a?auto=format&fit=crop&q=80&w=800", slug: '/resources/blog/sovereignty-framework' },
+        { id: 'cio-exit-strategy', date: "Jan 10, 2026", readTime: "18 min read", image: "https://images.unsplash.com/photo-1454165833767-027ee7a4477c?auto=format&fit=crop&q=80&w=800", slug: '/resources/blog/cio-exit-strategy' },
         { id: 'devops-practices', date: "Jan 04, 2026", readTime: "10 min read", image: "https://images.unsplash.com/photo-1667372333374-0d3c0ec3a28c?auto=format&fit=crop&q=80&w=800", slug: '/resources/blog/devops-best-practices' },
         { id: 'prompt', date: "Dec 10, 2025", readTime: "15 min read", image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&q=80&w=800" },
         { id: 'latency', date: "Dec 05, 2025", readTime: "10 min read", image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=800" },

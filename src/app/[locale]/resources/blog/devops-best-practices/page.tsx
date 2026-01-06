@@ -87,15 +87,10 @@ export default async function DevOpsBestPracticesPage({ params }: { params: Prom
                             </div>
                         </div>
 
-                        {/* INTERNAL LINKS */}
-                        <div className="mt-24 p-12 glass-panel rounded-[3rem] border-primary/20 bg-[#0A0F1E] flex flex-col md:flex-row items-center justify-between gap-8">
-                            <div className="max-w-md">
-                                <h3 className="text-2xl font-bold mb-4">Want the Technical Core?</h3>
-                                <p className="opacity-60 text-sm mb-6">Explore our DevOps services to see how we implement these patterns for the world's leading sovereign organizations.</p>
-                                <Link href={`/${locale}/services/devops`} className="btn-primary py-3 px-8 rounded-full font-bold inline-block">View DevOps Services</Link>
-                            </div>
-                            <div className="text-5xl font-black text-white/5 hidden lg:block">_AUTO_OPS</div>
-                        </div>
+                        <EngagementBox
+                            titleKey="thoughtLeadership.title"
+                            subtitleKey="thoughtLeadership.subtitle"
+                        />
                     </div>
                 </PageShell>
             </Section>
@@ -104,8 +99,8 @@ export default async function DevOpsBestPracticesPage({ params }: { params: Prom
             <Section className="py-24 border-t border-white/5">
                 <PageShell>
                     <div className="max-w-4xl mx-auto flex justify-between items-center">
-                        <Link href={`/${locale}/resources/blog/cloud-modernization-guide`} className="text-sm font-bold flex items-center gap-2 opacity-50 hover:opacity-100 transition-opacity">
-                            <ArrowRight size={14} className="rotate-180" /> Previous: Modernization Guide
+                        <Link href={`/${locale}/resources/blog/sovereignty-framework`} className="text-sm font-bold flex items-center gap-2 opacity-50 hover:opacity-100 transition-opacity">
+                            <ArrowRight size={14} className="rotate-180" /> Previous: Sovereignty Framework
                         </Link>
                         <Link href={`/${locale}/blog`} className="text-sm font-bold opacity-50 hover:opacity-100 transition-opacity">
                             Back to Impact Hub
@@ -116,3 +111,5 @@ export default async function DevOpsBestPracticesPage({ params }: { params: Prom
         </div>
     );
 }
+
+import EngagementBox from '@/components/EngagementBox';

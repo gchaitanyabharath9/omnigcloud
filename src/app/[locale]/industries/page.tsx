@@ -82,12 +82,16 @@ export default async function IndustriesPage() {
                         color: 'rgba(255,255,255,0.7)',
                         fontSize: '1.25rem',
                         maxWidth: '750px',
-                        margin: '0 auto 3rem',
+                        margin: '0 auto 1.5rem',
                         lineHeight: 1.6,
                         animationDelay: '0.3s'
                     }}>
                         {t('subtitle')}
                     </p>
+
+                    <div className="max-w-2xl text-center mb-8">
+                        <AboveTheFoldDescription pageKey="Industries" />
+                    </div>
 
                     {/* New Stats Grid to Utilize Space */}
                     <div className="grid grid-cols-2 md:grid-cols-4 gap-4 w-full max-w-5xl animate-fade-in-up" style={{ animationDelay: '0.4s' }}>
@@ -211,6 +215,33 @@ export default async function IndustriesPage() {
                     </Link>
                 </div>
             </section>
+
+            <EnterpriseTrust />
+
+            <HowItWorks pageKey="Industries" />
+
+            <VisualSection
+                pageKey="Industries"
+                imageUrl="/images/seo/architecture.png"
+                alt="Sovereign Industry Framework"
+                description="Our industrial logic layer ensures that sector-specific regulations are enforced as immutable code across all multi-cloud regions."
+            />
+
+            <DeepDive
+                pageKey="Industries"
+                relatedLinks={[
+                    { label: "Sovereign Finance", href: "/industries/finance" },
+                    { label: "Health Data Fabric", href: "/industries/healthcare" },
+                    { label: "Digital Trust Case Studies", href: "/case-studies" }
+                ]}
+            />
+
+            <TopicalAuthority pageKey="Industries" />
+            <TechnicalInsights pageKey="Industries" />
+            <FAQSection pageKey="Industries" />
         </div>
     );
 }
+
+import { AboveTheFoldDescription, HowItWorks, VisualSection, DeepDive, TopicalAuthority, TechnicalInsights, FAQSection } from '@/components/seo/Enrichment';
+import { EnterpriseTrust } from "@/components/sections/enterprise/EnterpriseApproach";

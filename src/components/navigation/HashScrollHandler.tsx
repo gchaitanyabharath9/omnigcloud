@@ -10,55 +10,60 @@ import { usePathname, useSearchParams } from 'next/navigation';
 export function HashScrollHandler() {
     const pathname = usePathname();
     const searchParams = useSearchParams();
-    const lastHash = useRef<string | null>(null);
+    const lastPath = useRef<string | null>(null);
 
     useEffect(() => {
         const handleScroll = () => {
-            const hash = window.location.hash.slice(1);
-            if (!hash) {
-                lastHash.current = null;
-                return;
-            }
+            const hash = typeof window !== 'undefined' ? window.location.hash.slice(1) : '';
+            if (!hash) return;
 
-            // Avoid redundant scrolling if hash hasn't changed
-            if (hash === lastHash.current) return;
+            const targetElement = document.getElementById(hash);
 
-            const scrollToTarget = (targetId: string) => {
-                const element = document.getElementById(targetId);
+            const scrollToElement = () => {
+                const element = document.getElementById(hash);
                 if (element) {
-                    lastHash.current = targetId;
+                    // Force a layout calculation check
+                    const rect = element.getBoundingClientRect();
 
-                    // We use scrollIntoView with 'smooth' behavior. 
                     // The offset is handled by CSS [id] { scroll-margin-top: ... }
-                    element.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
+                    window.scrollTo({
+                        top: window.scrollY + rect.top,
+                        behavior: 'smooth'
                     });
+
+                    lastPath.current = pathname + window.location.hash;
                     return true;
                 }
                 return false;
             };
 
-            // Attempt scroll
-            if (!scrollToTarget(hash)) {
-                // Retry mechanism for hydration/async content
-                let attempts = 0;
-                const maxAttempts = 10;
-                const interval = setInterval(() => {
-                    attempts++;
-                    if (scrollToTarget(hash) || attempts >= maxAttempts) {
-                        clearInterval(interval);
+            // Strategy: 
+            // 1. Wait for layout stabilization using multiple frames
+            // 2. Retry if element not found (async content load)
+            // 3. Ensure no recursion
+
+            if (pathname + window.location.hash === lastPath.current) return;
+
+            // Initial attempt with 2 frames delay for hydration to settle
+            requestAnimationFrame(() => {
+                requestAnimationFrame(() => {
+                    if (!scrollToElement()) {
+                        // Retry loop for slow mounting components
+                        let count = 0;
+                        const interval = setInterval(() => {
+                            count++;
+                            if (scrollToElement() || count > 20) {
+                                clearInterval(interval);
+                            }
+                        }, 150);
                     }
-                }, 150);
-            }
+                });
+            });
         };
 
-        // Run on mount and parameter changes
         handleScroll();
 
-        // Specific listener for manual changes or Link clicks that only change hash
         window.addEventListener('hashchange', handleScroll);
-
         return () => window.removeEventListener('hashchange', handleScroll);
     }, [pathname, searchParams]);
 

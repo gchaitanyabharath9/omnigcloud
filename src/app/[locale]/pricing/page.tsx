@@ -133,14 +133,17 @@ export default async function PricingPage({ params }: { params: Promise<{ locale
                         <h1 style={{ fontSize: 'clamp(2rem, 5vw, 2.5rem)', fontWeight: 950, marginBottom: '0.75rem', letterSpacing: '-1px' }}>
                             {t('hero.title')}
                         </h1>
-                        <p style={{ fontSize: '0.95rem', opacity: 0.7, maxWidth: '650px', margin: '0 auto', lineHeight: '1.4' }}>
+                        <p style={{ fontSize: '0.95rem', opacity: 0.7, maxWidth: '650px', margin: '0 auto 1rem', lineHeight: '1.4' }}>
                             {t('hero.subtitle')}
                         </p>
+                        <div className="max-w-2xl mx-auto">
+                            <AboveTheFoldDescription pageKey="Pricing" />
+                        </div>
                     </div>
 
                     <div className="grid-4">
                         {plans.map((plan, idx) => (
-                            <div key={idx} id={plan.id} className={`glass-panel ${plan.highlight ? 'border-primary' : ''}`} style={{
+                            <div key={idx} id={plan.id} className={`glass-panel ${plan.highlight ? 'border-primary pricing-plan-highlight' : ''}`} style={{
                                 padding: '1.25rem',
                                 borderRadius: '1.25rem',
                                 display: 'flex',
@@ -148,7 +151,6 @@ export default async function PricingPage({ params }: { params: Promise<{ locale
                                 position: 'relative',
                                 background: plan.highlight ? 'rgba(59, 130, 246, 0.03)' : 'var(--card-bg)',
                                 border: plan.highlight ? '2px solid var(--primary)' : '1px solid var(--card-border)',
-                                transform: plan.highlight && typeof window !== 'undefined' && window.innerWidth > 1024 ? 'scale(1.02)' : 'none',
                                 zIndex: plan.highlight ? 10 : 1
                             }}>
                                 {plan.highlight && (
@@ -306,6 +308,28 @@ export default async function PricingPage({ params }: { params: Promise<{ locale
                 </div>
             </section>
 
+            <HowItWorks pageKey="Pricing" />
+
+            <VisualSection
+                pageKey="Pricing"
+                imageUrl="/images/seo/architecture.png"
+                alt="Pricing Value Map"
+                description="Our pricing is aligned with the sovereign nodes you manage, ensuring that your costs scale linearly with your infrastructure value, not your provider's proprietary egress fees."
+            />
+
+            <DeepDive
+                pageKey="Pricing"
+                relatedLinks={[
+                    { label: "Cloud Modernization", href: "/services/cloud-modernization" },
+                    { label: "Sovereign Finance", href: "/industries/finance" },
+                    { label: "Modernization Blueprint", href: "/resources/blog/cloud-modernization-guide" }
+                ]}
+            />
+
+            <TopicalAuthority pageKey="Pricing" />
+            <TechnicalInsights pageKey="Pricing" />
+            <FAQSection pageKey="Pricing" />
+
             {/* SITEMAP / FOOTER SNAP SECTION */}
             <section id="sitemap" className="snap-section" style={{ background: 'var(--background)', borderTop: '1px solid var(--card-border)' }}>
                 <Footer />
@@ -313,3 +337,5 @@ export default async function PricingPage({ params }: { params: Promise<{ locale
         </>
     );
 }
+
+import { AboveTheFoldDescription, HowItWorks, VisualSection, DeepDive, TopicalAuthority, TechnicalInsights, FAQSection } from '@/components/seo/Enrichment';

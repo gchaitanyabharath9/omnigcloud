@@ -1,5 +1,6 @@
 import { Cloud, BarChart } from "lucide-react";
 import { useTranslations } from 'next-intl';
+import { AboveTheFoldDescription } from '@/components/seo/Enrichment';
 
 export default function ServicesHero() {
     const t = useTranslations('Services.Hero');
@@ -25,6 +26,7 @@ export default function ServicesHero() {
                                     span: (chunks) => <span style={{ color: 'var(--primary)', fontWeight: 800 }}>{chunks}</span>
                                 })}
                             </p>
+                            <AboveTheFoldDescription pageKey="Services" />
                             <div className="flex gap-4 mb-8">
                                 <button className="btn-primary">
                                     {t('cta')}

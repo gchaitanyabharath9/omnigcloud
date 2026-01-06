@@ -45,16 +45,16 @@ const nextConfig: any = {
     // To enforce: change 'Content-Security-Policy-Report-Only' to 'Content-Security-Policy'
     const cspDirectives = [
       "default-src 'self'",
-      // Scripts: Allow Next.js runtime, inline scripts (for hydration), and eval (for dev mode) + Vercel Live
-      `script-src 'self' 'unsafe-inline' https://vercel.live https://*.vercel.live https://vercel.com https://*.vercel.com ${isDev ? "'unsafe-eval'" : ""}`,
+      // Scripts: Allow Next.js runtime, inline scripts (for hydration), eval (for dev mode), Vercel Live, and Vercel Analytics
+      `script-src 'self' 'unsafe-inline' https://vercel.live https://*.vercel.live https://vercel.com https://*.vercel.com https://va.vercel-scripts.com ${isDev ? "'unsafe-eval'" : ""}`,
       // Styles: Allow inline styles (required for styled-jsx and CSS-in-JS), Google Fonts
       "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://vercel.live https://*.vercel.live",
       // Fonts: Allow self-hosted and Google Fonts, Vercel Live
       "font-src 'self' https://fonts.gstatic.com data: https://vercel.live https://*.vercel.live",
       // Images: Allow self, data URIs, blob, Unsplash, and Vercel Live
       "img-src 'self' data: blob: https://images.unsplash.com https://*.unsplash.com https://vercel.live https://*.vercel.live https://vercel.com https://*.vercel.com",
-      // Connect: Allow API calls to self, Unsplash, and Vercel Live
-      "connect-src 'self' https://api.unsplash.com https://vercel.live https://*.vercel.live wss://*.vercel.live https://vercel.com https://*.vercel.com",
+      // Connect: Allow API calls to self, Unsplash, Vercel Live, and Vercel Analytics
+      "connect-src 'self' https://api.unsplash.com https://vercel.live https://*.vercel.live wss://*.vercel.live https://vercel.com https://*.vercel.com https://va.vercel-scripts.com",
       // Media: Restrict to self
       "media-src 'self'",
       // Objects: Disallow plugins

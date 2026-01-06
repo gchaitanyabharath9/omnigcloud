@@ -9,9 +9,12 @@ export default async function CompliancePage() {
             <div style={{ marginBottom: '4rem', textAlign: 'center' }}>
                 <FileCheck className="w-20 h-20 mx-auto mb-4 text-purple-500" />
                 <h1 className="text-5xl font-bold mb-4">{t("title")}</h1>
-                <p className="text-xl text-zinc-600 dark:text-zinc-400 max-w-3xl mx-auto">
+                <p className="text-xl text-zinc-600 dark:text-zinc-400 max-w-3xl mx-auto mb-8">
                     {t("subtitle")}
                 </p>
+                <div className="max-w-2xl mx-auto">
+                    <AboveTheFoldDescription pageKey="Compliance" />
+                </div>
             </div>
 
             <div className="bg-blue-50 dark:bg-blue-900/10 border border-blue-200 dark:border-blue-900/30 p-6 rounded-xl mb-8">
@@ -158,6 +161,26 @@ export default async function CompliancePage() {
                     </ol>
                 </div>
             </section>
+
+            <HowItWorks pageKey="Compliance" />
+
+            <VisualSection
+                pageKey="Compliance"
+                imageUrl="/images/seo/architecture.png"
+                alt="Automated Compliance Flow"
+                description="This visual demonstrates how legal policy is translated into infrastructure logic, ensuring continuous adherence to global data residency mandates."
+            />
+
+            <DeepDive
+                pageKey="Compliance"
+                relatedLinks={[
+                    { label: "Legacy Modernization", href: "/services/cloud-modernization" },
+                    { label: "Sovereign Finance", href: "/industries/finance" },
+                    { label: "Modernization Blueprint", href: "/resources/blog/cloud-modernization-guide" }
+                ]}
+            />
         </div>
     );
 }
+
+import { AboveTheFoldDescription, HowItWorks, VisualSection, DeepDive } from '@/components/seo/Enrichment';

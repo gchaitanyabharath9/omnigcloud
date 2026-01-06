@@ -86,7 +86,7 @@ export default async function CloudModernizationGuidePage({ params }: { params: 
                                 </p>
                             </div>
 
-                            <h2 className="text-3xl font-bold mt-16 mb-8">Modernization FAQ</h2>
+                            <h2 className="text-3xl font-bold mt-16 mb-8">Executive Decision FAQ</h2>
                             <div className="space-y-6">
                                 {[
                                     { q: "What is the ROI on modernization vs. migration?", a: "While migration is cheaper upfront, modernization usually delivers a 40% reduction in long-term operational costs and a 3x increase in deployment velocity." },
@@ -95,18 +95,16 @@ export default async function CloudModernizationGuidePage({ params }: { params: 
                                 ].map((faq, i) => (
                                     <div key={i} className="border-l-2 border-primary/30 pl-6 py-2">
                                         <h5 className="font-bold text-lg mb-2">{faq.q}</h5>
-                                        <p className="text-sm opacity-70">{faq.a}</p>
+                                        <p className="text-sm opacity-70 italic">"{faq.a}"</p>
                                     </div>
                                 ))}
                             </div>
                         </div>
 
-                        {/* CTA */}
-                        <div className="mt-24 p-12 glass-panel rounded-[3rem] text-center border-primary/20 bg-gradient-to-b from-transparent to-primary/5">
-                            <h3 className="text-3xl font-bold mb-6">Ready to blueprint your journey?</h3>
-                            <p className="opacity-60 mb-10 max-w-xl mx-auto">Our architects are ready to audit your portfolio and provide a detailed modernization roadmap.</p>
-                            <Link href={`/${locale}/contact`} className="btn-primary py-4 px-12 rounded-full font-bold inline-block">Request Audit</Link>
-                        </div>
+                        <EngagementBox
+                            titleKey="thoughtLeadership.title"
+                            subtitleKey="thoughtLeadership.subtitle"
+                        />
                     </div>
                 </PageShell>
             </Section>
@@ -134,3 +132,5 @@ export default async function CloudModernizationGuidePage({ params }: { params: 
         </div>
     );
 }
+
+import EngagementBox from '@/components/EngagementBox';

@@ -16,9 +16,10 @@ export default async function SecurityPage() {
                     <div style={{ marginBottom: '2rem', textAlign: 'center' }}>
                         <Shield className="mx-auto mb-4 text-primary" size={60} />
                         <h1 style={{ fontSize: '3.5rem', fontWeight: 950, marginBottom: '1rem', letterSpacing: '-1.5px' }}>{t("title")}</h1>
-                        <p style={{ fontSize: '1.2rem', opacity: 0.7, maxWidth: '750px', margin: '0 auto', lineHeight: 1.5 }}>
+                        <p style={{ fontSize: '1.2rem', opacity: 0.7, maxWidth: '750px', margin: '0 auto 1.5rem', lineHeight: 1.5 }}>
                             {t("subtitle")}
                         </p>
+                        <AboveTheFoldDescription pageKey="Security" />
                     </div>
 
                     <div id="compliance-maps" className="grid grid-cols-2 gap-4" style={{ scrollMarginTop: '150px' }}>
@@ -177,6 +178,26 @@ export default async function SecurityPage() {
             <section id="sitemap" className="snap-section" style={{ background: 'var(--background)', borderTop: '1px solid var(--card-border)' }}>
                 <Footer />
             </section>
+
+            <HowItWorks pageKey="Security" />
+
+            <VisualSection
+                pageKey="Security"
+                imageUrl="/images/seo/architecture.png"
+                alt="Sovereign Security Mesh"
+                description="Our security visual illustrates the zero-trust identity layer that wraps every sovereign node, ensuring that data residency is cryptographically enforced."
+            />
+
+            <DeepDive
+                pageKey="Security"
+                relatedLinks={[
+                    { label: "Platform Engineering", href: "/services/devops" },
+                    { label: "Cloud Modernization", href: "/services/cloud-modernization" },
+                    { label: "Modernization Blueprint", href: "/resources/blog/cloud-modernization-guide" }
+                ]}
+            />
         </>
     );
 }
+
+import { AboveTheFoldDescription, HowItWorks, VisualSection, DeepDive } from '@/components/seo/Enrichment';

@@ -2,11 +2,14 @@
 
 import Footer from "@/components/Footer";
 
-import { Users, Globe, Target, Award, Briefcase, MapPin, Newspaper, Mail, Phone, ExternalLink } from "lucide-react";
+import { useTranslations } from "next-intl";
+import { Users, Globe, Target, Award, Briefcase, MapPin, Newspaper, Mail, Phone, ExternalLink, TrendingUp, BarChart3, Layers } from "lucide-react";
 
-export const COMPANY_SECTION_IDS = ['about', 'leadership', 'global-operations', 'newsroom', 'executive-office'];
+export const COMPANY_SECTION_IDS = ['about', 'leadership', 'global-operations', 'newsroom', 'investors', 'executive-office'];
 
 export default function CompanyPage() {
+    const t = useTranslations("Investors");
+
     return (
         <div className="snap-container">
             {/* ABOUT HERO - Snap 1 */}
@@ -131,7 +134,42 @@ export default function CompanyPage() {
                 </div>
             </section>
 
-            {/* EXECUTIVE OFFICE - Snap 5 */}
+            {/* STRATEGIC VISION & INVESTMENT - Snap 5 */}
+            <section id="investors" className="snap-section container">
+                <div className="grid-2 px-1 gap-16 items-center">
+                    <div>
+                        <div style={{ color: 'var(--primary)', fontWeight: 800, fontSize: '0.75rem', textTransform: 'uppercase', letterSpacing: '0.1em', marginBottom: '1rem' }}>{t('hero.tag')}</div>
+                        <h2 style={{ fontSize: '3.5rem', fontWeight: 900, marginBottom: '1.5rem', lineHeight: 1.1 }}>{t('hero.title')}</h2>
+                        <p style={{ fontSize: '1.1rem', opacity: 0.7, lineHeight: 1.7, marginBottom: '2.5rem' }}>{t('hero.subtitle')}</p>
+
+                        <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
+                            {[0, 1, 2].map(i => (
+                                <div key={i} style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
+                                    <div style={{ color: 'var(--primary)', background: 'var(--primary-glow)', padding: '0.75rem', borderRadius: '1rem' }}>
+                                        {i === 0 ? <BarChart3 size={20} /> : i === 1 ? <TrendingUp size={20} /> : <Layers size={20} />}
+                                    </div>
+                                    <div>
+                                        <div style={{ fontSize: '1.5rem', fontWeight: 900 }}>{t(`opportunity.metrics.${i}.value`)}</div>
+                                        <div style={{ fontSize: '0.75rem', opacity: 0.5, textTransform: 'uppercase', fontWeight: 700 }}>{t(`opportunity.metrics.${i}.label`)}</div>
+                                    </div>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+
+                    <div className="glass-panel" style={{ padding: '3.5rem', borderRadius: '3.5rem' }}>
+                        <h3 style={{ fontSize: '2rem', fontWeight: 900, marginBottom: '1.5rem' }}>{t('opportunity.title')}</h3>
+                        <p style={{ fontSize: '1.1rem', opacity: 0.8, lineHeight: 1.8, marginBottom: '2.5rem' }}>{t('opportunity.content')}</p>
+
+                        <div style={{ borderTop: '1px solid var(--card-border)', paddingTop: '2rem' }}>
+                            <h4 style={{ fontSize: '0.9rem', fontWeight: 800, marginBottom: '1rem', textTransform: 'uppercase', opacity: 0.6 }}>{t('vision.title')}</h4>
+                            <p style={{ fontSize: '0.95rem', opacity: 0.7, fontStyle: 'italic', lineHeight: 1.7 }}>"{t('vision.content')}"</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* EXECUTIVE OFFICE - Snap 6 */}
             <section id="executive-office" className="snap-section container">
                 <div className="glass-panel" style={{ padding: '5rem', borderRadius: '4rem', textAlign: 'center', background: 'var(--primary-glow)' }}>
                     <h2 style={{ fontSize: '3.5rem', fontWeight: 900, marginBottom: '1.5rem' }}>Contact Chief Executive Office</h2>

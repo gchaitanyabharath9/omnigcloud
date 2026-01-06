@@ -52,6 +52,7 @@ const Footer = () => {
                                     { name: "Technical Founder", href: "/founder" },
                                     { name: "System Architecture", href: "/architecture" },
                                     { name: "Research Hub", href: "/research" },
+                                    { name: "Strategic Playbooks", href: "/blog" },
                                     { name: "Case Studies", href: "/case-studies" }
                                 ]
                             },
@@ -69,6 +70,7 @@ const Footer = () => {
                                     { name: t('company.about'), href: "/company#about" },
                                     { name: t('company.leadership'), href: "/company#leadership" },
                                     { name: t('company.newsroom'), href: "/company#newsroom" },
+                                    { name: t('company.investors'), href: "/company#investors" },
                                     { name: t('trust.security'), href: "/security" },
                                     { name: t('trust.privacy'), href: "/privacy" },
                                     { name: t('company.contact'), href: "/contact" }

@@ -155,7 +155,7 @@ export default async function DevOpsPage({ params }: { params: Promise<{ locale:
             {/* INTERNAL LINKS / FOOTER CROSS-REF */}
             <Section className="py-24 border-t border-white/5">
                 <PageShell>
-                    <div className="flex flex-col md:flex-row items-center justify-between gap-8 glass-panel p-12 rounded-[3rem] bg-gradient-to-r from-background to-primary/5">
+                    <div className="flex flex-col md:flex-row items-center justify-between gap-8 glass-panel p-12 rounded-[3rem] bg-gradient-to-r from-background to-primary/5 mb-16">
                         <div className="max-w-md">
                             <h4 className="text-2xl font-bold mb-4">Explore Complementary Services</h4>
                             <p className="opacity-60 text-sm mb-6">Unify your infrastructure modernization with our AI-driven assessment and cost optimization platforms.</p>
@@ -172,8 +172,12 @@ export default async function DevOpsPage({ params }: { params: Promise<{ locale:
                             READY_TO_AUTO_GATE?
                         </div>
                     </div>
+
+                    <EngagementBox />
                 </PageShell>
             </Section>
         </div>
     );
 }
+
+import EngagementBox from '@/components/EngagementBox';

@@ -37,8 +37,33 @@ export default function Home() {
 
       <CapabilitiesSection />
       <IndustriesSection />
+
+      <EnterprisePillars />
+
+      <HowItWorks pageKey="Home" />
+
+      <VisualSection
+        pageKey="Home"
+        imageUrl="/images/seo/architecture.png"
+        alt="OmniGCloud Autonomous Architecture"
+        description="Our architecture integrates multi-cloud nodes into a single, cohesive sovereign fabric, ensuring that governance intent is enforced at the physical edge regardless of the provider."
+      />
+
       <CertificationsSection />
       <EcosystemSection />
+
+      <DeepDive
+        pageKey="Home"
+        relatedLinks={[
+          { label: "Financial Sovereignty", href: "/industries/finance" },
+          { label: "Healthcare Data Fabrics", href: "/industries/healthcare" },
+          { label: "Modernization Blueprint", href: "/resources/blog/cloud-modernization-guide" }
+        ]}
+      />
+
+      <TopicalAuthority pageKey="Home" />
+      <TechnicalInsights pageKey="Home" />
+      <FAQSection pageKey="Home" />
 
       <WhitePaperSection />
       <NewsroomSection />
@@ -49,4 +74,7 @@ export default function Home() {
     </>
   );
 }
+
+import { HowItWorks, VisualSection, DeepDive, TopicalAuthority, TechnicalInsights, FAQSection } from '@/components/seo/Enrichment';
+import EnterprisePillars from '@/components/sections/enterprise/EnterpriseApproach';
 

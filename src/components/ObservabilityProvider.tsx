@@ -2,6 +2,7 @@
 
 import React, { useEffect } from 'react';
 import { usePathname } from 'next/navigation';
+import { analytics } from '@/lib/analytics';
 
 interface ObservabilityProviderProps {
     children: React.ReactNode;
@@ -9,14 +10,7 @@ interface ObservabilityProviderProps {
 }
 
 /**
- * ObservabilityProvider - Zero-cost client-side monitoring
- * Captured signals:
- * - Client errors (window.onerror)
- * - Unhandled rejections
- * - Navigation performance marks
- * 
- * All signals are logged as structured JSON to the console.
- * In a real-world scenario, these could be POSTed to an ingestion endpoint.
+ * ObservabilityProvider - Zero-cost client-side monitoring & Conversion Tracking
  */
 export function ObservabilityProvider({ children, locale }: ObservabilityProviderProps) {
     const pathname = usePathname();
@@ -25,13 +19,20 @@ export function ObservabilityProvider({ children, locale }: ObservabilityProvide
         // 1. Error Capture
         const handleError = (event: ErrorEvent | PromiseRejectionEvent) => {
             const error = 'error' in event ? event.error : event.reason;
+
+            // Ignore telemetry/analytics errors (endpoint not yet implemented)
+            const message = event instanceof ErrorEvent ? event.message : 'Unhandled Promise Rejection';
+            if (message.includes('telemetry') || message.includes('/api/telemetry')) {
+                return;
+            }
+
             const log = {
                 signal: 'CLIENT_ERROR',
                 timestamp: new Date().toISOString(),
                 route: pathname,
                 locale,
                 userAgent: navigator.userAgent,
-                message: event instanceof ErrorEvent ? event.message : 'Unhandled Promise Rejection',
+                message,
                 stack: error?.stack || 'N/A',
                 type: event.type
             };
@@ -78,6 +79,36 @@ export function ObservabilityProvider({ children, locale }: ObservabilityProvide
                 window.addEventListener('load', logPerf, { once: true });
             }
         }
+    }, [pathname, locale]);
+
+    useEffect(() => {
+        // 3. Conversion & Engagement Tracking
+        analytics.track('cta_click', {
+            category: 'navigation',
+            label: 'page_view',
+            path: pathname,
+            locale
+        });
+
+        const trackScroll = () => {
+            const h = document.documentElement;
+            const b = document.body;
+            const scrollPercent = (h.scrollTop || b.scrollTop) / (h.scrollHeight - h.clientHeight) * 100;
+
+            const markers = [50, 90];
+            markers.forEach(mark => {
+                if (scrollPercent > mark) {
+                    analytics.track('cta_click', {
+                        category: 'engagement',
+                        label: `scroll_depth_${mark}`,
+                        path: pathname
+                    });
+                }
+            });
+        };
+
+        window.addEventListener('scroll', trackScroll, { passive: true });
+        return () => window.removeEventListener('scroll', trackScroll);
     }, [pathname, locale]);
 
     return <>{children}</>;

@@ -1,5 +1,6 @@
 import { useTranslations } from 'next-intl';
 import { Layers } from "lucide-react";
+import { AboveTheFoldDescription } from '@/components/seo/Enrichment';
 
 export default function PlatformHero() {
     const t = useTranslations('Platform');
@@ -38,6 +39,7 @@ export default function PlatformHero() {
                     <p className="text-lead mb-8">
                         {t('hero.subtitle')}
                     </p>
+                    <AboveTheFoldDescription pageKey="Platform" />
                     <div className="flex gap-4">
                         <button className="btn-primary">{t('hero.ctaPrimary')}</button>
                         <button className="btn-secondary">{t('hero.ctaSecondary')}</button>

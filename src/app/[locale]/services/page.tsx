@@ -41,9 +41,33 @@ export default async function ServicesPage({ params }: { params: Promise<{ local
             </div>
 
             <CloudFactorySection />
+            <HowItWorks pageKey="Services" />
+
             <AutomationStackSection />
+            <VisualSection
+                pageKey="Services"
+                imageUrl="/images/seo/architecture.png"
+                alt="OmniGCloud Modernization Pipeline"
+                description="Our services are powered by an autonomous pipeline that discovers, refactors, and orchestrates assets into a sovereign multi-cloud mesh."
+            />
+
             <ManagedOperationsSection />
+            <EnterpriseTrust />
             <DataAiFabricSection />
+            <EnterprisePartnership />
+
+            <DeepDive
+                pageKey="Services"
+                relatedLinks={[
+                    { label: "Cloud Modernization Guide", href: "/resources/blog/cloud-modernization-guide" },
+                    { label: "Sovereign DevOps", href: "/services/devops" },
+                    { label: "FinOps Strategy", href: "/services/cloud-cost-optimization" }
+                ]}
+            />
+
+            <TopicalAuthority pageKey="Services" />
+            <TechnicalInsights pageKey="Services" />
+            <FAQSection pageKey="Services" />
 
             {/* SITEMAP / FOOTER SNAP SECTION */}
             <section id="sitemap" className="snap-section" style={{ background: 'var(--background)', borderTop: '1px solid var(--card-border)' }}>
@@ -52,3 +76,6 @@ export default async function ServicesPage({ params }: { params: Promise<{ local
         </>
     );
 }
+
+import { HowItWorks, VisualSection, DeepDive, TopicalAuthority, TechnicalInsights, FAQSection } from '@/components/seo/Enrichment';
+import { EnterpriseTrust, EnterprisePartnership } from "@/components/sections/enterprise/EnterpriseApproach";
