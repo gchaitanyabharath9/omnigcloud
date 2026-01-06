@@ -23,7 +23,7 @@ export default async function SolutionsPage({ params }: { params: Promise<{ loca
     const uct = await getTranslations('UseCases');
 
     return (
-        <div className="flex-col w-full">
+        <div className="flex-col">
             {/* HERO */}
             <section className="snap-section" style={{ minHeight: '70vh', display: 'flex', alignItems: 'center', background: 'linear-gradient(to bottom, #020617, var(--background))' }}>
                 <PageShell>
