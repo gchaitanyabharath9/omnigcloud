@@ -18,11 +18,10 @@ export const PageShell = ({
     fluid = false,
     ...props
 }: PageShellProps) => {
-    // "container" class behavior explicitly defined here to centralize it.
-    // replacing the dependency on layout.css .container over time.
+    // Standardize constraint logic to match Dashboard/Landing pages
     const containerClasses = fluid
         ? 'w-full px-4 sm:px-6 lg:px-8'
-        : 'w-full max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8';
+        : 'container';
 
     return (
         <Component

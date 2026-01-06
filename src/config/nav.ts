@@ -84,9 +84,10 @@ export const NAV_CONFIG: NavGroup[] = [
             { id: 'industries-healthcare', labelKey: 'Header.nav.solutions_links.healthcare', type: 'section', route: '/solutions', hash: 'healthcare', icon: Activity },
             { id: 'industries-logistics', labelKey: 'Header.nav.solutions_links.logistics', type: 'section', route: '/solutions', hash: 'logistics', icon: Box },
             // Use Cases
-            { id: 'use-cases-financial', labelKey: 'Header.nav.solutions_links.finance_mod', type: 'section', route: '/solutions', hash: 'financial', icon: BarChart3 },
-            { id: 'use-cases-healthcare', labelKey: 'Header.nav.solutions_links.health_mod', type: 'section', route: '/solutions', hash: 'healthcare', icon: Activity },
-            { id: 'use-cases-government', labelKey: 'Header.nav.solutions_links.gov_trust', type: 'section', route: '/solutions', hash: 'government', icon: ShieldCheck },
+            // Use Cases
+            { id: 'use-cases-financial', labelKey: 'Header.nav.solutions_links.finance_mod', type: 'section', route: '/solutions', hash: 'use-case-financial', icon: BarChart3 },
+            { id: 'use-cases-healthcare', labelKey: 'Header.nav.solutions_links.health_mod', type: 'section', route: '/solutions', hash: 'use-case-healthcare', icon: Activity },
+            { id: 'use-cases-government', labelKey: 'Header.nav.solutions_links.gov_trust', type: 'section', route: '/solutions', hash: 'use-case-government', icon: ShieldCheck },
         ]
     },
     {
@@ -132,6 +133,7 @@ export const NAV_CONFIG: NavGroup[] = [
             { id: 'company-leadership', labelKey: 'Header.nav.company_links.leadership', type: 'section', route: '/company', hash: 'leadership', icon: Users },
             { id: 'company-operations', labelKey: 'Header.nav.company_links.operations', type: 'section', route: '/company', hash: 'global-operations', icon: Globe },
             { id: 'company-newsroom-main', labelKey: 'Header.nav.company_links.newsroom', type: 'section', route: '/company', hash: 'newsroom', icon: Newspaper },
+            { id: 'company-investors', labelKey: 'Header.nav.company_links.investors', type: 'section', route: '/company', hash: 'investors', icon: TrendingUp },
             // Contact
             { id: 'company-executive', labelKey: 'Header.nav.company_links.executive', type: 'section', route: '/company', hash: 'executive-office', icon: Briefcase },
             { id: 'contact', labelKey: 'Header.nav.company_links.contact', type: 'page', route: '/contact', icon: FileText },

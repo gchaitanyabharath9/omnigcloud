@@ -28,8 +28,15 @@ export function NavLink({ item, locale, className, onClick, children }: NavLinkP
             const targetPath = `/${locale}${item.route || ''}`;
             const currentPath = pathname;
 
+            // Normalize paths to handle trailing slashes and case (though routes are usually lowercase)
+            // This prevents "reload instead of scroll" issues
+            const normalize = (p: string) => p.replace(/\/$/, '') || '/';
+            // Also ensure we are comparing decoded paths just in case
+            const currNorm = normalize(decodeURIComponent(currentPath));
+            const targetNorm = normalize(decodeURIComponent(targetPath));
+
             // If same page, handle scrolling via hash change to avoid a full re-render
-            if (currentPath === targetPath || currentPath === item.route) {
+            if (currNorm === targetNorm) {
                 e.preventDefault();
                 // Setting hash directly triggers hashchange and our manager
                 window.location.hash = item.hash;

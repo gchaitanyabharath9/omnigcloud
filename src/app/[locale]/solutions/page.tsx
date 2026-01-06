@@ -96,7 +96,7 @@ export default async function SolutionsPage({ params }: { params: Promise<{ loca
 
                     <div className="flex-col" style={{ gap: '6rem' }}>
                         {USE_CASES.filter(uc => ['financial', 'healthcare', 'government'].includes(uc.id)).map((uc, idx) => (
-                            <div key={uc.id} id={uc.id} style={{ scrollMarginTop: '100px' }}>
+                            <div key={uc.id} id={`use-case-${uc.id}`} style={{ scrollMarginTop: '100px' }}>
                                 <Grid2x2Section
                                     {...uc}
                                     title={uct(`${uc.id}.title`)}
