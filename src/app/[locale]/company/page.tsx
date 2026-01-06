@@ -1,14 +1,11 @@
-"use client";
-
 import Footer from "@/components/Footer";
-
-import { useTranslations } from "next-intl";
+import { getTranslations } from "next-intl/server";
 import { Users, Globe, Target, Award, Briefcase, MapPin, Newspaper, Mail, Phone, ExternalLink, TrendingUp, BarChart3, Layers } from "lucide-react";
 
-export const COMPANY_SECTION_IDS = ['about', 'leadership', 'global-operations', 'newsroom', 'investors', 'executive-office'];
+// const COMPANY_SECTION_IDS removed in previous step
 
-export default function CompanyPage() {
-    const t = useTranslations("Investors");
+export default async function CompanyPage() {
+    const t = await getTranslations("Investors");
 
     return (
         <div className="snap-container">

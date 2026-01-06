@@ -3,7 +3,7 @@ import { Shield, Bug, Lock, AlertTriangle, CheckCircle, Mail } from "lucide-reac
 import SecurityPerformanceSection from "@/components/sections/security/SecurityPerformanceSection";
 import Footer from "@/components/Footer";
 
-export const SECURITY_SECTION_IDS = ['compliance-maps'];
+const SECURITY_SECTION_IDS = ['compliance-maps'];
 
 export default async function SecurityPage() {
     const t = await getTranslations("Security");

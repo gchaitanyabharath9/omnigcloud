@@ -2,7 +2,7 @@ import { Mail, Phone, MapPin, Globe } from "lucide-react";
 import { getTranslations, getLocale } from 'next-intl/server';
 import ContactForm from "@/components/forms/ContactForm";
 
-export const CONTACT_SECTION_IDS = ['hq'];
+const CONTACT_SECTION_IDS = ['hq'];
 
 export default async function ContactPage() {
     const t = await getTranslations('Company');

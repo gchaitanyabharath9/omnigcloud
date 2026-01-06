@@ -1,5 +1,5 @@
 import { config } from '../config';
-import { getVaultSecret } from './vault';
+// import { getVaultSecret } from './vault'; // Dynamically imported to support Edge
 
 // In-memory cache for Vault secrets to prevent excessive network calls
 let vaultCache: Record<string, string> | null = null;
@@ -27,14 +27,14 @@ export async function getSecret(key: string): Promise<string | undefined> {
     }
 
     // 2. Fallback: Fetch from Vault (for advanced non-local setups)
-    if (!vaultCache || (Date.now() - cacheTimestamp > CACHE_TTL_MS)) {
+    if (process.env.NEXT_RUNTIME === 'nodejs' && (!vaultCache || (Date.now() - cacheTimestamp > CACHE_TTL_MS))) {
         try {
             // Standardize path: secret/data/nascent-zodiac/<env>
-            // Note: KV v2 read paths usually include 'data' between mount and path.
-            // Assuming default 'secret' mount.
             const vaultPath = `secret/data/nascent-zodiac/${env}`;
 
+            const { getVaultSecret } = await import('./vault');
             const secretData = await getVaultSecret(vaultPath);
+
             if (secretData) {
                 vaultCache = secretData;
                 cacheTimestamp = Date.now();

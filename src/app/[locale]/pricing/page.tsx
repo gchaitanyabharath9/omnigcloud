@@ -15,7 +15,7 @@ const FeatureUsageBar = dynamic(() => import('@/components/charts/SimpleCharts')
 
 export const revalidate = 86400; // Cache for 24 hours (ISR)
 
-export const PRICING_SECTION_IDS = ['developer', 'professional', 'business', 'sovereign', 'trust', 'faq'];
+const PRICING_SECTION_IDS = ['developer', 'professional', 'business', 'sovereign', 'trust', 'faq'];
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
     const { locale } = await params;

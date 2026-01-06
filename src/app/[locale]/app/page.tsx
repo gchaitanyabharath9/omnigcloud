@@ -2,7 +2,7 @@ import { auth } from "@/auth";
 import { redirect } from "next/navigation";
 import { getTranslations } from "next-intl/server";
 
-export default async function DashboardPage({ params }: { params: { locale: string } }) {
+export default async function DashboardPage({ params }: { params: Promise<{ locale: string }> }) {
     const session = await auth();
     const t = await getTranslations("Dashboard");
 

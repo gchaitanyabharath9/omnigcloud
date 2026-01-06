@@ -235,7 +235,7 @@ export default async function DashboardMetricPage({ params }: { params: Promise<
     );
 }
 
-export const DASHBOARD_SECTION_IDS = [
+const DASHBOARD_SECTION_IDS = [
     'executive', 'technical', 'roi', 'cost', 'uptime',
     'security', 'resources', 'deployment', 'scaling', 'error'
 ];
