@@ -1,15 +1,15 @@
 "use client";
 
 import React, { useState, useEffect } from 'react';
-import DashboardShell from '@/components/dashboard/DashboardShell';
+import DashboardShell from '@/features/dashboard/DashboardShell';
 import { EnhancedCostSavingsChart, LiveROIGauge, PulsingSecurityScore, AnimatedResourceUtilization, LiveDeploymentFrequency } from '@/components/visuals/EnhancedGraphs';
 import { UptimeRing, ResponseTimeTrend } from '@/components/visuals/MetricsGraphs';
 import { ErrorRateTrend, QueryPerformance, AutoScalingEvents } from '@/components/visuals/PerformanceMetrics';
 import { TrendingUp, Zap, Globe, Shield, Activity, Server, Layers, AlertTriangle } from 'lucide-react';
-import DashboardScroller from '@/components/dashboard/DashboardScroller';
+import DashboardScroller from '@/features/dashboard/DashboardScroller';
 
 // Map of metrics to their display configuration and components
-import MetricDashboardLayout from '@/components/dashboard/MetricDashboardLayout';
+import MetricDashboardLayout from '@/features/dashboard/MetricDashboardLayout';
 import {
     LatencyLineChart,
     CloudDistributionPie,

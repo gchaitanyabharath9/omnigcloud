@@ -1,6 +1,6 @@
 import { PRODUCTS } from '@/data/products';
-import ProductDetailView from '@/components/products/ProductDetailView';
-import ProductScroller from '@/components/products/ProductScroller';
+import ProductDetailView from '@/features/products/ProductDetailView';
+import ProductScroller from '@/features/products/ProductScroller';
 import { notFound } from 'next/navigation';
 import React from 'react';
 

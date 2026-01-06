@@ -5,7 +5,7 @@ import { Cpu, ArrowRight } from 'lucide-react';
 import Link from 'next/link';
 import { PRODUCTS } from '@/data/products';
 import Footer from '@/components/Footer';
-import ProductScroller from '@/components/products/ProductScroller';
+import ProductScroller from '@/features/products/ProductScroller';
 import { HowItWorks, VisualSection, DeepDive } from '@/components/seo/Enrichment';
 
 export const PRODUCT_SECTION_IDS = ['playground', 'workflows', 'guard', 'knowledge', 'deploy', 'nexus'];

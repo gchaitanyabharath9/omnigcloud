@@ -4,10 +4,10 @@ import Link from 'next/link';
 import { WatermarkOverlay } from '@/components/WatermarkOverlay';
 
 // Modular Components
-import { ResearchHeader } from '@/components/research/ResearchHeader';
-import { ResearchContent } from '@/components/research/ResearchContent';
-import { ResearchActions } from '@/components/research/ResearchActions';
-import { ResearchFooter } from '@/components/research/ResearchFooter';
+import { ResearchHeader } from '@/features/resources/research/ResearchHeader';
+import { ResearchContent } from '@/features/resources/research/ResearchContent';
+import { ResearchActions } from '@/features/resources/research/ResearchActions';
+import { ResearchFooter } from '@/features/resources/research/ResearchFooter';
 
 export default async function PublicationPage({ params }: { params: Promise<{ locale: string }> }) {
     const { locale } = await params;
