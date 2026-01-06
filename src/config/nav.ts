@@ -11,7 +11,7 @@
 import {
     BarChart3, Terminal, GitBranch, ShieldCheck, Database, Activity, Layers,
     Building2, Zap, Box, BookOpen, FileText, Newspaper, Users, Camera,
-    Briefcase, HelpCircle, Globe, TrendingUp, Settings, Server, AlertTriangle
+    Briefcase, HelpCircle, Globe, TrendingUp, Settings, Server, AlertTriangle, Shield
 } from 'lucide-react';
 
 export type NavItemType = 'page' | 'section';
@@ -118,10 +118,14 @@ export const NAV_CONFIG: NavGroup[] = [
             { id: 'pricing-professional', labelKey: 'Header.nav.pricing_links.professional', type: 'section', route: '/pricing', hash: 'professional', icon: Zap, section: 'Header.nav.tiers' },
             { id: 'pricing-business', labelKey: 'Header.nav.pricing_links.business', type: 'section', route: '/pricing', hash: 'business', icon: Building2, section: 'Header.nav.tiers' },
             { id: 'pricing-sovereign', labelKey: 'Header.nav.pricing_links.sovereign', type: 'section', route: '/pricing', hash: 'sovereign', icon: ShieldCheck, section: 'Header.nav.tiers' },
-            // Information
-            { id: 'pricing-compare', labelKey: 'Header.nav.pricing_links.compare', type: 'page', route: '/pricing', icon: Layers, section: 'Header.nav.information' },
-            { id: 'pricing-trust', labelKey: 'Header.nav.pricing_links.trust', type: 'section', route: '/pricing', hash: 'trust', icon: ShieldCheck, section: 'Header.nav.information' },
-            { id: 'pricing-faq', labelKey: 'Header.nav.pricing_links.faq', type: 'section', route: '/pricing', hash: 'faq', icon: HelpCircle, section: 'Header.nav.information' },
+            // Analysis & Value
+            { id: 'pricing-savings', labelKey: 'Header.nav.pricing_links.savings_analysis', type: 'section', route: '/pricing', hash: 'savings-analysis', icon: TrendingUp, section: 'Header.nav.analysis' },
+            { id: 'pricing-value-economy', labelKey: 'Header.nav.pricing_links.value_economy', type: 'section', route: '/pricing', hash: 'value-economy', icon: Zap, section: 'Header.nav.analysis' },
+            { id: 'pricing-visual-arch', labelKey: 'Header.nav.pricing_links.visual_architecture', type: 'section', route: '/pricing', hash: 'visual-architecture', icon: Layers, section: 'Header.nav.analysis' },
+            // Trust & Compliance
+            { id: 'pricing-compliance', labelKey: 'Header.nav.pricing_links.compliance', type: 'section', route: '/pricing', hash: 'compliance', icon: ShieldCheck, section: 'Header.nav.trust_compliance' },
+            { id: 'pricing-trust', labelKey: 'Header.nav.pricing_links.trust', type: 'section', route: '/pricing', hash: 'trust', icon: Shield, section: 'Header.nav.trust_compliance' },
+            { id: 'pricing-faq', labelKey: 'Header.nav.pricing_links.faq', type: 'section', route: '/pricing', hash: 'faq', icon: HelpCircle, section: 'Header.nav.trust_compliance' },
         ]
     },
     {
