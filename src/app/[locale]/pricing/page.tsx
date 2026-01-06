@@ -398,13 +398,6 @@ export default async function PricingPage({ params }: { params: Promise<{ locale
 
             <HowItWorks pageKey="Pricing" />
 
-            <VisualSection
-                pageKey="Pricing"
-                imageUrl="/images/seo/architecture.png"
-                alt="Pricing Value Map"
-                description="Our pricing is aligned with the sovereign nodes you manage, ensuring that your costs scale linearly with your infrastructure value, not your provider's proprietary egress fees."
-            />
-
             <DeepDive
                 pageKey="Pricing"
                 relatedLinks={[
