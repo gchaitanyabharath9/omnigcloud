@@ -229,23 +229,63 @@ export default async function PricingPage({ params }: { params: Promise<{ locale
                         <FeatureUsageBar />
                     </div>
 
+
                     {/* Related Strategy & Insights */}
-                    <div style={{ marginTop: '3rem', display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: '1.5rem' }}>
-                        <Link href={`/${locale}/resources/blog/cloud-modernization-guide`} className="glass-panel" style={{ padding: '1.5rem', borderRadius: '1rem', textDecoration: 'none', transition: 'all 0.3s' }}>
-                            <div style={{ fontSize: '0.75rem', opacity: 0.6, marginBottom: '0.5rem', textTransform: 'uppercase', letterSpacing: '0.1em' }}>Strategy</div>
-                            <h4 style={{ fontSize: '1rem', fontWeight: 800, marginBottom: '0.5rem' }}>Cloud Modernization</h4>
-                            <p style={{ fontSize: '0.8rem', opacity: 0.7 }}>Comprehensive guide to modernizing your cloud infrastructure</p>
-                        </Link>
-                        <Link href={`/${locale}/resources/blog/sovereignty-framework`} className="glass-panel" style={{ padding: '1.5rem', borderRadius: '1rem', textDecoration: 'none', transition: 'all 0.3s' }}>
-                            <div style={{ fontSize: '0.75rem', opacity: 0.6, marginBottom: '0.5rem', textTransform: 'uppercase', letterSpacing: '0.1em' }}>Framework</div>
-                            <h4 style={{ fontSize: '1rem', fontWeight: 800, marginBottom: '0.5rem' }}>Sovereign Finance</h4>
-                            <p style={{ fontSize: '0.8rem', opacity: 0.7 }}>Financial sovereignty through cloud-agnostic architecture</p>
-                        </Link>
-                        <Link href={`/${locale}/resources/blog/devops-best-practices`} className="glass-panel" style={{ padding: '1.5rem', borderRadius: '1rem', textDecoration: 'none', transition: 'all 0.3s' }}>
-                            <div style={{ fontSize: '0.75rem', opacity: 0.6, marginBottom: '0.5rem', textTransform: 'uppercase', letterSpacing: '0.1em' }}>Blueprint</div>
-                            <h4 style={{ fontSize: '1rem', fontWeight: 800, marginBottom: '0.5rem' }}>Modernization Blueprint</h4>
-                            <p style={{ fontSize: '0.8rem', opacity: 0.7 }}>Step-by-step DevOps transformation roadmap</p>
-                        </Link>
+                    <div style={{ marginTop: '3rem' }}>
+                        <h3 style={{ fontSize: '1.2rem', fontWeight: 900, marginBottom: '1.5rem', opacity: 0.9 }}>Related Strategy & Insights</h3>
+                        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: '1.5rem' }}>
+                            <Link
+                                href={`/${locale}/resources/blog/cloud-modernization-guide`}
+                                className="glass-panel"
+                                style={{
+                                    padding: '1.5rem',
+                                    borderRadius: '1rem',
+                                    textDecoration: 'none',
+                                    display: 'block',
+                                    transition: 'all 0.3s ease',
+                                    cursor: 'pointer',
+                                    border: '1px solid var(--card-border)'
+                                }}
+                            >
+                                <div style={{ fontSize: '0.7rem', opacity: 0.5, marginBottom: '0.75rem', textTransform: 'uppercase', letterSpacing: '0.15em', fontWeight: 700 }}>STRATEGY</div>
+                                <h4 style={{ fontSize: '1.1rem', fontWeight: 900, marginBottom: '0.75rem', color: 'var(--text-primary)' }}>Cloud Modernization</h4>
+                                <p style={{ fontSize: '0.85rem', opacity: 0.7, lineHeight: 1.5, color: 'var(--text-secondary)' }}>Comprehensive guide to modernizing your cloud infrastructure</p>
+                            </Link>
+                            <Link
+                                href={`/${locale}/resources/blog/sovereignty-framework`}
+                                className="glass-panel"
+                                style={{
+                                    padding: '1.5rem',
+                                    borderRadius: '1rem',
+                                    textDecoration: 'none',
+                                    display: 'block',
+                                    transition: 'all 0.3s ease',
+                                    cursor: 'pointer',
+                                    border: '1px solid var(--card-border)'
+                                }}
+                            >
+                                <div style={{ fontSize: '0.7rem', opacity: 0.5, marginBottom: '0.75rem', textTransform: 'uppercase', letterSpacing: '0.15em', fontWeight: 700 }}>FRAMEWORK</div>
+                                <h4 style={{ fontSize: '1.1rem', fontWeight: 900, marginBottom: '0.75rem', color: 'var(--text-primary)' }}>Sovereign Finance</h4>
+                                <p style={{ fontSize: '0.85rem', opacity: 0.7, lineHeight: 1.5, color: 'var(--text-secondary)' }}>Financial sovereignty through cloud-agnostic architecture</p>
+                            </Link>
+                            <Link
+                                href={`/${locale}/resources/blog/devops-best-practices`}
+                                className="glass-panel"
+                                style={{
+                                    padding: '1.5rem',
+                                    borderRadius: '1rem',
+                                    textDecoration: 'none',
+                                    display: 'block',
+                                    transition: 'all 0.3s ease',
+                                    cursor: 'pointer',
+                                    border: '1px solid var(--card-border)'
+                                }}
+                            >
+                                <div style={{ fontSize: '0.7rem', opacity: 0.5, marginBottom: '0.75rem', textTransform: 'uppercase', letterSpacing: '0.15em', fontWeight: 700 }}>BLUEPRINT</div>
+                                <h4 style={{ fontSize: '1.1rem', fontWeight: 900, marginBottom: '0.75rem', color: 'var(--text-primary)' }}>Modernization Blueprint</h4>
+                                <p style={{ fontSize: '0.85rem', opacity: 0.7, lineHeight: 1.5, color: 'var(--text-secondary)' }}>Step-by-step DevOps transformation roadmap</p>
+                            </Link>
+                        </div>
                     </div>
                 </div>
             </section>
