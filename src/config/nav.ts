@@ -95,14 +95,14 @@ export const NAV_CONFIG: NavGroup[] = [
         mainRoute: '/docs',
         items: [
             // Documentation
-            { id: 'docs-main', labelKey: 'Header.nav.docs_links.tech_docs', type: 'page', route: '/docs', icon: BookOpen },
-            { id: 'docs-architecture', labelKey: 'Header.nav.docs_links.patterns', type: 'page', route: '/docs/architecture', icon: Layers },
-            { id: 'docs-whitepaper', labelKey: 'Header.nav.docs_links.whitepaper', type: 'page', route: '/docs/whitepaper', icon: FileText },
-            { id: 'docs-guide', labelKey: 'Header.nav.docs_links.guide', type: 'page', route: '/docs/guide', icon: BookOpen },
-            { id: 'docs-api', labelKey: 'Header.nav.docs_links.api', type: 'page', route: '/docs/api', icon: Terminal },
+            { id: 'docs-main', labelKey: 'Header.nav.docs_links.tech_docs', type: 'section', route: '/docs', hash: 'intro', icon: BookOpen },
+            { id: 'docs-architecture', labelKey: 'Header.nav.docs_links.patterns', type: 'section', route: '/docs', hash: 'architecture', icon: Layers },
+            { id: 'docs-whitepaper', labelKey: 'Header.nav.docs_links.whitepaper', type: 'section', route: '/docs', hash: 'whitepaper', icon: FileText },
+            { id: 'docs-guide', labelKey: 'Header.nav.docs_links.guide', type: 'section', route: '/docs', hash: 'guide', icon: BookOpen },
+            { id: 'docs-api', labelKey: 'Header.nav.docs_links.api', type: 'section', route: '/docs', hash: 'api', icon: Terminal },
             // Community
             { id: 'visual-library', labelKey: 'Header.nav.docs_links.visual_library', type: 'page', route: '/visual-library', icon: Camera },
-            { id: 'company-newsroom', labelKey: 'Header.nav.docs_links.newsroom', type: 'page', route: '/company#newsroom', icon: Newspaper },
+            { id: 'company-newsroom', labelKey: 'Header.nav.docs_links.newsroom', type: 'section', route: '/company', hash: 'newsroom', icon: Newspaper },
             { id: 'community', labelKey: 'Header.nav.docs_links.open_source', type: 'page', route: '/community', icon: Users },
         ]
     },

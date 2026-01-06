@@ -30,10 +30,10 @@ export default async function DocsPage() {
                                 <h4 style={{ fontSize: '0.65rem', fontWeight: 900, color: 'var(--primary)', textTransform: 'uppercase', letterSpacing: '0.1em', marginBottom: '0.75rem' }}>{t('sidebar.documentation')}</h4>
                                 <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
                                     {[
-                                        { key: 'intro', label: t('sidebar.links.introduction'), href: '/docs' },
-                                        { key: 'arch', label: t('sidebar.links.architecture'), href: '/docs/architecture' },
-                                        { key: 'whitepaper', label: t('sidebar.links.whitepaper'), href: '/docs/whitepaper' },
-                                        { key: 'security', label: t('sidebar.links.security'), href: '/docs/governance' }
+                                        { key: 'intro', label: t('sidebar.links.introduction'), href: '#intro' },
+                                        { key: 'arch', label: t('sidebar.links.architecture'), href: '#architecture' },
+                                        { key: 'whitepaper', label: t('sidebar.links.whitepaper'), href: '#whitepaper' },
+                                        { key: 'security', label: t('sidebar.links.security'), href: '#governance' }
                                     ].map(item => (
                                         <Link key={item.key} href={item.href} style={{
                                             fontSize: '0.8rem',
@@ -63,7 +63,7 @@ export default async function DocsPage() {
                         </aside>
 
                         {/* Content */}
-                        <main>
+                        <main id="intro" style={{ scrollMarginTop: '120px' }}>
                             <div style={{ marginBottom: '2rem' }}>
                                 <div style={{ display: 'flex', alignItems: 'center', gap: '0.6rem', marginBottom: '0.75rem' }}>
                                     <Award size={20} color="var(--primary)" />
@@ -133,7 +133,7 @@ export default async function DocsPage() {
                                 </div>
                             </div>
 
-                            <div className="glass-panel" style={{ marginTop: '1.5rem', padding: '1.5rem', borderRadius: '1.5rem', background: 'var(--primary-glow)' }}>
+                            <div id="governance" className="glass-panel" style={{ marginTop: '1.5rem', padding: '1.5rem', borderRadius: '1.5rem', background: 'var(--primary-glow)', scrollMarginTop: '120px' }}>
                                 <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', marginBottom: '1rem' }}>
                                     <ShieldCheck size={24} color="var(--primary)" />
                                     <h3 style={{ fontSize: '1.5rem', fontWeight: 950 }}>{t('banner.title')}</h3>
