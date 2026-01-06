@@ -13,13 +13,13 @@ export default defineConfig({
     workers: 4,
     reporter: [['html', { open: 'never' }], ['list']],
     use: {
-        baseURL: 'http://localhost:3001',
+        baseURL: 'http://localhost:3000',
         trace: 'on-first-retry',
         screenshot: 'only-on-failure',
     },
     webServer: {
-        command: 'npm run start -- -p 3001',
-        port: 3001,
+        command: 'npm run start -- -p 3000',
+        port: 3000,
         reuseExistingServer: true,
         timeout: 120 * 1000,
     },

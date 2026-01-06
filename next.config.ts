@@ -67,8 +67,8 @@ const nextConfig: any = {
       "frame-ancestors 'self' https://vercel.live https://*.vercel.live https://vercel.com",
       // Frame src: Allow Vercel Live
       "frame-src 'self' https://vercel.live https://*.vercel.live https://vercel.com",
-      // Upgrade insecure requests
-      "upgrade-insecure-requests",
+      // Upgrade insecure requests (strict prod only to avoid local test failures)
+      ...(appEnv === 'prod' ? ["upgrade-insecure-requests"] : []),
       // Block mixed content
       "block-all-mixed-content"
     ].join('; ');
