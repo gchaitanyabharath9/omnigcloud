@@ -1,8 +1,15 @@
+import Link from 'next/link';
 import Footer from "@/components/Footer";
 import { getTranslations } from "next-intl/server";
 import { Users, Globe, Target, Award, Briefcase, MapPin, Newspaper, Mail, Phone, ExternalLink, TrendingUp, BarChart3, Layers } from "lucide-react";
 
 // const COMPANY_SECTION_IDS removed in previous step
+
+export function generateStaticParams() {
+    return ['en', 'es', 'fr', 'de', 'zh', 'hi', 'ja', 'ko'].map((locale) => ({ locale }));
+}
+
+export const revalidate = 3600;
 
 export default async function CompanyPage() {
     const t = await getTranslations("Investors");

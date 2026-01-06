@@ -1,6 +1,8 @@
 import { config } from '@/config';
 import { MetadataRoute } from 'next';
 
+export const revalidate = 86400; // Cache for 24 hours
+
 export default function sitemap(): MetadataRoute.Sitemap {
     const baseUrl = config.site.url;
     const locales = ['en', 'es', 'fr', 'de', 'zh', 'hi', 'ja', 'ko'];

@@ -18,6 +18,8 @@ const DemoSection = dynamic(() => import('@/components/sections/home/DemoSection
 
 import { getTranslations } from 'next-intl/server';
 
+export const revalidate = 3600;
+
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
   const tm = await getTranslations({ locale, namespace: 'Metadata.Home' });
@@ -28,7 +30,13 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   };
 }
 
-export default function Home() {
+export function generateStaticParams() {
+  return ['en', 'es', 'fr', 'de', 'zh', 'hi', 'ja', 'ko'].map((locale) => ({ locale }));
+}
+
+export default async function Home({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params;
+
   return (
     <>
       <HeroSection />

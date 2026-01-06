@@ -13,7 +13,11 @@ const CloudDistributionPie = dynamic(() => import('@/components/charts/SimpleCha
 const FeatureUsageBar = dynamic(() => import('@/components/charts/SimpleCharts').then(mod => mod.FeatureUsageBar));
 // ComplianceScoresBar is unused
 
-export const revalidate = 86400; // Cache for 24 hours (ISR)
+export function generateStaticParams() {
+    return ['en', 'es', 'fr', 'de', 'zh', 'hi', 'ja', 'ko'].map((locale) => ({ locale }));
+}
+
+export const revalidate = 3600;
 
 const PRICING_SECTION_IDS = ['developer', 'professional', 'business', 'sovereign', 'trust', 'faq'];
 

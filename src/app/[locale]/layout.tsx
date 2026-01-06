@@ -142,6 +142,12 @@ export function generateViewport(): Viewport {
   };
 }
 
+// ... (previous imports)
+
+export function generateStaticParams() {
+  return ['en', 'es', 'fr', 'de', 'zh', 'hi', 'ja', 'ko'].map((locale) => ({ locale }));
+}
+
 export default async function RootLayout({
   children,
   params
@@ -150,6 +156,7 @@ export default async function RootLayout({
   params: Promise<{ locale: string }>;
 }) {
   const { locale } = await params;
+
   const messages = await getMessages();
 
   return (
