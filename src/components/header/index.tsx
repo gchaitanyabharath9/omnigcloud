@@ -94,16 +94,40 @@ const Header = () => {
                                                 overflowY: 'auto'
                                             }}
                                         >
-                                            {/* Split items into two columns */}
+                                            {/* Split items into two columns based on section groups */}
                                             {(() => {
-                                                const midpoint = Math.ceil(navGroup.items.length / 2);
-                                                const leftItems = navGroup.items.slice(0, midpoint);
-                                                const rightItems = navGroup.items.slice(midpoint);
+                                                // 1. Group items by section
+                                                const groups: Record<string, typeof navGroup.items> = {};
+                                                const orderedSections: string[] = [];
 
-                                                return (
-                                                    <>
-                                                        <div style={{ display: 'flex', flexDirection: 'column', gap: '0.2rem' }}>
-                                                            {leftItems.map((item) => (
+                                                navGroup.items.forEach(item => {
+                                                    const section = item.section || 'default';
+                                                    if (!groups[section]) {
+                                                        groups[section] = [];
+                                                        orderedSections.push(section);
+                                                    }
+                                                    groups[section].push(item);
+                                                });
+
+                                                // 2. Distribute sections into two columns
+                                                // Strategy: Alternating distribution or Half/Half based on section count
+                                                // Since we curated the data to be nicely split, we can just put half of sections in left, half in right
+
+                                                const sectionCount = orderedSections.length;
+                                                const midPoint = Math.ceil(sectionCount / 2);
+
+                                                const leftSections = orderedSections.slice(0, midPoint);
+                                                const rightSections = orderedSections.slice(midPoint);
+
+                                                const renderSection = (sectionKey: string) => (
+                                                    <div key={sectionKey} className="flex flex-col gap-2 mb-6">
+                                                        {sectionKey !== 'default' && (
+                                                            <div className="text-xs font-bold text-gray-500 uppercase tracking-wider mb-2 px-2">
+                                                                {t(sectionKey)}
+                                                            </div>
+                                                        )}
+                                                        <div className="flex flex-col gap-1">
+                                                            {groups[sectionKey].map((item) => (
                                                                 <NavLink
                                                                     key={item.id}
                                                                     item={item}
@@ -115,18 +139,16 @@ const Header = () => {
                                                                 </NavLink>
                                                             ))}
                                                         </div>
-                                                        <div style={{ display: 'flex', flexDirection: 'column', gap: '0.2rem' }}>
-                                                            {rightItems.map((item) => (
-                                                                <NavLink
-                                                                    key={item.id}
-                                                                    item={item}
-                                                                    locale={locale}
-                                                                    className={styles.dropdownLink}
-                                                                    onClick={() => setActiveDropdown(null)}
-                                                                >
-                                                                    {item.icon && <item.icon size={14} />} {t(item.labelKey)}
-                                                                </NavLink>
-                                                            ))}
+                                                    </div>
+                                                );
+
+                                                return (
+                                                    <>
+                                                        <div className="flex flex-col">
+                                                            {leftSections.map(renderSection)}
+                                                        </div>
+                                                        <div className="flex flex-col">
+                                                            {rightSections.map(renderSection)}
                                                         </div>
                                                     </>
                                                 );
