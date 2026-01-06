@@ -244,10 +244,11 @@ export default async function PricingPage({ params }: { params: Promise<{ locale
                                     display: 'block',
                                     transition: 'all 0.3s ease',
                                     cursor: 'pointer',
-                                    border: '1px solid var(--card-border)'
+                                    border: '1px solid var(--card-border)',
+                                    background: 'var(--card-bg)'
                                 }}
                             >
-                                <div style={{ fontSize: '0.7rem', opacity: 0.5, marginBottom: '0.75rem', textTransform: 'uppercase', letterSpacing: '0.15em', fontWeight: 700 }}>STRATEGY</div>
+                                <div style={{ fontSize: '0.7rem', opacity: 0.5, marginBottom: '0.75rem', textTransform: 'uppercase', letterSpacing: '0.15em', fontWeight: 700, color: 'var(--text-primary)' }}>STRATEGY</div>
                                 <h4 style={{ fontSize: '1.1rem', fontWeight: 900, marginBottom: '0.75rem', color: 'var(--text-primary)' }}>Cloud Modernization</h4>
                                 <p style={{ fontSize: '0.85rem', opacity: 0.7, lineHeight: 1.5, color: 'var(--text-secondary)' }}>Comprehensive guide to modernizing your cloud infrastructure</p>
                             </Link>
@@ -261,10 +262,11 @@ export default async function PricingPage({ params }: { params: Promise<{ locale
                                     display: 'block',
                                     transition: 'all 0.3s ease',
                                     cursor: 'pointer',
-                                    border: '1px solid var(--card-border)'
+                                    border: '1px solid var(--card-border)',
+                                    background: 'var(--card-bg)'
                                 }}
                             >
-                                <div style={{ fontSize: '0.7rem', opacity: 0.5, marginBottom: '0.75rem', textTransform: 'uppercase', letterSpacing: '0.15em', fontWeight: 700 }}>FRAMEWORK</div>
+                                <div style={{ fontSize: '0.7rem', opacity: 0.5, marginBottom: '0.75rem', textTransform: 'uppercase', letterSpacing: '0.15em', fontWeight: 700, color: 'var(--text-primary)' }}>FRAMEWORK</div>
                                 <h4 style={{ fontSize: '1.1rem', fontWeight: 900, marginBottom: '0.75rem', color: 'var(--text-primary)' }}>Sovereign Finance</h4>
                                 <p style={{ fontSize: '0.85rem', opacity: 0.7, lineHeight: 1.5, color: 'var(--text-secondary)' }}>Financial sovereignty through cloud-agnostic architecture</p>
                             </Link>
@@ -278,10 +280,11 @@ export default async function PricingPage({ params }: { params: Promise<{ locale
                                     display: 'block',
                                     transition: 'all 0.3s ease',
                                     cursor: 'pointer',
-                                    border: '1px solid var(--card-border)'
+                                    border: '1px solid var(--card-border)',
+                                    background: 'var(--card-bg)'
                                 }}
                             >
-                                <div style={{ fontSize: '0.7rem', opacity: 0.5, marginBottom: '0.75rem', textTransform: 'uppercase', letterSpacing: '0.15em', fontWeight: 700 }}>BLUEPRINT</div>
+                                <div style={{ fontSize: '0.7rem', opacity: 0.5, marginBottom: '0.75rem', textTransform: 'uppercase', letterSpacing: '0.15em', fontWeight: 700, color: 'var(--text-primary)' }}>BLUEPRINT</div>
                                 <h4 style={{ fontSize: '1.1rem', fontWeight: 900, marginBottom: '0.75rem', color: 'var(--text-primary)' }}>Modernization Blueprint</h4>
                                 <p style={{ fontSize: '0.85rem', opacity: 0.7, lineHeight: 1.5, color: 'var(--text-secondary)' }}>Step-by-step DevOps transformation roadmap</p>
                             </Link>
@@ -337,14 +340,6 @@ export default async function PricingPage({ params }: { params: Promise<{ locale
             <section id="visual-architecture" className="snap-section" style={{ background: 'var(--background)' }}>
                 <div className="container">
                     <div style={{ marginBottom: '2rem' }}>
-                        <Image
-                            src="/images/pricing-value-map.png"
-                            alt="Pricing Value Map - ARCHITECTURE_VISUAL_01"
-                            width={120}
-                            height={40}
-                            style={{ marginBottom: '1rem', opacity: 0.7 }}
-                            unoptimized
-                        />
                         <h2 style={{ fontSize: '2.5rem', fontWeight: 950, marginBottom: '1rem' }}>Visual Architecture Breakdown</h2>
                         <p style={{ opacity: 0.7, maxWidth: '900px', fontSize: '1rem', lineHeight: 1.6 }}>Our pricing is aligned with the sovereign nodes you manage, ensuring that your costs scale linearly with your infrastructure value, not your provider's proprietary egress fees.</p>
                     </div>
