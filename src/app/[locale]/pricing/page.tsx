@@ -11,6 +11,7 @@ import { safeJsonLd } from '@/lib/security';
 const CostSavingsArea = dynamic(() => import('@/components/charts/SimpleCharts').then(mod => mod.CostSavingsArea));
 const CloudDistributionPie = dynamic(() => import('@/components/charts/SimpleCharts').then(mod => mod.CloudDistributionPie));
 const FeatureUsageBar = dynamic(() => import('@/components/charts/SimpleCharts').then(mod => mod.FeatureUsageBar));
+const RelatedStrategyLinks = dynamic(() => import('@/components/pricing/RelatedStrategyLinks'));
 // ComplianceScoresBar is unused
 
 export function generateStaticParams() {
@@ -229,67 +230,8 @@ export default async function PricingPage({ params }: { params: Promise<{ locale
                         <FeatureUsageBar />
                     </div>
 
-
                     {/* Related Strategy & Insights */}
-                    <div style={{ marginTop: '3rem' }}>
-                        <h3 style={{ fontSize: '1.2rem', fontWeight: 900, marginBottom: '1.5rem', opacity: 0.9 }}>Related Strategy & Insights</h3>
-                        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: '1.5rem' }}>
-                            <Link
-                                href={`/${locale}/resources/blog/cloud-modernization-guide`}
-                                className="glass-panel"
-                                style={{
-                                    padding: '1.5rem',
-                                    borderRadius: '1rem',
-                                    textDecoration: 'none',
-                                    display: 'block',
-                                    transition: 'all 0.3s ease',
-                                    cursor: 'pointer',
-                                    border: '1px solid var(--card-border)',
-                                    background: 'var(--card-bg)'
-                                }}
-                            >
-                                <div style={{ fontSize: '0.7rem', opacity: 0.5, marginBottom: '0.75rem', textTransform: 'uppercase', letterSpacing: '0.15em', fontWeight: 700, color: 'var(--text-primary)' }}>STRATEGY</div>
-                                <h4 style={{ fontSize: '1.1rem', fontWeight: 900, marginBottom: '0.75rem', color: 'var(--text-primary)' }}>Cloud Modernization</h4>
-                                <p style={{ fontSize: '0.85rem', opacity: 0.7, lineHeight: 1.5, color: 'var(--text-secondary)' }}>Comprehensive guide to modernizing your cloud infrastructure</p>
-                            </Link>
-                            <Link
-                                href={`/${locale}/resources/blog/sovereignty-framework`}
-                                className="glass-panel"
-                                style={{
-                                    padding: '1.5rem',
-                                    borderRadius: '1rem',
-                                    textDecoration: 'none',
-                                    display: 'block',
-                                    transition: 'all 0.3s ease',
-                                    cursor: 'pointer',
-                                    border: '1px solid var(--card-border)',
-                                    background: 'var(--card-bg)'
-                                }}
-                            >
-                                <div style={{ fontSize: '0.7rem', opacity: 0.5, marginBottom: '0.75rem', textTransform: 'uppercase', letterSpacing: '0.15em', fontWeight: 700, color: 'var(--text-primary)' }}>FRAMEWORK</div>
-                                <h4 style={{ fontSize: '1.1rem', fontWeight: 900, marginBottom: '0.75rem', color: 'var(--text-primary)' }}>Sovereign Finance</h4>
-                                <p style={{ fontSize: '0.85rem', opacity: 0.7, lineHeight: 1.5, color: 'var(--text-secondary)' }}>Financial sovereignty through cloud-agnostic architecture</p>
-                            </Link>
-                            <Link
-                                href={`/${locale}/resources/blog/devops-best-practices`}
-                                className="glass-panel"
-                                style={{
-                                    padding: '1.5rem',
-                                    borderRadius: '1rem',
-                                    textDecoration: 'none',
-                                    display: 'block',
-                                    transition: 'all 0.3s ease',
-                                    cursor: 'pointer',
-                                    border: '1px solid var(--card-border)',
-                                    background: 'var(--card-bg)'
-                                }}
-                            >
-                                <div style={{ fontSize: '0.7rem', opacity: 0.5, marginBottom: '0.75rem', textTransform: 'uppercase', letterSpacing: '0.15em', fontWeight: 700, color: 'var(--text-primary)' }}>BLUEPRINT</div>
-                                <h4 style={{ fontSize: '1.1rem', fontWeight: 900, marginBottom: '0.75rem', color: 'var(--text-primary)' }}>Modernization Blueprint</h4>
-                                <p style={{ fontSize: '0.85rem', opacity: 0.7, lineHeight: 1.5, color: 'var(--text-secondary)' }}>Step-by-step DevOps transformation roadmap</p>
-                            </Link>
-                        </div>
-                    </div>
+                    <RelatedStrategyLinks />
                 </div>
             </section>
 
