@@ -54,6 +54,12 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
     };
 }
 
+export function generateStaticParams() {
+    return ['en', 'es', 'fr', 'de', 'zh', 'hi', 'ja', 'ko'].map((locale) => ({ locale }));
+}
+
+export const revalidate = 3600;
+
 export default async function WhitepaperPage({ params }: { params: Promise<{ locale: string }> }) {
     const { locale } = await params;
     const t = await getTranslations({ locale, namespace: 'Whitepaper' });

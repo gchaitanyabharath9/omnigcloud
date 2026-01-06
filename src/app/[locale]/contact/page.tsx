@@ -4,6 +4,12 @@ import ContactForm from "@/components/forms/ContactForm";
 
 const CONTACT_SECTION_IDS = ['hq'];
 
+export function generateStaticParams() {
+    return ['en', 'es', 'fr', 'de', 'zh', 'hi', 'ja', 'ko'].map((locale) => ({ locale }));
+}
+
+export const revalidate = 3600;
+
 export default async function ContactPage() {
     const t = await getTranslations('Company');
     const locale = await getLocale();

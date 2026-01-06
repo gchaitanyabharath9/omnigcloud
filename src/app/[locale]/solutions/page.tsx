@@ -17,6 +17,12 @@ const industryConfigs = [
     { id: "logistics", key: "logistics", icon: <Truck size={32} /> }
 ];
 
+export function generateStaticParams() {
+    return ['en', 'es', 'fr', 'de', 'zh', 'hi', 'ja', 'ko'].map((locale) => ({ locale }));
+}
+
+export const revalidate = 3600;
+
 export default async function SolutionsPage({ params }: { params: Promise<{ locale: string }> }) {
     const { locale } = await params;
     const t = await getTranslations('Industries');

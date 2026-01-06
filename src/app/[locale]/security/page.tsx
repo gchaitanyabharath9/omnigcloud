@@ -5,6 +5,12 @@ import Footer from "@/components/Footer";
 
 const SECURITY_SECTION_IDS = ['compliance-maps'];
 
+export function generateStaticParams() {
+    return ['en', 'es', 'fr', 'de', 'zh', 'hi', 'ja', 'ko'].map((locale) => ({ locale }));
+}
+
+export const revalidate = 3600;
+
 export default async function SecurityPage() {
     const t = await getTranslations("Security");
 
