@@ -16,11 +16,13 @@ export default auth(async (req) => {
 
     // 3. REMOVE REDUNDANT SKIP LOGIC (PERF/COST)
     // Matcher handles most exclusions, but redundant safety checks for specific files:
-    if (
-        pathname === '/favicon.ico' ||
+    const isPublicStatics = pathname === '/favicon.ico' ||
         pathname === '/robots.txt' ||
-        pathname === '/sitemap.xml'
-    ) {
+        pathname === '/sitemap.xml' ||
+        pathname === '/logo.svg' ||
+        pathname === '/manifest.webmanifest';
+
+    if (isPublicStatics) {
         return NextResponse.next();
     }
 
@@ -29,7 +31,7 @@ export default auth(async (req) => {
 
     // A) Root path "/" -> "/en" (PRESERVE SEARCH)
     if (pathname === '/') {
-        return NextResponse.redirect(new URL(`/${DEFAULT_LOCALE}${search}`, nextUrl));
+        return NextResponse.redirect(new URL(`/${DEFAULT_LOCALE}${search}`, nextUrl), { status: 301 });
     }
 
     // B) Check for locale prefix (USE SET HAS)
@@ -68,5 +70,17 @@ export default auth(async (req) => {
 });
 
 export const config = {
-    matcher: ['/((?!api|_next|_vercel|.*\\..*).*)'],
+    matcher: [
+        /*
+         * Match all request paths except for the ones starting with:
+         * - api (API routes)
+         * - _next/static (static files)
+         * - _next/image (image optimization files)
+         * - favicon.ico (favicon file)
+         * - sitemap.xml
+         * - robots.txt
+         * - logo.svg
+         */
+        '/((?!api|_next/static|_next/image|sitemap.xml|robots.txt|logo.svg|favicon.ico).*)',
+    ],
 };

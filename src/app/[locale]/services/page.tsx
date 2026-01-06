@@ -13,7 +13,8 @@ export const metadata: Metadata = {
     description: "Cloud-agnostic modernization, AI-driven automation, and enterprise platform engineering.",
 };
 
-export default function ServicesPage() {
+export default async function ServicesPage({ params }: { params: Promise<{ locale: string }> }) {
+    const { locale } = await params;
     return (
         <>
             <ServicesHero />
@@ -21,11 +22,12 @@ export default function ServicesPage() {
             <div className="container py-20">
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                     {[
-                        { title: "Cloud Modernization", path: "/en/services/cloud-modernization", desc: "AI-driven assessment and refactoring of legacy application portfolios." },
-                        { title: "OpenShift Strategy", path: "/en/services/openshift-modernization", desc: "Enterprise-scale fleet management for RedHat OCP clusters." },
-                        { title: "App Engineering", path: "/en/services/application-modernization", desc: "Deconstructing monoliths into sovereign microservices." },
-                        { title: "FinOps Intelligence", path: "/en/services/cloud-cost-optimization", desc: "Autonomous cost reduction and infrastructure rightsizing." },
-                        { title: "AI Infrastructure", path: "/en/services/ai-cloud-platform", desc: "High-density GPU orchestration for agentic AI workloads." }
+                        { title: "Cloud Modernization", path: `/${locale}/services/cloud-modernization`, desc: "AI-driven assessment and refactoring of legacy application portfolios." },
+                        { title: "DevOps & Automation", path: `/${locale}/services/devops`, desc: "Automated Platform Engineering and CI/CD for sovereign clouds." },
+                        { title: "Microservices", path: `/${locale}/services/microservices`, desc: "Deconstructing monoliths into resilient distributed systems." },
+                        { title: "Cloud Migration", path: `/${locale}/services/cloud-migration`, desc: "Strategic transformation and low-risk multi-cloud transition." },
+                        { title: "OpenShift Strategy", path: `/${locale}/services/openshift-modernization`, desc: "Enterprise-scale fleet management for RedHat OCP clusters." },
+                        { title: "FinOps Intelligence", path: `/${locale}/services/cloud-cost-optimization`, desc: "Autonomous cost reduction and infrastructure rightsizing." }
                     ].map((service, i) => (
                         <Link href={service.path} key={i} className="glass-panel p-8 hover:border-primary/50 transition-colors group">
                             <h3 className="text-xl font-bold mb-4 group-hover:text-primary transition-colors">{service.title}</h3>

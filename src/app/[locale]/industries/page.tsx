@@ -1,4 +1,4 @@
-import { Landmark, Shield, Phone, HeartPulse, Truck, Globe, CheckCircle } from "lucide-react";
+import { Landmark, Shield, Phone, HeartPulse, Truck, Globe, CheckCircle, ArrowRight } from "lucide-react";
 import Link from "next/link";
 import { getTranslations, getLocale } from "next-intl/server";
 
@@ -138,13 +138,17 @@ export default async function IndustriesPage() {
                                             </ul>
                                         </div>
 
-                                        <div style={{ display: 'flex', gap: '1rem', alignItems: 'flex-start' }}>
+                                        <div style={{ display: 'flex', gap: '1rem', alignItems: 'flex-start', marginBottom: '1.5rem' }}>
                                             <CheckCircle size={20} color="#10b981" style={{ flexShrink: 0, marginTop: '0.25rem' }} />
                                             <div>
                                                 <h4 style={{ color: 'var(--foreground)', fontWeight: 800, marginBottom: '0.25rem', fontSize: '1rem' }}>{t('solution')}</h4>
                                                 <p style={{ color: 'var(--foreground)', opacity: 0.6, fontSize: '0.85rem' }}>{item.solution}</p>
                                             </div>
                                         </div>
+
+                                        <Link href={item.id === 'financial-services' ? `/${locale}/industries/finance` : item.id === 'healthcare' ? `/${locale}/industries/healthcare` : '#'} className="btn-secondary py-2 px-6 rounded-lg text-sm font-bold inline-flex items-center gap-2">
+                                            Deep Dive {item.name} <ArrowRight size={14} />
+                                        </Link>
                                     </div>
                                     <div>
                                         <div style={{ borderRadius: '1.5rem', overflow: 'hidden', boxShadow: '0 20px 40px rgba(0,0,0,0.5)', border: '1px solid rgba(255,255,255,0.1)' }}>
@@ -164,7 +168,7 @@ export default async function IndustriesPage() {
                                         <h2 style={{ fontSize: '2rem', color: 'white', marginBottom: '1rem', fontWeight: 800 }}>{item.name}</h2>
                                         <p style={{ fontSize: '1rem', color: 'rgba(255,255,255,0.9)', marginBottom: '1rem', lineHeight: 1.5 }}>{item.description}</p>
 
-                                        <div className="glass-panel" style={{ padding: '1rem', borderRadius: '1.25rem', marginBottom: '1rem' }}>
+                                        <div className="glass-panel" style={{ padding: '1rem', borderRadius: '1.25rem', marginBottom: '1.5rem' }}>
                                             <h4 style={{ color: '#60efff', fontSize: '0.8rem', fontWeight: 800, textTransform: 'uppercase', marginBottom: '0.75rem' }}>{t('challenges')}</h4>
                                             <ul style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
                                                 {item.challenges.map((c, j) => (
@@ -176,13 +180,17 @@ export default async function IndustriesPage() {
                                             </ul>
                                         </div>
 
-                                        <div style={{ display: 'flex', gap: '1rem', alignItems: 'flex-start' }}>
+                                        <div style={{ display: 'flex', gap: '1rem', alignItems: 'flex-start', marginBottom: '1.5rem' }}>
                                             <CheckCircle size={20} color="#10b981" style={{ flexShrink: 0, marginTop: '0.25rem' }} />
                                             <div>
                                                 <h4 style={{ color: 'var(--foreground)', fontWeight: 800, marginBottom: '0.25rem', fontSize: '1rem' }}>{t('solution')}</h4>
                                                 <p style={{ color: 'var(--foreground)', opacity: 0.6, fontSize: '0.85rem' }}>{item.solution}</p>
                                             </div>
                                         </div>
+
+                                        <Link href={item.id === 'healthcare' ? `/${locale}/industries/healthcare` : item.id === 'financial-services' ? `/${locale}/industries/finance` : '#'} className="btn-secondary py-2 px-6 rounded-lg text-sm font-bold inline-flex items-center gap-2">
+                                            Deep Dive {item.name} <ArrowRight size={14} />
+                                        </Link>
                                     </div>
                                 </>
                             )}

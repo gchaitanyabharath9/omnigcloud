@@ -7,11 +7,18 @@ export default async function BlogPage() {
 
     const posts = [
         { id: 'aso', date: "Dec 15, 2025", readTime: "25 min read", image: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=800" },
+        { id: 'modernization-guide', date: "Jan 05, 2026", readTime: "12 min read", image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80&w=800", slug: '/resources/blog/cloud-modernization-guide' },
+        { id: 'devops-practices', date: "Jan 04, 2026", readTime: "10 min read", image: "https://images.unsplash.com/photo-1667372333374-0d3c0ec3a28c?auto=format&fit=crop&q=80&w=800", slug: '/resources/blog/devops-best-practices' },
         { id: 'prompt', date: "Dec 10, 2025", readTime: "15 min read", image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&q=80&w=800" },
         { id: 'latency', date: "Dec 05, 2025", readTime: "10 min read", image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=800" },
         { id: 'rag', date: "Nov 30, 2025", readTime: "20 min read", image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc48?auto=format&fit=crop&q=80&w=800" },
         { id: 'bench', date: "Nov 25, 2025", readTime: "12 min read", image: "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&q=80&w=800" }
     ];
+
+    const getPostUrl = (post: any, index: number) => {
+        if (post.slug) return post.slug;
+        return `/blog/${index}`;
+    };
 
     return (
         <>
@@ -93,7 +100,7 @@ export default async function BlogPage() {
                                             <div style={{ width: '32px', height: '32px', borderRadius: '50%', background: 'var(--primary)', display: 'flex', alignItems: 'center', justifyContent: 'center', fontWeight: 'bold', fontSize: '10px' }}>OG</div>
                                             <span style={{ fontSize: '0.9rem', fontWeight: 700 }}>{t(`posts.${post.id}.author`)}</span>
                                         </div>
-                                        <Link href={`/blog/${idx}`} style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', fontWeight: 800, color: 'var(--primary)', fontSize: '0.9rem' }}>
+                                        <Link href={getPostUrl(post, idx)} style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', fontWeight: 800, color: 'var(--primary)', fontSize: '0.9rem' }}>
                                             Read More <ArrowRight size={16} />
                                         </Link>
                                     </div>

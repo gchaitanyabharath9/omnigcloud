@@ -20,13 +20,16 @@ export async function coreMiddleware(request: NextRequest) {
     (request as any).ip ||
     'unknown';
 
-  const rateLimit = await limiter.check(ip);
+  const userAgent = request.headers.get('user-agent') || '';
+  const isBot = /googlebot|bingbot|yandexbot|duckduckbot|slurp|baiduspider|ia_archiver|facebot|facebookexternalhit|twitterbot|rogerbot|linkedinbot|embedly|quora link preview|showyoubot|outbrain|pinterest\/0\.|developers\.google\.com\/\+\/web\/snippet|slackbot|vkshare|w3c_validator|redditbot|applebot|whatsapp|flipboard|tumblr|bitlybot|skypeuripreview|nuzzel|discordbot|google pagead|qwantify|pinterestbot|bitrix link preview|xing-content-proxy|chrome-lighthouse|telegrambot|gptbot/i.test(userAgent);
+
+  const rateLimit = isBot ? { allowed: true } : await limiter.check(ip);
 
   if (!rateLimit.allowed) {
     return new NextResponse('Too Many Requests', {
       status: 429,
       headers: {
-        'Retry-After': String(rateLimit.retryAfter ?? 60),
+        'Retry-After': String((rateLimit as any).retryAfter ?? 60),
       },
     });
   }

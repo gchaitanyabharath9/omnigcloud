@@ -1,6 +1,10 @@
 User-agent: *
-Disallow: /AECP-Whitepaper-*.pdf
-Disallow: /_next/
 Allow: /
+Allow: /_next/
+Disallow: /private/
+Disallow: /tmp/
+
+User-agent: GPTBot
+Disallow: /docs/whitepaper
 
 Sitemap: https://omnigcloud.com/sitemap.xml
