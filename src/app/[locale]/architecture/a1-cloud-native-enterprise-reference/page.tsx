@@ -1,5 +1,5 @@
 import { Metadata } from 'next';
-import { getTranslations } from 'next-intl/server';
+
 import AuthorBio from '@/components/article/AuthorBio';
 import RelatedReading from '@/components/article/RelatedReading';
 import TableOfContents from '@/components/article/TableOfContents';

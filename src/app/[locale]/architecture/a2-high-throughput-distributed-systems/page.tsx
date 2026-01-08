@@ -276,7 +276,7 @@ export default async function A2HighThroughputSystemsPage({ params }: { params: 
                                     <tbody>
                                         <tr>
                                             <td className="p-3 border border-white/10 font-bold">Ingress Gateway</td>
-                                            <td className="p-3 border border-white/10">Shed Load > Capacity</td>
+                                            <td className="p-3 border border-white/10">Shed Load &gt; Capacity</td>
                                             <td className="p-3 border border-white/10">Fail Fast (HTTP 503)</td>
                                         </tr>
                                         <tr>
