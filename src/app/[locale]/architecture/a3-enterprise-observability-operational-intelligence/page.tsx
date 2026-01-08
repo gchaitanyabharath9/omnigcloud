@@ -226,6 +226,58 @@ export default async function A3ObservabilityPage({ params }: { params: Promise<
                                 </table>
                             </div>
 
+                            <h3 className="text-xl font-semibold mt-8 mb-4">4.5 Observability Maturity Model</h3>
+                            <p>
+                                Organizations progress through distinct maturity levels as they evolve from reactive debugging to predictive operations. Each level builds upon the previous, reducing Mean Time To Resolution (MTTR) exponentially.
+                            </p>
+                            <div className="overflow-x-auto my-6">
+                                <table className="w-full text-left border-collapse border border-white/10 text-sm">
+                                    <thead className="bg-white/5">
+                                        <tr>
+                                            <th className="p-3 border border-white/10">Level</th>
+                                            <th className="p-3 border border-white/10">Capability</th>
+                                            <th className="p-3 border border-white/10">Tooling</th>
+                                            <th className="p-3 border border-white/10">MTTR Impact</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td className="p-3 border border-white/10 font-bold">L1</td>
+                                            <td className="p-3 border border-white/10">Centralized Logging</td>
+                                            <td className="p-3 border border-white/10">ELK Stack / Splunk</td>
+                                            <td className="p-3 border border-white/10">~4 hours</td>
+                                        </tr>
+                                        <tr>
+                                            <td className="p-3 border border-white/10 font-bold">L2</td>
+                                            <td className="p-3 border border-white/10">Distributed Tracing</td>
+                                            <td className="p-3 border border-white/10">Jaeger / Zipkin</td>
+                                            <td className="p-3 border border-white/10">~2 hours</td>
+                                        </tr>
+                                        <tr>
+                                            <td className="p-3 border border-white/10 font-bold">L3</td>
+                                            <td className="p-3 border border-white/10">Metrics + Dashboards</td>
+                                            <td className="p-3 border border-white/10">Prometheus / Grafana</td>
+                                            <td className="p-3 border border-white/10">~1 hour</td>
+                                        </tr>
+                                        <tr>
+                                            <td className="p-3 border border-white/10 font-bold">L4</td>
+                                            <td className="p-3 border border-white/10">Automated Alerting</td>
+                                            <td className="p-3 border border-white/10">PagerDuty + Runbooks</td>
+                                            <td className="p-3 border border-white/10">~30 min</td>
+                                        </tr>
+                                        <tr>
+                                            <td className="p-3 border border-white/10 font-bold">L5</td>
+                                            <td className="p-3 border border-white/10">Predictive Anomaly Detection</td>
+                                            <td className="p-3 border border-white/10">ML-based (A3 Contribution)</td>
+                                            <td className="p-3 border border-white/10">~10 min</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <p className="text-sm text-muted-foreground italic">
+                                Note: MTTR values represent industry averages for P1 incidents in production systems with 50+ microservices.
+                            </p>
+
                             {/* 6. NFR Mapping */}
                             <h2 id="nfr-mapping" className="text-3xl font-bold mt-16 mb-8 scroll-mt-24">5. Non-Functional Requirements Mapping</h2>
                             <div className="overflow-x-auto my-8">

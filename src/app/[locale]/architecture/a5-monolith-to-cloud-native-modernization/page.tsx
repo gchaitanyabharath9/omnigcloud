@@ -88,6 +88,49 @@ export default async function A5ModernizationPage({ params }: { params: Promise<
                                 </div>
                             </div>
 
+                            <h3 className="text-xl font-semibold mt-8 mb-4">2.5 Migration Strategy Decision Matrix</h3>
+                            <p>
+                                Not all monoliths warrant the same modernization strategy. The decision depends on system size, team capacity, and business criticality.
+                            </p>
+                            <div className="overflow-x-auto my-6">
+                                <table className="w-full text-left border-collapse border border-white/10 text-sm">
+                                    <thead className="bg-white/5">
+                                        <tr>
+                                            <th className="p-3 border border-white/10">Monolith Size</th>
+                                            <th className="p-3 border border-white/10">Team Size</th>
+                                            <th className="p-3 border border-white/10">Recommended Strategy</th>
+                                            <th className="p-3 border border-white/10">Rationale</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td className="p-3 border border-white/10 font-bold">&lt; 100K LOC</td>
+                                            <td className="p-3 border border-white/10">1-5 devs</td>
+                                            <td className="p-3 border border-white/10">Rewrite</td>
+                                            <td className="p-3 border border-white/10">Small enough to reimplement in 6-12 months</td>
+                                        </tr>
+                                        <tr>
+                                            <td className="p-3 border border-white/10 font-bold">100K-500K LOC</td>
+                                            <td className="p-3 border border-white/10">5-20 devs</td>
+                                            <td className="p-3 border border-white/10">Strangler Fig</td>
+                                            <td className="p-3 border border-white/10">Incremental extraction viable; manageable risk</td>
+                                        </tr>
+                                        <tr>
+                                            <td className="p-3 border border-white/10 font-bold">500K-2M LOC</td>
+                                            <td className="p-3 border border-white/10">20-50 devs</td>
+                                            <td className="p-3 border border-white/10">Strangler + ACL</td>
+                                            <td className="p-3 border border-white/10">Requires translation layers; multi-year effort</td>
+                                        </tr>
+                                        <tr>
+                                            <td className="p-3 border border-white/10 font-bold">&gt; 2M LOC</td>
+                                            <td className="p-3 border border-white/10">50+ devs</td>
+                                            <td className="p-3 border border-white/10">Hybrid (Keep Core)</td>
+                                            <td className="p-3 border border-white/10">Full migration ROI negative; modernize edges only</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
                             {/* 4. Logical Architecture */}
                             <h2 id="logical-architecture" className="text-3xl font-bold mt-16 mb-8 scroll-mt-24">3. Logical Modernization Architecture</h2>
 
@@ -320,8 +363,17 @@ export default async function A5ModernizationPage({ params }: { params: Promise<
                             {/* 11. Conclusion */}
                             <h2 id="conclusion" className="text-3xl font-bold mt-16 mb-8 scroll-mt-24">10. Conclusion</h2>
                             <p>
-                                Modernization is continuous. The goal is not to reach a "finished" state, but to reach an "agile" state where the system can evolve at the speed of business. A5 provides the roadmap to escape the gravity of the monolith without the catastrophic risk of a full rewrite.
+                                The Strangler Fig pattern, when rigorously applied through a Facade-first approach, provides a mathematically sound path for monolith decomposition. By treating modernization as a continuous architectural evolution rather than a discrete rewrite event, organizations can maintain business continuity while incrementally adopting cloud-native patterns.
                             </p>
+                            <p>
+                                This framework's key contribution lies in its explicit formalization of the <strong>"Coexistence Topology"</strong>—the structured methodology for running Legacy and Modern systems in parallel without data corruption or user-visible regression. Unlike ad-hoc migration strategies, A5 provides deterministic rollback mechanisms and observable canary metrics, reducing the existential risk of "Big Bang" failures.
+                            </p>
+                            <p>
+                                The architectural invariants defined here—Facade-First Routing, Event-Driven Decoupling, and Anti-Corruption Layers—are not vendor-specific implementations but platform-neutral patterns applicable across AWS, Azure, GCP, and on-premises environments. This portability ensures that the modernization investment is not coupled to a single infrastructure provider's roadmap.
+                            </p>
+                            <div className="bg-emerald-900/10 border-l-4 border-emerald-500 p-6 my-8">
+                                <strong>Future Evolution:</strong> As AI-driven code analysis matures, the Anti-Corruption Layer generation process described in Section 4.2 could be partially automated, further reducing the human cost of modernization. Similarly, machine learning models trained on historical canary deployments could predict optimal traffic shift percentages, moving from manual 5% increments to adaptive, risk-calibrated rollouts.
+                            </div>
 
                         </div>
 
