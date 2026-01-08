@@ -216,6 +216,44 @@ export default async function A1ReferenceArchitecturePage({ params }: { params: 
                                 The central nervous system of the A1 architecture is the Event Persistence layer (e.g., Kafka, Pulsar). This provides the "Log" for the architecture. Services do not query each other's databases; they consume event streams to build local read-models (CQRS Pattern). This <em>shared-nothing</em> approach is critical for scalability.
                             </p>
 
+                            <h3 className="text-xl font-semibold mt-8 mb-4">4.4 Component Responsibility Matrix</h3>
+                            <p>
+                                To prevent "God Classes" and sprawl, we strictly define the scope of each architectural component.
+                            </p>
+                            <div className="overflow-x-auto my-6">
+                                <table className="w-full text-left border-collapse border border-white/10 text-sm">
+                                    <thead className="bg-white/5">
+                                        <tr>
+                                            <th className="p-3 border border-white/10">Component</th>
+                                            <th className="p-3 border border-white/10">Responsibility</th>
+                                            <th className="p-3 border border-white/10">Anti-Pattern (Forbidden)</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td className="p-3 border border-white/10 font-bold">API Gateway</td>
+                                            <td className="p-3 border border-white/10">Traffic Shaping, AuthZ, Rate Limiting</td>
+                                            <td className="p-3 border border-white/10">Business Logic, Database Access</td>
+                                        </tr>
+                                        <tr>
+                                            <td className="p-3 border border-white/10 font-bold">Service Mesh</td>
+                                            <td className="p-3 border border-white/10">mTLS, Retries, Circuit Breaking</td>
+                                            <td className="p-3 border border-white/10">Payload Transformation, JSON Parsing</td>
+                                        </tr>
+                                        <tr>
+                                            <td className="p-3 border border-white/10 font-bold">Event Bus</td>
+                                            <td className="p-3 border border-white/10">Hard Persistence, Ordering</td>
+                                            <td className="p-3 border border-white/10">Filtering, Complex Processing (ETL)</td>
+                                        </tr>
+                                        <tr>
+                                            <td className="p-3 border border-white/10 font-bold">Microservice</td>
+                                            <td className="p-3 border border-white/10">Domain Logic, Local State</td>
+                                            <td className="p-3 border border-white/10">Distributed Transactions, Shared DB</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
                             {/* 6. NFRs */}
                             <h2 id="nfr-mapping" className="text-3xl font-bold mt-16 mb-8 scroll-mt-24">5. Non-Functional Requirements (NFR) Mapping</h2>
                             <p>
