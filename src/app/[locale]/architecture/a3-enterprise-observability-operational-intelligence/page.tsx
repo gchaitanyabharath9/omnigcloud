@@ -7,6 +7,9 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
     return {
         title: 'Architectural Patterns for Enterprise Observability and Operational Intelligence | OmniGCloud',
         description: 'A comprehensive guide to implementing high-cardinality observability, distributed tracing, and symptom-based alerting at scale.',
+        alternates: {
+            canonical: 'https://www.omnigcloud.com/en/architecture/a3-enterprise-observability-operational-intelligence'
+        },
         openGraph: {
             title: 'Architectural Patterns for Enterprise Observability (A3)',
             description: 'Moving beyond "three pillars" to operational intelligence and automated remediation.',

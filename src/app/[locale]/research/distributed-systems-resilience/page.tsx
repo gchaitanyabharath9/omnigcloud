@@ -9,6 +9,9 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
     return {
         title: 'Distributed Systems Resilience & Scalability Patterns | OmniGCloud',
         description: 'Deep dive into CAP theorem, chaos engineering, and patterns for building unbreakable distributed systems in the cloud.',
+        alternates: {
+            canonical: 'https://www.omnigcloud.com/en/research/distributed-systems-resilience'
+        },
         openGraph: {
             title: 'Distributed Systems Resilience & Scalability Patterns',
             description: 'Engineering systems that survive failure by design.',

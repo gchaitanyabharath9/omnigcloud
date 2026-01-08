@@ -5,8 +5,11 @@ import TableOfContents from '@/components/article/TableOfContents';
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
     return {
-        title: 'Designing High-Throughput Distributed Systems for Enterprise Workloads | OmniGCloud',
-        description: 'Architectural patterns for managing 1M+ RPS event streams, explicit backpressure, and failure isolation in global enterprise platforms.',
+        title: 'Designing High-Throughput Distributed Systems at Scale | OmniGCloud',
+        description: 'Architectural patterns for building resilient systems that handle 100K+ messages per second with sub-10ms latency.',
+        alternates: {
+            canonical: 'https://www.omnigcloud.com/en/architecture/a2-high-throughput-distributed-systems'
+        },
         openGraph: {
             title: 'Designing High-Throughput Distributed Systems (A2)',
             description: 'The definitive guide to partition strategies, load shedding, and consistency models at hyper-scale.',

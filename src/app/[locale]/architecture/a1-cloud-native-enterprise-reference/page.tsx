@@ -8,6 +8,9 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
     return {
         title: 'A Reference Architecture for Cloud-Native Enterprise Platforms at Scale | OmniGCloud',
         description: 'A definitive technical standard for implementing sovereign, multi-cloud platforms maximizing latency budgets and governance.',
+        alternates: {
+            canonical: 'https://www.omnigcloud.com/en/architecture/a1-cloud-native-enterprise-reference'
+        },
         openGraph: {
             title: 'Reference Architecture for Cloud-Native Enterprise Platforms (A1)',
             description: 'The flagship specification for scalable, sovereign enterprise systems.',

@@ -7,6 +7,9 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
     return {
         title: 'Modernizing Monolithic Enterprise Systems to Cloud-Native Architectures | OmniGCloud',
         description: 'A systematic architectural framework for decomposing legacy monoliths using Strangler Fig patterns and domain-driven design at scale.',
+        alternates: {
+            canonical: 'https://www.omnigcloud.com/en/architecture/a5-monolith-to-cloud-native-modernization'
+        },
         openGraph: {
             title: 'Modernizing Monolithic Systems to Cloud-Native (A5)',
             description: 'De-risking the journey from Legacy to Cloud-Native via incremental architectural strangulation.',

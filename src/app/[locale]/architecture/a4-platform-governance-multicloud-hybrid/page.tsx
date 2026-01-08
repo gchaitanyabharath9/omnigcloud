@@ -7,6 +7,9 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
     return {
         title: 'Platform Governance in Multi-Cloud and Hybrid Enterprise Environments | OmniGCloud',
         description: 'A reference architecture for establishing decentralized, policy-as-code governance across heterogeneous cloud estates.',
+        alternates: {
+            canonical: 'https://www.omnigcloud.com/en/architecture/a4-platform-governance-multicloud-hybrid'
+        },
         openGraph: {
             title: 'Platform Governance in Multi-Cloud & Hybrid Environments (A4)',
             description: 'Moving from "Gatekeeper" to "Guardrails": A new standard for enterprise control planes.',
