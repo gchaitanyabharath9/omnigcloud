@@ -271,7 +271,7 @@ export default async function A5ModernizationPage({ params }: { params: Promise<
                                             </div>
                                             <div className="text-[10px] text-center text-white">5% New / 95% Old</div>
                                             <div className="mt-2 text-[9px] text-center text-red-300 bg-red-900/30 rounded p-1">
-                                                ⚠ If Err > 1% → Rollback
+                                                ⚠ If Err &gt; 1% → Rollback
                                             </div>
                                         </div>
                                         {/* State 3 */}
