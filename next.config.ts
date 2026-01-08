@@ -132,6 +132,20 @@ const nextConfig: any = {
       }
     ]
   },
+  async redirects() {
+    return [
+      {
+        source: '/:locale/architecture/cloud-native-reference-architecture',
+        destination: '/:locale/architecture/a1-cloud-native-enterprise-reference',
+        permanent: true, // 301 redirect
+      },
+      {
+        source: '/architecture/cloud-native-reference-architecture',
+        destination: '/en/architecture/a1-cloud-native-enterprise-reference',
+        permanent: true, // 301 redirect
+      },
+    ];
+  },
   images: {
     formats: ['image/avif', 'image/webp'],
     minimumCacheTTL: 31536000, // 1 year cache for optimized images
