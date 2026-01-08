@@ -37,13 +37,15 @@ export default async function A3ObservabilityPage({ params }: { params: Promise<
                                 Architectural Patterns for Enterprise Observability and Operational Intelligence
                             </h1>
                             <div className="flex flex-wrap items-center gap-6 text-sm text-muted-foreground font-mono mb-8 border-b border-white/10 pb-8">
-                                <span className="flex items-center gap-2">
-                                    <span className="w-2 h-2 rounded-full bg-purple-500"></span>
-                                    Draft Standard (v0.8)
-                                </span>
-                                <span>Last updated: January 22, 2026</span>
-                                <span>•</span>
-                                <span>40 min read</span>
+                                <div className='grid grid-cols-1 md:grid-cols-2 gap-4 w-full'>
+                                    <div><span className='text-slate-500'>Publication Type:</span> Independent Technical Paper</div>
+                                    <div><span className='text-slate-500'>Version:</span> 0.8 (Draft)</div>
+                                    <div><span className='text-slate-500'>First Published:</span> January 2026</div>
+                                    <div><span className='text-slate-500'>Last Updated:</span> January 2026</div>
+                                    <div><span className='text-slate-500'>Author:</span> Chaitanya Bharath Gopu</div>
+                                    <div><span className='text-slate-500'>License:</span> © Author. All rights reserved.</div>
+                                    <div className='col-span-1 md:col-span-2'><span className='text-slate-500'>Canonical URL:</span> https://www.omnigcloud.com/en/architecture/a3-enterprise-observability-operational-intelligence</div>
+                                </div>
                             </div>
                         </header>
 
@@ -380,8 +382,16 @@ export default async function A3ObservabilityPage({ params }: { params: Promise<
                                 <li><strong>Federated Governance Model:</strong> Allowing teams to own their own metrics (Prometheus) while enforcing global naming standards.</li>
                             </ol>
 
+                            {/* 10. Limitations */}
+                            <h2 id="limitations" className="text-3xl font-bold mt-16 mb-8 scroll-mt-24">10. Limitations and Scope</h2>
+                            <ul className="list-disc pl-6 space-y-2 mb-6">
+                                <li><strong>Instrumentation Burden:</strong> Achieving the high-cardinality benefits described requires deep code instrumentation. Autoinstrumentation agents cover 80% but miss business-specific context.</li>
+                                <li><strong>Storage Cost:</strong> Even with sampling, retaining 13 months of high-fidelity data is expensive. Tiered storage (S3 Glacier) is mandatory to make the economics work.</li>
+                                <li><strong>Kernel Dependency:</strong> The zero-copy performance claims rely on eBPF, which requires modern Linux kernels (5.4+). This limits applicability on legacy OS versions.</li>
+                            </ul>
+
                             {/* 11. Conclusion */}
-                            <h2 id="conclusion" className="text-3xl font-bold mt-16 mb-8 scroll-mt-24">10. Conclusion</h2>
+                            <h2 id="conclusion" className="text-3xl font-bold mt-16 mb-8 scroll-mt-24">11. Conclusion</h2>
                             <p>
                                 Operational Intelligence is the nervous system of the cloud-native enterprise. Without it, the "body" of the architecture (A1 and A2) acts without coordination. By adopting cost-aware patterns and focusing on high-cardinality analysis, enterprises can turn the noise of distributed systems into the signal of competitive advantage.
                             </p>

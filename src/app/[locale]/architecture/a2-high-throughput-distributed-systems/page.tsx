@@ -37,13 +37,15 @@ export default async function A2HighThroughputSystemsPage({ params }: { params: 
                                 Designing High-Throughput Distributed Systems for Enterprise Workloads
                             </h1>
                             <div className="flex flex-wrap items-center gap-6 text-sm text-muted-foreground font-mono mb-8 border-b border-white/10 pb-8">
-                                <span className="flex items-center gap-2">
-                                    <span className="w-2 h-2 rounded-full bg-blue-500"></span>
-                                    Draft Standard (v0.9)
-                                </span>
-                                <span>Last updated: January 15, 2026</span>
-                                <span>•</span>
-                                <span>35 min read</span>
+                                <div className='grid grid-cols-1 md:grid-cols-2 gap-4 w-full'>
+                                    <div><span className='text-slate-500'>Publication Type:</span> Independent Technical Paper</div>
+                                    <div><span className='text-slate-500'>Version:</span> 0.9 (Draft)</div>
+                                    <div><span className='text-slate-500'>First Published:</span> January 2026</div>
+                                    <div><span className='text-slate-500'>Last Updated:</span> January 2026</div>
+                                    <div><span className='text-slate-500'>Author:</span> Chaitanya Bharath Gopu</div>
+                                    <div><span className='text-slate-500'>License:</span> © Author. All rights reserved.</div>
+                                    <div className='col-span-1 md:col-span-2'><span className='text-slate-500'>Canonical URL:</span> https://www.omnigcloud.com/en/architecture/a2-high-throughput-distributed-systems</div>
+                                </div>
                             </div>
                         </header>
 
@@ -455,8 +457,16 @@ export default async function A2HighThroughputSystemsPage({ params }: { params: 
                                 <li><strong>Predictive Lag Autoscaling:</strong> Replacing reactive CPU scaling with predictive queue-depth scaling models.</li>
                             </ol>
 
+                            {/* 10. Limitations */}
+                            <h2 id="limitations" className="text-3xl font-bold mt-16 mb-8 scroll-mt-24">10. Limitations and Scope</h2>
+                            <ul className="list-disc pl-6 space-y-2 mb-6">
+                                <li><strong>Eventual Consistency Only:</strong> The "async-first" nature of A2 makes strong consistency (ACID) impossible across boundaries. It is unsuitable for systems requiring immediate read-after-write guarantees for all data.</li>
+                                <li><strong>Hardware Cost:</strong> The redundancy required for high-throughput partitioning (Replication Factor 3) increases storage costs by 300%.</li>
+                                <li><strong>Semantic Complexity:</strong> Developers must handle idempotency and out-of-order message delivery in their application logic, increasing the cognitive load on feature teams.</li>
+                            </ul>
+
                             {/* 11. Conclusion */}
-                            <h2 id="conclusion" className="text-3xl font-bold mt-16 mb-8 scroll-mt-24">10. Conclusion</h2>
+                            <h2 id="conclusion" className="text-3xl font-bold mt-16 mb-8 scroll-mt-24">11. Conclusion</h2>
                             <p>
                                 High-throughput systems require a fundamental shift in mindset from "Efficiency" to "Stability." By acknowledging that failures will happen and designing systems that degrade gracefully via load shedding and partitioning, we achieve resilience that defies the chaos of the open internet. The A2 architecture provides the blueprint for this new class of Sovereign Enterprise Platforms.
                             </p>

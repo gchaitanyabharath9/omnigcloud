@@ -37,13 +37,15 @@ export default async function A4GovernancePage({ params }: { params: Promise<{ l
                                 Platform Governance in Multi-Cloud and Hybrid Enterprise Environments
                             </h1>
                             <div className="flex flex-wrap items-center gap-6 text-sm text-muted-foreground font-mono mb-8 border-b border-white/10 pb-8">
-                                <span className="flex items-center gap-2">
-                                    <span className="w-2 h-2 rounded-full bg-blue-500"></span>
-                                    Draft Standard (v0.9)
-                                </span>
-                                <span>Last updated: January 22, 2026</span>
-                                <span>•</span>
-                                <span>35 min read</span>
+                                <div className='grid grid-cols-1 md:grid-cols-2 gap-4 w-full'>
+                                    <div><span className='text-slate-500'>Publication Type:</span> Independent Technical Paper</div>
+                                    <div><span className='text-slate-500'>Version:</span> 0.9 (Draft)</div>
+                                    <div><span className='text-slate-500'>First Published:</span> January 2026</div>
+                                    <div><span className='text-slate-500'>Last Updated:</span> January 2026</div>
+                                    <div><span className='text-slate-500'>Author:</span> Chaitanya Bharath Gopu</div>
+                                    <div><span className='text-slate-500'>License:</span> © Author. All rights reserved.</div>
+                                    <div className='col-span-1 md:col-span-2'><span className='text-slate-500'>Canonical URL:</span> https://www.omnigcloud.com/en/architecture/a4-platform-governance-multicloud-hybrid</div>
+                                </div>
                             </div>
                         </header>
 
@@ -375,8 +377,16 @@ export default async function A4GovernancePage({ params }: { params: Promise<{ l
                                 <li><strong>Continuous Compliance Loop:</strong> Treating audit as a streaming data problem.</li>
                             </ol>
 
+                            {/* 10. Limitations */}
+                            <h2 id="limitations" className="text-3xl font-bold mt-16 mb-8 scroll-mt-24">10. Limitations and Scope</h2>
+                            <ul className="list-disc pl-6 space-y-2 mb-6">
+                                <li><strong>Cloud Provider Maturity:</strong> This governance model relies on Cloud APIs (AWS CloudTrail, Azure Monitor). It faces significant challenges in "bare metal" or legacy datacenter environments where APIs are missing.</li>
+                                <li><strong>Policy Complexity:</strong> Writing Rego/Sentinel policies is a specialized skill. There is a learning curve for traditional security auditors.</li>
+                                <li><strong>Latency:</strong> While optimized, OPA admission control adds ~20ms to API requests. This may be noticeable in extremely latency-sensitive control planes.</li>
+                            </ul>
+
                             {/* 11. Conclusion */}
-                            <h2 id="conclusion" className="text-3xl font-bold mt-16 mb-8 scroll-mt-24">10. Conclusion</h2>
+                            <h2 id="conclusion" className="text-3xl font-bold mt-16 mb-8 scroll-mt-24">11. Conclusion</h2>
                             <p>
                                 Governance is the bridge between Velocity and Safety. By investing in Platform Governance, organizations move from "Department of No" to "Paved Roads." The architecture defined in A4 provides the rigorous foundation necessary to operate A1 and A2 systems at scale without incurring unacceptable risk.
                             </p>

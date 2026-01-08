@@ -38,13 +38,15 @@ export default async function A6Page({ params }: { params: Promise<{ locale: str
                                 Adaptive Policy Enforcement in Cloud-Native Architectures
                             </h1>
                             <div className="flex flex-wrap items-center gap-6 text-sm text-muted-foreground font-mono mb-8 border-b border-white/10 pb-8">
-                                <span className="flex items-center gap-2">
-                                    <span className="w-2 h-2 rounded-full bg-blue-500"></span>
-                                    Proposal (v1.0)
-                                </span>
-                                <span>Last updated: January 08, 2026</span>
-                                <span>•</span>
-                                <span>25 min read</span>
+                                <div className='grid grid-cols-1 md:grid-cols-2 gap-4 w-full'>
+                                    <div><span className='text-slate-500'>Publication Type:</span> Independent Technical Paper</div>
+                                    <div><span className='text-slate-500'>Version:</span> 1.0 (Proposal)</div>
+                                    <div><span className='text-slate-500'>First Published:</span> January 2026</div>
+                                    <div><span className='text-slate-500'>Last Updated:</span> January 2026</div>
+                                    <div><span className='text-slate-500'>Author:</span> Chaitanya Bharath Gopu</div>
+                                    <div><span className='text-slate-500'>License:</span> © Author. All rights reserved.</div>
+                                    <div className='col-span-1 md:col-span-2'><span className='text-slate-500'>Canonical URL:</span> https://www.omnigcloud.com/en/architecture/a6-adaptive-policy-enforcement</div>
+                                </div>
                             </div>
                         </header>
 
@@ -216,7 +218,7 @@ export default async function A6Page({ params }: { params: Promise<{ locale: str
                             <p>A new law requires "Double Encryption". The Policy Administrator updates the intent. The Binding Engine flags all non-compliant resources, allowing automated remediation.</p>
 
                             {/* 9. Limitations */}
-                            <h2 id="limitations" className="text-3xl font-bold mt-16 mb-8 scroll-mt-24">8. Limitations & Boundaries</h2>
+                            <h2 id="limitations" className="text-3xl font-bold mt-16 mb-8 scroll-mt-24">8. Limitations and Scope</h2>
                             <ol className="list-decimal pl-6 space-y-2 mb-6">
                                 <li><strong>Complexity Overhead:</strong> A6 introduces an additional abstraction layer (Binding Engine) which requires maintenance.</li>
                                 <li><strong>Capability Vocabulary:</strong> Defining a universal taxonomy is non-trivial.</li>

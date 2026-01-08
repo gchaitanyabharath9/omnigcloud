@@ -38,13 +38,15 @@ export default async function A1ReferenceArchitecturePage({ params }: { params: 
                                 A Reference Architecture for Cloud-Native Enterprise Platforms at Scale
                             </h1>
                             <div className="flex flex-wrap items-center gap-6 text-sm text-muted-foreground font-mono mb-8 border-b border-white/10 pb-8">
-                                <span className="flex items-center gap-2">
-                                    <span className="w-2 h-2 rounded-full bg-emerald-500"></span>
-                                    Current Standard (v2.4)
-                                </span>
-                                <span>Last updated: January 08, 2026</span>
-                                <span>•</span>
-                                <span>45 min read</span>
+                                <div className='grid grid-cols-1 md:grid-cols-2 gap-4 w-full'>
+                                    <div><span className='text-slate-500'>Publication Type:</span> Independent Technical Paper</div>
+                                    <div><span className='text-slate-500'>Version:</span> 2.4 (Stable)</div>
+                                    <div><span className='text-slate-500'>First Published:</span> January 2024</div>
+                                    <div><span className='text-slate-500'>Last Updated:</span> January 2026</div>
+                                    <div><span className='text-slate-500'>Author:</span> Chaitanya Bharath Gopu</div>
+                                    <div><span className='text-slate-500'>License:</span> © Author. All rights reserved.</div>
+                                    <div className='col-span-1 md:col-span-2'><span className='text-slate-500'>Canonical URL:</span> https://www.omnigcloud.com/en/architecture/a1-cloud-native-enterprise-reference</div>
+                                </div>
                             </div>
                         </header>
 
@@ -439,8 +441,19 @@ export default async function A1ReferenceArchitecturePage({ params }: { params: 
                                 </li>
                             </ul>
 
+                            {/* 10. Limitations */}
+                            <h2 id="limitations" className="text-3xl font-bold mt-16 mb-8 scroll-mt-24">10. Limitations and Scope</h2>
+                            <p>
+                                While robust, the A1 architecture is not a panacea. It is designed specifically for large-scale, regulated enterprise environments.
+                            </p>
+                            <ul className="list-disc pl-6 space-y-2 mb-6">
+                                <li><strong>Complexity Overhead:</strong> This architecture introduces significant Day 1 complexity (Mesh, gitops). It is not recommended for startups or teams under 10 engineers.</li>
+                                <li><strong>Latency Floor:</strong> The sidecar mesh model introduces a mandatory ~2ms latency capability floor. This is unacceptable for High-Frequency Trading (HFT) applications requiring microsecond-level response times.</li>
+                                <li><strong>Operational Maturity:</strong> Successful implementation assumes a mature Site Reliability Engineering (SRE) capability. Without automated observability (A3), this architecture will be unmanageable.</li>
+                            </ul>
+
                             {/* 11. Conclusion */}
-                            <h2 id="conclusion" className="text-3xl font-bold mt-16 mb-8 scroll-mt-24">10. Conclusion & Future Evolution</h2>
+                            <h2 id="conclusion" className="text-3xl font-bold mt-16 mb-8 scroll-mt-24">11. Conclusion & Future Evolution</h2>
                             <p>
                                 The A1 Reference Architecture represents the convergence of best practices from the last decade of cloud computing. It shifts the focus from "building servers" to "composing platforms." As we look toward the future, the integration of probabilistic failure injection (Chaos AI) and self-optimizing compilers will further reduce the operational burden.
                             </p>

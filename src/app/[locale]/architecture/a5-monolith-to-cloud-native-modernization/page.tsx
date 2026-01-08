@@ -37,13 +37,15 @@ export default async function A5ModernizationPage({ params }: { params: Promise<
                                 Modernizing Monolithic Enterprise Systems to Cloud-Native Architectures
                             </h1>
                             <div className="flex flex-wrap items-center gap-6 text-sm text-muted-foreground font-mono mb-8 border-b border-white/10 pb-8">
-                                <span className="flex items-center gap-2">
-                                    <span className="w-2 h-2 rounded-full bg-blue-500"></span>
-                                    Published Standard (v1.0)
-                                </span>
-                                <span>Last updated: February 08, 2026</span>
-                                <span>•</span>
-                                <span>40 min read</span>
+                                <div className='grid grid-cols-1 md:grid-cols-2 gap-4 w-full'>
+                                    <div><span className='text-slate-500'>Publication Type:</span> Independent Technical Paper</div>
+                                    <div><span className='text-slate-500'>Version:</span> 1.0 (Stable)</div>
+                                    <div><span className='text-slate-500'>First Published:</span> February 2025</div>
+                                    <div><span className='text-slate-500'>Last Updated:</span> February 2026</div>
+                                    <div><span className='text-slate-500'>Author:</span> Chaitanya Bharath Gopu</div>
+                                    <div><span className='text-slate-500'>License:</span> © Author. All rights reserved.</div>
+                                    <div className='col-span-1 md:col-span-2'><span className='text-slate-500'>Canonical URL:</span> https://www.omnigcloud.com/en/architecture/a5-monolith-to-cloud-native-modernization</div>
+                                </div>
                             </div>
                         </header>
 
@@ -363,8 +365,16 @@ export default async function A5ModernizationPage({ params }: { params: Promise<
                                 <li><strong>Fail-Safe Modernization:</strong> The principle that existing functionality must never break for the sake of new architecture.</li>
                             </ol>
 
+                            {/* 10. Limitations */}
+                            <h2 id="limitations" className="text-3xl font-bold mt-16 mb-8 scroll-mt-24">10. Limitations and Scope</h2>
+                            <ul className="list-disc pl-6 space-y-2 mb-6">
+                                <li><strong>Migration Duration:</strong> The Strangler Fig pattern is inherently slow. It is not suitable for businesses that need to exit a datacenter in &lt; 6 months. A "Lift and Shift" would be faster (though riskier long-term).</li>
+                                <li><strong>Temporary Complexity:</strong> During the migration (which may last years), the organization must maintain <em>both</em> the Legacy and Modern stacks. This doubles the operational footprint temporarily.</li>
+                                <li><strong>Performance Penalty:</strong> The Facade and CDC layers introduce network hops. Latency will increase slightly during the transitional architecture phase.</li>
+                            </ul>
+
                             {/* 11. Conclusion */}
-                            <h2 id="conclusion" className="text-3xl font-bold mt-16 mb-8 scroll-mt-24">10. Conclusion</h2>
+                            <h2 id="conclusion" className="text-3xl font-bold mt-16 mb-8 scroll-mt-24">11. Conclusion</h2>
                             <p>
                                 The Strangler Fig pattern, when rigorously applied through a Facade-first approach, provides a mathematically sound path for monolith decomposition. By treating modernization as a continuous architectural evolution rather than a discrete rewrite event, organizations can maintain business continuity while incrementally adopting cloud-native patterns.
                             </p>

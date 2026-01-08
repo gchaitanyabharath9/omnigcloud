@@ -43,7 +43,6 @@ export default async function ResearchHubPage({ params }: { params: Promise<{ lo
                                 <Link href={`/${locale}/research/automated-multilingual-quality-assurance`} className="btn-primary flex items-center gap-2 px-6">
                                     Read Publication <ChevronRight size={18} />
                                 </Link>
-                                <span className="text-[10px] opacity-40 font-mono italic">EXHIBIT A-1</span>
                             </div>
                         </div>
 
@@ -83,7 +82,7 @@ export default async function ResearchHubPage({ params }: { params: Promise<{ lo
                     <p className="opacity-70 max-w-2xl mx-auto italic text-sm leading-relaxed">
                         "The software systems and architectural patterns documented herein were independently designed
                         and implemented by CHAITANYA BHARATH GOPU to secure the global surface area of the OmniGCloud platform.
-                        Public dissemination is provided for scholarly evidentiary purposes."
+                        Public dissemination is provided for technical knowledge sharing."
                     </p>
                     <div className="mt-8 text-[10px] opacity-30 font-mono">
                         © 2026 CHAITANYA BHARATH GOPU. ALL RIGHTS RESERVED.
