@@ -167,12 +167,72 @@ export default async function A4GovernancePage({ params }: { params: Promise<{ l
                                 Identity is the new perimeter. In a multi-cloud environment, relying on cloud-native IAM (AWS IAM vs Azure RBAC) leads to fragmentation. We strictly enforce <strong>Federated Identity</strong> via OIDC. No human user has direct write access to production. All changes must originate from a machine identity (the CI/CD pipeline) aka "GitOps."
                             </p>
 
-                            <h3 className="text-xl font-semibold mt-8 mb-4">4.2 Policy Lifecycle Management</h3>
+                            <h3 className="text-xl font-semibold mt-8 mb-4">4.2 Component Responsibility Matrix</h3>
+                            <div className="overflow-x-auto my-6">
+                                <table className="w-full text-left border-collapse border border-white/10 text-sm">
+                                    <thead className="bg-white/5">
+                                        <tr>
+                                            <th className="p-3 border border-white/10">Component</th>
+                                            <th className="p-3 border border-white/10">Responsibility</th>
+                                            <th className="p-3 border border-white/10">Anti-Pattern (Forbidden)</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td className="p-3 border border-white/10 font-bold">Policy Engine</td>
+                                            <td className="p-3 border border-white/10">Evaluate State vs. Intent</td>
+                                            <td className="p-3 border border-white/10">State Mutation (Write)</td>
+                                        </tr>
+                                        <tr>
+                                            <td className="p-3 border border-white/10 font-bold">Admission Controller</td>
+                                            <td className="p-3 border border-white/10">Block Invalid Objects</td>
+                                            <td className="p-3 border border-white/10">External API Calls (Latency)</td>
+                                        </tr>
+                                        <tr>
+                                            <td className="p-3 border border-white/10 font-bold">Audit Sidecar</td>
+                                            <td className="p-3 border border-white/10">Stream Logs to Cold Storage</td>
+                                            <td className="p-3 border border-white/10">Crash Loop on Network Fail</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <h3 className="text-xl font-semibold mt-8 mb-4">4.3 Quantitative Governance Metrics</h3>
+                            <div className="overflow-x-auto my-6">
+                                <table className="w-full text-left border-collapse border border-white/10 text-sm">
+                                    <thead className="bg-white/5">
+                                        <tr>
+                                            <th className="p-3 border border-white/10">Metric</th>
+                                            <th className="p-3 border border-white/10">Target (SLA)</th>
+                                            <th className="p-3 border border-white/10">Business Impact</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td className="p-3 border border-white/10 font-bold">Policy Eval Latency</td>
+                                            <td className="p-3 border border-white/10">&lt; 20ms p99</td>
+                                            <td className="p-3 border border-white/10">Zero impact on deploy times</td>
+                                        </tr>
+                                        <tr>
+                                            <td className="p-3 border border-white/10 font-bold">Drift Detection</td>
+                                            <td className="p-3 border border-white/10">&lt; 60 seconds</td>
+                                            <td className="p-3 border border-white/10">Minimize vulnerability window</td>
+                                        </tr>
+                                        <tr>
+                                            <td className="p-3 border border-white/10 font-bold">False Positive Rate</td>
+                                            <td className="p-3 border border-white/10">&lt; 0.1%</td>
+                                            <td className="p-3 border border-white/10">Avoid "Alert Fatigue"</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <h3 className="text-xl font-semibold mt-8 mb-4">4.4 Policy Lifecycle Management</h3>
                             <p>
                                 Policies are code. They undergo unit testing (does this regex actually catch S3 buckets?) and integration testing (run against a staging environment) before promotion. We define policies in a technology-agnostic language (like OPA Rego) where possible, or abstract them via a "Policy Control Plane" that translates high-level intent ("Encrypt Storage") into low-level implementation ("AWS: KMS-Key", "Azure: SSE").
                             </p>
 
-                            <h3 className="text-xl font-semibold mt-8 mb-4">4.3 Drift Detection & Remediation</h3>
+                            <h3 className="text-xl font-semibold mt-8 mb-4">4.5 Drift Detection & Remediation</h3>
                             <p>
                                 "Drift" occurs when the actual state diverges from the desired state (e.g., someone manually opens a firewall port). Automation must detect this within 5 minutes.
                             </p>
