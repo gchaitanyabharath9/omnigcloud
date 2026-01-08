@@ -12,9 +12,9 @@ interface AuthorBioProps {
 
 export default function AuthorBio({ author }: AuthorBioProps) {
     const defaultAuthor = {
-        name: "Editorial Team",
-        role: "Cloud Architecture Research",
-        bio: "The OmniGCloud research team specializes in distributed systems, sovereign cloud governance, and AI-driven enterprise modernization.",
+        name: "CHAITANYA BHARATH GOPU",
+        role: "Principal Cloud Architect",
+        bio: "Specializing in distributed systems, sovereign cloud governance, and AI-driven enterprise modernization.",
         image: "/images/authors/omnigcloud-team.jpg"
     };
 

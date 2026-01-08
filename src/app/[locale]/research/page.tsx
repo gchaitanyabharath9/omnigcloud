@@ -49,34 +49,23 @@ export default async function ResearchHubPage({ params }: { params: Promise<{ lo
 
                         {/* OTHER RESOURCES */}
                         <div className="grid grid-cols-1 gap-4">
-                            <Link href={`/${locale}/research/architecture`} className="glass-panel p-8 rounded-[2rem] flex items-center justify-between group">
-                                <div className="flex items-center gap-6">
-                                    <Layers className="text-[var(--primary)]" size={32} />
-                                    <div>
-                                        <h3 className="font-bold text-lg">System Architecture</h3>
-                                        <p className="text-sm opacity-60">Architectural evidence and diagrams.</p>
-                                    </div>
-                                </div>
-                                <ChevronRight className="opacity-0 group-hover:opacity-100 transition-opacity" />
-                            </Link>
-
-                            <Link href={`/${locale}/research/metrics`} className="glass-panel p-8 rounded-[2rem] flex items-center justify-between group">
-                                <div className="flex items-center gap-6">
-                                    <BarChart3 className="text-[var(--primary)]" size={32} />
-                                    <div>
-                                        <h3 className="font-bold text-lg">Operational Metrics</h3>
-                                        <p className="text-sm opacity-60">Verified validation logs and impact data.</p>
-                                    </div>
-                                </div>
-                                <ChevronRight className="opacity-0 group-hover:opacity-100 transition-opacity" />
-                            </Link>
-
                             <Link href={`/${locale}/research/distributed-systems-resilience`} className="glass-panel p-8 rounded-[2rem] flex items-center justify-between group">
                                 <div className="flex items-center gap-6">
                                     <FileText className="text-[var(--primary)]" size={32} />
                                     <div>
                                         <h3 className="font-bold text-lg">Distributed Systems Resilience</h3>
                                         <p className="text-sm opacity-60">Patterns for reliability in unreliable networks.</p>
+                                    </div>
+                                </div>
+                                <ChevronRight className="opacity-0 group-hover:opacity-100 transition-opacity" />
+                            </Link>
+
+                            <Link href={`/${locale}/architecture/a1-cloud-native-enterprise-reference`} className="glass-panel p-8 rounded-[2rem] flex items-center justify-between group">
+                                <div className="flex items-center gap-6">
+                                    <Layers className="text-[var(--primary)]" size={32} />
+                                    <div>
+                                        <h3 className="font-bold text-lg">Architecture Reference (A1)</h3>
+                                        <p className="text-sm opacity-60">Cloud-native enterprise platform patterns.</p>
                                     </div>
                                 </div>
                                 <ChevronRight className="opacity-0 group-hover:opacity-100 transition-opacity" />
@@ -93,11 +82,11 @@ export default async function ResearchHubPage({ params }: { params: Promise<{ lo
                     <p className="text-xs opacity-50 tracking-widest uppercase mb-4">Authorship Declaration</p>
                     <p className="opacity-70 max-w-2xl mx-auto italic text-sm leading-relaxed">
                         "The software systems and architectural patterns documented herein were independently designed
-                        and implemented by [Applicant Name] to secure the global surface area of the OmniGCloud platform.
+                        and implemented by CHAITANYA BHARATH GOPU to secure the global surface area of the OmniGCloud platform.
                         Public dissemination is provided for scholarly evidentiary purposes."
                     </p>
                     <div className="mt-8 text-[10px] opacity-30 font-mono">
-                        © 2024 [APPLICANT NAME]. ALL RIGHTS RESERVED.
+                        © 2026 CHAITANYA BHARATH GOPU. ALL RIGHTS RESERVED.
                     </div>
                 </div>
             </section>
