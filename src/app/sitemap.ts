@@ -57,6 +57,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
         '/architecture/a3-enterprise-observability-operational-intelligence',
         '/architecture/a4-platform-governance-multicloud-hybrid',
         '/architecture/a5-monolith-to-cloud-native-modernization',
+        '/architecture/a6-adaptive-policy-enforcement',
 
         '/terms',
         '/ai-data'

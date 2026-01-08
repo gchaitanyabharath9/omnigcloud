@@ -448,14 +448,19 @@ export default async function A1ReferenceArchitecturePage({ params }: { params: 
                                 By adopting these invariants—Domain Isolation, Asynchronous Decoupling, and Policy as Code—enterprise architects can build systems that don't just survive scale, but thrive on it.
                             </p>
 
+                            <hr className="my-12 border-white/10" />
+                            <p className="text-sm text-muted-foreground italic">
+                                © 2026 Chaitanya Bharath Gopu. All rights reserved.
+                            </p>
+
                         </div>
 
                         <AuthorBio
                             author={{
-                                name: "Principal Architecture Group",
-                                role: "Systems Engineering",
-                                bio: "The OmniGCloud Principal Architecture Group defines the technical standards and strategic roadmaps for next-generation sovereign cloud platforms.",
-                                image: "/images/authors/omnig-arch-team.jpg"
+                                name: "Chaitanya Bharath Gopu",
+                                role: "Principal Software Architect",
+                                bio: "Specializing in distributed systems, sovereign cloud governance, and AI-driven enterprise modernization.",
+                                image: "/images/authors/omnigcloud-team.jpg"
                             }}
                         />
 
@@ -463,22 +468,22 @@ export default async function A1ReferenceArchitecturePage({ params }: { params: 
                             locale={locale}
                             articles={[
                                 {
-                                    title: "Cloud-Native Reference Architecture (Precursor)",
-                                    excerpt: "The foundational patterns for Kubernetes and GitOps adoption in validatied environments.",
-                                    href: "/architecture/cloud-native-reference-architecture",
+                                    title: "High-Throughput Distributed Systems (A2)",
+                                    excerpt: "Achieving 500k RPS with low latency mandates.",
+                                    href: "/architecture/a2-high-throughput-distributed-systems",
                                     category: "Architecture"
                                 },
                                 {
-                                    title: "AI-Driven Enterprise Observability",
-                                    excerpt: "Detailed implementation of the observability control loops discussed in section 7.",
-                                    href: "/architecture/ai-driven-enterprise-observability",
+                                    title: "Enterprise Observability (A3)",
+                                    excerpt: "AI-driven telemetry and control loops.",
+                                    href: "/architecture/a3-enterprise-observability-operational-intelligence",
                                     category: "Observability"
                                 },
                                 {
-                                    title: "Distributed Systems Resilience",
-                                    excerpt: "Deep dive into the Circuit Breaker and Bulkhead patterns mandated by this standard.",
-                                    href: "/research/distributed-systems-resilience",
-                                    category: "Research"
+                                    title: "Monolith to Cloud-Native (A5)",
+                                    excerpt: "Modernization strategies for legacy stacks.",
+                                    href: "/architecture/a5-monolith-to-cloud-native-modernization",
+                                    category: "Modernization"
                                 }
                             ]}
                         />
