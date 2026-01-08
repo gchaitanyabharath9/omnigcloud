@@ -48,8 +48,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
         '/partners',
         '/staffing',
         '/research',
-        '/research/metrics',
-        '/research/architecture',
+
         '/research/automated-multilingual-quality-assurance',
         '/research/distributed-systems-resilience',
         '/publications',
@@ -58,8 +57,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
         '/architecture/a3-enterprise-observability-operational-intelligence',
         '/architecture/a4-platform-governance-multicloud-hybrid',
         '/architecture/a5-monolith-to-cloud-native-modernization',
-        '/architecture/cloud-native-reference-architecture',
-        '/architecture/ai-driven-enterprise-observability',
+
         '/terms',
         '/ai-data'
     ];
