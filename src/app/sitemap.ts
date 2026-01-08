@@ -51,6 +51,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
         '/research/metrics',
         '/research/architecture',
         '/research/automated-multilingual-quality-assurance',
+        '/research/distributed-systems-resilience',
+        '/publications',
+        '/architecture/a1-cloud-native-enterprise-reference',
+        '/architecture/cloud-native-reference-architecture',
+        '/architecture/ai-driven-enterprise-observability',
         '/terms',
         '/ai-data'
     ];

@@ -14,6 +14,7 @@ import FloatingActions from "@/components/FloatingActions";
 import CookieConsent from "@/components/CookieConsent";
 import { HashScrollHandler } from "@/components/navigation/HashScrollHandler";
 import { ObservabilityProvider } from "@/components/ObservabilityProvider";
+import UtmTracker from "@/components/analytics/UtmTracker";
 
 import { config } from '@/config';
 
@@ -174,6 +175,7 @@ export default async function RootLayout({
         >
           <NextIntlClientProvider messages={messages}>
             <ObservabilityProvider locale={locale}>
+              <UtmTracker />
               <HashScrollHandler />
               <Header />
               <main className="main-content">

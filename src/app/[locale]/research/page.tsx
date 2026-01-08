@@ -70,6 +70,17 @@ export default async function ResearchHubPage({ params }: { params: Promise<{ lo
                                 </div>
                                 <ChevronRight className="opacity-0 group-hover:opacity-100 transition-opacity" />
                             </Link>
+
+                            <Link href={`/${locale}/research/distributed-systems-resilience`} className="glass-panel p-8 rounded-[2rem] flex items-center justify-between group">
+                                <div className="flex items-center gap-6">
+                                    <FileText className="text-[var(--primary)]" size={32} />
+                                    <div>
+                                        <h3 className="font-bold text-lg">Distributed Systems Resilience</h3>
+                                        <p className="text-sm opacity-60">Patterns for reliability in unreliable networks.</p>
+                                    </div>
+                                </div>
+                                <ChevronRight className="opacity-0 group-hover:opacity-100 transition-opacity" />
+                            </Link>
                         </div>
                     </div>
                 </div>
