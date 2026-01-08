@@ -17,7 +17,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
             description: 'Engineering systems that survive failure by design.',
             type: 'article',
             publishedTime: '2025-01-05T10:00:00.000Z',
-            authors: ['OmniGCloud Research Team'],
+            authors: ['Chaitanya Bharath Gopu'],
         }
     };
 }

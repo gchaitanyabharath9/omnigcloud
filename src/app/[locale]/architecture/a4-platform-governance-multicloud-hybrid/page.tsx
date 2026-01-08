@@ -15,7 +15,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
             description: 'Moving from "Gatekeeper" to "Guardrails": A new standard for enterprise control planes.',
             type: 'article',
             publishedTime: '2026-02-01T12:00:00.000Z',
-            authors: ['OmniGCloud Research Team'],
+            authors: ['Chaitanya Bharath Gopu'],
         }
     };
 }

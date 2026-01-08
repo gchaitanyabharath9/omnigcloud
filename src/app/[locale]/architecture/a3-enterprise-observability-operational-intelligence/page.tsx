@@ -15,7 +15,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
             description: 'Moving beyond "three pillars" to operational intelligence and automated remediation.',
             type: 'article',
             publishedTime: '2026-01-22T12:00:00.000Z',
-            authors: ['OmniGCloud Research Team'],
+            authors: ['Chaitanya Bharath Gopu'],
         }
     };
 }

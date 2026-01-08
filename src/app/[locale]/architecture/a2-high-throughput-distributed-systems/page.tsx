@@ -15,7 +15,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
             description: 'The definitive guide to partition strategies, load shedding, and consistency models at hyper-scale.',
             type: 'article',
             publishedTime: '2026-01-15T12:00:00.000Z',
-            authors: ['OmniGCloud Research Team'],
+            authors: ['Chaitanya Bharath Gopu'],
         }
     };
 }
