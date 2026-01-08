@@ -129,7 +129,7 @@ export default function ArchitecturePage() {
                         <a href="/en/architecture/a1-cloud-native-enterprise-reference" className="glass-panel p-8 rounded-2xl group border border-emerald-500/20 hover:border-emerald-500/50 transition-all md:col-span-2 relative overflow-hidden">
                             <div className="absolute top-0 right-0 bg-emerald-500 text-black text-[10px] font-bold px-3 py-1 uppercase tracking-widest rounded-bl-xl">Flagship Standard</div>
                             <span className="text-xs font-mono text-emerald-500 mb-4 block">A1-REF-STD</span>
-                            <h3 className="text-3xl font-bold mb-4 group-hover:text-emerald-400 transition-colors">A Reference Architecture for Cloud-Native Enterprise Platforms at Scale</h3>
+                            <h3 className="text-3xl font-bold mb-4 group-hover:text-emerald-400 transition-colors">A1: Reference Architecture for Cloud-Native Enterprise Platforms</h3>
                             <p className="text-muted-foreground mb-6 text-lg max-w-3xl">
                                 The definitive technical standard for implementing sovereign, multi-cloud platforms maximizing latency budgets and governance. Covers domain isolation, cell-based topology, and predictive capacity modeling.
                             </p>
@@ -138,24 +138,47 @@ export default function ArchitecturePage() {
                             </div>
                         </a>
 
-                        <a href="/en/architecture/cloud-native-reference-architecture" className="glass-panel p-8 rounded-2xl group border border-white/5 hover:border-primary/50 transition-all">
-                            <span className="text-xs font-mono text-primary mb-4 block">REF-ARCH-001</span>
-                            <h3 className="text-2xl font-bold mb-4 group-hover:text-primary transition-colors">Cloud-Native Reference Architecture</h3>
+                        <a href="/en/architecture/a2-high-throughput-distributed-systems" className="glass-panel p-8 rounded-2xl group border border-white/5 hover:border-primary/50 transition-all">
+                            <span className="text-xs font-mono text-primary mb-4 block">A2-DIST-SYS</span>
+                            <h3 className="text-2xl font-bold mb-4 group-hover:text-primary transition-colors">A2: High-Throughput Distributed Systems</h3>
                             <p className="text-muted-foreground mb-6">
-                                The comprehensive guide to building sovereign, portable, and scalable systems using Kubernetes and GitOps.
+                                Handling massive concurrency with non-blocking I/O and reactive streams.
                             </p>
                             <div className="flex items-center text-sm font-bold mt-auto">
-                                Read Specification <span className="ml-2 group-hover:translate-x-1 transition-transform">→</span>
+                                Read A2 <span className="ml-2 group-hover:translate-x-1 transition-transform">→</span>
                             </div>
                         </a>
-                        <a href="/en/architecture/ai-driven-enterprise-observability" className="glass-panel p-8 rounded-2xl group border border-white/5 hover:border-primary/50 transition-all">
-                            <span className="text-xs font-mono text-primary mb-4 block">REF-ARCH-002</span>
-                            <h3 className="text-2xl font-bold mb-4 group-hover:text-primary transition-colors">AI-Driven Observability</h3>
+
+                        <a href="/en/architecture/a3-enterprise-observability-operational-intelligence" className="glass-panel p-8 rounded-2xl group border border-white/5 hover:border-primary/50 transition-all">
+                            <span className="text-xs font-mono text-primary mb-4 block">A3-OBSERVABILITY</span>
+                            <h3 className="text-2xl font-bold mb-4 group-hover:text-primary transition-colors">A3: Enterprise Observability Patterns</h3>
                             <p className="text-muted-foreground mb-6">
-                                Implementing predictive analytics and automated root cause analysis for enterprise hybrid clouds.
+                                Beyond logging: Distributed tracing, correlation IDs, and AI-driven alerting.
                             </p>
                             <div className="flex items-center text-sm font-bold mt-auto">
-                                Read Specification <span className="ml-2 group-hover:translate-x-1 transition-transform">→</span>
+                                Read A3 <span className="ml-2 group-hover:translate-x-1 transition-transform">→</span>
+                            </div>
+                        </a>
+
+                        <a href="/en/architecture/a4-platform-governance-multicloud-hybrid" className="glass-panel p-8 rounded-2xl group border border-white/5 hover:border-primary/50 transition-all">
+                            <span className="text-xs font-mono text-primary mb-4 block">A4-GOVERNANCE</span>
+                            <h3 className="text-2xl font-bold mb-4 group-hover:text-primary transition-colors">A4: Platform Governance & Policy-as-Code</h3>
+                            <p className="text-muted-foreground mb-6">
+                                Decentralized enforcement of security policies across hybrid cloud estates.
+                            </p>
+                            <div className="flex items-center text-sm font-bold mt-auto">
+                                Read A4 <span className="ml-2 group-hover:translate-x-1 transition-transform">→</span>
+                            </div>
+                        </a>
+
+                        <a href="/en/architecture/a5-monolith-to-cloud-native-modernization" className="glass-panel p-8 rounded-2xl group border border-white/5 hover:border-primary/50 transition-all">
+                            <span className="text-xs font-mono text-primary mb-4 block">A5-MODERNIZATION</span>
+                            <h3 className="text-2xl font-bold mb-4 group-hover:text-primary transition-colors">A5: Monolith Modernization Strategy</h3>
+                            <p className="text-muted-foreground mb-6">
+                                The Strangler Fig pattern applied to large-scale enterprise legacy systems.
+                            </p>
+                            <div className="flex items-center text-sm font-bold mt-auto">
+                                Read A5 <span className="ml-2 group-hover:translate-x-1 transition-transform">→</span>
                             </div>
                         </a>
                     </div>
