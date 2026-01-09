@@ -43,11 +43,11 @@ export default auth(async (req) => {
         if (firstSegment.length === 2) {
             const rest = segments.slice(2).join('/');
             const newPath = rest ? `/${DEFAULT_LOCALE}/${rest}` : `/${DEFAULT_LOCALE}`;
-            return NextResponse.redirect(new URL(newPath + search, nextUrl));
+            return NextResponse.redirect(new URL(newPath + search, nextUrl), { status: 301 });
         }
 
         // Otherwise it's a bare path like "/pricing" -> "/en/pricing"
-        return NextResponse.redirect(new URL(`/${DEFAULT_LOCALE}${pathname}${search}`, nextUrl));
+        return NextResponse.redirect(new URL(`/${DEFAULT_LOCALE}${pathname}${search}`, nextUrl), { status: 301 });
     }
 
     // 1. FIX AUTH ROUTE DETECTION (BUG FIX) + 4. LOCALE AWARE

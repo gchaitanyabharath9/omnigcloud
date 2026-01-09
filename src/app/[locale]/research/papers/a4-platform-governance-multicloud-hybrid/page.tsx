@@ -5,13 +5,15 @@ import AuthorBio from '@/components/article/AuthorBio';
 import MermaidDiagram from '@/components/article/MermaidDiagram';
 import { ArrowRight } from 'lucide-react';
 
+export const revalidate = 86400; // Cache for 24 hours (ISR)
+
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
     const { locale } = await params;
     return {
-        title: 'Platform Governance & Multi-Cloud Hybrid Strategy | OmniGCloud',
+        title: 'A4: Platform Governance & Multi-Cloud Hybrid Strategy | OmniGCloud',
         description: 'Implementing Policy-as-Code and Sovereign Identity boundaries for scalable compliance.',
         alternates: {
-            canonical: 'https://www.omnigcloud.com/en/research/papers/a4-platform-governance-multicloud-hybrid'
+            canonical: `https://www.omnigcloud.com/${locale}/research/papers/a4-platform-governance-multicloud-hybrid`
         },
         openGraph: {
             title: 'Platform Governance & Multi-Cloud Strategy (A4)',
@@ -19,6 +21,14 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
             type: 'article',
             publishedTime: '2026-01-29T12:00:00.000Z',
             authors: ['Chaitanya Bharath Gopu'],
+        },
+        other: {
+            'citation_title': 'Platform Governance & Multi-Cloud Hybrid Strategy',
+            'citation_author': 'Chaitanya Bharath Gopu',
+            'citation_publication_date': '2026/01/29',
+            'citation_journal_title': 'OmniGCloud Technical Research Repository',
+            'citation_language': 'en',
+            'citation_technical_report_number': 'A4-GOV-STD'
         }
     };
 }

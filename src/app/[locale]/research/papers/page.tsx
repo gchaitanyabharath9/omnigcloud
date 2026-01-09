@@ -3,10 +3,18 @@ import Link from 'next/link';
 import { Metadata } from 'next';
 import { BookOpen, Calendar, ChevronRight, FileText, Hash, ShieldCheck, Tag } from 'lucide-react';
 
-export const metadata: Metadata = {
-    title: 'Applied Architecture Papers | OmniGCloud Research',
-    description: 'Index of independent technical papers (A1-A6) detailing the OmniGCloud sovereign architecture.',
-};
+export const revalidate = 86400; // Cache for 24 hours
+
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+    const { locale } = await params;
+    return {
+        title: 'Applied Architecture Papers | OmniGCloud Research',
+        description: 'Index of independent technical papers (A1-A6) detailing the OmniGCloud sovereign architecture.',
+        alternates: {
+            canonical: `https://www.omnigcloud.com/${locale}/research/papers`
+        }
+    };
+}
 
 const PAPERS = [
     {

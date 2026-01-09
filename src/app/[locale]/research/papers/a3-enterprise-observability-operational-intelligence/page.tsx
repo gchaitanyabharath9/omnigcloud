@@ -5,13 +5,15 @@ import AuthorBio from '@/components/article/AuthorBio';
 import MermaidDiagram from '@/components/article/MermaidDiagram';
 import { ArrowRight } from 'lucide-react';
 
+export const revalidate = 86400; // Cache for 24 hours (ISR)
+
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
     const { locale } = await params;
     return {
-        title: 'Enterprise Observability & Operational Intelligence | OmniGCloud',
+        title: 'A3: Enterprise Observability & Operational Intelligence at Scale | OmniGCloud',
         description: 'Implementing high-cardinality distributed tracing and adaptive sampling to debug unknown-unknowns.',
         alternates: {
-            canonical: 'https://www.omnigcloud.com/en/research/papers/a3-enterprise-observability-operational-intelligence'
+            canonical: `https://www.omnigcloud.com/${locale}/research/papers/a3-enterprise-observability-operational-intelligence`
         },
         openGraph: {
             title: 'Enterprise Observability & Operational Intelligence (A3)',
@@ -19,6 +21,14 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
             type: 'article',
             publishedTime: '2026-01-22T12:00:00.000Z',
             authors: ['Chaitanya Bharath Gopu'],
+        },
+        other: {
+            'citation_title': 'Enterprise Observability & Operational Intelligence at Scale',
+            'citation_author': 'Chaitanya Bharath Gopu',
+            'citation_publication_date': '2026/01/22',
+            'citation_journal_title': 'OmniGCloud Technical Research Repository',
+            'citation_language': 'en',
+            'citation_technical_report_number': 'A3-OBS-STD'
         }
     };
 }

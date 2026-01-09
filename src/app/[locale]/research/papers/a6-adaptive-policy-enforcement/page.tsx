@@ -5,13 +5,15 @@ import AuthorBio from '@/components/article/AuthorBio';
 import MermaidDiagram from '@/components/article/MermaidDiagram';
 import { ArrowRight } from 'lucide-react';
 
+export const revalidate = 86400; // Cache for 24 hours (ISR)
+
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
     const { locale } = await params;
     return {
-        title: 'Adaptive Policy Enforcement & Sovereign Control | OmniGCloud',
+        title: 'A6: Adaptive Policy Enforcement & Sovereign Control | OmniGCloud',
         description: 'Synthesizing the A1-A5 patterns into a self-healing, autonomic control plane.',
         alternates: {
-            canonical: 'https://www.omnigcloud.com/en/research/papers/a6-adaptive-policy-enforcement'
+            canonical: `https://www.omnigcloud.com/${locale}/research/papers/a6-adaptive-policy-enforcement`
         },
         openGraph: {
             title: 'Adaptive Policy Enforcement (A6)',
@@ -19,6 +21,14 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
             type: 'article',
             publishedTime: '2026-02-12T12:00:00.000Z',
             authors: ['Chaitanya Bharath Gopu'],
+        },
+        other: {
+            'citation_title': 'Adaptive Policy Enforcement: The Synthesis of Sovereign Control',
+            'citation_author': 'Chaitanya Bharath Gopu',
+            'citation_publication_date': '2026/02/12',
+            'citation_journal_title': 'OmniGCloud Technical Research Repository',
+            'citation_language': 'en',
+            'citation_technical_report_number': 'A6-SYNTHESIS'
         }
     };
 }

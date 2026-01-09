@@ -5,13 +5,15 @@ import AuthorBio from '@/components/article/AuthorBio';
 import MermaidDiagram from '@/components/article/MermaidDiagram';
 import { ArrowRight } from 'lucide-react';
 
+export const revalidate = 86400; // Cache for 24 hours (ISR)
+
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
     const { locale } = await params;
     return {
-        title: 'Monolith to Cloud-Native Modernization | OmniGCloud',
+        title: 'A5: Monolith to Cloud-Native Modernization | OmniGCloud',
         description: 'A risk-managed strategy for legacy modernization using Strangler Fig and Shadow Traffic patterns.',
         alternates: {
-            canonical: 'https://www.omnigcloud.com/en/research/papers/a5-monolith-to-cloud-native-modernization'
+            canonical: `https://www.omnigcloud.com/${locale}/research/papers/a5-monolith-to-cloud-native-modernization`
         },
         openGraph: {
             title: 'Monolith to Microservices (A5)',
@@ -19,6 +21,14 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
             type: 'article',
             publishedTime: '2026-02-05T12:00:00.000Z',
             authors: ['Chaitanya Bharath Gopu'],
+        },
+        other: {
+            'citation_title': 'Monolith to Cloud-Native Modernization',
+            'citation_author': 'Chaitanya Bharath Gopu',
+            'citation_publication_date': '2026/02/05',
+            'citation_journal_title': 'OmniGCloud Technical Research Repository',
+            'citation_language': 'en',
+            'citation_technical_report_number': 'A5-MOD-STD'
         }
     };
 }

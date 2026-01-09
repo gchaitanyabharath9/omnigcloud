@@ -5,12 +5,15 @@ import AuthorBio from '@/components/article/AuthorBio';
 import MermaidDiagram from '@/components/article/MermaidDiagram';
 import { ArrowRight } from 'lucide-react';
 
+export const revalidate = 86400; // Cache for 24 hours (ISR)
+
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+    const { locale } = await params;
     return {
-        title: 'Designing High-Throughput Distributed Systems at Scale | OmniGCloud',
+        title: 'A2: Designing High-Throughput Distributed Systems at Scale | OmniGCloud',
         description: 'Architectural patterns for building resilient systems that handle 100K+ messages per second with sub-10ms latency.',
         alternates: {
-            canonical: 'https://www.omnigcloud.com/en/research/papers/a2-high-throughput-distributed-systems'
+            canonical: `https://www.omnigcloud.com/${locale}/research/papers/a2-high-throughput-distributed-systems`
         },
         openGraph: {
             title: 'Designing High-Throughput Distributed Systems (A2)',
@@ -18,6 +21,14 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
             type: 'article',
             publishedTime: '2026-01-15T12:00:00.000Z',
             authors: ['Chaitanya Bharath Gopu'],
+        },
+        other: {
+            'citation_title': 'Designing High-Throughput Distributed Systems at Scale',
+            'citation_author': 'Chaitanya Bharath Gopu',
+            'citation_publication_date': '2026/01/15',
+            'citation_journal_title': 'OmniGCloud Technical Research Repository',
+            'citation_language': 'en',
+            'citation_technical_report_number': 'A2-DIST-SYS'
         }
     };
 }

@@ -5,12 +5,15 @@ import AuthorBio from '@/components/article/AuthorBio';
 import MermaidDiagram from '@/components/article/MermaidDiagram';
 import { ChevronRight, FileText, Calendar, Tag, ShieldCheck, Layers, ArrowRight } from 'lucide-react';
 
+export const revalidate = 86400; // Cache for 24 hours (ISR)
+
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+    const { locale } = await params;
     return {
-        title: 'A Reference Architecture for Cloud-Native Enterprise Platforms | OmniGCloud',
+        title: 'A1 Reference Architecture: Cloud-Native Enterprise Platforms | OmniGCloud',
         description: 'The canonical A1 technical standard for implementing sovereign, multi-cloud platforms maximizing latency budgets and governance.',
         alternates: {
-            canonical: 'https://www.omnigcloud.com/en/research/papers/a1-cloud-native-enterprise-reference'
+            canonical: `https://www.omnigcloud.com/${locale}/research/papers/a1-cloud-native-enterprise-reference`
         },
         openGraph: {
             title: 'Reference Architecture for Cloud-Native Enterprise Platforms (A1)',
@@ -18,6 +21,14 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
             type: 'article',
             publishedTime: '2026-01-08T12:00:00.000Z',
             authors: ['Chaitanya Bharath Gopu'],
+        },
+        other: {
+            'citation_title': 'A Reference Architecture for Cloud-Native Enterprise Platforms at Scale',
+            'citation_author': 'Chaitanya Bharath Gopu',
+            'citation_publication_date': '2026/01/08',
+            'citation_journal_title': 'OmniGCloud Technical Research Repository',
+            'citation_language': 'en',
+            'citation_technical_report_number': 'A1-REF-STD'
         }
     };
 }
