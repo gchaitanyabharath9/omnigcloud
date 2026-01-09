@@ -40,27 +40,47 @@ export default async function ResearchHubPage({ params }: { params: Promise<{ lo
                         <h2 className="text-3xl font-bold tracking-tight">The Enterprise Architecture Tension</h2>
                     </div>
 
-                    <Link href={`/${locale}/research/scholarly-article`} className="glass-panel p-8 md:p-12 rounded-[2rem] border border-white/10 hover:border-primary/50 transition-all group relative overflow-hidden">
-                        <div className="absolute top-0 right-0 p-8 opacity-10 group-hover:opacity-20 transition-opacity">
-                            <FileText size={200} />
+                    <Link href={`/${locale}/research/scholarly-article`} className="glass-panel p-0 rounded-[2rem] border border-white/10 hover:border-primary/50 transition-all group relative overflow-hidden block">
+                        {/* Dynamic Background */}
+                        <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-transparent opacity-50 group-hover:opacity-100 transition-opacity" />
+
+                        {/* Abstract Architectural Decoration */}
+                        <div className="absolute top-0 right-0 p-8 md:p-12 opacity-10 group-hover:opacity-20 transition-all duration-500 group-hover:scale-110">
+                            <div className="relative">
+                                <Network size={200} className="text-primary" />
+                                <ShieldCheck size={80} className="absolute bottom-0 right-0 text-white" />
+                                <Layers size={80} className="absolute top-0 left-0 text-white" />
+                            </div>
                         </div>
-                        <div className="relative z-10 max-w-4xl">
-                            <h3 className="text-2xl md:text-4xl font-bold mb-6 leading-tight">
-                                Reconciling Sovereignty, Scale, and Operational Complexity in Cloud-Native Platforms
+
+                        <div className="relative z-10 p-8 md:p-12 max-w-4xl">
+                            <div className="flex items-center gap-3 mb-6">
+                                <span className="px-3 py-1 rounded-full bg-primary/20 text-primary text-xs font-mono font-bold uppercase tracking-wider border border-primary/20 shadow-[0_0_15px_rgba(var(--primary-rgb),0.3)]">
+                                    New Publication
+                                </span>
+                                <span className="text-muted-foreground text-xs font-mono uppercase">Jan 2026</span>
+                            </div>
+
+                            <h3 className="text-3xl md:text-5xl font-black mb-6 leading-[1.1] tracking-tight text-white group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-white group-hover:to-slate-400 transition-all">
+                                Reconciling Sovereignty, Scale, and Complexity
                             </h3>
-                            <p className="text-xl text-muted-foreground leading-relaxed mb-8">
-                                Why do systems that work at 10k RPS fail at 100k RPS? This position paper analyzes the "Cliff of Failure" in conventional microservices and proposes a <strong>Plane Separation</strong> model to resolve the tension between regulatory sovereignty and operational scale.
+
+                            <p className="text-xl text-muted-foreground leading-relaxed mb-8 max-w-2xl">
+                                Why do systems that work at 10k RPS fail at 100k RPS? This position paper analyzes the "Cliff of Failure" and proposes a <strong>Plane Separation</strong> model to resolve the enterprise architecture tension.
                             </p>
-                            <div className="flex flex-wrap gap-4 items-center">
-                                <span className="btn-primary rounded-full px-8 py-3 flex items-center gap-2">
-                                    Read Article <ArrowRight size={18} />
+
+                            <div className="flex flex-wrap gap-3 items-center">
+                                <span className="btn-primary rounded-full px-8 py-4 flex items-center gap-2 text-lg shadow-lg shadow-primary/20 group-hover:shadow-primary/40 transition-all">
+                                    Read Article <ArrowRight size={20} />
                                 </span>
-                                <span className="px-4 py-2 rounded-full bg-white/5 text-sm font-mono text-muted-foreground border border-white/10">
-                                    ~5,400 Words
-                                </span>
-                                <span className="px-4 py-2 rounded-full bg-white/5 text-sm font-mono text-muted-foreground border border-white/10">
-                                    6 Diagrams
-                                </span>
+                                <div className="hidden sm:flex items-center gap-3 ml-4">
+                                    <span className="flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 text-sm font-mono text-slate-300 border border-white/10">
+                                        <FileText size={14} /> 5,400 Words
+                                    </span>
+                                    <span className="flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 text-sm font-mono text-slate-300 border border-white/10">
+                                        <Layers size={14} /> 6 Diagrams
+                                    </span>
+                                </div>
                             </div>
                         </div>
                     </Link>
