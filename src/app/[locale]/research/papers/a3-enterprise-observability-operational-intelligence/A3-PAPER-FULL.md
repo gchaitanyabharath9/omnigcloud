@@ -18,17 +18,24 @@ Traditional monitoring (metrics + logs) fails in microservices environments beca
 We define the pillars not as separate tools, but as interconnected signals.
 
 ```mermaid
-graph TD
-    Metrics[Metrics (Aggregatable)]
-    Logs[Logs (High Fidelity)]
-    Traces[Traces (Causal Chain)]
+    top_node[Observability]
     
-    Metrics -->|Trigger Alert| Alert[Symptom Detected]
-    Alert -->|Link to Trace| Traces
-    Traces -->|Link to Log| Logs
+    subgraph Pillars
+        Metrics[Metrics: "What is happening?"]
+        Logs[Logs: "Why is it happening?"]
+        Traces[Traces: "Where is it happening?"]
+    end
     
+    top_node --> Metrics
+    top_node --> Logs
+    top_node --> Traces
+    
+    Metrics -->|Alert Trigger| Traces
+    Traces -->|Context Link| Logs
+    Logs -->|Dimension Extraction| Metrics
+
     style Metrics fill:#2d3748,stroke:#fff
-    style Logs fill:#2d3748,stroke:#fff
+    style Logs fill:#276749,stroke:#fff
     style Traces fill:#c53030,stroke:#fff
 ```
 
@@ -42,10 +49,10 @@ In modern systems, the number of unique time-series (Cardinality) grows with the
 
 ```mermaid
 xychart-beta
-    title "Storage Cost vs Cardinality (Tags)"
-    x-axis "Dimensions (Tags)" [Host, +Service, +Container, +PodID, +CustomerID]
-    y-axis "Series Cost ($)" 0 --> 10000
-    line [100, 500, 2000, 10000, 100000]
+    title "Storage Cost vs Cardinality"
+    x-axis [10, 100, 1k, 10k, 100k]
+    y-axis "Cost Index" 0 --> 1000
+    line [10, 50, 200, 1000, 1000]
 ```
 
 **Figure 2.0:** Cardinality Explosion. Adding high-cardinality tags like `CustomerID` (10M unique values) to a standard metric breaks TSDBs (Prometheus). **Resolution:** We must drop high-cardinality tags from metrics and keep them only in Traces/Logs.
@@ -72,6 +79,14 @@ flowchart LR
 ```
 
 **Figure 3.0:** Tail Sampling. The decision to keep a trace is made *after* the request completes. If the request was slow (>2s) or failed (500), we keep it. If it was fast and successful, we keep only a random 1% sample for baseline stats.
+
+**Table 2: Sampling Strategies**
+
+| Strategy | Mechanism | Pros | Cons |
+| :--- | :--- | :--- | :--- |
+| **Head-Based** | Random % at Ingress | Simple, Low Overhead | Misses Rare Errors |
+| **Tail-Based** | Buffer & Decide at Egress | Captures Every Error | High Memory/CPU Cost |
+| **Adpative** | Dynamic Rate based on Traffic | Constant Storage Cost | Complex Implementation |
 
 ---
 
@@ -110,6 +125,18 @@ $$ Availability = \frac{Valid Requests}{Total Requests} $$
 | **Availability** | 99.95% | 28 Days | If > 2% budget consumed in 1 hour |
 | **Latency** | 99% < 200ms | 28 Days | If > 5% budget consumed in 1 hour |
 
+### 6.1 The Four Golden Signals
+We standardize dashboards on Google's SRE Golden Signals.
+
+**Table 1: Golden Signals Definition**
+
+| Signal | Definition | Metric Type |
+| :--- | :--- | :--- |
+| **Latency** | Time taken to service a request | Histogram (p50, p90, p99) |
+| **Traffic** | Demand placed on the system | Counter (RPS) |
+| **Errors** | Rate of request failures | Rate (HTTP 5xx / Total) |
+| **Saturation** | "Fullness" of the system resources | Gauge (Queue Depth, CPU) |
+
 ---
 
 ## 7. Operational Intelligence Cycle
@@ -118,15 +145,21 @@ Observability is not just for debugging; it drives the **OODA Loop** (Observe, O
 
 ```mermaid
 stateDiagram-v2
-    [*] --> Observe
-    Observe --> Orient : Metrics Ingest
-    Orient --> Decide : Alert Evaluated
-    Decide --> Act : PagerDuty / Auto-Remediation
-    Act --> Observe : System State Changed
+    state "Observe (Metrics)" as Obs
+    state "Orient (Context)" as Ori
+    state "Decide (Policy)" as Dec
+    state "Act (Remediation)" as Act
+    
+    [*] --> Obs
+    Obs --> Ori : Threshold Breach
+    Ori --> Dec : Correlate Logs/Traces
+    Dec --> Act : Execute Runbook
+    Act --> Obs : Validate Fix
     
     state Act {
-        [*] --> Rollback
-        Rollback --> Scaling
+        Manual --> Auto : Maturity Improv
+        Auto : Scale Group Resize
+        Auto : Feature Flag Flip
     }
 ```
 
