@@ -209,7 +209,7 @@ export default async function A2HighThroughputSystemsPage({ params }: { params: 
                         <AuthorBio
                             author={{
                                 name: "Chaitanya Bharath Gopu",
-                                role: "Principal Investigator",
+                                role: "Lead Research Architect",
                                 bio: "Researching the limits of queue theory and throughput in cloud-native systems.",
                                 image: "/images/authors/omnigcloud-team.jpg"
                             }}

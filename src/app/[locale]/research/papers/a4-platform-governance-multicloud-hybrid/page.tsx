@@ -209,7 +209,7 @@ export default async function A4GovernancePage({ params }: { params: Promise<{ l
                         <AuthorBio
                             author={{
                                 name: "Chaitanya Bharath Gopu",
-                                role: "Principal Investigator",
+                                role: "Lead Research Architect",
                                 bio: "Researching policy automation and sovereign identity.",
                                 image: "/images/authors/omnigcloud-team.jpg"
                             }}

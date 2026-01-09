@@ -209,7 +209,7 @@ export default async function A3ObservabilityPage({ params }: { params: Promise<
                         <AuthorBio
                             author={{
                                 name: "Chaitanya Bharath Gopu",
-                                role: "Principal Investigator",
+                                role: "Lead Research Architect",
                                 bio: "Researching observability signals and automated remediation in distributed systems.",
                                 image: "/images/authors/omnigcloud-team.jpg"
                             }}

@@ -209,7 +209,7 @@ export default async function A5ModernizationPage({ params }: { params: Promise<
                         <AuthorBio
                             author={{
                                 name: "Chaitanya Bharath Gopu",
-                                role: "Principal Investigator",
+                                role: "Lead Research Architect",
                                 bio: "Specializing in zero-downtime migration of critical financial infrastructure.",
                                 image: "/images/authors/omnigcloud-team.jpg"
                             }}

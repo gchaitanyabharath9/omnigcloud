@@ -209,7 +209,7 @@ export default async function A6SynthesisPage({ params }: { params: Promise<{ lo
                         <AuthorBio
                             author={{
                                 name: "Chaitanya Bharath Gopu",
-                                role: "Principal Investigator",
+                                role: "Lead Research Architect",
                                 bio: "Defining the unified control theory for next-generation enterprise platforms.",
                                 image: "/images/authors/omnigcloud-team.jpg"
                             }}

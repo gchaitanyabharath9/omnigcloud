@@ -215,7 +215,7 @@ export default async function A1ReferenceArchitecturePage({ params }: { params: 
                         <AuthorBio
                             author={{
                                 name: "Chaitanya Bharath Gopu",
-                                role: "Principal Investigator",
+                                role: "Lead Research Architect",
                                 bio: "Author of the Cloud-Native Enterprise Reference Architecture (A1) and associated technical standards.",
                                 image: "/images/authors/omnigcloud-team.jpg"
                             }}
