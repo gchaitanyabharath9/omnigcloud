@@ -71,7 +71,7 @@ Conventional patterns work below a certain scale. Above it, stability creates a 
 ```mermaid
 xychart-beta
     title "System Stability vs Scale"
-    x-axis "Operational Scale (Log)" [10, 100, 1k, 10k, 100k]
+    x-axis "Operational Scale (Log)" ["10", "100", "1k", "10k", "100k"]
     y-axis "Stability %" 0 --> 100
     line [99.99, 99.95, 99.9, 95.0, 80.0]
     line [99.99, 99.99, 99.99, 99.99, 99.95]
@@ -105,8 +105,8 @@ block-beta
         Ingress --> App --> Database
     end
     
-    Control -- "Async Push" --> Data
-    Governance -- "WASM Push" --> Data
+    Control -- Async Push --> Data
+    Governance -- WASM Push --> Data
     
     style Control fill:#f96
     style Governance fill:#9cf
@@ -123,7 +123,7 @@ We must explicitly define trust boundaries to prevent privilege escalation.
 
 ```mermaid
 graph TD
-    subgraph "Region: EU-West-1"
+    subgraph RegionEU["Region: EU-West-1"]
         subgraph "Control Plane (Privileged)"
             K8s[Kubernetes Master]
             Vault[Vault Primary]
