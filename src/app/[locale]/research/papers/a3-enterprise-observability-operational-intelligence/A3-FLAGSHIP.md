@@ -509,6 +509,5 @@ This work extends the A1 reference architecture with specific implementation gui
 
 ---
 
-**Word Count:** ~5,200 words  
 **Diagrams:** 5  
 **Tables:** 4

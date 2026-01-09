@@ -207,6 +207,5 @@ Future work: ML-based anomaly detection, automated root cause analysis, cross-re
 
 ---
 
-**Word Count:** ~2,000 words  
 **Diagrams:** 6  
 **Tables:** 4

@@ -122,5 +122,4 @@ Governance must move from being a "Gatekeeper" (blocking deployment) to a "Guard
 
 ---
 
-**Word Count:** ~3,600 words (Equivalent)
 **Status:** Gold Standard

@@ -381,6 +381,5 @@ The framework has been validated through the A1-A6 paper series, demonstrating p
 
 ---
 
-**Word Count:** ~4,200 words
 
 **End of Framework Document**

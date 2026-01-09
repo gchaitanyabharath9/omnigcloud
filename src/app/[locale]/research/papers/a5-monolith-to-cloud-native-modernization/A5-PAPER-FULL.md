@@ -161,5 +161,4 @@ Modernization is a journey of risk management. By employing the Strangler Fig pa
 
 ---
 
-**Word Count:** ~3,500 words (Equivalent)
 **Status:** Gold Standard

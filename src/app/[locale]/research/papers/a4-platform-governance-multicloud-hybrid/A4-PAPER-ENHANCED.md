@@ -84,6 +84,5 @@ Policy-as-code with pre-compilation and distributed enforcement achieves <1ms ev
 
 ---
 
-**Word Count:** ~600 words (condensed)  
 **Diagrams:** 1  
 **Tables:** 2

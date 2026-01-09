@@ -27,7 +27,7 @@ graph TD
     Scale <-->|Tension: Entropy| Complexity
     Complexity <-->|Tension: Consistency| Sovereignty
     
-    style Sovereignty fill:#f9f,stroke:#333,,stroke-width:2px
+    style Sovereignty fill:#f9f,stroke:#333,stroke-width:2px
     style Scale fill:#bbf,stroke:#333,stroke-width:2px
     style Complexity fill:#bfb,stroke:#333,stroke-width:2px
 ```
@@ -184,5 +184,3 @@ graph LR
 
 ---
 
-**Word Count:** ~5,400 words (Equivalent)
-**End of Scholarly Article**

@@ -92,6 +92,5 @@ Strangler fig pattern with parallel run and automated validation enables zero-do
 
 ---
 
-**Word Count:** ~650 words (condensed)  
 **Diagrams:** 1  
 **Tables:** 3

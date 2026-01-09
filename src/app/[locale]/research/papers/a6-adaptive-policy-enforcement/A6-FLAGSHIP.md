@@ -548,6 +548,5 @@ This work establishes A1-A5 as a complete reference architecture for enterprise 
 
 ---
 
-**Word Count:** ~5,200 words  
 **Diagrams:** 5  
 **Tables:** 3

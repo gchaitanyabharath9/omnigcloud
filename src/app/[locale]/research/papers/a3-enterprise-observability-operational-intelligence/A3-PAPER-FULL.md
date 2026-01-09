@@ -140,5 +140,4 @@ Observability at scale requires a shift from "Hoarding Data" to "Curating Signal
 
 ---
 
-**Word Count:** ~4,100 words (Equivalent)
 **Status:** Gold Standard

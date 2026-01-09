@@ -93,6 +93,5 @@ Adaptive policy enforcement achieves 10-second threat response with <5ms evaluat
 
 ---
 
-**Word Count:** ~650 words (condensed)  
 **Diagrams:** 1  
 **Tables:** 3

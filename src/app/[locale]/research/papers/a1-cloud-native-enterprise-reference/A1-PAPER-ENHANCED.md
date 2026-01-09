@@ -254,6 +254,5 @@ This reference architecture resolves the enterprise tension between sovereignty,
 
 ---
 
-**Word Count:** ~1,600 words (condensed for token limits)
 
 **Note:** Full 5,500-word version available separately with expanded sections on component model, detailed failure analysis, and implementation guidance.

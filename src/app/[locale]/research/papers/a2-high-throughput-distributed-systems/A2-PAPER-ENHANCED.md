@@ -210,6 +210,5 @@ Future work: adaptive batching based on load, NUMA-aware request routing, hardwa
 
 ---
 
-**Word Count:** ~2,100 words  
 **Diagrams:** 6  
 **Tables:** 4

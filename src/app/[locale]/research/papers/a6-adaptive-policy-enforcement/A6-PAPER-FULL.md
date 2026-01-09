@@ -150,5 +150,4 @@ The ultimate goal of the A-Series research is to move beyond "Static Architectur
 
 ---
 
-**Word Count:** ~4,200 words (Equivalent)
 **Status:** Gold Standard

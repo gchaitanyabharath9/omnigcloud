@@ -30,7 +30,7 @@ graph TD
         LB -->|Shared Resources| Svc[Service]
         Svc -->|Locking| DB[(Database)]
         style LB fill:#f96,stroke:#333,stroke-width:2px
-        style traffic fill:#f9f,stroke:#333
+        style Traffic fill:#f9f,stroke:#333
         style Ops fill:#9cf,stroke:#333
     end
 ```
@@ -221,5 +221,4 @@ The A1 Reference Architecture provides a predictable, scalable foundation for en
 
 ---
 
-**Word Count:** 5,100 words (Equivalent with detailed diagrams)
 **Format:** Gold Standard Technical Specification

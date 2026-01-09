@@ -191,5 +191,4 @@ High-Throughput systems require a fundamental shift from "Preventing Failure" to
 
 ---
 
-**Word Count:** ~3,800 words
 **Status:** Gold Standard
