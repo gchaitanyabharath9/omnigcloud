@@ -1,288 +1,210 @@
 import { Metadata } from 'next';
-
+import fs from 'fs';
+import path from 'path';
 import AuthorBio from '@/components/article/AuthorBio';
-import RelatedReading from '@/components/article/RelatedReading';
-import TableOfContents from '@/components/article/TableOfContents';
+import MermaidDiagram from '@/components/article/MermaidDiagram';
+import { ArrowRight } from 'lucide-react';
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+    const { locale } = await params;
     return {
-        title: 'Adaptive Policy Enforcement in Cloud-Native Architectures (A6) | OmniGCloud',
-        description: 'A Late-Binding Framework for Governance Continuity in Multi-Cloud Environments.',
+        title: 'Adaptive Policy Enforcement & Sovereign Control | OmniGCloud',
+        description: 'Synthesizing the A1-A5 patterns into a self-healing, autonomic control plane.',
         alternates: {
             canonical: 'https://www.omnigcloud.com/en/research/papers/a6-adaptive-policy-enforcement'
         },
         openGraph: {
             title: 'Adaptive Policy Enforcement (A6)',
-            description: 'Decoupling policy intent from architectural implementation.',
+            description: 'The Unified Control Theory: Combining Observability, Governance, and Throughput into a Digital Organism.',
             type: 'article',
-            publishedTime: '2026-01-08T12:00:00.000Z',
+            publishedTime: '2026-02-12T12:00:00.000Z',
             authors: ['Chaitanya Bharath Gopu'],
         }
     };
 }
 
-export default async function A6Page({ params }: { params: Promise<{ locale: string }> }) {
+// Simple markdown parser to handle text and mermaid blocks
+function parseContent(content: string) {
+    const parts = [];
+    const lines = content.split('\n');
+    let currentText = [];
+    let isMermaid = false;
+    let mermaidCode = [];
+
+    for (const line of lines) {
+        if (line.trim().startsWith('```mermaid')) {
+            if (currentText.length > 0) {
+                parts.push({ type: 'text', content: currentText.join('\n') });
+                currentText = [];
+            }
+            isMermaid = true;
+            continue;
+        }
+
+        if (line.trim() === '```' && isMermaid) {
+            isMermaid = false;
+            parts.push({ type: 'mermaid', content: mermaidCode.join('\n') });
+            mermaidCode = [];
+            continue;
+        }
+
+        if (isMermaid) {
+            mermaidCode.push(line);
+        } else {
+            currentText.push(line);
+        }
+    }
+
+    if (currentText.length > 0) {
+        parts.push({ type: 'text', content: currentText.join('\n') });
+    }
+
+    return parts;
+}
+
+// Improved markdown renderer with table support
+function renderMarkdownText(md: string) {
+    const lines = md.split('\n');
+    let html = '';
+    let inTable = false;
+    let tableBuffer: string[] = [];
+
+    function renderTable(rows: string[]) {
+        if (rows.length === 0) return '';
+        let html = '<div class="overflow-x-auto my-8 border border-white/10 rounded-lg"><table class="w-full text-left text-sm font-mono">';
+
+        const contentRows = rows.filter(r => !r.includes('---'));
+
+        contentRows.forEach((row, index) => {
+            const cols = row.split('|').filter(c => c.trim() !== '');
+            const isHeader = index === 0;
+
+            html += `<tr class="${isHeader ? 'bg-white/10 font-bold text-accent-foreground border-b border-white/20' : 'border-b border-white/5 text-muted-foreground hover:bg-white/5'}">`;
+            cols.forEach(col => {
+                html += `<td class="p-4 align-top leading-relaxed">${col.trim()}</td>`;
+            });
+            html += '</tr>';
+        });
+
+        html += '</table></div>';
+        return html;
+    }
+
+    for (let i = 0; i < lines.length; i++) {
+        const line = lines[i];
+
+        if (line.trim().startsWith('|')) {
+            if (!inTable) inTable = true;
+            tableBuffer.push(line);
+            continue;
+        } else if (inTable) {
+            inTable = false;
+            html += renderTable(tableBuffer);
+            tableBuffer = [];
+        }
+
+        if (line.startsWith('# ')) { html += `<h1 class="text-3xl md:text-5xl font-extrabold tracking-tight mb-8 mt-12 text-foreground">${line.slice(2)}</h1>`; continue; }
+        if (line.startsWith('## ')) { html += `<h2 class="text-2xl font-bold mt-16 mb-8 scroll-mt-24 text-foreground/90 pb-4 border-b border-white/10" id="${line.slice(3).toLowerCase().replace(/[^a-z0-9]+/g, '-')}">${line.slice(3)}</h2>`; continue; }
+        if (line.startsWith('### ')) { html += `<h3 class="text-xl font-bold mt-12 mb-6 text-foreground/90">${line.slice(4)}</h3>`; continue; }
+        if (line.startsWith('**') && line.endsWith('**')) { html += `<p class="font-bold mt-4 mb-2 text-primary">${line.slice(2, -2)}</p>`; continue; }
+        if (line.startsWith('$$') && line.endsWith('$$')) { html += `<div class="bg-card border border-border rounded p-4 my-6 text-center font-mono text-lg overflow-x-auto text-primary shadow-inner bg-black/20">${line.slice(2, -2)}</div>`; continue; }
+        if (line.startsWith('- ')) { html += `<li class="ml-6 text-muted-foreground mb-2 list-disc">${line.slice(2)}</li>`; continue; }
+
+        if (line.trim() === '---') { html += '<hr class="my-12 border-white/10" />'; continue; }
+        if (line.trim() === '') { html += '<br />'; continue; }
+
+        html += `<p class="mb-4 leading-relaxed text-lg text-muted-foreground/80">${line}</p>`;
+    }
+
+    if (inTable) {
+        html += renderTable(tableBuffer);
+    }
+
+    return html;
+}
+
+export default async function A6SynthesisPage({ params }: { params: Promise<{ locale: string }> }) {
     const { locale } = await params;
+
+    const contentPath = path.join(process.cwd(), 'src/app/[locale]/research/papers/a6-adaptive-policy-enforcement/A6-PAPER-FULL.md');
+    // Using fs to read file
+    let fileContent = '';
+    try {
+        fileContent = fs.readFileSync(contentPath, 'utf-8');
+    } catch (e) {
+        fileContent = "# Error\nCould not load paper content.";
+    }
+
+    const contentParts = parseContent(fileContent);
 
     return (
         <article className="min-h-screen bg-background pt-24 pb-20">
             <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex flex-col lg:flex-row gap-12">
 
-                    <main className="flex-1 max-w-4xl">
-                        <header className="mb-12">
-                            <span className="text-primary font-mono text-sm tracking-wider uppercase mb-4 block">
-                                Independent Technical Paper / A6-GOV-STD
-                            </span>
-                            <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight mb-8 leading-tight">
-                                Adaptive Policy Enforcement in Cloud-Native Architectures
+                    <main className="flex-1 max-w-5xl mx-auto">
+                        <header className="mb-16 border-b border-white/10 pb-12">
+                            <div className="flex items-center gap-2 mb-6">
+                                <span className="px-3 py-1 rounded-full bg-primary/10 text-primary text-xs font-mono font-bold uppercase tracking-wider border border-primary/20">
+                                    Strategic Synthesis
+                                </span>
+                                <span className="text-muted-foreground text-xs font-mono uppercase tracking-wider">
+                                    A6-SYNTHESIS
+                                </span>
+                            </div>
+
+                            <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight mb-8 leading-[1.1]">
+                                Adaptive Policy Enforcement: The Synthesis of Sovereign Control
                             </h1>
-                            <div className="flex flex-wrap items-center gap-6 text-sm text-muted-foreground font-mono mb-8 border-b border-white/10 pb-8">
-                                <div className='grid grid-cols-1 md:grid-cols-2 gap-4 w-full'>
-                                    <div><span className='text-slate-500'>Publication Type:</span> Independent Technical Paper</div>
-                                    <div><span className='text-slate-500'>Version:</span> 1.0 (Proposal)</div>
-                                    <div><span className='text-slate-500'>First Published:</span> January 2026</div>
-                                    <div><span className='text-slate-500'>Last Updated:</span> January 2026</div>
-                                    <div><span className='text-slate-500'>Author:</span> Chaitanya Bharath Gopu</div>
-                                    <div><span className='text-slate-500'>License:</span> © Author. All rights reserved.</div>
-                                    <div><span className='text-slate-500'>arXiv Primary:</span> cs.SE (Software Engineering)</div>
-                                    <div><span className='text-slate-500'>arXiv Secondary:</span> cs.CR (Cryptography and Security)</div>
-                                    <div className='col-span-1 md:col-span-2'><span className='text-slate-500'>Canonical URL:</span> https://www.omnigcloud.com/en/research/papers/a6-adaptive-policy-enforcement</div>
+
+                            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-sm font-mono text-muted-foreground">
+                                <div>
+                                    <div className="text-xs uppercase text-slate-500 mb-1">Author</div>
+                                    <div className="text-foreground">Chaitanya Bharath Gopu</div>
+                                </div>
+                                <div>
+                                    <div className="text-xs uppercase text-slate-500 mb-1">Version</div>
+                                    <div className="text-foreground">2.0 (Gold)</div>
+                                </div>
+                                <div>
+                                    <div className="text-xs uppercase text-slate-500 mb-1">Published</div>
+                                    <div className="text-foreground">Feb 2026</div>
+                                </div>
+                                <div>
+                                    <div className="text-xs uppercase text-slate-500 mb-1">Classification</div>
+                                    <div className="text-foreground">Synthesis</div>
                                 </div>
                             </div>
                         </header>
 
                         <div className="prose prose-lg prose-invert max-w-none">
-
-                            {/* 1. Executive Summary */}
-                            <section id="executive-summary" className="mb-16">
-                                <p className="lead text-xl leading-relaxed font-light text-foreground/90">
-                                    As enterprises transition from monolithic to cloud-native architectures, governance policies often become the primary impediment to agility. A policy written for a monolithic system—such as "Encrypt customer data at rest"—effectively couples legal intent with specific technical implementations (e.g., Oracle Tablespaces). When the architecture evolves to microservices or serverless topologies, these policies become technically invalid, forcing manual rewrites and creating a dangerous "compliance debt."
-                                </p>
-                                <p>
-                                    This paper introduces <strong>Adaptive Policy Enforcement (APE)</strong>, a Late-Binding Policy Framework that decouples <strong>policy intent</strong> from <strong>architectural implementation</strong>. By treating policies as abstract constraints and deferring their mapping to concrete controls until deployment time, organizations can maintain governance continuity across radical architectural shifts.
-                                </p>
-                            </section>
-
-                            {/* 2. Problem Framing */}
-                            <h2 id="problem-framing" className="text-3xl font-bold mt-16 mb-8 scroll-mt-24">1. Problem Framing & Industry Context</h2>
-                            <h3 className="text-xl font-semibold mt-6 mb-4">1.1 The Policy Brittleness Paradox</h3>
-                            <p>
-                                Modernization programs are often stalled not by technical complexity, but by the rigidity of existing governance frameworks. In strictly regulated industries (finance, healthcare, government), policies are historically "hard-coded" to the prevailing architecture of the time.
-                            </p>
-                            <p>
-                                Consider a GDPR data residency requirement. In a legacy context, this might be enforced via "Physical Server Location" checks. In a cloud-native context, the same requirement must be enforced via "Region Tags" or "Cluster Affinity." When a policy engine rigidly looks for server attributes, it fails in a containerized environment, halting deployment.
-                            </p>
-
-                            <h3 className="text-xl font-semibold mt-6 mb-4">1.2 Systemic Challenges</h3>
-                            <ul className="list-disc pl-6 space-y-2 mb-6">
-                                <li><strong>Compliance Debt:</strong> The gap between a new architecture going live and the updated policies being ratified.</li>
-                                <li><strong>Vendor Lock-in via Policy:</strong> Policies written for specific vendor features (e.g., "Must use AWS KMS") prevent multi-cloud portability.</li>
-                                <li><strong>Scale Discontinuity:</strong> Manual policy reviews that work for quarterly monolithic releases collapse under the weight of daily microservice deployments.</li>
-                            </ul>
-
-                            {/* 3. Principles */}
-                            <h2 id="principles" className="text-3xl font-bold mt-16 mb-8 scroll-mt-24">2. Architectural Design Principles</h2>
-                            <p>To resolve the tension between agility and control, we propose four immutable design principles:</p>
-                            <div className="grid md:grid-cols-2 gap-6 my-8">
-                                <div className="bg-card p-6 rounded-xl border border-border">
-                                    <h4 className="font-bold text-primary mb-2">P1. Intent-Implementation Decoupling</h4>
-                                    <p className="text-sm text-muted-foreground">Policies must express <strong>what</strong> must be true (intent), not <strong>how</strong> to make it true. Imperative policies break whenever the underlying platform changes.</p>
-                                </div>
-                                <div className="bg-card p-6 rounded-xl border border-border">
-                                    <h4 className="font-bold text-primary mb-2">P2. Late Binding of Controls</h4>
-                                    <p className="text-sm text-muted-foreground">The mapping of abstract policy to concrete control must occur at <strong>deployment time</strong>. This allows the same policy to adapt to unknown target environments.</p>
-                                </div>
-                                <div className="bg-card p-6 rounded-xl border border-border">
-                                    <h4 className="font-bold text-primary mb-2">P3. Capability Advertisement</h4>
-                                    <p className="text-sm text-muted-foreground">Infrastructure components must explicitly "advertise" their security capabilities (e.g., "mTLS-enabled") to the control plane via a Capability Registry.</p>
-                                </div>
-                                <div className="bg-card p-6 rounded-xl border border-border">
-                                    <h4 className="font-bold text-primary mb-2">P4. Fail-Safe Default</h4>
-                                    <p className="text-sm text-muted-foreground">If the Binding Engine cannot find a valid path from Policy Intent to Advertisement, the deployment is blocked. Silent non-compliance is catastrophic.</p>
-                                </div>
-                            </div>
-
-                            {/* 4. Reference Architecture */}
-                            <h2 id="reference-architecture" className="text-3xl font-bold mt-16 mb-8 scroll-mt-24">3. Reference Architecture</h2>
-                            <p>The Adaptive Policy Enforcement (APE) architecture consists of three distinct planes: the Abstraction Plane, the Binding Plane, and the Execution Plane.</p>
-
-                            <div className="my-12 p-6 bg-slate-950 rounded-lg border border-white/10 overflow-x-auto">
-                                <pre className="text-xs font-mono leading-relaxed text-emerald-400">
-                                    {`┌─────────────────────────────────────────────────────────────┐
-│                 ABSTRACTION PLANE (Policy Intent)           │
-│  "All PII must be encrypted" | "Residency: EU-Only"         │
-└──────────────────────────────┬──────────────────────────────┘
-                               │ (PDL Request)
-                               ▼
-┌─────────────────────────────────────────────────────────────┐
-│                    BINDING PLANE (The Engine)               │
-│                                                             │
-│   1. Constraint Solver ◄───►  2. Capability Registry        │
-│      (Matches Intent)           (Infrastructure Inventory)  │
-│                                           ▲                 │
-│                                           │ (Registration)  │
-└──────────────────────────────┬────────────┼─────────────────┘
-                               │ (Injection)│
-                               ▼            │
-┌───────────────────────────────────────────┴─────────────────┐
-│                 EXECUTION PLANE (Infrastructure)            │
-│                                                             │
-│  ┌──────────────┐    ┌──────────────┐    ┌──────────────┐   │
-│  │ Legacy DB    │    │ K8s Cluster  │    │ S3 Bucket    │   │
-│  │ (TDE Enabled)├───►│ (mTLS On)    ├───►│ (SSE-KMS)    │   │
-│  └──────────────┘    └──────────────┘    └──────────────┘   │
-└─────────────────────────────────────────────────────────────┘`}
-                                </pre>
-                                <div className="text-center text-sm text-muted-foreground mt-4 italic">
-                                    Figure 1: The Late-Binding Policy Architecture
-                                </div>
-                            </div>
-
-                            {/* 5. Decision Framework */}
-                            <h2 id="decision-framework" className="text-3xl font-bold mt-16 mb-8 scroll-mt-24">4. Decision Framework</h2>
-                            <p>Architects must make trade-offs when implementing APE. The primary decision is <strong>Static vs. Dynamic Binding</strong>.</p>
-
-                            <div className="my-12 p-6 bg-slate-950 rounded-lg border border-white/10 overflow-x-auto">
-                                <pre className="text-xs font-mono leading-relaxed text-blue-400">
-                                    {`                 Start Deployment
-                        │
-                        ▼
-            Does Policy Require Runtime Context?
-           ┌────────────┴────────────┐
-           │                         │
-          YES                        NO
-           │                         │
-           ▼                         ▼
-    [Dynamic Binding]         [Static Binding]
-    Check Cluster State       Check Terraform Plan
-           │                         │
-           ▼                         ▼
-    Capability Available?     Capability Defined?
-      ┌────┴────┐               ┌────┴────┐
-      │         │               │         │
-     NO        YES             NO        YES
-      │         │               │         │
-      ▼         ▼               ▼         ▼
-  BLOCK       ALLOW           FAIL      PASS
-  DEPLOY      BINDING         BUILD     SCAN`}
-                                </pre>
-                                <div className="text-center text-sm text-muted-foreground mt-4 italic">
-                                    Figure 2: Binding Decision Flow
-                                </div>
-                            </div>
-
-                            {/* 6. Operational Considerations */}
-                            <h2 id="operational-considerations" className="text-3xl font-bold mt-16 mb-8 scroll-mt-24">5. Operational Considerations</h2>
-                            <ul className="list-disc pl-6 space-y-2 mb-6">
-                                <li><strong>Observability & Audit:</strong> Every binding decision must be logged. The generated Compliance Bind artifact serves as the audit proof.</li>
-                                <li><strong>Change Management:</strong> When a policy changes, the Binding Engine invalidates existing bindings, triggering a "Re-Bind" event.</li>
-                                <li><strong>Failure Containment:</strong> If the Capability Registry is unavailable, the system fails closed (P4).</li>
-                            </ul>
-
-                            {/* 7. Comparative Analysis */}
-                            <h2 id="comparative-analysis" className="text-3xl font-bold mt-16 mb-8 scroll-mt-24">6. Comparative Analysis</h2>
-                            <div className="overflow-x-auto my-6">
-                                <table className="w-full text-left border-collapse border border-white/10 text-sm">
-                                    <thead className="bg-white/5">
-                                        <tr>
-                                            <th className="p-3 border border-white/10">Approach</th>
-                                            <th className="p-3 border border-white/10">Feature-Hardcoded</th>
-                                            <th className="p-3 border border-white/10">Late-Binding (A6)</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td className="p-3 border border-white/10 font-bold">Definition</td>
-                                            <td className="p-3 border border-white/10">"Use Oracle TDE"</td>
-                                            <td className="p-3 border border-white/10">"Confidentiality: High"</td>
-                                        </tr>
-                                        <tr>
-                                            <td className="p-3 border border-white/10 font-bold">Portability</td>
-                                            <td className="p-3 border border-white/10">None</td>
-                                            <td className="p-3 border border-white/10">High (Intent based)</td>
-                                        </tr>
-                                        <tr>
-                                            <td className="p-3 border border-white/10 font-bold">Brittleness</td>
-                                            <td className="p-3 border border-white/10">Breaks on Architecture Change</td>
-                                            <td className="p-3 border border-white/10">Resilient</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-
-                            {/* 8. Scenarios */}
-                            <h2 id="scenarios" className="text-3xl font-bold mt-16 mb-8 scroll-mt-24">7. Scenarios</h2>
-                            <h3 className="text-xl font-semibold mt-4 mb-2">Scenario A: The Multi-Cloud Failover</h3>
-                            <p>An enterprise moves a workload from AWS (US-East) to Azure (EU-West). A6 Framework detects the Azure Blob Storage capability and generates the RoleAssignment automatically.</p>
-
-                            <h3 className="text-xl font-semibold mt-4 mb-2">Scenario B: Regulatory Divergence</h3>
-                            <p>A new law requires "Double Encryption". The Policy Administrator updates the intent. The Binding Engine flags all non-compliant resources, allowing automated remediation.</p>
-
-                            {/* 9. Limitations */}
-                            <h2 id="limitations" className="text-3xl font-bold mt-16 mb-8 scroll-mt-24">8. Limitations and Scope</h2>
-                            <ol className="list-decimal pl-6 space-y-2 mb-6">
-                                <li><strong>Complexity Overhead:</strong> A6 introduces an additional abstraction layer (Binding Engine) which requires maintenance.</li>
-                                <li><strong>Capability Vocabulary:</strong> Defining a universal taxonomy is non-trivial.</li>
-                                <li><strong>Latency:</strong> Dynamic binding adds milliseconds to startup time.</li>
-                            </ol>
-
-                            {/* 10. Conclusion */}
-                            <h2 id="conclusion" className="text-3xl font-bold mt-16 mb-8 scroll-mt-24">9. Conclusion</h2>
-                            <p>
-                                The "Policy Brittleness" problem is a structural flaw in modern cloud architecture. By coupling governance to specific implementations, we inadvertently cap our velocity. The <strong>Adaptive Policy Enforcement (A6)</strong> framework resolves this by elevating policy to a first-class architectural concern—one that is abstract, portable, and late-bound.
-                            </p>
-                            <p>
-                                This shift allows the "Governance" lifecycle to decouple from the "Infrastructure" lifecycle. The result is an enterprise that is not only compliant by design, but capable of evolving its architecture without renegotiating its social contract with regulators.
-                            </p>
-
-                            <hr className="my-12 border-white/10" />
-                            <p className="text-sm text-muted-foreground italic">
-                                © 2026 Chaitanya Bharath Gopu. All rights reserved.
-                            </p>
-
+                            {contentParts.map((part, index) => {
+                                if (part.type === 'text') {
+                                    return <div key={index} dangerouslySetInnerHTML={{ __html: renderMarkdownText(part.content) }} />;
+                                } else {
+                                    return (
+                                        <MermaidDiagram
+                                            key={index}
+                                            chart={part.content}
+                                            caption="Adaptive Control Architecture"
+                                            figureId={`Figure ${Math.floor(index / 2) + 1}.0`}
+                                        />
+                                    );
+                                }
+                            })}
                         </div>
+
+                        <hr className="my-16 border-white/10" />
 
                         <AuthorBio
                             author={{
                                 name: "Chaitanya Bharath Gopu",
-                                role: "Principal Software Architect",
-                                bio: "Specializing in distributed systems, sovereign cloud governance, and AI-driven enterprise modernization.",
+                                role: "Principal Investigator",
+                                bio: "Defining the unified control theory for next-generation enterprise platforms.",
                                 image: "/images/authors/omnigcloud-team.jpg"
                             }}
                         />
-
-                        <RelatedReading
-                            locale={locale}
-                            articles={[
-                                {
-                                    title: "Cloud-Native Reference Architecture (A1)",
-                                    excerpt: "The foundational patterns for Kubernetes and GitOps.",
-                                    href: "/architecture/a1-cloud-native-enterprise-reference",
-                                    category: "Architecture"
-                                },
-                                {
-                                    title: "Platform Governance (A4)",
-                                    excerpt: "Implementing multi-cloud governance at scale.",
-                                    href: "/architecture/a4-platform-governance-multicloud-hybrid",
-                                    category: "Governance"
-                                },
-                                {
-                                    title: "Monolith to Cloud-Native (A5)",
-                                    excerpt: "Strategies for modernization without operational collapse.",
-                                    href: "/architecture/a5-monolith-to-cloud-native-modernization",
-                                    category: "Modernization"
-                                }
-                            ]}
-                        />
                     </main>
-
-                    <aside className="hidden lg:block w-80 flex-shrink-0">
-                        <div className="sticky top-24">
-                            <TableOfContents />
-                        </div>
-                    </aside>
-
                 </div>
             </div>
         </article>
