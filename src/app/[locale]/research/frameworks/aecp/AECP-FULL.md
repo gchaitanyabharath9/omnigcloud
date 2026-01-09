@@ -166,6 +166,44 @@ graph TD
 
 ---
 
+## 3. Zero Trust Alignment
+
+AECP is a reference implementation of **NIST 800-207 Zero Trust Architecture**, explicitly mapping abstract ZT components to concrete AECP primitives.
+
+### Diagram 7: AECP Zero Trust Mapping
+
+```mermaid
+graph TD
+    subgraph NIST["NIST 800-207 Components"]
+        PDP[Policy Decision Point]
+        PEP[Policy Enforcement Point]
+        PA[Policy Administrator]
+    end
+
+    subgraph AECP["AECP Implementation"]
+        Judicial[Judicial Plane (Compiler)]
+        Sidecar[WASM Sidecar]
+        Legislative[Legislative Plane (DSL)]
+    end
+
+    Legislative -.->|Maps To| PA
+    Judicial -.->|Maps To| PDP
+    Sidecar -.->|Maps To| PEP
+
+    style NIST fill:#e2e8f0,stroke:#64748b,stroke-dasharray: 5 5
+    style AECP fill:#f0fdf4,stroke:#16a34a
+```
+
+**Alignment Matrix:**
+
+| NIST Component | AECP Primitive | Function |
+|----------------|----------------|----------|
+| **Policy Engine (PE)** + **Policy Administrator (PA)** | **Judicial Layer** | Compiles intent into decisions, manages lifecycle. |
+| **Policy Enforcement Point (PEP)** | **Executive Layer** | Intercepts requests, executes WASM decision. |
+| **Trust Algorithm** | **Legislative Layer** | Defines the logic (DSL) for access. |
+
+---
+
 ## 3. Architectural Invariants
 
 AECP establishes seven architectural invariants that must hold for the framework to function correctly:
@@ -300,7 +338,39 @@ Enforcement points evaluate policies locally for every request:
 **Performance Characteristics:**
 - Policy lookup: <100μs (in-memory cache)
 - WASM execution: <500μs (optimized bytecode)
-- Total overhead: <1ms added to request latency
+### 4.6 Emergency Protocols ("Break-Glass")
+
+In catastrophic failure scenarios (e.g., Judicial Layer offline, policies blocking critical recovery), a "Break-Glass" protocol overrides standard enforcement.
+
+### Diagram 8: Break-Glass Emergency Workflow
+
+```mermaid
+sequenceDiagram
+    participant Admin as Human Admin
+    participant Vault as Master Vault
+    participant EP as Enforcement Point
+    participant Audit as Audit Log
+
+    Note over Admin,EP: Scenario: Critical Policy Blocking Recovery
+    
+    Admin->>Vault: Request Break-Glass Token (MFA)
+    Vault->>Admin: Issue Signed Override Token (TTL: 1h)
+    
+    Admin->>EP: Inject Token via Header
+    EP->>EP: Verify Token Signature (Root Key)
+    EP->>EP: Bypass WASM Engine
+    EP->>EP: Force ALLOW
+    
+    EP->>Audit: Log CRITICAL_BREAK_GLASS_EVENT
+    Note right of Audit: Immediate Alert to SOC
+```
+
+**Protocol Safeguards:**
+1.  **Dual-Key Authorization:** Requires consensus from two admins to unlock vault.
+2.  **Short TTL:** Tokens expire automatically after 1 hour.
+3.  **Non-Repudiation:** Action is cryptographically inextricably linked to the admin's identity.
+
+---
 
 ### 4.5 Audit & Compliance
 
@@ -469,7 +539,52 @@ graph TD
 
 ---
 
-## 8. Future Directions
+## 8. Organizational Maturity Model
+
+Adopting AECP is a journey. We define a 4-stage maturity model to guide organizations from ad-hoc governance to adaptive sovereignty.
+
+### Diagram 9: Adoption Maturity Quadrant
+
+```mermaid
+quadrantChart
+    title AECP Adoption Maturity
+    x-axis Low Automation --> High Automation
+    y-axis Low Coverage --> High Coverage
+    quadrant-1 "Sovereign (Level 4)"
+    quadrant-2 "Scaling (Level 3)"
+    quadrant-3 "Ad-Hoc (Level 1)"
+    quadrant-4 "Foundational (Level 2)"
+    
+    "Manual Reviews": [0.1, 0.2]
+    "Audit-Only Sidecars": [0.6, 0.2]
+    "Blocking Ingress": [0.7, 0.6]
+    "Full Zero Trust": [0.9, 0.9]
+```
+
+**Level 1: Ad-Hoc (Manual)**
+- Policy defined in PDFs/Wikis.
+- Enforcement via manual code reviews.
+- **Risk:** High drift, "Shadow IT".
+
+**Level 2: Foundational (Audit-Only)**
+- Policies defined in DSL but compiled to "Audit Mode" WASM.
+- Sidecars deployed but only log violations (no blocking).
+- **Gain:** Visibility into compliance gap.
+
+**Level 3: Scaling (Blocking Ingress)**
+- Blocking enforcement enabled at Ingress/Edge.
+- Service-to-service internal traffic still permissive.
+- **Gain:** Perimeter hard/soft shell.
+
+**Level 4: Sovereign (Zero Trust)**
+- mTLS everywhere.
+- Policy enforcement at every hop (Sidecar/Kernel).
+- Automated "Break-Glass" and drift remediation.
+- **Gain:** Mathematical proof of compliance.
+
+---
+
+## 9. Future Directions
 
 ### 8.1 Machine Learning Integration
 
