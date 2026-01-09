@@ -73,19 +73,18 @@ Code migration is easy; Data migration is hard. We use the **Parallel Run / Doub
 The Monolith's domain model is often messy (e.g., `User` table has 200 columns). To prevent this mess from infecting the clean Microservice, we insert an **Anti-Corruption Layer**.
 
 ```mermaid
-```mermaid
 graph LR
-    subgraph Legacy["Legacy Monolith"]
+    subgraph Legacy [Legacy Monolith]
         Mud[Big Ball of Mud (God Class)]
     end
     
-    subgraph ACL["Anti-Corruption Layer"]
+    subgraph ACL [Anti-Corruption Layer]
         Facade[Facade Interface]
         Adapter[Adapter Logic]
         Translator[Translator (Map DTOs)]
     end
     
-    subgraph New["New Microservice"]
+    subgraph New [New Microservice]
         Clean[Clean Domain Model]
     end
     
@@ -110,9 +109,6 @@ graph LR
 | **Gateway ACL** | Logic inside API Gateway | Centralized, easy to manage | Gateway becomes bloated |
 | **Service ACL** | Logic inside Microservice | Clean, encapsulated | Duplication across services |
 | **Sidecar ACL** | Logic in Service Mesh Proxy | Language agnostic | High operational complexity |
-```
-
-**Figure 3.0:** The ACL acts as a DMZ. It translates the Monolith's "God Object" into a focused, domain-driven entity for the new service.
 
 ---
 

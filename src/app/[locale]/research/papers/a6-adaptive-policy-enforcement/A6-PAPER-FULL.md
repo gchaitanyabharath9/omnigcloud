@@ -19,18 +19,18 @@ The core of A6 is the OODA Loop (Observe, Orient, Decide, Act) implemented as co
 
 ```mermaid
 graph TD
-    subgraph "A3: SENSE"
+    subgraph A3 ["A3: SENSE"]
         Log[Logs]
         Metric[Metrics (Latency)]
         Trace[Traces]
     end
     
-    subgraph "A6: DECIDE (Brain)"
+    subgraph A6 ["A6: DECIDE (Brain)"]
         Policy[Policy Engine (OPA)]
         Threshold{Is Latency > 200ms?}
     end
     
-    subgraph "A2: ACT (Muscle)"
+    subgraph A2 ["A2: ACT (Muscle)"]
         Shed[Load Shedder]
         Scale[Autoscaler]
         Circuit[Circuit Breaker]
@@ -157,7 +157,6 @@ sequenceDiagram
 
 Where does your organization sit?
 
-```mermaid
 ```mermaid
 quadrantChart
     title "Architecture Maturity Matrix"

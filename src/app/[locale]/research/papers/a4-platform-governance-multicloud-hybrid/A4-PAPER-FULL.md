@@ -57,13 +57,12 @@ Not all policies are created equal. We categorize them by intent and enforcement
 When operating across AWS, Azure, and On-Premises, relying on vendor-specific IAM (AWS IAM) is insufficient. We establish a **Sovereign Identity Boundary**.
 
 ```mermaid
-```mermaid
 graph TD
-    subgraph Identity["Sovereign Identity Layer"]
+    subgraph Identity [Sovereign Identity Layer]
         OIDC[OIDC Provider (Okta/Keycloak)]
     end
     
-    subgraph Clouds["Multi-Cloud Infrastructure"]
+    subgraph Clouds [Multi-Cloud Infrastructure]
         AWS[AWS Account]
         Azure[Azure Subscription]
         GCP[GCP Project]

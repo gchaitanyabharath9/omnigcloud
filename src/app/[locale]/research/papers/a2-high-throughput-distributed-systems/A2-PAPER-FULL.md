@@ -89,28 +89,28 @@ Global locks are the enemy of throughput. We use deterministic partitioning (sha
 
 ```mermaid
 graph TD
-    subgraph IngressLayer["Ingress Layer"]
+    subgraph IngressLayer [Ingress Layer]
         LB[Load Balancer]
     end
 
-    subgraph PartitionLayer["Partitioning Layer (Log)"]
+    subgraph PartitionLayer [Partitioning Layer Log]
         P0[Partition 0]
         P1[Partition 1]
         P2[Partition 2]
         P3[Partition 3]
     end
 
-    subgraph ConsumerLayer["Consumer Layer"]
+    subgraph ConsumerLayer [Consumer Layer]
         C0[Consumer A]
         C1[Consumer B]
         C2[Consumer C]
         C3[Consumer D]
     end
 
-    LB -->|Hash(ID)%4| P0
-    LB -->|Hash(ID)%4| P1
-    LB -->|Hash(ID)%4| P2
-    LB -->|Hash(ID)%4| P3
+    LB -->|"Hash(ID)%4"| P0
+    LB -->|"Hash(ID)%4"| P1
+    LB -->|"Hash(ID)%4"| P2
+    LB -->|"Hash(ID)%4"| P3
 
     P0 -->|Affinity| C0
     P1 -->|Affinity| C1

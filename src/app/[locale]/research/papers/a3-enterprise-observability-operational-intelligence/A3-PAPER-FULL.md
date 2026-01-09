@@ -21,9 +21,9 @@ We define the pillars not as separate tools, but as interconnected signals.
     top_node[Observability]
     
     subgraph Pillars
-        Metrics[Metrics: "What is happening?"]
-        Logs[Logs: "Why is it happening?"]
-        Traces[Traces: "Where is it happening?"]
+        Metrics["Metrics: 'What is happening?'"]
+        Logs["Logs: 'Why is it happening?'"]
+        Traces["Traces: 'Where is it happening?'"]
     end
     
     top_node --> Metrics
