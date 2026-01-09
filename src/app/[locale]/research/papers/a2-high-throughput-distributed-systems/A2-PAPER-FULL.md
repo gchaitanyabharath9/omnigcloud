@@ -21,6 +21,15 @@ $$ C(N) = \frac{N}{1 + \alpha (N-1) + \beta N (N-1)} $$
 
 Where $\alpha$ is contention (serialized portions of code) and $\beta$ is crosstalk (coherency delay).
 
+**Table 1: USL Coefficients**
+
+| Coefficient | Meaning | Impact at Scale | Typical Source |
+| :--- | :--- | :--- | :--- |
+| **$\alpha$ (Alpha)** | **Contention** | Linear Decay | Locked Data Structures, Single Master DB |
+| **$\beta$ (Beta)** | **Crosstalk** | Exponential Decay | Cluster Coherency, 2-Phase Commit, Chatty Protocols |
+
+Minimizing $\beta$ is the primary goal of the A2 architecture. While $\alpha$ limits maximum speed, $\beta$ causes the system to get *slower* as you add hardware.
+
 ```mermaid
 xychart-beta
     title "Throughput vs Concurrency (USL)"
@@ -60,7 +69,17 @@ graph LR
     style Consumer fill:#bfb
 ```
 
-**Figure 2.0:** The Shock Absorber Architecture. The Ingress layer is extremely simple (dumb pipe), doing nothing but validating diagrams and appending to the Log. This allows it to absorb spikes of 50x normal load without crashing the complex Consumers.
+**Figure 2.0:** The Shock Absorber Architecture. The Ingress layer is extremely simple (dumb pipe), doing nothing but validating payloads and appending to the Log. This allows it to absorb spikes of 50x normal load without crashing the complex Consumers.
+
+**Table 2: Synchronous vs. Shock Absorber Patterns**
+
+| Feature | Synchronous (REST/RPC) | Shock Absorber (Async Log) |
+| :--- | :--- | :--- |
+| **Ingress Latency** | High (Wait for DB) | Low (Write to Buffer) |
+| **Throughput Ceiling** | Limited by DB IOPS | Limited by Network Bandwidth |
+| **Failure Mode** | Cascading Timeout | Increased Lag (Safe) |
+| **Load Handling** | Rejects Spikes | Buffers Spikes |
+| **Consistency** | Strong (Immediate) | Eventual (Lag-dependent) |
 
 ---
 
@@ -104,6 +123,14 @@ graph TD
 
 **Figure 3.0:** Partition Affinity. `TenantID % 4` determines the partition. Consumer A *only* reads from Partition 0. This guarantees that if Tenant 1 (on P0) creates a DDoS, only Consumer A is affected. Consumers B, C, and D continue processing normally.
 
+**Table 3: Partitioning Strategies Comparison**
+
+| Strategy | Description | Pros | Cons | Use Case |
+| :--- | :--- | :--- | :--- | :--- |
+| **Hash Partitioning** | `Hash(Key) % N` | Uniform distribution | Resharding is expensive | High-volume Event Streams |
+| **Range Partitioning** | `Key in [A-M]` | Efficient range scans | "Hot Spot" partitions | Time-series Data |
+| **Directory** | `Lookup(Key) -> ID` | Flexible placement | Lookup bottleneck | Multi-tenant SaaS |
+
 ---
 
 ## 5. Explicit Backpressure & Load Shedding
@@ -131,6 +158,25 @@ sequenceDiagram
 ```
 
 **Figure 4.0:** Backpressure propagation. The Gateway rejects excess traffic instantly (cheap), saving the expensive Service resources for valid traffic.
+
+### 5.1 Token Bucket Algorithm
+We employ a distributed **Token Bucket** algorithm for rate limiting, distinct from Leaky Bucket.
+
+```mermaid
+graph TD
+    Bucket((Token Bucket))
+    Source[Token Refill Rate R] --> Bucket
+    Req[Incoming Request] --> Check{Enough Tokens?}
+    Bucket -->|Consume 1| Check
+    
+    Check -->|Yes| Process[Process Request]
+    Check -->|No| Drop[Drop / 429]
+    
+    style Bucket fill:#f9f
+    style Drop fill:#c53030,color:white
+```
+
+**Figure 4.1:** Token Bucket Visualization. Allows for "bursty" traffic up to the bucket capacity, but enforces a long-term average rate.
 
 ---
 
@@ -177,6 +223,31 @@ Because network partitions are inevitable, we must assume **At-Least-Once** deli
 
 ### 7.2 The "Lag" Metric
 CPU usage is a poor proxy for autoscaling in async systems. We scale based on **Consumer Lag** (Queue Depth / Consumption Rate = Seconds Behind). If Lag > 10s, we add consumers.
+
+**Table 4: Golden Signals for High-Throughput**
+
+| Signal | Metric Definition | Alert Threshold | Action |
+| :--- | :---- | :--- | :--- |
+| **Lag** | `Max(WriteOffset) - Max(ReadOffset)` | > 1,000,000 events | Scale Consumers |
+| **Latency** | `Now() - EventTimestamp` | > 30 seconds | Investigate Downstream |
+| **Saturation** | `PartitionCount / ConsumerCount` | > 1.0 (Lagging) | Add Partitions (Hard) |
+| **Error Rate** | `% of Dead Letter Queue Writes` | > 1% | Trip Circuit Breaker |
+
+### 7.3 Chaos Engineering & Failure Injection
+To prove the system's resilience, we continuously test the "Anti-Patterns".
+
+```mermaid
+graph LR
+    Chaos[Chaos Monkey]
+    
+    Chaos -->|Kill| Pod[Random Consumer Pod]
+    Chaos -->|Inject| Latency[Network Latency 500ms]
+    Chaos -->|Partition| Split[Network Partition]
+    
+    style Chaos fill:#c53030,color:white,stroke:#fff
+```
+
+**Figure 6.0:** Continuous Verification. We assert that `p99` latency remains stable even when 20% of consumer pods are effectively dead.
 
 ---
 
