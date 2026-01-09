@@ -140,17 +140,17 @@ To limit the "Blast Radius" of faults, we deploy the system in independent "Cell
 
 ```mermaid
 graph TD
-    subgraph "Region: US-East-1"
+    subgraph RegionUS["Region: US-East-1"]
         Router[Global Router]
         
-        subgraph "Cell 1 (Tenants A-M)"
+        subgraph Cell1["Cell 1 (Tenants A-M)"]
             Ingress1
             Kafka1
             K8s1
             DB1
         end
         
-        subgraph "Cell 2 (Tenants N-Z)"
+        subgraph Cell2["Cell 2 (Tenants N-Z)"]
             Ingress2
             Kafka2
             K8s2
@@ -161,8 +161,8 @@ graph TD
         Router -->|Route: Tenant Z| Ingress2
     end
     
-    style Cell 1 fill:#1a202c,stroke:#4fd1c5
-    style Cell 2 fill:#1a202c,stroke:#4fd1c5
+    style Cell1 fill:#1a202c,stroke:#4fd1c5
+    style Cell2 fill:#1a202c,stroke:#4fd1c5
 ```
 
 **Figure 5.0:** Cellular Bulkheads. Cell 1 and Cell 2 share **nothing** (no DB, no Queue). If Cell 1's Database corrupts, Cell 2 is 100% unaffected.

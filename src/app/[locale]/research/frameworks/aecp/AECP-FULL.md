@@ -586,21 +586,21 @@ quadrantChart
 
 ## 9. Future Directions
 
-### 8.1 Machine Learning Integration
+### 9.1 Machine Learning Integration
 
 Future work will explore using ML models to predict policy violations before they occur, enabling proactive remediation.
 
-### 8.2 Cross-Cloud Federation
+### 9.2 Cross-Cloud Federation
 
 Extending AECP to federated multi-cloud environments where policies span organizational boundaries.
 
-### 8.3 Real-Time Policy Adaptation
+### 9.3 Real-Time Policy Adaptation
 
 Dynamic policy adjustment based on observed threat patterns and operational conditions.
 
 ---
 
-## 9. Conclusion
+## 10. Conclusion
 
 The Adaptive Enterprise Control Plane establishes a theoretical foundation for sovereign governance in multi-cloud environments. By treating policy as a first-class primitive and enforcing strict separation of concerns, AECP enables organizations to maintain operational sovereignty while operating across heterogeneous infrastructure.
 

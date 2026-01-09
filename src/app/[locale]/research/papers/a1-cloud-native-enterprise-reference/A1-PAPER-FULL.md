@@ -114,7 +114,7 @@ sequenceDiagram
     
     G->>S: gRPC Request
     activate S
-    S->>S: Busiess Logic (Compute)
+    S->>S: Business Logic (Compute)
     S->>D: SQL Query
     activate D
     D-->>S: Result Set (40ms)
@@ -217,7 +217,7 @@ flowchart LR
 
 ## 9. Conclusion
 
-The A1 Reference Architecture provides a predictable, scalable foundation for enterprise cloud systems. by strictly decoupling the control loop from the data loop and enforcing governance at the edge, organizations can scale to 100k+ RPS while maintaining regulatory sovereignty.
+The A1 Reference Architecture provides a predictable, scalable foundation for enterprise cloud systems. By strictly decoupling the control loop from the data loop and enforcing governance at the edge, organizations can scale to 100k+ RPS while maintaining regulatory sovereignty.
 
 ---
 
