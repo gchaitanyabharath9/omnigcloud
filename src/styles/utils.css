@@ -659,6 +659,10 @@ a.block {
     align-items: center;
 }
 
+.items-start {
+    align-items: flex-start;
+}
+
 .justify-between {
     justify-content: space-between;
 }
@@ -711,4 +715,8 @@ a.block {
 /* Text alignments */
 .text-center {
     text-align: center;
+}
+
+.text-left {
+    text-align: left;
 }

@@ -15,17 +15,23 @@ export default async function ResearchHubPage({ params }: { params: Promise<{ lo
         <div className="min-h-screen bg-[var(--background)]">
             {/* HERO */}
             <section className="pt-8 pb-8 border-b border-[var(--card-border)] bg-[var(--bg-surface-2)]">
-                <div className="container text-center">
-                    <div className="badge badge-primary-subtle mb-4 mx-auto flex items-center gap-2">
-                        <Award size={14} /> TECHNICAL RESEARCH REPOSITORY
+                <div className="container">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                        <div className="text-left">
+                            <div className="badge badge-primary-subtle mb-4 inline-flex items-center gap-2">
+                                <Award size={14} /> TECHNICAL RESEARCH REPOSITORY
+                            </div>
+                            <h1 className="text-3xl md:text-5xl font-bold tracking-tight">
+                                Software <span className="text-gradient">Architecture Research</span>
+                            </h1>
+                        </div>
+                        <div className="text-left">
+                            <p className="text-xl opacity-70 leading-relaxed text-balance">
+                                This repository documents original contributions to global software delivery systems,
+                                focusing on automated quality enforcement, request routing safety, and sovereign control planes.
+                            </p>
+                        </div>
                     </div>
-                    <h1 className="text-3xl md:text-5xl font-bold mb-4 tracking-tight">
-                        Software <span className="text-gradient">Architecture Research</span>
-                    </h1>
-                    <p className="text-xl opacity-70 max-w-3xl mx-auto leading-relaxed text-balance">
-                        This repository documents original contributions to global software delivery systems,
-                        focusing on automated quality enforcement, request routing safety, and sovereign control planes.
-                    </p>
                 </div>
             </section>
 
