@@ -1,5 +1,5 @@
 import React from 'react';
-import { FileText, Layers, ShieldCheck, Award, ChevronRight, Network, BookOpen } from 'lucide-react';
+import { FileText, Layers, ShieldCheck, Award, ChevronRight, Network, BookOpen, ArrowRight } from 'lucide-react';
 import Link from 'next/link';
 import { Metadata } from 'next';
 
@@ -26,6 +26,44 @@ export default async function ResearchHubPage({ params }: { params: Promise<{ lo
                         This repository documents original contributions to global software delivery systems,
                         focusing on automated quality enforcement, request routing safety, and sovereign control planes.
                     </p>
+                </div>
+            </section>
+
+            {/* FEATURED: SCHOLARLY ARTICLE */}
+            <section className="py-16 border-b border-white/5">
+                <div className="container">
+                    <div className="mb-8">
+                        <div className="flex items-center gap-2 mb-2 text-primary">
+                            <Award size={18} />
+                            <span className="text-xs font-bold font-mono uppercase tracking-widest">Featured Publication</span>
+                        </div>
+                        <h2 className="text-3xl font-bold tracking-tight">The Enterprise Architecture Tension</h2>
+                    </div>
+
+                    <Link href={`/${locale}/research/scholarly-article`} className="glass-panel p-8 md:p-12 rounded-[2rem] border border-white/10 hover:border-primary/50 transition-all group relative overflow-hidden">
+                        <div className="absolute top-0 right-0 p-8 opacity-10 group-hover:opacity-20 transition-opacity">
+                            <FileText size={200} />
+                        </div>
+                        <div className="relative z-10 max-w-4xl">
+                            <h3 className="text-2xl md:text-4xl font-bold mb-6 leading-tight">
+                                Reconciling Sovereignty, Scale, and Operational Complexity in Cloud-Native Platforms
+                            </h3>
+                            <p className="text-xl text-muted-foreground leading-relaxed mb-8">
+                                Why do systems that work at 10k RPS fail at 100k RPS? This position paper analyzes the "Cliff of Failure" in conventional microservices and proposes a <strong>Plane Separation</strong> model to resolve the tension between regulatory sovereignty and operational scale.
+                            </p>
+                            <div className="flex flex-wrap gap-4 items-center">
+                                <span className="btn-primary rounded-full px-8 py-3 flex items-center gap-2">
+                                    Read Article <ArrowRight size={18} />
+                                </span>
+                                <span className="px-4 py-2 rounded-full bg-white/5 text-sm font-mono text-muted-foreground border border-white/10">
+                                    ~5,400 Words
+                                </span>
+                                <span className="px-4 py-2 rounded-full bg-white/5 text-sm font-mono text-muted-foreground border border-white/10">
+                                    6 Diagrams
+                                </span>
+                            </div>
+                        </div>
+                    </Link>
                 </div>
             </section>
 

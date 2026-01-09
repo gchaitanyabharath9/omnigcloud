@@ -6,15 +6,16 @@ import MermaidDiagram from '@/components/article/MermaidDiagram';
 import { ChevronRight, FileText, Calendar, Tag, ShieldCheck, Layers, ArrowRight } from 'lucide-react';
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+    const { locale } = await params;
     return {
-        title: 'A Reference Architecture for Cloud-Native Enterprise Platforms | OmniGCloud',
-        description: 'The canonical A1 technical standard for implementing sovereign, multi-cloud platforms maximizing latency budgets and governance.',
+        title: 'The Enterprise Architecture Tension | OmniGCloud Research',
+        description: 'Examining the conflict between sovereignty, scale, and operational complexity in cloud-native platforms.',
         alternates: {
-            canonical: 'https://www.omnigcloud.com/en/research/papers/a1-cloud-native-enterprise-reference'
+            canonical: 'https://www.omnigcloud.com/en/research/scholarly-article-enterprise-architecture'
         },
         openGraph: {
-            title: 'Reference Architecture for Cloud-Native Enterprise Platforms (A1)',
-            description: 'The flagship specification for scalable, sovereign enterprise systems.',
+            title: 'The Enterprise Architecture Tension',
+            description: 'Why conventional cloud-native patterns fail at enterprise scale.',
             type: 'article',
             publishedTime: '2026-01-08T12:00:00.000Z',
             authors: ['Chaitanya Bharath Gopu'],
@@ -72,7 +73,6 @@ function renderMarkdownText(md: string) {
         if (rows.length === 0) return '';
         let html = '<div class="overflow-x-auto my-8 border border-white/10 rounded-lg"><table class="w-full text-left text-sm font-mono">';
 
-        // Filter out separator lines (---)
         const contentRows = rows.filter(r => !r.includes('---'));
 
         contentRows.forEach((row, index) => {
@@ -128,10 +128,10 @@ function renderMarkdownText(md: string) {
     return html;
 }
 
-export default async function A1ReferenceArchitecturePage({ params }: { params: Promise<{ locale: string }> }) {
+export default async function ScholarlyArticlePage({ params }: { params: Promise<{ locale: string }> }) {
     const { locale } = await params;
 
-    const contentPath = path.join(process.cwd(), 'src/app/[locale]/research/papers/a1-cloud-native-enterprise-reference/A1-PAPER-FULL.md');
+    const contentPath = path.join(process.cwd(), 'src/app/[locale]/research/SCHOLARLY-ARTICLE-ENTERPRISE-ARCHITECTURE.md');
     // Using fs to read file
     let fileContent = '';
     try {
@@ -151,15 +151,15 @@ export default async function A1ReferenceArchitecturePage({ params }: { params: 
                         <header className="mb-16 border-b border-white/10 pb-12">
                             <div className="flex items-center gap-2 mb-6">
                                 <span className="px-3 py-1 rounded-full bg-primary/10 text-primary text-xs font-mono font-bold uppercase tracking-wider border border-primary/20">
-                                    Technical Specification
+                                    Research Position Paper
                                 </span>
                                 <span className="text-muted-foreground text-xs font-mono uppercase tracking-wider">
-                                    A1-REF-STD
+                                    IND-RES-01
                                 </span>
                             </div>
 
                             <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight mb-8 leading-[1.1]">
-                                A Reference Architecture for Cloud-Native Enterprise Platforms at Scale
+                                The Enterprise Architecture Tension
                             </h1>
 
                             <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-sm font-mono text-muted-foreground">
@@ -169,15 +169,15 @@ export default async function A1ReferenceArchitecturePage({ params }: { params: 
                                 </div>
                                 <div>
                                     <div className="text-xs uppercase text-slate-500 mb-1">Version</div>
-                                    <div className="text-foreground">3.0 (Gold)</div>
+                                    <div className="text-foreground">2.1 (Gold)</div>
                                 </div>
                                 <div>
                                     <div className="text-xs uppercase text-slate-500 mb-1">Published</div>
                                     <div className="text-foreground">Jan 2026</div>
                                 </div>
                                 <div>
-                                    <div className="text-xs uppercase text-slate-500 mb-1">Classification</div>
-                                    <div className="text-foreground">Standard</div>
+                                    <div className="text-xs uppercase text-slate-500 mb-1">Field</div>
+                                    <div className="text-foreground">Enterprise Systems</div>
                                 </div>
                             </div>
                         </header>
@@ -191,7 +191,7 @@ export default async function A1ReferenceArchitecturePage({ params }: { params: 
                                         <MermaidDiagram
                                             key={index}
                                             chart={part.content}
-                                            caption="Architectural Diagram generated from specification"
+                                            caption="System Dynamics Analysis"
                                             figureId={`Figure ${Math.floor(index / 2) + 1}.0`}
                                         />
                                     );
@@ -205,7 +205,7 @@ export default async function A1ReferenceArchitecturePage({ params }: { params: 
                             author={{
                                 name: "Chaitanya Bharath Gopu",
                                 role: "Principal Investigator",
-                                bio: "Author of the Cloud-Native Enterprise Reference Architecture (A1) and associated technical standards.",
+                                bio: "Researching the intersection of regulatory sovereignty and hyper-scale distributed systems.",
                                 image: "/images/authors/omnigcloud-team.jpg"
                             }}
                         />
