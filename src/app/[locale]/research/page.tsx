@@ -1,5 +1,5 @@
 import React from 'react';
-import { FileText, Layers, ShieldCheck, Award, ChevronRight, Network, BookOpen, ArrowRight } from 'lucide-react';
+import { FileText, Layers, ShieldCheck, Award, ChevronRight, Network, BookOpen, ArrowRight, Activity } from 'lucide-react';
 import Link from 'next/link';
 import { Metadata } from 'next';
 
@@ -96,18 +96,49 @@ export default async function ResearchHubPage({ params }: { params: Promise<{ lo
                     </div>
 
                     <div className="grid grid-cols-1">
-                        <Link href={`/${locale}/research/frameworks/aecp`} className="glass-panel p-10 rounded-[2rem] flex flex-col md:flex-row items-center justify-between border-t-4 border-primary hover:translate-y-[-4px] transition-transform group">
-                            <div className="max-w-3xl">
-                                <div className="text-primary mb-3 font-mono text-xs font-bold uppercase tracking-widest">Foundational Framework</div>
-                                <h3 className="text-3xl font-bold mb-4">Adaptive Enterprise Control Plane (AECP)</h3>
-                                <p className="opacity-70 text-lg leading-relaxed">
-                                    A theoretical framework for managing entropy in hyper-scale distributed systems through probabilistic failure injection and policy-as-code governance. The methodology establishes the "Control Plane" as a distinct, sovereign primitive separate from infrastructure.
-                                </p>
-                            </div>
-                            <div className="mt-8 md:mt-0">
-                                <span className="btn-secondary rounded-full px-8 py-3 flex items-center gap-2">
-                                    View Framework <ChevronRight size={18} className="group-hover:translate-x-1 transition-transform" />
-                                </span>
+                        <Link href={`/${locale}/research/frameworks/aecp`} className="group relative overflow-hidden rounded-[2rem] border border-white/10 bg-[var(--bg-surface-1)] hover:border-blue-500/50 transition-all shadow-2xl shadow-black/50">
+                            {/* Decorative Background Gradients */}
+                            <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-blue-500/10 rounded-full blur-[100px] -translate-y-1/2 translate-x-1/2 pointer-events-none" />
+                            <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/5 to-transparent -translate-x-full group-hover:animate-shimmer pointer-events-none" />
+
+                            <div className="relative p-8 md:p-12 flex flex-col md:flex-row gap-10 items-center justify-between">
+                                <div className="flex-1 max-w-3xl">
+                                    <div className="flex items-center gap-3 mb-4">
+                                        <div className="flex items-center gap-2 px-3 py-1 rounded-md bg-blue-500/10 border border-blue-500/20 text-blue-400 text-xs font-bold font-mono uppercase tracking-widest">
+                                            <Layers size={12} /> Foundational Framework
+                                        </div>
+                                        <span className="text-muted-foreground text-xs font-mono uppercase">v2.1</span>
+                                    </div>
+
+                                    <h3 className="text-3xl md:text-4xl font-bold mb-4 text-white group-hover:text-blue-400 transition-colors">
+                                        Adaptive Enterprise Control Plane (AECP)
+                                    </h3>
+
+                                    <p className="text-lg text-slate-400 leading-relaxed max-w-2xl mb-8">
+                                        A methodology for managing entropy in hyper-scale systems. Establishes the <strong>"Control Plane"</strong> as a sovereign primitive, using probabilistic failure injection and <span className="text-white">Policy-as-Code</span> governance to guarantee partial availability.
+                                    </p>
+
+                                    <div className="flex flex-wrap gap-4 md:gap-8">
+                                        <div className="flex items-center gap-3 text-sm text-slate-400 font-mono">
+                                            <ShieldCheck className="text-blue-500" size={16} />
+                                            <span>Sovereign Security</span>
+                                        </div>
+                                        <div className="flex items-center gap-3 text-sm text-slate-400 font-mono">
+                                            <Network className="text-purple-500" size={16} />
+                                            <span>Mesh Topology</span>
+                                        </div>
+                                        <div className="flex items-center gap-3 text-sm text-slate-400 font-mono">
+                                            <Activity className="text-green-500" size={16} />
+                                            <span>Self-Healing</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div className="flex-shrink-0">
+                                    <span className="flex items-center justify-center w-16 h-16 rounded-full bg-white/5 border border-white/10 text-white group-hover:bg-blue-500 group-hover:border-blue-500 group-hover:scale-110 transition-all duration-300">
+                                        <ChevronRight size={24} />
+                                    </span>
+                                </div>
                             </div>
                         </Link>
                     </div>
