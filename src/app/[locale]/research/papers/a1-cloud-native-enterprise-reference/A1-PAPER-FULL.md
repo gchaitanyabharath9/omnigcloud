@@ -45,25 +45,25 @@ The architecture is stratified into four logical planes. This separation of conc
 
 ```mermaid
 graph TD
-    subgraph "Tier 1: Edge & Ingress Plane"
+    subgraph Tier1["Tier 1: Edge & Ingress Plane"]
         DNS[Global DNS / GSLB] --> WAF[WAF & DDoS Shield]
         WAF --> API[API Gateway Cluster]
     end
 
-    subgraph "Tier 2: Control Plane (Async)"
+    subgraph Tier2["Tier 2: Control Plane (Async)"]
         IdP[Identity Provider]
         Vault[Secret Vault]
         Policy[Policy Engine]
         Obs[Observability/Metrics]
     end
 
-    subgraph "Tier 3: Data Plane (Synchronous)"
+    subgraph Tier3["Tier 3: Data Plane (Synchronous)"]
         Mesh[Service Mesh / Sidecar] --> SvcA[Domain Service A]
         Mesh --> SvcB[Domain Service B]
         SvcA -->|gRPC/mTLS| SvcB
     end
 
-    subgraph "Tier 4: Persistence Plane"
+    subgraph Tier4["Tier 4: Persistence Plane"]
         SvcA --> Cache[(Redis Cluster)]
         SvcB --> DB[(Postgres/Spanner)]
         SvcA --> Stream[Event Log / Kafka]
@@ -155,7 +155,7 @@ In our reference architecture, we aim to minimize $\beta$ (coherency penalty) by
 
 ```mermaid
 graph LR
-    subgraph "Scale Unit (Cell)"
+    subgraph Cell["Scale Unit (Cell)"]
         LB[Cell LB]
         App[App Instance x 50]
         DB[Cell DB Shard]
