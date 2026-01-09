@@ -36,6 +36,18 @@ sequenceDiagram
     end
 ```
 
+### 2.1 Policy Types & Scope
+Not all policies are created equal. We categorize them by intent and enforcement stage.
+
+**Table 1: Policy Governance Categories**
+
+| Category | Goal | Example Policy | Enforcement Stage |
+| :--- | :--- | :--- | :--- |
+| **Security** | Prevent Breach | "Allow only port 443", "Root FS ReadOnly" | Admission (Blocking) |
+| **Reliability** | Ensure Availability | "Must set CPU Requests/Limits", "LivenessProbe Required" | Admission (Blocking) |
+| **Cost (FinOps)** | Control Spend | "Max Spot Instance Price < $0.50" | Admission (Advisory) |
+| **Compliance** | Legal/Audit | "All resources must have `CostCenter` tag" | Audit (Async) |
+
 **Figure 1.0:** The Governance Loop. Policies are authored in Rego and pushed to Git. Within 60 seconds, every cluster in every region pulls the new policy bundle, ensuring global compliance consistency.
 
 ---
@@ -45,28 +57,27 @@ sequenceDiagram
 When operating across AWS, Azure, and On-Premises, relying on vendor-specific IAM (AWS IAM) is insufficient. We establish a **Sovereign Identity Boundary**.
 
 ```mermaid
-block-beta
-    columns 3
-    block:Identity
-        columns 1
-        OIDC[OIDC Provider]
+```mermaid
+graph TD
+    subgraph Identity["Sovereign Identity Layer"]
+        OIDC[OIDC Provider (Okta/Keycloak)]
     end
-    space
-    block:Clouds
-        columns 3
+    
+    subgraph Clouds["Multi-Cloud Infrastructure"]
         AWS[AWS Account]
-        Azure[Azure Sub]
+        Azure[Azure Subscription]
         GCP[GCP Project]
     end
     
-    OIDC --> AWS
-    OIDC --> Azure
-    OIDC --> GCP
+    OIDC -->|Federated Token| AWS
+    OIDC -->|Federated Token| Azure
+    OIDC -->|Federated Token| GCP
     
-    style OIDC fill:#6b46c1,stroke:#fff
-    style AWS fill:#ed8936
-    style Azure fill:#3182ce
-    style GCP fill:#4285f4
+    style OIDC fill:#6b46c1,stroke:#fff,color:white
+    style AWS fill:#ed8936,color:white
+    style Azure fill:#3182ce,color:white
+    style GCP fill:#4285f4,color:white
+```
 ```
 
 **Figure 2.0:** Federated Identity. Developers never have long-lived keys for AWS or Azure. They authenticate against a central OIDC Provider (e.g., Keycloak/Okta) which issues short-lived tokens exchanged for cloud-native credentials via Workload Identity Federation.
@@ -114,6 +125,34 @@ graph TD
 2.  **Build:** Vulnerability scanning (CVEs).
 3.  **Admission:** Block non-compliant configs (Request Limit missing).
 4.  **Runtime:** Detect anomalous behavior (Shell spawned in container).
+
+**Table 2: Comparison of Enforcement Models**
+
+| Model | Mechanism | Lag | Pros | Cons |
+| :--- | :--- | :--- | :--- | :--- |
+| **Gatekeeper** | Admission Webhook | Zero (Blocking) | Prevents bad state completely | Can block critical ops during outage |
+| **Audit Scanner** | Periodic API Poll | Minutes | Safe, non-intrusive | Reactive (bad state exists for a while) |
+| **Shift-Left** | IDE/CI Linter | Negative (Pre-commit) | Fastest feedback loop | Developers can bypass/ignore |
+
+### 5.1 The "Break-Glass" Protocol
+Strict governance must not impede disaster recovery. We implement a specific "Break Glass" mechanism.
+
+```mermaid
+graph LR
+    User[Admin]
+    Vault[Vault TTL Token]
+    Cluster[K8s Cluster]
+    Audit[Audit Log]
+    
+    User -->|Request Access| Vault
+    Vault -->|Issue 1h Cert| User
+    User -->|Bypass Policy| Cluster
+    Cluster -->|Alert SOC| Audit
+    
+    style Vault fill:#c53030,color:white
+```
+
+**Figure 5.0:** Emergency Access. During a P0 incident, admins can request a short-lived (1 hour) certificate that bypasses the OPA Admission Controller. This action immediately triggers a high-severity alert to the SOC.
 
 ---
 
