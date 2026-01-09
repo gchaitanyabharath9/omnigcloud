@@ -69,40 +69,35 @@ graph LR
 Global locks are the enemy of throughput. We use deterministic partitioning (sharding) to ensure zero contention between tenants.
 
 ```mermaid
-block-beta
-    columns 4
-    block:IngressLayer
-        columns 1
+graph TD
+    subgraph IngressLayer["Ingress Layer"]
         LB[Load Balancer]
     end
-    space
-    
-    block:PartitionLayer
-        columns 4
+
+    subgraph PartitionLayer["Partitioning Layer (Log)"]
         P0[Partition 0]
         P1[Partition 1]
         P2[Partition 2]
         P3[Partition 3]
     end
-    
-    block:ConsumerLayer
-        columns 4
+
+    subgraph ConsumerLayer["Consumer Layer"]
         C0[Consumer A]
         C1[Consumer B]
         C2[Consumer C]
         C3[Consumer D]
     end
-    
-    LB --> P0
-    LB --> P1
-    LB --> P2
-    LB --> P3
-    
-    P0 --> C0
-    P1 --> C1
-    P2 --> C2
-    P3 --> C3
-    
+
+    LB -->|Hash(ID)%4| P0
+    LB -->|Hash(ID)%4| P1
+    LB -->|Hash(ID)%4| P2
+    LB -->|Hash(ID)%4| P3
+
+    P0 -->|Affinity| C0
+    P1 -->|Affinity| C1
+    P2 -->|Affinity| C2
+    P3 -->|Affinity| C3
+
     style P0 fill:#2d3748,stroke:#fff
     style C0 fill:#276749,stroke:#fff
 ```

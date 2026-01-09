@@ -28,8 +28,31 @@ This conflation creates systemic brittleness: policy changes require infrastruct
 
 AECP establishes that **policy is the primary primitive, not compute**. Infrastructure becomes a side effect of valid policy evaluation rather than the foundation upon which policy is layered.
 
-**DIAGRAM 1: Governance Inversion Model**  
-*[Conceptual diagram showing traditional architecture with policy as an overlay on infrastructure versus AECP architecture with policy as the primary primitive and infrastructure as a derived concern. Illustrates the inversion of dependencies.]*
+### Diagram 1: Governance Inversion Model
+
+```mermaid
+graph TD
+    subgraph Traditional["Traditional Model (Overlay)"]
+        direction TB
+        Infra1[Infrastructure Layer] -->|Supports| App1[Application Logic]
+        Policy1[Policy Rules] -.->|Applied To| Infra1
+        Constraint1[Compliance Check] -.->|Audit After| Infra1
+        
+        style Policy1 fill:#f9f,stroke:#333
+        style Infra1 fill:#bbf,stroke:#333
+    end
+
+    subgraph AECP["AECP Model (Inverted)"]
+        direction TB
+        Intent2[Policy Intent (Legislative)] -->|Compiles To| WASM2[Enforcement Agent]
+        WASM2 -->|Permits| Infra2[Infrastructure Provisioning]
+        WASM2 -->|Permits| App2[Application Execution]
+        Infra2 -.->|Derived From| Intent2
+        
+        style Intent2 fill:#f96,stroke:#333,stroke-width:2px
+        style WASM2 fill:#9cf,stroke:#333
+    end
+```
 
 ---
 
@@ -85,8 +108,26 @@ The Judicial Layer is a deterministic engine that compiles legislative intent in
 - Evaluation latency: <1ms for 95% of decisions
 - Memory footprint: <10MB per enforcement point
 
-**DIAGRAM 2: Policy Compilation Pipeline**  
-*[Flow diagram showing the transformation from DSL policy text through parsing, validation, optimization, and compilation to WASM bytecode, with feedback loops for validation errors.]*
+### Diagram 2: Policy Compilation Pipeline
+
+```mermaid
+flowchart LR
+    Source[Policy DSL] -->|Parse| AST[Abstract Syntax Tree]
+    AST -->|Validate| Semantic[Semantic Checker]
+    Semantic -->|Optimize| Optimizer[Decision Tree Optimizer]
+    Optimizer -->|CodeGen| Bytecode[WASM Bytecode]
+    Bytecode -->|Sign| Artifact[Signed Policy Artifact]
+    
+    Semantic -- Error --> Source
+    
+    subgraph "Verification Loop"
+        Compiler[Compiler Engine]
+        Verifier[Cryptographic Signer]
+    end
+    
+    style Source fill:#f9f
+    style Artifact fill:#9f9
+```
 
 ### 2.3 The Executive Layer (Enforcement)
 
@@ -103,8 +144,25 @@ The Executive Layer consists of distributed sidecars that enforce policy at the 
 - **ADVISORY**: Log violations but allow requests (asynchronous)
 - **AUDIT_ONLY**: Record decisions without enforcement (compliance mode)
 
-**DIAGRAM 3: Distributed Enforcement Architecture**  
-*[Architecture diagram showing enforcement points embedded at ingress, service mesh, data layer, and egress, with asynchronous policy distribution from the Judicial Layer and audit log aggregation.]*
+### Diagram 3: Distributed Enforcement Architecture
+
+```mermaid
+graph TD
+    Judicial[Judicial Plane (Compiler)] -->|Async Push| Distribution[Distribution Network]
+    
+    subgraph "Edge Node (Compute)"
+        Distribution -.->|Hot Reload| Sidecar[Policy Sidecar (WASM)]
+        Ingress[Ingress Traffic] --> Sidecar
+        Sidecar -->|Allow| Service[Business Logic]
+        Sidecar -->|Deny| Block[403 Forbidden]
+        Sidecar -.->|Async Log| Buffer[Audit Buffer]
+    end
+    
+    Buffer -->|Batch Flush| Aggregator[Audit Aggregator]
+    
+    style Judicial fill:#f96
+    style Sidecar fill:#9cf,stroke-width:2px
+```
 
 ---
 
@@ -206,8 +264,26 @@ Compiled policies are distributed to enforcement points using a push model with 
 5. Acknowledge receipt and activation
 6. Audit log records distribution event
 
-**DIAGRAM 4: Policy Distribution Flow**  
-*[Sequence diagram showing policy compilation, signing, distribution to multiple enforcement points, signature verification, and activation acknowledgment.]*
+### Diagram 4: Policy Distribution Flow
+
+```mermaid
+sequenceDiagram
+    participant J as Judicial Plane
+    participant D as Dist. Service
+    participant E as Enforcement Point
+    participant A as Audit Log
+
+    J->>J: Compile & Sign Policy
+    J->>D: Push Artifact (v1.2)
+    D->>E: Push Artifact (v1.2)
+    activate E
+    E->>E: Verify Signature
+    E->>E: Hot Swap Engine
+    E-->>D: Ack (Active)
+    deactivate E
+    D-->>J: Ack (Converged)
+    E->>A: Log Event (PolicyUpdate)
+```
 
 ### 4.4 Policy Enforcement
 
@@ -247,8 +323,25 @@ All policy decisions are aggregated into an immutable audit log for compliance r
 }
 ```
 
-**DIAGRAM 5: Audit Log Aggregation**  
-*[Architecture diagram showing distributed enforcement points sending audit logs to regional aggregators, which forward to a central immutable audit store with retention policies and compliance reporting interfaces.]*
+### Diagram 5: Audit Log Aggregation
+
+```mermaid
+graph LR
+    subgraph "Zone A"
+        EP1[Enforcement Point 1] -->|Log| AggA[Zone Aggregator]
+        EP2[Enforcement Point 2] -->|Log| AggA
+    end
+    
+    subgraph "Zone B"
+        EP3[Enforcement Point 3] -->|Log| AggB[Zone Aggregator]
+    end
+    
+    AggA -->|Batch| Global[Global Audit Store]
+    AggB -->|Batch| Global
+    
+    Global -->|Query| Compliance[Compliance Dashboard]
+    Global -->|Alert| SOC[Security Ops Center]
+```
 
 ---
 
@@ -341,8 +434,27 @@ As a theoretical framework, AECP defines the *capabilities* required for soverei
 
 ## 7. Comparison with Conventional Approaches
 
-**DIAGRAM 6: AECP vs. Conventional Governance**  
-*[Side-by-side comparison showing: (1) Traditional centralized policy server with synchronous evaluation, (2) Service-level policy logic with fragmentation, (3) AECP with distributed enforcement and async distribution. Highlights bottlenecks, consistency guarantees, and latency characteristics.]*
+### Diagram 6: AECP vs. Conventional Governance
+
+```mermaid
+graph TD
+    subgraph "Centralized (Bad)"
+        Req1[Request] -->|Sync Call| PolicyServer[Central Policy Server]
+        PolicyServer -->|Decision| Req1
+        style PolicyServer fill:#f96
+    end
+    
+    subgraph "Fragmented (Bad)"
+        Req2[Request] --> AppLogic[Hardcoded Logic]
+        style AppLogic fill:#f96
+    end
+    
+    subgraph "AECP (Good)"
+        Req3[Request] --> LocalEngine[Local WASM Engine]
+        JudicialPlane -->|Async Push| LocalEngine
+        style LocalEngine fill:#9cf
+    end
+```
 
 **Table 4: Governance Approach Comparison**
 
