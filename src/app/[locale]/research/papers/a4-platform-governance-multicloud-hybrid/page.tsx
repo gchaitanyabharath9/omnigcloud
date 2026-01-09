@@ -8,7 +8,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
         title: 'Platform Governance in Multi-Cloud and Hybrid Enterprise Environments | OmniGCloud',
         description: 'A reference architecture for establishing decentralized, policy-as-code governance across heterogeneous cloud estates.',
         alternates: {
-            canonical: 'https://www.omnigcloud.com/en/architecture/a4-platform-governance-multicloud-hybrid'
+            canonical: 'https://www.omnigcloud.com/en/research/papers/a4-platform-governance-multicloud-hybrid'
         },
         openGraph: {
             title: 'Platform Governance in Multi-Cloud & Hybrid Environments (A4)',
@@ -31,7 +31,7 @@ export default async function A4GovernancePage({ params }: { params: Promise<{ l
                     <main className="flex-1 max-w-4xl">
                         <header className="mb-12">
                             <span className="text-primary font-mono text-sm tracking-wider uppercase mb-4 block">
-                                Architecture Specification / A4-GOV-HYBRID
+                                Independent Technical Paper / A4-GOV-HYBRID
                             </span>
                             <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight mb-8 leading-tight">
                                 Platform Governance in Multi-Cloud and Hybrid Enterprise Environments
@@ -44,7 +44,9 @@ export default async function A4GovernancePage({ params }: { params: Promise<{ l
                                     <div><span className='text-slate-500'>Last Updated:</span> January 2026</div>
                                     <div><span className='text-slate-500'>Author:</span> Chaitanya Bharath Gopu</div>
                                     <div><span className='text-slate-500'>License:</span> © Author. All rights reserved.</div>
-                                    <div className='col-span-1 md:col-span-2'><span className='text-slate-500'>Canonical URL:</span> https://www.omnigcloud.com/en/architecture/a4-platform-governance-multicloud-hybrid</div>
+                                    <div><span className='text-slate-500'>arXiv Primary:</span> cs.CY (Computers and Society)</div>
+                                    <div><span className='text-slate-500'>arXiv Secondary:</span> cs.SE (Software Engineering)</div>
+                                    <div className='col-span-1 md:col-span-2'><span className='text-slate-500'>Canonical URL:</span> https://www.omnigcloud.com/en/research/papers/a4-platform-governance-multicloud-hybrid</div>
                                 </div>
                             </div>
                         </header>

@@ -68,7 +68,7 @@ export default async function PatternsPage({ params }: { params: Promise<{ local
             <section style={{ padding: '2rem 0', background: 'var(--bg-surface-2)', borderBottom: '1px solid var(--card-border)', minHeight: 'calc(100vh - var(--header-height) - var(--breadcrumb-height))', display: 'flex', alignItems: 'center' }}>
                 <div className="container text-center">
                     <div className="badge badge-primary-subtle mb-4 mx-auto">
-                        <Award size={14} className="mr-2" /> EB-1A SCHOLARLY COMPENDIUM
+                        <Award size={14} className="mr-2" /> RESEARCH COMPENDIUM
                     </div>
                     <h1 style={{ fontSize: '4.5rem', fontWeight: 950, marginBottom: '2rem' }}>
                         Architectural <br /><span className="text-gradient">Design Patterns</span>
@@ -89,7 +89,7 @@ export default async function PatternsPage({ params }: { params: Promise<{ local
                                     {/* Text Block */}
                                     <div className="glass-panel" style={{ padding: '4rem', borderRadius: '3rem' }}>
                                         <div style={{ color: 'var(--primary)', marginBottom: '1.5rem' }}>{p.icon}</div>
-                                        <div style={{ fontSize: '0.75rem', fontWeight: 900, color: 'var(--primary)', textTransform: 'uppercase', letterSpacing: '0.1em', marginBottom: '1rem' }}>Original Contribution Exhibit #{idx + 1}</div>
+                                        <div style={{ fontSize: '0.75rem', fontWeight: 900, color: 'var(--primary)', textTransform: 'uppercase', letterSpacing: '0.1em', marginBottom: '1rem' }}>Original Contribution #{idx + 1}</div>
                                         <h2 style={{ fontSize: '3rem', fontWeight: 950, marginBottom: '2rem' }}>{p.title}</h2>
                                         <p style={{ fontSize: '1.3rem', opacity: 0.8, lineHeight: 1.8, marginBottom: '3rem' }}>{p.description}</p>
                                         <div style={{ background: 'rgba(59, 130, 246, 0.05)', padding: '2rem', borderRadius: '2rem', borderLeft: '6px solid var(--primary)' }}>
@@ -127,7 +127,7 @@ export default async function PatternsPage({ params }: { params: Promise<{ local
                                     {/* Text Block (Right) */}
                                     <div className="glass-panel" style={{ padding: '4rem', borderRadius: '3rem' }}>
                                         <div style={{ color: 'var(--primary)', marginBottom: '1.5rem' }}>{p.icon}</div>
-                                        <div style={{ fontSize: '0.75rem', fontWeight: 900, color: 'var(--primary)', textTransform: 'uppercase', letterSpacing: '0.1em', marginBottom: '1rem' }}>Original Contribution Exhibit #{idx + 1}</div>
+                                        <div style={{ fontSize: '0.75rem', fontWeight: 900, color: 'var(--primary)', textTransform: 'uppercase', letterSpacing: '0.1em', marginBottom: '1rem' }}>Original Contribution #{idx + 1}</div>
                                         <h2 style={{ fontSize: '3rem', fontWeight: 950, marginBottom: '2rem' }}>{p.title}</h2>
                                         <p style={{ fontSize: '1.3rem', opacity: 0.8, lineHeight: 1.8, marginBottom: '3rem' }}>{p.description}</p>
                                         <div style={{ background: 'rgba(59, 130, 246, 0.05)', padding: '2rem', borderRadius: '2rem', borderLeft: '6px solid var(--primary)' }}>

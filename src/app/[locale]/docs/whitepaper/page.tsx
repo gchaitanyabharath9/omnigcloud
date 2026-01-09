@@ -51,7 +51,7 @@ export default function WhitePaperPage() {
                 textAlign: 'center',
                 userSelect: 'none'
             }}>
-                OMNIGCLOUD RESEARCH  •  USCIS EVIDENCE  •  DO NOT DISTRIBUTE
+                OMNIGCLOUD RESEARCH  •  COPYRIGHT 2026  •  DO NOT DISTRIBUTE
             </div>
 
             {/* PAPER CONTENT */}
@@ -414,7 +414,7 @@ export default function WhitePaperPage() {
                     <div style={{ marginTop: '5rem', paddingTop: '3rem', borderTop: '1px solid var(--border)', display: 'flex', justifyContent: 'space-between', alignItems: 'center', opacity: 0.7 }}>
                         <div style={{ fontSize: '0.8rem' }}>
                             OmniGCloud Research Labs • Tallahassee, FL<br />
-                            <span style={{ fontSize: '0.7rem' }}>CONFIDENTIAL: FOR RELEASE TO USCIS / PEER REVIEW ONLY</span>
+                            <span style={{ fontSize: '0.7rem' }}>OMNIGCLOUD RESEARCH LABS • COPYRIGHT 2026</span>
                         </div>
                         <div style={{ display: 'flex', gap: '1rem' }}>
                             <Printer size={18} style={{ opacity: 0.5, cursor: 'not-allowed' }} aria-label="Print view unavailable" />

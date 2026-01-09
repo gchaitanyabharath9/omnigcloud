@@ -5,9 +5,9 @@ export const ResearchHeader = () => {
     return (
         <header className="mb-12 border-b border-[var(--card-border)] pb-8">
             <div className="flex items-center gap-3 mb-6">
-                <div className="badge badge-primary-subtle">TECHNICAL PUBLICATION EXHIBIT A</div>
-                <div className="flex items-center gap-1 text-[10px] font-bold uppercase tracking-widest text-green-400 bg-green-400/10 px-2 py-1 rounded">
-                    <ShieldCheck size={12} /> Peer Reviewed
+                <div className="badge badge-primary-subtle">TECHNICAL PUBLICATION</div>
+                <div className="flex items-center gap-1 text-[10px] font-bold uppercase tracking-widest text-blue-400 bg-blue-400/10 px-2 py-1 rounded">
+                    <ShieldCheck size={12} /> Technical Paper
                 </div>
             </div>
 

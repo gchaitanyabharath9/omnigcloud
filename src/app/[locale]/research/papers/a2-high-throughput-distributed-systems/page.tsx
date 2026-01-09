@@ -8,7 +8,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
         title: 'Designing High-Throughput Distributed Systems at Scale | OmniGCloud',
         description: 'Architectural patterns for building resilient systems that handle 100K+ messages per second with sub-10ms latency.',
         alternates: {
-            canonical: 'https://www.omnigcloud.com/en/architecture/a2-high-throughput-distributed-systems'
+            canonical: 'https://www.omnigcloud.com/en/research/papers/a2-high-throughput-distributed-systems'
         },
         openGraph: {
             title: 'Designing High-Throughput Distributed Systems (A2)',
@@ -31,7 +31,7 @@ export default async function A2HighThroughputSystemsPage({ params }: { params: 
                     <main className="flex-1 max-w-4xl">
                         <header className="mb-12">
                             <span className="text-primary font-mono text-sm tracking-wider uppercase mb-4 block">
-                                Architecture Specification / A2-DIST-SYS
+                                Independent Technical Paper / A2-DIST-SYS
                             </span>
                             <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight mb-8 leading-tight">
                                 Designing High-Throughput Distributed Systems for Enterprise Workloads
@@ -44,7 +44,9 @@ export default async function A2HighThroughputSystemsPage({ params }: { params: 
                                     <div><span className='text-slate-500'>Last Updated:</span> January 2026</div>
                                     <div><span className='text-slate-500'>Author:</span> Chaitanya Bharath Gopu</div>
                                     <div><span className='text-slate-500'>License:</span> © Author. All rights reserved.</div>
-                                    <div className='col-span-1 md:col-span-2'><span className='text-slate-500'>Canonical URL:</span> https://www.omnigcloud.com/en/architecture/a2-high-throughput-distributed-systems</div>
+                                    <div><span className='text-slate-500'>arXiv Primary:</span> cs.DC (Distributed Computing)</div>
+                                    <div><span className='text-slate-500'>arXiv Secondary:</span> cs.NI (Networking)</div>
+                                    <div className='col-span-1 md:col-span-2'><span className='text-slate-500'>Canonical URL:</span> https://www.omnigcloud.com/en/research/papers/a2-high-throughput-distributed-systems</div>
                                 </div>
                             </div>
                         </header>

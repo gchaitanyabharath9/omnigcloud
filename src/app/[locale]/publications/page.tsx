@@ -4,7 +4,7 @@ import Link from 'next/link';
 export async function generateMetadata(): Promise<Metadata> {
     return {
         title: 'Publications & Technical Papers | OmniGCloud',
-        description: 'Archive of peer-reviewed whitepapers, technical specifications, and research notes from the OmniGCloud engineering team.',
+        description: 'Archive of industry-validated whitepapers, technical specifications, and research notes from the OmniGCloud engineering team.',
     };
 }
 
@@ -20,23 +20,23 @@ export default async function PublicationsPage({ params }: { params: Promise<{ l
             date: "2024-12-15"
         },
         {
-            title: "Cloud-Native Reference Architecture for Enterprises",
+            title: "Cloud-Native Enterprise Reference Architecture (A1)",
             excerpt: "Defining the standard for portability and security in hybrid cloud.",
-            href: "/architecture/cloud-native-reference-architecture",
+            href: "/research/papers/a1-cloud-native-enterprise-reference",
             category: "Architecture",
             date: "2025-01-02"
         },
         {
-            title: "AI-Driven Enterprise Architecture & Observability",
+            title: "Enterprise Observability & Operational Intelligence (A3)",
             excerpt: "Predictive analytics for self-healing infrastructure.",
-            href: "/architecture/ai-driven-enterprise-observability",
+            href: "/research/papers/a3-enterprise-observability-operational-intelligence",
             category: "Observability",
             date: "2025-01-04"
         },
         {
-            title: "Distributed Systems Resilience & Scalability Patterns",
+            title: "High-Throughput Distributed Systems (A2)",
             excerpt: "Patterns for building unbreakable distributed systems.",
-            href: "/research/distributed-systems-resilience",
+            href: "/research/papers/a2-high-throughput-distributed-systems",
             category: "Research",
             date: "2025-01-05"
         }

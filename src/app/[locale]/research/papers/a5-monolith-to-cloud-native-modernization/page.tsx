@@ -8,7 +8,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
         title: 'Modernizing Monolithic Enterprise Systems to Cloud-Native Architectures | OmniGCloud',
         description: 'A systematic architectural framework for decomposing legacy monoliths using Strangler Fig patterns and domain-driven design at scale.',
         alternates: {
-            canonical: 'https://www.omnigcloud.com/en/architecture/a5-monolith-to-cloud-native-modernization'
+            canonical: 'https://www.omnigcloud.com/en/research/papers/a5-monolith-to-cloud-native-modernization'
         },
         openGraph: {
             title: 'Modernizing Monolithic Systems to Cloud-Native (A5)',
@@ -31,7 +31,7 @@ export default async function A5ModernizationPage({ params }: { params: Promise<
                     <main className="flex-1 max-w-4xl">
                         <header className="mb-12">
                             <span className="text-primary font-mono text-sm tracking-wider uppercase mb-4 block">
-                                Architecture Specification / A5-MOD-STRATEGY
+                                Independent Technical Paper / A5-MOD-STRATEGY
                             </span>
                             <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight mb-8 leading-tight">
                                 Modernizing Monolithic Enterprise Systems to Cloud-Native Architectures
@@ -44,7 +44,9 @@ export default async function A5ModernizationPage({ params }: { params: Promise<
                                     <div><span className='text-slate-500'>Last Updated:</span> February 2026</div>
                                     <div><span className='text-slate-500'>Author:</span> Chaitanya Bharath Gopu</div>
                                     <div><span className='text-slate-500'>License:</span> © Author. All rights reserved.</div>
-                                    <div className='col-span-1 md:col-span-2'><span className='text-slate-500'>Canonical URL:</span> https://www.omnigcloud.com/en/architecture/a5-monolith-to-cloud-native-modernization</div>
+                                    <div><span className='text-slate-500'>arXiv Primary:</span> cs.SE (Software Engineering)</div>
+                                    <div><span className='text-slate-500'>arXiv Secondary:</span> cs.PL (Programming Languages)</div>
+                                    <div className='col-span-1 md:col-span-2'><span className='text-slate-500'>Canonical URL:</span> https://www.omnigcloud.com/en/research/papers/a5-monolith-to-cloud-native-modernization</div>
                                 </div>
                             </div>
                         </header>

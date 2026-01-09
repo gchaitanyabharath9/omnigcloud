@@ -104,7 +104,7 @@ export default async function CloudModernizationPage({ params }: { params: Promi
                         <h2 className="text-3xl font-black mb-10">Strategic Modernization Patterns</h2>
                         <div className="prose prose-invert prose-slate max-w-none leading-relaxed">
                             <p className="text-lg mb-8">
-                                Modernization is not a one-size-fits-all process. Depending on your business goals and compliance requirements, OmniGCloud employs a variety of peer-reviewed architectural patterns to ensure a low-risk transition.
+                                Modernization is not a one-size-fits-all process. Depending on your business goals and compliance requirements, OmniGCloud employs a variety of industry-validated architectural patterns to ensure a low-risk transition.
                             </p>
 
                             <h4 className="text-xl font-bold mb-4">Containerization & Re-platforming</h4>

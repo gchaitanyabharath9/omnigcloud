@@ -8,7 +8,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
         title: 'Architectural Patterns for Enterprise Observability and Operational Intelligence | OmniGCloud',
         description: 'A comprehensive guide to implementing high-cardinality observability, distributed tracing, and symptom-based alerting at scale.',
         alternates: {
-            canonical: 'https://www.omnigcloud.com/en/architecture/a3-enterprise-observability-operational-intelligence'
+            canonical: 'https://www.omnigcloud.com/en/research/papers/a3-enterprise-observability-operational-intelligence'
         },
         openGraph: {
             title: 'Architectural Patterns for Enterprise Observability (A3)',
@@ -31,7 +31,7 @@ export default async function A3ObservabilityPage({ params }: { params: Promise<
                     <main className="flex-1 max-w-4xl">
                         <header className="mb-12">
                             <span className="text-primary font-mono text-sm tracking-wider uppercase mb-4 block">
-                                Architecture Specification / A3-OBS-INTEL
+                                Independent Technical Paper / A3-OBS-INTEL
                             </span>
                             <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight mb-8 leading-tight">
                                 Architectural Patterns for Enterprise Observability and Operational Intelligence
@@ -44,7 +44,9 @@ export default async function A3ObservabilityPage({ params }: { params: Promise<
                                     <div><span className='text-slate-500'>Last Updated:</span> January 2026</div>
                                     <div><span className='text-slate-500'>Author:</span> Chaitanya Bharath Gopu</div>
                                     <div><span className='text-slate-500'>License:</span> © Author. All rights reserved.</div>
-                                    <div className='col-span-1 md:col-span-2'><span className='text-slate-500'>Canonical URL:</span> https://www.omnigcloud.com/en/architecture/a3-enterprise-observability-operational-intelligence</div>
+                                    <div><span className='text-slate-500'>arXiv Primary:</span> cs.SE (Software Engineering)</div>
+                                    <div><span className='text-slate-500'>arXiv Secondary:</span> cs.OS (Operating Systems)</div>
+                                    <div className='col-span-1 md:col-span-2'><span className='text-slate-500'>Canonical URL:</span> https://www.omnigcloud.com/en/research/papers/a3-enterprise-observability-operational-intelligence</div>
                                 </div>
                             </div>
                         </header>

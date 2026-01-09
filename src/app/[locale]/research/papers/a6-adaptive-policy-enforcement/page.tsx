@@ -9,7 +9,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
         title: 'Adaptive Policy Enforcement in Cloud-Native Architectures (A6) | OmniGCloud',
         description: 'A Late-Binding Framework for Governance Continuity in Multi-Cloud Environments.',
         alternates: {
-            canonical: 'https://www.omnigcloud.com/en/architecture/a6-adaptive-policy-enforcement'
+            canonical: 'https://www.omnigcloud.com/en/research/papers/a6-adaptive-policy-enforcement'
         },
         openGraph: {
             title: 'Adaptive Policy Enforcement (A6)',
@@ -32,7 +32,7 @@ export default async function A6Page({ params }: { params: Promise<{ locale: str
                     <main className="flex-1 max-w-4xl">
                         <header className="mb-12">
                             <span className="text-primary font-mono text-sm tracking-wider uppercase mb-4 block">
-                                Architecture Specification / A6-GOV-STD
+                                Independent Technical Paper / A6-GOV-STD
                             </span>
                             <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight mb-8 leading-tight">
                                 Adaptive Policy Enforcement in Cloud-Native Architectures
@@ -45,7 +45,9 @@ export default async function A6Page({ params }: { params: Promise<{ locale: str
                                     <div><span className='text-slate-500'>Last Updated:</span> January 2026</div>
                                     <div><span className='text-slate-500'>Author:</span> Chaitanya Bharath Gopu</div>
                                     <div><span className='text-slate-500'>License:</span> © Author. All rights reserved.</div>
-                                    <div className='col-span-1 md:col-span-2'><span className='text-slate-500'>Canonical URL:</span> https://www.omnigcloud.com/en/architecture/a6-adaptive-policy-enforcement</div>
+                                    <div><span className='text-slate-500'>arXiv Primary:</span> cs.SE (Software Engineering)</div>
+                                    <div><span className='text-slate-500'>arXiv Secondary:</span> cs.CR (Cryptography and Security)</div>
+                                    <div className='col-span-1 md:col-span-2'><span className='text-slate-500'>Canonical URL:</span> https://www.omnigcloud.com/en/research/papers/a6-adaptive-policy-enforcement</div>
                                 </div>
                             </div>
                         </header>

@@ -300,7 +300,7 @@
     padding-top: 0.5rem;
 }
 
-.eb1aSection {
+.contributionSection {
     background: linear-gradient(135deg, rgba(var(--primary-rgb), 0.05) 0%, transparent 100%);
     padding: 3rem;
     border-radius: 16px;
@@ -308,14 +308,14 @@
     margin: 4rem 0;
 }
 
-.eb1aGrid {
+.contributionGrid {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 2rem;
     margin: 2rem 0;
 }
 
-.eb1aCard {
+.contributionCard {
     background: var(--background);
     padding: 1.5rem;
     border-radius: 8px;
@@ -472,13 +472,13 @@
         font-size: 1.5rem;
     }
 
-    .eb1aGrid,
+    .contributionGrid,
     .grid3,
     .sectorsGrid {
         grid-template-columns: 1fr;
     }
 
-    .eb1aSection {
+    .contributionSection {
         padding: 1.5rem;
     }
 

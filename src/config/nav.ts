@@ -96,11 +96,13 @@ export const NAV_CONFIG: NavGroup[] = [
         labelKey: 'Header.nav.docs',
         mainRoute: '/docs',
         items: [
+            // Research
+            { id: 'research-overview', labelKey: 'Header.nav.research_links.overview', type: 'page', route: '/research', icon: BookOpen, section: 'Header.nav.research' },
+            { id: 'research-papers', labelKey: 'Header.nav.research_links.papers', type: 'page', route: '/research/papers', icon: FileText, section: 'Header.nav.research' },
+            { id: 'research-frameworks', labelKey: 'Header.nav.research_links.frameworks', type: 'page', route: '/research/frameworks/aecp', icon: Layers, section: 'Header.nav.research' },
             // Documentation
-            { id: 'docs-main', labelKey: 'Header.nav.docs_links.tech_docs', type: 'section', route: '/docs', hash: 'intro', icon: BookOpen, section: 'Header.nav.documentation' },
+            { id: 'docs-main', labelKey: 'Header.nav.docs_links.tech_docs', type: 'section', route: '/docs', hash: 'intro', icon: Terminal, section: 'Header.nav.documentation' },
             { id: 'docs-architecture', labelKey: 'Header.nav.docs_links.patterns', type: 'section', route: '/docs', hash: 'architecture', icon: Layers, section: 'Header.nav.documentation' },
-            { id: 'docs-whitepaper', labelKey: 'Header.nav.docs_links.whitepaper', type: 'section', route: '/docs', hash: 'whitepaper', icon: FileText, section: 'Header.nav.documentation' },
-            { id: 'docs-guide', labelKey: 'Header.nav.docs_links.guide', type: 'section', route: '/docs', hash: 'guide', icon: BookOpen, section: 'Header.nav.documentation' },
             { id: 'docs-api', labelKey: 'Header.nav.docs_links.api', type: 'section', route: '/docs', hash: 'api', icon: Terminal, section: 'Header.nav.documentation' },
             // Community
             { id: 'visual-library', labelKey: 'Header.nav.docs_links.visual_library', type: 'page', route: '/visual-library', icon: Camera, section: 'Header.nav.community' },

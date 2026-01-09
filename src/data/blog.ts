@@ -19,7 +19,7 @@ export const BLOG_POSTS = [
         date: "Dec 10, 2025",
         readTime: "15 min read",
         image: ASSETS.images.aiChip,
-        impact: "EB-1A Original Guide"
+        impact: "Original Guide"
     },
     {
         category: "EVALUATION",

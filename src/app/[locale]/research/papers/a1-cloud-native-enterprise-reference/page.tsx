@@ -9,7 +9,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
         title: 'A Reference Architecture for Cloud-Native Enterprise Platforms at Scale | OmniGCloud',
         description: 'A definitive technical standard for implementing sovereign, multi-cloud platforms maximizing latency budgets and governance.',
         alternates: {
-            canonical: 'https://www.omnigcloud.com/en/architecture/a1-cloud-native-enterprise-reference'
+            canonical: 'https://www.omnigcloud.com/en/research/papers/a1-cloud-native-enterprise-reference'
         },
         openGraph: {
             title: 'Reference Architecture for Cloud-Native Enterprise Platforms (A1)',
@@ -32,7 +32,7 @@ export default async function A1ReferenceArchitecturePage({ params }: { params: 
                     <main className="flex-1 max-w-4xl">
                         <header className="mb-12">
                             <span className="text-primary font-mono text-sm tracking-wider uppercase mb-4 block">
-                                Architecture Specification / A1-REF-STD
+                                Independent Technical Paper / A1-REF-STD
                             </span>
                             <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight mb-8 leading-tight">
                                 A Reference Architecture for Cloud-Native Enterprise Platforms at Scale
@@ -45,7 +45,9 @@ export default async function A1ReferenceArchitecturePage({ params }: { params: 
                                     <div><span className='text-slate-500'>Last Updated:</span> January 2026</div>
                                     <div><span className='text-slate-500'>Author:</span> Chaitanya Bharath Gopu</div>
                                     <div><span className='text-slate-500'>License:</span> © Author. All rights reserved.</div>
-                                    <div className='col-span-1 md:col-span-2'><span className='text-slate-500'>Canonical URL:</span> https://www.omnigcloud.com/en/architecture/a1-cloud-native-enterprise-reference</div>
+                                    <div><span className='text-slate-500'>arXiv Primary:</span> cs.SE (Software Engineering)</div>
+                                    <div><span className='text-slate-500'>arXiv Secondary:</span> cs.DC (Distributed Computing)</div>
+                                    <div className='col-span-1 md:col-span-2'><span className='text-slate-500'>Canonical URL:</span> https://www.omnigcloud.com/en/research/papers/a1-cloud-native-enterprise-reference</div>
                                 </div>
                             </div>
                         </header>

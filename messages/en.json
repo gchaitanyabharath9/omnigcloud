@@ -112,6 +112,12 @@
         "transparency": "Transparency",
         "certs": "Certifications",
         "privacy": "Privacy Center"
+      },
+      "research": "RESEARCH LAB",
+      "research_links": {
+        "overview": "Research Overview",
+        "papers": "Applied Papers (A1-A6)",
+        "frameworks": "Frameworks (AECP)"
       }
     }
   },
@@ -173,7 +179,13 @@
     "cloud-modernization": "Cloud Modernization",
     "openshift-modernization": "OpenShift Modernization",
     "solutions": "Solutions",
-    "staffing": "Staffing"
+    "staffing": "Staffing",
+    "a1-cloud-native-enterprise-reference": "A1 Reference Architecture",
+    "a2-high-throughput-distributed-systems": "A2 Distributed Systems",
+    "a3-enterprise-observability-operational-intelligence": "A3 Observability",
+    "a4-platform-governance-multicloud-hybrid": "A4 Platform Governance",
+    "a5-monolith-to-cloud-native-modernization": "A5 Modernization",
+    "a6-adaptive-policy-enforcement": "A6 Policy Enforcement"
   },
   "Company": {
     "email": {
@@ -440,7 +452,7 @@
         "title": "Prompt Engineering for Sovereign Infrastructure Control",
         "excerpt": "How to use Natural Language to orchestrate complex Kubernetes clusters. A guide to our 'Declarative Intent' engine.",
         "author": "Chaitanya Bharath Gopu",
-        "impact": "EB-1A Original Guide"
+        "impact": "Original Guide"
       },
       "latency": {
         "category": "EVALUATION",
@@ -518,8 +530,8 @@
         "desc": "No vendor lock-in. Move workloads between clouds at the touch of a button."
       },
       "scholarly": {
-        "title": "EB-1A Scholarly Ops",
-        "desc": "Implementation follows peer-reviewed AECP architectural patterns."
+        "title": "Scholarly Operations",
+        "desc": "Implementation follows industry-validated AECP architectural patterns."
       }
     },
     "faq": {
@@ -620,8 +632,8 @@
       "lockinDesc": "Maintain 100% portability of your data and logic state across borders.",
       "portabilityTitle": "Instant Portability",
       "portabilityDesc": "Migrate production workloads in seconds without code changes.",
-      "eb1aTag": "EB-1A Original Contribution #5",
-      "eb1aDesc": "\"The EABF (Economic Arbitrage & Billing Forecast) algorithm represents a significant advancement in the field of Distributed Economics. By decoupling resource cost from provider APIs, the petitioner has established a new standard for Cloud-Agnostic Financial Governance.\"",
+      "eb1aTag": "Original Contribution",
+      "eb1aDesc": "\"The EABF (Economic Arbitrage & Billing Forecast) algorithm represents a significant advancement in the field of Distributed Economics. By decoupling resource cost from provider APIs, the platform has established a new standard for Cloud-Agnostic Financial Governance.\"",
       "auditor": "James Sterling",
       "auditorTitle": "Sovereign Systems Auditor"
     },
