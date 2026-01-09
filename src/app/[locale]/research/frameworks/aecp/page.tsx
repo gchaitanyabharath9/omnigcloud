@@ -79,7 +79,7 @@ export default async function AECPPage({ params }: { params: Promise<{ locale: s
                         <AuthorBio
                             author={{
                                 name: "Chaitanya Bharath Gopu",
-                                role: "Principal Investigator",
+                                role: "Lead Research Architect",
                                 bio: "Author of the Adaptive Enterprise Control Plane framework and the A1-A6 research paper series.",
                                 image: "/images/authors/omnigcloud-team.jpg"
                             }}

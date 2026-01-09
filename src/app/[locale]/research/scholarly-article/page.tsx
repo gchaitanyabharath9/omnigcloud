@@ -204,7 +204,7 @@ export default async function ScholarlyArticlePage({ params }: { params: Promise
                         <AuthorBio
                             author={{
                                 name: "Chaitanya Bharath Gopu",
-                                role: "Principal Investigator",
+                                role: "Lead Research Architect",
                                 bio: "Researching the intersection of regulatory sovereignty and hyper-scale distributed systems.",
                                 image: "/images/authors/omnigcloud-team.jpg"
                             }}
