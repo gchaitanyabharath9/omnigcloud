@@ -566,3 +566,86 @@
 .group-hover\:animate-shimmer:hover {
     animation: shimmer 2s infinite;
 }
+
+/* Specific Layout Fixes */
+.w-\[500px\] {
+    width: 500px;
+}
+
+.h-\[500px\] {
+    height: 500px;
+}
+
+.bg-\[var\(--bg-surface-2\)\] {
+    background-color: var(--bg-surface-2);
+}
+
+.bg-\[var\(--bg-surface-1\)\] {
+    background-color: var(--card-bg);
+}
+
+/* Fallback */
+
+/* Ensure display: block for links */
+a.block {
+    display: block !important;
+}
+
+/* Flex alignment */
+.items-center {
+    align-items: center;
+}
+
+.justify-between {
+    justify-content: space-between;
+}
+
+.flex-col {
+    flex-direction: column;
+}
+
+.flex-1 {
+    flex: 1 1 0%;
+}
+
+.flex-shrink-0 {
+    flex-shrink: 0;
+}
+
+.flex-wrap {
+    flex-wrap: wrap;
+}
+
+/* Widths */
+.max-w-3xl {
+    max-width: 48rem;
+}
+
+.max-w-4xl {
+    max-width: 56rem;
+}
+
+.max-w-2xl {
+    max-width: 42rem;
+}
+
+.w-10 {
+    width: 2.5rem;
+}
+
+.h-10 {
+    height: 2.5rem;
+}
+
+.w-16 {
+    width: 4rem;
+}
+
+.h-16 {
+    height: 4rem;
+}
+
+/* Text alignments */
+.text-center {
+    text-align: center;
+}
