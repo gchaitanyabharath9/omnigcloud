@@ -48,6 +48,18 @@ graph TD
 
 **Figure 1.0:** The Autonomic Control Loop. The system constantly monitors its own vitals. When Latency spikes, it doesn't just "alert a human"; it actively sheds non-critical load (Tier 3) to save the critical core (Tier 1).
 
+### 2.1 Automating the "Act" Phase
+The critical innovation in A6 is removing the human from the decision loop for known failure modes.
+
+**Table 1: Self-Healing Stimulus-Response**
+
+| Stimulus (Symptom) | Threshold | Response (Action) | Recovery |
+| :--- | :--- | :--- | :--- |
+| **Latency Spike** | p99 > 500ms | Enable Aggressive Caching | Auto-disable when < 200ms |
+| **Dependency Down** | 100% Failure | Open Circuit Breaker (Return Defaults) | Half-Open Probe every 30s |
+| **Traffic Surge** | RPS > Capacity | Load Shed Tier 3 (Batch Jobs) | Restore when Queue clear |
+| **Bad Deployment** | Error Rate > 1% | Auto-Rollback to Last Known Good | Manual Investigation |
+
 ---
 
 ## 3. Threat Response Lifecycle
@@ -83,7 +95,28 @@ stateDiagram-v2
 *   **DEFCON 2:** Only domestic traffic allowed (Geofencing).
 *   **DEFCON 1:** "Lifeboat Mode" - Read-only, no logins. Survival is priority.
 
----
+### 3.1 Policy Hierarchy
+Policies conflict. We need a resolution order. A6 establishes that **Survival** overrides **Correctness**, which overrides **Availability**.
+
+```mermaid
+graph TD
+    Level0[L0: Physics (Capacity)]
+    Level1[L1: Security (AuthZ)]
+    Level2[L2: Business Logic]
+    
+    Level0 -->|Constrains| Level1
+    Level1 -->|Constrains| Level2
+    
+    Note0[If CPU > 95%, Drop Requests]
+    Note1[If Token Invalid, 401]
+    Note2[Process Transfer]
+    
+    style Level0 fill:#e53e3e,color:white
+    style Level1 fill:#dd6b20,color:white
+    style Level2 fill:#38a169,color:white
+```
+
+**Figure 2.1:** The Maslow's Hierarchy of Distributed Systems. You cannot process a "Valid" transfer (L2) if the server is on fire (L0).
 
 ## 4. End-to-End Synthesis Flow
 
@@ -125,19 +158,21 @@ sequenceDiagram
 Where does your organization sit?
 
 ```mermaid
+```mermaid
 quadrantChart
     title "Architecture Maturity Matrix"
-    x-axis "Operational Capability"
-    y-axis "Architectural Rigor"
-    quadrant-1 "Chaos Factory"
-    quadrant-2 "Bureaucratic Monolith"
-    quadrant-3 "Agile but Fragile"
-    quadrant-4 "Sovereign Cloud"
+    x-axis "Operational Capability (Speed)"
+    y-axis "Architectural Rigor (Safety)"
+    quadrant-1 "Adaptive Sovereign (Level 4)"
+    quadrant-2 "Bureaucratic Stagnation"
+    quadrant-3 "Chaos Factory"
+    quadrant-4 "Agile Complexity"
     
-    "Startup" : [0.2, 0.2]
-    "Enterprise (Legacy)" : [0.3, 0.8]
-    "Tech Gian" : [0.8, 0.4]
-    "OmniGCloud Target" : [0.9, 0.9]
+    "Startup" : [0.1, 0.4]
+    "Enterprise Legacy" : [0.3, 0.8]
+    "Cloud Native V1" : [0.7, 0.3]
+    "OmniGCloud Target" : [0.95, 0.95]
+```
 ```
 
 **Figure 4.0:** The Goal. Most organizations are either Agile but Fragile (break often) or Bureaucratic (never ship). The goal is the top-right: High Rigor *and* High Capability.
