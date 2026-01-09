@@ -42,30 +42,22 @@ graph TD
 Code migration is easy; Data migration is hard. We use the **Parallel Run / Double Write** pattern to migrate data without downtime.
 
 ```mermaid
-stateDiagram-v2
-    [*] --> Phase1_DualWrite
+    state "1. Dual Write (Dark)" as S1
+    state "2. Backfill (Historical)" as S2
+    state "3. Validation (Compare)" as S3
+    state "4. Cutover (Live)" as S4
     
-    state Phase1_DualWrite {
-        [*] --> WriteOld
-        WriteOld --> WriteNew : Async Queue
-    }
+    [*] --> S1
+    S1 --> S1 : Writes go to Both DBs
+    S1 --> S2 : New DB has Live Data
+    S2 --> S2 : Batch Copy History
+    S2 --> S3 : Consistency > 99.9%
+    S3 --> S3 : Compare Reads (Shadow)
+    S3 --> S4 : Zero Errors for 7 days
+    S4 --> [*] : Old DB Deprecated
     
-    Phase1_DualWrite --> Phase2_Backfill : New Writes OK
-    
-    state Phase2_Backfill {
-        [*] --> ScanOld
-        ScanOld --> InsertNew : If Missing
-    }
-    
-    Phase2_Backfill --> Phase3_Validation : 100% Data Copy
-    
-    state Phase3_Validation {
-        [*] --> Compare
-        Compare --> Alert : Mismatch
-    }
-    
-    Phase3_Validation --> Phase4_Cutover
-    Phase4_Cutover --> [*] : Read from New
+    style S1 fill:#f56565,color:white
+    style S4 fill:#48bb78,color:white
 ```
 
 **Figure 2.0:** Zero-Downtime Data Migration.
@@ -81,30 +73,43 @@ stateDiagram-v2
 The Monolith's domain model is often messy (e.g., `User` table has 200 columns). To prevent this mess from infecting the clean Microservice, we insert an **Anti-Corruption Layer**.
 
 ```mermaid
-block-beta
-    columns 3
-    block:LegacySystem
-        columns 1
-        BigBallOfMud
+```mermaid
+graph LR
+    subgraph Legacy["Legacy Monolith"]
+        Mud[Big Ball of Mud (God Class)]
     end
     
-    block:ACL
-        columns 1
-        Translator
-        Adapter
+    subgraph ACL["Anti-Corruption Layer"]
+        Facade[Facade Interface]
+        Adapter[Adapter Logic]
+        Translator[Translator (Map DTOs)]
     end
     
-    block:NewSystem
-        columns 1
-        CleanDomain
+    subgraph New["New Microservice"]
+        Clean[Clean Domain Model]
     end
     
-    LegacySystem --> ACL
-    ACL --> NewSystem
-    
-    style LegacySystem fill:#718096
-    style ACL fill:#d69e2e
-    style NewSystem fill:#38b2ac
+    Mud --> Facade
+    Facade --> Adapter
+    Adapter --> Translator
+    Translator --> Clean
+
+    style Legacy fill:#718096,color:white
+    style ACL fill:#d69e2e,color:white
+    style New fill:#38b2ac,color:white
+```
+
+**Figure 3.0:** The ACL acts as a DMZ. It translates the Monolith's "God Object" into a focused, domain-driven entity for the new service.
+
+### 4.1 ACL Implementation Patterns
+
+**Table 1: ACL Patterns**
+
+| Pattern | Implementation | Pros | Cons |
+| :--- | :--- | :--- | :--- |
+| **Gateway ACL** | Logic inside API Gateway | Centralized, easy to manage | Gateway becomes bloated |
+| **Service ACL** | Logic inside Microservice | Clean, encapsulated | Duplication across services |
+| **Sidecar ACL** | Logic in Service Mesh Proxy | Language agnostic | High operational complexity |
 ```
 
 **Figure 3.0:** The ACL acts as a DMZ. It translates the Monolith's "God Object" into a focused, domain-driven entity for the new service.
@@ -147,11 +152,35 @@ sequenceDiagram
 Migration is not just technical; it's cultural.
 
 | Level | Characteristics | Risk Profile |
-| :--- | :--- | :--- |
+| :--- | :--- | :--- | :--- |
 | **Level 1 (Ad-Hoc)** | Rewriting code blindly. No tests. | **Extreme** (Resume Generating Event) |
 | **Level 2 (Strangler)** | Using Gateway to split traffic. | **Moderate** |
 | **Level 3 (Shadow)** | Verifying with shadow traffic. | **Low** |
 | **Level 4 (GitOps)** | Automated rollback on error rate. | **Minimal** |
+
+**Table 2: Migration Strategy Risk Matrix**
+
+| Strategy | Speed | Risk | Rollback Difficulty | Cost |
+| :--- | :--- | :--- | :--- | :--- |
+| **Big Bang Rewrite** | Fast (Theoretically) | Critical | Impossible | High |
+| **Parallel Run** | Slow | Low | Instant | Very High (2x Infra) |
+| **Strangler Fig** | Moderate | Low | Easy (Route Switch) | Moderate |
+
+### 6.1 Decommissioning Strategy
+The hardest part is turning the old system off.
+
+```mermaid
+graph TD
+    Step1[1. Stop Writes] --> Step2[2. Stop Reads]
+    Step2 --> Step3[3. Archive Data]
+    Step3 --> Step4[4. Remove Hardware]
+    
+    Step3 -.->|Keep for Compliance| S3[Cold Storage]
+    
+    style Step4 fill:#e53e3e,color:white
+```
+
+**Figure 5.0:** The Decommissioning Lifecycle. Never delete data immediately; always archive to cold storage first.
 
 ---
 
