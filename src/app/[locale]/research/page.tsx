@@ -14,12 +14,12 @@ export default async function ResearchHubPage({ params }: { params: Promise<{ lo
     return (
         <div className="min-h-screen bg-[var(--background)]">
             {/* HERO */}
-            <section className="pt-10 pb-20 border-b border-[var(--card-border)] bg-[var(--bg-surface-2)]">
+            <section className="pt-10 pb-10 border-b border-[var(--card-border)] bg-[var(--bg-surface-2)]">
                 <div className="container text-center">
                     <div className="badge badge-primary-subtle mb-6 mx-auto flex items-center gap-2">
                         <Award size={14} /> TECHNICAL RESEARCH REPOSITORY
                     </div>
-                    <h1 className="text-5xl md:text-7xl font-black mb-6 tracking-tight">
+                    <h1 className="text-4xl md:text-6xl font-black mb-6 tracking-tight">
                         Software <span className="text-gradient">Architecture Research</span>
                     </h1>
                     <p className="text-xl opacity-70 max-w-3xl mx-auto leading-relaxed text-balance">
