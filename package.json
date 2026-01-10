@@ -31,7 +31,10 @@
     "check:smoke": "node scripts/verify.mjs smoke",
     "check:i18n": "node scripts/verify.mjs i18n",
     "quality": "node scripts/verify.mjs all",
-    "check:all": "npm run quality"
+    "check:all": "npm run quality",
+    "release:wordcount": "npx tsx scripts/check_wordcount.ts",
+    "release:terms": "npx tsx scripts/check_forbidden_terms.ts",
+    "release:gate": "npx tsx scripts/release_gate.ts"
   },
   "dependencies": {
     "@auth/upstash-redis-adapter": "^2.11.1",
