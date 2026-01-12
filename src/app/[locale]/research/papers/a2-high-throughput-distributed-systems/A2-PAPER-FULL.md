@@ -119,15 +119,27 @@ We measured α and β for three production systems by running controlled load te
 - Failure Mode: None under test conditions; bottleneck shifts to network bandwidth (10 Gbps per node) rather than coordination
 
 ```mermaid
-xychart
-    title "Throughput vs Concurrency (USL)"
-    x-axis "Concurrency (Nodes)" [1, 10, 50, 100, 500, 1000]
-    y-axis "Throughput (RPS)" 0 --> 1000000
-    line [1000, 9500, 42000, 80000, 250000, 150000]
-    line [1000, 10000, 50000, 100000, 500000, 950000]
+graph TD
+    subgraph USL ["Universal Scalability Law Model"]
+        L[Linear Scalability: 1:1 Gain]
+        A[Alpha - Contention: Asymptotic Ceiling]
+        B[Beta - Crosstalk: Retrograde Scaling]
+        
+        N[Node Count N] --> L
+        L -.-> A
+        A -.-> B
+    end
+    
+    subgraph Mechanics
+        A -->|Serialization| Lock[Global Locks / Shared State]
+        B -->|Coordination| Consensus[Raft / Paxos / 2PC]
+    end
+    
+    style B fill:#f96,stroke:#333,stroke-width:2px
+    style L stroke-dasharray: 5 5
 ```
 
-**Figure 1:** The "Retrograde Scaling" Phenomenon. The orange line shows System B where β = 0.08 (high crosstalk from Raft consensus), causing performance to peak at 100 nodes then decrease to 150k RPS at 1000 nodes—40% below peak. The green line shows System C (A2 architecture) where β ≈ 0.001, enabling near-linear scaling to 950k RPS at 1000 nodes.
+**Figure 1:** Theoretical limit visualized via USL. Contention (α) creates a speed limit (asymptote), while Crosstalk (β) creates a "Performance Cliff" where adding nodes destroys throughput. The A2 architecture targets β < 0.001 to maintain linear scaling.
 
 ### 2.3 Architectural Implications
 
@@ -379,12 +391,23 @@ Resharding (changing partition count) is expensive but sometimes necessary:
 2. Projected growth exceeds capacity within 30 days
 3. Hot spot detected (one partition >2x average load)
 
-**Resharding Process:**
-1. **Create New Partitions**: Add new partitions (e.g., 12 → 24)
-2. **Dual-Write**: Write to both old and new partitions
-3. **Backfill**: Copy historical data to new partitions
-4. **Cutover Reads**: Switch consumers to new partitions
-5. **Cleanup**: Delete old partitions after 30-day grace period
+```mermaid
+stateDiagram-v2
+    state "Phase 1: Scale Ingress" as P1
+    state "Phase 2: Dual Write" as P2
+    state "Phase 3: Backfill" as P3
+    state "Phase 4: Consumer Switch" as P4
+    state "Phase 5: Cleanup" as P5
+
+    [*] --> P1
+    P1 --> P2: Provision New Partitions
+    P2 --> P3: Log Forking
+    P3 --> P4: Sync Check
+    P4 --> P5: Offset Mapping
+    P5 --> [*]: Deprecate Old Shards
+```
+
+**Figure 3.1:** Zero-Downtime Resharding Workflow. By utilizing the sequential nature of the distributed log, we can map new partition offsets to old ones without pausing ingestion.
 
 **Downtime:** Zero (dual-write ensures continuity)  
 **Duration:** 2-4 hours for backfill (depends on data volume)

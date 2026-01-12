@@ -156,14 +156,26 @@ Time-series databases have hard limits on cardinality:
 Beyond the performance cliff, query latency degrades exponentially:
 
 ```mermaid
-xychart
-    title "Query Latency vs Cardinality"
-    x-axis "Cardinality (Log Scale)" ["10k", "100k", "1M", "10M", "100M"]
-    y-axis "Query Latency (ms)" 0 --> 10000
-    line [50, 100, 500, 2000, 8000]
+graph LR
+    subgraph Data ["Data Source & Cardinality"]
+        L1[Logs - Index-Heavy]
+        M1[Metrics - Aggregated]
+        T1[Traces - High Context]
+    end
+
+    subgraph Cost ["The Cardinality Cliff"]
+        M1 -->|Dimension Explosion| C[Storage Peak]
+        C -->|Unbounded Cost| F[Finance Alarm]
+    end
+
+    F -->|A3 Strategy| S[Stratified Sampling]
+    
+    style C fill:#c53030,color:white
+    style F fill:#ea580c,color:white
+    style S fill:#16a34a,color:white
 ```
 
-**Figure 2:** Cardinality Explosion. Beyond 1M series, Prometheus query latency exceeds 2 seconds, making dashboards unusable.
+**Figure 2:** The "Cardinality Cliff." Without dimension stratification, metrics storage grows exponentially with unique label combinations (tenants, users). A3 shifts this complexity into distributed traces.
 
 ### 2.3 Solution: Dimension Stratification
 
@@ -303,21 +315,31 @@ This is expensive but manageable. However, 99% of these traces are "successful f
 Tail-based sampling makes the keep/discard decision after the request completes, enabling intelligent retention:
 
 ```mermaid
-flowchart LR
-    App[Application] -->|100% Trace| Collector[OpenTelemetry Collector]
-    
-    subgraph "Decision Engine"
-        Collector -->|Buffer 30s| Buffer
-        Buffer --> Check{Interesting?}
-        Check -->|Error or High Latency| Keep[Store Trace]
-        Check -->|Success & Fast| Sample[Keep 1%]
-        Sample -->|99% Drop| Trash[Discard]
+flowchart TD
+    subgraph Ingest ["Step 1: Ingest (100%)"]
+        R[Incoming Span] --> B[Sliding Window Buffer]
     end
+
+    subgraph Decision ["Step 2: Tail Decision"]
+        B --> E{Is Error?}
+        B --> L{Is Slow?}
+        B --> P{Probabilistic?}
+    end
+
+    subgraph Storage ["Step 3: Action"]
+        E -->|Yes| K[KEEP 100%]
+        L -->|Yes| K
+        P -->|1%| K
+        P -->|99%| D[DISCARD]
+    end
+
+    K --> Backend[(Jaeger / Tempo)]
     
-    Keep --> Backend[(Trace Store / Jaeger)]
+    style K fill:#16a34a,color:white
+    style D fill:#64748b,color:white
 ```
 
-**Figure 3:** Tail Sampling. The decision to keep a trace is made after the request completes. If the request was slow (>2s) or failed (5xx), we keep it. If it was fast and successful, we keep only 1% for baseline statistics.
+**Figure 3:** The Tail-Based Sampling Pipeline. Unlike head-based sampling (which decides randomly at the start), tail-based sampling waits for request completion to ensure metadata (errors, latency) can drive the retention policy.
 
 **Sampling Rules:**
 ```yaml
@@ -464,14 +486,20 @@ If the service is down for 20 minutes in 28 days, the error budget is exhausted.
 
 We standardize dashboards on Google's SRE Golden Signals:
 
-**Table 6: Golden Signals Definition**
+```mermaid
+graph TD
+    subgraph SLO ["SLO: 99.95% Availability"]
+        EB[Error Budget: 21.6 min / Month]
+    end
 
-| Signal | Definition | Metric Type | Alert Threshold |
-|:---|:---|:---|:---|
-| **Latency** | Time to service request | Histogram (p50, p90, p99) | p99 >200ms |
-| **Traffic** | Demand on system | Counter (RPS) | <80% of capacity |
-| **Errors** | Rate of failures | Rate (5xx / Total) | >1% |
-| **Saturation** | Resource fullness | Gauge (CPU, Queue) | >80% |
+    BR[High Burn Rate Alert] -->|Detection| I[Incident Context]
+    I -->|Remediation| Act[Rollback / Scale]
+    
+    style EB fill:#0ea5e9,color:white
+    style BR fill:#ef4444,color:white
+```
+
+**Figure 5:** Error Budget Mechanics. The goal is not "zero errors" but managing the "Burn Rate" to ensure the Error Budget (the allowed 21.6 minutes of monthly downtime) isn't exhausted prematurely.
 
 ---
 

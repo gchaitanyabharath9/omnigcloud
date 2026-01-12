@@ -37,7 +37,7 @@ const Header = () => {
     const handleMouseEnter = (name: string) => setActiveDropdown(name);
     const handleMouseLeave = () => setActiveDropdown(null);
 
-    if (!mounted) return null;
+
 
     return (
         <header className={styles.header}>
@@ -164,7 +164,7 @@ const Header = () => {
                 {/* ACTIONS */}
                 <div className={styles.actions}>
                     <button onClick={toggleTheme} className={styles.themeToggle} aria-label="Toggle Theme">
-                        {theme === 'dark' ? <Sun size={18} /> : <Moon size={18} />}
+                        {!mounted ? <Sun size={18} /> : theme === 'dark' ? <Sun size={18} /> : <Moon size={18} />}
                     </button>
                     <LanguageSwitcher />
                     <button
