@@ -141,7 +141,8 @@ export default function HeroSection() {
                                         alt="Global Sovereign Dashboard"
                                         fill
                                         style={{ objectFit: 'cover', opacity: 0.3 }}
-                                        priority // Critical LCP element - load immediately
+                                        unoptimized // Unsplash CDN is already optimized
+                                        fetchPriority="high" // Critical LCP element
                                         sizes="(max-width: 768px) 100vw, 50vw"
                                     />
                                     <div style={{ position: 'absolute', inset: 0, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
