@@ -62,7 +62,11 @@ export function renderMarkdownToHTML(md: string): string {
         let tableHtml = '<div class="overflow-x-auto my-8 border border-white/10 rounded-lg"><table class="w-full text-left text-sm font-mono">';
 
         // Filter out separator lines (---)
-        const contentRows = rows.filter(r => !r.trim().match(/^\|?(\s*:?---*:?\s*\|?)+$/));
+        const contentRows = rows.filter(r => {
+            const clean = r.trim();
+            // ReDoS-safe check: line contains only separator chars and at least one dash sequence
+            return !(/^[\s|:-]+$/.test(clean) && clean.includes('-'));
+        });
 
         contentRows.forEach((row, idx) => {
             const cells = row.split('|').filter(c => c.trim().length > 0 || row.startsWith('|') || row.endsWith('|'));

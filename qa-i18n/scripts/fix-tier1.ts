@@ -289,8 +289,12 @@ function updateJson(locale: string, localeTranslations: Record<string, string>) 
         const parts = key.split('.');
         let current = obj;
         for (let i = 0; i < parts.length - 1; i++) {
-            if (!current[parts[i]]) current[parts[i]] = {};
-            current = current[parts[i]];
+            const part = parts[i];
+            // Security: Prevent prototype pollution
+            if (part === '__proto__' || part === 'constructor' || part === 'prototype') return;
+
+            if (!current[part]) current[part] = {};
+            current = current[part];
         }
         current[parts[parts.length - 1]] = value;
     };
