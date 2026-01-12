@@ -53,7 +53,6 @@ const Footer = () => {
                                 label: "Authority", color: "#8b5cf6", links: [
                                     { name: "Technical Founder", href: "/founder" },
                                     { name: "System Architecture", href: "/architecture" },
-                                    { name: "Research Hub", href: "/research" },
                                     { name: "Strategic Playbooks", href: "/blog" },
                                     { name: "Case Studies", href: "/case-studies" }
                                 ]
