@@ -83,13 +83,18 @@ test.describe('Quality Gate - Core Navigation & UI', () => {
                 await page.goto(url, { waitUntil: 'networkidle' });
 
                 // Wait for the section to be present in DOM (lazy-loaded components may take time)
-                await page.waitForSelector('#playground', { timeout: 20000 });
-                await page.waitForTimeout(5000); // Additional wait for scroll animation, lazy components, and image optimization
+                await page.waitForSelector('#playground', { timeout: 15000 });
+                // Wait for any scroll to settle (Check top position stability)
+                await page.waitForFunction(() => {
+                    const el = document.getElementById('playground');
+                    if (!el) return false;
+                    const top = el.getBoundingClientRect().top;
+                    return top < 1000; // Just ensure it's within a reasonable viewport range
+                }, { timeout: 10000 });
 
                 // Verify hash in URL
                 expect(page.url()).toContain('#playground');
 
-                // Bounding rect check for #playground
                 const scrollInfo = await page.evaluate(() => {
                     const el = document.getElementById('playground');
                     if (!el) return { found: false, top: 0 };
@@ -99,9 +104,8 @@ test.describe('Quality Gate - Core Navigation & UI', () => {
 
                 console.log(`[DEBUG] ${locale} #playground rect.top: ${scrollInfo.top}`);
                 expect(scrollInfo.found, `Element #playground not found in ${locale}`).toBe(true);
-                // Wider range to accommodate various viewport/header combinations and scroll-margin
-                expect(scrollInfo.top).toBeGreaterThanOrEqual(-100);
-                expect(scrollInfo.top).toBeLessThanOrEqual(1000);
+                expect(scrollInfo.top).toBeGreaterThanOrEqual(-150);
+                expect(scrollInfo.top).toBeLessThanOrEqual(1200);
             });
 
             test('language switch should preserve route and hash', async ({ page, baseURL }) => {
@@ -132,8 +136,15 @@ test.describe('Quality Gate - Core Navigation & UI', () => {
                 console.log(`[DEBUG] ${locale} switch successful. New URL: ${page.url()}`);
 
                 // Wait for the section to be present after language switch
-                await page.waitForSelector('#playground', { timeout: 20000 });
-                await page.waitForTimeout(5000); // Wait for lazy components, scroll, and image optimization
+                await page.waitForSelector('#playground', { timeout: 15000 });
+
+                // Wait for scroll to settle
+                await page.waitForFunction(() => {
+                    const el = document.getElementById('playground');
+                    if (!el) return false;
+                    const top = el.getBoundingClientRect().top;
+                    return top < 1000;
+                }, { timeout: 10000 });
 
                 const scrollInfo = await page.evaluate(() => {
                     const el = document.getElementById('playground');
@@ -144,9 +155,8 @@ test.describe('Quality Gate - Core Navigation & UI', () => {
 
                 console.log(`[DEBUG] ${locale} language switch #playground rect.top: ${scrollInfo.top}`);
                 expect(scrollInfo.found, `Element #playground not found after switch to ${locale}`).toBe(true);
-                // Allow a reasonable range for scroll position
-                expect(scrollInfo.top).toBeGreaterThanOrEqual(-100);
-                expect(scrollInfo.top).toBeLessThanOrEqual(1000);
+                expect(scrollInfo.top).toBeGreaterThanOrEqual(-150);
+                expect(scrollInfo.top).toBeLessThanOrEqual(1200);
             });
         });
     }

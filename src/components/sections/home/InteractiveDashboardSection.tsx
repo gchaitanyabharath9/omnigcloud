@@ -25,7 +25,7 @@ export default function InteractiveDashboardSection() {
     }, []);
 
     return (
-        <section className="snap-section" style={{ background: 'var(--bg-surface-2)', paddingTop: '0.5rem', paddingBottom: '0.5rem', minHeight: 'calc(100vh - var(--header-height) - var(--breadcrumb-height))', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
+        <section id="playground" className="snap-section" style={{ background: 'var(--bg-surface-2)', paddingTop: '0.5rem', paddingBottom: '0.5rem', minHeight: 'calc(100vh - var(--header-height) - var(--breadcrumb-height))', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
             <div className="container">
                 <div style={{ textAlign: 'center', marginBottom: '1rem' }}>
                     <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-xs font-bold mb-3 uppercase tracking-wider backdrop-blur-sm">
