@@ -12,8 +12,7 @@ import dynamic from 'next/dynamic';
 
 // Lazy load dashboard section - it's below the fold and contains heavy chart libraries
 const InteractiveDashboardSection = dynamic(() => import('@/components/sections/home/InteractiveDashboardSection'), {
-  loading: () => <div style={{ minHeight: '600px' }} />,
-  ssr: false // Charts are client-only
+  loading: () => <div style={{ minHeight: '600px' }} />
 });
 
 // Keep these lazy-loaded as they're far below the fold
