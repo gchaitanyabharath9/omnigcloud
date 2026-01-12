@@ -96,10 +96,10 @@ export const NAV_CONFIG: NavGroup[] = [
         labelKey: 'Header.nav.docs',
         mainRoute: '/docs',
         items: [
-            // Research
-            { id: 'research-overview', labelKey: 'Header.nav.research_links.overview', type: 'page', route: '/research', icon: BookOpen, section: 'Header.nav.research' },
-            { id: 'research-papers', labelKey: 'Header.nav.research_links.papers', type: 'page', route: '/research/papers', icon: FileText, section: 'Header.nav.research' },
-            { id: 'research-frameworks', labelKey: 'Header.nav.research_links.frameworks', type: 'page', route: '/research/frameworks/aecp', icon: Layers, section: 'Header.nav.research' },
+            // Research (Unlisted for Sovereign Repository)
+            // { id: 'research-overview', labelKey: 'Header.nav.research_links.overview', type: 'page', route: '/research', icon: BookOpen, section: 'Header.nav.research' },
+            // { id: 'research-papers', labelKey: 'Header.nav.research_links.papers', type: 'page', route: '/research/papers', icon: FileText, section: 'Header.nav.research' },
+            // { id: 'research-frameworks', labelKey: 'Header.nav.research_links.frameworks', type: 'page', route: '/research/frameworks/aecp', icon: Layers, section: 'Header.nav.research' },
             // Documentation
             { id: 'docs-main', labelKey: 'Header.nav.docs_links.tech_docs', type: 'section', route: '/docs', hash: 'intro', icon: Terminal, section: 'Header.nav.documentation' },
             { id: 'docs-architecture', labelKey: 'Header.nav.docs_links.patterns', type: 'section', route: '/docs', hash: 'architecture', icon: Layers, section: 'Header.nav.documentation' },

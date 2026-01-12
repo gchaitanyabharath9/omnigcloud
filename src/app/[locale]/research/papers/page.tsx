@@ -12,6 +12,10 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
         description: 'Index of independent technical papers (A1-A6) detailing the OmniGCloud sovereign architecture.',
         alternates: {
             canonical: `https://www.omnigcloud.com/${locale}/research/papers`
+        },
+        robots: {
+            index: false,
+            follow: true
         }
     };
 }

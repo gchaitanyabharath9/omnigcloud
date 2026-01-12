@@ -3,7 +3,7 @@ import fs from 'fs';
 import path from 'path';
 import AuthorBio from '@/components/article/AuthorBio';
 import MermaidDiagram from '@/components/article/MermaidDiagram';
-import { ArrowRight } from 'lucide-react';
+import { ChevronRight, FileText, Calendar, Tag, ShieldCheck, Layers, ArrowRight } from 'lucide-react';
 
 export const revalidate = 86400; // Cache for 24 hours (ISR)
 
@@ -14,6 +14,16 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
         description: 'Implementing Policy-as-Code and Sovereign Identity boundaries for scalable compliance.',
         alternates: {
             canonical: `https://www.omnigcloud.com/${locale}/research/papers/a4-platform-governance-multicloud-hybrid`
+        },
+        robots: {
+            index: false,
+            follow: true,
+            nocache: true,
+            googleBot: {
+                index: false,
+                follow: true,
+                noimageindex: true,
+            },
         },
         openGraph: {
             title: 'Platform Governance & Multi-Cloud Strategy (A4)',
@@ -203,6 +213,38 @@ export default async function A4GovernancePage({ params }: { params: Promise<{ l
                                 }
                             })}
                         </div>
+
+                        <section className="mt-20 p-8 rounded-2xl bg-card border border-primary/20 bg-primary/5 font-mono text-sm leading-relaxed">
+                            <h3 className="text-primary font-bold mb-4 uppercase tracking-widest flex items-center gap-2">
+                                <ShieldCheck size={16} /> Rights & Permissions
+                            </h3>
+                            <p className="mb-4">
+                                This document is a technical standard of the OmniGCloud Sovereign Architecture (A4-GOV-STD).
+                                It is provided under Open Access for the purpose of architectural validation and regulatory review (USCIS/EB-1A).
+                            </p>
+                            <div className="grid md:grid-cols-2 gap-8">
+                                <div>
+                                    <div className="text-muted-foreground uppercase text-[10px] mb-2 font-bold">Citation (BibTeX)</div>
+                                    <pre className="bg-black/40 p-4 rounded border border-white/5 overflow-x-auto text-[11px]">
+                                        {`@techreport{gopu2026a4,
+  author      = {Gopu, Chaitanya Bharath},
+  title       = {Platform Governance & Multi-Cloud Hybrid Strategy},
+  institution = {OmniGCloud Research},
+  year        = {2026},
+  number      = {A4-GOV-STD},
+  type        = {Technical Specification}
+}`}
+                                    </pre>
+                                </div>
+                                <div>
+                                    <div className="text-muted-foreground uppercase text-[10px] mb-2 font-bold">Sovereign Grant</div>
+                                    <p className="text-xs text-muted-foreground">
+                                        Usage for production implementation outside of the OmniGCloud Control Plane requires an explicit Sovereign Grant.
+                                        Commercial redistribution or derivative architectural works are prohibited without prior authorization.
+                                    </p>
+                                </div>
+                            </div>
+                        </section>
 
                         <hr className="my-16 border-white/10" />
 
