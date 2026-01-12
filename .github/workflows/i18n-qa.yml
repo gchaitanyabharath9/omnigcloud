@@ -52,7 +52,8 @@ jobs:
             qa-i18n/
             package.json
             package-lock.json
-            next.config.js
+            next.config.ts
+            .npmrc
             tsconfig.json
           retention-days: 1
 
@@ -78,6 +79,10 @@ jobs:
         uses: "actions/download-artifact@v4"
         with:
           name: "build-output"
+          path: .
+
+      - name: "Debug: Show Artifacts"
+        run: ls -laR .next | head -n 20
 
       - name: "Install Dependencies"
         run: "npm ci --legacy-peer-deps"
@@ -89,9 +94,9 @@ jobs:
         run: "npx playwright test -c qa-i18n/playwright.config.ts --shard=${{ matrix.shard }}/${{ strategy.job-total }}"
         env:
           CI: "true"
-          APP_ENV: "local"
+          APP_ENV: "production"
           AUTH_TRUST_HOST: "true"
-          AUTH_SECRET: "${{ secrets.AUTH_SECRET || 'dummy_secret_for_ci_testing_only_32_chars' }}"
+          AUTH_SECRET: "dummy_secret_for_ci_testing_only_32_chars"
           NEXT_PUBLIC_SITE_URL: "http://localhost:3000"
 
       - name: "Upload Shard Results"
