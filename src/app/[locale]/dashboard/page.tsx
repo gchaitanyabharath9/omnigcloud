@@ -10,14 +10,14 @@ import DashboardScroller from '@/features/dashboard/DashboardScroller';
 
 // Map of metrics to their display configuration and components
 import MetricDashboardLayout from '@/features/dashboard/MetricDashboardLayout';
-import {
-    LatencyLineChart,
-    CloudDistributionPie,
-    UptimeTrend,
-    ErrorRateArea,
-    FeatureUsageBar,
-    ComplianceScoresBar
-} from '@/components/charts/SimpleCharts';
+import dynamic from 'next/dynamic';
+
+const LatencyLineChart = dynamic(() => import('@/components/charts/SimpleCharts').then(mod => mod.LatencyLineChart), { ssr: false });
+const CloudDistributionPie = dynamic(() => import('@/components/charts/SimpleCharts').then(mod => mod.CloudDistributionPie), { ssr: false });
+const UptimeTrend = dynamic(() => import('@/components/charts/SimpleCharts').then(mod => mod.UptimeTrend), { ssr: false });
+const ErrorRateArea = dynamic(() => import('@/components/charts/SimpleCharts').then(mod => mod.ErrorRateArea), { ssr: false });
+const FeatureUsageBar = dynamic(() => import('@/components/charts/SimpleCharts').then(mod => mod.FeatureUsageBar), { ssr: false });
+const ComplianceScoresBar = dynamic(() => import('@/components/charts/SimpleCharts').then(mod => mod.ComplianceScoresBar), { ssr: false });
 
 const METRIC_CONFIG: Record<string, any> = {
     // EXECUTIVE SUMMARY (The "Page 1")

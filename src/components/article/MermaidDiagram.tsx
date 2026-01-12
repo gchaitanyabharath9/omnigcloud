@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useEffect, useRef, useState } from 'react';
-import mermaid from 'mermaid';
+
 
 interface MermaidDiagramProps {
     chart: string;
@@ -15,26 +15,30 @@ export default function MermaidDiagram({ chart, caption, figureId }: MermaidDiag
     const [error, setError] = useState<string>('');
 
     useEffect(() => {
-        mermaid.initialize({
-            startOnLoad: false,
-            theme: 'dark',
-            securityLevel: 'loose',
-            fontFamily: 'ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace',
-        });
+        const initMermaid = async () => {
+            const mermaidModule = (await import('mermaid')).default;
+            mermaidModule.initialize({
+                startOnLoad: false,
+                theme: 'dark',
+                securityLevel: 'loose',
+                fontFamily: 'ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace',
+            });
+            return mermaidModule;
+        };
 
         const renderChart = async () => {
             if (!elementRef.current) return;
 
             try {
+                const mermaidModule = await initMermaid();
                 const id = `mermaid-${Math.random().toString(36).substr(2, 9)}`;
-                const { svg } = await mermaid.render(id, chart);
+                const { svg } = await mermaidModule.render(id, chart);
                 setSvg(svg);
                 setError('');
             } catch (err) {
                 console.error('Mermaid rendering error:', err);
                 // Fallback to text if rendering fails
                 setError('Could not render diagram. Please check syntax.');
-                // We keep the original text visible if needed, or just show error
             }
         };
 
