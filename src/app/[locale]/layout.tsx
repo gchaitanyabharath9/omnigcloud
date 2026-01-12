@@ -22,12 +22,14 @@ import { config } from '@/config';
 const inter = Inter({
   variable: "--font-inter",
   subsets: ["latin"],
+  display: 'swap',
 });
 
 const jakarta = Plus_Jakarta_Sans({
   variable: "--font-jakarta",
   subsets: ["latin"],
   weight: ["400", "500", "600", "700", "800"],
+  display: 'swap',
 });
 
 const siteUrl = config.site.url;
@@ -164,6 +166,11 @@ export default async function RootLayout({
     <html lang={locale} suppressHydrationWarning>
       <head>
         <link rel="icon" href="/logo.svg" type="image/svg+xml" sizes="any" />
+        {/* Preconnect to external domains for faster resource loading */}
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link rel="dns-prefetch" href="https://vercel.live" />
+        <link rel="dns-prefetch" href="https://va.vercel-scripts.com" />
       </head>
       <body className={`${inter.variable} ${jakarta.variable}`}>
         <SchemaOrg />
@@ -185,11 +192,12 @@ export default async function RootLayout({
               <ScrollManager />
               <FloatingActions />
               <CookieConsent />
-              <SpeedInsights />
-              <Analytics />
             </ObservabilityProvider>
           </NextIntlClientProvider>
         </ThemeProvider>
+        {/* Load analytics after main content */}
+        <SpeedInsights />
+        <Analytics />
       </body>
     </html>
   );
