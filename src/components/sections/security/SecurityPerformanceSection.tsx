@@ -4,9 +4,9 @@ import React, { useState, useEffect } from 'react';
 import dynamic from 'next/dynamic';
 import { Activity, Server, ShieldAlert } from 'lucide-react';
 
-const LatencyChart = dynamic(() => import('../../charts/MetricsCharts').then(mod => mod.LatencyChart), { ssr: false, loading: () => <ChartSkeleton /> });
-const RpsChart = dynamic(() => import('../../charts/MetricsCharts').then(mod => mod.RpsChart), { ssr: false, loading: () => <ChartSkeleton /> });
-const ErrorRateChart = dynamic(() => import('../../charts/MetricsCharts').then(mod => mod.ErrorRateChart), { ssr: false, loading: () => <ChartSkeleton /> });
+const LatencyChart = dynamic(() => import('../../charts/MetricsCharts').then(mod => mod.LatencyChart), { loading: () => <ChartSkeleton /> });
+const RpsChart = dynamic(() => import('../../charts/MetricsCharts').then(mod => mod.RpsChart), { loading: () => <ChartSkeleton /> });
+const ErrorRateChart = dynamic(() => import('../../charts/MetricsCharts').then(mod => mod.ErrorRateChart), { loading: () => <ChartSkeleton /> });
 
 function ChartSkeleton() {
     return <div className="w-full h-full bg-slate-800/20 animate-pulse rounded-xl" />;

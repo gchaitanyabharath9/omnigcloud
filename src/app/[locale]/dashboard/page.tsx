@@ -12,12 +12,12 @@ import DashboardScroller from '@/features/dashboard/DashboardScroller';
 import MetricDashboardLayout from '@/features/dashboard/MetricDashboardLayout';
 import dynamic from 'next/dynamic';
 
-const LatencyLineChart = dynamic(() => import('@/components/charts/SimpleCharts').then(mod => mod.LatencyLineChart), { ssr: false });
-const CloudDistributionPie = dynamic(() => import('@/components/charts/SimpleCharts').then(mod => mod.CloudDistributionPie), { ssr: false });
-const UptimeTrend = dynamic(() => import('@/components/charts/SimpleCharts').then(mod => mod.UptimeTrend), { ssr: false });
-const ErrorRateArea = dynamic(() => import('@/components/charts/SimpleCharts').then(mod => mod.ErrorRateArea), { ssr: false });
-const FeatureUsageBar = dynamic(() => import('@/components/charts/SimpleCharts').then(mod => mod.FeatureUsageBar), { ssr: false });
-const ComplianceScoresBar = dynamic(() => import('@/components/charts/SimpleCharts').then(mod => mod.ComplianceScoresBar), { ssr: false });
+const LatencyLineChart = dynamic(() => import('@/components/charts/SimpleCharts').then(mod => mod.LatencyLineChart));
+const CloudDistributionPie = dynamic(() => import('@/components/charts/SimpleCharts').then(mod => mod.CloudDistributionPie));
+const UptimeTrend = dynamic(() => import('@/components/charts/SimpleCharts').then(mod => mod.UptimeTrend));
+const ErrorRateArea = dynamic(() => import('@/components/charts/SimpleCharts').then(mod => mod.ErrorRateArea));
+const FeatureUsageBar = dynamic(() => import('@/components/charts/SimpleCharts').then(mod => mod.FeatureUsageBar));
+const ComplianceScoresBar = dynamic(() => import('@/components/charts/SimpleCharts').then(mod => mod.ComplianceScoresBar));
 
 const METRIC_CONFIG: Record<string, any> = {
     // EXECUTIVE SUMMARY (The "Page 1")
