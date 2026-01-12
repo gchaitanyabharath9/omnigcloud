@@ -55,7 +55,7 @@ test.describe('Quality Gate - Core Navigation & UI', () => {
                 }
             });
 
-            test.setTimeout(60000);
+            test.setTimeout(90000); // Increased for image optimization on first load
 
             test('initial block load & layout integrity', async ({ page, baseURL }) => {
                 const HOST = baseURL || 'http://localhost:3000';
@@ -83,8 +83,8 @@ test.describe('Quality Gate - Core Navigation & UI', () => {
                 await page.goto(url, { waitUntil: 'networkidle' });
 
                 // Wait for the section to be present in DOM (lazy-loaded components may take time)
-                await page.waitForSelector('#playground', { timeout: 15000 });
-                await page.waitForTimeout(3000); // Additional wait for scroll animation and lazy components
+                await page.waitForSelector('#playground', { timeout: 20000 });
+                await page.waitForTimeout(5000); // Additional wait for scroll animation, lazy components, and image optimization
 
                 // Verify hash in URL
                 expect(page.url()).toContain('#playground');
@@ -132,8 +132,8 @@ test.describe('Quality Gate - Core Navigation & UI', () => {
                 console.log(`[DEBUG] ${locale} switch successful. New URL: ${page.url()}`);
 
                 // Wait for the section to be present after language switch
-                await page.waitForSelector('#playground', { timeout: 15000 });
-                await page.waitForTimeout(3000); // Wait for lazy components and scroll
+                await page.waitForSelector('#playground', { timeout: 20000 });
+                await page.waitForTimeout(5000); // Wait for lazy components, scroll, and image optimization
 
                 const scrollInfo = await page.evaluate(() => {
                     const el = document.getElementById('playground');
