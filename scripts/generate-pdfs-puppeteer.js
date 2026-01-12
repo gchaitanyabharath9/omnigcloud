@@ -129,6 +129,7 @@ const HTML_TEMPLATE = `
       startOnLoad: false,
       theme: 'default',
       themeVariables: {
+        fontSize: '20px', // Larger font for readability
         primaryColor: '#4A90E2',
         primaryTextColor: '#fff',
         primaryBorderColor: '#2E5C8A',
@@ -157,17 +158,21 @@ const HTML_TEMPLATE = `
       sequence: { 
         useMaxWidth: false,
         actorMargin: 100,
-        boxMargin: 20
+        boxMargin: 20,
+        messageFontSize: 20,
+        noteFontSize: 18,
+        actorFontSize: 20
       },
       gantt: { 
         useMaxWidth: false,
-        barHeight: 30,
-        fontSize: 12
+        barHeight: 40,
+        fontSize: 18,
+        sectionFontSize: 20
       },
       journey: { useMaxWidth: false },
-      er: { useMaxWidth: false },
+      er: { useMaxWidth: false, fontSize: 18 },
       class: { useMaxWidth: false },
-      state: { useMaxWidth: false },
+      state: { useMaxWidth: false, fontSize: 18 },
       pie: { useMaxWidth: false }
     });
     
@@ -200,15 +205,34 @@ const HTML_TEMPLATE = `
           // Constrain diagram size and add colorful styling
           const svgElement = container.querySelector('svg');
           if (svgElement) {
-            const width = parseInt(svgElement.getAttribute('width') || '800');
-            const height = parseInt(svgElement.getAttribute('height') || '600');
+            // Get original dimensions
+            const viewBox = svgElement.getAttribute('viewBox');
+            let width, height;
             
-            // Scale down if too large
-            if (width > 700 || height > 500) {
-              const scale = Math.min(700 / width, 500 / height);
-              svgElement.style.transform = \`scale(\${scale})\`;
-              svgElement.style.transformOrigin = 'top left';
-              container.style.height = \`\${height * scale}px\`;
+            if (viewBox) {
+              const parts = viewBox.split(/\s+|,/);
+              width = parseFloat(parts[2]);
+              height = parseFloat(parts[3]);
+            } else {
+              width = parseInt(svgElement.getAttribute('width') || '800');
+              height = parseInt(svgElement.getAttribute('height') || '600');
+            }
+            
+            // Set max width without shrinking if possible
+            const MAX_WIDTH = 750; // Increased readable width
+            
+            if (width > MAX_WIDTH) {
+              // Instead of strict transform scaling which shrinks text, 
+              // we set width to 100% and let it contain specific max width
+              svgElement.style.width = '100%';
+              svgElement.style.maxWidth = \`\${MAX_WIDTH}px\`;
+              svgElement.style.height = 'auto'; // Maintain aspect ratio
+              
+              // Ensure container fits
+              container.style.width = '100%';
+            } else {
+              svgElement.style.width = \`\${width}px\`;
+              svgElement.style.height = \`\${height}px\`;
             }
           }
           
@@ -342,12 +366,18 @@ const HTML_TEMPLATE = `
       background: linear-gradient(135deg, #F5F5F5 0%, #E8E8E8 100%);
       padding: 14pt;
       border-radius: 6px;
-      overflow-x: auto;
       page-break-inside: avoid;
       page-break-before: avoid;
       margin: 14pt 0;
       border-left: 5px solid #4A90E2;
       box-shadow: 0 3px 6px rgba(0,0,0,0.15);
+      
+      /* WRAPPING FIXES */
+      white-space: pre-wrap;
+      word-wrap: break-word;
+      word-break: break-all;
+      overflow-x: hidden;
+      max-width: 100%;
     }
     
     pre code {
