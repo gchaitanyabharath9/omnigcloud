@@ -29,7 +29,7 @@ jobs:
       - name: "Step 1: Build Application"
         run: "npm run build"
         env:
-          APP_ENV: "local"
+          APP_ENV: "production"
           NEXT_PUBLIC_SITE_URL: "http://localhost:3000"
           AUTH_SECRET: ${{ secrets.AUTH_SECRET || 'dummy_secret_for_ci' }}
 
@@ -37,9 +37,13 @@ jobs:
         run: |
           npm run qa:inventory
           npx tsx qa-i18n/scripts/generate-urls.ts
+        env:
+          APP_ENV: "production"
 
       - name: "Step 3: Verify i18n Coverage (Strict Gate)"
         run: "npm run qa:i18n"
+        env:
+          APP_ENV: "production"
 
       - name: "Step 4: Upload Build Artifacts"
         uses: "actions/upload-artifact@v4"
