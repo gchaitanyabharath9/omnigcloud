@@ -73,7 +73,7 @@ The tension arises because these forces conflict in ways that aren't obvious unt
 Conventional cloud-native patterns work well below a certain scale threshold. Above this threshold, systems experience a "cliff of failure"—stability degrades rapidly rather than gracefully. This isn't a gentle slope. It's a cliff.
 
 ```mermaid
-xychart-beta
+xychart
     title "System Stability vs Scale"
     x-axis "Operational Scale (Log)" ["10", "100", "1k", "10k", "100k"]
     y-axis "Stability %" 0 --> 100
@@ -252,27 +252,26 @@ Configuration distribution must not block the data plane. Therefore, control pla
 To resolve the enterprise architecture tension, we partition the system into three independent planes that share nothing synchronously. This isn't just organizational—it's enforced through network isolation, resource quotas, and deployment boundaries.
 
 ```mermaid
-block-beta
-    columns 3
-    block:Control
-        columns 1
+graph TD
+    subgraph Control [Control Plane]
+
         Orchestrator
         Configdist
     end
-    space
-    block:Governance
-        columns 1
+
+    subgraph Governance [Governance Plane]
+
         PolicyEngine
         AuditLog
     end
     
-    block:Data
-        columns 3
+    subgraph Data [Data Plane]
+        direction LR
         Ingress --> App --> Database
     end
     
-    Control -- Async Push --> Data
-    Governance -- WASM Push --> Data
+    Control -.->|Async Push| Data
+    Governance -.->|WASM Push| Data
     
     style Control fill:#f96
     style Governance fill:#9cf

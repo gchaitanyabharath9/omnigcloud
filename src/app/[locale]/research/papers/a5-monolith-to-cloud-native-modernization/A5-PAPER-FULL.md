@@ -227,13 +227,13 @@ stateDiagram-v2
     state "4. Cutover (Live)" as S4
     
     [*] --> S1
-    S1 --> S1 : Writes go to Both DBs
-    S1 --> S2 : New DB has Live Data
-    S2 --> S2 : Batch Copy History
-    S2 --> S3 : Consistency > 99.9%
-    S3 --> S3 : Compare Reads (Shadow)
-    S3 --> S4 : Zero Errors for 7 days
-    S4 --> [*] : Old DB Deprecated
+    S1 --> S1 : "Writes go to Both DBs"
+    S1 --> S2 : "New DB has Live Data"
+    S2 --> S2 : "Batch Copy History"
+    S2 --> S3 : "Consistency > 99.9%"
+    S3 --> S3 : "Compare Reads (Shadow)"
+    S3 --> S4 : "Zero Errors for 7 days"
+    S4 --> [*] : "Old DB Deprecated"
     
     style S1 fill:#f56565,color:white
     style S4 fill:#48bb78,color:white

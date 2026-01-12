@@ -119,7 +119,7 @@ We measured α and β for three production systems by running controlled load te
 - Failure Mode: None under test conditions; bottleneck shifts to network bandwidth (10 Gbps per node) rather than coordination
 
 ```mermaid
-xychart-beta
+xychart
     title "Throughput vs Concurrency (USL)"
     x-axis "Concurrency (Nodes)" [1, 10, 50, 100, 500, 1000]
     y-axis "Throughput (RPS)" 0 --> 1000000

@@ -188,12 +188,10 @@ const HTML_TEMPLATE = `
         let code = diagram.textContent.trim();
         
         // Fix common Mermaid syntax issues
-        // Fix block-beta syntax (not supported in Mermaid 11)
-        if (code.includes('block-beta')) {
-          code = code.replace(/block-beta/g, 'graph TD');
-          code = code.replace(/columns \\d+/g, '');
-          code = code.replace(/block:/g, 'subgraph ');
-          code = code.replace(/end(?!\\s*subgraph)/g, 'end');
+        // Fix common Mermaid syntax issues
+        // Replace xychart-beta with xychart for compatibility if it slipped through manual checks
+        if (code.includes('xychart-beta')) {
+          code = code.replace(/xychart-beta/g, 'xychart');
         }
         
         try {

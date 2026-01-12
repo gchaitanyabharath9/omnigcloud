@@ -38,8 +38,8 @@ AECP inverts this entirely: **policy is the primary primitive, not compute**. Th
 
 ```mermaid
 graph TD
-    subgraph Traditional["Traditional Model (Overlay)"]
-        direction TB
+    subgraph Traditional [Traditional Model (Overlay)]
+
         Infra1[Infrastructure Layer] -->|Supports| App1[Application Logic]
         Policy1[Policy Rules] -.->|Applied To| Infra1
         Constraint1[Compliance Check] -.->|Audit After| Infra1
@@ -48,11 +48,11 @@ graph TD
         style Infra1 fill:#bbf,stroke:#333
     end
 
-    subgraph AECP["AECP Model (Inverted)"]
+    subgraph AECP ["AECP Model (Inverted)"]
         direction TB
-        Intent2[Policy Intent (Legislative)] -->|Compiles To| WASM2[Enforcement Agent]
-        WASM2 -->|Permits| Infra2[Infrastructure Provisioning]
-        WASM2 -->|Permits| App2[Application Execution]
+        Intent2["Policy Intent (Legislative)"] -->|Compiles To| WASM2["Enforcement Agent"]
+        WASM2 -->|Permits| Infra2["Infrastructure Provisioning"]
+        WASM2 -->|Permits| App2["Application Execution"]
         Infra2 -.->|Derived From| Intent2
         
         style Intent2 fill:#f96,stroke:#333,stroke-width:2px
@@ -154,17 +154,17 @@ The Executive Layer consists of distributed sidecars that enforce policy at the 
 
 ```mermaid
 graph TD
-    Judicial[Judicial Plane (Compiler)] -->|Async Push| Distribution[Distribution Network]
+    Judicial["Judicial Plane (Compiler)"] -->|Async Push| Distribution["Distribution Network"]
     
-    subgraph "Edge Node (Compute)"
-        Distribution -.->|Hot Reload| Sidecar[Policy Sidecar (WASM)]
-        Ingress[Ingress Traffic] --> Sidecar
-        Sidecar -->|Allow| Service[Business Logic]
-        Sidecar -->|Deny| Block[403 Forbidden]
-        Sidecar -.->|Async Log| Buffer[Audit Buffer]
+    subgraph EdgeNode ["Edge Node (Compute)"]
+        Distribution -.->|Hot Reload| Sidecar["Policy Sidecar (WASM)"]
+        Ingress["Ingress Traffic"] --> Sidecar
+        Sidecar -->|Allow| Service["Business Logic"]
+        Sidecar -->|Deny| Block["403 Forbidden"]
+        Sidecar -.->|Async Log| Buffer["Audit Buffer"]
     end
     
-    Buffer -->|Batch Flush| Aggregator[Audit Aggregator]
+    Buffer -->|Batch Flush| Aggregator["Audit Aggregator"]
     
     style Judicial fill:#f96
     style Sidecar fill:#9cf,stroke-width:2px

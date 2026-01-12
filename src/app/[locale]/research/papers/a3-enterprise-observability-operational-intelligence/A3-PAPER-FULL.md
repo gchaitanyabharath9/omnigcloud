@@ -156,7 +156,7 @@ Time-series databases have hard limits on cardinality:
 Beyond the performance cliff, query latency degrades exponentially:
 
 ```mermaid
-xychart-beta
+xychart
     title "Query Latency vs Cardinality"
     x-axis "Cardinality (Log Scale)" ["10k", "100k", "1M", "10M", "100M"]
     y-axis "Query Latency (ms)" 0 --> 10000

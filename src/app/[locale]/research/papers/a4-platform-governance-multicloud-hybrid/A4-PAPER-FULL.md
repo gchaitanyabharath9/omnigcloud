@@ -106,14 +106,14 @@ sequenceDiagram
     participant OPA as OPA Bundle Service
     participant Cluster as K8s Cluster
     
-    Dev->>Git: Push Policy (allow_http = false)
-    Git->>CI: Trigger Test
-    CI->>CI: Run Unit Tests (Rego)
-    CI-->>OPA: Publish .tar.gz Bundle
+    Dev->>Git: "Push Policy (allow_http = false)"
+    Git->>CI: "Trigger Test"
+    CI->>CI: "Run Unit Tests (Rego)"
+    CI-->>OPA: "Publish .tar.gz Bundle"
     
     loop Every 60s
-        Cluster->>OPA: Poll for Updates
-        OPA-->>Cluster: New Policy Bundle
+        Cluster->>OPA: "Poll for Updates"
+        OPA-->>Cluster: "New Policy Bundle"
     end
 ```
 
@@ -403,10 +403,10 @@ We forbid `kubectl apply` and ClickOps. All state is reconciled from Git.
 gitGraph
     commit id: "Initial"
     branch feature/new-app
-    commit id: "Add Manifests"
+    commit id: "Add-Manifests"
     checkout main
     merge feature/new-app tag: "v1.0"
-    commit id: "Sync: ArgoCD"
+    commit id: "Sync-ArgoCD"
 ```
 
 **Figure 3:** GitOps Workflow. The state of the cluster is the state of the main branch. Manual changes are automatically reverted.
