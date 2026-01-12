@@ -94,34 +94,41 @@ The core of A6 is the OODA loop implemented as code:
 
 ```mermaid
 graph TD
-    subgraph A3 ["A3: OBSERVE (Sensors)"]
-        Log[Logs]
-        Metric[Metrics (Latency)]
-        Trace[Traces]
+    subgraph A3 ["1. OBSERVE (A3)"]
+        M["Metrics: Latency/Errors"]
+        L["Logs: Exceptions"]
+        T["Traces: Bottlenecks"]
     end
-    
-    subgraph A6 ["A6: DECIDE (Brain)"]
-        Policy[Policy Engine (OPA)]
-        Threshold{Is Latency > 200ms?}
+
+    A3 --> Orient
+
+    subgraph Orient ["2. ORIENT (Context)"]
+        B[Baseline Analysis]
+        A[Anomaly Detection]
     end
-    
-    subgraph A2 ["A2: ACT (Actuators)"]
-        Shed[Load Shedder]
-        Scale[Autoscaler]
-        Circuit[Circuit Breaker]
+
+    Orient --> Decide
+
+    subgraph Decide ["3. DECIDE (A4/A6)"]
+        P["Policy Evaluation (Rego)"]
+        C["Conflict resolution"]
     end
-    
-    Metric --> Threshold
-    Threshold -->|Yes| Policy
-    Policy -->|Action: Shed Tier 3 Traffic| Shed
-    Shed -->|Result: Load Drops| Metric
-    
-    style Policy fill:#d53f8c,stroke:#fff
-    style Metric fill:#4299e1,stroke:#fff
-    style Shed fill:#48bb78,stroke:#fff
+
+    Decide --> Act
+
+    subgraph Act ["4. ACT (A2)"]
+        S[Load Shedder]
+        CB[Circuit Breaker]
+        AS[Autoscaler]
+    end
+
+    Act -.->|Feedback| A3
+
+    style Decide fill:#d53f8c,color:white
+    style Act fill:#16a34a,color:white
 ```
 
-**Figure 1:** The Autonomic Control Loop. The system constantly monitors its own vitals. When latency spikes, it doesn't just alert a human; it actively sheds non-critical load (Tier 3) to save the critical core (Tier 1).
+**Figure 1:** The Autonomic OODA Control Loop. Integrating Observability (A3), Governance (A4), and Throughput Control (A2) into a recursive feedback loop that enables millisecond-level autonomous remediation.
 
 ### 2.2 Mapping A-Series to OODA
 
@@ -283,10 +290,12 @@ Policies conflict. We need a resolution order. A6 establishes that **Survival** 
 
 ```mermaid
 graph TD
-    Level0[L0: Survival (Prevent Total Failure)]
-    Level1[L1: Security (Prevent Breach)]
-    Level2[L2: Correctness (Prevent Data Corruption)]
-    Level3[L3: Availability (Prevent User Impact)]
+    subgraph Levels
+        Level0["L0: Survival (Prevent Total Failure)"]
+        Level1["L1: Security (Prevent Breach)"]
+        Level2["L2: Correctness (Prevent Data Corruption)"]
+        Level3["L3: Availability (Prevent User Impact)"]
+    end
     
     Level0 -->|Constrains| Level1
     Level1 -->|Constrains| Level2
@@ -354,33 +363,29 @@ graph TD
 A single request flows through all A-series components:
 
 ```mermaid
-sequenceDiagram
-    participant Client
-    participant A2_Ingress as A2: Ingress
-    participant A4_Policy as A4: Policy
-    participant A5_Proxy as A5: Strangler
-    participant A3_Backend as A3: Backend
-    participant A6_Control as A6: Control Plane
-    
-    Client->>A2_Ingress: POST /transfer
-    A2_Ingress->>A2_Ingress: Check Rate Limit (A2)
-    
-    A2_Ingress->>A4_Policy: Check AuthZ (OPA)
-    A4_Policy-->>A2_Ingress: Allow (A4)
-    
-    A2_Ingress->>A5_Proxy: Forward
-    A5_Proxy->>A5_Proxy: Shadow to V2 (A5)
-    
-    A5_Proxy->>A3_Backend: Process
-    A3_Backend->>A3_Backend: Emit Trace (A3)
-    
-    A3_Backend->>A6_Control: Report Metrics
-    A6_Control->>A6_Control: Analyze (OODA)
-    
-    A3_Backend-->>Client: 200 OK
+graph TD
+    subgraph Synthesis ["The Sovereign Architecture Synthesis"]
+        A1[A1: Plane Separation]
+        A2[A2: High Throughput]
+        A3[A3: Observability]
+        A4[A4: Governance]
+        A5[A5: Modernization]
+        
+        A6((A6: Sovereign Control))
+    end
+
+    A1 --> A2
+    A2 --> A3
+    A3 --> A4
+    A4 --> A5
+    A5 -.-> A6
+    A6 -->|Feedback| A2
+    A6 -->|Decision| A4
+
+    style A6 fill:#d53f8c,color:white,stroke-width:4px
 ```
 
-**Figure 4:** The Unified Flow.
+**Figure 4:** The Unified Sovereign Architecture. A6 acts as the "Meta-Control Plane", binding the operational primitives of A1-A5 into a self-healing, biological digital organism.
 
 ### 5.2 Component Responsibilities
 

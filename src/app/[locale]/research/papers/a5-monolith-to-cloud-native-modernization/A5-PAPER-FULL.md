@@ -118,21 +118,25 @@ Rather than rewriting the monolith, we strangle it. A facade (API Gateway) sits 
 
 ```mermaid
 graph TD
-    Client[Client App] -->|HTTPS| Proxy[Strangler Facade (Gateway)]
+    Client[Client Request] --> Facade[Strangler Facade]
     
-    Proxy -->|Route: /users| New[New User Service]
-    Proxy -->|Route: /shipping| Legacy[Monolith (Legacy)]
-    Proxy -->|Route: /billing| Legacy
-    
-    New -->|Read| NewDB[(User DB)]
-    Legacy -->|Read/Write| OldDB[(Legacy DB)]
-    
-    style Proxy fill:#805ad5,stroke:#fff
-    style New fill:#48bb78,stroke:#fff
-    style Legacy fill:#e53e3e,stroke:#fff
+    subgraph Routing ["Routing Intent"]
+        Facade -->|New Path /v2| Micro[New Microservice]
+        Facade -->|Legacy Path| Mono[Monolith]
+        Facade -->|Canary 10%| Micro
+    end
+
+    subgraph Boundaries ["Domain Boundaries"]
+        Micro --> ACL[Anti-Corruption Layer]
+        ACL --> Mono
+    end
+
+    style Facade fill:#805ad5,color:white
+    style Micro fill:#16a34a,color:white
+    style Mono fill:#dc2626,color:white
 ```
 
-**Figure 1:** The Strangler Facade. The client has no idea that the backend is being migrated. We slowly flip routes from red (legacy) to green (new) one by one.
+**Figure 1:** The Strangler Facade with Architectural Decoupling. The facade handles routing, while the Anti-Corruption Layer (ACL) ensures the new microservice's domain model remains clean despite backend dependencies on the monolith.
 
 ### 2.2 Routing Strategies
 
@@ -374,31 +378,31 @@ To prevent this mess from infecting the clean microservice, we insert an Anti-Co
 
 ```mermaid
 graph LR
-    subgraph Legacy [Legacy Monolith]
-        Mud[Big Ball of Mud (God Class)]
+    subgraph Legacy ["Legacy Domain (God Object)"]
+        U[User Table]
+        U --- B[Billing]
+        U --- P[Profile]
+        U --- A[Auth]
     end
-    
-    subgraph ACL [Anti-Corruption Layer]
-        Facade[Facade Interface]
-        Adapter[Adapter Logic]
-        Translator[Translator (Map DTOs)]
-    end
-    
-    subgraph New [New Microservice]
-        Clean[Clean Domain Model]
-    end
-    
-    Mud --> Facade
-    Facade --> Adapter
-    Adapter --> Translator
-    Translator --> Clean
 
-    style Legacy fill:#718096,color:white
+    subgraph ACL ["Anti-Corruption Layer"]
+        T[Translator / Map]
+        V[Validator]
+    end
+
+    subgraph Micro ["New Microservice (DDD)"]
+        S1[Auth Service]
+        S2[Profile Service]
+    end
+
+    U --> T
+    T --> S1
+    T --> S2
+
     style ACL fill:#d69e2e,color:white
-    style New fill:#38b2ac,color:white
 ```
 
-**Figure 3:** The ACL acts as a DMZ. It translates the monolith's "God Object" into a focused, domain-driven entity for the new service.
+**Figure 3:** Domain Translation via ACL. The ACL acts as a semantic boundary, translating the monolithic "Big Ball of Mud" into discrete, bounded contexts required for microservices (DDD).
 
 ### 4.2 ACL Implementation Patterns
 

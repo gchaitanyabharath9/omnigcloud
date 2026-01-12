@@ -5,20 +5,45 @@ import AuthorBio from '@/components/article/AuthorBio';
 import MermaidDiagram from '@/components/article/MermaidDiagram';
 import { ChevronRight, FileText, Calendar, Tag, ShieldCheck, Layers, ArrowRight } from 'lucide-react';
 
+export const revalidate = 86400; // Cache for 24 hours (ISR)
+
+export function generateStaticParams() {
+    return ['en', 'es', 'fr', 'de', 'zh', 'hi', 'ja', 'ko'].map((locale) => ({ locale }));
+}
+
+
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
     const { locale } = await params;
     return {
         title: 'The Enterprise Architecture Tension | OmniGCloud Research',
         description: 'Examining the conflict between sovereignty, scale, and operational complexity in cloud-native platforms.',
         alternates: {
-            canonical: 'https://www.omnigcloud.com/en/research/scholarly-article-enterprise-architecture'
+            canonical: `https://www.omnigcloud.com/${locale}/research/scholarly-article`
+        },
+        robots: {
+            index: false,
+            follow: true,
+            nocache: true,
+            googleBot: {
+                index: false,
+                follow: true,
+                noimageindex: true,
+            },
         },
         openGraph: {
-            title: 'The Enterprise Architecture Tension',
+            title: 'The Enterprise Architecture Tension | OmniGCloud Research',
             description: 'Why conventional cloud-native patterns fail at enterprise scale.',
             type: 'article',
             publishedTime: '2026-01-08T12:00:00.000Z',
             authors: ['Chaitanya Bharath Gopu'],
+        },
+        other: {
+            'citation_title': 'The Enterprise Architecture Tension: Reconciling Sovereignty, Scale, and Operational Complexity',
+            'citation_author': 'Chaitanya Bharath Gopu',
+            'citation_publication_date': '2026/01/08',
+            'citation_journal_title': 'OmniGCloud Technical Research Repository',
+            'citation_language': 'en',
+            'citation_technical_report_number': 'IND-RES-01'
         }
     };
 }
@@ -169,7 +194,7 @@ export default async function ScholarlyArticlePage({ params }: { params: Promise
                                 </div>
                                 <div>
                                     <div className="text-xs uppercase text-slate-500 mb-1">Version</div>
-                                    <div className="text-foreground">2.1 (Gold)</div>
+                                    <div className="text-foreground">3.0 (Gold)</div>
                                 </div>
                                 <div>
                                     <div className="text-xs uppercase text-slate-500 mb-1">Published</div>

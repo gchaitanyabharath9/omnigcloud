@@ -2,7 +2,7 @@
 
 **Author:** Chaitanya Bharath Gopu  
 **Classification:** Position Paper / Industry Research  
-**Version:** 3.0  
+**Version:** 3.0 (Gold Standard)  
 **Date:** January 2026
 
 ---
@@ -379,6 +379,72 @@ Regional failure affects only traffic in that region. Global load balancer redir
 | Region | 1/3 regions | 15 min | <1 min | Global LB redirects traffic |
 
 The key insight: failure domains are bounded by infrastructure topology (instance, cell, region), not by service type. A failure in the authentication service doesn't cascade to the payment service because they're in different failure domains.
+
+---
+
+## 5.3 Data Sovereignty Enforcement Logic
+
+The enforcement of sovereignty requires a precise sequence where the user's regional identity is verified against the resource's residency policy *before* any data access occurs.
+
+```mermaid
+sequenceDiagram
+    participant U as Global User
+    participant G as Ingress Gateway
+    participant P as Policy Engine (WASM)
+    participant S as Regional Service
+    participant D as Data Store
+
+    U->>G: Request Resource (EU-12345)
+    G->>P: Verify Identity & Location (JWT)
+    P->>P: Check Residency Policy (A4)
+    alt Location Valid (EU)
+        P-->>G: ALLOW
+        G->>S: Forward Request
+        S->>D: Queried Encrypted Segment
+        D-->>S: Payload
+        S-->>G: Response
+        G-->>U: Secure Result
+    else Location Invalid (e.g. US)
+        P-->>G: DENY (Residency Violation)
+        G-->>U: 403 Forbidden (Non-Sovereign Access)
+    end
+```
+
+**Figure 7:** Data Sovereignty Enforcement Logic. The system enforces geographic boundaries at the cryptographic layer, preventing cross-continent data leakage.
+
+## 5.4 Architectural Migration Path
+
+Transitioning from a legacy centralized architecture to a sovereign cellular model requires three distinct phases to manage risk and maintain availability.
+
+```mermaid
+graph LR
+    subgraph Legacy [Phase 1: Chaos]
+        M["Central Monolith"]
+        E["Shared ESB"]
+        M --- E
+    end
+
+    subgraph Intermediate [Phase 2: Decoupling]
+        S1["Service A"]
+        S2["Service B"]
+        A["Anti-Corruption Layer"]
+        S1 --- A
+        S2 --- A
+    end
+
+    subgraph Sovereign [Phase 3: Gold Standard]
+        C1["Sovereign Cell (EU)"]
+        C2["Sovereign Cell (US)"]
+        G["Meta-Control Plane"]
+        G -.-> C1
+        G -.-> C2
+    end
+
+    Legacy --> Intermediate
+    Intermediate --> Sovereign
+```
+
+**Figure 8:** Architectural Migration Path. From Monolith/ESB bottlenecks through Decoupling to Sovereign Cellularity (AECP).
 
 ---
 

@@ -31,7 +31,7 @@ jobs:
         env:
           APP_ENV: "ci"
           NEXT_PUBLIC_SITE_URL: "http://localhost:3000"
-          AUTH_SECRET: ${{ secrets.AUTH_SECRET || 'dummy_secret_for_ci' }}
+          AUTH_SECRET: "dummy_secret_for_ci_build_32_chars_long"
 
       - name: "Step 2: Generate Inventory & URLs"
         run: |

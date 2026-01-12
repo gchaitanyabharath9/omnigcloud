@@ -2,6 +2,12 @@ import { Metadata } from 'next';
 import Link from 'next/link';
 import { BookOpen, ChevronRight, Layers } from 'lucide-react';
 
+export const revalidate = 86400; // Cache for 24 hours (ISR)
+
+export function generateStaticParams() {
+    return ['en', 'es', 'fr', 'de', 'zh', 'hi', 'ja', 'ko'].map((locale) => ({ locale }));
+}
+
 export const metadata: Metadata = {
     title: 'Research Frameworks | OmniGCloud Research',
     description: 'Theoretical frameworks and architectural models developed by OmniGCloud Research.',
@@ -13,7 +19,7 @@ const FRAMEWORKS = [
         slug: "aecp",
         title: "Adaptive Enterprise Control Plane (AECP)",
         description: "A theoretical framework for managing entropy in hyper-scale distributed systems. It posits that governance in multi-cloud environments cannot be achieved through static 'gatekeeping' but requires a dynamic, probabilistic control loop that treats 'Policy' as a first-class distinct primitive from 'Infrastructure'.",
-        version: "1.0 (Stable)",
+        version: "3.0 (Gold Standard)",
         date: "Jan 2026",
         category: "Theoretical Framework"
     }

@@ -1,0 +1,61 @@
+≡ƒÜÇ Starting PDF generation with colorful styling...
+
+≡ƒîÉ Launching browser...
+
+≡ƒôä Converting A1 Paper...
+  Rendered 6 diagrams successfully, 0 errors
+  Γ£à Successfully converted A1 Paper (6 diagrams rendered, 0 errors)
+
+≡ƒôä Converting A2 Paper...
+  Rendered 8 diagrams successfully, 0 errors
+  Γ£à Successfully converted A2 Paper (8 diagrams rendered, 0 errors)
+
+≡ƒôä Converting A3 Paper...
+  Rendered 6 diagrams successfully, 0 errors
+  Γ£à Successfully converted A3 Paper (6 diagrams rendered, 0 errors)
+
+≡ƒôä Converting A4 Paper...
+  Failed to render diagram 1: Parse error on line 3:
+... OIDC[OIDC Provider (Okta/Keycloak)]   
+-----------------------^
+Expecting 'SQE', 'DOUBLECIRCLEEND', 'PE', '-)', 'STADIUMEND', 'SUBROUTINEEND', 'PIPE', 'CYLINDEREND', 'DIAMOND_STOP', 'TAGEND', 'TRAPEND', 'INVTRAPEND', 'UNICODE_TEXT', 'TEXT', 'TAGSTART', got 'PS'
+  Rendered 4 diagrams successfully, 1 errors
+  Error details: JSHandle@array
+  Γ£à Successfully converted A4 Paper (4 diagrams rendered, 1 errors)
+
+≡ƒôä Converting A5 Paper...
+  Rendered 5 diagrams successfully, 0 errors
+  Γ£à Successfully converted A5 Paper (5 diagrams rendered, 0 errors)
+
+≡ƒôä Converting A6 Paper...
+  Failed to render diagram 0: Parse error on line 4:
+...     Metric[Metrics (Latency)]        T
+-----------------------^
+Expecting 'SQE', 'DOUBLECIRCLEEND', 'PE', '-)', 'STADIUMEND', 'SUBROUTINEEND', 'PIPE', 'CYLINDEREND', 'DIAMOND_STOP', 'TAGEND', 'TRAPEND', 'INVTRAPEND', 'UNICODE_TEXT', 'TEXT', 'TAGSTART', got 'PS'
+  Failed to render diagram 2: Parse error on line 2:
+...Level0[L0: Survival (Prevent Total Failu
+-----------------------^
+Expecting 'SQE', 'DOUBLECIRCLEEND', 'PE', '-)', 'STADIUMEND', 'SUBROUTINEEND', 'PIPE', 'CYLINDEREND', 'DIAMOND_STOP', 'TAGEND', 'TRAPEND', 'INVTRAPEND', 'UNICODE_TEXT', 'TEXT', 'TAGSTART', got 'PS'
+  Rendered 3 diagrams successfully, 2 errors
+  Error details: JSHandle@array
+  Γ£à Successfully converted A6 Paper (3 diagrams rendered, 2 errors)
+
+≡ƒôä Converting Scholarly Article...
+  Rendered 8 diagrams successfully, 0 errors
+  Γ£à Successfully converted Scholarly Article (8 diagrams rendered, 0 errors)
+
+≡ƒôä Converting AECP Framework...
+  Failed to render diagram 0: Parse error on line 2:
+... [Traditional Model (Overlay)]Infra1[In
+-----------------------^
+Expecting 'SQE', 'DOUBLECIRCLEEND', 'PE', '-)', 'STADIUMEND', 'SUBROUTINEEND', 'PIPE', 'CYLINDEREND', 'DIAMOND_STOP', 'TAGEND', 'TRAPEND', 'INVTRAPEND', 'UNICODE_TEXT', 'TEXT', 'TAGSTART', got 'PS'
+  Failed to render diagram 3: Parse error on line 8:
+...cial[Judicial Plane (Compiler)]        
+-----------------------^
+Expecting 'SQE', 'DOUBLECIRCLEEND', 'PE', '-)', 'STADIUMEND', 'SUBROUTINEEND', 'PIPE', 'CYLINDEREND', 'DIAMOND_STOP', 'TAGEND', 'TRAPEND', 'INVTRAPEND', 'UNICODE_TEXT', 'TEXT', 'TAGSTART', got 'PS'
+  Rendered 9 diagrams successfully, 2 errors
+  Error details: JSHandle@array
+  Γ£à Successfully converted AECP Framework (9 diagrams rendered, 2 errors)
+
+Γ£à PDF generation complete!
+≡ƒôü PDFs saved to: C:\Users\SOHAN\.gemini\antigravity\playground\nascent-zodiac\publication-pdfs

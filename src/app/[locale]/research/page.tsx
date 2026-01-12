@@ -3,6 +3,12 @@ import { FileText, Layers, ShieldCheck, Award, ChevronRight, Network, BookOpen, 
 import Link from 'next/link';
 import { Metadata } from 'next';
 
+export const revalidate = 86400; // Cache for 24 hours (ISR)
+
+export function generateStaticParams() {
+    return ['en', 'es', 'fr', 'de', 'zh', 'hi', 'ja', 'ko'].map((locale) => ({ locale }));
+}
+
 export const metadata: Metadata = {
     title: 'Research Repository | OmniGCloud',
     description: 'Independent technical research frameworks and architecture specifications.',
@@ -113,7 +119,7 @@ export default async function ResearchHubPage({ params }: { params: Promise<{ lo
                                         <div className="flex items-center gap-2 px-3 py-1 rounded-md bg-blue-500/10 border border-blue-500/20 text-blue-400 text-xs font-bold font-mono uppercase tracking-widest">
                                             <Layers size={12} /> Foundational Framework
                                         </div>
-                                        <span className="text-muted-foreground text-xs font-mono uppercase">v2.1</span>
+                                        <span className="text-muted-foreground text-xs font-mono uppercase">v3.0 (Gold)</span>
                                     </div>
 
                                     <h3 className="text-3xl md:text-4xl font-bold mb-4 text-white group-hover:text-blue-400 transition-colors">

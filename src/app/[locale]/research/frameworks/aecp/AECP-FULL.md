@@ -2,7 +2,7 @@
 
 **Author:** Chaitanya Bharath Gopu  
 **Classification:** Independent Technical Research Framework  
-**Version:** 1.0 (Stable)  
+**Version:** 3.0 (Gold Standard)  
 **Date:** January 2026
 
 ---
@@ -38,9 +38,9 @@ AECP inverts this entirely: **policy is the primary primitive, not compute**. Th
 
 ```mermaid
 graph TD
-    subgraph Traditional [Traditional Model (Overlay)]
+    subgraph Traditional ["Traditional Model (Overlay)"]
 
-        Infra1[Infrastructure Layer] -->|Supports| App1[Application Logic]
+        Infra1["Infrastructure Layer"] -->|Supports| App1[Application Logic]
         Policy1[Policy Rules] -.->|Applied To| Infra1
         Constraint1[Compliance Check] -.->|Audit After| Infra1
         
@@ -156,12 +156,11 @@ The Executive Layer consists of distributed sidecars that enforce policy at the 
 graph TD
     Judicial["Judicial Plane (Compiler)"] -->|Async Push| Distribution["Distribution Network"]
     
-    subgraph EdgeNode ["Edge Node (Compute)"]
-        Distribution -.->|Hot Reload| Sidecar["Policy Sidecar (WASM)"]
-        Ingress["Ingress Traffic"] --> Sidecar
-        Sidecar -->|Allow| Service["Business Logic"]
-        Sidecar -->|Deny| Block["403 Forbidden"]
-        Sidecar -.->|Async Log| Buffer["Audit Buffer"]
+    subgraph Sidecar ["Policy Sidecar (WASM)"]
+        Ingress["Ingress Traffic"] --> Logic["Business Logic"]
+        Logic -->|Allow| Service["Service"]
+        Logic -->|Deny| Block["403 Forbidden"]
+        Logic -.->|Async Log| Buffer["Audit Buffer"]
     end
     
     Buffer -->|Batch Flush| Aggregator["Audit Aggregator"]
@@ -186,10 +185,10 @@ graph TD
         PA[Policy Administrator]
     end
 
-    subgraph AECP["AECP Implementation"]
-        Judicial[Judicial Plane (Compiler)]
+    subgraph AECP ["AECP Implementation"]
+        Judicial["Judicial Plane (Compiler)"]
         Sidecar[WASM Sidecar]
-        Legislative[Legislative Plane (DSL)]
+        Legislative["Legislative Plane (DSL)"]
     end
 
     Legislative -.->|Maps To| PA
@@ -587,6 +586,61 @@ quadrantChart
 - Policy enforcement at every hop (Sidecar/Kernel).
 - Automated "Break-Glass" and drift remediation.
 - **Gain:** Mathematical proof of compliance.
+
+---
+
+## 8.2 AECP Multi-Cloud Deployment Architecture
+
+The AECP framework is designed to operate across multiple cloud providers simultaneously, maintaining a unified sovereign control plane while utilizing regional infrastructure.
+
+```mermaid
+graph TD
+    subgraph Global ["Global Meta-Control Plane"]
+        J[Judicial Plane]
+        L[Legislative Plane]
+    end
+
+    subgraph AWS ["AWS - Region: US-East-1"]
+        C1[Sovereign Cell 1]
+    end
+
+    subgraph GCP ["GCP - Region: EU-West-4"]
+        C2[Sovereign Cell 2]
+    end
+
+    subgraph Azure ["Azure - Region: SE-Central-1"]
+        C3[Sovereign Cell 3]
+    end
+
+    Global -->|WASM Push| AWS
+    Global -->|WASM Push| GCP
+    Global -->|WASM Push| Azure
+
+    C1 -.->|Audit| Global
+    C2 -.->|Audit| Global
+    C3 -.->|Audit| Global
+```
+
+**Figure 10:** Multi-Cloud Sovereign Deployment. AECP abstracts the underlying cloud provider, treating them as interchangeable execution environments for sovereign policies.
+
+## 8.3 Sovereign Compliance Feedback Loop
+
+The framework implements a continuous feedback loop where enforcement audit logs are fed back into the Legislative plane for adaptive rule refinement.
+
+```mermaid
+graph LR
+    L[Legislative: Intent] --> J[Judicial: Compilation]
+    J --> E[Executive: Enforcement]
+    E --> A[Audit: Observations]
+    A --> O[Orient: Conflict Detection]
+    O --> L
+    
+    style E fill:#9cf
+    style L fill:#f96
+    style O fill:#f9f
+```
+
+**Figure 11:** Sovereign Compliance Feedback Loop. The system autonomously detects policy conflicts and gaps through real-time enforcement telemetry.
 
 ---
 

@@ -101,23 +101,25 @@ We treat policy exactly like code: versioned, tested, and compiled.
 ```mermaid
 sequenceDiagram
     participant Dev as Policy Author
-    participant Git as PolicyRepo
-    participant CI as CI Runner
-    participant OPA as OPA Bundle Service
-    participant Cluster as K8s Cluster
-    
-    Dev->>Git: "Push Policy (allow_http = false)"
-    Git->>CI: "Trigger Test"
-    CI->>CI: "Run Unit Tests (Rego)"
-    CI-->>OPA: "Publish .tar.gz Bundle"
+    participant Git as PolicyRepo (Rego)
+    participant CI as CI/CD (Testing/WASM)
+    participant Bundle as OPA Bundle Service
+    participant Enforce as Enforcement Point (K8s/Envoy)
+
+    Dev->>Git: Commit Rule (e.g. deny_root_fs)
+    Git->>CI: Trigger Pipeline
+    CI->>CI: "opa test" (Unit Validations)
+    CI->>CI: "opa build" (WASM Compilation)
+    CI->>Bundle: Push Signed Artifacts
     
     loop Every 60s
-        Cluster->>OPA: "Poll for Updates"
-        OPA-->>Cluster: "New Policy Bundle"
+        Enforce->>Bundle: Sync Policy Delta
+        Bundle-->>Enforce: .tar.gz (Signed WASM)
     end
+    Note over Enforce: Logic updated in < 60s
 ```
 
-**Figure 1:** The Policy-as-Code Pipeline. Policies are authored in Rego, tested in CI, and deployed to all clusters within 60 seconds.
+**Figure 1:** The Policy-as-Code (PaC) Compilation Pipeline. By compiling Rego to WASM, we achieve millisecond-level enforcement latency at the edge while maintaining centralized governance.
 
 ### 2.2 Policy Categories
 
@@ -284,7 +286,7 @@ We establish a sovereign identity boundary using OIDC:
 ```mermaid
 graph TD
     subgraph Identity [Sovereign Identity Layer]
-        OIDC[OIDC Provider (Okta/Keycloak)]
+        OIDC["OIDC Provider (Okta/Keycloak)"]
     end
     
     subgraph Clouds [Multi-Cloud Infrastructure]
@@ -471,19 +473,34 @@ Governance is applied at four distinct layers:
 
 ```mermaid
 graph TD
-    Code[Code Layer] -->|Linter/SAST| Build[Build Artifact]
-    Build -->|Image Scan| Registry[Registry]
-    Registry -->|Admission Controller| Runtime[Runtime]
+    subgraph L1 [Layer 1: Code/IDE]
+        P1[Pre-commit Hooks]
+        P2[SAST/SCA Scan]
+    end
+
+    subgraph L2 [Layer 2: CI/CD Build]
+        P3[OPA conftest]
+        P4[Image Vulnerability]
+    end
+
+    subgraph L3 [Layer 3: Admission]
+        P5[K8s Gatekeeper]
+        P6[Envoy AuthZ]
+    end
+
+    subgraph L4 [Layer 4: Runtime]
+        P7[eBPF Monitoring]
+        P8[Drift Correction]
+    end
+
+    L1 --> L2
+    L2 --> L3
+    L3 --> L4
     
-    Runtime -->|Runtime Security| Detect[Detection (eBPF)]
-    
-    style Code fill:#f56565
-    style Build fill:#ed8936
-    style Registry fill:#ecc94b
-    style Runtime fill:#48bb78
+    style L4 fill:#166534,color:white
 ```
 
-**Figure 4:** The Four Gates of Governance.
+**Figure 4:** The Four Gates of Governance (Defense-in-Depth). Compliance is verified at every transition point, ensuring that "Risk Entropy" is arrested before artifacts reach production environments.
 
 ### 5.2 Layer 1: Code (Shift-Left)
 

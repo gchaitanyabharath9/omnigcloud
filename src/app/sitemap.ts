@@ -13,6 +13,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
         '/contact',
         '/blog',
         '/research',
+        '/research/papers',
+        '/research/frameworks',
         '/solutions',
         '/platform',
     ]
@@ -33,7 +35,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
         '/research/frameworks/aecp',
     ]
 
-    const allRoutes = [...routes, ...academicRoutes]
+    const allRoutes = [...routes, ...academicRoutes, ...researchRoutes]
 
     const sitemapEntries: MetadataRoute.Sitemap = []
 
