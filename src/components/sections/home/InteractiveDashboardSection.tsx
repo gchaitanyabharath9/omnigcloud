@@ -1,17 +1,26 @@
 "use client";
 
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { useTranslations } from 'next-intl';
-import { Activity, ShieldCheck, TrendingUp, Zap, BarChart3, Cloud } from 'lucide-react';
-import { LiveROIGauge, EnhancedCostSavingsChart, PulsingSecurityScore } from '@/components/visuals/EnhancedGraphs';
-import { UptimeRing } from '@/components/visuals/MetricsGraphs';
-import { LatencyLineChart, CloudDistributionPie, RequestVolumeBar, ComplianceScoresBar } from '@/components/charts/SimpleCharts';
+import dynamic from 'next/dynamic';
+import Image from 'next/image';
+import { Activity, ShieldCheck, TrendingUp, Zap } from 'lucide-react';
+
+const ChartSkeleton = () => <div className="w-full h-full bg-white/5 animate-pulse rounded-lg" />;
+
+// Lazy load heavy chart components
+const LiveROIGauge = dynamic(() => import('@/components/visuals/EnhancedGraphs').then(mod => mod.LiveROIGauge), { ssr: false, loading: () => <ChartSkeleton /> });
+const EnhancedCostSavingsChart = dynamic(() => import('@/components/visuals/EnhancedGraphs').then(mod => mod.EnhancedCostSavingsChart), { ssr: false, loading: () => <ChartSkeleton /> });
+const PulsingSecurityScore = dynamic(() => import('@/components/visuals/EnhancedGraphs').then(mod => mod.PulsingSecurityScore), { ssr: false, loading: () => <ChartSkeleton /> });
+const LatencyLineChart = dynamic(() => import('@/components/charts/SimpleCharts').then(mod => mod.LatencyLineChart), { ssr: false, loading: () => <ChartSkeleton /> });
+const CloudDistributionPie = dynamic(() => import('@/components/charts/SimpleCharts').then(mod => mod.CloudDistributionPie), { ssr: false, loading: () => <ChartSkeleton /> });
+const ComplianceScoresBar = dynamic(() => import('@/components/charts/SimpleCharts').then(mod => mod.ComplianceScoresBar), { ssr: false, loading: () => <ChartSkeleton /> });
 
 export default function InteractiveDashboardSection() {
     const t = useTranslations('Dashboard');
     const [isMounted, setIsMounted] = useState(false);
 
-    useEffect(() => {
+    React.useEffect(() => {
         setIsMounted(true);
     }, []);
 
@@ -54,10 +63,12 @@ export default function InteractiveDashboardSection() {
 
                     {/* TOP RIGHT: SYSTEM ARCHITECTURE (Image mix) */}
                     <div className="glass-panel" style={{ padding: '1.25rem', borderRadius: '1.5rem', overflow: 'hidden', position: 'relative', minHeight: '260px', minWidth: 0 }}>
-                        <img
+                        <Image
                             src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=800"
                             alt="Data Center"
-                            style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', objectFit: 'cover', opacity: 0.4 }}
+                            fill
+                            className="object-cover opacity-40"
+                            sizes="(max-width: 768px) 100vw, 50vw"
                         />
                         <div style={{ position: 'relative', zIndex: 2 }}>
                             <h4 style={{ margin: 0, fontSize: '1rem', fontWeight: 950, textShadow: '0 2px 4px rgba(0,0,0,0.5)' }}>{t('infraTitle')}</h4>
