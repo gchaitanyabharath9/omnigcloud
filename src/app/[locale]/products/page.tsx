@@ -5,6 +5,7 @@ import { Cpu, ArrowRight } from 'lucide-react';
 import Link from 'next/link';
 import { PRODUCTS } from '@/data/products';
 import Footer from '@/components/Footer';
+import Image from 'next/image';
 import ProductScroller from '@/features/products/ProductScroller';
 import { HowItWorks, VisualSection, DeepDive } from '@/components/seo/Enrichment';
 
@@ -77,10 +78,13 @@ export default async function ProductsPage() {
                         {/* Right: Contained Image */}
                         <div className="animate-fade-in-up hidden md:block" style={{ animationDelay: '0.5s' }}>
                             <div className="glass-panel p-3 rounded-[2.5rem] border border-white/20 overflow-hidden shadow-2xl relative aspect-[4/3] max-w-[600px] mx-auto transition-transform hover:scale-[1.02] duration-500">
-                                <img
-                                    src="https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=2070&auto=format&fit=crop"
+                                <Image
+                                    src="https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200"
                                     alt="Sovereignty Suite"
-                                    className="w-full h-full object-cover rounded-[1.75rem] opacity-90"
+                                    fill
+                                    priority
+                                    className="object-cover rounded-[1.75rem] opacity-90"
+                                    sizes="(max-width: 768px) 100vw, 50vw"
                                 />
                                 <div className="absolute inset-0 bg-gradient-to-tr from-primary/20 to-transparent pointer-events-none" />
                             </div>

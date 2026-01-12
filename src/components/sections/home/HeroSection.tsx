@@ -137,12 +137,12 @@ export default function HeroSection() {
                                 </div>
                                 <div style={{ height: '280px', borderRadius: '1rem', border: '1px solid var(--card-border)', position: 'relative', overflow: 'hidden', background: '#020617' }}>
                                     <Image
-                                        src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80"
+                                        src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1200&q=90"
                                         alt="Global Sovereign Dashboard"
                                         fill
                                         style={{ objectFit: 'cover', opacity: 0.3 }}
-                                        unoptimized // Unsplash CDN is already optimized
-                                        fetchPriority="high" // Critical LCP element
+                                        priority
+                                        fetchPriority="high"
                                         sizes="(max-width: 768px) 100vw, 50vw"
                                     />
                                     <div style={{ position: 'absolute', inset: 0, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>

@@ -28,8 +28,7 @@ export default function ProblemSection() {
                             fill
                             className="img-cover"
                             sizes="(max-width: 768px) 100vw, 50vw"
-                            unoptimized
-                            loading="eager"
+                            priority
                         />
                         <div className="card-overlay"></div>
                         <div className="card-content-overlay p-6 flex-col justify-end">
@@ -49,8 +48,7 @@ export default function ProblemSection() {
                             fill
                             className="img-cover"
                             sizes="(max-width: 768px) 100vw, 50vw"
-                            unoptimized
-                            loading="eager"
+                            priority
                         />
                         <div className="card-overlay" style={{ background: 'linear-gradient(0deg, rgba(2,6,23,0.95) 20%, rgba(2,6,23,0.5) 100%)' }}></div>
                         <div className="card-content-overlay p-6 flex-col justify-end">
@@ -82,8 +80,6 @@ export default function ProblemSection() {
                             fill
                             className="img-cover"
                             sizes="(max-width: 768px) 100vw, 50vw"
-                            unoptimized
-                            loading="eager"
                         />
                         <div className="card-overlay"></div>
                         <div className="card-content-overlay p-6 flex-col justify-end">
@@ -103,8 +99,6 @@ export default function ProblemSection() {
                             fill
                             className="img-cover"
                             sizes="(max-width: 768px) 100vw, 50vw"
-                            unoptimized
-                            loading="eager"
                         />
                         <div className="card-overlay" style={{ background: 'linear-gradient(0deg, rgba(2,6,23,0.95) 30%, rgba(16, 185, 129, 0.2) 100%)' }}></div>
                         <div className="card-content-overlay p-6 flex-col justify-center text-center">
