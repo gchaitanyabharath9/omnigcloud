@@ -1,7 +1,8 @@
 import { NextResponse } from 'next/server'
 import type { NextRequest } from 'next/server'
+import { coreMiddleware } from './core-middleware'
 
-export function middleware(request: NextRequest) {
+export async function middleware(request: NextRequest) {
     const url = request.nextUrl.clone()
 
     // Force canonical URLs (no trailing slashes except root)
@@ -17,7 +18,9 @@ export function middleware(request: NextRequest) {
     }
 
     // Add security headers
-    const response = NextResponse.next()
+    // We delegate to coreMiddleware for i18n and rate limiting
+    // coreMiddleware returns a NextResponse (rewrite, redirect, or json for 429)
+    const response = await coreMiddleware(request);
 
     // Prevent clickjacking
     response.headers.set('X-Frame-Options', 'DENY')
@@ -25,6 +28,7 @@ export function middleware(request: NextRequest) {
     response.headers.set('Referrer-Policy', 'strict-origin-when-cross-origin')
 
     // Add canonical header for SEO
+    // We utilize the original request URL for the canonical tag
     response.headers.set('Link', `<https://omnigcloud.com${url.pathname}>; rel="canonical"`)
 
     return response
