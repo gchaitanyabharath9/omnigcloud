@@ -1,86 +1,45 @@
-import NextAuth from "next-auth";
-import { authConfig } from "@/auth.config";
-import { coreMiddleware as coreProxy } from "@/core-middleware";
-import { NextResponse } from "next/server";
-import type { NextRequest } from "next/server";
+import { NextResponse } from 'next/server'
+import type { NextRequest } from 'next/server'
 
-const { auth } = NextAuth(authConfig);
+export function middleware(request: NextRequest) {
+    const url = request.nextUrl.clone()
 
-// MICRO-OPTIMIZATION: Use Set for O(1) lookups
-const SUPPORTED_LOCALES = new Set(['en', 'es', 'fr', 'de', 'zh', 'hi', 'ja', 'ko']);
-const DEFAULT_LOCALE = 'en';
-
-export default auth(async (req) => {
-    const { nextUrl } = req;
-    const { pathname, search } = nextUrl;
-
-    // 3. REMOVE REDUNDANT SKIP LOGIC (PERF/COST)
-    // Matcher handles most exclusions, but redundant safety checks for specific files:
-    const isPublicStatics = pathname === '/favicon.ico' ||
-        pathname === '/robots.txt' ||
-        pathname === '/sitemap.xml' ||
-        pathname === '/logo.svg' ||
-        pathname === '/manifest.webmanifest';
-
-    if (isPublicStatics) {
-        return NextResponse.next();
+    // Force canonical URLs (no trailing slashes except root)
+    if (url.pathname.endsWith('/') && url.pathname !== '/') {
+        url.pathname = url.pathname.slice(0, -1)
+        return NextResponse.redirect(url, 301)
     }
 
-    const segments = pathname.split('/');
-    const firstSegment = segments[1]; // pathname starts with /
-
-    // A) Root path "/" -> "/en" (PRESERVE SEARCH)
-    if (pathname === '/') {
-        return NextResponse.redirect(new URL(`/${DEFAULT_LOCALE}${search}`, nextUrl), { status: 301 });
+    // Force lowercase URLs for consistency
+    if (url.pathname !== url.pathname.toLowerCase()) {
+        url.pathname = url.pathname.toLowerCase()
+        return NextResponse.redirect(url, 301)
     }
 
-    // B) Check for locale prefix (USE SET HAS)
-    const isSupportedLocale = SUPPORTED_LOCALES.has(firstSegment);
+    // Add security headers
+    const response = NextResponse.next()
 
-    if (!isSupportedLocale) {
-        // C) Handle unsupported 2-letter codes or bare paths
-        // If it looks like a locale (2 chars) but isn't supported, replace it
-        if (firstSegment.length === 2) {
-            const rest = segments.slice(2).join('/');
-            const newPath = rest ? `/${DEFAULT_LOCALE}/${rest}` : `/${DEFAULT_LOCALE}`;
-            return NextResponse.redirect(new URL(newPath + search, nextUrl), { status: 301 });
-        }
+    // Prevent clickjacking
+    response.headers.set('X-Frame-Options', 'DENY')
+    response.headers.set('X-Content-Type-Options', 'nosniff')
+    response.headers.set('Referrer-Policy', 'strict-origin-when-cross-origin')
 
-        // Otherwise it's a bare path like "/pricing" -> "/en/pricing"
-        return NextResponse.redirect(new URL(`/${DEFAULT_LOCALE}${pathname}${search}`, nextUrl), { status: 301 });
-    }
+    // Add canonical header for SEO
+    response.headers.set('Link', `<https://omnigcloud.com${url.pathname}>; rel="canonical"`)
 
-    // 1. FIX AUTH ROUTE DETECTION (BUG FIX) + 4. LOCALE AWARE
-    // Only gate routes if we are in a valid locale and the NEXT segment is 'app'
-    // Structure: /:locale/app/...
-    // segments: ['', 'en', 'app', ...] -> segments[2] is 'app'
-    const isAppRoute = segments[2] === 'app';
-
-    if (isAppRoute) {
-        const isLoggedIn = !!req.auth;
-        if (!isLoggedIn) {
-            const signInUrl = new URL("/api/auth/signin", nextUrl);
-            signInUrl.searchParams.set("callbackUrl", pathname + search);
-            return NextResponse.redirect(signInUrl);
-        }
-    }
-
-    // Pass to core-middleware for rate limiting and final intl processing
-    return coreProxy(req as unknown as NextRequest);
-});
+    return response
+}
 
 export const config = {
     matcher: [
         /*
-         * Match all request paths except for the ones starting with:
+         * Match all request paths except:
          * - api (API routes)
          * - _next/static (static files)
          * - _next/image (image optimization files)
          * - favicon.ico (favicon file)
-         * - sitemap.xml
-         * - robots.txt
-         * - logo.svg
+         * - public files (images, etc)
          */
-        '/((?!api|_next/static|_next/image|sitemap.xml|robots.txt|logo.svg|favicon.ico).*)',
+        '/((?!api|_next/static|_next/image|favicon.ico|.*\\.(?:svg|png|jpg|jpeg|gif|webp|ico)$).*)',
     ],
-};
+}
