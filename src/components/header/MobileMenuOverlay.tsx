@@ -37,7 +37,12 @@ export default function MobileMenuOverlay({ isOpen, onClose, locale }: MobileMen
             />
 
             {/* Drawer */}
-            <div className={clsx(styles.mobileNav, isOpen && styles.mobileNavOpen)} role="dialog" aria-modal="true">
+            <div
+                className={clsx(styles.mobileNav, isOpen && styles.mobileNavOpen)}
+                role="dialog"
+                aria-modal="true"
+                aria-label={t('Header.menu_accessibility_label') || "Mobile Navigation Menu"}
+            >
                 <div className="flex flex-col gap-2">
                     {NAV_CONFIG.map((navGroup) => {
                         // If nav group has only a few items, show as direct links

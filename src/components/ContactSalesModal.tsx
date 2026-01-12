@@ -73,6 +73,9 @@ export default function ContactSalesModal() {
                         animation: 'modalOpen 0.3s cubic-bezier(0.16, 1, 0.3, 1)'
                     }}
                     onClick={e => e.stopPropagation()}
+                    role="dialog"
+                    aria-modal="true"
+                    aria-labelledby="contact-sales-title"
                 >
                     <button
                         onClick={() => setIsFallbackVisible(false)}
@@ -104,7 +107,7 @@ export default function ContactSalesModal() {
                         }}>
                             <Mail size={24} color="var(--primary)" />
                         </div>
-                        <h2 style={{ fontSize: '1.5rem', fontWeight: 900, marginBottom: '0.5rem' }}>
+                        <h2 id="contact-sales-title" style={{ fontSize: '1.5rem', fontWeight: 900, marginBottom: '0.5rem' }}>
                             {isRateLimited ? translations.rateLimitMessage : translations.title}
                         </h2>
                         {!isRateLimited && (

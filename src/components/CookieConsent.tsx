@@ -52,7 +52,12 @@ export default function CookieConsent() {
                 gap: '1.25rem',
                 position: 'relative',
                 zIndex: 100001
-            }}>
+            }}
+                role="alertdialog"
+                aria-modal="true"
+                aria-labelledby="cookie-consent-title"
+                aria-describedby="cookie-consent-desc"
+            >
                 <div style={{ display: 'flex', alignItems: 'flex-start', gap: '1.25rem' }}>
                     <div style={{
                         background: 'rgba(59, 130, 246, 0.1)',
@@ -67,15 +72,16 @@ export default function CookieConsent() {
                     </div>
                     <div style={{ flex: 1 }}>
                         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '0.25rem' }}>
-                            <h4 style={{ margin: 0, fontSize: '1rem', fontWeight: 800 }}>{t('title')}</h4>
+                            <h4 id="cookie-consent-title" style={{ margin: 0, fontSize: '1rem', fontWeight: 800 }}>{t('title')}</h4>
                             <button
                                 onClick={() => setIsVisible(false)}
                                 style={{ background: 'none', border: 'none', color: 'var(--muted)', cursor: 'pointer', padding: '0.25rem' }}
+                                aria-label={t('close') || "Close cookie consent"}
                             >
                                 <X size={16} />
                             </button>
                         </div>
-                        <p style={{ margin: 0, fontSize: '0.8rem', opacity: 0.7, lineHeight: 1.5 }}>
+                        <p id="cookie-consent-desc" style={{ margin: 0, fontSize: '0.8rem', opacity: 0.7, lineHeight: 1.5 }}>
                             {t('message')}
                             <Link href={`/${locale}/privacy`} style={{ color: 'var(--primary)', textDecoration: 'none', fontWeight: 700, marginLeft: '0.4rem' }}>
                                 {t('policyLink')}
