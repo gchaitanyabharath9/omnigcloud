@@ -10,54 +10,94 @@ permissions:
   contents: read
 
 jobs:
-  qa-i18n:
+  build:
+    name: "🏗️ Build & Prepare"
     runs-on: "ubuntu-latest"
-
     steps:
       - name: "Checkout Repository"
-        uses: "actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5" # v4.2.2
+        uses: "actions/checkout@v4"
 
       - name: "Setup Node.js"
-        uses: "actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020" # v4.2.0
+        uses: "actions/setup-node@v4"
         with:
           node-version: "20"
           cache: "npm"
 
       - name: "Install Dependencies"
-        run: "npm install --legacy-peer-deps"
+        run: "npm ci --legacy-peer-deps"
 
-      - name: "Install Playwright Browsers"
-        run: "npx playwright install --with-deps chromium"
-
-      - name: "Build Application"
+      - name: "Step 1: Build Application"
         run: "npm run build"
         env:
           APP_ENV: "local"
           NEXT_PUBLIC_SITE_URL: "http://localhost:3000"
           AUTH_SECRET: ${{ secrets.AUTH_SECRET || 'dummy_secret_for_ci' }}
 
-      - name: "Step 1: Build Route Inventory"
-        run: "npm run qa:inventory"
+      - name: "Step 2: Generate Inventory & URLs"
+        run: |
+          npm run qa:inventory
+          npx tsx qa-i18n/scripts/generate-urls.ts
 
-      - name: "Step 2: Verify i18n Coverage (Gating)"
+      - name: "Step 3: Verify i18n Coverage (Strict Gate)"
         run: "npm run qa:i18n"
 
-      - name: "Step 3: Run Playwright E2E Crawl"
-        run: "npm run qa:test"
+      - name: "Step 4: Upload Build Artifacts"
+        uses: "actions/upload-artifact@v4"
+        with:
+          name: "build-output"
+          path: |
+            .next/
+            public/
+            messages/
+            qa-i18n/
+            package.json
+            package-lock.json
+            next.config.js
+            tsconfig.json
+          retention-days: 1
+
+  test:
+    name: "🧪 Playwright Shard ${{ matrix.shard }}/${{ strategy.job-total }}"
+    needs: build
+    runs-on: "ubuntu-latest"
+    strategy:
+      fail-fast: false
+      matrix:
+        shard: [1, 2, 3, 4]
+    steps:
+      - name: "Checkout Repository"
+        uses: "actions/checkout@v4"
+
+      - name: "Setup Node.js"
+        uses: "actions/setup-node@v4"
+        with:
+          node-version: "20"
+          cache: "npm"
+
+      - name: "Download Build Artifacts"
+        uses: "actions/download-artifact@v4"
+        with:
+          name: "build-output"
+
+      - name: "Install Dependencies"
+        run: "npm ci --legacy-peer-deps"
+
+      - name: "Install Playwright Browser (Chromium Only)"
+        run: "npx playwright install --with-deps chromium"
+
+      - name: "Run Sharded Tests"
+        run: "npx playwright test -c qa-i18n/playwright.config.ts --shard=${{ matrix.shard }}/${{ strategy.job-total }}"
         env:
           CI: "true"
           APP_ENV: "local"
           AUTH_TRUST_HOST: "true"
           AUTH_SECRET: "${{ secrets.AUTH_SECRET || 'dummy_secret_for_ci_testing_only_32_chars' }}"
-          NEXT_PUBLIC_SITE_URL: "${{ vars.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000' }}"
+          NEXT_PUBLIC_SITE_URL: "http://localhost:3000"
 
-      - name: "Upload QA Artifacts"
+      - name: "Upload Shard Results"
         if: "always()"
-        uses: "actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02" # v4
+        uses: "actions/upload-artifact@v4"
         with:
-          name: "i18n-qa-reports"
-          path: |
-            qa-i18n/i18n-report.md
-            qa-i18n/failures/
-            playwright-report/
+          name: "playwright-report-${{ matrix.shard }}"
+          path: "playwright-report/"
           retention-days: 7

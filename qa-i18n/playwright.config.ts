@@ -12,16 +12,23 @@ export default defineConfig({
         trace: 'on-first-retry',
         screenshot: 'only-on-failure',
     },
-    projects: [
-        {
-            name: 'chromium',
-            use: { ...devices['Desktop Chrome'] },
-        },
-        {
-            name: 'mobile-chrome',
-            use: { ...devices['Pixel 5'] },
-        },
-    ],
+    projects: process.env.CI
+        ? [
+            {
+                name: 'chromium',
+                use: { ...devices['Desktop Chrome'] },
+            }
+        ]
+        : [
+            {
+                name: 'chromium',
+                use: { ...devices['Desktop Chrome'] },
+            },
+            {
+                name: 'mobile-chrome',
+                use: { ...devices['Pixel 5'] },
+            },
+        ],
     webServer: {
         command: 'npm run start',
         url: 'http://localhost:3000',

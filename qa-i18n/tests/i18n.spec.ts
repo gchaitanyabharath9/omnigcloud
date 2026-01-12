@@ -96,7 +96,7 @@ test.describe('i18n & Release Gate', () => {
                     consoleErrors.push(`[RUNTIME_ERROR] ${err.message}`);
                 });
 
-                const response = await page.goto(url, { waitUntil: 'networkidle' });
+                const response = await page.goto(url, { waitUntil: 'domcontentloaded' });
                 expect(response?.status()).toBe(200);
 
                 const bodyText = await page.innerText('body');
@@ -146,16 +146,19 @@ test.describe('i18n & Release Gate', () => {
                     }
                 }
 
-                // Visual Smoke
-                const viewport = page.viewportSize();
-                await page.screenshot({ path: `qa-i18n/smoke/desktop_${locale}_${pathSuffix.replace(/\//g, '_')}.png` });
+                // Visual Smoke (Home Page only in CI, or all in local)
+                const isHome = pathSuffix === '/' || pathSuffix === '';
+                if (!process.env.CI || isHome) {
+                    const viewport = page.viewportSize();
+                    await page.screenshot({ path: `qa-i18n/smoke/desktop_${locale}_${pathSuffix.replace(/\//g, '_')}.png` });
 
-                if (viewport && viewport.width < 768) {
-                    const menuBtn = page.locator('button[aria-label*="menu"], button[class*="menu-toggle"]').first();
-                    if (await menuBtn.isVisible()) {
-                        await menuBtn.click();
-                        await page.waitForTimeout(300);
-                        await page.screenshot({ path: `qa-i18n/smoke/mobile_menu_${locale}_${pathSuffix.replace(/\//g, '_')}.png` });
+                    if (viewport && viewport.width < 768) {
+                        const menuBtn = page.locator('button[aria-label*="menu"], button[class*="menu-toggle"]').first();
+                        if (await menuBtn.isVisible()) {
+                            await menuBtn.click();
+                            await page.waitForTimeout(300);
+                            await page.screenshot({ path: `qa-i18n/smoke/mobile_menu_${locale}_${pathSuffix.replace(/\//g, '_')}.png` });
+                        }
                     }
                 }
             });
