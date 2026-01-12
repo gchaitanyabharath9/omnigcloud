@@ -1,6 +1,6 @@
 # SEO & i18n Head Validation Report
-Generated on: 2026-01-12T17:58:44.267Z
+Generated on: 2026-01-12T21:31:47.953Z
 
 | URL | Lang | Canonical | Hreflangs Count | Title |
 |-----|------|-----------|-----------------|-------|
-| http://localhost:3000/fr/services | fr | http://localhost:3000/fr | 9 | Cloud Modernization & Automation | OmniGCloud | OmniGCloud |
+| http://localhost:3000/ja/contact | ja | http://localhost:3000/ja | 9 | OmniGCloud | エンタープライズ・クラウド近代化 |

@@ -181,7 +181,11 @@ const Header = () => {
                     >
                         {t('Header.nav.onboarding')}
                     </Link>
-                    <button className={styles.mobileMenuBtn} onClick={() => setIsMenuOpen(!isMenuOpen)}>
+                    <button
+                        className={styles.mobileMenuBtn}
+                        onClick={() => setIsMenuOpen(!isMenuOpen)}
+                        aria-label={t('Header.menu_accessibility_label')}
+                    >
                         {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
                     </button>
                 </div>
