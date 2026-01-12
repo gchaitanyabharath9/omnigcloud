@@ -3,13 +3,12 @@
 import React, { useState, useEffect } from 'react';
 import { TrendingUp, TrendingDown, Activity, Zap, AlertTriangle } from 'lucide-react';
 
-import dynamic from 'next/dynamic';
-
 // Re-export simple charts for components that depend on this file
-export const LiveDeploymentFrequency = dynamic(() => import('@/components/charts/SimpleCharts').then(mod => mod.LatencyLineChart), { ssr: false });
-export const AnimatedResourceUtilization = dynamic(() => import('@/components/charts/SimpleCharts').then(mod => mod.FeatureUsageBar), { ssr: false });
-export const CloudDistributionPie = dynamic(() => import('@/components/charts/SimpleCharts').then(mod => mod.CloudDistributionPie), { ssr: false });
-export const CloudCostComparison = CloudDistributionPie;
+export {
+    LatencyLineChart as LiveDeploymentFrequency,
+    FeatureUsageBar as AnimatedResourceUtilization,
+    CloudDistributionPie as CloudCostComparison
+} from '@/components/charts/SimpleCharts';
 
 // Enhanced Cost Savings with hover and animation
 export const EnhancedCostSavingsChart = ({ height = 180 }: { height?: number }) => {

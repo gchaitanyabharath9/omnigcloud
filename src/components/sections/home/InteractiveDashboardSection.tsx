@@ -5,11 +5,7 @@ import { useTranslations } from 'next-intl';
 import { Activity, ShieldCheck, TrendingUp, Zap, BarChart3, Cloud } from 'lucide-react';
 import { LiveROIGauge, EnhancedCostSavingsChart, PulsingSecurityScore } from '@/components/visuals/EnhancedGraphs';
 import { UptimeRing } from '@/components/visuals/MetricsGraphs';
-import dynamic from 'next/dynamic';
-const LatencyLineChart = dynamic(() => import('@/components/charts/SimpleCharts').then(mod => mod.LatencyLineChart), { ssr: false });
-const CloudDistributionPie = dynamic(() => import('@/components/charts/SimpleCharts').then(mod => mod.CloudDistributionPie), { ssr: false });
-const RequestVolumeBar = dynamic(() => import('@/components/charts/SimpleCharts').then(mod => mod.RequestVolumeBar), { ssr: false });
-const ComplianceScoresBar = dynamic(() => import('@/components/charts/SimpleCharts').then(mod => mod.ComplianceScoresBar), { ssr: false });
+import { LatencyLineChart, CloudDistributionPie, RequestVolumeBar, ComplianceScoresBar } from '@/components/charts/SimpleCharts';
 
 export default function InteractiveDashboardSection() {
     const t = useTranslations('Dashboard');

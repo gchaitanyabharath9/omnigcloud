@@ -8,11 +8,11 @@ import NewsroomSection from '@/components/sections/home/NewsroomSection';
 import FaqSection from '@/components/sections/home/FaqSection';
 import CtaSection from '@/components/sections/home/CtaSection';
 
+import InteractiveDashboardSection from '@/components/sections/home/InteractiveDashboardSection';
+
 import dynamic from 'next/dynamic';
 
-const InteractiveDashboardSection = dynamic(() => import('@/components/sections/home/InteractiveDashboardSection'), {
-  loading: () => <div className="snap-section bg-gray-900/5 animate-pulse" style={{ height: '600px' }} />
-});
+// Only lazy-load below-the-fold sections
 const EcosystemSection = dynamic(() => import('@/components/sections/home/EcosystemSection'));
 const DemoSection = dynamic(() => import('@/components/sections/home/DemoSection'));
 
