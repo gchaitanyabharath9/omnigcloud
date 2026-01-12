@@ -8,11 +8,15 @@ import NewsroomSection from '@/components/sections/home/NewsroomSection';
 import FaqSection from '@/components/sections/home/FaqSection';
 import CtaSection from '@/components/sections/home/CtaSection';
 
-import InteractiveDashboardSection from '@/components/sections/home/InteractiveDashboardSection';
-
 import dynamic from 'next/dynamic';
 
-// Only lazy-load below-the-fold sections
+// Lazy load dashboard section - it's below the fold and contains heavy chart libraries
+const InteractiveDashboardSection = dynamic(() => import('@/components/sections/home/InteractiveDashboardSection'), {
+  loading: () => <div style={{ minHeight: '600px' }} />,
+  ssr: false // Charts are client-only
+});
+
+// Keep these lazy-loaded as they're far below the fold
 const EcosystemSection = dynamic(() => import('@/components/sections/home/EcosystemSection'));
 const DemoSection = dynamic(() => import('@/components/sections/home/DemoSection'));
 
