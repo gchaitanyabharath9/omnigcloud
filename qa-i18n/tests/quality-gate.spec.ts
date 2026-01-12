@@ -80,8 +80,11 @@ test.describe('Quality Gate - Core Navigation & UI', () => {
                 const HOST = baseURL || 'http://localhost:3000';
                 // Test a known section like products#playground
                 const url = `${HOST}/${locale}/products#playground`;
-                await page.goto(url);
-                await page.waitForTimeout(5000); // Wait for scroll animation to settle
+                await page.goto(url, { waitUntil: 'networkidle' });
+
+                // Wait for the section to be present in DOM (lazy-loaded components may take time)
+                await page.waitForSelector('#playground', { timeout: 15000 });
+                await page.waitForTimeout(3000); // Additional wait for scroll animation and lazy components
 
                 // Verify hash in URL
                 expect(page.url()).toContain('#playground');
@@ -105,7 +108,8 @@ test.describe('Quality Gate - Core Navigation & UI', () => {
                 if (locale === 'en') return; // Skip en-to-en switch test as it's redundant
                 const HOST = baseURL || 'http://localhost:3000';
 
-                await page.goto(`${HOST}/en/products#playground`);
+                await page.goto(`${HOST}/en/products#playground`, { waitUntil: 'networkidle' });
+                await page.waitForSelector('#playground', { timeout: 15000 });
                 await page.waitForTimeout(2000);
                 console.log(`[DEBUG] ${locale} current URL before switch: ${page.url()}`);
 
@@ -127,7 +131,9 @@ test.describe('Quality Gate - Core Navigation & UI', () => {
                 await expect(page).toHaveURL(new RegExp(expectedUrlPart), { timeout: 15000 });
                 console.log(`[DEBUG] ${locale} switch successful. New URL: ${page.url()}`);
 
-                await page.waitForTimeout(2000); // Wait for possible client-side scroll
+                // Wait for the section to be present after language switch
+                await page.waitForSelector('#playground', { timeout: 15000 });
+                await page.waitForTimeout(3000); // Wait for lazy components and scroll
 
                 const scrollInfo = await page.evaluate(() => {
                     const el = document.getElementById('playground');
