@@ -1,0 +1,39 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{geometry}
+\geometry{a4paper, margin=1in}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{cite}
+
+\newcommand{\PaperFile}{A6}
+
+% Load canonical metadata
+\newcommand{\PaperMetadataOnly}{}
+\input{\PaperFile.tex}
+\let\PaperMetadataOnly\undefined
+
+\begin{document}
+
+\title{\PaperTitle}
+\author{\PaperAuthor \\ \small \texttt{gchaitanyabharath9@gmail.com}}
+\date{January 2026}
+
+\maketitle
+
+\begin{abstract}
+\PaperAbstract
+\end{abstract}
+
+\textbf{Keywords:} \PaperKeywords
+
+\newpage
+
+\input{\PaperFile.tex}
+
+\bibliographystyle{plain}
+\bibliography{references}
+
+\end{document}

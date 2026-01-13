@@ -22,6 +22,8 @@
 
 # production
 /build
+!/build/*.ps1
+!/build/README*
 
 # misc
 .DS_Store
