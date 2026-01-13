@@ -1,0 +1,36 @@
+\documentclass[sigconf,nonatbib]{acmart}
+
+\usepackage{booktabs} % For formal tables
+
+% Load canonical metadata
+\newcommand{\PaperMetadataOnly}{}
+\input{../papers-canonical/\PaperFile.tex}
+\let\PaperMetadataOnly\undefined
+
+\begin{document}
+
+\title{\PaperTitle}
+
+\author{\PaperAuthor}
+\email{gchaitanyabharath9@gmail.com}
+\affiliation{%
+  \institution{Independent Researcher}
+  \city{}
+  \country{}
+}
+
+\begin{abstract}
+\PaperAbstract
+\end{abstract}
+
+\keywords{\PaperKeywords}
+
+\maketitle
+
+% The canonical file contains \section commands
+\input{../papers-canonical/\PaperFile.tex}
+
+\bibliographystyle{ACM-Reference-Format}
+\bibliography{../papers-canonical/references}
+
+\end{document}
