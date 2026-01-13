@@ -199,6 +199,8 @@ graph TD
     style AECP fill:#f0fdf4,stroke:#16a34a
 ```
 
+<div style="page-break-before: always;"></div>
+
 **Alignment Matrix:**
 
 | NIST Component | AECP Primitive | Function |
@@ -853,6 +855,8 @@ All policy artifacts are signed using Ed25519 (fast, secure):
 - Non-repudiation: Policy author cryptographically linked to artifact
 - Integrity: Any tampering invalidates signature
 - Authenticity: Only Judicial Layer can sign valid policies
+
+<div style="page-break-before: always;"></div>
 
 ### 9.7 Operational Metrics
 
