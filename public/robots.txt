@@ -1,12 +1,11 @@
 User-agent: *
 Allow: /
 Allow: /_next/
+Allow: /research/
 Disallow: /private/
 Disallow: /tmp/
-Disallow: /research/
-Disallow: /research/papers/
 
 User-agent: GPTBot
 Disallow: /docs/whitepaper
 
-Sitemap: https://omnigcloud.com/sitemap.xml
+Sitemap: https://www.omnigcloud.com/sitemap.xml

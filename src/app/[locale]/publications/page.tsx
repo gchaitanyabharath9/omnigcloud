@@ -27,6 +27,13 @@ export default async function PublicationsPage({ params }: { params: Promise<{ l
             date: "2025-01-02"
         },
         {
+            title: "High-Throughput Distributed Systems (A2)",
+            excerpt: "Patterns for building unbreakable distributed systems.",
+            href: "/research/papers/a2-high-throughput-distributed-systems",
+            category: "Research",
+            date: "2025-01-05"
+        },
+        {
             title: "Enterprise Observability & Operational Intelligence (A3)",
             excerpt: "Predictive analytics for self-healing infrastructure.",
             href: "/research/papers/a3-enterprise-observability-operational-intelligence",
@@ -34,11 +41,39 @@ export default async function PublicationsPage({ params }: { params: Promise<{ l
             date: "2025-01-04"
         },
         {
-            title: "High-Throughput Distributed Systems (A2)",
-            excerpt: "Patterns for building unbreakable distributed systems.",
-            href: "/research/papers/a2-high-throughput-distributed-systems",
-            category: "Research",
-            date: "2025-01-05"
+            title: "Platform Governance & Multi-Cloud Hybrid Strategy (A4)",
+            excerpt: "Governance-as-Code for sovereign multi-cloud environments.",
+            href: "/research/papers/a4-platform-governance-multicloud-hybrid",
+            category: "Governance",
+            date: "2025-01-06"
+        },
+        {
+            title: "Monolith-to-Cloud-Native Modernization Pattern (A5)",
+            excerpt: "Strangler Fig patterns for risk-free legacy migration.",
+            href: "/research/papers/a5-monolith-to-cloud-native-modernization",
+            category: "Modernization",
+            date: "2025-01-07"
+        },
+        {
+            title: "Adaptive Policy Enforcement & Sovereign Autonomy (A6)",
+            excerpt: "The OODA loop for autonomous sovereign control planes.",
+            href: "/research/papers/a6-adaptive-policy-enforcement",
+            category: "Autonomy",
+            date: "2025-01-08"
+        },
+        {
+            title: "Adaptive Enterprise Control Plane (AECP)",
+            excerpt: "The unified framework for sovereign cloud operations.",
+            href: "/research/frameworks/aecp",
+            category: "Framework",
+            date: "2025-01-01"
+        },
+        {
+            title: "Governance-Driven Architectural Stability",
+            excerpt: "Scholarly analysis of policy-as-code impact on system stability.",
+            href: "/research/scholarly-article",
+            category: "Scholarly",
+            date: "2025-01-10"
         }
     ];
 
