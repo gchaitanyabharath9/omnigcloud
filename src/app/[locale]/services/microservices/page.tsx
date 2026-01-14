@@ -4,14 +4,26 @@ import React from 'react';
 import { Layers, Zap, Shield, Search, ArrowRight, Code, MessageCircle, BarChart3, Lock, CheckCircle2, Cpu, Network, Database } from 'lucide-react';
 import Link from 'next/link';
 import type { Metadata } from 'next';
+import { generateSEOMetadata, SEO_KEYWORDS } from '@/utils/seo';
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
     const { locale } = await params;
-    return {
-        title: "Microservices Architecture & Consulting | Monolith Deconstruction",
-        description: "Deconstruct legacy monoliths with OmniGCloud's microservices architecture services. We build resilient, cloud-native distributed systems with managed service meshes.",
-        keywords: ["Microservices architecture", "Monolith deconstruction", "Distributed systems", "Service mesh", "Microservices consulting"],
-    };
+    return generateSEOMetadata({
+        title: "Microservices Architecture & Consulting | Decoupled Systems",
+        description: "Design and deploy resilient microservices architectures. We help you decompose monoliths, implement service meshes, and establish event-driven patterns.",
+        keywords: [
+            ...SEO_KEYWORDS.modernization,
+            ...SEO_KEYWORDS.performance,
+            "microservices architecture",
+            "service mesh implementation",
+            "event driven architecture",
+            "domain driven design",
+            "api gateway",
+        ],
+        canonical: `https://www.omnigcloud.com/${locale}/services/microservices`,
+        ogImage: 'https://www.omnigcloud.com/og-images/services/microservices.png',
+        ogType: 'website',
+    }, locale);
 }
 
 export default async function MicroservicesPage({ params }: { params: Promise<{ locale: string }> }) {

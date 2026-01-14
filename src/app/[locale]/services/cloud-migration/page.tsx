@@ -4,14 +4,27 @@ import React from 'react';
 import { Globe, Zap, Shield, Search, ArrowRight, Code, MessageCircle, BarChart3, Lock, CheckCircle2, Cloud, RotateCcw } from 'lucide-react';
 import Link from 'next/link';
 import type { Metadata } from 'next';
+import { generateSEOMetadata, SEO_KEYWORDS } from '@/utils/seo';
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
     const { locale } = await params;
-    return {
+    return generateSEOMetadata({
         title: "Enterprise Cloud Migration Services | Low-Risk Modernization",
         description: "Migrate your enterprise workloads to the cloud with zero downtime. OmniGCloud provides end-to-end migration services, from assessment to sovereign operations.",
-        keywords: ["Cloud migration services", "Enterprise cloud migration", "Azure migration", "AWS migration", "Cloud strategy consulting"],
-    };
+        keywords: [
+            ...SEO_KEYWORDS.modernization,
+            "Cloud migration services",
+            "Enterprise cloud migration",
+            "Azure migration",
+            "AWS migration",
+            "Cloud strategy consulting",
+            "lift and shift",
+            "re-platforming",
+        ],
+        canonical: `https://www.omnigcloud.com/${locale}/services/cloud-migration`,
+        ogImage: 'https://www.omnigcloud.com/og-images/services/cloud-migration.png',
+        ogType: 'website',
+    }, locale);
 }
 
 export default async function CloudMigrationPage({ params }: { params: Promise<{ locale: string }> }) {

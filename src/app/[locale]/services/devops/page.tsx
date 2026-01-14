@@ -5,14 +5,26 @@ import { Settings, Zap, Shield, Search, ArrowRight, Code, MessageCircle, BarChar
 import Link from 'next/link';
 import type { Metadata } from 'next';
 import { getTranslations } from 'next-intl/server';
+import { generateSEOMetadata, SEO_KEYWORDS } from '@/utils/seo';
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
     const { locale } = await params;
-    return {
-        title: "Enterprise DevOps Services | Automated Platform Engineering",
-        description: "Accelerate delivery with OmniGCloud's AI-native DevOps services. We automate CI/CD pipelines, infrastructure as code, and security gating for multi-cloud parity.",
-        keywords: ["DevOps services", "CI/CD automation", "Infrastructure as Code", "Platform Engineering", "Automated Security Gating"],
-    };
+    return generateSEOMetadata({
+        title: "Enterprise DevOps & GitOps Services | Automated Pipelines",
+        description: "Accelerate your delivery cycle with our sovereign DevOps practices. We implement secure CI/CD, GitOps workflows, and automated infrastructure as code.",
+        keywords: [
+            ...SEO_KEYWORDS.modernization,
+            ...SEO_KEYWORDS.performance,
+            "devops services",
+            "gitops implementation",
+            "ci/cd pipelines",
+            "infrastructure as code",
+            "site reliability engineering",
+        ],
+        canonical: `https://www.omnigcloud.com/${locale}/services/devops`,
+        ogImage: 'https://www.omnigcloud.com/og-images/services/devops.png',
+        ogType: 'website',
+    }, locale);
 }
 
 export default async function DevOpsPage({ params }: { params: Promise<{ locale: string }> }) {

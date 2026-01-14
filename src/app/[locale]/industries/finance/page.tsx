@@ -4,14 +4,27 @@ import React from 'react';
 import { Landmark, Zap, Shield, Search, ArrowRight, Code, MessageCircle, BarChart3, Lock, CheckCircle2, Globe, Building2, TrendingUp } from 'lucide-react';
 import Link from 'next/link';
 import type { Metadata } from 'next';
+import { generateSEOMetadata, SEO_KEYWORDS } from '@/utils/seo';
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
     const { locale } = await params;
-    return {
-        title: "Financial Services Cloud Modernization | Secure Banking Infra",
-        description: "Scale your financial institution with OmniGCloud's sovereign cloud solutions. We modernize legacy banking systems, ensure SOC2/GDPR compliance, and optimize fintech performance.",
-        keywords: ["Financial services cloud", "Banking modernization", "Fintech infrastructure", "Sovereign banking cloud", "Financial compliance automation"],
-    };
+    return generateSEOMetadata({
+        title: "Financial Services Cloud Infrastructure | PCI-DSS Compliant",
+        description: "Secure, high-frequency cloud infrastructure for the financial sector. We ensure PCI-DSS compliance, data residency, and micro-latency performance.",
+        keywords: [
+            ...SEO_KEYWORDS.security,
+            ...SEO_KEYWORDS.platform,
+            "financial services cloud",
+            "fintech infrastructure",
+            "pci dss compliance",
+            "banking cloud",
+            "high frequency trading",
+            "secure payment processing",
+        ],
+        canonical: `https://www.omnigcloud.com/${locale}/industries/finance`,
+        ogImage: 'https://www.omnigcloud.com/og-images/industries/finance.png',
+        ogType: 'website',
+    }, locale);
 }
 
 export default async function FinanceIndustryPage({ params }: { params: Promise<{ locale: string }> }) {

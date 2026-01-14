@@ -4,14 +4,26 @@ import React from 'react';
 import { Cloud, Zap, Shield, Search, ArrowRight, Code, MessageCircle, BarChart3, Lock, CheckCircle2 } from 'lucide-react';
 import Link from 'next/link';
 import type { Metadata } from 'next';
+import { generateSEOMetadata, SEO_KEYWORDS } from '@/utils/seo';
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
     const { locale } = await params;
-    return {
-        title: "Enterprise Cloud Modernization & Refactoring | OmniGCloud",
-        description: "Transform your legacy application portfolio with AI-driven cloud modernization. We automate the refactoring of monoliths into sovereign, cloud-agnostic microservices.",
-        keywords: ["Cloud modernization", "Application refactoring", "Monolith to microservices", "Digital transformation", "Enterprise cloud strategy"],
-    };
+    return generateSEOMetadata({
+        title: "Application Modernization Services | Cloud Native Transformation",
+        description: "Transform legacy monoliths into scalable microservices using our automated 6R methodology (Rehost, Replatform, Refactor).",
+        keywords: [
+            ...SEO_KEYWORDS.modernization,
+            ...SEO_KEYWORDS.platform,
+            "application modernization",
+            "legacy modernization",
+            "mainframe modernization",
+            "cloud native transformation",
+            "containerization",
+        ],
+        canonical: `https://www.omnigcloud.com/${locale}/services/cloud-modernization`,
+        ogImage: 'https://www.omnigcloud.com/og-images/services/modernization.png',
+        ogType: 'website',
+    }, locale);
 }
 
 export default async function CloudModernizationPage({ params }: { params: Promise<{ locale: string }> }) {

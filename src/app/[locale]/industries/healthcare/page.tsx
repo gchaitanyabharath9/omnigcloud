@@ -4,14 +4,27 @@ import React from 'react';
 import { HeartPulse, Zap, Shield, Search, ArrowRight, Code, MessageCircle, BarChart3, Lock, CheckCircle2, Globe, Database, Microchip } from 'lucide-react';
 import Link from 'next/link';
 import type { Metadata } from 'next';
+import { generateSEOMetadata, SEO_KEYWORDS } from '@/utils/seo';
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
     const { locale } = await params;
-    return {
-        title: "Healthcare Cloud Solutions | HIPAA Compliant Modernization",
-        description: "Transform healthcare delivery with OmniGCloud's sovereign cloud platforms. We provide HIPAA/GDPR compliant infrastructure for health systems and life sciences research.",
-        keywords: ["Healthcare cloud computing", "HIPAA compliant cloud", "Health data sovereignty", "Digital health infrastructure", "Life sciences AI platform"],
-    };
+    return generateSEOMetadata({
+        title: "Healthcare Cloud Solutions | HIPAA & GDPR Compliant",
+        description: "HIPAA-compliant cloud infrastructure for healthcare providers. Secure patient data storage, interoperable FHIR APIs, and medical imaging storage.",
+        keywords: [
+            ...SEO_KEYWORDS.security,
+            ...SEO_KEYWORDS.platform,
+            "healthcare cloud solutions",
+            "hipaa compliant cloud",
+            "medical data storage",
+            "healthcare interoperability",
+            "fhir api implementation",
+            "hitech compliance",
+        ],
+        canonical: `https://www.omnigcloud.com/${locale}/industries/healthcare`,
+        ogImage: 'https://www.omnigcloud.com/og-images/industries/healthcare.png',
+        ogType: 'website',
+    }, locale);
 }
 
 export default async function HealthcareIndustryPage({ params }: { params: Promise<{ locale: string }> }) {
