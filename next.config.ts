@@ -134,15 +134,228 @@ const nextConfig: any = {
   },
   async redirects() {
     return [
+      // Existing architecture redirect
       {
         source: '/:locale/architecture/cloud-native-reference-architecture',
-        destination: '/:locale/architecture/a1-cloud-native-enterprise-reference',
-        permanent: true, // 301 redirect
+        destination: '/:locale/research/papers/a1-cloud-native-enterprise-reference',
+        permanent: true,
       },
       {
         source: '/architecture/cloud-native-reference-architecture',
-        destination: '/en/architecture/a1-cloud-native-enterprise-reference',
-        permanent: true, // 301 redirect
+        destination: '/en/research/papers/a1-cloud-native-enterprise-reference',
+        permanent: true,
+      },
+
+      // FIX: /architecture/* → /research/papers/* (wrong path structure)
+      {
+        source: '/:locale/architecture/a1-cloud-native-enterprise-reference',
+        destination: '/:locale/research/papers/a1-cloud-native-enterprise-reference',
+        permanent: true,
+      },
+      {
+        source: '/:locale/architecture/a2-high-throughput-distributed-systems',
+        destination: '/:locale/research/papers/a2-high-throughput-distributed-systems',
+        permanent: true,
+      },
+      {
+        source: '/:locale/architecture/a3-enterprise-observability-operational-intelligence',
+        destination: '/:locale/research/papers/a3-enterprise-observability-operational-intelligence',
+        permanent: true,
+      },
+      {
+        source: '/:locale/architecture/a4-platform-governance-multicloud-hybrid',
+        destination: '/:locale/research/papers/a4-platform-governance-multicloud-hybrid',
+        permanent: true,
+      },
+      {
+        source: '/:locale/architecture/a5-monolith-to-cloud-native-modernization',
+        destination: '/:locale/research/papers/a5-monolith-to-cloud-native-modernization',
+        permanent: true,
+      },
+      {
+        source: '/:locale/architecture/a6-adaptive-policy-enforcement',
+        destination: '/:locale/research/papers/a6-adaptive-policy-enforcement',
+        permanent: true,
+      },
+
+      // FIX: Old scholarly article URL
+      {
+        source: '/:locale/research/scholarly-article-enterprise-architecture',
+        destination: '/:locale/research/scholarly-article',
+        permanent: true,
+      },
+
+      // FIX: Non-existent /news → /blog
+      {
+        source: '/:locale/news',
+        destination: '/:locale/blog',
+        permanent: true,
+      },
+      {
+        source: '/news/:path*',
+        destination: '/en/blog',
+        permanent: true,
+      },
+
+      // FIX: Non-existent /resources → /research
+      {
+        source: '/:locale/resources',
+        destination: '/:locale/research',
+        permanent: true,
+      },
+      {
+        source: '/:locale/resources/:path*',
+        destination: '/:locale/research',
+        permanent: true,
+      },
+
+      // FIX: Non-existent /research/architecture → /research/papers
+      {
+        source: '/:locale/research/architecture',
+        destination: '/:locale/research/papers',
+        permanent: true,
+      },
+
+      // FIX: Non-existent /research/metrics → /research/papers
+      {
+        source: '/:locale/research/metrics',
+        destination: '/:locale/research/papers',
+        permanent: true,
+      },
+
+      // FIX: Non-existent /platform/ai → /platform
+      {
+        source: '/platform/:path*',
+        destination: '/en/platform',
+        permanent: true,
+      },
+
+      // FIX: Non-existent /checkout → /pricing
+      {
+        source: '/checkout',
+        destination: '/en/pricing',
+        permanent: true,
+      },
+
+      // FIX: Locale words (월=month in Korean, 月=month in Chinese, etc.) → homepage
+      {
+        source: '/월',
+        destination: '/ko',
+        permanent: true,
+      },
+      {
+        source: '/月',
+        destination: '/zh',
+        permanent: true,
+      },
+      {
+        source: '/माह',
+        destination: '/hi',
+        permanent: true,
+      },
+      {
+        source: '/Monat',
+        destination: '/de',
+        permanent: true,
+      },
+      {
+        source: '/mes',
+        destination: '/es',
+        permanent: true,
+      },
+      {
+        source: '/mois',
+        destination: '/fr',
+        permanent: true,
+      },
+
+      // Locale-less main pages → /en/
+      {
+        source: '/about',
+        destination: '/en/about',
+        permanent: true,
+      },
+      {
+        source: '/pricing',
+        destination: '/en/pricing',
+        permanent: true,
+      },
+      {
+        source: '/contact',
+        destination: '/en/contact',
+        permanent: true,
+      },
+      {
+        source: '/blog',
+        destination: '/en/blog',
+        permanent: true,
+      },
+      {
+        source: '/research',
+        destination: '/en/research',
+        permanent: true,
+      },
+      {
+        source: '/research/papers',
+        destination: '/en/research/papers',
+        permanent: true,
+      },
+      {
+        source: '/research/frameworks',
+        destination: '/en/research/frameworks',
+        permanent: true,
+      },
+      {
+        source: '/solutions',
+        destination: '/en/solutions',
+        permanent: true,
+      },
+      {
+        source: '/platform',
+        destination: '/en/platform',
+        permanent: true,
+      },
+
+      // Research papers without locale
+      {
+        source: '/research/papers/a1-cloud-native-enterprise-reference',
+        destination: '/en/research/papers/a1-cloud-native-enterprise-reference',
+        permanent: true,
+      },
+      {
+        source: '/research/papers/a2-high-throughput-distributed-systems',
+        destination: '/en/research/papers/a2-high-throughput-distributed-systems',
+        permanent: true,
+      },
+      {
+        source: '/research/papers/a3-enterprise-observability-operational-intelligence',
+        destination: '/en/research/papers/a3-enterprise-observability-operational-intelligence',
+        permanent: true,
+      },
+      {
+        source: '/research/papers/a4-platform-governance-multicloud-hybrid',
+        destination: '/en/research/papers/a4-platform-governance-multicloud-hybrid',
+        permanent: true,
+      },
+      {
+        source: '/research/papers/a5-monolith-to-cloud-native-modernization',
+        destination: '/en/research/papers/a5-monolith-to-cloud-native-modernization',
+        permanent: true,
+      },
+      {
+        source: '/research/papers/a6-adaptive-policy-enforcement',
+        destination: '/en/research/papers/a6-adaptive-policy-enforcement',
+        permanent: true,
+      },
+      {
+        source: '/research/scholarly-article',
+        destination: '/en/research/scholarly-article',
+        permanent: true,
+      },
+      {
+        source: '/research/frameworks/aecp',
+        destination: '/en/research/frameworks/aecp',
+        permanent: true,
       },
     ];
   },
