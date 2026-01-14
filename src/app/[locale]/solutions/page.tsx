@@ -4,6 +4,7 @@ import React from 'react';
 import { Shield, Globe, Layers, ArrowRight, ChevronRight, Award, Landmark, Phone, HeartPulse, Truck, Activity, BarChart3, Building2, CheckCircle } from 'lucide-react';
 import Link from 'next/link';
 import { getTranslations } from 'next-intl/server';
+import { generateSEOMetadata, SEO_KEYWORDS } from '@/utils/seo';
 import { USE_CASES } from '@/data/use-cases';
 import Grid2x2Section from '@/components/layout/Grid2x2Section';
 import { HowItWorks, VisualSection, DeepDive, TopicalAuthority, TechnicalInsights, FAQSection } from '@/components/seo/Enrichment';
@@ -22,6 +23,27 @@ export function generateStaticParams() {
 }
 
 export const revalidate = 3600;
+
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
+    const { locale } = await params;
+    const tm = await getTranslations({ locale, namespace: 'Metadata.Solutions' });
+
+    return generateSEOMetadata({
+        title: tm('title'),
+        description: tm('description'),
+        keywords: [
+            ...SEO_KEYWORDS.platform,
+            ...SEO_KEYWORDS.security,
+            'industry solutions',
+            'enterprise use cases',
+            'cloud transformation',
+            'digital modernization',
+        ],
+        canonical: `https://www.omnigcloud.com/${locale}/solutions`,
+        ogImage: `https://www.omnigcloud.com/og-images/solutions.png`,
+        ogType: 'website',
+    }, locale);
+}
 
 export default async function SolutionsPage({ params }: { params: Promise<{ locale: string }> }) {
     const { locale } = await params;

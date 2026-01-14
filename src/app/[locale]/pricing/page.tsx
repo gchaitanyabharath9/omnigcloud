@@ -1,5 +1,6 @@
 import { PageShell } from '@/components/layout/PageShell';
 import { getTranslations } from 'next-intl/server';
+import { generateSEOMetadata, SEO_KEYWORDS } from '@/utils/seo';
 import { Check, X, Shield, Globe, Cpu, Zap, Award, HelpCircle, ArrowRight } from 'lucide-react';
 import Link from 'next/link';
 import type { Metadata } from 'next';
@@ -25,11 +26,22 @@ const PRICING_SECTION_IDS = ['developer', 'professional', 'business', 'sovereign
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
     const { locale } = await params;
     const tm = await getTranslations({ locale, namespace: 'Metadata.Pricing' });
-    return {
+
+    return generateSEOMetadata({
         title: tm('title'),
         description: tm('description'),
-        keywords: ['cloud governance pricing', 'enterprise cloud management cost', 'multi-cloud pricing', 'compliance automation pricing'],
-    };
+        keywords: [
+            ...SEO_KEYWORDS.platform,
+            'cloud pricing',
+            'enterprise pricing',
+            'sovereign cloud cost',
+            'multi-cloud pricing',
+            'infrastructure cost',
+        ],
+        canonical: `https://www.omnigcloud.com/${locale}/pricing`,
+        ogImage: `https://www.omnigcloud.com/og-images/pricing.png`,
+        ogType: 'website',
+    }, locale);
 }
 
 export default async function PricingPage({ params }: { params: Promise<{ locale: string }> }) {
