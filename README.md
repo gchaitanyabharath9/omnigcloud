@@ -461,3 +461,52 @@ This project is **Actively Maintained**.
 *   **Update Frequency**: We target weekly updates for dependencies and security patches.
 *   **Vulnerability Response**: See `SECURITY.md` for our 24-hour response policy.
 *   **Support**: Create a GitHub Issue for bugs or feature requests.
+
+---
+
+## 🚦 Release Quality Gates (Local-First)
+
+We enforce strict quality standards via our **Unified Release Gate**. The gate is designed to run **locally first**, then mirrored in CI.
+
+### Run Locally (Developer Mode)
+
+```bash
+# Run ALL checks in local mode (faster, reduced URL set)
+npm run release:gate:local
+```
+
+This is the **recommended** way to validate changes before pushing. Local mode:
+- Tests 6-8 critical URLs for performance (vs 12 in CI)
+- Crawls up to 50 URLs for SEO (vs 200 in CI)
+- Provides developer-friendly output
+- Runs in ~2-5 minutes
+
+### Run in CI Mode (Full Validation)
+
+```bash
+# Run ALL checks in CI mode (full URL set, deterministic)
+npm run release:gate:ci
+```
+
+CI mode runs the **exact same checks** as local mode, but with:
+- Full URL coverage (all 8 papers + hubs)
+- Larger crawl depth for SEO validation
+- Artifact uploads to GitHub Actions
+
+### What Gets Checked
+
+The release gate runs these sub-gates in sequence (fail-fast):
+
+1.  **Gate A (Build/Lint)**: Typechecks, lints, and builds the app.
+2.  **Gate B (SEO)**: `npm run seo:gate`. Validates sitemaps, canonicals, hreflang, and status codes.
+3.  **Gate C (Performance)**: `npm run perf:gate`. Runs Lighthouse CI against key pages (desktop/mobile).
+4.  **Gate D (Security)**: `npm run security:gate`. CodeQL analysis + `npm audit` (high/critical).
+5.  **Gate E (i18n)**: `npm run i18n:gate`. Ensures locale parity and missing key detection.
+
+### Interpretation & Fixes
+
+*   **Artifacts**: Check `artifacts/release-gate/` for detailed reports.
+*   **SEO Failures**: usually 404 links or missing standard paper URLs.
+*   **Perf Failures**: usually LCP regression or CLS > 0.1.
+*   **Security Failures**: update dependencies with `npm audit fix`.
+

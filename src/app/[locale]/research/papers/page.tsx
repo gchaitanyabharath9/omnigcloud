@@ -14,7 +14,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
             canonical: `https://www.omnigcloud.com/${locale}/research/papers`
         },
         robots: {
-            index: false,
+            index: true,
             follow: true
         }
     };

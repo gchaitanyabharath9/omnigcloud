@@ -34,7 +34,12 @@
     "check:all": "npm run quality",
     "release:wordcount": "npx tsx scripts/check_wordcount.ts",
     "release:terms": "npx tsx scripts/check_forbidden_terms.ts",
-    "release:gate": "npx tsx scripts/release_gate.ts"
+    "release:gate:local": "node scripts/release_gate.mjs --mode=local",
+    "release:gate:ci": "node scripts/release_gate.mjs --mode=ci",
+    "seo:gate": "npm run build && node scripts/seo_gate.mjs",
+    "perf:gate": "node scripts/perf_gate.mjs",
+    "i18n:gate": "node scripts/i18n_gate.mjs",
+    "security:gate": "node scripts/security_gate.mjs"
   },
   "dependencies": {
     "@auth/upstash-redis-adapter": "^2.11.1",
@@ -62,6 +67,7 @@
     "zod": "^4.2.1"
   },
   "devDependencies": {
+    "@lhci/cli": "^0.15.1",
     "@next/bundle-analyzer": "^16.1.1",
     "@playwright/test": "^1.57.0",
     "@testing-library/jest-dom": "^6.9.1",
@@ -83,5 +89,9 @@
     "tsx": "^4.21.0",
     "typescript": "^5",
     "vitest": "^4.0.16"
+  },
+  "overrides": {
+    "qs": "^6.14.1",
+    "form-data": "^2.5.4"
   }
 }
