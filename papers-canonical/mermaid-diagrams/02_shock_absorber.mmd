@@ -1,0 +1,17 @@
+graph LR
+    Client[Client Requests<br/>Bursty Traffic] -->|HTTP POST| Ingress[Ingress Layer<br/>Stateless, Fast<br/>< 10ms]
+    Ingress -->|Append| Log[Distributed Log<br/>Kafka/Pulsar<br/>Durable Buffer]
+    Log -->|Pull Batch| Consumer1[Consumer 1<br/>Partition 0]
+    Log -->|Pull Batch| Consumer2[Consumer 2<br/>Partition 1]
+    Log -->|Pull Batch| Consumer3[Consumer N<br/>Partition N]
+    Consumer1 --> DB1[(Database<br/>Shard 0)]
+    Consumer2 --> DB2[(Database<br/>Shard 1)]
+    Consumer3 --> DB3[(Database<br/>Shard N)]
+    
+    Ingress -.->|HTTP 202 Accepted| Client
+    
+    style Ingress fill:#4CAF50,color:#fff
+    style Log fill:#2196F3,color:#fff
+    style Consumer1 fill:#FF9800,color:#fff
+    style Consumer2 fill:#FF9800,color:#fff
+    style Consumer3 fill:#FF9800,color:#fff

@@ -1,0 +1,15 @@
+graph TD
+    Request[Incoming Request<br/>TenantID: ABC123] -->|Hash Function| Router{Hash(TenantID) % N}
+    Router -->|Partition 0| P0[Partition 0<br/>Consumer 0<br/>DB Shard 0]
+    Router -->|Partition 1| P1[Partition 1<br/>Consumer 1<br/>DB Shard 1]
+    Router -->|Partition N| PN[Partition N<br/>Consumer N<br/>DB Shard N]
+    
+    P0 -.->|Zero Communication| P1
+    P1 -.->|Zero Communication| PN
+    P0 -.->|Zero Communication| PN
+    
+    style Request fill:#4CAF50,color:#fff
+    style Router fill:#2196F3,color:#fff
+    style P0 fill:#FF9800,color:#fff
+    style P1 fill:#FF9800,color:#fff
+    style PN fill:#FF9800,color:#fff

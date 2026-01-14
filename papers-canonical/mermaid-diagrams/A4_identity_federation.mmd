@@ -1,0 +1,41 @@
+graph TB
+    subgraph Identity["Identity Fragmentation Problem"]
+        AWS_IAM[AWS IAM Role<br/>Long-lived credentials<br/>Rotation: manual]
+        GCP_SA[GCP Service Account<br/>JSON key files<br/>Stored in Git]
+        Azure_AD[Azure AD<br/>Client secrets<br/>90-day expiry]
+        OnPrem[On-Prem Active Directory<br/>Kerberos tickets<br/>Complex trust]
+        
+        style AWS_IAM fill:#FEE2E2,stroke:#DC2626,color:#333
+        style GCP_SA fill:#FEE2E2,stroke:#DC2626,color:#333
+        style Azure_AD fill:#FEE2E2,stroke:#DC2626,color:#333
+        style OnPrem fill:#FEE2E2,stroke:#DC2626,color:#333
+    end
+    
+    Problem[2,400 long-lived secrets<br/>14% rotated in past year<br/>3.7% orphaned]
+    
+    AWS_IAM --> Problem
+    GCP_SA --> Problem
+    Azure_AD --> Problem
+    OnPrem --> Problem
+    
+    style Problem fill:#FEE2E2,stroke:#DC2626,color:#333,stroke-width:3px
+    
+    subgraph Solution["A4 Unified Identity"]
+        SPIFFE[SPIFFE Namespace<br/>spiffe://acme.org/...]
+        SVID[X.509 SVID<br/>Short-lived (1 hour)<br/>Auto-rotated]
+        Federation[OIDC Federation<br/>Cross-cloud trust<br/>Mesh topology]
+        
+        SPIFFE --> SVID
+        SVID --> Federation
+        
+        style SPIFFE fill:#D1FAE5,stroke:#059669,color:#333
+        style SVID fill:#D1FAE5,stroke:#059669,color:#333
+        style Federation fill:#D1FAE5,stroke:#059669,color:#333
+    end
+    
+    Problem -.->|Replaced by| SPIFFE
+    
+    Result[Zero long-lived secrets<br/>100% auto-rotation<br/>Cryptographic verification]
+    Federation --> Result
+    
+    style Result fill:#A78BFA,stroke:#7C3AED,color:#fff,stroke-width:3px

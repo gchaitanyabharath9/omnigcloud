@@ -1,0 +1,35 @@
+graph LR
+    subgraph Legislative[Legislative Branch]
+        Author[Security Team<br/>Policy Authors]
+        Compiler[Policy Compiler<br/>Rego → WASM]
+        Registry[Policy Registry<br/>Version Control]
+    end
+    
+    subgraph Executive[Executive Branch]
+        Distributor[Policy Distributor<br/>Kafka/NATS]
+        Runtime1[WASM Runtime 1<br/>Node 1]
+        Runtime2[WASM Runtime 2<br/>Node 2]
+        RuntimeN[WASM Runtime N<br/>Node N]
+    end
+    
+    subgraph Judicial[Judicial Branch]
+        Collector[Log Collector<br/>Aggregator]
+        Analyzer[Compliance Analyzer<br/>Audit Reports]
+        Alerting[Alert System<br/>Violations]
+    end
+    
+    Author --> Compiler
+    Compiler --> Registry
+    Registry --> Distributor
+    Distributor --> Runtime1
+    Distributor --> Runtime2
+    Distributor --> RuntimeN
+    Runtime1 --> Collector
+    Runtime2 --> Collector
+    RuntimeN --> Collector
+    Collector --> Analyzer
+    Analyzer --> Alerting
+    
+    style Legislative fill:#E3F2FD,stroke:#2196F3,stroke-width:3px
+    style Executive fill:#E8F5E9,stroke:#4CAF50,stroke-width:3px
+    style Judicial fill:#FFF3E0,stroke:#FF9800,stroke-width:3px

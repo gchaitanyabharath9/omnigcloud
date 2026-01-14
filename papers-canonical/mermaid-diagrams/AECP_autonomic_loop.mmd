@@ -1,0 +1,42 @@
+stateDiagram-v2
+    [*] --> Monitor: System Running
+    
+    Monitor --> Analyze: Anomaly Detected<br/>(e.g., 403 spike)
+    
+    Analyze --> Benign: Normal Traffic Pattern
+    Analyze --> Malicious: Attack Detected
+    Analyze --> Misconfigured: Config Error
+    
+    Benign --> Monitor: Continue Monitoring
+    
+    Malicious --> Plan_Quarantine: Generate Isolation Rule
+    Misconfigured --> Plan_Rollback: Generate Rollback Rule
+    
+    Plan_Quarantine --> Execute_Quarantine: Compile & Sign WASM
+    Plan_Rollback --> Execute_Rollback: Revert to Previous CID
+    
+    Execute_Quarantine --> Verify_Quarantine: Deploy via SOPP
+    Execute_Rollback --> Verify_Rollback: Deploy via SOPP
+    
+    Verify_Quarantine --> Recovery: Threat Contained
+    Verify_Rollback --> Recovery: Service Restored
+    
+    Recovery --> Monitor: Resume Normal Operations
+    
+    note right of Monitor
+        MAPE-K Loop:
+        Monitor → Analyze → Plan → Execute
+        Knowledge: Policy History
+    end note
+    
+    note right of Execute_Quarantine
+        Quarantine Rule:
+        "Allow only health-check traffic
+        from suspected service"
+    end note
+    
+    note right of Execute_Rollback
+        Rollback:
+        "Revert to CID: xyz789
+        (Last Known Good)"
+    end note

@@ -1,0 +1,25 @@
+stateDiagram-v2
+    [*] --> Closed
+    Closed --> Open : Error rate > 5%
+    Open --> HalfOpen : After 30s cooldown
+    HalfOpen --> Closed : 3 consecutive successes
+    HalfOpen --> Open : Any failure
+    
+    Closed : Normal Operation<br/>All requests pass through<br/>Monitor error rate
+    Open : Failure Mode<br/>All requests rejected<br/>Fast fail to prevent cascade
+    HalfOpen : Recovery Test<br/>Limited requests allowed<br/>Test downstream health
+    
+    note right of Closed
+        Success rate > 95%
+        Latency < p99 threshold
+    end note
+    
+    note right of Open
+        Prevents cascading failures
+        Gives downstream time to recover
+    end note
+    
+    note right of HalfOpen
+        Gradual recovery
+        Fail fast if still unhealthy
+    end note

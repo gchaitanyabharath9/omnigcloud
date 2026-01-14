@@ -1,0 +1,68 @@
+graph TB
+    CAS[Content-Addressable<br/>Store CID: abc123]
+    
+    subgraph Region1["Region: US-East"]
+        Seed1[Seed Node]
+        Agent1A[Agent 1]
+        Agent1B[Agent 2]
+        Agent1C[Agent 3]
+        Agent1D[Agent 4]
+    end
+    
+    subgraph Region2["Region: EU-West"]
+        Seed2[Seed Node]
+        Agent2A[Agent 1]
+        Agent2B[Agent 2]
+        Agent2C[Agent 3]
+        Agent2D[Agent 4]
+    end
+    
+    subgraph Region3["Region: AP-South"]
+        Seed3[Seed Node]
+        Agent3A[Agent 1]
+        Agent3B[Agent 2]
+        Agent3C[Agent 3]
+        Agent3D[Agent 4]
+    end
+    
+    CAS -->|T+0s| Seed1
+    CAS -->|T+0s| Seed2
+    CAS -->|T+0s| Seed3
+    
+    Seed1 -->|T+5s Gossip| Agent1A
+    Seed1 -->|T+5s Gossip| Agent1B
+    Agent1A -->|T+10s| Agent1C
+    Agent1B -->|T+10s| Agent1D
+    
+    Seed2 -->|T+5s Gossip| Agent2A
+    Seed2 -->|T+5s Gossip| Agent2B
+    Agent2A -->|T+10s| Agent2C
+    Agent2B -->|T+10s| Agent2D
+    
+    Seed3 -->|T+5s Gossip| Agent3A
+    Seed3 -->|T+5s Gossip| Agent3B
+    Agent3A -->|T+10s| Agent3C
+    Agent3B -->|T+10s| Agent3D
+    
+    style CAS fill:#1F2937,stroke:#10B981,color:#fff,stroke-width:3px
+    style Seed1 fill:#4A90E2,stroke:#2E5C8A,color:#fff
+    style Seed2 fill:#50C878,stroke:#2E7D4E,color:#fff
+    style Seed3 fill:#FF6B6B,stroke:#CC5555,color:#fff
+    
+    style Agent1A fill:#93C5FD,stroke:#3B82F6
+    style Agent1B fill:#93C5FD,stroke:#3B82F6
+    style Agent1C fill:#93C5FD,stroke:#3B82F6
+    style Agent1D fill:#93C5FD,stroke:#3B82F6
+    
+    style Agent2A fill:#86EFAC,stroke:#22C55E
+    style Agent2B fill:#86EFAC,stroke:#22C55E
+    style Agent2C fill:#86EFAC,stroke:#22C55E
+    style Agent2D fill:#86EFAC,stroke:#22C55E
+    
+    style Agent3A fill:#FCA5A5,stroke:#EF4444
+    style Agent3B fill:#FCA5A5,stroke:#EF4444
+    style Agent3C fill:#FCA5A5,stroke:#EF4444
+    style Agent3D fill:#FCA5A5,stroke:#EF4444
+    
+    Note1[Convergence: O(log N) rounds<br/>50,000 agents in 42 seconds]
+    style Note1 fill:#FEF3C7,stroke:#D97706

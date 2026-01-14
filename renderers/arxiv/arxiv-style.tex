@@ -1,0 +1,52 @@
+% arxiv-style.tex - Premium styling for arXiv papers
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{geometry}
+\geometry{letterpaper, margin=1in}
+
+% Typography - Using Libertine for a professional, high-impact look
+\usepackage{libertine}
+\usepackage[libertine]{newtxmath}
+\usepackage{microtype}
+
+% Professional Table support
+\usepackage{booktabs}
+\usepackage{array}
+
+% Colors and Links
+\usepackage{xcolor}
+\definecolor{DarkBlue}{rgb}{0,0.08,0.45}
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=DarkBlue,
+    filecolor=DarkBlue,      
+    urlcolor=DarkBlue,
+    citecolor=DarkBlue,
+    pdftitle={\PaperTitle},
+    pdfauthor={\PaperAuthor},
+}
+
+% Section styling
+\usepackage{titlesec}
+\titleformat{\section}{\large\bfseries\color{black}}{\thesection}{1em}{}
+\titleformat{\subsection}{\normalsize\bfseries\color{black}}{\thesubsection}{1em}{}
+
+% Custom header/footer if desired
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small \PaperTitle}
+\fancyhead[R]{\small \thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+
+% Title block enhancement
+\usepackage{authblk}
+
+\renewcommand\Authfont{\large\bfseries}
+\renewcommand\Affilfont{\small\itshape}
+
+% Abstract styling
+\renewenvironment{abstract}
+{\centerline{\bfseries Abstract}\vspace{0.5em}\quotation\noindent}
+{\endquotation}

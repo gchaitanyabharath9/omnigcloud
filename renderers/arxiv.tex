@@ -6,11 +6,17 @@
 \usepackage{amsmath,amssymb}
 \usepackage{graphicx}
 \usepackage{hyperref}
+\usepackage{lmodern}
+\usepackage{microtype}
+\usepackage{xcolor}
 \usepackage{cite}
+\usepackage{listings}
+
+\graphicspath{{papers-canonical/}}
 
 % Load canonical metadata
 \newcommand{\PaperMetadataOnly}{}
-\input{../papers-canonical/\PaperFile.tex}
+\input{papers-canonical/\PaperFile.tex}
 \let\PaperMetadataOnly\undefined
 
 \begin{document}
@@ -30,9 +36,9 @@
 \newpage
 
 % The canonical file contains \section commands
-\input{../papers-canonical/\PaperFile.tex}
+\input{papers-canonical/\PaperFile.tex}
 
 \bibliographystyle{plain}
-\bibliography{../papers-canonical/references}
+\bibliography{papers-canonical/\PaperFile_references}
 
 \end{document}

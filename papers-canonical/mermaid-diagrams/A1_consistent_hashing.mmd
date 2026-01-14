@@ -1,0 +1,30 @@
+graph TD
+    Tenant[Tenant Request<br/>TenantID: ABC123] --> Hash{Hash Function<br/>hash(TenantID)}
+    
+    Hash --> Ring[Consistent Hash Ring<br/>0 to 2^32-1]
+    
+    Ring --> VN1[VNode 1<br/>Cell 1<br/>Range: 0-536M]
+    Ring --> VN2[VNode 2<br/>Cell 1<br/>Range: 536M-1.07B]
+    Ring --> VN3[VNode 3<br/>Cell 2<br/>Range: 1.07B-1.61B]
+    Ring --> VN4[VNode 4<br/>Cell 2<br/>Range: 1.61B-2.15B]
+    Ring --> VN5[VNode 5<br/>Cell 3<br/>Range: 2.15B-2.68B]
+    Ring --> VN6[VNode 6<br/>Cell 3<br/>Range: 2.68B-3.22B]
+    Ring --> VN7[VNode 7<br/>Cell 4<br/>Range: 3.22B-3.76B]
+    Ring --> VN8[VNode 8<br/>Cell 4<br/>Range: 3.76B-4.29B]
+    
+    VN1 --> Cell1[Cell 1<br/>Partitions 0-31]
+    VN2 --> Cell1
+    VN3 --> Cell2[Cell 2<br/>Partitions 32-63]
+    VN4 --> Cell2
+    VN5 --> Cell3[Cell 3<br/>Partitions 64-95]
+    VN6 --> Cell3
+    VN7 --> Cell4[Cell 4<br/>Partitions 96-127]
+    VN8 --> Cell4
+    
+    style Tenant fill:#4CAF50,color:#fff
+    style Hash fill:#2196F3,color:#fff
+    style Ring fill:#FF9800,color:#fff
+    style Cell1 fill:#E8F5E9,stroke:#4CAF50,stroke-width:2px
+    style Cell2 fill:#E3F2FD,stroke:#2196F3,stroke-width:2px
+    style Cell3 fill:#FFF3E0,stroke:#FF9800,stroke-width:2px
+    style Cell4 fill:#FCE4EC,stroke:#E91E63,stroke-width:2px

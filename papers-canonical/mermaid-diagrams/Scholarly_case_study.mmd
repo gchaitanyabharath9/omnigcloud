@@ -1,0 +1,44 @@
+graph TB
+    Event[Black Friday Event<br/>45M Users, 850k RPS Peak]
+    
+    subgraph Migration["Migration Journey"]
+        Before[Legacy Monolith<br/>Java + Oracle<br/>Crashed at 120k RPS]
+        
+        Step1[Step 1: Decompose to 24 Cells<br/>Geographic + Product Category]
+        Step2[Step 2: Sidecar Injection<br/>Local Policy Enforcement]
+        Step3[Step 3: Async Order Bus<br/>Kafka Partitioned Log]
+        
+        Before --> Step1 --> Step2 --> Step3
+        
+        style Before fill:#FEE2E2,stroke:#DC2626,color:#333
+        style Step1 fill:#DBEAFE,stroke:#2563EB,color:#333
+        style Step2 fill:#DBEAFE,stroke:#2563EB,color:#333
+        style Step3 fill:#DBEAFE,stroke:#2563EB,color:#333
+    end
+    
+    Step3 --> Event
+    
+    subgraph Results["Production Results"]
+        R1[Peak Traffic:<br/>200k → 850k RPS<br/>in 90 seconds]
+        R2[Ingress CPU:<br/>Stable at 45%<br/>across 24 cells]
+        R3[Anti-Fraud Update:<br/>Propagated in 42s<br/>Zero latency impact]
+        R4[Availability:<br/>99.998%<br/>Best in history]
+        R5[Mobile Conversion:<br/>+23% vs prior year<br/>p99: 850ms → 180ms]
+        R6[Revenue Impact:<br/>+$42M<br/>12:1 ROI]
+        
+        Event --> R1
+        Event --> R2
+        Event --> R3
+        Event --> R4
+        Event --> R5
+        Event --> R6
+        
+        style R1 fill:#D1FAE5,stroke:#059669,color:#333
+        style R2 fill:#D1FAE5,stroke:#059669,color:#333
+        style R3 fill:#D1FAE5,stroke:#059669,color:#333
+        style R4 fill:#D1FAE5,stroke:#059669,color:#333
+        style R5 fill:#FEF3C7,stroke:#D97706,color:#333
+        style R6 fill:#FEF3C7,stroke:#D97706,color:#333
+    end
+    
+    style Event fill:#A78BFA,stroke:#7C3AED,color:#fff,stroke-width:3px

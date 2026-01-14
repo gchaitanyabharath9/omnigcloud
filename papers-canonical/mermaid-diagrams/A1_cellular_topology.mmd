@@ -1,0 +1,46 @@
+graph TB
+    subgraph Region_US_East[Region: US-East]
+        subgraph Cell1[Cell 1 - 50k RPS]
+            I1[Ingress] --> S1[Services]
+            S1 --> D1[(DB Shard 0-31)]
+        end
+        subgraph Cell2[Cell 2 - 50k RPS]
+            I2[Ingress] --> S2[Services]
+            S2 --> D2[(DB Shard 32-63)]
+        end
+    end
+    
+    subgraph Region_US_West[Region: US-West]
+        subgraph Cell3[Cell 3 - 50k RPS]
+            I3[Ingress] --> S3[Services]
+            S3 --> D3[(DB Shard 64-95)]
+        end
+        subgraph Cell4[Cell 4 - 50k RPS]
+            I4[Ingress] --> S4[Services]
+            S4 --> D4[(DB Shard 96-127)]
+        end
+    end
+    
+    subgraph Region_EU[Region: EU-Central]
+        subgraph Cell5[Cell 5 - 50k RPS]
+            I5[Ingress] --> S5[Services]
+            S5 --> D5[(DB Shard 128-159)]
+        end
+        subgraph Cell6[Cell 6 - 50k RPS]
+            I6[Ingress] --> S6[Services]
+            S6 --> D6[(DB Shard 160-191)]
+        end
+    end
+    
+    Cell1 -.->|Failure Isolated| Cell2
+    Cell3 -.->|Failure Isolated| Cell4
+    Cell5 -.->|Failure Isolated| Cell6
+    Region_US_East -.->|Async Replication| Region_EU
+    Region_US_West -.->|Async Replication| Region_EU
+    
+    style Cell1 fill:#E8F5E9,stroke:#4CAF50,stroke-width:2px
+    style Cell2 fill:#E8F5E9,stroke:#4CAF50,stroke-width:2px
+    style Cell3 fill:#E3F2FD,stroke:#2196F3,stroke-width:2px
+    style Cell4 fill:#E3F2FD,stroke:#2196F3,stroke-width:2px
+    style Cell5 fill:#FFF3E0,stroke:#FF9800,stroke-width:2px
+    style Cell6 fill:#FFF3E0,stroke:#FF9800,stroke-width:2px

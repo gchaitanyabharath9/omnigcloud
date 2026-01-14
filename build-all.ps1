@@ -16,33 +16,39 @@ foreach ($Paper in $Papers) {
         
         $JobName = "$Paper-$Venue"
         $WrapperPath = "renderers/$Venue.tex"
+        $LaTeXCommand = "\newcommand{\PaperFile}{$Paper}\input{$WrapperPath}"
         
-        # Create a tiny driver file
-        $DriverContent = "\newcommand{\PaperFile}{$Paper}`n\input{$WrapperPath}"
-        $DriverFile = "$BuildDir/$JobName.tex"
-        $DriverContent | Out-File -FilePath $DriverFile -Encoding utf8
-        
-        # Run pdflatex
-        # Note: Requires a TeX distribution (TeX Live, MiKTeX, or Tectonic) installed on the system path.
         try {
-            # Running twice for references/toc
-            pdflatex -interaction=batchmode -output-directory=$BuildDir $DriverFile
-            # bibtex $BuildDir/$JobName
-            # pdflatex -interaction=batchmode -output-directory=$BuildDir $DriverFile
-            # pdflatex -interaction=batchmode -output-directory=$BuildDir $DriverFile
+            # 1st run
+            Write-Host "  Pass 1..."
+            pdflatex -interaction=nonstopmode -output-directory=$BuildDir -jobname=$JobName $LaTeXCommand > $null
+            
+            # BibTeX
+            if (Test-Path "$BuildDir/$JobName.aux") {
+                Write-Host "  BibTeX..."
+                bibtex "$BuildDir/$JobName" > $null
+            }
+            
+            # 2nd run
+            Write-Host "  Pass 2..."
+            pdflatex -interaction=nonstopmode -output-directory=$BuildDir -jobname=$JobName $LaTeXCommand > $null
+            
+            # 3rd run
+            Write-Host "  Pass 3..."
+            pdflatex -interaction=nonstopmode -output-directory=$BuildDir -jobname=$JobName $LaTeXCommand > $null
             
             if (Test-Path "$BuildDir/$JobName.pdf") {
                 Move-Item -Path "$BuildDir/$JobName.pdf" -Destination "$OutputDir/$JobName.pdf" -Force
-                Write-Host "Success: $OutputDir/$JobName.pdf" -ForegroundColor Green
+                Write-Host "  Success: $OutputDir/$JobName.pdf" -ForegroundColor Green
             }
             else {
-                Write-Warning "Failed to generate $JobName.pdf. Check $BuildDir/$JobName.log"
+                Write-Warning "  Failed to generate $JobName.pdf. Check $BuildDir/$JobName.log"
             }
         }
         catch {
-            Write-Error "Error building ${JobName}: $($_.Exception.Message)"
+            Write-Error "  Error building ${JobName}: $($_.Exception.Message)"
         }
     }
 }
 
-Write-Host "Build process complete. Check the $OutputDir directory." -ForegroundColor Yellow
+Write-Host "Build process complete." -ForegroundColor Yellow

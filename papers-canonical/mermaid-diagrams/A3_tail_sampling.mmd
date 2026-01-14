@@ -1,0 +1,36 @@
+sequenceDiagram
+    participant Svc as Service (Span Generator)
+    participant Coll as Regional Collector
+    participant Buf as Trace Buffer
+    participant Dec as Decision Engine
+    participant Store as Storage Backend
+    
+    Note over Svc,Store: Adaptive Tail-Sampling Lifecycle
+    
+    Svc->>Coll: Span 1 (trace_id=abc123)
+    Coll->>Buf: Hash(abc123) → Buffer Node 5
+    
+    Svc->>Coll: Span 2 (trace_id=abc123)
+    Coll->>Buf: Route to same Node 5
+    
+    Svc->>Coll: Span 3 (trace_id=abc123, END)
+    Coll->>Buf: Final span arrived
+    
+    Note over Buf: Wait 60s for stragglers
+    
+    Buf->>Dec: Complete trace tree ready
+    
+    Dec->>Dec: Evaluate Heuristics:<br/>1. Has error? NO<br/>2. p99 outlier? YES (850ms)<br/>3. Cold path? NO<br/>4. Baseline sample? NO
+    
+    Dec->>Dec: Decision: KEEP (p99 outlier)
+    
+    Dec->>Store: Persist full trace
+    Store-->>Dec: Stored
+    
+    Note over Svc,Store: Alternative: Discard path
+    
+    Svc->>Coll: Span (trace_id=xyz789, SUCCESS, 120ms)
+    Coll->>Buf: Buffer
+    Buf->>Dec: Evaluate
+    Dec->>Dec: Decision: DISCARD (nominal)
+    Dec->>Dec: Drop trace (85% reduction)

@@ -1,0 +1,32 @@
+sequenceDiagram
+    participant AWS as Payment Service (AWS)
+    participant AWS_Agent as SPIRE Agent (AWS)
+    participant AWS_Server as SPIRE Server (AWS)
+    participant GCP_Server as SPIRE Server (GCP)
+    participant GCP_Agent as SPIRE Agent (GCP)
+    participant GCP as Settlement Service (GCP)
+    
+    Note over AWS,GCP: Federated Identity Lifecycle
+    
+    AWS->>AWS_Agent: Request identity on startup
+    AWS_Agent->>AWS_Agent: Attest workload<br/>(K8s SA + AWS Nitro)
+    AWS_Agent->>AWS_Server: Request SVID
+    AWS_Server->>AWS_Server: Verify attestation
+    AWS_Server->>AWS_Agent: Issue X.509 SVID<br/>spiffe://acme.org/finance/payments
+    AWS_Agent->>AWS: Deliver via Workload API
+    
+    Note over AWS,GCP: Cross-Cloud mTLS Handshake
+    
+    AWS->>GCP: Initiate mTLS connection
+    GCP->>GCP_Agent: Validate incoming SVID
+    GCP_Agent->>GCP_Server: Fetch trust bundle
+    GCP_Server->>AWS_Server: OIDC federation<br/>Fetch public keys
+    AWS_Server-->>GCP_Server: Trust bundle
+    GCP_Server-->>GCP_Agent: Validation keys
+    GCP_Agent->>GCP_Agent: Verify SVID signature
+    GCP_Agent->>GCP_Agent: Check local WASM policy<br/>spiffe://*/finance/payments → ALLOW
+    GCP_Agent->>GCP: Connection authorized
+    
+    GCP-->>AWS: mTLS established (0.8ms)
+    
+    Note over AWS,GCP: Total latency: 0.8ms vs 12ms IAM

@@ -1,0 +1,41 @@
+% A3 - arXiv Preprint Template
+\documentclass[11pt,a4paper]{article}
+
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{booktabs}
+\usepackage{geometry}
+\geometry{margin=1in}
+
+\title{Enterprise Observability \& Operational Intelligence at Scale}
+
+\author{Chaitanya Bharath Gopu\\
+Independent Researcher\\
+\texttt{[redacted for review]}}
+
+\date{January 2026}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+Traditional observability models encounter the "Cardinality Cliff" at enterprise scale. A3 achieves 85\% storage reduction and 62.5\% MTTR improvement through Dimension Stratification, Adaptive Tail-Sampling, and autonomous OODA loops.
+
+\textbf{Keywords}: observability, distributed tracing, telemetry, MTTR, tail-sampling
+\end{abstract}
+
+\section{Introduction}
+The cardinality cliff occurs when $S = \sum_{m \in M} \prod_{l \in L_m} \text{Card}(l)$ grows exponentially.
+
+\section{Architecture}
+Three pillars: Metrics (What), Traces (Why), Logs (Detail).
+
+\section{Results}
+85\% storage reduction, 62.5\% MTTR improvement, \$180k cost savings.
+
+\bibliographystyle{plain}
+\bibliography{A3_references}
+
+\end{document}

@@ -1,0 +1,36 @@
+graph TB
+    subgraph Gates["The Four Gates of Governance"]
+        Gate1[GATE 1<br/>Developer Laptop<br/>Local Policy Linting<br/>Feedback: 5 seconds]
+        Gate2[GATE 2<br/>CI/CD Pipeline<br/>Judicial Review<br/>Feedback: 45 seconds]
+        Gate3[GATE 3<br/>Admission Control<br/>Kubernetes API<br/>Sync Protection]
+        Gate4[GATE 4<br/>Runtime Monitoring<br/>Continuous Reconciliation<br/>Self-Healing]
+        
+        Gate1 --> Gate2 --> Gate3 --> Gate4
+        
+        style Gate1 fill:#4A90E2,stroke:#2E5C8A,color:#fff
+        style Gate2 fill:#50C878,stroke:#2E7D4E,color:#fff
+        style Gate3 fill:#FF6B6B,stroke:#CC5555,color:#fff
+        style Gate4 fill:#A78BFA,stroke:#7C3AED,color:#fff
+    end
+    
+    subgraph Violations["Violation Detection"]
+        V1[68% caught at Gate 1<br/>Immediate feedback]
+        V2[24% caught at Gate 2<br/>Before merge]
+        V3[6% caught at Gate 3<br/>API rejection]
+        V4[2% caught at Gate 4<br/>Drift remediation]
+        
+        style V1 fill:#93C5FD,stroke:#3B82F6
+        style V2 fill:#86EFAC,stroke:#22C55E
+        style V3 fill:#FCA5A5,stroke:#EF4444
+        style V4 fill:#C4B5FD,stroke:#8B5CF6
+    end
+    
+    Gate1 -.->|Blocks| V1
+    Gate2 -.->|Blocks| V2
+    Gate3 -.->|Blocks| V3
+    Gate4 -.->|Remediates| V4
+    
+    Result[100% Policy Compliance<br/>Zero misconfig outages]
+    Gate4 --> Result
+    
+    style Result fill:#D1FAE5,stroke:#059669,color:#333,stroke-width:3px

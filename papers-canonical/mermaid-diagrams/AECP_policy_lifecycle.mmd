@@ -1,0 +1,39 @@
+sequenceDiagram
+    participant SRE as SRE/Policy Author
+    participant Leg as Legislative Layer
+    participant Jud as Judicial Layer
+    participant CAS as Content Store
+    participant Exec as Executive Agents
+    participant Data as Data Plane
+    
+    Note over SRE,Data: T=0s: Emergency Kill-Switch Deployment
+    
+    SRE->>Leg: Submit A-DSL Policy Change
+    Note right of SRE: deny where api.label == "reporting"<br/>and state.mode == "emergency"
+    
+    Note over Leg,Jud: T+5s: Judicial Compilation
+    Leg->>Jud: Trigger CI/CD Pipeline
+    Jud->>Jud: Verify Label Exists
+    Jud->>Jud: Compile to 12KB WASM
+    
+    Note over Jud,CAS: T+8s: Signing & Publishing
+    Jud->>Jud: Sign with Enterprise Root CA
+    Jud->>CAS: Publish Module (CID: abc123...)
+    
+    Note over CAS,Exec: T+12s: Gossip Cascade
+    CAS->>Exec: Broadcast CID + Signature
+    Exec->>CAS: Fetch WASM Module (P2P)
+    
+    Note over Exec: T+25s: Coordinated Slot Swap
+    Exec->>Exec: Verify HSM Signature
+    Exec->>Exec: Hot-Swap Policy Module
+    
+    Note over Exec,Data: T+30s: Enforcement Active
+    Data->>Exec: Request to /api/reporting
+    Exec->>Exec: Evaluate: state.mode == "emergency"
+    Exec->>Data: HTTP 429 (Too Many Requests)
+    
+    Note over Exec,Leg: T+60s: Audit Consolidation
+    Exec->>Leg: Audit Hash (100% throttling confirmed)
+    
+    Note over SRE,Data: Total Time: 30 seconds (vs 72 hours manual)

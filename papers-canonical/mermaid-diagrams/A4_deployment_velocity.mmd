@@ -1,0 +1,42 @@
+graph TB
+    subgraph Before["Before A4: Manual Governance"]
+        B1[Developer writes Terraform]
+        B2[Opens Change Request ticket]
+        B3[Waits for CAB meeting<br/>Average: 14 days]
+        B4[Manual security review<br/>12 hours]
+        B5[Manual approval signature]
+        B6[Deployment: 14.5 days total]
+        
+        B1 --> B2 --> B3 --> B4 --> B5 --> B6
+        
+        style B1 fill:#FEE2E2,stroke:#DC2626,color:#333
+        style B2 fill:#FEE2E2,stroke:#DC2626,color:#333
+        style B3 fill:#FEE2E2,stroke:#DC2626,color:#333,stroke-width:3px
+        style B4 fill:#FEE2E2,stroke:#DC2626,color:#333
+        style B5 fill:#FEE2E2,stroke:#DC2626,color:#333
+        style B6 fill:#FEE2E2,stroke:#DC2626,color:#333,stroke-width:3px
+    end
+    
+    subgraph After["After A4: Governance-as-Code"]
+        A1[Developer writes Terraform]
+        A2[Gate 1: Local lint<br/>5 seconds]
+        A3[Gate 2: CI/CD review<br/>45 seconds]
+        A4[Gate 3: Admission control<br/>Sync validation]
+        A5[Gate 4: Runtime monitoring<br/>Continuous]
+        A6[Deployment: 45 minutes total]
+        
+        A1 --> A2 --> A3 --> A4 --> A5 --> A6
+        
+        style A1 fill:#D1FAE5,stroke:#059669,color:#333
+        style A2 fill:#D1FAE5,stroke:#059669,color:#333
+        style A3 fill:#D1FAE5,stroke:#059669,color:#333
+        style A4 fill:#D1FAE5,stroke:#059669,color:#333
+        style A5 fill:#D1FAE5,stroke:#059669,color:#333
+        style A6 fill:#D1FAE5,stroke:#059669,color:#333,stroke-width:3px
+    end
+    
+    Improvement[99.8% Reduction<br/>14 days → 45 minutes<br/>$15M additional revenue]
+    B6 -.-> Improvement
+    A6 -.-> Improvement
+    
+    style Improvement fill:#A78BFA,stroke:#7C3AED,color:#fff,stroke-width:3px

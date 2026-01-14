@@ -1,0 +1,26 @@
+graph TB
+    subgraph Cell1[Cell 1 - US-East]
+        I1[Ingress] --> L1[Log<br/>Partitions 0-15]
+        L1 --> C1[Consumers<br/>16 pods]
+        C1 --> D1[(DB Shards<br/>0-15)]
+    end
+    
+    subgraph Cell2[Cell 2 - US-West]
+        I2[Ingress] --> L2[Log<br/>Partitions 16-31]
+        L2 --> C2[Consumers<br/>16 pods]
+        C2 --> D2[(DB Shards<br/>16-31)]
+    end
+    
+    subgraph Cell3[Cell 3 - EU]
+        I3[Ingress] --> L3[Log<br/>Partitions 32-47]
+        L3 --> C3[Consumers<br/>16 pods]
+        C3 --> D3[(DB Shards<br/>32-47)]
+    end
+    
+    Cell1 -.->|Failure Isolated| Cell2
+    Cell2 -.->|Failure Isolated| Cell3
+    Cell1 -.->|Failure Isolated| Cell3
+    
+    style Cell1 fill:#E3F2FD,stroke:#2196F3,stroke-width:3px
+    style Cell2 fill:#E8F5E9,stroke:#4CAF50,stroke-width:3px
+    style Cell3 fill:#FFF3E0,stroke:#FF9800,stroke-width:3px

@@ -1,0 +1,43 @@
+graph LR
+    subgraph Invariants["Seven Architectural Invariants"]
+        I1["Invariant 1:<br/>Plane Separation<br/>(C ∩ D = ∅)"]
+        I2["Invariant 2:<br/>Late Binding<br/>(Edge Context)"]
+        I3["Invariant 3:<br/>Local Evaluation<br/>(L_eval < 1ms)"]
+        I4["Invariant 4:<br/>Async Distribution<br/>(Eventual Consistency)"]
+        I5["Invariant 5:<br/>Crypto Verification<br/>(Signed Artifacts)"]
+        I6["Invariant 6:<br/>Immutable Audit<br/>(Complete Logs)"]
+        I7["Invariant 7:<br/>Fail-Safe Default<br/>(DENY by default)"]
+        
+        style I1 fill:#4A90E2,stroke:#2E5C8A,color:#fff
+        style I2 fill:#50C878,stroke:#2E7D4E,color:#fff
+        style I3 fill:#FF6B6B,stroke:#CC5555,color:#fff
+        style I4 fill:#FFD93D,stroke:#CCA82E,color:#333
+        style I5 fill:#A78BFA,stroke:#7C3AED,color:#fff
+        style I6 fill:#FB923C,stroke:#EA580C,color:#fff
+        style I7 fill:#EC4899,stroke:#BE185D,color:#fff
+    end
+    
+    I1 --> G1[Prevents Noise<br/>Contamination]
+    I2 --> G2[Eliminates Trust-in-<br/>the-Middle]
+    I3 --> G3[Sub-ms Latency<br/>Guarantee]
+    I4 --> G4[100% Availability<br/>During Outage]
+    I5 --> G5[Shadow Policy<br/>Protection]
+    I6 --> G6[Regulatory<br/>Compliance]
+    I7 --> G7[Security Over<br/>Availability]
+    
+    G1 --> R[AECP Guarantees]
+    G2 --> R
+    G3 --> R
+    G4 --> R
+    G5 --> R
+    G6 --> R
+    G7 --> R
+    
+    style G1 fill:#E8F4F8,stroke:#4A90E2
+    style G2 fill:#E8F8F0,stroke:#50C878
+    style G3 fill:#FFE8E8,stroke:#FF6B6B
+    style G4 fill:#FFF9E6,stroke:#FFD93D
+    style G5 fill:#F3EFFF,stroke:#A78BFA
+    style G6 fill:#FFF0E6,stroke:#FB923C
+    style G7 fill:#FFE6F0,stroke:#EC4899
+    style R fill:#1F2937,stroke:#10B981,color:#fff,stroke-width:3px

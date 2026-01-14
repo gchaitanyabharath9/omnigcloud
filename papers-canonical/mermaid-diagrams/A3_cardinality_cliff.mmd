@@ -1,0 +1,32 @@
+graph TB
+    subgraph CardiCliff["The Cardinality Cliff"]
+        Low[Low Cardinality<br/>< 100 dimensions<br/>Safe for Metrics]
+        Med[Medium Cardinality<br/>100-10,000 dimensions<br/>Transient Metrics]
+        High[High Cardinality<br/>> 10,000 dimensions<br/>FORBIDDEN in Metrics]
+        
+        Low -->|Add user_id| Med
+        Med -->|Add session_id| High
+        
+        style Low fill:#D1FAE5,stroke:#059669,color:#333
+        style Med fill:#FEF3C7,stroke:#D97706,color:#333
+        style High fill:#FEE2E2,stroke:#DC2626,color:#333
+    end
+    
+    subgraph Impact["Storage Impact"]
+        I1[500 time-series<br/>10 MB/day]
+        I2[50,000 time-series<br/>1 GB/day]
+        I3[500M time-series<br/>1 TB/day<br/>CLIFF!]
+        
+        Low -.->|Manageable| I1
+        Med -.->|Acceptable| I2
+        High -.->|Catastrophic| I3
+        
+        style I1 fill:#93C5FD,stroke:#3B82F6
+        style I2 fill:#FBBF24,stroke:#F59E0B
+        style I3 fill:#F87171,stroke:#EF4444
+    end
+    
+    Solution[A3 Dimension Stratification<br/>Metrics: E_low only<br/>Traces: E_high allowed]
+    High -.->|Prevents| Solution
+    
+    style Solution fill:#A78BFA,stroke:#7C3AED,color:#fff,stroke-width:3px

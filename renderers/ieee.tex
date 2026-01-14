@@ -6,10 +6,13 @@
 \usepackage{textcomp}
 \usepackage{xcolor}
 \usepackage{hyperref}
+\usepackage{listings}
+
+\graphicspath{{papers-canonical/}}
 
 % Load canonical metadata
 \newcommand{\PaperMetadataOnly}{}
-\input{../papers-canonical/\PaperFile.tex}
+\input{papers-canonical/\PaperFile.tex}
 \let\PaperMetadataOnly\undefined
 
 \begin{document}
@@ -31,9 +34,9 @@ Email: gchaitanyabharath9@gmail.com}}
 \end{IEEEkeywords}
 
 % The canonical file contains \section commands
-\input{../papers-canonical/\PaperFile.tex}
+\input{papers-canonical/\PaperFile.tex}
 
 \bibliographystyle{IEEEtran}
-\bibliography{../papers-canonical/references}
+\bibliography{papers-canonical/\PaperFile_references}
 
 \end{document}

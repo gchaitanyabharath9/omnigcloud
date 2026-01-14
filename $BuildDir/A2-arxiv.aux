@@ -1,0 +1,85 @@
+\relax 
+\providecommand\hyper@newdestlabel[2]{}
+\providecommand\HyField@AuxAddToFields[1]{}
+\providecommand\HyField@AuxAddToCoFields[2]{}
+\@writefile{toc}{\contentsline {section}{\numberline {1}Introduction}{2}{section.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.1}The Throughput Imperative}{2}{subsection.1.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.2}The Physics of Coordination}{2}{subsection.1.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.3}Paper Structure}{2}{subsection.1.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {2}Problem Statement / Motivation}{2}{section.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.1}The Retrograde Scaling Paradox}{2}{subsection.2.1}\protected@file@percent }
+\citation{gunther1998practical}
+\citation{boner2014reactive}
+\citation{gopu2026a2}
+\citation{thompson2011lmax}
+\citation{lamport2001paxos}
+\citation{ongaro2014search}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.2}The Requirements of the 1M RPS System}{3}{subsection.2.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {3}Related Work}{3}{section.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.1}Performance Modeling and USL}{3}{subsection.3.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.2}Reactive and Event-Driven Architectures}{3}{subsection.3.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.3}Queueing Theory and Backpressure}{3}{subsection.3.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.4}Consensus Protocols and Coordination}{4}{subsection.3.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {4}Original Contributions}{4}{section.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {5}System Model \& Assumptions}{4}{section.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.1}Deployment Model and Infrastructure Topology}{4}{subsection.5.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.2}Traffic Model Classification}{4}{subsection.5.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.3}Failure Model and Blast Radius Containment}{5}{subsection.5.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {6}Architecture Model: The Physics of Throughput}{5}{section.6}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.1}Universal Scalability Law}{5}{subsection.6.1}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {1}{\ignorespaces USL Coefficients and their Architectural Implications.}}{6}{table.1}\protected@file@percent }
+\newlabel{tab:usl_coeffs_detail}{{1}{6}{USL Coefficients and their Architectural Implications}{table.1}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.2}Empirical Validation of USL Parameters}{6}{subsection.6.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {7}The ``Shock Absorber'' Pattern}{6}{section.7}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {7.1}Architectural Decoupling Principles}{6}{subsection.7.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {7.2}Distributed Log Selection: Why Kafka/Pulsar?}{6}{subsection.7.2}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {2}{\ignorespaces Comparison of Log Infrastructure for High-Throughput Workloads.}}{7}{table.2}\protected@file@percent }
+\newlabel{tab:log_comparison}{{2}{7}{Comparison of Log Infrastructure for High-Throughput Workloads}{table.2}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {7.3}Ingress Layer Implementation Details}{7}{subsection.7.3}\protected@file@percent }
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {1}Low-latency Ingress Gateway}{7}{lstlisting.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {7.4}Consumer Layer: Idempotency and State Management}{7}{subsection.7.4}\protected@file@percent }
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {2}Idempotent Event Consumer}{7}{lstlisting.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {8}Partitioning Strategy}{8}{section.8}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {8.1}Comparison of Partitioning Strategies}{8}{subsection.8.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {8.2}The Mathematics of Partition Sizing}{8}{subsection.8.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {8.3}Universal Scalability Law Application to Partitioning}{8}{subsection.8.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {8.4}Detailed Algorithm: Consistent Hashing for Dynamic Resharding}{8}{subsection.8.4}\protected@file@percent }
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {3}Consistent Hashing with Virtual Nodes}{9}{lstlisting.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {8.5}Proof of Correctness: Idempotency with Write-Ahead-Cache}{9}{subsection.8.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {9}Explicit Backpressure \& Load Shedding}{9}{section.9}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {9.1}Distributed Token Bucket Algorithm}{10}{subsection.9.1}\protected@file@percent }
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {4}Thread-safe Token Bucket}{10}{lstlisting.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {9.2}Load Shedding Strategies}{10}{subsection.9.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {10}Cell-Based Architecture Topology}{10}{section.10}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {11}Operational Semantics and Self-Healing}{10}{section.11}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {11.1}At-Least-Once Delivery and Idempotency}{10}{subsection.11.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {11.2}The "Lag" Metric for Auto-Scaling}{10}{subsection.11.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {11.3}Adaptive Rate Limiting with PID Controllers}{11}{subsection.11.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {11.4}Black Friday Operational Runbook}{11}{subsection.11.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {11.5}Chaos Engineering and Continuous Verification}{11}{subsection.11.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {12}Case Study: Global E-Commerce Scale-Out}{11}{section.12}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {12.1}Migration from Monolith to A2}{11}{subsection.12.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {12.2}Performance During Peak Load}{12}{subsection.12.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {12.3}Quantitative Results Comparison}{12}{subsection.12.3}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {3}{\ignorespaces Performance Comparison between Legacy Monolith and A2 Architecture.}}{12}{table.3}\protected@file@percent }
+\newlabel{tab:monolith_vs_a2}{{3}{12}{Performance Comparison between Legacy Monolith and A2 Architecture}{table.3}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {12.4}Scalability Validation Benchmark}{12}{subsection.12.4}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {4}{\ignorespaces A2 Scalability Benchmark showing near-linear performance to 10M RPS.}}{12}{table.4}\protected@file@percent }
+\newlabel{tab:scalability_bench}{{4}{12}{A2 Scalability Benchmark showing near-linear performance to 10M RPS}{table.4}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {13}Lessons Learned from 30+ TB of Event Logs}{12}{section.13}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {14}Limitations and Constraints}{13}{section.14}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {14.1}Consistency vs. Throughput}{13}{subsection.14.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {14.2}Operational and Cognitive Load}{13}{subsection.14.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {14.3}Storage and Infrastructure Cost}{13}{subsection.14.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {15}Conclusion and Future Work}{13}{section.15}\protected@file@percent }
+\bibstyle{plain}
+\bibdata{papers-canonical/references}
+\@writefile{toc}{\contentsline {subsection}{\numberline {15.1}Key Achievements}{14}{subsection.15.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {15.2}Future Research Directions}{14}{subsection.15.2}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces USL visualization: Contention creates a speed limit, while Crosstalk creates a performance cliff. The A2 architecture targets $\beta < 0.001$.}}{15}{figure.1}\protected@file@percent }
+\newlabel{fig:a2_usl_vibrant}{{1}{15}{USL visualization: Contention creates a speed limit, while Crosstalk creates a performance cliff. The A2 architecture targets $\beta < 0.001$}{figure.1}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces The Shock Absorber Architecture: A "Dumb Pipe" ingress layer protects "Smart Node" consumers from load spikes.}}{16}{figure.2}\protected@file@percent }
+\newlabel{fig:a2_shock_vibrant}{{2}{16}{The Shock Absorber Architecture: A "Dumb Pipe" ingress layer protects "Smart Node" consumers from load spikes}{figure.2}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces Partition Affinity: Hash(TenantID) \% N determines the partition. This ensures a "DDoS" on Tenant A only affects one consumer.}}{17}{figure.3}\protected@file@percent }
+\newlabel{fig:a2_partition_detail}{{3}{17}{Partition Affinity: Hash(TenantID) \% N determines the partition. This ensures a "DDoS" on Tenant A only affects one consumer}{figure.3}{}}
+\gdef \@abspage@last{17}

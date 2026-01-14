@@ -1,0 +1,16 @@
+graph LR
+    Target[Target p99<br/>Latency: 50ms] --> PID{PID Controller}
+    Actual[Actual p99<br/>Latency: 75ms] --> PID
+    
+    PID -->|Error Signal<br/>e(t) = 25ms| Adjust[Adjust Token<br/>Bucket Rate]
+    
+    Adjust -->|Reduce by 10%| TokenBucket[Token Bucket<br/>New Rate: 900k RPS]
+    
+    TokenBucket --> Ingress[Ingress Layer]
+    Ingress -->|Reduced Load| System[System]
+    System -->|Measure| Actual
+    
+    style Target fill:#4CAF50,color:#fff
+    style PID fill:#2196F3,color:#fff
+    style Adjust fill:#FF9800,color:#fff
+    style TokenBucket fill:#9C27B0,color:#fff
