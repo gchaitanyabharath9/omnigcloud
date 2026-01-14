@@ -1,5 +1,5 @@
 import { Metadata } from 'next';
-import { generateSEOMetadata, SEO_KEYWORDS } from '@/utils/seo';
+import { generateSEOMetadata, generateArticleSchema, SEO_KEYWORDS } from '@/utils/seo';
 import fs from 'fs';
 import path from 'path';
 import AuthorBio from '@/components/article/AuthorBio';
@@ -61,6 +61,20 @@ export default async function A5ModernizationPage({ params }: { params: Promise<
 
     return (
         <div className="min-h-screen bg-[#020617] text-slate-200 selection:bg-primary/30">
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{
+                    __html: JSON.stringify(generateArticleSchema({
+                        title: 'A5: Monolith to Cloud-Native Modernization',
+                        description: 'A risk-managed strategy for legacy modernization using Strangler Fig and Shadow Traffic patterns.',
+                        author: 'Chaitanya Bharath Gopu',
+                        publishedTime: '2026-02-05T12:00:00.000Z',
+                        modifiedTime: '2026-02-05T12:00:00.000Z',
+                        image: 'https://www.omnigcloud.com/og-images/papers/a5-modernization.png',
+                        url: `https://www.omnigcloud.com/${locale}/research/papers/a5-monolith-to-cloud-native-modernization`,
+                    }))
+                }}
+            />
             {/* Semantic Header for SEO */}
             <header className="relative py-24 overflow-hidden border-b border-white/5">
                 <div className="absolute inset-0 bg-grid-white/[0.02] bg-[size:40px_40px]" />

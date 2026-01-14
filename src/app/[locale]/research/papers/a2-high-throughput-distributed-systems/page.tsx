@@ -1,5 +1,5 @@
 import { Metadata } from 'next';
-import { generateSEOMetadata, SEO_KEYWORDS } from '@/utils/seo';
+import { generateSEOMetadata, generateArticleSchema, SEO_KEYWORDS } from '@/utils/seo';
 import fs from 'fs';
 import path from 'path';
 import AuthorBio from '@/components/article/AuthorBio';
@@ -60,6 +60,20 @@ export default async function A2HighThroughputSystemsPage({ params }: { params: 
 
     return (
         <div className="min-h-screen bg-[#020617] text-slate-200 selection:bg-primary/30">
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{
+                    __html: JSON.stringify(generateArticleSchema({
+                        title: 'A2: Designing High-Throughput Distributed Systems at Scale',
+                        description: 'Architectural patterns for building resilient systems that handle 100K+ messages per second with sub-10ms latency.',
+                        author: 'Chaitanya Bharath Gopu',
+                        publishedTime: '2026-01-15T12:00:00.000Z',
+                        modifiedTime: '2026-01-15T12:00:00.000Z',
+                        image: 'https://www.omnigcloud.com/og-images/papers/a2-high-throughput.png',
+                        url: `https://www.omnigcloud.com/${locale}/research/papers/a2-high-throughput-distributed-systems`,
+                    }))
+                }}
+            />
             {/* Semantic Header for SEO */}
             <header className="relative py-24 overflow-hidden border-b border-white/5">
                 <div className="absolute inset-0 bg-grid-white/[0.02] bg-[size:40px_40px]" />
