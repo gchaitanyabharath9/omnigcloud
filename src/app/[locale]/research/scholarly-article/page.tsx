@@ -1,5 +1,5 @@
 import { Metadata } from 'next';
-import { generateSEOMetadata, SEO_KEYWORDS } from '@/utils/seo';
+import { generateSEOMetadata, generateArticleSchema, SEO_KEYWORDS } from '@/utils/seo';
 import fs from 'fs';
 import path from 'path';
 import AuthorBio from '@/components/article/AuthorBio';
@@ -184,6 +184,20 @@ export default async function ScholarlyArticlePage({ params }: { params: Promise
 
     return (
         <article className="min-h-screen bg-background pt-24 pb-20">
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{
+                    __html: JSON.stringify(generateArticleSchema({
+                        title: 'The Enterprise Architecture Tension',
+                        description: 'Examining the conflict between sovereignty, scale, and operational complexity in cloud-native platforms.',
+                        author: 'Chaitanya Bharath Gopu',
+                        publishedTime: '2026-01-08T12:00:00.000Z',
+                        modifiedTime: '2026-01-14T00:00:00.000Z',
+                        image: 'https://www.omnigcloud.com/og-images/research/scholarly-article.png',
+                        url: `https://www.omnigcloud.com/${locale}/research/scholarly-article`,
+                    }))
+                }}
+            />
             <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex flex-col lg:flex-row gap-12">
 

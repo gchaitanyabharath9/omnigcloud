@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import Footer from "@/components/Footer";
 import { getTranslations } from "next-intl/server";
-import { generateSEOMetadata, SEO_KEYWORDS } from '@/utils/seo';
+import { generateSEOMetadata, generateOrganizationSchema, SEO_KEYWORDS } from '@/utils/seo';
 import { Users, Globe, Target, Award, Briefcase, MapPin, Newspaper, Mail, Phone, ExternalLink, TrendingUp, BarChart3, Layers } from "lucide-react";
 
 // const COMPANY_SECTION_IDS removed in previous step
@@ -37,6 +37,10 @@ export default async function CompanyPage() {
 
     return (
         <div className="snap-container">
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(generateOrganizationSchema()) }}
+            />
             {/* ABOUT HERO - Snap 1 */}
             <section id="about" className="snap-section container" style={{ paddingTop: 'var(--section-pt)' }}>
 

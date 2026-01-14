@@ -1,6 +1,6 @@
 import { PageShell } from '@/components/layout/PageShell';
 import { getTranslations } from 'next-intl/server';
-import { generateSEOMetadata, SEO_KEYWORDS } from '@/utils/seo';
+import { generateSEOMetadata, generateProductSchema, SEO_KEYWORDS } from '@/utils/seo';
 import { Check, X, Shield, Globe, Cpu, Zap, Award, HelpCircle, ArrowRight } from 'lucide-react';
 import Link from 'next/link';
 import type { Metadata } from 'next';
@@ -120,20 +120,17 @@ export default async function PricingPage({ params }: { params: Promise<{ locale
         }
     ];
 
-    const jsonLd = {
-        "@context": "https://schema.org",
-        "@type": "Product",
-        "name": "OmniGCloud Platform",
-        "description": t('hero.subtitle'),
-        "offers": plans.map(plan => ({
-            "@type": "Offer",
-            "name": t(`plans.${plan.id}.name`),
-            "price": plan.price === "Custom" ? "0" : plan.price,
-            "priceCurrency": "USD",
-            "description": t(`plans.${plan.id}.desc`),
-            "url": `https://omnigcloud.com/${locale}/pricing#${plan.id}`
-        }))
-    };
+    const jsonLd = generateProductSchema({
+        name: "OmniGCloud Platform",
+        description: t('hero.subtitle'),
+        image: "https://www.omnigcloud.com/og-images/pricing.png",
+        sku: "OMNIG-PLATFORM-V3",
+        brand: "OmniGCloud",
+        offers: {
+            price: "250",
+            priceCurrency: "USD"
+        }
+    });
 
     return (
         <>

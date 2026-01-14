@@ -16,7 +16,7 @@ const EcosystemSection = dynamic(() => import('@/components/sections/home/Ecosys
 const DemoSection = dynamic(() => import('@/components/sections/home/DemoSection'));
 
 import { getTranslations } from 'next-intl/server';
-import { generateSEOMetadata, SEO_KEYWORDS } from '@/utils/seo';
+import { generateSEOMetadata, generateOrganizationSchema, SEO_KEYWORDS } from '@/utils/seo';
 
 export const revalidate = 3600;
 
@@ -52,6 +52,10 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
 
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(generateOrganizationSchema()) }}
+      />
       <HeroSection />
       <ProblemSection />
       <InteractiveDashboardSection />

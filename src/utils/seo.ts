@@ -146,18 +146,18 @@ export function generateOrganizationSchema() {
         ],
         contactPoint: {
             '@type': 'ContactPoint',
-            telephone: '+1-XXX-XXX-XXXX',
+            telephone: '+1-850-443-1481',
             contactType: 'customer service',
-            email: 'support@omnigcloud.com',
+            email: 'omnigcloud@gmail.com',
             areaServed: 'Worldwide',
             availableLanguage: ['en', 'es', 'fr', 'de', 'zh', 'hi', 'ja', 'ko']
         },
         address: {
             '@type': 'PostalAddress',
-            streetAddress: 'Your Street Address',
-            addressLocality: 'Your City',
-            addressRegion: 'Your State',
-            postalCode: 'Your ZIP',
+            streetAddress: '3354 Jasmine Hill Rd',
+            addressLocality: 'Tallahassee',
+            addressRegion: 'FL',
+            postalCode: '32311',
             addressCountry: 'US'
         }
     };
