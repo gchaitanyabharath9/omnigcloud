@@ -16,17 +16,31 @@ const EcosystemSection = dynamic(() => import('@/components/sections/home/Ecosys
 const DemoSection = dynamic(() => import('@/components/sections/home/DemoSection'));
 
 import { getTranslations } from 'next-intl/server';
+import { generateSEOMetadata, SEO_KEYWORDS } from '@/utils/seo';
 
 export const revalidate = 3600;
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
   const tm = await getTranslations({ locale, namespace: 'Metadata.Home' });
-  return {
+
+  return generateSEOMetadata({
     title: tm('title'),
     description: tm('description'),
-    keywords: ['enterprise cloud modernization', 'AI cloud governance', 'cloud agnostic platform', 'RedHat OCP modernization', 'sovereign cloud infrastructure'],
-  };
+    keywords: [
+      ...SEO_KEYWORDS.platform,
+      ...SEO_KEYWORDS.security,
+      ...SEO_KEYWORDS.performance,
+      'enterprise cloud modernization',
+      'AI cloud governance',
+      'cloud agnostic platform',
+      'RedHat OCP modernization',
+      'autonomous infrastructure',
+    ],
+    canonical: `https://www.omnigcloud.com/${locale}`,
+    ogImage: `https://www.omnigcloud.com/og-images/home.png`,
+    ogType: 'website',
+  }, locale);
 }
 
 export function generateStaticParams() {

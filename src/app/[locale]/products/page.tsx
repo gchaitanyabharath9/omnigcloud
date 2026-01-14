@@ -1,6 +1,7 @@
 import { PageShell } from '@/components/layout/PageShell';
 import { Section } from '@/components/layout/Section';
 import { getTranslations, getLocale } from 'next-intl/server';
+import { generateSEOMetadata, SEO_KEYWORDS } from '@/utils/seo';
 import { Cpu, ArrowRight } from 'lucide-react';
 import Link from 'next/link';
 import { PRODUCTS } from '@/data/products';
@@ -14,10 +15,22 @@ const PRODUCT_SECTION_IDS = ['playground', 'workflows', 'guard', 'knowledge', 'd
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
     const { locale } = await params;
     const tm = await getTranslations({ locale, namespace: 'Metadata.Products' });
-    return {
+
+    return generateSEOMetadata({
         title: tm('title'),
         description: tm('description'),
-    };
+        keywords: [
+            ...SEO_KEYWORDS.platform,
+            ...SEO_KEYWORDS.modernization,
+            'cloud orchestration',
+            'multi-cloud management',
+            'infrastructure automation',
+            'sovereign products',
+        ],
+        canonical: `https://www.omnigcloud.com/${locale}/products`,
+        ogImage: `https://www.omnigcloud.com/og-images/products.png`,
+        ogType: 'website',
+    }, locale);
 }
 
 export function generateStaticParams() {
