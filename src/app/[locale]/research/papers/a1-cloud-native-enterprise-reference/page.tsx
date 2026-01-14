@@ -5,7 +5,7 @@ import path from 'path';
 import AuthorBio from '@/components/article/AuthorBio';
 import MermaidDiagram from '@/components/article/MermaidDiagram';
 import { parseMarkdownContent, renderMarkdownToHTML } from '@/utils/markdown';
-import { FileText, Calendar, Tag, ShieldCheck, Layers, ArrowRight } from 'lucide-react';
+import { FileText, Calendar, Tag, ShieldCheck, Layers, ArrowRight, Download } from 'lucide-react';
 
 export const revalidate = 86400; // Cache for 24 hours (ISR)
 
@@ -135,6 +135,13 @@ export default async function A1PaperPage({ params }: { params: Promise<{ locale
                                 "This standard establishes a sovereign boundary between application logic and infrastructure primitives, ensuring
                                 infinite portability across heterogeneous cloud providers while maintaining centralized governance."
                             </p>
+
+                            <a
+                                href="/pdfs/A1-Reference-Architecture-Signed.pdf"
+                                className="flex items-center justify-center gap-2 w-full py-3 rounded-lg bg-primary/10 border border-primary/20 text-primary font-bold text-xs uppercase tracking-wider hover:bg-primary/20 transition-all mb-6"
+                            >
+                                <Download size={16} /> Download Signed PDF
+                            </a>
                             <div className="space-y-4">
                                 <div className="flex items-center justify-between text-xs font-mono border-b border-white/5 pb-2">
                                     <span className="text-slate-500">Classification</span>

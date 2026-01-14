@@ -5,7 +5,7 @@ import path from 'path';
 import AuthorBio from '@/components/article/AuthorBio';
 import MermaidDiagram from '@/components/article/MermaidDiagram';
 import { parseMarkdownContent, renderMarkdownToHTML } from '@/utils/markdown';
-import { ChevronRight, FileText, Calendar, Tag, ShieldCheck, Layers, ArrowRight } from 'lucide-react';
+import { ChevronRight, FileText, Calendar, Tag, ShieldCheck, Layers, ArrowRight, Download } from 'lucide-react';
 
 export const revalidate = 86400; // Cache for 24 hours (ISR)
 
@@ -137,6 +137,13 @@ export default async function A6SynthesisPage({ params }: { params: Promise<{ lo
                                 "This synthesis paper unites the architectural patterns of A1-A5 into a consolidated theory of 'Adaptive Policy Enforcement'.
                                 It demonstrates how observability triggers governance, which in turn modulates throughput, creating a self-regulating digital organism."
                             </p>
+
+                            <a
+                                href="/pdfs/A6-Adaptive-Signed.pdf"
+                                className="flex items-center justify-center gap-2 w-full py-3 rounded-lg bg-primary/10 border border-primary/20 text-primary font-bold text-xs uppercase tracking-wider hover:bg-primary/20 transition-all mb-6"
+                            >
+                                <Download size={16} /> Download Signed PDF
+                            </a>
                             <div className="space-y-4">
                                 <div className="flex items-center justify-between text-xs font-mono border-b border-white/5 pb-2">
                                     <span className="text-slate-500">Classification</span>
