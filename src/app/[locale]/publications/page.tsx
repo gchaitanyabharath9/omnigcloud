@@ -64,14 +64,14 @@ export default async function PublicationsPage({ params }: { params: Promise<{ l
         {
             title: "Adaptive Enterprise Control Plane (AECP)",
             excerpt: "The unified framework for sovereign cloud operations.",
-            href: "/research/frameworks/aecp",
+            href: "/research/papers/aecp",
             category: "Framework",
             date: "2025-01-01"
         },
         {
             title: "Governance-Driven Architectural Stability",
             excerpt: "Scholarly analysis of policy-as-code impact on system stability.",
-            href: "/research/scholarly-article",
+            href: "/research/papers/scholarly-article",
             category: "Scholarly",
             date: "2025-01-10"
         }

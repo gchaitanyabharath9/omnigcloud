@@ -52,7 +52,7 @@ export default async function ResearchHubPage({ params }: { params: Promise<{ lo
                         <h2 className="text-3xl font-bold tracking-tight">The Enterprise Architecture Tension</h2>
                     </div>
 
-                    <Link href={`/${locale}/research/scholarly-article`} className="glass-panel p-0 rounded-[2rem] border border-white/10 hover:border-primary/50 transition-all group relative overflow-hidden block">
+                    <Link href={`/${locale}/research/papers/scholarly-article`} className="glass-panel p-0 rounded-[2rem] border border-white/10 hover:border-primary/50 transition-all group relative overflow-hidden block">
                         {/* Dynamic Background */}
                         <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-transparent opacity-50 group-hover:opacity-100 transition-opacity" />
 
@@ -108,7 +108,7 @@ export default async function ResearchHubPage({ params }: { params: Promise<{ lo
                     </div>
 
                     <div className="grid grid-cols-1">
-                        <Link href={`/${locale}/research/frameworks/aecp`} className="group relative overflow-hidden rounded-[2rem] border border-white/10 bg-[var(--bg-surface-1)] hover:border-blue-500/50 transition-all shadow-2xl shadow-black/50">
+                        <Link href={`/${locale}/research/papers/aecp`} className="group relative overflow-hidden rounded-[2rem] border border-white/10 bg-[var(--bg-surface-1)] hover:border-blue-500/50 transition-all shadow-2xl shadow-black/50">
                             {/* Decorative Background Gradients */}
                             <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-blue-500/10 rounded-full blur-[100px] -translate-y-1/2 translate-x-1/2 pointer-events-none" />
                             <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/5 to-transparent -translate-x-full group-hover:animate-shimmer pointer-events-none" />

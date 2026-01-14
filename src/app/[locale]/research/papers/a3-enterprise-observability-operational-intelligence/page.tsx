@@ -138,7 +138,7 @@ export default async function A3ObservabilityPage({ params }: { params: Promise<
                             </p>
 
                             <a
-                                href="/pdfs/A3-Observability-Signed.pdf"
+                                href="/assets/papers/a3/a3-signed.pdf"
                                 className="flex items-center justify-center gap-2 w-full py-3 rounded-lg bg-primary/10 border border-primary/20 text-primary font-bold text-xs uppercase tracking-wider hover:bg-primary/20 transition-all mb-6"
                             >
                                 <Download size={16} /> Download Signed PDF

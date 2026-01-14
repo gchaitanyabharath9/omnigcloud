@@ -21,10 +21,10 @@ jobs:
     name: 🛡️ Quality Gates (CI)
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # v4.2.2
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
 
       - name: Setup Node.js
-        uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4.2.0
+        uses: actions/setup-node@393700c4314b93198f82875f5bc9fa4219b2585f # v4.1.0
         with:
           node-version: "20"
           cache: "npm"
@@ -63,7 +63,7 @@ jobs:
     env:
       APP_ENV: "sit"
     steps:
-      - uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # v4.2.2
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
 
       - name: Deploy Information
         run: |

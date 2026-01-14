@@ -61,3 +61,15 @@ next-env.d.ts
 
 # Review PDFs (Local Only)
 /review-pdfs/
+artifacts/
+
+# stale exports
+/public-release/
+/_stale/
+/temp/
+
+# media drafts
+*-FLAGSHIP.md
+*-ENHANCED.md
+*-ORIGINAL.md
+PUBLICATION_STRATEGY.md

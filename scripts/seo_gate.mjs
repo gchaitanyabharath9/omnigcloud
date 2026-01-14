@@ -95,9 +95,14 @@ async function fetchSitemap() {
         const matches = text.matchAll(/<loc>(.*?)<\/loc>/g);
         for (const match of matches) {
             let url = match[1];
-            // Normalize to local
-            if (url.includes('omnigcloud.com')) {
-                url = url.replace(/https?:\/\/(www\.)?omnigcloud\.com/, BASE_URL);
+            try {
+                const parsedUrl = new URL(url);
+                if (parsedUrl.hostname === 'omnigcloud.com' || parsedUrl.hostname === 'www.omnigcloud.com') {
+                    // Normalize to local for crawling
+                    url = `${BASE_URL}${parsedUrl.pathname}${parsedUrl.search}`;
+                }
+            } catch (e) {
+                // If not a valid absolute URL, assume it might be relative or ignore
             }
             sitemapUrls.add(url);
         }
@@ -147,18 +152,13 @@ async function checkUrl(url) {
             if (!canonical.startsWith('http')) {
                 violations.push({ type: 'CANONICAL', url, message: `Invalid canonical format: ${canonical}` });
             } else {
-                if (canonical.includes('omnigcloud.com')) {
-                    const path = new URL(canonical).pathname;
-                    // Check consistency
-                    // Map to duplicate check
-                    if (canonicalMap.has(canonical)) {
-                        // It's inconsistent if the same canonical is used for different localized pages that are NOT the same page
-                        // Actually, cross-language duplicates are bad if they aren't properly hreflang'd.
-                        // But for now, let's just warn if strict duplicates on different content.
-                        // We'll skip strict duplicate check across locales for now as many pages might share canonical if implemented wrong, 
-                        // but for hreflang they usually point to self.
+                try {
+                    const parsedCanonical = new URL(canonical, BASE_URL);
+                    if (parsedCanonical.hostname === 'omnigcloud.com' || parsedCanonical.hostname === 'www.omnigcloud.com' || parsedCanonical.origin === new URL(BASE_URL).origin) {
+                        canonicalMap.set(canonical, url);
                     }
-                    canonicalMap.set(canonical, url);
+                } catch (e) {
+                    violations.push({ type: 'CANONICAL', url, message: `Invalid canonical URL: ${canonical}` });
                 }
             }
         }
@@ -189,17 +189,22 @@ async function checkUrl(url) {
         // 5. Internal Links (collect for crawl)
         const links = Array.from(doc.querySelectorAll('a[href]'));
         for (const link of links) {
-            let href = link.getAttribute('href');
-            if (href.startsWith('/')) {
-                href = `${BASE_URL}${href}`;
-            }
-            if (href.startsWith(BASE_URL) && !visited.has(href)) {
-                // Avoid crawling infinite query params
-                if (!href.includes('?') && !href.includes('#')) {
-                    if (queue.length < MAX_URLS * 2) { // Buffer
-                        queue.push(href);
+            try {
+                const href = link.getAttribute('href');
+                if (!href) continue;
+                const parsedHref = new URL(href, url); // Use current page as base for relative links
+                const baseOrigin = new URL(BASE_URL).origin;
+
+                if (parsedHref.origin === baseOrigin && !visited.has(parsedHref.href)) {
+                    // Avoid crawling infinite query params
+                    if (!parsedHref.search && !parsedHref.hash) {
+                        if (queue.length < MAX_URLS * 2) {
+                            queue.push(parsedHref.href);
+                        }
                     }
                 }
+            } catch (e) {
+                // Ignore invalid links
             }
         }
 
