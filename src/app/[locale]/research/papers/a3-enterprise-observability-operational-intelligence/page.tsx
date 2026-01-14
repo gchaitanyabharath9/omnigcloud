@@ -1,4 +1,5 @@
 import { Metadata } from 'next';
+import { generateSEOMetadata, SEO_KEYWORDS } from '@/utils/seo';
 import fs from 'fs';
 import path from 'path';
 import AuthorBio from '@/components/article/AuthorBio';
@@ -14,29 +15,30 @@ export function generateStaticParams() {
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
     const { locale } = await params;
-    return {
-        title: 'A3: Enterprise Observability & Operational Intelligence at Scale | OmniGCloud',
+
+    const baseMetadata = generateSEOMetadata({
+        title: 'A3: Enterprise Observability & Operational Intelligence at Scale',
         description: 'Implementing high-cardinality distributed tracing and adaptive sampling to debug unknown-unknowns.',
-        alternates: {
-            canonical: `https://www.omnigcloud.com/${locale}/research/papers/a3-enterprise-observability-operational-intelligence`
-        },
-        robots: {
-            index: true,
-            follow: true,
-            nocache: true,
-            googleBot: {
-                index: true,
-                follow: true,
-                noimageindex: false,
-            },
-        },
-        openGraph: {
-            title: 'Enterprise Observability & Operational Intelligence (A3)',
-            description: 'Moving beyond dashboards to symptom-based alerting and automated remediation.',
-            type: 'article',
-            publishedTime: '2026-01-22T12:00:00.000Z',
-            authors: ['Chaitanya Bharath Gopu'],
-        },
+        keywords: [
+            ...SEO_KEYWORDS.performance,
+            ...SEO_KEYWORDS.modernization,
+            'observability',
+            'distributed tracing',
+            'high cardinality',
+            'operational intelligence',
+            'adaptive sampling',
+        ],
+        canonical: `https://www.omnigcloud.com/${locale}/research/papers/a3-enterprise-observability-operational-intelligence`,
+        ogImage: 'https://www.omnigcloud.com/og-images/papers/a3-observability.png',
+        ogType: 'article',
+        author: 'Chaitanya Bharath Gopu',
+        publishedTime: '2026-01-22T12:00:00.000Z',
+        section: 'Research',
+        tags: ['observability', 'distributed systems', 'monitoring'],
+    }, locale);
+
+    return {
+        ...baseMetadata,
         other: {
             'citation_title': 'Enterprise Observability & Operational Intelligence at Scale',
             'citation_author': 'Chaitanya Bharath Gopu',

@@ -1,4 +1,5 @@
 import { Metadata } from 'next';
+import { generateSEOMetadata, SEO_KEYWORDS } from '@/utils/seo';
 import fs from 'fs';
 import path from 'path';
 import AuthorBio from '@/components/article/AuthorBio';
@@ -14,29 +15,30 @@ export function generateStaticParams() {
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
     const { locale } = await params;
-    return {
-        title: 'A2: Designing High-Throughput Distributed Systems at Scale | OmniGCloud',
+
+    const baseMetadata = generateSEOMetadata({
+        title: 'A2: Designing High-Throughput Distributed Systems at Scale',
         description: 'Architectural patterns for building resilient systems that handle 100K+ messages per second with sub-10ms latency.',
-        alternates: {
-            canonical: `https://www.omnigcloud.com/${locale}/research/papers/a2-high-throughput-distributed-systems`
-        },
-        robots: {
-            index: true,
-            follow: true,
-            nocache: true,
-            googleBot: {
-                index: true,
-                follow: true,
-                noimageindex: false,
-            },
-        },
-        openGraph: {
-            title: 'Designing High-Throughput Distributed Systems (A2)',
-            description: 'The definitive guide to partition strategies, load shedding, and consistency models at hyper-scale.',
-            type: 'article',
-            publishedTime: '2026-01-15T12:00:00.000Z',
-            authors: ['Chaitanya Bharath Gopu'],
-        },
+        keywords: [
+            ...SEO_KEYWORDS.performance,
+            ...SEO_KEYWORDS.platform,
+            'distributed systems',
+            'high throughput',
+            'sharding strategies',
+            'load shedding',
+            'eventual consistency',
+        ],
+        canonical: `https://www.omnigcloud.com/${locale}/research/papers/a2-high-throughput-distributed-systems`,
+        ogImage: 'https://www.omnigcloud.com/og-images/papers/a2-high-throughput.png',
+        ogType: 'article',
+        author: 'Chaitanya Bharath Gopu',
+        publishedTime: '2026-01-15T12:00:00.000Z',
+        section: 'Research',
+        tags: ['distributed systems', 'scalability', 'performance engineering'],
+    }, locale);
+
+    return {
+        ...baseMetadata,
         other: {
             'citation_title': 'Designing High-Throughput Distributed Systems at Scale',
             'citation_author': 'Chaitanya Bharath Gopu',

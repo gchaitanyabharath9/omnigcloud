@@ -1,4 +1,5 @@
 import { Metadata } from 'next';
+import { generateSEOMetadata, SEO_KEYWORDS } from '@/utils/seo';
 import fs from 'fs';
 import path from 'path';
 import AuthorBio from '@/components/article/AuthorBio';
@@ -14,29 +15,29 @@ export function generateStaticParams() {
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
     const { locale } = await params;
-    return {
-        title: 'A1 Reference Architecture: Cloud-Native Enterprise Platforms | OmniGCloud',
+
+    const baseMetadata = generateSEOMetadata({
+        title: 'A1 Reference Architecture: Cloud-Native Enterprise Platforms',
         description: 'The canonical A1 technical standard for implementing sovereign, multi-cloud platforms maximizing latency budgets and governance.',
-        alternates: {
-            canonical: `https://www.omnigcloud.com/${locale}/research/papers/a1-cloud-native-enterprise-reference`
-        },
-        robots: {
-            index: true,
-            follow: true,
-            nocache: true,
-            googleBot: {
-                index: true,
-                follow: true,
-                noimageindex: false,
-            },
-        },
-        openGraph: {
-            title: 'Reference Architecture for Cloud-Native Enterprise Platforms (A1)',
-            description: 'The flagship specification for scalable, sovereign enterprise systems.',
-            type: 'article',
-            publishedTime: '2026-01-08T12:00:00.000Z',
-            authors: ['Chaitanya Bharath Gopu'],
-        },
+        keywords: [
+            ...SEO_KEYWORDS.platform,
+            ...SEO_KEYWORDS.modernization,
+            'reference architecture',
+            'technical standard',
+            'enterprise platform',
+            'cloud governance',
+        ],
+        canonical: `https://www.omnigcloud.com/${locale}/research/papers/a1-cloud-native-enterprise-reference`,
+        ogImage: 'https://www.omnigcloud.com/og-images/papers/a1-reference-architecture.png',
+        ogType: 'article',
+        author: 'Chaitanya Bharath Gopu',
+        publishedTime: '2026-01-08T12:00:00.000Z',
+        section: 'Research',
+        tags: ['cloud-native', 'distributed systems', 'enterprise architecture', 'technical standard'],
+    }, locale);
+
+    return {
+        ...baseMetadata,
         other: {
             'citation_title': 'A Reference Architecture for Cloud-Native Enterprise Platforms at Scale',
             'citation_author': 'Chaitanya Bharath Gopu',

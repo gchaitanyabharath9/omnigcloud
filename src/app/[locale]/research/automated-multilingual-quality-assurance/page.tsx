@@ -2,6 +2,7 @@ import React from 'react';
 import { ChevronLeft } from 'lucide-react';
 import Link from 'next/link';
 import { Metadata } from 'next';
+import { generateSEOMetadata, SEO_KEYWORDS } from '@/utils/seo';
 import { WatermarkOverlay } from '@/components/WatermarkOverlay';
 
 // Modular Components
@@ -11,20 +12,28 @@ import { ResearchActions } from '@/features/resources/research/ResearchActions';
 import { ResearchFooter } from '@/features/resources/research/ResearchFooter';
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
-    return {
-        title: 'Automated Multilingual Quality Assurance Framework | OmniGCloud Research',
+    const { locale } = await params;
+
+    return generateSEOMetadata({
+        title: 'Automated Multilingual Quality Assurance Framework',
         description: 'A deterministic framework for automated multilingual quality assurance in global-scale web applications.',
-        alternates: {
-            canonical: 'https://www.omnigcloud.com/en/research/automated-multilingual-quality-assurance'
-        },
-        openGraph: {
-            title: 'Automated Multilingual Quality Assurance Framework',
-            description: 'Research paper on deterministic QA frameworks for multilingual systems.',
-            type: 'article',
-            publishedTime: '2024-12-01T12:00:00.000Z',
-            authors: ['Chaitanya Bharath Gopu'],
-        }
-    };
+        keywords: [
+            ...SEO_KEYWORDS.platform,
+            'quality assurance',
+            'multilingual testing',
+            'automation framework',
+            'i18n testing',
+            'l10n automation',
+            'regulatory compliance',
+        ],
+        canonical: `https://www.omnigcloud.com/${locale}/research/automated-multilingual-quality-assurance`,
+        ogImage: 'https://www.omnigcloud.com/og-images/research/qa-framework.png',
+        ogType: 'article',
+        author: 'Chaitanya Bharath Gopu',
+        publishedTime: '2024-12-01T12:00:00.000Z',
+        section: 'Research',
+        tags: ['qa', 'automation', 'multilingual', 'compliance'],
+    }, locale);
 }
 
 export default async function PublicationPage({ params }: { params: Promise<{ locale: string }> }) {

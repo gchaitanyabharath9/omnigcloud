@@ -1,4 +1,5 @@
 import { Metadata } from 'next';
+import { generateSEOMetadata, SEO_KEYWORDS } from '@/utils/seo';
 import fs from 'fs';
 import path from 'path';
 import AuthorBio from '@/components/article/AuthorBio';
@@ -14,29 +15,31 @@ export function generateStaticParams() {
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
     const { locale } = await params;
-    return {
-        title: 'A6: Adaptive Policy Enforcement & Sovereign Control | OmniGCloud',
+
+    const baseMetadata = generateSEOMetadata({
+        title: 'A6: Adaptive Policy Enforcement & Sovereign Control',
         description: 'Synthesizing the A1-A5 patterns into a self-healing, autonomic control plane.',
-        alternates: {
-            canonical: `https://www.omnigcloud.com/${locale}/research/papers/a6-adaptive-policy-enforcement`
-        },
-        robots: {
-            index: true,
-            follow: true,
-            nocache: true,
-            googleBot: {
-                index: true,
-                follow: true,
-                noimageindex: false,
-            },
-        },
-        openGraph: {
-            title: 'Adaptive Policy Enforcement (A6)',
-            description: 'The Unified Control Theory: Combining Observability, Governance, and Throughput into a Digital Organism.',
-            type: 'article',
-            publishedTime: '2026-02-12T12:00:00.000Z',
-            authors: ['Chaitanya Bharath Gopu'],
-        },
+        keywords: [
+            ...SEO_KEYWORDS.security,
+            ...SEO_KEYWORDS.performance,
+            'adaptive policy enforcement',
+            'sovereign control',
+            'digital organism',
+            'control theory',
+            'autonomic computing',
+            'self-healing systems',
+        ],
+        canonical: `https://www.omnigcloud.com/${locale}/research/papers/a6-adaptive-policy-enforcement`,
+        ogImage: 'https://www.omnigcloud.com/og-images/papers/a6-adaptive.png',
+        ogType: 'article',
+        author: 'Chaitanya Bharath Gopu',
+        publishedTime: '2026-02-12T12:00:00.000Z',
+        section: 'Research',
+        tags: ['synthesis', 'control theory', 'autonomous systems', 'governance'],
+    }, locale);
+
+    return {
+        ...baseMetadata,
         other: {
             'citation_title': 'Adaptive Policy Enforcement: The Synthesis of Sovereign Control',
             'citation_author': 'Chaitanya Bharath Gopu',

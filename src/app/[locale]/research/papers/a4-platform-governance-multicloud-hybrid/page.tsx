@@ -1,4 +1,5 @@
 import { Metadata } from 'next';
+import { generateSEOMetadata, SEO_KEYWORDS } from '@/utils/seo';
 import fs from 'fs';
 import path from 'path';
 import AuthorBio from '@/components/article/AuthorBio';
@@ -14,29 +15,30 @@ export function generateStaticParams() {
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
     const { locale } = await params;
-    return {
-        title: 'A4: Platform Governance & Multi-Cloud Hybrid Strategy | OmniGCloud',
+
+    const baseMetadata = generateSEOMetadata({
+        title: 'A4: Platform Governance & Multi-Cloud Hybrid Strategy',
         description: 'Implementing Policy-as-Code and Sovereign Identity boundaries for scalable compliance.',
-        alternates: {
-            canonical: `https://www.omnigcloud.com/${locale}/research/papers/a4-platform-governance-multicloud-hybrid`
-        },
-        robots: {
-            index: true,
-            follow: true,
-            nocache: true,
-            googleBot: {
-                index: true,
-                follow: true,
-                noimageindex: false,
-            },
-        },
-        openGraph: {
-            title: 'Platform Governance & Multi-Cloud Strategy (A4)',
-            description: 'Automating compliance via Open Policy Agent (OPA) and GitOps.',
-            type: 'article',
-            publishedTime: '2026-01-29T12:00:00.000Z',
-            authors: ['Chaitanya Bharath Gopu'],
-        },
+        keywords: [
+            ...SEO_KEYWORDS.security,
+            ...SEO_KEYWORDS.platform,
+            'platform governance',
+            'multi-cloud strategy',
+            'policy as code',
+            'hybrid cloud',
+            'sovereign identity',
+        ],
+        canonical: `https://www.omnigcloud.com/${locale}/research/papers/a4-platform-governance-multicloud-hybrid`,
+        ogImage: 'https://www.omnigcloud.com/og-images/papers/a4-governance.png',
+        ogType: 'article',
+        author: 'Chaitanya Bharath Gopu',
+        publishedTime: '2026-01-29T12:00:00.000Z',
+        section: 'Research',
+        tags: ['governance', 'multi-cloud', 'compliance'],
+    }, locale);
+
+    return {
+        ...baseMetadata,
         other: {
             'citation_title': 'Platform Governance & Multi-Cloud Hybrid Strategy',
             'citation_author': 'Chaitanya Bharath Gopu',

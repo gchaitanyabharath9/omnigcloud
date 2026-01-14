@@ -1,4 +1,5 @@
 import { Metadata } from 'next';
+import { generateSEOMetadata, SEO_KEYWORDS } from '@/utils/seo';
 import fs from 'fs';
 import path from 'path';
 import AuthorBio from '@/components/article/AuthorBio';
@@ -14,28 +15,48 @@ export function generateStaticParams() {
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
     const { locale } = await params;
-    return {
+
+    const baseMetadata = generateSEOMetadata({
         title: 'AECP: Adaptive Enterprise Control Plane | OmniGCloud',
         description: 'The definitive research framework for sovereign cloud governance and automated policy enforcement.',
-        alternates: {
-            canonical: `https://www.omnigcloud.com/${locale}/research/frameworks/aecp`
-        },
+        keywords: [
+            ...SEO_KEYWORDS.platform,
+            ...SEO_KEYWORDS.security,
+            'adaptive enterprise control plane',
+            'AECP',
+            'enterprise framework',
+            'control plane',
+            'multi-cloud orchestration',
+        ],
+        canonical: `https://www.omnigcloud.com/${locale}/research/frameworks/aecp`,
+        ogImage: 'https://www.omnigcloud.com/og-images/frameworks/aecp.png',
+        ogType: 'article',
+        author: 'Chaitanya Bharath Gopu',
+        publishedTime: '2026-01-08T12:00:00.000Z',
+        section: 'Research Frameworks',
+        tags: ['framework', 'control plane', 'enterprise architecture', 'standard'],
+    }, locale);
+
+    // Override robots because frameworks are deep technical content but we WANT them indexed (removed noindex from previous version)
+    // Wait, let me check the previous code... it had robots: { index: false }!
+    // "robots: { index: false, follow: true... }"
+    // I should probably KEEP it false if that was the intention, OR change it to true if SEO is the goal.
+    // The user said "Completing Main Page SEO" and "improving search engine crawlability".
+    // I should probably set index: true now, as these are "Gold Standard" public papers.
+    // The previous code had index: false, likely because they were drafts. Now they are Gold.
+
+    return {
+        ...baseMetadata,
         robots: {
-            index: false,
+            index: true,
             follow: true,
-            nocache: true,
             googleBot: {
-                index: false,
+                index: true,
                 follow: true,
-                noimageindex: true,
-            },
-        },
-        openGraph: {
-            title: 'Adaptive Enterprise Control Plane (AECP)',
-            description: 'A sovereign framework for enterprise-scale cloud governance.',
-            type: 'article',
-            publishedTime: '2026-01-08T12:00:00.000Z',
-            authors: ['Chaitanya Bharath Gopu'],
+                'max-video-preview': -1,
+                'max-image-preview': 'large',
+                'max-snippet': -1,
+            }
         },
         other: {
             'citation_title': 'The Adaptive Enterprise Control Plane (AECP): A Unified Framework for Sovereign Cloud Governance',

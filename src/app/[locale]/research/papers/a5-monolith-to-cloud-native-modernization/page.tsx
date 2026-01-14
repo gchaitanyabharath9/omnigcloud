@@ -1,4 +1,5 @@
 import { Metadata } from 'next';
+import { generateSEOMetadata, SEO_KEYWORDS } from '@/utils/seo';
 import fs from 'fs';
 import path from 'path';
 import AuthorBio from '@/components/article/AuthorBio';
@@ -14,29 +15,31 @@ export function generateStaticParams() {
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
     const { locale } = await params;
-    return {
-        title: 'A5: Monolith to Cloud-Native Modernization | OmniGCloud',
+
+    const baseMetadata = generateSEOMetadata({
+        title: 'A5: Monolith to Cloud-Native Modernization',
         description: 'A risk-managed strategy for legacy modernization using Strangler Fig and Shadow Traffic patterns.',
-        alternates: {
-            canonical: `https://www.omnigcloud.com/${locale}/research/papers/a5-monolith-to-cloud-native-modernization`
-        },
-        robots: {
-            index: true,
-            follow: true,
-            nocache: true,
-            googleBot: {
-                index: true,
-                follow: true,
-                noimageindex: false,
-            },
-        },
-        openGraph: {
-            title: 'Monolith to Microservices (A5)',
-            description: 'How to migrate without rewriting: Strangler Fig, ACLs, and Dark Launching.',
-            type: 'article',
-            publishedTime: '2026-02-05T12:00:00.000Z',
-            authors: ['Chaitanya Bharath Gopu'],
-        },
+        keywords: [
+            ...SEO_KEYWORDS.modernization,
+            ...SEO_KEYWORDS.platform,
+            'legacy modernization',
+            'strangler fig pattern',
+            'cloud migration',
+            'anti-corruption layer',
+            'microservices decomposition',
+            'shadow traffic',
+        ],
+        canonical: `https://www.omnigcloud.com/${locale}/research/papers/a5-monolith-to-cloud-native-modernization`,
+        ogImage: 'https://www.omnigcloud.com/og-images/papers/a5-modernization.png',
+        ogType: 'article',
+        author: 'Chaitanya Bharath Gopu',
+        publishedTime: '2026-02-05T12:00:00.000Z',
+        section: 'Research',
+        tags: ['modernization', 'migration', 'cloud-native', 'architecture'],
+    }, locale);
+
+    return {
+        ...baseMetadata,
         other: {
             'citation_title': 'Monolith to Cloud-Native Modernization',
             'citation_author': 'Chaitanya Bharath Gopu',

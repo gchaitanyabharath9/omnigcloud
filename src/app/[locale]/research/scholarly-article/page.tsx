@@ -1,4 +1,5 @@
 import { Metadata } from 'next';
+import { generateSEOMetadata, SEO_KEYWORDS } from '@/utils/seo';
 import fs from 'fs';
 import path from 'path';
 import AuthorBio from '@/components/article/AuthorBio';
@@ -14,28 +15,42 @@ export function generateStaticParams() {
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
     const { locale } = await params;
-    return {
+
+    const baseMetadata = generateSEOMetadata({
         title: 'The Enterprise Architecture Tension | OmniGCloud Research',
         description: 'Examining the conflict between sovereignty, scale, and operational complexity in cloud-native platforms.',
-        alternates: {
-            canonical: `https://www.omnigcloud.com/${locale}/research/scholarly-article`
-        },
+        keywords: [
+            ...SEO_KEYWORDS.platform,
+            ...SEO_KEYWORDS.modernization,
+            'enterprise architecture',
+            'cloud tension',
+            'sovereign cloud',
+            'developer velocity',
+            'governance tension',
+            'research paper',
+        ],
+        canonical: `https://www.omnigcloud.com/${locale}/research/scholarly-article`,
+        ogImage: 'https://www.omnigcloud.com/og-images/research/scholarly-article.png',
+        ogType: 'article',
+        author: 'Chaitanya Bharath Gopu',
+        publishedTime: '2026-01-08T12:00:00.000Z',
+        section: 'Research',
+        tags: ['enterprise architecture', 'microservices', 'governance', 'cloud-native'],
+    }, locale);
+
+    // Explicitly enabling indexing for this gold standard paper
+    return {
+        ...baseMetadata,
         robots: {
-            index: false,
+            index: true,
             follow: true,
-            nocache: true,
             googleBot: {
-                index: false,
+                index: true,
                 follow: true,
-                noimageindex: true,
-            },
-        },
-        openGraph: {
-            title: 'The Enterprise Architecture Tension | OmniGCloud Research',
-            description: 'Why conventional cloud-native patterns fail at enterprise scale.',
-            type: 'article',
-            publishedTime: '2026-01-08T12:00:00.000Z',
-            authors: ['Chaitanya Bharath Gopu'],
+                'max-video-preview': -1,
+                'max-image-preview': 'large',
+                'max-snippet': -1,
+            }
         },
         other: {
             'citation_title': 'The Enterprise Architecture Tension: Reconciling Sovereignty, Scale, and Operational Complexity',

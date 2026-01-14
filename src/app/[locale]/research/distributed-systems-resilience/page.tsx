@@ -1,4 +1,5 @@
 import { Metadata } from 'next';
+import { generateSEOMetadata, SEO_KEYWORDS } from '@/utils/seo';
 import { getTranslations } from 'next-intl/server';
 import AuthorBio from '@/components/article/AuthorBio';
 import RelatedReading from '@/components/article/RelatedReading';
@@ -6,20 +7,27 @@ import TableOfContents from '@/components/article/TableOfContents';
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
     const { locale } = await params;
-    return {
-        title: 'Distributed Systems Resilience & Scalability Patterns | OmniGCloud',
+
+    return generateSEOMetadata({
+        title: 'Distributed Systems Resilience & Scalability Patterns',
         description: 'Deep dive into CAP theorem, chaos engineering, and patterns for building unbreakable distributed systems in the cloud.',
-        alternates: {
-            canonical: 'https://www.omnigcloud.com/en/research/distributed-systems-resilience'
-        },
-        openGraph: {
-            title: 'Distributed Systems Resilience & Scalability Patterns',
-            description: 'Engineering systems that survive failure by design.',
-            type: 'article',
-            publishedTime: '2025-01-05T10:00:00.000Z',
-            authors: ['Chaitanya Bharath Gopu'],
-        }
-    };
+        keywords: [
+            ...SEO_KEYWORDS.performance,
+            'distributed systems',
+            'resilience',
+            'cap theorem',
+            'chaos engineering',
+            'circuit breaker',
+            'system scalability',
+        ],
+        canonical: `https://www.omnigcloud.com/${locale}/research/distributed-systems-resilience`,
+        ogImage: 'https://www.omnigcloud.com/og-images/research/distributed-systems.png',
+        ogType: 'article',
+        author: 'Chaitanya Bharath Gopu',
+        publishedTime: '2025-01-05T10:00:00.000Z',
+        section: 'Research',
+        tags: ['distributed systems', 'resilience', 'engineering'],
+    }, locale);
 }
 
 export default async function DistributedSystemsResiliencePage({ params }: { params: Promise<{ locale: string }> }) {
