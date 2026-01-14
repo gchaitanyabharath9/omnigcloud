@@ -209,6 +209,8 @@ export function generateProductSchema(config: {
     name: string;
     description: string;
     image?: string;
+    sku?: string;
+    brand?: string;
     offers?: {
         price: string;
         priceCurrency: string;
@@ -220,9 +222,10 @@ export function generateProductSchema(config: {
         name: config.name,
         description: config.description,
         image: config.image || DEFAULT_OG_IMAGE,
+        sku: config.sku,
         brand: {
             '@type': 'Brand',
-            name: SITE_NAME,
+            name: config.brand || SITE_NAME,
         },
         ...(config.offers && {
             offers: {
