@@ -94,8 +94,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     const routeGroups = [
         { routes: mainPages, priority: 1.0, changeFreq: 'daily' as const },
         { routes: docsPages, priority: 0.9, changeFreq: 'weekly' as const },
-        { routes: researchPapers, priority: 0.9, changeFreq: 'monthly' as const },
-        { routes: researchFrameworks, priority: 0.9, changeFreq: 'monthly' as const },
+        // Research Papers & Frameworks removed for EB-1A Private Portfolio Strategy
         { routes: servicePages, priority: 0.8, changeFreq: 'weekly' as const },
         { routes: industryPages, priority: 0.8, changeFreq: 'weekly' as const },
         { routes: platformPages, priority: 0.8, changeFreq: 'weekly' as const },
