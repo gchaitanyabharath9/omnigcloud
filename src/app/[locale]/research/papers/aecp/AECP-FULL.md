@@ -19,7 +19,32 @@ Through production deployments across five organizations over 18 months (e-comme
 
 ---
 
+## Original Contribution
+
+To the best of our knowledge, AECP is the first framework to formally treat the "Enterprise Control Plane" not as a collection of scripts or tools, but as a distinct software product with its own SDLC, release cadence, and availability SLOs. While Google SRE books describe "Toil reduction," AECP quantifies the architectural mechanism for eliminating toil: the probabilistic conversion of manual policy logic into deterministic, computable automata. This framework extends the NIST 800-207 Zero Trust Architecture by applying its principles beyond network access to general-purpose operational governance.
+
+### Contribution Summary for Non-Specialists
+
+In traditional IT, when a rule needs to be followed (like "encrypt all data"), a human has to check it manually or write a script to check it. As systems grow to thousands of servers, this human-centric approach fails—people forget, scripts break, and security holes open up. AECP changes this by treating "Governance" like a self-driving car system. Instead of a human driver (operator) constantly steering and braking (fixing issues), the system creates a "digital guardrail" that physically prevents the car from driving off the road. This means compliance isn't something you *check*; it's something the system guarantees automatically, 24/7, without human intervention.
+
+### Why This Framework Was Needed Now
+
+The explosion of microservices (2015-2025) created an "entropy crisis." Organizations deployed services faster than they could govern them. Traditional responses—hiring more ops people or buying rigid "Cloud Management Platforms"—failed because they didn't address the core math: the number of policy decision points ($N$) was growing faster than the number of humans ($M$). AECP was needed to provide an $O(1)$ governance model—where the cost of governance remains constant regardless of how many services are deployed.
+
+### Relationship to A1-A6 Series
+
+This framework stands as the **Operational Implementation Engine** for the entire A1-A6 research series.
+*   **A1** defines the *structure* (Separation of Planes).
+*   **AECP** defines the *mechanism* (The Control Plane itself).
+*   **A6** defines the *logic* (Adaptive Policy).
+
+AECP is the machine that executes the requirements defined in A1.
+
+---
+
 ## 1. Core Thesis
+
+This framework operationalizes the A1-REF-STD control plane specifications by providing the concrete state machines and policy lifecycle required to maintain the "Shared Nothing" invariant at scale. Importantly, the AECP framework operationalizes the architectural invariants defined in the A1-REF-STD reference architecture and is intended to complement, rather than replace, that foundational structural model.
 
 Traditional enterprise architecture treats governance as an overlay—a set of rules applied *after* infrastructure is provisioned. This isn't just inefficient. It's architecturally wrong. AECP inverts this model, enforcing a strict separation of concerns where the **Control Plane** (Policy) operates asynchronously from the **Data Plane** (Infrastructure), bound only by late-binding enforcement agents.
 
@@ -38,26 +63,30 @@ AECP inverts this entirely: **policy is the primary primitive, not compute**. Th
 
 ```mermaid
 graph TD
-    subgraph Traditional ["Traditional Model (Overlay)"]
-
-        Infra1["Infrastructure Layer"] -->|Supports| App1[Application Logic]
-        Policy1[Policy Rules] -.->|Applied To| Infra1
-        Constraint1[Compliance Check] -.->|Audit After| Infra1
-        
-        style Policy1 fill:#f9f,stroke:#333
-        style Infra1 fill:#bbf,stroke:#333
+    classDef Control fill:#4E79A7,stroke:#2C3E50,color:#fff;
+    classDef Data fill:#59A14F,stroke:#274E13,color:#fff;
+    classDef Policy fill:#9C6ADE,stroke:#4B0082,color:#fff;
+    classDef Obs fill:#F28E2B,stroke:#8B4513,color:#fff;
+    classDef Risk fill:#E15759,stroke:#7B241C,color:#fff;
+    classDef State fill:#76B7B2,stroke:#0E6251,color:#fff;
+    classDef Actor fill:#BAB0AC,stroke:#515A5A,color:#000;
+    subgraph Traditional ["Traditional Model Overlay"]
+    Infra1["Infrastructure Layer"] -->|Supports| App1["Application Logic"]
+    Policy1["Policy Rules"] -.->|Applied To| Infra1
+    Constraint1["Compliance Check"] -.->|Audit After| Infra1
     end
-
-    subgraph AECP ["AECP Model (Inverted)"]
-        direction TB
-        Intent2["Policy Intent (Legislative)"] -->|Compiles To| WASM2["Enforcement Agent"]
-        WASM2 -->|Permits| Infra2["Infrastructure Provisioning"]
-        WASM2 -->|Permits| App2["Application Execution"]
-        Infra2 -.->|Derived From| Intent2
-        
-        style Intent2 fill:#f96,stroke:#333,stroke-width:2px
-        style WASM2 fill:#9cf,stroke:#333
+    subgraph AECP ["AECP Model Inverted"]
+    direction TB
+    Intent2["Policy Intent ("Legislative")"] -->|Compiles To| WASM2["Enforcement Agent"]
+    WASM2 -->|Permits| Infra2["Infrastructure Provisioning"]
+    WASM2 -->|Permits| App2["Application Execution"]
+    Infra2 -.->|Derived From| Intent2
     end
+    class App1 Obs;
+    class Policy1 Policy;
+    class Constraint1 Policy;
+    class Intent2 Policy;
+    class App2 Data;
 ```
 
 ---
@@ -118,21 +147,25 @@ The Judicial Layer is a deterministic engine that compiles legislative intent in
 
 ```mermaid
 flowchart LR
-    Source[Policy DSL] -->|Parse| AST[Abstract Syntax Tree]
-    AST -->|Validate| Semantic[Semantic Checker]
-    Semantic -->|Optimize| Optimizer[Decision Tree Optimizer]
-    Optimizer -->|CodeGen| Bytecode[WASM Bytecode]
-    Bytecode -->|Sign| Artifact[Signed Policy Artifact]
-    
+    classDef Control fill:#4E79A7,stroke:#2C3E50,color:#fff;
+    classDef Data fill:#59A14F,stroke:#274E13,color:#fff;
+    classDef Policy fill:#9C6ADE,stroke:#4B0082,color:#fff;
+    classDef Obs fill:#F28E2B,stroke:#8B4513,color:#fff;
+    classDef Risk fill:#E15759,stroke:#7B241C,color:#fff;
+    classDef State fill:#76B7B2,stroke:#0E6251,color:#fff;
+    classDef Actor fill:#BAB0AC,stroke:#515A5A,color:#000;
+    Source["Policy DSL"] -->|Parse| AST["Abstract Syntax Tree"]
+    AST -->|Validate| Semantic["Semantic Checker"]
+    Semantic -->|Optimize| Optimizer["Decision Tree Optimizer"]
+    Optimizer -->|CodeGen| Bytecode["WASM Bytecode"]
+    Bytecode -->|Sign| Artifact["Signed Policy Artifact"]
     Semantic -- Error --> Source
-    
-    subgraph "Verification Loop"
-        Compiler[Compiler Engine]
-        Verifier[Cryptographic Signer]
+    subgraph Verification ["Loop"]
+    Compiler["Compiler Engine"]
+    Verifier["Cryptographic Signer"]
     end
-    
-    style Source fill:#f9f
-    style Artifact fill:#9f9
+    class Source Policy;
+    class Artifact Policy;
 ```
 
 ### 2.3 The Executive Layer (Enforcement)
@@ -154,19 +187,24 @@ The Executive Layer consists of distributed sidecars that enforce policy at the 
 
 ```mermaid
 graph TD
-    Judicial["Judicial Plane (Compiler)"] -->|Async Push| Distribution["Distribution Network"]
-    
-    subgraph Sidecar ["Policy Sidecar (WASM)"]
-        Ingress["Ingress Traffic"] --> Logic["Business Logic"]
-        Logic -->|Allow| Service["Service"]
-        Logic -->|Deny| Block["403 Forbidden"]
-        Logic -.->|Async Log| Buffer["Audit Buffer"]
+    classDef Control fill:#4E79A7,stroke:#2C3E50,color:#fff;
+    classDef Data fill:#59A14F,stroke:#274E13,color:#fff;
+    classDef Policy fill:#9C6ADE,stroke:#4B0082,color:#fff;
+    classDef Obs fill:#F28E2B,stroke:#8B4513,color:#fff;
+    classDef Risk fill:#E15759,stroke:#7B241C,color:#fff;
+    classDef State fill:#76B7B2,stroke:#0E6251,color:#fff;
+    classDef Actor fill:#BAB0AC,stroke:#515A5A,color:#000;
+    Judicial["Judicial Plane ("Compiler")"] -->|Async Push| Distribution["Distribution Network"]
+    subgraph Sidecar ["Policy Sidecar WASM"]
+    Ingress["Ingress Traffic"] --> Logic["Business Logic"]
+    Logic -->|Allow| Service["Service"]
+    Logic -->|Deny| Block["403 Forbidden"]
+    Logic -.->|Async Log| Buffer["Audit Buffer"]
     end
-    
     Buffer -->|Batch Flush| Aggregator["Audit Aggregator"]
-    
-    style Judicial fill:#f96
-    style Sidecar fill:#9cf,stroke-width:2px
+    class Ingress Actor;
+    class Logic Obs;
+    class Service Data;
 ```
 
 ---
@@ -179,24 +217,29 @@ AECP is a reference implementation of **NIST 800-207 Zero Trust Architecture**, 
 
 ```mermaid
 graph TD
-    subgraph NIST["NIST 800-207 Components"]
-        PDP[Policy Decision Point]
-        PEP[Policy Enforcement Point]
-        PA[Policy Administrator]
+    classDef Control fill:#4E79A7,stroke:#2C3E50,color:#fff;
+    classDef Data fill:#59A14F,stroke:#274E13,color:#fff;
+    classDef Policy fill:#9C6ADE,stroke:#4B0082,color:#fff;
+    classDef Obs fill:#F28E2B,stroke:#8B4513,color:#fff;
+    classDef Risk fill:#E15759,stroke:#7B241C,color:#fff;
+    classDef State fill:#76B7B2,stroke:#0E6251,color:#fff;
+    classDef Actor fill:#BAB0AC,stroke:#515A5A,color:#000;
+    subgraph NISTNIST ["800-207 Components"]
+    PDP["Policy Decision Point"]
+    PEP["Policy Enforcement Point"]
+    PA["Policy Administrator"]
     end
-
     subgraph AECP ["AECP Implementation"]
-        Judicial["Judicial Plane (Compiler)"]
-        Sidecar[WASM Sidecar]
-        Legislative["Legislative Plane (DSL)"]
+    Judicial["Judicial Plane ("Compiler")"]
+    Sidecar["WASM Sidecar"]
+    Legislative["Legislative Plane ("DSL")"]
     end
-
     Legislative -.->|Maps To| PA
     Judicial -.->|Maps To| PDP
     Sidecar -.->|Maps To| PEP
-
-    style NIST fill:#e2e8f0,stroke:#64748b,stroke-dasharray: 5 5
-    style AECP fill:#f0fdf4,stroke:#16a34a
+    class PDP Policy;
+    class PEP Policy;
+    class PA Policy;
 ```
 
 <div style="page-break-before: always;"></div>
@@ -313,21 +356,28 @@ Compiled policies are distributed to enforcement points using a push model with 
 
 ```mermaid
 sequenceDiagram
-    participant J as Judicial Plane
-    participant D as Dist. Service
-    participant E as Enforcement Point
-    participant A as Audit Log
-
-    J->>J: Compile & Sign Policy
-    J->>D: Push Artifact (v1.2)
-    D->>E: Push Artifact (v1.2)
+    classDef Control fill:#4E79A7,stroke:#2C3E50,color:#fff;
+    classDef Data fill:#59A14F,stroke:#274E13,color:#fff;
+    classDef Policy fill:#9C6ADE,stroke:#4B0082,color:#fff;
+    classDef Obs fill:#F28E2B,stroke:#8B4513,color:#fff;
+    classDef Risk fill:#E15759,stroke:#7B241C,color:#fff;
+    classDef State fill:#76B7B2,stroke:#0E6251,color:#fff;
+    classDef Actor fill:#BAB0AC,stroke:#515A5A,color:#000;
+    participant J as "Judicial Plane"
+    participant D as "Dist. Service"
+    participant E as "Enforcement Point"
+    participant A as "Audit Log"
+    J->>J: "Compile & Sign Policy"
+    J->>D: "Push Artifact (v1.2)"
+    D->>E: "Push Artifact (v1.2)"
     activate E
-    E->>E: Verify Signature
-    E->>E: Hot Swap Engine
-    E-->>D: Ack (Active)
+    E->>E: "Verify Signature"
+    E->>E: "Hot Swap Engine"
+    E-->>D: "Ack (Active)"
     deactivate E
-    D-->>J: Ack (Converged)
-    E->>A: Log Event (PolicyUpdate)
+    D-->>J: "Ack (Converged)"
+    E->>A: "Log Event (PolicyUpdate)"
+
 ```
 
 ### 4.4 Policy Enforcement
@@ -353,23 +403,27 @@ In catastrophic failure scenarios (e.g., Judicial Layer offline, policies blocki
 
 ```mermaid
 sequenceDiagram
-    participant Admin as Human Admin
-    participant Vault as Master Vault
-    participant EP as Enforcement Point
-    participant Audit as Audit Log
+    classDef Control fill:#4E79A7,stroke:#2C3E50,color:#fff;
+    classDef Data fill:#59A14F,stroke:#274E13,color:#fff;
+    classDef Policy fill:#9C6ADE,stroke:#4B0082,color:#fff;
+    classDef Obs fill:#F28E2B,stroke:#8B4513,color:#fff;
+    classDef Risk fill:#E15759,stroke:#7B241C,color:#fff;
+    classDef State fill:#76B7B2,stroke:#0E6251,color:#fff;
+    classDef Actor fill:#BAB0AC,stroke:#515A5A,color:#000;
+    participant Admin as "Human Admin"
+    participant Vault as "Master Vault"
+    participant EP as "Enforcement Point"
+    participant Audit as "Audit Log"
+    Note over Admin,EP: "Scenario: Critical Policy Blocking Recovery"
+    Admin->>Vault: "Request Break-Glass Token (MFA)"
+    Vault->>Admin: "Issue Signed Override Token (TTL: 1h)"
+    Admin->>EP: "Inject Token via Header"
+    EP->>EP: "Verify Token Signature (Root Key)"
+    EP->>EP: "Bypass WASM Engine"
+    EP->>EP: "Force ALLOW"
+    EP->>Audit: "Log CRITICAL_BREAK_GLASS_EVENT"
+    Note right of Audit: "Immediate Alert to SOC"
 
-    Note over Admin,EP: Scenario: Critical Policy Blocking Recovery
-    
-    Admin->>Vault: Request Break-Glass Token (MFA)
-    Vault->>Admin: Issue Signed Override Token (TTL: 1h)
-    
-    Admin->>EP: Inject Token via Header
-    EP->>EP: Verify Token Signature (Root Key)
-    EP->>EP: Bypass WASM Engine
-    EP->>EP: Force ALLOW
-    
-    EP->>Audit: Log CRITICAL_BREAK_GLASS_EVENT
-    Note right of Audit: Immediate Alert to SOC
 ```
 
 **Protocol Safeguards:**
@@ -404,20 +458,25 @@ All policy decisions are aggregated into an immutable audit log for compliance r
 
 ```mermaid
 graph LR
-    subgraph "Zone A"
-        EP1[Enforcement Point 1] -->|Log| AggA[Zone Aggregator]
-        EP2[Enforcement Point 2] -->|Log| AggA
+    classDef Control fill:#4E79A7,stroke:#2C3E50,color:#fff;
+    classDef Data fill:#59A14F,stroke:#274E13,color:#fff;
+    classDef Policy fill:#9C6ADE,stroke:#4B0082,color:#fff;
+    classDef Obs fill:#F28E2B,stroke:#8B4513,color:#fff;
+    classDef Risk fill:#E15759,stroke:#7B241C,color:#fff;
+    classDef State fill:#76B7B2,stroke:#0E6251,color:#fff;
+    classDef Actor fill:#BAB0AC,stroke:#515A5A,color:#000;
+    subgraph Zone ["A"]
+    EP1["Enforcement Point 1"] -->|Log| AggA["Zone Aggregator"]
+    EP2["Enforcement Point 2"] -->|Log| AggA
     end
-    
-    subgraph "Zone B"
-        EP3[Enforcement Point 3] -->|Log| AggB[Zone Aggregator]
+    subgraph Zone ["B"]
+    EP3["Enforcement Point 3"] -->|Log| AggB["Zone Aggregator"]
     end
-    
-    AggA -->|Batch| Global[Global Audit Store]
+    AggA -->|Batch| Global["Global Audit Store"]
     AggB -->|Batch| Global
-    
-    Global -->|Query| Compliance[Compliance Dashboard]
-    Global -->|Alert| SOC[Security Ops Center]
+    Global -->|Query| Compliance["Compliance Dashboard"]
+    Global -->|Alert| SOC["Security Ops Center"]
+    class Compliance Policy;
 ```
 
 ---
@@ -515,22 +574,26 @@ As a theoretical framework, AECP defines the *capabilities* required for soverei
 
 ```mermaid
 graph TD
-    subgraph "Centralized (Bad)"
-        Req1[Request] -->|Sync Call| PolicyServer[Central Policy Server]
-        PolicyServer -->|Decision| Req1
-        style PolicyServer fill:#f96
+    classDef Control fill:#4E79A7,stroke:#2C3E50,color:#fff;
+    classDef Data fill:#59A14F,stroke:#274E13,color:#fff;
+    classDef Policy fill:#9C6ADE,stroke:#4B0082,color:#fff;
+    classDef Obs fill:#F28E2B,stroke:#8B4513,color:#fff;
+    classDef Risk fill:#E15759,stroke:#7B241C,color:#fff;
+    classDef State fill:#76B7B2,stroke:#0E6251,color:#fff;
+    classDef Actor fill:#BAB0AC,stroke:#515A5A,color:#000;
+    subgraph Centralized ["Bad"]
+    Req1["Request"] -->|Sync Call| PolicyServer["Central Policy Server"]
+    PolicyServer -->|Decision| Req1
     end
-    
-    subgraph "Fragmented (Bad)"
-        Req2[Request] --> AppLogic[Hardcoded Logic]
-        style AppLogic fill:#f96
+    subgraph Fragmented ["Bad"]
+    Req2["Request"] --> AppLogic["Hardcoded Logic"]
     end
-    
-    subgraph "AECP (Good)"
-        Req3[Request] --> LocalEngine[Local WASM Engine]
-        JudicialPlane -->|Async Push| LocalEngine
-        style LocalEngine fill:#9cf
+    subgraph AECP ["Good"]
+    Req3["Request"] --> LocalEngine["Local WASM Engine"]
+    JudicialPlane -->|Async Push| LocalEngine
     end
+    class PolicyServer Policy;
+    class AppLogic Obs;
 ```
 
 **Table 4: Governance Approach Comparison**
@@ -554,18 +617,25 @@ Adopting AECP is a journey. We define a 4-stage maturity model to guide organiza
 
 ```mermaid
 quadrantChart
+    classDef Control fill:#4E79A7,stroke:#2C3E50,color:#fff;
+    classDef Data fill:#59A14F,stroke:#274E13,color:#fff;
+    classDef Policy fill:#9C6ADE,stroke:#4B0082,color:#fff;
+    classDef Obs fill:#F28E2B,stroke:#8B4513,color:#fff;
+    classDef Risk fill:#E15759,stroke:#7B241C,color:#fff;
+    classDef State fill:#76B7B2,stroke:#0E6251,color:#fff;
+    classDef Actor fill:#BAB0AC,stroke:#515A5A,color:#000;
     title AECP Adoption Maturity
     x-axis Low Automation --> High Automation
     y-axis Low Coverage --> High Coverage
-    quadrant-1 "Sovereign (Level 4)"
-    quadrant-2 "Scaling (Level 3)"
-    quadrant-3 "Ad-Hoc (Level 1)"
-    quadrant-4 "Foundational (Level 2)"
-    
-    "Manual Reviews": [0.1, 0.2]
-    "Audit-Only Sidecars": [0.6, 0.2]
-    "Blocking Ingress": [0.7, 0.6]
-    "Full Zero Trust": [0.9, 0.9]
+    quadrant-1 Sovereign (Level 4)
+    quadrant-2 Scaling (Level 3)
+    quadrant-3 Ad-Hoc (Level 1)
+    quadrant-4 Foundational (Level 2)
+    Manual Reviews: [0.1, 0.2]
+    Audit-Only Sidecars: [0.6, 0.2]
+    Blocking Ingress: [0.7, 0.6]
+    Full Zero Trust: [0.9, 0.9]
+
 ```
 
 **Level 1: Ad-Hoc (Manual)**
@@ -597,30 +667,35 @@ The AECP framework is designed to operate across multiple cloud providers simult
 
 ```mermaid
 graph TD
+    classDef Control fill:#4E79A7,stroke:#2C3E50,color:#fff;
+    classDef Data fill:#59A14F,stroke:#274E13,color:#fff;
+    classDef Policy fill:#9C6ADE,stroke:#4B0082,color:#fff;
+    classDef Obs fill:#F28E2B,stroke:#8B4513,color:#fff;
+    classDef Risk fill:#E15759,stroke:#7B241C,color:#fff;
+    classDef State fill:#76B7B2,stroke:#0E6251,color:#fff;
+    classDef Actor fill:#BAB0AC,stroke:#515A5A,color:#000;
     subgraph Global ["Global Meta-Control Plane"]
-        J[Judicial Plane]
-        L[Legislative Plane]
+    J["Judicial Plane"]
+    L["Legislative Plane"]
     end
-
     subgraph AWS ["AWS - Region: US-East-1"]
-        C1[Sovereign Cell 1]
+    C1["Sovereign Cell 1"]
     end
-
     subgraph GCP ["GCP - Region: EU-West-4"]
-        C2[Sovereign Cell 2]
+    C2["Sovereign Cell 2"]
     end
-
     subgraph Azure ["Azure - Region: SE-Central-1"]
-        C3[Sovereign Cell 3]
+    C3["Sovereign Cell 3"]
     end
-
     Global -->|WASM Push| AWS
     Global -->|WASM Push| GCP
     Global -->|WASM Push| Azure
-
     C1 -.->|Audit| Global
     C2 -.->|Audit| Global
     C3 -.->|Audit| Global
+    class C1 Data;
+    class C2 Data;
+    class C3 Data;
 ```
 
 **Figure 10:** Multi-Cloud Sovereign Deployment. AECP abstracts the underlying cloud provider, treating them as interchangeable execution environments for sovereign policies.
@@ -631,15 +706,19 @@ The framework implements a continuous feedback loop where enforcement audit logs
 
 ```mermaid
 graph LR
-    L[Legislative: Intent] --> J[Judicial: Compilation]
-    J --> E[Executive: Enforcement]
-    E --> A[Audit: Observations]
-    A --> O[Orient: Conflict Detection]
+    classDef Control fill:#4E79A7,stroke:#2C3E50,color:#fff;
+    classDef Data fill:#59A14F,stroke:#274E13,color:#fff;
+    classDef Policy fill:#9C6ADE,stroke:#4B0082,color:#fff;
+    classDef Obs fill:#F28E2B,stroke:#8B4513,color:#fff;
+    classDef Risk fill:#E15759,stroke:#7B241C,color:#fff;
+    classDef State fill:#76B7B2,stroke:#0E6251,color:#fff;
+    classDef Actor fill:#BAB0AC,stroke:#515A5A,color:#000;
+    L["Legislative: Intent"] --> J["Judicial: Compilation"]
+    J --> E["Executive: Enforcement"]
+    E --> A["Audit: Observations"]
+    A --> O["Orient: Conflict Detection"]
     O --> L
-    
-    style E fill:#9cf
-    style L fill:#f96
-    style O fill:#f9f
+    class A Obs;
 ```
 
 **Figure 11:** Sovereign Compliance Feedback Loop. The system autonomously detects policy conflicts and gaps through real-time enforcement telemetry.
@@ -904,27 +983,57 @@ All policy artifacts are signed using Ed25519 (fast, secure):
 
 ---
 
-## 10. Future Directions
+## 10. Generalizability Beyond Observed Deployments
 
-### 10.1 Machine Learning Integration
+The AECP framework is not limited to the cloud-native microservices studied in this work. The core principle—decoupling policy intent from execution mechanics—is a fundamental control theory invariant applicable to any complex system with high entropy.
 
-Future work will explore using ML models to predict policy violations before they occur, enabling proactive remediation. Anomaly detection algorithms could identify unusual access patterns that may indicate compromised credentials or insider threats.
+### 10.1 Applicability Criteria
+The framework generalizes to:
+*   **Industrial IoT:** Where edge devices require autonomous policy enforcement without constant cloud connectivity.
+*   **Financial Trading:** Where risk checks must be enforced in the data path with zero latency penalty.
+*   **Telecommunications:** Where network slicing requires dynamic policy enforcement across varied infrastructure.
 
-### 10.2 Cross-Cloud Federation
-
-Extending AECP to federated multi-cloud environments where policies span organizational boundaries. This would enable policy enforcement across AWS, GCP, and Azure with unified audit trails and cryptographic proof of compliance.
-
-### 10.3 Real-Time Policy Adaptation
-
-Dynamic policy adjustment based on observed threat patterns and operational conditions. For example, automatically tightening access controls when detecting brute-force attacks or relaxing rate limits during legitimate traffic surges.
-
-### 10.4 Policy Simulation and Testing
-
-Advanced policy testing frameworks that simulate production traffic against proposed policies before deployment, identifying unintended consequences and performance impacts.
+### 10.2 When AECP Is Not Appropriate
+This framework introduces significant architectural complexity ("Control Plane Engineering") which is unjustified for:
+*   **Small Teams (< 5 Ops Engineers):** The overhead of maintaining the Judicial Layer exceeds the manual toil it saves.
+*   **Monolithic Architectures:** Where valid state is contained in a single process, removing the need for distributed coordination.
+*   **Stateless Frontends:** Where "policy" is simple (e.g., standard CDN rules) and does not require complex state evaluation.
 
 ---
 
-## 11. Conclusion
+## 11. Practical and Scholarly Impact
+
+### 11.1 Shifting from OPEX to CAPEX
+For practitioners, AECP provides the financial justification for Platform Engineering. It demonstrates that investing in an "Autonomous Control Plane" (Capital Expenditure) permanently reduces the "Marginal Cost of Complexity" (Operating Expenditure), allowing organizations to break the linear relationship between system scale and team size.
+
+### 11.2 Defining "Autonomous Systems" Research
+For academia, this framework provides a concrete operational definition of an "Autonomous System" not as "AI magic," but as a rigorous system of feedback loops and convergent control planes.
+
+---
+
+## 12. Future Research Directions
+
+### 12.1 Machine Learning Integration
+Future work will explore using ML models to predict policy violations before they occur, enabling proactive remediation. Anomaly detection algorithms could identify unusual access patterns that may indicate compromised credentials or insider threats.
+
+### 12.2 Cross-Cloud Federation
+Extending AECP to federated multi-cloud environments where policies span organizational boundaries. This would enable policy enforcement across AWS, GCP, and Azure with unified audit trails and cryptographic proof of compliance.
+
+### 12.3 Real-Time Policy Adaptation
+Dynamic policy adjustment based on observed threat patterns and operational conditions. For example, automatically tightening access controls when detecting brute-force attacks or relaxing rate limits during legitimate traffic surges.
+
+### 12.4 Policy Simulation and Testing
+Advanced policy testing frameworks that simulate production traffic against proposed policies before deployment, identifying unintended consequences and performance impacts.
+
+### 12.5 AI-Driven Policy Synthesis
+Leveraging Large Language Models (LLMs) to automatically synthesize formal policy definitions (Rego/OPA) from natural language regulatory text (GDPR/HIPAA), reducing the "Legislative" friction.
+
+### 12.6 Formal Proofs of Safety
+Developing mathematical proofs that guarantee that the "Judicial" compiler never produces an enforcement agent that violates a specific safety invariant (e.g., "deny-by-default"), regardless of the input policy.
+
+---
+
+## 13. Conclusion
 
 The Adaptive Enterprise Control Plane establishes a theoretical foundation for sovereign governance in multi-cloud environments. By treating policy as a first-class primitive and enforcing strict separation of concerns, AECP enables organizations to maintain operational sovereignty while operating across heterogeneous infrastructure.
 
@@ -950,7 +1059,7 @@ Through production deployments, AECP has demonstrated:
 - **Cost**: $98k/month net savings (7.5:1 ROI)
 - **Agility**: Policy updates in 8 minutes (vs 4 days manual)
 
-The framework has been validated through the A1-A6 paper series, demonstrating practical applicability at enterprise scale. AECP represents a paradigm shift from infrastructure-centric to policy-centric architecture, enabling organizations to achieve provable compliance without sacrificing availability or performance.
+The framework has been validated through the A1-A6 paper series, demonstrating practical applicability at enterprise scale. AECP represents a paradigm shift from infrastructure-centric to policy-centric architecture, enabling organizations to achieve provable compliance without sacrificing availability or performance. This framework provides a foundation for research in autonomous systems and control theory in software, moving the field from heuristic toil reduction to provable state convergence.
 
 **Industry Impact:**
 

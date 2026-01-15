@@ -35,11 +35,11 @@ $filesToConvert = @(
         Output = "A6-Adaptive-Policy-Enforcement.pdf"
     },
     @{
-        Input  = Join-Path $RESEARCH_DIR "SCHOLARLY-ARTICLE-ENTERPRISE-ARCHITECTURE.md"
+        Input  = Join-Path $RESEARCH_DIR "papers\scholarly-article\SCHOLARLY-ARTICLE-ENTERPRISE-ARCHITECTURE.md"
         Output = "SCHOLARLY-ARTICLE-Enterprise-Architecture.pdf"
     },
     @{
-        Input  = Join-Path $RESEARCH_DIR "frameworks\aecp\AECP-FULL.md"
+        Input  = Join-Path $RESEARCH_DIR "papers\aecp\AECP-FULL.md"
         Output = "AECP-Framework-Full.pdf"
     }
 )

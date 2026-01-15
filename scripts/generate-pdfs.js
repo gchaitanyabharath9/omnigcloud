@@ -35,12 +35,12 @@ const papers = [
         name: 'A6 Paper'
     },
     {
-        input: 'src/app/[locale]/research/SCHOLARLY-ARTICLE-ENTERPRISE-ARCHITECTURE.md',
+        input: 'src/app/[locale]/research/papers/scholarly-article/SCHOLARLY-ARTICLE-ENTERPRISE-ARCHITECTURE.md',
         output: 'publication-pdfs/Scholarly-Article-Enterprise-Architecture.pdf',
         name: 'Scholarly Article'
     },
     {
-        input: 'src/app/[locale]/research/frameworks/aecp/AECP-FULL.md',
+        input: 'src/app/[locale]/research/papers/aecp/AECP-FULL.md',
         output: 'publication-pdfs/AECP-Framework.pdf',
         name: 'AECP Framework'
     }
