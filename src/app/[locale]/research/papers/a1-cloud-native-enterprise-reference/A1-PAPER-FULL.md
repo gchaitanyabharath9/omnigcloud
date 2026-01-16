@@ -102,7 +102,7 @@ Many systems evaluate authorization policies synchronously on the request path b
 
 Storing both application data and system metadata (service registry, configuration, secrets) in the same database creates contention that's invisible until it isn't. A metadata query—service discovery lookup, configuration fetch, secret retrieval—can lock tables or exhaust connection pools, blocking business transactions. We measured this in a production system where a configuration update triggered 10,000 simultaneous service discovery queries (each service instance querying for updated endpoint lists). The database connection pool saturated within 8 seconds. For the next 4 minutes, 23% of user requests were rejected with "connection pool exhausted" errors. The database wasn't overloaded—CPU was at 45%, disk I/O was normal. The bottleneck was connection pool exhaustion caused by metadata queries holding connections while waiting for lock releases.
 
-![Placeholder Diagram](../figures/fig-1.svg)
+![Placeholder Diagram](/assets/papers/a1/figures/fig-1.svg)
 
 **Figure 1:** The Conflated Plane Anti-Pattern. User traffic and operational changes compete for the same resources, creating cascading failure risk.
 
@@ -135,7 +135,7 @@ The A1 architecture emerged from specific production constraints, not abstract d
 - Rollback any change within 5 minutes—5 minutes is the maximum acceptable MTTR (mean time to resolution) for configuration errors
 - Support 1000+ services without O(N²) complexity—as service count grows, coordination overhead must remain constant, not quadratic
 
-![Placeholder Diagram](../figures/fig-2.svg)
+![Placeholder Diagram](/assets/papers/a1/figures/fig-2.svg)
 **Figure 2:** Global Traffic Distribution Strategy. Steering users to the most performant healthy region.
 
 ---
@@ -162,7 +162,7 @@ We assume a multi-region deployment across at least three geographic regions for
 
 Cells are **shared-nothing** architectures. They don't share databases, caches, or message queues. This ensures that a failure in Cell A cannot propagate to Cell B through shared state.
 
-![Placeholder Diagram](../figures/fig-3.svg)
+![Placeholder Diagram](/assets/papers/a1/figures/fig-3.svg)
 **Figure 3:** Shared-Nothing Cellular Isolation. Zero cross-cell dependencies prevent blast radius expansion.
 
 ### 3.2 Traffic Model
@@ -208,7 +208,7 @@ We explicitly do NOT design for:
 
 The A1 architecture stratifies into four logical planes, each with distinct responsibilities, technologies, and failure modes. The stratification isn't just organizational—it's enforced through network isolation, resource quotas, and deployment boundaries.
 
-![Placeholder Diagram](../figures/fig-4.svg)
+![Placeholder Diagram](/assets/papers/a1/figures/fig-4.svg)
 
 **Figure 4:** The A1 Four-Plane Architecture. Solid lines represent synchronous dependencies (request path). Dashed lines represent asynchronous configuration push (control path).
 
@@ -556,7 +556,7 @@ These scenarios come from actual production deployments, not hypothetical exerci
 - Error rate: 0.08% (target: <1%) ✅—error rate remained negligible
 - Revenue: $18.2M (vs $15.1M previous year, +20%)—faster checkout increased conversion rate
 
-![Placeholder Diagram](../figures/fig-5.svg)
+![Placeholder Diagram](/assets/papers/a1/figures/fig-5.svg)
 
 **Figure 5:** Dynamic scaling response during sub-second traffic spikes. Cells are added independently within regions to absorb volumetric surges.
 
@@ -577,7 +577,7 @@ These scenarios come from actual production deployments, not hypothetical exerci
 - Data loss: 0 (RPO target: <1 min) ✅—no data loss because writes are replicated across regions
 - User impact: 6.3% of requests failed during failover—acceptable for disaster scenario where alternative is 100% failure
 
-![Placeholder Diagram](../figures/fig-6.svg)
+![Placeholder Diagram](/assets/papers/a1/figures/fig-6.svg)
 
 **Figure 6:** Automated regional failover sequence. Traffic is redistributed within the RTO window without data loss (RPO=0).
 
@@ -605,7 +605,7 @@ These scenarios come from actual production deployments, not hypothetical exerci
 
 To understand where latency comes from—and more importantly, where it can be reduced—we trace a single request through the system. The hard constraint is **200ms p99**, which isn't arbitrary. It comes from user experience research showing that interfaces feel "instant" below 100ms and "acceptable" below 200ms. Beyond 200ms, users perceive lag.
 
-![Placeholder Diagram](../figures/fig-7.svg)
+![Placeholder Diagram](/assets/papers/a1/figures/fig-7.svg)
 
 **Figure 7:** Request Lifecycle Sequence Diagram. Each component has a strict latency budget.
 
@@ -623,7 +623,7 @@ To understand where latency comes from—and more importantly, where it can be r
 
 The 40% buffer (80ms) accounts for variance and tail latency. Under normal conditions, p50 latency is ~60ms, p90 is ~100ms, and p99 is ~180ms. The buffer prevents SLO violations during minor degradations (slow database query, garbage collection pause, network congestion).
 
-![Placeholder Diagram](../figures/fig-8.svg)
+![Placeholder Diagram](/assets/papers/a1/figures/fig-8.svg)
 **Figure 8:** Policy-as-Code Lifecycle. Policies are compiled to WebAssembly (WASM) and pushed to the edge, enabling sub-millisecond local evaluation without network round-trips.
 
 ### 5.1 Advanced Request Routing
@@ -878,7 +878,7 @@ Where:
 
 ### 6.2 Cellular Architecture for Linear Scalability
 
-![Placeholder Diagram](../figures/fig-9.svg)
+![Placeholder Diagram](/assets/papers/a1/figures/fig-9.svg)
 
 **Figure 9:** The Cellular (Bulkhead) Pattern. Each cell is an independent failure domain.
 
@@ -957,7 +957,7 @@ The principle: if one layer fails (zero-day in WAF, misconfigured policy), other
 
 When a dependency fails (database down, external API timeout), we face a choice: keep trying (wasting resources) or fail fast (preserving system capacity). Circuit breakers implement fail-fast behavior, prioritizing **System Survival** over **Request Success**.
 
-![Placeholder Diagram](../figures/fig-10.svg)
+![Placeholder Diagram](/assets/papers/a1/figures/fig-10.svg)
 
 **Figure 10:** Circuit Breaker State Machine. Prevents cascading failures by failing fast.
 
@@ -990,7 +990,7 @@ Example: if the recommendation engine fails, we serve cached recommendations rat
 
 Governance isn't a PDF policy document gathering dust in SharePoint. It's executable code that runs on every request. We use **Open Policy Agent (OPA)** compiled to WebAssembly for local policy evaluation.
 
-![Placeholder Diagram](../figures/fig-11.svg)
+![Placeholder Diagram](/assets/papers/a1/figures/fig-11.svg)
 
 **Figure 11:** Policy-as-Code Supply Chain. Policies are versioned, tested, and distributed like software.
 
@@ -1713,7 +1713,7 @@ The A1 Reference Architecture provides a predictable, scalable foundation for en
 
 1. **Formal Plane Separation**: We formalized the separation of control and data planes, demonstrating through production measurements that asynchronous configuration distribution eliminates 87% of cascading failure modes observed in traditional service mesh architectures.
 
-2. **Cellular Isolation Pattern**: The shared-nothing cell architecture enables linear scalability (β ≈ 0) validated through benchmarks showing constant cost per request ($1.14-$1.15 per 1M requests) across 1-20 cells. This contradicts the common assumption that distributed systems exhibit retrograde scaling.
+2. **Cellular Isolation Pattern**: The shared-nothing cell architecture enables linear scalability (β ≈ 0) validated through benchmarks showing constant cost per request ($1.14-$1.15 per 1M requests) across 1-20 cells. This contradicts the common assumption that distributed systems demonstrate retrograde scaling.
 
 3. **Quantitative Evaluation**: Through real-world deployments across 5 organizations over 18 months, we demonstrated 99.99% availability, p99 latency <200ms, and 6-minute MTTR for regional failures. These results match or exceed industry benchmarks while maintaining operational simplicity.
 

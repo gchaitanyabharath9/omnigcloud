@@ -1,7 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 
-const WORKSPACE = 'c:/Users/SOHAN/.gemini/antigravity/playground/nascent-zodiac';
+const WORKSPACE = process.cwd();
 const RESEARCH_DIR = path.join(WORKSPACE, 'src/app/[locale]/research/papers');
 
 const papers = [

@@ -61,7 +61,7 @@ AECP inverts this entirely: **policy is the primary primitive, not compute**. Th
 
 ### Diagram 1: Governance Inversion Model
 
-![Governance Inversion Model](../figures/fig-1.svg)
+![Governance Inversion Model](/assets/papers/aecp/figures/fig-1.svg)
 
 ---
 
@@ -119,7 +119,7 @@ The Judicial Layer is a deterministic engine that compiles legislative intent in
 
 ### Diagram 2: Policy Compilation Pipeline
 
-![Policy Compilation Pipeline](../figures/fig-2.svg)
+![Policy Compilation Pipeline](/assets/papers/aecp/figures/fig-2.svg)
 
 ### 2.3 The Executive Layer (Enforcement)
 
@@ -138,7 +138,7 @@ The Executive Layer consists of distributed sidecars that enforce policy at the 
 
 ### Diagram 3: Distributed Enforcement Architecture
 
-![Distributed Enforcement Architecture](../figures/fig-3.svg)
+![Distributed Enforcement Architecture](/assets/papers/aecp/figures/fig-3.svg)
 
 ---
 
@@ -148,7 +148,7 @@ AECP is a reference implementation of **NIST 800-207 Zero Trust Architecture**, 
 
 ### Diagram 7: AECP Zero Trust Mapping
 
-![AECP vs. Conventional Governance](../figures/fig-6.svg)
+![AECP vs. Conventional Governance](/assets/papers/aecp/figures/fig-6.svg)
 
 **Table 4: Governance Approach Comparison**
 
@@ -169,7 +169,7 @@ Adopting AECP is a journey. We define a 4-stage maturity model to guide organiza
 
 ### Diagram 9: Adoption Maturity Quadrant
 
-![AECP Adoption Maturity](../figures/fig-9.svg)
+![AECP Adoption Maturity](/assets/papers/aecp/figures/fig-9.svg)
 
 **Level 1: Ad-Hoc (Manual)**
 - Policy defined in PDFs/Wikis.
@@ -198,7 +198,7 @@ Adopting AECP is a journey. We define a 4-stage maturity model to guide organiza
 
 The AECP framework is designed to operate across multiple cloud providers simultaneously, maintaining a unified sovereign control plane while utilizing regional infrastructure.
 
-![Multi-Cloud Sovereign Deployment](../figures/fig-1.svg)
+![Multi-Cloud Sovereign Deployment](/assets/papers/aecp/figures/fig-1.svg)
 
 **Figure 1:** Multi-Cloud Sovereign Deployment. AECP abstracts the underlying cloud provider, treating them as interchangeable execution environments for sovereign policies.
 
@@ -206,7 +206,7 @@ The AECP framework is designed to operate across multiple cloud providers simult
 
 The framework implements a continuous feedback loop where enforcement audit logs are fed back into the Legislative plane for adaptive rule refinement.
 
-![Sovereign Compliance Feedback Loop](../figures/fig-2.svg)
+![Sovereign Compliance Feedback Loop](/assets/papers/aecp/figures/fig-2.svg)
 
 **Figure 2:** Sovereign Compliance Feedback Loop. The system autonomously detects policy conflicts and gaps through real-time enforcement telemetry.
 

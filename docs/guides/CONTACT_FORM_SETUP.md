@@ -79,7 +79,7 @@ Environments: ✅ Production ✅ Preview ✅ Development
 ### Step 5: Install Resend Package (5 min)
 
 ```bash
-cd c:\Users\SOHAN\.gemini\antigravity\playground\nascent-zodiac
+cd .
 npm install resend
 git add package.json package-lock.json
 git commit -m "Add Resend for contact form emails"

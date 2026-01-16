@@ -91,7 +91,7 @@ We define the scale threshold empirically through analysis of production systems
 
 - **Regions**: 3+ regions—beyond this, cross-region consistency becomes untenable. Synchronous replication adds 90-180ms latency. Asynchronous replication creates consistency windows where different regions see different data.
 
-Beyond these thresholds, conventional patterns exhibit three failure modes that we've observed repeatedly:
+Beyond these thresholds, conventional patterns demonstrate three failure modes that we've observed repeatedly:
 
 **Failure Mode 1: Configuration Churn Degrades Traffic**  
 During a deployment wave affecting 500 pods, we measured p99 latency increase from 45ms to 380ms (740% degradation) due to service mesh sidecar configuration reloads. The mechanism: each sidecar receives a configuration update, validates it, recomputes routing tables, and restarts its proxy worker threads. During this 200-300ms window, the sidecar queues incoming requests rather than processing them. With 500 sidecars reloading simultaneously, request queuing cascades across the mesh. The control plane (configuration distribution) competed with the data plane (user requests) for CPU and network bandwidth.

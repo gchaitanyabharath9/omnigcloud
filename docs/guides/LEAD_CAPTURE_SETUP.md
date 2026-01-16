@@ -206,7 +206,7 @@ Open your terminal and run:
 
 ```bash
 # Navigate to your project
-cd c:\Users\SOHAN\.gemini\antigravity\playground\nascent-zodiac
+cd .
 
 # Install packages
 npm install resend @upstash/redis

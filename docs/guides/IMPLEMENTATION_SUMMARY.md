@@ -175,7 +175,7 @@
 
 ### **Install Lead Capture Dependencies**:
 ```bash
-cd c:\Users\SOHAN\.gemini\antigravity\playground\nascent-zodiac
+cd .
 npm install resend @upstash/redis
 git add package.json package-lock.json
 git commit -m "Add lead capture dependencies"

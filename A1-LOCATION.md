@@ -4,7 +4,7 @@
 
 **Full Path:**
 ```
-c:\Users\SOHAN\.gemini\antigravity\playground\nascent-zodiac\src\app\[locale]\research\papers\a1-cloud-native-enterprise-reference\A1-PAPER-FULL.md
+.\src\app\[locale]\research\papers\a1-cloud-native-enterprise-reference\A1-PAPER-FULL.md
 ```
 
 **Relative Path:**
@@ -75,7 +75,7 @@ src\app\[locale]\research\papers\a1-cloud-native-enterprise-reference\A1-PAPER-F
 ### Option 3: Direct Path
 Copy and paste this path into File Explorer address bar:
 ```
-c:\Users\SOHAN\.gemini\antigravity\playground\nascent-zodiac\src\app\[locale]\research\papers\a1-cloud-native-enterprise-reference
+.\src\app\[locale]\research\papers\a1-cloud-native-enterprise-reference
 ```
 
 ---
@@ -101,7 +101,7 @@ Use this checklist while reviewing:
 
 For detailed breakdown of all enhancements:
 ```
-c:\Users\SOHAN\.gemini\antigravity\playground\nascent-zodiac\A1-FINAL-COMPLETE.md
+.\A1-FINAL-COMPLETE.md
 ```
 
 This document contains:

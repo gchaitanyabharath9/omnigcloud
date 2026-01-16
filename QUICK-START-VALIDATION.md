@@ -20,7 +20,7 @@ Click these links to open in your browser:
 ## 📂 **YOUR PDFS ARE HERE**
 
 ```
-c:\Users\SOHAN\.gemini\antigravity\playground\nascent-zodiac\review-pdfs\
+.\review-pdfs\
 ```
 
 **Open folder now:**

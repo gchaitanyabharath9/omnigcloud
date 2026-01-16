@@ -110,7 +110,7 @@ Section 2 presents the OODA loop architecture. Section 3 defines threat response
 
 The core of A6 is the OODA loop implemented as code:
 
-![The Autonomic OODA Control Loop](../figures/fig-1.svg)
+![The Autonomic OODA Control Loop](/assets/papers/a6/figures/fig-1.svg)
 
 **Figure 1:** The Autonomic OODA Control Loop. The model defines the deterministic interaction between observability sensors (control plane) and runtime actuators (data path) during steady-state and failure response. Integrating Observability (A3), Governance (A4), and Throughput Control (A2) into a recursive feedback loop that enables millisecond-level autonomous remediation.
 
@@ -187,7 +187,7 @@ data:
 
 We model system security not as binary (secure/hacked) but as a dynamic state machine:
 
-![The DEFCON State Machine](../figures/fig-2.svg)
+![The DEFCON State Machine](/assets/papers/a6/figures/fig-2.svg)
 
 **Figure 2:** The DEFCON State Machine. The system automatically escalates defense measures based on pressure.
 
@@ -250,7 +250,7 @@ We model system security not as binary (secure/hacked) but as a dynamic state ma
 
 Policies conflict. We need a resolution order. A6 establishes that **Survival** overrides **Security**, which overrides **Correctness**, which overrides **Availability**.
 
-![The Maslow's Hierarchy of Distributed Systems](../figures/fig-3.svg)
+![The Maslow's Hierarchy of Distributed Systems](/assets/papers/a6/figures/fig-3.svg)
 
 **Figure 3:** The Maslow's Hierarchy of Distributed Systems. You cannot process a "valid" transfer (L3) if the server is on fire (L0).
 
@@ -302,7 +302,7 @@ Policies conflict. We need a resolution order. A6 establishes that **Survival** 
 
 A single request flows through all A-series components:
 
-![The Unified Sovereign Architecture](../figures/fig-4.svg)
+![The Unified Sovereign Architecture](/assets/papers/a6/figures/fig-4.svg)
 
 **Figure 4:** The Unified Sovereign Architecture. A6 acts as the "Meta-Control Plane", binding the operational primitives of A1-A5 into a self-healing, biological digital organism.
 
@@ -325,14 +325,14 @@ A single request flows through all A-series components:
 
 ## 6. Organizational Maturity Model (Verified)
 
-![The Self-Healing Maturity Model](../figures/fig-5.svg)
+![The Self-Healing Maturity Model](/assets/papers/a6/figures/fig-5.svg)
 **Figure 5:** The Self-Healing Maturity Model. Organizations evolve from manual incident response (minutes) to policy-driven autonomous remediation (milliseconds), effectively removing the human bottleneck from the reliability path.
 
 ### 6.1 The Maturity Quadrant
 
 Where does your organization sit?
 
-![Architecture Maturity Matrix](../figures/fig-6.svg)
+![Architecture Maturity Matrix](/assets/papers/a6/figures/fig-6.svg)
 
 **Figure 6:** The Goal. Most organizations are either Agile but Fragile (break often) or Bureaucratic (never ship). The goal is the top-right: High Rigor AND High Capability.
 

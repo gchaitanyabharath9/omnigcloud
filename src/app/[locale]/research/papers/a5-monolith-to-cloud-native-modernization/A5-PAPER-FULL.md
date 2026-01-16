@@ -19,7 +19,7 @@ The architecture addresses three challenges that cause Big Bang failures: (1) ro
 
 **Keywords:** monolith modernization, strangler fig pattern, anti-corruption layer, shadow traffic, incremental migration, zero-downtime migration, legacy modernization, microservices migration, dual-write pattern, cloud-native transformation
 
-![Comparison of Modernization Strategies](../figures/fig-1.svg)
+![Comparison of Modernization Strategies](/assets/papers/a5/figures/fig-1.svg)
 **Figure 1:** Comparison of Modernization Strategies. The "Big Bang" approach accumulates risk until a single catastrophic cutover point. The A5 Strangler Fig pattern amortizes risk through incremental validation and continuous delivery.
 
 ---
@@ -138,7 +138,7 @@ Section 2 presents the Strangler Fig architecture. Section 3 details zero-downti
 
 Rather than rewriting the monolith, we strangle it. A facade (API Gateway) sits in front, routing traffic either to the legacy monolith or new microservices:
 
-![The Strangler Facade with Architectural Decoupling](../figures/fig-2.svg)
+![The Strangler Facade with Architectural Decoupling](/assets/papers/a5/figures/fig-2.svg)
 
 **Figure 2:** The Strangler Facade with Architectural Decoupling. The facade handles routing, while the Anti-Corruption Layer (ACL) ensures the new microservice's domain model remains clean despite backend dependencies on the monolith.
 
@@ -227,7 +227,7 @@ Code migration is easy; data migration is hard. The monolith's database contains
 
 We use the Parallel Run / Dual-Write pattern to migrate data without downtime:
 
-![Zero-Downtime Data Migration](../figures/fig-3.svg)
+![Zero-Downtime Data Migration](/assets/papers/a5/figures/fig-3.svg)
 
 **Figure 3:** Zero-Downtime Data Migration.
 
@@ -362,7 +362,7 @@ The monolith's domain model is often messy:
 
 To prevent this mess from infecting the clean microservice, we insert an Anti-Corruption Layer. The Sidecar ACL represents the most scalable approach. By implementing translation logic in an Envoy filter (using C++ or WASM), we offload the domain transformation from the application code. This prevents the microservice's binary from being bloated with legacy dependencies, maintaining a pure domain model while still communicating with a SOAP-based monolith.
 
-![Domain Translation via ACL](../figures/fig-4.svg)
+![Domain Translation via ACL](/assets/papers/a5/figures/fig-4.svg)
 
 **Figure 4:** Domain Translation via ACL. The ACL acts as a semantic boundary, translating the monolithic "Big Ball of Mud" into discrete, bounded contexts required for microservices (DDD).
 
@@ -445,7 +445,7 @@ class UserACL {
 
 Before we let users touch the new service, we test it with "Shadow Traffic." The gateway duplicates real user requests and sends them to the new service in "fire-and-forget" mode:
 
-![Zero-Downtime Data Migration](../figures/fig-5.svg)
+![Zero-Downtime Data Migration](/assets/papers/a5/figures/fig-5.svg)
 
 **Figure 5:** Traffic Shadowing (Dark Launching). The user receives the response from the proven monolith. The new microservice processes the same request, but its response is discarded after comparison.
 
@@ -526,7 +526,7 @@ Migration is not just technical; it's cultural.
 
 The hardest part is turning the old system off:
 
-![The Decommissioning Lifecycle](../figures/fig-6.svg)
+![The Decommissioning Lifecycle](/assets/papers/a5/figures/fig-6.svg)
 
 **Figure 6:** The Decommissioning Lifecycle. Never delete data immediately; always archive to cold storage first.
 

@@ -78,12 +78,12 @@
 
 **PDFs Location:**
 ```
-c:\Users\SOHAN\.gemini\antigravity\playground\nascent-zodiac\review-pdfs\
+.\review-pdfs\
 ```
 
 **Open folder:**
 ```powershell
-explorer c:\Users\SOHAN\.gemini\antigravity\playground\nascent-zodiac\review-pdfs
+explorer .\review-pdfs
 ```
 
 ---

@@ -237,7 +237,7 @@ You need to update `src/auth.ts` to add Azure AD provider.
 #### 1. Install React Share (5 min)
 
 ```bash
-cd c:\Users\SOHAN\.gemini\antigravity\playground\nascent-zodiac
+cd .
 npm install react-share
 git add package.json package-lock.json
 git commit -m "Add react-share for social sharing"

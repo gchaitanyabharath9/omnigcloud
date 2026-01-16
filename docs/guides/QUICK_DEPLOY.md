@@ -18,7 +18,7 @@ Open PowerShell in your project directory and run:
 
 ```powershell
 # Navigate to project
-cd c:\Users\SOHAN\.gemini\antigravity\playground\nascent-zodiac
+cd .
 
 # Initialize Git
 git init

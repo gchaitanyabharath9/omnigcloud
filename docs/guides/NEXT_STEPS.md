@@ -8,7 +8,7 @@
 
 ```bash
 # Step 1: Push to GitHub
-cd c:\Users\SOHAN\.gemini\antigravity\playground\nascent-zodiac
+cd .
 
 git init
 git add .

@@ -2,7 +2,7 @@ const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
 
-const WORKSPACE = 'c:/Users/SOHAN/.gemini/antigravity/playground/nascent-zodiac';
+const WORKSPACE = process.cwd();
 const SRC_PAPERS_DIR = path.join(WORKSPACE, 'src/app/[locale]/research/papers');
 const OUTPUT_ROOT = path.join(WORKSPACE, 'papers');
 

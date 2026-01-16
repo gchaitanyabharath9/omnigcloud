@@ -2,8 +2,8 @@ const fs = require('fs');
 const path = require('path');
 const { mdToPdf } = require('md-to-pdf');
 
-const RESEARCH_DIR = 'c:/Users/SOHAN/.gemini/antigravity/playground/nascent-zodiac/src/app/[locale]/research/papers';
-const OUTPUT_DIR = 'c:/Users/SOHAN/.gemini/antigravity/playground/nascent-zodiac/publication-pdfs';
+const RESEARCH_DIR = path.join(process.cwd(), 'src/app/[locale]/research/papers');
+const OUTPUT_DIR = path.join(process.cwd(), 'publication-pdfs');
 
 const papers = [
     { dir: 'a1-cloud-native-enterprise-reference', file: 'A1-PAPER-FULL.md', output: 'A1-Cloud-Native-Enterprise-Reference.pdf' },

@@ -6,20 +6,20 @@
 ## Generated Packages
 
 All 8 arXiv submission packages have been successfully created in:
-`c:\Users\SOHAN\.gemini\antigravity\playground\nascent-zodiac\build\arxiv-packages\`
+`.\build\arxiv-packages\`
 
 ### Package Details
 
 | Paper | Zip File | Size (KB) | Full Path |
 |-------|----------|-----------|-----------|
-| **A1** | arxiv-A1-source.zip | 339.22 | `c:\Users\SOHAN\.gemini\antigravity\playground\nascent-zodiac\build\arxiv-packages\arxiv-A1-source.zip` |
-| **A2** | arxiv-A2-source.zip | 328.71 | `c:\Users\SOHAN\.gemini\antigravity\playground\nascent-zodiac\build\arxiv-packages\arxiv-A2-source.zip` |
-| **A3** | arxiv-A3-source.zip | 241.07 | `c:\Users\SOHAN\.gemini\antigravity\playground\nascent-zodiac\build\arxiv-packages\arxiv-A3-source.zip` |
-| **A4** | arxiv-A4-source.zip | 242.51 | `c:\Users\SOHAN\.gemini\antigravity\playground\nascent-zodiac\build\arxiv-packages\arxiv-A4-source.zip` |
-| **A5** | arxiv-A5-source.zip | 332.16 | `c:\Users\SOHAN\.gemini\antigravity\playground\nascent-zodiac\build\arxiv-packages\arxiv-A5-source.zip` |
-| **A6** | arxiv-A6-source.zip | 4.11 | `c:\Users\SOHAN\.gemini\antigravity\playground\nascent-zodiac\build\arxiv-packages\arxiv-A6-source.zip` |
-| **AECP** | arxiv-AECP-source.zip | 3.85 | `c:\Users\SOHAN\.gemini\antigravity\playground\nascent-zodiac\build\arxiv-packages\arxiv-AECP-source.zip` |
-| **ScholarlyArticle** | arxiv-ScholarlyArticle-source.zip | 266.94 | `c:\Users\SOHAN\.gemini\antigravity\playground\nascent-zodiac\build\arxiv-packages\arxiv-ScholarlyArticle-source.zip` |
+| **A1** | arxiv-A1-source.zip | 339.22 | `.\build\arxiv-packages\arxiv-A1-source.zip` |
+| **A2** | arxiv-A2-source.zip | 328.71 | `.\build\arxiv-packages\arxiv-A2-source.zip` |
+| **A3** | arxiv-A3-source.zip | 241.07 | `.\build\arxiv-packages\arxiv-A3-source.zip` |
+| **A4** | arxiv-A4-source.zip | 242.51 | `.\build\arxiv-packages\arxiv-A4-source.zip` |
+| **A5** | arxiv-A5-source.zip | 332.16 | `.\build\arxiv-packages\arxiv-A5-source.zip` |
+| **A6** | arxiv-A6-source.zip | 4.11 | `.\build\arxiv-packages\arxiv-A6-source.zip` |
+| **AECP** | arxiv-AECP-source.zip | 3.85 | `.\build\arxiv-packages\arxiv-AECP-source.zip` |
+| **ScholarlyArticle** | arxiv-ScholarlyArticle-source.zip | 266.94 | `.\build\arxiv-packages\arxiv-ScholarlyArticle-source.zip` |
 
 ## Package Contents
 

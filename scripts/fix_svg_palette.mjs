@@ -1,7 +1,7 @@
 import fs from 'fs';
 import path from 'path';
 
-const papersDir = 'c:/Users/SOHAN/.gemini/antigravity/playground/nascent-zodiac/papers';
+const papersDir = path.join(process.cwd(), 'papers');
 
 const palette = {
     Control: { oldFill: '#4E79A7', oldStroke: '#2C3E50', oldText: '#fff', newFill: '#f0f4f8', newStroke: '#4E79A7', newText: '#2C3E50' },

@@ -140,7 +140,7 @@ We measured α and β for three production systems by running controlled load te
 - Retrograde Point: None observed (linear scaling maintained to test limit of 500 nodes)
 - Failure Mode: None under test conditions; bottleneck shifts to network bandwidth (10 Gbps per node) rather than coordination
 
-![Theoretical limit visualized via USL](../figures/fig-1.svg)
+![Theoretical limit visualized via USL](/assets/papers/a2/figures/fig-1.svg)
 
 **Figure 1:** Theoretical limit visualized via USL. This visualization clarifies the separation between coordination crosstalk (control path) and throughput scaling (data path) in high-volume systems. Contention (α) creates a speed limit (asymptote), while Crosstalk (β) creates a "Performance Cliff" where adding nodes destroys throughput. The A2 architecture targets β < 0.001 to maintain linear scaling. Note: All colors used in this and subsequent figures are semantic and role-based, intended to distinguish architectural components rather than encode quantitative magnitude.
 
@@ -175,7 +175,7 @@ A 2x spike in ingress traffic causes a 2x spike in database load. If the databas
 
 The Shock Absorber pattern decouples ingress from business logic using an asynchronous buffer (distributed log):
 
-![The Shock Absorber Architecture](../figures/fig-2.svg)
+![The Shock Absorber Architecture](/assets/papers/a2/figures/fig-2.svg)
 
 **Figure 2:** The Shock Absorber Architecture. This clarifies the separation between high-velocity ingress (data path) and complex asynchronous processing (control/state reconciliation). The Ingress layer is extremely simple (dumb pipe), doing nothing but validating payloads and appending to the Log. This allows it to absorb spikes of 10x normal load without crashing the complex Consumers.
 
@@ -292,7 +292,7 @@ class EventConsumer:
 
 Global locks are the enemy of throughput. We use deterministic partitioning (sharding) to ensure zero contention between tenants.
 
-![Partition Affinity](../figures/fig-3.svg)
+![Partition Affinity](/assets/papers/a2/figures/fig-3.svg)
 
 **Figure 3:** Partition Affinity. `Hash(TenantID) % 4` determines the partition. Consumer A only reads from Partition 0. This guarantees that if Tenant 1 (on P0) creates a DDoS, only Consumer A is affected. Consumers B, C, and D continue processing normally.
 
@@ -342,7 +342,7 @@ Resharding (changing partition count) is expensive but sometimes necessary:
 2. Projected growth exceeds capacity within 30 days
 3. Hot spot detected (one partition >2x average load)
 
-![Zero-Downtime Resharding Workflow](../figures/fig-4.svg)
+![Zero-Downtime Resharding Workflow](/assets/papers/a2/figures/fig-4.svg)
 
 **Figure 4:** Zero-Downtime Resharding Workflow. By utilizing the sequential nature of the distributed log, we can map new partition offsets to old ones without pausing ingestion.
 
@@ -362,7 +362,7 @@ Infinite queues are a lie. Every queue has a finite capacity (memory, disk, netw
 
 A2 implements explicit backpressure to push the problem back to the sender rather than crashing the receiver.
 
-![Placeholder Diagram](../figures/fig-5.svg)
+![Placeholder Diagram](/assets/papers/a2/figures/fig-5.svg)
 
 **Figure 5:** Backpressure propagation. The Gateway rejects excess traffic instantly (cheap), saving the expensive Service resources for valid traffic.
 
@@ -370,7 +370,7 @@ A2 implements explicit backpressure to push the problem back to the sender rathe
 
 We employ a distributed **Token Bucket** algorithm for rate limiting:
 
-![Token Bucket Visualization](../figures/fig-6.svg)
+![Token Bucket Visualization](/assets/papers/a2/figures/fig-6.svg)
 
 **Figure 6:** Token Bucket Visualization. Allows for "bursty" traffic up to the bucket capacity, but enforces a long-term average rate.
 
@@ -434,7 +434,7 @@ When backpressure fails (client ignores 429), we must shed load:
 
 To limit the "Blast Radius" of faults, we deploy the system in independent "Cells":
 
-![Cellular Bulkheads](../figures/fig-7.svg)
+![Cellular Bulkheads](/assets/papers/a2/figures/fig-7.svg)
 
 **Figure 7:** Cellular Bulkheads. Cell 1 and Cell 2 share nothing (no DB, no Queue). If Cell 1's Database corrupts, Cell 2 is 100% unaffected.
 
@@ -495,7 +495,7 @@ Lag = (WriteOffset - ReadOffset) / ConsumptionRate
 
 To prove the system's resilience, we continuously test failure modes:
 
-![Continuous Verification](../figures/fig-8.svg)
+![Continuous Verification](/assets/papers/a2/figures/fig-8.svg)
 
 **Figure 8:** Continuous Verification. We assert that p99 latency remains stable even when 20% of consumer pods are killed.
 

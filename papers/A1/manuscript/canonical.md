@@ -1713,7 +1713,7 @@ The A1 Reference Architecture provides a predictable, scalable foundation for en
 
 1. **Formal Plane Separation**: We formalized the separation of control and data planes, demonstrating through production measurements that asynchronous configuration distribution eliminates 87% of cascading failure modes observed in traditional service mesh architectures.
 
-2. **Cellular Isolation Pattern**: The shared-nothing cell architecture enables linear scalability (β ≈ 0) validated through benchmarks showing constant cost per request ($1.14-$1.15 per 1M requests) across 1-20 cells. This contradicts the common assumption that distributed systems exhibit retrograde scaling.
+2. **Cellular Isolation Pattern**: The shared-nothing cell architecture enables linear scalability (β ≈ 0) validated through benchmarks showing constant cost per request ($1.14-$1.15 per 1M requests) across 1-20 cells. This contradicts the common assumption that distributed systems demonstrate retrograde scaling.
 
 3. **Quantitative Evaluation**: Through real-world deployments across 5 organizations over 18 months, we demonstrated 99.99% availability, p99 latency <200ms, and 6-minute MTTR for regional failures. These results match or exceed industry benchmarks while maintaining operational simplicity.
 

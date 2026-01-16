@@ -53,7 +53,7 @@ const bibContent = `
 `;
 
 const ids = ['A1', 'A2', 'A3', 'A4', 'A5', 'A6', 'AECP', 'SCHOLARLY'];
-const WORKSPACE = 'c:/Users/SOHAN/.gemini/antigravity/playground/nascent-zodiac';
+const WORKSPACE = process.cwd();
 
 ids.forEach(id => {
     const refsDir = path.join(WORKSPACE, 'papers', id, 'refs');

@@ -30,7 +30,7 @@
 **Use AI Tools for Quality Enhancement**
 
 #### Step 1.1: Upload PDFs to Review Platforms
-📂 **PDFs Location:** `c:\Users\SOHAN\.gemini\antigravity\playground\nascent-zodiac\public-release\papers\`
+📂 **PDFs Location:** `.\public-release\papers\`
 
 **Tools to Use:**
 
@@ -290,7 +290,7 @@
 
 **PDFs for Review:**
 ```
-c:\Users\SOHAN\.gemini\antigravity\playground\nascent-zodiac\public-release\papers\
+.\public-release\papers\
 ├── A1-Cloud-Native-Enterprise-Reference-Architecture.pdf
 ├── A2-Designing-High-Throughput-Distributed-Systems-at-Scale.pdf
 ├── A3-Enterprise-Observability-Operational-Intelligence-at-Scale.pdf
@@ -302,7 +302,7 @@ c:\Users\SOHAN\.gemini\antigravity\playground\nascent-zodiac\public-release\pape
 
 **arXiv Source Packages:**
 ```
-c:\Users\SOHAN\.gemini\antigravity\playground\nascent-zodiac\build\arxiv-packages\
+.\build\arxiv-packages\
 ├── arxiv-A1-source.zip
 ├── arxiv-A2-source.zip
 ├── arxiv-A3-source.zip
@@ -315,7 +315,7 @@ c:\Users\SOHAN\.gemini\antigravity\playground\nascent-zodiac\build\arxiv-package
 
 **Metadata & Templates:**
 ```
-c:\Users\SOHAN\.gemini\antigravity\playground\nascent-zodiac\
+.\
 ├── ARXIV-BUILD-SUMMARY.md (arXiv metadata table)
 └── README-ARXIV-PACKAGES.md (submission instructions)
 ```

@@ -2,9 +2,9 @@ const fs = require('fs');
 const path = require('path');
 const { mdToPdf } = require('md-to-pdf');
 
-const inputPath = 'c:\\Users\\SOHAN\\Documents\\gemini\\antigravity\\playground\\nascent-zodiac\\src\\app\\[locale]\\research\\papers\\a1-cloud-native-enterprise-reference\\A1-PAPER-FULL.md';
+const inputPath = '/home/user\\Documents\\gemini\\antigravity\\playground\\nascent-zodiac\\src\\app\\[locale]\\research\\papers\\a1-cloud-native-enterprise-reference\\A1-PAPER-FULL.md';
 // Note: If the path above is slightly different in your env, let's use the one from tool output
-const workspaceRoot = 'c:\\Users\\SOHAN\\.gemini\\antigravity\\playground\\nascent-zodiac';
+const workspaceRoot = '.';
 const relativePath = 'src/app/[locale]/research/papers/a1-cloud-native-enterprise-reference/A1-PAPER-FULL.md';
 const absoluteInput = path.join(workspaceRoot, relativePath);
 

@@ -4,7 +4,7 @@
 
 **Full Path:**
 ```
-c:\Users\SOHAN\.gemini\antigravity\playground\nascent-zodiac\src\app\[locale]\research\papers\a1-cloud-native-enterprise-reference\A1-PAPER-FULL.md
+.\src\app\[locale]\research\papers\a1-cloud-native-enterprise-reference\A1-PAPER-FULL.md
 ```
 
 **Relative Path:**
@@ -94,13 +94,13 @@ src\app\[locale]\research\papers\a1-cloud-native-enterprise-reference\A1-PAPER-F
 4. Use the search function (`Ctrl + F`) to find new sections
 
 ### Option 2: File Explorer
-1. Navigate to: `c:\Users\SOHAN\.gemini\antigravity\playground\nascent-zodiac`
+1. Navigate to: `.`
 2. Go to: `src\app\[locale]\research\papers\a1-cloud-native-enterprise-reference\`
 3. Open: `A1-PAPER-FULL.md`
 
 ### Option 3: Command Line
 ```powershell
-cd c:\Users\SOHAN\.gemini\antigravity\playground\nascent-zodiac
+cd .
 notepad "src\app\[locale]\research\papers\a1-cloud-native-enterprise-reference\A1-PAPER-FULL.md"
 ```
 
@@ -129,7 +129,7 @@ notepad "src\app\[locale]\research\papers\a1-cloud-native-enterprise-reference\A
 
 For a comprehensive breakdown of all changes, see:
 ```
-c:\Users\SOHAN\.gemini\antigravity\playground\nascent-zodiac\A1-PHASE2-COMPLETE.md
+.\A1-PHASE2-COMPLETE.md
 ```
 
 This document contains:

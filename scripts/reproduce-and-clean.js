@@ -2,7 +2,7 @@ const fs = require('fs');
 const path = require('path');
 const { mdToPdf } = require('md-to-pdf');
 
-const WORKSPACE = 'c:/Users/SOHAN/.gemini/antigravity/playground/nascent-zodiac';
+const WORKSPACE = process.cwd();
 const RESEARCH_DIR = path.join(WORKSPACE, 'src/app/[locale]/research/papers');
 const OUTPUT_DIR = path.join(WORKSPACE, 'publication-pdfs');
 

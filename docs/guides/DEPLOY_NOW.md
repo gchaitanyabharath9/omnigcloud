@@ -10,7 +10,7 @@ Open PowerShell/Terminal in your project directory:
 
 ```powershell
 # Navigate to project
-cd c:\Users\SOHAN\.gemini\antigravity\playground\nascent-zodiac
+cd .
 
 # Initialize Git
 git init

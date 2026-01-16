@@ -63,7 +63,7 @@ The industry has converged on three pillars of observability:
 
 However, these pillars are often implemented as isolated systems (Prometheus for metrics, ELK for logs, Jaeger for traces), creating correlation challenges. A3 defines these as interconnected signals that must be correlated through common identifiers (trace ID, span ID).
 
-![The Observability Triangle](../figures/fig-1.svg)
+![The Observability Triangle](/assets/papers/a3/figures/fig-1.svg)
 
 **Figure 1:** The Observability Triangle. The model demonstrates the interconnectedness of signals required for rapid correlation across the control and data planes. Metrics tell you when something is wrong. Traces tell you where. Logs tell you why.
 
@@ -158,7 +158,7 @@ Time-series databases have hard limits on cardinality:
 
 Beyond the performance cliff, query latency degrades exponentially:
 
-![The Cardinality Cliff](../figures/fig-2.svg)
+![The Cardinality Cliff](/assets/papers/a3/figures/fig-2.svg)
 
 **Figure 2:** The "Cardinality Cliff." This shift in complexity from metrics to traces protects the scalability of the monitoring control plane. Without dimension stratification, metrics storage grows exponentially with unique label combinations (tenants, users). A3 shifts this complexity into distributed traces.
 
@@ -191,7 +191,7 @@ The solution is to stratify dimensions by cardinality:
 
 ## 3. The Three Pillars of Observability
 
-![Dimension Stratification Pipeline](../figures/fig-3.svg)
+![Dimension Stratification Pipeline](/assets/papers/a3/figures/fig-3.svg)
 **Figure 3:** Dimension Stratification Pipeline. By separating aggregated metrics from high-context traces at the ingest layer, we prevent TSDB cardinality explosions while preserving queryability.
 
 ### 3.1 Metrics: Aggregated Signals
@@ -302,7 +302,7 @@ This is expensive but manageable. However, 99% of these traces are "successful f
 
 Tail-based sampling makes the keep/discard decision after the request completes, enabling intelligent retention:
 
-![The Tail-Based Sampling Pipeline](../figures/fig-4.svg)
+![The Tail-Based Sampling Pipeline](/assets/papers/a3/figures/fig-4.svg)
 
 **Figure 4:** The Tail-Based Sampling Pipeline. Unlike head-based sampling (which decides randomly at the start), tail-based sampling waits for request completion to ensure metadata (errors, latency) can drive the retention policy.
 
@@ -380,7 +380,7 @@ traceparent: 00-4bf92f3577b34da6a3ce929d0e0e4736-00f067aa0ba902b7-01
 ```
 
 **Propagation Flow:**
-![Context Propagation](../figures/fig-5.svg)
+![Context Propagation](/assets/papers/a3/figures/fig-5.svg)
 
 **Figure 5:** Context Propagation. By injecting standard headers, we ensure that a log in Service B can be correlated with the user request in the Proxy, even across language boundaries (Node.js → Go).
 
@@ -405,7 +405,7 @@ Extract dimensions from logs (e.g., error_type) and create metrics for trending.
 
 ---
 
-![Telemetry Pipeline Architecture](../figures/fig-6.svg)
+![Telemetry Pipeline Architecture](/assets/papers/a3/figures/fig-6.svg)
 **Figure 6:** Telemetry Pipeline Architecture. Data flows from heterogeneous application runtimes into a unified collector, where it is enriched with infrastructure context and intelligently sampled before persistence.
 
 ## 6. Service Level Objectives (SLO)
@@ -440,7 +440,7 @@ If the service is down for 20 minutes in 28 days, the error budget is exhausted.
 
 We standardize dashboards on Google's SRE Golden Signals:
 
-![Error Budget Mechanics](../figures/fig-7.svg)
+![Error Budget Mechanics](/assets/papers/a3/figures/fig-7.svg)
 
 **Figure 7:** Error Budget Mechanics. The goal is not "zero errors" but managing the "Burn Rate" to ensure the Error Budget (the allowed 21.6 minutes of monthly downtime) isn't exhausted prematurely.
 
@@ -452,7 +452,7 @@ We standardize dashboards on Google's SRE Golden Signals:
 
 Observability drives the OODA Loop (Observe, Orient, Decide, Act):
 
-![The Incident Lifecycle](../figures/fig-8.svg)
+![The Incident Lifecycle](/assets/papers/a3/figures/fig-8.svg)
 
 **Figure 8:** The incident lifecycle. Operational Intelligence aims to automate the "Decide → Act" link (e.g., auto-rollback on high error rate).
 

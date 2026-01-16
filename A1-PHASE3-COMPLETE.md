@@ -205,7 +205,7 @@
 ---
 
 **File Location:**  
-`c:\Users\SOHAN\.gemini\antigravity\playground\nascent-zodiac\src\app\[locale]\research\papers\a1-cloud-native-enterprise-reference\A1-PAPER-FULL.md`
+`.\src\app\[locale]\research\papers\a1-cloud-native-enterprise-reference\A1-PAPER-FULL.md`
 
 **Next Steps:**
 1. User reviews enhanced A1 paper

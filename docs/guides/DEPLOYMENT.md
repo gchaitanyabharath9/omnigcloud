@@ -29,7 +29,7 @@
 
 ```bash
 # Navigate to project
-cd c:\Users\SOHAN\.gemini\antigravity\playground\nascent-zodiac
+cd .
 
 # Initialize git
 git init

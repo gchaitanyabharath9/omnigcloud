@@ -57,7 +57,7 @@ Generation 3 (cloud-native microservices, 2010s-present) promises both scale and
 
 Modern enterprise architecture is pulled by three opposing forces that create an "iron triangle" of constraints. You can optimize for two, but the third degrades. Attempting to maximize all three simultaneously without architectural buffers leads to system failure.
 
-![Placeholder Diagram](../figures/fig-1.svg)
+![Placeholder Diagram](/assets/papers/scholarly/figures/fig-1.svg)
 
 **Figure 1:** The "Iron Triangle" of Enterprise Architecture. Most failures occur when organizations attempt to maximize all three simultaneously without architectural buffers.
 
@@ -79,7 +79,7 @@ The tension arises because these forces conflict in ways that aren't obvious unt
 
 Conventional cloud-native patterns work well below a certain scale threshold. Above this threshold, systems experience a "cliff of failure"—stability degrades rapidly rather than gracefully. This isn't a gentle slope. It's a cliff.
 
-![Placeholder Diagram](../figures/fig-2.svg)
+![Placeholder Diagram](/assets/papers/scholarly/figures/fig-2.svg)
 
 **Figure 2:** The "Cliff of Failure". The orange line represents conventional microservices which degrade rapidly after 10k RPS/50 services. The green line represents the proposed plane separation model.
 
@@ -91,7 +91,7 @@ We define the scale threshold empirically through analysis of production systems
 
 - **Regions**: 3+ regions—beyond this, cross-region consistency becomes untenable. Synchronous replication adds 90-180ms latency. Asynchronous replication creates consistency windows where different regions see different data.
 
-Beyond these thresholds, conventional patterns exhibit three failure modes that we've observed repeatedly:
+Beyond these thresholds, conventional patterns show three failure modes that we've observed repeatedly:
 
 **Failure Mode 1: Configuration Churn Degrades Traffic**  
 During a deployment wave affecting 500 pods, we measured p99 latency increase from 45ms to 380ms (740% degradation) due to service mesh sidecar configuration reloads. The mechanism: each sidecar receives a configuration update, validates it, recomputes routing tables, and restarts its proxy worker threads. During this 200-300ms window, the sidecar queues incoming requests rather than processing them. With 500 sidecars reloading simultaneously, request queuing cascades across the mesh. The control plane (configuration distribution) competed with the data plane (user requests) for CPU and network bandwidth.
@@ -190,7 +190,7 @@ A request requiring three cross-region hops (e.g., user in EU → authentication
 
 We decompose the 200ms p99 latency budget across network, compute, and data layers to understand where time goes:
 
-![Placeholder Diagram](../figures/fig-3.svg)
+![Placeholder Diagram](/assets/papers/scholarly/figures/fig-3.svg)
 
 **Figure 3:** A strict 200ms budget leaves only ~120ms for business logic. Any synchronous cross-region call (min 90ms RTT) instantly consumes nearly 50% of the budget.
 
@@ -232,7 +232,7 @@ Configuration distribution must not block the data plane. Therefore, control pla
 
 To resolve the enterprise architecture tension, we partition the system into three independent planes that share nothing synchronously. This isn't just organizational—it's enforced through network isolation, resource quotas, and deployment boundaries.
 
-![Placeholder Diagram](../figures/fig-4.svg)
+![Placeholder Diagram](/assets/papers/scholarly/figures/fig-4.svg)
 
 **Figure 4:** The Three-Plane Model. The Data Plane (green) processes requests. The Control Plane (orange) manages lifecycle. The Governance Plane (blue) enforces rules. They interact only via asynchronous push.
 
@@ -281,7 +281,7 @@ When policy evaluation fails (WASM module corrupt, evaluation error), default to
 
 We define trust boundaries to prevent privilege escalation. A compromised application service should not be able to destroy infrastructure.
 
-![Placeholder Diagram](../figures/fig-5.svg)
+![Placeholder Diagram](/assets/papers/scholarly/figures/fig-5.svg)
 
 **Figure 5:** Explicit Trust Boundaries. The Data Plane can never initiate a write to the Control Plane. This prevents compromised applications from destroying infrastructure.
 
@@ -325,7 +325,7 @@ The key insight: failure domains are bounded by infrastructure topology (instanc
 
 The enforcement of sovereignty requires a precise sequence where the user's regional identity is verified against the resource's residency policy *before* any data access occurs.
 
-![Placeholder Diagram](../figures/fig-6.svg)
+![Placeholder Diagram](/assets/papers/scholarly/figures/fig-6.svg)
 
 **Figure 6:** Data Sovereignty Enforcement Logic. The system enforces geographic boundaries at the cryptographic layer, preventing cross-continent data leakage.
 
@@ -333,7 +333,7 @@ The enforcement of sovereignty requires a precise sequence where the user's regi
 
 Transitioning from a legacy centralized architecture to a sovereign cellular model requires three distinct phases to manage risk and maintain availability.
 
-![Placeholder Diagram](../figures/fig-7.svg)
+![Placeholder Diagram](/assets/papers/scholarly/figures/fig-7.svg)
 
 **Figure 7:** Architectural Migration Path. From Monolith/ESB bottlenecks through Decoupling to Sovereign Cellularity (AECP).
 
@@ -343,7 +343,7 @@ Transitioning from a legacy centralized architecture to a sovereign cellular mod
 
 ### 6.1 Evolution of Enterprise Topologies
 
-![Placeholder Diagram](../figures/fig-8.svg)
+![Placeholder Diagram](/assets/papers/scholarly/figures/fig-8.svg)
 
 **Figure 8:** Evolution of topologies. SOA centralized logic (bottleneck). Microservices distributed logic (chaos). Plane separation isolates concerns (cellular).
 

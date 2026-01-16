@@ -52,7 +52,7 @@
 
 ### Step 1: Deploy Sitemap (15 minutes)
 ```bash
-cd c:\Users\SOHAN\.gemini\antigravity\playground\nascent-zodiac
+cd .
 npm run build
 vercel --prod
 ```

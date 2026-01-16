@@ -119,7 +119,7 @@ Section 2 presents the policy-as-code pipeline. Section 3 defines multi-cloud id
 
 We treat policy exactly like code: versioned, tested, and compiled. The compilation step is critical. By transforming Rego logic into WebAssembly (WASM), we decouple the policy logic from the host environment. This allows the same policy to be enforced on a Kubernetes Admission Controller, an Envoy sidecar, or even a local developer workstation, ensuring consistent enforcement at every hop.
 
-![The Policy-as-Code (PaC) Compilation Pipeline](../figures/fig-1.svg)
+![The Policy-as-Code (PaC) Compilation Pipeline](/assets/papers/a4/figures/fig-1.svg)
 
 **Figure 1:** The Policy-as-Code (PaC) Compilation Pipeline. The diagram illustrates the asynchronous propagation from policy definition (control plane) to runtime enforcement (data path). By compiling Rego to WASM, we achieve millisecond-level enforcement latency at the edge while maintaining centralized governance. The blue region represents the "Legislative" (Safe) plane, while the red region represents the "Executive" (Runtime) plane.
 
@@ -285,7 +285,7 @@ Traditional multi-cloud deployments suffer from credential sprawl:
 
 We establish a sovereign identity boundary using OIDC:
 
-![Federated Identity](../figures/fig-2.svg)
+![Federated Identity](/assets/papers/a4/figures/fig-2.svg)
 
 **Figure 2:** Federated Identity. Developers authenticate against a central OIDC Provider which issues short-lived tokens exchanged for cloud-native credentials via Workload Identity Federation.
 
@@ -383,7 +383,7 @@ Manual changes to infrastructure create drift:
 
 We forbid `kubectl apply` and ClickOps. All state is reconciled from Git.
 
-![GitOps Workflow](../figures/fig-3.svg)
+![GitOps Workflow](/assets/papers/a4/figures/fig-3.svg)
 
 **Figure 3:** GitOps Workflow. The state of the cluster is the state of the main branch. Manual changes are automatically reverted.
 
@@ -445,7 +445,7 @@ argocd_app_reconcile_duration_seconds{quantile="0.99"} = 8.2
 
 Governance is applied at four distinct layers:
 
-![The Four Gates of Governance (Defense-in-Depth)](../figures/fig-4.svg)
+![The Four Gates of Governance (Defense-in-Depth)](/assets/papers/a4/figures/fig-4.svg)
 
 **Figure 4:** The Four Gates of Governance (Defense-in-Depth). Compliance is verified at every transition point, ensuring that "Risk Entropy" is arrested before artifacts reach production environments.
 
@@ -577,7 +577,7 @@ Strict governance must not impede disaster recovery. During a P0 incident, waiti
 
 ### 6.2 Break-Glass Implementation
 
-![Emergency Access](../figures/fig-5.svg)
+![Emergency Access](/assets/papers/a4/figures/fig-5.svg)
 
 **Figure 5:** Emergency Access. Admins can request short-lived (1 hour) certificates that bypass OPA Admission Controller, triggering immediate SOC alerts.
 
