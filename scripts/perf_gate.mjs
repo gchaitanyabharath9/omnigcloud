@@ -103,19 +103,12 @@ async function waitForServer() {
 // Run LHCI
 async function runLHCI() {
     return new Promise((resolve, reject) => {
-        const lhciArgs = [
+        // Use config file only - no CLI URL overrides
+        const lhci = spawn('npx', [
+            '@lhci/cli',
             'autorun',
-            '--config=lighthouserc.json',
-            `--collect.numberOfRuns=1`,
-            `--upload.outputDir=${artifactsDir}`
-        ];
-
-        // Add each URL as a separate flag
-        URLS_TO_TEST.forEach(url => {
-            lhciArgs.push('--collect.url', url);
-        });
-
-        const lhci = spawn('npx', ['@lhci/cli', ...lhciArgs], {
+            '--config=lighthouserc.json'
+        ], {
             stdio: 'inherit',
             shell: true
         });
