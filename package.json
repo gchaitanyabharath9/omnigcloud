@@ -41,7 +41,8 @@
     "i18n:gate": "node scripts/i18n_gate.mjs",
     "security:gate": "node scripts/security_gate.mjs",
     "health:routes": "npx tsx scripts/check-routes.ts",
-    "health:i18n": "npx tsx scripts/check-i18n-keys.ts"
+    "health:i18n": "npx tsx scripts/check-i18n-keys.ts",
+    "validate:seo": "node scripts/validate-seo.mjs"
   },
   "dependencies": {
     "@auth/upstash-redis-adapter": "^2.11.1",

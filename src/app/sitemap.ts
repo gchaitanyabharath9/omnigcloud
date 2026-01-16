@@ -1,7 +1,8 @@
 import { MetadataRoute } from 'next'
+import { config } from '@/config'
 
 export default function sitemap(): MetadataRoute.Sitemap {
-    const baseUrl = 'https://www.omnigcloud.com'
+    const baseUrl = config.site.url || 'https://omnigcloud.com'
     const currentDate = new Date()
     const locales = ['en', 'es', 'fr', 'de', 'zh', 'hi', 'ja', 'ko']
 
