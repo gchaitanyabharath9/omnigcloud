@@ -1,8 +1,11 @@
-$stagedPdfs = git diff --cached --name-only --diff-filter=A | Select-String -Pattern "\.pdf$"
+# scripts/check-no-pdf.ps1
+# Ensures no PDF files are staged for commit.
+
+$stagedPdfs = git diff --cached --name-only --filter=ACM | Select-String "\.pdf$"
+
 if ($stagedPdfs) {
-    Write-Host "ERROR: The following PDF files are staged for commit:" -ForegroundColor Red
-    $stagedPdfs | ForEach-Object { Write-Host " - $_" -ForegroundColor Yellow }
-    Write-Host "PDFs must not be committed to this repository. Please unstage them." -ForegroundColor Red
+    Write-Error "ERROR: Attempting to commit PDF files. Please unstage them:`n$stagedPdfs"
     exit 1
 }
+
 exit 0

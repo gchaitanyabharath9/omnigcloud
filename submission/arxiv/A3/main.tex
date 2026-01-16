@@ -1,29 +1,29 @@
-% arXiv submission source for A3
-% Generated/Normalized at 2026-01-16T18:11:44.548Z
-% 
+% arXiv submission for A3
+% Generated: 2026-01-16T19:10:01.237Z
 
 \documentclass{article}
+\usepackage[utf8]{inputenc}
 \usepackage[margin=1in]{geometry}
-\usepackage{cite}
 \usepackage{graphicx}
-\usepackage{hyperref}
 \usepackage{amsmath}
-\usepackage{authblk}
-
-\providecommand{\tightlist}{%
-  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
-\usepackage{longtable}
+\usepackage{amssymb}
 \usepackage{booktabs}
+\usepackage{longtable}
 \usepackage{array}
 \usepackage{calc}
 \usepackage{multirow}
+\usepackage{hyperref}
 
+% Pandoc compatibility
+\providecommand{\tightlist}{\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\providecommand{\pandocbounded}[1]{#1}
 
 \title{Enterprise Observability & Operational Intelligence at Scale}
-\author{Chaitanya Bharath Gopu  }
-\date{}
+\author{Author Name}
+\date{\today}
 
 \begin{document}
+
 \maketitle
 
 \begin{abstract}
@@ -35,75 +35,48 @@ We present an adaptive tail-sampling architecture that captures 100% of errors a
 
 The architecture builds on A1's plane separation and A2's throughput patterns, adding four observability-specific patterns: W3C Trace Context propagation for distributed correlation, tail-based sampling for intelligent data retention, SLO-based alerting for proactive incident detection, and OODA loop automation for self-healing systems.
 
-**Keywords:** observability, distributed tracing, high-cardinality metrics, sampling, OpenTelemetry, SLO, MTTR, operational intelligence, monitoring, telemetry
-
----
+\textbf{Keywords:} observability, distributed tracing, high-cardinality metrics, sampling, OpenTelemetry, SLO, MTTR, operational intelligence, monitoring, telemetry
 \end{abstract}
 
 \textbf{Keywords:} observability, distributed tracing, high-cardinality metrics, sampling, OpenTelemetry, SLO, MTTR, operational intelligence, monitoring, telemetry
 
+
+\section{Enterprise Observability \& Operational Intelligence at Scale}\label{enterprise-observability-operational-intelligence-at-scale}
+
+\textbf{Author:} Chaitanya Bharath Gopu\\
+\textbf{Classification:} \\
+\textbf{Version:} 3.0\\
+\textbf{Date:} January 2026
+
 \subsection{Original Contribution}\label{original-contribution}
 
-To the best of our knowledge, this work offers the first empirical
-quantification of ``Observability Entropy''---the exponential growth of
-telemetry data (\(O(N!)\)) relative to system scale (\(O(N)\)). While
-vendors advocate for ``logging everything,'' we demonstrate that at
-enterprise scale (\textgreater250k RPS), ``log everything'' is
-mathematically impossible without bankrupcy. We formalize ``Tail-Based
-Sampling'' not just as a cost-optimization technique, but as a critical
-architectural invariant required to maintain signal-to-noise ratios in
-systems exceeding \(10^9\) daily events.
+To the best of our knowledge, this work offers the first empirical quantification of ``Observability Entropy''---the exponential growth of telemetry data (\(O(N!)\)) relative to system scale (\(O(N)\)). While vendors advocate for ``logging everything,'' we demonstrate that at enterprise scale (\textgreater250k RPS), ``log everything'' is mathematically impossible without bankrupcy. We formalize ``Tail-Based Sampling'' not just as a cost-optimization technique, but as a critical architectural invariant required to maintain signal-to-noise ratios in systems exceeding \(10^9\) daily events.
 
-\subsubsection{Why This Framework Was Needed
-Now}\label{why-this-framework-was-needed-now}
+\section{}\label{section}
 
-The transition to microservices broke traditional monitoring. In the
-past, ``CPU High'' meant ``Server Overloaded.'' Now, ``CPU High'' could
-mean a garbage collection pause, a noisy neighbor, or a valid batch job.
-The context (Why?) was lost in aggregation. Existing academic work
-focuses on sampling algorithms but rarely addresses the economic and
-operational constraints of implementing them in petabyte-scale
-production environments. This work bridges that gap.
+\subsubsection{Why This Framework Was Needed Now}\label{why-this-framework-was-needed-now}
 
-\subsubsection{Relationship to A1-A6
-Series}\label{relationship-to-a1-a6-series}
+The transition to microservices broke traditional monitoring. In the past, ``CPU High'' meant ``Server Overloaded.'' Now, ``CPU High'' could mean a garbage collection pause, a noisy neighbor, or a valid batch job. The context (Why?) was lost in aggregation. Existing academic work focuses on sampling algorithms but rarely addresses the economic and operational constraints of implementing them in petabyte-scale production environments. This work bridges that gap.
 
-This paper serves as the \textbf{Sensory Nervous System} for the A1-A6
-architecture. * \textbf{A1} provides the Body (Structure). *
-\textbf{AECP} provides the Brain (Control). * \textbf{A3} provides the
-Eyes and Ears (Sensors). Without A3's high-cardinality observability,
-the invariants defined in A1 cannot be verified, and the policies in A6
-cannot be enforced. A3 is the feedback loop that closes the control
-system.
+\subsubsection{Relationship to A1-A6 Series}\label{relationship-to-a1-a6-series}
+
+This paper serves as the \textbf{Sensory Nervous System} for the A1-A6 architecture.
+* \textbf{A1} provides the Body (Structure).
+* \textbf{AECP} provides the Brain (Control).
+* \textbf{A3} provides the Eyes and Ears (Sensors).
+Without A3's high-cardinality observability, the invariants defined in A1 cannot be verified, and the policies in A6 cannot be enforced. A3 is the feedback loop that closes the control system.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
 \subsection{1. Introduction}\label{introduction}
 
-This paper implements the closed-loop feedback requirements of
-A1-REF-STD by defining the high-cardinality observability substrate
-necessary to validate architectural invariants in production.
+This paper implements the closed-loop feedback requirements of A1-REF-STD by defining the high-cardinality observability substrate necessary to validate architectural invariants in production.
 
-\subsubsection{1.1 The Observability
-Crisis}\label{the-observability-crisis}
+\subsubsection{1.1 The Observability Crisis}\label{the-observability-crisis}
 
-Modern enterprises operate distributed systems of unprecedented
-complexity. A typical e-commerce platform comprises 500-1000
-microservices deployed across 3-5 regions, processing millions of
-requests per second. When latency spikes or errors occur, operators face
-a needle-in-haystack problem: identifying the root cause among billions
-of log lines, millions of metrics, and thousands of traces.
+Modern enterprises operate distributed systems of unprecedented complexity. A typical e-commerce platform comprises 500-1000 microservices deployed across 3-5 regions, processing millions of requests per second. When latency spikes or errors occur, operators face a needle-in-haystack problem: identifying the root cause among billions of log lines, millions of metrics, and thousands of traces.
 
-Traditional monitoring approaches fail because they were designed for
-monolithic systems with known failure modes. In a monolith, ``database
-slow'' is a sufficient diagnosis. In microservices, the question
-becomes: ``Which of the 50 database instances? For which tenant? From
-which calling service? In which region? During which time window?'' It
-should be emphasized that this framework formalizes architectural
-observability requirements and feedback invariants rather than providing
-guidance on specific commercial observability tools or vendor-locked
-implementations. A3 defines architectural observability requirements,
-not monitoring tools or vendor stacks. The observability patterns focus
-on architectural verification and drift detection, not general-purpose
-application monitoring.
+Traditional monitoring approaches fail because they were designed for monolithic systems with known failure modes. In a monolith, ``database slow'' is a sufficient diagnosis. In microservices, the question becomes: ``Which of the 50 database instances? For which tenant? From which calling service? In which region? During which time window?'' It should be emphasized that this framework formalizes architectural observability requirements and feedback invariants rather than providing guidance on specific commercial observability tools or vendor-locked implementations. A3 defines architectural observability requirements, not monitoring tools or vendor stacks. The observability patterns focus on architectural verification and drift detection, not general-purpose application monitoring.
 
 \subsubsection{1.2 The Three-Pillar Model}\label{the-three-pillar-model}
 
@@ -113,28 +86,19 @@ The industry has converged on three pillars of observability:
 \textbf{Logs:} Discrete event records (request logs, error messages)\\
 \textbf{Traces:} Request flow through distributed services
 
-However, these pillars are often implemented as isolated systems
-(Prometheus for metrics, ELK for logs, Jaeger for traces), creating
-correlation challenges. A3 defines these as interconnected signals that
-must be correlated through common identifiers (trace ID, span ID).
+However, these pillars are often implemented as isolated systems (Prometheus for metrics, ELK for logs, Jaeger for traces), creating correlation challenges. A3 defines these as interconnected signals that must be correlated through common identifiers (trace ID, span ID).
 
 \begin{figure}
 \centering
-\pandocbounded{\includegraphics[keepaspectratio,alt={figures/fig-1.png}}
+\includegraphics[width=0.8\linewidth]{figures/fig-1.png}
 \caption{The Observability Triangle}
 \end{figure}
 
-\textbf{Figure 1:} The Observability Triangle. The model demonstrates
-the interconnectedness of signals required for rapid correlation across
-the control and data planes. Metrics tell you when something is wrong.
-Traces tell you where. Logs tell you why.
+\textbf{Figure 1:} The Observability Triangle. The model demonstrates the interconnectedness of signals required for rapid correlation across the control and data planes. Metrics tell you when something is wrong. Traces tell you where. Logs tell you why.
 
-\subsubsection{1.3 The Cardinality
-Problem}\label{the-cardinality-problem}
+\subsubsection{1.3 The Cardinality Problem}\label{the-cardinality-problem}
 
-The fundamental challenge in observability is cardinality---the number
-of unique combinations of dimensional attributes. Consider a simple HTTP
-request metric:
+The fundamental challenge in observability is cardinality---the number of unique combinations of dimensional attributes. Consider a simple HTTP request metric:
 
 \textbf{Low Cardinality (Traditional):}
 
@@ -142,7 +106,7 @@ request metric:
 http_requests_total{method="GET", status="200"} = 1000
 \end{verbatim}
 
-Cardinality: 10 methods × 10 status codes = 100 time series
+Cardinality: 10 methods \(\times\) 10 status codes = 100 time series
 
 \textbf{High Cardinality (Modern):}
 
@@ -157,51 +121,36 @@ http_requests_total{
 } = 1
 \end{verbatim}
 
-Cardinality: 10 methods × 10 statuses × 10M tenants × 100M users × 10
-devices × 20 regions = 2×10\^{}17 time series
+Cardinality: 10 methods \(\times\) 10 statuses \(\times\) 10M tenants \(\times\) 100M users \(\times\) 10 devices \(\times\) 20 regions = 2\$\times\$10\^{}17 time series
 
-This explosion makes traditional time-series databases (Prometheus,
-InfluxDB) unusable. The solution is to move high-cardinality dimensions
-from metrics to traces.
+This explosion makes traditional time-series databases (Prometheus, InfluxDB) unusable. The solution is to move high-cardinality dimensions from metrics to traces.
 
-\subsubsection{1.4 Paper Contributions
-(Enhanced)}\label{paper-contributions-enhanced}
+\subsubsection{1.4 Paper Contributions (Enhanced)}\label{paper-contributions-enhanced}
 
 This paper makes four contributions:
 
 \textbf{C1: Cardinality Analysis}\\
-We quantify the storage cost of high-cardinality metrics, demonstrating
-that naive instrumentation costs \$2M+ annually at enterprise scale.
+We quantify the storage cost of high-cardinality metrics, demonstrating that naive instrumentation costs \$2M+ annually at enterprise scale.
 
 \textbf{C2: Adaptive Sampling Architecture}\\
-We present a tail-based sampling system that reduces storage costs by
-95\% while maintaining 100\% error visibility.
+We present a tail-based sampling system that reduces storage costs by 95\% while maintaining 100\% error visibility.
 
 \textbf{C3: Correlation Framework}\\
-We define W3C Trace Context propagation patterns that enable correlation
-across metrics, logs, and traces.
+We define W3C Trace Context propagation patterns that enable correlation across metrics, logs, and traces.
 
 \textbf{C4: Production Validation}\\
-We validate the architecture through deployments demonstrating 82\% MTTR
-reduction and 73\% reduction in escalations.
+We validate the architecture through deployments demonstrating 82\% MTTR reduction and 73\% reduction in escalations.
 
 \textbf{Paper Organization:}\\
-Section 2 analyzes the cardinality explosion. Section 3 presents the
-three-pillar model. Section 4 details adaptive sampling. Section 5
-covers correlation and propagation. Section 6 defines SLOs and error
-budgets. Section 7 describes the OODA loop. Section 8 provides
-implementation guidance. Section 9 evaluates the architecture. Section
-10 discusses related work. Section 11 acknowledges limitations. Section
-12 concludes.
+Section 2 analyzes the cardinality explosion. Section 3 presents the three-pillar model. Section 4 details adaptive sampling. Section 5 covers correlation and propagation. Section 6 defines SLOs and error budgets. Section 7 describes the OODA loop. Section 8 provides implementation guidance. Section 9 evaluates the architecture. Section 10 discusses related work. Section 11 acknowledges limitations. Section 12 concludes.
 
-\subsection{2. The Cardinality Explosion
-Problem}\label{the-cardinality-explosion-problem}
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
-\subsubsection{2.1 Quantifying
-Cardinality}\label{quantifying-cardinality}
+\subsection{2. The Cardinality Explosion Problem}\label{the-cardinality-explosion-problem}
 
-Cardinality is the number of unique time series in a metric system. It
-grows multiplicatively with each dimension:
+\subsubsection{2.1 Quantifying Cardinality}\label{quantifying-cardinality}
+
+Cardinality is the number of unique time series in a metric system. It grows multiplicatively with each dimension:
 
 \[ Cardinality = \prod_{i=1}^{n} |Dimension_i| \]
 
@@ -209,18 +158,21 @@ grows multiplicatively with each dimension:
 
 \textbf{Metric:} \texttt{http\_request\_duration\_seconds}
 
-\textbf{Dimensions:} - method: 10 values (GET, POST, PUT, DELETE, etc.)
-- status: 50 values (200, 201, 400, 404, 500, etc.) - endpoint: 500
-values (API endpoints) - service: 1000 values (microservices) - region:
-5 values (AWS regions) - tenant\_id: 10,000 values (customers)
+\textbf{Dimensions:}
+- method: 10 values (GET, POST, PUT, DELETE, etc.)
+- status: 50 values (200, 201, 400, 404, 500, etc.)
+- endpoint: 500 values (API endpoints)
+- service: 1000 values (microservices)
+- region: 5 values (AWS regions)
+- tenant\_id: 10,000 values (customers)
 
-\textbf{Cardinality:} 10 × 50 × 500 × 1000 × 5 × 10,000 = 1.25 ×
-10\^{}12 time series
+\textbf{Cardinality:} 10 \(\times\) 50 \(\times\) 500 \(\times\) 1000 \(\times\) 5 \(\times\) 10,000 = 1.25 \(\times\) 10\^{}12 time series
 
-\textbf{Storage Cost:} - Samples per series per day: 86,400 (1
-sample/second) - Bytes per sample: 16 bytes (timestamp + value) - Daily
-storage: 1.25×10\^{}12 × 86,400 × 16 = 1.7 PB/day - Monthly cost (S3):
-1.7 PB × 30 × \$0.023/GB = \$1.2M/month
+\textbf{Storage Cost:}
+- Samples per series per day: 86,400 (1 sample/second)
+- Bytes per sample: 16 bytes (timestamp + value)
+- Daily storage: 1.25\$\times\$10\^{}12 \(\times\) 86,400 \(\times\) 16 = 1.7 PB/day
+- Monthly cost (S3): 1.7 PB \(\times\) 30 \(\times\) \$0.023/GB = \$1.2M/month
 
 This is clearly untenable.
 
@@ -230,77 +182,74 @@ Time-series databases have hard limits on cardinality:
 
 \textbf{Table 1: TSDB Cardinality Limits}
 
-Database \textbar{} Max Cardinality \textbar{} Performance Cliff
-\textbar{} Recommendation \textbar{}
-
-\textbar:\textbar:\textbar:\textbar:\textbar{} \textbar{}
-\textbf{Prometheus} \textbar{} 10M series \textbar{} \textgreater1M
-series \textbar{} \textless100k series \textbar{} \textbar{}
-\textbf{InfluxDB} \textbar{} 100M series \textbar{} \textgreater10M
-series \textbar{} \textless1M series \textbar{} \textbar{}
-\textbf{TimescaleDB} \textbar{} 1B series \textbar{} \textgreater100M
-series \textbar{} \textless10M series \textbar{} \textbar{}
-\textbf{Cortex/Thanos} \textbar{} 1B+ series \textbar{} \textgreater100M
-series \textbar{} \textless50M series \textbar{}
+{\def\LTcaptype{none} % do not increment counter
+\begin{longtable}[]{@{}llll@{}}
+\toprule\noalign{}
+Database & Max Cardinality & Performance Cliff & Recommendation \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+\textbf{Prometheus} & 10M series & \textgreater1M series & \textless100k series \\
+\textbf{InfluxDB} & 100M series & \textgreater10M series & \textless1M series \\
+\textbf{TimescaleDB} & 1B series & \textgreater100M series & \textless10M series \\
+\textbf{Cortex/Thanos} & 1B+ series & \textgreater100M series & \textless50M series \\
+\end{longtable}
+}
 
 Beyond the performance cliff, query latency degrades exponentially:
 
 \begin{figure}
 \centering
-\pandocbounded{\includegraphics[keepaspectratio,alt={figures/fig-2.png}}
+\includegraphics[width=0.8\linewidth]{figures/fig-2.png}
 \caption{The Cardinality Cliff}
 \end{figure}
 
-\textbf{Figure 2:} The ``Cardinality Cliff.'' This shift in complexity
-from metrics to traces protects the scalability of the monitoring
-control plane. Without dimension stratification, metrics storage grows
-exponentially with unique label combinations (tenants, users). A3 shifts
-this complexity into distributed traces.
+\textbf{Figure 2:} The ``Cardinality Cliff.'' This shift in complexity from metrics to traces protects the scalability of the monitoring control plane. Without dimension stratification, metrics storage grows exponentially with unique label combinations (tenants, users). A3 shifts this complexity into distributed traces.
 
-\subsubsection{2.3 Solution: Dimension
-Stratification}\label{solution-dimension-stratification}
+\subsubsection{2.3 Solution: Dimension Stratification}\label{solution-dimension-stratification}
 
 The solution is to stratify dimensions by cardinality:
 
-\textbf{Low Cardinality (Metrics):} - method, status, endpoint, service,
-region - Cardinality: 10 × 50 × 500 × 1000 × 5 = 125M series
-(manageable)
+\textbf{Low Cardinality (Metrics):}
+- method, status, endpoint, service, region
+- Cardinality: 10 \(\times\) 50 \(\times\) 500 \(\times\) 1000 \(\times\) 5 = 125M series (manageable)
 
-\textbf{High Cardinality (Traces):} - tenant\_id, user\_id,
-device\_type, session\_id - Stored as trace attributes, queryable via
-trace backend (Jaeger, Tempo)
+\textbf{High Cardinality (Traces):}
+- tenant\_id, user\_id, device\_type, session\_id
+- Stored as trace attributes, queryable via trace backend (Jaeger, Tempo)
 
 \textbf{Table 2: Dimension Stratification}
 
-Dimension \textbar{} Cardinality \textbar{} Storage \textbar{} Queryable
-Via \textbar{}
+{\def\LTcaptype{none} % do not increment counter
+\begin{longtable}[]{@{}llll@{}}
+\toprule\noalign{}
+Dimension & Cardinality & Storage & Queryable Via \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+\textbf{method} & 10 & Metrics & Prometheus \\
+\textbf{status} & 50 & Metrics & Prometheus \\
+\textbf{endpoint} & 500 & Metrics & Prometheus \\
+\textbf{service} & 1000 & Metrics & Prometheus \\
+\textbf{region} & 5 & Metrics & Prometheus \\
+\textbf{tenant\_id} & 10k-10M & Traces & Jaeger/Tempo \\
+\textbf{user\_id} & 100M+ & Traces & Jaeger/Tempo \\
+\textbf{device\_type} & 10-100 & Traces & Jaeger/Tempo \\
+\end{longtable}
+}
 
-\textbar:\textbar:\textbar:\textbar:\textbar{} \textbar{}
-\textbf{method} \textbar{} 10 \textbar{} Metrics \textbar{} Prometheus
-\textbar{} \textbar{} \textbf{status} \textbar{} 50 \textbar{} Metrics
-\textbar{} Prometheus \textbar{} \textbar{} \textbf{endpoint} \textbar{}
-500 \textbar{} Metrics \textbar{} Prometheus \textbar{} \textbar{}
-\textbf{service} \textbar{} 1000 \textbar{} Metrics \textbar{}
-Prometheus \textbar{} \textbar{} \textbf{region} \textbar{} 5 \textbar{}
-Metrics \textbar{} Prometheus \textbar{} \textbar{} \textbf{tenant\_id}
-\textbar{} 10k-10M \textbar{} Traces \textbar{} Jaeger/Tempo \textbar{}
-\textbar{} \textbf{user\_id} \textbar{} 100M+ \textbar{} Traces
-\textbar{} Jaeger/Tempo \textbar{} \textbar{} \textbf{device\_type}
-\textbar{} 10-100 \textbar{} Traces \textbar{} Jaeger/Tempo \textbar{}
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
-\subsection{3. The Three Pillars of
-Observability}\label{the-three-pillars-of-observability}
+\subsection{3. The Three Pillars of Observability}\label{the-three-pillars-of-observability}
 
-\pandocbounded{\includegraphics[keepaspectratio,alt={figures/fig-3.png}}
-\textbf{Figure 3:} Dimension Stratification Pipeline. By separating
-aggregated metrics from high-context traces at the ingest layer, we
-prevent TSDB cardinality explosions while preserving queryability.
+\includegraphics[width=0.8\linewidth]{figures/fig-3.png}
+\textbf{Figure 3:} Dimension Stratification Pipeline. By separating aggregated metrics from high-context traces at the ingest layer, we prevent TSDB cardinality explosions while preserving queryability.
 
-\subsubsection{3.1 Metrics: Aggregated
-Signals}\label{metrics-aggregated-signals}
+\subsubsection{3.1 Metrics: Aggregated Signals}\label{metrics-aggregated-signals}
 
-Metrics are numerical measurements aggregated over time. They answer
-``what is happening?'' but not ``why?''
+Metrics are numerical measurements aggregated over time. They answer ``what is happening?'' but not ``why?''
 
 \textbf{Types of Metrics:}
 
@@ -332,13 +281,11 @@ http_request_duration_seconds{quantile="0.9"} = 0.45
 http_request_duration_seconds{quantile="0.99"} = 0.98
 \end{verbatim}
 
-\textbf{Best Practice:} Use histograms over summaries for server-side
-aggregation flexibility.
+\textbf{Best Practice:} Use histograms over summaries for server-side aggregation flexibility.
 
 \subsubsection{3.2 Logs: Discrete Events}\label{logs-discrete-events}
 
-Logs are discrete event records with timestamps and structured or
-unstructured data. They answer ``why is it happening?''
+Logs are discrete event records with timestamps and structured or unstructured data. They answer ``why is it happening?''
 
 \textbf{Structured Logging (JSON):}
 
@@ -359,17 +306,18 @@ unstructured data. They answer ``why is it happening?''
 \end{Highlighting}
 \end{Shaded}
 
-\textbf{Key Characteristics:} - \textbf{Structured:} Queryable fields
-(tenant\_id, amount, gateway) - \textbf{Correlated:} trace\_id links to
-distributed trace - \textbf{Contextual:} Includes business-relevant data
+\textbf{Key Characteristics:}
+- \textbf{Structured:} Queryable fields (tenant\_id, amount, gateway)
+- \textbf{Correlated:} trace\_id links to distributed trace
+- \textbf{Contextual:} Includes business-relevant data
 
 \subsubsection{3.3 Traces: Request Flow}\label{traces-request-flow}
 
-Traces represent the flow of a single request through distributed
-services. They answer ``where is it happening?''
+Traces represent the flow of a single request through distributed services. They answer ``where is it happening?''
 
-\textbf{Trace Structure:} - \textbf{Trace:} End-to-end request
-(trace\_id) - \textbf{Span:} Single operation within a trace (span\_id)
+\textbf{Trace Structure:}
+- \textbf{Trace:} End-to-end request (trace\_id)
+- \textbf{Span:} Single operation within a trace (span\_id)
 - \textbf{Parent-Child:} Spans form a tree structure
 
 \textbf{Example Trace:}
@@ -384,59 +332,67 @@ Trace ID: abc-123-def-456
 │        └─ Span: Stripe API (35ms) [ERROR]
 \end{verbatim}
 
-\textbf{Critical Insight:} The error in Stripe API (35ms) is visible in
-the trace, but the overall request took 100ms. Without tracing, we'd
-only see ``API Gateway slow'' without knowing Stripe was the root cause.
+\textbf{Critical Insight:} The error in Stripe API (35ms) is visible in the trace, but the overall request took 100ms. Without tracing, we'd only see ``API Gateway slow'' without knowing Stripe was the root cause.
 
-\subsection{4. Adaptive Sampling
-Architecture}\label{adaptive-sampling-architecture}
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
-\subsubsection{4.1 The Sampling
-Imperative}\label{the-sampling-imperative}
+\subsection{4. Adaptive Sampling Architecture}\label{adaptive-sampling-architecture}
 
-Recording 100\% of traces at 100,000 RPS generates: - Traces per day:
-100,000 × 86,400 = 8.64 billion - Bytes per trace: \textasciitilde10 KB
-(average) - Daily storage: 8.64B × 10 KB = 86.4 TB - Monthly cost (S3):
-86.4 TB × 30 × \$0.023/GB = \$60k/month
+\subsubsection{4.1 The Sampling Imperative}\label{the-sampling-imperative}
 
-This is expensive but manageable. However, 99\% of these traces are
-``successful fast requests'' with no diagnostic value. We can safely
-discard them.
+Recording 100\% of traces at 100,000 RPS generates:
+- Traces per day: 100,000 \(\times\) 86,400 = 8.64 billion
+- Bytes per trace: \textasciitilde10 KB (average)
+- Daily storage: 8.64B \(\times\) 10 KB = 86.4 TB
+- Monthly cost (S3): 86.4 TB \(\times\) 30 \(\times\) \$0.023/GB = \$60k/month
+
+This is expensive but manageable. However, 99\% of these traces are ``successful fast requests'' with no diagnostic value. We can safely discard them.
 
 \subsubsection{4.2 Sampling Strategies}\label{sampling-strategies}
 
 \textbf{Table 3: Sampling Strategies Comparison}
 
-Strategy \textbar{} Decision Point \textbar{} Pros \textbar{} Cons
-\textbar{} Use Case \textbar{}
+{\def\LTcaptype{none} % do not increment counter
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.2000}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.2000}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.2000}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.2000}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.2000}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+Strategy
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Decision Point
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Pros
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Cons
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Use Case
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+\textbf{Head-Based} & At ingress (random \%) & Simple, low overhead & Misses rare errors & Baseline sampling \\
+\textbf{Tail-Based} & After completion & Captures every error & High memory/CPU & Production debugging \\
+\textbf{Adaptive} & Dynamic rate & Constant storage cost & Complex implementation & Cost optimization \\
+\textbf{Rule-Based} & Policy-driven & Flexible & Requires tuning & Custom requirements \\
+\end{longtable}
+}
 
-\textbar:\textbar:\textbar:\textbar:\textbar:\textbar{} \textbar{}
-\textbf{Head-Based} \textbar{} At ingress (random \%) \textbar{} Simple,
-low overhead \textbar{} Misses rare errors \textbar{} Baseline sampling
-\textbar{} \textbar{} \textbf{Tail-Based} \textbar{} After completion
-\textbar{} Captures every error \textbar{} High memory/CPU \textbar{}
-Production debugging \textbar{} \textbar{} \textbf{Adaptive} \textbar{}
-Dynamic rate \textbar{} Constant storage cost \textbar{} Complex
-implementation \textbar{} Cost optimization \textbar{} \textbar{}
-\textbf{Rule-Based} \textbar{} Policy-driven \textbar{} Flexible
-\textbar{} Requires tuning \textbar{} Custom requirements \textbar{}
+\subsubsection{4.3 Tail-Based Sampling Implementation}\label{tail-based-sampling-implementation}
 
-\subsubsection{4.3 Tail-Based Sampling
-Implementation}\label{tail-based-sampling-implementation}
-
-Tail-based sampling makes the keep/discard decision after the request
-completes, enabling intelligent retention:
+Tail-based sampling makes the keep/discard decision after the request completes, enabling intelligent retention:
 
 \begin{figure}
 \centering
-\pandocbounded{\includegraphics[keepaspectratio,alt={figures/fig-4.png}}
+\includegraphics[width=0.8\linewidth]{figures/fig-4.png}
 \caption{The Tail-Based Sampling Pipeline}
 \end{figure}
 
-\textbf{Figure 4:} The Tail-Based Sampling Pipeline. Unlike head-based
-sampling (which decides randomly at the start), tail-based sampling
-waits for request completion to ensure metadata (errors, latency) can
-drive the retention policy.
+\textbf{Figure 4:} The Tail-Based Sampling Pipeline. Unlike head-based sampling (which decides randomly at the start), tail-based sampling waits for request completion to ensure metadata (errors, latency) can drive the retention policy.
 
 \textbf{Sampling Rules:}
 
@@ -462,11 +418,12 @@ drive the retention policy.
 \end{Highlighting}
 \end{Shaded}
 
-\textbf{Storage Reduction:} - Errors: 1\% of traffic → 100\% sampled =
-0.86 TB/day - Slow requests: 5\% of traffic → 100\% sampled = 4.3 TB/day
-- Fast success: 94\% of traffic → 1\% sampled = 0.81 TB/day -
-\textbf{Total: 6 TB/day} (vs 86.4 TB/day without sampling) -
-\textbf{Reduction: 93\%}
+\textbf{Storage Reduction:}
+- Errors: 1\% of traffic \(\rightarrow\) 100\% sampled = 0.86 TB/day
+- Slow requests: 5\% of traffic \(\rightarrow\) 100\% sampled = 4.3 TB/day
+- Fast success: 94\% of traffic \(\rightarrow\) 1\% sampled = 0.81 TB/day
+- \textbf{Total: 6 TB/day} (vs 86.4 TB/day without sampling)
+- \textbf{Reduction: 93\%}
 
 \subsubsection{4.4 Implementation Details}\label{implementation-details}
 
@@ -494,15 +451,17 @@ drive the retention policy.
 \end{Highlighting}
 \end{Shaded}
 
-\textbf{Memory Requirements:} - Buffer window: 30 seconds - Expected
-traces: 10,000 traces/sec × 30s = 300,000 traces - Bytes per trace: 10
-KB - \textbf{Memory: 3 GB} (acceptable for modern servers)
+\textbf{Memory Requirements:}
+- Buffer window: 30 seconds
+- Expected traces: 10,000 traces/sec \(\times\) 30s = 300,000 traces
+- Bytes per trace: 10 KB
+- \textbf{Memory: 3 GB} (acceptable for modern servers)
 
-\subsection{5. Correlation \&
-Propagation}\label{correlation-propagation}
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
-\subsubsection{5.1 W3C Trace Context
-Standard}\label{w3c-trace-context-standard}
+\subsection{5. Correlation \& Propagation}\label{correlation-propagation}
+
+\subsubsection{5.1 W3C Trace Context Standard}\label{w3c-trace-context-standard}
 
 A3 mandates W3C Trace Context propagation across all service boundaries:
 
@@ -516,47 +475,55 @@ traceparent: 00-4bf92f3577b34da6a3ce929d0e0e4736-00f067aa0ba902b7-01
 \end{verbatim}
 
 \textbf{Propagation Flow:}
-\pandocbounded{\includegraphics[keepaspectratio,alt={figures/fig-5.png}}
+\includegraphics[width=0.8\linewidth]{figures/fig-5.png}
 
-\textbf{Figure 5:} Context Propagation. By injecting standard headers,
-we ensure that a log in Service B can be correlated with the user
-request in the Proxy, even across language boundaries (Node.js → Go).
+\textbf{Figure 5:} Context Propagation. By injecting standard headers, we ensure that a log in Service B can be correlated with the user request in the Proxy, even across language boundaries (Node.js \(\rightarrow\) Go).
 
 \subsubsection{5.2 Correlation Patterns}\label{correlation-patterns}
 
-\textbf{Pattern 1: Metric → Trace}\\
-When a metric alert fires (high latency), query traces with the same
-time range and service to find slow requests.
+\textbf{Pattern 1: Metric \(\rightarrow\) Trace}\\
+When a metric alert fires (high latency), query traces with the same time range and service to find slow requests.
 
-\textbf{Pattern 2: Trace → Log}\\
-When a trace shows an error span, query logs with the same trace\_id to
-find the error message.
+\textbf{Pattern 2: Trace \(\rightarrow\) Log}\\
+When a trace shows an error span, query logs with the same trace\_id to find the error message.
 
-\textbf{Pattern 3: Log → Metric}\\
-Extract dimensions from logs (e.g., error\_type) and create metrics for
-trending.
+\textbf{Pattern 3: Log \(\rightarrow\) Metric}\\
+Extract dimensions from logs (e.g., error\_type) and create metrics for trending.
 
 \textbf{Table 4: Correlation Use Cases}
 
-Scenario \textbar{} Start Point \textbar{} Correlation Path \textbar{}
-Outcome \textbar{}
+{\def\LTcaptype{none} % do not increment counter
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.2500}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.2500}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.2500}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.2500}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+Scenario
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Start Point
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Correlation Path
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Outcome
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+\textbf{Latency spike} & Metric alert & Metric \(\rightarrow\) Trace \(\rightarrow\) Log & Identify slow database query \\
+\textbf{Error investigation} & Log error & Log \(\rightarrow\) Trace \(\rightarrow\) Metric & Determine error rate trend \\
+\textbf{Capacity planning} & Metric trend & Metric \(\rightarrow\) Trace \(\rightarrow\) Log & Identify resource bottleneck \\
+\end{longtable}
+}
 
-\textbar:\textbar:\textbar:\textbar:\textbar{} \textbar{}
-\textbf{Latency spike} \textbar{} Metric alert \textbar{} Metric → Trace
-→ Log \textbar{} Identify slow database query \textbar{} \textbar{}
-\textbf{Error investigation} \textbar{} Log error \textbar{} Log → Trace
-→ Metric \textbar{} Determine error rate trend \textbar{} \textbar{}
-\textbf{Capacity planning} \textbar{} Metric trend \textbar{} Metric →
-Trace → Log \textbar{} Identify resource bottleneck \textbar{}
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
-\pandocbounded{\includegraphics[keepaspectratio,alt={figures/fig-6.png}}
-\textbf{Figure 6:} Telemetry Pipeline Architecture. Data flows from
-heterogeneous application runtimes into a unified collector, where it is
-enriched with infrastructure context and intelligently sampled before
-persistence.
+\includegraphics[width=0.8\linewidth]{figures/fig-6.png}
+\textbf{Figure 6:} Telemetry Pipeline Architecture. Data flows from heterogeneous application runtimes into a unified collector, where it is enriched with infrastructure context and intelligently sampled before persistence.
 
-\subsection{6. Service Level Objectives
-(SLO)}\label{service-level-objectives-slo}
+\subsection{6. Service Level Objectives (SLO)}\label{service-level-objectives-slo}
 
 \subsubsection{6.1 SLO Definition}\label{slo-definition}
 
@@ -566,16 +533,19 @@ Service Level Objectives quantify reliability targets:
 
 \textbf{Table 5: SLO Targets}
 
-SLO Type \textbar{} Target \textbar{} Window \textbar{} Burn Rate Alert
-\textbar{}
-
-\textbar:\textbar:\textbar:\textbar:\textbar{} \textbar{}
-\textbf{Availability} \textbar{} 99.95\% \textbar{} 28 days \textbar{}
-\textgreater2\% budget consumed in 1 hour \textbar{} \textbar{}
-\textbf{Latency} \textbar{} 99\% \textless200ms \textbar{} 28 days
-\textbar{} \textgreater5\% budget consumed in 1 hour \textbar{}
-\textbar{} \textbf{Throughput} \textbar{} \textgreater100k RPS
-\textbar{} 1 hour \textbar{} \textless80k RPS for 5 minutes \textbar{}
+{\def\LTcaptype{none} % do not increment counter
+\begin{longtable}[]{@{}llll@{}}
+\toprule\noalign{}
+SLO Type & Target & Window & Burn Rate Alert \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+\textbf{Availability} & 99.95\% & 28 days & \textgreater2\% budget consumed in 1 hour \\
+\textbf{Latency} & 99\% \textless200ms & 28 days & \textgreater5\% budget consumed in 1 hour \\
+\textbf{Throughput} & \textgreater100k RPS & 1 hour & \textless80k RPS for 5 minutes \\
+\end{longtable}
+}
 
 \subsubsection{6.2 Error Budget}\label{error-budget}
 
@@ -583,29 +553,27 @@ Error budget is the allowed downtime:
 
 \[ Error\ Budget = (1 - SLO) \times Time\ Window \]
 
-\textbf{Example:} - SLO: 99.95\% availability over 28 days - Error
-Budget: (1 - 0.9995) × 28 days = 0.0005 × 28 days = 20 minutes
+\textbf{Example:}
+- SLO: 99.95\% availability over 28 days
+- Error Budget: (1 - 0.9995) \(\times\) 28 days = 0.0005 \(\times\) 28 days = 20 minutes
 
-If the service is down for 20 minutes in 28 days, the error budget is
-exhausted.
+If the service is down for 20 minutes in 28 days, the error budget is exhausted.
 
-\subsubsection{6.3 The Four Golden
-Signals}\label{the-four-golden-signals}
+\subsubsection{6.3 The Four Golden Signals}\label{the-four-golden-signals}
 
 We standardize dashboards on Google's SRE Golden Signals:
 
 \begin{figure}
 \centering
-\pandocbounded{\includegraphics[keepaspectratio,alt={figures/fig-7.png}}
+\includegraphics[width=0.8\linewidth]{figures/fig-7.png}
 \caption{Error Budget Mechanics}
 \end{figure}
 
-\textbf{Figure 7:} Error Budget Mechanics. The goal is not ``zero
-errors'' but managing the ``Burn Rate'' to ensure the Error Budget (the
-allowed 21.6 minutes of monthly downtime) isn't exhausted prematurely.
+\textbf{Figure 7:} Error Budget Mechanics. The goal is not ``zero errors'' but managing the ``Burn Rate'' to ensure the Error Budget (the allowed 21.6 minutes of monthly downtime) isn't exhausted prematurely.
 
-\subsection{7. Operational Intelligence
-Cycle}\label{operational-intelligence-cycle}
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\subsection{7. Operational Intelligence Cycle}\label{operational-intelligence-cycle}
 
 \subsubsection{7.1 The OODA Loop}\label{the-ooda-loop}
 
@@ -613,51 +581,58 @@ Observability drives the OODA Loop (Observe, Orient, Decide, Act):
 
 \begin{figure}
 \centering
-\pandocbounded{\includegraphics[keepaspectratio,alt={figures/fig-8.png}}
+\includegraphics[width=0.8\linewidth]{figures/fig-8.png}
 \caption{The Incident Lifecycle}
 \end{figure}
 
-\textbf{Figure 8:} The incident lifecycle. Operational Intelligence aims
-to automate the ``Decide → Act'' link (e.g., auto-rollback on high error
-rate).
+\textbf{Figure 8:} The incident lifecycle. Operational Intelligence aims to automate the ``Decide \(\rightarrow\) Act'' link (e.g., auto-rollback on high error rate).
 
 \subsubsection{7.2 Automated Remediation}\label{automated-remediation}
 
 \textbf{Table 7: Remediation Automation}
 
-Trigger \textbar{} Detection \textbar{} Automated Action \textbar{}
-Manual Fallback \textbar{}
+{\def\LTcaptype{none} % do not increment counter
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.2500}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.2500}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.2500}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.2500}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+Trigger
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Detection
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Automated Action
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Manual Fallback
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+\textbf{High Error Rate} & \textgreater5\% errors for 2 min & Rollback deployment & Page on-call \\
+\textbf{High Latency} & p99 \textgreater500ms for 5 min & Scale up instances & Investigate \\
+\textbf{Database Saturation} & Connection pool \textgreater90\% & Add read replicas & Restart service \\
+\textbf{Memory Leak} & Memory \textgreater90\% for 10 min & Restart pod & Debug heap dump \\
+\end{longtable}
+}
 
-\textbar:\textbar:\textbar:\textbar:\textbar{} \textbar{} \textbf{High
-Error Rate} \textbar{} \textgreater5\% errors for 2 min \textbar{}
-Rollback deployment \textbar{} Page on-call \textbar{} \textbar{}
-\textbf{High Latency} \textbar{} p99 \textgreater500ms for 5 min
-\textbar{} Scale up instances \textbar{} Investigate \textbar{}
-\textbar{} \textbf{Database Saturation} \textbar{} Connection pool
-\textgreater90\% \textbar{} Add read replicas \textbar{} Restart service
-\textbar{} \textbar{} \textbf{Memory Leak} \textbar{} Memory
-\textgreater90\% for 10 min \textbar{} Restart pod \textbar{} Debug heap
-dump \textbar{}
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
-\subsection{8. Mathematical Formalization of Adaptive
-Sampling}\label{mathematical-formalization-of-adaptive-sampling}
+\subsection{8. Mathematical Formalization of Adaptive Sampling}\label{mathematical-formalization-of-adaptive-sampling}
 
-Reliability at scale is a probability function. We formalize the
-sampling decision \(P_{sample}\) for any given trace \(t\) as a function
-of its attributes, ensuring that ``signal'' is preserved while ``noise''
-is discarded.
+Reliability at scale is a probability function. We formalize the sampling decision \(P_{sample}\) for any given trace \(t\) as a function of its attributes, ensuring that ``signal'' is preserved while ``noise'' is discarded.
 
-\subsubsection{8.1 The Signal Preservation
-Function}\label{the-signal-preservation-function}
+\subsubsection{8.1 The Signal Preservation Function}\label{the-signal-preservation-function}
 
 \[ P_{sample}(t) = \begin{cases} 1 & \text{if } t \in \text{Errors} \\ 1 & \text{if } latency(t) > T_{p99} \\ 1 & \text{if } t \in \text{GoldenSignals} \\ R_{base} & \text{otherwise} \end{cases} \]
 
-Where: * \(R_{base}\) is the baseline sampling rate (e.g., 1\%). *
-\(\text{GoldenSignals}\) is a set of high-value tenants or critical
-paths.
+Where:
+* \(R_{base}\) is the baseline sampling rate (e.g., 1\%).
+* \(\text{GoldenSignals}\) is a set of high-value tenants or critical paths.
 
-\subsubsection{8.2 Cost Function
-Derivation}\label{cost-function-derivation}
+\subsubsection{8.2 Cost Function Derivation}\label{cost-function-derivation}
 
 The total cost of observability \(C_{total}\) is defined as:
 
@@ -667,39 +642,32 @@ Substituting the sampling probability:
 
 \[ C_{total} \approx V_{vol} \times [ R_{base} \times (1 - P_{anomaly}) + 1 \times P_{anomaly} ] \times S_{trace} \]
 
-This derivation proves that as system volume \(V_{vol}\) increases
-linearly, the cost can be capped \(O(1)\) by dynamically adjusting
-\(R_{base}\) inverse to volume, provided that \(P_{anomaly}\) remains
-low.
+This derivation proves that as system volume \(V_{vol}\) increases linearly, the cost can be capped \(O(1)\) by dynamically adjusting \(R_{base}\) inverse to volume, provided that \(P_{anomaly}\) remains low.
 
-\subsection{9. Production Case Study: The ``Hidden'' Latency
-Spike}\label{production-case-study-the-hidden-latency-spike}
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\subsection{9. Production Case Study: The ``Hidden'' Latency Spike}\label{production-case-study-the-hidden-latency-spike}
 
 \textbf{Context:} A Fortune 500 retailer during Black Friday (250k RPS).
-\textbf{Symptom:} Checkout latency spiked from 200ms to 5,000ms. CPU,
-Memory, and DB Latency metrics were all green (normal).
+\textbf{Symptom:} Checkout latency spiked from 200ms to 5,000ms. CPU, Memory, and DB Latency metrics were all green (normal).
 
-\textbf{Investigation:} 1. \textbf{Metric Failure:} Aggregated metrics
-showed average latency was fine. The spike was hidden in the p99.9 tail.
-2. \textbf{Trace Discovery:} Using A3's high-cardinality exploration,
-engineers grouped latency by \texttt{payment\_method}. 3. \textbf{Root
-Cause:} The \texttt{GiftCard} provider API had degraded. Because Gift
-Cards were only 2\% of traffic, the aggregate metrics drowned out the
-failure.
+\textbf{Investigation:}
+1. \textbf{Metric Failure:} Aggregated metrics showed average latency was fine. The spike was hidden in the p99.9 tail.
+2. \textbf{Trace Discovery:} Using A3's high-cardinality exploration, engineers grouped latency by \texttt{payment\_method}.
+3. \textbf{Root Cause:} The \texttt{GiftCard} provider API had degraded. Because Gift Cards were only 2\% of traffic, the aggregate metrics drowned out the failure.
 
-\textbf{Resolution:} The team applied a circuit breaker specifically for
-the \texttt{GiftCard} payment type. \textbf{Outcome:} Revenue saved
-estimated at \$450,000 per hour. Without high-cardinality tracing, this
-would have been a ``ghost issue'' labeled as ``network transient.''
+\textbf{Resolution:}
+The team applied a circuit breaker specifically for the \texttt{GiftCard} payment type.
+\textbf{Outcome:}
+Revenue saved estimated at \$450,000 per hour. Without high-cardinality tracing, this would have been a ``ghost issue'' labeled as ``network transient.''
 
-\subsection{10. Implementation
-Reference}\label{implementation-reference}
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
-\subsubsection{10.1 OpenTelemetry Collector
-Configuration}\label{opentelemetry-collector-configuration}
+\subsection{10. Implementation Reference}\label{implementation-reference}
 
-The following configuration implements the tail-based sampling logic
-defined in A3.
+\subsubsection{10.1 OpenTelemetry Collector Configuration}\label{opentelemetry-collector-configuration}
+
+The following configuration implements the tail-based sampling logic defined in A3.
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -726,6 +694,8 @@ defined in A3.
 \end{Highlighting}
 \end{Shaded}
 
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
 \subsection{11. Implementation Guidance}\label{implementation-guidance}
 
 \subsubsection{11.1 Technology Stack}\label{technology-stack}
@@ -736,71 +706,52 @@ defined in A3.
 \textbf{Instrumentation:} OpenTelemetry SDK\\
 \textbf{Visualization:} Grafana
 
-\subsubsection{11.2 Instrumentation Best
-Practices}\label{instrumentation-best-practices}
+\subsubsection{11.2 Instrumentation Best Practices}\label{instrumentation-best-practices}
 
-\textbf{DO:} - Use OpenTelemetry for vendor-neutral instrumentation -
-Propagate W3C Trace Context across all boundaries - Use structured
-logging (JSON) with trace\_id - Implement tail-based sampling for cost
-optimization - Define SLOs before building dashboards
+\textbf{DO:}
+- Use OpenTelemetry for vendor-neutral instrumentation
+- Propagate W3C Trace Context across all boundaries
+- Use structured logging (JSON) with trace\_id
+- Implement tail-based sampling for cost optimization
+- Define SLOs before building dashboards
 
-\textbf{DON'T:} - Add high-cardinality dimensions to metrics - Sample
-errors or slow requests - Use synchronous logging (blocks request path)
-- Create dashboards without SLO context - Ignore trace context
-propagation
+\textbf{DON'T:}
+- Add high-cardinality dimensions to metrics
+- Sample errors or slow requests
+- Use synchronous logging (blocks request path)
+- Create dashboards without SLO context
+- Ignore trace context propagation
 
-\subsubsection{9.2 Comparative Analysis of Observability
-Architectures}\label{comparative-analysis-of-observability-architectures}
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
-The results obtained across the three deployment environments
-demonstrate a fundamental shift in the OODA loop execution time. In
-Environment A (Fintech), the reduction in MTTR from 45 minutes to 6
-minutes was not merely a result of better visibility, but of the
-\textbf{Contextual Correlation Invariant} (CCI). By ensuring that every
-metric alert carried a W3C trace-id, engineers bypassed the ``Search and
-Greet'' phase of incident response, moving directly into ``Orient and
-Decide.'' This represents a transition from stochastic debugging to
-deterministic root cause identification.
+\subsubsection{9.2 Comparative Analysis of Observability Architectures}\label{comparative-analysis-of-observability-architectures}
 
-Furthermore, the \textbf{Economic Efficiency of Telemetry} (EET) metric
-shows that by applying tail-based sampling, the ROI of observability
-storage increased by an order of magnitude. In Environment B
-(E-Commerce), the 93\% cost reduction enabled the reallocation of \$2.2M
-in annual cloud spend toward additional capacity in the A2 Data Plane
-cells, effectively funding its own scalability. This circular feedback
-between observability efficiency and infrastructure capacity underscores
-the holistic nature of the A1-A6 series.
+The results obtained across the three deployment environments demonstrate a fundamental shift in the OODA loop execution time. In Environment A (Fintech), the reduction in MTTR from 45 minutes to 6 minutes was not merely a result of better visibility, but of the \textbf{Contextual Correlation Invariant} (CCI). By ensuring that every metric alert carried a W3C trace-id, engineers bypassed the ``Search and Greet'' phase of incident response, moving directly into ``Orient and Decide.'' This represents a transition from stochastic debugging to deterministic root cause identification.
 
-\subsection{15. Technical Implementation
-Nuance}\label{technical-implementation-nuance}
+Furthermore, the \textbf{Economic Efficiency of Telemetry} (EET) metric shows that by applying tail-based sampling, the ROI of observability storage increased by an order of magnitude. In Environment B (E-Commerce), the 93\% cost reduction enabled the reallocation of \$2.2M in annual cloud spend toward additional capacity in the A2 Data Plane cells, effectively funding its own scalability. This circular feedback between observability efficiency and infrastructure capacity underscores the holistic nature of the A1-A6 series.
 
-The tail-sampling logic is bound by the \textbf{Horizon Correlation
-Limit}. In extremely deep call graphs (\textgreater50 services), the
-collector must maintain span buffers across a distributed cluster. We
-solve this by using trace-id based hashing to ensure all spans for Trace
-X always land on Collector Node Y, allowing deterministic sampling
-decisions without cross-node coordination, thus maintaining the β ≈ 0
-invariant established in A2.
+\subsection{15. Technical Implementation Nuance}\label{technical-implementation-nuance}
+
+The tail-sampling logic is bound by the \textbf{Horizon Correlation Limit}. In extremely deep call graphs (\textgreater50 services), the collector must maintain span buffers across a distributed cluster. We solve this by using trace-id based hashing to ensure all spans for Trace X always land on Collector Node Y, allowing deterministic sampling decisions without cross-node coordination, thus maintaining the \(\beta\) \(\approx\) 0 invariant established in A2.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
 \subsection{10. Conclusion}\label{conclusion}
 
-Enterprise observability at scale requires a shift from ``hoarding
-data'' to ``curating signals.'' By adopting high-cardinality tracing for
-debugging and aggregated metrics for trending, coupled with adaptive
-tail-based sampling, organizations can achieve deep visibility without
-bankrupting their storage budget.
+Enterprise observability at scale requires a shift from ``hoarding data'' to ``curating signals.'' By adopting high-cardinality tracing for debugging and aggregated metrics for trending, coupled with adaptive tail-based sampling, organizations can achieve deep visibility without bankrupting their storage budget.
 
-Production deployments demonstrate 82\% MTTR reduction, 93\% cost
-savings, and 86\% reduction in escalations to senior engineers. The key
-insight is that observability is not about collecting all data---it's
-about collecting the right data. This observability substrate provides
-the evidentiary basis for academic research into autonomous self-healing
-systems and the formal verification of distributed system state in the
-wild.
+Production deployments demonstrate 82\% MTTR reduction, 93\% cost savings, and 86\% reduction in escalations to senior engineers. The key insight is that observability is not about collecting all data---it's about collecting the right data. This observability substrate provides the evidentiary basis for academic research into autonomous self-healing systems and the formal verification of distributed system state in the wild.
 
-\textbf{Authorship Declaration:} This paper represents independent
-research conducted by the author. No conflicts of interest exist. All
-production data is anonymized.
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\textbf{:}
+This paper represents independent research conducted by the author. No conflicts of interest exist. All production data is anonymized.
 
 \textbf{Format:} Technical Specification
 

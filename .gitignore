@@ -86,3 +86,14 @@ PUBLICATION_STRATEGY.md
 /dist/**/*.pdf
 /out/**/*.pdf
 /build/**/*.pdf
+# LaTeX auxiliary files
+*.aux
+*.log
+*.out
+*.toc
+*.nav
+*.snm
+*.vrb
+*.fls
+*.fdb_latexmk
+*.synctex.gz

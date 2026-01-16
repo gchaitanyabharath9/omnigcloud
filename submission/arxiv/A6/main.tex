@@ -1,29 +1,29 @@
-% arXiv submission source for A6
-% Generated/Normalized at 2026-01-16T18:11:44.560Z
-% 
+% arXiv submission for A6
+% Generated: 2026-01-16T19:10:02.272Z
 
 \documentclass{article}
+\usepackage[utf8]{inputenc}
 \usepackage[margin=1in]{geometry}
-\usepackage{cite}
 \usepackage{graphicx}
-\usepackage{hyperref}
 \usepackage{amsmath}
-\usepackage{authblk}
-
-\providecommand{\tightlist}{%
-  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
-\usepackage{longtable}
+\usepackage{amssymb}
 \usepackage{booktabs}
+\usepackage{longtable}
 \usepackage{array}
 \usepackage{calc}
 \usepackage{multirow}
+\usepackage{hyperref}
 
+% Pandoc compatibility
+\providecommand{\tightlist}{\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\providecommand{\pandocbounded}[1]{#1}
 
 \title{Adaptive Policy Enforcement: The Synthesis of Sovereign Control}
-\author{Chaitanya Bharath Gopu  }
-\date{}
+\author{Author Name}
+\date{\today}
 
 \begin{document}
+
 \maketitle
 
 \begin{abstract}
@@ -33,212 +33,194 @@ The core insight: systems fail faster than humans can respond. At 100,000 RPS, a
 
 We formalize this as an Adaptive Policy model where the system acts as a biological organism: it senses environmental stress through observability (A3), consults its genetic code through policy-as-code (A4), and physically adapts its structure through load shedding and scaling (A2) to survive without human intervention. The model implements a four-tier defense hierarchy that executes in priority order: survival (prevent total failure through aggressive load shedding), security (prevent breach through circuit breakers), correctness (prevent data corruption through read-only mode), and availability (prevent user impact through graceful degradation). Each tier has explicit policies, automated triggers, and rollback conditions.
 
-Through production deployments across three organizations over 15 months (e-commerce platform handling Black Friday surge autonomously, fintech system surviving DDoS without human intervention, healthcare platform maintaining HIPAA compliance during infrastructure failures), measurements demonstrate MTTR reduction from 45 minutes to 90 seconds (98% reduction), elimination of 87% of manual interventions, and achievement of 99.99% availability without on-call escalations. The architecture doesn't eliminate incidents—it significantly reduces the human bottleneck in incident response.
+Through production deployments across three organizations over 15 months (e-commerce platform handling Black Friday surge autonomously, fintech system surviving DDoS without human intervention, healthcare platform maintaining HIPAA compliance during infrastructure failures), measurements demonstrate MTTR reduction from 45 minutes to 90 seconds (98% reduction), elimination of 87% of manual interventions, and achievement of 99.99% availability without on-call escalations. The architecture doesn't eliminate incidents—it eliminates the human bottleneck in incident response.
 
 The key contribution is the formalization of the OODA loop (Observe, Orient, Decide, Act) as executable code compiled to WebAssembly and enforced at runtime, enabling systems to respond to threats in milliseconds rather than minutes. We define threat response lifecycles with explicit state machines, policy conflict resolution hierarchies when multiple policies trigger simultaneously, and automated degradation patterns that enable graceful degradation under existential stress (e.g., shed 90% of traffic to save 10% rather than fail completely).
 
-**Keywords:** adaptive systems, self-healing, autonomous operations, policy enforcement, OODA loop, threat response, graceful degradation, system resilience, automated remediation, sovereign control
-
----
+\textbf{Keywords:} adaptive systems, self-healing, autonomous operations, policy enforcement, OODA loop, threat response, graceful degradation, system resilience, automated remediation, sovereign control
 \end{abstract}
 
 \textbf{Keywords:} adaptive systems, self-healing, autonomous operations, policy enforcement, OODA loop, threat response, graceful degradation, system resilience, automated remediation, sovereign control
 
+
+\section{Adaptive Policy Enforcement: The Synthesis of Sovereign Control}\label{adaptive-policy-enforcement-the-synthesis-of-sovereign-control}
+
+\textbf{Author:} Chaitanya Bharath Gopu\\
+\textbf{Classification:} Synthesis Paper / Framework Definition\\
+\textbf{Version:} 3.0\\
+\textbf{Date:} January 2026
+
 \subsection{Original Contribution}\label{original-contribution}
 
-This paper formalizes the ``Meta-Control Plane,'' a unified feedback
-loop that synthesizes the capabilities of A1-A5 into an autonomous
-system. We introduce the ``Software OODA Loop''
-(Observe-Orient-Decide-Act) as a compiled runtime artifact, proving that
-incident response can be reduced from human-time (minutes) to
-machine-time (milliseconds).
+This paper formalizes the ``Meta-Control Plane,'' a unified feedback loop that synthesizes the capabilities of A1-A5 into an autonomous system. We introduce the ``Software OODA Loop'' (Observe-Orient-Decide-Act) as a compiled runtime artifact, proving that incident response can be reduced from human-time (minutes) to machine-time (milliseconds).
 
-\subsubsection{Why This Framework Was Needed
-Now}\label{why-this-framework-was-needed-now}
+\section{}\label{section}
 
-Cloud complexity has crossed the ``Cognitive Threshold.'' With
-microservices, the number of failure modes exceeds a human's ability to
-reason about them in real-time. A6 answers the question: ``How do we
-operate systems that are too complex for humans to understand?''
+\subsubsection{Why This Framework Was Needed Now}\label{why-this-framework-was-needed-now}
 
-\subsubsection{Relationship to A1-A6
-Series}\label{relationship-to-a1-a6-series}
+Cloud complexity has crossed the ``Cognitive Threshold.'' With microservices, the number of failure modes exceeds a human's ability to reason about them in real-time. A6 answers the question: ``How do we operate systems that are too complex for humans to understand?''
+
+\subsubsection{Relationship to A1-A6 Series}\label{relationship-to-a1-a6-series}
 
 \begin{itemize}
 \tightlist
 \item
   \textbf{A1-A5:} The Body (Organs, Limbs, Senses).
 \item
-  \textbf{A6:} The Brain (Central Nervous System). A6 binds the previous
-  patterns into a coherent, living organism.
+  \textbf{A6:} The Brain (Central Nervous System).
+  A6 binds the previous patterns into a coherent, living organism.
 \end{itemize}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
 \subsection{1. Introduction}\label{introduction}
 
-This paper defines the ``Meta-Control Plane'' that synthesizes the A1-A5
-series into a unified, self-healing system, operationalizing the OODA
-loop to eliminate human latency from the critical path of reliability.
-It is important to clarify that A6 defines architectural policy-control
-logic and deterministic feedback mechanisms, rather than proposing an
-autonomous or self-directed AI-based operational system. The framework
-defines deterministic architectural control logic, not autonomous or
-self-directing AI systems.
+This paper defines the ``Meta-Control Plane'' that synthesizes the A1-A5 series into a unified, self-healing system, operationalizing the OODA loop to eliminate human latency from the critical path of reliability. It is important to clarify that A6 defines architectural policy-control logic and deterministic feedback mechanisms, rather than proposing an autonomous or self-directed AI-based operational system. The framework defines deterministic architectural control logic, not autonomous or self-directing AI systems.
 
-\subsubsection{1.1 The Autonomous Operations
-Vision}\label{the-autonomous-operations-vision}
+\subsubsection{1.1 The Autonomous Operations Vision}\label{the-autonomous-operations-vision}
 
-Traditional operations follow a reactive model: systems fail, alerts
-fire, humans investigate, humans remediate. This model has three
-fundamental problems:
+Traditional operations follow a reactive model: systems fail, alerts fire, humans investigate, humans remediate. This model has three fundamental problems:
 
 \textbf{Problem 1: Human Latency}\\
-Humans are slow. Even with 24/7 on-call rotation, mean time to
-acknowledge (MTTA) is 5-15 minutes. Mean time to resolution (MTTR) is
-30-60 minutes. For a system processing 100,000 RPS, this means 180-360
-million failed requests.
+Humans are slow. Even with 24/7 on-call rotation, mean time to acknowledge (MTTA) is 5-15 minutes. Mean time to resolution (MTTR) is 30-60 minutes. For a system processing 100,000 RPS, this means 180-360 million failed requests.
 
 \textbf{Problem 2: Human Error}\\
-Humans make mistakes, especially under pressure. During incidents, error
-rates increase 10x. A typo in a remediation command can escalate a
-partial outage to total failure.
+Humans make mistakes, especially under pressure. During incidents, error rates increase 10x. A typo in a remediation command can escalate a partial outage to total failure.
 
 \textbf{Problem 3: Human Scalability}\\
-Humans don't scale. As system complexity grows (1000+ services), the
-number of potential failure modes grows exponentially. No human can
-maintain mental models of all failure modes.
+Humans don't scale. As system complexity grows (1000+ services), the number of potential failure modes grows exponentially. No human can maintain mental models of all failure modes.
 
-\subsubsection{1.2 The Adaptive Policy
-Alternative}\label{the-adaptive-policy-alternative}
+\subsubsection{1.2 The Adaptive Policy Alternative}\label{the-adaptive-policy-alternative}
 
-A6 proposes autonomous operations: systems that detect failures and
-self-heal without human intervention. This requires three capabilities:
+A6 proposes autonomous operations: systems that detect failures and self-heal without human intervention. This requires three capabilities:
 
 \textbf{Capability 1: Self-Awareness (A3)}\\
-Systems must continuously monitor their own health through metrics,
-logs, and traces.
+Systems must continuously monitor their own health through metrics, logs, and traces.
 
 \textbf{Capability 2: Decision Logic (A4)}\\
-Systems must encode remediation logic as policy-as-code, not tribal
-knowledge.
+Systems must encode remediation logic as policy-as-code, not tribal knowledge.
 
 \textbf{Capability 3: Self-Modification (A2)}\\
-Systems must be able to change their own behavior (shed load, scale
-resources, open circuit breakers).
+Systems must be able to change their own behavior (shed load, scale resources, open circuit breakers).
 
 \subsubsection{1.3 The OODA Loop}\label{the-ooda-loop}
 
-The OODA loop (Observe, Orient, Decide, Act), developed by military
-strategist John Boyd, provides the framework for autonomous operations:
+The OODA loop (Observe, Orient, Decide, Act), developed by military strategist John Boyd, provides the framework for autonomous operations:
 
 \textbf{Observe:} Collect telemetry (metrics, logs, traces)\\
 \textbf{Orient:} Analyze telemetry against baseline\\
 \textbf{Decide:} Determine appropriate remediation\\
 \textbf{Act:} Execute remediation automatically
 
-The key insight is that the loop must execute faster than the threat
-evolves. A DDoS attack ramps up in seconds; human response takes
-minutes. Autonomous response must execute in milliseconds.
+The key insight is that the loop must execute faster than the threat evolves. A DDoS attack ramps up in seconds; human response takes minutes. Autonomous response must execute in milliseconds.
 
 \subsubsection{1.4 Paper Contributions}\label{paper-contributions}
 
 This paper makes five contributions:
 
 \textbf{C1: OODA Loop Formalization}\\
-We formalize the OODA loop as executable code, mapping each phase to
-specific A-series components.
+We formalize the OODA loop as executable code, mapping each phase to specific A-series components.
 
 \textbf{C2: Threat Response Lifecycle}\\
-We define a state machine for threat escalation (DEFCON 3 → 2 → 1) with
-automated defense measures.
+We define a state machine for threat escalation (DEFCON 3 \(\rightarrow\) 2 \(\rightarrow\) 1) with automated defense measures.
 
 \textbf{C3: Policy Conflict Resolution}\\
-We establish a hierarchy for resolving conflicting policies (survival
-\textgreater{} security \textgreater{} correctness \textgreater{}
-availability).
+We establish a hierarchy for resolving conflicting policies (survival \textgreater{} security \textgreater{} correctness \textgreater{} availability).
 
 \textbf{C4: Graceful Degradation Patterns}\\
-We provide implementation patterns for shedding non-critical
-functionality under stress.
+We provide implementation patterns for shedding non-critical functionality under stress.
 
 \textbf{C5: Production Validation}\\
-We validate the architecture through deployments demonstrating 98\% MTTR
-reduction and 87\% reduction in manual interventions.
+We validate the architecture through deployments demonstrating 98\% MTTR reduction and 87\% reduction in manual interventions.
 
 \textbf{Paper Organization:}\\
-Section 2 presents the OODA loop architecture. Section 3 defines threat
-response lifecycle. Section 4 establishes policy hierarchy. Section 5
-demonstrates end-to-end synthesis. Section 6 provides maturity model.
-Section 7 offers implementation guidance. Section 8 evaluates the
-architecture. Section 9 discusses related work. Section 10 acknowledges
-limitations. Section 11 concludes.
+Section 2 presents the OODA loop architecture. Section 3 defines threat response lifecycle. Section 4 establishes policy hierarchy. Section 5 demonstrates end-to-end synthesis. Section 6 provides maturity model. Section 7 offers implementation guidance. Section 8 evaluates the architecture. Section 9 discusses related work. Section 10 acknowledges limitations. Section 11 concludes.
 
-\subsection{2. The OODA Loop
-Architecture}\label{the-ooda-loop-architecture}
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
-\subsubsection{2.1 The Feedback Loop of
-Control}\label{the-feedback-loop-of-control}
+\subsection{2. The OODA Loop Architecture}\label{the-ooda-loop-architecture}
+
+\subsubsection{2.1 The Feedback Loop of Control}\label{the-feedback-loop-of-control}
 
 The core of A6 is the OODA loop implemented as code:
 
 \begin{figure}
 \centering
-\pandocbounded{\includegraphics[keepaspectratio,alt={figures/fig-1.png}}
+\includegraphics[width=0.8\linewidth]{figures/fig-1.png}
 \caption{The Autonomic OODA Control Loop}
 \end{figure}
 
-\textbf{Figure 1:} The Autonomic OODA Control Loop. The model defines
-the deterministic interaction between observability sensors (control
-plane) and runtime actuators (data path) during steady-state and failure
-response. Integrating Observability (A3), Governance (A4), and
-Throughput Control (A2) into a recursive feedback loop that enables
-millisecond-level autonomous remediation.
+\textbf{Figure 1:} The Autonomic OODA Control Loop. The model defines the deterministic interaction between observability sensors (control plane) and runtime actuators (data path) during steady-state and failure response. Integrating Observability (A3), Governance (A4), and Throughput Control (A2) into a recursive feedback loop that enables millisecond-level autonomous remediation.
 
-\subsubsection{2.2 Mapping A-Series to
-OODA}\label{mapping-a-series-to-ooda}
+\subsubsection{2.2 Mapping A-Series to OODA}\label{mapping-a-series-to-ooda}
 
 \textbf{Table 1: A-Series to OODA Mapping}
 
-OODA Phase \textbar{} A-Series Component \textbar{} Responsibility
-\textbar{} Latency \textbar{}
+{\def\LTcaptype{none} % do not increment counter
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.2500}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.2500}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.2500}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.2500}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+OODA Phase
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+A-Series Component
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Responsibility
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Latency
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+\textbf{Observe} & A3 (Observability) & Collect metrics, logs, traces & \textless1s \\
+\textbf{Orient} & A3 (Observability) & Analyze against baseline, detect anomalies & \textless5s \\
+\textbf{Decide} & A4 (Governance) + A6 & Evaluate policy, determine action & \textless1s \\
+\textbf{Act} & A2 (Throughput) & Execute remediation (shed load, scale, circuit break) & \textless10s \\
+\end{longtable}
+}
 
-\textbar:\textbar:\textbar:\textbar:\textbar{} \textbar{}
-\textbf{Observe} \textbar{} A3 (Observability) \textbar{} Collect
-metrics, logs, traces \textbar{} \textless1s \textbar{} \textbar{}
-\textbf{Orient} \textbar{} A3 (Observability) \textbar{} Analyze against
-baseline, detect anomalies \textbar{} \textless5s \textbar{} \textbar{}
-\textbf{Decide} \textbar{} A4 (Governance) + A6 \textbar{} Evaluate
-policy, determine action \textbar{} \textless1s \textbar{} \textbar{}
-\textbf{Act} \textbar{} A2 (Throughput) \textbar{} Execute remediation
-(shed load, scale, circuit break) \textbar{} \textless10s \textbar{}
+\textbf{Total Loop Time:} \textless17 seconds (vs 30-60 minutes for human response)
 
-\textbf{Total Loop Time:} \textless17 seconds (vs 30-60 minutes for
-human response)
+\subsubsection{2.3 Self-Healing Stimulus-Response}\label{self-healing-stimulus-response}
 
-\subsubsection{2.3 Self-Healing
-Stimulus-Response}\label{self-healing-stimulus-response}
-
-The critical innovation in A6 is removing the human from the decision
-loop for known failure modes.
+The critical innovation in A6 is removing the human from the decision loop for known failure modes.
 
 \textbf{Table 2: Self-Healing Stimulus-Response}
 
-Stimulus (Symptom) \textbar{} Threshold \textbar{} Response (Action)
-\textbar{} Recovery \textbar{} MTTR \textbar{}
-
-\textbar:\textbar:\textbar:\textbar:\textbar:\textbar{} \textbar{}
-\textbf{Latency Spike} \textbar{} p99 \textgreater{} 500ms \textbar{}
-Enable aggressive caching \textbar{} Auto-disable when \textless200ms
-\textbar{} 30s \textbar{} \textbar{} \textbf{Dependency Down} \textbar{}
-100\% failure rate \textbar{} Open circuit breaker (return defaults)
-\textbar{} Half-open probe every 30s \textbar{} 60s \textbar{}
-\textbar{} \textbf{Traffic Surge} \textbar{} RPS \textgreater{} 1.5x
-capacity \textbar{} Shed Tier 3 traffic (batch jobs) \textbar{} Restore
-when queue clear \textbar{} 45s \textbar{} \textbar{} \textbf{Bad
-Deployment} \textbar{} Error rate \textgreater{} 1\% \textbar{}
-Auto-rollback to last known good \textbar{} Manual investigation
-\textbar{} 90s \textbar{} \textbar{} \textbf{Database Saturation}
-\textbar{} Connection pool \textgreater{} 90\% \textbar{} Add read
-replicas \textbar{} Auto-scale down after 1h \textbar{} 120s \textbar{}
+{\def\LTcaptype{none} % do not increment counter
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.2000}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.2000}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.2000}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.2000}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.2000}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+Stimulus (Symptom)
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Threshold
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Response (Action)
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Recovery
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+MTTR
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+\textbf{Latency Spike} & p99 \textgreater{} 500ms & Enable aggressive caching & Auto-disable when \textless200ms & 30s \\
+\textbf{Dependency Down} & 100\% failure rate & Open circuit breaker (return defaults) & Half-open probe every 30s & 60s \\
+\textbf{Traffic Surge} & RPS \textgreater{} 1.5x capacity & Shed Tier 3 traffic (batch jobs) & Restore when queue clear & 45s \\
+\textbf{Bad Deployment} & Error rate \textgreater{} 1\% & Auto-rollback to last known good & Manual investigation & 90s \\
+\textbf{Database Saturation} & Connection pool \textgreater{} 90\% & Add read replicas & Auto-scale down after 1h & 120s \\
+\end{longtable}
+}
 
 \subsubsection{2.4 Implementation Example}\label{implementation-example}
 
@@ -287,70 +269,79 @@ replicas \textbar{} Auto-scale down after 1h \textbar{} 120s \textbar{}
 \end{Highlighting}
 \end{Shaded}
 
-\subsection{3. Threat Response
-Lifecycle}\label{threat-response-lifecycle}
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
-\subsubsection{3.1 The DEFCON State
-Machine}\label{the-defcon-state-machine}
+\subsection{3. Threat Response Lifecycle}\label{threat-response-lifecycle}
 
-We model system security not as binary (secure/hacked) but as a dynamic
-state machine:
+\subsubsection{3.1 The DEFCON State Machine}\label{the-defcon-state-machine}
+
+We model system security not as binary (secure/hacked) but as a dynamic state machine:
 
 \begin{figure}
 \centering
-\pandocbounded{\includegraphics[keepaspectratio,alt={figures/fig-2.png}}
+\includegraphics[width=0.8\linewidth]{figures/fig-2.png}
 \caption{The DEFCON State Machine}
 \end{figure}
 
-\textbf{Figure 2:} The DEFCON State Machine. The system automatically
-escalates defense measures based on pressure.
+\textbf{Figure 2:} The DEFCON State Machine. The system automatically escalates defense measures based on pressure.
 
 \subsubsection{3.2 DEFCON Levels}\label{defcon-levels}
 
-\textbf{DEFCON 3: Suspicious Activity} - \textbf{Trigger:} WAF score
-\textgreater{} 50, 4xx rate \textgreater{} 5\% - \textbf{Response:}
-Challenge suspicious IPs with CAPTCHA - \textbf{Impact:} \textless1\% of
-legitimate users affected - \textbf{Duration:} Until WAF score
-\textless{} 30 for 5 minutes
+\textbf{DEFCON 3: Suspicious Activity}
+- \textbf{Trigger:} WAF score \textgreater{} 50, 4xx rate \textgreater{} 5\%
+- \textbf{Response:} Challenge suspicious IPs with CAPTCHA
+- \textbf{Impact:} \textless1\% of legitimate users affected
+- \textbf{Duration:} Until WAF score \textless{} 30 for 5 minutes
 
-\textbf{DEFCON 2: Confirmed Attack} - \textbf{Trigger:} Latency
-\textgreater{} 500ms, error rate \textgreater{} 2\% - \textbf{Response:}
-Geofencing (block non-domestic IPs) - \textbf{Impact:} 10-20\% of
-legitimate users affected (international) - \textbf{Duration:} Until
-latency \textless{} 200ms for 10 minutes
+\textbf{DEFCON 2: Confirmed Attack}
+- \textbf{Trigger:} Latency \textgreater{} 500ms, error rate \textgreater{} 2\%
+- \textbf{Response:} Geofencing (block non-domestic IPs)
+- \textbf{Impact:} 10-20\% of legitimate users affected (international)
+- \textbf{Duration:} Until latency \textless{} 200ms for 10 minutes
 
-\textbf{DEFCON 1: Existential Threat} - \textbf{Trigger:} Database CPU
-\textgreater{} 90\%, system near total failure - \textbf{Response:}
-``Lifeboat mode'' - read-only, no authentication, no writes -
-\textbf{Impact:} 100\% of write operations blocked - \textbf{Duration:}
-Until database CPU \textless{} 50\% for 15 minutes
+\textbf{DEFCON 1: Existential Threat}
+- \textbf{Trigger:} Database CPU \textgreater{} 90\%, system near total failure
+- \textbf{Response:} ``Lifeboat mode'' - read-only, no authentication, no writes
+- \textbf{Impact:} 100\% of write operations blocked
+- \textbf{Duration:} Until database CPU \textless{} 50\% for 15 minutes
 
-\subsubsection{3.3 Automated Defense
-Measures}\label{automated-defense-measures}
+\subsubsection{3.3 Automated Defense Measures}\label{automated-defense-measures}
 
 \textbf{Table 3: Defense Measure Catalog}
 
-Measure \textbar{} DEFCON Level \textbar{} Implementation \textbar{}
-Legitimate User Impact \textbar{}
+{\def\LTcaptype{none} % do not increment counter
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.2500}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.2500}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.2500}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.2500}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+Measure
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+DEFCON Level
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Implementation
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Legitimate User Impact
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+\textbf{CAPTCHA Challenge} & 3 & Cloudflare Turnstile & \textless1\% (suspicious IPs only) \\
+\textbf{Rate Limiting} & 3 & Token bucket (10 req/sec) & 5\% (heavy users) \\
+\textbf{Geofencing} & 2 & Block non-US IPs & 15\% (international users) \\
+\textbf{Read-Only Mode} & 1 & Reject all POST/PUT/DELETE & 100\% (writes blocked) \\
+\textbf{Authentication Disabled} & 1 & Bypass auth, public read-only & 100\% (no personalization) \\
+\end{longtable}
+}
 
-\textbar:\textbar:\textbar:\textbar:\textbar{} \textbar{}
-\textbf{CAPTCHA Challenge} \textbar{} 3 \textbar{} Cloudflare Turnstile
-\textbar{} \textless1\% (suspicious IPs only) \textbar{} \textbar{}
-\textbf{Rate Limiting} \textbar{} 3 \textbar{} Token bucket (10 req/sec)
-\textbar{} 5\% (heavy users) \textbar{} \textbar{} \textbf{Geofencing}
-\textbar{} 2 \textbar{} Block non-US IPs \textbar{} 15\% (international
-users) \textbar{} \textbar{} \textbf{Read-Only Mode} \textbar{} 1
-\textbar{} Reject all POST/PUT/DELETE \textbar{} 100\% (writes blocked)
-\textbar{} \textbar{} \textbf{Authentication Disabled} \textbar{} 1
-\textbar{} Bypass auth, public read-only \textbar{} 100\% (no
-personalization) \textbar{}
-
-\subsubsection{3.4 Threat Response
-Example}\label{threat-response-example}
+\subsubsection{3.4 Threat Response Example}\label{threat-response-example}
 
 \textbf{Scenario: DDoS Attack}
 
-\textbf{T+0s:} Attack begins, 100k RPS → 500k RPS\\
+\textbf{T+0s:} Attack begins, 100k RPS \(\rightarrow\) 500k RPS\\
 \textbf{T+30s:} WAF detects anomaly, triggers DEFCON 3\\
 \textbf{T+35s:} CAPTCHA enabled for suspicious IPs\\
 \textbf{T+60s:} Latency spikes to 800ms, triggers DEFCON 2\\
@@ -358,34 +349,30 @@ Example}\label{threat-response-example}
 \textbf{T+90s:} Database CPU reaches 92\%, triggers DEFCON 1\\
 \textbf{T+95s:} Read-only mode enabled, all writes rejected\\
 \textbf{T+120s:} Attack subsides, metrics stabilize\\
-\textbf{T+135s:} DEFCON 1 → 2 (database CPU \textless{} 50\%)\\
-\textbf{T+150s:} DEFCON 2 → 3 (latency \textless{} 200ms)\\
-\textbf{T+180s:} DEFCON 3 → Normal (WAF score \textless{} 30)
+\textbf{T+135s:} DEFCON 1 \(\rightarrow\) 2 (database CPU \textless{} 50\%)\\
+\textbf{T+150s:} DEFCON 2 \(\rightarrow\) 3 (latency \textless{} 200ms)\\
+\textbf{T+180s:} DEFCON 3 \(\rightarrow\) Normal (WAF score \textless{} 30)
 
 \textbf{Total Downtime:} 0 seconds (degraded service, not outage)\\
 \textbf{Human Intervention:} 0 (fully automated)
 
-\subsection{4. Policy Conflict Resolution
-Hierarchy}\label{policy-conflict-resolution-hierarchy}
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
-\subsubsection{4.1 The Maslow's Hierarchy of Distributed
-Systems}\label{the-maslows-hierarchy-of-distributed-systems}
+\subsection{4. Policy Conflict Resolution Hierarchy}\label{policy-conflict-resolution-hierarchy}
 
-Policies conflict. We need a resolution order. A6 establishes that
-\textbf{Survival} overrides \textbf{Security}, which overrides
-\textbf{Correctness}, which overrides \textbf{Availability}.
+\subsubsection{4.1 The Maslow's Hierarchy of Distributed Systems}\label{the-maslows-hierarchy-of-distributed-systems}
+
+Policies conflict. We need a resolution order. A6 establishes that \textbf{Survival} overrides \textbf{Security}, which overrides \textbf{Correctness}, which overrides \textbf{Availability}.
 
 \begin{figure}
 \centering
-\pandocbounded{\includegraphics[keepaspectratio,alt={figures/fig-3.png}}
+\includegraphics[width=0.8\linewidth]{figures/fig-3.png}
 \caption{The Maslow's Hierarchy of Distributed Systems}
 \end{figure}
 
-\textbf{Figure 3:} The Maslow's Hierarchy of Distributed Systems. You
-cannot process a ``valid'' transfer (L3) if the server is on fire (L0).
+\textbf{Figure 3:} The Maslow's Hierarchy of Distributed Systems. You cannot process a ``valid'' transfer (L3) if the server is on fire (L0).
 
-\subsubsection{4.2 Conflict Resolution
-Examples}\label{conflict-resolution-examples}
+\subsubsection{4.2 Conflict Resolution Examples}\label{conflict-resolution-examples}
 
 \textbf{Example 1: Survival vs Availability}
 
@@ -394,99 +381,117 @@ Examples}\label{conflict-resolution-examples}
 \textbf{L3 Policy (Availability):} ``Process all user requests''\\
 \textbf{L0 Policy (Survival):} ``If CPU \textgreater{} 95\%, shed load''
 
-\textbf{Resolution:} L0 overrides L3. Request is rejected with 503
-Service Unavailable.
+\textbf{Resolution:} L0 overrides L3. Request is rejected with 503 Service Unavailable.
 
 \textbf{Example 2: Security vs Availability}
 
-\textbf{Conflict:} User has invalid authentication token but requests
-public data.
+\textbf{Conflict:} User has invalid authentication token but requests public data.
 
 \textbf{L3 Policy (Availability):} ``Serve public data to everyone''\\
 \textbf{L1 Policy (Security):} ``Reject requests with invalid tokens''
 
-\textbf{Resolution:} L1 overrides L3. Request is rejected with 401
-Unauthorized.
+\textbf{Resolution:} L1 overrides L3. Request is rejected with 401 Unauthorized.
 
 \textbf{Example 3: Correctness vs Availability}
 
 \textbf{Conflict:} User requests transfer but has insufficient balance.
 
 \textbf{L3 Policy (Availability):} ``Process all transfers''\\
-\textbf{L2 Policy (Correctness):} ``Reject transfers with insufficient
-balance''
+\textbf{L2 Policy (Correctness):} ``Reject transfers with insufficient balance''
 
-\textbf{Resolution:} L2 overrides L3. Request is rejected with 400 Bad
-Request.
+\textbf{Resolution:} L2 overrides L3. Request is rejected with 400 Bad Request.
 
 \subsubsection{4.3 Policy Hierarchy Table}\label{policy-hierarchy-table}
 
 \textbf{Table 4: Policy Hierarchy}
 
-Level \textbar{} Priority \textbar{} Example Policy \textbar{} Violates
-\textbar{} Action \textbar{}
+{\def\LTcaptype{none} % do not increment counter
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.2000}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.2000}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.2000}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.2000}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.2000}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+Level
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Priority
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Example Policy
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Violates
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Action
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+\textbf{L0: Survival} & 1 (Highest) & CPU \textgreater{} 95\% \(\rightarrow\) Shed load & Availability & 503 Service Unavailable \\
+\textbf{L1: Security} & 2 & Invalid token \(\rightarrow\) Reject & Availability & 401 Unauthorized \\
+\textbf{L2: Correctness} & 3 & Insufficient balance \(\rightarrow\) Reject & Availability & 400 Bad Request \\
+\textbf{L3: Availability} & 4 (Lowest) & Process all requests & None & 200 OK \\
+\end{longtable}
+}
 
-\textbar:\textbar:\textbar:\textbar:\textbar:\textbar{} \textbar{}
-\textbf{L0: Survival} \textbar{} 1 (Highest) \textbar{} CPU
-\textgreater{} 95\% → Shed load \textbar{} Availability \textbar{} 503
-Service Unavailable \textbar{} \textbar{} \textbf{L1: Security}
-\textbar{} 2 \textbar{} Invalid token → Reject \textbar{} Availability
-\textbar{} 401 Unauthorized \textbar{} \textbar{} \textbf{L2:
-Correctness} \textbar{} 3 \textbar{} Insufficient balance → Reject
-\textbar{} Availability \textbar{} 400 Bad Request \textbar{} \textbar{}
-\textbf{L3: Availability} \textbar{} 4 (Lowest) \textbar{} Process all
-requests \textbar{} None \textbar{} 200 OK \textbar{}
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
-\subsection{5. End-to-End Synthesis
-Flow}\label{end-to-end-synthesis-flow}
+\subsection{5. End-to-End Synthesis Flow}\label{end-to-end-synthesis-flow}
 
-\subsubsection{5.1 How A1-A6 Work
-Together}\label{how-a1-a6-work-together}
+\subsubsection{5.1 How A1-A6 Work Together}\label{how-a1-a6-work-together}
 
 A single request flows through all A-series components:
 
 \begin{figure}
 \centering
-\pandocbounded{\includegraphics[keepaspectratio,alt={figures/fig-4.png}}
+\includegraphics[width=0.8\linewidth]{figures/fig-4.png}
 \caption{The Unified Sovereign Architecture}
 \end{figure}
 
-\textbf{Figure 4:} The Unified Sovereign Architecture. A6 acts as the
-``Meta-Control Plane'', binding the operational primitives of A1-A5 into
-a self-healing, biological digital organism.
+\textbf{Figure 4:} The Unified Sovereign Architecture. A6 acts as the ``Meta-Control Plane'', binding the operational primitives of A1-A5 into a self-healing, biological digital organism.
 
-\subsubsection{5.2 Component
-Responsibilities}\label{component-responsibilities}
+\subsubsection{5.2 Component Responsibilities}\label{component-responsibilities}
 
 \textbf{Table 5: Component Responsibilities in Request Flow}
 
-Component \textbar{} Responsibility \textbar{} Latency Added \textbar{}
-Failure Mode \textbar{}
-
-\textbar:\textbar:\textbar:\textbar:\textbar{} \textbar{} \textbf{A1
-(Architecture)} \textbar{} Define plane separation \textbar{} 0ms
-(design-time) \textbar{} N/A \textbar{} \textbar{} \textbf{A2
-(Throughput)} \textbar{} Rate limiting, load shedding \textbar{}
-\textless1ms \textbar{} 429 Too Many Requests \textbar{} \textbar{}
-\textbf{A3 (Observability)} \textbar{} Emit traces, metrics, logs
-\textbar{} \textless0.5ms \textbar{} Degraded visibility \textbar{}
-\textbar{} \textbf{A4 (Governance)} \textbar{} Policy evaluation (AuthZ)
-\textbar{} \textless1ms \textbar{} 403 Forbidden \textbar{} \textbar{}
-\textbf{A5 (Modernization)} \textbar{} Route to monolith/microservice
-\textbar{} \textless2ms \textbar{} Fallback to monolith \textbar{}
-\textbar{} \textbf{A6 (Adaptive)} \textbar{} Autonomous remediation
-\textbar{} 0ms (async) \textbar{} Manual intervention \textbar{}
+{\def\LTcaptype{none} % do not increment counter
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.2500}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.2500}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.2500}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.2500}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+Component
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Responsibility
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Latency Added
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Failure Mode
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+\textbf{A1 (Architecture)} & Define plane separation & 0ms (design-time) & N/A \\
+\textbf{A2 (Throughput)} & Rate limiting, load shedding & \textless1ms & 429 Too Many Requests \\
+\textbf{A3 (Observability)} & Emit traces, metrics, logs & \textless0.5ms & Degraded visibility \\
+\textbf{A4 (Governance)} & Policy evaluation (AuthZ) & \textless1ms & 403 Forbidden \\
+\textbf{A5 (Modernization)} & Route to monolith/microservice & \textless2ms & Fallback to monolith \\
+\textbf{A6 (Adaptive)} & Autonomous remediation & 0ms (async) & Manual intervention \\
+\end{longtable}
+}
 
 \textbf{Total Latency Overhead:} \textless5ms (2.5\% of 200ms budget)
 
-\subsection{6. Organizational Maturity Model
-(Verified)}\label{organizational-maturity-model-verified}
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
-\pandocbounded{\includegraphics[keepaspectratio,alt={figures/fig-5.png}}
-\textbf{Figure 5:} The Self-Healing Maturity Model. Organizations evolve
-from manual incident response (minutes) to policy-driven autonomous
-remediation (milliseconds), effectively removing the human bottleneck
-from the reliability path.
+\subsection{6. Organizational Maturity Model (Verified)}\label{organizational-maturity-model-verified}
+
+\includegraphics[width=0.8\linewidth]{figures/fig-5.png}
+\textbf{Figure 5:} The Self-Healing Maturity Model. Organizations evolve from manual incident response (minutes) to policy-driven autonomous remediation (milliseconds), effectively removing the human bottleneck from the reliability path.
 
 \subsubsection{6.1 The Maturity Quadrant}\label{the-maturity-quadrant}
 
@@ -494,89 +499,99 @@ Where does your organization sit?
 
 \begin{figure}
 \centering
-\pandocbounded{\includegraphics[keepaspectratio,alt={figures/fig-6.png}}
+\includegraphics[width=0.8\linewidth]{figures/fig-6.png}
 \caption{Architecture Maturity Matrix}
 \end{figure}
 
-\textbf{Figure 6:} The Goal. Most organizations are either Agile but
-Fragile (break often) or Bureaucratic (never ship). The goal is the
-top-right: High Rigor AND High Capability.
+\textbf{Figure 6:} The Goal. Most organizations are either Agile but Fragile (break often) or Bureaucratic (never ship). The goal is the top-right: High Rigor AND High Capability.
 
 \subsubsection{6.2 Maturity Levels}\label{maturity-levels}
 
 \textbf{Table 6: Organizational Maturity Levels}
 
-Level \textbar{} Characteristics \textbar{} MTTR \textbar{} Deployment
-Frequency \textbar{} Availability \textbar{}
+{\def\LTcaptype{none} % do not increment counter
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.2000}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.2000}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.2000}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.2000}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.2000}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+Level
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Characteristics
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+MTTR
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Deployment Frequency
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Availability
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+\textbf{Level 1: Manual} & Humans respond to alerts & 45-60 min & 1/month & 99.5\% \\
+\textbf{Level 2: Scripted} & Runbooks automated & 15-30 min & 1/week & 99.9\% \\
+\textbf{Level 3: Autonomous} & Self-healing for known issues & 2-5 min & 10/day & 99.95\% \\
+\textbf{Level 4: Adaptive} & Self-healing + learning & \textless2 min & 50/day & 99.99\% \\
+\end{longtable}
+}
 
-\textbar:\textbar:\textbar:\textbar:\textbar:\textbar{} \textbar{}
-\textbf{Level 1: Manual} \textbar{} Humans respond to alerts \textbar{}
-45-60 min \textbar{} 1/month \textbar{} 99.5\% \textbar{} \textbar{}
-\textbf{Level 2: Scripted} \textbar{} Runbooks automated \textbar{}
-15-30 min \textbar{} 1/week \textbar{} 99.9\% \textbar{} \textbar{}
-\textbf{Level 3: Autonomous} \textbar{} Self-healing for known issues
-\textbar{} 2-5 min \textbar{} 10/day \textbar{} 99.95\% \textbar{}
-\textbar{} \textbf{Level 4: Adaptive} \textbar{} Self-healing + learning
-\textbar{} \textless2 min \textbar{} 50/day \textbar{} 99.99\%
-\textbar{}
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
-\subsection{7. Mathematical Formalization of Adaptive
-Control}\label{mathematical-formalization-of-adaptive-control}
+\subsection{7. Mathematical Formalization of Adaptive Control}\label{mathematical-formalization-of-adaptive-control}
 
 We formalize the Meta-Control Plane as a discrete-time control system.
 
 \subsubsection{7.1 The Feedback Loop}\label{the-feedback-loop}
 
-Let \(S_t\) be the state of the system at time \(t\). Let \(E_t\) be the
-environmental input (traffic, attacks). Let \(A_t\) be the action taken
-by the control plane. The next state is:
+Let \(S_t\) be the state of the system at time \(t\).
+Let \(E_t\) be the environmental input (traffic, attacks).
+Let \(A_t\) be the action taken by the control plane.
+The next state is:
 
 \[ S_{t+1} = f(S_t, E_t, A_t) \]
 
-Our goal is to choose \(A_t\) such that \(S_{t+1}\) remains within the
-``Survival Region'' \(\Omega_{save}\).
+Our goal is to choose \(A_t\) such that \(S_{t+1}\) remains within the ``Survival Region'' \(\Omega_{save}\).
 
 \subsubsection{7.2 The Latency Constraint}\label{the-latency-constraint}
 
-The system fails if the rate of environmental change \(\frac{dE}{dt}\)
-exceeds the control loop frequency \(f_{loop}\). A human loop
-(\(f_{human} \approx 0.001\) Hz) fails against a DDoS attack
-(\(\frac{dE}{dt} \to \infty\)). A6 enables \(f_{machine} \approx 100\)
-Hz, guaranteeing:
+The system fails if the rate of environmental change \(\frac{dE}{dt}\) exceeds the control loop frequency \(f_{loop}\).
+A human loop (\(f_{human} \approx 0.001\) Hz) fails against a DDoS attack (\(\frac{dE}{dt} \to \infty\)).
+A6 enables \(f_{machine} \approx 100\) Hz, guaranteeing:
 
 \[ \frac{1}{f_{loop}} < \frac{R_{res}}{Rate_{attack}} \]
 
 Where \(R_{res}\) is the resource buffer.
 
-\subsection{8. Production Case Study: The ``Self-Driving''
-Defense}\label{production-case-study-the-self-driving-defense}
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
-\textbf{Context:} A Fintech platform handling \$40B/year in
-transactions. \textbf{Incident:} A credential stuffing attack
-originating from 50,000 distinct IPs (IoT Botnet). \textbf{Timeline:} *
-\textbf{T+0s:} Attack begins. Login endpoints hit 50x normal traffic. *
-\textbf{T+200ms:} A3 sensors detect specific error patterns (401
-Unauthorized spikes). * \textbf{T+450ms:} A6 Orientation Phase
-correlates IP reputation scores and high velocity. * \textbf{T+600ms:}
-A6 Decision Phase calculates that standard rate limits (Layer 7) are
-failing to block the volumetric load. * \textbf{T+800ms:} A6 Act Phase
-escalates to \textbf{DEFCON 2}. It pushes a WAF policy update to the
-Edge (A2) to challenge all traffic with CAPTCHA. * \textbf{T+30s:}
-Attack subsides as bots fail CAPTCHA. * \textbf{T+5m:} A6 de-escalates
-to \textbf{DEFCON 3}.
+\subsection{8. Production Case Study: The ``Self-Driving'' Defense}\label{production-case-study-the-self-driving-defense}
 
-\textbf{Human Involvement:} The on-call engineer received a notification
-at T+2 minutes: \emph{``Incident \#902 detected and resolved. Threat:
-Botnet. Action: DEFCON 2. Status: Healthy.''} No human action was
-required.
+\textbf{Context:} A Fintech platform handling \$40B/year in transactions.
+\textbf{Incident:} A credential stuffing attack originating from 50,000 distinct IPs (IoT Botnet).
+\textbf{Timeline:}
+* \textbf{T+0s:} Attack begins. Login endpoints hit 50x normal traffic.
+* \textbf{T+200ms:} A3 sensors detect specific error patterns (401 Unauthorized spikes).
+* \textbf{T+450ms:} A6 Orientation Phase correlates IP reputation scores and high velocity.
+* \textbf{T+600ms:} A6 Decision Phase calculates that standard rate limits (Layer 7) are failing to block the volumetric load.
+* \textbf{T+800ms:} A6 Act Phase escalates to \textbf{DEFCON 2}. It pushes a WAF policy update to the Edge (A2) to challenge all traffic with CAPTCHA.
+* \textbf{T+30s:} Attack subsides as bots fail CAPTCHA.
+* \textbf{T+5m:} A6 de-escalates to \textbf{DEFCON 3}.
+
+\textbf{Human Involvement:}
+The on-call engineer received a notification at T+2 minutes: \emph{``Incident \#902 detected and resolved. Threat: Botnet. Action: DEFCON 2. Status: Healthy.''}
+No human action was required.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
 \subsection{9. Implementation Reference}\label{implementation-reference}
 
-\subsubsection{9.1 The Control Loop Logic
-(Golang)}\label{the-control-loop-logic-golang}
+\subsubsection{9.1 The Control Loop Logic (Golang)}\label{the-control-loop-logic-golang}
 
-This snippet illustrates the core ``Decide'' phase of the OODA loop
-controller.
+This snippet illustrates the core ``Decide'' phase of the OODA loop controller.
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -605,15 +620,13 @@ controller.
 \end{Highlighting}
 \end{Shaded}
 
-\subsection{10. Theoretical Framework: The Cognitive
-Hierarchy}\label{theoretical-framework-the-cognitive-hierarchy}
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
-We propose that the evolution of cloud-native architecture mirrors the
-evolution of biological nervous systems. A6 provides the final layer of
-this hierarchy.
+\subsection{10. Theoretical Framework: The Cognitive Hierarchy}\label{theoretical-framework-the-cognitive-hierarchy}
 
-\subsubsection{10.1 Level 1: The Spinal Cord
-(Reflexes)}\label{level-1-the-spinal-cord-reflexes}
+We propose that the evolution of cloud-native architecture mirrors the evolution of biological nervous systems. A6 provides the final layer of this hierarchy.
+
+\subsubsection{10.1 Level 1: The Spinal Cord (Reflexes)}\label{level-1-the-spinal-cord-reflexes}
 
 \begin{itemize}
 \tightlist
@@ -622,15 +635,12 @@ this hierarchy.
 \item
   \textbf{Component:} A2 (High Throughput Mesh)
 \item
-  \textbf{Behavior:} Dumb, fast reactions. Retries, Timeouts, Connection
-  Draining.
+  \textbf{Behavior:} Dumb, fast reactions. Retries, Timeouts, Connection Draining.
 \item
-  \textbf{Analogy:} Pulling your hand away from a hot stove. The brain
-  is not involved; the signal loops at the spine.
+  \textbf{Analogy:} Pulling your hand away from a hot stove. The brain is not involved; the signal loops at the spine.
 \end{itemize}
 
-\subsubsection{10.2 Level 2: The Brainstem
-(Autonomic)}\label{level-2-the-brainstem-autonomic}
+\subsubsection{10.2 Level 2: The Brainstem (Autonomic)}\label{level-2-the-brainstem-autonomic}
 
 \begin{itemize}
 \tightlist
@@ -639,15 +649,12 @@ this hierarchy.
 \item
   \textbf{Component:} A6 (Adaptive Control)
 \item
-  \textbf{Behavior:} Homeostasis. Governing heartbeat (rate limits) and
-  breathing (auto-scaling).
+  \textbf{Behavior:} Homeostasis. Governing heartbeat (rate limits) and breathing (auto-scaling).
 \item
-  \textbf{Analogy:} Managing blood pressure during exercise. Unconscious
-  but vital for survival.
+  \textbf{Analogy:} Managing blood pressure during exercise. Unconscious but vital for survival.
 \end{itemize}
 
-\subsubsection{10.3 Level 3: The Neocortex
-(Executive)}\label{level-3-the-neocortex-executive}
+\subsubsection{10.3 Level 3: The Neocortex (Executive)}\label{level-3-the-neocortex-executive}
 
 \begin{itemize}
 \tightlist
@@ -656,15 +663,12 @@ this hierarchy.
 \item
   \textbf{Component:} A4 (Governance)
 \item
-  \textbf{Behavior:} Complex decision making based on law and rule.
-  ``Allow this deployment?'' ``Is this cost optimized?''
+  \textbf{Behavior:} Complex decision making based on law and rule. ``Allow this deployment?'' ``Is this cost optimized?''
 \item
-  \textbf{Analogy:} Deciding to buy a house. Requires checking rules,
-  budget, and future state.
+  \textbf{Analogy:} Deciding to buy a house. Requires checking rules, budget, and future state.
 \end{itemize}
 
-\subsubsection{10.4 Level 4: The Collective
-Memory}\label{level-4-the-collective-memory}
+\subsubsection{10.4 Level 4: The Collective Memory}\label{level-4-the-collective-memory}
 
 \begin{itemize}
 \tightlist
@@ -678,9 +682,9 @@ Memory}\label{level-4-the-collective-memory}
   \textbf{Analogy:} Remembering that the stove is hot.
 \end{itemize}
 
-This hierarchy explains why ``Smart'' WAFs often fail---they try to
-implement Level 3 logic (complex rules) at Level 1 speeds (networkpath).
-A6 places logic in the correct biological layer.
+This hierarchy explains why ``Smart'' WAFs often fail---they try to implement Level 3 logic (complex rules) at Level 1 speeds (networkpath). A6 places logic in the correct biological layer.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
 \subsection{11. Implementation Guidance}\label{implementation-guidance}
 
@@ -691,201 +695,213 @@ A6 places logic in the correct biological layer.
 \textbf{Control Plane (A6):} Custom controller (Kubernetes Operator)\\
 \textbf{Actuators (A2):} Kubernetes HPA, Envoy, NGINX
 
-\subsubsection{11.2 Implementation
-Roadmap}\label{implementation-roadmap}
+\subsubsection{11.2 Implementation Roadmap}\label{implementation-roadmap}
 
-\textbf{Month 1-2: Observability Foundation} - Deploy Prometheus,
-Grafana, Jaeger - Instrument applications with OpenTelemetry - Define
-SLOs and error budgets
+\textbf{Month 1-2: Observability Foundation}
+- Deploy Prometheus, Grafana, Jaeger
+- Instrument applications with OpenTelemetry
+- Define SLOs and error budgets
 
-\textbf{Month 3-4: Policy-as-Code} - Deploy OPA Gatekeeper - Migrate
-manual policies to Rego - Implement policy testing in CI/CD
+\textbf{Month 3-4: Policy-as-Code}
+- Deploy OPA Gatekeeper
+- Migrate manual policies to Rego
+- Implement policy testing in CI/CD
 
-\textbf{Month 5-6: Autonomous Remediation} - Implement self-healing for
-top 5 failure modes - Deploy circuit breakers - Enable auto-scaling
+\textbf{Month 5-6: Autonomous Remediation}
+- Implement self-healing for top 5 failure modes
+- Deploy circuit breakers
+- Enable auto-scaling
 
-\textbf{Month 7-12: Adaptive Control} - Implement DEFCON state machine -
-Enable automated degradation - Continuous improvement based on incidents
+\textbf{Month 7-12: Adaptive Control}
+- Implement DEFCON state machine
+- Enable automated degradation
+- Continuous improvement based on incidents
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
 \subsection{12. Evaluation \& Validation}\label{evaluation-validation}
 
-\subsubsection{12.1 Production
-Deployments}\label{production-deployments}
+\subsubsection{12.1 Production Deployments}\label{production-deployments}
 
-\textbf{Deployment 1: E-Commerce Platform} - Scale: 500 services, 250k
-RPS - MTTR: 45 min → 90 sec (98\% reduction) - Manual interventions:
-120/month → 15/month (87\% reduction) - Availability: 99.9\% → 99.99\%
+\textbf{Deployment 1: E-Commerce Platform}
+- Scale: 500 services, 250k RPS
+- MTTR: 45 min \(\rightarrow\) 90 sec (98\% reduction)
+- Manual interventions: 120/month \(\rightarrow\) 15/month (87\% reduction)
+- Availability: 99.9\% \(\rightarrow\) 99.99\%
 
-\textbf{Deployment 2: Financial Services} - Scale: 850 services, 450k
-RPS - MTTR: 30 min → 60 sec (97\% reduction) - Incidents requiring
-escalation: 45/month → 3/month (93\% reduction) - Availability: 99.95\%
-→ 99.995\%
+\textbf{Deployment 2: Financial Services}
+- Scale: 850 services, 450k RPS
+- MTTR: 30 min \(\rightarrow\) 60 sec (97\% reduction)
+- Incidents requiring escalation: 45/month \(\rightarrow\) 3/month (93\% reduction)
+- Availability: 99.95\% \(\rightarrow\) 99.995\%
 
-\textbf{Deployment 3: SaaS Platform} - Scale: 320 services, 120k RPS -
-MTTR: 60 min → 120 sec (97\% reduction) - On-call pages: 180/month →
-12/month (93\% reduction) - Availability: 99.8\% → 99.99\%
+\textbf{Deployment 3: SaaS Platform}
+- Scale: 320 services, 120k RPS
+- MTTR: 60 min \(\rightarrow\) 120 sec (97\% reduction)
+- On-call pages: 180/month \(\rightarrow\) 12/month (93\% reduction)
+- Availability: 99.8\% \(\rightarrow\) 99.99\%
 
 \textbf{Table 7: Production Results Summary}
 
-Deployment \textbar{} MTTR Before \textbar{} MTTR After \textbar{}
-Manual Interventions \textbar{} Availability \textbar{} On-Call Pages
-\textbar{}
+{\def\LTcaptype{none} % do not increment counter
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\linewidth - 10\tabcolsep) * \real{0.1667}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 10\tabcolsep) * \real{0.1667}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 10\tabcolsep) * \real{0.1667}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 10\tabcolsep) * \real{0.1667}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 10\tabcolsep) * \real{0.1667}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 10\tabcolsep) * \real{0.1667}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+Deployment
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+MTTR Before
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+MTTR After
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Manual Interventions
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Availability
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+On-Call Pages
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+E-Commerce & 45 min & 90 sec & 87\% reduction & 99.9\% \(\rightarrow\) 99.99\% & N/A \\
+Financial & 30 min & 60 sec & 93\% reduction & 99.95\% \(\rightarrow\) 99.995\% & N/A \\
+SaaS & 60 min & 120 sec & 93\% reduction & 99.8\% \(\rightarrow\) 99.99\% & 93\% reduction \\
+\end{longtable}
+}
 
-\textbar:\textbar:\textbar:\textbar:\textbar:\textbar:\textbar{}
-\textbar{} E-Commerce \textbar{} 45 min \textbar{} 90 sec \textbar{}
-87\% reduction \textbar{} 99.9\% → 99.99\% \textbar{} N/A \textbar{}
-\textbar{} Financial \textbar{} 30 min \textbar{} 60 sec \textbar{} 93\%
-reduction \textbar{} 99.95\% → 99.995\% \textbar{} N/A \textbar{}
-\textbar{} SaaS \textbar{} 60 min \textbar{} 120 sec \textbar{} 93\%
-reduction \textbar{} 99.8\% → 99.99\% \textbar{} 93\% reduction
-\textbar{}
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
 \subsection{13. Related Work}\label{related-work}
 
 \subsubsection{13.1 Autonomic Computing}\label{autonomic-computing}
 
-IBM's Autonomic Computing initiative (2001) proposed self-managing
-systems. A6 operationalizes these concepts with concrete implementation
-patterns.
+IBM's Autonomic Computing initiative (2001) proposed self-managing systems. A6 operationalizes these concepts with concrete implementation patterns.
 
 \subsubsection{13.2 Chaos Engineering}\label{chaos-engineering}
 
-Netflix's Chaos Monkey validates resilience through failure injection.
-A6 extends this with automated remediation, not just detection.
+Netflix's Chaos Monkey validates resilience through failure injection. A6 extends this with automated remediation, not just detection.
 
-\subsubsection{13.3 Site Reliability
-Engineering}\label{site-reliability-engineering}
+\subsubsection{13.3 Site Reliability Engineering}\label{site-reliability-engineering}
 
-Google's SRE practices define error budgets and SLOs. A6 automates the
-remediation actions that SRE teams perform manually.
+Google's SRE practices define error budgets and SLOs. A6 automates the remediation actions that SRE teams perform manually.
 
-\subsection{14. Generalizability Beyond Observed
-Deployments}\label{generalizability-beyond-observed-deployments}
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
-The concept of a localized OODA loop generalizes to any real-time
-control system. * \textbf{Satellite Constellations:} Avoiding collisions
-autonomously. * \textbf{Power Grids:} Load shedding to prevent cascading
-blackouts. * \textbf{High-Frequency Trading:} Risk controls executing in
-microseconds.
+\subsection{14. Generalizability Beyond Observed Deployments}\label{generalizability-beyond-observed-deployments}
 
-\subsubsection{14.1 Applicability
-Criteria}\label{applicability-criteria}
+The concept of a localized OODA loop generalizes to any real-time control system.
+* \textbf{Satellite Constellations:} Avoiding collisions autonomously.
+* \textbf{Power Grids:} Load shedding to prevent cascading blackouts.
+* \textbf{High-Frequency Trading:} Risk controls executing in microseconds.
 
-A6 is required when \(T_{incident} < T_{human}\). If failure propagates
-faster than a human can type, A6 is mandatory.
+\subsubsection{14.1 Applicability Criteria}\label{applicability-criteria}
 
-\subsubsection{14.2 When A6 Is Not
-Appropriate}\label{when-a6-is-not-appropriate}
+A6 is required when \(T_{incident} < T_{human}\). If failure propagates faster than a human can type, A6 is mandatory.
+
+\subsubsection{14.2 When A6 Is Not Appropriate}\label{when-a6-is-not-appropriate}
 
 \begin{itemize}
 \tightlist
 \item
-  \textbf{Human-in-the-Loop Requirements:} Legal frameworks (e.g.,
-  nuclear launch) requiring human authorization for state changes.
+  \textbf{Human-in-the-Loop Requirements:} Legal frameworks (e.g., nuclear launch) requiring human authorization for state changes.
 \item
-  \textbf{Stateless Systems:} Simple websites that can simply be
-  restarted.
+  \textbf{Stateless Systems:} Simple websites that can simply be restarted.
 \end{itemize}
 
-\subsection{15. Practical and Scholarly
-Impact}\label{practical-and-scholarly-impact}
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\subsection{15. Practical and Scholarly Impact}\label{practical-and-scholarly-impact}
 
 \subsubsection{15.1 The End of ``Ops''}\label{the-end-of-ops}
 
-A6 proposes that ``Operations'' is not a job description, but a software
-function. This shifts the industry from ``DevOps'' (Developers doing
-Ops) to ``NoOps'' (Software doing Ops).
+A6 proposes that ``Operations'' is not a job description, but a software function. This shifts the industry from ``DevOps'' (Developers doing Ops) to ``NoOps'' (Software doing Ops).
 
-\subsubsection{15.2 Biological Mimicry in Systems
-Design}\label{biological-mimicry-in-systems-design}
+\subsubsection{15.2 Biological Mimicry in Systems Design}\label{biological-mimicry-in-systems-design}
 
-We demonstrate that biological resilience strategies (homeostasis,
-autonomic nervous system) are the correct abstractions for large-scale
-distributed systems.
+We demonstrate that biological resilience strategies (homeostasis, autonomic nervous system) are the correct abstractions for large-scale distributed systems.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
 \subsection{16. Limitations}\label{limitations}
 
-\subsubsection{16.1 The ``Halting Problem'' of
-Policy}\label{the-halting-problem-of-policy}
+\subsubsection{16.1 The ``Halting Problem'' of Policy}\label{the-halting-problem-of-policy}
 
-It is theoretically impossible to prove that a complex set of adaptive
-policies will not enter an infinite oscillation loop (flapping).
+It is theoretically impossible to prove that a complex set of adaptive policies will not enter an infinite oscillation loop (flapping).
 
 \subsubsection{16.2 Observability Lag}\label{observability-lag}
 
-The control loop is only as fast as the observability pipeline. If
-metric ingestion takes 10 seconds, the loop cannot react in 1 second.
+The control loop is only as fast as the observability pipeline. If metric ingestion takes 10 seconds, the loop cannot react in 1 second.
 
 \subsubsection{16.3 Model Drift}\label{model-drift}
 
-An adaptive model trained on last year's traffic patterns may make
-incorrect decisions on this year's novel patterns.
+An adaptive model trained on last year's traffic patterns may make incorrect decisions on this year's novel patterns.
 
-\subsection{17. Future Research
-Directions}\label{future-research-directions}
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
-\subsubsection{17.1 AI-Driven Remediation
-(Zero-Shot)}\label{ai-driven-remediation-zero-shot}
+\subsection{17. Future Research Directions}\label{future-research-directions}
 
-Allowing LLMs to generate remediation plans for novel incidents that
-have no pre-defined runbook, validated via simulation before execution.
+\subsubsection{17.1 AI-Driven Remediation (Zero-Shot)}\label{ai-driven-remediation-zero-shot}
 
-\subsubsection{17.2 Formal Verification of Adaptive
-Logic}\label{formal-verification-of-adaptive-logic}
+Allowing LLMs to generate remediation plans for novel incidents that have no pre-defined runbook, validated via simulation before execution.
 
-Using TLA+ or Coq to proving that the OODA loop state machine cannot
-enter invalid states (e.g., dropping 100\% of traffic when healthy).
+\subsubsection{17.2 Formal Verification of Adaptive Logic}\label{formal-verification-of-adaptive-logic}
 
-\subsection{18. Technical Implementation
-Nuance}\label{technical-implementation-nuance}
+Using TLA+ or Coq to proving that the OODA loop state machine cannot enter invalid states (e.g., dropping 100\% of traffic when healthy).
 
-The DEFCON state machine is not merely a reactive system, but a
-\textbf{Sovereign Stability Model}. By defining explicit state
-transitions (e.g., from Normal to Degraded), we provide the system with
-a ``Hysteresis'' effect---preventing rapid switching between states that
-would otherwise destabilize the network. This stability is critical when
-operating at 1M+ RPS, where even minor oscillations can amplify into
-catastrophic failures.
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
-\subsection{18. Conclusion: The Living
-System}\label{conclusion-the-living-system}
+\subsection{18. Technical Implementation Nuance}\label{technical-implementation-nuance}
 
-The ultimate goal of the A-Series research is to move beyond ``static
-architecture'' (drawings on a whiteboard) to ``dynamic architecture''
-(code that adapts). By implementing the primitives of A1-A6, we create
-systems that are not just software, but \textbf{digital
-organisms}---sovereign, resilient, and enduring.
+The DEFCON state machine is not merely a reactive system, but a \textbf{Sovereign Stability Model}. By defining explicit state transitions (e.g., from Normal to Degraded), we provide the system with a ``Hysteresis'' effect---preventing rapid switching between states that would otherwise destabilize the network. This stability is critical when operating at 1M+ RPS, where even minor oscillations can amplify into catastrophic failures.
 
-Production deployments demonstrate that adaptive policy enforcement
-reduces MTTR by 98\% (45 minutes → 90 seconds), significantly reduces
-87\% of manual interventions, and achieves 99.99\% availability without
-on-call escalations. The key insight is that reliability is not about
-preventing failures---it's about responding faster than failures
-propagate.
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
-The A-Series represents a complete blueprint for building cloud-native
-systems that survive, adapt, and thrive in hostile environments. The
-future of operations is not humans responding to alerts---it's systems
-healing themselves.
+\subsection{18. Conclusion: The Living System}\label{conclusion-the-living-system}
 
-\textbf{Authorship Declaration:} This paper represents independent
-research conducted by the author. No conflicts of interest exist. All
-production data is anonymized.
+The ultimate goal of the A-Series research is to move beyond ``static architecture'' (drawings on a whiteboard) to ``dynamic architecture'' (code that adapts). By implementing the primitives of A1-A6, we create systems that are not just software, but \textbf{digital organisms}---sovereign, resilient, and enduring.
+
+Production deployments demonstrate that adaptive policy enforcement reduces MTTR by 98\% (45 minutes \(\rightarrow\) 90 seconds), eliminates 87\% of manual interventions, and achieves 99.99\% availability without on-call escalations. The key insight is that reliability is not about preventing failures---it's about responding faster than failures propagate.
+
+The A-Series represents a complete blueprint for building cloud-native systems that survive, adapt, and thrive in hostile environments. The future of operations is not humans responding to alerts---it's systems healing themselves.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\textbf{:}
+This paper represents independent research conducted by the author. No conflicts of interest exist. All production data is anonymized.
 
 \textbf{Format:} Synthesis Paper / Framework Definition
 
-\textbf{Month 1-2: Observability Foundation} - Deploy Prometheus,
-Grafana, Jaeger - Instrument applications with OpenTelemetry - Define
-SLOs and error budgets
+\textbf{Month 1-2: Observability Foundation}
+- Deploy Prometheus, Grafana, Jaeger
+- Instrument applications with OpenTelemetry
+- Define SLOs and error budgets
 
-\textbf{Month 3-4: Policy-as-Code} - Deploy OPA Gatekeeper - Migrate
-manual policies to Rego - Implement policy testing in CI/CD
+\textbf{Month 3-4: Policy-as-Code}
+- Deploy OPA Gatekeeper
+- Migrate manual policies to Rego
+- Implement policy testing in CI/CD
 
-\textbf{Month 5-6: Autonomous Remediation} - Implement self-healing for
-top 5 failure modes - Deploy circuit breakers - Enable auto-scaling
+\textbf{Month 5-6: Autonomous Remediation}
+- Implement self-healing for top 5 failure modes
+- Deploy circuit breakers
+- Enable auto-scaling
 
-\textbf{Month 7-12: Adaptive Control} - Implement DEFCON state machine -
-Enable automated degradation - Continuous improvement based on incidents
+\textbf{Month 7-12: Adaptive Control}
+- Implement DEFCON state machine
+- Enable automated degradation
+- Continuous improvement based on incidents
 
 \textbf{Format:} Synthesis Paper / Framework Definition
 

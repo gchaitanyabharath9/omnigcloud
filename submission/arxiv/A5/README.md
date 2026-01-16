@@ -1,10 +1,19 @@
 # arXiv Submission: A5
 
-## Metadata
-- **Title**: Monolith to Cloud Native Modernization
-- **Category**: cs.AR
-- **Compilation**: `pdflatex main.tex` (2-3 passes)
+## Title
+Monolith to Cloud-Native Modernization: A Reference Pattern
+
+## Compilation
+```bash
+pdflatex main.tex
+pdflatex main.tex  # Second pass for references
+```
 
 ## Contents
-- `main.tex`: Source code (normalized)
-- `figures/`: All assets (local paths)
+- main.tex: Complete LaTeX source
+- figures/: All referenced figures (PNG format)
+
+## Notes
+- All Unicode characters have been converted to LaTeX equivalents
+- All figure paths are relative
+- No external dependencies required

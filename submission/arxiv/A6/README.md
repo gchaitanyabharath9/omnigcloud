@@ -1,10 +1,19 @@
 # arXiv Submission: A6
 
-## Metadata
-- **Title**: Adaptive Policy Enforcement
-- **Category**: cs.AR
-- **Compilation**: `pdflatex main.tex` (2-3 passes)
+## Title
+Adaptive Policy Enforcement: The Synthesis of Sovereign Control
+
+## Compilation
+```bash
+pdflatex main.tex
+pdflatex main.tex  # Second pass for references
+```
 
 ## Contents
-- `main.tex`: Source code (normalized)
-- `figures/`: All assets (local paths)
+- main.tex: Complete LaTeX source
+- figures/: All referenced figures (PNG format)
+
+## Notes
+- All Unicode characters have been converted to LaTeX equivalents
+- All figure paths are relative
+- No external dependencies required

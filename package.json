@@ -42,7 +42,8 @@
     "security:gate": "node scripts/security_gate.mjs",
     "health:routes": "npx tsx scripts/check-routes.ts",
     "health:i18n": "npx tsx scripts/check-i18n-keys.ts",
-    "validate:seo": "node scripts/validate-seo.mjs"
+    "validate:seo": "node scripts/validate-seo.mjs",
+    "generate:pdfs": "node scripts/generate-paper-pdfs.js"
   },
   "dependencies": {
     "@auth/upstash-redis-adapter": "^2.11.1",
