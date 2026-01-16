@@ -22,7 +22,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
         '/docs/whitepaper',
         '/research',
         '/research/papers',
-        '/research/frameworks',
         '/visual-library',
         '/community',
     ]
@@ -39,8 +38,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
     // Research Frameworks (Priority: 0.9)
     const researchFrameworks = [
-        '/research/frameworks/aecp',
-        '/research/scholarly-article',
+        '/research/papers/aecp',
+        '/research/papers/scholarly-article',
         '/research/distributed-systems-resilience',
         '/research/automated-multilingual-quality-assurance',
     ]

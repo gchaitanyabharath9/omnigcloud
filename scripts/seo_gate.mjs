@@ -19,8 +19,8 @@ const REQUIRED_PAPERS = [
     '/research/papers/a4-platform-governance-multicloud-hybrid',
     '/research/papers/a5-monolith-to-cloud-native-modernization',
     '/research/papers/a6-adaptive-policy-enforcement',
-    '/research/frameworks/aecp',
-    '/research/scholarly-article'
+    '/research/papers/aecp',
+    '/research/papers/scholarly-article'
 ];
 
 // Paths that are allowed to have noindex (secure areas)

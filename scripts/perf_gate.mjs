@@ -33,8 +33,8 @@ const CI_URLS = [
     `${BASE_URL}/en/research/papers/a4-platform-governance-multicloud-hybrid`,
     `${BASE_URL}/en/research/papers/a5-monolith-to-cloud-native-modernization`,
     `${BASE_URL}/en/research/papers/a6-adaptive-policy-enforcement`,
-    `${BASE_URL}/en/research/frameworks/aecp`,
-    `${BASE_URL}/en/research/scholarly-article`,
+    `${BASE_URL}/en/research/papers/aecp`,
+    `${BASE_URL}/en/research/papers/scholarly-article`,
 ];
 
 const URLS_TO_TEST = isLocal ? LOCAL_URLS : CI_URLS;

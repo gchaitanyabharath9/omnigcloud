@@ -29,7 +29,7 @@ export async function middleware(request: NextRequest) {
 
     // Add canonical header for SEO
     // We utilize the original request URL for the canonical tag
-    response.headers.set('Link', `<https://omnigcloud.com${url.pathname}>; rel="canonical"`)
+    response.headers.set('Link', `<https://www.omnigcloud.com${url.pathname}>; rel="canonical"`)
 
     return response
 }

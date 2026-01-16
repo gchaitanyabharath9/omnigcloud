@@ -181,7 +181,7 @@ const nextConfig: any = {
       // FIX: Old scholarly article URL
       {
         source: '/:locale/research/scholarly-article-enterprise-architecture',
-        destination: '/:locale/research/scholarly-article',
+        destination: '/:locale/research/papers/scholarly-article',
         permanent: true,
       },
 
@@ -302,7 +302,7 @@ const nextConfig: any = {
       },
       {
         source: '/research/frameworks',
-        destination: '/en/research/frameworks',
+        destination: '/en/research/papers',
         permanent: true,
       },
       {
@@ -349,12 +349,12 @@ const nextConfig: any = {
       },
       {
         source: '/research/scholarly-article',
-        destination: '/en/research/scholarly-article',
+        destination: '/en/research/papers/scholarly-article',
         permanent: true,
       },
       {
         source: '/research/frameworks/aecp',
-        destination: '/en/research/frameworks/aecp',
+        destination: '/en/research/papers/aecp',
         permanent: true,
       },
     ];
