@@ -1,20 +1,6 @@
 {
     "ci": {
         "collect": {
-            "url": [
-                "http://localhost:3000/en",
-                "http://localhost:3000/en/resources",
-                "http://localhost:3000/en/architecture",
-                "http://localhost:3000/en/research",
-                "http://localhost:3000/en/research/papers/a1-cloud-native-enterprise-reference",
-                "http://localhost:3000/en/research/papers/a2-high-throughput-distributed-systems",
-                "http://localhost:3000/en/research/papers/a3-enterprise-observability-operational-intelligence",
-                "http://localhost:3000/en/research/papers/a4-platform-governance-multicloud-hybrid",
-                "http://localhost:3000/en/research/papers/a5-monolith-to-cloud-native-modernization",
-                "http://localhost:3000/en/research/papers/a6-adaptive-policy-enforcement",
-                "http://localhost:3000/en/research/papers/aecp",
-                "http://localhost:3000/en/research/papers/scholarly-article"
-            ],
             "numberOfRuns": 1,
             "settings": {
                 "preset": "perf",

@@ -135,6 +135,29 @@ async function main() {
     try {
         await waitForServer();
 
+        // Additional healthcheck with wait-on
+        console.log('\nVerifying server health with wait-on...');
+        const waitOn = spawn('npx', [
+            'wait-on',
+            '-t', '120000',
+            'http-get://localhost:3000/en'
+        ], {
+            stdio: 'inherit',
+            shell: true
+        });
+
+        await new Promise((resolve, reject) => {
+            waitOn.on('close', (code) => {
+                if (code === 0) {
+                    console.log('✅ Server health check passed!');
+                    resolve();
+                } else {
+                    reject(new Error('Server health check failed'));
+                }
+            });
+            waitOn.on('error', reject);
+        });
+
         console.log('\nRunning Lighthouse CI...\n');
         const code = await runLHCI();
 
