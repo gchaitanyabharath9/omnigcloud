@@ -510,3 +510,6 @@ The release gate runs these sub-gates in sequence (fail-fast):
 *   **Perf Failures**: usually LCP regression or CLS > 0.1.
 *   **Security Failures**: update dependencies with `npm audit fix`.
 
+
+## 🛡️ Repository Protection
+PDFs must not be committed to this repository. A pre-commit hook is in place to block accidental PDF commits. Store large binaries/PDFs externally or in GitHub Releases.
