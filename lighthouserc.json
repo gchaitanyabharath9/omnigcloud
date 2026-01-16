@@ -1,10 +1,8 @@
 {
     "ci": {
         "collect": {
-            "startServerCommand": "npm run start",
-            "startServerReadyPattern": "ready on",
             "url": [
-                "http://localhost:3000/",
+                "http://localhost:3000/en",
                 "http://localhost:3000/en/resources",
                 "http://localhost:3000/en/architecture",
                 "http://localhost:3000/en/research",

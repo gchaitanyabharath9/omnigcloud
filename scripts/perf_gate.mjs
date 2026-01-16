@@ -9,7 +9,7 @@ const mode = args.find(a => a.startsWith('--mode='))?.split('=')[1] || 'local';
 const isLocal = mode === 'local';
 
 // Configuration
-const PORT = 3001;
+const PORT = 3000;
 const BASE_URL = `http://localhost:${PORT}`;
 
 // URLs to test - reduced for local mode
