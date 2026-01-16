@@ -28,12 +28,33 @@
         "impact": "विद्वतापूर्ण सामग्री",
         "title": "इंफ्रा-कोड जनरेशन के लिए एलएलएम प्रदर्शन की तुलना"
       },
+      "cio-exit-strategy": {
+        "author": "कार्यकारी रणनीति",
+        "category": "CIO रणनीति",
+        "excerpt": "वेंडर लॉक-इन की वास्तविक लागत और प्रारंभिक चरण के संप्रभु आर्किटेक्चर के ROI के मूल्यांकन के लिए एक औपचारिक निर्णय लेने वाली प्लेबुक।",
+        "impact": "बाजार रणनीतिक संसाधन",
+        "title": "CIO की क्लाउड निकास रणनीति गाइड: पोर्टेबिलिटी को मात्रात्मक बनाना"
+      },
+      "devops-practices": {
+        "author": "ऑप्स टीम",
+        "category": "इंजीनियरिंग सर्वोत्तम अभ्यास",
+        "excerpt": "बिना किसी समझौते के AWS, Azure और निजी संप्रभु क्लस्टरों में उच्च-वेग वितरण पाइपलाइनों के प्रबंधन के लिए आवश्यक पैटर्न।",
+        "impact": "परिचालन उत्कृष्टता",
+        "title": "सोवरेन मल्टी-क्लाउड युग के लिए DevOps"
+      },
       "latency": {
         "author": "अनुसंधान लैब",
         "category": "मूल्यांकन",
         "excerpt": "ग्लोबल इनग्रेस प्रदर्शन पर OCI, AWS और Azure का मूल्यांकन। क्यों Oracle के ARM Ampere नोड्स सोवरेन वर्कलोड के लिए जीत रहे हैं।",
         "impact": "विद्वतापूर्ण बेंचमार्किंग",
         "title": "क्लाउड प्रदाता विलंबता: 2025 व्यापक बेंचमार्क"
+      },
+      "modernization-guide": {
+        "author": "OmniG Research",
+        "category": "शैक्षिक गाइड",
+        "excerpt": "विरासत के मोनोलिथ को विखंडित करने और उन्हें संप्रभु, क्लाउड-नेटिव वितरित प्रणालियों के रूप में पुनर्निर्माण के लिए एक रणनीतिक ढांचा।",
+        "impact": "मुख्य रणनीतिक संसाधन",
+        "title": "एंटरप्राइज़ क्लाउड आधुनिकीकरण ब्लूप्रिंट 2026"
       },
       "prompt": {
         "author": "AI Ops टीम",
@@ -49,37 +70,22 @@
         "impact": "प्रमुख योगदान",
         "title": "सोवरेन नॉलेज के साथ नियामक डेटा को सुरक्षित करना"
       },
-      "modernization-guide": {
-        "category": "शैक्षिक गाइड",
-        "title": "एंटरप्राइज़ क्लाउड आधुनिकीकरण ब्लूप्रिंट 2026",
-        "excerpt": "विरासत के मोनोलिथ को विखंडित करने और उन्हें संप्रभु, क्लाउड-नेटिव वितरित प्रणालियों के रूप में पुनर्निर्माण के लिए एक रणनीतिक ढांचा।",
-        "author": "OmniG Research",
-        "impact": "मुख्य रणनीतिक संसाधन"
-      },
-      "devops-practices": {
-        "category": "इंजीनियरिंग सर्वोत्तम अभ्यास",
-        "title": "सोवरेन मल्टी-क्लाउड युग के लिए DevOps",
-        "excerpt": "बिना किसी समझौते के AWS, Azure और निजी संप्रभु क्लस्टरों में उच्च-वेग वितरण पाइपलाइनों के प्रबंधन के लिए आवश्यक पैटर्न।",
-        "author": "ऑप्स टीम",
-        "impact": "परिचालन उत्कृष्टता"
-      },
       "sovereignty-framework": {
-        "category": "आर्किटेक्चर ढांचा",
-        "title": "मल्टी-क्लाउड संप्रभुता ढांचा: एक गणितीय दृष्टिकोण",
-        "excerpt": "उच्च-दांव वाले वातावरण में डेटा गुरुत्वाकर्षण, अधिकार क्षेत्र की सीमाओं और प्रदाता-अज्ञेयवादी विलंबता के बीच संबंध को मात्रात्मक बनाना।",
         "author": "वास्तुशिल्प बोर्ड",
-        "impact": "मुख्य ढांचा"
-      },
-      "cio-exit-strategy": {
-        "category": "CIO रणनीति",
-        "title": "CIO की क्लाउड निकास रणनीति गाइड: पोर्टेबिलिटी को मात्रात्मक बनाना",
-        "excerpt": "वेंडर लॉक-इन की वास्तविक लागत और प्रारंभिक चरण के संप्रभु आर्किटेक्चर के ROI के मूल्यांकन के लिए एक औपचारिक निर्णय लेने वाली प्लेबुक।",
-        "author": "कार्यकारी रणनीति",
-        "impact": "बाजार रणनीतिक संसाधन"
+        "category": "आर्किटेक्चर ढांचा",
+        "excerpt": "उच्च-दांव वाले वातावरण में डेटा गुरुत्वाकर्षण, अधिकार क्षेत्र की सीमाओं और प्रदाता-अज्ञेयवादी विलंबता के बीच संबंध को मात्रात्मक बनाना।",
+        "impact": "मुख्य ढांचा",
+        "title": "मल्टी-क्लाउड संप्रभुता ढांचा: एक गणितीय दृष्टिकोण"
       }
     }
   },
   "Breadcrumb": {
+    "a1-cloud-native-enterprise-reference": "[TODO_TRANSLATE] A1 Reference Architecture",
+    "a2-high-throughput-distributed-systems": "[TODO_TRANSLATE] A2 Distributed Systems",
+    "a3-enterprise-observability-operational-intelligence": "[TODO_TRANSLATE] A3 Observability",
+    "a4-platform-governance-multicloud-hybrid": "[TODO_TRANSLATE] A4 Platform Governance",
+    "a5-monolith-to-cloud-native-modernization": "[TODO_TRANSLATE] A5 Modernization",
+    "a6-adaptive-policy-enforcement": "[TODO_TRANSLATE] A6 Policy Enforcement",
     "ai-cloud-platform": "AI Cloud Platform",
     "ai-data": "AI Data",
     "ai-engine": "AI Engine",
@@ -106,6 +112,7 @@
     "error": "오류율",
     "executive": "경영진 개요",
     "founder": "Founder",
+    "frameworks": "[TODO_TRANSLATE] Frameworks",
     "governance": "Governance",
     "guide": "यूज़र गाइड",
     "home": "होम",
@@ -116,6 +123,7 @@
     "observability": "Observability",
     "onboarding": "ग्लोबल ऑनबोर्डिंग",
     "openshift-modernization": "OpenShift Modernization",
+    "papers": "[TODO_TRANSLATE] Papers",
     "partners": "Partners",
     "platform": "प्लेटफार्म",
     "pricing": "सदस्यता योजनाएं",
@@ -221,6 +229,16 @@
     "title": "अनुपालन और प्रमाणन",
     "transparency": "पारदर्शिता नोटिस",
     "transparencyText": "हम अपनी अनुपालन स्थिति के बारे में ईमानदार संचार में विश्वास करते हैं। नीचे आपको हमारे वर्तमान प्रमाणन, चल रहे ऑडिट और नियोजित पहल मिलेंगे। हम उन प्रमाणपत्रों का दावा नहीं करते हैं जो हमने अभी तक हासिल नहीं किए हैं।"
+  },
+  "ContactSales": {
+    "bodyIntro": "नमस्ते OmniGCloud बिक्री टीम,",
+    "copyLabel": "ईमेल कॉपी करें",
+    "copyToast": "ईमेल क्लिपबोर्ड पर कॉपी किया गया",
+    "fallbackInstruction": "आपका मेल ऐप नहीं खुला। आप हमें सीधे ईमेल कर सकते हैं।",
+    "fallbackTitle": "बिक्री से संपर्क करें",
+    "rateLimitMessage": "कृपया हमसे दोबारा संपर्क करने से पहले कुछ देर प्रतीक्षा करें।",
+    "subject": "बिक्री पूछताछ",
+    "whatsappLabel": "WhatsApp पर चैट करें"
   },
   "CookieConsent": {
     "accept": "कुकीज़ स्वीकार करें",
@@ -364,6 +382,32 @@
       "title": "Sovereign Vault"
     }
   },
+  "Engagement": {
+    "primary": "ब्रीफिंग शेड्यूल करें",
+    "secondary": "ईमेल आर्किटेक्ट्स",
+    "subtitle": "अपने बुनियादी ढांचे को आधुनिक बनाने के लिए तैयार हैं? अपनी मल्टी-क्लाउड रणनीति पर चर्चा करने के लिए हमारे प्लेटफॉर्म आर्किटेक्ट्स के साथ एक रणनीति सत्र निर्धारित करें।",
+    "thoughtLeadership": {
+      "subtitle": "इन ढांचों को एक कार्रवाई योग्य रोडमैप में बदलने के लिए तैयार हैं? हमारे वरिष्ठ आर्किटेक्ट्स के साथ एक रणनीति सत्र निर्धारित करें।",
+      "title": "चर्चा करें कि यह आपके संगठन पर कैसे लागू होता है"
+    },
+    "title": "अपने संप्रभु भविष्य को सुरक्षित करें"
+  },
+  "Enterprise": {
+    "approach": {
+      "pillars": "[TODO_TRANSLATE] [object Object],[object Object],[object Object]",
+      "subtitle": "[TODO_TRANSLATE] How we partner with Global 2000 organizations to deliver sovereign infrastructure.",
+      "title": "[TODO_TRANSLATE] Enterprise-Grade Approach"
+    },
+    "partnership": {
+      "steps": "[TODO_TRANSLATE] [object Object],[object Object],[object Object]",
+      "title": "[TODO_TRANSLATE] How We Work with Large Organizations"
+    },
+    "trust": {
+      "p1": "[TODO_TRANSLATE] Enterprises choose OmniGCloud because our architecture is designed for high-consequence environments. We don't just automate; we provide a formal framework for sovereignty.",
+      "p2": "[TODO_TRANSLATE] From mTLS-backed service meshes to FIPS-validated encryption, every layer of our stack is audited for enterprise-grade security and limitless scalability across 100+ global regions.",
+      "title": "[TODO_TRANSLATE] Security, Compliance & Scalability"
+    }
+  },
   "Faq": {
     "badge": "RESOURCES",
     "cta": "Speak with a Cloud Architect",
@@ -374,6 +418,7 @@
     "company": {
       "about": "हमारे बारे में",
       "contact": "संपर्क",
+      "investors": "[TODO_TRANSLATE] For Investors",
       "label": "कंपनी",
       "leadership": "नेतृत्व",
       "newsroom": "न्यूज़रूम"
@@ -428,10 +473,10 @@
   },
   "Header": {
     "latency_badge": "MESH_RT",
-    "title": "OmniGCloud",
     "menu_accessibility_label": "मोबाइल नेविगेशन मेनू",
     "nav": {
       "advanced": "उन्नत संचालन",
+      "analysis": "[TODO_TRANSLATE] COST ANALYSIS",
       "community": "समुदाय",
       "company": "कंपनी",
       "company_links": {
@@ -444,6 +489,7 @@
         "newsroom": "न्यूज़रूम",
         "operations": "ग्लोबल ऑपरेशंस"
       },
+      "contactSales": "बिक्री से संपर्क करें",
       "contact_us": "문의하기",
       "dashboard": "डैशबोर्ड",
       "dashboard_links": {
@@ -471,23 +517,24 @@
       },
       "documentation": "दस्तावेज़ीकरण",
       "industries": "उद्योग",
+      "information": "[TODO_TRANSLATE] INFORMATION",
       "onboarding": "अभी स्केल करें",
-      "contactSales": "बिक्री से संपर्क करें",
+      "organization": "[TODO_TRANSLATE] ORGANIZATION",
       "performance": "성능",
       "pillars": "प्लेटफ़ॉर्म स्तंभ",
       "pricing": "मूल्य निर्धारण",
       "pricing_links": {
         "business": "व्यवसाय",
         "compare": "योजनाओं की तुलना करें",
+        "compliance": "अनुपालन",
         "developer": "डेवलपर",
         "faq": "सामान्य प्रश्न केंद्र",
         "professional": "पेशेवर",
+        "savings_analysis": "बचत विश्लेषण",
         "sovereign": "संप्रभु",
         "trust": "उद्यम विश्वास",
-        "savings_analysis": "बचत विश्लेषण",
         "value_economy": "मूल्य अर्थव्यवस्था",
-        "visual_architecture": "दृश्य वास्तुकला",
-        "compliance": "अनुपालन"
+        "visual_architecture": "दृश्य वास्तुकला"
       },
       "products": "उत्पाद",
       "products_links": {
@@ -497,6 +544,12 @@
         "nexus": "क्रॉस-क्लाउड नेक्सस",
         "playground": "संप्रभु खेल का मैदान",
         "workflows": "जी-वर्कफ़्लो"
+      },
+      "research": "अनुसंधान प्रयोगशाला",
+      "research_links": {
+        "frameworks": "फ्रेमवर्क (AECP)",
+        "overview": "अनुसंधान अवलोकन",
+        "papers": "अनुप्रयुक्त पत्र (A1-A6)"
       },
       "solutions": "समाधान",
       "solutions_links": {
@@ -512,20 +565,16 @@
       "telemetry": "원격 측정",
       "tiers": "요금 계정",
       "trust": "विश्वास",
+      "trust_compliance": "[TODO_TRANSLATE] TRUST & COMPLIANCE",
       "trust_links": {
         "certs": "प्रमाणन",
         "compliance_maps": "ग्लोबल अनुपालन मानचित्र",
         "privacy": "गोपनीयता केंद्र",
         "transparency": "पारदर्शिता रिपोर्ट"
       },
-      "research": "अनुसंधान प्रयोगशाला",
-      "research_links": {
-        "overview": "अनुसंधान अवलोकन",
-        "papers": "अनुप्रयुक्त पत्र (A1-A6)",
-        "frameworks": "फ्रेमवर्क (AECP)"
-      },
       "useCases": "उपयोग के मामले"
-    }
+    },
+    "title": "OmniGCloud"
   },
   "Hero": {
     "audience": "Designed for Global 2000 CIOs and Sovereign Government Entities.",
@@ -666,6 +715,26 @@
       "sol": "क्रॉसप्लेन-संचालित एज प्रबंधन हजारों स्थानीय नोड्स में टेल्को स्टैक के सुसंगत परिनियोजन को सक्षम बनाता है।"
     },
     "title": "उद्योग-विशिष्ट समाधान"
+  },
+  "Investors": {
+    "differentiation": {
+      "content": "[TODO_TRANSLATE] Unlike traditional consultancies or script-driven tools, we provide an autonomous kernel that evolves with the infrastructure. Our platform-first approach ensures that value compounds as the managed estate grows.",
+      "title": "[TODO_TRANSLATE] The OmniGCloud Moat"
+    },
+    "hero": {
+      "subtitle": "[TODO_TRANSLATE] OmniGCloud is building the definitive operating system for autonomous, provider-agnostic infrastructure. We solve the structural complexity and vendor entrappment that costs Global 2000 enterprises billions in technical debt.",
+      "tag": "[TODO_TRANSLATE] Strategic Vision",
+      "title": "[TODO_TRANSLATE] Scaling Sovereignty as a Global Standard"
+    },
+    "opportunity": {
+      "content": "[TODO_TRANSLATE] As multi-cloud maturity becomes mandatory, the lack of a provider-neutral orchestration layer represents a systemic bottleneck. OmniGCloud's AECP kernel creates a scalable, defensible moat by decoupling infrastructure intent from provider proprietary APIs, enabling true workload portability and real-time regulatory compliance for high-consequence environments.",
+      "metrics": "[TODO_TRANSLATE] [object Object],[object Object],[object Object]",
+      "title": "[TODO_TRANSLATE] The Next Frontier of Platform Engineering"
+    },
+    "vision": {
+      "content": "[TODO_TRANSLATE] Our objective is to move from a multi-cloud control plane to a global, self-healing sovereign mesh that autonomously negotiates cost, performance, and compliance across all jurisdictions, restoring technical bargaining power to the enterprise.",
+      "title": "[TODO_TRANSLATE] The Strategic Roadmap"
+    }
   },
   "Metadata": {
     "Home": {
@@ -997,6 +1066,232 @@
       "shortDesc": "विजुअल मल्टी-स्टेप ऑर्केस्ट्रेशन इंजन।",
       "tag": "स्वचालन",
       "title": "जी-वर्कफ्लो"
+    }
+  },
+  "SEO_Content": {
+    "Compliance": {
+      "AboveTheFold": "[TODO_TRANSLATE] OmniGCloud automates the arduous process of cross-border regulatory compliance with our real-time Governance Guard engine. By injecting audit policies directly into the infrastructure manifest, we ensure that your estate remains compliant with local laws like the EU AI Act and GDPR by default. Our platform generates 100% verifiable evidence trails, transforming compliance from a manual bottleneck into an automated technical advantage.",
+      "DeepDive": {
+        "content": "[TODO_TRANSLATE] Regulations like the EU AI Act impose significant burdens on organizations deploying AI models across borders. OmniGCloud provides a 'Sovereign AI Wrapper' that ensures patient data or sensitive PII never traverses unsecured networks during inference. We automate the logging and transparency requirements mandated by global regulators, ensuring that your AI modernization remains on the right side of the law while maintaining the speed of innovation. This is 'Compliance-as-Code' in its most powerful, enterprise-grade form.",
+        "title": "[TODO_TRANSLATE] Navigating the New Age of AI Regulation"
+      },
+      "HowItWorks": {
+        "steps": "[TODO_TRANSLATE] [object Object],[object Object],[object Object]",
+        "title": "[TODO_TRANSLATE] Automated Policy Enforcement"
+      },
+      "LeadCapture": {
+        "cta": "[TODO_TRANSLATE] Build Compliance Map",
+        "subtitle": "[TODO_TRANSLATE] Let's automate your regulatory evidence trails across every region you operate in.",
+        "title": "[TODO_TRANSLATE] Map Your Compliance Mandates"
+      }
+    },
+    "Home": {
+      "AboveTheFold": "[TODO_TRANSLATE] OmniGCloud is the enterprise-grade sovereign multi-cloud control plane designed for Global 2000 CIOs and Architects. Our platform eliminates vendor lock-in by providing an autonomous orchestration layer that abstracts infrastructure intent from provider-specific execution. This platform-first approach ensures that your infrastructure remains compliant, performant, and truly under your control regardless of the underlying cloud provider.",
+      "DeepDive": {
+        "content": "[TODO_TRANSLATE] In an era of increasing geopolitical instability, digital sovereignty is a survival requirement for the modern enterprise. Traditional cloud management creates a facade of control but leaves organizations vulnerable to vendor proprietary APIs and regional jurisdictional overreach. OmniGCloud's Autonomous Enterprise Control Plane (AECP) provides a hard abstraction layer that protects your data residency and operational continuity. By decoupling policy from the provider, we enable true workload portability and cost-efficiency at a global scale.",
+        "title": "[TODO_TRANSLATE] The Strategic Necessity of Digital Sovereignty"
+      },
+      "Differentiation": {
+        "content": "[TODO_TRANSLATE] Unlike traditional IAC which is static and reactive, OmniGCloud provides a continuous, goal-oriented orchestration kernel. This allows enterprises to manage infrastructure by intent, where the platform autonomously reconciles state to meet compliance and cost targets 24/7.",
+        "title": "[TODO_TRANSLATE] A Proactive Governance Engine"
+      },
+      "FAQ": {
+        "items": "[TODO_TRANSLATE] [object Object],[object Object]",
+        "title": "[TODO_TRANSLATE] Common Inquiries"
+      },
+      "HowItWorks": {
+        "steps": "[TODO_TRANSLATE] [object Object],[object Object],[object Object]",
+        "title": "[TODO_TRANSLATE] How OmniGCloud Orchestrates Sovereignty"
+      },
+      "LeadCapture": {
+        "cta": "[TODO_TRANSLATE] Talk to a Cloud Expert",
+        "subtitle": "[TODO_TRANSLATE] Join Global 2000 leaders who have already eliminated cloud lock-in with OmniGCloud.",
+        "title": "[TODO_TRANSLATE] Ready to Orchestrate Your Sovereignty?"
+      },
+      "TechnicalApproach": {
+        "content": "[TODO_TRANSLATE] AECP utilizes a declarative intent model that abstracts infrastructure from provider APIs. Instead of managing AWS VPCs or Azure VNets directly, our kernel maps high-level sovereignty requirements to optimized provider resources, ensuring consistency across 100+ global data centers.",
+        "title": "[TODO_TRANSLATE] The AECP Kernel Approach"
+      },
+      "WhyItMatters": {
+        "content": "[TODO_TRANSLATE] Regulatory fragmentation and vendor proprietary lock-in have become the single largest technical risks for the modern enterprise. As cloud spend continues to dominate OpEx, the ability to maintain 'Exit Sovereignty'—the technical capability to move workloads between providers without catastrophic cost—is now a fiduciary responsibility.",
+        "title": "[TODO_TRANSLATE] Why Enterprise Sovereignty Matters Today"
+      }
+    },
+    "Industries": {
+      "AboveTheFold": "[TODO_TRANSLATE] OmniGCloud provides sector-specific sovereign cloud solutions for the world's most regulated industries, including Finance, Healthcare, and Telecommunications. Our framework standardizes the digital core while ensuring 100% data residency and regional compliance across all providers. We enable high-compute innovation—from banking ledgers to AI research—without compromising on jurisdictional security or operational integrity.",
+      "DeepDive": {
+        "content": "[TODO_TRANSLATE] For regulated entities, the ability to rapidly enter new markets depends on how quickly they can meet local compliance standards. OmniGCloud transforms compliance from a multi-month manual effort into a code-level configuration. By utilizing our Sovereign Industry Solutions, a bank or health system can spin up a fully compliant region in a new jurisdiction in days rather than months, allowing them to capture market share while their competitors are still navigating legal bottlenecks.",
+        "title": "[TODO_TRANSLATE] Sovereignty as a Competitive Advantage"
+      },
+      "FAQ": {
+        "items": "[TODO_TRANSLATE] [object Object],[object Object]",
+        "title": "[TODO_TRANSLATE] Industry Compliance FAQ"
+      },
+      "HowItWorks": {
+        "steps": "[TODO_TRANSLATE] [object Object],[object Object],[object Object]",
+        "title": "[TODO_TRANSLATE] Vertical Alignment Strategy"
+      },
+      "LeadCapture": {
+        "cta": "[TODO_TRANSLATE] Consult an Industry Specialist",
+        "subtitle": "[TODO_TRANSLATE] Learn how our industry blueprints can bypass legal bottlenecks and geographic silos.",
+        "title": "[TODO_TRANSLATE] Accelerate Your Market Entry"
+      },
+      "TechnicalApproach": {
+        "content": "[TODO_TRANSLATE] We use regional metadata tags to enforce 'Jurisdictional Guardrails' at the network layer, ensuring that data never accidentally traverses borders that would trigger a compliance violation.",
+        "title": "[TODO_TRANSLATE] Jurisdictional Guardrails"
+      },
+      "WhyItMatters": {
+        "content": "[TODO_TRANSLATE] In regulated industries, speed is often throttled by legal and compliance bottlenecks. Our approach moves these checks into the automated pipeline, allowing for rapid geographic expansion without increasing risk.",
+        "title": "[TODO_TRANSLATE] The Compliance Velocity Advantage"
+      }
+    },
+    "Platform": {
+      "AboveTheFold": "[TODO_TRANSLATE] The OmniGCloud Platform is a horizontally integrated ecosystem designed to manage the complexity of global, modernized cloud portfolios. It provides a unified command center for discovery, refactoring, and orchestration across AWS, Azure, OCI, and on-premise OpenShift clusters. By decoupling policy from infrastructure, we enable true workload portability and real-time regulatory adherence for high-stakes enterprise environments.",
+      "DeepDive": {
+        "content": "[TODO_TRANSLATE] A resilient platform must assume that any single cloud provider or region can fail or be legally blocked at any time. OmniGCloud's architecture is based on 'Sovereign Nodes' that operate independently but stay synchronized via a global intent mesh. This ensures that even if the central management plane is inaccessible, your regional workloads continue to function and enforce their local security policies. This level of decentralization is critical for entities managing life-safety systems or national critical infrastructure.",
+        "title": "[TODO_TRANSLATE] Architecting for Multi-Cloud Resilience"
+      },
+      "FAQ": {
+        "items": "[TODO_TRANSLATE] [object Object],[object Object]",
+        "title": "[TODO_TRANSLATE] Platform Excellence FAQ"
+      },
+      "HowItWorks": {
+        "steps": "[TODO_TRANSLATE] [object Object],[object Object],[object Object]",
+        "title": "[TODO_TRANSLATE] The Platform Engineering Approach"
+      },
+      "LeadCapture": {
+        "cta": "[TODO_TRANSLATE] Request Architecture Review",
+        "subtitle": "[TODO_TRANSLATE] Let's review your current architecture and identify modernization opportunities.",
+        "title": "[TODO_TRANSLATE] Discuss Your Platform Roadmap"
+      },
+      "TechnicalApproach": {
+        "content": "[TODO_TRANSLATE] Our platform is built on a horizontally integrated mesh of 'Sovereign Nodes'. Each node is a self-contained unit of governance that can operate independently while maintaining synchronization with the global intent layer.",
+        "title": "[TODO_TRANSLATE] Architecture of the AECP Platform"
+      },
+      "WhyItMatters": {
+        "content": "[TODO_TRANSLATE] A sovereign platform provides 'Exit Sovereignty'—the capability to move workloads between providers without cost-prohibitive technical debt or provider-specific locks.",
+        "title": "[TODO_TRANSLATE] A Strategic Pivot to Sovereignty"
+      }
+    },
+    "Pricing": {
+      "AboveTheFold": "[TODO_TRANSLATE] OmniGCloud offers transparent, sovereign-first pricing models tailored for every stage of enterprise modernization. Whether you are a developer exploring our G-CLI or a Global 2000 entity requiring air-gapped regional clusters, our plans are designed to eliminate hidden egress fees and proprietary lock-in costs. We align our success with your infrastructure efficiency, ensuring predictable ROI and total financial sovereignty across your multi-cloud estate.",
+      "DeepDive": {
+        "content": "[TODO_TRANSLATE] Vendor lock-in isn't just a technical problem; it's a massive financial risk. Egress fees and proprietary services can increase your long-term cloud spend by up to 50% through artificial gravity. OmniGCloud's pricing philosophy is built on 'Economic Neutrality.' By enabling workload portability, we allow you to arbitrage cloud providers against each other, ensuring you always get the best market rate for your sovereign compute and storage requirements.",
+        "title": "[TODO_TRANSLATE] The Hidden Costs of Cloud Lock-In"
+      },
+      "FAQ": {
+        "items": "[TODO_TRANSLATE] [object Object],[object Object]",
+        "title": "[TODO_TRANSLATE] Pricing & Value FAQ"
+      },
+      "HowItWorks": {
+        "steps": "[TODO_TRANSLATE] [object Object],[object Object],[object Object]",
+        "title": "[TODO_TRANSLATE] Value-Based Infrastructure Economy"
+      },
+      "LeadCapture": {
+        "cta": "[TODO_TRANSLATE] Request TCO Analysis",
+        "subtitle": "[TODO_TRANSLATE] Get a custom TCO analysis to compare your current cloud spend against a sovereign architecture.",
+        "title": "[TODO_TRANSLATE] Analyze Your Savings Potential"
+      },
+      "TechnicalApproach": {
+        "content": "[TODO_TRANSLATE] The platform's arbitrage engine continuously scans across thousands of region-specific pricing APIs to identify the most cost-effective compliant route for your workloads, often reducing OpEx by 30% or more.",
+        "title": "[TODO_TRANSLATE] Automated Cost Arbitrage"
+      },
+      "WhyItMatters": {
+        "content": "[TODO_TRANSLATE] Digital sovereignty is impossible without economic sovereignty. If your cloud costs are non-negotiable due to technical debt, you are not truly in control. Our pricing and platform model restores that bargaining power.",
+        "title": "[TODO_TRANSLATE] Economic Sovereignty"
+      }
+    },
+    "Products": {
+      "AboveTheFold": "[TODO_TRANSLATE] The OmniGCloud Sovereign Suite is a unified platform for multi-cloud discovery, refactoring, and orchestration. It provides the technical foundation for digital sovereignty by decoupling infrastructure intent from provider proprietary APIs. From automated portfolio audits to global service mesh management, our products are engineered to provide maximum operational resilience and 100% vendor neutrality for Global 2000 entities.",
+      "DeepDive": {
+        "content": "[TODO_TRANSLATE] A true sovereign tech stack requires more than just running on multiple clouds; it requires a control plane that is independent of any single provider's proprietary lifecycle. OmniGCloud's products are built on an 'Agnostic Kernel' architecture. This means our CLI, Dashboard, and Orchestration engines talk to the kernel, which then translates that intent into cloud-specific execution provider by provider. If a provider changes their API or deprecates a service, only our kernel adapter needs updating—your internal workflows and governance scripts remain untouched and functional.",
+        "title": "[TODO_TRANSLATE] Building a Sovereign Tech Stack"
+      },
+      "HowItWorks": {
+        "steps": "[TODO_TRANSLATE] [object Object],[object Object],[object Object]",
+        "title": "[TODO_TRANSLATE] The Engineering Lifecycle"
+      },
+      "LeadCapture": {
+        "cta": "[TODO_TRANSLATE] Request Tooling Audit",
+        "subtitle": "[TODO_TRANSLATE] Discuss how our suite can integrate with your existing DevOps and Governance toolchain.",
+        "title": "[TODO_TRANSLATE] Talk to an Architect"
+      },
+      "TechnicalApproach": {
+        "content": "[TODO_TRANSLATE] Our intent engine uses graph-based evaluation to identify the optimal path for workload modernization, balancing cost, performance, and regional residency requirements.",
+        "title": "[TODO_TRANSLATE] Advanced Intent Engine"
+      },
+      "WhyItMatters": {
+        "content": "[TODO_TRANSLATE] While others provide cloud management, we provide a cloud-agnostic operating system. Your infrastructure should work for you, not the other way around.",
+        "title": "[TODO_TRANSLATE] Why the Sovereign Suite is Different"
+      }
+    },
+    "Security": {
+      "AboveTheFold": "[TODO_TRANSLATE] Security at OmniGCloud is built on the principle of sovereign identity as the perimeter. Our platform employs FIPS-validated encryption, mTLS-backed service meshes, and autonomous zero-trust identity gates to protect your most sensitive assets across borders. We provide absolute transparency into your security posture with real-time drift detection and automated remediation for SOC2, HIPAA, and GDPR compliance standards.",
+      "DeepDive": {
+        "content": "[TODO_TRANSLATE] In a multi-cloud environment, traditional network perimeters are obsolete. OmniGCloud implements a 'Sovereign Identity Mesh' where security is tied directly to the service and its data residency mandate, not its IP address. This ensures that even if an underlying cloud provider's network is compromised, your workloads remain shielded behind cryptographic gates. Our approach ensures that only authorized processes can access your data, and only within the jurisdictions you have explicitly permitted by policy.",
+        "title": "[TODO_TRANSLATE] Identity as the New Border"
+      },
+      "HowItWorks": {
+        "steps": "[TODO_TRANSLATE] [object Object],[object Object],[object Object]",
+        "title": "[TODO_TRANSLATE] Zero-Trust Sovereign Security"
+      },
+      "LeadCapture": {
+        "cta": "[TODO_TRANSLATE] Get Security Audit",
+        "subtitle": "[TODO_TRANSLATE] Speak with a security architect about hardening your multi-cloud identity perimeter.",
+        "title": "[TODO_TRANSLATE] Review Your Security Posture"
+      }
+    },
+    "Services": {
+      "AboveTheFold": "[TODO_TRANSLATE] OmniGCloud Services provide a comprehensive modernization journey, from automated portfolio audits to managed sovereign operations. Our AI-native approach reduces technical debt and accelerates deployment frequency by transforming legacy monoliths into cloud-agnostic microservices. We partner with enterprise architecture teams to establish 100% vendor neutrality while automating complex governance mandates across your global estate.",
+      "DeepDive": {
+        "content": "[TODO_TRANSLATE] Bulk cloud migration often fails to deliver ROI because organizations simply move legacy technical debt to VMs on someone else's hardware. OmniGCloud's services focus on 'Re-platforming' and 'Refactoring.' This means injecting modern DevOps guardrails, service mesh telemetry, and localized data residency gates during the move. We ensure that every modernized application is not only in the cloud but is also inherently secure, scalable, and independent of proprietary vendor lock-in.",
+        "title": "[TODO_TRANSLATE] Moving Beyond Lift-and-Shift"
+      },
+      "FAQ": {
+        "items": "[TODO_TRANSLATE] [object Object],[object Object]",
+        "title": "[TODO_TRANSLATE] Services & Methodology FAQ"
+      },
+      "HowItWorks": {
+        "steps": "[TODO_TRANSLATE] [object Object],[object Object],[object Object]",
+        "title": "[TODO_TRANSLATE] Our Modernization Methodology"
+      },
+      "LeadCapture": {
+        "cta": "[TODO_TRANSLATE] Discuss Your Use Case",
+        "subtitle": "[TODO_TRANSLATE] From automated portfolio audits to managed operations—we are your partner in sovereignty.",
+        "title": "[TODO_TRANSLATE] Start Your Modernization Journey"
+      },
+      "TechnicalApproach": {
+        "content": "[TODO_TRANSLATE] Our service methodology uses agentic scans to identify monolithic dependencies, which are then autonomously refactored into cloud-native microservices with built-in mesh governance.",
+        "title": "[TODO_TRANSLATE] Agentic Re-platforming"
+      },
+      "WhyItMatters": {
+        "content": "[TODO_TRANSLATE] Migration is a movement; modernization is a transformation. We ensure your assets are not just moved, but optimized for a cloud-agnostic future where your business logic owns the infrastructure.",
+        "title": "[TODO_TRANSLATE] Modernization vs. Migration"
+      }
+    },
+    "Solutions": {
+      "AboveTheFold": "[TODO_TRANSLATE] OmniGCloud Solutions provide the architectural blueprints and operational frameworks needed to solve the most complex multi-cloud challenges. We focus on 'High-Consequence Sovereignty'—ensuring that critical enterprise workloads in Finance, Healthcare, and Defense can operate across borders with absolute regulatory adherence. Our solutions combine technical automation with industry-specific governance logic to accelerate global modernization by 10x.",
+      "DeepDive": {
+        "content": "[TODO_TRANSLATE] The biggest blocker to global modernization is not the technology, but the friction of differing regional regulations. OmniGCloud's ‘Governance Guard’ solution transforms legal text into executable infrastructure code. When you deploy a solution in Germany, the system automatically adjusts residency gates, encryption levels, and audit frequency to match BaFin and GDPR requirements. When that same workload is cloned to the US, the kernel adapts the guardrails for HIPAA or FedRAMP. This 'Context-Aware Compliance' is the core of our solution philosophy.",
+        "title": "[TODO_TRANSLATE] Solving for Global Regulatory Friction"
+      },
+      "HowItWorks": {
+        "steps": "[TODO_TRANSLATE] [object Object],[object Object],[object Object]",
+        "title": "[TODO_TRANSLATE] Our Solution Framework"
+      },
+      "LeadCapture": {
+        "cta": "[TODO_TRANSLATE] Start Solution Briefing",
+        "subtitle": "[TODO_TRANSLATE] See how our solutions can reduce your regional compliance overhead and operational friction.",
+        "title": "[TODO_TRANSLATE] Benchmark Your Workloads"
+      },
+      "TechnicalApproach": {
+        "content": "[TODO_TRANSLATE] Every solution blueprint undergoes formal verification to ensure that the infrastructure intent matches the regulatory requirement with 100% mathematical certainty.",
+        "title": "[TODO_TRANSLATE] Formal Verification in Solutions"
+      },
+      "WhyItMatters": {
+        "content": "[TODO_TRANSLATE] By transforming regulatory mandates into executable code, our solutions reduce the time-to-market for global enterprise initiatives by up to 90%.",
+        "title": "[TODO_TRANSLATE] The Strategic Impact of Sovereign Solutions"
+      }
     }
   },
   "Security": {
@@ -1455,25 +1750,5 @@
     "title": "ऑटोनॉमस सॉवरेन ऑर्केस्ट्रेशन (ASO): क्लाउड-अज्ञेयवादी शासन के लिए एक औपचारिक ढांचा",
     "version": "2.1.0 (अनुसंधान श्रेणी)",
     "version_label": "संस्करण"
-  },
-  "ContactSales": {
-    "subject": "बिक्री पूछताछ",
-    "bodyIntro": "नमस्ते OmniGCloud बिक्री टीम,",
-    "fallbackTitle": "बिक्री से संपर्क करें",
-    "fallbackInstruction": "आपका मेल ऐप नहीं खुला। आप हमें सीधे ईमेल कर सकते हैं।",
-    "copyLabel": "ईमेल कॉपी करें",
-    "whatsappLabel": "WhatsApp पर चैट करें",
-    "rateLimitMessage": "कृपया हमसे दोबारा संपर्क करने से पहले कुछ देर प्रतीक्षा करें।",
-    "copyToast": "ईमेल क्लिपबोर्ड पर कॉपी किया गया"
-  },
-  "Engagement": {
-    "title": "अपने संप्रभु भविष्य को सुरक्षित करें",
-    "subtitle": "अपने बुनियादी ढांचे को आधुनिक बनाने के लिए तैयार हैं? अपनी मल्टी-क्लाउड रणनीति पर चर्चा करने के लिए हमारे प्लेटफॉर्म आर्किटेक्ट्स के साथ एक रणनीति सत्र निर्धारित करें।",
-    "primary": "ब्रीफिंग शेड्यूल करें",
-    "secondary": "ईमेल आर्किटेक्ट्स",
-    "thoughtLeadership": {
-      "title": "चर्चा करें कि यह आपके संगठन पर कैसे लागू होता है",
-      "subtitle": "इन ढांचों को एक कार्रवाई योग्य रोडमैप में बदलने के लिए तैयार हैं? हमारे वरिष्ठ आर्किटेक्ट्स के साथ एक रणनीति सत्र निर्धारित करें।"
-    }
   }
 }

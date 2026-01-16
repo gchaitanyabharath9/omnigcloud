@@ -39,7 +39,9 @@
     "seo:gate": "npm run build && node scripts/seo_gate.mjs",
     "perf:gate": "node scripts/perf_gate.mjs",
     "i18n:gate": "node scripts/i18n_gate.mjs",
-    "security:gate": "node scripts/security_gate.mjs"
+    "security:gate": "node scripts/security_gate.mjs",
+    "health:routes": "npx tsx scripts/check-routes.ts",
+    "health:i18n": "npx tsx scripts/check-i18n-keys.ts"
   },
   "dependencies": {
     "@auth/upstash-redis-adapter": "^2.11.1",

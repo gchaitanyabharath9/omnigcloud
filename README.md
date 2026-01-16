@@ -344,13 +344,16 @@ NEXT_PUBLIC_GIT_COMMIT=abc123def
 
 ---
 
-## 📚 Documentation
+## 📚 Documentation & Reports
 
-- **Architecture**: `docs/architecture/patterns.md`
-- **Observability**: `docs/OBSERVABILITY.md`
-- **Trust Pages**: `docs/TRUST_PAGES.md`
-- **Security**: `SECURITY.md`
-- **Whitepaper**: `docs/whitepaper/G-Framework-ASO.md`
+Detailed documentation, verification reports, and project status tracking are located in the [Documentation Index](./docs/00-index.md).
+
+- **Master Index**: [docs/00-index.md](./docs/00-index.md)
+- **Architecture**: [docs/architecture/patterns.md](./docs/architecture/patterns.md)
+- **Research & Observability**: [docs/research/OBSERVABILITY.md](./docs/research/OBSERVABILITY.md)
+- **Trust & Compliance**: [docs/TRUST_PAGES.md](./docs/TRUST_PAGES.md)
+- **Security**: [SECURITY.md](./SECURITY.md)
+- **Whitepaper**: [docs/whitepaper/G-Framework-ASO.md](./docs/whitepaper/G-Framework-ASO.md)
 
 ---
 
