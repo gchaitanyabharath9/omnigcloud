@@ -1,0 +1,363 @@
+#!/usr/bin/env python3
+"""
+ACM LaTeX Finalization Engine v3
+Sanitizes LaTeX, fixes common errors, and builds submission-ready PDFs.
+"""
+
+import os
+import re
+import subprocess
+import sys
+from pathlib import Path
+from typing import Dict, List
+
+# Base directory
+BASE_DIR = Path(r"C:\Users\SOHAN\.gemini\antigravity\playground\nascent-zodiac\papers")
+PAPERS = ["A1", "A2", "A3", "A4", "A5", "A6", "AECP", "ARCH"]
+
+# Novelty/advocacy language patterns to neutralize
+NOVELTY_PATTERNS = [
+    (r'\bfirst\s+', 'a '),
+    (r'\bthe\s+first\s+', 'a '),
+    (r'\bestablishes\b', 'provides'),
+    (r'\bdefines the laws\b', 'describes'),
+    (r'\bbreakthrough\b', 'approach'),
+    (r'\bgroundbreaking\b', 'novel'),
+    (r'\bpioneer(?:ing)?\b', 'early'),
+    (r'\bunprecedented\b', 'new'),
+    (r'\brevolutionary\b', 'significant'),
+    (r'\bparadigm-shifting\b', 'important'),
+    (r'\bgame-changing\b', 'notable'),
+    (r'\bfirst-ever\b', 'new'),
+    (r'\bworld\'s first\b', 'new'),
+]
+
+# Metaphor-based architecture language to neutralize
+METAPHOR_PATTERNS = [
+    (r'\bLegislative Layer\b', 'Policy Definition Layer'),
+    (r'\bJudicial Layer\b', 'Policy Evaluation Layer'),
+    (r'\bExecutive Layer\b', 'Policy Enforcement Layer'),
+    (r'\bBrain\b', 'Control'),
+    (r'\bBody\b', 'Evaluation'),
+    (r'\bPolice\b', 'Enforcement'),
+]
+
+
+def sanitize_latex(content: str) -> tuple[str, dict]:
+    """Sanitize LaTeX content and return changes made."""
+    changes = {
+        "unicode_removed": 0,
+        "novelty_removed": 0,
+        "metaphors_removed": 0,
+        "svg_fixed": 0,
+    }
+    
+    original_content = content
+    
+    # Remove Unicode issues - convert to ASCII
+    try:
+        ascii_content = content.encode('ascii', 'ignore').decode('ascii')
+        if ascii_content != content:
+            changes["unicode_removed"] = len(content) - len(ascii_content)
+            content = ascii_content
+    except:
+        pass
+    
+    # Apply novelty pattern replacements
+    for pattern, replacement in NOVELTY_PATTERNS:
+        matches = len(re.findall(pattern, content, flags=re.IGNORECASE))
+        if matches > 0:
+            changes["novelty_removed"] += matches
+            content = re.sub(pattern, replacement, content, flags=re.IGNORECASE)
+    
+    # Apply metaphor pattern replacements
+    for pattern, replacement in METAPHOR_PATTERNS:
+        matches = len(re.findall(pattern, content))
+        if matches > 0:
+            changes["metaphors_removed"] += matches
+            content = re.sub(pattern, replacement, content)
+    
+    # Fix SVG to PNG (LaTeX doesn't support SVG natively)
+    svg_matches = len(re.findall(r'\.svg\}', content))
+    if svg_matches > 0:
+        changes["svg_fixed"] = svg_matches
+        content = re.sub(r'\.svg\}', '.png}', content)
+    
+    return content, changes
+
+
+def build_pdf(paper_dir: Path) -> tuple[bool, str]:
+    """Build PDF using pdflatex."""
+    main_tex = paper_dir / "main.tex"
+    build_dir = paper_dir / "build"
+    
+    if not main_tex.exists():
+        return False, "main.tex not found"
+    
+    build_dir.mkdir(exist_ok=True)
+    
+    # Save current directory
+    original_dir = os.getcwd()
+    
+    try:
+        os.chdir(paper_dir)
+        
+        # Run pdflatex first time
+        result = subprocess.run(
+            ["pdflatex", "-interaction=nonstopmode", 
+             "-output-directory=build", "main.tex"],
+            capture_output=True,
+            text=True,
+            timeout=60
+        )
+        
+        if result.returncode != 0:
+            # Extract error from log
+            log_file = build_dir / "main.log"
+            if log_file.exists():
+                with open(log_file, 'r', encoding='utf-8', errors='ignore') as f:
+                    log_content = f.read()
+                    # Find first error
+                    error_match = re.search(r'! (.+?)(?:\n|$)', log_content)
+                    if error_match:
+                        return False, f"LaTeX error: {error_match.group(1)}"
+            return False, f"pdflatex failed with code {result.returncode}"
+        
+        # Run bibtex if refs.bib exists
+        refs_bib = paper_dir / "refs.bib"
+        if refs_bib.exists():
+            os.chdir(build_dir)
+            subprocess.run(
+                ["bibtex", "main"],
+                capture_output=True,
+                text=True,
+                timeout=30
+            )
+            os.chdir(paper_dir)
+        
+        # Run pdflatex two more times
+        for _ in range(2):
+            subprocess.run(
+                ["pdflatex", "-interaction=nonstopmode",
+                 "-output-directory=build", "main.tex"],
+                capture_output=True,
+                text=True,
+                timeout=60
+            )
+        
+        # Check if PDF was created
+        pdf_file = build_dir / "main.pdf"
+        if pdf_file.exists():
+            return True, "PDF built successfully"
+        else:
+            return False, "PDF file not created"
+            
+    except subprocess.TimeoutExpired:
+        return False, "Build timeout"
+    except Exception as e:
+        return False, f"Build error: {str(e)}"
+    finally:
+        os.chdir(original_dir)
+
+
+def process_paper(paper_name: str) -> Dict:
+    """Process a single paper."""
+    paper_dir = BASE_DIR / paper_name
+    main_tex = paper_dir / "main.tex"
+    
+    result = {
+        "paper": paper_name,
+        "unicode_removed": 0,
+        "advocacy_removed": 0,
+        "metaphors_removed": 0,
+        "svg_fixed": 0,
+        "compiled": False,
+        "errors": []
+    }
+    
+    # Check if main.tex exists
+    if not main_tex.exists():
+        result["errors"].append(f"main.tex not found at {main_tex}")
+        return result
+    
+    # Read main.tex
+    try:
+        with open(main_tex, 'r', encoding='utf-8', errors='ignore') as f:
+            content = f.read()
+    except Exception as e:
+        result["errors"].append(f"Failed to read main.tex: {e}")
+        return result
+    
+    # Sanitize content
+    sanitized_content, changes = sanitize_latex(content)
+    
+    result["unicode_removed"] = changes["unicode_removed"]
+    result["advocacy_removed"] = changes["novelty_removed"]
+    result["metaphors_removed"] = changes["metaphors_removed"]
+    result["svg_fixed"] = changes["svg_fixed"]
+    
+    # Write sanitized content back
+    if sanitized_content != content:
+        try:
+            with open(main_tex, 'w', encoding='utf-8') as f:
+                f.write(sanitized_content)
+        except Exception as e:
+            result["errors"].append(f"Failed to write sanitized main.tex: {e}")
+            return result
+    
+    # Build PDF
+    success, message = build_pdf(paper_dir)
+    result["compiled"] = success
+    if not success:
+        result["errors"].append(message)
+    
+    return result
+
+
+def generate_report(results: List[Dict]) -> str:
+    """Generate final ACM patch report."""
+    report = "# FINAL ACM PATCH REPORT\n\n"
+    report += f"**Generated:** {Path.cwd()}\n\n"
+    
+    report += "## Executive Summary\n\n"
+    
+    total = len(results)
+    compiled = sum(1 for r in results if r["compiled"])
+    total_unicode = sum(r["unicode_removed"] for r in results)
+    total_advocacy = sum(r["advocacy_removed"] for r in results)
+    total_metaphors = sum(r["metaphors_removed"] for r in results)
+    total_svg = sum(r["svg_fixed"] for r in results)
+    
+    report += f"- **Total papers processed:** {total}\n"
+    report += f"- **Successfully compiled:** {compiled} / {total}\n"
+    report += f"- **Failed:** {total - compiled}\n\n"
+    
+    report += "### Sanitization Applied\n\n"
+    report += f"- **Unicode characters removed:** {total_unicode}\n"
+    report += f"- **Advocacy phrases neutralized:** {total_advocacy}\n"
+    report += f"- **Metaphors neutralized:** {total_metaphors}\n"
+    report += f"- **SVG references fixed (→ PNG):** {total_svg}\n\n"
+    
+    report += "## Per-Paper Results\n\n"
+    
+    for result in results:
+        status = "✓ PASS" if result["compiled"] else "✗ FAIL"
+        report += f"### {result['paper']} - {status}\n\n"
+        
+        if result['unicode_removed'] > 0:
+            report += f"- ✓ Unicode removed: {result['unicode_removed']} characters\n"
+        if result['advocacy_removed'] > 0:
+            report += f"- ✓ Advocacy language neutralized: {result['advocacy_removed']} instances\n"
+        if result['metaphors_removed'] > 0:
+            report += f"- ✓ Metaphors neutralized: {result['metaphors_removed']} instances\n"
+        if result['svg_fixed'] > 0:
+            report += f"- ✓ SVG references fixed: {result['svg_fixed']} instances\n"
+        
+        report += f"- **Compilation:** {'✓ SUCCESS' if result['compiled'] else '✗ FAILED'}\n"
+        
+        if result['errors']:
+            report += "\n**Errors:**\n"
+            for error in result['errors']:
+                report += f"- {error}\n"
+        
+        if result['compiled']:
+            report += f"\n**Output:** `papers/{result['paper']}/build/main.pdf`\n"
+        
+        report += "\n"
+    
+    report += "## Compliance Checklist\n\n"
+    report += "- [x] Unicode corruption removed\n"
+    report += "- [x] Advocacy language neutralized\n"
+    report += "- [x] Metaphor-based terminology neutralized\n"
+    report += "- [x] Graphics references fixed (SVG → PNG)\n"
+    
+    if compiled == total:
+        report += "- [x] All papers compiled successfully\n"
+    else:
+        report += f"- [ ] All papers compiled successfully ({compiled}/{total})\n"
+    
+    report += "\n## Next Steps\n\n"
+    if compiled < total:
+        report += "**Action Required:** Some papers failed to compile.\n\n"
+        report += "1. Review error messages above\n"
+        report += "2. Check LaTeX log files: `papers/[PAPER]/build/main.log`\n"
+        report += "3. Fix remaining LaTeX syntax errors\n"
+        report += "4. Re-run this script\n\n"
+        report += "**Common Issues:**\n"
+        report += "- Missing $ inserted: Math mode errors (check for unescaped special chars)\n"
+        report += "- Misplaced alignment tab: Table syntax errors (check & usage)\n"
+    else:
+        report += "**✓ All papers ready for submission!**\n\n"
+        report += "PDFs are located in `papers/[PAPER]/build/main.pdf`\n"
+    
+    return report
+
+
+def main():
+    """Main execution."""
+    print("=" * 70)
+    print("ACM LaTeX Finalization Engine v3")
+    print("Sanitization + Compilation + Reporting")
+    print("=" * 70)
+    print()
+    
+    results = []
+    
+    for paper in PAPERS:
+        print(f"Processing {paper}...", end=" ", flush=True)
+        result = process_paper(paper)
+        results.append(result)
+        
+        if result["compiled"]:
+            changes = []
+            if result['unicode_removed'] > 0:
+                changes.append(f"U:{result['unicode_removed']}")
+            if result['advocacy_removed'] > 0:
+                changes.append(f"A:{result['advocacy_removed']}")
+            if result['metaphors_removed'] > 0:
+                changes.append(f"M:{result['metaphors_removed']}")
+            if result['svg_fixed'] > 0:
+                changes.append(f"SVG:{result['svg_fixed']}")
+            
+            change_str = ", ".join(changes) if changes else "no changes"
+            print(f"✓ SUCCESS ({change_str})")
+        else:
+            print(f"✗ FAILED")
+            if result["errors"]:
+                for error in result["errors"][:1]:  # Show first error only
+                    print(f"  → {error}")
+    
+    print()
+    print("=" * 70)
+    
+    # Generate report
+    report = generate_report(results)
+    report_file = BASE_DIR.parent / "FINAL_ACM_PATCH_REPORT.md"
+    
+    with open(report_file, 'w', encoding='utf-8') as f:
+        f.write(report)
+    
+    print(f"Report: {report_file}")
+    print()
+    
+    # Summary
+    compiled = sum(1 for r in results if r["compiled"])
+    total_changes = sum(
+        r["unicode_removed"] + r["advocacy_removed"] + 
+        r["metaphors_removed"] + r["svg_fixed"] 
+        for r in results
+    )
+    
+    print(f"Results: {compiled}/{len(results)} papers compiled successfully")
+    print(f"Total sanitization changes: {total_changes}")
+    
+    if compiled == len(results):
+        print("\n✓ All papers ready for ACM submission!")
+        return 0
+    else:
+        print(f"\n✗ {len(results) - compiled} papers need attention")
+        return 1
+
+
+if __name__ == "__main__":
+    sys.exit(main())
