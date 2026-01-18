@@ -294,9 +294,7 @@ The monolith's domain model is often messy:
 God objects with 50+ methods
 \begin{itemize}
 \item \end{itemize}
-Tight coupling between unrelated concerns
-
-To prevent this mess from infecting the clean microservice, we insert an Anti-Corruption Layer:
+Tight coupling between unrelated concerns To prevent this mess from infecting the clean microservice, we insert an Anti-Corruption Layer:
 
 \begin{figure}[ht!]\centering\includegraphics[width=0.8\linewidth]{../../figures/fig-4.pdf}\caption{Diagram 4}\end{figure}
 
@@ -397,20 +395,14 @@ Let \_\_\_MATHINLINE2\_\_\_ be the router (Facade) handling request \_\_\_MATHIN
 Let \_\_\_MATHINLINE4\_\_\_ be the Monolith and \_\_\_MATHINLINE5\_\_\_ be the Microservice.
 The routing decision \_\_\_MATHINLINE6\_\_\_ is:
 
-\_\_\_MATHBLOCK0\_\_\_
-
-Where \_\_\_MATHINLINE7\_\_\_ is the percentage of traffic shifted at time \_\_\_MATHINLINE8\_\_\_.
+\_\_\_MATHBLOCK0\_\_\_ Where \_\_\_MATHINLINE7\_\_\_ is the percentage of traffic shifted at time \_\_\_MATHINLINE8\_\_\_.
 
 \subsubsection{7.2 Risk Minimization}
 The expected cost of failure \_\_\_MATHINLINE9\_\_\_ at any point \_\_\_MATHINLINE10\_\_\_ is:
 
-\_\_\_MATHBLOCK1\_\_\_
+\_\_\_MATHBLOCK1\_\_\_ In a "Big Bang" migration, \_\_\_MATHINLINE11\_\_\_ jumps from 0 to 1 instantaneously, maximizing \_\_\_MATHINLINE12\_\_\_. In the Strangler pattern, \_\_\_MATHINLINE13\_\_\_ increases as a logistic function:
 
-In a "Big Bang" migration, \_\_\_MATHINLINE11\_\_\_ jumps from 0 to 1 instantaneously, maximizing \_\_\_MATHINLINE12\_\_\_. In the Strangler pattern, \_\_\_MATHINLINE13\_\_\_ increases as a logistic function:
-
-\_\_\_MATHBLOCK2\_\_\_
-
-This ensures that traffic volume only increases as confidence (\_\_\_MATHINLINE14\_\_\_) increases.
+\_\_\_MATHBLOCK2\_\_\_ This ensures that traffic volume only increases as confidence (\_\_\_MATHINLINE14\_\_\_) increases.
 
 ---
 
@@ -793,3 +785,4 @@ The goal is not just to reach the cloud, but to survive the trip.
 This paper represents independent research conducted by the author. No conflicts of interest exist. All case study data is anonymized.
 
 \textbf{Format:} Technical Specification
+

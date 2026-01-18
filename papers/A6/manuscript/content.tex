@@ -69,9 +69,7 @@ The OODA loop (Observe, Orient, Decide, Act), developed by military strategist J
 \textbf{Observe:} Collect telemetry (metrics, logs, traces)  
 \textbf{Orient:} Analyze telemetry against baseline  
 \textbf{Decide:} Determine appropriate remediation  
-\textbf{Act:} Execute remediation automatically
-
-The key insight is that the loop must execute faster than the threat evolves. A DDoS attack ramps up in seconds; human response takes minutes. Autonomous response must execute in milliseconds.
+\textbf{Act:} Execute remediation automatically The key insight is that the loop must execute faster than the threat evolves. A DDoS attack ramps up in seconds; human response takes minutes. Autonomous response must execute in milliseconds.
 
 \subsubsection{1.4 Paper Contributions}
 
@@ -303,18 +301,14 @@ Let \_\_\_MATHINLINE2\_\_\_ be the environmental input (traffic, attacks).
 Let \_\_\_MATHINLINE3\_\_\_ be the action taken by the control plane.
 The next state is:
 
-\_\_\_MATHBLOCK0\_\_\_
-
-Our goal is to choose \_\_\_MATHINLINE4\_\_\_ such that \_\_\_MATHINLINE5\_\_\_ remains within the "Survival Region" \_\_\_MATHINLINE6\_\_\_.
+\_\_\_MATHBLOCK0\_\_\_ Our goal is to choose \_\_\_MATHINLINE4\_\_\_ such that \_\_\_MATHINLINE5\_\_\_ remains within the "Survival Region" \_\_\_MATHINLINE6\_\_\_.
 
 \subsubsection{7.2 The Latency Constraint}
 The system fails if the rate of environmental change \_\_\_MATHINLINE7\_\_\_ exceeds the control loop frequency \_\_\_MATHINLINE8\_\_\_.
 A human loop (\_\_\_MATHINLINE9\_\_\_ Hz) fails against a DDoS attack (\_\_\_MATHINLINE10\_\_\_).
 A6 enables \_\_\_MATHINLINE11\_\_\_ Hz, guaranteeing:
 
-\_\_\_MATHBLOCK1\_\_\_
-
-Where \_\_\_MATHINLINE12\_\_\_ is the resource buffer.
+\_\_\_MATHBLOCK1\_\_\_ Where \_\_\_MATHINLINE12\_\_\_ is the resource buffer.
 
 ---
 
@@ -886,3 +880,4 @@ The A-Series represents a complete blueprint for building cloud-native systems t
 This paper represents independent research conducted by the author. No conflicts of interest exist. All production data is anonymized.
 
 \textbf{Format:} Synthesis Paper / Framework Definition
+

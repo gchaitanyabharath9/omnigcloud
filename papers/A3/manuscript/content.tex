@@ -52,9 +52,7 @@ The industry has converged on three pillars of observability:
 
 \textbf{Metrics:} Aggregated numerical data (CPU, latency, error rate)  
 \textbf{Logs:} Discrete event records (request logs, error messages)  
-\textbf{Traces:} Request flow through distributed services
-
-However, these pillars are often implemented as isolated systems (Prometheus for metrics, ELK for logs, Jaeger for traces), creating correlation challenges. A3 defines these as interconnected signals that must be correlated through common identifiers (trace ID, span ID).
+\textbf{Traces:} Request flow through distributed services However, these pillars are often implemented as isolated systems (Prometheus for metrics, ELK for logs, Jaeger for traces), creating correlation challenges. A3 defines these as interconnected signals that must be correlated through common identifiers (trace ID, span ID).
 
 \begin{figure}[ht!]\centering\includegraphics[width=0.8\linewidth]{../../figures/fig-1.pdf}\caption{Diagram 1}\end{figure}
 
@@ -65,14 +63,10 @@ However, these pillars are often implemented as isolated systems (Prometheus for
 The fundamental challenge in observability is cardinality—the number of unique combinations of dimensional attributes. Consider a simple HTTP request metric:
 
 \textbf{Low Cardinality (Traditional):}
-\_\_\_CODEBLOCK0\_\_\_
-Cardinality: 10 methods $\times$ 10 status codes = 100 time series
+\_\_\_CODEBLOCK0\_\_\_ Cardinality: 10 methods $\times$ 10 status codes = 100 time series
 
 \textbf{High Cardinality (Modern):}
-\_\_\_CODEBLOCK1\_\_\_
-Cardinality: 10 methods $\times$ 10 statuses $\times$ 10M tenants $\times$ 100M users $\times$ 10 devices $\times$ 20 regions = 2$\times$10^17 time series
-
-This explosion makes traditional time-series databases (Prometheus, InfluxDB) unusable. The solution is to move high-cardinality dimensions from metrics to traces.
+\_\_\_CODEBLOCK1\_\_\_ Cardinality: 10 methods $\times$ 10 statuses $\times$ 10M tenants $\times$ 100M users $\times$ 10 devices $\times$ 20 regions = 2$\times$10^17 time series This explosion makes traditional time-series databases (Prometheus, InfluxDB) unusable. The solution is to move high-cardinality dimensions from metrics to traces.
 
 \subsubsection{1.4 Paper Contributions (Enhanced)}
 
@@ -141,17 +135,14 @@ Bytes per sample: 16 bytes (timestamp + value)
 Daily storage: 1.25$\times$10^12 $\times$ 86,400 $\times$ 16 = 1.7 PB/day
 \begin{itemize}
 \item \end{itemize}
-Monthly cost (S3): 1.7 PB $\times$ 30 $\times$ \_\_\_MATHINLINE5\_\_\_1.2M/month
-
-This is clearly untenable.
+Monthly cost (S3): 1.7 PB $\times$ 30 $\times$ \_\_\_MATHINLINE5\_\_\_1.2M/month This is clearly untenable.
 
 \subsubsection{2.2 The Cardinality Cliff}
 
 Time-series databases have hard limits on cardinality:
 
 \textbf{Table 1: TSDB Cardinality Limits}
-\_\_\_TABLE0\_\_\_
-Beyond the performance cliff, query latency degrades exponentially:
+\_\_\_TABLE0\_\_\_ Beyond the performance cliff, query latency degrades exponentially:
 
 \begin{figure}[ht!]\centering\includegraphics[width=0.8\linewidth]{../../figures/fig-2.pdf}\caption{Diagram 2}\end{figure}
 
@@ -262,9 +253,7 @@ Bytes per trace: ~10 KB (average)
 Daily storage: 8.64B $\times$ 10 KB = 86.4 TB
 \begin{itemize}
 \item \end{itemize}
-Monthly cost (S3): 86.4 TB $\times$ 30 $\times$ \_\_\_MATHINLINE6\_\_\_60k/month
-
-This is expensive but manageable. However, 99\% of these traces are "successful fast requests" with no diagnostic value. We can safely discard them.
+Monthly cost (S3): 86.4 TB $\times$ 30 $\times$ \_\_\_MATHINLINE6\_\_\_60k/month This is expensive but manageable. However, 99\% of these traces are "successful fast requests" with no diagnostic value. We can safely discard them.
 
 \subsubsection{4.2 Sampling Strategies}
 
@@ -373,9 +362,7 @@ Error budget is the allowed downtime:
 SLO: 99.95\% availability over 28 days
 \begin{itemize}
 \item \end{itemize}
-Error Budget: (1 - 0.9995) $\times$ 28 days = 0.0005 $\times$ 28 days = 20 minutes
-
-If the service is down for 20 minutes in 28 days, the error budget is exhausted.
+Error Budget: (1 - 0.9995) $\times$ 28 days = 0.0005 $\times$ 28 days = 20 minutes If the service is down for 20 minutes in 28 days, the error budget is exhausted.
 
 \subsubsection{6.3 The Four Golden Signals}
 
@@ -409,22 +396,16 @@ Reliability at scale is a probability function. We formalize the sampling decisi
 
 \subsubsection{8.1 The Signal Preservation Function}
 
-\_\_\_MATHBLOCK3\_\_\_
-
-Where:
+\_\_\_MATHBLOCK3\_\_\_ Where:
 }   \_\_\_MATHINLINE9\_\_\_ is the baseline sampling rate (e.g., 1\%).
 \textit{   \_\_\_MATHINLINE10\_\_\_ is a set of high-value tenants or critical paths.
 
 \subsubsection{8.2 Cost Function Derivation}
 The total cost of observability \_\_\_MATHINLINE11\_\_\_ is defined as:
 
-\_\_\_MATHBLOCK4\_\_\_
+\_\_\_MATHBLOCK4\_\_\_ Substituting the sampling probability:
 
-Substituting the sampling probability:
-
-\_\_\_MATHBLOCK5\_\_\_
-
-This derivation proves that as system volume \_\_\_MATHINLINE12\_\_\_ increases linearly, the cost can be capped \_\_\_MATHINLINE13\_\_\_ by dynamically adjusting \_\_\_MATHINLINE14\_\_\_ inverse to volume, provided that \_\_\_MATHINLINE15\_\_\_ remains low.
+\_\_\_MATHBLOCK5\_\_\_ This derivation proves that as system volume \_\_\_MATHINLINE12\_\_\_ increases linearly, the cost can be capped \_\_\_MATHINLINE13\_\_\_ by dynamically adjusting \_\_\_MATHINLINE14\_\_\_ inverse to volume, provided that \_\_\_MATHINLINE15\_\_\_ remains low.
 
 ---
 
@@ -747,3 +728,4 @@ Production deployments demonstrate 82\% MTTR reduction, 93\% cost savings, and 8
 This paper represents independent research conducted by the author. No conflicts of interest exist. All production data is anonymized.
 
 \textbf{Format:} Technical Specification
+
