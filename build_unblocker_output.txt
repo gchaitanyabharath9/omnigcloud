@@ -1,0 +1,23 @@
+======================================================================
+ACM LaTeX Build Unblocker - Strict Mode
+======================================================================
+
+
+======================================================================
+Processing A1
+======================================================================
+Traceback (most recent call last):
+  File "C:\Users\SOHAN\.gemini\antigravity\playground\nascent-zodiac\acm_build_unblocker.py", line 338, in <module>
+    sys.exit(main())
+             ~~~~^^
+  File "C:\Users\SOHAN\.gemini\antigravity\playground\nascent-zodiac\acm_build_unblocker.py", line 296, in main
+    success, fixes = unblocker.build_paper()
+                     ~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\SOHAN\.gemini\antigravity\playground\nascent-zodiac\acm_build_unblocker.py", line 252, in build_paper
+    print(f"\u2717 Error: {error_msg[:80]}")
+    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python314\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u2717' in position 0: character maps to <undefined>
+  Iteration 1... 

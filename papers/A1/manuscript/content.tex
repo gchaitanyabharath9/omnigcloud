@@ -190,9 +190,7 @@ N application service instances (auto-scaled)—N varies by cell load, typically
 1 database shard (or partition)—each cell owns a subset of the data keyspace, determined by consistent hashing
 \begin{itemize}
 \item \end{itemize}
-1 cache cluster (Redis/Memcached)—typically 3-5 nodes for redundancy
-
-Cells are \textbf{shared-nothing} architectures. They don't share databases, caches, or message queues. This ensures that a failure in Cell A cannot propagate to Cell B through shared state.
+1 cache cluster (Redis/Memcached)—typically 3-5 nodes for redundancy Cells are \textbf{shared-nothing} architectures. They don't share databases, caches, or message queues. This ensures that a failure in Cell A cannot propagate to Cell B through shared state.
 
 \begin{figure}[ht!]\centering\includegraphics[width=0.8\linewidth]{../../figures/fig-3.pdf}\caption{Diagram 3}\end{figure}
 \textbf{Figure 1.2:} Shared-Nothing Cellular Isolation. Zero cross-cell dependencies prevent blast radius expansion.
@@ -254,9 +252,7 @@ We design for specific failure scenarios based on production incident analysis, 
 \textbf{Dependency Failure}: External dependencies (DNS, IdP, third-party APIs) can become unavailable—third-party dependencies fail more frequently than internal infrastructure
 \begin{itemize}
 \item \end{itemize}
-\textbf{Partial Network Partition}: Network connectivity between components can degrade or fail—network partitions are often partial (some paths work, others don't) rather than complete
-
-We explicitly do NOT design for:
+\textbf{Partial Network Partition}: Network connectivity between components can degrade or fail—network partitions are often partial (some paths work, others don't) rather than complete We explicitly do NOT design for:
 \begin{itemize}
 \item \end{itemize}
 Simultaneous failure of all regions (requires business continuity planning beyond architecture)—this scenario requires offline backups and manual recovery procedures
@@ -280,34 +276,23 @@ The A1 architecture stratifies into four logical planes, each with distinct resp
 \textbf{Figure 2.0:} The A1 Four-Plane Architecture. Solid lines represent synchronous dependencies (request path). Dashed lines represent asynchronous configuration push (control path).
 
 \textbf{Tier 1: Edge \& Ingress Plane}  
-Responsibilities: TLS termination, DDoS mitigation, geographic routing, rate limiting, request authentication  
-Technologies: Global DNS (Route53, Cloud DNS), WAF (Cloudflare, AWS WAF), API Gateway (Kong, Envoy Gateway)  
-Latency Budget: <10ms—this budget covers TLS handshake, WAF inspection, and routing decision  
-Failure Mode: Fail-over to alternate region via DNS (30-60s TTL)—DNS failover is slow but reliable
+Responsibilities: TLS termination, DDoS mitigation, geographic routing, rate limiting, request authentication Technologies: Global DNS (Route53, Cloud DNS), WAF (Cloudflare, AWS WAF), API Gateway (Kong, Envoy Gateway)  
+Latency Budget: <10ms—this budget covers TLS handshake, WAF inspection, and routing decision Failure Mode: Fail-over to alternate region via DNS (30-60s TTL)—DNS failover is slow but reliable
 
 \textbf{Tier 2: Control Plane}  
-Responsibilities: Identity management, secret distribution, policy compilation, metrics aggregation  
-Technologies: OIDC Provider (Keycloak, Auth0), Vault (HashiCorp Vault), OPA, Prometheus  
-Latency Budget: Asynchronous (no direct request path)—control plane operations don't block user requests  
-Failure Mode: Stale configuration (safe degradation)—services continue using cached configuration if control plane is unavailable
+Responsibilities: Identity management, secret distribution, policy compilation, metrics aggregation Technologies: OIDC Provider (Keycloak, Auth0), Vault (HashiCorp Vault), OPA, Prometheus Latency Budget: Asynchronous (no direct request path)—control plane operations don't block user requests Failure Mode: Stale configuration (safe degradation)—services continue using cached configuration if control plane is unavailable
 
 \textbf{Tier 3: Data Plane}  
-Responsibilities: Business logic execution, inter-service communication, local policy enforcement  
-Technologies: Service Mesh (Istio, Linkerd), Application Services (Go, Rust, Java), gRPC/HTTP2  
-Latency Budget: <150ms—this budget covers all business logic, database queries, and inter-service calls  
-Failure Mode: Circuit breaker, fallback to cached responses—services degrade gracefully rather than failing completely
+Responsibilities: Business logic execution, inter-service communication, local policy enforcement Technologies: Service Mesh (Istio, Linkerd), Application Services (Go, Rust, Java), gRPC/HTTP2 Latency Budget: <150ms—this budget covers all business logic, database queries, and inter-service calls Failure Mode: Circuit breaker, fallback to cached responses—services degrade gracefully rather than failing completely
 
 \textbf{Tier 4: Persistence Plane}  
-Responsibilities: Durable storage, caching, event streaming  
-Technologies: RDBMS (Postgres, MySQL), NoSQL (Cassandra, DynamoDB), Cache (Redis), Stream (Kafka)  
-Latency Budget: <40ms (cache), <100ms (database)—cache hits must be fast, database queries can be slower  
-Failure Mode: Read replicas, eventual consistency—reads can tolerate stale data, writes require quorum
+Responsibilities: Durable storage, caching, event streaming Technologies: RDBMS (Postgres, MySQL), NoSQL (Cassandra, DynamoDB), Cache (Redis), Stream (Kafka)  
+Latency Budget: <40ms (cache), <100ms (database)—cache hits must be fast, database queries can be slower Failure Mode: Read replicas, eventual consistency—reads can tolerate stale data, writes require quorum
 
 \subsubsection{4.2 Control Plane vs Data Plane Separation}
 
 The critical design principle: Control Plane and Data Plane share \textbf{nothing} except asynchronous configuration updates. This isn't a soft guideline—it's enforced through network policies, resource quotas, and deployment isolation.
-\_\_\_TABLE0\_\_\_
-This separation ensures three properties that prevent the most common cloud-native outages:
+\_\_\_TABLE0\_\_\_ This separation ensures three properties that prevent the most common cloud-native outages:
 \begin{itemize}
 \item \end{itemize}
 \textbf{Control Plane outage does NOT impact Data Plane traffic}—services continue using cached configuration, degrading gracefully rather than failing completely
@@ -743,8 +728,7 @@ To understand where latency comes from—and more importantly, where it can be r
 \textbf{Figure 3.0:} Request Lifecycle Sequence Diagram. Each component has a strict latency budget.
 
 \textbf{Latency Budget Breakdown:}
-\_\_\_TABLE5\_\_\_
-The 40\% buffer (80ms) accounts for variance and tail latency. Under normal conditions, p50 latency is ~60ms, p90 is ~100ms, and p99 is ~180ms. The buffer prevents SLO violations during minor degradations (slow database query, garbage collection pause, network congestion).
+\_\_\_TABLE5\_\_\_ The 40\% buffer (80ms) accounts for variance and tail latency. Under normal conditions, p50 latency is ~60ms, p90 is ~100ms, and p99 is ~180ms. The buffer prevents SLO violations during minor degradations (slow database query, garbage collection pause, network congestion).
 
 \begin{figure}[ht!]\centering\includegraphics[width=0.8\linewidth]{../../figures/fig-8.pdf}\caption{Diagram 8}\end{figure}
 \textbf{Figure 4.0:} Policy-as-Code Lifecycle. Policies are compiled to WebAssembly (WASM) and pushed to the edge, enabling sub-millisecond local evaluation without network round-trips.
@@ -979,9 +963,7 @@ Before deploying A1 to production, verify these items. This checklist comes from
 
 We model scalability using the \textbf{Universal Scalability Law (USL)}, developed by Neil Gunther. Most architects assume linear scalability—double the servers, double the throughput. This assumption breaks in practice due to two factors: contention and crosstalk.
 
-\_\_\_MATHBLOCK0\_\_\_
-
-Where:
+\_\_\_MATHBLOCK0\_\_\_ Where:
 \begin{itemize}
 \item \end{itemize}
 \_\_\_MATHINLINE16\_\_\_ = Capacity (throughput) with N nodes
@@ -1045,9 +1027,7 @@ Cache: 1 Redis cluster per cell (50GB memory, 100k ops/sec)—sized for 80\% cac
 \textbf{Horizontal Scaling (add cells)}: Deploy new cell when existing cells exceed 70\% capacity—70\% threshold provides headroom for traffic spikes
 \begin{itemize}
 \item \end{itemize}
-\textbf{Geographic Scaling (add regions)}: Deploy new region when latency to existing regions exceeds 100ms—100ms is the threshold where users perceive lag
-
-The key insight: cells are \textbf{shared-nothing}. They don't share databases, caches, or message queues. This eliminates crosstalk (\_\_\_MATHINLINE23\_\_\_), enabling linear scalability. The tradeoff: operational complexity increases because you're managing N independent systems rather than one large system.
+\textbf{Geographic Scaling (add regions)}: Deploy new region when latency to existing regions exceeds 100ms—100ms is the threshold where users perceive lag The key insight: cells are \textbf{shared-nothing}. They don't share databases, caches, or message queues. This eliminates crosstalk (\_\_\_MATHINLINE23\_\_\_), enabling linear scalability. The tradeoff: operational complexity increases because you're managing N independent systems rather than one large system.
 
 ---
 
@@ -1058,18 +1038,13 @@ The key insight: cells are \textbf{shared-nothing}. They don't share databases, 
 Security architecture starts with explicit threat modeling. We design defenses against specific threat actors with defined capabilities, not abstract "hackers."
 
 \textbf{T1: External Attacker (Internet)}  
-Capabilities: DDoS attacks (volumetric, protocol, application-layer), credential stuffing using leaked password databases, SQL injection through unvalidated inputs, XSS through unsanitized outputs  
-Defenses: WAF with OWASP Top 10 rules, rate limiting (100 RPS per IP), input validation against JSON Schema, parameterized queries preventing SQL injection
+Capabilities: DDoS attacks (volumetric, protocol, application-layer), credential stuffing using leaked password databases, SQL injection through unvalidated inputs, XSS through unsanitized outputs Defenses: WAF with OWASP Top 10 rules, rate limiting (100 RPS per IP), input validation against JSON Schema, parameterized queries preventing SQL injection
 
 \textbf{T2: Compromised Service}  
-Capabilities: Lateral movement to other services, data exfiltration through legitimate APIs, privilege escalation by exploiting misconfigurations  
-Defenses: mTLS requiring cryptographic proof of identity, network policies enforcing zero-trust (default-deny), least-privilege IAM where services only access resources they need, audit logging capturing every API call
+Capabilities: Lateral movement to other services, data exfiltration through legitimate APIs, privilege escalation by exploiting misconfigurations Defenses: mTLS requiring cryptographic proof of identity, network policies enforcing zero-trust (default-deny), least-privilege IAM where services only access resources they need, audit logging capturing every API call
 
 \textbf{T3: Malicious Tenant}  
-Capabilities: Resource exhaustion by consuming excessive CPU/memory/bandwidth, noisy neighbor attacks degrading performance for other tenants  
-Defenses: Cell isolation preventing cross-tenant interference, per-tenant quotas limiting resource consumption, circuit breakers preventing cascading failures
-
-We explicitly do NOT defend against:
+Capabilities: Resource exhaustion by consuming excessive CPU/memory/bandwidth, noisy neighbor attacks degrading performance for other tenants Defenses: Cell isolation preventing cross-tenant interference, per-tenant quotas limiting resource consumption, circuit breakers preventing cascading failures We explicitly do NOT defend against:
 \begin{itemize}
 \item \end{itemize}
 Malicious insider with root access—this requires organizational controls (background checks, separation of duties, audit trails) beyond architecture
@@ -1126,9 +1101,7 @@ Validate all inputs against schemas (JSON Schema, Protobuf)—reject malformed r
 Sanitize outputs to prevent XSS—escape HTML, JavaScript, SQL
 \begin{itemize}
 \item \end{itemize}
-Use parameterized queries to prevent SQL injection—never concatenate user input into SQL
-
-The principle: if one layer fails (zero-day in WAF, misconfigured policy), other layers still provide protection.
+Use parameterized queries to prevent SQL injection—never concatenate user input into SQL The principle: if one layer fails (zero-day in WAF, misconfigured policy), other layers still provide protection.
 
 ---
 
@@ -1154,17 +1127,14 @@ When a dependency fails (database down, external API timeout), we face a choice:
 \textbf{Half-Open Test}: Send 1 request every 5 seconds—probes dependency health without overwhelming it
 \begin{itemize}
 \item \end{itemize}
-\textbf{Success Threshold}: 3 consecutive successes to close circuit—prevents premature closure from single lucky request
-
-The mechanism: when error rate exceeds 5\%, the circuit opens. All subsequent requests fail immediately with 503 Service Unavailable, avoiding wasted resources (threads, connections, time) on a failing dependency. After 30 seconds, the circuit enters half-open state, sending probe requests. If probes succeed, the circuit closes and normal operation resumes.
+\textbf{Success Threshold}: 3 consecutive successes to close circuit—prevents premature closure from single lucky request The mechanism: when error rate exceeds 5\%, the circuit opens. All subsequent requests fail immediately with 503 Service Unavailable, avoiding wasted resources (threads, connections, time) on a failing dependency. After 30 seconds, the circuit enters half-open state, sending probe requests. If probes succeed, the circuit closes and normal operation resumes.
 
 \subsubsection{8.2 Graceful Degradation}
 
 Under partial failure, the system degrades gracefully rather than failing completely. This requires explicit degradation levels with defined behavior.
 
 \textbf{Degradation Levels:}
-\_\_\_TABLE8\_\_\_
-Example: if the recommendation engine fails, we serve cached recommendations rather than failing the entire page. If the payment processor fails, we queue transactions for later processing rather than rejecting orders. The principle: partial functionality is better than total failure.
+\_\_\_TABLE8\_\_\_ Example: if the recommendation engine fails, we serve cached recommendations rather than failing the entire page. If the payment processor fails, we queue transactions for later processing rather than rejecting orders. The principle: partial functionality is better than total failure.
 
 ---
 
@@ -1197,9 +1167,7 @@ Governance isn't a PDF policy document gathering dust in SharePoint. It's execut
 \textbf{Evaluate}: Execute locally (<1ms latency)—no network calls, no external dependencies
 
 \textbf{Example Policy (Rego):}
-\_\_\_CODEBLOCK3\_\_\_
-
-This policy allows GET requests to \_\_\_CODEINLINE3\_\_\_ (unauthenticated) and POST requests from admins. All other requests are denied by default (fail-closed).
+\_\_\_CODEBLOCK3\_\_\_ This policy allows GET requests to \_\_\_CODEINLINE3\_\_\_ (unauthenticated) and POST requests from admins. All other requests are denied by default (fail-closed).
 
 \subsubsection{9.1 Implementation Details}
 
@@ -1351,8 +1319,7 @@ The linear cost scaling validates the shared-nothing architecture ($\beta$ $\app
 \textbf{Right-Sizing}: Monitor utilization and downsize over-provisioned instances—typically saves 15-25\%
 
 \textbf{Table 5: Cost Comparison vs Alternatives}
-\_\_\_TABLE12\_\_\_
-Serverless is cheaper but has unpredictable latency (cold starts). Monolith is cheaper but can't scale horizontally. Shared Kubernetes is cheaper but has lower availability due to blast radius.
+\_\_\_TABLE12\_\_\_ Serverless is cheaper but has unpredictable latency (cold starts). Monolith is cheaper but can't scale horizontally. Shared Kubernetes is cheaper but has lower availability due to blast radius.
 
 \subsubsection{9.6 Disaster Recovery \& Business Continuity}
 
@@ -2043,9 +2010,7 @@ Revenue impact: +15-25\% (faster performance increases conversion, higher availa
 \textbf{Policy Optimization}: Develop policy compilation techniques to reduce evaluation latency—sub-100$\mu s$ evaluation
 \begin{itemize}
 \item \end{itemize}
-\textbf{Chaos Engineering}: Formalize failure injection testing for cellular architectures—continuous resilience validation
-
-The A1 architecture represents a pragmatic balance between operational simplicity and technical rigor. While more expensive than serverless alternatives (20\% higher than Google, but 24\% cheaper than AWS), it provides predictable performance and regulatory compliance required for enterprise workloads. Organizations that prioritize availability, latency, and sovereignty over cost optimization will find A1 a compelling foundation for their cloud-native journey.
+\textbf{Chaos Engineering}: Formalize failure injection testing for cellular architectures—continuous resilience validation The A1 architecture represents a pragmatic balance between operational simplicity and technical rigor. While more expensive than serverless alternatives (20\% higher than Google, but 24\% cheaper than AWS), it provides predictable performance and regulatory compliance required for enterprise workloads. Organizations that prioritize availability, latency, and sovereignty over cost optimization will find A1 a compelling foundation for their cloud-native journey.
 
 The architecture isn't perfect—eventual consistency, cell rebalancing complexity, and cross-cell transaction limitations constrain its applicability. But for the 80\% of enterprise workloads that fit within these constraints, A1 provides a proven path to cloud-native scalability without sacrificing reliability. Beyond enterprise practice, the architectural invariants and latency decomposition introduced here provide a foundation for academic research in distributed systems correctness, policy verification, and large-scale performance modeling.
 
@@ -2055,3 +2020,4 @@ The architecture isn't perfect—eventual consistency, cell rebalancing complexi
 This paper represents independent research conducted by the author. No conflicts of interest exist. All diagrams and code examples are original work or properly attributed.
 
 \textbf{Format:} Gold Standard Technical Specification
+

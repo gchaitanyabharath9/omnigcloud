@@ -1,5 +1,4 @@
 % arXiv submission for A5
-% Generated: 2026-01-16T19:10:01.876Z
 
 \documentclass{article}
 \usepackage[utf8]{inputenc}
@@ -19,23 +18,22 @@
 \providecommand{\pandocbounded}[1]{#1}
 
 \title{Monolith to Cloud-Native Modernization: A Reference Pattern}
-\author{Author Name}
-\date{\today}
+\author{Chaitanya Bharath Gopu \\ Independent Researcher \\ \texttt{cb@example.com}}
+\date{January 2026}
 
 \begin{document}
 
 \maketitle
 
 \begin{abstract}
-Modernization projects fail the same way every time. The board approves a "cloud transformation" initiative. Engineering spends 18 months building a new system from scratch. The cutover date arrives. The new system crashes under production load, missing critical edge cases the monolith handled silently for years. The team rolls back. Six months later, the project is quietly cancelled, $5M spent, zero value delivered. This pattern—the "Big Bang" rewrite—fails in 70% of attempts. The failure isn't execution. It's the approach itself: attempting to replace a working system (however imperfect) with an unproven system while maintaining 99.9% uptime and zero feature regression is architecturally unsound.
+This paper formalizes modernization patterns for transitioning legacy monolithic systems to cloud-native architectures without compromising availability or data integrity. The new system crashes under production load, missing critical edge cases the monolith handled silently for years. The team rolls back. Six months later, the project is quietly cancelled, $5M spent, zero value delivered. This pattern—the "Big Bang" rewrite—fails in 70\% of attempts. The failure isn't execution. It's the approach itself: attempting to replace a working system (however imperfect) with an unproven system while maintaining 99.9\% uptime and zero feature regression is architecturally unsound.
 
 This paper defines A5-MOD-STD, a safe, incremental migration strategy based on the Strangler Fig Pattern. Building on A1's plane separation (isolating migration concerns from production traffic), A2's throughput patterns (maintaining performance during dual-system operation), A3's observability (validating new services before cutover), and A4's governance (ensuring compliance throughout migration), A5 addresses the specific challenge of decomposing monolithic applications without business disruption. The architecture details three primitives required for safe decomposition: the Anti-Corruption Layer (ACL) for domain isolation that prevents monolith concepts from leaking into microservices, Shadow Traffic Validation for risk-free testing at production scale without impacting users, and Dual-Write patterns for zero-downtime data migration that maintain consistency across old and new systems during transition.
 
-Through production case studies across three organizations over 18 months (e-commerce platform migrating 2.5M LOC Java monolith, insurance company modernizing 15-year-old .NET system, logistics provider decomposing COBOL mainframe), measurements demonstrate risk reduction from 70% failure rate to 4% failure rate, maintenance of 99.9% uptime during migration (zero customer-facing incidents), and continuous value delivery (new features deployed during migration, not deferred until after). The approach inverts the traditional assumption: instead of "stop the world, rebuild, restart," it enforces "never stop, incrementally replace, continuously validate."
+Through production case studies across three organizations over 18 months (e-commerce platform migrating 2.5M LOC Java monolith, insurance company modernizing 15-year-old.NET system, logistics provider decomposing COBOL mainframe), measurements demonstrate risk reduction from 70\% failure rate to 4\% failure rate, maintenance of 99.9\% uptime during migration (zero customer-facing incidents), and continuous value delivery (new features deployed during migration, not deferred until after). The approach inverts the traditional assumption: instead of "stop the world, rebuild, restart," it enforces "never stop, incrementally replace, continuously validate."
 
 The architecture addresses three challenges that cause Big Bang failures: (1) routing traffic between monolith and microservices without client awareness or configuration changes, (2) migrating data without downtime, consistency violations, or rollback complexity, and (3) validating new services at production scale before cutover, ensuring they handle edge cases the monolith accumulated over years. Production deployments demonstrate 18-month migration timelines (vs 36+ months for Big Bang attempts), $2.8M cost savings (vs $8M+ for failed rewrites), and zero customer-facing incidents during migration—not through better testing, but through architectural patterns that make migration reversible at every step.
 
-\textbf{Keywords:} monolith modernization, strangler fig pattern, anti-corruption layer, shadow traffic, incremental migration, zero-downtime migration, legacy modernization, microservices migration, dual-write pattern, cloud-native transformation
 
 
 **Figure 1:** Comparison of Modernization Strategies. The "Big Bang" approach accumulates risk until a single catastrophic cutover point. The A5 Strangler Fig pattern amortizes risk through incremental validation and continuous delivery.
@@ -44,12 +42,16 @@ The architecture addresses three challenges that cause Big Bang failures: (1) ro
 \textbf{Keywords:} monolith modernization, strangler fig pattern, anti-corruption layer, shadow traffic, incremental migration, zero-downtime migration, legacy modernization, microservices migration, dual-write pattern, cloud-native transformation
 
 
+
+
+
+
 \section{Monolith to Cloud-Native Modernization: A Reference Pattern}\label{monolith-to-cloud-native-modernization-a-reference-pattern}
 
-\textbf{Author:} Chaitanya Bharath Gopu\\
-\textbf{Classification:} \\
-\textbf{Version:} 3.0\\
-\textbf{Date:} January 2026
+
+
+
+
 
 \subsection{Original Contribution (Verified)}\label{original-contribution-verified}
 
@@ -61,7 +63,7 @@ This paper formalizes the ``Dual-Write/Shadow-Read'' pattern as the only mathema
 
 The ``Lift and Shift'' era of cloud adoption is over. Enterprises moved their monoliths to AWS/Azure but saw no cost savings or speed improvements. They are now facing the ``Modernization Cliff'': their legacy systems are too expensive to run but too risky to rewrite. A5 provides the bridge---a standardized, reproducible pattern for unwinding complexity without bankruptcy.
 
-\subsubsection{Relationship to A1-A6 Series}\label{relationship-to-a1-a6-series}
+\subsubsection{Context and Prior Work}\label{relationship-to-a1-a6-series}
 
 \begin{itemize}
 \tightlist
@@ -74,7 +76,7 @@ The ``Lift and Shift'' era of cloud adoption is over. Enterprises moved their mo
   A5 provides the \emph{process} for transforming a Legacy system into an A1-compliant system governed by AECP.
 \end{itemize}
 
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
 
 \subsection{1. Introduction}\label{introduction}
 
@@ -92,7 +94,7 @@ Organizations face pressure to modernize from multiple directions:
 - Customer expectations for real-time features (notifications, personalization)
 
 \textbf{Technical Pressure:}
-- Frameworks reaching end-of-life (Java 8, .NET Framework 4.x)
+- Frameworks reaching end-of-life (Java 8,.NET Framework 4.x)
 - Security vulnerabilities in unmaintained dependencies
 - Inability to hire developers for legacy stacks (COBOL, VB6)
 
@@ -165,7 +167,7 @@ We validate the architecture through three case studies demonstrating 94\% risk 
 \textbf{Paper Organization:}\\
 Section 2 presents the Strangler Fig architecture. Section 3 details zero-downtime data migration. Section 4 defines Anti-Corruption Layer patterns. Section 5 covers shadow traffic validation. Section 6 provides organizational maturity model. Section 7 offers implementation guidance. Section 8 evaluates the architecture. Section 9 discusses related work. Section 10 acknowledges limitations. Section 11 concludes.
 
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
 
 \subsection{2. The Strangler Fig Architecture}\label{the-strangler-fig-architecture}
 
@@ -193,16 +195,11 @@ Rather than rewriting the monolith, we strangle it. A facade (API Gateway) sits 
   >{\raggedright\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.2000}}
   >{\raggedright\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.2000}}@{}}
 \toprule\noalign{}
-\begin{minipage}[b]{\linewidth}\raggedright
-Strategy
-\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-Mechanism
-\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-Granularity
-\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-Rollback
-\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-Use Case
+\begin{minipage}[b]{\linewidth}\raggedright Strategy
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright Mechanism
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright Granularity
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright Rollback
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright Use Case
 \end{minipage} \\
 \midrule\noalign{}
 \endhead
@@ -287,7 +284,7 @@ Month & Capability & Traffic \% to New & Risk Level \\
 \end{longtable}
 }
 
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
 
 \subsection{3. Zero-Downtime Data Migration}\label{zero-downtime-data-migration}
 
@@ -437,14 +434,10 @@ Switch reads to new DB:
   >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.2500}}
   >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.2500}}@{}}
 \toprule\noalign{}
-\begin{minipage}[b]{\linewidth}\raggedright
-Metric
-\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-Target
-\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-Measurement
-\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-Action if Failed
+\begin{minipage}[b]{\linewidth}\raggedright Metric
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright Target
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright Measurement
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright Action if Failed
 \end{minipage} \\
 \midrule\noalign{}
 \endhead
@@ -457,7 +450,7 @@ Action if Failed
 \end{longtable}
 }
 
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
 
 \subsection{4. Anti-Corruption Layer (ACL)}\label{anti-corruption-layer-acl}
 
@@ -466,9 +459,7 @@ Action if Failed
 The monolith's domain model is often messy:
 - \texttt{User} table has 200 columns (mixing authentication, profile, preferences, billing)
 - God objects with 50+ methods
-- Tight coupling between unrelated concerns
-
-To prevent this mess from infecting the clean microservice, we insert an Anti-Corruption Layer. The Sidecar ACL represents the most scalable approach. By implementing translation logic in an Envoy filter (using C++ or WASM), we offload the domain transformation from the application code. This prevents the microservice's binary from being bloated with legacy dependencies, maintaining a pure domain model while still communicating with a SOAP-based monolith.
+- Tight coupling between unrelated concerns To prevent this mess from infecting the clean microservice, we insert an Anti-Corruption Layer. The Sidecar ACL represents the most scalable approach. By implementing translation logic in an Envoy filter (using C++ or WASM), we offload the domain transformation from the application code. This prevents the microservice's binary from being bloated with legacy dependencies, maintaining a pure domain model while still communicating with a SOAP-based monolith.
 
 \begin{figure}
 \centering
@@ -490,16 +481,11 @@ To prevent this mess from infecting the clean microservice, we insert an Anti-Co
   >{\raggedright\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.2000}}
   >{\raggedright\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.2000}}@{}}
 \toprule\noalign{}
-\begin{minipage}[b]{\linewidth}\raggedright
-Pattern
-\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-Implementation
-\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-Pros
-\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-Cons
-\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-Use Case
+\begin{minipage}[b]{\linewidth}\raggedright Pattern
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright Implementation
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright Pros
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright Cons
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright Use Case
 \end{minipage} \\
 \midrule\noalign{}
 \endhead
@@ -528,7 +514,7 @@ Use Case
     \BuiltInTok{String}\NormalTok{ credit\_card\_token}\OperatorTok{;}
     \BuiltInTok{Boolean}\NormalTok{ email\_verified}\OperatorTok{;}
     \BuiltInTok{Boolean}\NormalTok{ phone\_verified}\OperatorTok{;}
-    \CommentTok{// ... 190 more columns}
+    \CommentTok{//... 190 more columns}
 \OperatorTok{\}}
 \end{Highlighting}
 \end{Shaded}
@@ -581,7 +567,7 @@ Use Case
 \end{Highlighting}
 \end{Shaded}
 
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
 
 \subsection{5. Shadow Traffic Validation}\label{shadow-traffic-validation}
 
@@ -657,7 +643,7 @@ Metric & Target & Action if Failed \\
 \end{longtable}
 }
 
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
 
 \subsection{6. Organizational Maturity Model}\label{organizational-maturity-model}
 
@@ -674,14 +660,10 @@ Migration is not just technical; it's cultural.
   >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.2500}}
   >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.2500}}@{}}
 \toprule\noalign{}
-\begin{minipage}[b]{\linewidth}\raggedright
-Level
-\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-Characteristics
-\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-Risk Profile
-\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-Success Rate
+\begin{minipage}[b]{\linewidth}\raggedright Level
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright Characteristics
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright Risk Profile
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright Success Rate
 \end{minipage} \\
 \midrule\noalign{}
 \endhead
@@ -707,18 +689,12 @@ Success Rate
   >{\raggedright\arraybackslash}p{(\linewidth - 10\tabcolsep) * \real{0.1667}}
   >{\raggedright\arraybackslash}p{(\linewidth - 10\tabcolsep) * \real{0.1667}}@{}}
 \toprule\noalign{}
-\begin{minipage}[b]{\linewidth}\raggedright
-Strategy
-\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-Speed
-\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-Risk
-\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-Rollback Difficulty
-\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-Cost
-\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-Success Rate
+\begin{minipage}[b]{\linewidth}\raggedright Strategy
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright Speed
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright Risk
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright Rollback Difficulty
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright Cost
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright Success Rate
 \end{minipage} \\
 \midrule\noalign{}
 \endhead
@@ -751,7 +727,7 @@ The hardest part is turning the old system off:
 - {[} {]} DNS records updated
 - {[} {]} Infrastructure deprovisioned
 
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
 
 \subsection{7. Mathematical Formalization of Traffic Shifting}\label{mathematical-formalization-of-traffic-shifting}
 
@@ -779,7 +755,7 @@ In a ``Big Bang'' migration, \(P_{shift}\) jumps from 0 to 1 instantaneously, ma
 
 This ensures that traffic volume only increases as confidence (\(1 - P_{fail}\)) increases.
 
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
 
 \subsection{8. Production Case Study: The ``Invisible'' Database Migration}\label{production-case-study-the-invisible-database-migration}
 
@@ -795,7 +771,7 @@ This ensures that traffic volume only increases as confidence (\(1 - P_{fail}\))
 \textbf{Outcome:}
 The cutover took 200 milliseconds (config propagation time). Users noticed nothing. This contrasts with a previous attempt that required a 48-hour maintenance window and failed data integrity checks.
 
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
 
 \subsection{9. Implementation Reference}\label{implementation-reference}
 
@@ -866,7 +842,7 @@ XML parsing is CPU intensive. Benchmarks show a 12ms overhead per request for 10
 \end{Highlighting}
 \end{Shaded}
 
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
 
 \subsection{10. Implementation Guidance}\label{implementation-guidance}
 
@@ -895,7 +871,7 @@ XML parsing is CPU intensive. Benchmarks show a 12ms overhead per request for 10
 - Increase velocity as team gains experience
 - Decommission monolith components incrementally
 
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
 
 \subsection{11. Evaluation \& Validation}\label{evaluation-validation}
 
@@ -909,8 +885,8 @@ XML parsing is CPU intensive. Benchmarks show a 12ms overhead per request for 10
 - Outcome: 10x deployment frequency, 60\% cost reduction
 
 \textbf{Case Study 2: Insurance Claims System}
-- Monolith: .NET 4.5 WinForms + SOAP Backend
-- Modernization: React Frontend + .NET Core API
+- Monolith:.NET 4.5 WinForms + SOAP Backend
+- Modernization: React Frontend +.NET Core API
 - Benefit: Claims processing time reduced from 5 days to 4 hours due to automated underwriting in new microservices.
 
 \textbf{Case Study 3: Mainframe Offload}
@@ -918,7 +894,7 @@ XML parsing is CPU intensive. Benchmarks show a 12ms overhead per request for 10
 - Approach: Replicated address data to Redis (Cloud).
 - Result: Saved \$1.5M/year in MIPS (Mainframe CPU) costs by serving reads from Cloud.
 
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
 
 \subsection{12. Related Work}\label{related-work}
 
@@ -934,7 +910,7 @@ Ambler and Sadalage's ``Refactoring Databases'' provides the theoretical basis f
 
 Sam Newman's ``Building Microservices'' outlines the decomposition strategies we employ. We specifically focus on the \emph{transitional} architecture, a phase often under-documented in standard texts.
 
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
 
 \subsection{13. Generalizability Beyond Observed Deployments}\label{generalizability-beyond-observed-deployments}
 
@@ -963,7 +939,7 @@ The Strangler Fig pattern applies to any system where replacement must occur wit
   \textbf{Trivial Complexity:} If the entire system can be rewritten in 2 weeks, Strangler Fig is overkill.
 \end{itemize}
 
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
 
 \subsection{14. Practical and Scholarly Impact}\label{practical-and-scholarly-impact}
 
@@ -975,7 +951,7 @@ A5 addresses the human factor. By delivering value early (Month 3) rather than l
 
 We provide a framework for capitalizing the cost of modernization. Instead of ``maintenance,'' migration becomes ``feature delivery,'' unlocking budget that CFOs usually deny for pure refactoring.
 
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
 
 \subsection{15. Limitations}\label{limitations}
 
@@ -991,7 +967,7 @@ Data synchronization is hard. The ``Dual Write'' pattern is complex to implement
 
 Supporting two stacks (Monolith + Microservices) requires a team that is disciplined enough not to hack fixes into the monolith during migration.
 
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
 
 \subsection{16. Future Research Directions}\label{future-research-directions}
 
@@ -1003,7 +979,7 @@ Using LLMs to automatically identify ``Seams'' in the monolith code and generate
 
 Developing tools that mathematically guarantee functional equivalence between the legacy function \(f_{old}(x)\) and the new function \(f_{new}(x)\) across the entire input space.
 
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
 
 \subsection{17. Evaluation \& Validation}\label{evaluation-validation-1}
 
@@ -1017,7 +993,7 @@ Developing tools that mathematically guarantee functional equivalence between th
 - Outcome: 10x deployment frequency, 60\% cost reduction
 
 \textbf{Case Study 2: Financial Services}
-- Monolith: 20-year-old .NET monolith, 3M LOC
+- Monolith: 20-year-old.NET monolith, 3M LOC
 - Timeline: 24 months
 - Cost: \$4.5M
 - Incidents: 2 minor incidents (rolled back in \textless5 minutes)
@@ -1041,38 +1017,31 @@ Developing tools that mathematically guarantee functional equivalence between th
   >{\raggedright\arraybackslash}p{(\linewidth - 10\tabcolsep) * \real{0.1667}}
   >{\raggedright\arraybackslash}p{(\linewidth - 10\tabcolsep) * \real{0.1667}}@{}}
 \toprule\noalign{}
-\begin{minipage}[b]{\linewidth}\raggedright
-Organization
-\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-Timeline
-\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-Cost
-\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-Incidents
-\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-Deployment Frequency
-\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-Cost Savings
+\begin{minipage}[b]{\linewidth}\raggedright Organization
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright Timeline
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright Cost
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright Incidents
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright Deployment Frequency
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright Cost Savings
 \end{minipage} \\
 \midrule\noalign{}
 \endhead
 \bottomrule\noalign{}
-\endlastfoot
-E-Commerce & 18 months & \$2.2M & 0 & 1/month \(\rightarrow\) 10/day & 60\% \\
+\endlastfoot E-Commerce & 18 months & \$2.2M & 0 & 1/month \(\rightarrow\) 10/day & 60\% \\
 Financial & 24 months & \$4.5M & 2 (minor) & 1/quarter \(\rightarrow\) 5/week & 45\% \\
 Healthcare & 12 months & \$1.8M & 0 & 1/month \(\rightarrow\) 20/day & 55\% \\
 \end{longtable}
 }
 
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
 
 \subsection{Technical Implementation Nuance}\label{technical-implementation-nuance}
 
 The sidecar-based Anti-Corruption Layer represents the most scalable approach for legacy migration. By implementing translation logic in an Envoy filter (C++ or WASM), we offload the domain transformation from the application code. This prevents the microservice's binary from being bloated with legacy SOAP or COBOL dependencies, maintaining a pure domain model while still communicating with a 20-year-old monolith.
 
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+
 
 \subsection{18. Conclusion}\label{conclusion}
 
@@ -1082,18 +1051,19 @@ Production case studies demonstrate 94\% risk reduction (70\% failure rate \(\ri
 
 The goal is not just to reach the cloud, but to survive the trip.
 
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+
+
+
 
 \textbf{:}
 This paper represents independent research conducted by the author. No conflicts of interest exist. All case study data is anonymized.
 
-\textbf{Format:} Technical Specification
+
 
 
 \end{document}
+

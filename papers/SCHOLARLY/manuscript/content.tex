@@ -143,16 +143,14 @@ Deploy application updates, configuration changes, and policy updates without us
 \subsubsection{2.2 Non-Functional Requirements}
 
 \textbf{Table 1: Quantitative Requirements}
-\_\_\_TABLE0\_\_\_
-These targets aren't arbitrary. They come from SLA commitments with financial penalties for breaches (typically 10-25\% of monthly contract value per incident), user experience research (users abandon transactions beyond 500ms), and regulatory requirements (GDPR mandates data access within 30 days, implying systems must be operational).
+\_\_\_TABLE0\_\_\_ These targets aren't arbitrary. They come from SLA commitments with financial penalties for breaches (typically 10-25\% of monthly contract value per incident), user experience research (users abandon transactions beyond 500ms), and regulatory requirements (GDPR mandates data access within 30 days, implying systems must be operational).
 
 \subsubsection{2.3 The Conflated Plane Anti-Pattern}
 
 In standard microservices architectures, a single service mesh handles both traffic routing (data plane function) and configuration distribution (control plane function). This dual responsibility creates the failure modes described in Section 1.3.
 
 \textbf{Table 2: Failure Mode Quantification}
-\_\_\_TABLE1\_\_\_
-These failure modes aren't theoretical—they represent actual incidents observed in production systems. The common pattern: operational changes (deployments, configuration updates, scaling events) directly impact user-facing performance. The control plane and data plane are coupled, creating cascading failures.
+\_\_\_TABLE1\_\_\_ These failure modes aren't theoretical—they represent actual incidents observed in production systems. The common pattern: operational changes (deployments, configuration updates, scaling events) directly impact user-facing performance. The control plane and data plane are coupled, creating cascading failures.
 
 ---
 
@@ -184,8 +182,7 @@ We decompose the 200ms p99 latency budget across network, compute, and data laye
 \textbf{Figure 3:} A strict 200ms budget leaves only ~120ms for business logic. Any synchronous cross-region call (min 90ms RTT) instantly consumes nearly 50\% of the budget.
 
 \textbf{Table 3: Latency Budget Breakdown}
-\_\_\_TABLE2\_\_\_
-The 25ms negative buffer accounts for variance. Under normal conditions, p50 latency is ~60ms, p90 is ~100ms, and p99 is ~180ms. The 200ms budget provides headroom for tail latency—garbage collection pauses, slow database queries, network congestion.
+\_\_\_TABLE2\_\_\_ The 25ms negative buffer accounts for variance. Under normal conditions, p50 latency is ~60ms, p90 is ~100ms, and p99 is ~180ms. The 200ms budget provides headroom for tail latency—garbage collection pauses, slow database queries, network congestion.
 
 \subsubsection{3.3 Architectural Implications}
 
@@ -325,8 +322,7 @@ Cell failure (AZ outage, database corruption) affects only tenants assigned to t
 Regional failure affects only traffic in that region. Global load balancer redirects to healthy regions within 15 minutes. Regions are independent—a failure in US-East doesn't propagate to EU-Central.
 
 \textbf{Table 4: Failure Domain Boundaries}
-\_\_\_TABLE3\_\_\_
-The key insight: failure domains are bounded by infrastructure topology (instance, cell, region), not by service type. A failure in the authentication service doesn't cascade to the payment service because they're in different failure domains.
+\_\_\_TABLE3\_\_\_ The key insight: failure domains are bounded by infrastructure topology (instance, cell, region), not by service type. A failure in the authentication service doesn't cascade to the payment service because they're in different failure domains.
 
 ---
 
@@ -357,8 +353,7 @@ Transitioning from a legacy centralized architecture to a sovereign cellular mod
 \textbf{Figure 6:} Evolution of topologies. SOA centralized logic (bottleneck). Microservices distributed logic (chaos). Plane separation isolates concerns (cellular).
 
 \textbf{Table 5: Architecture Comparison}
-\_\_\_TABLE4\_\_\_
-SOA failed because the ESB became a bottleneck. Microservices succeeded at scale but introduced operational complexity. Plane separation provides the benefits of microservices (horizontal scaling, independent deployment) while reducing complexity through cellular isolation.
+\_\_\_TABLE4\_\_\_ SOA failed because the ESB became a bottleneck. Microservices succeeded at scale but introduced operational complexity. Plane separation provides the benefits of microservices (horizontal scaling, independent deployment) while reducing complexity through cellular isolation.
 
 ---
 
@@ -431,8 +426,7 @@ Incident count: 60\% reduction vs conventional microservices—fewer outages
 \subsubsection{7.3 Cost-Benefit Analysis}
 
 \textbf{Table 6: Cost-Benefit Comparison}
-\_\_\_TABLE5\_\_\_
-The 67\% infrastructure cost increase is offset by 23\% revenue increase from improved performance and availability, yielding 12:1 ROI. The infrastructure costs more, but the business makes more money. Faster checkout (180ms vs 850ms latency) increases conversion rates. Higher availability (99.98\% vs 99.5\%) reduces lost sales during outages.
+\_\_\_TABLE5\_\_\_ The 67\% infrastructure cost increase is offset by 23\% revenue increase from improved performance and availability, yielding 12:1 ROI. The infrastructure costs more, but the business makes more money. Faster checkout (180ms vs 850ms latency) increases conversion rates. Higher availability (99.98\% vs 99.5\%) reduces lost sales during outages.
 
 ---
 
@@ -576,3 +570,4 @@ The model isn't perfect. Eventual consistency, operational learning curve, infra
 This paper represents independent research conducted by the author. No conflicts of interest exist. All diagrams and analysis are original work.
 
 \textbf{Format:} Position Paper / Industry Research
+

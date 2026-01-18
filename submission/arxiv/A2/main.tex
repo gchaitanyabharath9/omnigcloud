@@ -1,5 +1,4 @@
 % arXiv submission for A2
-% Generated: 2026-01-16T19:10:01.122Z
 
 \documentclass{article}
 \usepackage[utf8]{inputenc}
@@ -19,38 +18,36 @@
 \providecommand{\pandocbounded}[1]{#1}
 
 \title{Designing High-Throughput Distributed Systems at Scale}
-\author{Author Name}
-\date{\today}
+\author{Chaitanya Bharath Gopu \\ Independent Researcher \\ \texttt{cb@example.com}}
+\date{January 2026}
 
 \begin{document}
 
 \maketitle
 
 \begin{abstract}
-Most enterprises discover the throughput wall the hard way: a system handling 10,000 requests per second collapses at 50,000 RPS despite having sufficient CPU, memory, and network bandwidth. The failure isn't resource exhaustion—it's architectural. What breaks isn't individual components. It's the coordination overhead between them. This phenomenon, called "retrograde scaling," violates the assumption that more hardware equals more capacity. In production systems we've analyzed, adding nodes beyond a threshold actually decreased throughput by 40% because the cost of coordinating those nodes exceeded their contribution.
+This paper formalizes the phenomenon of retrograde scaling in high-throughput distributed systems and introduces an asynchronous buffering architecture to maintain linear scalability. In production systems we've analyzed, adding nodes beyond a threshold actually decreased throughput by 40\% because the cost of coordinating those nodes exceeded their contribution.
 
-The root cause emerges from the Universal Scalability Law (USL), which quantifies two distinct bottlenecks: contention ($\alpha$) from shared locks that serialize operations, and crosstalk ($\beta$) from distributed coordination that grows quadratically with node count. Through measurements across production systems processing 850k to 1.2M RPS, we've observed that $\beta$ > 0.01 triggers retrograde scaling beyond 100 nodes. At $\beta$ = 0.08 (typical for Raft-based consensus systems), peak throughput occurs at 50 nodes—adding the 51st node reduces capacity. This isn't theoretical. It's the primary failure mode in high-throughput deployments.
+The root cause emerges from the Universal Scalability Law (USL), which quantifies two distinct bottlenecks: contention ($\alpha$) from shared locks that serialize operations, and crosstalk ($\beta$) from distributed coordination that grows quadratically with node count. Through measurements across production systems processing 850k to 1.2M RPS, we've observed that $\beta$ > 0.01 triggers retrograde scaling beyond 100 nodes. At $\beta$ = 0.08 (typical for Raft-based consensus systems), peak throughput occurs at 50 nodes—adding the 51st node reduces capacity. Empirical analysis demonstrates It's the primary failure mode in high-throughput deployments.
 
-This paper presents the "Shock Absorber" architecture, validated across three production deployments (e-commerce, IoT sensor networks, financial trading) over 18 months. The architecture eliminates crosstalk ($\beta$ ≈ 0.001) through four non-negotiable patterns: (1) asynchronous ingress buffering that decouples high-velocity writes from complex business logic, preventing cascading failures during load spikes; (2) deterministic hash partitioning that guarantees zero cross-partition contention; (3) explicit backpressure propagation using token buckets that reject excess load at the edge rather than crashing downstream services; and (4) cellular isolation where failure domains are bounded by partition, not by service type. Production measurements demonstrate linear scalability to 1.2 million RPS with p99 latency 38-45ms and 99.99% availability, including graceful degradation under 10x surge events that would crash synchronous architectures.
+This paper presents the "Shock Absorber" architecture, validated across three production deployments (e-commerce, IoT sensor networks, financial trading) over 18 months. The architecture eliminates crosstalk ($\beta$ ≈ 0.001) through four non-negotiable patterns: (1) asynchronous ingress buffering that decouples high-velocity writes from complex business logic, preventing cascading failures during load spikes; (2) deterministic hash partitioning that guarantees zero cross-partition contention; (3) explicit backpressure propagation using token buckets that reject excess load at the edge rather than crashing downstream services; and (4) cellular isolation where failure domains are bounded by partition, not by service type. Production measurements demonstrate linear scalability to 1.2 million RPS with p99 latency 38-45ms and 99.99\% availability, including graceful degradation under 10x surge events that would crash synchronous architectures.
 
 The contribution isn't another event-driven pattern. It's a quantified demonstration that coordination overhead—not computation—limits throughput at scale, with specific measurements of when systems transition from scaling linearly to scaling retrograde.
-
-\textbf{Keywords:} distributed systems, high-throughput, scalability, Universal Scalability Law, backpressure, partitioning, event-driven architecture, queue theory, load shedding, cellular architecture
 \end{abstract}
 
 \textbf{Keywords:} distributed systems, high-throughput, scalability, Universal Scalability Law, backpressure, partitioning, event-driven architecture, queue theory, load shedding, cellular architecture
 
 
+
+
+
+
 \section{Designing High-Throughput Distributed Systems at Scale}\label{designing-high-throughput-distributed-systems-at-scale}
 
-\textbf{Author:} Chaitanya Bharath Gopu\\
-\textbf{Classification:} \\
-\textbf{Version:} 3.0\\
-\textbf{Date:} January 2026
 
-\subsection{Original Contribution}\label{original-contribution}
 
-To the best of our knowledge, this work represents the first formalization of ``retrograde scaling'' as a primary architectural failure mode in enterprise distributed systems, distinct from simple resource exhaustion. While the Universal Scalability Law (USL) has theoretically quantified coordination penalties, existing literature lacks empirical models that map specific architectural patterns (synchronous RPC, shared-state databases) to precise USL coefficients (\(\beta\)) at the scale of 100,000+ RPS. We introduce the ``Shock Absorber'' architecture not merely as an implementation pattern, but as a formal throughput model that proves linear scalability is achievable only when coordination overhead is strictly zero (\(\beta \approx 0\)). This extends the state of the art by moving beyond ``tuning'' existing systems to defining architectural invariants that prevent coordination collapse by design.
+
+
 
 \section{}\label{section}
 
@@ -58,15 +55,15 @@ To the best of our knowledge, this work represents the first formalization of ``
 
 Prior research in distributed systems has largely focused on two extremes: theoretical algorithms for consensus (small scale, high rigor) or massive-scale analytical processing (MapReduce, Hadoop). The ``middle ground'' of high-throughput \emph{transactional} systems---where strict correctness, low latency, and massive volume must coexist---has historically been the domain of proprietary corporate engineering (e.g., inside Google or Amazon) rather than public academic models. Additionally, the specific failure mode of retrograde scaling is rarely observed in academic testbeds because it only emerges at enterprise scale (50+ nodes, 50k+ RPS), creating a blind spot in the literature. This work bridges that gap by providing empirical coefficients and structural guarantees derived from real-world production constraints.
 
-\subsubsection{Relationship to A1-REF-STD Architectural Invariants}\label{relationship-to-a1-ref-std-architectural-invariants}
+\subsubsection{Relationship to The reference architecture Architectural Invariants}\label{relationship-to-a1-ref-std-architectural-invariants}
 
-This paper operates as a direct extension of the \textbf{A1 Cloud-Native Enterprise Reference Architecture (A1-REF-STD)}. While A1 defines the macro-level separation of \textbf{Control Plane} and \textbf{Data Plane} to prevent cascading failures, A2 focuses strictly on the internal dynamics of the \textbf{Data Plane} itself. We operationalize A1's invariant of ``Cellular Fault Containment'' by providing the mathematical throughput model that governs cell sizing. Specifically, A2 demonstrates that A1's ``Strict Plane Isolation'' is a prerequisite for high throughput: if control traffic mixes with data traffic, the coordination term (\(\beta\)) increases, triggering immediate throughput collapse. A2 is the formal execution of A1's performance mandates.
+This paper operates as a direct extension of the \textbf{A1 Cloud-Native Enterprise Reference Architecture (The reference architecture)}. While A1 defines the macro-level separation of \textbf{Control Plane} and \textbf{Data Plane} to prevent cascading failures, A2 focuses strictly on the internal dynamics of the \textbf{Data Plane} itself. We operationalize A1's invariant of ``Cellular Fault Containment'' by providing the mathematical throughput model that governs cell sizing. Specifically, A2 demonstrates that A1's ``Strict Plane Isolation'' is a prerequisite for high throughput: if control traffic mixes with data traffic, the coordination term (\(\beta\)) increases, triggering immediate throughput collapse. A2 is the formal execution of A1's performance mandates.
 
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
-\subsection{1. Introduction}\label{introduction}
 
-This paper extends A1-REF-STD by formalizing the throughput, coordination, and latency constraints that emerge when invariant-driven architectures operate at extreme scale.
+\subsection{Introduction}\label{introduction}
+
+This paper extends The reference architecture by formalizing the throughput, coordination, and latency constraints that emerge when invariant-driven architectures operate at extreme scale.
 
 \subsubsection{1.1 The Throughput Imperative}\label{the-throughput-imperative}
 
@@ -108,7 +105,7 @@ Production deployments validate the architecture through production deployments 
 \textbf{Organization:}\\
 Section 2 formalizes the scalability problem using the Universal Scalability Law and provides empirical measurements of \(\alpha\) and \(\beta\) for common architectures. Section 3 presents the Shock Absorber pattern with implementation details and performance analysis. Section 4 details partitioning strategies and resharding procedures. Section 5 covers backpressure propagation and load shedding. Section 6 describes cellular architecture for blast radius containment. Section 7 provides operational guidance including idempotency, lag monitoring, and chaos engineering. Section 8 evaluates the architecture through production deployments and scalability benchmarks. Section 9 positions this work relative to event-driven architectures, USL theory, and reactive systems. Section 10 acknowledges limitations and boundary conditions. Section 11 concludes.
 
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+This work formalizes the of ``retrograde scaling'' as a primary architectural failure mode in enterprise distributed systems, distinct from simple resource exhaustion. While the Universal Scalability Law (USL) has theoretically quantified coordination penalties, existing literature lacks empirical models that map specific architectural patterns (synchronous RPC, shared-state databases) to precise USL coefficients (\(\beta\)) at the scale of 100,000+ RPS. We introduce the ``Shock Absorber'' architecture not merely as an implementation pattern, but as a formal throughput model that proves linear scalability is achievable only when coordination overhead is strictly zero (\(\beta \approx 0\)). This extends the state of the art by moving beyond ``tuning'' existing systems to defining architectural invariants that prevent coordination collapse by design.
 
 \subsection{2. The Physics of Throughput}\label{the-physics-of-throughput}
 
@@ -136,16 +133,11 @@ The formula reveals two distinct bottlenecks. The \(\alpha\) term grows linearly
   >{\raggedright\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.2000}}
   >{\raggedright\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.2000}}@{}}
 \toprule\noalign{}
-\begin{minipage}[b]{\linewidth}\raggedright
-Coefficient
-\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-Meaning
-\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-Impact at Scale
-\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-Typical Source
-\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-Mitigation
+\begin{minipage}[b]{\linewidth}\raggedright Coefficient
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright Meaning
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright Impact at Scale
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright Typical Source
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright Mitigation
 \end{minipage} \\
 \midrule\noalign{}
 \endhead
@@ -207,7 +199,7 @@ Any distributed coordination (consensus protocols, two-phase commit, distributed
 \textbf{Constraint 3: Partition Everything}\\
 The only way to achieve \(\beta\) \(\approx\) 0 is through shared-nothing partitioning where each partition operates independently without cross-partition communication. This means partitioning not just the data, but also the compute (dedicated consumers per partition), the cache (partition-local caches), and the message queue (dedicated partition per shard). The A2 architecture achieves \(\beta\) = 0.001 by ensuring that a request to partition 0 never requires communication with partition 1. Partitions are isolated failure domains.
 
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
 
 \subsection{3. The ``Shock Absorber'' Pattern}\label{the-shock-absorber-pattern}
 
@@ -241,12 +233,9 @@ The Shock Absorber pattern decouples ingress from business logic using an asynch
   >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.3333}}
   >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.3333}}@{}}
 \toprule\noalign{}
-\begin{minipage}[b]{\linewidth}\raggedright
-Feature
-\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-Synchronous (REST/RPC)
-\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-Shock Absorber (Async Log)
+\begin{minipage}[b]{\linewidth}\raggedright Feature
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright Synchronous (REST/RPC)
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright Shock Absorber (Async Log)
 \end{minipage} \\
 \midrule\noalign{}
 \endhead
@@ -361,7 +350,7 @@ Shock Absorber (Async Log)
 - Database Write: 5ms
 - \textbf{Total (p99): 45ms}
 
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
 
 \subsection{4. Partitioning Strategy}\label{partitioning-strategy}
 
@@ -389,16 +378,11 @@ Global locks are the enemy of throughput. We use deterministic partitioning (sha
   >{\raggedright\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.2000}}
   >{\raggedright\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.2000}}@{}}
 \toprule\noalign{}
-\begin{minipage}[b]{\linewidth}\raggedright
-Strategy
-\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-Description
-\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-Pros
-\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-Cons
-\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-Use Case
+\begin{minipage}[b]{\linewidth}\raggedright Strategy
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright Description
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright Pros
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright Cons
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright Use Case
 \end{minipage} \\
 \midrule\noalign{}
 \endhead
@@ -414,10 +398,8 @@ Use Case
 \textbf{Selection Criteria:}
 
 For A2, we use \textbf{Hash Partitioning} because:
-1. Uniform distribution prevents hot spots
-2. Deterministic routing (no lookup required)
-3. Simple implementation
-4. Acceptable resharding cost (rare operation)
+1. Uniform distribution prevents hot spots 2. Deterministic routing (no lookup required)
+3. Simple implementation 4. Acceptable resharding cost (rare operation)
 
 \subsubsection{4.3 Partition Sizing}\label{partition-sizing}
 
@@ -443,9 +425,7 @@ We recommend 2x over-provisioning for headroom:
 Resharding (changing partition count) is expensive but sometimes necessary:
 
 \textbf{Trigger Conditions:}
-1. Sustained \textgreater80\% partition utilization for 7 days
-2. Projected growth exceeds capacity within 30 days
-3. Hot spot detected (one partition \textgreater2x average load)
+1. Sustained \textgreater80\% partition utilization for 7 days 2. Projected growth exceeds capacity within 30 days 3. Hot spot detected (one partition \textgreater2x average load)
 
 \begin{figure}
 \centering
@@ -458,7 +438,7 @@ Resharding (changing partition count) is expensive but sometimes necessary:
 \textbf{Downtime:} Zero (dual-write ensures continuity)\\
 \textbf{Duration:} 2-4 hours for backfill (depends on data volume)
 
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
 
 \subsection{5. Explicit Backpressure \& Load Shedding}\label{explicit-backpressure-load-shedding}
 
@@ -528,16 +508,11 @@ We employ a distributed \textbf{Token Bucket} algorithm for rate limiting:
   >{\raggedright\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.2000}}
   >{\raggedright\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.2000}}@{}}
 \toprule\noalign{}
-\begin{minipage}[b]{\linewidth}\raggedright
-Algorithm
-\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-Burst Handling
-\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-Fairness
-\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-Complexity
-\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-Use Case
+\begin{minipage}[b]{\linewidth}\raggedright Algorithm
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright Burst Handling
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright Fairness
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright Complexity
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright Use Case
 \end{minipage} \\
 \midrule\noalign{}
 \endhead
@@ -569,7 +544,7 @@ When backpressure fails (client ignores 429), we must shed load:
 - Reject all requests for cooldown period
 - Gradually restore service (half-open state)
 
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
 
 \subsection{6. Cell-Based Architecture Topology}\label{cell-based-architecture-topology}
 
@@ -601,7 +576,7 @@ Cell_Capacity = Min(Network_BW, DB_IOPS, Consumer_Throughput)
 
 \textbf{Recommendation:} Size cells to 60-70\% of capacity for headroom.
 
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
 
 \subsection{7. Operational Semantics}\label{operational-semantics}
 
@@ -641,14 +616,10 @@ Lag = (WriteOffset - ReadOffset) / ConsumptionRate
   >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.2500}}
   >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.2500}}@{}}
 \toprule\noalign{}
-\begin{minipage}[b]{\linewidth}\raggedright
-Signal
-\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-Metric Definition
-\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-Alert Threshold
-\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-Action
+\begin{minipage}[b]{\linewidth}\raggedright Signal
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright Metric Definition
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright Alert Threshold
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright Action
 \end{minipage} \\
 \midrule\noalign{}
 \endhead
@@ -673,7 +644,7 @@ To prove the system's resilience, we continuously test failure modes:
 
 \textbf{Figure 8:} Continuous Verification. We assert that p99 latency remains stable even when 20\% of consumer pods are killed.
 
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
 
 \subsection{8. Evaluation \& Validation}\label{evaluation-validation}
 
@@ -706,8 +677,7 @@ Deployment & Peak RPS & p99 Latency & Availability & Incidents \\
 \midrule\noalign{}
 \endhead
 \bottomrule\noalign{}
-\endlastfoot
-E-Commerce & 850k & 42ms & 99.99\% & 1 (capacity) \\
+\endlastfoot E-Commerce & 850k & 42ms & 99.99\% & 1 (capacity) \\
 IoT & 1.2M & 38ms & 99.995\% & 0 \\
 Financial & 450k & 28ms & 99.999\% & 1 (rebalance) \\
 \end{longtable}
@@ -728,24 +698,17 @@ We validated linear scalability by measuring throughput at different partition c
   >{\raggedright\arraybackslash}p{(\linewidth - 10\tabcolsep) * \real{0.1667}}
   >{\raggedright\arraybackslash}p{(\linewidth - 10\tabcolsep) * \real{0.1667}}@{}}
 \toprule\noalign{}
-\begin{minipage}[b]{\linewidth}\raggedright
-Partitions
-\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-Consumers
-\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-Target RPS
-\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-Achieved RPS
-\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-Latency p99
-\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-Efficiency
+\begin{minipage}[b]{\linewidth}\raggedright Partitions
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright Consumers
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright Target RPS
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright Achieved RPS
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright Latency p99
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright Efficiency
 \end{minipage} \\
 \midrule\noalign{}
 \endhead
 \bottomrule\noalign{}
-\endlastfoot
-4 & 8 & 200k & 198k & 35ms & 99\% \\
+\endlastfoot 4 & 8 & 200k & 198k & 35ms & 99\% \\
 8 & 16 & 400k & 395k & 37ms & 99\% \\
 16 & 32 & 800k & 788k & 40ms & 99\% \\
 32 & 64 & 1.6M & 1.58M & 45ms & 99\% \\
@@ -754,7 +717,7 @@ Efficiency
 
 \textbf{Result:} Linear scalability maintained up to 32 partitions (\(\beta\) \(\approx\) 0.001).
 
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
 
 \subsection{9. Related Work}\label{related-work}
 
@@ -770,7 +733,7 @@ Gunther's USL provides the theoretical framework for understanding retrograde sc
 
 The Reactive Manifesto advocates for asynchronous, message-driven systems. A2 implements these principles with specific patterns for high-throughput scenarios.
 
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
 
 \subsection{10. Generalizability Beyond Observed Deployments}\label{generalizability-beyond-observed-deployments}
 
@@ -790,7 +753,7 @@ A2 is explicitly \textbf{not appropriate} for:
 * \textbf{Batch Processing:} Workloads that do not require low-latency responses should use standard batch frameworks (Spark, MapReduce) rather than complex event-driven buffering.
 * \textbf{Single-Region Monoliths:} If valid vertical scaling options exist, they are operationally cheaper than distributed partitioning.
 
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
 
 \subsection{11. Practical and Scholarly Impact}\label{practical-and-scholarly-impact}
 
@@ -802,7 +765,7 @@ For practitioners, this work provides a decision framework to avoid ``blind scal
 
 For the academic community, this paper moves the Universal Scalability Law from a descriptive curve to a prescriptive design constraint. It provides empirical confirmation that \(\beta\) is a structural property of the architecture, not just a property of the network, inviting further research into ``coordination-free'' structural patterns.
 
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
 
 \subsection{12. Limitations}\label{limitations}
 
@@ -818,9 +781,9 @@ Changing partition count requires careful orchestration and can cause temporary 
 
 Monitoring lag, managing consumer groups, and handling rebalancing requires operational expertise.
 
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+
 
 \subsection{13. Future Research Directions Enabled by A2}\label{future-research-directions-enabled-by-a2}
 
@@ -858,18 +821,19 @@ The key insight is that throughput is constrained by coordination overhead (\(\b
 
 Production deployments across three organizations validate the architecture, demonstrating p99 latency \textless50ms and 99.99\% availability under sustained high load. The throughput limits and coordination dynamics formalized here provide a foundation for academic research in distributed systems scalability, synchronization avoidance, and performance-bounded system design.
 
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+
+
+
 
 \textbf{:}
 This paper represents independent research conducted by the author. No conflicts of interest exist. All benchmarks and production data are original work or properly anonymized.
 
-\textbf{Format:} Technical Specification
+
 
 
 \end{document}
+
