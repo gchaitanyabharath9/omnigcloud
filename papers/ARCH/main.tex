@@ -9,9 +9,8 @@
 
 \title{The Enterprise Architecture Tension: Reconciling Sovereignty, Scale, and Operational Complexity}
 \author{Chaitanya Bharath Gopu}
-\affiliation{\institution{OmniGCloud Systems, Inc.}\city{Tallahassee}\state{Florida}\country{USA}}
+\affiliation{\institution{OmniGCloud Systems, Inc.}\city{Tallahassee}\state{Florida}\country{USA}
 \email{gchaitanyabharath9@gmail.com}
-
 \begin{abstract}
 This paper analyzes the intrinsic tensions between sovereignty, scale, and complexity in enterprise architecture, proposing a unified framework for digital resilience. As organizations move toward sovereign cloud models, the complexity of managing decentralized infrastructure threatens to negate the benefits of agility and scale. We present a formal synthesis of distributed systems theory and enterprise governance, identifying the core primitives required for modern digital architectures. The paper evaluates the trade-offs between administrative control and system performance in highly decoupled environments. We show that a principled approach to plane separation and policy-as-code allows for the construction of systems that are both highly resilient and administratively sovereign. This work synthesizes the architectural series by providing a unified theory of cloud-native enterprise design. We quantify the "Cliff of Failure" where shared-state architectures become untenable, and demonstrate how our proposed invariants provide a path to 1M RPS scalability with bounded complexity. This work presents the theoretical foundation for the architectural studies, establishing the macro-architectural rules for future digital enterprise systems.
 \end{abstract}
@@ -148,7 +147,7 @@ Section 6 provides comparative analysis against SOA and conventional microservic
 
 This work formalizes the ``Iron Triangle of Enterprise Architecture''
 (Sovereignty, Scale, Complexity) as a hard constraint system where optimizing two variables inevitably degrades the third. While CAP theorem formally constrains distributed data stores, no equivalent theorem existed for the macro-architectural tension between regulatory sovereignty (data residency), operational scale (throughput), and system complexity (entropy). We introduce the ``Cliff of Failure'' not as an abstract metaphor but as a quantified boundary (50+ services, 10k+ RPS)
-where conventional patterns undergo phase-change failure. This contribution shifts the discourse from ``best practices'' to
+where conventional patterns undergo phase-change failure. This work shifts the discourse from ``best practices'' to
 ``architectural physics,'' defining the precise scale at which shared-state architectures become mathematically untenable.
 
 \subsection{Problem Statement \&
@@ -186,7 +185,7 @@ Rationale \textbar{}
 \textbar{} \textbar{} \textbf{Latency (p99)} \textbar{} \textless200ms
 \textbar{} Request duration \textbar{} Acceptable user experience threshold \textbar{} \textbar{} \textbf{Availability} \textbar{} 99.99\%
 \textbar{} Uptime percentage \textbar{} 52 minutes downtime per year maximum \textbar{} \textbar{} \textbf{MTTR} \textbar{} \textless15 minutes \textbar{} Incident resolution \textbar{} Minimize revenue impact of failures \textbar{} \textbar{} \textbf{Scalability} \textbar{}
-Linear to 1M RPS \textbar{} Cost per request \textbar{} Avoid retrograde scaling ($\beta $\approx$ 0$) \textbar{} \textbar{} \textbf{Policy Latency} \textbar{}
+Linear to 1M RPS \textbar{} Cost per request \textbar{} Avoid retrograde scaling $\beta \approx 0$) \textbar{} \textbar{} \textbf{Policy Latency} \textbar{}
 \textless1ms \textbar{} Evaluation time \textbar{} No user-facing impact from governance \textbar{} \textbar{} \textbf{Config Propagation}
 \textbar{} \textless60s \textbar{} Update latency \textbar{} Eventual consistency acceptable \textbar{}
 
@@ -435,7 +434,7 @@ SOA failed because the ESB became a bottleneck. Microservices succeeded at scale
 We validate the plane separation model against four criteria derived from production requirements, not theoretical ideals:
 
 \textbf{C1: Scalability}\\
-Does the architecture scale linearly without retrograde performance degradation? We measure this through cost per request---if it remains constant as we add cells, we've achieved linear scalability ($\beta $\approx$ 0$ in the Universal Scalability Law).
+Does the architecture scale linearly without retrograde performance degradation? We measure this through cost per request---if it remains constant as we add cells, we've achieved linear scalability $\beta \approx 0$ in the Universal Scalability Law).
 
 \textbf{C2: Availability}\\
 Does the architecture achieve 99.99\% uptime under realistic failure scenarios? We measure this through actual uptime over 18 months,
@@ -452,7 +451,7 @@ Does the architecture reduce operational burden compared to conventional microse
 Through analysis of production deployments across five organizations
 (e-commerce, fintech, healthcare, SaaS, media) over 18 months, we collected measurements that validate the model:
 
-\textbf{Scalability:} - Linear cost scaling: \$1.14-\$1.15 per 1M requests across 1-20 cells---cost per request remains constant - No retrograde performance degradation up to 200k RPS---latency doesn't increase with scale - Validates Universal Scalability Law $\beta $\approx$ 0$ (no crosstalk)---cells don't interfere with each other
+\textbf{Scalability:} - Linear cost scaling: \$1.14-\$1.15 per 1M requests across 1-20 cells---cost per request remains constant - No retrograde performance degradation up to 200k RPS---latency doesn't increase with scale - Validates Universal Scalability Law $\beta \approx 0$ (no crosstalk)---cells don't interfere with each other
 
 \textbf{Availability:} - Average: 99.98\% (exceeds 99.99\% target in 3
 of 5 deployments)---better than target - MTTR: 6-12 minutes for regional failures (target: \textless15 minutes)---automated failover works - Zero cross-region failure propagation---failures stay contained to their region
@@ -653,30 +652,20 @@ The model isn't perfect. Eventual consistency, operational learning curve, infra
 \section{Limitations}
 
 
-\section{Problem Statement}
-% Placeholder for Problem Statement. To be filled.
 
 
-\section{Architecture}
-% Placeholder for Architecture. To be filled.
 
 
-\section{Implementation}
-% Placeholder for Implementation. To be filled.
 
 
-\section{Evaluation}
-% Placeholder for Evaluation. To be filled.
 
 
-\section{Reproducibility}
-% Placeholder for Reproducibility. To be filled.
 
 
-\section{Conclusion}
-% Placeholder for Conclusion. To be filled.
 
 \bibliographystyle{ACM-Reference-Format}
 \bibliography{refs}
 
 \end{document}
+
+}

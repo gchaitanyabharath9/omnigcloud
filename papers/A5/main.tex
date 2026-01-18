@@ -9,9 +9,8 @@
 
 \title{Monolith to Cloud-Native Modernization: A Reference Pattern}
 \author{Chaitanya Bharath Gopu}
-\affiliation{\institution{OmniGCloud Systems, Inc.}\city{Tallahassee}\state{Florida}\country{USA}}
+\affiliation{\institution{OmniGCloud Systems, Inc.}\city{Tallahassee}\state{Florida}\country{USA}
 \email{gchaitanyabharath9@gmail.com}
-
 \begin{abstract}
 Modernization projects fail the same way every time. The board approves a "cloud transformation" initiative. Engineering spends 18 months building a new system from scratch. The cutover date arrives. The new system crashes under production load, missing critical edge cases the monolith handled silently for years. The team rolls back. Six months later, the project is quietly cancelled, \$5M spent, zero value delivered. This patternthe "Big Bang" rewritefails in 70\% of attempts. The failure isn't execution. It's the approach itself: attempting to replace a working system (however imperfect) with an unproven system while maintaining 99.9% uptime and zero feature regression is architecturally unsound.
 
@@ -206,17 +205,17 @@ Rather than rewriting the monolith, we strangle it. A facade (API Gateway) sits 
 | \textbf{Path-Based} | \texttt{/v2/users}  New | Endpoint | Instant | API versioning |
 | \textbf{Header-Based} | \texttt{X-Version: 2}  New | Request | Instant | A/B testing |
 | \textbf{Percentage} | 10\%  New, 90\%  Old | Traffic | Gradual | Canary deployment |
-| \textbf{User-Based} | \texttt{user\_id \% 10 == 0}  New | User cohort | Instant | Beta testing |
+| \textbf{User-Based} | \texttt{user\\\\\\_id \% 10 == 0}  New | User cohort | Instant | Beta testing |
 
 \subsection{2.3 Implementation Example}
 
 \textbf{NGINX Configuration:}
-\texttt{`}nginx
+\begin{verbatim}
 upstream monolith {
     server monolith:8080;
 }
 
-upstream user\_service {
+upstream userTEMP_USservice {
     server user-service:8080;
 }
 
@@ -225,20 +224,20 @@ server {
     
     \# Route /users to new service
     location /users {
-        proxy\textit{pass http://user}service;
+        proxyTEMP_USpass http://userTEMP_USservice;
     }
     
     \# Route everything else to monolith
     location / {
-        proxy\_pass http://monolith;
+        proxyTEMP_USpass http://monolith;
     }
 }
-\texttt{`}
+\end{verbatim}
 
 \textbf{Percentage-Based Routing (Envoy):}
-\texttt{`}yaml
-route\_config:
-  virtual\_hosts:
+\begin{verbatim}
+routeTEMP_USconfig:
+  virtualTEMP_UShosts:
 \begin{itemize}
 \item name: backend
 \end{itemize}
@@ -248,17 +247,17 @@ route\_config:
 \item match: { prefix: "/users" }
 \end{itemize}
           route:
-            weighted\_clusters:
+            weightedTEMP_USclusters:
               clusters:
 \begin{itemize}
-\item name: user\_service
+\item name: userTEMP_USservice
 \end{itemize}
                   weight: 10  \# 10\% to new service
 \begin{itemize}
 \item name: monolith
 \end{itemize}
                   weight: 90  \# 90\% to monolith
-\texttt{`}
+\end{verbatim}
 
 \subsection{2.4 Migration Timeline}
 
@@ -306,25 +305,25 @@ We use the Parallel Run / Dual-Write pattern to migrate data without downtime:
 
 Application writes to old database (primary) and asynchronously writes to new database (secondary):
 
-\texttt{`}python
+\begin{verbatim}
 class UserRepository:
-    def \textit{\_init}\textit{(self, old}db, new\_db):
-        self.old\textit{db = old}db
-        self.new\textit{db = new}db
+    def TEMP_USTEMP_USinitTEMP_USTEMP_US(self, oldTEMP_USdb, newTEMP_USdb):
+        self.oldTEMP_USdb = oldTEMP_USdb
+        self.newTEMP_USdb = newTEMP_USdb
     
-    def create\_user(self, user):
+    def createTEMP_USuser(self, user):
         \# Write to old DB (synchronous, blocking)
-        user\textit{id = self.old}db.insert(user)
+        userTEMP_USid = self.oldTEMP_USdb.insert(user)
         
         \# Write to new DB (asynchronous, non-blocking)
         try:
-            self.new\textit{db.insert}async(user)
+            self.newTEMP_USdb.insertTEMP_USasync(user)
         except Exception as e:
             \# Log error but don't fail request
             logger.error(f"Dual write failed: {e}")
         
-        return user\_id
-\texttt{`}
+        return userTEMP_USid
+\end{verbatim}
 
 \textbf{Characteristics:}
 \begin{itemize}
@@ -337,29 +336,29 @@ class UserRepository:
 
 Batch job copies historical data from old DB to new DB:
 
-\texttt{`}python
+\begin{verbatim}
 class BackfillJob:
     def run(self):
         \# Get max ID in new DB
-        last\textit{id = self.new}db.get\textit{max}id()
+        lastTEMP_USid = self.newTEMP_USdb.getTEMP_USmaxTEMP_USid()
         
         \# Copy in batches
-        batch\_size = 10000
+        batchTEMP_USsize = 10000
         while True:
-            users = self.old\textit{db.get}users(
-                start\textit{id=last}id,
-                limit=batch\_size
+            users = self.oldTEMP_USdb.getTEMP_USusers(
+                startTEMP_USid=lastTEMP_USid,
+                limit=batchTEMP_USsize
             )
             
             if not users:
                 break
             
-            self.new\textit{db.bulk}insert(users)
-            last\_id = users[-1].id
+            self.newTEMP_USdb.bulkTEMP_USinsert(users)
+            lastTEMP_USid = users[-1].id
             
             \# Rate limit to avoid overwhelming DB
             time.sleep(1)
-\texttt{`}
+\end{verbatim}
 
 \textbf{Characteristics:}
 \begin{itemize}
@@ -372,23 +371,23 @@ class BackfillJob:
 
 Every read compares old DB vs new DB to detect inconsistencies:
 
-\texttt{`}python
+\begin{verbatim}
 class UserRepository:
-    def get\textit{user(self, user}id):
+    def getTEMP_USuser(self, userTEMP_USid):
         \# Read from old DB (primary)
-        old\textit{user = self.old}db.get(user\_id)
+        oldTEMP_USuser = self.oldTEMP_USdb.get(userTEMP_USid)
         
         \# Read from new DB (shadow)
-        new\textit{user = self.new}db.get(user\_id)
+        newTEMP_USuser = self.newTEMP_USdb.get(userTEMP_USid)
         
         \# Compare
-        if old\textit{user != new}user:
-            logger.error(f"Inconsistency detected: {user\_id}")
-            metrics.increment("data\_inconsistency")
+        if oldTEMP_USuser != newTEMP_USuser:
+            logger.error(f"Inconsistency detected: {userTEMP_USid}")
+            metrics.increment("dataTEMP_USinconsistency")
         
         \# Return old DB result (source of truth)
-        return old\_user
-\texttt{`}
+        return oldTEMP_USuser
+\end{verbatim}
 
 \textbf{Characteristics:}
 \begin{itemize}
@@ -401,12 +400,12 @@ class UserRepository:
 
 Switch reads to new DB:
 
-\texttt{`}python
+\begin{verbatim}
 class UserRepository:
-    def get\textit{user(self, user}id):
+    def getTEMP_USuser(self, userTEMP_USid):
         \# Read from new DB (now primary)
-        return self.new\textit{db.get(user}id)
-\texttt{`}
+        return self.newTEMP_USdb.get(userTEMP_USid)
+\end{verbatim}
 
 \textbf{Characteristics:}
 \begin{itemize}
@@ -462,24 +461,24 @@ To prevent this mess from infecting the clean microservice, we insert an Anti-Co
 \subsection{4.3 Example: User Domain Translation}
 
 \textbf{Monolith Model (Messy):}
-\texttt{`}java
+\begin{verbatim}
 class User {
     Long id;
     String username;
-    String password\_hash;
+    String passwordTEMP_UShash;
     String email;
     String phone;
-    String billing\_address;
-    String shipping\_address;
-    String credit\textit{card}token;
-    Boolean email\_verified;
-    Boolean phone\_verified;
+    String billingTEMP_USaddress;
+    String shippingTEMP_USaddress;
+    String creditTEMP_UScardTEMP_UStoken;
+    Boolean emailTEMP_USverified;
+    Boolean phoneTEMP_USverified;
     // ... 190 more columns
 }
-\texttt{`}
+\end{verbatim}
 
 \textbf{Microservice Model (Clean):}
-\texttt{`}java
+\begin{verbatim}
 class UserProfile {
     Long id;
     String username;
@@ -497,28 +496,28 @@ class UserBilling {
     String billingAddress;
     String creditCardToken;
 }
-\texttt{`}
+\end{verbatim}
 
 \textbf{ACL Translator:}
-\texttt{`}java
+\begin{verbatim}
 class UserACL {
     public UserProfile toProfile(MonolithUser user) {
         return new UserProfile(
             user.id,
             user.username,
             user.email,
-            user.email\_verified
+            user.emailTEMP_USverified
         );
     }
     
     public UserAuth toAuth(MonolithUser user) {
         return new UserAuth(
             user.id,
-            user.password\_hash
+            user.passwordTEMP_UShash
         );
     }
 }
-\texttt{`}
+\end{verbatim}
 
 ---
 
@@ -539,9 +538,9 @@ Before we let users touch the new service, we test it with "Shadow Traffic." The
 \subsection{5.2 Shadowing Implementation}
 
 \textbf{Envoy Configuration:}
-\texttt{`}yaml
-route\_config:
-  virtual\_hosts:
+\begin{verbatim}
+routeTEMP_USconfig:
+  virtualTEMP_UShosts:
 \begin{itemize}
 \item name: backend
 \end{itemize}
@@ -551,31 +550,31 @@ route\_config:
 \end{itemize}
           route:
             cluster: monolith
-            request\textit{mirror}policies:
+            requestTEMP_USmirrorTEMP_USpolicies:
 \begin{itemize}
-\item cluster: checkout\_service
+\item cluster: checkoutTEMP_USservice
 \end{itemize}
-                runtime\_fraction:
-                  default\_value:
+                runtimeTEMP_USfraction:
+                  defaultTEMP_USvalue:
                     numerator: 100  \# 100\% of traffic
                     denominator: HUNDRED
-\texttt{`}
+\end{verbatim}
 
 \textbf{Diff Engine:}
-\texttt{`}python
+\begin{verbatim}
 class DiffEngine:
-    def compare(self, legacy\textit{response, new}response):
+    def compare(self, legacyTEMP_USresponse, newTEMP_USresponse):
         \# Normalize responses
-        legacy\textit{norm = self.normalize(legacy}response)
-        new\textit{norm = self.normalize(new}response)
+        legacyTEMP_USnorm = self.normalize(legacyTEMP_USresponse)
+        newTEMP_USnorm = self.normalize(newTEMP_USresponse)
         
         \# Compare
-        if legacy\textit{norm != new}norm:
-            self.log\textit{diff(legacy}norm, new\_norm)
-            metrics.increment("shadow\_diff")
+        if legacyTEMP_USnorm != newTEMP_USnorm:
+            self.logTEMP_USdiff(legacyTEMP_USnorm, newTEMP_USnorm)
+            metrics.increment("shadowTEMP_USdiff")
         else:
-            metrics.increment("shadow\_match")
-\texttt{`}
+            metrics.increment("shadowTEMP_USmatch")
+\end{verbatim}
 
 \subsection{5.3 Validation Metrics}
 
@@ -645,24 +644,24 @@ The hardest part is turning the old system off:
 We model the Strangler Fig pattern as a probabilistic routing function that seeks to minimize the risk integral over time.
 
 \subsection{7.1 The Routing Function}
-Let \$R$ be the router (Facade) handling request \$r$.
-Let \$M$ be the Monolith and \$\mu$ be the Microservice.
-The routing decision \$D(r)$ is:
+Let $R$ be the router (Facade) handling request $r$.
+Let $M$ be the Monolith and \$\mu$ be the Microservice.
+The routing decision $D(r)$ is:
 
-$$ D(r) = \begin{cases} \mu \& \text{if } r \in \text{Cohort}\textit{{canary} \lor \text{Random}() < P}{shift}(t) \\ M \& \text{otherwise} \end{cases} $$
+$ D(r) = \begin{cases} \mu & \text{if } r \in \text{Cohort}\textit{{canary} \lor \text{Random}() < P_{shift}(t) \\ M & \text{otherwise} \end{cases} $
 
-Where \$P\_{shift}(t)$ is the percentage of traffic shifted at time $t$.
+Where $P\_{shift}(t)$ is the percentage of traffic shifted at time $t$.
 
 \subsection{7.2 Risk Minimization}
-The expected cost of failure \$E(C)$ at any point \$t$ is:
+The expected cost of failure $E(C)$ at any point $t$ is:
 
-$$ E(C, t) = P\textit{{shift}(t) \times P}{fail}(\mu) \times Impact $$
+$ E(C, t) = P\_{\text{shift}(t) \times P\_{\text{fail}(\mu) \times Impact $
 
-In a "Big Bang" migration, \$P\textit{{shift}$ jumps from 0 to 1 instantaneously, maximizing \$E(C)$. In the Strangler pattern, \$P}{shift}$ increases as a logistic function:
+In a "Big Bang" migration, $P_{\text{shift}$ jumps from 0 to 1 instantaneously, maximizing $E(C)$. In the Strangler pattern, $P_{shift}$ increases as a logistic function:
 
-$$ P\textit{{shift}(t) = \frac{1}{1 + e^{-k(t-t}0)}} $$
+$ P\_{\text{shift}(t) = \frac{1}{1 + e^{-k(t-t\_0)} $
 
-This ensures that traffic volume only increases as confidence (\$1 - P\_{fail}\$) increases.
+This ensures that traffic volume only increases as confidence (\$1 - P\_{fail}$) increases.
 
 ---
 
@@ -687,7 +686,7 @@ The cutover took 200 milliseconds (config propagation time). Users noticed nothi
 \subsection{9.1 Strangler Facade Configuration (NGINX)}
 This configuration demonstrates how to route traffic between legacy and modern systems based on headers and paths.
 
-\texttt{`}nginx
+\begin{verbatim}
 upstream legacy\_monolith {
     server 10.0.1.5:8080;
 }
@@ -701,28 +700,28 @@ server {
 
     \# Default to Monolith
     location / {
-        proxy\textit{pass http://legacy}monolith;
+        proxy\_pass http://legacy\_monolith;
     }
 
     \# Strangler Rule: Inventory Service
     location /api/v1/inventory {
         \# Feature Flag Logic via Header
-        if (\$http\textit{x}canary\_user = "true") {
-            proxy\textit{pass http://new}microservice;
+        if ($http_x_canary_user = "true") {
+            proxy_pass http://new_microservice;
         }
         
         \# Percentage-based Shift (Split Clients)
-        split\textit{clients "\${remote}addr}AAA" \$variant {
-            5\%      new\_microservice;
+        split_clients "\${remote\_addr}AAA" $variant {
+            5\%      new_microservice;
 \begin{itemize}
-\item legacy\_monolith;
+\item legacy_monolith;
 \end{itemize}
         }
 
-        proxy\_pass http://\$variant;
+        proxy_pass http://$variant;
     }
 }
-\texttt{`}
+\end{verbatim}
 
 \subsection{9.2 Protocol Translation (SOAP to gRPC)}
 Legacy systems often expose SOAP/XML interfaces, while modern microservices expect gRPC/Protobuf. The Strangler Facade must perform on-the-fly transcoding.
@@ -737,7 +736,7 @@ Legacy systems often expose SOAP/XML interfaces, while modern microservices expe
 \textbf{Performance Impact:}
 XML parsing is CPU intensive. Benchmarks show a 12ms overhead per request for 10KB payloads. This must be accounted for in latency budgets.
 
-\texttt{`}protobuf
+\begin{verbatim}
 // gRPC Definition (Modern)
 service AccountService {
   rpc GetBalance (GetBalanceRequest) returns (GetBalanceResponse) {}
@@ -745,7 +744,7 @@ service AccountService {
 
 // Maps to Legacy SOAP Action:
 // <soap:Evaluation><GetBalance><AccountId>...</AccountId></GetBalance></soap:Evaluation>
-\texttt{`}
+\end{verbatim}
 
 ---
 
@@ -784,7 +783,7 @@ service AccountService {
 
 ---
 
-\section{11. Evaluation \& Validation}
+\section{11. Evaluation & Validation}
 
 \subsection{11.1 Production Case Studies}
 
@@ -878,7 +877,7 @@ Supporting two stacks (Monolith + Microservices) requires a team that is discipl
 Using LLMs to automatically identify "Seams" in the monolith code and generate the initial microservice scaffolding and Anti-Corruption Layer translation logic.
 
 \subsection{16.2 Automated Verification}
-Developing tools that mathematically guarantee functional equivalence between the legacy function \$f\textit{{old}(x)$ and the new function \$f}{new}(x)$ across the entire input space.
+Developing tools that mathematically guarantee functional equivalence between the legacy function $f\_{old}(x)$ and the new function $f_{new}(x)$ across the entire input space.
 
 ---
 
@@ -917,7 +916,7 @@ This paper represents independent research conducted by the author. No conflicts
 
 ---
 
-\section{8. Evaluation \& Validation}
+\section{8. Evaluation & Validation}
 
 \subsection{8.1 Production Case Studies}
 
@@ -974,7 +973,7 @@ Blue-green deployment enables zero-downtime releases. Strangler Fig extends this
 
 ---
 
-\section{10. Limitations \& Future Work}
+\section{10. Limitations & Future Work}
 
 \subsection{10.1 Limitations}
 
@@ -999,7 +998,7 @@ Use LLMs to assist in translating monolith code to microservice code.
 
 \begin{figure}[h]
 \centering
-\includegraphics[width=0.8\textwidth]{figures/fig-7.png}
+\fbox{MISSING FIGURE: figures/fig-7.png}
 \caption{Diagram 7}
 \end{figure}
 \textbf{Figure 10.1:} The Migration Maturity Model. Organizations move from measuring the monolith to intercepting its traffic, and finally extracting its core logic until the legacy system can be safely decommissioned.
@@ -1020,47 +1019,39 @@ This paper represents independent research conducted by the author. No conflicts
 \textbf{Format:} Technical Specification
 
 
-\section{Introduction}
-% TODO: Add content for Introduction
 
 
-\section{Problem Statement}
-% TODO: Add content for Problem Statement
 
 
-\section{Architecture}
-% TODO: Add content for Architecture
 
 
-\section{Implementation}
-% TODO: Add content for Implementation
 
 
-\section{Evaluation}
-% TODO: Add content for Evaluation
 
 
-\section{Results}
-% TODO: Add content for Results
 
 
-\section{Related Work}
-% TODO: Add content for Related Work
 
 
-\section{Limitations}
-% TODO: Add content for Limitations
 
 
-\section{Reproducibility}
-% TODO: Add content for Reproducibility
 
 
-\section{Conclusion}
-% TODO: Add content for Conclusion
+
+
+
+
+
+
+
+
+
+
 
 
 \bibliographystyle{ACM-Reference-Format}
 \bibliography{refs}
 
 \end{document}
+
+}}}

@@ -9,9 +9,8 @@
 
 \title{Platform Governance \& Multi-Cloud Hybrid Strategy}
 \author{Chaitanya Bharath Gopu}
-\affiliation{\institution{OmniGCloud Systems, Inc.}\city{Tallahassee}\state{Florida}\country{USA}}
+\affiliation{\institution{OmniGCloud Systems, Inc.}\city{Tallahassee}\state{Florida}\country{USA}
 \email{gchaitanyabharath9@gmail.com}
-
 \begin{abstract}
 Governance becomes the bottleneck the moment you try to scale. A startup with 10 developers can review every deployment manually. At 100 developers, the Change Advisory Board meets weekly and approvals take days. At 1000 developers deploying 50-100 times daily across AWS, Azure, and GCP, manual governance doesn't just slow downit collapses. The choice appears binary: move fast and accumulate compliance violations, or enforce controls and throttle innovation. This paper demonstrates the choice is false.
 
@@ -57,7 +56,7 @@ Key contributions: (1) policy-as-code pipeline with sub-60-second propagation ac
 
 \section{Original Contribution}
 
-To the best of our knowledge, this work offers the a formalization of "Risk Entropy" in multi-cloud environmentsthe measurable tendency of unmanaged cloud infrastructure to drift toward non-compliance (\$O(t)$). We introduce \textbf{A4-GOV-STD}, a unified governance substrate that abstracts policy enforcement from the underlying cloud provider APIs, effectively solving the "Policy Fragmentation" problem where AWS IAM, Azure RBAC, and GCP IAM cannot be reasoned about coherently. We quantify the "Cost of Governance" and demonstrate that switching from procedural (human) to declarative (code) governance reduces deployment latency by 99.96\%.
+To the best of our knowledge, this work offers the formalization of "Risk Entropy" in multi-cloud environmentsthe measurable tendency of unmanaged cloud infrastructure to drift toward non-compliance ($O(t)$). We introduce \textbf{A4-GOV-STD}, a unified governance substrate that abstracts policy enforcement from the underlying cloud provider APIs, effectively solving the "Policy Fragmentation" problem where AWS IAM, Azure RBAC, and GCP IAM cannot be reasoned about coherently. We quantify the "Cost of Governance" and demonstrate that switching from procedural (human) to declarative (code) governance reduces deployment latency by 99.96\%.
 
 \subsection{Contribution Summary for Non-Specialists}
 
@@ -185,48 +184,48 @@ Not all policies are created equal. We categorize them by intent and enforcement
 Open Policy Agent uses Rego, a declarative language for expressing policies:
 
 \textbf{Example: Require Resource Limits}
-\texttt{`}rego
+\begin{verbatim}
 package kubernetes.admission
 
 deny[msg] {
   input.request.kind.kind == "Pod"
-  container := input.request.object.spec.containers[\_]
+  container := input.request.object.spec.containers[_]
   not container.resources.limits.memory
   msg := sprintf("Container \%v must specify memory limit", [container.name])
 }
 
 deny[msg] {
   input.request.kind.kind == "Pod"
-  container := input.request.object.spec.containers[\_]
+  container := input.request.object.spec.containers[_]
   not container.resources.limits.cpu
   msg := sprintf("Container \%v must specify CPU limit", [container.name])
 }
-\texttt{`}
+\end{verbatim}
 
 \textbf{Example: Enforce Image Registry}
-\texttt{`}rego
+\begin{verbatim}
 package kubernetes.admission
 
-allowed\_registries := ["gcr.io/company", "docker.io/company"]
+allowed_registries := ["gcr.io/company", "docker.io/company"]
 
 deny[msg] {
   input.request.kind.kind == "Pod"
-  container := input.request.object.spec.containers[\_]
+  container := input.request.object.spec.containers[_]
   image := container.image
-  not startswith(image, allowed\textit{registries[}])
+  not startswith(image, allowed_registries[_])
   msg := sprintf("Image \%v from unauthorized registry", [image])
 }
-\texttt{`}
+\end{verbatim}
 
 \subsection{2.4 Policy Testing}
 
 Policies are tested using OPA's built-in test framework:
 
 \textbf{Test Case:}
-\texttt{`}rego
+\begin{verbatim}
 package kubernetes.admission
 
-test\textit{deny}missing\textit{memory}limit {
+test_deny_missing_memory_limit {
   input := {
     "request": {
       "kind": {"kind": "Pod"},
@@ -234,7 +233,7 @@ test\textit{deny}missing\textit{memory}limit {
         "spec": {
           "containers": [{
             "name": "app",
-            "resources": {"limits": {"cpu": "1"}}
+            "resources": {"limits": {"cpu": "1"}
           }]
         }
       }
@@ -244,13 +243,13 @@ test\textit{deny}missing\textit{memory}limit {
   deny[msg] with input as input
   msg == "Container app must specify memory limit"
 }
-\texttt{`}
+\end{verbatim}
 
 \textbf{CI Integration:}
-\texttt{`}yaml
+\begin{verbatim}
 \# .github/workflows/policy-test.yml
 name: Policy Tests
-on: [push, pull\_request]
+on: [push, pull_request]
 jobs:
   test:
     runs-on: ubuntu-latest
@@ -259,19 +258,19 @@ jobs:
 \item uses: actions/checkout@v2
 \item name: Install OPA
 \end{itemize}
-        run: curl -L -o opa https://openpolicyagent.org/downloads/latest/opa\textit{linux}amd64
+        run: curl -L -o opa https://openpolicyagent.org/downloads/latest/opa_linux_amd64
 \begin{itemize}
 \item name: Run Tests
 \end{itemize}
         run: ./opa test policies/ --verbose
-\texttt{`}
+\end{verbatim}
 
 \subsection{2.5 Policy Distribution}
 
 Policies are bundled and distributed to all enforcement points:
 
 \textbf{Bundle Creation:}
-\texttt{`}bash
+\begin{verbatim}
 \# Create OPA bundle
 opa build -b policies/ -o bundle.tar.gz
 
@@ -281,10 +280,10 @@ opa sign bundle.tar.gz --signing-key private.pem
 \# Upload to registry
 curl -X PUT http://opa-registry/bundles/latest \
   --data-binary @bundle.tar.gz
-\texttt{`}
+\end{verbatim}
 
 \textbf{Cluster Configuration:}
-\texttt{`}yaml
+\begin{verbatim}
 \# OPA ConfigMap
 apiVersion: v1
 kind: ConfigMap
@@ -302,9 +301,9 @@ data:
         service: bundle-registry
         resource: bundles/latest
         polling:
-          min\textit{delay}seconds: 60
-          max\textit{delay}seconds: 120
-\texttt{`}
+          min_delay_seconds: 60
+          max_delay_seconds: 120
+\end{verbatim}
 
 \textbf{Propagation Time:}
 \begin{itemize}
@@ -352,7 +351,7 @@ We establish a sovereign identity boundary using OIDC:
 \subsection{3.3 Implementation Details}
 
 \textbf{AWS: OIDC Identity Provider}
-\texttt{`}bash
+\begin{verbatim}
 \# Create OIDC provider in AWS
 aws iam create-open-id-connect-provider \
   --url https://oidc.company.com \
@@ -375,10 +374,10 @@ aws iam create-open-id-connect-provider \
     }
   }]
 }
-\texttt{`}
+\end{verbatim}
 
 \textbf{Azure: Workload Identity Federation}
-\texttt{`}bash
+\begin{verbatim}
 \# Create federated credential
 az ad app federated-credential create \
   --id <app-id> \
@@ -388,10 +387,10 @@ az ad app federated-credential create \
     "subject": "user@company.com",
     "audiences": ["api://AzureADTokenExchange"]
   }'
-\texttt{`}
+\end{verbatim}
 
 \textbf{GCP: Workload Identity Federation}
-\texttt{`}bash
+\begin{verbatim}
 \# Create workload identity pool
 gcloud iam workload-identity-pools create company-pool \
   --location=global
@@ -402,7 +401,7 @@ gcloud iam workload-identity-pools providers create-oidc company-oidc \
   --workload-identity-pool=company-pool \
   --issuer-uri=https://oidc.company.com \
   --attribute-mapping="google.subject=assertion.sub"
-\texttt{`}
+\end{verbatim}
 
 \subsection{3.4 Token Exchange Flow}
 
@@ -454,7 +453,7 @@ We forbid \texttt{kubectl apply} and ClickOps. All state is reconciled from Git.
 \subsection{4.3 ArgoCD Implementation}
 
 \textbf{Application Manifest:}
-\texttt{`}yaml
+\begin{verbatim}
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
@@ -476,7 +475,7 @@ spec:
 \begin{itemize}
 \item CreateNamespace=true
 \end{itemize}
-\texttt{`}
+\end{verbatim}
 
 \textbf{Key Features:}
 \begin{itemize}
@@ -488,13 +487,13 @@ spec:
 \subsection{4.4 Drift Detection}
 
 \textbf{Metrics:}
-\texttt{`}
+\begin{verbatim}
 \# Drift events per day
-argocd\textit{app}sync\_total{phase="OutOfSync"} = 45
+argocd_app_sync_total{phase="OutOfSync"} = 45
 
 \# Time to reconciliation
-argocd\textit{app}reconcile\textit{duration}seconds{quantile="0.99"} = 8.2
-\texttt{`}
+argocd_app_reconcile_duration_seconds{quantile="0.99"} = 8.2
+\end{verbatim}
 
 \textbf{Table 3: Drift Prevention Results}
 
@@ -524,7 +523,7 @@ Governance is applied at four distinct layers:
 \subsection{5.2 Layer 1: Code (Shift-Left)}
 
 \textbf{Pre-Commit Hooks:}
-\texttt{`}bash
+\begin{verbatim}
 \# .git/hooks/pre-commit
 \#!/bin/bash
 \# Detect secrets in code
@@ -535,7 +534,7 @@ kubeval manifests/*.yaml
 
 \# Check Terraform
 tflint --recursive
-\texttt{`}
+\end{verbatim}
 
 \textbf{IDE Integration:}
 \begin{itemize}
@@ -547,24 +546,24 @@ tflint --recursive
 \subsection{5.3 Layer 2: Build (CI/CD)}
 
 \textbf{Container Image Scanning:}
-\texttt{`}yaml
+\begin{verbatim}
 \# .github/workflows/build.yml
 \begin{itemize}
 \item name: Build Image
 \end{itemize}
-  run: docker build -t app:\${{ github.sha }} .
+  run: docker build -t app:\${{ github.sha } .
 \begin{itemize}
 \item name: Scan Image
 \end{itemize}
   uses: aquasecurity/trivy-action@master
   with:
-    image-ref: app:\${{ github.sha }}
+    image-ref: app:\${{ github.sha }
     severity: 'CRITICAL,HIGH'
     exit-code: '1'  \# Fail build on vulnerabilities
-\texttt{`}
+\end{verbatim}
 
 \textbf{Policy Checks:}
-\texttt{`}yaml
+\begin{verbatim}
 \begin{itemize}
 \item name: Validate Manifests
 \end{itemize}
@@ -572,12 +571,12 @@ tflint --recursive
     conftest test manifests/ \
       --policy policies/ \
       --namespace kubernetes.admission
-\texttt{`}
+\end{verbatim}
 
 \subsection{5.4 Layer 3: Admission (Runtime Gate)}
 
 \textbf{OPA Gatekeeper:}
-\texttt{`}yaml
+\begin{verbatim}
 apiVersion: templates.gatekeeper.sh/v1beta1
 kind: ConstraintTemplate
 metadata:
@@ -601,15 +600,15 @@ spec:
         package k8srequiredlabels
         violation[{"msg": msg}] {
           provided := {label | input.review.object.metadata.labels[label]}
-          required := {label | label := input.parameters.labels[\_]}
+          required := {label | label := input.parameters.labels[_]}
           missing := required - provided
           count(missing) > 0
           msg := sprintf("Missing required labels: \%v", [missing])
         }
-\texttt{`}
+\end{verbatim}
 
 \textbf{Constraint:}
-\texttt{`}yaml
+\begin{verbatim}
 apiVersion: constraints.gatekeeper.sh/v1beta1
 kind: K8sRequiredLabels
 metadata:
@@ -623,25 +622,25 @@ spec:
         kinds: ["Pod"]
   parameters:
     labels: ["cost-center", "owner", "environment"]
-\texttt{`}
+\end{verbatim}
 
 \subsection{5.5 Layer 4: Runtime (Detection)}
 
 \textbf{Falco Rules:}
-\texttt{`}yaml
+\begin{verbatim}
 \begin{itemize}
 \item rule: Unexpected outbound connection
 \end{itemize}
   desc: Detect unexpected outbound connections
   condition: >
     outbound and
-    not fd.sip in (allowed\_ips) and
+    not fd.sip in (allowed_ips) and
     container.id != host
   output: >
     Unexpected outbound connection
     (user=\%user.name command=\%proc.cmdline connection=\%fd.name)
   priority: WARNING
-\texttt{`}
+\end{verbatim}
 
 \textbf{Table 4: Enforcement Layer Comparison}
 
@@ -671,19 +670,19 @@ Strict governance must not impede disaster recovery. During a P0 incident, waiti
 \textbf{Figure 5:} Emergency Access. Admins can request short-lived (1 hour) certificates that bypass OPA Admission Controller, triggering immediate SOC alerts.
 
 \textbf{Vault Configuration:}
-\texttt{`}hcl
+\begin{verbatim}
 \# Break-glass role
 path "pki/issue/break-glass" {
   capabilities = ["create", "update"]
-  allowed\_parameters = {
-    "common\_name" = ["admin-*"]
+  allowed_parameters = {
+    "common_name" = ["admin-*"]
     "ttl" = ["1h"]
   }
 }
-\texttt{`}
+\end{verbatim}
 
 \textbf{Kubernetes RBAC:}
-\texttt{`}yaml
+\begin{verbatim}
 apiVersion: rbac.authorization.k8s.io/v1
 kind: ClusterRoleBinding
 metadata:
@@ -699,46 +698,46 @@ subjects:
 \item kind: User
 \end{itemize}
     name: admin-break-glass
-\texttt{`}
+\end{verbatim}
 
 \textbf{Audit Alert:}
-\texttt{`}yaml
+\begin{verbatim}
 \# Prometheus alert
 \begin{itemize}
 \item alert: BreakGlassAccess
 \end{itemize}
   expr: |
-    increase(kubernetes\textit{audit}event\_total{
+    increase(kubernetes_audit_event_total{
       user=~"admin-break-glass.*"
     }[5m]) > 0
   labels:
     severity: critical
   annotations:
     summary: "Break-glass access detected"
-    description: "User {{ \$labels.user }} used break-glass access"
-\texttt{`}
+    description: "User {{ $labels.user } used break-glass access"
+\end{verbatim}
 
 ---
 
 \section{7. Mathematical Formalization of Policy Governance}
 
-We model the Governance Plane as a state transition function where the validity of any state \$S$ is determined by a set of Policy Functions \$P$.
+We model the Governance Plane as a state transition function where the validity of any state $S$ is determined by a set of Policy Functions $P$.
 
 \subsection{7.1 The Compliance Predicate}
-Let \$S\_{infra}$ be the set of all infrastructure resources (containers, buckets, load balancers).
+Let $S\_{infra}$ be the set of all infrastructure resources (containers, buckets, load balancers).
 Let $P = \{p\textit{1, p}2, ..., p\_n\}$ be the set of active policies.
-A resource $r \in S\_{infra}\$ is compliant if and only if:
+A resource $r \in S\_{infra}$ is compliant if and only if:
 
-$$ \forall p \in P, p(r) = \text{true} $$
+$ \forall p \in P, p(r) = \text{true} $
 
-The global state \$S\_{infra}\$ is compliant iff:
+The global state $S\_{infra}$ is compliant iff:
 
-$$ \text{Compliance}(S\textit{{infra}) = \bigwedge}{r \in S\textit{{infra}} \bigwedge}{p \in P} p(r) $$
+$ \text{Compliance}(\_\_MATH\_VAR\_0\_\_) = \bigwedge_{r \in \_\_MATH\_VAR\_0\_\_} \bigwedge_{p \in P} p(r) $
 
 \subsection{7.2 Risk Entropy Calculation}
-We define "Risk Entropy" \$E(t)$ as the rate at which \$S\_{infra}\$ drifts from compliance in the absence of enforcement. Emperical observation suggests linear growth:
+We define "Risk Entropy" $E(t)$ as the rate at which $S\_{infra}$ drifts from compliance in the absence of enforcement. Emperical observation suggests linear growth:
 
-$$ E(t) \propto \lambda \cdot t $$
+$ E(t) \propto \lambda \cdot t $
 
 Where \$\lambda$ is the rate of manual changes. A4's continuous reconciliation drives $E(t) \to 0$ with a period equal to the GitOps sync interval ($\tau \approx 60s$).
 
@@ -764,20 +763,20 @@ The vulnerability existed for less than 1 minute. Under the previous manual audi
 \subsection{9.1 Unified Identity via OIDC}
 The following Rego snippet demonstrates how A4 normalizes identity claims across AWS (ARN) and GCP (ServiceAccount).
 
-\texttt{`}rego
+\begin{verbatim}
 package authz.normalization
 
 \# Normalize AWS ARN
 identity = {"provider": "aws", "user": user, "role": role} {
     input.identity.arn
     \# Regex to extract role and user
-    regex.match("arn:aws:iam::.\textit{:role/(.})", input.identity.arn)
+    regex.match("arn:aws:iam::.TEMP_US:role/(.TEMP_US)", input.identity.arn)
     role := split(input.identity.arn, "/")\cite{ref1}
-    user := input.session.verified\_email
+    user := input.session.verifiedTEMP_USemail
 }
 
 \# Normalize GCP Service Account
-identity = {"provider": "gcp", "user": sa, "role": "service\_account"} {
+identity = {"provider": "gcp", "user": sa, "role": "serviceTEMP_USaccount"} {
     input.identity.email
     endswith(input.identity.email, ".iam.gserviceaccount.com")
     sa := input.identity.email
@@ -789,7 +788,7 @@ allow {
     identity.role == "admin"
     input.operation == "delete"
 }
-\texttt{`}
+\end{verbatim}
 
 ---
 
@@ -1134,47 +1133,39 @@ This paper represents independent research conducted by the author. No conflicts
 \textbf{Format:} Technical Specification
 
 
-\section{Introduction}
-% TODO: Add content for Introduction
 
 
-\section{Problem Statement}
-% TODO: Add content for Problem Statement
 
 
-\section{Architecture}
-% TODO: Add content for Architecture
 
 
-\section{Implementation}
-% TODO: Add content for Implementation
 
 
-\section{Evaluation}
-% TODO: Add content for Evaluation
 
 
-\section{Results}
-% TODO: Add content for Results
 
 
-\section{Related Work}
-% TODO: Add content for Related Work
 
 
-\section{Limitations}
-% TODO: Add content for Limitations
 
 
-\section{Reproducibility}
-% TODO: Add content for Reproducibility
 
 
-\section{Conclusion}
-% TODO: Add content for Conclusion
+
+
+
+
+
+
+
+
+
+
 
 
 \bibliographystyle{ACM-Reference-Format}
 \bibliography{refs}
 
 \end{document}
+
+}}

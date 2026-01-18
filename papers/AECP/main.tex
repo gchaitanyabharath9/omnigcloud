@@ -53,7 +53,7 @@ Through production deployments across five organizations over 18 months (e-comme
 
 \section{Original Contribution}
 
-To the best of our knowledge, AECP is the a framework to formally treat the "Enterprise Control Plane" not as a collection of scripts or tools, but as a distinct software product with its own SDLC, release cadence, and availability SLOs. While Google SRE books describe "Toil reduction," AECP quantifies the architectural mechanism for eliminating toil: the probabilistic conversion of manual policy logic into deterministic, computable automata. This framework extends the NIST 800-207 Zero Trust Architecture by applying its principles beyond network access to general-purpose operational governance.
+To the best of our knowledge, AECP is the framework to formally treat the "Enterprise Control Plane" not as a collection of scripts or tools, but as a distinct software product with its own SDLC, release cadence, and availability SLOs. While Google SRE books describe "Toil reduction," AECP quantifies the architectural mechanism for eliminating toil: the probabilistic conversion of manual policy logic into deterministic, computable automata. This framework extends the NIST 800-207 Zero Trust Architecture by applying its principles beyond network access to general-purpose operational governance.
 
 \subsection{Contribution Summary for Non-Specialists}
 
@@ -61,7 +61,7 @@ In traditional IT, when a rule needs to be followed (like "encrypt all data"), a
 
 \subsection{Why This Framework Was Needed Now}
 
-The explosion of microservices (2015-2025) created an "entropy crisis." Organizations deployed services faster than they could govern them. Traditional responseshiring more ops people or buying rigid "Cloud Management Platforms"failed because they didn't address the core math: the number of policy decision points (\$N$) was growing faster than the number of humans (\$M$). AECP was needed to provide an $O(1)$ governance modelwhere the cost of governance remains constant regardless of how many services are deployed.
+The explosion of microservices (2015-2025) created an "entropy crisis." Organizations deployed services faster than they could govern them. Traditional responseshiring more ops people or buying rigid "Cloud Management Platforms"failed because they didn't address the core math: the number of policy decision points ($N$) was growing faster than the number of humans ($M$). AECP was needed to provide an $O(1)$ governance modelwhere the cost of governance remains constant regardless of how many services are deployed.
 
 \subsection{Relationship to A1-A6 Series}
 
@@ -126,14 +126,14 @@ The Policy Definition Layer serves as the source of truth for all disparate comp
 \end{itemize}
 
 \textbf{Example Policy Intent:}
-\texttt{`}
-POLICY data\textit{residency}eu {
-  SCOPE: customer\_data WHERE customer.region = "EU"
+\begin{verbatim}
+POLICY data_residency_eu {
+  SCOPE: customer_data WHERE customer.region = "EU"
   CONSTRAINT: storage.location IN ["eu-west-1", "eu-central-1"]
   ENFORCEMENT: BLOCKING
   AUDIT: REQUIRED
 }
-\texttt{`}
+\end{verbatim}
 
 \subsection{2.2 The Policy Evaluation Layer (Evaluation)}
 
@@ -369,27 +369,27 @@ In catastrophic failure scenarios (e.g., Policy Evaluation Layer offline, polici
 All policy decisions are aggregated into an immutable audit log for compliance reporting:
 
 \textbf{Audit Log Schema:}
-\texttt{`}json
+\begin{verbatim}
 {
   "timestamp": "2026-01-09T06:27:00Z",
-  "enforcement\_point": "ingress-eu-west-1-az2",
-  "policy\textit{id": "data}residency\textit{eu}v1.2",
+  "enforcement_point": "ingress-eu-west-1-az2",
+  "policy_id": "data_residency_eu_v1.2",
   "decision": "DENY",
   "context": {
     "identity": "user@example.com",
-    "resource": "customer\_data/12345",
+    "resource": "customer_data/12345",
     "action": "READ",
     "environment": "production"
   },
   "reason": "storage.location=us-east-1 violates EU residency"
 }
-\texttt{`}
+\end{verbatim}
 
 \subsection{Diagram 5: Audit Log Aggregation}
 
 \begin{figure}[h]
 \centering
-\includegraphics[width=0.8\textwidth]{figures/fig-7.png}
+\fbox{MISSING FIGURE: figures/fig-7.png}
 \caption{Diagram 7}
 \end{figure}
 
@@ -500,7 +500,7 @@ As a theoretical framework, AECP defines the \textit{capabilities} required for 
 
 \begin{figure}[h]
 \centering
-\includegraphics[width=0.8\textwidth]{figures/fig-8.png}
+\fbox{MISSING FIGURE: figures/fig-8.png}
 \caption{Diagram 8}
 \end{figure}
 
@@ -566,7 +566,7 @@ The AECP framework is designed to operate across multiple cloud providers simult
 
 \begin{figure}[h]
 \centering
-\includegraphics[width=0.8\textwidth]{figures/fig-10.png}
+\fbox{MISSING FIGURE: figures/fig-10.png}
 \caption{Diagram 10}
 \end{figure}
 
@@ -578,7 +578,7 @@ The framework implements a continuous feedback loop where enforcement audit logs
 
 \begin{figure}[h]
 \centering
-\includegraphics[width=0.8\textwidth]{figures/fig-11.png}
+\fbox{MISSING FIGURE: figures/fig-11.png}
 \caption{Diagram 11}
 \end{figure}
 
@@ -777,12 +777,12 @@ We evaluated three WASM runtimes for policy execution:
 The AECP DSL is designed for readability by compliance officers, not just engineers:
 
 \textbf{Example: Data Residency Policy}
-\texttt{`}
-POLICY customer\textit{data}residency {
+\begin{verbatim}
+POLICY customer_data_residency {
   DESCRIPTION: "Ensure EU customer data stays in EU regions"
   
   SCOPE: requests WHERE {
-    resource.type == "customer\_data"
+    resource.type == "customer_data"
     AND customer.region == "EU"
   }
   
@@ -793,9 +793,9 @@ POLICY customer\textit{data}residency {
   
   ENFORCEMENT: BLOCKING
   AUDIT: REQUIRED
-  EXCEPTION: break\textit{glass}token\_required
+  EXCEPTION: break_glass_token_required
 }
-\texttt{`}
+\end{verbatim}
 
 \textbf{DSL Features:}
 \begin{itemize}
@@ -974,44 +974,34 @@ This framework represents independent research conducted by the author. No confl
 \textbf{End of Framework Document}
 
 
-\section{Introduction}
-% TODO: Add content for Introduction
 
 
-\section{Problem Statement}
-% TODO: Add content for Problem Statement
 
 
-\section{Architecture}
-% TODO: Add content for Architecture
 
 
-\section{Implementation}
-% TODO: Add content for Implementation
 
 
-\section{Evaluation}
-% TODO: Add content for Evaluation
 
 
-\section{Results}
-% TODO: Add content for Results
 
 
-\section{Related Work}
-% TODO: Add content for Related Work
 
 
-\section{Limitations}
-% TODO: Add content for Limitations
 
 
-\section{Reproducibility}
-% TODO: Add content for Reproducibility
 
 
-\section{Conclusion}
-% TODO: Add content for Conclusion
+
+
+
+
+
+
+
+
+
+
 
 
 \bibliographystyle{ACM-Reference-Format}

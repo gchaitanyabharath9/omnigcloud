@@ -1,0 +1,128 @@
+Starting Next.js server for SEO validation...
+(node:6384) [DEP0190] DeprecationWarning: Passing args to a child process with shell option true can lead to security vulnerabilities, as the arguments are not escaped, only concatenated.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+[Next.js Error]: Γ¿» Failed to start server
+
+[Next.js Error]: Error: listen EADDRINUSE: address already in use :::3001
+    at <unknown> (Error: listen EADDRINUSE: address already in use :::3001)
+    at new Promise (<anonymous>) {
+  code: 'EADDRINUSE',
+  errno: -4091,
+  syscall: 'listen',
+  address: '::',
+  port: 3001
+}
+
+Server ready at http://localhost:3001
+Fetching sitemap...
+Found 352 URLs in sitemap.
+
+Crawled: 1/50 | Violations: 1
+Crawled: 2/50 | Violations: 2
+Crawled: 3/50 | Violations: 3
+Crawled: 4/50 | Violations: 4
+Crawled: 5/50 | Violations: 5
+Crawled: 6/50 | Violations: 6
+Crawled: 7/50 | Violations: 7
+Crawled: 8/50 | Violations: 8
+Crawled: 9/50 | Violations: 9
+Crawled: 10/50 | Violations: 10
+Crawled: 11/50 | Violations: 11
+Crawled: 12/50 | Violations: 12
+Crawled: 13/50 | Violations: 13
+Crawled: 14/50 | Violations: 14
+Crawled: 15/50 | Violations: 15
+Crawled: 16/50 | Violations: 16
+Crawled: 17/50 | Violations: 17
+Crawled: 18/50 | Violations: 18
+Crawled: 19/50 | Violations: 19
+Crawled: 20/50 | Violations: 20
+Crawled: 21/50 | Violations: 21
+Crawled: 22/50 | Violations: 22
+Crawled: 23/50 | Violations: 23
+Crawled: 24/50 | Violations: 24
+Crawled: 25/50 | Violations: 25
+Crawled: 26/50 | Violations: 26
+Crawled: 27/50 | Violations: 27
+Crawled: 28/50 | Violations: 28
+Crawled: 29/50 | Violations: 29
+Crawled: 30/50 | Violations: 30
+Crawled: 31/50 | Violations: 31
+Crawled: 32/50 | Violations: 32
+Crawled: 33/50 | Violations: 33
+Crawled: 34/50 | Violations: 34
+Crawled: 35/50 | Violations: 35
+Crawled: 36/50 | Violations: 36
+Crawled: 37/50 | Violations: 37
+Crawled: 38/50 | Violations: 38
+Crawled: 39/50 | Violations: 39
+Crawled: 40/50 | Violations: 40
+Crawled: 41/50 | Violations: 41
+Crawled: 42/50 | Violations: 42
+Crawled: 43/50 | Violations: 43
+Crawled: 44/50 | Violations: 44
+Crawled: 45/50 | Violations: 45
+Crawled: 46/50 | Violations: 46
+Crawled: 47/50 | Violations: 47
+Crawled: 48/50 | Violations: 48
+Crawled: 49/50 | Violations: 49
+Crawled: 50/50 | Violations: 50
+Crawl complete.
+Stopping server...
+
+--- SEO GATE REPORT ---
+[31mFAILED: 50 violations found.[0m
+ΓöîΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓö¼ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓö¼ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓö¼ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÉ
+Γöé (index) Γöé Type    Γöé URL                                  Γöé Message                      Γöé
+Γö£ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓö╝ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓö╝ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓö╝ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöñ
+Γöé 0       Γöé 'FETCH' Γöé 'http://localhost:3000/de'           Γöé 'Fetch failed: fetch failed' Γöé
+Γöé 1       Γöé 'FETCH' Γöé 'http://localhost:3000/de/company'   Γöé 'Fetch failed: fetch failed' Γöé
+Γöé 2       Γöé 'FETCH' Γöé 'http://localhost:3000/de/contact'   Γöé 'Fetch failed: fetch failed' Γöé
+Γöé 3       Γöé 'FETCH' Γöé 'http://localhost:3000/de/dashboard' Γöé 'Fetch failed: fetch failed' Γöé
+Γöé 4       Γöé 'FETCH' Γöé 'http://localhost:3000/de/pricing'   Γöé 'Fetch failed: fetch failed' Γöé
+Γöé 5       Γöé 'FETCH' Γöé 'http://localhost:3000/de/products'  Γöé 'Fetch failed: fetch failed' Γöé
+Γöé 6       Γöé 'FETCH' Γöé 'http://localhost:3000/de/solutions' Γöé 'Fetch failed: fetch failed' Γöé
+Γöé 7       Γöé 'FETCH' Γöé 'http://localhost:3000/en'           Γöé 'Fetch failed: fetch failed' Γöé
+Γöé 8       Γöé 'FETCH' Γöé 'http://localhost:3000/en/company'   Γöé 'Fetch failed: fetch failed' Γöé
+Γöé 9       Γöé 'FETCH' Γöé 'http://localhost:3000/en/contact'   Γöé 'Fetch failed: fetch failed' Γöé
+Γöé 10      Γöé 'FETCH' Γöé 'http://localhost:3000/en/dashboard' Γöé 'Fetch failed: fetch failed' Γöé
+Γöé 11      Γöé 'FETCH' Γöé 'http://localhost:3000/en/pricing'   Γöé 'Fetch failed: fetch failed' Γöé
+Γöé 12      Γöé 'FETCH' Γöé 'http://localhost:3000/en/products'  Γöé 'Fetch failed: fetch failed' Γöé
+Γöé 13      Γöé 'FETCH' Γöé 'http://localhost:3000/en/solutions' Γöé 'Fetch failed: fetch failed' Γöé
+Γöé 14      Γöé 'FETCH' Γöé 'http://localhost:3000/es'           Γöé 'Fetch failed: fetch failed' Γöé
+Γöé 15      Γöé 'FETCH' Γöé 'http://localhost:3000/es/company'   Γöé 'Fetch failed: fetch failed' Γöé
+Γöé 16      Γöé 'FETCH' Γöé 'http://localhost:3000/es/contact'   Γöé 'Fetch failed: fetch failed' Γöé
+Γöé 17      Γöé 'FETCH' Γöé 'http://localhost:3000/es/dashboard' Γöé 'Fetch failed: fetch failed' Γöé
+Γöé 18      Γöé 'FETCH' Γöé 'http://localhost:3000/es/pricing'   Γöé 'Fetch failed: fetch failed' Γöé
+Γöé 19      Γöé 'FETCH' Γöé 'http://localhost:3000/es/products'  Γöé 'Fetch failed: fetch failed' Γöé
+Γöé 20      Γöé 'FETCH' Γöé 'http://localhost:3000/es/solutions' Γöé 'Fetch failed: fetch failed' Γöé
+Γöé 21      Γöé 'FETCH' Γöé 'http://localhost:3000/fr'           Γöé 'Fetch failed: fetch failed' Γöé
+Γöé 22      Γöé 'FETCH' Γöé 'http://localhost:3000/fr/company'   Γöé 'Fetch failed: fetch failed' Γöé
+Γöé 23      Γöé 'FETCH' Γöé 'http://localhost:3000/fr/contact'   Γöé 'Fetch failed: fetch failed' Γöé
+Γöé 24      Γöé 'FETCH' Γöé 'http://localhost:3000/fr/dashboard' Γöé 'Fetch failed: fetch failed' Γöé
+Γöé 25      Γöé 'FETCH' Γöé 'http://localhost:3000/fr/pricing'   Γöé 'Fetch failed: fetch failed' Γöé
+Γöé 26      Γöé 'FETCH' Γöé 'http://localhost:3000/fr/products'  Γöé 'Fetch failed: fetch failed' Γöé
+Γöé 27      Γöé 'FETCH' Γöé 'http://localhost:3000/fr/solutions' Γöé 'Fetch failed: fetch failed' Γöé
+Γöé 28      Γöé 'FETCH' Γöé 'http://localhost:3000/hi'           Γöé 'Fetch failed: fetch failed' Γöé
+Γöé 29      Γöé 'FETCH' Γöé 'http://localhost:3000/hi/company'   Γöé 'Fetch failed: fetch failed' Γöé
+Γöé 30      Γöé 'FETCH' Γöé 'http://localhost:3000/hi/contact'   Γöé 'Fetch failed: fetch failed' Γöé
+Γöé 31      Γöé 'FETCH' Γöé 'http://localhost:3000/hi/dashboard' Γöé 'Fetch failed: fetch failed' Γöé
+Γöé 32      Γöé 'FETCH' Γöé 'http://localhost:3000/hi/pricing'   Γöé 'Fetch failed: fetch failed' Γöé
+Γöé 33      Γöé 'FETCH' Γöé 'http://localhost:3000/hi/products'  Γöé 'Fetch failed: fetch failed' Γöé
+Γöé 34      Γöé 'FETCH' Γöé 'http://localhost:3000/hi/solutions' Γöé 'Fetch failed: fetch failed' Γöé
+Γöé 35      Γöé 'FETCH' Γöé 'http://localhost:3000/ja'           Γöé 'Fetch failed: fetch failed' Γöé
+Γöé 36      Γöé 'FETCH' Γöé 'http://localhost:3000/ja/company'   Γöé 'Fetch failed: fetch failed' Γöé
+Γöé 37      Γöé 'FETCH' Γöé 'http://localhost:3000/ja/contact'   Γöé 'Fetch failed: fetch failed' Γöé
+Γöé 38      Γöé 'FETCH' Γöé 'http://localhost:3000/ja/dashboard' Γöé 'Fetch failed: fetch failed' Γöé
+Γöé 39      Γöé 'FETCH' Γöé 'http://localhost:3000/ja/pricing'   Γöé 'Fetch failed: fetch failed' Γöé
+Γöé 40      Γöé 'FETCH' Γöé 'http://localhost:3000/ja/products'  Γöé 'Fetch failed: fetch failed' Γöé
+Γöé 41      Γöé 'FETCH' Γöé 'http://localhost:3000/ja/solutions' Γöé 'Fetch failed: fetch failed' Γöé
+Γöé 42      Γöé 'FETCH' Γöé 'http://localhost:3000/ko'           Γöé 'Fetch failed: fetch failed' Γöé
+Γöé 43      Γöé 'FETCH' Γöé 'http://localhost:3000/ko/company'   Γöé 'Fetch failed: fetch failed' Γöé
+Γöé 44      Γöé 'FETCH' Γöé 'http://localhost:3000/ko/contact'   Γöé 'Fetch failed: fetch failed' Γöé
+Γöé 45      Γöé 'FETCH' Γöé 'http://localhost:3000/ko/dashboard' Γöé 'Fetch failed: fetch failed' Γöé
+Γöé 46      Γöé 'FETCH' Γöé 'http://localhost:3000/ko/pricing'   Γöé 'Fetch failed: fetch failed' Γöé
+Γöé 47      Γöé 'FETCH' Γöé 'http://localhost:3000/ko/products'  Γöé 'Fetch failed: fetch failed' Γöé
+Γöé 48      Γöé 'FETCH' Γöé 'http://localhost:3000/ko/solutions' Γöé 'Fetch failed: fetch failed' Γöé
+Γöé 49      Γöé 'FETCH' Γöé 'http://localhost:3000/zh'           Γöé 'Fetch failed: fetch failed' Γöé
+ΓööΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓö┤ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓö┤ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓö┤ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÿ

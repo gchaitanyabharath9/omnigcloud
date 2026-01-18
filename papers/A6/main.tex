@@ -9,9 +9,8 @@
 
 \title{Adaptive Policy Enforcement: The Synthesis of Sovereign Control}
 \author{Chaitanya Bharath Gopu}
-\affiliation{\institution{OmniGCloud Systems, Inc.}\city{Tallahassee}\state{Florida}\country{USA}}
+\affiliation{\institution{OmniGCloud Systems, Inc.}\city{Tallahassee}\state{Florida}\country{USA}
 \email{gchaitanyabharath9@gmail.com}
-
 \begin{abstract}
 The previous five papers addressed distinct architectural challenges: A1 established plane separation, A2 quantified throughput limits, A3 defined observability requirements, A4 automated governance, and A5 enabled safe modernization. Each solved a specific problem. None solved the meta-problem: how do these patterns compose into a system that doesn't just tolerate failure, but adapts to it autonomously? A6 defines the Meta-Control Plane that binds A1-A5 into a coherent, self-healing systemnot through better monitoring or faster alerts, but through architectural patterns that eliminate the human from the critical path of incident response.
 
@@ -186,44 +185,44 @@ The critical innovation in A6 is removing the human from the decision loop for k
 \subsection{2.4 Implementation Example}
 
 \textbf{Prometheus Alert:}
-\texttt{`}yaml
+\begin{verbatim}
 groups:
 \begin{itemize}
-\item name: adaptive\_policy
+\item name: adaptiveTEMP_USpolicy
 \end{itemize}
     rules:
 \begin{itemize}
 \item alert: LatencySpike
 \end{itemize}
-        expr: histogram\textit{quantile(0.99, http}request\textit{duration}seconds) > 0.5
+        expr: histogramTEMP_USquantile(0.99, httpTEMP_USrequestTEMP_USdurationTEMP_USseconds) > 0.5
         for: 1m
         annotations:
-          action: enable\textit{aggressive}caching
-\texttt{`}
+          action: enableTEMP_USaggressiveTEMP_UScaching
+\end{verbatim}
 
 \textbf{Policy Engine (OPA):}
-\texttt{`}rego
-package adaptive\_policy
+\begin{verbatim}
+package adaptiveTEMP_USpolicy
 
-enable\textit{aggressive}caching {
+enableTEMP_USaggressiveTEMP_UScaching {
   input.alert.name == "LatencySpike"
-  input.metrics.p99\_latency > 500
+  input.metrics.p99TEMP_USlatency > 500
 }
 
-action := "cache\textit{ttl}increase" {
-  enable\textit{aggressive}caching
+action := "cacheTEMP_USttlTEMP_USincrease" {
+  enableTEMP_USaggressiveTEMP_UScaching
 }
-\texttt{`}
+\end{verbatim}
 
 \textbf{Actuator (Kubernetes):}
-\texttt{`}yaml
+\begin{verbatim}
 apiVersion: v1
 kind: ConfigMap
 metadata:
   name: cache-config
 data:
   ttl: "300"  \# Increased from 60s to 300s
-\texttt{`}
+\end{verbatim}
 
 ---
 
@@ -426,23 +425,23 @@ Where does your organization sit?
 We formalize the Meta-Control Plane as a discrete-time control system.
 
 \subsection{7.1 The Feedback Loop}
-Let \$S\_t$ be the state of the system at time $t$.
-Let \$E\_t$ be the environmental input (traffic, attacks).
-Let $A\_t\$ be the action taken by the control plane.
+Let $S\_t$ be the state of the system at time $t$.
+Let $E\_t$ be the environmental input (traffic, attacks).
+Let $A\_t$ be the action taken by the control plane.
 The next state is:
 
-$$ S\textit{{t+1} = f(S}t, E\textit{t, A}t) $$
+$ \_\_MATH\_VAR\_0\_\_ = f(\_\_MATH\_VAR\_1\_\_, \_\_MATH\_VAR\_2\_\_, \_\_MATH\_VAR\_3\_\_) $
 
-Our goal is to choose \$A\textit{t$ such that $S}{t+1}$ remains within the "Survival Region" \$\Omega\_{save}$.
+Our goal is to choose $A_t$ such that $S_{t+1}$ remains within the "Survival Region" \$\Omega\_{save}$.
 
 \subsection{7.2 The Latency Constraint}
-The system fails if the rate of environmental change $\frac{dE}{dt}$ exceeds the control loop frequency \$f\_{loop}$.
-A human loop ($f\_{human} \approx 0.001$ Hz) fails against a DDoS attack ($\frac{dE}{dt} \to \infty$).
-A6 enables $f\_{machine} \approx 100\$ Hz, guaranteeing:
+The system fails if the rate of environmental change $\frac{dE_{dt}$ exceeds the control loop frequency $f\_{loop}$.
+A human loop ($f\_{human} \approx 0.001$ Hz) fails against a DDoS attack ($\frac{dE_{dt} \to \infty$).
+A6 enables $f\_{machine} \approx 100$ Hz, guaranteeing:
 
-$$ \frac{1}{f\textit{{loop}} < \frac{R}{res}}{Rate\_{attack}} $$
+$ \frac{1}{\_\_MATH\_VAR\_1\_\_} < \frac{\_\_MATH\_VAR\_2\_\_}{\_\_MATH\_VAR\_0\_\_}{\_\_MATH\_VAR\_0\_\_} $
 
-Where \$R\_{res}\$ is the resource buffer.
+Where $R\_{res}$ is the resource buffer.
 
 ---
 
@@ -472,7 +471,7 @@ No human action was required.
 \subsection{9.1 The Control Loop Logic (Golang)}
 This snippet illustrates the core "Decide" phase of the OODA loop controller.
 
-\texttt{`}go
+\begin{verbatim}
 func (c *Controller) EvaluateState(metrics Metrics) Action {
     // 1. Calculate Stress Score (0.0 - 1.0)
     stress := calculateStress(metrics.Latency, metrics.Errors)
@@ -482,11 +481,11 @@ func (c *Controller) EvaluateState(metrics Metrics) Action {
     targetLevel := currentLevel
 
     if stress > 0.9 {
-        targetLevel = DEFCON\_1 // Survival Mode
+        targetLevel = DEFCON_1 // Survival Mode
     } else if stress > 0.6 {
-        targetLevel = DEFCON\_2 // Security Mode
+        targetLevel = DEFCON_2 // Security Mode
     } else if stress < 0.1 {
-        targetLevel = DEFCON\_3 // Normal
+        targetLevel = DEFCON_3 // Normal
     }
 
     // 3. Resolve Hysteresis (Prevent flapping)
@@ -495,7 +494,7 @@ func (c *Controller) EvaluateState(metrics Metrics) Action {
     }
     return NoAction
 }
-\texttt{`}
+\end{verbatim}
 
 ---
 
@@ -641,7 +640,7 @@ The concept of a localized OODA loop generalizes to any real-time control system
 \end{itemize}
 
 \subsection{14.1 Applicability Criteria}
-A6 is required when $T\textit{{incident} < T}{human}$. If failure propagates faster than a human can type, A6 is mandatory.
+A6 is required when $\_\_MATH\_VAR\_0\_\_ < T_{human}. If failure propagates faster than a human can type, A6 is mandatory.
 
 \subsection{14.2 When A6 Is Not Appropriate}
 \begin{itemize}
@@ -790,7 +789,7 @@ The concept of a localized OODA loop generalizes to any real-time control system
 \end{itemize}
 
 \subsection{13.1 Applicability Criteria}
-A6 is required when $T\textit{{incident} < T}{human}$. If failure propagates faster than a human can type, A6 is mandatory.
+A6 is required when $\_\_MATH\_VAR\_0\_\_$ < T_{human}$. If failure propagates faster than a human can type, A6 is mandatory.
 
 \subsection{13.2 When A6 Is Not Appropriate}
 \begin{itemize}
@@ -971,47 +970,39 @@ This paper represents independent research conducted by the author. No conflicts
 \textbf{Format:} Synthesis Paper / Framework Definition
 
 
-\section{Introduction}
-% TODO: Add content for Introduction
 
 
-\section{Problem Statement}
-% TODO: Add content for Problem Statement
 
 
-\section{Architecture}
-% TODO: Add content for Architecture
 
 
-\section{Implementation}
-% TODO: Add content for Implementation
 
 
-\section{Evaluation}
-% TODO: Add content for Evaluation
 
 
-\section{Results}
-% TODO: Add content for Results
 
 
-\section{Related Work}
-% TODO: Add content for Related Work
 
 
-\section{Limitations}
-% TODO: Add content for Limitations
 
 
-\section{Reproducibility}
-% TODO: Add content for Reproducibility
 
 
-\section{Conclusion}
-% TODO: Add content for Conclusion
+
+
+
+
+
+
+
+
+
+
 
 
 \bibliographystyle{ACM-Reference-Format}
 \bibliography{refs}
 
 \end{document}
+
+}
