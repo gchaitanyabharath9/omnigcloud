@@ -13,14 +13,14 @@ export class AppError extends Error {
     public readonly code: ErrorCode;
     public readonly httpStatus: number;
     public readonly retryable: boolean;
-    public readonly details?: any;
+    public readonly details?: unknown;
 
     constructor(opts: {
         code: ErrorCode;
         message: string;
         httpStatus?: number;
         retryable?: boolean;
-        details?: any;
+        details?: unknown;
     }) {
         super(opts.message);
         this.name = 'AppError';
@@ -33,7 +33,7 @@ export class AppError extends Error {
         Object.setPrototypeOf(this, AppError.prototype);
     }
 
-    static isAppError(error: any): error is AppError {
+    static isAppError(error: unknown): error is AppError {
         return error instanceof AppError;
     }
 }

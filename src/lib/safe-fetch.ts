@@ -2,7 +2,7 @@
  * Client-side resilient fetch utility
  */
 
-export interface SafeFetchOptions<T = any> extends RequestInit {
+export interface SafeFetchOptions<T = unknown> extends RequestInit {
     timeoutMs?: number;
     maxRetries?: number;
     fallbackData?: T | null;

@@ -79,21 +79,25 @@ export async function withRetry<T>(
                 return await operation();
             }
 
-        } catch (error: any) {
+        } catch (error: unknown) {
             // Determine if we should retry
             let shouldRetry = false;
 
+            // Safe error narrowing
+            const isAppError = AppError.isAppError(error);
+            const errName = error instanceof Error ? error.name : '';
+            const errMessage = error instanceof Error ? error.message : String(error);
+            const errCode = (error as { code?: string })?.code;
+
             if (attempt < opts.maxAttempts) {
-                if (AppError.isAppError(error)) {
-                    shouldRetry = error.retryable;
-                    if (opts.retryableErrors && !opts.retryableErrors.includes(error.code)) {
+                if (isAppError) {
+                    shouldRetry = (error as AppError).retryable;
+                    if (opts.retryableErrors && !opts.retryableErrors.includes((error as AppError).code)) {
                         shouldRetry = false;
                     }
                 } else {
-                    // Normalize unknown errors check? 
-                    // Usually we treat network errors are retryable. 
-                    // Simple check for now:
-                    if (error.code === 'ECONNRESET' || error.message.includes('network') || error.name === 'TimeoutError') {
+                    // Normalize unknown errors check
+                    if (errCode === 'ECONNRESET' || errMessage.includes('network') || errName === 'TimeoutError') {
                         shouldRetry = true;
                     }
                 }
@@ -107,7 +111,7 @@ export async function withRetry<T>(
             logger.warn(`Retrying ${operationName}`, {
                 attempt,
                 maxAttempts: opts.maxAttempts,
-                error: error.message,
+                error: error instanceof Error ? error.message : String(error),
                 delay
             });
 

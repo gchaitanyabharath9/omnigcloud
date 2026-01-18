@@ -1,5 +1,5 @@
 import { NextResponse } from 'next/server'
-import type { NextRequest } from 'next/server'
+import { NextRequest } from 'next/server';
 import { coreMiddleware } from './core-middleware'
 
 export async function middleware(request: NextRequest) {
@@ -20,7 +20,15 @@ export async function middleware(request: NextRequest) {
     // Add security headers
     // We delegate to coreMiddleware for i18n and rate limiting
     // coreMiddleware returns a NextResponse (rewrite, redirect, or json for 429)
-    const response = await coreMiddleware(request);
+    // Inject x-current-path for layout metadata
+    const requestHeaders = new Headers(request.headers);
+    requestHeaders.set('x-current-path', url.pathname);
+
+    const requestWithHeaders = new NextRequest(request, {
+        headers: requestHeaders,
+    });
+
+    const response = await coreMiddleware(requestWithHeaders);
 
     // Prevent clickjacking
     response.headers.set('X-Frame-Options', 'DENY')

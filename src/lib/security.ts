@@ -50,7 +50,7 @@ export function secureRandomInt(min: number, max: number): number {
  * Sanitizes JSON-LD data to safely embed in <script> tags.
  * Escapes </script> to prevent XSS.
  */
-export function safeJsonLd(data: Record<string, any>): string {
+export function safeJsonLd(data: Record<string, unknown>): string {
     const json = JSON.stringify(data);
     return json.replace(/<\/script>/g, '<\\/script>');
 }

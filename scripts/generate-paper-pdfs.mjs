@@ -171,7 +171,7 @@ console.log(`📊 Summary:`);
 console.log(`   ✅ Success: ${successCount} PDFs generated`);
 console.log(`   ❌ Failed: ${failCount}`);
 console.log(`   📁 Output directory: ${OUTPUT_DIR}`);
-console.log('\n   ℹ️  Note: Placeholder diagrams are marked with [DIAGRAM PLACEHOLDER]`);
+console.log('\n   ℹ️  Note: Placeholder diagrams are marked with [DIAGRAM PLACEHOLDER]');
 console.log(`   ℹ️  For full diagrams, view papers online at omnigcloud.com`);
 console.log('='.repeat(60));
 

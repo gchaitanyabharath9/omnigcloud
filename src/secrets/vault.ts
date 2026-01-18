@@ -13,7 +13,7 @@ export async function getVaultSecret(path: string): Promise<Record<string, strin
     try {
         // Dynamically import node-vault to prevent Edge Runtime crashes
         // eslint-disable-next-line @typescript-eslint/no-explicit-any
-        const vaultModule: any = await import('node-vault');
+        const vaultModule = await import('node-vault') as any;
         const vault = vaultModule.default;
 
         const client = vault({
@@ -29,11 +29,17 @@ export async function getVaultSecret(path: string): Promise<Record<string, strin
         // but strictly standard Vault paths are explicit.
         // Let's support the standard `read` method which node-vault handles.
 
-        const response: any = await withRetry(
+        interface VaultResponse {
+            data?: {
+                data?: Record<string, string>;
+            };
+        }
+
+        const response = (await withRetry(
             () => client.read(path),
             { maxAttempts: 3, timeoutMs: 3000 },
             'VaultRead'
-        );
+        )) as VaultResponse;
 
         // Vault KV v2 returns data in response.data.data
         if (response && response.data && response.data.data) {

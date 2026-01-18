@@ -3,7 +3,7 @@ import { withRetry } from '@/lib/retry';
 import { getSecret } from '@/secrets';
 
 // Optional imports
-let Resend: any = null;
+let Resend: unknown = null;
 try {
     // @ts-ignore
     Resend = require('resend').Resend;
@@ -79,7 +79,8 @@ export class LeadService {
         // 2. Notification (Resend)
         if (Resend && resendApiKey && resendFrom && resendTo) {
             try {
-                const resend = new Resend(resendApiKey);
+                // eslint-disable-next-line @typescript-eslint/no-explicit-any
+                const resend = new (Resend as any)(resendApiKey);
                 await withRetry(async () => {
                     await resend.emails.send({
                         from: resendFrom,

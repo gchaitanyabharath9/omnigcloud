@@ -46,7 +46,7 @@ export const CostEfficiencyChart = () => {
                     <CartesianGrid strokeDasharray="3 3" horizontal={true} vertical={true} opacity={0.3} />
                     <XAxis type="number" hide />
                     <YAxis dataKey="scale" type="category" stroke="var(--foreground)" width={70} fontSize={11} />
-                    <Tooltip cursor={{ fill: 'transparent' }} contentStyle={{ backgroundColor: 'var(--bg-surface)', border: '1px solid var(--border)' }} formatter={(value: any) => [`$${(value / 1000).toFixed(0)}k`]} />
+                    <Tooltip cursor={{ fill: 'transparent' }} contentStyle={{ backgroundColor: 'var(--bg-surface)', border: '1px solid var(--border)' }} formatter={(value: number | undefined) => [`$${((value || 0) / 1000).toFixed(0)}k`]} />
                     <Legend />
                     <Bar dataKey="legacy" name="Legacy OpEx ($)" fill="#94a3b8" barSize={20} radius={[0, 4, 4, 0]} />
                     <Bar dataKey="aso" name="ASO OpEx ($)" fill="#3b82f6" barSize={20} radius={[0, 4, 4, 0]} />

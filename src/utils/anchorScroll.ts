@@ -47,7 +47,7 @@ export function scrollToElement(elementId: string, behavior: ScrollBehavior = 's
 export function handleAnchorClick(
     href: string,
     currentPath: string,
-    router: any, // Next.js router
+    router: { push: (href: string) => void }, // Minimal Router interface
     locale: string
 ): void {
     const url = new URL(href, window.location.origin);

@@ -12,7 +12,7 @@ export interface LogContext {
     status?: number | string;
     userId?: string;
     duration?: number;
-    [key: string]: any;
+    [key: string]: unknown;
 }
 
 class Logger {
@@ -41,10 +41,10 @@ class Logger {
         const sanitized = { ...context };
 
         // Mask any email fields
-        if (sanitized.email) {
+        if (typeof sanitized.email === 'string') {
             sanitized.email = this.maskEmail(sanitized.email);
         }
-        if (sanitized.userEmail) {
+        if (typeof sanitized.userEmail === 'string') {
             sanitized.userEmail = this.maskEmail(sanitized.userEmail);
         }
 

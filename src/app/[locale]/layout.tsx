@@ -55,6 +55,21 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
     ko: 'ko_KR',
   };
 
+  const headersList = await import("next/headers").then(mod => mod.headers());
+  const pathname = headersList.get("x-current-path") || `/${locale}`;
+  const canonicalUrl = `${siteUrl}${pathname}`;
+
+  const languages: Record<string, string> = {};
+  ['en', 'es', 'fr', 'de', 'zh', 'hi', 'ja', 'ko'].forEach(lang => {
+    // Replace current locale segment with target lang
+    // pathname starts with /en, /es etc.
+    // If pathname is /en/pricing, we want /es/pricing
+    // If pathname is /en, we want /es
+    const pathWithoutLocale = pathname.replace(new RegExp(`^/${locale}`), '') || '';
+    languages[lang] = `${siteUrl}/${lang}${pathWithoutLocale}`;
+  });
+  languages['x-default'] = `${siteUrl}/en${pathname.replace(new RegExp(`^/${locale}`), '') || ''}`;
+
   return {
     metadataBase: new URL(siteUrl),
     title: {
@@ -65,30 +80,17 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
     keywords: ["Cloud Modernization", "Enterprise AI Architecture", "RedHat OpenShift Modernization", "Cloud Agnostic Discovery", "Azure Cloud Migration", "Cloud Cost Optimization", "AECP Engine", "Sovereign Cloud Governance"],
     authors: [{ name: "OmniGCloud Executive Office" }],
     alternates: {
-      canonical: `${siteUrl}/${locale}`,
-      languages: {
-        'en': `${siteUrl}/en`,
-        'es': `${siteUrl}/es`,
-        'fr': `${siteUrl}/fr`,
-        'de': `${siteUrl}/de`,
-        'zh': `${siteUrl}/zh`,
-        'hi': `${siteUrl}/hi`,
-        'ja': `${siteUrl}/ja`,
-        'ko': `${siteUrl}/ko`,
-        'x-default': `${siteUrl}/en`,
-      },
+      canonical: canonicalUrl,
+      languages,
     },
     robots: {
       index: true,
       follow: true,
-      googleBot: {
-        index: true,
-        follow: true,
-        'max-video-preview': -1,
-        'max-image-preview': 'large',
-        'max-snippet': -1,
-      },
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
     },
+
     openGraph: {
       type: 'website',
       locale: localeMap[locale] || 'en_US',
