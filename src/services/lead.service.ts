@@ -1,6 +1,7 @@
 import { getRedis } from '@/lib/redis';
 import { withRetry } from '@/lib/retry';
 import { getSecret } from '@/secrets';
+import { logger } from '@/lib/logger';
 
 // Optional imports
 let Resend: unknown = null;
@@ -69,10 +70,10 @@ export class LeadService {
                     await pipe.exec();
                 }, { maxAttempts: 3, timeoutMs: 2000 }, 'RedisSaveLead');
 
-                console.log(`[LeadService] Lead saved: ${submissionId}`);
+                logger.info(`[LeadService] Lead saved: ${submissionId}`, { submissionId, source: 'LeadService' });
                 saved = true;
             } catch (err) {
-                console.error(`[LeadService] Redis Error for ${submissionId}:`, err);
+                logger.error('Redis save failed', { submissionId, source: 'LeadService', error: err });
             }
         }
 
@@ -90,10 +91,10 @@ export class LeadService {
                     });
                 }, { maxAttempts: 3, timeoutMs: 5000 }, 'ResendEmail');
 
-                console.log(`[LeadService] Email sent for ${submissionId}`);
+                logger.info(`[LeadService] Email sent: ${submissionId}`, { submissionId, source: 'LeadService' });
                 notified = true;
             } catch (err) {
-                console.error(`[LeadService] Email Error for ${submissionId}:`, err);
+                logger.error('Email send failed', { submissionId, source: 'LeadService', error: err });
             }
         }
 

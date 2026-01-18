@@ -2,6 +2,7 @@ import NextAuth, { type DefaultSession, type NextAuthConfig } from "next-auth";
 import { UpstashRedisAdapter } from "@auth/upstash-redis-adapter";
 import { Redis } from "@upstash/redis";
 import { authConfig } from "./auth.config";
+import { logger } from "@/lib/logger";
 
 const redis = new Redis({
     url: process.env.REDIS_URL || "https://mock.upstash.io",
@@ -42,12 +43,17 @@ const fullAuthConfig = {
     },
     events: {
         async signIn({ user, account }) {
-            const maskedEmail = (user as any).email?.replace(/^(.)(.*)(@.*)$/, (_: any, a: any, b: any, c: any) => a + b.replace(/./g, '*') + c);
-            console.log(`[AUTH_AUDIT] Login Success | User: ${maskedEmail} | Provider: ${account?.provider} | Timestamp: ${new Date().toISOString()}`);
+            logger.info('Login Success', {
+                email: (user as any).email,
+                provider: account?.provider,
+                source: 'AuthAudit'
+            });
         },
         async signOut(data: any) {
-            const maskedEmail = data.session?.user?.email?.replace(/^(.)(.*)(@.*)$/, (_: any, a: any, b: any, c: any) => a + b.replace(/./g, '*') + c);
-            console.log(`[AUTH_AUDIT] Logout | User: ${maskedEmail || 'Unknown'} | Timestamp: ${new Date().toISOString()}`);
+            logger.info('Logout', {
+                email: data.session?.user?.email,
+                source: 'AuthAudit'
+            });
         },
     },
 } satisfies NextAuthConfig;

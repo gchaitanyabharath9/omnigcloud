@@ -13,9 +13,7 @@ function UtmTrackerInner() {
             const utms = getUtmFromUrl(searchParams);
             if (Object.keys(utms).length > 0) {
                 saveUtmToStorage(utms);
-                if (process.env.NODE_ENV === 'development') {
-                    console.log('[Analytics] UTMs captured:', utms);
-                }
+
             }
         }
     }, [searchParams, pathname]);

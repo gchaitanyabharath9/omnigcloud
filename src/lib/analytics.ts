@@ -36,7 +36,7 @@ class Analytics {
         };
 
         if (this.isDevelopment) {
-            console.log('📊 [Analytics Event]:', payload);
+            // No console spam in production-like dev environments, enable if needed for debugging
             return;
         }
 

@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { z } from 'zod';
 import { withApiHarden, createSuccessResponse, createErrorResponse, handleZodError } from '@/lib/api-utils';
+import { logger } from "@/lib/logger";
 
 // Validation schema
 const registerSchema = z.object({
@@ -43,7 +44,7 @@ export async function POST(request: NextRequest) {
             };
 
             // Log registration (PII-safe)
-            console.log(`[REGISTRATION] RequestId: ${requestId} | Email: ${validatedData.email.replace(/(.{2}).*(@.*)/, '$1***$2')} | Company: ${validatedData.company}`);
+            logger.info(`[REGISTRATION] User Registered`, { requestId, email: validatedData.email, company: validatedData.company });
 
             return createSuccessResponse(requestId, {
                 message: 'Registration successful',
