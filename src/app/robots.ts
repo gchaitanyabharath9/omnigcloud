@@ -13,7 +13,7 @@ export default function robots(): MetadataRoute.Robots {
                     '/content/',
                     '/private/',
                     '/_next/',
-                    '/AECP-Whitepaper-*.pdf',
+                    '/*.pdf',
                     '/tmp/',
                     '/dashboard/',
                     '/en/dashboard/',
@@ -28,7 +28,31 @@ export default function robots(): MetadataRoute.Robots {
             },
             {
                 userAgent: 'GPTBot',
-                disallow: ['/docs/whitepaper'], // Protect research intellectual property from basic crawlers if required
+                disallow: ['/'],
+            },
+            {
+                userAgent: 'CCBot',
+                disallow: ['/'],
+            },
+            {
+                userAgent: 'Google-Extended',
+                disallow: ['/'],
+            },
+            {
+                userAgent: 'anthropic-ai',
+                disallow: ['/'],
+            },
+            {
+                userAgent: 'Claude-Web',
+                disallow: ['/'],
+            },
+            {
+                userAgent: 'FacebookBot',
+                disallow: ['/'],
+            },
+            {
+                userAgent: 'Bytespider',
+                disallow: ['/'],
             }
         ],
         sitemap: `${config.site.url}/sitemap.xml`,

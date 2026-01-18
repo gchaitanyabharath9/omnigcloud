@@ -21,10 +21,25 @@ export async function coreMiddleware(request: NextRequest) {
     'unknown';
 
   const userAgent = request.headers.get('user-agent') || '';
-  const isBot = /googlebot|bingbot|yandexbot|duckduckbot|slurp|baiduspider|ia_archiver|facebot|facebookexternalhit|twitterbot|rogerbot|linkedinbot|embedly|quora link preview|showyoubot|outbrain|pinterest\/0\.|developers\.google\.com\/\+\/web\/snippet|slackbot|vkshare|w3c_validator|redditbot|applebot|whatsapp|flipboard|tumblr|bitlybot|skypeuripreview|nuzzel|discordbot|google pagead|qwantify|pinterestbot|bitrix link preview|xing-content-proxy|chrome-lighthouse|telegrambot|gptbot|HeadlessChrome|Playwright/i.test(userAgent);
+
+  // Define good bots (SEO) vs bad bots (Scrapers/AI)
+  const isGoodBot = /googlebot|bingbot|yandexbot|duckduckbot|slurp|baiduspider|facebot|facebookexternalhit|twitterbot|linkedinbot|pinterestbot|applebot|whatsapp|flipboard|tumblr|skypeuripreview|nuzzel|discordbot|google pagead/i.test(userAgent);
+
+  const isBadBot = /gptbot|ccbot|google-extended|anthropic-ai|claude-web|bytespider|omgilibot|facebookbot|diffbot|ia_archiver|cohere-ai|mj12bot/i.test(userAgent);
+
+  // BLOCK aggressive AI scrapers and data miners immediately
+  if (isBadBot) {
+    return new NextResponse(JSON.stringify({ error: 'Access Denied: Automated scraping prohibited.' }), {
+      status: 403,
+      headers: { 'Content-Type': 'application/json' }
+    });
+  }
 
   const isLocal = ip === '127.0.0.1' || ip === '::1' || process.env.NEXT_PUBLIC_APP_ENV === 'local';
-  const rateLimit = (isBot || isLocal) ? { allowed: true } : await limiter.check(ip);
+
+  // Allow good bots and local dev to bypass rate limits
+  // Enforce rate limits on everyone else
+  const rateLimit = (isGoodBot || isLocal) ? { allowed: true } : await limiter.check(ip);
 
   if (!rateLimit.allowed) {
     return new NextResponse('Too Many Requests', {
