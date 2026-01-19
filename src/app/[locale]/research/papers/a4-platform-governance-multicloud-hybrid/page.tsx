@@ -2,6 +2,7 @@ import { Metadata } from 'next';
 import { generateSEOMetadata, generateArticleSchema, SEO_KEYWORDS } from '@/utils/seo';
 import fs from 'fs';
 import path from 'path';
+import Link from 'next/link';
 import AuthorBio from '@/components/article/AuthorBio';
 import MermaidDiagram from '@/components/article/MermaidDiagram';
 import { parseMarkdownContent, renderMarkdownToHTML } from '@/utils/markdown';
@@ -137,12 +138,12 @@ export default async function A4GovernancePage({ params }: { params: Promise<{ l
                                 It advocates for moving compliance checks out of pipelines and into the runtime via admission controllers (OPA)."
                             </p>
 
-                            <a
-                                href="/assets/papers/a4/a4-signed.pdf"
+                            <Link
+                                href={`/${locale}/contact?subject=Paper%20Request:%20A4`}
                                 className="flex items-center justify-center gap-2 w-full py-3 rounded-lg bg-primary/10 border border-primary/20 text-primary font-bold text-xs uppercase tracking-wider hover:bg-primary/20 transition-all mb-6"
                             >
-                                <Download size={16} /> Download Signed PDF
-                            </a>
+                                <FileText size={16} /> Request Full Paper (PDF)
+                            </Link>
                             <div className="space-y-4">
                                 <div className="flex items-center justify-between text-xs font-mono border-b border-white/5 pb-2">
                                     <span className="text-slate-500">Classification</span>
