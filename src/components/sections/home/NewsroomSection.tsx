@@ -1,10 +1,11 @@
 import Link from 'next/link';
 import { Newspaper, ArrowRight, ExternalLink } from 'lucide-react';
-import { useTranslations } from 'next-intl';
+import { useTranslations, useLocale } from 'next-intl';
 import Image from 'next/image';
 
 export default function NewsroomSection() {
     const t = useTranslations('Newsroom');
+    const locale = useLocale();
     const news = [
         {
             id: 'bank',
@@ -32,7 +33,7 @@ export default function NewsroomSection() {
                         <div className="badge badge-primary-subtle mb-2">{t('badge')}</div>
                         <h2 style={{ fontSize: 'clamp(1.75rem, 5vw, 2.5rem)', fontWeight: 950 }}>{t('title')}</h2>
                     </div>
-                    <Link href="/blog" style={{ color: 'var(--primary)', fontWeight: 700, textDecoration: 'none', display: 'flex', alignItems: 'center', gap: '0.5rem', fontSize: '0.9rem' }}>
+                    <Link href={`/${locale}/blog`} style={{ color: 'var(--primary)', fontWeight: 700, textDecoration: 'none', display: 'flex', alignItems: 'center', gap: '0.5rem', fontSize: '0.9rem' }}>
                         {t('link')} <ArrowRight size={16} />
                     </Link>
                 </div>
@@ -70,7 +71,7 @@ export default function NewsroomSection() {
                                     <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', color: 'var(--muted)', fontSize: '0.75rem', fontWeight: 600 }}>
                                         <Newspaper size={14} /> {t(`news.${item.id}.source`)}
                                     </div>
-                                    <Link href={`/news/${item.id}`} style={{ fontSize: '0.8rem', fontWeight: 700, color: 'var(--primary)', display: 'flex', alignItems: 'center', gap: '0.25rem', textDecoration: 'none' }}>
+                                    <Link href={`/${locale}/blog`} style={{ fontSize: '0.8rem', fontWeight: 700, color: 'var(--primary)', display: 'flex', alignItems: 'center', gap: '0.25rem', textDecoration: 'none' }}>
                                         {t('cta')} <ArrowRight size={14} />
                                     </Link>
                                 </div>

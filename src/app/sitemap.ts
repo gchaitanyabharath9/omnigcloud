@@ -2,7 +2,7 @@ import { MetadataRoute } from 'next'
 import { config } from '@/config'
 
 export default function sitemap(): MetadataRoute.Sitemap {
-    const baseUrl = config.site.url || 'https://omnigcloud.com'
+    const baseUrl = config.site.url || 'https://www.omnigcloud.com'
     const currentDate = new Date()
     const locales = ['en', 'es', 'fr', 'de', 'zh', 'hi', 'ja', 'ko']
 
@@ -61,13 +61,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
     // Platform Pages (Priority: 0.8)
     const platformPages = [
-        '/platform/ai-engine',
-        '/platform/observability',
+        '/platform',
     ]
 
     // Company Pages (Priority: 0.7)
     const companyPages = [
-        '/newsroom',
         '/partners',
         '/publications',
         '/founder',
@@ -87,7 +85,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
         '/case-studies',
         '/onboarding',
         '/demo',
-        '/architecture',
     ]
 
     // Combine all routes with their priorities

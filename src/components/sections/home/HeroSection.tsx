@@ -67,7 +67,7 @@ export default function HeroSection() {
                                 <Link href={`/${locale}/platform`} className="btn-primary" style={{ padding: '0.8rem 1.8rem', fontSize: '1rem' }}>
                                     {t('ctaPrimary')}
                                 </Link>
-                                <Link href={`/${locale}/architecture`} className="btn-secondary" style={{ padding: '0.8rem 1.8rem', fontSize: '1rem', display: 'flex', alignItems: 'center' }}>
+                                <Link href={`/${locale}/research/papers`} className="btn-secondary" style={{ padding: '0.8rem 1.8rem', fontSize: '1rem', display: 'flex', alignItems: 'center' }}>
                                     <Layers size={18} style={{ marginRight: '0.5rem' }} /> {t('ctaArchitecture')}
                                 </Link>
                                 <Link href={`/${locale}/docs/whitepaper`} className="btn-secondary" style={{ padding: '0.8rem 1.8rem', fontSize: '1rem', display: 'flex', alignItems: 'center', opacity: 0.8 }}>

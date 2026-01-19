@@ -52,7 +52,7 @@ const Footer = () => {
                             {
                                 label: "Authority", color: "#8b5cf6", links: [
                                     { name: "Technical Founder", href: "/founder" },
-                                    { name: "System Architecture", href: "/architecture" },
+                                    { name: "System Architecture", href: "/research/papers" },
                                     { name: "Strategic Playbooks", href: "/blog" },
                                     { name: "Case Studies", href: "/case-studies" }
                                 ]
@@ -61,8 +61,8 @@ const Footer = () => {
                                 label: t('resources.label'), color: "#f59e0b", links: [
                                     { name: t('resources.docs'), href: "/docs" },
                                     { name: "Sovereign Whitepaper", href: "/docs/whitepaper" },
-                                    { name: "AECP Engine", href: "/platform/ai-engine" },
-                                    { name: "Observability", href: "/platform/observability" },
+                                    { name: "AECP Engine", href: "/research/papers/aecp" },
+                                    { name: "Reference Standards", href: "/research/papers" },
                                     { name: t('resources.visual_library'), href: "/visual-library" }
                                 ]
                             },
@@ -70,8 +70,7 @@ const Footer = () => {
                                 label: t('company.label'), color: "#ec4899", links: [
                                     { name: t('company.about'), href: "/company#about" },
                                     { name: t('company.leadership'), href: "/company#leadership" },
-                                    { name: t('company.newsroom'), href: "/company#newsroom" },
-                                    { name: t('company.investors'), href: "/company#investors" },
+                                    { name: "Strategic Engineering", href: "/blog" },
                                     { name: t('trust.security'), href: "/security" },
                                     { name: t('trust.privacy'), href: "/privacy" },
                                     { name: t('company.contact'), href: "/contact" }

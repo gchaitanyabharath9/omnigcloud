@@ -1,3 +1,19 @@
+% PUBLICATION_READINESS_GATE
+% Word Count: 3683
+% Threshold: 5000
+% STATUS: FAIL_LENGTH (Needs ~1317 more words)
+% PUBLICATION_READINESS_GATE
+% Word Count: 3671
+% Threshold: 5000
+% STATUS: FAIL_LENGTH (Needs ~1329 more words)
+% PUBLICATION_READINESS_GATE
+% Word Count: 3659
+% Threshold: 5000
+% STATUS: FAIL_LENGTH (Needs ~1341 more words)
+% PUBLICATION_READINESS_GATE
+% Word Count: 3647
+% Threshold: 5000
+% STATUS: FAIL_LENGTH (Needs ~1353 more words)
 \documentclass[sigconf]{acmart}
 
 \setcopyright{none}
@@ -12,23 +28,22 @@
 \affiliation{\institution{OmniGCloud Systems, Inc.}\city{Tallahassee}\state{Florida}\country{USA}}
 \email{gchaitanyabharath9@gmail.com}
 \begin{abstract}
-Modernization projects fail the same way every time. The board approves a "cloud transformation" initiative. Engineering spends 18 months building a new system from scratch. The cutover date arrives. The new system crashes under production load, missing critical edge cases the monolith handled silently for years. The team rolls back. Six months later, the project is quietly cancelled, \$5M spent, zero value delivered. This patternthe "Big Bang" rewritefails in 70\% of attempts. The failure isn't execution. It's the approach itself: attempting to replace a working system (however imperfect) with an unproven system while maintaining 99.9% uptime and zero feature regression is architecturally unsound.
-
-This paper defines A5-MOD-STD, a safe, incremental migration strategy based on the Strangler Fig Pattern. Building on A1's plane separation (isolating migration concerns from production traffic), A2's throughput patterns (maintaining performance during dual-system operation), A3's observability (validating new services before cutover), and A4's governance (ensuring compliance throughout migration), A5 addresses the specific challenge of decomposing monolithic applications without business disruption. The architecture details three primitives required for safe decomposition: the Anti-Corruption Layer (ACL) for domain isolation that prevents monolith concepts from leaking into microservices, Shadow Traffic Validation for risk-free testing at production scale without impacting users, and Dual-Write patterns for zero-downtime data migration that maintain consistency across old and new systems during transition.
-
-Through production case studies across three organizations over 18 months (e-commerce platform migrating 2.5M LOC Java monolith, insurance company modernizing 15-year-old .NET system, logistics provider decomposing COBOL mainframe), measurements demonstrate risk reduction from 70\% failure rate to 4% failure rate, maintenance of 99.9% uptime during migration (zero customer-facing incidents), and continuous value delivery (new features deployed during migration, not deferred until after). The approach inverts the traditional assumption: instead of "stop the world, rebuild, restart," it enforces "never stop, incrementally replace, continuously validate."
-
-The architecture addresses three challenges that cause Big Bang failures: (1) routing traffic between monolith and microservices without client awareness or configuration changes, (2) migrating data without downtime, consistency violations, or rollback complexity, and (3) validating new services at production scale before cutover, ensuring they handle edge cases the monolith accumulated over years. Production deployments demonstrate 18-month migration timelines (vs 36+ months for Big Bang attempts), \$2.8M cost savings (vs \$8M+ for failed rewrites), and zero customer-facing incidents during migrationnot through better testing, but through architectural patterns that make migration reversible at every step.
-
-**Keywords:** monolith modernization, strangler fig pattern, anti-corruption layer, shadow traffic, incremental migration, zero-downtime migration, legacy modernization, microservices migration, dual-write pattern, cloud-native transformation
-
-![Diagram 1](figures/fig-1.svg)
-**Figure 0.1:** Comparison of Modernization Strategies. The "Big Bang" approach accumulates risk until a single catastrophic cutover point. The A5 Strangler Fig pattern amortizes risk through incremental validation and continuous delivery.
-
----
+Modernization projects fail the same way every time. The board approves a "cloud transformation" initiative. Engineering spends 18 months building a new system from scratch. The cutover date arrives. The new system crashes under production load, missing critical edge cases the monolith handled silently for years. The team rolls back. Six months later, the project is quietly cancelled, \$5M spent, zero value delivered. This patternthe "Big Bang" rewritefails in 70\% of attempts. The failure isn't execution. It's the approach itself: attempting to replace a working system (however imperfect) with an unproven system while maintaining 99.9% uptime and zero feature regression is architecturally unsound. This paper defines A5-MOD-STD, a safe, incremental migration strategy based on the Strangler Fig Pattern. Building on A1's plane separation (isolating migration concerns from production traffic), A2's throughput patterns (maintaining performance during dual-system operation), A3's observability (validating new services before cutover), and A4's governance (ensuring compliance throughout migration), A5 addresses the specific challenge of decomposing monolithic applications without business disruption. The architecture details three primitives required for safe decomposition: the Anti-Corruption Layer (ACL) for domain isolation that prevents monolith concepts from leaking into microservices, Shadow Traffic Validation for risk-free testing at production scale without impacting users, and Dual-Write patterns for zero-downtime data migration that maintain consistency across old and new systems during transition.
 \end{abstract}
 
+\begin{CCSXML}
+<ccs2012>
+ <concept>
+  <concept_id>10010520.10010521.10010537</concept_id>
+  <concept_desc>Software and its engineering~Cloud computing</concept_desc>
+  <concept_significance>500</concept_significance>
+ </concept>
+</ccs2012>
+\end{CCSXML}
 \ccsdesc[500]{Software and its engineering~Cloud computing}
+%\keywords{
+cloud-native modernization, distributed systems, adaptive policy enforcement
+%}
 \keywords{cloud-native modernization, distributed systems, adaptive policy enforcement}
 
 \begin{document}
@@ -215,29 +230,29 @@ upstream monolith {
     server monolith:8080;
 }
 
-upstream userTEMP_USservice {
+upstream user_service {
     server user-service:8080;
 }
 
 server {
     listen 80;
     
-    \# Route /users to new service
+    # Route /users to new service
     location /users {
-        proxyTEMP_USpass http://userTEMP_USservice;
+        proxy_pass http://user_service;
     }
     
-    \# Route everything else to monolith
+    # Route everything else to monolith
     location / {
-        proxyTEMP_USpass http://monolith;
+        proxy_pass http://monolith;
     }
 }
 \end{verbatim}
 
 \textbf{Percentage-Based Routing (Envoy):}
 \begin{verbatim}
-routeTEMP_USconfig:
-  virtualTEMP_UShosts:
+route_config:
+  virtual_hosts:
 \begin{itemize}
 \item name: backend
 \end{itemize}
@@ -247,16 +262,16 @@ routeTEMP_USconfig:
 \item match: { prefix: "/users" }
 \end{itemize}
           route:
-            weightedTEMP_USclusters:
+            weighted_clusters:
               clusters:
 \begin{itemize}
-\item name: userTEMP_USservice
+\item name: user_service
 \end{itemize}
-                  weight: 10  \# 10\% to new service
+                  weight: 10  # 10% to new service
 \begin{itemize}
 \item name: monolith
 \end{itemize}
-                  weight: 90  \# 90\% to monolith
+                  weight: 90  # 90% to monolith
 \end{verbatim}
 
 \subsection{2.4 Migration Timeline}
@@ -307,22 +322,22 @@ Application writes to old database (primary) and asynchronously writes to new da
 
 \begin{verbatim}
 class UserRepository:
-    def TEMP_USTEMP_USinitTEMP_USTEMP_US(self, oldTEMP_USdb, newTEMP_USdb):
-        self.oldTEMP_USdb = oldTEMP_USdb
-        self.newTEMP_USdb = newTEMP_USdb
+    def __init__(self, old_db, new_db):
+        self.old_db = old_db
+        self.new_db = new_db
     
-    def createTEMP_USuser(self, user):
-        \# Write to old DB (synchronous, blocking)
-        userTEMP_USid = self.oldTEMP_USdb.insert(user)
+    def create_user(self, user):
+        # Write to old DB (synchronous, blocking)
+        user_id = self.old_db.insert(user)
         
-        \# Write to new DB (asynchronous, non-blocking)
+        # Write to new DB (asynchronous, non-blocking)
         try:
-            self.newTEMP_USdb.insertTEMP_USasync(user)
+            self.new_db.insert_async(user)
         except Exception as e:
-            \# Log error but don't fail request
+            # Log error but don't fail request
             logger.error(f"Dual write failed: {e}")
         
-        return userTEMP_USid
+        return user_id
 \end{verbatim}
 
 \textbf{Characteristics:}
@@ -339,24 +354,24 @@ Batch job copies historical data from old DB to new DB:
 \begin{verbatim}
 class BackfillJob:
     def run(self):
-        \# Get max ID in new DB
-        lastTEMP_USid = self.newTEMP_USdb.getTEMP_USmaxTEMP_USid()
+        # Get max ID in new DB
+        last_id = self.new_db.get_max_id()
         
-        \# Copy in batches
-        batchTEMP_USsize = 10000
+        # Copy in batches
+        batch_size = 10000
         while True:
-            users = self.oldTEMP_USdb.getTEMP_USusers(
-                startTEMP_USid=lastTEMP_USid,
-                limit=batchTEMP_USsize
+            users = self.old_db.get_users(
+                start_id=last_id,
+                limit=batch_size
             )
             
             if not users:
                 break
             
-            self.newTEMP_USdb.bulkTEMP_USinsert(users)
-            lastTEMP_USid = users[-1].id
+            self.new_db.bulk_insert(users)
+            last_id = users[-1].id
             
-            \# Rate limit to avoid overwhelming DB
+            # Rate limit to avoid overwhelming DB
             time.sleep(1)
 \end{verbatim}
 
@@ -373,20 +388,20 @@ Every read compares old DB vs new DB to detect inconsistencies:
 
 \begin{verbatim}
 class UserRepository:
-    def getTEMP_USuser(self, userTEMP_USid):
-        \# Read from old DB (primary)
-        oldTEMP_USuser = self.oldTEMP_USdb.get(userTEMP_USid)
+    def get_user(self, user_id):
+        # Read from old DB (primary)
+        old_user = self.old_db.get(user_id)
         
-        \# Read from new DB (shadow)
-        newTEMP_USuser = self.newTEMP_USdb.get(userTEMP_USid)
+        # Read from new DB (shadow)
+        new_user = self.new_db.get(user_id)
         
-        \# Compare
-        if oldTEMP_USuser != newTEMP_USuser:
-            logger.error(f"Inconsistency detected: {userTEMP_USid}")
-            metrics.increment("dataTEMP_USinconsistency")
+        # Compare
+        if old_user != new_user:
+            logger.error(f"Inconsistency detected: {user_id}")
+            metrics.increment("data_inconsistency")
         
-        \# Return old DB result (source of truth)
-        return oldTEMP_USuser
+        # Return old DB result (source of truth)
+        return old_user
 \end{verbatim}
 
 \textbf{Characteristics:}
@@ -402,9 +417,9 @@ Switch reads to new DB:
 
 \begin{verbatim}
 class UserRepository:
-    def getTEMP_USuser(self, userTEMP_USid):
-        \# Read from new DB (now primary)
-        return self.newTEMP_USdb.get(userTEMP_USid)
+    def get_user(self, user_id):
+        # Read from new DB (now primary)
+        return self.new_db.get(user_id)
 \end{verbatim}
 
 \textbf{Characteristics:}
@@ -465,14 +480,14 @@ To prevent this mess from infecting the clean microservice, we insert an Anti-Co
 class User {
     Long id;
     String username;
-    String passwordTEMP_UShash;
+    String password_hash;
     String email;
     String phone;
-    String billingTEMP_USaddress;
-    String shippingTEMP_USaddress;
-    String creditTEMP_UScardTEMP_UStoken;
-    Boolean emailTEMP_USverified;
-    Boolean phoneTEMP_USverified;
+    String billing_address;
+    String shipping_address;
+    String credit_card_token;
+    Boolean email_verified;
+    Boolean phone_verified;
     // ... 190 more columns
 }
 \end{verbatim}
@@ -506,14 +521,14 @@ class UserACL {
             user.id,
             user.username,
             user.email,
-            user.emailTEMP_USverified
+            user.email_verified
         );
     }
     
     public UserAuth toAuth(MonolithUser user) {
         return new UserAuth(
             user.id,
-            user.passwordTEMP_UShash
+            user.password_hash
         );
     }
 }
@@ -521,6 +536,10 @@ class UserACL {
 
 ---
 
+
+
+% LENGTH GATE WARNING: Short by ~638 words.
+% TODO: Expand this section significantly to meet publication requirements.
 \section{5. Shadow Traffic Validation}
 
 \subsection{5.1 Production-Scale Testing}
@@ -539,8 +558,8 @@ Before we let users touch the new service, we test it with "Shadow Traffic." The
 
 \textbf{Envoy Configuration:}
 \begin{verbatim}
-routeTEMP_USconfig:
-  virtualTEMP_UShosts:
+route_config:
+  virtual_hosts:
 \begin{itemize}
 \item name: backend
 \end{itemize}
@@ -550,30 +569,30 @@ routeTEMP_USconfig:
 \end{itemize}
           route:
             cluster: monolith
-            requestTEMP_USmirrorTEMP_USpolicies:
+            request_mirror_policies:
 \begin{itemize}
-\item cluster: checkoutTEMP_USservice
+\item cluster: checkout_service
 \end{itemize}
-                runtimeTEMP_USfraction:
-                  defaultTEMP_USvalue:
-                    numerator: 100  \# 100\% of traffic
+                runtime_fraction:
+                  default_value:
+                    numerator: 100  # 100% of traffic
                     denominator: HUNDRED
 \end{verbatim}
 
 \textbf{Diff Engine:}
 \begin{verbatim}
 class DiffEngine:
-    def compare(self, legacyTEMP_USresponse, newTEMP_USresponse):
-        \# Normalize responses
-        legacyTEMP_USnorm = self.normalize(legacyTEMP_USresponse)
-        newTEMP_USnorm = self.normalize(newTEMP_USresponse)
+    def compare(self, legacy_response, new_response):
+        # Normalize responses
+        legacy_norm = self.normalize(legacy_response)
+        new_norm = self.normalize(new_response)
         
-        \# Compare
-        if legacyTEMP_USnorm != newTEMP_USnorm:
-            self.logTEMP_USdiff(legacyTEMP_USnorm, newTEMP_USnorm)
-            metrics.increment("shadowTEMP_USdiff")
+        # Compare
+        if legacy_norm != new_norm:
+            self.log_diff(legacy_norm, new_norm)
+            metrics.increment("shadow_diff")
         else:
-            metrics.increment("shadowTEMP_USmatch")
+            metrics.increment("shadow_match")
 \end{verbatim}
 
 \subsection{5.3 Validation Metrics}
@@ -645,7 +664,7 @@ We model the Strangler Fig pattern as a probabilistic routing function that seek
 
 \subsection{7.1 The Routing Function}
 Let \(R\) be the router (Facade) handling request \(r\).
-Let \(M\) be the Monolith and \$\mu$ be the Microservice.
+Let \(M\) be the Monolith and $\mu$ be the Microservice.
 The routing decision \(D(r)\) is:
 
 \( D(r) = \begin{cases} \mu & \text{if } r \in \text{Cohort}\textit{{canary} \lor \text{Random}() < P_{shift}(t) \\ M & \text{otherwise} \end{cases} \)
@@ -687,32 +706,32 @@ The cutover took 200 milliseconds (config propagation time). Users noticed nothi
 This configuration demonstrates how to route traffic between legacy and modern systems based on headers and paths.
 
 \begin{verbatim}
-upstream legacy\_monolith {
+upstream legacy_monolith {
     server 10.0.1.5:8080;
 }
 
-upstream new\_microservice {
+upstream new_microservice {
     server 10.0.2.10:3000;
 }
 
 server {
     listen 80;
 
-    \# Default to Monolith
+    # Default to Monolith
     location / {
-        proxy\_pass http://legacy\_monolith;
+        proxy_pass http://legacy_monolith;
     }
 
-    \# Strangler Rule: Inventory Service
+    # Strangler Rule: Inventory Service
     location /api/v1/inventory {
-        \# Feature Flag Logic via Header
+        # Feature Flag Logic via Header
         if ($http_x_canary_user = "true") {
             proxy_pass http://new_microservice;
         }
         
-        \# Percentage-based Shift (Split Clients)
-        split_clients "\${remote\_addr}AAA" $variant {
-            5\%      new_microservice;
+        # Percentage-based Shift (Split Clients)
+        split_clients "${remote_addr}AAA" $variant {
+            5%      new_microservice;
 \begin{itemize}
 \item legacy_monolith;
 \end{itemize}
@@ -783,6 +802,10 @@ service AccountService {
 
 ---
 
+
+
+% LENGTH GATE WARNING: Short by ~638 words.
+% TODO: Expand this section significantly to meet publication requirements.
 \section{11. Evaluation & Validation}
 
 \subsection{11.1 Production Case Studies}
@@ -916,6 +939,10 @@ This paper represents independent research conducted by the author. No conflicts
 
 ---
 
+
+
+% LENGTH GATE WARNING: Short by ~638 words.
+% TODO: Expand this section significantly to meet publication requirements.
 \section{8. Evaluation & Validation}
 
 \subsection{8.1 Production Case Studies}
@@ -1050,7 +1077,5 @@ This paper represents independent research conducted by the author. No conflicts
 
 
 \bibliographystyle{ACM-Reference-Format}
-\bibliography{refs}
-
-}}}}}
+\bibliography{refs}}
 \end{document}}

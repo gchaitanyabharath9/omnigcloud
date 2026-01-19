@@ -1,7 +1,8 @@
 import { Metadata } from 'next';
 import { SALES_EMAIL } from '@/config/emails';
+import { config } from '@/config';
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://omnigcloud.com';
+const siteUrl = config.site.url;
 
 export const SUPPORTED_LOCALES = ['en', 'es', 'fr', 'de', 'zh', 'hi', 'ja', 'ko', 'pt'] as const;
 export type SupportedLocale = typeof SUPPORTED_LOCALES[number];

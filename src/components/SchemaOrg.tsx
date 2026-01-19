@@ -1,7 +1,8 @@
 import React from 'react';
+import { config } from '@/config';
 
 const SchemaOrg = () => {
-    const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://omnigcloud.com";
+    const siteUrl = config.site.url;
 
     const orgSchema = {
         "@context": "https://schema.org",

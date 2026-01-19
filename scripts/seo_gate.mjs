@@ -97,7 +97,12 @@ async function fetchSitemap() {
             let url = match[1];
             try {
                 const parsedUrl = new URL(url);
-                if (parsedUrl.hostname === 'omnigcloud.com' || parsedUrl.hostname === 'www.omnigcloud.com') {
+                if (
+                    parsedUrl.hostname === 'omnigcloud.com' ||
+                    parsedUrl.hostname === 'www.omnigcloud.com' ||
+                    parsedUrl.hostname === 'localhost' ||
+                    parsedUrl.hostname === '127.0.0.1'
+                ) {
                     // Normalize to local for crawling
                     url = `${BASE_URL}${parsedUrl.pathname}${parsedUrl.search}`;
                 }
@@ -258,15 +263,18 @@ async function run() {
     } finally {
         if (server) {
             console.log('Stopping server...');
-            // Windows kill
-            try {
-                process.kill(server.pid);
-            } catch (e) {
-                // Ignore ESRCH
+            if (process.platform === 'win32') {
+                spawn('taskkill', ['/F', '/T', '/PID', server.pid.toString()], { shell: true });
+            } else {
+                try {
+                    process.kill(server.pid);
+                } catch (e) {
+                    // Ignore ESRCH
+                }
+                try {
+                    server.kill();
+                } catch (e) { }
             }
-            try {
-                server.kill();
-            } catch (e) { }
         }
     }
 

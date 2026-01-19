@@ -2,6 +2,7 @@
 
 import React from 'react';
 import { Layers, Shield, Cpu, Zap, Share2, Server, Database, Lock, Search, Code, Workflow, BarChart4 } from 'lucide-react';
+import { useLocale } from 'next-intl';
 
 const layers = [
     {
@@ -31,6 +32,7 @@ const layers = [
 ];
 
 export default function ArchitecturePage() {
+    const locale = useLocale();
     return (
         <div className="bg-background min-h-screen pt-24">
             <div className="container">
@@ -126,7 +128,7 @@ export default function ArchitecturePage() {
                     <h2 className="text-3xl font-black mb-12">Reference Standards</h2>
                     <div className="grid md:grid-cols-2 gap-8">
                         {/* Flagship A1 Paper */}
-                        <a href="/en/architecture/a1-cloud-native-enterprise-reference" className="glass-panel p-8 rounded-2xl group border border-emerald-500/20 hover:border-emerald-500/50 transition-all md:col-span-2 relative overflow-hidden">
+                        <a href={`/${locale}/research/papers/a1-cloud-native-enterprise-reference`} className="glass-panel p-8 rounded-2xl group border border-emerald-500/20 hover:border-emerald-500/50 transition-all md:col-span-2 relative overflow-hidden">
                             <div className="absolute top-0 right-0 bg-emerald-500 text-black text-[10px] font-bold px-3 py-1 uppercase tracking-widest rounded-bl-xl">Flagship Standard</div>
                             <span className="text-xs font-mono text-emerald-500 mb-4 block">A1-REF-STD</span>
                             <h3 className="text-3xl font-bold mb-4 group-hover:text-emerald-400 transition-colors">A1: Reference Architecture for Cloud-Native Enterprise Platforms</h3>
@@ -138,7 +140,7 @@ export default function ArchitecturePage() {
                             </div>
                         </a>
 
-                        <a href="/en/architecture/a2-high-throughput-distributed-systems" className="glass-panel p-8 rounded-2xl group border border-white/5 hover:border-primary/50 transition-all">
+                        <a href={`/${locale}/research/papers/a2-high-throughput-distributed-systems`} className="glass-panel p-8 rounded-2xl group border border-white/5 hover:border-primary/50 transition-all">
                             <span className="text-xs font-mono text-primary mb-4 block">A2-DIST-SYS</span>
                             <h3 className="text-2xl font-bold mb-4 group-hover:text-primary transition-colors">A2: High-Throughput Distributed Systems</h3>
                             <p className="text-muted-foreground mb-6">
@@ -149,7 +151,7 @@ export default function ArchitecturePage() {
                             </div>
                         </a>
 
-                        <a href="/en/architecture/a3-enterprise-observability-operational-intelligence" className="glass-panel p-8 rounded-2xl group border border-white/5 hover:border-primary/50 transition-all">
+                        <a href={`/${locale}/research/papers/a3-enterprise-observability-operational-intelligence`} className="glass-panel p-8 rounded-2xl group border border-white/5 hover:border-primary/50 transition-all">
                             <span className="text-xs font-mono text-primary mb-4 block">A3-OBSERVABILITY</span>
                             <h3 className="text-2xl font-bold mb-4 group-hover:text-primary transition-colors">A3: Enterprise Observability Patterns</h3>
                             <p className="text-muted-foreground mb-6">
@@ -160,7 +162,7 @@ export default function ArchitecturePage() {
                             </div>
                         </a>
 
-                        <a href="/en/architecture/a4-platform-governance-multicloud-hybrid" className="glass-panel p-8 rounded-2xl group border border-white/5 hover:border-primary/50 transition-all">
+                        <a href={`/${locale}/research/papers/a4-platform-governance-multicloud-hybrid`} className="glass-panel p-8 rounded-2xl group border border-white/5 hover:border-primary/50 transition-all">
                             <span className="text-xs font-mono text-primary mb-4 block">A4-GOVERNANCE</span>
                             <h3 className="text-2xl font-bold mb-4 group-hover:text-primary transition-colors">A4: Platform Governance & Policy-as-Code</h3>
                             <p className="text-muted-foreground mb-6">
@@ -171,7 +173,7 @@ export default function ArchitecturePage() {
                             </div>
                         </a>
 
-                        <a href="/en/architecture/a5-monolith-to-cloud-native-modernization" className="glass-panel p-8 rounded-2xl group border border-white/5 hover:border-primary/50 transition-all">
+                        <a href={`/${locale}/research/papers/a5-monolith-to-cloud-native-modernization`} className="glass-panel p-8 rounded-2xl group border border-white/5 hover:border-primary/50 transition-all">
                             <span className="text-xs font-mono text-primary mb-4 block">A5-MODERNIZATION</span>
                             <h3 className="text-2xl font-bold mb-4 group-hover:text-primary transition-colors">A5: Monolith Modernization Strategy</h3>
                             <p className="text-muted-foreground mb-6">

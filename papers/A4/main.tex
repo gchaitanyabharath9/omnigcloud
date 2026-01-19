@@ -1,3 +1,19 @@
+% PUBLICATION_READINESS_GATE
+% Word Count: 3716
+% Threshold: 5000
+% STATUS: FAIL_LENGTH (Needs ~1284 more words)
+% PUBLICATION_READINESS_GATE
+% Word Count: 3704
+% Threshold: 5000
+% STATUS: FAIL_LENGTH (Needs ~1296 more words)
+% PUBLICATION_READINESS_GATE
+% Word Count: 3692
+% Threshold: 5000
+% STATUS: FAIL_LENGTH (Needs ~1308 more words)
+% PUBLICATION_READINESS_GATE
+% Word Count: 3680
+% Threshold: 5000
+% STATUS: FAIL_LENGTH (Needs ~1320 more words)
 \documentclass[sigconf]{acmart}
 
 \setcopyright{none}
@@ -12,20 +28,22 @@
 \affiliation{\institution{OmniGCloud Systems, Inc.}\city{Tallahassee}\state{Florida}\country{USA}}
 \email{gchaitanyabharath9@gmail.com}
 \begin{abstract}
-Governance becomes the bottleneck the moment you try to scale. A startup with 10 developers can review every deployment manually. At 100 developers, the Change Advisory Board meets weekly and approvals take days. At 1000 developers deploying 50-100 times daily across AWS, Azure, and GCP, manual governance doesn't just slow downit collapses. The choice appears binary: move fast and accumulate compliance violations, or enforce controls and throttle innovation. This paper demonstrates the choice is false.
-
-This paper defines A4-GOV-STD, a framework for automated governance that replaces manual review boards with Policy-as-Code (PaC) pipelines compiled to WebAssembly and enforced at multiple layers. Building on A1's plane separation (governance as distinct primitive) and A2's throughput patterns (eliminating coordination bottlenecks), A4 addresses the specific challenge of maintaining compliance across heterogeneous cloud providers without creating approval bottlenecks. The framework embeds compliance checks into CI/CD workflows and enforces them at runtime via Open Policy Agent (OPA), enabling organizations to scale to 1000+ developers without accumulating what we term "risk entropy"the gradual drift from compliant to non-compliant state that occurs when manual processes can't keep pace with change velocity.
-
-Through production deployments across three organizations over 16 months (fintech with SOC 2, healthcare with HIPAA, SaaS with ISO 27001), measurements demonstrate deployment approval time reduction from 14 days to 8 minutes (99.96\% reduction), elimination of 94% of manual compliance reviews, and achievement of 99.8% policy compliance (compared to 67% baseline with manual processes). The architecture enables organizations to maintain regulatory compliance while deploying 50-100 times per daynot through better tools, but through architectural separation of policy definition (slow, deliberate) from policy enforcement (fast, automated).
-
-Key contributions: (1) policy-as-code pipeline with sub-60-second propagation across multi-cloud environments, (2) federated identity model that abstracts AWS IAM, Azure AD, and GCP IAM into unified RBAC, (3) GitOps-based drift prevention with cryptographic verification, (4) defense-in-depth enforcement framework spanning code, build, admission, and runtime layers, and (5) break-glass protocol for emergency access that maintains audit trails without blocking critical operations.
-
-**Keywords:** platform governance, policy-as-code, multi-cloud, GitOps, Open Policy Agent, compliance automation, federated identity, admission control, security guardrails, regulatory compliance
-
----
+Governance becomes the bottleneck the moment you try to scale. A startup with 10 developers can review every deployment manually. At 100 developers, the Change Advisory Board meets weekly and approvals take days. At 1000 developers deploying 50-100 times daily across AWS, Azure, and GCP, manual governance doesn't just slow downit collapses. The choice appears binary: move fast and accumulate compliance violations, or enforce controls and throttle innovation. This paper demonstrates the choice is false. This paper defines A4-GOV-STD, a framework for automated governance that replaces manual review boards with Policy-as-Code (PaC) pipelines compiled to WebAssembly and enforced at multiple layers. Building on A1's plane separation (governance as distinct primitive) and A2's throughput patterns (eliminating coordination bottlenecks), A4 addresses the specific challenge of maintaining compliance across heterogeneous cloud providers without creating approval bottlenecks. The framework embeds compliance checks into CI/CD workflows and enforces them at runtime via Open Policy Agent (OPA), enabling organizations to scale to 1000+ developers without accumulating what we term "risk entropy"the gradual drift from compliant to non-compliant state that occurs when manual processes can't keep pace with change velocity.
 \end{abstract}
 
+\begin{CCSXML}
+<ccs2012>
+ <concept>
+  <concept_id>10010520.10010521.10010537</concept_id>
+  <concept_desc>Software and its engineering~Cloud computing</concept_desc>
+  <concept_significance>500</concept_significance>
+ </concept>
+</ccs2012>
+\end{CCSXML}
 \ccsdesc[500]{Software and its engineering~Cloud computing}
+%\keywords{
+cloud-native modernization, distributed systems, adaptive policy enforcement
+%}
 \keywords{cloud-native modernization, distributed systems, adaptive policy enforcement}
 
 \begin{document}
@@ -191,14 +209,14 @@ deny[msg] {
   input.request.kind.kind == "Pod"
   container := input.request.object.spec.containers[_]
   not container.resources.limits.memory
-  msg := sprintf("Container \%v must specify memory limit", [container.name])
+  msg := sprintf("Container %v must specify memory limit", [container.name])
 }
 
 deny[msg] {
   input.request.kind.kind == "Pod"
   container := input.request.object.spec.containers[_]
   not container.resources.limits.cpu
-  msg := sprintf("Container \%v must specify CPU limit", [container.name])
+  msg := sprintf("Container %v must specify CPU limit", [container.name])
 }
 \end{verbatim}
 
@@ -213,7 +231,7 @@ deny[msg] {
   container := input.request.object.spec.containers[_]
   image := container.image
   not startswith(image, allowed_registries[_])
-  msg := sprintf("Image \%v from unauthorized registry", [image])
+  msg := sprintf("Image %v from unauthorized registry", [image])
 }
 \end{verbatim}
 
@@ -247,7 +265,7 @@ test_deny_missing_memory_limit {
 
 \textbf{CI Integration:}
 \begin{verbatim}
-\# .github/workflows/policy-test.yml
+# .github/workflows/policy-test.yml
 name: Policy Tests
 on: [push, pull_request]
 jobs:
@@ -271,20 +289,20 @@ Policies are bundled and distributed to all enforcement points:
 
 \textbf{Bundle Creation:}
 \begin{verbatim}
-\# Create OPA bundle
+# Create OPA bundle
 opa build -b policies/ -o bundle.tar.gz
 
-\# Sign bundle
+# Sign bundle
 opa sign bundle.tar.gz --signing-key private.pem
 
-\# Upload to registry
+# Upload to registry
 curl -X PUT http://opa-registry/bundles/latest \
   --data-binary @bundle.tar.gz
 \end{verbatim}
 
 \textbf{Cluster Configuration:}
 \begin{verbatim}
-\# OPA ConfigMap
+# OPA ConfigMap
 apiVersion: v1
 kind: ConfigMap
 metadata:
@@ -352,13 +370,13 @@ We establish a sovereign identity boundary using OIDC:
 
 \textbf{AWS: OIDC Identity Provider}
 \begin{verbatim}
-\# Create OIDC provider in AWS
+# Create OIDC provider in AWS
 aws iam create-open-id-connect-provider \
   --url https://oidc.company.com \
   --client-id-list company-aws \
   --thumbprint-list <cert-thumbprint>
 
-\# Create IAM role with trust policy
+# Create IAM role with trust policy
 {
   "Version": "2012-10-17",
   "Statement": [{
@@ -378,7 +396,7 @@ aws iam create-open-id-connect-provider \
 
 \textbf{Azure: Workload Identity Federation}
 \begin{verbatim}
-\# Create federated credential
+# Create federated credential
 az ad app federated-credential create \
   --id <app-id> \
   --parameters '{
@@ -391,11 +409,11 @@ az ad app federated-credential create \
 
 \textbf{GCP: Workload Identity Federation}
 \begin{verbatim}
-\# Create workload identity pool
+# Create workload identity pool
 gcloud iam workload-identity-pools create company-pool \
   --location=global
 
-\# Create OIDC provider
+# Create OIDC provider
 gcloud iam workload-identity-pools providers create-oidc company-oidc \
   --location=global \
   --workload-identity-pool=company-pool \
@@ -469,8 +487,8 @@ spec:
     namespace: production
   syncPolicy:
     automated:
-      prune: true      \# Delete resources not in Git
-      selfHeal: true   \# Revert manual changes
+      prune: true      # Delete resources not in Git
+      selfHeal: true   # Revert manual changes
     syncOptions:
 \begin{itemize}
 \item CreateNamespace=true
@@ -488,10 +506,10 @@ spec:
 
 \textbf{Metrics:}
 \begin{verbatim}
-\# Drift events per day
+# Drift events per day
 argocd_app_sync_total{phase="OutOfSync"} = 45
 
-\# Time to reconciliation
+# Time to reconciliation
 argocd_app_reconcile_duration_seconds{quantile="0.99"} = 8.2
 \end{verbatim}
 
@@ -524,15 +542,15 @@ Governance is applied at four distinct layers:
 
 \textbf{Pre-Commit Hooks:}
 \begin{verbatim}
-\# .git/hooks/pre-commit
-\#!/bin/bash
-\# Detect secrets in code
+# .git/hooks/pre-commit
+#!/bin/bash
+# Detect secrets in code
 gitleaks detect --source . --verbose
 
-\# Lint Kubernetes manifests
+# Lint Kubernetes manifests
 kubeval manifests/*.yaml
 
-\# Check Terraform
+# Check Terraform
 tflint --recursive
 \end{verbatim}
 
@@ -547,19 +565,19 @@ tflint --recursive
 
 \textbf{Container Image Scanning:}
 \begin{verbatim}
-\# .github/workflows/build.yml
+# .github/workflows/build.yml
 \begin{itemize}
 \item name: Build Image
 \end{itemize}
-  run: docker build -t app:\${{ github.sha } .
+  run: docker build -t app:${{ github.sha } .
 \begin{itemize}
 \item name: Scan Image
 \end{itemize}
   uses: aquasecurity/trivy-action@master
   with:
-    image-ref: app:\${{ github.sha }
+    image-ref: app:${{ github.sha }
     severity: 'CRITICAL,HIGH'
-    exit-code: '1'  \# Fail build on vulnerabilities
+    exit-code: '1'  # Fail build on vulnerabilities
 \end{verbatim}
 
 \textbf{Policy Checks:}
@@ -603,7 +621,7 @@ spec:
           required := {label | label := input.parameters.labels[_]}
           missing := required - provided
           count(missing) > 0
-          msg := sprintf("Missing required labels: \%v", [missing])
+          msg := sprintf("Missing required labels: %v", [missing])
         }
 \end{verbatim}
 
@@ -638,7 +656,7 @@ spec:
     container.id != host
   output: >
     Unexpected outbound connection
-    (user=\%user.name command=\%proc.cmdline connection=\%fd.name)
+    (user=%user.name command=%proc.cmdline connection=%fd.name)
   priority: WARNING
 \end{verbatim}
 
@@ -671,7 +689,7 @@ Strict governance must not impede disaster recovery. During a P0 incident, waiti
 
 \textbf{Vault Configuration:}
 \begin{verbatim}
-\# Break-glass role
+# Break-glass role
 path "pki/issue/break-glass" {
   capabilities = ["create", "update"]
   allowed_parameters = {
@@ -702,7 +720,7 @@ subjects:
 
 \textbf{Audit Alert:}
 \begin{verbatim}
-\# Prometheus alert
+# Prometheus alert
 \begin{itemize}
 \item alert: BreakGlassAccess
 \end{itemize}
@@ -766,25 +784,25 @@ The following Rego snippet demonstrates how A4 normalizes identity claims across
 \begin{verbatim}
 package authz.normalization
 
-\# Normalize AWS ARN
+# Normalize AWS ARN
 identity = {"provider": "aws", "user": user, "role": role} {
     input.identity.arn
-    \# Regex to extract role and user
-    regex.match("arn:aws:iam::.TEMP_US:role/(.TEMP_US)", input.identity.arn)
-    role := split(input.identity.arn, "/")\cite{ref1}
-    user := input.session.verifiedTEMP_USemail
+    # Regex to extract role and user
+    regex.match("arn:aws:iam::._:role/(._)", input.identity.arn)
+    role := split(input.identity.arn, "/")[1]
+    user := input.session.verified_email
 }
 
-\# Normalize GCP Service Account
-identity = {"provider": "gcp", "user": sa, "role": "serviceTEMP_USaccount"} {
+# Normalize GCP Service Account
+identity = {"provider": "gcp", "user": sa, "role": "service_account"} {
     input.identity.email
     endswith(input.identity.email, ".iam.gserviceaccount.com")
     sa := input.identity.email
 }
 
-\# Unified Access Rule
+# Unified Access Rule
 allow {
-    \# Policy applies to "admin" role regardless of cloud
+    # Policy applies to "admin" role regardless of cloud
     identity.role == "admin"
     input.operation == "delete"
 }
@@ -834,6 +852,10 @@ allow {
 
 ---
 
+
+
+% LENGTH GATE WARNING: Short by ~299 words.
+% TODO: Expand this section significantly to meet publication requirements.
 \section{11. Evaluation \\& Validation}
 
 \subsection{11.1 Production Deployments}
@@ -998,6 +1020,10 @@ This paper represents independent research conducted by the author. No conflicts
 
 ---
 
+
+
+% LENGTH GATE WARNING: Short by ~299 words.
+% TODO: Expand this section significantly to meet publication requirements.
 \section{8. Evaluation \\& Validation}
 
 \subsection{8.1 Production Deployments}
@@ -1164,7 +1190,5 @@ This paper represents independent research conducted by the author. No conflicts
 
 
 \bibliographystyle{ACM-Reference-Format}
-\bibliography{refs}
-
-}}}}
+\bibliography{refs}}
 \end{document}
