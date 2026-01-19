@@ -9,7 +9,7 @@
 
 \title{Adaptive Policy Enforcement: The Synthesis of Sovereign Control}
 \author{Chaitanya Bharath Gopu}
-\affiliation{\institution{OmniGCloud Systems, Inc.}\city{Tallahassee}\state{Florida}\country{USA}
+\affiliation{\institution{OmniGCloud Systems, Inc.}\city{Tallahassee}\state{Florida}\country{USA}}
 \email{gchaitanyabharath9@gmail.com}
 \begin{abstract}
 The previous five papers addressed distinct architectural challenges: A1 established plane separation, A2 quantified throughput limits, A3 defined observability requirements, A4 automated governance, and A5 enabled safe modernization. Each solved a specific problem. None solved the meta-problem: how do these patterns compose into a system that doesn't just tolerate failure, but adapts to it autonomously? A6 defines the Meta-Control Plane that binds A1-A5 into a coherent, self-healing systemnot through better monitoring or faster alerts, but through architectural patterns that eliminate the human from the critical path of incident response.
@@ -42,7 +42,7 @@ The key contribution is the formalization of the OODA loop (Observe, Orient, Dec
 
 ---
 
-\section{Abstract}
+
 
 The previous five papers addressed distinct architectural challenges: A1 established plane separation, A2 quantified throughput limits, A3 defined observability requirements, A4 automated governance, and A5 enabled safe modernization. Each solved a specific problem. None solved the meta-problem: how do these patterns compose into a system that doesn't just tolerate failure, but adapts to it autonomously? A6 defines the Meta-Control Plane that binds A1-A5 into a coherent, self-healing systemnot through better monitoring or faster alerts, but through architectural patterns that eliminate the human from the critical path of incident response.
 
@@ -425,23 +425,23 @@ Where does your organization sit?
 We formalize the Meta-Control Plane as a discrete-time control system.
 
 \subsection{7.1 The Feedback Loop}
-Let $S\_t$ be the state of the system at time $t$.
-Let $E\_t$ be the environmental input (traffic, attacks).
-Let $A\_t$ be the action taken by the control plane.
+Let \(S\_t\) be the state of the system at time \(t\).
+Let \(E\_t\) be the environmental input (traffic, attacks).
+Let \(A\_t\) be the action taken by the control plane.
 The next state is:
 
-$ \_\_MATH\_VAR\_0\_\_ = f(\_\_MATH\_VAR\_1\_\_, \_\_MATH\_VAR\_2\_\_, \_\_MATH\_VAR\_3\_\_) $
+\( \_\_MATH\_VAR\_0\_\_ = f(\_\_MATH\_VAR\_1\_\_, \_\_MATH\_VAR\_2\_\_, \_\_MATH\_VAR\_3\_\_) \)
 
-Our goal is to choose $A_t$ such that $S_{t+1}$ remains within the "Survival Region" \$\Omega\_{save}$.
+Our goal is to choose \(A_t\) such that \(S_{t+1}\) remains within the "Survival Region" \$\Omega\_{save}$.
 
 \subsection{7.2 The Latency Constraint}
-The system fails if the rate of environmental change $\frac{dE_{dt}$ exceeds the control loop frequency $f\_{loop}$.
-A human loop ($f\_{human} \approx 0.001$ Hz) fails against a DDoS attack ($\frac{dE_{dt} \to \infty$).
-A6 enables $f\_{machine} \approx 100$ Hz, guaranteeing:
+The system fails if the rate of environmental change \(\frac{dE_{dt}\) exceeds the control loop frequency \(f\_{loop}\).
+A human loop (\(f\_{human} \approx 0.001\) Hz) fails against a DDoS attack (\(\frac{dE_{dt} \to \infty\)).
+A6 enables \(f\_{machine} \approx 100\) Hz, guaranteeing:
 
-$ \frac{1}{\_\_MATH\_VAR\_1\_\_} < \frac{\_\_MATH\_VAR\_2\_\_}{\_\_MATH\_VAR\_0\_\_}{\_\_MATH\_VAR\_0\_\_} $
+\( \frac{1}{\_\_MATH\_VAR\_1\_\_} < \frac{\_\_MATH\_VAR\_2\_\_}{\_\_MATH\_VAR\_0\_\_}{\_\_MATH\_VAR\_0\_\_} \)
 
-Where $R\_{res}$ is the resource buffer.
+Where \(R\_{res}\) is the resource buffer.
 
 ---
 
@@ -789,7 +789,7 @@ The concept of a localized OODA loop generalizes to any real-time control system
 \end{itemize}
 
 \subsection{13.1 Applicability Criteria}
-A6 is required when $\_\_MATH\_VAR\_0\_\_$ < T_{human}$. If failure propagates faster than a human can type, A6 is mandatory.
+A6 is required when \(\_\_MATH\_VAR\_0\_\_\) < T_{human}$. If failure propagates faster than a human can type, A6 is mandatory.
 
 \subsection{13.2 When A6 Is Not Appropriate}
 \begin{itemize}
@@ -1003,6 +1003,5 @@ This paper represents independent research conducted by the author. No conflicts
 \bibliographystyle{ACM-Reference-Format}
 \bibliography{refs}
 
+}}
 \end{document}
-
-}

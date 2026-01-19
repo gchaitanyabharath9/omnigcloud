@@ -9,7 +9,7 @@
 
 \title{Cloud-Native Enterprise Reference Architecture}
 \author{Chaitanya Bharath Gopu}
-\affiliation{\institution{OmniGCloud Systems, Inc.}\city{Tallahassee}\state{Florida}\country{USA}
+\affiliation{\institution{OmniGCloud Systems, Inc.}\city{Tallahassee}\state{Florida}\country{USA}}
 \email{gchaitanyabharath9@gmail.com}
 \begin{abstract}
 Enterprises running globally distributed systems confront an architectural paradox that most cloud-native frameworks fail to address: you need sovereign governancemeaning regulatory compliance that respects jurisdictional boundaries and failure domains that don't cross geographic lineswhile simultaneously pushing throughput beyond 100,000 requests per second per region. What breaks most "cloud native" implementations isn't the individual components. It's the conflation of two fundamentally incompatible concerns: the Control Plane (where you manage configuration, health checks, and policy) and the Data Plane (where you actually process user requests). When these share resources, a configuration error in `us-east-1` doesn't stay in `us-east-1`it propagates latency degradation to `eu-central-1` through shared state, synchronized updates, or cascading timeouts.
@@ -38,7 +38,7 @@ This work isn't just another microservices pattern. It's a formal separation mod
 
 ---
 
-\section{Abstract}
+
 
 Enterprises running globally distributed systems confront an architectural paradox that most cloud-native frameworks fail to address: you need sovereign governancemeaning regulatory compliance that respects jurisdictional boundaries and failure domains that don't cross geographic lineswhile simultaneously pushing throughput beyond 100,000 requests per second per region. What breaks most "cloud native" implementations isn't the individual components. It's the conflation of two fundamentally incompatible concerns: the Control Plane (where you manage configuration, health checks, and policy) and the Data Plane (where you actually process user requests). When these share resources, a configuration error in \texttt{us-east-1} doesn't stay in \texttt{us-east-1}it propagates latency degradation to \texttt{eu-central-1} through shared state, synchronized updates, or cascading timeouts.
 
@@ -1000,23 +1000,23 @@ Before deploying A1 to production, verify these items. This checklist comes from
 
 We model scalability using the \textbf{Universal Scalability Law (USL)}, developed by Neil Gunther. Most architects assume linear scalabilitydouble the servers, double the throughput. This assumption breaks in practice due to two factors: contention and crosstalk.
 
-$ C(N) = \frac{N_{1 + \alpha (N-1) + \beta N (N-1)} $
+\( C(N) = \frac{N_{1 + \alpha (N-1) + \beta N (N-1)} \)
 
 Where:
 \begin{itemize}
-\item $C(N)$ = Capacity (throughput) with N nodes
-\item $\alpha$ = Contention coefficient (serialization penalty)
-\item $\beta$ = Crosstalk coefficient (coherency penalty)
+\item \(C(N)\) = Capacity (throughput) with N nodes
+\item \(\alpha\) = Contention coefficient (serialization penalty)
+\item \(\beta\) = Crosstalk coefficient (coherency penalty)
 \end{itemize}
 
-\textbf{Contention ($\alpha$)} emerges from serialized operations that only one node can perform at a time. Examples: database writes to a single master, leader election in consensus protocols, global locks protecting shared state. When $\alpha > 0$, adding nodes provides diminishing returns because nodes spend time waiting for the serialized resource. In A1, we minimize contention through:
+\textbf{Contention (\(\alpha\))} emerges from serialized operations that only one node can perform at a time. Examples: database writes to a single master, leader election in consensus protocols, global locks protecting shared state. When \(\alpha > 0\), adding nodes provides diminishing returns because nodes spend time waiting for the serialized resource. In A1, we minimize contention through:
 \begin{itemize}
 \item Optimistic locking instead of pessimistic locksoptimistic locking assumes conflicts are rare, avoiding lock acquisition overhead
 \item Database sharding to eliminate global write bottleneckseach shard handles writes independently
 \item Leaderless consensus where applicableRaft with multiple leaders for different partitions
 \end{itemize}
 
-\textbf{Crosstalk ($\beta$)} emerges from inter-node communication overhead. Examples: cache coherency protocols where nodes must synchronize their caches, distributed transactions requiring two-phase commit, gossip protocols for cluster membership. When $\beta > 0$, adding nodes actually \textit{decreases} throughput beyond a certain point because communication overhead grows quadratically. This is retrograde scalingmore resources, less capacity. In A1, we minimize crosstalk through:
+\textbf{Crosstalk (\(\beta\))} emerges from inter-node communication overhead. Examples: cache coherency protocols where nodes must synchronize their caches, distributed transactions requiring two-phase commit, gossip protocols for cluster membership. When \(\beta > 0\), adding nodes actually \textit{decreases} throughput beyond a certain point because communication overhead grows quadratically. This is retrograde scalingmore resources, less capacity. In A1, we minimize crosstalk through:
 \begin{itemize}
 \item Shared-nothing cell architecturecells don't communicate with each other, eliminating cross-cell coordination
 \item Eventual consistency for non-critical dataavoiding synchronous replication reduces coordination overhead
@@ -1049,7 +1049,7 @@ A "cell" represents the minimum unit of horizontal scalability. To increase capa
 2. \textbf{Horizontal Scaling (add cells)}: Deploy new cell when existing cells exceed 70\% capacity70\% threshold provides headroom for traffic spikes
 3. \textbf{Geographic Scaling (add regions)}: Deploy new region when latency to existing regions exceeds 100ms100ms is the threshold where users perceive lag
 
-The key insight: cells are \textbf{shared-nothing}. They don't share databases, caches, or message queues. This eliminates crosstalk ($\beta  0$), enabling linear scalability. The tradeoff: operational complexity increases because you're managing N independent systems rather than one large system.
+The key insight: cells are \textbf{shared-nothing}. They don't share databases, caches, or message queues. This eliminates crosstalk (\(\beta  0\)), enabling linear scalability. The tradeoff: operational complexity increases because you're managing N independent systems rather than one large system.
 
 ---
 
@@ -2007,6 +2007,5 @@ This paper represents independent research conducted by the author. No conflicts
 \bibliographystyle{ACM-Reference-Format}
 \bibliography{refs}
 
-\end{document}
-
 }
+\end{document}

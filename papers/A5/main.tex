@@ -9,7 +9,7 @@
 
 \title{Monolith to Cloud-Native Modernization: A Reference Pattern}
 \author{Chaitanya Bharath Gopu}
-\affiliation{\institution{OmniGCloud Systems, Inc.}\city{Tallahassee}\state{Florida}\country{USA}
+\affiliation{\institution{OmniGCloud Systems, Inc.}\city{Tallahassee}\state{Florida}\country{USA}}
 \email{gchaitanyabharath9@gmail.com}
 \begin{abstract}
 Modernization projects fail the same way every time. The board approves a "cloud transformation" initiative. Engineering spends 18 months building a new system from scratch. The cutover date arrives. The new system crashes under production load, missing critical edge cases the monolith handled silently for years. The team rolls back. Six months later, the project is quietly cancelled, \$5M spent, zero value delivered. This patternthe "Big Bang" rewritefails in 70\% of attempts. The failure isn't execution. It's the approach itself: attempting to replace a working system (however imperfect) with an unproven system while maintaining 99.9% uptime and zero feature regression is architecturally unsound.
@@ -43,7 +43,7 @@ The architecture addresses three challenges that cause Big Bang failures: (1) ro
 
 ---
 
-\section{Abstract}
+
 
 Modernization projects fail the same way every time. The board approves a "cloud transformation" initiative. Engineering spends 18 months building a new system from scratch. The cutover date arrives. The new system crashes under production load, missing critical edge cases the monolith handled silently for years. The team rolls back. Six months later, the project is quietly cancelled, \$5M spent, zero value delivered. This patternthe "Big Bang" rewritefails in 70\% of attempts. The failure isn't execution. It's the approach itself: attempting to replace a working system (however imperfect) with an unproven system while maintaining 99.9\% uptime and zero feature regression is architecturally unsound.
 
@@ -644,22 +644,22 @@ The hardest part is turning the old system off:
 We model the Strangler Fig pattern as a probabilistic routing function that seeks to minimize the risk integral over time.
 
 \subsection{7.1 The Routing Function}
-Let $R$ be the router (Facade) handling request $r$.
-Let $M$ be the Monolith and \$\mu$ be the Microservice.
-The routing decision $D(r)$ is:
+Let \(R\) be the router (Facade) handling request \(r\).
+Let \(M\) be the Monolith and \$\mu$ be the Microservice.
+The routing decision \(D(r)\) is:
 
-$ D(r) = \begin{cases} \mu & \text{if } r \in \text{Cohort}\textit{{canary} \lor \text{Random}() < P_{shift}(t) \\ M & \text{otherwise} \end{cases} $
+\( D(r) = \begin{cases} \mu & \text{if } r \in \text{Cohort}\textit{{canary} \lor \text{Random}() < P_{shift}(t) \\ M & \text{otherwise} \end{cases} \)
 
-Where $P\_{shift}(t)$ is the percentage of traffic shifted at time $t$.
+Where \(P\_{shift}(t)\) is the percentage of traffic shifted at time \(t\).
 
 \subsection{7.2 Risk Minimization}
-The expected cost of failure $E(C)$ at any point $t$ is:
+The expected cost of failure \(E(C)\) at any point \(t\) is:
 
-$ E(C, t) = P\_{\text{shift}(t) \times P\_{\text{fail}(\mu) \times Impact $
+\( E(C, t) = P\_{\text{shift}(t) \times P\_{\text{fail}(\mu) \times Impact \)
 
-In a "Big Bang" migration, $P_{\text{shift}$ jumps from 0 to 1 instantaneously, maximizing $E(C)$. In the Strangler pattern, $P_{shift}$ increases as a logistic function:
+In a "Big Bang" migration, \(P_{\text{shift}\) jumps from 0 to 1 instantaneously, maximizing \(E(C)\). In the Strangler pattern, \(P_{shift}\) increases as a logistic function:
 
-$ P\_{\text{shift}(t) = \frac{1}{1 + e^{-k(t-t\_0)} $
+\( P\_{\text{shift}(t) = \frac{1}{1 + e^{-k(t-t\_0)} \)
 
 This ensures that traffic volume only increases as confidence (\$1 - P\_{fail}$) increases.
 
@@ -877,7 +877,7 @@ Supporting two stacks (Monolith + Microservices) requires a team that is discipl
 Using LLMs to automatically identify "Seams" in the monolith code and generate the initial microservice scaffolding and Anti-Corruption Layer translation logic.
 
 \subsection{16.2 Automated Verification}
-Developing tools that mathematically guarantee functional equivalence between the legacy function $f\_{old}(x)$ and the new function $f_{new}(x)$ across the entire input space.
+Developing tools that mathematically guarantee functional equivalence between the legacy function \(f\_{old}(x)\) and the new function \(f_{new}(x)\) across the entire input space.
 
 ---
 
@@ -1052,6 +1052,5 @@ This paper represents independent research conducted by the author. No conflicts
 \bibliographystyle{ACM-Reference-Format}
 \bibliography{refs}
 
-\end{document}
-
-}}}
+}}}}}
+\end{document}}

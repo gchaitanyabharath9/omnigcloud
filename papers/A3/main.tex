@@ -9,7 +9,7 @@
 
 \title{Enterprise Observability \& Operational Intelligence at Scale}
 \author{Chaitanya Bharath Gopu}
-\affiliation{\institution{OmniGCloud Systems, Inc.}\city{Tallahassee}\state{Florida}\country{USA}
+\affiliation{\institution{OmniGCloud Systems, Inc.}\city{Tallahassee}\state{Florida}\country{USA}}
 \email{gchaitanyabharath9@gmail.com}
 \begin{abstract}
 Monitoring breaks at the moment you need it most. A production incident hitslatency spiking, errors climbingand your dashboards show everything green. CPU normal. Memory normal. Network normal. The system is failing, but traditional monitoring can only answer questions you anticipated ("Is CPU high?"). It cannot answer the question you actually need ("Why did latency spike for Tenant A only on iOS devices in EU-West-1?"). This failure stems from architectural constraints in how traditional metrics aggregate data, discarding the dimensional context required for root cause analysis.
@@ -40,7 +40,7 @@ The architecture builds on A1's plane separation and A2's throughput patterns, a
 
 ---
 
-\section{Abstract}
+
 
 Monitoring breaks at the moment you need it most. A production incident hitslatency spiking, errors climbingand your dashboards show everything green. CPU normal. Memory normal. Network normal. The system is failing, but traditional monitoring can only answer questions you anticipated ("Is CPU high?"). It cannot answer the question you actually need ("Why did latency spike for Tenant A only on iOS devices in EU-West-1?"). This failure stems from architectural constraints in how traditional metrics aggregate data, discarding the dimensional context required for root cause analysis.
 
@@ -56,7 +56,7 @@ The architecture builds on A1's plane separation and A2's throughput patterns, a
 
 \section{Original Contribution}
 
-To the best of our knowledge, this work offers the empirical quantification of "Observability Entropy"the exponential growth of telemetry data ($O(N!)$) relative to system scale ($O(N)$). While vendors advocate for "logging everything," we demonstrate that at enterprise scale (>250k RPS), "log everything" is mathematically impossible without bankrupcy. We formalize "Tail-Based Sampling" not just as a cost-optimization technique, but as a critical architectural invariant required to maintain signal-to-noise ratios in systems exceeding \$10^9$ daily events.
+To the best of our knowledge, this work offers the empirical quantification of "Observability Entropy"the exponential growth of telemetry data (\(O(N!)\)) relative to system scale (\(O(N)\)). While vendors advocate for "logging everything," we demonstrate that at enterprise scale (>250k RPS), "log everything" is mathematically impossible without bankrupcy. We formalize "Tail-Based Sampling" not just as a cost-optimization technique, but as a critical architectural invariant required to maintain signal-to-noise ratios in systems exceeding \$10^9$ daily events.
 
 \subsection{Contribution Summary for Non-Specialists}
 
@@ -158,7 +158,7 @@ Section 2 analyzes the cardinality explosion. Section 3 presents the three-pilla
 
 Cardinality is the number of unique time series in a metric system. It grows multiplicatively with each dimension:
 
-$ Cardinality = \prod_{i=1}^{n} |Dimension_i| $
+\( Cardinality = \prod_{i=1}^{n} |Dimension_i| \)
 
 \textbf{Example Calculation:}
 
@@ -500,7 +500,7 @@ Extract dimensions from logs (e.g., error\_type) and create metrics for trending
 
 Service Level Objectives quantify reliability targets:
 
-$ Availability = \frac{Valid\ Requests_{Total\ Requests} $
+\( Availability = \frac{Valid\ Requests_{Total\ Requests} \)
 
 \textbf{Table 5: SLO Targets}
 
@@ -514,7 +514,7 @@ $ Availability = \frac{Valid\ Requests_{Total\ Requests} $
 
 Error budget is the allowed downtime:
 
-$ Error\ Budget = (1 - SLO) \times Time\ Window $
+\( Error\ Budget = (1 - SLO) \times Time\ Window \)
 
 \textbf{Example:}
 \begin{itemize}
@@ -567,28 +567,28 @@ Observability drives the OODA Loop (Observe, Orient, Decide, Act):
 
 \section{8. Mathematical Formalization of Adaptive Sampling}
 
-Reliability at scale is a probability function. We formalize the sampling decision $P\\_{sample}$ for any given trace $t$ as a function of its attributes, ensuring that "signal" is preserved while "noise" is discarded.
+Reliability at scale is a probability function. We formalize the sampling decision \(P\\_{sample}\) for any given trace \(t\) as a function of its attributes, ensuring that "signal" is preserved while "noise" is discarded.
 
 \subsection{8.1 The Signal Preservation Function}
 
-$ P_{\text{sample}(t) = \begin{cases} 1 & \text{if } t \in \text{Errors} \\ 1 & \text{if } latency(t) > T_{p99} \\ 1 & \text{if } t \in \text{GoldenSignals} \\ R\_{base} & \text{otherwise} \end{cases} $
+\( P_{\text{sample}(t) = \begin{cases} 1 & \text{if } t \in \text{Errors} \\ 1 & \text{if } latency(t) > T_{p99} \\ 1 & \text{if } t \in \text{GoldenSignals} \\ R\_{base} & \text{otherwise} \end{cases} \)
 
 Where:
 \begin{itemize}
-\item $R\\_{base}$ is the baseline sampling rate (e.g., 1\%).
-\item $\text{GoldenSignals}$ is a set of high-value tenants or critical paths.
+\item \(R\\_{base}\) is the baseline sampling rate (e.g., 1\%).
+\item \(\text{GoldenSignals}\) is a set of high-value tenants or critical paths.
 \end{itemize}
 
 \subsection{8.2 Cost Function Derivation}
-The total cost of observability $C\\_{total}$ is defined as:
+The total cost of observability \(C\\_{total}\) is defined as:
 
-$ C_{total} = C_{ingest} + C_{storage} + C_{compute} $
+\( C_{total} = C_{ingest} + C_{storage} + C_{compute} \)
 
 Substituting the sampling probability:
 
-$ C_{total} \approx V_{vol} \times [ R_{base} \times (1 - P_{anomaly}) + 1 \times P_{\text{anomaly} ] \times S_{trace} $
+\( C_{total} \approx V_{vol} \times [ R_{base} \times (1 - P_{anomaly}) + 1 \times P_{\text{anomaly} ] \times S_{trace} \)
 
-This derivation proves that as system volume $\_\_MATH\_VAR\_0\_\_$ increases linearly, the cost can be capped $O(1)$ by dynamically adjusting $\_\_MATH\_VAR\_0\_\_$ inverse to volume, provided that $P\\_{anomaly}$ remains low.
+This derivation proves that as system volume \(\_\_MATH\_VAR\_0\_\_\) increases linearly, the cost can be capped \(O(1)\) by dynamically adjusting \(\_\_MATH\_VAR\_0\_\_\) inverse to volume, provided that \(P\\_{anomaly}\) remains low.
 
 ---
 
@@ -933,6 +933,5 @@ This paper represents independent research conducted by the author. No conflicts
 \bibliographystyle{ACM-Reference-Format}
 \bibliography{refs}
 
+}}}
 \end{document}
-
-}}

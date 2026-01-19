@@ -9,7 +9,7 @@
 
 \title{Platform Governance \& Multi-Cloud Hybrid Strategy}
 \author{Chaitanya Bharath Gopu}
-\affiliation{\institution{OmniGCloud Systems, Inc.}\city{Tallahassee}\state{Florida}\country{USA}
+\affiliation{\institution{OmniGCloud Systems, Inc.}\city{Tallahassee}\state{Florida}\country{USA}}
 \email{gchaitanyabharath9@gmail.com}
 \begin{abstract}
 Governance becomes the bottleneck the moment you try to scale. A startup with 10 developers can review every deployment manually. At 100 developers, the Change Advisory Board meets weekly and approvals take days. At 1000 developers deploying 50-100 times daily across AWS, Azure, and GCP, manual governance doesn't just slow downit collapses. The choice appears binary: move fast and accumulate compliance violations, or enforce controls and throttle innovation. This paper demonstrates the choice is false.
@@ -40,7 +40,7 @@ Key contributions: (1) policy-as-code pipeline with sub-60-second propagation ac
 
 ---
 
-\section{Abstract}
+
 
 Governance becomes the bottleneck the moment you try to scale. A startup with 10 developers can review every deployment manually. At 100 developers, the Change Advisory Board meets weekly and approvals take days. At 1000 developers deploying 50-100 times daily across AWS, Azure, and GCP, manual governance doesn't just slow downit collapses. The choice appears binary: move fast and accumulate compliance violations, or enforce controls and throttle innovation. This paper demonstrates the choice is false.
 
@@ -56,7 +56,7 @@ Key contributions: (1) policy-as-code pipeline with sub-60-second propagation ac
 
 \section{Original Contribution}
 
-To the best of our knowledge, this work offers the formalization of "Risk Entropy" in multi-cloud environmentsthe measurable tendency of unmanaged cloud infrastructure to drift toward non-compliance ($O(t)$). We introduce \textbf{A4-GOV-STD}, a unified governance substrate that abstracts policy enforcement from the underlying cloud provider APIs, effectively solving the "Policy Fragmentation" problem where AWS IAM, Azure RBAC, and GCP IAM cannot be reasoned about coherently. We quantify the "Cost of Governance" and demonstrate that switching from procedural (human) to declarative (code) governance reduces deployment latency by 99.96\%.
+To the best of our knowledge, this work offers the formalization of "Risk Entropy" in multi-cloud environmentsthe measurable tendency of unmanaged cloud infrastructure to drift toward non-compliance (\(O(t)\)). We introduce \textbf{A4-GOV-STD}, a unified governance substrate that abstracts policy enforcement from the underlying cloud provider APIs, effectively solving the "Policy Fragmentation" problem where AWS IAM, Azure RBAC, and GCP IAM cannot be reasoned about coherently. We quantify the "Cost of Governance" and demonstrate that switching from procedural (human) to declarative (code) governance reduces deployment latency by 99.96\%.
 
 \subsection{Contribution Summary for Non-Specialists}
 
@@ -721,25 +721,25 @@ subjects:
 
 \section{7. Mathematical Formalization of Policy Governance}
 
-We model the Governance Plane as a state transition function where the validity of any state $S$ is determined by a set of Policy Functions $P$.
+We model the Governance Plane as a state transition function where the validity of any state \(S\) is determined by a set of Policy Functions \(P\).
 
 \subsection{7.1 The Compliance Predicate}
-Let $S\_{infra}$ be the set of all infrastructure resources (containers, buckets, load balancers).
-Let $P = \{p\textit{1, p}2, ..., p\_n\}$ be the set of active policies.
-A resource $r \in S\_{infra}$ is compliant if and only if:
+Let \(S\_{infra}\) be the set of all infrastructure resources (containers, buckets, load balancers).
+Let \(P = \{p\textit{1, p}2, ..., p\_n\}\) be the set of active policies.
+A resource \(r \in S\_{infra}\) is compliant if and only if:
 
-$ \forall p \in P, p(r) = \text{true} $
+\( \forall p \in P, p(r) = \text{true} \)
 
-The global state $S\_{infra}$ is compliant iff:
+The global state \(S\_{infra}\) is compliant iff:
 
-$ \text{Compliance}(\_\_MATH\_VAR\_0\_\_) = \bigwedge_{r \in \_\_MATH\_VAR\_0\_\_} \bigwedge_{p \in P} p(r) $
+\( \text{Compliance}(\_\_MATH\_VAR\_0\_\_) = \bigwedge_{r \in \_\_MATH\_VAR\_0\_\_} \bigwedge_{p \in P} p(r) \)
 
 \subsection{7.2 Risk Entropy Calculation}
-We define "Risk Entropy" $E(t)$ as the rate at which $S\_{infra}$ drifts from compliance in the absence of enforcement. Emperical observation suggests linear growth:
+We define "Risk Entropy" \(E(t)\) as the rate at which \(S\_{infra}\) drifts from compliance in the absence of enforcement. Emperical observation suggests linear growth:
 
-$ E(t) \propto \lambda \cdot t $
+\( E(t) \propto \lambda \cdot t \)
 
-Where \$\lambda$ is the rate of manual changes. A4's continuous reconciliation drives $E(t) \to 0$ with a period equal to the GitOps sync interval ($\tau \approx 60s$).
+Where \$\lambda\( is the rate of manual changes. A4's continuous reconciliation drives \)E(t) \to 0\( with a period equal to the GitOps sync interval (\)\tau \approx 60s$).
 
 ---
 
@@ -1166,6 +1166,5 @@ This paper represents independent research conducted by the author. No conflicts
 \bibliographystyle{ACM-Reference-Format}
 \bibliography{refs}
 
+}}}}
 \end{document}
-
-}}
