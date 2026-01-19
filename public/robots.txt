@@ -1,7 +1,8 @@
 User-agent: *
 Allow: /
 Allow: /_next/
-Allow: /research/
+Disallow: /api/
+Disallow: /admin/
 Disallow: /private/
 Disallow: /tmp/
 
