@@ -32,9 +32,10 @@ export function HashScrollHandler() {
                     const scrollMargin = headerHeight + breadcrumbHeight;
 
                     // Calculate scroll position accounting for the scroll margin
+                    // Use 'auto' (instant) scroll for deterministic positioning
                     window.scrollTo({
                         top: window.scrollY + rect.top - scrollMargin,
-                        behavior: 'smooth'
+                        behavior: 'auto'
                     });
 
                     lastPath.current = pathname + window.location.hash;
