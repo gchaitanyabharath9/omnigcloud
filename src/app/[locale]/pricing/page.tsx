@@ -2,7 +2,7 @@ import { PageShell } from '@/components/layout/PageShell';
 import { getTranslations } from 'next-intl/server';
 import { generateSEOMetadata, generateProductSchema, SEO_KEYWORDS } from '@/utils/seo';
 import { Check, X, Shield, Globe, Cpu, Zap, Award, HelpCircle, ArrowRight } from 'lucide-react';
-import Link from 'next/link';
+import { Link } from '@/navigation';
 import type { Metadata } from 'next';
 import Footer from '@/components/Footer';
 import dynamic from 'next/dynamic';

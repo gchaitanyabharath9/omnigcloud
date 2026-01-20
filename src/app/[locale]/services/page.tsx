@@ -1,6 +1,7 @@
 import Footer from "@/components/Footer";
 import type { Metadata } from "next";
-import Link from "next/link";
+import { Link } from "@/navigation";
+
 import { ArrowRight } from "lucide-react";
 import ServicesHero from "@/components/sections/services/ServicesHero";
 import CloudFactorySection from "@/components/sections/services/CloudFactorySection";
@@ -13,6 +14,11 @@ export const metadata: Metadata = {
     description: "Cloud-agnostic modernization, AI-driven automation, and enterprise platform engineering.",
 };
 
+export function generateStaticParams() {
+    return ['en', 'es', 'fr', 'de', 'zh', 'hi', 'ja', 'ko'].map((locale) => ({ locale }));
+}
+
+
 export default async function ServicesPage({ params }: { params: Promise<{ locale: string }> }) {
     const { locale } = await params;
     return (
@@ -22,12 +28,13 @@ export default async function ServicesPage({ params }: { params: Promise<{ local
             <div className="container py-20">
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                     {[
-                        { title: "Cloud Modernization", path: `/${locale}/services/cloud-modernization`, desc: "AI-driven assessment and refactoring of legacy application portfolios." },
-                        { title: "DevOps & Automation", path: `/${locale}/services/devops`, desc: "Automated Platform Engineering and CI/CD for sovereign clouds." },
-                        { title: "Microservices", path: `/${locale}/services/microservices`, desc: "Deconstructing monoliths into resilient distributed systems." },
-                        { title: "Cloud Migration", path: `/${locale}/services/cloud-migration`, desc: "Strategic transformation and low-risk multi-cloud transition." },
-                        { title: "OpenShift Strategy", path: `/${locale}/services/openshift-modernization`, desc: "Enterprise-scale fleet management for RedHat OCP clusters." },
-                        { title: "FinOps Intelligence", path: `/${locale}/services/cloud-cost-optimization`, desc: "Autonomous cost reduction and infrastructure rightsizing." }
+                        { title: "Cloud Modernization", path: `/services/cloud-modernization`, desc: "AI-driven assessment and refactoring of legacy application portfolios." },
+                        { title: "DevOps & Automation", path: `/services/devops`, desc: "Automated Platform Engineering and CI/CD for sovereign clouds." },
+                        { title: "Microservices", path: `/services/microservices`, desc: "Deconstructing monoliths into resilient distributed systems." },
+                        { title: "Cloud Migration", path: `/services/cloud-migration`, desc: "Strategic transformation and low-risk multi-cloud transition." },
+                        { title: "OpenShift Strategy", path: `/services/openshift-modernization`, desc: "Enterprise-scale fleet management for RedHat OCP clusters." },
+                        { title: "FinOps Intelligence", path: `/services/cloud-cost-optimization`, desc: "Autonomous cost reduction and infrastructure rightsizing." }
+
                     ].map((service, i) => (
                         <Link href={service.path} key={i} className="glass-panel p-8 hover:border-primary/50 transition-colors group">
                             <h3 className="text-xl font-bold mb-4 group-hover:text-primary transition-colors">{service.title}</h3>

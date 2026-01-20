@@ -1,5 +1,6 @@
 import { BookOpen, Code, Cpu, ShieldCheck, Zap, Search, ChevronRight, Layers, Settings, Globe, FileText, Award } from "lucide-react";
-import Link from "next/link";
+import { Link } from "@/navigation";
+
 import Footer from "@/components/Footer";
 import type { Metadata } from "next";
 import { useTranslations } from "next-intl";
@@ -15,6 +16,11 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
         keywords: ['ASO framework', 'cloud governance patterns', 'autonomous orchestration', 'scholarly whitepaper'],
     };
 }
+
+export function generateStaticParams() {
+    return ['en', 'es', 'fr', 'de', 'zh', 'hi', 'ja', 'ko'].map((locale) => ({ locale }));
+}
+
 
 export default async function DocsPage() {
     const t = await getTranslations('Docs');

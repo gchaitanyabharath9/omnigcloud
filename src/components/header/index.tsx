@@ -11,7 +11,8 @@ import React, { useState, useEffect } from 'react';
 import { useTheme } from 'next-themes';
 import { useLocale, useTranslations } from 'next-intl';
 import { ChevronDown, Moon, Sun, Menu, X } from 'lucide-react';
-import Link from 'next/link';
+import { Link } from '@/navigation';
+
 
 import { NAV_CONFIG } from '@/config/nav';
 import { NavLink } from '@/components/navigation/NavLink';
@@ -43,7 +44,8 @@ const Header = () => {
         <header className={styles.header}>
             <div className={`container ${styles.headerContainer}`}>
                 {/* LOGO */}
-                <Link href={`/${locale}`} className={styles.logo}>
+                <Link href="/" className={styles.logo}>
+
                     <div className={styles.logoIcon}>
                         <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M16 2L28.1244 9V23L16 30L3.87564 23V9L16 2Z" stroke="url(#logo-grad)" strokeWidth="2" strokeLinejoin="round" />
@@ -72,7 +74,8 @@ const Header = () => {
                                 onMouseEnter={() => handleMouseEnter(navGroup.id)}
                                 onMouseLeave={handleMouseLeave}
                             >
-                                <Link href={`/${locale}${navGroup.mainRoute}`} className={styles.navLink}>
+                                <Link href={navGroup.mainRoute} className={styles.navLink}>
+
                                     {t(navGroup.labelKey)} <ChevronDown size={14} />
                                 </Link>
 
@@ -175,7 +178,8 @@ const Header = () => {
                         {translations.ctaLabel}
                     </button>
                     <Link
-                        href={`/${locale}/onboarding`}
+                        href="/onboarding"
+
                         className={`btn-primary ${styles.onboardingBtn}`}
                         style={{ padding: '0.6rem 1.5rem', borderRadius: '0.75rem', fontSize: '0.85rem' }}
                     >

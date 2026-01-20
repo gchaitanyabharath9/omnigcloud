@@ -104,6 +104,11 @@ html {
   width: 100%;
 }
 
+/* Hash navigation scroll offset - ensures hash targets scroll into view with proper header clearance */
+[id] {
+  scroll-margin-top: 120px;
+}
+
 body {
   margin: 0;
   padding: 0;
