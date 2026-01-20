@@ -1,5 +1,42 @@
-# STRICT i18n Quality Gate Report
+# i18n Coverage Report
 
-Generated on: 2026-01-18T04:41:04.796Z
+Generated on 2026-01-20T17:10:09.589Z
 
-✅ **STATUS: PASS** - All Tier-1 keys are strictly translated.
+## 🇬🇧 Base Locale (en.json) Health
+- **Total Keys:** 765
+- ✅ All codebase keys found in en.json
+
+### ✅ es - ✅ PASS
+- **Tier:** 1
+- **Total Keys:** 765
+- **Missing/Untranslated relative to en.json:** 0
+
+### ✅ fr - ✅ PASS
+- **Tier:** 1
+- **Total Keys:** 765
+- **Missing/Untranslated relative to en.json:** 0
+
+### ✅ de - ✅ PASS
+- **Tier:** 1
+- **Total Keys:** 765
+- **Missing/Untranslated relative to en.json:** 0
+
+### ✅ zh - ✅ PASS
+- **Tier:** 1
+- **Total Keys:** 765
+- **Missing/Untranslated relative to en.json:** 0
+
+### ✅ hi - ✅ PASS
+- **Tier:** 1
+- **Total Keys:** 765
+- **Missing/Untranslated relative to en.json:** 0
+
+### ✅ ja - ✅ PASS
+- **Tier:** 1
+- **Total Keys:** 765
+- **Missing/Untranslated relative to en.json:** 0
+
+### ✅ ko - ✅ PASS
+- **Tier:** 1
+- **Total Keys:** 765
+- **Missing/Untranslated relative to en.json:** 0
