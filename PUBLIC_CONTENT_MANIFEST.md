@@ -1,20 +1,20 @@
-# OmnigCloud Public Content Manifest
+# PUBLIC_CONTENT_MANIFEST.md - omnigcloud
 
+## Purpose
 This repository contains the public-facing website and marketing materials for the OmnigCloud system. It is designed to be safe for public dissemination and does not contain sensitive EB-1A petition details or private research paper source files.
 
-## Content Inclusion Rules
-- **PUBLIC_WEB**: Safe for omnigcloud. Contains the Next.js application, marketing copy, and public documentation.
-- **GENERATED**: Build artifacts, node_modules, and PDF files. These are not tracked in version control.
+## Content Classification
+### PUBLIC_WEB
+- **src/**: Next.js application source code.
+- **public/**: Public assets, images, and fonts.
+- **docs/**: Public-facing documentation for platform users. (Private research/status docs have been moved to private repos).
+- **scripts/**: Build and CI orchestration scripts.
 
-## Directory Structure
-- `/src`: Next.js application source code.
-- `/public`: Static assets (images, robots.txt, sitemap.xml).
-- `/content`: Public-safe markdown files for solutions and resources.
-- `/docs`: Public product and engineering documentation.
-- `/scripts`: Frontend-specific utility scripts and release gates.
-- `/seo`: Tools for sitemap generation and SEO validation.
+## Segregated Repositories
+- **cnmrf-papers-private**: Contains LaTeX source files and build configurations for research papers.
+- **eb1a-evidence-vault**: Contains legal materials, petition narrative, exhibits, and evidence mapping.
 
-## Excluded Content (Stored in Private Repos)
-- LaTeX source files for technical papers (A1-A6, AECP, ARCH).
-- EB-1A petition narrative and exhibits.
-- Internal audit reports and raw research data.
+## Compliance
+- **No PDFs**: All generated PDF artifacts are ignored and not committed to history.
+- **No USCIS/EB1A Content**: Scanned and purged of petition-specific framing.
+- **Secret Hygiene**: Protected by `check-secrets-hygiene.js`.
