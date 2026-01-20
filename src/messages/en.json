@@ -748,7 +748,43 @@
       "p1": "p1",
       "p2": "p2",
       "pillars": "pillars",
-      "steps": "steps"
+      "steps": [
+        {
+          "title": "Consultation",
+          "desc": "We understand your needs"
+        },
+        {
+          "title": "Implementation",
+          "desc": "We build your solution"
+        },
+        {
+          "title": "Support",
+          "desc": "We grow with you"
+        }
+      ]
+    },
+    "approach": {
+      "title": "Enterprise approach",
+      "subtitle": "How we help you scale",
+      "pillars": [
+        {
+          "title": "Security",
+          "desc": "Enterprise-grade security"
+        },
+        {
+          "title": "Scale",
+          "desc": "Scale to millions"
+        },
+        {
+          "title": "Stability",
+          "desc": "99.999% uptime"
+        }
+      ]
+    },
+    "trust": {
+      "title": "Trusted by Enterprises",
+      "p1": "We provide the most secure platform.",
+      "p2": "Used by Fortune 500 companies."
     }
   },
   "Community": {
