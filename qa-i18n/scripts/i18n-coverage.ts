@@ -1,7 +1,8 @@
 import fs from 'fs';
 import path from 'path';
 
-const MESSAGES_DIR = path.join(process.cwd(), 'messages');
+const MESSAGES_DIR = path.join(process.cwd(), 'src/messages');
+
 const SRC_DIR = path.join(process.cwd(), 'src');
 const DEFAULT_LOCALE = 'en';
 const LOCALES = ['en', 'es', 'fr', 'de', 'zh', 'hi', 'ja', 'ko'];

@@ -1,7 +1,7 @@
 import fs from 'fs';
 import path from 'path';
 
-const MESSAGES_DIR = path.join(process.cwd(), 'messages');
+const MESSAGES_DIR = path.join(process.cwd(), 'src/messages');
 const TIER1_KEYS_PATH = path.join(process.cwd(), 'qa-i18n/scripts/tier1-keys.json');
 const REPORT_PATH = path.join(process.cwd(), 'qa-i18n/i18n-report.md');
 const LOCALES = ['de', 'en', 'es', 'fr', 'hi', 'ja', 'ko', 'zh'];

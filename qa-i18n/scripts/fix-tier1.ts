@@ -1,7 +1,7 @@
 import fs from 'fs';
 import path from 'path';
 
-const MESSAGES_DIR = path.join(process.cwd(), 'messages');
+const MESSAGES_DIR = path.join(process.cwd(), 'src/messages');
 const LOCALES = ['de', 'es', 'fr', 'hi', 'ja', 'ko', 'zh'];
 
 const TRANSLATIONS: Record<string, Record<string, string>> = {

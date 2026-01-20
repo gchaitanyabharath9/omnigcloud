@@ -2,7 +2,7 @@ import fs from 'fs';
 import path from 'path';
 
 const SRC_DIR = path.join(process.cwd(), 'src');
-const MESSAGES_DIR = path.join(process.cwd(), 'messages');
+const MESSAGES_DIR = path.join(process.cwd(), 'src/messages');
 const EN_PATH = path.join(MESSAGES_DIR, 'en.json');
 
 function getAllFiles(dir: string, extensions: string[]): string[] {
