@@ -48,7 +48,7 @@ jobs:
 
       - name: "Step 4: Package Build Output"
         run: |
-          tar -czf build-output.tar.gz .next public messages qa-i18n package.json package-lock.json next.config.ts .npmrc tsconfig.json
+          tar -czf build-output.tar.gz .next public src/messages qa-i18n package.json package-lock.json next.config.ts .npmrc tsconfig.json
 
       - name: "Step 5: Upload Build Artifacts"
         uses: "actions/upload-artifact@65c4c4a1ddee5b72f698fdd19549f0f0fb45cf08" # v4.6.0
