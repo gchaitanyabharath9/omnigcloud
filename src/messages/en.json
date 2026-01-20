@@ -3,6 +3,26 @@
     "Home": {
       "title": "OmnigCloud",
       "description": "Enterprise Cloud Solutions"
+    },
+    "Company": {
+      "title": "title",
+      "description": "description"
+    },
+    "default": {
+      "title": "title",
+      "description": "description"
+    },
+    "Pricing": {
+      "title": "title",
+      "description": "description"
+    },
+    "Products": {
+      "title": "title",
+      "description": "description"
+    },
+    "Solutions": {
+      "title": "title",
+      "description": "description"
     }
   },
   "Common": {
@@ -13,10 +33,1006 @@
     "nav": {
       "solutions": "Solutions",
       "research": "Research",
-      "pricing": "Pricing"
-    }
+      "pricing": "Pricing",
+      "onboarding": "onboarding",
+      "contactSales": "contactSales"
+    },
+    "title": "title",
+    "menu_accessibility_label": "menu_accessibility_label",
+    "latency_badge": "latency_badge"
   },
   "Footer": {
-    "company": "Company"
-  }
+    "company": {
+      "_value": "Company",
+      "label": "label",
+      "about": "about",
+      "leadership": "leadership",
+      "contact": "contact"
+    },
+    "platform": {
+      "label": "label",
+      "control": "control",
+      "policy": "policy",
+      "iac": "iac",
+      "obs": "obs"
+    },
+    "services": {
+      "label": "label"
+    },
+    "resources": {
+      "label": "label",
+      "docs": "docs",
+      "visual_library": "visual_library"
+    },
+    "trust": {
+      "security": "security",
+      "privacy": "privacy"
+    },
+    "tagline": "tagline",
+    "directory": "directory",
+    "status": "status",
+    "copyright": "copyright",
+    "footerText": "footerText"
+  },
+  "Whitepaper": {
+    "aso": {
+      "principles": {
+        "neutrality": {
+          "title": "title",
+          "content": "content"
+        },
+        "automation": {
+          "title": "title",
+          "content": "content"
+        },
+        "sovereignty": {
+          "title": "title",
+          "content": "content"
+        },
+        "observability": {
+          "title": "title",
+          "content": "content"
+        },
+        "title": "title"
+      },
+      "title": "title",
+      "p1": "p1"
+    },
+    "decision_framework": {
+      "components": {
+        "guardrails": {
+          "title": "title",
+          "content": "content"
+        },
+        "adaptation": {
+          "title": "title",
+          "content": "content"
+        },
+        "intent_mapping": {
+          "title": "title",
+          "content": "content"
+        }
+      },
+      "title": "title",
+      "p1": "p1"
+    },
+    "feasibility": {
+      "sectors": {
+        "finance": {
+          "title": "title",
+          "impact": "impact"
+        },
+        "healthcare": {
+          "title": "title",
+          "impact": "impact"
+        },
+        "telecom": {
+          "title": "title",
+          "impact": "impact"
+        },
+        "government": {
+          "title": "title",
+          "impact": "impact"
+        }
+      },
+      "title": "title",
+      "p1": "p1"
+    },
+    "problem": {
+      "vendor_lock": {
+        "title": "title",
+        "content": "content",
+        "scenario": "scenario"
+      },
+      "compliance": {
+        "title": "title",
+        "content": "content",
+        "scenario": "scenario"
+      },
+      "operational": {
+        "title": "title",
+        "content": "content",
+        "scenario": "scenario"
+      },
+      "metrics": {
+        "mttr_manual_label": "mttr_manual_label",
+        "mttr_manual": "mttr_manual",
+        "mttr_aso_label": "mttr_aso_label",
+        "mttr_aso": "mttr_aso",
+        "compliance_label": "compliance_label",
+        "compliance_aso": "compliance_aso",
+        "opex_label": "opex_label",
+        "opex_savings": "opex_savings"
+      },
+      "title": "title",
+      "p1": "p1"
+    },
+    "architecture": {
+      "control_plane": {
+        "title": "title",
+        "content": "content"
+      },
+      "decision_engine": {
+        "title": "title",
+        "content": "content"
+      },
+      "state_sync": {
+        "title": "title",
+        "content": "content"
+      },
+      "title": "title",
+      "p1": "p1"
+    },
+    "execution_flow": {
+      "steps": {
+        "s1": "s1",
+        "s2": "s2",
+        "s3": "s3",
+        "s4": "s4",
+        "s5": "s5"
+      },
+      "title": "title",
+      "p1": "p1"
+    },
+    "impact": {
+      "metrics": {
+        "efficiency_label": "efficiency_label",
+        "efficiency": "efficiency",
+        "cost_label": "cost_label",
+        "cost": "cost",
+        "security_label": "security_label",
+        "security": "security"
+      },
+      "title": "title",
+      "p1": "p1",
+      "business_value": "business_value"
+    },
+    "meta": {
+      "title": "title",
+      "description": "description"
+    },
+    "abstract": {
+      "title": "title",
+      "content": "content"
+    },
+    "introduction": {
+      "title": "title",
+      "p1": "p1",
+      "p2": "p2",
+      "p3": "p3"
+    },
+    "limitations": {
+      "title": "title",
+      "p1": "p1",
+      "p2": "p2"
+    },
+    "lifecycle": {
+      "title": "title",
+      "resilience": "resilience"
+    },
+    "differentiation": {
+      "title": "title",
+      "p1": "p1",
+      "non_replicability": "non_replicability",
+      "comparison": "comparison"
+    },
+    "eb1a": {
+      "title": "title",
+      "p1": "p1",
+      "originality_label": "originality_label",
+      "originality": "originality",
+      "importance_label": "importance_label",
+      "importance": "importance",
+      "executive_summary_title": "executive_summary_title",
+      "summary_content": "summary_content"
+    },
+    "conclusion": {
+      "title": "title",
+      "p1": "p1",
+      "p2": "p2"
+    },
+    "references": {
+      "title": "title"
+    },
+    "title": "title",
+    "classification": "classification",
+    "author_label": "author_label",
+    "author": "author",
+    "version_label": "version_label",
+    "version": "version",
+    "date_label": "date_label",
+    "date": "date",
+    "footer": "footer"
+  },
+  "HomeSections": {
+    "Pricing": {
+      "core": {
+        "features": {
+          "nodes": "nodes",
+          "drift": "drift",
+          "sla": "sla",
+          "support": "support"
+        },
+        "badge": "badge",
+        "price": "price",
+        "unit": "unit",
+        "desc": "desc",
+        "cta": "cta"
+      },
+      "enterprise": {
+        "features": {
+          "nodes": "nodes",
+          "remediation": "remediation",
+          "finops": "finops",
+          "rbac": "rbac",
+          "support": "support"
+        },
+        "popular": "popular",
+        "badge": "badge",
+        "price": "price",
+        "desc": "desc",
+        "cta": "cta"
+      },
+      "federal": {
+        "features": {
+          "onprem": "onprem",
+          "byok": "byok",
+          "security": "security",
+          "audit": "audit"
+        },
+        "badge": "badge",
+        "price": "price",
+        "desc": "desc",
+        "cta": "cta"
+      },
+      "title": "title",
+      "subtitle": "subtitle"
+    },
+    "Cta": {
+      "title": "title",
+      "subtitle": "subtitle",
+      "primary": "primary",
+      "secondary": "secondary",
+      "disclaimer": "disclaimer"
+    }
+  },
+  "Platform": {
+    "security": {
+      "features": {
+        "fips": {
+          "title": "title",
+          "desc": "desc"
+        },
+        "rbac": {
+          "title": "title",
+          "desc": "desc"
+        },
+        "vpc": {
+          "title": "title",
+          "desc": "desc"
+        },
+        "audit": {
+          "title": "title",
+          "desc": "desc"
+        }
+      },
+      "title": "title",
+      "desc": "desc",
+      "cta": "cta",
+      "zerotrust": "zerotrust"
+    },
+    "comparison": {
+      "rows": {
+        "neutrality": "neutrality",
+        "audits": "audits",
+        "sync": "sync",
+        "refactoring": "refactoring",
+        "encryption": "encryption",
+        "iam": "iam",
+        "arbitrage": "arbitrage"
+      },
+      "limited": "limited",
+      "partial": "partial",
+      "title": "title",
+      "subtitle": "subtitle",
+      "capability": "capability",
+      "legacy": "legacy",
+      "sovereign": "sovereign",
+      "footer": "footer"
+    },
+    "control": {
+      "observability": {
+        "title": "title",
+        "desc": "desc"
+      },
+      "title": "title",
+      "subtitle": "subtitle",
+      "fleet": "fleet",
+      "healing": "healing",
+      "gitops": "gitops",
+      "audit": "audit"
+    },
+    "arbitrage": {
+      "tag": "tag",
+      "title": "title",
+      "subtitle": "subtitle",
+      "forecastTitle": "forecastTitle",
+      "forecastDesc": "forecastDesc",
+      "lockinTitle": "lockinTitle",
+      "lockinDesc": "lockinDesc",
+      "portabilityTitle": "portabilityTitle",
+      "portabilityDesc": "portabilityDesc",
+      "switchTitle": "switchTitle",
+      "switchDesc": "switchDesc",
+      "eb1aTag": "eb1aTag",
+      "eb1aDesc": "eb1aDesc",
+      "auditor": "auditor",
+      "auditorTitle": "auditorTitle"
+    },
+    "integrations": {
+      "title": "title",
+      "subtitle": "subtitle",
+      "infra": "infra",
+      "obs": "obs",
+      "delivery": "delivery",
+      "identity": "identity"
+    },
+    "hero": {
+      "title": "title",
+      "subtitle": "subtitle",
+      "ctaPrimary": "ctaPrimary",
+      "ctaSecondary": "ctaSecondary"
+    },
+    "core": {
+      "title": "title",
+      "desc": "desc"
+    },
+    "stack": {
+      "api": "api",
+      "shielded": "shielded",
+      "logic": "logic",
+      "active": "active",
+      "cluster": "cluster",
+      "scaling": "scaling",
+      "db": "db",
+      "verified": "verified"
+    }
+  },
+  "Docs": {
+    "sidebar": {
+      "links": {
+        "introduction": "introduction",
+        "architecture": "architecture",
+        "whitepaper": "whitepaper",
+        "security": "security"
+      },
+      "documentation": "documentation",
+      "blueprints": "blueprints",
+      "blueprint_links": "blueprint_links"
+    },
+    "cards": {
+      "architecture": {
+        "title": "title",
+        "exhibit": "exhibit",
+        "description": "description",
+        "cta": "cta"
+      },
+      "whitepaper": {
+        "title": "title",
+        "exhibit": "exhibit",
+        "description": "description",
+        "cta": "cta"
+      },
+      "guide": {
+        "title": "title",
+        "exhibit": "exhibit",
+        "description": "description",
+        "cta": "cta"
+      },
+      "api": {
+        "title": "title",
+        "exhibit": "exhibit",
+        "description": "description",
+        "cta": "cta"
+      },
+      "_value": "cards"
+    },
+    "meta": {
+      "title": "title",
+      "description": "description"
+    },
+    "hero": {
+      "title": "title",
+      "badge": "badge",
+      "description": "description"
+    },
+    "banner": {
+      "title": "title",
+      "description": "description",
+      "cta": "cta"
+    }
+  },
+  "Pricing": {
+    "faq": {
+      "q1": {
+        "q": "q",
+        "a": "a"
+      },
+      "q2": {
+        "q": "q",
+        "a": "a"
+      },
+      "q3": {
+        "q": "q",
+        "a": "a"
+      }
+    },
+    "trust": {
+      "residency": {
+        "title": "title",
+        "desc": "desc"
+      },
+      "neutrality": {
+        "title": "title",
+        "desc": "desc"
+      },
+      "title": "title",
+      "subtitle": "subtitle"
+    },
+    "hero": {
+      "subtitle": "subtitle",
+      "tag": "tag",
+      "title": "title"
+    },
+    "plans": {
+      "popular": "popular",
+      "month": "month",
+      "_value": "plans"
+    },
+    "cta": {
+      "title": "title",
+      "subtitle": "subtitle",
+      "button": "button"
+    }
+  },
+  "Services": {
+    "Stack": {
+      "terraform": {
+        "title": "title",
+        "desc": "desc"
+      },
+      "ansible": {
+        "title": "title",
+        "desc": "desc"
+      },
+      "badge": "badge",
+      "title": "title",
+      "subtitle": "subtitle"
+    },
+    "Migration": {
+      "azure": {
+        "title": "title",
+        "desc": "desc"
+      },
+      "ocp": {
+        "title": "title",
+        "desc": "desc"
+      },
+      "provisioning": {
+        "title": "title",
+        "desc": "desc"
+      },
+      "drift": {
+        "title": "title",
+        "desc": "desc"
+      },
+      "title": "title",
+      "subtitle": "subtitle"
+    },
+    "DataAI": {
+      "sovereignty": {
+        "title": "title",
+        "desc": "desc"
+      },
+      "fabric": {
+        "title": "title",
+        "desc": "desc"
+      },
+      "search": {
+        "title": "title",
+        "desc": "desc"
+      },
+      "analytics": {
+        "title": "title",
+        "desc": "desc"
+      },
+      "title": "title",
+      "subtitle": "subtitle",
+      "uptime": "uptime"
+    },
+    "Operations": {
+      "sre": {
+        "title": "title",
+        "desc": "desc"
+      },
+      "finops": {
+        "title": "title",
+        "desc": "desc"
+      },
+      "healing": {
+        "title": "title",
+        "desc": "desc"
+      },
+      "audit": {
+        "title": "title",
+        "desc": "desc"
+      },
+      "title": "title",
+      "subtitle": "subtitle"
+    },
+    "Hero": {
+      "badge": "badge",
+      "cta": "cta",
+      "velocity": "velocity",
+      "errors": "errors"
+    }
+  },
+  "Blog": {
+    "hero": {
+      "tag": "tag",
+      "title": "title",
+      "subtitle": "subtitle",
+      "search": "search"
+    },
+    "newsletter": {
+      "title": "title",
+      "subtitle": "subtitle",
+      "placeholder": "placeholder",
+      "button": "button",
+      "footer": "footer"
+    },
+    "posts": "posts"
+  },
+  "Investors": {
+    "hero": {
+      "tag": "tag",
+      "title": "title",
+      "subtitle": "subtitle"
+    },
+    "opportunity": {
+      "title": "title",
+      "content": "content",
+      "metrics": "metrics"
+    },
+    "vision": {
+      "title": "title",
+      "content": "content"
+    }
+  },
+  "Company": {
+    "email": {
+      "support": "support"
+    },
+    "location": "location"
+  },
+  "Industries": {
+    "cta": {
+      "title": "title",
+      "subtitle": "subtitle",
+      "button": "button"
+    },
+    "badge": "badge",
+    "title": "title",
+    "subtitle": "subtitle",
+    "challenges": "challenges",
+    "solution": "solution"
+  },
+  "Products": {
+    "hero": {
+      "tag": "tag",
+      "title": "title",
+      "subtitle": "subtitle"
+    }
+  },
+  "UseCases": {
+    "hero": {
+      "tag": "tag",
+      "title": "title",
+      "subtitle": "subtitle"
+    }
+  },
+  "Enterprise": {
+    "partnership": {
+      "title": "title",
+      "subtitle": "subtitle",
+      "p1": "p1",
+      "p2": "p2",
+      "pillars": "pillars",
+      "steps": "steps"
+    }
+  },
+  "Community": {
+    "cli": {
+      "title": "title",
+      "cmd": "cmd"
+    },
+    "plugins": {
+      "title": "title",
+      "desc": "desc"
+    },
+    "maintainers": {
+      "title": "title",
+      "desc": "desc"
+    },
+    "badge": "badge",
+    "subtitle": "subtitle",
+    "join": "join",
+    "contribute": "contribute"
+  },
+  "DemoSection": {
+    "discovery": {
+      "title": "title",
+      "desc": "desc",
+      "code": "code"
+    },
+    "iac": {
+      "title": "title",
+      "desc": "desc",
+      "code": "code"
+    },
+    "sync": {
+      "title": "title",
+      "desc": "desc",
+      "code": "code"
+    },
+    "drift": {
+      "title": "title",
+      "desc": "desc",
+      "code": "code"
+    },
+    "badge": "badge",
+    "subtitle": "subtitle"
+  },
+  "Ecosystem": {
+    "governance": {
+      "title": "title",
+      "desc": "desc",
+      "status": "status",
+      "link": "link"
+    },
+    "mesh": {
+      "title": "title",
+      "desc": "desc",
+      "status": "status",
+      "link": "link"
+    },
+    "ai": {
+      "title": "title",
+      "desc": "desc",
+      "status": "status",
+      "link": "link"
+    },
+    "vault": {
+      "title": "title",
+      "desc": "desc",
+      "status": "status",
+      "link": "link"
+    },
+    "badge": "badge",
+    "title": "title",
+    "subtitle": "subtitle"
+  },
+  "Hero": {
+    "stats": {
+      "assets": "assets",
+      "drift": "drift",
+      "nodes": "nodes"
+    },
+    "systemStatus": {
+      "live": "live"
+    },
+    "experts": {
+      "count": "count"
+    },
+    "badge": "badge",
+    "title": "title",
+    "subtitle": "subtitle",
+    "ctaPrimary": "ctaPrimary",
+    "ctaArchitecture": "ctaArchitecture",
+    "ctaWhitepaper": "ctaWhitepaper",
+    "trust": "trust"
+  },
+  "Problem": {
+    "fragmentation": {
+      "title": "title",
+      "desc": "desc"
+    },
+    "regulatory": {
+      "title": "title",
+      "desc": "desc",
+      "score": "score",
+      "risk": "risk"
+    },
+    "vendor": {
+      "title": "title",
+      "desc": "desc"
+    },
+    "opacity": {
+      "title": "title",
+      "desc": "desc",
+      "scanning": "scanning"
+    },
+    "badge": "badge",
+    "title": "title",
+    "subtitle": "subtitle"
+  },
+  "Visuals": {
+    "drift": {
+      "title": "title",
+      "detected": "detected",
+      "remediate": "remediate"
+    },
+    "telemetry": {
+      "title": "title",
+      "live": "live",
+      "latency": "latency",
+      "throughput": "throughput",
+      "loss": "loss"
+    }
+  },
+  "Dashboard": {
+    "title": "title",
+    "welcome": "welcome",
+    "role": "role",
+    "logicMeshStatus": "logicMeshStatus",
+    "active": "active",
+    "badge": "badge",
+    "liveTitle": "liveTitle",
+    "liveSubtitle": "liveSubtitle",
+    "roiTitle": "roiTitle",
+    "roiSubtitle": "roiSubtitle",
+    "infraTitle": "infraTitle",
+    "infraSubtitle": "infraSubtitle",
+    "globalHealth": "globalHealth",
+    "optimizationTitle": "optimizationTitle",
+    "trustTitle": "trustTitle"
+  },
+  "SecuritySettings": {
+    "title": "title",
+    "description": "description",
+    "ssoConfiguration": "ssoConfiguration",
+    "enabled": "enabled",
+    "disabled": "disabled",
+    "clientId": "clientId",
+    "tenantId": "tenantId",
+    "outboundEmail": "outboundEmail",
+    "advancedSecurity": "advancedSecurity",
+    "advancedDescription": "advancedDescription",
+    "requestSaml": "requestSaml"
+  },
+  "Compliance": {
+    "title": "title",
+    "subtitle": "subtitle",
+    "transparency": "transparency",
+    "transparencyText": "transparencyText",
+    "active": "active",
+    "gdpr": "gdpr",
+    "gdprText": "gdprText",
+    "inProgress": "inProgress",
+    "soc2": "soc2",
+    "soc2Text": "soc2Text",
+    "planned": "planned",
+    "iso27001": "iso27001",
+    "iso27001Text": "iso27001Text",
+    "dataHandling": "dataHandling",
+    "encryption": "encryption",
+    "encryption1": "encryption1",
+    "encryption2": "encryption2",
+    "encryption3": "encryption3",
+    "dataResidency": "dataResidency",
+    "dataResidencyText": "dataResidencyText",
+    "retention": "retention",
+    "operational": "operational",
+    "operationalText": "operationalText",
+    "audit": "audit",
+    "auditText": "auditText",
+    "backups": "backups",
+    "backupsText": "backupsText",
+    "accessControls": "accessControls",
+    "authentication": "authentication",
+    "auth1": "auth1",
+    "auth2": "auth2",
+    "auth3": "auth3",
+    "authorization": "authorization",
+    "authz1": "authz1",
+    "authz2": "authz2",
+    "authz3": "authz3",
+    "incidentResponse": "incidentResponse",
+    "incidentResponseText": "incidentResponseText",
+    "responseProcess": "responseProcess",
+    "response1": "response1",
+    "response2": "response2",
+    "response3": "response3",
+    "response4": "response4"
+  },
+  "Newsroom": {
+    "news": "news",
+    "badge": "badge",
+    "title": "title",
+    "link": "link",
+    "cta": "cta"
+  },
+  "Privacy": {
+    "title": "title",
+    "lastUpdated": "lastUpdated",
+    "commitment": "commitment",
+    "commitmentText": "commitmentText",
+    "dataCollection": "dataCollection",
+    "dataCollectionText": "dataCollectionText",
+    "accountData": "accountData",
+    "accountDataText": "accountDataText",
+    "infrastructureData": "infrastructureData",
+    "infrastructureDataText": "infrastructureDataText",
+    "usageData": "usageData",
+    "usageDataText": "usageDataText",
+    "dataProtection": "dataProtection",
+    "dataProtectionText": "dataProtectionText",
+    "protection1": "protection1",
+    "protection2": "protection2",
+    "protection3": "protection3",
+    "protection4": "protection4",
+    "dataRetention": "dataRetention",
+    "dataRetentionText": "dataRetentionText",
+    "yourRights": "yourRights",
+    "yourRightsText": "yourRightsText",
+    "right1": "right1",
+    "right2": "right2",
+    "right3": "right3",
+    "right4": "right4",
+    "thirdParty": "thirdParty",
+    "thirdPartyText": "thirdPartyText",
+    "cookies": "cookies",
+    "cookiesText": "cookiesText",
+    "changes": "changes",
+    "changesText": "changesText",
+    "contact": "contact",
+    "contactText": "contactText"
+  },
+  "Breadcrumb": {
+    "home": "home",
+    "resources": "resources"
+  },
+  "Security": {
+    "title": "title",
+    "subtitle": "subtitle",
+    "encryption": "encryption",
+    "encryptionText": "encryptionText",
+    "authentication": "authentication",
+    "authenticationText": "authenticationText",
+    "responsibleDisclosure": "responsibleDisclosure",
+    "disclosureIntro": "disclosureIntro",
+    "reportingProcess": "reportingProcess",
+    "step1": "step1",
+    "step2": "step2",
+    "step3": "step3",
+    "step4": "step4",
+    "scope": "scope",
+    "scope1": "scope1",
+    "scope2": "scope2",
+    "scope3": "scope3",
+    "scope4": "scope4",
+    "securityPractices": "securityPractices",
+    "infrastructure": "infrastructure",
+    "infra1": "infra1",
+    "infra2": "infra2",
+    "monitoring": "monitoring",
+    "monitor1": "monitor1",
+    "monitor2": "monitor2",
+    "contactSecurity": "contactSecurity",
+    "securityEmail": "securityEmail",
+    "pgpKey": "pgpKey"
+  },
+  "Terms": {
+    "title": "title",
+    "lastUpdated": "lastUpdated",
+    "acceptance": "acceptance",
+    "acceptanceText": "acceptanceText",
+    "services": "services",
+    "servicesText": "servicesText",
+    "service1": "service1",
+    "service2": "service2",
+    "service3": "service3",
+    "service4": "service4",
+    "userResponsibilities": "userResponsibilities",
+    "userResponsibilitiesText": "userResponsibilitiesText",
+    "responsibility1": "responsibility1",
+    "responsibility2": "responsibility2",
+    "responsibility3": "responsibility3",
+    "dataOwnership": "dataOwnership",
+    "dataOwnershipText": "dataOwnershipText",
+    "termination": "termination",
+    "terminationText": "terminationText",
+    "disclaimer": "disclaimer",
+    "disclaimerText": "disclaimerText",
+    "governingLaw": "governingLaw",
+    "governingLawText": "governingLawText",
+    "contact": "contact",
+    "contactText": "contactText"
+  },
+  "SovereignGallery": {
+    "title": "title",
+    "subtitle": "subtitle"
+  },
+  "CookieConsent": {
+    "title": "title",
+    "close": "close",
+    "message": "message",
+    "policyLink": "policyLink",
+    "accept": "accept",
+    "decline": "decline",
+    "sovereignNotice": "sovereignNotice"
+  },
+  "Engagement": {
+    "title": "title",
+    "subtitle": "subtitle",
+    "primary": "primary",
+    "secondary": "secondary"
+  },
+  "Capabilities": {
+    "tag": "tag",
+    "title": "title",
+    "subtitle": "subtitle",
+    "cta": "cta",
+    "explore": "explore"
+  },
+  "WhitePaper": {
+    "contribution": "contribution",
+    "title": "title",
+    "description": "description",
+    "peerReview": "peerReview",
+    "pageCount": "pageCount",
+    "badge": "badge",
+    "downloadTitle": "downloadTitle",
+    "downloadSubtitle": "downloadSubtitle",
+    "readOnline": "readOnline",
+    "designPatterns": "designPatterns",
+    "footer": "footer"
+  },
+  "ContactSales": {
+    "subject": "subject",
+    "bodyIntro": "bodyIntro",
+    "fallbackTitle": "fallbackTitle",
+    "fallbackInstruction": "fallbackInstruction",
+    "copyLabel": "copyLabel",
+    "whatsappLabel": "whatsappLabel",
+    "rateLimitMessage": "rateLimitMessage",
+    "copyToast": "copyToast"
+  },
+  "title": "title",
+  "subtitle": "subtitle",
+  "cta": "cta",
+  "AboveTheFold": "AboveTheFold",
+  "content": "content",
+  "steps": "steps",
+  "items": "items"
 }

@@ -96,22 +96,32 @@ function audit() {
         return true;
     });
 
-    const realMissing = missingKeys.sort();
+    const realMissing = missingKeys.sort((a, b) => b.split('.').length - a.split('.').length);
 
     if (realMissing.length > 0) {
         console.log(`❌ Found ${realMissing.length} missing keys in en.json:`);
-        realMissing.forEach(k => console.log(`   - ${k}`));
 
         realMissing.forEach(k => {
             const parts = k.split('.');
             let current = enMessages;
             for (let i = 0; i < parts.length - 1; i++) {
-                if (!current[parts[i]]) current[parts[i]] = {};
-                current = current[parts[i]];
+                const part = parts[i];
+                if (!current[part]) {
+                    current[part] = {};
+                } else if (typeof current[part] === 'string') {
+                    // Collision: promoted from string to object
+                    current[part] = { _value: current[part] };
+                }
+                current = current[part];
             }
             const leaf = parts[parts.length - 1];
-            if (!current[leaf]) {
+            if (current[leaf] === undefined) {
                 current[leaf] = `[TODO] ${leaf}`;
+            } else if (typeof current[leaf] === 'object') {
+                // If we are trying to set a string value on a path that is already an object
+                if (!current[leaf]._value) {
+                    current[leaf]._value = `[TODO] ${leaf}`;
+                }
             }
         });
 
