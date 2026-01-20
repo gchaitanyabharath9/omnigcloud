@@ -25,9 +25,15 @@ export function HashScrollHandler() {
                     // Force a layout calculation check
                     const rect = element.getBoundingClientRect();
 
-                    // The offset is handled by CSS [id] { scroll-margin-top: ... }
+                    // Get the scroll margin from CSS variables (header + breadcrumb height)
+                    const computedStyle = getComputedStyle(document.documentElement);
+                    const headerHeight = parseInt(computedStyle.getPropertyValue('--header-height')) || 70;
+                    const breadcrumbHeight = parseInt(computedStyle.getPropertyValue('--breadcrumb-height')) || 48;
+                    const scrollMargin = headerHeight + breadcrumbHeight;
+
+                    // Calculate scroll position accounting for the scroll margin
                     window.scrollTo({
-                        top: window.scrollY + rect.top,
+                        top: window.scrollY + rect.top - scrollMargin,
                         behavior: 'smooth'
                     });
 
