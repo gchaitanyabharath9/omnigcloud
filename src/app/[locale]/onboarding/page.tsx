@@ -1,7 +1,13 @@
 import { Rocket, Shield, Globe, Cpu, CheckCircle, ArrowRight, Zap, RefreshCcw, ArrowLeft } from "lucide-react";
-import Link from "next/link";
+import { Link } from "@/navigation";
+
+
+export function generateStaticParams() {
+    return ['en', 'es', 'fr', 'de', 'zh', 'hi', 'ja', 'ko'].map((locale) => ({ locale }));
+}
 
 export default function OnboardingPage() {
+
     return (
         <div className="animate-fade-in" style={{ paddingBottom: '4rem' }}>
             {/* Hero */}

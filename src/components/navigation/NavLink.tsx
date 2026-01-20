@@ -5,8 +5,8 @@
 'use client';
 
 import React from 'react';
-import Link from 'next/link';
-import { usePathname } from 'next/navigation';
+import { Link, usePathname } from '@/navigation';
+
 import type { NavItem } from '@/config/nav';
 
 interface NavLinkProps {
@@ -25,28 +25,26 @@ export function NavLink({ item, locale, className, onClick, children }: NavLinkP
         onClick?.();
 
         if (item.type === 'section' && item.hash) {
-            const targetPath = `/${locale}${item.route || ''}`;
+            const targetPath = item.route || '/';
             const currentPath = pathname;
 
-            // Normalize paths to handle trailing slashes and case (though routes are usually lowercase)
-            // This prevents "reload instead of scroll" issues
             const normalize = (p: string) => p.replace(/\/$/, '') || '/';
-            // Also ensure we are comparing decoded paths just in case
             const currNorm = normalize(decodeURIComponent(currentPath));
             const targetNorm = normalize(decodeURIComponent(targetPath));
 
-            // If same page, handle scrolling via hash change to avoid a full re-render
             if (currNorm === targetNorm) {
                 e.preventDefault();
-                // Setting hash directly triggers hashchange and our manager
                 window.location.hash = item.hash;
             }
         }
+
     };
 
-    const href = item.hash
-        ? `/${locale}${item.route || ''}#${item.hash}`
-        : `/${locale}${item.route || ''}`;
+    const href = {
+        pathname: item.route || '/',
+        hash: item.hash
+    };
+
 
     return (
         <Link

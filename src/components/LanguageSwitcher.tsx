@@ -85,7 +85,7 @@ export default function LanguageSwitcher() {
                                 }}
                                 locale={lang.code as any}
                                 onClick={() => setIsOpen(false)}
-                                scroll={true}
+                                scroll={false}
                                 style={{
                                     display: 'flex',
                                     alignItems: 'center',

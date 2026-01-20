@@ -1,6 +1,7 @@
 "use client";
 
-import Link from 'next/link';
+import { Link } from '@/navigation';
+
 import { useTranslations, useLocale } from 'next-intl';
 import { Linkedin, Twitter, Github, MessageSquare } from 'lucide-react';
 import styles from './Footer.module.css';
@@ -17,7 +18,8 @@ const Footer = () => {
                 <div style={{ borderTop: '1px solid var(--card-border)', borderBottom: '1px solid var(--card-border)', padding: '1.5rem 0', marginTop: '0.5rem' }}>
                     <div style={{ marginBottom: '1.5rem', display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start' }}>
                         <div>
-                            <Link href={`/${locale}#hero`} style={{ fontSize: '1.5rem', fontWeight: 900, textDecoration: 'none', color: 'var(--foreground)', letterSpacing: '-0.75px', fontFamily: 'var(--font-heading)' }}>
+                            <Link href="/#hero" style={{ fontSize: '1.5rem', fontWeight: 900, textDecoration: 'none', color: 'var(--foreground)', letterSpacing: '-0.75px', fontFamily: 'var(--font-heading)' }}>
+
                                 OmniG<span style={{ color: 'var(--primary)' }}>Cloud</span>
                             </Link>
                             <p style={{ marginTop: '0.5rem', color: 'var(--foreground)', opacity: 0.7, maxWidth: '400px', fontSize: 'var(--small-size)', lineHeight: '1.5' }}>
@@ -81,7 +83,8 @@ const Footer = () => {
                                 <h5 style={{ color: col.color, fontWeight: 900, marginBottom: '0.75rem', fontSize: 'var(--tiny-size)', textTransform: 'uppercase', letterSpacing: '0.05em' }}>{col.label}</h5>
                                 <div style={{ display: 'flex', flexDirection: 'column', gap: '0.6rem', fontSize: 'var(--small-size)' }}>
                                     {col.links.map((link, lIdx) => (
-                                        <Link key={lIdx} href={`/${locale}${link.href}`} style={{ color: 'var(--foreground)', opacity: 0.7, textDecoration: 'none', transition: 'all 0.2s', fontWeight: 600 }}>{link.name}</Link>
+                                        <Link key={lIdx} href={link.href} style={{ color: 'var(--foreground)', opacity: 0.7, textDecoration: 'none', transition: 'all 0.2s', fontWeight: 600 }}>{link.name}</Link>
+
                                     ))}
                                 </div>
                             </div>
