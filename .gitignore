@@ -1,14 +1,16 @@
-# dependencies
+# Dependencies
 /node_modules
 /.pnp
 .pnp.*
-.yarn/*
-!.yarn/patches
-!.yarn/plugins
-!.yarn/releases
-!.yarn/versions
 
-# testing
+# Next.js
+/.next/
+/out/
+/build
+/tsconfig.tsbuildinfo
+next-env.d.ts
+
+# Testing
 /coverage
 /playwright-report
 /test-results
@@ -16,74 +18,24 @@
 /qa-i18n/smoke/*.png
 /qa-i18n/smoke/*.jpg
 
-# next.js
-/.next/
-/out/
-
-# production
-/build
-!/build/*.ps1
-!/build/README*
-
-# misc
-.DS_Store
-*.pem
-*.log
-*.txt
-!public/robots.txt
-!README.md
-!CODEOWNERS
-!CONTRIBUTING.md
-!SECURITY.md
-!LICENSE
-!CITATION.cff
-
-# debug
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-.pnpm-debug.log*
-logs/
-
-# env files
-.env*
-
-# vercel
-.vercel
-
-# terraform
-.terraform
-*.tfstate
-*.tfstate.*
-terraform.tfvars
-terraform.tfvars.json
-override.tf
-override.tf.json
-*_override.tf
-*_override.tf.json
-
-# typescript
-*.tsbuildinfo
-next-env.d.ts
-
-# publication and artifacts
-/publication-pdfs
+# Private & Generated Artifacts (DO NOT COMMIT)
+*.pdf
+/publication-pdfs/
 /review-pdfs/
 /artifacts/
 /public-release/
 /_stale/
 /temp/
-
-# media drafts
-*-FLAGSHIP.md
-*-ENHANCED.md
-*-ORIGINAL.md
-PUBLICATION_STRATEGY.md
-
-# Local LaTeX and PDF
-*.pdf
-*.aux
+/dist/
+*.zip
 *.log
+*.bak
+*.tmp
+*.temp
+/logs/
+
+# LaTeX Artifacts
+*.aux
 *.out
 *.toc
 *.nav
@@ -94,5 +46,29 @@ PUBLICATION_STRATEGY.md
 *.synctex.gz
 *.bbl
 *.blg
-build/
-papers/*/build/
+
+# Environment & Secrets
+.env*
+*.pem
+
+# IDE & OS
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+
+# Protected Files (Force Include)
+!public/robots.txt
+!public/sitemap.xml
+!README.md
+!CODEOWNERS
+!CONTRIBUTING.md
+!SECURITY.md
+!LICENSE
+!CITATION.cff
+!PUBLIC_CONTENT_MANIFEST.md
+!REPO_SEGREGATION_PLAN.md
+
+

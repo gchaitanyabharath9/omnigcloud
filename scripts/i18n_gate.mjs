@@ -5,7 +5,7 @@ console.log('\n╔════════════════════�
 console.log('║         i18n INTEGRITY GATE                                         ║');
 console.log('╚══════════════════════════════════════════════════════════════════════╝\n');
 
-const MESSAGES_DIR = './messages';
+const MESSAGES_DIR = './src/messages';
 const REQUIRED_LOCALES = ['en', 'es', 'fr', 'de', 'zh', 'hi', 'ja', 'ko'];
 const CRITICAL_KEYS = [
     'Header.nav.solutions',
