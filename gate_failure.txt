@@ -1,0 +1,17 @@
+
+> nascent-zodiac@0.1.0 i18n:gate
+> npx tsx scripts/i18n_gate.ts
+
+≡ƒöì i18n Quality Gate: Scanning en.json...
+ΓÜá∩╕Å Found 533 placeholder translations in non-strict namespaces (Technical Debt).
+Γ¥î Found 8 invalid translations in STRICT namespaces (Hero, CookieConsent, SEO_Content, Header, Footer, HomeSections, Products, WhitePaper, Capabilities, UseCases):
+   - UseCases.hero.tag (Value equals key)
+   - UseCases.hero.title (Value equals key)
+   - UseCases.hero.subtitle (Value equals key)
+   - Capabilities.tag (Value equals key)
+   - Capabilities.title (Value equals key)
+   - Capabilities.subtitle (Value equals key)
+   - Capabilities.cta (Value equals key)
+   - Capabilities.explore (Value equals key)
+
+Run 'npm run qa:i18n:fill' or manually edit src/messages/en.json to fix.
