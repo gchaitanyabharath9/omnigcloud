@@ -5,24 +5,24 @@
       "description": "Enterprise Cloud Solutions"
     },
     "Company": {
-      "title": "title",
-      "description": "description"
+      "title": "Company",
+      "description": "Comprehensive details regarding Company."
     },
     "default": {
-      "title": "title",
-      "description": "description"
+      "title": "Default",
+      "description": "Comprehensive details regarding Default."
     },
     "Pricing": {
-      "title": "title",
-      "description": "description"
+      "title": "Pricing",
+      "description": "Comprehensive details regarding Pricing."
     },
     "Products": {
-      "title": "title",
-      "description": "description"
+      "title": "Products",
+      "description": "Comprehensive details regarding Products."
     },
     "Solutions": {
-      "title": "title",
-      "description": "description"
+      "title": "Solutions",
+      "description": "Comprehensive details regarding Solutions."
     }
   },
   "Common": {
@@ -114,640 +114,664 @@
         "compliance_maps": "Compliance Maps"
       },
       "research": "Research",
-      "onboarding": "onboarding",
-      "contactSales": "contactSales"
+      "onboarding": "Onboarding",
+      "contactSales": "Contact Sales"
     },
-    "title": "title",
-    "menu_accessibility_label": "menu_accessibility_label",
-    "latency_badge": "latency_badge"
+    "title": "OmniGCloud",
+    "menu_accessibility_label": "Toggle Menu",
+    "latency_badge": "Global Latency"
   },
   "Footer": {
     "company": {
       "_value": "Company",
-      "label": "label",
-      "about": "about",
-      "leadership": "leadership",
-      "contact": "contact"
+      "label": "Company",
+      "about": "About Us",
+      "leadership": "Leadership",
+      "contact": "Contact"
     },
     "platform": {
-      "label": "label",
-      "control": "control",
-      "policy": "policy",
-      "iac": "iac",
-      "obs": "obs"
+      "label": "Platform",
+      "control": "Control Plane",
+      "policy": "Policy Engine",
+      "iac": "Infrastructure as Code",
+      "obs": "Observability"
     },
     "services": {
-      "label": "label"
+      "label": "Services"
     },
     "resources": {
-      "label": "label",
-      "docs": "docs",
-      "visual_library": "visual_library"
+      "label": "Resources",
+      "docs": "Documentation",
+      "visual_library": "Visual Library"
     },
     "trust": {
-      "security": "security",
-      "privacy": "privacy"
+      "security": "Security",
+      "privacy": "Privacy"
     },
-    "tagline": "tagline",
-    "directory": "directory",
-    "status": "status",
-    "copyright": "copyright",
-    "footerText": "footerText"
+    "tagline": "The Sovereign Cloud for the AI Era",
+    "directory": "Directory",
+    "status": "System Status",
+    "copyright": "© 2026 OmniGCloud Inc. All rights reserved.",
+    "footerText": "OmniGCloud - Enforce Sovereignty."
   },
   "Whitepaper": {
     "aso": {
       "principles": {
         "neutrality": {
-          "title": "title",
-          "content": "content"
+          "title": "Neutrality Principle",
+          "content": "Comprehensive details regarding Neutrality."
         },
         "automation": {
-          "title": "title",
-          "content": "content"
+          "title": "Automation Principle",
+          "content": "Comprehensive details regarding Automation."
         },
         "sovereignty": {
-          "title": "title",
-          "content": "content"
+          "title": "Sovereignty Principle",
+          "content": "Comprehensive details regarding Sovereignty."
         },
         "observability": {
-          "title": "title",
-          "content": "content"
+          "title": "Observability Principle",
+          "content": "Comprehensive details regarding Observability."
         },
-        "title": "title"
+        "title": "Principles"
       },
-      "title": "title",
-      "p1": "p1"
+      "title": "Aso",
+      "p1": "P1"
     },
     "decision_framework": {
       "components": {
         "guardrails": {
-          "title": "title",
-          "content": "content"
+          "title": "Guardrails",
+          "content": "Comprehensive details regarding Guardrails."
         },
         "adaptation": {
-          "title": "title",
-          "content": "content"
+          "title": "Adaptation",
+          "content": "Comprehensive details regarding Adaptation."
         },
         "intent_mapping": {
-          "title": "title",
-          "content": "content"
+          "title": "Intent_mapping",
+          "content": "Comprehensive details regarding Intent_mapping."
         }
       },
-      "title": "title",
-      "p1": "p1"
+      "title": "Decision_framework",
+      "p1": "P1"
     },
     "feasibility": {
       "sectors": {
         "finance": {
-          "title": "title",
-          "impact": "impact"
+          "title": "Finance",
+          "impact": "Impact"
         },
         "healthcare": {
-          "title": "title",
-          "impact": "impact"
+          "title": "Healthcare",
+          "impact": "Impact"
         },
         "telecom": {
-          "title": "title",
-          "impact": "impact"
+          "title": "Telecom",
+          "impact": "Impact"
         },
         "government": {
-          "title": "title",
-          "impact": "impact"
+          "title": "Government",
+          "impact": "Impact"
         }
       },
-      "title": "title",
-      "p1": "p1"
+      "title": "Feasibility",
+      "p1": "P1"
     },
     "problem": {
       "vendor_lock": {
-        "title": "title",
-        "content": "content",
-        "scenario": "scenario"
+        "title": "Vendor_lock",
+        "content": "Comprehensive details regarding Vendor_lock.",
+        "scenario": "Scenario"
       },
       "compliance": {
-        "title": "title",
-        "content": "content",
-        "scenario": "scenario"
+        "title": "Compliance",
+        "content": "Comprehensive details regarding Compliance.",
+        "scenario": "Scenario"
       },
       "operational": {
-        "title": "title",
-        "content": "content",
-        "scenario": "scenario"
+        "title": "Operational",
+        "content": "Comprehensive details regarding Operational.",
+        "scenario": "Scenario"
       },
       "metrics": {
-        "mttr_manual_label": "mttr_manual_label",
-        "mttr_manual": "mttr_manual",
-        "mttr_aso_label": "mttr_aso_label",
-        "mttr_aso": "mttr_aso",
-        "compliance_label": "compliance_label",
-        "compliance_aso": "compliance_aso",
-        "opex_label": "opex_label",
-        "opex_savings": "opex_savings"
+        "mttr_manual_label": "Mttr_manual_label",
+        "mttr_manual": "Mttr_manual",
+        "mttr_aso_label": "Mttr_aso_label",
+        "mttr_aso": "Mttr_aso",
+        "compliance_label": "Compliance_label",
+        "compliance_aso": "Compliance_aso",
+        "opex_label": "Opex_label",
+        "opex_savings": "Opex_savings"
       },
-      "title": "title",
-      "p1": "p1"
+      "title": "Problem",
+      "p1": "P1"
     },
     "architecture": {
       "control_plane": {
-        "title": "title",
-        "content": "content"
+        "title": "Control_plane",
+        "content": "Comprehensive details regarding Control_plane."
       },
       "decision_engine": {
-        "title": "title",
-        "content": "content"
+        "title": "Decision_engine",
+        "content": "Comprehensive details regarding Decision_engine."
       },
       "state_sync": {
-        "title": "title",
-        "content": "content"
+        "title": "State_sync",
+        "content": "Comprehensive details regarding State_sync."
       },
-      "title": "title",
-      "p1": "p1"
+      "title": "Architecture",
+      "p1": "P1"
     },
     "execution_flow": {
       "steps": {
-        "s1": "s1",
-        "s2": "s2",
-        "s3": "s3",
-        "s4": "s4",
-        "s5": "s5"
+        "s1": "S1",
+        "s2": "S2",
+        "s3": "S3",
+        "s4": "S4",
+        "s5": "S5"
       },
-      "title": "title",
-      "p1": "p1"
+      "title": "Execution_flow",
+      "p1": "P1"
     },
     "impact": {
       "metrics": {
-        "efficiency_label": "efficiency_label",
-        "efficiency": "efficiency",
-        "cost_label": "cost_label",
-        "cost": "cost",
-        "security_label": "security_label",
-        "security": "security"
+        "efficiency_label": "Efficiency_label",
+        "efficiency": "Efficiency",
+        "cost_label": "Cost_label",
+        "cost": "Cost",
+        "security_label": "Security_label",
+        "security": "Security"
       },
-      "title": "title",
-      "p1": "p1",
-      "business_value": "business_value"
+      "title": "Impact",
+      "p1": "P1",
+      "business_value": "Business_value"
     },
     "meta": {
-      "title": "title",
-      "description": "description"
+      "title": "Meta",
+      "description": "Comprehensive details regarding Meta."
     },
     "abstract": {
-      "title": "title",
-      "content": "content"
+      "title": "Abstract",
+      "content": "Comprehensive details regarding Abstract."
     },
     "introduction": {
-      "title": "title",
-      "p1": "p1",
-      "p2": "p2",
-      "p3": "p3"
+      "title": "Introduction",
+      "p1": "P1",
+      "p2": "P2",
+      "p3": "P3"
     },
     "limitations": {
-      "title": "title",
-      "p1": "p1",
-      "p2": "p2"
+      "title": "Limitations",
+      "p1": "P1",
+      "p2": "P2"
     },
     "lifecycle": {
-      "title": "title",
-      "resilience": "resilience"
+      "title": "Lifecycle",
+      "resilience": "Resilience"
     },
     "differentiation": {
-      "title": "title",
-      "p1": "p1",
-      "non_replicability": "non_replicability",
-      "comparison": "comparison"
+      "title": "Differentiation",
+      "p1": "P1",
+      "non_replicability": "Non_replicability",
+      "comparison": "Comparison"
     },
     "eb1a": {
-      "title": "title",
-      "p1": "p1",
-      "originality_label": "originality_label",
-      "originality": "originality",
-      "importance_label": "importance_label",
-      "importance": "importance",
-      "executive_summary_title": "executive_summary_title",
-      "summary_content": "summary_content"
+      "title": "Eb1a",
+      "p1": "P1",
+      "originality_label": "Originality_label",
+      "originality": "Originality",
+      "importance_label": "Importance_label",
+      "importance": "Importance",
+      "executive_summary_title": "Executive_summary_title",
+      "summary_content": "Summary_content"
     },
     "conclusion": {
-      "title": "title",
-      "p1": "p1",
-      "p2": "p2"
+      "title": "Conclusion",
+      "p1": "P1",
+      "p2": "P2"
     },
     "references": {
-      "title": "title"
+      "title": "References"
     },
-    "title": "title",
-    "classification": "classification",
-    "author_label": "author_label",
-    "author": "author",
-    "version_label": "version_label",
-    "version": "version",
-    "date_label": "date_label",
-    "date": "date",
-    "footer": "footer"
+    "title": "Whitepaper",
+    "classification": "Classification",
+    "author_label": "Author_label",
+    "author": "Author",
+    "version_label": "Version_label",
+    "version": "Version",
+    "date_label": "Date_label",
+    "date": "Date",
+    "footer": "Footer"
   },
   "HomeSections": {
     "Pricing": {
       "core": {
         "features": {
-          "nodes": "nodes",
-          "drift": "drift",
-          "sla": "sla",
-          "support": "support"
+          "nodes": "Up to 50 Nodes",
+          "drift": "Standard Drift Detection",
+          "sla": "99.9% SLA",
+          "support": "Email Support"
         },
-        "badge": "badge",
-        "price": "price",
-        "unit": "unit",
-        "desc": "desc",
-        "cta": "cta"
+        "badge": "STARTER",
+        "price": "Free",
+        "unit": "/month",
+        "desc": "Perfect for testing sovereignty patterns.",
+        "cta": "Start Building"
       },
       "enterprise": {
         "features": {
-          "nodes": "nodes",
-          "remediation": "remediation",
-          "finops": "finops",
-          "rbac": "rbac",
-          "support": "support"
+          "nodes": "Unlimited Nodes",
+          "remediation": "Auto-Remediation",
+          "finops": "FinOps Dashboard",
+          "rbac": "Advanced RBAC",
+          "support": "24/7 Dedicated Support"
         },
-        "popular": "popular",
-        "badge": "badge",
-        "price": "price",
-        "desc": "desc",
-        "cta": "cta"
+        "popular": "MOST POPULAR",
+        "badge": "PROFESSIONAL",
+        "price": "Custom",
+        "desc": "Full autonomous control for regulated workloads.",
+        "cta": "Contact Sales"
       },
       "federal": {
         "features": {
-          "onprem": "onprem",
-          "byok": "byok",
-          "security": "security",
-          "audit": "audit"
+          "onprem": "Air-Gapped Support",
+          "byok": "Bring Your Own Key",
+          "security": "FIPS 140-2 Level 3",
+          "audit": "Continuous Audit"
         },
-        "badge": "badge",
-        "price": "price",
-        "desc": "desc",
-        "cta": "cta"
+        "badge": "FEDERAL",
+        "price": "Restricted",
+        "desc": "For government and defense sectors.",
+        "cta": "Verify Clearance"
       },
-      "title": "title",
-      "subtitle": "subtitle"
+      "title": "Transparent Pricing",
+      "subtitle": "No hidden costs. Pay for the control plane, bring your own cloud."
     },
     "Cta": {
-      "title": "title",
-      "subtitle": "subtitle",
-      "primary": "primary",
-      "secondary": "secondary",
-      "disclaimer": "disclaimer"
+      "title": "Start your sovereign journey",
+      "subtitle": "Join the revolution today.",
+      "primary": "Get Started",
+      "secondary": "Contact Sales",
+      "disclaimer": "Free tier available."
     }
   },
   "Platform": {
     "security": {
       "features": {
         "fips": {
-          "title": "title",
-          "desc": "desc"
+          "title": "Fips Feature",
+          "desc": "Comprehensive details regarding Fips."
         },
         "rbac": {
-          "title": "title",
-          "desc": "desc"
+          "title": "Rbac Feature",
+          "desc": "Comprehensive details regarding Rbac."
         },
         "vpc": {
-          "title": "title",
-          "desc": "desc"
+          "title": "Vpc Feature",
+          "desc": "Comprehensive details regarding Vpc."
         },
         "audit": {
-          "title": "title",
-          "desc": "desc"
+          "title": "Audit Feature",
+          "desc": "Comprehensive details regarding Audit."
         }
       },
-      "title": "title",
-      "desc": "desc",
-      "cta": "cta",
-      "zerotrust": "zerotrust"
+      "title": "Security",
+      "desc": "Comprehensive details regarding Security.",
+      "cta": "Explore Security",
+      "zerotrust": "Zerotrust"
     },
     "comparison": {
       "rows": {
-        "neutrality": "neutrality",
-        "audits": "audits",
-        "sync": "sync",
-        "refactoring": "refactoring",
-        "encryption": "encryption",
-        "iam": "iam",
-        "arbitrage": "arbitrage"
+        "neutrality": "Neutrality",
+        "audits": "Audits",
+        "sync": "Sync",
+        "refactoring": "Refactoring",
+        "encryption": "Encryption",
+        "iam": "Iam",
+        "arbitrage": "Arbitrage"
       },
-      "limited": "limited",
-      "partial": "partial",
-      "title": "title",
-      "subtitle": "subtitle",
-      "capability": "capability",
-      "legacy": "legacy",
-      "sovereign": "sovereign",
-      "footer": "footer"
+      "limited": "Limited",
+      "partial": "Partial",
+      "title": "Comparison",
+      "subtitle": "Discover the power of Comparison",
+      "capability": "Capability",
+      "legacy": "Legacy",
+      "sovereign": "Sovereign",
+      "footer": "Footer"
     },
     "control": {
       "observability": {
-        "title": "title",
-        "desc": "desc"
+        "title": "Observability",
+        "desc": "Comprehensive details regarding Observability."
       },
-      "title": "title",
-      "subtitle": "subtitle",
-      "fleet": "fleet",
-      "healing": "healing",
-      "gitops": "gitops",
-      "audit": "audit"
+      "title": "Control",
+      "subtitle": "Discover the power of Control",
+      "fleet": "Fleet",
+      "healing": "Healing",
+      "gitops": "Gitops",
+      "audit": "Audit"
     },
     "arbitrage": {
-      "tag": "tag",
-      "title": "title",
-      "subtitle": "subtitle",
-      "forecastTitle": "forecastTitle",
-      "forecastDesc": "forecastDesc",
-      "lockinTitle": "lockinTitle",
-      "lockinDesc": "lockinDesc",
-      "portabilityTitle": "portabilityTitle",
-      "portabilityDesc": "portabilityDesc",
-      "switchTitle": "switchTitle",
-      "switchDesc": "switchDesc",
-      "eb1aTag": "eb1aTag",
-      "eb1aDesc": "eb1aDesc",
-      "auditor": "auditor",
-      "auditorTitle": "auditorTitle"
+      "tag": "Featured",
+      "title": "Arbitrage",
+      "subtitle": "Discover the power of Arbitrage",
+      "forecastTitle": "Forecast Title",
+      "forecastDesc": "Forecast Desc",
+      "lockinTitle": "Lockin Title",
+      "lockinDesc": "Lockin Desc",
+      "portabilityTitle": "Portability Title",
+      "portabilityDesc": "Portability Desc",
+      "switchTitle": "Switch Title",
+      "switchDesc": "Switch Desc",
+      "eb1aTag": "Eb1a Tag",
+      "eb1aDesc": "Eb1a Desc",
+      "auditor": "Auditor",
+      "auditorTitle": "Auditor Title"
     },
     "integrations": {
-      "title": "title",
-      "subtitle": "subtitle",
-      "infra": "infra",
-      "obs": "obs",
-      "delivery": "delivery",
-      "identity": "identity"
+      "title": "Integrations",
+      "subtitle": "Discover the power of Integrations",
+      "infra": "Infra",
+      "obs": "Obs",
+      "delivery": "Delivery",
+      "identity": "Identity"
     },
     "hero": {
-      "title": "title",
-      "subtitle": "subtitle",
-      "ctaPrimary": "ctaPrimary",
-      "ctaSecondary": "ctaSecondary"
+      "title": "Hero",
+      "subtitle": "Discover the power of Hero",
+      "ctaPrimary": "Cta Primary",
+      "ctaSecondary": "Cta Secondary"
     },
     "core": {
-      "title": "title",
-      "desc": "desc"
+      "title": "Core",
+      "desc": "Comprehensive details regarding Core."
     },
     "stack": {
-      "api": "api",
-      "shielded": "shielded",
-      "logic": "logic",
-      "active": "active",
-      "cluster": "cluster",
-      "scaling": "scaling",
-      "db": "db",
-      "verified": "verified"
+      "api": "Api",
+      "shielded": "Shielded",
+      "logic": "Logic",
+      "active": "Active",
+      "cluster": "Cluster",
+      "scaling": "Scaling",
+      "db": "Db",
+      "verified": "Verified"
     }
   },
   "Docs": {
     "sidebar": {
       "links": {
-        "introduction": "introduction",
-        "architecture": "architecture",
-        "whitepaper": "whitepaper",
-        "security": "security"
+        "introduction": "Introduction",
+        "architecture": "Architecture",
+        "whitepaper": "Whitepaper",
+        "security": "Security"
       },
-      "documentation": "documentation",
-      "blueprints": "blueprints",
-      "blueprint_links": "blueprint_links"
+      "documentation": "Documentation",
+      "blueprints": "Blueprints",
+      "blueprint_links": "Blueprint_links"
     },
     "cards": {
       "architecture": {
-        "title": "title",
-        "exhibit": "exhibit",
-        "description": "description",
-        "cta": "cta"
+        "title": "Architecture",
+        "exhibit": "Exhibit",
+        "description": "Comprehensive details regarding Architecture.",
+        "cta": "Explore Architecture"
       },
       "whitepaper": {
-        "title": "title",
-        "exhibit": "exhibit",
-        "description": "description",
-        "cta": "cta"
+        "title": "Whitepaper",
+        "exhibit": "Exhibit",
+        "description": "Comprehensive details regarding Whitepaper.",
+        "cta": "Explore Whitepaper"
       },
       "guide": {
-        "title": "title",
-        "exhibit": "exhibit",
-        "description": "description",
-        "cta": "cta"
+        "title": "Guide",
+        "exhibit": "Exhibit",
+        "description": "Comprehensive details regarding Guide.",
+        "cta": "Explore Guide"
       },
       "api": {
-        "title": "title",
-        "exhibit": "exhibit",
-        "description": "description",
-        "cta": "cta"
+        "title": "Api",
+        "exhibit": "Exhibit",
+        "description": "Comprehensive details regarding Api.",
+        "cta": "Explore Api"
       },
       "_value": "cards"
     },
     "meta": {
-      "title": "title",
-      "description": "description"
+      "title": "Meta",
+      "description": "Comprehensive details regarding Meta."
     },
     "hero": {
-      "title": "title",
-      "badge": "badge",
-      "description": "description"
+      "title": "Hero",
+      "badge": "New",
+      "description": "Comprehensive details regarding Hero."
     },
     "banner": {
-      "title": "title",
-      "description": "description",
-      "cta": "cta"
+      "title": "Banner",
+      "description": "Comprehensive details regarding Banner.",
+      "cta": "Explore Banner"
     }
   },
   "Pricing": {
     "faq": {
       "q1": {
-        "q": "q",
-        "a": "a"
+        "q": "Q",
+        "a": "A"
       },
       "q2": {
-        "q": "q",
-        "a": "a"
+        "q": "Q",
+        "a": "A"
       },
       "q3": {
-        "q": "q",
-        "a": "a"
+        "q": "Q",
+        "a": "A"
       }
     },
     "trust": {
       "residency": {
-        "title": "title",
-        "desc": "desc"
+        "title": "Residency",
+        "desc": "Comprehensive details regarding Residency."
       },
       "neutrality": {
-        "title": "title",
-        "desc": "desc"
+        "title": "Neutrality",
+        "desc": "Comprehensive details regarding Neutrality."
       },
-      "title": "title",
-      "subtitle": "subtitle"
+      "title": "Trust",
+      "subtitle": "Discover the power of Trust"
     },
     "hero": {
-      "subtitle": "subtitle",
-      "tag": "tag",
-      "title": "title"
+      "subtitle": "Discover the power of Hero",
+      "tag": "Featured",
+      "title": "Hero"
     },
     "plans": {
-      "popular": "popular",
-      "month": "month",
+      "popular": "Popular",
+      "month": "Month",
       "_value": "plans"
     },
     "cta": {
-      "title": "title",
-      "subtitle": "subtitle",
-      "button": "button"
+      "title": "Cta",
+      "subtitle": "Discover the power of Cta",
+      "button": "Explore Cta"
     }
   },
   "Services": {
     "Stack": {
       "terraform": {
-        "title": "title",
-        "desc": "desc"
+        "title": "Terraform",
+        "desc": "Comprehensive details regarding Terraform."
       },
       "ansible": {
-        "title": "title",
-        "desc": "desc"
+        "title": "Ansible",
+        "desc": "Comprehensive details regarding Ansible."
       },
-      "badge": "badge",
-      "title": "title",
-      "subtitle": "subtitle"
+      "badge": "New",
+      "title": "Stack",
+      "subtitle": "Discover the power of Stack"
     },
     "Migration": {
       "azure": {
-        "title": "title",
-        "desc": "desc"
+        "title": "Azure",
+        "desc": "Comprehensive details regarding Azure."
       },
       "ocp": {
-        "title": "title",
-        "desc": "desc"
+        "title": "Ocp",
+        "desc": "Comprehensive details regarding Ocp."
       },
       "provisioning": {
-        "title": "title",
-        "desc": "desc"
+        "title": "Provisioning",
+        "desc": "Comprehensive details regarding Provisioning."
       },
       "drift": {
-        "title": "title",
-        "desc": "desc"
+        "title": "Drift",
+        "desc": "Comprehensive details regarding Drift."
       },
-      "title": "title",
-      "subtitle": "subtitle"
+      "title": "Migration",
+      "subtitle": "Discover the power of Migration"
     },
     "DataAI": {
       "sovereignty": {
-        "title": "title",
-        "desc": "desc"
+        "title": "Sovereignty",
+        "desc": "Comprehensive details regarding Sovereignty."
       },
       "fabric": {
-        "title": "title",
-        "desc": "desc"
+        "title": "Fabric",
+        "desc": "Comprehensive details regarding Fabric."
       },
       "search": {
-        "title": "title",
-        "desc": "desc"
+        "title": "Search",
+        "desc": "Comprehensive details regarding Search."
       },
       "analytics": {
-        "title": "title",
-        "desc": "desc"
+        "title": "Analytics",
+        "desc": "Comprehensive details regarding Analytics."
       },
-      "title": "title",
-      "subtitle": "subtitle",
-      "uptime": "uptime"
+      "title": "Data A I",
+      "subtitle": "Discover the power of Data A I",
+      "uptime": "Uptime"
     },
     "Operations": {
       "sre": {
-        "title": "title",
-        "desc": "desc"
+        "title": "Sre",
+        "desc": "Comprehensive details regarding Sre."
       },
       "finops": {
-        "title": "title",
-        "desc": "desc"
+        "title": "Finops",
+        "desc": "Comprehensive details regarding Finops."
       },
       "healing": {
-        "title": "title",
-        "desc": "desc"
+        "title": "Healing",
+        "desc": "Comprehensive details regarding Healing."
       },
       "audit": {
-        "title": "title",
-        "desc": "desc"
+        "title": "Audit",
+        "desc": "Comprehensive details regarding Audit."
       },
-      "title": "title",
-      "subtitle": "subtitle"
+      "title": "Operations",
+      "subtitle": "Discover the power of Operations"
     },
     "Hero": {
-      "badge": "badge",
-      "cta": "cta",
-      "velocity": "velocity",
-      "errors": "errors"
+      "badge": "New",
+      "cta": "Explore Hero",
+      "velocity": "Velocity",
+      "errors": "Errors"
     }
   },
   "Blog": {
     "hero": {
-      "tag": "tag",
-      "title": "title",
-      "subtitle": "subtitle",
-      "search": "search"
+      "tag": "Featured",
+      "title": "Hero",
+      "subtitle": "Discover the power of Hero",
+      "search": "Search"
     },
     "newsletter": {
-      "title": "title",
-      "subtitle": "subtitle",
-      "placeholder": "placeholder",
-      "button": "button",
-      "footer": "footer"
+      "title": "Newsletter",
+      "subtitle": "Discover the power of Newsletter",
+      "placeholder": "Placeholder",
+      "button": "Explore Newsletter",
+      "footer": "Footer"
     },
-    "posts": "posts"
+    "posts": "Posts"
   },
   "Investors": {
     "hero": {
-      "tag": "tag",
-      "title": "title",
-      "subtitle": "subtitle"
+      "tag": "Featured",
+      "title": "Hero",
+      "subtitle": "Discover the power of Hero"
     },
     "opportunity": {
-      "title": "title",
-      "content": "content",
-      "metrics": "metrics"
+      "title": "Opportunity",
+      "content": "Comprehensive details regarding Opportunity.",
+      "metrics": "Metrics"
     },
     "vision": {
-      "title": "title",
-      "content": "content"
+      "title": "Vision",
+      "content": "Comprehensive details regarding Vision."
     }
   },
   "Company": {
     "email": {
-      "support": "support"
+      "support": "Support"
     },
-    "location": "location"
+    "location": "Location"
   },
   "Industries": {
     "cta": {
-      "title": "title",
-      "subtitle": "subtitle",
-      "button": "button"
+      "title": "Cta",
+      "subtitle": "Discover the power of Cta",
+      "button": "Explore Cta"
     },
-    "badge": "badge",
-    "title": "title",
-    "subtitle": "subtitle",
-    "challenges": "challenges",
-    "solution": "solution"
+    "badge": "New",
+    "title": "Industries",
+    "subtitle": "Discover the power of Industries",
+    "challenges": "Challenges",
+    "solution": "Solution"
   },
   "Products": {
     "hero": {
-      "tag": "tag",
-      "title": "title",
-      "subtitle": "subtitle"
+      "tag": "Platform Products",
+      "title": "A Sovereign Suite",
+      "subtitle": "Everything you need to build, secure, and scale compliant infrastructure."
+    },
+    "playground": {
+      "title": "Sovereign Playground",
+      "shortDesc": "IDE for prototyping cross-cloud infra."
+    },
+    "workflows": {
+      "title": "G-Workflows",
+      "shortDesc": "Visual multi-step orchestration engine."
+    },
+    "guard": {
+      "title": "Governance Guard",
+      "shortDesc": "Real-time compliance auto-remediation."
+    },
+    "knowledge": {
+      "title": "Sovereign Knowledge",
+      "shortDesc": "Secure RAG for regulatory data."
+    },
+    "deploy": {
+      "title": "Obsidian Deploy",
+      "shortDesc": "Atomic, immutable production releases."
+    },
+    "nexus": {
+      "title": "Cross-Cloud Nexus",
+      "shortDesc": "Global telemetry and cost arbitrage."
     }
   },
   "UseCases": {
     "hero": {
-      "tag": "tag",
-      "title": "title",
-      "subtitle": "subtitle"
+      "tag": "Proven Solutions",
+      "title": "Use Cases",
+      "subtitle": "Discover how regulated industries use OmniGCloud to achieve sovereignty."
     }
   },
   "Enterprise": {
     "partnership": {
-      "title": "title",
-      "subtitle": "subtitle",
-      "p1": "p1",
-      "p2": "p2",
-      "pillars": "pillars",
+      "title": "Partnership",
+      "subtitle": "Discover the power of Partnership",
+      "p1": "P1",
+      "p2": "P2",
+      "pillars": "Pillars",
       "steps": [
         {
           "title": "Consultation",
@@ -789,250 +813,250 @@
   },
   "Community": {
     "cli": {
-      "title": "title",
-      "cmd": "cmd"
+      "title": "Cli",
+      "cmd": "Cmd"
     },
     "plugins": {
-      "title": "title",
-      "desc": "desc"
+      "title": "Plugins",
+      "desc": "Comprehensive details regarding Plugins."
     },
     "maintainers": {
-      "title": "title",
-      "desc": "desc"
+      "title": "Maintainers",
+      "desc": "Comprehensive details regarding Maintainers."
     },
-    "badge": "badge",
-    "subtitle": "subtitle",
-    "join": "join",
-    "contribute": "contribute"
+    "badge": "New",
+    "subtitle": "Discover the power of Community",
+    "join": "Join",
+    "contribute": "Contribute"
   },
   "DemoSection": {
     "discovery": {
-      "title": "title",
-      "desc": "desc",
-      "code": "code"
+      "title": "Discovery",
+      "desc": "Comprehensive details regarding Discovery.",
+      "code": "Code"
     },
     "iac": {
-      "title": "title",
-      "desc": "desc",
-      "code": "code"
+      "title": "Iac",
+      "desc": "Comprehensive details regarding Iac.",
+      "code": "Code"
     },
     "sync": {
-      "title": "title",
-      "desc": "desc",
-      "code": "code"
+      "title": "Sync",
+      "desc": "Comprehensive details regarding Sync.",
+      "code": "Code"
     },
     "drift": {
-      "title": "title",
-      "desc": "desc",
-      "code": "code"
+      "title": "Drift",
+      "desc": "Comprehensive details regarding Drift.",
+      "code": "Code"
     },
-    "badge": "badge",
-    "subtitle": "subtitle"
+    "badge": "New",
+    "subtitle": "Discover the power of Demo Section"
   },
   "Ecosystem": {
     "governance": {
-      "title": "title",
-      "desc": "desc",
-      "status": "status",
-      "link": "link"
+      "title": "Governance",
+      "desc": "Comprehensive details regarding Governance.",
+      "status": "Status",
+      "link": "Link"
     },
     "mesh": {
-      "title": "title",
-      "desc": "desc",
-      "status": "status",
-      "link": "link"
+      "title": "Mesh",
+      "desc": "Comprehensive details regarding Mesh.",
+      "status": "Status",
+      "link": "Link"
     },
     "ai": {
-      "title": "title",
-      "desc": "desc",
-      "status": "status",
-      "link": "link"
+      "title": "Ai",
+      "desc": "Comprehensive details regarding Ai.",
+      "status": "Status",
+      "link": "Link"
     },
     "vault": {
-      "title": "title",
-      "desc": "desc",
-      "status": "status",
-      "link": "link"
+      "title": "Vault",
+      "desc": "Comprehensive details regarding Vault.",
+      "status": "Status",
+      "link": "Link"
     },
-    "badge": "badge",
-    "title": "title",
-    "subtitle": "subtitle"
+    "badge": "New",
+    "title": "Ecosystem",
+    "subtitle": "Discover the power of Ecosystem"
   },
   "Hero": {
     "stats": {
-      "assets": "assets",
-      "drift": "drift",
-      "nodes": "nodes"
+      "assets": "Assets Managed",
+      "drift": "Drift Detected",
+      "nodes": "Active Nodes"
     },
     "systemStatus": {
-      "live": "live"
+      "live": "System Operational"
     },
     "experts": {
-      "count": "count"
+      "count": "Experts Available"
     },
-    "badge": "badge",
-    "title": "title",
-    "subtitle": "subtitle",
-    "ctaPrimary": "ctaPrimary",
-    "ctaArchitecture": "ctaArchitecture",
-    "ctaWhitepaper": "ctaWhitepaper",
-    "trust": "trust"
+    "badge": "ENTERPRISE SOVEREIGNTY",
+    "title": "The Autonomous Cloud",
+    "subtitle": "Regain control of your digital estate with the world's first sovereign multi-cloud fabric. Enforce governance logic at the infrastructure level.",
+    "ctaPrimary": "Explore Platform",
+    "ctaArchitecture": "Visual Architecture",
+    "ctaWhitepaper": "Read Whitepaper",
+    "trust": "TRUSTED BY LEADING REGULATED INDUSTRIES"
   },
   "Problem": {
     "fragmentation": {
-      "title": "title",
-      "desc": "desc"
+      "title": "Fragmentation",
+      "desc": "Comprehensive details regarding Fragmentation."
     },
     "regulatory": {
-      "title": "title",
-      "desc": "desc",
-      "score": "score",
-      "risk": "risk"
+      "title": "Regulatory",
+      "desc": "Comprehensive details regarding Regulatory.",
+      "score": "Score",
+      "risk": "Risk"
     },
     "vendor": {
-      "title": "title",
-      "desc": "desc"
+      "title": "Vendor",
+      "desc": "Comprehensive details regarding Vendor."
     },
     "opacity": {
-      "title": "title",
-      "desc": "desc",
-      "scanning": "scanning"
+      "title": "Opacity",
+      "desc": "Comprehensive details regarding Opacity.",
+      "scanning": "Scanning"
     },
-    "badge": "badge",
-    "title": "title",
-    "subtitle": "subtitle"
+    "badge": "New",
+    "title": "Problem",
+    "subtitle": "Discover the power of Problem"
   },
   "Visuals": {
     "drift": {
-      "title": "title",
-      "detected": "detected",
-      "remediate": "remediate"
+      "title": "Drift",
+      "detected": "Detected",
+      "remediate": "Remediate"
     },
     "telemetry": {
-      "title": "title",
-      "live": "live",
-      "latency": "latency",
-      "throughput": "throughput",
-      "loss": "loss"
+      "title": "Telemetry",
+      "live": "Live",
+      "latency": "Latency",
+      "throughput": "Throughput",
+      "loss": "Loss"
     }
   },
   "Dashboard": {
-    "title": "title",
-    "welcome": "welcome",
-    "role": "role",
-    "logicMeshStatus": "logicMeshStatus",
-    "active": "active",
-    "badge": "badge",
-    "liveTitle": "liveTitle",
-    "liveSubtitle": "liveSubtitle",
-    "roiTitle": "roiTitle",
-    "roiSubtitle": "roiSubtitle",
-    "infraTitle": "infraTitle",
-    "infraSubtitle": "infraSubtitle",
-    "globalHealth": "globalHealth",
-    "optimizationTitle": "optimizationTitle",
-    "trustTitle": "trustTitle"
+    "title": "Dashboard",
+    "welcome": "Welcome",
+    "role": "Role",
+    "logicMeshStatus": "Logic Mesh Status",
+    "active": "Active",
+    "badge": "New",
+    "liveTitle": "Live Title",
+    "liveSubtitle": "Live Subtitle",
+    "roiTitle": "Roi Title",
+    "roiSubtitle": "Roi Subtitle",
+    "infraTitle": "Infra Title",
+    "infraSubtitle": "Infra Subtitle",
+    "globalHealth": "Global Health",
+    "optimizationTitle": "Optimization Title",
+    "trustTitle": "Trust Title"
   },
   "SecuritySettings": {
-    "title": "title",
-    "description": "description",
-    "ssoConfiguration": "ssoConfiguration",
-    "enabled": "enabled",
-    "disabled": "disabled",
-    "clientId": "clientId",
-    "tenantId": "tenantId",
-    "outboundEmail": "outboundEmail",
-    "advancedSecurity": "advancedSecurity",
-    "advancedDescription": "advancedDescription",
-    "requestSaml": "requestSaml"
+    "title": "Security Settings",
+    "description": "Comprehensive details regarding Security Settings.",
+    "ssoConfiguration": "Sso Configuration",
+    "enabled": "Enabled",
+    "disabled": "Disabled",
+    "clientId": "Client Id",
+    "tenantId": "Tenant Id",
+    "outboundEmail": "Outbound Email",
+    "advancedSecurity": "Advanced Security",
+    "advancedDescription": "Advanced Description",
+    "requestSaml": "Request Saml"
   },
   "Compliance": {
-    "title": "title",
-    "subtitle": "subtitle",
-    "transparency": "transparency",
-    "transparencyText": "transparencyText",
-    "active": "active",
-    "gdpr": "gdpr",
-    "gdprText": "gdprText",
-    "inProgress": "inProgress",
-    "soc2": "soc2",
-    "soc2Text": "soc2Text",
-    "planned": "planned",
-    "iso27001": "iso27001",
-    "iso27001Text": "iso27001Text",
-    "dataHandling": "dataHandling",
-    "encryption": "encryption",
-    "encryption1": "encryption1",
-    "encryption2": "encryption2",
-    "encryption3": "encryption3",
-    "dataResidency": "dataResidency",
-    "dataResidencyText": "dataResidencyText",
-    "retention": "retention",
-    "operational": "operational",
-    "operationalText": "operationalText",
-    "audit": "audit",
-    "auditText": "auditText",
-    "backups": "backups",
-    "backupsText": "backupsText",
-    "accessControls": "accessControls",
-    "authentication": "authentication",
-    "auth1": "auth1",
-    "auth2": "auth2",
-    "auth3": "auth3",
-    "authorization": "authorization",
-    "authz1": "authz1",
-    "authz2": "authz2",
-    "authz3": "authz3",
-    "incidentResponse": "incidentResponse",
-    "incidentResponseText": "incidentResponseText",
-    "responseProcess": "responseProcess",
-    "response1": "response1",
-    "response2": "response2",
-    "response3": "response3",
-    "response4": "response4"
+    "title": "Compliance",
+    "subtitle": "Discover the power of Compliance",
+    "transparency": "Transparency",
+    "transparencyText": "Transparency Text",
+    "active": "Active",
+    "gdpr": "Gdpr",
+    "gdprText": "Gdpr Text",
+    "inProgress": "In Progress",
+    "soc2": "Soc2",
+    "soc2Text": "Soc2 Text",
+    "planned": "Planned",
+    "iso27001": "Iso27001",
+    "iso27001Text": "Iso27001 Text",
+    "dataHandling": "Data Handling",
+    "encryption": "Encryption",
+    "encryption1": "Encryption1",
+    "encryption2": "Encryption2",
+    "encryption3": "Encryption3",
+    "dataResidency": "Data Residency",
+    "dataResidencyText": "Data Residency Text",
+    "retention": "Retention",
+    "operational": "Operational",
+    "operationalText": "Operational Text",
+    "audit": "Audit",
+    "auditText": "Audit Text",
+    "backups": "Backups",
+    "backupsText": "Backups Text",
+    "accessControls": "Access Controls",
+    "authentication": "Authentication",
+    "auth1": "Auth1",
+    "auth2": "Auth2",
+    "auth3": "Auth3",
+    "authorization": "Authorization",
+    "authz1": "Authz1",
+    "authz2": "Authz2",
+    "authz3": "Authz3",
+    "incidentResponse": "Incident Response",
+    "incidentResponseText": "Incident Response Text",
+    "responseProcess": "Response Process",
+    "response1": "Response1",
+    "response2": "Response2",
+    "response3": "Response3",
+    "response4": "Response4"
   },
   "Newsroom": {
-    "news": "news",
-    "badge": "badge",
-    "title": "title",
-    "link": "link",
-    "cta": "cta"
+    "news": "News",
+    "badge": "New",
+    "title": "Newsroom",
+    "link": "Link",
+    "cta": "Explore Newsroom"
   },
   "Privacy": {
-    "title": "title",
-    "lastUpdated": "lastUpdated",
-    "commitment": "commitment",
-    "commitmentText": "commitmentText",
-    "dataCollection": "dataCollection",
-    "dataCollectionText": "dataCollectionText",
-    "accountData": "accountData",
-    "accountDataText": "accountDataText",
-    "infrastructureData": "infrastructureData",
-    "infrastructureDataText": "infrastructureDataText",
-    "usageData": "usageData",
-    "usageDataText": "usageDataText",
-    "dataProtection": "dataProtection",
-    "dataProtectionText": "dataProtectionText",
-    "protection1": "protection1",
-    "protection2": "protection2",
-    "protection3": "protection3",
-    "protection4": "protection4",
-    "dataRetention": "dataRetention",
-    "dataRetentionText": "dataRetentionText",
-    "yourRights": "yourRights",
-    "yourRightsText": "yourRightsText",
-    "right1": "right1",
-    "right2": "right2",
-    "right3": "right3",
-    "right4": "right4",
-    "thirdParty": "thirdParty",
-    "thirdPartyText": "thirdPartyText",
-    "cookies": "cookies",
-    "cookiesText": "cookiesText",
-    "changes": "changes",
-    "changesText": "changesText",
-    "contact": "contact",
-    "contactText": "contactText"
+    "title": "Privacy",
+    "lastUpdated": "Last Updated",
+    "commitment": "Commitment",
+    "commitmentText": "Commitment Text",
+    "dataCollection": "Data Collection",
+    "dataCollectionText": "Data Collection Text",
+    "accountData": "Account Data",
+    "accountDataText": "Account Data Text",
+    "infrastructureData": "Infrastructure Data",
+    "infrastructureDataText": "Infrastructure Data Text",
+    "usageData": "Usage Data",
+    "usageDataText": "Usage Data Text",
+    "dataProtection": "Data Protection",
+    "dataProtectionText": "Data Protection Text",
+    "protection1": "Protection1",
+    "protection2": "Protection2",
+    "protection3": "Protection3",
+    "protection4": "Protection4",
+    "dataRetention": "Data Retention",
+    "dataRetentionText": "Data Retention Text",
+    "yourRights": "Your Rights",
+    "yourRightsText": "Your Rights Text",
+    "right1": "Right1",
+    "right2": "Right2",
+    "right3": "Right3",
+    "right4": "Right4",
+    "thirdParty": "Third Party",
+    "thirdPartyText": "Third Party Text",
+    "cookies": "Cookies",
+    "cookiesText": "Cookies Text",
+    "changes": "Changes",
+    "changesText": "Changes Text",
+    "contact": "Contact",
+    "contactText": "Contact Text"
   },
   "Breadcrumb": {
     "home": "Home",
@@ -1056,116 +1080,172 @@
     "frameworks": "Frameworks"
   },
   "Security": {
-    "title": "title",
-    "subtitle": "subtitle",
-    "encryption": "encryption",
-    "encryptionText": "encryptionText",
-    "authentication": "authentication",
-    "authenticationText": "authenticationText",
-    "responsibleDisclosure": "responsibleDisclosure",
-    "disclosureIntro": "disclosureIntro",
-    "reportingProcess": "reportingProcess",
-    "step1": "step1",
-    "step2": "step2",
-    "step3": "step3",
-    "step4": "step4",
-    "scope": "scope",
-    "scope1": "scope1",
-    "scope2": "scope2",
-    "scope3": "scope3",
-    "scope4": "scope4",
-    "securityPractices": "securityPractices",
-    "infrastructure": "infrastructure",
-    "infra1": "infra1",
-    "infra2": "infra2",
-    "monitoring": "monitoring",
-    "monitor1": "monitor1",
-    "monitor2": "monitor2",
-    "contactSecurity": "contactSecurity",
-    "securityEmail": "securityEmail",
-    "pgpKey": "pgpKey"
+    "title": "Security",
+    "subtitle": "Discover the power of Security",
+    "encryption": "Encryption",
+    "encryptionText": "Encryption Text",
+    "authentication": "Authentication",
+    "authenticationText": "Authentication Text",
+    "responsibleDisclosure": "Responsible Disclosure",
+    "disclosureIntro": "Disclosure Intro",
+    "reportingProcess": "Reporting Process",
+    "step1": "Step1",
+    "step2": "Step2",
+    "step3": "Step3",
+    "step4": "Step4",
+    "scope": "Scope",
+    "scope1": "Scope1",
+    "scope2": "Scope2",
+    "scope3": "Scope3",
+    "scope4": "Scope4",
+    "securityPractices": "Security Practices",
+    "infrastructure": "Infrastructure",
+    "infra1": "Infra1",
+    "infra2": "Infra2",
+    "monitoring": "Monitoring",
+    "monitor1": "Monitor1",
+    "monitor2": "Monitor2",
+    "contactSecurity": "Contact Security",
+    "securityEmail": "Security Email",
+    "pgpKey": "Pgp Key"
   },
   "Terms": {
-    "title": "title",
-    "lastUpdated": "lastUpdated",
-    "acceptance": "acceptance",
-    "acceptanceText": "acceptanceText",
-    "services": "services",
-    "servicesText": "servicesText",
-    "service1": "service1",
-    "service2": "service2",
-    "service3": "service3",
-    "service4": "service4",
-    "userResponsibilities": "userResponsibilities",
-    "userResponsibilitiesText": "userResponsibilitiesText",
-    "responsibility1": "responsibility1",
-    "responsibility2": "responsibility2",
-    "responsibility3": "responsibility3",
-    "dataOwnership": "dataOwnership",
-    "dataOwnershipText": "dataOwnershipText",
-    "termination": "termination",
-    "terminationText": "terminationText",
-    "disclaimer": "disclaimer",
-    "disclaimerText": "disclaimerText",
-    "governingLaw": "governingLaw",
-    "governingLawText": "governingLawText",
-    "contact": "contact",
-    "contactText": "contactText"
+    "title": "Terms",
+    "lastUpdated": "Last Updated",
+    "acceptance": "Acceptance",
+    "acceptanceText": "Acceptance Text",
+    "services": "Services",
+    "servicesText": "Services Text",
+    "service1": "Service1",
+    "service2": "Service2",
+    "service3": "Service3",
+    "service4": "Service4",
+    "userResponsibilities": "User Responsibilities",
+    "userResponsibilitiesText": "User Responsibilities Text",
+    "responsibility1": "Responsibility1",
+    "responsibility2": "Responsibility2",
+    "responsibility3": "Responsibility3",
+    "dataOwnership": "Data Ownership",
+    "dataOwnershipText": "Data Ownership Text",
+    "termination": "Termination",
+    "terminationText": "Termination Text",
+    "disclaimer": "Disclaimer",
+    "disclaimerText": "Disclaimer Text",
+    "governingLaw": "Governing Law",
+    "governingLawText": "Governing Law Text",
+    "contact": "Contact",
+    "contactText": "Contact Text"
   },
   "SovereignGallery": {
-    "title": "title",
-    "subtitle": "subtitle"
+    "title": "Sovereign Gallery",
+    "subtitle": "Discover the power of Sovereign Gallery"
   },
   "CookieConsent": {
-    "title": "title",
-    "close": "close",
-    "message": "message",
-    "policyLink": "policyLink",
-    "accept": "accept",
-    "decline": "decline",
-    "sovereignNotice": "sovereignNotice"
+    "title": "Privacy & Sovereignty",
+    "close": "Close",
+    "message": "We use strictly necessary cookies to ensure platform security and data sovereignty compliance. Usage analytics are optional.",
+    "policyLink": "Sovereignty Policy",
+    "accept": "Accept Essential",
+    "decline": "Decline Optional",
+    "sovereignNotice": "Data resides in your jurisdiction"
+  },
+  "SEO_Content": {
+    "Home": {
+      "AboveTheFold": "OmniGCloud is the first autonomous multi-cloud fabric that enforces data sovereignty at the infrastructure level, allowing enterprises to decouple logic from vendor-specific APIs.",
+      "HowItWorks": {
+        "title": "Autonomous Synchronization",
+        "steps": [
+          {
+            "title": "Intent Definition",
+            "desc": "Define your governance and sovereignty rules in a vendor-agnostic format."
+          },
+          {
+            "title": "Fabric Arbitration",
+            "desc": "The AECP kernel continuously audits and corrects infrastructure drift."
+          },
+          {
+            "title": "State Enforcement",
+            "desc": "Logic is pushed to the edge, ensuring compliance regardless of the underlying cloud."
+          }
+        ]
+      },
+      "DeepDive": {
+        "title": "Architectural Deep Dive",
+        "content": "Our platform eliminates the complexity of multi-cloud management by abstracting provider APIs into a unified control plane. This ensures that your business logic remains portable and secure, preventing vendor lock-in and guaranteeing long-term operational resilience."
+      },
+      "WhyItMatters": {
+        "title": "Why Sovereignty Matters",
+        "content": "In an era of fragmenting regulations, data residency is no longer optional. OmniGCloud provides mathematical guarantees that your data stays where it needs to be."
+      },
+      "TechnicalApproach": {
+        "title": "Technical Approach",
+        "content": "We utilize a lattice-based state synchronization engine that operates on a millisecond scale, providing real-time remediation of non-compliant infrastructure states."
+      },
+      "FAQ": {
+        "title": "F.A.Q",
+        "items": [
+          {
+            "q": "How does OmniGCloud differ from Terraform?",
+            "a": "Terraform is a deployment tool; OmniGCloud is an active state enforcement engine that corrects drift automatically."
+          },
+          {
+            "q": "Is it compatible with AWS and Azure?",
+            "a": "Yes, we support all major hyperscalers including AWS, Azure, GCP, and on-premise OpenShift clusters."
+          }
+        ]
+      },
+      "LeadCapture": {
+        "title": "Ready to regain control?",
+        "subtitle": "Schedule a comprehensive architecture review with our sovereign cloud experts.",
+        "cta": "Book Consultation"
+      }
+    }
   },
   "Engagement": {
-    "title": "title",
-    "subtitle": "subtitle",
-    "primary": "primary",
-    "secondary": "secondary"
+    "title": "Engagement",
+    "subtitle": "Discover the power of Engagement",
+    "primary": "Primary",
+    "secondary": "Secondary"
   },
   "Capabilities": {
-    "tag": "tag",
-    "title": "title",
-    "subtitle": "subtitle",
-    "cta": "cta",
-    "explore": "explore"
+    "tag": "Capabilities",
+    "title": "Core Capabilities",
+    "subtitle": "Explore the building blocks of our sovereign cloud platform.",
+    "cta": "View All Products",
+    "explore": "Explore"
   },
   "WhitePaper": {
-    "contribution": "contribution",
-    "title": "title",
-    "description": "description",
-    "peerReview": "peerReview",
-    "pageCount": "pageCount",
-    "badge": "badge",
-    "downloadTitle": "downloadTitle",
-    "downloadSubtitle": "downloadSubtitle",
-    "readOnline": "readOnline",
-    "designPatterns": "designPatterns",
-    "footer": "footer"
+    "contribution": "Contribution",
+    "title": "The Autonomous Sovereign Cloud Protocol",
+    "description": "A comprehensive framework for achieving mathematical certainty in data sovereignty across multi-cloud environments.",
+    "peerReview": "Peer Reviewed",
+    "pageCount": "42 Pages",
+    "badge": "LATEST RESEARCH",
+    "downloadTitle": "Download the Whitepaper",
+    "downloadSubtitle": "Get the full technical specification, including architecture diagrams, decision frameworks, and implementation guides.",
+    "readOnline": "Read Online",
+    "designPatterns": "Design Patterns",
+    "footer": "Available in PDF / ePub formats."
   },
   "ContactSales": {
-    "subject": "subject",
-    "bodyIntro": "bodyIntro",
-    "fallbackTitle": "fallbackTitle",
-    "fallbackInstruction": "fallbackInstruction",
-    "copyLabel": "copyLabel",
-    "whatsappLabel": "whatsappLabel",
-    "rateLimitMessage": "rateLimitMessage",
-    "copyToast": "copyToast"
+    "subject": "Subject",
+    "bodyIntro": "Body Intro",
+    "fallbackTitle": "Fallback Title",
+    "fallbackInstruction": "Fallback Instruction",
+    "copyLabel": "Copy Label",
+    "whatsappLabel": "Whatsapp Label",
+    "rateLimitMessage": "Rate Limit Message",
+    "copyToast": "Copy Toast"
   },
-  "title": "title",
-  "subtitle": "subtitle",
-  "cta": "cta",
-  "AboveTheFold": "AboveTheFold",
-  "content": "content",
-  "steps": "steps",
-  "items": "items"
+  "title": "OmniGCloud Platform",
+  "subtitle": "The Sovereign Cloud Control Plane",
+  "cta": "Get Started",
+  "AboveTheFold": "Above The Fold",
+  "content": "Comprehensive details regarding .",
+  "steps": "Steps",
+  "items": "Items",
+  "desc": "Enterprise Grade Sovereignty",
+  "readOnline": "Read Online",
+  "designPatterns": "Design Patterns",
+  "downloadTitle": "Download Whitepaper"
 }
