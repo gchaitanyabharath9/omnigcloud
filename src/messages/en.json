@@ -263,7 +263,8 @@
       "q3": {
         "a": "A",
         "q": "Q"
-      }
+      },
+      "title": "title Details"
     },
     "feasibility": {
       "p1": "Generate audit-ready compliance reports.",
@@ -287,7 +288,20 @@
       },
       "title": "Feasibility Title"
     },
-    "footer": "Footer Details",
+    "footer": {
+      "_value": "Footer Details",
+      "authorshipDisclaimer": "authorshipDisclaimer Details",
+      "authorshipRequest": "authorshipRequest Details",
+      "copyright": "copyright Details",
+      "lab": "lab Details",
+      "links": {
+        "finops": "finops Details",
+        "modernization": "modernization Details"
+      },
+      "ready": "ready Details",
+      "subtitle": "subtitle Details",
+      "title": "title Details"
+    },
     "gdpr": "Gdpr Details",
     "gdprText": "Gdpr Text",
     "governingLaw": "Governing Law",
@@ -298,7 +312,15 @@
       "search": "Search Details",
       "subtitle": "The standard for autonomous cloud governance.",
       "tag": "HERO",
-      "title": "Hero Title"
+      "title": "Hero Title",
+      "author": "author Details",
+      "ctaPrimary": "ctaPrimary Details",
+      "ctaSecondary": "ctaSecondary Details",
+      "date": "date Details",
+      "readTime": "readTime Details",
+      "titleHighlight": "titleHighlight Details",
+      "titlePrefix": "titlePrefix Details",
+      "titleSuffix": "titleSuffix Details"
     },
     "impact": {
       "business_value": "Business_value Details",
@@ -507,7 +529,444 @@
         "label": "Status",
         "value": "Value"
       }
-    }
+    },
+    "appliedPapers": {
+      "title": "title Details"
+    },
+    "body": {
+      "dist1": {
+        "title": "title Details"
+      },
+      "dist2": {
+        "title": "title Details"
+      },
+      "dist3": {
+        "title": "title Details"
+      },
+      "dist4": {
+        "title": "title Details"
+      },
+      "exitGateText": "exitGateText Details",
+      "exitGateTitle": "exitGateTitle Details",
+      "frameworkStepsTitle": "frameworkStepsTitle Details",
+      "grid": {
+        "invariance": {
+          "text": "text Details",
+          "title": "title Details"
+        },
+        "portability": {
+          "text": "text Details",
+          "title": "title Details"
+        }
+      },
+      "introTitle": "introTitle Details",
+      "mathTitle": "mathTitle Details",
+      "nodesText": "nodesText Details",
+      "nodesTitle": "nodesTitle Details",
+      "p1": "p1 Details",
+      "pillar1": {
+        "text": "text Details",
+        "title": "title Details"
+      },
+      "pillar2": {
+        "text": "text Details",
+        "title": "title Details"
+      },
+      "pillar3": {
+        "text": "text Details",
+        "title": "title Details"
+      },
+      "pillar4": {
+        "title": "title Details"
+      },
+      "pillar5": {
+        "text": "text Details",
+        "title": "title Details"
+      },
+      "pillarsTitle": "pillarsTitle Details",
+      "quote2": "quote2 Details",
+      "takeaway": {
+        "text": "text Details",
+        "title": "title Details"
+      }
+    },
+    "economicTrap": {
+      "title": "title Details"
+    },
+    "evolution": {
+      "badge": "badge Details",
+      "description2": "description2 Details",
+      "quote": "quote Details",
+      "title": "title Details"
+    },
+    "exitMatrix": {
+      "p1": "p1 Details",
+      "tiers": {
+        "t1": {
+          "text": "text Details",
+          "title": "title Details"
+        },
+        "t2": {
+          "text": "text Details",
+          "title": "title Details"
+        },
+        "t3": {
+          "text": "text Details",
+          "title": "title Details"
+        }
+      },
+      "title": "title Details"
+    },
+    "featured": {
+      "abstract": "abstract Details",
+      "badge": "badge Details",
+      "date": "date Details",
+      "diagramCount": "diagramCount Details",
+      "readArticle": "readArticle Details",
+      "sectionTitle": "sectionTitle Details",
+      "title": "title Details",
+      "wordCount": "wordCount Details"
+    },
+    "frameworks": {
+      "aecp": {
+        "badge": "badge Details",
+        "features": {
+          "healing": "healing Details",
+          "security": "security Details",
+          "topology": "topology Details"
+        },
+        "title": "title Details",
+        "version": "version Details"
+      },
+      "title": "title Details"
+    },
+    "geopolitics": {
+      "p1": "p1 Details",
+      "title": "title Details"
+    },
+    "header": {
+      "category": "category Details",
+      "description": "description Details",
+      "lastUpdated": "lastUpdated Details",
+      "readTime": "readTime Details",
+      "title": "title Details"
+    },
+    "intro": {
+      "_value": "intro Details",
+      "quote": "quote Details"
+    },
+    "nav": {
+      "back": "back Details",
+      "prev": "prev Details"
+    },
+    "newPublication": "newPublication Details",
+    "quantifyingROI": {
+      "box": {
+        "content": "content Details",
+        "title": "title Details"
+      },
+      "title": "title Details"
+    },
+    "related": {
+      "card1": {
+        "desc": "desc Details",
+        "title": "title Details"
+      },
+      "card2": {
+        "desc": "desc Details",
+        "title": "title Details"
+      },
+      "readPost": "readPost Details",
+      "readWhitepaper": "readWhitepaper Details",
+      "title": "title Details"
+    },
+    "relatedReading": {
+      "0": {
+        "category": "category Details",
+        "excerpt": "excerpt Details",
+        "title": "title Details"
+      },
+      "1": {
+        "category": "category Details",
+        "excerpt": "excerpt Details",
+        "title": "title Details"
+      },
+      "2": {
+        "category": "category Details",
+        "excerpt": "excerpt Details",
+        "title": "title Details"
+      }
+    },
+    "section1": {
+      "box": {
+        "content": "content Details",
+        "title": "title Details"
+      },
+      "p2": "p2 Details",
+      "title": "title Details"
+    },
+    "section10": {
+      "box": {
+        "content": "content Details",
+        "title": "title Details"
+      },
+      "diagram9": {
+        "adapters": {
+          "aws": "aws Details",
+          "azure": "azure Details",
+          "gcp": "gcp Details"
+        },
+        "title": "title Details"
+      },
+      "p1": "p1 Details",
+      "p2": "p2 Details",
+      "title": "title Details"
+    },
+    "section11": {
+      "p1": "p1 Details",
+      "proof": {
+        "box": {
+          "content": "content Details",
+          "title": "title Details"
+        },
+        "diagram10": {
+          "aecp": {
+            "plane1": "plane1 Details",
+            "plane2": "plane2 Details",
+            "policy": "policy Details",
+            "title": "title Details"
+          },
+          "legacy": {
+            "fail": "fail Details",
+            "plane": "plane Details",
+            "policy": "policy Details",
+            "title": "title Details"
+          },
+          "title": "title Details"
+        },
+        "table3": {
+          "rows": {
+            "0": {
+              "aso": "aso Details",
+              "label": "label Details",
+              "legacy": "legacy Details"
+            },
+            "1": {
+              "aso": "aso Details",
+              "label": "label Details",
+              "legacy": "legacy Details"
+            },
+            "2": {
+              "aso": "aso Details",
+              "label": "label Details",
+              "legacy": "legacy Details"
+            },
+            "3": {
+              "aso": "aso Details",
+              "label": "label Details",
+              "legacy": "legacy Details"
+            }
+          },
+          "title": "title Details"
+        },
+        "title": "title Details"
+      },
+      "table2": {
+        "rows": {
+          "0": {
+            "aso": "aso Details",
+            "label": "label Details",
+            "legacy": "legacy Details"
+          },
+          "1": {
+            "aso": "aso Details",
+            "label": "label Details",
+            "legacy": "legacy Details"
+          },
+          "2": {
+            "aso": "aso Details",
+            "label": "label Details",
+            "legacy": "legacy Details"
+          },
+          "3": {
+            "aso": "aso Details",
+            "label": "label Details",
+            "legacy": "legacy Details"
+          }
+        },
+        "title": "title Details"
+      },
+      "title": "title Details"
+    },
+    "section12": {
+      "diagram11": {
+        "title": "title Details"
+      },
+      "sectors": {
+        "finance": {
+          "desc": "desc Details",
+          "title": "title Details"
+        },
+        "health": {
+          "desc": "desc Details",
+          "title": "title Details"
+        }
+      },
+      "title": "title Details"
+    },
+    "section13": {
+      "box": {
+        "content": "content Details",
+        "title": "title Details"
+      },
+      "subsection": {
+        "p1": "p1 Details",
+        "p2": "p2 Details",
+        "p3": "p3 Details",
+        "title": "title Details"
+      },
+      "title": "title Details"
+    },
+    "section14": {
+      "diagram12": {
+        "title": "title Details"
+      },
+      "p1": "p1 Details",
+      "title": "title Details"
+    },
+    "section2": {
+      "diagram1": {
+        "title": "title Details"
+      },
+      "title": "title Details"
+    },
+    "section3": {
+      "description": "description Details",
+      "p1": "p1 Details",
+      "table1": {
+        "rows": {
+          "0": {
+            "aso": "aso Details",
+            "label": "label Details",
+            "legacy": "legacy Details"
+          },
+          "1": {
+            "aso": "aso Details",
+            "label": "label Details",
+            "legacy": "legacy Details"
+          },
+          "2": {
+            "aso": "aso Details",
+            "label": "label Details",
+            "legacy": "legacy Details"
+          },
+          "3": {
+            "aso": "aso Details",
+            "label": "label Details",
+            "legacy": "legacy Details"
+          }
+        },
+        "title": "title Details"
+      },
+      "title": "title Details"
+    },
+    "section4": {
+      "description": "description Details",
+      "diagram2": {
+        "title": "title Details"
+      },
+      "hypothesis": "hypothesis Details",
+      "hypothesisTitle": "hypothesisTitle Details",
+      "p1": "p1 Details",
+      "title": "title Details"
+    },
+    "section5": {
+      "box": {
+        "content": "content Details",
+        "title": "title Details"
+      },
+      "diagram3": {
+        "title": "title Details"
+      },
+      "p1": "p1 Details",
+      "title": "title Details"
+    },
+    "section6": {
+      "diagram4": {
+        "title": "title Details"
+      },
+      "p1": "p1 Details",
+      "title": "title Details"
+    },
+    "section7": {
+      "box": {
+        "title": "title Details"
+      },
+      "diagram6": {
+        "labels": {
+          "alert": "alert Details",
+          "command": "command Details",
+          "commandSub": "commandSub Details",
+          "input": "input Details",
+          "inputSub": "inputSub Details",
+          "solver": "solver Details",
+          "solverSub": "solverSub Details"
+        },
+        "title": "title Details"
+      },
+      "title": "title Details"
+    },
+    "section8": {
+      "diagram7": {
+        "title": "title Details"
+      },
+      "p1": "p1 Details",
+      "title": "title Details"
+    },
+    "section9": {
+      "diagram8": {
+        "protocolA": {
+          "text": "text Details",
+          "title": "title Details"
+        },
+        "protocolB": {
+          "text": "text Details",
+          "title": "title Details"
+        },
+        "title": "title Details"
+      },
+      "title": "title Details"
+    },
+    "tech": {
+      "intentTitle": "intentTitle Details",
+      "securityDesc": "securityDesc Details",
+      "securityTitle": "securityTitle Details",
+      "title": "title Details"
+    },
+    "titleHighlight": "titleHighlight Details",
+    "ui": {
+      "filter": "filter Details",
+      "readMore": "readMore Details"
+    },
+    "value": {
+      "cards": {
+        "audit": {
+          "desc": "desc Details",
+          "title": "title Details"
+        },
+        "drift": {
+          "desc": "desc Details",
+          "title": "title Details"
+        },
+        "leadTime": {
+          "desc": "desc Details",
+          "title": "title Details"
+        }
+      },
+      "subtitle": "subtitle Details",
+      "title": "title Details"
+    },
+    "watermark": "watermark Details"
   },
   "Header": {
     "nav": {
