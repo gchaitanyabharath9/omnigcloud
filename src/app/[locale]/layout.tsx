@@ -34,6 +34,8 @@ const jakarta = Plus_Jakarta_Sans({
 
 const siteUrl = config.site.url;
 
+import { locales } from '@/navigation';
+
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params;
   const messages = await getMessages({ locale });
@@ -60,7 +62,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   const canonicalUrl = `${siteUrl}${pathname}`;
 
   const languages: Record<string, string> = {};
-  ['en', 'es', 'fr', 'de', 'zh', 'hi', 'ja', 'ko'].forEach(lang => {
+  locales.forEach(lang => {
     // Replace current locale segment with target lang
     // pathname starts with /en, /es etc.
     // If pathname is /en/pricing, we want /es/pricing
@@ -150,7 +152,7 @@ export function generateViewport(): Viewport {
 // ... (previous imports)
 
 export function generateStaticParams() {
-  return ['en', 'es', 'fr', 'de', 'zh', 'hi', 'ja', 'ko'].map((locale) => ({ locale }));
+  return locales.map((locale) => ({ locale }));
 }
 
 export default async function RootLayout({

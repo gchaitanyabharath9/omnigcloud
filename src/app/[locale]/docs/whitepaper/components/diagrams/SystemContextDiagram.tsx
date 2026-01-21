@@ -4,7 +4,7 @@ import { useTranslations } from 'next-intl';
 import { User, Shield, Layers, Cpu, Cloud } from 'lucide-react';
 
 export const SystemContextDiagram = () => {
-    const t = useTranslations('WhitePaper.detailedDiagrams.context');
+    const t = useTranslations('docs.whitepaper.diagrams');
     return (
         <div style={{ padding: '2rem', background: 'var(--bg-surface-2)', borderRadius: '0.5rem', border: '1px solid var(--border)' }}>
             <div style={{ display: 'grid', gridTemplateColumns: '1fr 3fr 1fr', gap: '2rem', alignItems: 'center' }}>
@@ -12,13 +12,13 @@ export const SystemContextDiagram = () => {
                 <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem', alignItems: 'center' }}>
                     <div style={{ border: '1px dashed var(--border)', padding: '1rem', borderRadius: '0.5rem', textAlign: 'center', width: '100%', background: 'var(--bg-surface)' }}>
                         <User size={24} className="mx-auto mb-2 opacity-60" />
-                        <div style={{ fontSize: '0.8rem', fontWeight: 700 }}>{t('devOps.title')}</div>
-                        <div style={{ fontSize: '0.7rem', opacity: 0.7 }}>{t('devOps.desc')}</div>
+                        <div style={{ fontSize: '0.8rem', fontWeight: 700 }}>{t('devOpsTitle')}</div>
+                        <div style={{ fontSize: '0.7rem', opacity: 0.7 }}>{t('devOpsDesc')}</div>
                     </div>
                     <div style={{ border: '1px dashed var(--border)', padding: '1rem', borderRadius: '0.5rem', textAlign: 'center', width: '100%', background: 'var(--bg-surface)' }}>
                         <Shield size={24} className="mx-auto mb-2 opacity-60" />
-                        <div style={{ fontSize: '0.8rem', fontWeight: 700 }}>{t('compliance.title')}</div>
-                        <div style={{ fontSize: '0.7rem', opacity: 0.7 }}>{t('compliance.desc')}</div>
+                        <div style={{ fontSize: '0.8rem', fontWeight: 700 }}>{t('complianceTitle')}</div>
+                        <div style={{ fontSize: '0.7rem', opacity: 0.7 }}>{t('complianceDesc')}</div>
                     </div>
                 </div>
 
@@ -29,7 +29,7 @@ export const SystemContextDiagram = () => {
                     <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem', marginBottom: '1rem' }}>
                         <div style={{ background: 'rgba(59, 130, 246, 0.1)', padding: '1rem', borderRadius: '0.5rem', textAlign: 'center' }}>
                             <Layers size={20} className="mx-auto mb-2 text-blue-500" />
-                            <div style={{ fontSize: '0.8rem', fontWeight: 800 }}>{t('interpreter')}</div>
+                            <div style={{ fontSize: '0.8rem', fontWeight: 800 }}>{t('intentInterpreter')}</div>
                         </div>
                         <div style={{ background: 'rgba(16, 185, 129, 0.1)', padding: '1rem', borderRadius: '0.5rem', textAlign: 'center' }}>
                             <Cpu size={20} className="mx-auto mb-2 text-green-500" />
@@ -38,7 +38,7 @@ export const SystemContextDiagram = () => {
                     </div>
                     <div style={{ borderTop: '2px dashed var(--border)', margin: '1rem 0' }}></div>
                     <div style={{ background: 'var(--bg-surface-2)', padding: '0.8rem', borderRadius: '0.5rem', textAlign: 'center', fontSize: '0.8rem', opacity: 0.8 }}>
-                        <strong>{t('reconciliation.title')}</strong> {t('reconciliation.desc')}
+                        <strong>{t('stateReconciliation')}</strong> {t('stateReconciliationDesc')}
                     </div>
                 </div>
 

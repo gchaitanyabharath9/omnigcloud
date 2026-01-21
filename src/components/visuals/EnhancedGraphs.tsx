@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { TrendingUp, TrendingDown, Activity, Zap, AlertTriangle } from 'lucide-react';
+import { DemoChartPlaceholder } from './../demo/DemoChartPlaceholder';
 
 // Re-export simple charts for components that depend on this file
 export {
@@ -22,7 +23,7 @@ export const EnhancedCostSavingsChart = ({ height = 180 }: { height?: number }) 
         setIsMounted(true);
     }, []);
 
-    if (!isMounted) return <div style={{ width: '100%', height: '100%', minHeight: '200px' }}></div>;
+    if (!isMounted) return <DemoChartPlaceholder />;
 
     return (
         <div style={{ width: '100%', height: '100%', display: 'flex', flexDirection: 'column' }}>
@@ -100,7 +101,7 @@ export const LiveROIGauge = ({ value = 342 }: { value?: number }) => {
         return () => clearTimeout(timer);
     }, [currentValue, value, isMounted]);
 
-    if (!isMounted) return <div style={{ width: '100%', height: '100%', minHeight: '180px' }}></div>;
+    if (!isMounted) return <DemoChartPlaceholder />;
 
     return (
         <div style={{ width: '100%', height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center', position: 'relative' }}>
@@ -157,7 +158,7 @@ export const PulsingSecurityScore = ({ score = 94 }: { score?: number }) => {
         return () => clearInterval(interval);
     }, [isMounted]);
 
-    if (!isMounted) return <div style={{ width: '100%', height: '100%', minHeight: '150px' }}></div>;
+    if (!isMounted) return <DemoChartPlaceholder />;
 
     return (
         <div style={{ width: '100%', height: '100%', display: 'flex', flexDirection: 'column', justifyContent: 'center', gap: '1rem' }}>

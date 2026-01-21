@@ -1,9 +1,18 @@
 import { MetadataRoute } from 'next'
 import { config } from '@/config'
+import { locales } from '@/navigation'
+import { PRIVATE_ROUTES } from '@/config/routes'
 
 export const revalidate = 86400; // Cache for 24 hours
 
 export default function robots(): MetadataRoute.Robots {
+    const baseUrl = config.site.url || 'https://www.omnigcloud.com'
+
+    // Generate disallow rules for all private routes across all locales
+    const localeDisallows = locales.flatMap(locale =>
+        PRIVATE_ROUTES.map(route => `/${locale}${route}/`)
+    );
+
     return {
         rules: [
             {
@@ -15,15 +24,9 @@ export default function robots(): MetadataRoute.Robots {
                     '/_next/',
                     '/*.pdf',
                     '/tmp/',
-                    '/dashboard/',
-                    '/en/dashboard/',
-                    '/es/dashboard/',
-                    '/fr/dashboard/',
-                    '/de/dashboard/',
-                    '/zh/dashboard/',
-                    '/hi/dashboard/',
-                    '/ja/dashboard/',
-                    '/ko/dashboard/',
+                    ...localeDisallows,
+                    // Also disallow non-locale prefixed private paths just in case
+                    ...PRIVATE_ROUTES.map(route => `${route}/`),
                 ],
             },
             {
@@ -55,6 +58,6 @@ export default function robots(): MetadataRoute.Robots {
                 disallow: ['/'],
             }
         ],
-        sitemap: `${config.site.url}/sitemap.xml`,
+        sitemap: `${baseUrl}/sitemap.xml`,
     }
 }

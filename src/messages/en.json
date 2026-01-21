@@ -1411,6 +1411,35 @@
       "loss": "Loss Details"
     }
   },
+  "Newsroom": {
+    "badge": "LATEST NEWS",
+    "title": "Global Newsroom",
+    "link": "Explore all insights",
+    "cta": "Read Article",
+    "news": {
+      "bank": {
+        "title": "Central Bank Digital Sovereignty Framework",
+        "desc": "How national financial systems are adopting AECP for secure, cross-border digital asset management and settlement.",
+        "tag": "FinTech",
+        "date": "Oct 24, 2024",
+        "source": "Global FinTech Review"
+      },
+      "security": {
+        "title": "Zero-Trust Architecture in Defense Networks",
+        "desc": "A case study on implementing identity-driven security boundaries in heterogeneous mission-critical environments.",
+        "tag": "Security",
+        "date": "Nov 12, 2024",
+        "source": "Cyber Defense Mag"
+      },
+      "integration": {
+        "title": "The Future of Federated Cloud Integration",
+        "desc": "Analyzing the shift from monolithic vendor islands to a unified, federated multi-cloud ecosystem.",
+        "tag": "Architecture",
+        "date": "Dec 05, 2024",
+        "source": "IEEE Cloud Computing"
+      }
+    }
+  },
   "Dashboard": {
     "title": "Dashboard",
     "welcome": "Welcome Details",
@@ -1747,13 +1776,6 @@
     "response2": "Response2 Details",
     "response3": "Response3 Details",
     "response4": "Response4 Details"
-  },
-  "Newsroom": {
-    "news": "News Details",
-    "badge": "New",
-    "title": "Newsroom",
-    "link": "Link Details",
-    "cta": "Explore Newsroom"
   },
   "Privacy": {
     "title": "Privacy",
@@ -2243,6 +2265,48 @@
     "Charts": {
       "empty": "No data available in demo mode",
       "loading": "Simulating real-time data frame..."
+    }
+  },
+  "docs": {
+    "whitepaper": {
+      "diagrams": {
+        "devOpsTitle": "DevOps Team",
+        "devOpsDesc": "Define Policy",
+        "complianceTitle": "Compliance",
+        "complianceDesc": "Audit Logs",
+        "controlPlane": "AECP CONTROL PLANE",
+        "intentInterpreter": "Intent Interpreter",
+        "decisionEngine": "Decision Engine (AI)",
+        "stateReconciliation": "State Reconciliation Loop",
+        "stateReconciliationDesc": "(Current State → Target State)",
+        "validation": "Validation",
+        "validationDesc": "State Confirmed",
+        "signalTitle": "1. SIGNAL",
+        "signalDesc": "Multi-cloud Telemetry",
+        "decisionTitle": "2. DECISION",
+        "decisionDesc": "AECP Graph Engine",
+        "actionTitle": "3. ACTION",
+        "actionDesc": "Targeted API Call",
+        "cycleTime": "Autonomous Control Loop Cycle Time: < 200ms",
+        "mttrReduction": "MTTR Reduction",
+        "mttrDesc": "From 14 days to 4 minutes",
+        "cloudOpEx": "Cloud OpEx",
+        "opexDesc": "Verified Arbitrage Savings",
+        "complianceRate": "Compliance Rate",
+        "automatedAudit": "Automated Audit Pass",
+        "federationUsTitle": "US-EAST-SOVEREIGN",
+        "federationUsPolicy": "Policy: FIPS-140-2",
+        "federationEuTitle": "EU-CENTRAL-PRIVACY",
+        "federationEuPolicy": "Policy: GDPR-STRICT",
+        "federationApTitle": "AP-SOUTH-SHARED",
+        "federationApPolicy": "Policy: PERMISSIVE",
+        "federationProtocol": "Federated Trust Protocol (FTP) Active",
+        "clouds": {
+          "aws": "AWS (US)",
+          "azure": "Azure (EU)",
+          "gcp": "GCP (Asia)"
+        }
+      }
     }
   }
 }

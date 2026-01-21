@@ -393,6 +393,14 @@
       "type": "t_call"
     },
     {
+      "file": "src\\components\\papers\\PaperLanding.tsx",
+      "line": 23,
+      "namespace": "Papers",
+      "key": "Items.a1.title",
+      "fullKey": "Papers.Items.a1.title",
+      "type": "t_call"
+    },
+    {
       "file": "src\\components\\seo\\Enrichment.tsx",
       "line": 24,
       "namespace": "Common",
@@ -489,14 +497,6 @@
       "type": "t_call"
     },
     {
-      "file": "src\\components\\papers\\PaperLanding.tsx",
-      "line": 23,
-      "namespace": "Papers",
-      "key": "Items.a1.title",
-      "fullKey": "Papers.Items.a1.title",
-      "type": "t_call"
-    },
-    {
       "file": "src\\components\\observability\\LiveLatencyBadge.tsx",
       "line": 41,
       "namespace": "Header",
@@ -534,6 +534,30 @@
       "namespace": "Common",
       "key": "Header.menu_accessibility_label",
       "fullKey": "Common.Header.menu_accessibility_label",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\components\\demo\\DemoLiveViewChip.tsx",
+      "line": 10,
+      "namespace": "Demo",
+      "key": "Badge",
+      "fullKey": "Demo.Badge",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\components\\demo\\DemoChartPlaceholder.tsx",
+      "line": 14,
+      "namespace": "Demo.Charts",
+      "key": "empty",
+      "fullKey": "Demo.Charts.empty",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\components\\demo\\DemoChartPlaceholder.tsx",
+      "line": 17,
+      "namespace": "Demo.Charts",
+      "key": "loading",
+      "fullKey": "Demo.Charts.loading",
       "type": "t_call"
     },
     {
@@ -626,7 +650,7 @@
     },
     {
       "file": "src\\app\\[locale]\\layout.tsx",
-      "line": 76,
+      "line": 78,
       "namespace": "Common",
       "key": "Metadata.default.title",
       "fullKey": "Common.Metadata.default.title",
@@ -634,7 +658,7 @@
     },
     {
       "file": "src\\app\\[locale]\\layout.tsx",
-      "line": 77,
+      "line": 79,
       "namespace": "Common",
       "key": "Header.title",
       "fullKey": "Common.Header.title",
@@ -642,7 +666,7 @@
     },
     {
       "file": "src\\app\\[locale]\\layout.tsx",
-      "line": 79,
+      "line": 81,
       "namespace": "Common",
       "key": "Metadata.default.description",
       "fullKey": "Common.Metadata.default.description",
@@ -697,563 +721,339 @@
       "type": "t_call"
     },
     {
-      "file": "src\\components\\sections\\platform\\SecuritySection.tsx",
+      "file": "src\\components\\sections\\services\\ServicesHero.tsx",
       "line": 16,
-      "namespace": "Platform.security",
-      "key": "title",
-      "fullKey": "Platform.security.title",
+      "namespace": "Services.Hero",
+      "key": "badge",
+      "fullKey": "Services.Hero.badge",
       "type": "t_call"
     },
     {
-      "file": "src\\components\\sections\\platform\\SecuritySection.tsx",
-      "line": 18,
-      "namespace": "Platform.security",
-      "key": "desc",
-      "fullKey": "Platform.security.desc",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\components\\sections\\platform\\SecuritySection.tsx",
-      "line": 20,
-      "namespace": "Platform.security",
+      "file": "src\\components\\sections\\services\\ServicesHero.tsx",
+      "line": 32,
+      "namespace": "Services.Hero",
       "key": "cta",
-      "fullKey": "Platform.security.cta",
+      "fullKey": "Services.Hero.cta",
       "type": "t_call"
     },
     {
-      "file": "src\\components\\sections\\platform\\SecuritySection.tsx",
-      "line": 40,
-      "namespace": "Platform.security",
-      "key": "zerotrust",
-      "fullKey": "Platform.security.zerotrust",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\components\\sections\\platform\\SecuritySection.tsx",
-      "line": 46,
-      "namespace": "Platform.security",
-      "key": "features.fips.title",
-      "fullKey": "Platform.security.features.fips.title",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\components\\sections\\platform\\SecuritySection.tsx",
-      "line": 46,
-      "namespace": "Platform.security",
-      "key": "features.fips.desc",
-      "fullKey": "Platform.security.features.fips.desc",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\components\\sections\\platform\\SecuritySection.tsx",
-      "line": 47,
-      "namespace": "Platform.security",
-      "key": "features.rbac.title",
-      "fullKey": "Platform.security.features.rbac.title",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\components\\sections\\platform\\SecuritySection.tsx",
-      "line": 47,
-      "namespace": "Platform.security",
-      "key": "features.rbac.desc",
-      "fullKey": "Platform.security.features.rbac.desc",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\components\\sections\\platform\\SecuritySection.tsx",
-      "line": 48,
-      "namespace": "Platform.security",
-      "key": "features.vpc.title",
-      "fullKey": "Platform.security.features.vpc.title",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\components\\sections\\platform\\SecuritySection.tsx",
-      "line": 48,
-      "namespace": "Platform.security",
-      "key": "features.vpc.desc",
-      "fullKey": "Platform.security.features.vpc.desc",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\components\\sections\\platform\\SecuritySection.tsx",
-      "line": 49,
-      "namespace": "Platform.security",
-      "key": "features.audit.title",
-      "fullKey": "Platform.security.features.audit.title",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\components\\sections\\platform\\SecuritySection.tsx",
-      "line": 49,
-      "namespace": "Platform.security",
-      "key": "features.audit.desc",
-      "fullKey": "Platform.security.features.audit.desc",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\components\\sections\\platform\\PlatformHero.tsx",
-      "line": 37,
-      "namespace": "Platform",
-      "key": "hero.title",
-      "fullKey": "Platform.hero.title",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\components\\sections\\platform\\PlatformHero.tsx",
-      "line": 40,
-      "namespace": "Platform",
-      "key": "hero.subtitle",
-      "fullKey": "Platform.hero.subtitle",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\components\\sections\\platform\\PlatformHero.tsx",
-      "line": 44,
-      "namespace": "Platform",
-      "key": "hero.ctaPrimary",
-      "fullKey": "Platform.hero.ctaPrimary",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\components\\sections\\platform\\PlatformHero.tsx",
-      "line": 45,
-      "namespace": "Platform",
-      "key": "hero.ctaSecondary",
-      "fullKey": "Platform.hero.ctaSecondary",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\components\\sections\\platform\\PlatformHero.tsx",
-      "line": 60,
-      "namespace": "Platform",
-      "key": "core.title",
-      "fullKey": "Platform.core.title",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\components\\sections\\platform\\PlatformHero.tsx",
-      "line": 62,
-      "namespace": "Platform",
-      "key": "core.desc",
-      "fullKey": "Platform.core.desc",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\components\\sections\\platform\\PlatformHero.tsx",
-      "line": 68,
-      "namespace": "Platform",
-      "key": "stack.api",
-      "fullKey": "Platform.stack.api",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\components\\sections\\platform\\PlatformHero.tsx",
-      "line": 68,
-      "namespace": "Platform",
-      "key": "stack.shielded",
-      "fullKey": "Platform.stack.shielded",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\components\\sections\\platform\\PlatformHero.tsx",
+      "file": "src\\components\\sections\\services\\ServicesHero.tsx",
       "line": 69,
-      "namespace": "Platform",
-      "key": "stack.logic",
-      "fullKey": "Platform.stack.logic",
+      "namespace": "Services.Hero",
+      "key": "velocity",
+      "fullKey": "Services.Hero.velocity",
       "type": "t_call"
     },
     {
-      "file": "src\\components\\sections\\platform\\PlatformHero.tsx",
-      "line": 69,
-      "namespace": "Platform",
-      "key": "stack.active",
-      "fullKey": "Platform.stack.active",
+      "file": "src\\components\\sections\\services\\ServicesHero.tsx",
+      "line": 77,
+      "namespace": "Services.Hero",
+      "key": "errors",
+      "fullKey": "Services.Hero.errors",
       "type": "t_call"
     },
     {
-      "file": "src\\components\\sections\\platform\\PlatformHero.tsx",
-      "line": 70,
-      "namespace": "Platform",
-      "key": "stack.cluster",
-      "fullKey": "Platform.stack.cluster",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\components\\sections\\platform\\PlatformHero.tsx",
-      "line": 70,
-      "namespace": "Platform",
-      "key": "stack.scaling",
-      "fullKey": "Platform.stack.scaling",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\components\\sections\\platform\\PlatformHero.tsx",
-      "line": 71,
-      "namespace": "Platform",
-      "key": "stack.db",
-      "fullKey": "Platform.stack.db",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\components\\sections\\platform\\PlatformHero.tsx",
-      "line": 71,
-      "namespace": "Platform",
-      "key": "stack.verified",
-      "fullKey": "Platform.stack.verified",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\components\\sections\\platform\\IntegrationsSection.tsx",
-      "line": 9,
-      "namespace": "Platform.integrations",
-      "key": "title",
-      "fullKey": "Platform.integrations.title",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\components\\sections\\platform\\IntegrationsSection.tsx",
+      "file": "src\\components\\sections\\services\\ManagedOperationsSection.tsx",
       "line": 10,
-      "namespace": "Platform.integrations",
-      "key": "subtitle",
-      "fullKey": "Platform.integrations.subtitle",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\components\\sections\\platform\\IntegrationsSection.tsx",
-      "line": 15,
-      "namespace": "Platform.integrations",
-      "key": "infra",
-      "fullKey": "Platform.integrations.infra",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\components\\sections\\platform\\IntegrationsSection.tsx",
-      "line": 28,
-      "namespace": "Platform.integrations",
-      "key": "obs",
-      "fullKey": "Platform.integrations.obs",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\components\\sections\\platform\\IntegrationsSection.tsx",
-      "line": 39,
-      "namespace": "Platform.integrations",
-      "key": "delivery",
-      "fullKey": "Platform.integrations.delivery",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\components\\sections\\platform\\IntegrationsSection.tsx",
-      "line": 52,
-      "namespace": "Platform.integrations",
-      "key": "identity",
-      "fullKey": "Platform.integrations.identity",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\components\\sections\\platform\\ControlPlaneSection.tsx",
-      "line": 11,
-      "namespace": "Platform.control",
+      "namespace": "Services.Operations",
       "key": "title",
-      "fullKey": "Platform.control.title",
+      "fullKey": "Services.Operations.title",
       "type": "t_call"
     },
     {
-      "file": "src\\components\\sections\\platform\\ControlPlaneSection.tsx",
-      "line": 13,
-      "namespace": "Platform.control",
+      "file": "src\\components\\sections\\services\\ManagedOperationsSection.tsx",
+      "line": 11,
+      "namespace": "Services.Operations",
       "key": "subtitle",
-      "fullKey": "Platform.control.subtitle",
+      "fullKey": "Services.Operations.subtitle",
       "type": "t_call"
     },
     {
-      "file": "src\\components\\sections\\platform\\ControlPlaneSection.tsx",
-      "line": 26,
-      "namespace": "Platform.control",
-      "key": "observability.title",
-      "fullKey": "Platform.control.observability.title",
+      "file": "src\\components\\sections\\services\\ManagedOperationsSection.tsx",
+      "line": 21,
+      "namespace": "Services.Operations",
+      "key": "sre.title",
+      "fullKey": "Services.Operations.sre.title",
       "type": "t_call"
     },
     {
-      "file": "src\\components\\sections\\platform\\ControlPlaneSection.tsx",
-      "line": 27,
-      "namespace": "Platform.control",
-      "key": "observability.desc",
-      "fullKey": "Platform.control.observability.desc",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\components\\sections\\platform\\ControlPlaneSection.tsx",
-      "line": 34,
-      "namespace": "Platform.control",
-      "key": "fleet",
-      "fullKey": "Platform.control.fleet",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\components\\sections\\platform\\ControlPlaneSection.tsx",
-      "line": 35,
-      "namespace": "Platform.control",
-      "key": "healing",
-      "fullKey": "Platform.control.healing",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\components\\sections\\platform\\ControlPlaneSection.tsx",
-      "line": 36,
-      "namespace": "Platform.control",
-      "key": "gitops",
-      "fullKey": "Platform.control.gitops",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\components\\sections\\platform\\ControlPlaneSection.tsx",
-      "line": 37,
-      "namespace": "Platform.control",
-      "key": "audit",
-      "fullKey": "Platform.control.audit",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\components\\sections\\platform\\ComparisonSection.tsx",
-      "line": 9,
-      "namespace": "Platform.comparison",
-      "key": "rows.neutrality",
-      "fullKey": "Platform.comparison.rows.neutrality",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\components\\sections\\platform\\ComparisonSection.tsx",
-      "line": 10,
-      "namespace": "Platform.comparison",
-      "key": "rows.audits",
-      "fullKey": "Platform.comparison.rows.audits",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\components\\sections\\platform\\ComparisonSection.tsx",
-      "line": 11,
-      "namespace": "Platform.comparison",
-      "key": "rows.sync",
-      "fullKey": "Platform.comparison.rows.sync",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\components\\sections\\platform\\ComparisonSection.tsx",
-      "line": 11,
-      "namespace": "Platform.comparison",
-      "key": "limited",
-      "fullKey": "Platform.comparison.limited",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\components\\sections\\platform\\ComparisonSection.tsx",
-      "line": 12,
-      "namespace": "Platform.comparison",
-      "key": "rows.refactoring",
-      "fullKey": "Platform.comparison.rows.refactoring",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\components\\sections\\platform\\ComparisonSection.tsx",
-      "line": 13,
-      "namespace": "Platform.comparison",
-      "key": "rows.encryption",
-      "fullKey": "Platform.comparison.rows.encryption",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\components\\sections\\platform\\ComparisonSection.tsx",
-      "line": 13,
-      "namespace": "Platform.comparison",
-      "key": "partial",
-      "fullKey": "Platform.comparison.partial",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\components\\sections\\platform\\ComparisonSection.tsx",
-      "line": 14,
-      "namespace": "Platform.comparison",
-      "key": "rows.iam",
-      "fullKey": "Platform.comparison.rows.iam",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\components\\sections\\platform\\ComparisonSection.tsx",
-      "line": 15,
-      "namespace": "Platform.comparison",
-      "key": "rows.arbitrage",
-      "fullKey": "Platform.comparison.rows.arbitrage",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\components\\sections\\platform\\ComparisonSection.tsx",
+      "file": "src\\components\\sections\\services\\ManagedOperationsSection.tsx",
       "line": 22,
-      "namespace": "Platform.comparison",
-      "key": "title",
-      "fullKey": "Platform.comparison.title",
+      "namespace": "Services.Operations",
+      "key": "sre.desc",
+      "fullKey": "Services.Operations.sre.desc",
       "type": "t_call"
     },
     {
-      "file": "src\\components\\sections\\platform\\ComparisonSection.tsx",
+      "file": "src\\components\\sections\\services\\ManagedOperationsSection.tsx",
+      "line": 29,
+      "namespace": "Services.Operations",
+      "key": "finops.title",
+      "fullKey": "Services.Operations.finops.title",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\components\\sections\\services\\ManagedOperationsSection.tsx",
+      "line": 30,
+      "namespace": "Services.Operations",
+      "key": "finops.desc",
+      "fullKey": "Services.Operations.finops.desc",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\components\\sections\\services\\ManagedOperationsSection.tsx",
+      "line": 36,
+      "namespace": "Services.Operations",
+      "key": "healing.title",
+      "fullKey": "Services.Operations.healing.title",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\components\\sections\\services\\ManagedOperationsSection.tsx",
+      "line": 37,
+      "namespace": "Services.Operations",
+      "key": "healing.desc",
+      "fullKey": "Services.Operations.healing.desc",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\components\\sections\\services\\ManagedOperationsSection.tsx",
+      "line": 46,
+      "namespace": "Services.Operations",
+      "key": "audit.title",
+      "fullKey": "Services.Operations.audit.title",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\components\\sections\\services\\ManagedOperationsSection.tsx",
+      "line": 47,
+      "namespace": "Services.Operations",
+      "key": "audit.desc",
+      "fullKey": "Services.Operations.audit.desc",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\components\\sections\\services\\DataAiFabricSection.tsx",
+      "line": 11,
+      "namespace": "Services.DataAI",
+      "key": "title",
+      "fullKey": "Services.DataAI.title",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\components\\sections\\services\\DataAiFabricSection.tsx",
+      "line": 12,
+      "namespace": "Services.DataAI",
+      "key": "subtitle",
+      "fullKey": "Services.DataAI.subtitle",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\components\\sections\\services\\DataAiFabricSection.tsx",
+      "line": 19,
+      "namespace": "Services.DataAI",
+      "key": "sovereignty.title",
+      "fullKey": "Services.DataAI.sovereignty.title",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\components\\sections\\services\\DataAiFabricSection.tsx",
+      "line": 20,
+      "namespace": "Services.DataAI",
+      "key": "sovereignty.desc",
+      "fullKey": "Services.DataAI.sovereignty.desc",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\components\\sections\\services\\DataAiFabricSection.tsx",
+      "line": 24,
+      "namespace": "Services.DataAI",
+      "key": "fabric.title",
+      "fullKey": "Services.DataAI.fabric.title",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\components\\sections\\services\\DataAiFabricSection.tsx",
+      "line": 25,
+      "namespace": "Services.DataAI",
+      "key": "fabric.desc",
+      "fullKey": "Services.DataAI.fabric.desc",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\components\\sections\\services\\DataAiFabricSection.tsx",
+      "line": 29,
+      "namespace": "Services.DataAI",
+      "key": "search.title",
+      "fullKey": "Services.DataAI.search.title",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\components\\sections\\services\\DataAiFabricSection.tsx",
+      "line": 30,
+      "namespace": "Services.DataAI",
+      "key": "search.desc",
+      "fullKey": "Services.DataAI.search.desc",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\components\\sections\\services\\DataAiFabricSection.tsx",
+      "line": 34,
+      "namespace": "Services.DataAI",
+      "key": "analytics.title",
+      "fullKey": "Services.DataAI.analytics.title",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\components\\sections\\services\\DataAiFabricSection.tsx",
+      "line": 35,
+      "namespace": "Services.DataAI",
+      "key": "analytics.desc",
+      "fullKey": "Services.DataAI.analytics.desc",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\components\\sections\\services\\DataAiFabricSection.tsx",
+      "line": 44,
+      "namespace": "Services.DataAI",
+      "key": "uptime",
+      "fullKey": "Services.DataAI.uptime",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\components\\sections\\services\\CloudFactorySection.tsx",
+      "line": 10,
+      "namespace": "Services.Migration",
+      "key": "title",
+      "fullKey": "Services.Migration.title",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\components\\sections\\services\\CloudFactorySection.tsx",
+      "line": 11,
+      "namespace": "Services.Migration",
+      "key": "subtitle",
+      "fullKey": "Services.Migration.subtitle",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\components\\sections\\services\\CloudFactorySection.tsx",
+      "line": 22,
+      "namespace": "Services.Migration",
+      "key": "azure.title",
+      "fullKey": "Services.Migration.azure.title",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\components\\sections\\services\\CloudFactorySection.tsx",
       "line": 23,
-      "namespace": "Platform.comparison",
-      "key": "subtitle",
-      "fullKey": "Platform.comparison.subtitle",
+      "namespace": "Services.Migration",
+      "key": "azure.desc",
+      "fullKey": "Services.Migration.azure.desc",
       "type": "t_call"
     },
     {
-      "file": "src\\components\\sections\\platform\\ComparisonSection.tsx",
-      "line": 30,
-      "namespace": "Platform.comparison",
-      "key": "capability",
-      "fullKey": "Platform.comparison.capability",
+      "file": "src\\components\\sections\\services\\CloudFactorySection.tsx",
+      "line": 38,
+      "namespace": "Services.Migration",
+      "key": "ocp.title",
+      "fullKey": "Services.Migration.ocp.title",
       "type": "t_call"
     },
     {
-      "file": "src\\components\\sections\\platform\\ComparisonSection.tsx",
-      "line": 31,
-      "namespace": "Platform.comparison",
-      "key": "legacy",
-      "fullKey": "Platform.comparison.legacy",
+      "file": "src\\components\\sections\\services\\CloudFactorySection.tsx",
+      "line": 39,
+      "namespace": "Services.Migration",
+      "key": "ocp.desc",
+      "fullKey": "Services.Migration.ocp.desc",
       "type": "t_call"
     },
     {
-      "file": "src\\components\\sections\\platform\\ComparisonSection.tsx",
-      "line": 32,
-      "namespace": "Platform.comparison",
-      "key": "sovereign",
-      "fullKey": "Platform.comparison.sovereign",
+      "file": "src\\components\\sections\\services\\CloudFactorySection.tsx",
+      "line": 53,
+      "namespace": "Services.Migration",
+      "key": "provisioning.title",
+      "fullKey": "Services.Migration.provisioning.title",
       "type": "t_call"
     },
     {
-      "file": "src\\components\\sections\\platform\\ComparisonSection.tsx",
-      "line": 56,
-      "namespace": "Platform.comparison",
-      "key": "footer",
-      "fullKey": "Platform.comparison.footer",
+      "file": "src\\components\\sections\\services\\CloudFactorySection.tsx",
+      "line": 54,
+      "namespace": "Services.Migration",
+      "key": "provisioning.desc",
+      "fullKey": "Services.Migration.provisioning.desc",
       "type": "t_call"
     },
     {
-      "file": "src\\components\\sections\\platform\\ArbitrageSection.tsx",
+      "file": "src\\components\\sections\\services\\CloudFactorySection.tsx",
+      "line": 67,
+      "namespace": "Services.Migration",
+      "key": "drift.title",
+      "fullKey": "Services.Migration.drift.title",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\components\\sections\\services\\CloudFactorySection.tsx",
+      "line": 68,
+      "namespace": "Services.Migration",
+      "key": "drift.desc",
+      "fullKey": "Services.Migration.drift.desc",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\components\\sections\\services\\AutomationStackSection.tsx",
+      "line": 12,
+      "namespace": "Services.Stack",
+      "key": "badge",
+      "fullKey": "Services.Stack.badge",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\components\\sections\\services\\AutomationStackSection.tsx",
       "line": 13,
-      "namespace": "Platform.arbitrage",
-      "key": "tag",
-      "fullKey": "Platform.arbitrage.tag",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\components\\sections\\platform\\ArbitrageSection.tsx",
-      "line": 15,
-      "namespace": "Platform.arbitrage",
+      "namespace": "Services.Stack",
       "key": "title",
-      "fullKey": "Platform.arbitrage.title",
+      "fullKey": "Services.Stack.title",
       "type": "t_call"
     },
     {
-      "file": "src\\components\\sections\\platform\\ArbitrageSection.tsx",
-      "line": 18,
-      "namespace": "Platform.arbitrage",
+      "file": "src\\components\\sections\\services\\AutomationStackSection.tsx",
+      "line": 15,
+      "namespace": "Services.Stack",
       "key": "subtitle",
-      "fullKey": "Platform.arbitrage.subtitle",
+      "fullKey": "Services.Stack.subtitle",
       "type": "t_call"
     },
     {
-      "file": "src\\components\\sections\\platform\\ArbitrageSection.tsx",
+      "file": "src\\components\\sections\\services\\AutomationStackSection.tsx",
+      "line": 22,
+      "namespace": "Services.Stack",
+      "key": "terraform.title",
+      "fullKey": "Services.Stack.terraform.title",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\components\\sections\\services\\AutomationStackSection.tsx",
+      "line": 23,
+      "namespace": "Services.Stack",
+      "key": "terraform.desc",
+      "fullKey": "Services.Stack.terraform.desc",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\components\\sections\\services\\AutomationStackSection.tsx",
+      "line": 29,
+      "namespace": "Services.Stack",
+      "key": "ansible.title",
+      "fullKey": "Services.Stack.ansible.title",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\components\\sections\\services\\AutomationStackSection.tsx",
       "line": 30,
-      "namespace": "Platform.arbitrage",
-      "key": "forecastTitle",
-      "fullKey": "Platform.arbitrage.forecastTitle",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\components\\sections\\platform\\ArbitrageSection.tsx",
-      "line": 32,
-      "namespace": "Platform.arbitrage",
-      "key": "forecastDesc",
-      "fullKey": "Platform.arbitrage.forecastDesc",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\components\\sections\\platform\\ArbitrageSection.tsx",
-      "line": 43,
-      "namespace": "Platform.arbitrage",
-      "key": "lockinTitle",
-      "fullKey": "Platform.arbitrage.lockinTitle",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\components\\sections\\platform\\ArbitrageSection.tsx",
-      "line": 45,
-      "namespace": "Platform.arbitrage",
-      "key": "lockinDesc",
-      "fullKey": "Platform.arbitrage.lockinDesc",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\components\\sections\\platform\\ArbitrageSection.tsx",
-      "line": 50,
-      "namespace": "Platform.arbitrage",
-      "key": "portabilityTitle",
-      "fullKey": "Platform.arbitrage.portabilityTitle",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\components\\sections\\platform\\ArbitrageSection.tsx",
-      "line": 52,
-      "namespace": "Platform.arbitrage",
-      "key": "portabilityDesc",
-      "fullKey": "Platform.arbitrage.portabilityDesc",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\components\\sections\\platform\\ArbitrageSection.tsx",
-      "line": 64,
-      "namespace": "Platform.arbitrage",
-      "key": "switchTitle",
-      "fullKey": "Platform.arbitrage.switchTitle",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\components\\sections\\platform\\ArbitrageSection.tsx",
-      "line": 66,
-      "namespace": "Platform.arbitrage",
-      "key": "switchDesc",
-      "fullKey": "Platform.arbitrage.switchDesc",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\components\\sections\\platform\\ArbitrageSection.tsx",
-      "line": 74,
-      "namespace": "Platform.arbitrage",
-      "key": "eb1aTag",
-      "fullKey": "Platform.arbitrage.eb1aTag",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\components\\sections\\platform\\ArbitrageSection.tsx",
-      "line": 76,
-      "namespace": "Platform.arbitrage",
-      "key": "eb1aDesc",
-      "fullKey": "Platform.arbitrage.eb1aDesc",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\components\\sections\\platform\\ArbitrageSection.tsx",
-      "line": 81,
-      "namespace": "Platform.arbitrage",
-      "key": "auditor",
-      "fullKey": "Platform.arbitrage.auditor",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\components\\sections\\platform\\ArbitrageSection.tsx",
-      "line": 82,
-      "namespace": "Platform.arbitrage",
-      "key": "auditorTitle",
-      "fullKey": "Platform.arbitrage.auditorTitle",
+      "namespace": "Services.Stack",
+      "key": "ansible.desc",
+      "fullKey": "Services.Stack.ansible.desc",
       "type": "t_call"
     },
     {
@@ -2409,339 +2209,563 @@
       "type": "t_call"
     },
     {
-      "file": "src\\components\\sections\\services\\ServicesHero.tsx",
+      "file": "src\\components\\sections\\platform\\SecuritySection.tsx",
       "line": 16,
-      "namespace": "Services.Hero",
-      "key": "badge",
-      "fullKey": "Services.Hero.badge",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\components\\sections\\services\\ServicesHero.tsx",
-      "line": 32,
-      "namespace": "Services.Hero",
-      "key": "cta",
-      "fullKey": "Services.Hero.cta",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\components\\sections\\services\\ServicesHero.tsx",
-      "line": 69,
-      "namespace": "Services.Hero",
-      "key": "velocity",
-      "fullKey": "Services.Hero.velocity",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\components\\sections\\services\\ServicesHero.tsx",
-      "line": 77,
-      "namespace": "Services.Hero",
-      "key": "errors",
-      "fullKey": "Services.Hero.errors",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\components\\sections\\services\\ManagedOperationsSection.tsx",
-      "line": 10,
-      "namespace": "Services.Operations",
+      "namespace": "Platform.security",
       "key": "title",
-      "fullKey": "Services.Operations.title",
+      "fullKey": "Platform.security.title",
       "type": "t_call"
     },
     {
-      "file": "src\\components\\sections\\services\\ManagedOperationsSection.tsx",
-      "line": 11,
-      "namespace": "Services.Operations",
-      "key": "subtitle",
-      "fullKey": "Services.Operations.subtitle",
+      "file": "src\\components\\sections\\platform\\SecuritySection.tsx",
+      "line": 18,
+      "namespace": "Platform.security",
+      "key": "desc",
+      "fullKey": "Platform.security.desc",
       "type": "t_call"
     },
     {
-      "file": "src\\components\\sections\\services\\ManagedOperationsSection.tsx",
-      "line": 21,
-      "namespace": "Services.Operations",
-      "key": "sre.title",
-      "fullKey": "Services.Operations.sre.title",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\components\\sections\\services\\ManagedOperationsSection.tsx",
-      "line": 22,
-      "namespace": "Services.Operations",
-      "key": "sre.desc",
-      "fullKey": "Services.Operations.sre.desc",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\components\\sections\\services\\ManagedOperationsSection.tsx",
-      "line": 29,
-      "namespace": "Services.Operations",
-      "key": "finops.title",
-      "fullKey": "Services.Operations.finops.title",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\components\\sections\\services\\ManagedOperationsSection.tsx",
-      "line": 30,
-      "namespace": "Services.Operations",
-      "key": "finops.desc",
-      "fullKey": "Services.Operations.finops.desc",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\components\\sections\\services\\ManagedOperationsSection.tsx",
-      "line": 36,
-      "namespace": "Services.Operations",
-      "key": "healing.title",
-      "fullKey": "Services.Operations.healing.title",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\components\\sections\\services\\ManagedOperationsSection.tsx",
-      "line": 37,
-      "namespace": "Services.Operations",
-      "key": "healing.desc",
-      "fullKey": "Services.Operations.healing.desc",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\components\\sections\\services\\ManagedOperationsSection.tsx",
-      "line": 46,
-      "namespace": "Services.Operations",
-      "key": "audit.title",
-      "fullKey": "Services.Operations.audit.title",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\components\\sections\\services\\ManagedOperationsSection.tsx",
-      "line": 47,
-      "namespace": "Services.Operations",
-      "key": "audit.desc",
-      "fullKey": "Services.Operations.audit.desc",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\components\\sections\\services\\DataAiFabricSection.tsx",
-      "line": 11,
-      "namespace": "Services.DataAI",
-      "key": "title",
-      "fullKey": "Services.DataAI.title",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\components\\sections\\services\\DataAiFabricSection.tsx",
-      "line": 12,
-      "namespace": "Services.DataAI",
-      "key": "subtitle",
-      "fullKey": "Services.DataAI.subtitle",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\components\\sections\\services\\DataAiFabricSection.tsx",
-      "line": 19,
-      "namespace": "Services.DataAI",
-      "key": "sovereignty.title",
-      "fullKey": "Services.DataAI.sovereignty.title",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\components\\sections\\services\\DataAiFabricSection.tsx",
+      "file": "src\\components\\sections\\platform\\SecuritySection.tsx",
       "line": 20,
-      "namespace": "Services.DataAI",
-      "key": "sovereignty.desc",
-      "fullKey": "Services.DataAI.sovereignty.desc",
+      "namespace": "Platform.security",
+      "key": "cta",
+      "fullKey": "Platform.security.cta",
       "type": "t_call"
     },
     {
-      "file": "src\\components\\sections\\services\\DataAiFabricSection.tsx",
-      "line": 24,
-      "namespace": "Services.DataAI",
-      "key": "fabric.title",
-      "fullKey": "Services.DataAI.fabric.title",
+      "file": "src\\components\\sections\\platform\\SecuritySection.tsx",
+      "line": 40,
+      "namespace": "Platform.security",
+      "key": "zerotrust",
+      "fullKey": "Platform.security.zerotrust",
       "type": "t_call"
     },
     {
-      "file": "src\\components\\sections\\services\\DataAiFabricSection.tsx",
-      "line": 25,
-      "namespace": "Services.DataAI",
-      "key": "fabric.desc",
-      "fullKey": "Services.DataAI.fabric.desc",
+      "file": "src\\components\\sections\\platform\\SecuritySection.tsx",
+      "line": 46,
+      "namespace": "Platform.security",
+      "key": "features.fips.title",
+      "fullKey": "Platform.security.features.fips.title",
       "type": "t_call"
     },
     {
-      "file": "src\\components\\sections\\services\\DataAiFabricSection.tsx",
-      "line": 29,
-      "namespace": "Services.DataAI",
-      "key": "search.title",
-      "fullKey": "Services.DataAI.search.title",
+      "file": "src\\components\\sections\\platform\\SecuritySection.tsx",
+      "line": 46,
+      "namespace": "Platform.security",
+      "key": "features.fips.desc",
+      "fullKey": "Platform.security.features.fips.desc",
       "type": "t_call"
     },
     {
-      "file": "src\\components\\sections\\services\\DataAiFabricSection.tsx",
-      "line": 30,
-      "namespace": "Services.DataAI",
-      "key": "search.desc",
-      "fullKey": "Services.DataAI.search.desc",
+      "file": "src\\components\\sections\\platform\\SecuritySection.tsx",
+      "line": 47,
+      "namespace": "Platform.security",
+      "key": "features.rbac.title",
+      "fullKey": "Platform.security.features.rbac.title",
       "type": "t_call"
     },
     {
-      "file": "src\\components\\sections\\services\\DataAiFabricSection.tsx",
-      "line": 34,
-      "namespace": "Services.DataAI",
-      "key": "analytics.title",
-      "fullKey": "Services.DataAI.analytics.title",
+      "file": "src\\components\\sections\\platform\\SecuritySection.tsx",
+      "line": 47,
+      "namespace": "Platform.security",
+      "key": "features.rbac.desc",
+      "fullKey": "Platform.security.features.rbac.desc",
       "type": "t_call"
     },
     {
-      "file": "src\\components\\sections\\services\\DataAiFabricSection.tsx",
-      "line": 35,
-      "namespace": "Services.DataAI",
-      "key": "analytics.desc",
-      "fullKey": "Services.DataAI.analytics.desc",
+      "file": "src\\components\\sections\\platform\\SecuritySection.tsx",
+      "line": 48,
+      "namespace": "Platform.security",
+      "key": "features.vpc.title",
+      "fullKey": "Platform.security.features.vpc.title",
       "type": "t_call"
     },
     {
-      "file": "src\\components\\sections\\services\\DataAiFabricSection.tsx",
+      "file": "src\\components\\sections\\platform\\SecuritySection.tsx",
+      "line": 48,
+      "namespace": "Platform.security",
+      "key": "features.vpc.desc",
+      "fullKey": "Platform.security.features.vpc.desc",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\components\\sections\\platform\\SecuritySection.tsx",
+      "line": 49,
+      "namespace": "Platform.security",
+      "key": "features.audit.title",
+      "fullKey": "Platform.security.features.audit.title",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\components\\sections\\platform\\SecuritySection.tsx",
+      "line": 49,
+      "namespace": "Platform.security",
+      "key": "features.audit.desc",
+      "fullKey": "Platform.security.features.audit.desc",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\components\\sections\\platform\\PlatformHero.tsx",
+      "line": 37,
+      "namespace": "Platform",
+      "key": "hero.title",
+      "fullKey": "Platform.hero.title",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\components\\sections\\platform\\PlatformHero.tsx",
+      "line": 40,
+      "namespace": "Platform",
+      "key": "hero.subtitle",
+      "fullKey": "Platform.hero.subtitle",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\components\\sections\\platform\\PlatformHero.tsx",
       "line": 44,
-      "namespace": "Services.DataAI",
-      "key": "uptime",
-      "fullKey": "Services.DataAI.uptime",
+      "namespace": "Platform",
+      "key": "hero.ctaPrimary",
+      "fullKey": "Platform.hero.ctaPrimary",
       "type": "t_call"
     },
     {
-      "file": "src\\components\\sections\\services\\CloudFactorySection.tsx",
-      "line": 10,
-      "namespace": "Services.Migration",
-      "key": "title",
-      "fullKey": "Services.Migration.title",
+      "file": "src\\components\\sections\\platform\\PlatformHero.tsx",
+      "line": 45,
+      "namespace": "Platform",
+      "key": "hero.ctaSecondary",
+      "fullKey": "Platform.hero.ctaSecondary",
       "type": "t_call"
     },
     {
-      "file": "src\\components\\sections\\services\\CloudFactorySection.tsx",
-      "line": 11,
-      "namespace": "Services.Migration",
-      "key": "subtitle",
-      "fullKey": "Services.Migration.subtitle",
+      "file": "src\\components\\sections\\platform\\PlatformHero.tsx",
+      "line": 60,
+      "namespace": "Platform",
+      "key": "core.title",
+      "fullKey": "Platform.core.title",
       "type": "t_call"
     },
     {
-      "file": "src\\components\\sections\\services\\CloudFactorySection.tsx",
-      "line": 22,
-      "namespace": "Services.Migration",
-      "key": "azure.title",
-      "fullKey": "Services.Migration.azure.title",
+      "file": "src\\components\\sections\\platform\\PlatformHero.tsx",
+      "line": 62,
+      "namespace": "Platform",
+      "key": "core.desc",
+      "fullKey": "Platform.core.desc",
       "type": "t_call"
     },
     {
-      "file": "src\\components\\sections\\services\\CloudFactorySection.tsx",
-      "line": 23,
-      "namespace": "Services.Migration",
-      "key": "azure.desc",
-      "fullKey": "Services.Migration.azure.desc",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\components\\sections\\services\\CloudFactorySection.tsx",
-      "line": 38,
-      "namespace": "Services.Migration",
-      "key": "ocp.title",
-      "fullKey": "Services.Migration.ocp.title",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\components\\sections\\services\\CloudFactorySection.tsx",
-      "line": 39,
-      "namespace": "Services.Migration",
-      "key": "ocp.desc",
-      "fullKey": "Services.Migration.ocp.desc",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\components\\sections\\services\\CloudFactorySection.tsx",
-      "line": 53,
-      "namespace": "Services.Migration",
-      "key": "provisioning.title",
-      "fullKey": "Services.Migration.provisioning.title",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\components\\sections\\services\\CloudFactorySection.tsx",
-      "line": 54,
-      "namespace": "Services.Migration",
-      "key": "provisioning.desc",
-      "fullKey": "Services.Migration.provisioning.desc",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\components\\sections\\services\\CloudFactorySection.tsx",
-      "line": 67,
-      "namespace": "Services.Migration",
-      "key": "drift.title",
-      "fullKey": "Services.Migration.drift.title",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\components\\sections\\services\\CloudFactorySection.tsx",
+      "file": "src\\components\\sections\\platform\\PlatformHero.tsx",
       "line": 68,
-      "namespace": "Services.Migration",
-      "key": "drift.desc",
-      "fullKey": "Services.Migration.drift.desc",
+      "namespace": "Platform",
+      "key": "stack.api",
+      "fullKey": "Platform.stack.api",
       "type": "t_call"
     },
     {
-      "file": "src\\components\\sections\\services\\AutomationStackSection.tsx",
-      "line": 12,
-      "namespace": "Services.Stack",
-      "key": "badge",
-      "fullKey": "Services.Stack.badge",
+      "file": "src\\components\\sections\\platform\\PlatformHero.tsx",
+      "line": 68,
+      "namespace": "Platform",
+      "key": "stack.shielded",
+      "fullKey": "Platform.stack.shielded",
       "type": "t_call"
     },
     {
-      "file": "src\\components\\sections\\services\\AutomationStackSection.tsx",
-      "line": 13,
-      "namespace": "Services.Stack",
+      "file": "src\\components\\sections\\platform\\PlatformHero.tsx",
+      "line": 69,
+      "namespace": "Platform",
+      "key": "stack.logic",
+      "fullKey": "Platform.stack.logic",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\components\\sections\\platform\\PlatformHero.tsx",
+      "line": 69,
+      "namespace": "Platform",
+      "key": "stack.active",
+      "fullKey": "Platform.stack.active",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\components\\sections\\platform\\PlatformHero.tsx",
+      "line": 70,
+      "namespace": "Platform",
+      "key": "stack.cluster",
+      "fullKey": "Platform.stack.cluster",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\components\\sections\\platform\\PlatformHero.tsx",
+      "line": 70,
+      "namespace": "Platform",
+      "key": "stack.scaling",
+      "fullKey": "Platform.stack.scaling",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\components\\sections\\platform\\PlatformHero.tsx",
+      "line": 71,
+      "namespace": "Platform",
+      "key": "stack.db",
+      "fullKey": "Platform.stack.db",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\components\\sections\\platform\\PlatformHero.tsx",
+      "line": 71,
+      "namespace": "Platform",
+      "key": "stack.verified",
+      "fullKey": "Platform.stack.verified",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\components\\sections\\platform\\IntegrationsSection.tsx",
+      "line": 9,
+      "namespace": "Platform.integrations",
       "key": "title",
-      "fullKey": "Services.Stack.title",
+      "fullKey": "Platform.integrations.title",
       "type": "t_call"
     },
     {
-      "file": "src\\components\\sections\\services\\AutomationStackSection.tsx",
-      "line": 15,
-      "namespace": "Services.Stack",
+      "file": "src\\components\\sections\\platform\\IntegrationsSection.tsx",
+      "line": 10,
+      "namespace": "Platform.integrations",
       "key": "subtitle",
-      "fullKey": "Services.Stack.subtitle",
+      "fullKey": "Platform.integrations.subtitle",
       "type": "t_call"
     },
     {
-      "file": "src\\components\\sections\\services\\AutomationStackSection.tsx",
+      "file": "src\\components\\sections\\platform\\IntegrationsSection.tsx",
+      "line": 15,
+      "namespace": "Platform.integrations",
+      "key": "infra",
+      "fullKey": "Platform.integrations.infra",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\components\\sections\\platform\\IntegrationsSection.tsx",
+      "line": 28,
+      "namespace": "Platform.integrations",
+      "key": "obs",
+      "fullKey": "Platform.integrations.obs",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\components\\sections\\platform\\IntegrationsSection.tsx",
+      "line": 39,
+      "namespace": "Platform.integrations",
+      "key": "delivery",
+      "fullKey": "Platform.integrations.delivery",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\components\\sections\\platform\\IntegrationsSection.tsx",
+      "line": 52,
+      "namespace": "Platform.integrations",
+      "key": "identity",
+      "fullKey": "Platform.integrations.identity",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\components\\sections\\platform\\ControlPlaneSection.tsx",
+      "line": 11,
+      "namespace": "Platform.control",
+      "key": "title",
+      "fullKey": "Platform.control.title",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\components\\sections\\platform\\ControlPlaneSection.tsx",
+      "line": 13,
+      "namespace": "Platform.control",
+      "key": "subtitle",
+      "fullKey": "Platform.control.subtitle",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\components\\sections\\platform\\ControlPlaneSection.tsx",
+      "line": 26,
+      "namespace": "Platform.control",
+      "key": "observability.title",
+      "fullKey": "Platform.control.observability.title",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\components\\sections\\platform\\ControlPlaneSection.tsx",
+      "line": 27,
+      "namespace": "Platform.control",
+      "key": "observability.desc",
+      "fullKey": "Platform.control.observability.desc",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\components\\sections\\platform\\ControlPlaneSection.tsx",
+      "line": 34,
+      "namespace": "Platform.control",
+      "key": "fleet",
+      "fullKey": "Platform.control.fleet",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\components\\sections\\platform\\ControlPlaneSection.tsx",
+      "line": 35,
+      "namespace": "Platform.control",
+      "key": "healing",
+      "fullKey": "Platform.control.healing",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\components\\sections\\platform\\ControlPlaneSection.tsx",
+      "line": 36,
+      "namespace": "Platform.control",
+      "key": "gitops",
+      "fullKey": "Platform.control.gitops",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\components\\sections\\platform\\ControlPlaneSection.tsx",
+      "line": 37,
+      "namespace": "Platform.control",
+      "key": "audit",
+      "fullKey": "Platform.control.audit",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\components\\sections\\platform\\ComparisonSection.tsx",
+      "line": 9,
+      "namespace": "Platform.comparison",
+      "key": "rows.neutrality",
+      "fullKey": "Platform.comparison.rows.neutrality",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\components\\sections\\platform\\ComparisonSection.tsx",
+      "line": 10,
+      "namespace": "Platform.comparison",
+      "key": "rows.audits",
+      "fullKey": "Platform.comparison.rows.audits",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\components\\sections\\platform\\ComparisonSection.tsx",
+      "line": 11,
+      "namespace": "Platform.comparison",
+      "key": "rows.sync",
+      "fullKey": "Platform.comparison.rows.sync",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\components\\sections\\platform\\ComparisonSection.tsx",
+      "line": 11,
+      "namespace": "Platform.comparison",
+      "key": "limited",
+      "fullKey": "Platform.comparison.limited",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\components\\sections\\platform\\ComparisonSection.tsx",
+      "line": 12,
+      "namespace": "Platform.comparison",
+      "key": "rows.refactoring",
+      "fullKey": "Platform.comparison.rows.refactoring",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\components\\sections\\platform\\ComparisonSection.tsx",
+      "line": 13,
+      "namespace": "Platform.comparison",
+      "key": "rows.encryption",
+      "fullKey": "Platform.comparison.rows.encryption",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\components\\sections\\platform\\ComparisonSection.tsx",
+      "line": 13,
+      "namespace": "Platform.comparison",
+      "key": "partial",
+      "fullKey": "Platform.comparison.partial",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\components\\sections\\platform\\ComparisonSection.tsx",
+      "line": 14,
+      "namespace": "Platform.comparison",
+      "key": "rows.iam",
+      "fullKey": "Platform.comparison.rows.iam",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\components\\sections\\platform\\ComparisonSection.tsx",
+      "line": 15,
+      "namespace": "Platform.comparison",
+      "key": "rows.arbitrage",
+      "fullKey": "Platform.comparison.rows.arbitrage",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\components\\sections\\platform\\ComparisonSection.tsx",
       "line": 22,
-      "namespace": "Services.Stack",
-      "key": "terraform.title",
-      "fullKey": "Services.Stack.terraform.title",
+      "namespace": "Platform.comparison",
+      "key": "title",
+      "fullKey": "Platform.comparison.title",
       "type": "t_call"
     },
     {
-      "file": "src\\components\\sections\\services\\AutomationStackSection.tsx",
+      "file": "src\\components\\sections\\platform\\ComparisonSection.tsx",
       "line": 23,
-      "namespace": "Services.Stack",
-      "key": "terraform.desc",
-      "fullKey": "Services.Stack.terraform.desc",
+      "namespace": "Platform.comparison",
+      "key": "subtitle",
+      "fullKey": "Platform.comparison.subtitle",
       "type": "t_call"
     },
     {
-      "file": "src\\components\\sections\\services\\AutomationStackSection.tsx",
-      "line": 29,
-      "namespace": "Services.Stack",
-      "key": "ansible.title",
-      "fullKey": "Services.Stack.ansible.title",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\components\\sections\\services\\AutomationStackSection.tsx",
+      "file": "src\\components\\sections\\platform\\ComparisonSection.tsx",
       "line": 30,
-      "namespace": "Services.Stack",
-      "key": "ansible.desc",
-      "fullKey": "Services.Stack.ansible.desc",
+      "namespace": "Platform.comparison",
+      "key": "capability",
+      "fullKey": "Platform.comparison.capability",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\components\\sections\\platform\\ComparisonSection.tsx",
+      "line": 31,
+      "namespace": "Platform.comparison",
+      "key": "legacy",
+      "fullKey": "Platform.comparison.legacy",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\components\\sections\\platform\\ComparisonSection.tsx",
+      "line": 32,
+      "namespace": "Platform.comparison",
+      "key": "sovereign",
+      "fullKey": "Platform.comparison.sovereign",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\components\\sections\\platform\\ComparisonSection.tsx",
+      "line": 56,
+      "namespace": "Platform.comparison",
+      "key": "footer",
+      "fullKey": "Platform.comparison.footer",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\components\\sections\\platform\\ArbitrageSection.tsx",
+      "line": 13,
+      "namespace": "Platform.arbitrage",
+      "key": "tag",
+      "fullKey": "Platform.arbitrage.tag",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\components\\sections\\platform\\ArbitrageSection.tsx",
+      "line": 15,
+      "namespace": "Platform.arbitrage",
+      "key": "title",
+      "fullKey": "Platform.arbitrage.title",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\components\\sections\\platform\\ArbitrageSection.tsx",
+      "line": 18,
+      "namespace": "Platform.arbitrage",
+      "key": "subtitle",
+      "fullKey": "Platform.arbitrage.subtitle",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\components\\sections\\platform\\ArbitrageSection.tsx",
+      "line": 30,
+      "namespace": "Platform.arbitrage",
+      "key": "forecastTitle",
+      "fullKey": "Platform.arbitrage.forecastTitle",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\components\\sections\\platform\\ArbitrageSection.tsx",
+      "line": 32,
+      "namespace": "Platform.arbitrage",
+      "key": "forecastDesc",
+      "fullKey": "Platform.arbitrage.forecastDesc",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\components\\sections\\platform\\ArbitrageSection.tsx",
+      "line": 43,
+      "namespace": "Platform.arbitrage",
+      "key": "lockinTitle",
+      "fullKey": "Platform.arbitrage.lockinTitle",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\components\\sections\\platform\\ArbitrageSection.tsx",
+      "line": 45,
+      "namespace": "Platform.arbitrage",
+      "key": "lockinDesc",
+      "fullKey": "Platform.arbitrage.lockinDesc",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\components\\sections\\platform\\ArbitrageSection.tsx",
+      "line": 50,
+      "namespace": "Platform.arbitrage",
+      "key": "portabilityTitle",
+      "fullKey": "Platform.arbitrage.portabilityTitle",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\components\\sections\\platform\\ArbitrageSection.tsx",
+      "line": 52,
+      "namespace": "Platform.arbitrage",
+      "key": "portabilityDesc",
+      "fullKey": "Platform.arbitrage.portabilityDesc",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\components\\sections\\platform\\ArbitrageSection.tsx",
+      "line": 64,
+      "namespace": "Platform.arbitrage",
+      "key": "switchTitle",
+      "fullKey": "Platform.arbitrage.switchTitle",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\components\\sections\\platform\\ArbitrageSection.tsx",
+      "line": 66,
+      "namespace": "Platform.arbitrage",
+      "key": "switchDesc",
+      "fullKey": "Platform.arbitrage.switchDesc",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\components\\sections\\platform\\ArbitrageSection.tsx",
+      "line": 74,
+      "namespace": "Platform.arbitrage",
+      "key": "eb1aTag",
+      "fullKey": "Platform.arbitrage.eb1aTag",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\components\\sections\\platform\\ArbitrageSection.tsx",
+      "line": 76,
+      "namespace": "Platform.arbitrage",
+      "key": "eb1aDesc",
+      "fullKey": "Platform.arbitrage.eb1aDesc",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\components\\sections\\platform\\ArbitrageSection.tsx",
+      "line": 81,
+      "namespace": "Platform.arbitrage",
+      "key": "auditor",
+      "fullKey": "Platform.arbitrage.auditor",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\components\\sections\\platform\\ArbitrageSection.tsx",
+      "line": 82,
+      "namespace": "Platform.arbitrage",
+      "key": "auditorTitle",
+      "fullKey": "Platform.arbitrage.auditorTitle",
       "type": "t_call"
     },
     {
@@ -2985,6 +3009,94 @@
       "type": "t_call"
     },
     {
+      "file": "src\\app\\[locale]\\register\\page.tsx",
+      "line": 191,
+      "namespace": "Auth.Register",
+      "key": "placeholders.name",
+      "fullKey": "Auth.Register.placeholders.name",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\register\\page.tsx",
+      "line": 198,
+      "namespace": "Auth.Register",
+      "key": "fields.email",
+      "fullKey": "Auth.Register.fields.email",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\register\\page.tsx",
+      "line": 215,
+      "namespace": "Auth.Register",
+      "key": "placeholders.email",
+      "fullKey": "Auth.Register.placeholders.email",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\register\\page.tsx",
+      "line": 222,
+      "namespace": "Auth.Register",
+      "key": "fields.company",
+      "fullKey": "Auth.Register.fields.company",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\register\\page.tsx",
+      "line": 239,
+      "namespace": "Auth.Register",
+      "key": "placeholders.company",
+      "fullKey": "Auth.Register.placeholders.company",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\register\\page.tsx",
+      "line": 246,
+      "namespace": "Auth.Register",
+      "key": "fields.phone",
+      "fullKey": "Auth.Register.fields.phone",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\register\\page.tsx",
+      "line": 262,
+      "namespace": "Auth.Register",
+      "key": "placeholders.phone",
+      "fullKey": "Auth.Register.placeholders.phone",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\register\\page.tsx",
+      "line": 269,
+      "namespace": "Auth.Register",
+      "key": "fields.password",
+      "fullKey": "Auth.Register.fields.password",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\register\\page.tsx",
+      "line": 286,
+      "namespace": "Auth.Register",
+      "key": "placeholders.password",
+      "fullKey": "Auth.Register.placeholders.password",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\register\\page.tsx",
+      "line": 293,
+      "namespace": "Auth.Register",
+      "key": "fields.confirmPassword",
+      "fullKey": "Auth.Register.fields.confirmPassword",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\register\\page.tsx",
+      "line": 310,
+      "namespace": "Auth.Register",
+      "key": "placeholders.confirmPassword",
+      "fullKey": "Auth.Register.placeholders.confirmPassword",
+      "type": "t_call"
+    },
+    {
       "file": "src\\app\\[locale]\\security\\page.tsx",
       "line": 24,
       "namespace": "Common",
@@ -3206,94 +3318,6 @@
       "namespace": "Common",
       "key": "pgpKey",
       "fullKey": "Common.pgpKey",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\register\\page.tsx",
-      "line": 191,
-      "namespace": "Auth.Register",
-      "key": "placeholders.name",
-      "fullKey": "Auth.Register.placeholders.name",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\register\\page.tsx",
-      "line": 198,
-      "namespace": "Auth.Register",
-      "key": "fields.email",
-      "fullKey": "Auth.Register.fields.email",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\register\\page.tsx",
-      "line": 215,
-      "namespace": "Auth.Register",
-      "key": "placeholders.email",
-      "fullKey": "Auth.Register.placeholders.email",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\register\\page.tsx",
-      "line": 222,
-      "namespace": "Auth.Register",
-      "key": "fields.company",
-      "fullKey": "Auth.Register.fields.company",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\register\\page.tsx",
-      "line": 239,
-      "namespace": "Auth.Register",
-      "key": "placeholders.company",
-      "fullKey": "Auth.Register.placeholders.company",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\register\\page.tsx",
-      "line": 246,
-      "namespace": "Auth.Register",
-      "key": "fields.phone",
-      "fullKey": "Auth.Register.fields.phone",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\register\\page.tsx",
-      "line": 262,
-      "namespace": "Auth.Register",
-      "key": "placeholders.phone",
-      "fullKey": "Auth.Register.placeholders.phone",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\register\\page.tsx",
-      "line": 269,
-      "namespace": "Auth.Register",
-      "key": "fields.password",
-      "fullKey": "Auth.Register.fields.password",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\register\\page.tsx",
-      "line": 286,
-      "namespace": "Auth.Register",
-      "key": "placeholders.password",
-      "fullKey": "Auth.Register.placeholders.password",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\register\\page.tsx",
-      "line": 293,
-      "namespace": "Auth.Register",
-      "key": "fields.confirmPassword",
-      "fullKey": "Auth.Register.fields.confirmPassword",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\register\\page.tsx",
-      "line": 310,
-      "namespace": "Auth.Register",
-      "key": "placeholders.confirmPassword",
-      "fullKey": "Auth.Register.placeholders.confirmPassword",
       "type": "t_call"
     },
     {
@@ -3937,22 +3961,6 @@
       "type": "t_call"
     },
     {
-      "file": "src\\app\\[locale]\\contact\\page.tsx",
-      "line": 29,
-      "namespace": "Common",
-      "key": "email.support",
-      "fullKey": "Common.email.support",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\contact\\page.tsx",
-      "line": 31,
-      "namespace": "Common",
-      "key": "location",
-      "fullKey": "Common.location",
-      "type": "t_call"
-    },
-    {
       "file": "src\\app\\[locale]\\docs\\page.tsx",
       "line": 14,
       "namespace": "Common",
@@ -4590,6 +4598,22 @@
       "namespace": "Common",
       "key": "vision.content",
       "fullKey": "Common.vision.content",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\contact\\page.tsx",
+      "line": 29,
+      "namespace": "Common",
+      "key": "email.support",
+      "fullKey": "Common.email.support",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\contact\\page.tsx",
+      "line": 31,
+      "namespace": "Common",
+      "key": "location",
+      "fullKey": "Common.location",
       "type": "t_call"
     },
     {
@@ -5763,97 +5787,97 @@
     {
       "file": "src\\app\\[locale]\\docs\\whitepaper\\components\\diagrams\\SystemContextDiagram.tsx",
       "line": 15,
-      "namespace": "WhitePaper.detailedDiagrams.context",
-      "key": "devOps.title",
-      "fullKey": "WhitePaper.detailedDiagrams.context.devOps.title",
+      "namespace": "docs.whitepaper.diagrams",
+      "key": "devOpsTitle",
+      "fullKey": "docs.whitepaper.diagrams.devOpsTitle",
       "type": "t_call"
     },
     {
       "file": "src\\app\\[locale]\\docs\\whitepaper\\components\\diagrams\\SystemContextDiagram.tsx",
       "line": 16,
-      "namespace": "WhitePaper.detailedDiagrams.context",
-      "key": "devOps.desc",
-      "fullKey": "WhitePaper.detailedDiagrams.context.devOps.desc",
+      "namespace": "docs.whitepaper.diagrams",
+      "key": "devOpsDesc",
+      "fullKey": "docs.whitepaper.diagrams.devOpsDesc",
       "type": "t_call"
     },
     {
       "file": "src\\app\\[locale]\\docs\\whitepaper\\components\\diagrams\\SystemContextDiagram.tsx",
       "line": 20,
-      "namespace": "WhitePaper.detailedDiagrams.context",
-      "key": "compliance.title",
-      "fullKey": "WhitePaper.detailedDiagrams.context.compliance.title",
+      "namespace": "docs.whitepaper.diagrams",
+      "key": "complianceTitle",
+      "fullKey": "docs.whitepaper.diagrams.complianceTitle",
       "type": "t_call"
     },
     {
       "file": "src\\app\\[locale]\\docs\\whitepaper\\components\\diagrams\\SystemContextDiagram.tsx",
       "line": 21,
-      "namespace": "WhitePaper.detailedDiagrams.context",
-      "key": "compliance.desc",
-      "fullKey": "WhitePaper.detailedDiagrams.context.compliance.desc",
+      "namespace": "docs.whitepaper.diagrams",
+      "key": "complianceDesc",
+      "fullKey": "docs.whitepaper.diagrams.complianceDesc",
       "type": "t_call"
     },
     {
       "file": "src\\app\\[locale]\\docs\\whitepaper\\components\\diagrams\\SystemContextDiagram.tsx",
       "line": 27,
-      "namespace": "WhitePaper.detailedDiagrams.context",
+      "namespace": "docs.whitepaper.diagrams",
       "key": "controlPlane",
-      "fullKey": "WhitePaper.detailedDiagrams.context.controlPlane",
+      "fullKey": "docs.whitepaper.diagrams.controlPlane",
       "type": "t_call"
     },
     {
       "file": "src\\app\\[locale]\\docs\\whitepaper\\components\\diagrams\\SystemContextDiagram.tsx",
       "line": 32,
-      "namespace": "WhitePaper.detailedDiagrams.context",
-      "key": "interpreter",
-      "fullKey": "WhitePaper.detailedDiagrams.context.interpreter",
+      "namespace": "docs.whitepaper.diagrams",
+      "key": "intentInterpreter",
+      "fullKey": "docs.whitepaper.diagrams.intentInterpreter",
       "type": "t_call"
     },
     {
       "file": "src\\app\\[locale]\\docs\\whitepaper\\components\\diagrams\\SystemContextDiagram.tsx",
       "line": 36,
-      "namespace": "WhitePaper.detailedDiagrams.context",
+      "namespace": "docs.whitepaper.diagrams",
       "key": "decisionEngine",
-      "fullKey": "WhitePaper.detailedDiagrams.context.decisionEngine",
+      "fullKey": "docs.whitepaper.diagrams.decisionEngine",
       "type": "t_call"
     },
     {
       "file": "src\\app\\[locale]\\docs\\whitepaper\\components\\diagrams\\SystemContextDiagram.tsx",
       "line": 41,
-      "namespace": "WhitePaper.detailedDiagrams.context",
-      "key": "reconciliation.title",
-      "fullKey": "WhitePaper.detailedDiagrams.context.reconciliation.title",
+      "namespace": "docs.whitepaper.diagrams",
+      "key": "stateReconciliation",
+      "fullKey": "docs.whitepaper.diagrams.stateReconciliation",
       "type": "t_call"
     },
     {
       "file": "src\\app\\[locale]\\docs\\whitepaper\\components\\diagrams\\SystemContextDiagram.tsx",
       "line": 41,
-      "namespace": "WhitePaper.detailedDiagrams.context",
-      "key": "reconciliation.desc",
-      "fullKey": "WhitePaper.detailedDiagrams.context.reconciliation.desc",
+      "namespace": "docs.whitepaper.diagrams",
+      "key": "stateReconciliationDesc",
+      "fullKey": "docs.whitepaper.diagrams.stateReconciliationDesc",
       "type": "t_call"
     },
     {
       "file": "src\\app\\[locale]\\docs\\whitepaper\\components\\diagrams\\SystemContextDiagram.tsx",
       "line": 47,
-      "namespace": "WhitePaper.detailedDiagrams.context",
+      "namespace": "docs.whitepaper.diagrams",
       "key": "clouds.aws",
-      "fullKey": "WhitePaper.detailedDiagrams.context.clouds.aws",
+      "fullKey": "docs.whitepaper.diagrams.clouds.aws",
       "type": "t_call"
     },
     {
       "file": "src\\app\\[locale]\\docs\\whitepaper\\components\\diagrams\\SystemContextDiagram.tsx",
       "line": 47,
-      "namespace": "WhitePaper.detailedDiagrams.context",
+      "namespace": "docs.whitepaper.diagrams",
       "key": "clouds.azure",
-      "fullKey": "WhitePaper.detailedDiagrams.context.clouds.azure",
+      "fullKey": "docs.whitepaper.diagrams.clouds.azure",
       "type": "t_call"
     },
     {
       "file": "src\\app\\[locale]\\docs\\whitepaper\\components\\diagrams\\SystemContextDiagram.tsx",
       "line": 47,
-      "namespace": "WhitePaper.detailedDiagrams.context",
+      "namespace": "docs.whitepaper.diagrams",
       "key": "clouds.gcp",
-      "fullKey": "WhitePaper.detailedDiagrams.context.clouds.gcp",
+      "fullKey": "docs.whitepaper.diagrams.clouds.gcp",
       "type": "t_call"
     },
     {
@@ -5906,202 +5930,178 @@
     },
     {
       "file": "src\\app\\[locale]\\docs\\whitepaper\\components\\diagrams\\ImpactMetricsChart.tsx",
-      "line": 14,
-      "namespace": "WhitePaper.detailedDiagrams.impact",
-      "key": "mttr.value",
-      "fullKey": "WhitePaper.detailedDiagrams.impact.mttr.value",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\docs\\whitepaper\\components\\diagrams\\ImpactMetricsChart.tsx",
       "line": 15,
-      "namespace": "WhitePaper.detailedDiagrams.impact",
-      "key": "mttr.title",
-      "fullKey": "WhitePaper.detailedDiagrams.impact.mttr.title",
+      "namespace": "docs.whitepaper.diagrams",
+      "key": "mttrReduction",
+      "fullKey": "docs.whitepaper.diagrams.mttrReduction",
       "type": "t_call"
     },
     {
       "file": "src\\app\\[locale]\\docs\\whitepaper\\components\\diagrams\\ImpactMetricsChart.tsx",
       "line": 16,
-      "namespace": "WhitePaper.detailedDiagrams.impact",
-      "key": "mttr.desc",
-      "fullKey": "WhitePaper.detailedDiagrams.impact.mttr.desc",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\docs\\whitepaper\\components\\diagrams\\ImpactMetricsChart.tsx",
-      "line": 23,
-      "namespace": "WhitePaper.detailedDiagrams.impact",
-      "key": "opex.value",
-      "fullKey": "WhitePaper.detailedDiagrams.impact.opex.value",
+      "namespace": "docs.whitepaper.diagrams",
+      "key": "mttrDesc",
+      "fullKey": "docs.whitepaper.diagrams.mttrDesc",
       "type": "t_call"
     },
     {
       "file": "src\\app\\[locale]\\docs\\whitepaper\\components\\diagrams\\ImpactMetricsChart.tsx",
       "line": 24,
-      "namespace": "WhitePaper.detailedDiagrams.impact",
-      "key": "opex.title",
-      "fullKey": "WhitePaper.detailedDiagrams.impact.opex.title",
+      "namespace": "docs.whitepaper.diagrams",
+      "key": "cloudOpEx",
+      "fullKey": "docs.whitepaper.diagrams.cloudOpEx",
       "type": "t_call"
     },
     {
       "file": "src\\app\\[locale]\\docs\\whitepaper\\components\\diagrams\\ImpactMetricsChart.tsx",
       "line": 25,
-      "namespace": "WhitePaper.detailedDiagrams.impact",
-      "key": "opex.desc",
-      "fullKey": "WhitePaper.detailedDiagrams.impact.opex.desc",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\docs\\whitepaper\\components\\diagrams\\ImpactMetricsChart.tsx",
-      "line": 32,
-      "namespace": "WhitePaper.detailedDiagrams.impact",
-      "key": "compliance.value",
-      "fullKey": "WhitePaper.detailedDiagrams.impact.compliance.value",
+      "namespace": "docs.whitepaper.diagrams",
+      "key": "opexDesc",
+      "fullKey": "docs.whitepaper.diagrams.opexDesc",
       "type": "t_call"
     },
     {
       "file": "src\\app\\[locale]\\docs\\whitepaper\\components\\diagrams\\ImpactMetricsChart.tsx",
       "line": 33,
-      "namespace": "WhitePaper.detailedDiagrams.impact",
-      "key": "compliance.title",
-      "fullKey": "WhitePaper.detailedDiagrams.impact.compliance.title",
+      "namespace": "docs.whitepaper.diagrams",
+      "key": "complianceRate",
+      "fullKey": "docs.whitepaper.diagrams.complianceRate",
       "type": "t_call"
     },
     {
       "file": "src\\app\\[locale]\\docs\\whitepaper\\components\\diagrams\\ImpactMetricsChart.tsx",
       "line": 34,
-      "namespace": "WhitePaper.detailedDiagrams.impact",
-      "key": "compliance.desc",
-      "fullKey": "WhitePaper.detailedDiagrams.impact.compliance.desc",
+      "namespace": "docs.whitepaper.diagrams",
+      "key": "automatedAudit",
+      "fullKey": "docs.whitepaper.diagrams.automatedAudit",
       "type": "t_call"
     },
     {
       "file": "src\\app\\[locale]\\docs\\whitepaper\\components\\diagrams\\GovernanceLoopDiagram.tsx",
       "line": 15,
-      "namespace": "WhitePaper.detailedDiagrams.governance",
-      "key": "signal.title",
-      "fullKey": "WhitePaper.detailedDiagrams.governance.signal.title",
+      "namespace": "docs.whitepaper.diagrams",
+      "key": "signalTitle",
+      "fullKey": "docs.whitepaper.diagrams.signalTitle",
       "type": "t_call"
     },
     {
       "file": "src\\app\\[locale]\\docs\\whitepaper\\components\\diagrams\\GovernanceLoopDiagram.tsx",
       "line": 16,
-      "namespace": "WhitePaper.detailedDiagrams.governance",
-      "key": "signal.desc",
-      "fullKey": "WhitePaper.detailedDiagrams.governance.signal.desc",
+      "namespace": "docs.whitepaper.diagrams",
+      "key": "signalDesc",
+      "fullKey": "docs.whitepaper.diagrams.signalDesc",
       "type": "t_call"
     },
     {
       "file": "src\\app\\[locale]\\docs\\whitepaper\\components\\diagrams\\GovernanceLoopDiagram.tsx",
       "line": 25,
-      "namespace": "WhitePaper.detailedDiagrams.governance",
-      "key": "decision.title",
-      "fullKey": "WhitePaper.detailedDiagrams.governance.decision.title",
+      "namespace": "docs.whitepaper.diagrams",
+      "key": "decisionTitle",
+      "fullKey": "docs.whitepaper.diagrams.decisionTitle",
       "type": "t_call"
     },
     {
       "file": "src\\app\\[locale]\\docs\\whitepaper\\components\\diagrams\\GovernanceLoopDiagram.tsx",
       "line": 26,
-      "namespace": "WhitePaper.detailedDiagrams.governance",
-      "key": "decision.desc",
-      "fullKey": "WhitePaper.detailedDiagrams.governance.decision.desc",
+      "namespace": "docs.whitepaper.diagrams",
+      "key": "decisionDesc",
+      "fullKey": "docs.whitepaper.diagrams.decisionDesc",
       "type": "t_call"
     },
     {
       "file": "src\\app\\[locale]\\docs\\whitepaper\\components\\diagrams\\GovernanceLoopDiagram.tsx",
       "line": 35,
-      "namespace": "WhitePaper.detailedDiagrams.governance",
-      "key": "action.title",
-      "fullKey": "WhitePaper.detailedDiagrams.governance.action.title",
+      "namespace": "docs.whitepaper.diagrams",
+      "key": "actionTitle",
+      "fullKey": "docs.whitepaper.diagrams.actionTitle",
       "type": "t_call"
     },
     {
       "file": "src\\app\\[locale]\\docs\\whitepaper\\components\\diagrams\\GovernanceLoopDiagram.tsx",
       "line": 36,
-      "namespace": "WhitePaper.detailedDiagrams.governance",
-      "key": "action.desc",
-      "fullKey": "WhitePaper.detailedDiagrams.governance.action.desc",
+      "namespace": "docs.whitepaper.diagrams",
+      "key": "actionDesc",
+      "fullKey": "docs.whitepaper.diagrams.actionDesc",
       "type": "t_call"
     },
     {
       "file": "src\\app\\[locale]\\docs\\whitepaper\\components\\diagrams\\GovernanceLoopDiagram.tsx",
       "line": 45,
-      "namespace": "WhitePaper.detailedDiagrams.governance",
-      "key": "validation.title",
-      "fullKey": "WhitePaper.detailedDiagrams.governance.validation.title",
+      "namespace": "docs.whitepaper.diagrams",
+      "key": "validation",
+      "fullKey": "docs.whitepaper.diagrams.validation",
       "type": "t_call"
     },
     {
       "file": "src\\app\\[locale]\\docs\\whitepaper\\components\\diagrams\\GovernanceLoopDiagram.tsx",
       "line": 46,
-      "namespace": "WhitePaper.detailedDiagrams.governance",
-      "key": "validation.desc",
-      "fullKey": "WhitePaper.detailedDiagrams.governance.validation.desc",
+      "namespace": "docs.whitepaper.diagrams",
+      "key": "validationDesc",
+      "fullKey": "docs.whitepaper.diagrams.validationDesc",
       "type": "t_call"
     },
     {
       "file": "src\\app\\[locale]\\docs\\whitepaper\\components\\diagrams\\GovernanceLoopDiagram.tsx",
       "line": 50,
-      "namespace": "WhitePaper.detailedDiagrams.governance",
+      "namespace": "docs.whitepaper.diagrams",
       "key": "cycleTime",
-      "fullKey": "WhitePaper.detailedDiagrams.governance.cycleTime",
+      "fullKey": "docs.whitepaper.diagrams.cycleTime",
       "type": "t_call"
     },
     {
       "file": "src\\app\\[locale]\\docs\\whitepaper\\components\\diagrams\\FederationTopologyDiagram.tsx",
       "line": 17,
-      "namespace": "WhitePaper.detailedDiagrams.federation",
-      "key": "us.title",
-      "fullKey": "WhitePaper.detailedDiagrams.federation.us.title",
+      "namespace": "docs.whitepaper.diagrams",
+      "key": "federationUsTitle",
+      "fullKey": "docs.whitepaper.diagrams.federationUsTitle",
       "type": "t_call"
     },
     {
       "file": "src\\app\\[locale]\\docs\\whitepaper\\components\\diagrams\\FederationTopologyDiagram.tsx",
       "line": 19,
-      "namespace": "WhitePaper.detailedDiagrams.federation",
-      "key": "us.policy",
-      "fullKey": "WhitePaper.detailedDiagrams.federation.us.policy",
+      "namespace": "docs.whitepaper.diagrams",
+      "key": "federationUsPolicy",
+      "fullKey": "docs.whitepaper.diagrams.federationUsPolicy",
       "type": "t_call"
     },
     {
       "file": "src\\app\\[locale]\\docs\\whitepaper\\components\\diagrams\\FederationTopologyDiagram.tsx",
       "line": 27,
-      "namespace": "WhitePaper.detailedDiagrams.federation",
-      "key": "eu.title",
-      "fullKey": "WhitePaper.detailedDiagrams.federation.eu.title",
+      "namespace": "docs.whitepaper.diagrams",
+      "key": "federationEuTitle",
+      "fullKey": "docs.whitepaper.diagrams.federationEuTitle",
       "type": "t_call"
     },
     {
       "file": "src\\app\\[locale]\\docs\\whitepaper\\components\\diagrams\\FederationTopologyDiagram.tsx",
       "line": 29,
-      "namespace": "WhitePaper.detailedDiagrams.federation",
-      "key": "eu.policy",
-      "fullKey": "WhitePaper.detailedDiagrams.federation.eu.policy",
+      "namespace": "docs.whitepaper.diagrams",
+      "key": "federationEuPolicy",
+      "fullKey": "docs.whitepaper.diagrams.federationEuPolicy",
       "type": "t_call"
     },
     {
       "file": "src\\app\\[locale]\\docs\\whitepaper\\components\\diagrams\\FederationTopologyDiagram.tsx",
       "line": 37,
-      "namespace": "WhitePaper.detailedDiagrams.federation",
-      "key": "ap.title",
-      "fullKey": "WhitePaper.detailedDiagrams.federation.ap.title",
+      "namespace": "docs.whitepaper.diagrams",
+      "key": "federationApTitle",
+      "fullKey": "docs.whitepaper.diagrams.federationApTitle",
       "type": "t_call"
     },
     {
       "file": "src\\app\\[locale]\\docs\\whitepaper\\components\\diagrams\\FederationTopologyDiagram.tsx",
       "line": 39,
-      "namespace": "WhitePaper.detailedDiagrams.federation",
-      "key": "ap.policy",
-      "fullKey": "WhitePaper.detailedDiagrams.federation.ap.policy",
+      "namespace": "docs.whitepaper.diagrams",
+      "key": "federationApPolicy",
+      "fullKey": "docs.whitepaper.diagrams.federationApPolicy",
       "type": "t_call"
     },
     {
       "file": "src\\app\\[locale]\\docs\\whitepaper\\components\\diagrams\\FederationTopologyDiagram.tsx",
       "line": 48,
-      "namespace": "WhitePaper.detailedDiagrams.federation",
-      "key": "protocol",
-      "fullKey": "WhitePaper.detailedDiagrams.federation.protocol",
+      "namespace": "docs.whitepaper.diagrams",
+      "key": "federationProtocol",
+      "fullKey": "docs.whitepaper.diagrams.federationProtocol",
       "type": "t_call"
     }
   ],
@@ -6476,6 +6476,7 @@
     "Dashboard.roiTitle",
     "Dashboard.trustTitle",
     "Demo.Badge",
+    "Demo.Charts.empty",
     "Demo.Charts.loading",
     "DemoSection.badge",
     "DemoSection.discovery.code",
@@ -6758,43 +6759,6 @@
     "WhitePaper.contribution",
     "WhitePaper.description",
     "WhitePaper.designPatterns",
-    "WhitePaper.detailedDiagrams.context.clouds.aws",
-    "WhitePaper.detailedDiagrams.context.clouds.azure",
-    "WhitePaper.detailedDiagrams.context.clouds.gcp",
-    "WhitePaper.detailedDiagrams.context.compliance.desc",
-    "WhitePaper.detailedDiagrams.context.compliance.title",
-    "WhitePaper.detailedDiagrams.context.controlPlane",
-    "WhitePaper.detailedDiagrams.context.decisionEngine",
-    "WhitePaper.detailedDiagrams.context.devOps.desc",
-    "WhitePaper.detailedDiagrams.context.devOps.title",
-    "WhitePaper.detailedDiagrams.context.interpreter",
-    "WhitePaper.detailedDiagrams.context.reconciliation.desc",
-    "WhitePaper.detailedDiagrams.context.reconciliation.title",
-    "WhitePaper.detailedDiagrams.federation.ap.policy",
-    "WhitePaper.detailedDiagrams.federation.ap.title",
-    "WhitePaper.detailedDiagrams.federation.eu.policy",
-    "WhitePaper.detailedDiagrams.federation.eu.title",
-    "WhitePaper.detailedDiagrams.federation.protocol",
-    "WhitePaper.detailedDiagrams.federation.us.policy",
-    "WhitePaper.detailedDiagrams.federation.us.title",
-    "WhitePaper.detailedDiagrams.governance.action.desc",
-    "WhitePaper.detailedDiagrams.governance.action.title",
-    "WhitePaper.detailedDiagrams.governance.cycleTime",
-    "WhitePaper.detailedDiagrams.governance.decision.desc",
-    "WhitePaper.detailedDiagrams.governance.decision.title",
-    "WhitePaper.detailedDiagrams.governance.signal.desc",
-    "WhitePaper.detailedDiagrams.governance.signal.title",
-    "WhitePaper.detailedDiagrams.governance.validation.desc",
-    "WhitePaper.detailedDiagrams.governance.validation.title",
-    "WhitePaper.detailedDiagrams.impact.compliance.desc",
-    "WhitePaper.detailedDiagrams.impact.compliance.title",
-    "WhitePaper.detailedDiagrams.impact.compliance.value",
-    "WhitePaper.detailedDiagrams.impact.mttr.desc",
-    "WhitePaper.detailedDiagrams.impact.mttr.title",
-    "WhitePaper.detailedDiagrams.impact.mttr.value",
-    "WhitePaper.detailedDiagrams.impact.opex.desc",
-    "WhitePaper.detailedDiagrams.impact.opex.title",
-    "WhitePaper.detailedDiagrams.impact.opex.value",
     "WhitePaper.detailedDiagrams.security.audit.desc",
     "WhitePaper.detailedDiagrams.security.audit.title",
     "WhitePaper.detailedDiagrams.security.fence.desc",
@@ -6807,6 +6771,40 @@
     "WhitePaper.pageCount",
     "WhitePaper.peerReview",
     "WhitePaper.readOnline",
-    "WhitePaper.title"
+    "WhitePaper.title",
+    "docs.whitepaper.diagrams.actionDesc",
+    "docs.whitepaper.diagrams.actionTitle",
+    "docs.whitepaper.diagrams.automatedAudit",
+    "docs.whitepaper.diagrams.cloudOpEx",
+    "docs.whitepaper.diagrams.clouds.aws",
+    "docs.whitepaper.diagrams.clouds.azure",
+    "docs.whitepaper.diagrams.clouds.gcp",
+    "docs.whitepaper.diagrams.complianceDesc",
+    "docs.whitepaper.diagrams.complianceRate",
+    "docs.whitepaper.diagrams.complianceTitle",
+    "docs.whitepaper.diagrams.controlPlane",
+    "docs.whitepaper.diagrams.cycleTime",
+    "docs.whitepaper.diagrams.decisionDesc",
+    "docs.whitepaper.diagrams.decisionEngine",
+    "docs.whitepaper.diagrams.decisionTitle",
+    "docs.whitepaper.diagrams.devOpsDesc",
+    "docs.whitepaper.diagrams.devOpsTitle",
+    "docs.whitepaper.diagrams.federationApPolicy",
+    "docs.whitepaper.diagrams.federationApTitle",
+    "docs.whitepaper.diagrams.federationEuPolicy",
+    "docs.whitepaper.diagrams.federationEuTitle",
+    "docs.whitepaper.diagrams.federationProtocol",
+    "docs.whitepaper.diagrams.federationUsPolicy",
+    "docs.whitepaper.diagrams.federationUsTitle",
+    "docs.whitepaper.diagrams.intentInterpreter",
+    "docs.whitepaper.diagrams.mttrDesc",
+    "docs.whitepaper.diagrams.mttrReduction",
+    "docs.whitepaper.diagrams.opexDesc",
+    "docs.whitepaper.diagrams.signalDesc",
+    "docs.whitepaper.diagrams.signalTitle",
+    "docs.whitepaper.diagrams.stateReconciliation",
+    "docs.whitepaper.diagrams.stateReconciliationDesc",
+    "docs.whitepaper.diagrams.validation",
+    "docs.whitepaper.diagrams.validationDesc"
   ]
 }

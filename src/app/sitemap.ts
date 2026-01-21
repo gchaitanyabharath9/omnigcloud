@@ -1,122 +1,31 @@
 import { MetadataRoute } from 'next'
 import { config } from '@/config'
+import { locales } from '@/navigation'
+import { PUBLIC_ROUTES_MANIFEST } from '@/config/routes'
 
 export default function sitemap(): MetadataRoute.Sitemap {
     const baseUrl = config.site.url || 'https://www.omnigcloud.com'
-    const currentDate = new Date()
-    const locales = ['en', 'es', 'fr', 'de', 'zh', 'hi', 'ja', 'ko']
 
-    // Main pages (Priority: 1.0)
-    const mainPages = [
-        '', // Homepage
-        '/pricing',
-        '/products',
-        '/solutions',
-        '/dashboard',
-        '/company',
-        '/contact',
-    ]
-
-    // Documentation & Resources (Priority: 0.9)
-    const docsPages = [
-        '/docs',
-        '/docs/whitepaper',
-        '/research',
-        '/research/papers',
-        '/visual-library',
-        '/community',
-    ]
-
-    // Research Papers (Priority: 0.9)
-    const researchPapers = [
-        '/research/papers/a1-cloud-native-enterprise-reference',
-        '/research/papers/a2-high-throughput-distributed-systems',
-        '/research/papers/a3-enterprise-observability-operational-intelligence',
-        '/research/papers/a4-platform-governance-multicloud-hybrid',
-        '/research/papers/a5-monolith-to-cloud-native-modernization',
-        '/research/papers/a6-adaptive-policy-enforcement',
-    ]
-
-    // Research Frameworks (Priority: 0.9)
-    const researchFrameworks = [
-        '/research/papers/aecp',
-        '/research/papers/scholarly-article',
-        '/research/distributed-systems-resilience',
-        '/research/automated-multilingual-quality-assurance',
-    ]
-
-    // Services (Priority: 0.8)
-    const servicePages = [
-        '/services/cloud-migration',
-        '/services/cloud-modernization',
-        '/services/microservices',
-        '/services/devops',
-    ]
-
-    // Industries (Priority: 0.8)
-    const industryPages = [
-        '/industries/finance',
-        '/industries/healthcare',
-    ]
-
-    // Platform Pages (Priority: 0.8)
-    const platformPages = [
-        '/platform',
-    ]
-
-    // Company Pages (Priority: 0.7)
-    const companyPages = [
-        '/partners',
-        '/publications',
-        '/founder',
-    ]
-
-    // Legal Pages (Priority: 0.5)
-    const legalPages = [
-        '/privacy',
-        '/terms',
-        '/security',
-        '/compliance',
-    ]
-
-    // Other Pages (Priority: 0.6)
-    const otherPages = [
-        '/blog',
-        '/case-studies',
-        '/onboarding',
-        '/demo',
-    ]
-
-    // Combine all routes with their priorities
-    const routeGroups = [
-        { routes: mainPages, priority: 1.0, changeFreq: 'daily' as const },
-        { routes: docsPages, priority: 0.9, changeFreq: 'weekly' as const },
-        { routes: researchPapers, priority: 0.9, changeFreq: 'monthly' as const },
-        { routes: researchFrameworks, priority: 0.9, changeFreq: 'monthly' as const },
-        { routes: servicePages, priority: 0.8, changeFreq: 'weekly' as const },
-        { routes: industryPages, priority: 0.8, changeFreq: 'weekly' as const },
-        { routes: platformPages, priority: 0.8, changeFreq: 'weekly' as const },
-        { routes: companyPages, priority: 0.7, changeFreq: 'monthly' as const },
-        { routes: otherPages, priority: 0.6, changeFreq: 'weekly' as const },
-        { routes: legalPages, priority: 0.5, changeFreq: 'yearly' as const },
-    ]
+    // Use a stable date (e.g., the start of the current month) to avoid daily churn in search engines
+    // unless content actually changes. For a demo/static-ish site, monthly or constant is better.
+    const lastModified = new Date();
+    lastModified.setHours(0, 0, 0, 0);
+    lastModified.setDate(1); // Set to 1st of the month for stability
 
     const sitemapEntries: MetadataRoute.Sitemap = []
 
     // Generate entries for all routes in all locales
-    for (const group of routeGroups) {
-        for (const route of group.routes) {
-            for (const locale of locales) {
-                // Handle root path correctly
-                const urlPath = route === '' ? `/${locale}` : `/${locale}${route}`
+    for (const route of PUBLIC_ROUTES_MANIFEST) {
+        for (const locale of locales) {
+            // Handle root path correctly
+            const urlPath = route.path === '' ? `/${locale}` : `/${locale}${route.path}`
 
-                sitemapEntries.push({
-                    url: `${baseUrl}${urlPath}`,
-                    lastModified: currentDate,
-                    changeFrequency: group.changeFreq,
-                    priority: group.priority,
-                })
-            }
+            sitemapEntries.push({
+                url: `${baseUrl}${urlPath}`,
+                lastModified: lastModified,
+                changeFrequency: route.changeFreq,
+                priority: route.priority,
+            })
         }
     }
 
