@@ -4,8 +4,10 @@ import React, { useState, useEffect } from 'react';
 import { Activity, Zap, Shield, Globe, Server, Database, Cloud, AlertTriangle, CheckCircle, TrendingUp } from 'lucide-react';
 import { EnhancedCostSavingsChart, LiveROIGauge, PulsingSecurityScore } from '@/components/visuals/EnhancedGraphs';
 import { UptimeRing } from '@/components/visuals/MetricsGraphs';
+import { useTranslations } from 'next-intl';
 
 export default function ExecutiveDashboardPage() {
+    const t = useTranslations('Dashboard.Executive');
     const [currentTime, setCurrentTime] = useState(new Date());
     const [activeAlerts, setActiveAlerts] = useState(2);
     const [systemStatus, setSystemStatus] = useState<'operational' | 'degraded' | 'critical'>('operational');
@@ -31,10 +33,10 @@ export default function ExecutiveDashboardPage() {
                     <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
                         <div>
                             <h1 style={{ fontSize: '2rem', fontWeight: 950, margin: 0, color: '#60efff', letterSpacing: '-0.02em' }}>
-                                EXECUTIVE OVERVIEW
+                                {t('title')}
                             </h1>
                             <div style={{ fontSize: '0.75rem', opacity: 0.5, marginTop: '0.25rem', fontFamily: 'var(--font-mono)' }}>
-                                STRATEGIC_ALIGNMENT_VIEW_v4.2.1
+                                {t('version')}
                             </div>
                         </div>
                         <div style={{ display: 'flex', gap: '2rem', alignItems: 'center' }}>
@@ -68,7 +70,7 @@ export default function ExecutiveDashboardPage() {
                                     color: systemStatus === 'operational' ? '#10b981' : '#ef4444',
                                     textTransform: 'uppercase'
                                 }}>
-                                    {systemStatus}
+                                    {t(`status.${systemStatus}`)}
                                 </span>
                             </div>
                         </div>
@@ -87,7 +89,7 @@ export default function ExecutiveDashboardPage() {
                         border: '1px solid rgba(96, 239, 255, 0.2)'
                     }}>
                         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'start', marginBottom: '1rem' }}>
-                            <div style={{ fontSize: '0.65rem', opacity: 0.5, fontWeight: 700, textTransform: 'uppercase' }}>Active Assets</div>
+                            <div style={{ fontSize: '0.65rem', opacity: 0.5, fontWeight: 700, textTransform: 'uppercase' }}>{t('metrics.activeAssets')}</div>
                             <Server size={20} color="#60efff" />
                         </div>
                         <div style={{ fontSize: '2.5rem', fontWeight: 950, color: '#60efff' }}>142</div>
@@ -100,7 +102,7 @@ export default function ExecutiveDashboardPage() {
                         border: '1px solid rgba(16, 185, 129, 0.2)'
                     }}>
                         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'start', marginBottom: '1rem' }}>
-                            <div style={{ fontSize: '0.65rem', opacity: 0.5, fontWeight: 700, textTransform: 'uppercase' }}>Revenue Impact</div>
+                            <div style={{ fontSize: '0.65rem', opacity: 0.5, fontWeight: 700, textTransform: 'uppercase' }}>{t('metrics.revenueImpact')}</div>
                             <Activity size={20} color="#10b981" />
                         </div>
                         <div style={{ fontSize: '2.5rem', fontWeight: 950, color: '#10b981' }}>+18%</div>
@@ -113,7 +115,7 @@ export default function ExecutiveDashboardPage() {
                         border: '1px solid rgba(139, 92, 246, 0.2)'
                     }}>
                         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'start', marginBottom: '1rem' }}>
-                            <div style={{ fontSize: '0.65rem', opacity: 0.5, fontWeight: 700, textTransform: 'uppercase' }}>Cloud Spend</div>
+                            <div style={{ fontSize: '0.65rem', opacity: 0.5, fontWeight: 700, textTransform: 'uppercase' }}>{t('metrics.cloudSpend')}</div>
                             <Database size={20} color="#8b5cf6" />
                         </div>
                         <div style={{ fontSize: '2.5rem', fontWeight: 950, color: '#8b5cf6' }}>-40%</div>
@@ -126,10 +128,10 @@ export default function ExecutiveDashboardPage() {
                         border: '1px solid rgba(16, 185, 129, 0.2)'
                     }}>
                         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'start', marginBottom: '1rem' }}>
-                            <div style={{ fontSize: '0.65rem', opacity: 0.5, fontWeight: 700, textTransform: 'uppercase' }}>System Health</div>
+                            <div style={{ fontSize: '0.65rem', opacity: 0.5, fontWeight: 700, textTransform: 'uppercase' }}>{t('metrics.systemHealth')}</div>
                             <CheckCircle size={20} color="#10b981" />
                         </div>
-                        <div style={{ fontSize: '1.5rem', fontWeight: 950, color: '#10b981' }}>OPTIMAL</div>
+                        <div style={{ fontSize: '1.5rem', fontWeight: 950, color: '#10b981' }}>{t('metrics.healthStatus')}</div>
                     </div>
                 </div>
 
@@ -140,11 +142,11 @@ export default function ExecutiveDashboardPage() {
                     <div id="roi" className="glass-panel" style={{ padding: '2rem', borderRadius: '1.5rem', background: 'rgba(10, 10, 10, 0.8)', scrollMarginTop: '120px' }}>
                         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'start', marginBottom: '1.5rem' }}>
                             <div>
-                                <h3 style={{ fontSize: '1.2rem', fontWeight: 900, margin: 0 }}>Executive Overview</h3>
-                                <p style={{ fontSize: '0.7rem', opacity: 0.5, margin: '0.25rem 0 0 0' }}>Real-time return on investment</p>
+                                <h3 style={{ fontSize: '1.2rem', fontWeight: 900, margin: 0 }}>{t('roi.title')}</h3>
+                                <p style={{ fontSize: '0.7rem', opacity: 0.5, margin: '0.25rem 0 0 0' }}>{t('roi.subtitle')}</p>
                             </div>
                             <div className="badge badge-success-subtle" style={{ fontSize: '0.6rem' }}>
-                                <TrendingUp size={10} className="mr-1" /> GROWING
+                                <TrendingUp size={10} className="mr-1" /> {t('roi.badge')}
                             </div>
                         </div>
                         <LiveROIGauge value={342} />
@@ -154,8 +156,8 @@ export default function ExecutiveDashboardPage() {
                     <div id="cost" className="glass-panel" style={{ padding: '2rem', borderRadius: '1.5rem', background: 'rgba(10, 10, 10, 0.8)', scrollMarginTop: '120px' }}>
                         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'start', marginBottom: '1.5rem' }}>
                             <div>
-                                <h3 style={{ fontSize: '1.2rem', fontWeight: 900, margin: 0 }}>Cost Arbitrage</h3>
-                                <p style={{ fontSize: '0.7rem', opacity: 0.5, margin: '0.25rem 0 0 0' }}>Multi-cloud cost optimization</p>
+                                <h3 style={{ fontSize: '1.2rem', fontWeight: 900, margin: 0 }}>{t('cost.title')}</h3>
+                                <p style={{ fontSize: '0.7rem', opacity: 0.5, margin: '0.25rem 0 0 0' }}>{t('cost.subtitle')}</p>
                             </div>
                             <Zap size={20} color="#f59e0b" />
                         </div>
@@ -173,7 +175,7 @@ export default function ExecutiveDashboardPage() {
                             marginTop: '1rem'
                         }}>
                             <div className="animate-pulse" style={{ width: 6, height: 6, background: '#10b981', borderRadius: '50%' }}></div>
-                            $45K SAVED THIS MONTH • 275% YOY INCREASE
+                            {t('cost.impact')}
                         </div>
                     </div>
 
@@ -181,8 +183,8 @@ export default function ExecutiveDashboardPage() {
                     <div id="uptime" className="glass-panel" style={{ padding: '2rem', borderRadius: '1.5rem', background: 'rgba(10, 10, 10, 0.8)', scrollMarginTop: '120px' }}>
                         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'start', marginBottom: '1.5rem' }}>
                             <div>
-                                <h3 style={{ fontSize: '1.2rem', fontWeight: 900, margin: 0 }}>Global Connectivity</h3>
-                                <p style={{ fontSize: '0.7rem', opacity: 0.5, margin: '0.25rem 0 0 0' }}>Platform availability and uptime</p>
+                                <h3 style={{ fontSize: '1.2rem', fontWeight: 900, margin: 0 }}>{t('uptime.title')}</h3>
+                                <p style={{ fontSize: '0.7rem', opacity: 0.5, margin: '0.25rem 0 0 0' }}>{t('uptime.subtitle')}</p>
                             </div>
                             <Globe size={20} color="#60efff" />
                         </div>
@@ -195,8 +197,8 @@ export default function ExecutiveDashboardPage() {
                     <div id="security" className="glass-panel" style={{ padding: '2rem', borderRadius: '1.5rem', background: 'rgba(10, 10, 10, 0.8)', scrollMarginTop: '120px' }}>
                         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'start', marginBottom: '1.5rem' }}>
                             <div>
-                                <h3 style={{ fontSize: '1.2rem', fontWeight: 900, margin: 0 }}>Compliance Radar</h3>
-                                <p style={{ fontSize: '0.7rem', opacity: 0.5, margin: '0.25rem 0 0 0' }}>Security posture & threat protection</p>
+                                <h3 style={{ fontSize: '1.2rem', fontWeight: 900, margin: 0 }}>{t('compliance.title')}</h3>
+                                <p style={{ fontSize: '0.7rem', opacity: 0.5, margin: '0.25rem 0 0 0' }}>{t('compliance.subtitle')}</p>
                             </div>
                             <Shield size={20} color="#8b5cf6" />
                         </div>
