@@ -43,7 +43,12 @@ async function scanForKeyLeaks() {
             // This implies renders search (which we can't do easily) or checking JSX children.
 
             // Let's look for pattern in JSX text context: >.*Pattern.*<
-            const jsxTextRegex = new RegExp(`>[^<]*${pattern.replace('.', '\\.')}[^<]*<`, 'g');
+            // Refined regex: Match literal patterns that look like keys, but ignore common dynamic patterns (e.g. {var.Pattern} or ${Pattern})
+            // We want to find: >SEO_Content.Title<
+            // We want to IGNORE: >{t('SEO_Content.Title')}< or >{props.title}<
+
+            // This is a naive heuristic: if the matched text contains { or } or $, it's likely code, not a literal string patterns.
+            const jsxTextRegex = new RegExp(`>([^<{}$]*${pattern.replace('.', '\\.')}[^<{}$]*)<`, 'g');
             const matches = content.match(jsxTextRegex);
 
             if (matches) {
