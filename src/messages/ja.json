@@ -2138,6 +2138,76 @@
       "retry": "Force Reboot"
     }
   },
+  "Papers": {
+    "Common": {
+      "abstractHeading": "Abstract",
+      "authorsHeading": "Primary Investigator",
+      "howToCite": "Citation Format (BibTeX)",
+      "keywordsHeading": "Keywords & Concepts",
+      "publicationLinksHeading": "Publication Venues",
+      "requestFullText": "Request Full Text (PDF)",
+      "requestFullTextDisclaimer": "Full text is available to qualified academic and enterprise partners upon request.",
+      "technicalReport": "Official Technical Report"
+    },
+    "Items": {
+      "a1": {
+        "abstract": "This standard establishes a sovereign boundary between application logic and infrastructure primitives, ensuring infinite portability across heterogeneous cloud providers while maintaining centralized governance. By decoupling the control plane from the data plane, A1 enables true digital sovereignty without sacrificing the velocity of modern cloud-native development cycles.",
+        "authors": "Chaitanya Bharath Gopu",
+        "keywords": "Cloud-Native, Distributed Systems, Sovereignty, Enterprise Architecture",
+        "subtitle": "The canonical A1 technical standard for implementing sovereign, multi-cloud platforms maximizing latency budgets and governance.",
+        "title": "A1 Reference Architecture: Cloud-Native Enterprise Platforms"
+      },
+      "a2": {
+        "abstract": "Explores the theoretical limits of message throughput in federated setups, proposing a novel 'Lattice-Mesh' topology that reduces cross-region latency by 40% compared to traditional hub-and-spoke models. Benchmarks demonstrate sustained throughput of 1M+ events/sec with guaranteed causal ordering.",
+        "authors": "Chaitanya Bharath Gopu",
+        "keywords": "High-Throughput, Event-Driven, Lattice-Mesh, Resilience",
+        "subtitle": "Architecting resilient, event-driven backbones for global-scale enterprise data fabrics.",
+        "title": "High-Throughput Distributed Systems"
+      },
+      "a3": {
+        "abstract": "Defines a standardized telemetry schema that unifies logs, metrics, and traces from disparate cloud providers into a single operational pane of glass. This approach enables AI-driven anomaly detection and automated root cause analysis across vendor boundaries.",
+        "authors": "Chaitanya Bharath Gopu",
+        "keywords": "Observability, Telemetry, AIOps, Operational Intelligence",
+        "subtitle": "A unified framework for full-stack visibility in fragmented multi-cloud environments.",
+        "title": "Enterprise Observability & Operational Intelligence"
+      },
+      "a4": {
+        "abstract": "Introduces the 'Governance-as-Code' paradigm, where policy definitions are version-controlled and enforced at the infrastructure provisioning layer. This ensures that every deployment, regardless of target environment, adheres to organizational security and compliance mandates by default.",
+        "authors": "Chaitanya Bharath Gopu",
+        "keywords": "Governance, Compliance-as-Code, Hybrid Cloud, Security",
+        "subtitle": "Enforcing compliance as code across on-premise, public, and sovereign clouds.",
+        "title": "Platform Governance in Hybrid Environments"
+      },
+      "a5": {
+        "abstract": "Presents a risk-mitigated formulation for strangling legacy monoliths. By employing domain-driven design and the 'Strangler Fig' pattern, enterprises can incrementally migrate business capabilities to a cloud-native architecture without disrupting critical operations or data integrity.",
+        "authors": "Chaitanya Bharath Gopu",
+        "keywords": "Modernization, Microservices, Legacy Migration, Domain-Driven Design",
+        "subtitle": "Strategic patterns for decomposing legacy systems into sovereign microservices.",
+        "title": "Monolith to Cloud-Native Modernization"
+      },
+      "a6": {
+        "abstract": "Proposes an adaptive control loop that continuously monitors infrastructure state against defined policies. Using reinforcement learning, the system can automatically remediate drift and respond to emerging security threats in real-time, minimizing the window of vulnerability.",
+        "authors": "Chaitanya Bharath Gopu",
+        "keywords": "Adaptive Policy, AI Security, Drift Detection, Automation",
+        "subtitle": "AI-driven policy engines for dynamic threat response and compliance adherence.",
+        "title": "Adaptive Policy Enforcement"
+      },
+      "aecp": {
+        "abstract": "AECP effectively acts as a meta-operating system for the enterprise cloud. It abstracts the underlying infrastructure complexity, providing a unified API for provisioning, securing, and managing resources across any number of cloud providers.",
+        "authors": "Chaitanya Bharath Gopu",
+        "keywords": "AECP, Control Plane, Meta-OS, Sovereign Kernel",
+        "subtitle": "The kernel of the sovereign cloud operating system.",
+        "title": "Autonomous Enterprise Control Plane (AECP)"
+      },
+      "arch": {
+        "abstract": "A catalog of proven architectural patterns for solving common sovereignty challenges, including 'Data Residency Fence', 'Zero-Trust Injection', and 'Federated Identity Broker'. These patterns provide a blueprint for architects to build systems that are secure by design.",
+        "authors": "Chaitanya Bharath Gopu",
+        "keywords": "Architecture Patterns, Design Patterns, Sovereignty, Security",
+        "subtitle": "Reusable design patterns for building compliant, resilient, and portable systems.",
+        "title": "Architectural Patterns for Sovereignty"
+      }
+    }
+  },
   "Demo": {
     "Badge": "Live view (demo)",
     "Charts": {
