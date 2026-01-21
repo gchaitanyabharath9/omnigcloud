@@ -826,7 +826,12 @@
     "version": "Version Details",
     "date_label": "Date_label Details",
     "date": "Date Details",
-    "footer": "Footer Details"
+    "footer": "Footer Details",
+    "intro": {
+      "fundamentalFlaw": "The fundamental flaw in DevOps tooling is the assumption that infrastructure can be managed through imperative commands.",
+      "paradigmShift": "We propose a paradigm shift: declarative, policy-driven infrastructure that self-heals and self-optimizes.",
+      "autonomousControl": "The Autonomous Enterprise Control Plane (AECP) represents this new approach."
+    }
   },
   "HomeSections": {
     "Pricing": {
@@ -877,7 +882,13 @@
       "subtitle": "Join the revolution today.",
       "primary": "Get Started",
       "secondary": "Contact Sales",
-      "disclaimer": "Free tier available."
+      "disclaimer": "Free tier available.",
+      "platformMetrics": "PLATFORM METRICS",
+      "realResults": "Real Results from Real Deployments",
+      "metrics": {
+        "errorReduction": "Error rate reduction in 30 days",
+        "averageUptime": "Average uptime across all deployments"
+      }
     }
   },
   "Platform": {
@@ -1159,23 +1170,60 @@
       "cta": "Explore Hero",
       "velocity": "Velocity Details",
       "errors": "Errors Details"
+    },
+    "devops": {
+      "hero": {
+        "title": "Platform Engineering Services",
+        "subtitle": "Transform your DevOps practice into a platform engineering powerhouse"
+      },
+      "overview": {
+        "title": "Platform Overview",
+        "transition": "Transitioning to Platform Engineering",
+        "transitionDesc": "Move from manual DevOps to automated platform engineering",
+        "capabilities": "Core Capabilities",
+        "capabilitiesDesc": "Self-service infrastructure, policy enforcement, and observability"
+      }
     }
   },
   "Blog": {
-    "hero": {
-      "tag": "Featured",
-      "title": "Hero",
-      "subtitle": "The standard for autonomous cloud governance.",
-      "search": "Search Details"
+    "sovereigntyFramework": {
+      "hero": {
+        "title": "Data Sovereignty Framework",
+        "subtitle": "A comprehensive guide to sovereign cloud architectures",
+        "date": "January 15, 2026",
+        "readTime": "12 MIN READ"
+      },
+      "sections": {
+        "dataInvariance": "Data Invariance",
+        "dataInvarianceDesc": "Ensuring data integrity across distributed systems",
+        "instructionalPortability": "Instructional Portability",
+        "instructionalDesc": "Platform-agnostic deployment patterns",
+        "policyEnforcement": "Policy Enforcement",
+        "policyDesc": "Automated compliance and governance"
+      }
     },
-    "newsletter": {
-      "title": "Newsletter",
-      "subtitle": "Control your data. Control your future.",
-      "placeholder": "Placeholder Details",
-      "button": "Explore Newsletter",
-      "footer": "Footer Details"
+    "cloudModernization": {
+      "hero": {
+        "title": "Cloud Modernization Guide",
+        "subtitle": "The formal mathematical framework behind autonomous enterprise control planes",
+        "date": "January 10, 2026",
+        "readTime": "15 MIN READ"
+      },
+      "intro": "The formal mathematical framework behind autonomous enterprise control planes provides a rigorous foundation for building sovereign cloud infrastructure."
     },
-    "posts": "Posts Details"
+    "cioExitStrategy": {
+      "hero": {
+        "title": "CIO's Guide",
+        "subtitle": "to Cloud Exit Strategies",
+        "date": "January 5, 2026",
+        "readTime": "18 MIN READ"
+      },
+      "sections": {
+        "vendorLock": "Understanding Vendor Lock-in",
+        "exitPlanning": "Strategic Exit Planning",
+        "implementation": "Implementation Roadmap"
+      }
+    }
   },
   "Investors": {
     "hero": {
@@ -1251,7 +1299,10 @@
     "explore": "Explore Details",
     "subtitle": "Empowering the next generation of regulated enterprise.",
     "tag": "PRODUCTS",
-    "title": "Infrastructure Sovereignty"
+    "title": "Infrastructure Sovereignty",
+    "detail": {
+      "platformMetrics": "PLATFORM METRICS"
+    }
   },
   "UseCases": {
     "hero": {
@@ -2506,6 +2557,101 @@
           "azure": "Azure (EU)",
           "gcp": "GCP (Asia)"
         }
+      }
+    }
+  },
+  "FloatingActions": {
+    "talkToExpert": "Talk to an Expert",
+    "chatSupport": {
+      "title": "Chat Support",
+      "replyTime": "Typically replies in 2m",
+      "greeting": "👋 Hi there! I'm your OmniGCloud assistant. How can I help you modernize your infrastructure today?",
+      "actions": {
+        "connectSales": "💬 Connect with Sales",
+        "bookDemo": "📅 Book a Platform Demo",
+        "viewDocs": "📚 View Documentation"
+      },
+      "placeholder": "Type a message..."
+    },
+    "contact": {
+      "title": "Get in Touch",
+      "description": "Our sovereign cloud architects are ready to audit your infrastructure.",
+      "emailArchitects": "Email Architects",
+      "viewFullPage": "View Full Contact Page"
+    }
+  },
+  "ChatWidget": {
+    "brand": "SOVEREIGN AI"
+  },
+  "GlobalError": {
+    "title": "SYSTEM_WIDE_FAILURE",
+    "message": "System integrity compromised. The application cannot load.",
+    "cta": "Force Reboot"
+  },
+  "Home": {
+    "cta": {
+      "realResults": "Real Results from Real Deployments",
+      "metrics": {
+        "errorReduction": "Error rate reduction in 30 days",
+        "averageUptime": "Average uptime across all deployments"
+      }
+    }
+  },
+  "Solutions": {
+    "hero": {
+      "title": "Enterprise Cloud Solutions",
+      "subtitle": "Sovereign infrastructure for regulated industries"
+    },
+    "challenge": {
+      "title": "The Challenge",
+      "localizedDrift": "Localized Data Drift",
+      "driftDesc": "Configuration drift across regions creates compliance gaps",
+      "vendorLock": "Vendor Lock-in",
+      "lockDesc": "Proprietary tooling prevents true multi-cloud portability",
+      "manualOps": "Manual Operations",
+      "opsDesc": "Human-driven processes introduce latency and errors"
+    },
+    "solution": {
+      "title": "The Solution",
+      "autonomous": "Autonomous Control Plane",
+      "autoDesc": "Self-healing infrastructure with policy-driven governance",
+      "sovereign": "Sovereign Architecture",
+      "sovDesc": "Data residency and compliance built into every layer",
+      "unified": "Unified Observability",
+      "unifiedDesc": "Real-time visibility across all cloud providers"
+    }
+  },
+  "Research": {
+    "hero": {
+      "title": "Research & Publications",
+      "subtitle": "Technical standards and scholarly articles"
+    },
+    "newPublication": "New Publication",
+    "featured": {
+      "title": "Reconciling Sovereignty, Scale, and Complexity",
+      "subtitle": "A formal framework for autonomous enterprise control planes",
+      "authors": "Chaitanya Bharath Gopu, et al.",
+      "date": "January 2026",
+      "readTime": "45 min read",
+      "abstract": "This paper presents a comprehensive framework for implementing sovereign cloud architectures at enterprise scale."
+    }
+  },
+  "ResearchPages": {
+    "distributedSystems": {
+      "hero": {
+        "title": "Distributed Systems Resilience",
+        "subtitle": "Building fault-tolerant cloud-native architectures"
+      },
+      "scenarios": {
+        "normal": "Standard operation. Request flows through.",
+        "failure": "Node failure detected. Traffic rerouted.",
+        "recovery": "System self-heals. Full capacity restored."
+      },
+      "sections": {
+        "chaosEngineering": "4. Chaos Engineering",
+        "chaosDesc": "Proactive failure injection to validate resilience",
+        "circuitBreaker": "5. Circuit Breaker Pattern",
+        "circuitDesc": "Prevent cascade failures with intelligent request handling"
       }
     }
   }

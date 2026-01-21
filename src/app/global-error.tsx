@@ -3,6 +3,13 @@
 import React from 'react';
 import { ShieldAlert, RefreshCcw } from 'lucide-react';
 
+// i18n strings (global-error can't use hooks, so we use constants)
+const ERROR_STRINGS = {
+    title: 'SYSTEM_WIDE_FAILURE',
+    message: 'System integrity compromised. The application cannot load.',
+    cta: 'Force Reboot'
+};
+
 export default function GlobalError({
     error,
     reset,
@@ -42,11 +49,11 @@ export default function GlobalError({
                         </div>
 
                         <h1 style={{ fontSize: '2.5rem', fontWeight: 900, marginBottom: '1rem' }}>
-                            SYSTEM_WIDE_FAILURE
+                            {ERROR_STRINGS.title}
                         </h1>
 
                         <p style={{ fontSize: '1.2rem', opacity: 0.8, marginBottom: '2rem' }}>
-                            System integrity compromised. The application cannot load.
+                            {ERROR_STRINGS.message}
                         </p>
 
                         <button
@@ -65,7 +72,7 @@ export default function GlobalError({
                                 gap: '0.5rem',
                                 margin: '0 auto'
                             }}>
-                            <RefreshCcw size={18} /> Force Reboot
+                            <RefreshCcw size={18} /> {ERROR_STRINGS.cta}
                         </button>
                     </div>
                 </div>

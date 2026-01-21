@@ -2,6 +2,7 @@
 
 import { useState, useRef, useEffect } from 'react';
 import { MessageSquare, X, Send, Bot, User, Sparkles } from 'lucide-react';
+import { useTranslations } from 'next-intl';
 
 type Message = {
     role: 'bot' | 'user';
@@ -9,6 +10,7 @@ type Message = {
 };
 
 export default function ChatWidget() {
+    const t = useTranslations('ChatWidget');
     const [isOpen, setIsOpen] = useState(false);
     const [messages, setMessages] = useState<Message[]>([
         { role: 'bot', text: 'Identity Verified. Welcome effectively to the Sovereign Command Console. How can I assist with your cloud modernization?' }
@@ -101,7 +103,7 @@ export default function ChatWidget() {
                     <div style={{ padding: '1rem', background: 'rgba(255,255,255,0.03)', borderBottom: '1px solid var(--card-border)', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
                         <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
                             <Sparkles size={16} color="var(--primary)" />
-                            <span style={{ fontWeight: 800, fontSize: '0.9rem', letterSpacing: '0.5px' }}>SOVEREIGN AI</span>
+                            <span style={{ fontWeight: 800, fontSize: '0.9rem', letterSpacing: '0.5px' }}>{t('brand')}</span>
                         </div>
                         <button onClick={() => setIsOpen(false)} style={{ background: 'none', border: 'none', color: 'var(--foreground)', cursor: 'pointer', opacity: 0.7 }}>
                             <X size={18} />

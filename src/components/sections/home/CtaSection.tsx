@@ -15,10 +15,10 @@ export default function CtaSection() {
                     <div style={{ marginBottom: '3rem' }}>
                         <div style={{ textAlign: 'center', marginBottom: '2rem' }}>
                             <div className="badge badge-primary-subtle mb-3" style={{ fontSize: '0.6rem', letterSpacing: '0.1em' }}>
-                                PLATFORM METRICS
+                                {t('platformMetrics')}
                             </div>
                             <h2 style={{ fontSize: 'var(--h2-size)', fontWeight: 900, marginBottom: '0.5rem' }}>
-                                Real Results from Real Deployments
+                                {t('realResults')}
                             </h2>
                             <p style={{ opacity: 0.7, maxWidth: '700px', margin: '0 auto', fontSize: '0.95rem' }}>
                                 See how enterprises are transforming their multi-cloud operations
@@ -35,7 +35,7 @@ export default function CtaSection() {
                                         <span style={{ fontSize: '1.25rem', fontWeight: 900, color: '#10b981' }}>-73%</span>
                                     </div>
                                     <p style={{ fontSize: '0.75rem', opacity: 0.7, margin: 0, lineHeight: 1.3 }}>
-                                        Error rate reduction in 30 days
+                                        {t('metrics.errorReduction')}
                                     </p>
                                 </div>
                             </div>
@@ -48,7 +48,7 @@ export default function CtaSection() {
                                         <span style={{ fontSize: '1.25rem', fontWeight: 900, color: '#3b82f6' }}>99.99%</span>
                                     </div>
                                     <p style={{ fontSize: '0.75rem', opacity: 0.7, margin: 0, lineHeight: 1.3 }}>
-                                        Average uptime across all deployments
+                                        {t('metrics.averageUptime')}
                                     </p>
                                 </div>
                             </div>

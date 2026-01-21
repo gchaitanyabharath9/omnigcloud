@@ -4,10 +4,12 @@ import { MessageCircle, Mail, X, Phone } from "lucide-react";
 import { useState } from "react";
 import { twMerge } from "tailwind-merge";
 import Link from 'next/link';
+import { useTranslations } from 'next-intl';
 import { ARCHITECTS_EMAIL } from "@/config/emails";
 import styles from "./FloatingActions.module.css";
 
 export default function FloatingActions() {
+    const t = useTranslations('FloatingActions');
     const [showChat, setShowChat] = useState(false);
     const [showContact, setShowContact] = useState(false);
 
@@ -33,7 +35,7 @@ export default function FloatingActions() {
                         textDecoration: 'none'
                     }}
                 >
-                    <Phone size={16} /> Talk to an Expert
+                    <Phone size={16} /> {t('talkToExpert')}
                 </Link>
 
                 {/* Contact Us Button */}
@@ -113,8 +115,8 @@ export default function FloatingActions() {
                         background: 'rgba(255,255,255,0.02)'
                     }}>
                         <div>
-                            <h3 style={{ margin: 0, fontSize: '1.1rem', fontWeight: 700 }}>Chat Support</h3>
-                            <p style={{ margin: 0, fontSize: '0.85rem', opacity: 0.6 }}>Typically replies in 2m</p>
+                            <h3 style={{ margin: 0, fontSize: '1.1rem', fontWeight: 700 }}>{t('chatSupport.title')}</h3>
+                            <p style={{ margin: 0, fontSize: '0.85rem', opacity: 0.6 }}>{t('chatSupport.replyTime')}</p>
                         </div>
                     </div>
 
@@ -133,15 +135,15 @@ export default function FloatingActions() {
                             border: '1px solid var(--card-border)'
                         }}>
                             <p style={{ margin: 0, fontSize: '0.95rem', color: 'var(--foreground)', lineHeight: 1.5 }}>
-                                👋 Hi there! I'm your OmniGCloud assistant. How can I help you modernize your infrastructure today?
+                                {t('chatSupport.greeting')}
                             </p>
                         </div>
 
                         <div style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem' }}>
                             {[
-                                "💬 Connect with Sales",
-                                "📅 Book a Platform Demo",
-                                "📚 View Documentation"
+                                t('chatSupport.actions.connectSales'),
+                                t('chatSupport.actions.bookDemo'),
+                                t('chatSupport.actions.viewDocs')
                             ].map((action, i) => (
                                 <button key={i} className="glass-panel" style={{
                                     padding: '1rem',
@@ -170,7 +172,7 @@ export default function FloatingActions() {
                     }}>
                         <input
                             type="text"
-                            placeholder="Type a message..."
+                            placeholder={t('chatSupport.placeholder')}
                             style={{
                                 width: '100%',
                                 padding: '1rem',
@@ -199,14 +201,14 @@ export default function FloatingActions() {
                         alignItems: 'center',
                         background: 'rgba(255,255,255,0.02)'
                     }}>
-                        <h3 style={{ margin: 0, fontSize: '1.1rem', fontWeight: 700 }}>Get in Touch</h3>
+                        <h3 style={{ margin: 0, fontSize: '1.1rem', fontWeight: 700 }}>{t('contact.title')}</h3>
                     </div>
 
                     {/* Contact Body */}
                     <div style={{ padding: '1.5rem' }}>
                         <div style={{ marginBottom: '1.5rem' }}>
                             <p style={{ fontSize: '0.95rem', color: 'var(--muted)', lineHeight: 1.5 }}>
-                                Our sovereign cloud architects are ready to audit your infrastructure.
+                                {t('contact.description')}
                             </p>
                         </div>
 
@@ -218,7 +220,7 @@ export default function FloatingActions() {
                             }}>
                                 <Mail size={20} color="var(--primary)" />
                                 <div>
-                                    <div style={{ fontWeight: 600, fontSize: '0.9rem', color: 'var(--foreground)' }}>Email Architects</div>
+                                    <div style={{ fontWeight: 600, fontSize: '0.9rem', color: 'var(--foreground)' }}>{t('contact.emailArchitects')}</div>
                                     <div style={{ fontSize: '0.8rem', color: 'var(--muted)' }}>{ARCHITECTS_EMAIL}</div>
                                 </div>
                             </a>
@@ -227,7 +229,7 @@ export default function FloatingActions() {
                                 justifyContent: 'center',
                                 padding: '0.875rem'
                             }}>
-                                View Full Contact Page
+                                {t('contact.viewFullPage')}
                             </a>
                         </div>
                     </div>
