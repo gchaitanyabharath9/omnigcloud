@@ -1,184 +1,167 @@
 {
-  "AboveTheFold": "[ZH] Above The Fold",
-  "Blog": {
-    "hero": {
-      "search": "[ZH] Search",
-      "subtitle": "[ZH] Discover the power of Hero",
-      "tag": "[ZH] Featured",
-      "title": "[ZH] Hero"
+  "Metadata": {
+    "Home": {
+      "title": "[ZH] OmnigCloud",
+      "description": "[ZH] Enterprise Cloud Solutions"
     },
-    "newsletter": {
-      "button": "[ZH] Explore Newsletter",
-      "footer": "[ZH] Footer",
-      "placeholder": "[ZH] Placeholder",
-      "subtitle": "[ZH] Discover the power of Newsletter",
-      "title": "[ZH] Newsletter"
+    "Company": {
+      "title": "[ZH] Company",
+      "description": "[ZH] Achieve FIPS 140-2 Level 3 compliance with our shielded execution environments."
     },
-    "posts": "[ZH] Posts"
-  },
-  "Breadcrumb": {
-    "blog": "[ZH] Blog",
-    "company": "[ZH] Company",
-    "compliance_maps": "[ZH] Compliance Maps",
-    "contact": "[ZH] Contact",
-    "dashboard": "[ZH] Dashboard",
-    "docs": "[ZH] Documentation",
-    "frameworks": "[ZH] Frameworks",
-    "home": "[ZH] Home",
-    "industries": "[ZH] Industries",
-    "onboarding": "[ZH] Onboarding",
-    "papers": "[ZH] Papers",
-    "platform": "[ZH] Platform",
-    "pricing": "[ZH] Pricing",
-    "products": "[ZH] Products",
-    "research": "[ZH] Research",
-    "resources": "[ZH] Resources",
-    "services": "[ZH] Services",
-    "solutions": "[ZH] Solutions",
-    "whitepaper": "[ZH] Whitepaper"
-  },
-  "Capabilities": {
-    "cta": "[ZH] View All Products",
-    "explore": "探索",
-    "subtitle": "[ZH] Explore the building blocks of our sovereign cloud platform.",
-    "tag": "[ZH] Capabilities",
-    "title": "[ZH] Core Capabilities"
+    "default": {
+      "title": "[ZH] Default",
+      "description": "[ZH] Ensure your data never leaves the jurisdiction you define, regardless of the underlying infrastructure."
+    },
+    "Pricing": {
+      "title": "[ZH] Pricing",
+      "description": "[ZH] OmniGCloud provides a unified control plane to enforce data sovereignty across all your cloud providers."
+    },
+    "Products": {
+      "title": "[ZH] Products",
+      "description": "[ZH] Automate compliance with real-time drift detection and auto-remediation policies."
+    },
+    "Solutions": {
+      "title": "[ZH] Solutions",
+      "description": "[ZH] Automate compliance with real-time drift detection and auto-remediation policies."
+    }
   },
   "Common": {
+    "loading": "[ZH] Loading...",
+    "error": "[ZH] An error occurred",
     "AboveTheFold": "[ZH] Above The Fold",
     "Header": {
-      "menu_accessibility_label": "[ZH] Menu_accessibility_label",
+      "menu_accessibility_label": "[ZH] Menu_accessibility_label Details",
       "nav": {
-        "onboarding": "[ZH] Onboarding"
+        "onboarding": "[ZH] Onboarding Details"
       },
-      "title": "[ZH] Header Title"
+      "title": "[ZH] Data Residency Control"
     },
     "Metadata": {
       "default": {
-        "description": "[ZH] Content: Default",
+        "description": "[ZH] Ensure your data never leaves the jurisdiction you define, regardless of the underlying infrastructure.",
         "title": "[ZH] Default Title"
       }
     },
     "abstract": {
-      "content": "[ZH] Content: Abstract",
+      "content": "[ZH] Achieve FIPS 140-2 Level 3 compliance with our shielded execution environments.",
       "title": "[ZH] Abstract Title"
     },
-    "acceptance": "[ZH] Acceptance",
+    "acceptance": "[ZH] Acceptance Details",
     "acceptanceText": "[ZH] Acceptance Text",
     "accessControls": "[ZH] Access Controls",
     "accountData": "[ZH] Account Data",
     "accountDataText": "[ZH] Account Data Text",
-    "active": "[ZH] Active",
+    "active": "[ZH] Active Details",
     "advancedDescription": "[ZH] Advanced Description",
     "advancedSecurity": "[ZH] Advanced Security",
     "architecture": {
       "control_plane": {
-        "content": "[ZH] Content: Control_plane",
+        "content": "[ZH] Decouple your business logic from vendor-specific APIs and regain full control of your digital estate.",
         "title": "[ZH] Control_plane Title"
       },
       "decision_engine": {
-        "content": "[ZH] Content: Decision_engine",
+        "content": "[ZH] OmniGCloud provides a unified control plane to enforce data sovereignty across all your cloud providers.",
         "title": "[ZH] Decision_engine Title"
       },
-      "p1": "[ZH] P1",
+      "p1": "[ZH] Monitor real-time infrastructure drift.",
       "state_sync": {
-        "content": "[ZH] Content: State_sync",
+        "content": "[ZH] Automate compliance with real-time drift detection and auto-remediation policies.",
         "title": "[ZH] State_sync Title"
       },
       "title": "[ZH] Architecture Title"
     },
     "aso": {
-      "p1": "[ZH] P1",
+      "p1": "[ZH] Generate audit-ready compliance reports.",
       "principles": {
         "automation": {
-          "content": "[ZH] Content: Automation",
+          "content": "[ZH] OmniGCloud provides a unified control plane to enforce data sovereignty across all your cloud providers.",
           "title": "[ZH] Automation Title"
         },
         "neutrality": {
-          "content": "[ZH] Content: Neutrality",
+          "content": "[ZH] OmniGCloud provides a unified control plane to enforce data sovereignty across all your cloud providers.",
           "title": "[ZH] Neutrality Title"
         },
         "observability": {
-          "content": "[ZH] Content: Observability",
+          "content": "[ZH] OmniGCloud provides a unified control plane to enforce data sovereignty across all your cloud providers.",
           "title": "[ZH] Observability Title"
         },
         "sovereignty": {
-          "content": "[ZH] Content: Sovereignty",
+          "content": "[ZH] OmniGCloud provides a unified control plane to enforce data sovereignty across all your cloud providers.",
           "title": "[ZH] Sovereignty Title"
         },
         "title": "[ZH] Principles Title"
       },
       "title": "[ZH] Aso Title"
     },
-    "audit": "[ZH] Audit",
+    "audit": "[ZH] Audit Details",
     "auditText": "[ZH] Audit Text",
-    "auth1": "[ZH] Auth1",
-    "auth2": "[ZH] Auth2",
-    "auth3": "[ZH] Auth3",
-    "authentication": "[ZH] Authentication",
+    "auth1": "[ZH] Auth1 Details",
+    "auth2": "[ZH] Auth2 Details",
+    "auth3": "[ZH] Auth3 Details",
+    "authentication": "[ZH] Authentication Details",
     "authenticationText": "[ZH] Authentication Text",
-    "author": "[ZH] Author",
-    "author_label": "[ZH] Author_label",
-    "authorization": "[ZH] Authorization",
-    "authz1": "[ZH] Authz1",
-    "authz2": "[ZH] Authz2",
-    "authz3": "[ZH] Authz3",
-    "backups": "[ZH] Backups",
+    "author": "[ZH] Author Details",
+    "author_label": "[ZH] Author_label Details",
+    "authorization": "[ZH] Authorization Details",
+    "authz1": "[ZH] Authz1 Details",
+    "authz2": "[ZH] Authz2 Details",
+    "authz3": "[ZH] Authz3 Details",
+    "backups": "[ZH] Backups Details",
     "backupsText": "[ZH] Backups Text",
-    "badge": "[ZH] Badge",
+    "badge": "[ZH] Badge Details",
     "banner": {
       "cta": "了解更多",
-      "description": "[ZH] Content: Banner",
+      "description": "[ZH] Seamlessly orchestrate workloads across AWS, Azure, and Google Cloud with strict governance boundaries.",
       "title": "[ZH] Banner Title"
     },
     "callbackUrl": "[ZH] Callback Url",
     "cards": {
       "api": {
         "cta": "了解更多",
-        "description": "[ZH] Content: Api",
-        "exhibit": "[ZH] Exhibit",
+        "description": "[ZH] OmniGCloud provides a unified control plane to enforce data sovereignty across all your cloud providers.",
+        "exhibit": "[ZH] Exhibit Details",
         "title": "[ZH] Api Title"
       },
       "architecture": {
         "cta": "了解更多",
-        "description": "[ZH] Content: Architecture",
-        "exhibit": "[ZH] Exhibit",
+        "description": "[ZH] Ensure your data never leaves the jurisdiction you define, regardless of the underlying infrastructure.",
+        "exhibit": "[ZH] Exhibit Details",
         "title": "[ZH] Architecture Title"
       },
       "guide": {
         "cta": "了解更多",
-        "description": "[ZH] Content: Guide",
-        "exhibit": "[ZH] Exhibit",
+        "description": "[ZH] Seamlessly orchestrate workloads across AWS, Azure, and Google Cloud with strict governance boundaries.",
+        "exhibit": "[ZH] Exhibit Details",
         "title": "[ZH] Guide Title"
       },
       "whitepaper": {
         "cta": "了解更多",
-        "description": "[ZH] Content: Whitepaper",
-        "exhibit": "[ZH] Exhibit",
+        "description": "[ZH] Achieve FIPS 140-2 Level 3 compliance with our shielded execution environments.",
+        "exhibit": "[ZH] Exhibit Details",
         "title": "[ZH] Whitepaper Title"
       }
     },
-    "challenges": "[ZH] Challenges",
-    "changes": "[ZH] Changes",
+    "challenges": "[ZH] Challenges Details",
+    "changes": "[ZH] Changes Details",
     "changesText": "[ZH] Changes Text",
-    "classification": "[ZH] Classification",
+    "classification": "[ZH] Classification Details",
     "clientId": "[ZH] Client Id",
-    "commitment": "[ZH] Commitment",
+    "commitment": "[ZH] Commitment Details",
     "commitmentText": "[ZH] Commitment Text",
     "conclusion": {
-      "p1": "[ZH] P1",
-      "p2": "[ZH] P2",
+      "p1": "[ZH] Monitor real-time infrastructure drift.",
+      "p2": "[ZH] Enforce auto-remediation policies.",
       "title": "[ZH] Conclusion Title"
     },
-    "contact": "[ZH] Contact",
+    "contact": "[ZH] Contact Details",
     "contactSecurity": "[ZH] Contact Security",
     "contactText": "[ZH] Contact Text",
-    "content": "[ZH] Content: Common",
-    "cookies": "[ZH] Cookies",
+    "content": "[ZH] Automate compliance with real-time drift detection and auto-remediation policies.",
+    "cookies": "[ZH] Cookies Details",
     "cookiesText": "[ZH] Cookies Text",
     "cta": {
-      "button": "[ZH] Button",
-      "subtitle": "[ZH] Subtitle for Cta",
+      "button": "[ZH] Button Details",
+      "subtitle": "[ZH] Empowering the next generation of regulated enterprise.",
       "title": "[ZH] Cta Title"
     },
     "dataCollection": "[ZH] Data Collection",
@@ -192,64 +175,63 @@
     "dataResidencyText": "[ZH] Data Residency Text",
     "dataRetention": "[ZH] Data Retention",
     "dataRetentionText": "[ZH] Data Retention Text",
-    "date": "[ZH] Date",
-    "date_label": "[ZH] Date_label",
+    "date": "[ZH] Date Details",
+    "date_label": "[ZH] Date_label Details",
     "decision_framework": {
       "components": {
         "adaptation": {
-          "content": "[ZH] Content: Adaptation",
+          "content": "[ZH] Automate compliance with real-time drift detection and auto-remediation policies.",
           "title": "[ZH] Adaptation Title"
         },
         "guardrails": {
-          "content": "[ZH] Content: Guardrails",
+          "content": "[ZH] Decouple your business logic from vendor-specific APIs and regain full control of your digital estate.",
           "title": "[ZH] Guardrails Title"
         },
         "intent_mapping": {
-          "content": "[ZH] Content: Intent_mapping",
+          "content": "[ZH] Seamlessly orchestrate workloads across AWS, Azure, and Google Cloud with strict governance boundaries.",
           "title": "[ZH] Intent_mapping Title"
         }
       },
-      "p1": "[ZH] P1",
+      "p1": "[ZH] Generate audit-ready compliance reports.",
       "title": "[ZH] Decision_framework Title"
     },
-    "description": "[ZH] Content: Common",
+    "description": "[ZH] Achieve FIPS 140-2 Level 3 compliance with our shielded execution environments.",
     "differentiation": {
-      "non_replicability": "[ZH] Non_replicability",
-      "p1": "[ZH] P1",
+      "non_replicability": "[ZH] Non_replicability Details",
+      "p1": "[ZH] Define your governance intent.",
       "title": "[ZH] Differentiation Title"
     },
-    "disabled": "[ZH] Disabled",
-    "disclaimer": "[ZH] Disclaimer",
+    "disabled": "[ZH] Disabled Details",
+    "disclaimer": "[ZH] Disclaimer Details",
     "disclaimerText": "[ZH] Disclaimer Text",
     "disclosureIntro": "[ZH] Disclosure Intro",
     "eb1a": {
-      "executive_summary_title": "[ZH] Executive_summary_title",
-      "importance": "[ZH] Importance",
-      "importance_label": "[ZH] Importance_label",
-      "originality": "[ZH] Originality",
-      "originality_label": "[ZH] Originality_label",
-      "p1": "[ZH] P1",
-      "summary_content": "[ZH] Summary_content",
+      "executive_summary_title": "[ZH] Executive_summary_title Details",
+      "importance": "[ZH] Importance Details",
+      "importance_label": "[ZH] Importance_label Details",
+      "originality": "[ZH] Originality Details",
+      "originality_label": "[ZH] Originality_label Details",
+      "p1": "[ZH] Define your governance intent.",
+      "summary_content": "[ZH] Summary_content Details",
       "title": "[ZH] Eb1a Title"
     },
     "email": {
-      "support": "[ZH] Support"
+      "support": "[ZH] Support Details"
     },
-    "enabled": "[ZH] Enabled",
-    "encryption": "[ZH] Encryption",
-    "encryption1": "[ZH] Encryption1",
-    "encryption2": "[ZH] Encryption2",
-    "encryption3": "[ZH] Encryption3",
+    "enabled": "[ZH] Enabled Details",
+    "encryption": "[ZH] Encryption Details",
+    "encryption1": "[ZH] Encryption1 Details",
+    "encryption2": "[ZH] Encryption2 Details",
+    "encryption3": "[ZH] Encryption3 Details",
     "encryptionText": "[ZH] Encryption Text",
-    "error": "发生错误",
     "execution_flow": {
-      "p1": "[ZH] P1",
+      "p1": "[ZH] Define your governance intent.",
       "steps": {
-        "s1": "[ZH] S1",
-        "s2": "[ZH] S2",
-        "s3": "[ZH] S3",
-        "s4": "[ZH] S4",
-        "s5": "[ZH] S5"
+        "s1": "[ZH] Generate audit-ready compliance reports.",
+        "s2": "[ZH] Define your governance intent.",
+        "s3": "[ZH] Deploy the control plane agent.",
+        "s4": "[ZH] Monitor real-time infrastructure drift.",
+        "s5": "[ZH] Enforce auto-remediation policies."
       },
       "title": "[ZH] Execution_flow Title"
     },
@@ -268,1445 +250,1463 @@
       }
     },
     "feasibility": {
-      "p1": "[ZH] P1",
+      "p1": "[ZH] Generate audit-ready compliance reports.",
       "sectors": {
         "finance": {
-          "impact": "[ZH] Impact",
+          "impact": "[ZH] Impact Details",
           "title": "[ZH] Finance Title"
         },
         "government": {
-          "impact": "[ZH] Impact",
+          "impact": "[ZH] Impact Details",
           "title": "[ZH] Government Title"
         },
         "healthcare": {
-          "impact": "[ZH] Impact",
+          "impact": "[ZH] Impact Details",
           "title": "[ZH] Healthcare Title"
         },
         "telecom": {
-          "impact": "[ZH] Impact",
+          "impact": "[ZH] Impact Details",
           "title": "[ZH] Telecom Title"
         }
       },
       "title": "[ZH] Feasibility Title"
     },
-    "footer": "[ZH] Footer",
-    "gdpr": "[ZH] Gdpr",
+    "footer": "[ZH] Footer Details",
+    "gdpr": "[ZH] Gdpr Details",
     "gdprText": "[ZH] Gdpr Text",
     "governingLaw": "[ZH] Governing Law",
     "governingLawText": "[ZH] Governing Law Text",
     "hero": {
-      "badge": "[ZH] Badge",
-      "description": "[ZH] Content: Hero",
-      "search": "[ZH] Search",
-      "subtitle": "[ZH] Subtitle for Hero",
+      "badge": "[ZH] Badge Details",
+      "description": "[ZH] Automate compliance with real-time drift detection and auto-remediation policies.",
+      "search": "[ZH] Search Details",
+      "subtitle": "[ZH] The standard for autonomous cloud governance.",
       "tag": "[ZH] HERO",
       "title": "[ZH] Hero Title"
     },
     "impact": {
-      "business_value": "[ZH] Business_value",
+      "business_value": "[ZH] Business_value Details",
       "metrics": {
-        "cost": "[ZH] Cost",
-        "cost_label": "[ZH] Cost_label",
-        "efficiency": "[ZH] Efficiency",
-        "efficiency_label": "[ZH] Efficiency_label",
-        "security": "[ZH] Security",
-        "security_label": "[ZH] Security_label"
+        "cost": "[ZH] Cost Details",
+        "cost_label": "[ZH] Cost_label Details",
+        "efficiency": "[ZH] Efficiency Details",
+        "efficiency_label": "[ZH] Efficiency_label Details",
+        "security": "[ZH] Security Details",
+        "security_label": "[ZH] Security_label Details"
       },
-      "p1": "[ZH] P1",
+      "p1": "[ZH] Deploy the control plane agent.",
       "title": "[ZH] Impact Title"
     },
     "inProgress": "[ZH] In Progress",
     "incidentResponse": "[ZH] Incident Response",
     "incidentResponseText": "[ZH] Incident Response Text",
-    "infra1": "[ZH] Infra1",
-    "infra2": "[ZH] Infra2",
-    "infrastructure": "[ZH] Infrastructure",
+    "infra1": "[ZH] Define your governance intent.",
+    "infra2": "[ZH] Define your governance intent.",
+    "infrastructure": "[ZH] Infrastructure Details",
     "infrastructureData": "[ZH] Infrastructure Data",
     "infrastructureDataText": "[ZH] Infrastructure Data Text",
     "introduction": {
-      "p1": "[ZH] P1",
-      "p2": "[ZH] P2",
-      "p3": "[ZH] P3",
+      "p1": "[ZH] Deploy the control plane agent.",
+      "p2": "[ZH] Enforce auto-remediation policies.",
+      "p3": "[ZH] Define your governance intent.",
       "title": "[ZH] Introduction Title"
     },
-    "iso27001": "[ZH] Iso27001",
+    "iso27001": "[ZH] Iso27001 Details",
     "iso27001Text": "[ZH] Iso27001 Text",
     "lastUpdated": "[ZH] Last Updated",
     "lifecycle": {
-      "resilience": "[ZH] Resilience",
+      "resilience": "[ZH] Resilience Details",
       "title": "[ZH] Lifecycle Title"
     },
     "limitations": {
-      "p1": "[ZH] P1",
-      "p2": "[ZH] P2",
+      "p1": "[ZH] Enforce auto-remediation policies.",
+      "p2": "[ZH] Monitor real-time infrastructure drift.",
       "title": "[ZH] Limitations Title"
     },
-    "loading": "加载中...",
-    "location": "[ZH] Location",
+    "location": "[ZH] Location Details",
     "logicMeshStatus": "[ZH] Logic Mesh Status",
     "meta": {
-      "description": "[ZH] Content: Meta",
+      "description": "[ZH] Decouple your business logic from vendor-specific APIs and regain full control of your digital estate.",
       "title": "[ZH] Meta Title"
     },
-    "monitor1": "[ZH] Monitor1",
-    "monitor2": "[ZH] Monitor2",
-    "monitoring": "[ZH] Monitoring",
+    "monitor1": "[ZH] Monitor1 Details",
+    "monitor2": "[ZH] Monitor2 Details",
+    "monitoring": "[ZH] Monitoring Details",
     "newsletter": {
-      "button": "[ZH] Button",
-      "footer": "[ZH] Footer",
-      "placeholder": "[ZH] Placeholder",
-      "subtitle": "[ZH] Subtitle for Newsletter",
+      "button": "[ZH] Button Details",
+      "footer": "[ZH] Footer Details",
+      "placeholder": "[ZH] Placeholder Details",
+      "subtitle": "[ZH] Control your data. Control your future.",
       "title": "[ZH] Newsletter Title"
     },
-    "operational": "[ZH] Operational",
+    "operational": "[ZH] Operational Details",
     "operationalText": "[ZH] Operational Text",
     "opportunity": {
-      "content": "[ZH] Content: Opportunity",
+      "content": "[ZH] OmniGCloud provides a unified control plane to enforce data sovereignty across all your cloud providers.",
       "title": "[ZH] Opportunity Title"
     },
     "outboundEmail": "[ZH] Outbound Email",
     "pgpKey": "[ZH] Pgp Key",
-    "planned": "[ZH] Planned",
+    "planned": "[ZH] Planned Details",
     "plans": {
-      "month": "[ZH] Month",
-      "popular": "[ZH] Popular"
+      "month": "[ZH] Month Details",
+      "popular": "[ZH] Popular Details"
     },
     "problem": {
       "compliance": {
-        "content": "[ZH] Content: Compliance",
-        "scenario": "[ZH] Scenario",
+        "content": "[ZH] Automate compliance with real-time drift detection and auto-remediation policies.",
+        "scenario": "[ZH] Scenario Details",
         "title": "[ZH] Compliance Title"
       },
       "metrics": {
-        "compliance_aso": "[ZH] Compliance_aso",
-        "compliance_label": "[ZH] Compliance_label",
-        "mttr_aso": "[ZH] Mttr_aso",
-        "mttr_aso_label": "[ZH] Mttr_aso_label",
-        "mttr_manual": "[ZH] Mttr_manual",
-        "mttr_manual_label": "[ZH] Mttr_manual_label",
-        "opex_label": "[ZH] Opex_label",
-        "opex_savings": "[ZH] Opex_savings"
+        "compliance_aso": "[ZH] Compliance_aso Details",
+        "compliance_label": "[ZH] Compliance_label Details",
+        "mttr_aso": "[ZH] Mttr_aso Details",
+        "mttr_aso_label": "[ZH] Mttr_aso_label Details",
+        "mttr_manual": "[ZH] Mttr_manual Details",
+        "mttr_manual_label": "[ZH] Mttr_manual_label Details",
+        "opex_label": "[ZH] Opex_label Details",
+        "opex_savings": "[ZH] Opex_savings Details"
       },
       "operational": {
-        "content": "[ZH] Content: Operational",
-        "scenario": "[ZH] Scenario",
+        "content": "[ZH] Decouple your business logic from vendor-specific APIs and regain full control of your digital estate.",
+        "scenario": "[ZH] Scenario Details",
         "title": "[ZH] Operational Title"
       },
-      "p1": "[ZH] P1",
+      "p1": "[ZH] Define your governance intent.",
       "title": "[ZH] Problem Title",
       "vendor_lock": {
-        "content": "[ZH] Content: Vendor_lock",
-        "scenario": "[ZH] Scenario",
+        "content": "[ZH] Achieve FIPS 140-2 Level 3 compliance with our shielded execution environments.",
+        "scenario": "[ZH] Scenario Details",
         "title": "[ZH] Vendor_lock Title"
       }
     },
-    "protection1": "[ZH] Protection1",
-    "protection2": "[ZH] Protection2",
-    "protection3": "[ZH] Protection3",
-    "protection4": "[ZH] Protection4",
+    "protection1": "[ZH] Protection1 Details",
+    "protection2": "[ZH] Protection2 Details",
+    "protection3": "[ZH] Protection3 Details",
+    "protection4": "[ZH] Protection4 Details",
     "references": {
       "title": "[ZH] References Title"
     },
     "reportingProcess": "[ZH] Reporting Process",
     "requestSaml": "[ZH] Request Saml",
-    "response1": "[ZH] Response1",
-    "response2": "[ZH] Response2",
-    "response3": "[ZH] Response3",
-    "response4": "[ZH] Response4",
+    "response1": "[ZH] Response1 Details",
+    "response2": "[ZH] Response2 Details",
+    "response3": "[ZH] Response3 Details",
+    "response4": "[ZH] Response4 Details",
     "responseProcess": "[ZH] Response Process",
-    "responsibility1": "[ZH] Responsibility1",
-    "responsibility2": "[ZH] Responsibility2",
-    "responsibility3": "[ZH] Responsibility3",
+    "responsibility1": "[ZH] Responsibility1 Details",
+    "responsibility2": "[ZH] Responsibility2 Details",
+    "responsibility3": "[ZH] Responsibility3 Details",
     "responsibleDisclosure": "[ZH] Responsible Disclosure",
-    "retention": "[ZH] Retention",
-    "right1": "[ZH] Right1",
-    "right2": "[ZH] Right2",
-    "right3": "[ZH] Right3",
-    "right4": "[ZH] Right4",
-    "role": "[ZH] Role",
-    "scope": "[ZH] Scope",
-    "scope1": "[ZH] Scope1",
-    "scope2": "[ZH] Scope2",
-    "scope3": "[ZH] Scope3",
-    "scope4": "[ZH] Scope4",
+    "retention": "[ZH] Retention Details",
+    "right1": "[ZH] Right1 Details",
+    "right2": "[ZH] Right2 Details",
+    "right3": "[ZH] Right3 Details",
+    "right4": "[ZH] Right4 Details",
+    "role": "[ZH] Role Details",
+    "scope": "[ZH] Scope Details",
+    "scope1": "[ZH] Scope1 Details",
+    "scope2": "[ZH] Scope2 Details",
+    "scope3": "[ZH] Scope3 Details",
+    "scope4": "[ZH] Scope4 Details",
     "securityEmail": "[ZH] Security Email",
     "securityPractices": "[ZH] Security Practices",
-    "service1": "[ZH] Service1",
-    "service2": "[ZH] Service2",
-    "service3": "[ZH] Service3",
-    "service4": "[ZH] Service4",
-    "services": "[ZH] Services",
+    "service1": "[ZH] Service1 Details",
+    "service2": "[ZH] Service2 Details",
+    "service3": "[ZH] Service3 Details",
+    "service4": "[ZH] Service4 Details",
+    "services": "[ZH] Services Details",
     "servicesText": "[ZH] Services Text",
     "sidebar": {
-      "blueprints": "[ZH] Blueprints",
-      "documentation": "[ZH] Documentation",
+      "blueprints": "[ZH] Blueprints Details",
+      "documentation": "[ZH] Documentation Details",
       "links": {
-        "architecture": "[ZH] Architecture",
-        "introduction": "[ZH] Introduction",
-        "security": "[ZH] Security",
-        "whitepaper": "[ZH] Whitepaper"
+        "architecture": "[ZH] Architecture Details",
+        "introduction": "[ZH] Introduction Details",
+        "security": "[ZH] Security Details",
+        "whitepaper": "[ZH] Whitepaper Details"
       }
     },
-    "soc2": "[ZH] Soc2",
+    "soc2": "[ZH] Soc2 Details",
     "soc2Text": "[ZH] Soc2 Text",
-    "solution": "[ZH] Solution",
+    "solution": "[ZH] Solution Details",
     "ssoConfiguration": "[ZH] Sso Configuration",
-    "step1": "[ZH] Step1",
-    "step2": "[ZH] Step2",
-    "step3": "[ZH] Step3",
-    "step4": "[ZH] Step4",
-    "subtitle": "[ZH] Subtitle for Common",
+    "step1": "[ZH] Enforce auto-remediation policies.",
+    "step2": "[ZH] Generate audit-ready compliance reports.",
+    "step3": "[ZH] Deploy the control plane agent.",
+    "step4": "[ZH] Define your governance intent.",
+    "subtitle": "[ZH] Security, compliance, and velocity in one platform.",
     "tenantId": "[ZH] Tenant Id",
-    "termination": "[ZH] Termination",
+    "termination": "[ZH] Termination Details",
     "terminationText": "[ZH] Termination Text",
     "thirdParty": "[ZH] Third Party",
     "thirdPartyText": "[ZH] Third Party Text",
-    "title": "[ZH] Common Title",
-    "transparency": "[ZH] Transparency",
+    "title": "[ZH] Multi-Cloud Compliance",
+    "transparency": "[ZH] Transparency Details",
     "transparencyText": "[ZH] Transparency Text",
     "trust": {
       "neutrality": {
-        "desc": "[ZH] Content: Neutrality",
+        "desc": "[ZH] OmniGCloud provides a unified control plane to enforce data sovereignty across all your cloud providers.",
         "title": "[ZH] Neutrality Title"
       },
       "residency": {
-        "desc": "[ZH] Content: Residency",
+        "desc": "[ZH] Decouple your business logic from vendor-specific APIs and regain full control of your digital estate.",
         "title": "[ZH] Residency Title"
       },
-      "subtitle": "[ZH] Subtitle for Trust",
+      "subtitle": "[ZH] Empowering the next generation of regulated enterprise.",
       "title": "[ZH] Trust Title"
     },
     "usageData": "[ZH] Usage Data",
     "usageDataText": "[ZH] Usage Data Text",
     "userResponsibilities": "[ZH] User Responsibilities",
     "userResponsibilitiesText": "[ZH] User Responsibilities Text",
-    "version": "[ZH] Version",
-    "version_label": "[ZH] Version_label",
+    "version": "[ZH] Version Details",
+    "version_label": "[ZH] Version_label Details",
     "vision": {
-      "content": "[ZH] Content: Vision",
+      "content": "[ZH] Ensure your data never leaves the jurisdiction you define, regardless of the underlying infrastructure.",
       "title": "[ZH] Vision Title"
     },
-    "welcome": "[ZH] Welcome",
+    "welcome": "[ZH] Welcome Details",
     "yourRights": "[ZH] Your Rights",
     "yourRightsText": "[ZH] Your Rights Text"
   },
-  "Community": {
-    "badge": "[ZH] New",
-    "cli": {
-      "cmd": "[ZH] Cmd",
-      "title": "[ZH] Cli"
-    },
-    "contribute": "[ZH] Contribute",
-    "join": "[ZH] Join",
-    "maintainers": {
-      "desc": "[ZH] Comprehensive details regarding Maintainers.",
-      "title": "[ZH] Maintainers"
-    },
-    "plugins": {
-      "desc": "[ZH] Comprehensive details regarding Plugins.",
-      "title": "[ZH] Plugins"
-    },
-    "subtitle": "[ZH] Discover the power of Community"
-  },
-  "Company": {
-    "email": {
-      "support": "[ZH] Support"
-    },
-    "location": "[ZH] Location"
-  },
-  "Compliance": {
-    "accessControls": "[ZH] Access Controls",
-    "active": "[ZH] Active",
-    "audit": "[ZH] Audit",
-    "auditText": "[ZH] Audit Text",
-    "auth1": "[ZH] Auth1",
-    "auth2": "[ZH] Auth2",
-    "auth3": "[ZH] Auth3",
-    "authentication": "[ZH] Authentication",
-    "authorization": "[ZH] Authorization",
-    "authz1": "[ZH] Authz1",
-    "authz2": "[ZH] Authz2",
-    "authz3": "[ZH] Authz3",
-    "backups": "[ZH] Backups",
-    "backupsText": "[ZH] Backups Text",
-    "dataHandling": "[ZH] Data Handling",
-    "dataResidency": "[ZH] Data Residency",
-    "dataResidencyText": "[ZH] Data Residency Text",
-    "encryption": "[ZH] Encryption",
-    "encryption1": "[ZH] Encryption1",
-    "encryption2": "[ZH] Encryption2",
-    "encryption3": "[ZH] Encryption3",
-    "gdpr": "[ZH] Gdpr",
-    "gdprText": "[ZH] Gdpr Text",
-    "inProgress": "[ZH] In Progress",
-    "incidentResponse": "[ZH] Incident Response",
-    "incidentResponseText": "[ZH] Incident Response Text",
-    "iso27001": "[ZH] Iso27001",
-    "iso27001Text": "[ZH] Iso27001 Text",
-    "operational": "[ZH] Operational",
-    "operationalText": "[ZH] Operational Text",
-    "planned": "[ZH] Planned",
-    "response1": "[ZH] Response1",
-    "response2": "[ZH] Response2",
-    "response3": "[ZH] Response3",
-    "response4": "[ZH] Response4",
-    "responseProcess": "[ZH] Response Process",
-    "retention": "[ZH] Retention",
-    "soc2": "[ZH] Soc2",
-    "soc2Text": "[ZH] Soc2 Text",
-    "subtitle": "[ZH] Discover the power of Compliance",
-    "title": "[ZH] Compliance",
-    "transparency": "[ZH] Transparency",
-    "transparencyText": "[ZH] Transparency Text"
-  },
-  "ContactSales": {
-    "bodyIntro": "[ZH] Body Intro",
-    "copyLabel": "[ZH] Copy Label",
-    "copyToast": "[ZH] Copy Toast",
-    "fallbackInstruction": "[ZH] Fallback Instruction",
-    "fallbackTitle": "[ZH] Fallback Title",
-    "rateLimitMessage": "[ZH] Rate Limit Message",
-    "subject": "[ZH] Subject",
-    "whatsappLabel": "[ZH] Whatsapp Label"
-  },
-  "CookieConsent": {
-    "accept": "[ZH] Accept Essential",
-    "close": "[ZH] Close",
-    "decline": "[ZH] Decline Optional",
-    "message": "[ZH] We use strictly necessary cookies to ensure platform security and data sovereignty compliance. Usage analytics are optional.",
-    "policyLink": "[ZH] Sovereignty Policy",
-    "sovereignNotice": "[ZH] Data resides in your jurisdiction",
-    "title": "[ZH] Privacy & Sovereignty"
-  },
-  "Dashboard": {
-    "active": "[ZH] Active",
-    "badge": "[ZH] New",
-    "globalHealth": "[ZH] Global Health",
-    "infraSubtitle": "[ZH] Infra Subtitle",
-    "infraTitle": "[ZH] Infra Title",
-    "liveSubtitle": "[ZH] Live Subtitle",
-    "liveTitle": "[ZH] Live Title",
-    "logicMeshStatus": "[ZH] Logic Mesh Status",
-    "optimizationTitle": "[ZH] Optimization Title",
-    "roiSubtitle": "[ZH] Roi Subtitle",
-    "roiTitle": "[ZH] Roi Title",
-    "role": "[ZH] Role",
-    "title": "[ZH] Dashboard",
-    "trustTitle": "[ZH] Trust Title",
-    "welcome": "[ZH] Welcome"
-  },
-  "DemoSection": {
-    "badge": "[ZH] New",
-    "discovery": {
-      "code": "[ZH] Code",
-      "desc": "[ZH] Comprehensive details regarding Discovery.",
-      "title": "[ZH] Discovery"
-    },
-    "drift": {
-      "code": "[ZH] Code",
-      "desc": "[ZH] Comprehensive details regarding Drift.",
-      "title": "[ZH] Drift"
-    },
-    "iac": {
-      "code": "[ZH] Code",
-      "desc": "[ZH] Comprehensive details regarding Iac.",
-      "title": "[ZH] Iac"
-    },
-    "subtitle": "[ZH] Discover the power of Demo Section",
-    "sync": {
-      "code": "[ZH] Code",
-      "desc": "[ZH] Comprehensive details regarding Sync.",
-      "title": "[ZH] Sync"
-    }
-  },
-  "Docs": {
-    "banner": {
-      "cta": "[ZH] Explore Banner",
-      "description": "[ZH] Comprehensive details regarding Banner.",
-      "title": "[ZH] Banner"
-    },
-    "cards": {
-      "_value": "[ZH] cards",
-      "api": {
-        "cta": "[ZH] Explore Api",
-        "description": "[ZH] Comprehensive details regarding Api.",
-        "exhibit": "[ZH] Exhibit",
-        "title": "[ZH] Api"
+  "Header": {
+    "nav": {
+      "dashboard": "[ZH] Dashboard Details",
+      "products": "[ZH] Products Details",
+      "solutions": "[ZH] Solutions Details",
+      "docs": "[ZH] Documentation",
+      "pricing": "[ZH] Pricing Details",
+      "company": "[ZH] Company Details",
+      "performance": "[ZH] Performance Details",
+      "telemetry": "[ZH] Telemetry Details",
+      "pillars": "[ZH] Core Products",
+      "advanced": "[ZH] Advanced Features",
+      "industries": "[ZH] Industries Details",
+      "useCases": "[ZH] Use Cases",
+      "documentation": "[ZH] Documentation Details",
+      "community": "[ZH] Community Details",
+      "tiers": "[ZH] Pricing Tiers",
+      "analysis": "[ZH] Analysis & Value",
+      "trust_compliance": "[ZH] Trust & Compliance",
+      "organization": "[ZH] Organization Details",
+      "contact_us": "[ZH] Contact Us",
+      "dashboard_links": {
+        "executive": "[ZH] Executive Dashboard",
+        "roi": "[ZH] ROI Analysis",
+        "cost": "[ZH] Cost Optimization",
+        "uptime": "[ZH] Uptime Monitoring",
+        "security": "[ZH] Security Overview",
+        "technical": "[ZH] Technical Metrics",
+        "resources": "[ZH] Resource Utilization",
+        "deployment": "[ZH] Deployment Status",
+        "scaling": "[ZH] Auto-Scaling",
+        "error": "[ZH] Error Tracking"
       },
-      "architecture": {
-        "cta": "[ZH] Explore Architecture",
-        "description": "[ZH] Comprehensive details regarding Architecture.",
-        "exhibit": "[ZH] Exhibit",
-        "title": "[ZH] Architecture"
+      "products_links": {
+        "playground": "[ZH] Sovereign Playground",
+        "workflows": "[ZH] G-Workflows",
+        "guard": "[ZH] Governance Guard",
+        "knowledge": "[ZH] Sovereign Knowledge",
+        "deploy": "[ZH] Obsidian Deploy",
+        "nexus": "[ZH] Cross-Cloud Nexus"
       },
-      "guide": {
-        "cta": "[ZH] Explore Guide",
-        "description": "[ZH] Comprehensive details regarding Guide.",
-        "exhibit": "[ZH] Exhibit",
-        "title": "[ZH] Guide"
+      "solutions_links": {
+        "financial": "[ZH] Financial Services",
+        "insurance": "[ZH] Insurance Details",
+        "telecom": "[ZH] Telecommunications",
+        "healthcare": "[ZH] Healthcare Details",
+        "logistics": "[ZH] Logistics Details",
+        "finance_mod": "[ZH] Financial Modernization",
+        "health_mod": "[ZH] Healthcare Compliance",
+        "gov_trust": "[ZH] Government Trust"
       },
-      "whitepaper": {
-        "cta": "[ZH] Explore Whitepaper",
-        "description": "[ZH] Comprehensive details regarding Whitepaper.",
-        "exhibit": "[ZH] Exhibit",
-        "title": "[ZH] Whitepaper"
-      }
+      "docs_links": {
+        "tech_docs": "[ZH] Technical Documentation",
+        "patterns": "[ZH] Architecture Patterns",
+        "api": "[ZH] API Reference",
+        "visual_library": "[ZH] Visual Library",
+        "newsroom": "[ZH] Newsroom Details",
+        "open_source": "[ZH] Open Source"
+      },
+      "pricing_links": {
+        "developer": "[ZH] Developer Details",
+        "professional": "[ZH] Professional Details",
+        "business": "[ZH] Business Details",
+        "sovereign": "[ZH] Sovereign Details",
+        "savings_analysis": "[ZH] Savings Analysis",
+        "value_economy": "[ZH] Value Economy",
+        "visual_architecture": "[ZH] Visual Architecture",
+        "compliance": "[ZH] Compliance Details",
+        "trust": "[ZH] Trust Details",
+        "faq": "[ZH] FAQ Details"
+      },
+      "company_links": {
+        "about": "[ZH] About Us",
+        "leadership": "[ZH] Leadership Details",
+        "operations": "[ZH] Global Operations",
+        "newsroom": "[ZH] Newsroom Details",
+        "investors": "[ZH] Investors Details",
+        "executive": "[ZH] Executive Office",
+        "contact": "[ZH] Contact Details",
+        "global_hq": "[ZH] Global HQ"
+      },
+      "trust_links": {
+        "compliance_maps": "[ZH] Compliance Maps"
+      },
+      "research": "[ZH] Research Details",
+      "onboarding": "[ZH] Onboarding Details",
+      "contactSales": "[ZH] Contact Sales",
+      "bodyIntro": "[ZH] Body Intro",
+      "copyLabel": "[ZH] Copy Label",
+      "copyToast": "[ZH] Copy Toast",
+      "fallbackInstruction": "[ZH] Fallback Instruction",
+      "fallbackTitle": "[ZH] Fallback Title",
+      "rateLimitMessage": "[ZH] Rate Limit Message",
+      "subject": "[ZH] Subject Details",
+      "whatsappLabel": "[ZH] Whatsapp Label"
     },
-    "hero": {
-      "badge": "[ZH] New",
-      "description": "[ZH] Comprehensive details regarding Hero.",
-      "title": "[ZH] Hero"
-    },
-    "meta": {
-      "description": "[ZH] Comprehensive details regarding Meta.",
-      "title": "[ZH] Meta"
-    },
-    "sidebar": {
-      "blueprint_links": "[ZH] Blueprint_links",
-      "blueprints": "[ZH] Blueprints",
-      "documentation": "[ZH] Documentation",
-      "links": {
-        "architecture": "[ZH] Architecture",
-        "introduction": "[ZH] Introduction",
-        "security": "[ZH] Security",
-        "whitepaper": "[ZH] Whitepaper"
-      }
-    }
-  },
-  "Ecosystem": {
-    "ai": {
-      "desc": "[ZH] Comprehensive details regarding Ai.",
-      "link": "[ZH] Link",
-      "status": "[ZH] Status",
-      "title": "[ZH] Ai"
-    },
-    "badge": "[ZH] New",
-    "governance": {
-      "desc": "[ZH] Comprehensive details regarding Governance.",
-      "link": "[ZH] Link",
-      "status": "[ZH] Status",
-      "title": "[ZH] Governance"
-    },
-    "mesh": {
-      "desc": "[ZH] Comprehensive details regarding Mesh.",
-      "link": "[ZH] Link",
-      "status": "[ZH] Status",
-      "title": "[ZH] Mesh"
-    },
-    "subtitle": "[ZH] Discover the power of Ecosystem",
-    "title": "[ZH] Ecosystem",
-    "vault": {
-      "desc": "[ZH] Comprehensive details regarding Vault.",
-      "link": "[ZH] Link",
-      "status": "[ZH] Status",
-      "title": "[ZH] Vault"
-    }
-  },
-  "Engagement": {
-    "primary": "[ZH] Primary",
-    "secondary": "[ZH] Secondary",
-    "subtitle": "[ZH] Discover the power of Engagement",
-    "title": "[ZH] Engagement"
-  },
-  "Enterprise": {
-    "approach": {
-      "pillars": [
-        {
-          "desc": "Enterprise-grade security",
-          "title": "Security"
-        },
-        {
-          "desc": "Scale to millions",
-          "title": "Scale"
-        },
-        {
-          "desc": "99.999% uptime",
-          "title": "Stability"
-        }
-      ],
-      "subtitle": "[ZH] How we help you scale",
-      "title": "[ZH] Enterprise approach"
-    },
-    "partnership": {
-      "p1": "[ZH] P1",
-      "p2": "[ZH] P2",
-      "pillars": "[ZH] Pillars",
-      "steps": [
-        {
-          "desc": "We understand your needs",
-          "title": "Consultation"
-        },
-        {
-          "desc": "We build your solution",
-          "title": "Implementation"
-        },
-        {
-          "desc": "We grow with you",
-          "title": "Support"
-        }
-      ],
-      "subtitle": "[ZH] Discover the power of Partnership",
-      "title": "[ZH] Partnership"
-    },
-    "trust": {
-      "p1": "[ZH] We provide the most secure platform.",
-      "p2": "[ZH] Used by Fortune 500 companies.",
-      "title": "[ZH] Trusted by Enterprises"
-    }
+    "title": "OmniGCloud",
+    "menu_accessibility_label": "[ZH] Toggle Menu",
+    "latency_badge": "[ZH] Global Latency"
   },
   "Footer": {
     "company": {
       "_value": "[ZH] Company",
-      "about": "[ZH] About Us",
-      "contact": "[ZH] Contact",
       "label": "[ZH] Company",
-      "leadership": "[ZH] Leadership"
+      "about": "[ZH] About Us",
+      "leadership": "[ZH] Leadership Details",
+      "contact": "[ZH] Contact Details"
     },
-    "copyright": "[ZH] © 2026 OmniGCloud Inc. All rights reserved.",
-    "directory": "[ZH] Directory",
-    "footerText": "[ZH] OmniGCloud - Enforce Sovereignty.",
     "platform": {
-      "control": "[ZH] Control Plane",
-      "iac": "[ZH] Infrastructure as Code",
       "label": "[ZH] Platform",
-      "obs": "[ZH] Observability",
-      "policy": "[ZH] Policy Engine"
-    },
-    "resources": {
-      "docs": "[ZH] Documentation",
-      "label": "[ZH] Resources",
-      "visual_library": "[ZH] Visual Library"
+      "control": "[ZH] Control Plane",
+      "policy": "[ZH] Policy Engine",
+      "iac": "[ZH] Infrastructure as Code",
+      "obs": "[ZH] Observability"
     },
     "services": {
       "label": "[ZH] Services"
     },
-    "status": "[ZH] System Status",
-    "tagline": "[ZH] The Sovereign Cloud for the AI Era",
-    "trust": {
-      "privacy": "[ZH] Privacy",
-      "security": "[ZH] Security"
-    }
-  },
-  "Header": {
-    "latency_badge": "[ZH] Global Latency",
-    "menu_accessibility_label": "[ZH] Toggle Menu",
-    "nav": {
-      "advanced": "[ZH] Advanced Features",
-      "analysis": "[ZH] Analysis & Value",
-      "bodyIntro": "[ZH] Body Intro",
-      "community": "[ZH] Community",
-      "company": "[ZH] Company",
-      "company_links": {
-        "about": "[ZH] About Us",
-        "contact": "[ZH] Contact",
-        "executive": "[ZH] Executive Office",
-        "global_hq": "[ZH] Global HQ",
-        "investors": "[ZH] Investors",
-        "leadership": "[ZH] Leadership",
-        "newsroom": "[ZH] Newsroom",
-        "operations": "[ZH] Global Operations"
-      },
-      "contactSales": "[ZH] Contact Sales",
-      "contact_us": "[ZH] Contact Us",
-      "copyLabel": "[ZH] Copy Label",
-      "copyToast": "[ZH] Copy Toast",
-      "dashboard": "[ZH] Dashboard",
-      "dashboard_links": {
-        "cost": "[ZH] Cost Optimization",
-        "deployment": "[ZH] Deployment Status",
-        "error": "[ZH] Error Tracking",
-        "executive": "[ZH] Executive Dashboard",
-        "resources": "[ZH] Resource Utilization",
-        "roi": "[ZH] ROI Analysis",
-        "scaling": "[ZH] Auto-Scaling",
-        "security": "[ZH] Security Overview",
-        "technical": "[ZH] Technical Metrics",
-        "uptime": "[ZH] Uptime Monitoring"
-      },
+    "resources": {
+      "label": "[ZH] Resources",
       "docs": "[ZH] Documentation",
-      "docs_links": {
-        "api": "[ZH] API Reference",
-        "newsroom": "[ZH] Newsroom",
-        "open_source": "[ZH] Open Source",
-        "patterns": "[ZH] Architecture Patterns",
-        "tech_docs": "[ZH] Technical Documentation",
-        "visual_library": "[ZH] Visual Library"
-      },
-      "documentation": "[ZH] Documentation",
-      "fallbackInstruction": "[ZH] Fallback Instruction",
-      "fallbackTitle": "[ZH] Fallback Title",
-      "industries": "[ZH] Industries",
-      "onboarding": "[ZH] Onboarding",
-      "organization": "[ZH] Organization",
-      "performance": "[ZH] Performance",
-      "pillars": "[ZH] Core Products",
-      "pricing": "[ZH] Pricing",
-      "pricing_links": {
-        "business": "[ZH] Business",
-        "compliance": "[ZH] Compliance",
-        "developer": "[ZH] Developer",
-        "faq": "[ZH] FAQ",
-        "professional": "[ZH] Professional",
-        "savings_analysis": "[ZH] Savings Analysis",
-        "sovereign": "[ZH] Sovereign",
-        "trust": "[ZH] Trust",
-        "value_economy": "[ZH] Value Economy",
-        "visual_architecture": "[ZH] Visual Architecture"
-      },
-      "products": "[ZH] Products",
-      "products_links": {
-        "deploy": "[ZH] Obsidian Deploy",
-        "guard": "[ZH] Governance Guard",
-        "knowledge": "[ZH] Sovereign Knowledge",
-        "nexus": "[ZH] Cross-Cloud Nexus",
-        "playground": "[ZH] Sovereign Playground",
-        "workflows": "[ZH] G-Workflows"
-      },
-      "rateLimitMessage": "[ZH] Rate Limit Message",
-      "research": "[ZH] Research",
-      "solutions": "[ZH] Solutions",
-      "solutions_links": {
-        "finance_mod": "[ZH] Financial Modernization",
-        "financial": "[ZH] Financial Services",
-        "gov_trust": "[ZH] Government Trust",
-        "health_mod": "[ZH] Healthcare Compliance",
-        "healthcare": "[ZH] Healthcare",
-        "insurance": "[ZH] Insurance",
-        "logistics": "[ZH] Logistics",
-        "telecom": "[ZH] Telecommunications"
-      },
-      "subject": "[ZH] Subject",
-      "telemetry": "[ZH] Telemetry",
-      "tiers": "[ZH] Pricing Tiers",
-      "trust_compliance": "[ZH] Trust & Compliance",
-      "trust_links": {
-        "compliance_maps": "[ZH] Compliance Maps"
-      },
-      "useCases": "[ZH] Use Cases",
-      "whatsappLabel": "[ZH] Whatsapp Label"
-    },
-    "title": "OmniGCloud"
-  },
-  "Hero": {
-    "badge": "[ZH] ENTERPRISE SOVEREIGNTY",
-    "ctaArchitecture": "[ZH] Visual Architecture",
-    "ctaPrimary": "[ZH] Explore Platform",
-    "ctaWhitepaper": "[ZH] Read Whitepaper",
-    "experts": {
-      "count": "[ZH] Experts Available"
-    },
-    "stats": {
-      "assets": "[ZH] Assets Managed",
-      "drift": "[ZH] Drift Detected",
-      "nodes": "[ZH] Active Nodes"
-    },
-    "subtitle": "[ZH] Regain control of your digital estate with the world's first sovereign multi-cloud fabric. Enforce governance logic at the infrastructure level.",
-    "systemStatus": {
-      "live": "[ZH] System Operational"
-    },
-    "title": "[ZH] The Autonomous Cloud",
-    "trust": "[ZH] TRUSTED BY LEADING REGULATED INDUSTRIES"
-  },
-  "HomeSections": {
-    "Cta": {
-      "disclaimer": "[ZH] Free tier available.",
-      "primary": "[ZH] Get Started",
-      "secondary": "[ZH] Contact Sales",
-      "subtitle": "[ZH] Join the revolution today.",
-      "title": "[ZH] Start your sovereign journey"
-    },
-    "Pricing": {
-      "core": {
-        "badge": "[ZH] STARTER",
-        "cta": "[ZH] Start Building",
-        "desc": "[ZH] Perfect for testing sovereignty patterns.",
-        "features": {
-          "drift": "[ZH] Standard Drift Detection",
-          "nodes": "[ZH] Up to 50 Nodes",
-          "sla": "[ZH] 99.9% SLA",
-          "support": "[ZH] Email Support"
-        },
-        "price": "[ZH] Free",
-        "unit": "[ZH] /month"
-      },
-      "enterprise": {
-        "badge": "[ZH] PROFESSIONAL",
-        "cta": "[ZH] Contact Sales",
-        "desc": "[ZH] Full autonomous control for regulated workloads.",
-        "features": {
-          "finops": "[ZH] FinOps Dashboard",
-          "nodes": "[ZH] Unlimited Nodes",
-          "rbac": "[ZH] Advanced RBAC",
-          "remediation": "[ZH] Auto-Remediation",
-          "support": "[ZH] 24/7 Dedicated Support"
-        },
-        "popular": "[ZH] MOST POPULAR",
-        "price": "[ZH] Custom"
-      },
-      "federal": {
-        "badge": "[ZH] FEDERAL",
-        "cta": "[ZH] Verify Clearance",
-        "desc": "[ZH] For government and defense sectors.",
-        "features": {
-          "audit": "[ZH] Continuous Audit",
-          "byok": "[ZH] Bring Your Own Key",
-          "onprem": "[ZH] Air-Gapped Support",
-          "security": "[ZH] FIPS 140-2 Level 3"
-        },
-        "price": "[ZH] Restricted"
-      },
-      "subtitle": "[ZH] No hidden costs. Pay for the control plane, bring your own cloud.",
-      "title": "[ZH] Transparent Pricing"
-    }
-  },
-  "Industries": {
-    "badge": "[ZH] New",
-    "challenges": "[ZH] Challenges",
-    "cta": {
-      "button": "[ZH] Explore Cta",
-      "subtitle": "[ZH] Discover the power of Cta",
-      "title": "[ZH] Cta"
-    },
-    "solution": "[ZH] Solution",
-    "subtitle": "[ZH] Discover the power of Industries",
-    "title": "[ZH] Industries"
-  },
-  "Investors": {
-    "hero": {
-      "subtitle": "[ZH] Discover the power of Hero",
-      "tag": "[ZH] Featured",
-      "title": "[ZH] Hero"
-    },
-    "opportunity": {
-      "content": "[ZH] Comprehensive details regarding Opportunity.",
-      "metrics": "[ZH] Metrics",
-      "title": "[ZH] Opportunity"
-    },
-    "vision": {
-      "content": "[ZH] Comprehensive details regarding Vision.",
-      "title": "[ZH] Vision"
-    }
-  },
-  "Metadata": {
-    "Company": {
-      "description": "[ZH] Comprehensive details regarding Company.",
-      "title": "[ZH] Company"
-    },
-    "Home": {
-      "description": "企业云解决方案",
-      "title": "[ZH] OmnigCloud"
-    },
-    "Pricing": {
-      "description": "[ZH] Comprehensive details regarding Pricing.",
-      "title": "[ZH] Pricing"
-    },
-    "Products": {
-      "description": "[ZH] Comprehensive details regarding Products.",
-      "title": "[ZH] Products"
-    },
-    "Solutions": {
-      "description": "[ZH] Comprehensive details regarding Solutions.",
-      "title": "[ZH] Solutions"
-    },
-    "default": {
-      "description": "[ZH] Comprehensive details regarding Default.",
-      "title": "[ZH] Default"
-    }
-  },
-  "Newsroom": {
-    "badge": "[ZH] New",
-    "cta": "[ZH] Explore Newsroom",
-    "link": "[ZH] Link",
-    "news": "[ZH] News",
-    "title": "[ZH] Newsroom"
-  },
-  "Platform": {
-    "arbitrage": {
-      "auditor": "[ZH] Auditor",
-      "auditorTitle": "[ZH] Auditor Title",
-      "eb1aDesc": "[ZH] Eb1a Desc",
-      "eb1aTag": "[ZH] Eb1a Tag",
-      "forecastDesc": "[ZH] Forecast Desc",
-      "forecastTitle": "[ZH] Forecast Title",
-      "lockinDesc": "[ZH] Lockin Desc",
-      "lockinTitle": "[ZH] Lockin Title",
-      "portabilityDesc": "[ZH] Portability Desc",
-      "portabilityTitle": "[ZH] Portability Title",
-      "subtitle": "[ZH] Discover the power of Arbitrage",
-      "switchDesc": "[ZH] Switch Desc",
-      "switchTitle": "[ZH] Switch Title",
-      "tag": "[ZH] Featured",
-      "title": "[ZH] Arbitrage"
-    },
-    "comparison": {
-      "capability": "[ZH] Capability",
-      "footer": "[ZH] Footer",
-      "legacy": "[ZH] Legacy",
-      "limited": "[ZH] Limited",
-      "partial": "[ZH] Partial",
-      "rows": {
-        "arbitrage": "[ZH] Arbitrage",
-        "audits": "[ZH] Audits",
-        "encryption": "[ZH] Encryption",
-        "iam": "[ZH] Iam",
-        "neutrality": "[ZH] Neutrality",
-        "refactoring": "[ZH] Refactoring",
-        "sync": "[ZH] Sync"
-      },
-      "sovereign": "[ZH] Sovereign",
-      "subtitle": "[ZH] Discover the power of Comparison",
-      "title": "[ZH] Comparison"
-    },
-    "control": {
-      "audit": "[ZH] Audit",
-      "fleet": "[ZH] Fleet",
-      "gitops": "[ZH] Gitops",
-      "healing": "[ZH] Healing",
-      "observability": {
-        "desc": "[ZH] Comprehensive details regarding Observability.",
-        "title": "[ZH] Observability"
-      },
-      "subtitle": "[ZH] Discover the power of Control",
-      "title": "[ZH] Control"
-    },
-    "core": {
-      "desc": "[ZH] Comprehensive details regarding Core.",
-      "title": "[ZH] Core"
-    },
-    "hero": {
-      "ctaPrimary": "[ZH] Cta Primary",
-      "ctaSecondary": "[ZH] Cta Secondary",
-      "subtitle": "[ZH] Discover the power of Hero",
-      "title": "[ZH] Hero"
-    },
-    "integrations": {
-      "delivery": "[ZH] Delivery",
-      "identity": "[ZH] Identity",
-      "infra": "[ZH] Infra",
-      "obs": "[ZH] Obs",
-      "subtitle": "[ZH] Discover the power of Integrations",
-      "title": "[ZH] Integrations"
-    },
-    "security": {
-      "cta": "[ZH] Explore Security",
-      "desc": "[ZH] Comprehensive details regarding Security.",
-      "features": {
-        "audit": {
-          "desc": "[ZH] Comprehensive details regarding Audit.",
-          "title": "[ZH] Audit Feature"
-        },
-        "fips": {
-          "desc": "[ZH] Comprehensive details regarding Fips.",
-          "title": "[ZH] Fips Feature"
-        },
-        "rbac": {
-          "desc": "[ZH] Comprehensive details regarding Rbac.",
-          "title": "[ZH] Rbac Feature"
-        },
-        "vpc": {
-          "desc": "[ZH] Comprehensive details regarding Vpc.",
-          "title": "[ZH] Vpc Feature"
-        }
-      },
-      "title": "[ZH] Security",
-      "zerotrust": "[ZH] Zerotrust"
-    },
-    "stack": {
-      "active": "[ZH] Active",
-      "api": "[ZH] Api",
-      "cluster": "[ZH] Cluster",
-      "db": "[ZH] Db",
-      "logic": "[ZH] Logic",
-      "scaling": "[ZH] Scaling",
-      "shielded": "[ZH] Shielded",
-      "verified": "[ZH] Verified"
-    }
-  },
-  "Pricing": {
-    "cta": {
-      "button": "[ZH] Explore Cta",
-      "subtitle": "[ZH] Discover the power of Cta",
-      "title": "[ZH] Cta"
-    },
-    "faq": {
-      "q1": {
-        "a": "[ZH] A",
-        "q": "[ZH] Q"
-      },
-      "q2": {
-        "a": "[ZH] A",
-        "q": "[ZH] Q"
-      },
-      "q3": {
-        "a": "[ZH] A",
-        "q": "[ZH] Q"
-      }
-    },
-    "hero": {
-      "subtitle": "[ZH] Discover the power of Hero",
-      "tag": "[ZH] Featured",
-      "title": "[ZH] Hero"
-    },
-    "plans": {
-      "_value": "[ZH] plans",
-      "month": "[ZH] Month",
-      "popular": "[ZH] Popular"
+      "visual_library": "[ZH] Visual Library"
     },
     "trust": {
-      "neutrality": {
-        "desc": "[ZH] Comprehensive details regarding Neutrality.",
-        "title": "[ZH] Neutrality"
-      },
-      "residency": {
-        "desc": "[ZH] Comprehensive details regarding Residency.",
-        "title": "[ZH] Residency"
-      },
-      "subtitle": "[ZH] Discover the power of Trust",
-      "title": "[ZH] Trust"
-    }
-  },
-  "Privacy": {
-    "accountData": "[ZH] Account Data",
-    "accountDataText": "[ZH] Account Data Text",
-    "changes": "[ZH] Changes",
-    "changesText": "[ZH] Changes Text",
-    "commitment": "[ZH] Commitment",
-    "commitmentText": "[ZH] Commitment Text",
-    "contact": "[ZH] Contact",
-    "contactText": "[ZH] Contact Text",
-    "cookies": "[ZH] Cookies",
-    "cookiesText": "[ZH] Cookies Text",
-    "dataCollection": "[ZH] Data Collection",
-    "dataCollectionText": "[ZH] Data Collection Text",
-    "dataProtection": "[ZH] Data Protection",
-    "dataProtectionText": "[ZH] Data Protection Text",
-    "dataRetention": "[ZH] Data Retention",
-    "dataRetentionText": "[ZH] Data Retention Text",
-    "infrastructureData": "[ZH] Infrastructure Data",
-    "infrastructureDataText": "[ZH] Infrastructure Data Text",
-    "lastUpdated": "[ZH] Last Updated",
-    "protection1": "[ZH] Protection1",
-    "protection2": "[ZH] Protection2",
-    "protection3": "[ZH] Protection3",
-    "protection4": "[ZH] Protection4",
-    "right1": "[ZH] Right1",
-    "right2": "[ZH] Right2",
-    "right3": "[ZH] Right3",
-    "right4": "[ZH] Right4",
-    "thirdParty": "[ZH] Third Party",
-    "thirdPartyText": "[ZH] Third Party Text",
-    "title": "[ZH] Privacy",
-    "usageData": "[ZH] Usage Data",
-    "usageDataText": "[ZH] Usage Data Text",
-    "yourRights": "[ZH] Your Rights",
-    "yourRightsText": "[ZH] Your Rights Text"
-  },
-  "Problem": {
-    "badge": "[ZH] New",
-    "fragmentation": {
-      "desc": "[ZH] Comprehensive details regarding Fragmentation.",
-      "title": "[ZH] Fragmentation"
+      "security": "[ZH] Security Details",
+      "privacy": "[ZH] Privacy Details"
     },
-    "opacity": {
-      "desc": "[ZH] Comprehensive details regarding Opacity.",
-      "scanning": "[ZH] Scanning",
-      "title": "[ZH] Opacity"
-    },
-    "regulatory": {
-      "desc": "[ZH] Comprehensive details regarding Regulatory.",
-      "risk": "[ZH] Risk",
-      "score": "[ZH] Score",
-      "title": "[ZH] Regulatory"
-    },
-    "subtitle": "[ZH] Discover the power of Problem",
-    "title": "[ZH] Problem",
-    "vendor": {
-      "desc": "[ZH] Comprehensive details regarding Vendor.",
-      "title": "[ZH] Vendor"
-    }
-  },
-  "Products": {
-    "cta": "了解更多",
-    "deploy": {
-      "description": "[ZH] Content: Deploy",
-      "shortDesc": "[ZH] Atomic, immutable production releases.",
-      "title": "[ZH] Obsidian Deploy"
-    },
-    "explore": "探索",
-    "guard": {
-      "description": "[ZH] Content: Guard",
-      "shortDesc": "[ZH] Real-time compliance auto-remediation.",
-      "title": "[ZH] Governance Guard"
-    },
-    "hero": {
-      "subtitle": "[ZH] Everything you need to build, secure, and scale compliant infrastructure.",
-      "tag": "[ZH] Platform Products",
-      "title": "[ZH] A Sovereign Suite"
-    },
-    "knowledge": {
-      "description": "[ZH] Content: Knowledge",
-      "shortDesc": "[ZH] Secure RAG for regulatory data.",
-      "title": "[ZH] Sovereign Knowledge"
-    },
-    "nexus": {
-      "description": "[ZH] Content: Nexus",
-      "shortDesc": "[ZH] Global telemetry and cost arbitrage.",
-      "title": "[ZH] Cross-Cloud Nexus"
-    },
-    "playground": {
-      "description": "[ZH] Content: Playground",
-      "shortDesc": "[ZH] IDE for prototyping cross-cloud infra.",
-      "title": "[ZH] Sovereign Playground"
-    },
-    "subtitle": "[ZH] Subtitle for Products",
-    "tag": "[ZH] PRODUCTS",
-    "title": "[ZH] Products Title",
-    "workflows": {
-      "description": "[ZH] Content: Workflows",
-      "shortDesc": "[ZH] Visual multi-step orchestration engine.",
-      "title": "[ZH] G-Workflows"
-    }
-  },
-  "SEO_Content": {
-    "Home": {
-      "AboveTheFold": "[ZH] OmniGCloud is the first autonomous multi-cloud fabric that enforces data sovereignty at the infrastructure level, allowing enterprises to decouple logic from vendor-specific APIs.",
-      "DeepDive": {
-        "content": "[ZH] Our platform eliminates the complexity of multi-cloud management by abstracting provider APIs into a unified control plane. This ensures that your business logic remains portable and secure, preventing vendor lock-in and guaranteeing long-term operational resilience.",
-        "title": "[ZH] Architectural Deep Dive"
-      },
-      "FAQ": {
-        "items": [
-          {
-            "a": "Terraform is a deployment tool; OmniGCloud is an active state enforcement engine that corrects drift automatically.",
-            "q": "How does OmniGCloud differ from Terraform?"
-          },
-          {
-            "a": "Yes, we support all major hyperscalers including AWS, Azure, GCP, and on-premise OpenShift clusters.",
-            "q": "Is it compatible with AWS and Azure?"
-          }
-        ],
-        "title": "[ZH] F.A.Q"
-      },
-      "HowItWorks": {
-        "steps": [
-          {
-            "desc": "Define your governance and sovereignty rules in a vendor-agnostic format.",
-            "title": "Intent Definition"
-          },
-          {
-            "desc": "The AECP kernel continuously audits and corrects infrastructure drift.",
-            "title": "Fabric Arbitration"
-          },
-          {
-            "desc": "Logic is pushed to the edge, ensuring compliance regardless of the underlying cloud.",
-            "title": "State Enforcement"
-          }
-        ],
-        "title": "[ZH] Autonomous Synchronization"
-      },
-      "LeadCapture": {
-        "cta": "[ZH] Book Consultation",
-        "subtitle": "[ZH] Schedule a comprehensive architecture review with our sovereign cloud experts.",
-        "title": "[ZH] Ready to regain control?"
-      },
-      "TechnicalApproach": {
-        "content": "[ZH] We utilize a lattice-based state synchronization engine that operates on a millisecond scale, providing real-time remediation of non-compliant infrastructure states.",
-        "title": "[ZH] Technical Approach"
-      },
-      "WhyItMatters": {
-        "content": "[ZH] In an era of fragmenting regulations, data residency is no longer optional. OmniGCloud provides mathematical guarantees that your data stays where it needs to be.",
-        "title": "[ZH] Why Sovereignty Matters"
-      }
-    }
-  },
-  "Security": {
-    "authentication": "[ZH] Authentication",
-    "authenticationText": "[ZH] Authentication Text",
-    "contactSecurity": "[ZH] Contact Security",
-    "disclosureIntro": "[ZH] Disclosure Intro",
-    "encryption": "[ZH] Encryption",
-    "encryptionText": "[ZH] Encryption Text",
-    "infra1": "[ZH] Infra1",
-    "infra2": "[ZH] Infra2",
-    "infrastructure": "[ZH] Infrastructure",
-    "monitor1": "[ZH] Monitor1",
-    "monitor2": "[ZH] Monitor2",
-    "monitoring": "[ZH] Monitoring",
-    "pgpKey": "[ZH] Pgp Key",
-    "reportingProcess": "[ZH] Reporting Process",
-    "responsibleDisclosure": "[ZH] Responsible Disclosure",
-    "scope": "[ZH] Scope",
-    "scope1": "[ZH] Scope1",
-    "scope2": "[ZH] Scope2",
-    "scope3": "[ZH] Scope3",
-    "scope4": "[ZH] Scope4",
-    "securityEmail": "[ZH] Security Email",
-    "securityPractices": "[ZH] Security Practices",
-    "step1": "[ZH] Step1",
-    "step2": "[ZH] Step2",
-    "step3": "[ZH] Step3",
-    "step4": "[ZH] Step4",
-    "subtitle": "[ZH] Discover the power of Security",
-    "title": "[ZH] Security"
-  },
-  "SecuritySettings": {
-    "advancedDescription": "[ZH] Advanced Description",
-    "advancedSecurity": "[ZH] Advanced Security",
-    "clientId": "[ZH] Client Id",
-    "description": "[ZH] Comprehensive details regarding Security Settings.",
-    "disabled": "[ZH] Disabled",
-    "enabled": "[ZH] Enabled",
-    "outboundEmail": "[ZH] Outbound Email",
-    "requestSaml": "[ZH] Request Saml",
-    "ssoConfiguration": "[ZH] Sso Configuration",
-    "tenantId": "[ZH] Tenant Id",
-    "title": "[ZH] Security Settings"
-  },
-  "Services": {
-    "DataAI": {
-      "analytics": {
-        "desc": "[ZH] Comprehensive details regarding Analytics.",
-        "title": "[ZH] Analytics"
-      },
-      "fabric": {
-        "desc": "[ZH] Comprehensive details regarding Fabric.",
-        "title": "[ZH] Fabric"
-      },
-      "search": {
-        "desc": "[ZH] Comprehensive details regarding Search.",
-        "title": "[ZH] Search"
-      },
-      "sovereignty": {
-        "desc": "[ZH] Comprehensive details regarding Sovereignty.",
-        "title": "[ZH] Sovereignty"
-      },
-      "subtitle": "[ZH] Discover the power of Data A I",
-      "title": "[ZH] Data A I",
-      "uptime": "[ZH] Uptime"
-    },
-    "Hero": {
-      "badge": "[ZH] New",
-      "cta": "[ZH] Explore Hero",
-      "errors": "[ZH] Errors",
-      "velocity": "[ZH] Velocity"
-    },
-    "Migration": {
-      "azure": {
-        "desc": "[ZH] Comprehensive details regarding Azure.",
-        "title": "[ZH] Azure"
-      },
-      "drift": {
-        "desc": "[ZH] Comprehensive details regarding Drift.",
-        "title": "[ZH] Drift"
-      },
-      "ocp": {
-        "desc": "[ZH] Comprehensive details regarding Ocp.",
-        "title": "[ZH] Ocp"
-      },
-      "provisioning": {
-        "desc": "[ZH] Comprehensive details regarding Provisioning.",
-        "title": "[ZH] Provisioning"
-      },
-      "subtitle": "[ZH] Discover the power of Migration",
-      "title": "[ZH] Migration"
-    },
-    "Operations": {
-      "audit": {
-        "desc": "[ZH] Comprehensive details regarding Audit.",
-        "title": "[ZH] Audit"
-      },
-      "finops": {
-        "desc": "[ZH] Comprehensive details regarding Finops.",
-        "title": "[ZH] Finops"
-      },
-      "healing": {
-        "desc": "[ZH] Comprehensive details regarding Healing.",
-        "title": "[ZH] Healing"
-      },
-      "sre": {
-        "desc": "[ZH] Comprehensive details regarding Sre.",
-        "title": "[ZH] Sre"
-      },
-      "subtitle": "[ZH] Discover the power of Operations",
-      "title": "[ZH] Operations"
-    },
-    "Stack": {
-      "ansible": {
-        "desc": "[ZH] Comprehensive details regarding Ansible.",
-        "title": "[ZH] Ansible"
-      },
-      "badge": "[ZH] New",
-      "subtitle": "[ZH] Discover the power of Stack",
-      "terraform": {
-        "desc": "[ZH] Comprehensive details regarding Terraform.",
-        "title": "[ZH] Terraform"
-      },
-      "title": "[ZH] Stack"
-    }
-  },
-  "SovereignGallery": {
-    "subtitle": "[ZH] Discover the power of Sovereign Gallery",
-    "title": "[ZH] Sovereign Gallery"
-  },
-  "Terms": {
-    "acceptance": "[ZH] Acceptance",
-    "acceptanceText": "[ZH] Acceptance Text",
-    "contact": "[ZH] Contact",
-    "contactText": "[ZH] Contact Text",
-    "dataOwnership": "[ZH] Data Ownership",
-    "dataOwnershipText": "[ZH] Data Ownership Text",
-    "disclaimer": "[ZH] Disclaimer",
-    "disclaimerText": "[ZH] Disclaimer Text",
-    "governingLaw": "[ZH] Governing Law",
-    "governingLawText": "[ZH] Governing Law Text",
-    "lastUpdated": "[ZH] Last Updated",
-    "responsibility1": "[ZH] Responsibility1",
-    "responsibility2": "[ZH] Responsibility2",
-    "responsibility3": "[ZH] Responsibility3",
-    "service1": "[ZH] Service1",
-    "service2": "[ZH] Service2",
-    "service3": "[ZH] Service3",
-    "service4": "[ZH] Service4",
-    "services": "[ZH] Services",
-    "servicesText": "[ZH] Services Text",
-    "termination": "[ZH] Termination",
-    "terminationText": "[ZH] Termination Text",
-    "title": "[ZH] Terms",
-    "userResponsibilities": "[ZH] User Responsibilities",
-    "userResponsibilitiesText": "[ZH] User Responsibilities Text"
-  },
-  "UseCases": {
-    "hero": {
-      "subtitle": "[ZH] Discover how regulated industries use OmniGCloud to achieve sovereignty.",
-      "tag": "[ZH] Proven Solutions",
-      "title": "[ZH] Use Cases"
-    }
-  },
-  "Visuals": {
-    "drift": {
-      "detected": "[ZH] Detected",
-      "remediate": "[ZH] Remediate",
-      "title": "[ZH] Drift"
-    },
-    "telemetry": {
-      "latency": "[ZH] Latency",
-      "live": "[ZH] Live",
-      "loss": "[ZH] Loss",
-      "throughput": "[ZH] Throughput",
-      "title": "[ZH] Telemetry"
-    }
-  },
-  "WhitePaper": {
-    "badge": "[ZH] LATEST RESEARCH",
-    "contribution": "[ZH] Contribution",
-    "description": "[ZH] A comprehensive framework for achieving mathematical certainty in data sovereignty across multi-cloud environments.",
-    "designPatterns": "[ZH] Design Patterns",
-    "downloadSubtitle": "[ZH] Get the full technical specification, including architecture diagrams, decision frameworks, and implementation guides.",
-    "downloadTitle": "[ZH] Download the Whitepaper",
-    "footer": "[ZH] Available in PDF / ePub formats.",
-    "pageCount": "[ZH] 42 Pages",
-    "peerReview": "[ZH] Peer Reviewed",
-    "readOnline": "[ZH] Read Online",
-    "title": "[ZH] The Autonomous Sovereign Cloud Protocol"
+    "tagline": "[ZH] The Sovereign Cloud for the AI Era",
+    "directory": "[ZH] Directory Details",
+    "status": "[ZH] System Status",
+    "copyright": "[ZH] © 2026 OmniGCloud Inc. All rights reserved.",
+    "footerText": "[ZH] OmniGCloud - Enforce Sovereignty."
   },
   "Whitepaper": {
-    "abstract": {
-      "content": "[ZH] Comprehensive details regarding Abstract.",
-      "title": "[ZH] Abstract"
-    },
-    "architecture": {
-      "control_plane": {
-        "content": "[ZH] Comprehensive details regarding Control_plane.",
-        "title": "[ZH] Control_plane"
-      },
-      "decision_engine": {
-        "content": "[ZH] Comprehensive details regarding Decision_engine.",
-        "title": "[ZH] Decision_engine"
-      },
-      "p1": "[ZH] P1",
-      "state_sync": {
-        "content": "[ZH] Comprehensive details regarding State_sync.",
-        "title": "[ZH] State_sync"
-      },
-      "title": "[ZH] Architecture"
-    },
     "aso": {
-      "p1": "[ZH] P1",
       "principles": {
-        "automation": {
-          "content": "[ZH] Comprehensive details regarding Automation.",
-          "title": "[ZH] Automation Principle"
-        },
         "neutrality": {
-          "content": "[ZH] Comprehensive details regarding Neutrality.",
-          "title": "[ZH] Neutrality Principle"
+          "title": "[ZH] Neutrality Principle",
+          "content": "[ZH] OmniGCloud provides a unified control plane to enforce data sovereignty across all your cloud providers."
         },
-        "observability": {
-          "content": "[ZH] Comprehensive details regarding Observability.",
-          "title": "[ZH] Observability Principle"
+        "automation": {
+          "title": "[ZH] Automation Principle",
+          "content": "[ZH] OmniGCloud provides a unified control plane to enforce data sovereignty across all your cloud providers."
         },
         "sovereignty": {
-          "content": "[ZH] Comprehensive details regarding Sovereignty.",
-          "title": "[ZH] Sovereignty Principle"
+          "title": "[ZH] Sovereignty Principle",
+          "content": "[ZH] OmniGCloud provides a unified control plane to enforce data sovereignty across all your cloud providers."
+        },
+        "observability": {
+          "title": "[ZH] Observability Principle",
+          "content": "[ZH] OmniGCloud provides a unified control plane to enforce data sovereignty across all your cloud providers."
         },
         "title": "[ZH] Principles"
       },
-      "title": "[ZH] Aso"
+      "title": "[ZH] Aso",
+      "p1": "[ZH] Generate audit-ready compliance reports."
     },
-    "author": "[ZH] Author",
-    "author_label": "[ZH] Author_label",
-    "classification": "[ZH] Classification",
-    "conclusion": {
-      "p1": "[ZH] P1",
-      "p2": "[ZH] P2",
-      "title": "[ZH] Conclusion"
-    },
-    "date": "[ZH] Date",
-    "date_label": "[ZH] Date_label",
     "decision_framework": {
       "components": {
-        "adaptation": {
-          "content": "[ZH] Comprehensive details regarding Adaptation.",
-          "title": "[ZH] Adaptation"
-        },
         "guardrails": {
-          "content": "[ZH] Comprehensive details regarding Guardrails.",
-          "title": "[ZH] Guardrails"
+          "title": "[ZH] Guardrails",
+          "content": "[ZH] Decouple your business logic from vendor-specific APIs and regain full control of your digital estate."
+        },
+        "adaptation": {
+          "title": "[ZH] Adaptation",
+          "content": "[ZH] Automate compliance with real-time drift detection and auto-remediation policies."
         },
         "intent_mapping": {
-          "content": "[ZH] Comprehensive details regarding Intent_mapping.",
-          "title": "[ZH] Intent_mapping"
+          "title": "[ZH] Intent_mapping",
+          "content": "[ZH] Seamlessly orchestrate workloads across AWS, Azure, and Google Cloud with strict governance boundaries."
         }
       },
-      "p1": "[ZH] P1",
-      "title": "[ZH] Decision_framework"
-    },
-    "differentiation": {
-      "comparison": "[ZH] Comparison",
-      "non_replicability": "[ZH] Non_replicability",
-      "p1": "[ZH] P1",
-      "title": "[ZH] Differentiation"
-    },
-    "eb1a": {
-      "executive_summary_title": "[ZH] Executive_summary_title",
-      "importance": "[ZH] Importance",
-      "importance_label": "[ZH] Importance_label",
-      "originality": "[ZH] Originality",
-      "originality_label": "[ZH] Originality_label",
-      "p1": "[ZH] P1",
-      "summary_content": "[ZH] Summary_content",
-      "title": "[ZH] Eb1a"
-    },
-    "execution_flow": {
-      "p1": "[ZH] P1",
-      "steps": {
-        "s1": "[ZH] S1",
-        "s2": "[ZH] S2",
-        "s3": "[ZH] S3",
-        "s4": "[ZH] S4",
-        "s5": "[ZH] S5"
-      },
-      "title": "[ZH] Execution_flow"
+      "title": "[ZH] Decision_framework",
+      "p1": "[ZH] Generate audit-ready compliance reports."
     },
     "feasibility": {
-      "p1": "[ZH] P1",
       "sectors": {
         "finance": {
-          "impact": "[ZH] Impact",
-          "title": "[ZH] Finance"
-        },
-        "government": {
-          "impact": "[ZH] Impact",
-          "title": "[ZH] Government"
+          "title": "[ZH] Finance",
+          "impact": "[ZH] Impact Details"
         },
         "healthcare": {
-          "impact": "[ZH] Impact",
-          "title": "[ZH] Healthcare"
+          "title": "[ZH] Healthcare",
+          "impact": "[ZH] Impact Details"
         },
         "telecom": {
-          "impact": "[ZH] Impact",
-          "title": "[ZH] Telecom"
+          "title": "[ZH] Telecom",
+          "impact": "[ZH] Impact Details"
+        },
+        "government": {
+          "title": "[ZH] Government",
+          "impact": "[ZH] Impact Details"
         }
       },
-      "title": "[ZH] Feasibility"
-    },
-    "footer": "[ZH] Footer",
-    "impact": {
-      "business_value": "[ZH] Business_value",
-      "metrics": {
-        "cost": "[ZH] Cost",
-        "cost_label": "[ZH] Cost_label",
-        "efficiency": "[ZH] Efficiency",
-        "efficiency_label": "[ZH] Efficiency_label",
-        "security": "[ZH] Security",
-        "security_label": "[ZH] Security_label"
-      },
-      "p1": "[ZH] P1",
-      "title": "[ZH] Impact"
-    },
-    "introduction": {
-      "p1": "[ZH] P1",
-      "p2": "[ZH] P2",
-      "p3": "[ZH] P3",
-      "title": "[ZH] Introduction"
-    },
-    "lifecycle": {
-      "resilience": "[ZH] Resilience",
-      "title": "[ZH] Lifecycle"
-    },
-    "limitations": {
-      "p1": "[ZH] P1",
-      "p2": "[ZH] P2",
-      "title": "[ZH] Limitations"
-    },
-    "meta": {
-      "description": "[ZH] Comprehensive details regarding Meta.",
-      "title": "[ZH] Meta"
+      "title": "[ZH] Feasibility",
+      "p1": "[ZH] Generate audit-ready compliance reports."
     },
     "problem": {
-      "compliance": {
-        "content": "[ZH] Comprehensive details regarding Compliance.",
-        "scenario": "[ZH] Scenario",
-        "title": "[ZH] Compliance"
+      "vendor_lock": {
+        "title": "[ZH] Vendor_lock",
+        "content": "[ZH] Achieve FIPS 140-2 Level 3 compliance with our shielded execution environments.",
+        "scenario": "[ZH] Scenario Details"
       },
-      "metrics": {
-        "compliance_aso": "[ZH] Compliance_aso",
-        "compliance_label": "[ZH] Compliance_label",
-        "mttr_aso": "[ZH] Mttr_aso",
-        "mttr_aso_label": "[ZH] Mttr_aso_label",
-        "mttr_manual": "[ZH] Mttr_manual",
-        "mttr_manual_label": "[ZH] Mttr_manual_label",
-        "opex_label": "[ZH] Opex_label",
-        "opex_savings": "[ZH] Opex_savings"
+      "compliance": {
+        "title": "[ZH] Compliance",
+        "content": "[ZH] Automate compliance with real-time drift detection and auto-remediation policies.",
+        "scenario": "[ZH] Scenario Details"
       },
       "operational": {
-        "content": "[ZH] Comprehensive details regarding Operational.",
-        "scenario": "[ZH] Scenario",
-        "title": "[ZH] Operational"
+        "title": "[ZH] Operational",
+        "content": "[ZH] Decouple your business logic from vendor-specific APIs and regain full control of your digital estate.",
+        "scenario": "[ZH] Scenario Details"
       },
-      "p1": "[ZH] P1",
+      "metrics": {
+        "mttr_manual_label": "[ZH] Mttr_manual_label Details",
+        "mttr_manual": "[ZH] Mttr_manual Details",
+        "mttr_aso_label": "[ZH] Mttr_aso_label Details",
+        "mttr_aso": "[ZH] Mttr_aso Details",
+        "compliance_label": "[ZH] Compliance_label Details",
+        "compliance_aso": "[ZH] Compliance_aso Details",
+        "opex_label": "[ZH] Opex_label Details",
+        "opex_savings": "[ZH] Opex_savings Details"
+      },
       "title": "[ZH] Problem",
-      "vendor_lock": {
-        "content": "[ZH] Comprehensive details regarding Vendor_lock.",
-        "scenario": "[ZH] Scenario",
-        "title": "[ZH] Vendor_lock"
-      }
+      "p1": "[ZH] Define your governance intent."
+    },
+    "architecture": {
+      "control_plane": {
+        "title": "[ZH] Control_plane",
+        "content": "[ZH] Decouple your business logic from vendor-specific APIs and regain full control of your digital estate."
+      },
+      "decision_engine": {
+        "title": "[ZH] Decision_engine",
+        "content": "[ZH] OmniGCloud provides a unified control plane to enforce data sovereignty across all your cloud providers."
+      },
+      "state_sync": {
+        "title": "[ZH] State_sync",
+        "content": "[ZH] Automate compliance with real-time drift detection and auto-remediation policies."
+      },
+      "title": "[ZH] Architecture",
+      "p1": "[ZH] Monitor real-time infrastructure drift."
+    },
+    "execution_flow": {
+      "steps": {
+        "s1": "[ZH] Generate audit-ready compliance reports.",
+        "s2": "[ZH] Define your governance intent.",
+        "s3": "[ZH] Deploy the control plane agent.",
+        "s4": "[ZH] Monitor real-time infrastructure drift.",
+        "s5": "[ZH] Enforce auto-remediation policies."
+      },
+      "title": "[ZH] Execution_flow",
+      "p1": "[ZH] Define your governance intent."
+    },
+    "impact": {
+      "metrics": {
+        "efficiency_label": "[ZH] Efficiency_label Details",
+        "efficiency": "[ZH] Efficiency Details",
+        "cost_label": "[ZH] Cost_label Details",
+        "cost": "[ZH] Cost Details",
+        "security_label": "[ZH] Security_label Details",
+        "security": "[ZH] Security Details"
+      },
+      "title": "[ZH] Impact",
+      "p1": "[ZH] Deploy the control plane agent.",
+      "business_value": "[ZH] Business_value Details"
+    },
+    "meta": {
+      "title": "[ZH] Meta",
+      "description": "[ZH] Decouple your business logic from vendor-specific APIs and regain full control of your digital estate."
+    },
+    "abstract": {
+      "title": "[ZH] Abstract",
+      "content": "[ZH] Achieve FIPS 140-2 Level 3 compliance with our shielded execution environments."
+    },
+    "introduction": {
+      "title": "[ZH] Introduction",
+      "p1": "[ZH] Deploy the control plane agent.",
+      "p2": "[ZH] Enforce auto-remediation policies.",
+      "p3": "[ZH] Define your governance intent."
+    },
+    "limitations": {
+      "title": "[ZH] Limitations",
+      "p1": "[ZH] Enforce auto-remediation policies.",
+      "p2": "[ZH] Monitor real-time infrastructure drift."
+    },
+    "lifecycle": {
+      "title": "[ZH] Lifecycle",
+      "resilience": "[ZH] Resilience Details"
+    },
+    "differentiation": {
+      "title": "[ZH] Differentiation",
+      "p1": "[ZH] Define your governance intent.",
+      "non_replicability": "[ZH] Non_replicability Details",
+      "comparison": "[ZH] Comparison Details"
+    },
+    "eb1a": {
+      "title": "[ZH] Eb1a",
+      "p1": "[ZH] Define your governance intent.",
+      "originality_label": "[ZH] Originality_label Details",
+      "originality": "[ZH] Originality Details",
+      "importance_label": "[ZH] Importance_label Details",
+      "importance": "[ZH] Importance Details",
+      "executive_summary_title": "[ZH] Executive_summary_title Details",
+      "summary_content": "[ZH] Summary_content Details"
+    },
+    "conclusion": {
+      "title": "[ZH] Conclusion",
+      "p1": "[ZH] Monitor real-time infrastructure drift.",
+      "p2": "[ZH] Enforce auto-remediation policies."
     },
     "references": {
       "title": "[ZH] References"
     },
     "title": "[ZH] Whitepaper",
-    "version": "[ZH] Version",
-    "version_label": "[ZH] Version_label"
+    "classification": "[ZH] Classification Details",
+    "author_label": "[ZH] Author_label Details",
+    "author": "[ZH] Author Details",
+    "version_label": "[ZH] Version_label Details",
+    "version": "[ZH] Version Details",
+    "date_label": "[ZH] Date_label Details",
+    "date": "[ZH] Date Details",
+    "footer": "[ZH] Footer Details"
   },
-  "content": "[ZH] Comprehensive details regarding .",
-  "cta": "[ZH] Get Started",
-  "desc": "[ZH] Enterprise Grade Sovereignty",
-  "designPatterns": "[ZH] Design Patterns",
-  "downloadTitle": "[ZH] Download Whitepaper",
-  "items": "[ZH] Items",
-  "readOnline": "[ZH] Read Online",
-  "steps": "[ZH] Steps",
+  "HomeSections": {
+    "Pricing": {
+      "core": {
+        "features": {
+          "nodes": "[ZH] Up to 50 Nodes",
+          "drift": "[ZH] Standard Drift Detection",
+          "sla": "[ZH] 99.9% SLA",
+          "support": "[ZH] Email Support"
+        },
+        "badge": "[ZH] STARTER",
+        "price": "[ZH] Free",
+        "unit": "[ZH] /month",
+        "desc": "[ZH] Perfect for testing sovereignty patterns.",
+        "cta": "[ZH] Start Building"
+      },
+      "enterprise": {
+        "features": {
+          "nodes": "[ZH] Unlimited Nodes",
+          "remediation": "[ZH] Auto-Remediation",
+          "finops": "[ZH] FinOps Dashboard",
+          "rbac": "[ZH] Advanced RBAC",
+          "support": "[ZH] 24/7 Dedicated Support"
+        },
+        "popular": "[ZH] MOST POPULAR",
+        "badge": "[ZH] PROFESSIONAL",
+        "price": "[ZH] Custom",
+        "desc": "[ZH] Full autonomous control for regulated workloads.",
+        "cta": "[ZH] Contact Sales"
+      },
+      "federal": {
+        "features": {
+          "onprem": "[ZH] Air-Gapped Support",
+          "byok": "[ZH] Bring Your Own Key",
+          "security": "[ZH] FIPS 140-2 Level 3",
+          "audit": "[ZH] Continuous Audit"
+        },
+        "badge": "[ZH] FEDERAL",
+        "price": "[ZH] Restricted",
+        "desc": "[ZH] For government and defense sectors.",
+        "cta": "[ZH] Verify Clearance"
+      },
+      "title": "[ZH] Transparent Pricing",
+      "subtitle": "[ZH] No hidden costs. Pay for the control plane, bring your own cloud."
+    },
+    "Cta": {
+      "title": "[ZH] Start your sovereign journey",
+      "subtitle": "[ZH] Join the revolution today.",
+      "primary": "[ZH] Get Started",
+      "secondary": "[ZH] Contact Sales",
+      "disclaimer": "[ZH] Free tier available."
+    }
+  },
+  "Platform": {
+    "security": {
+      "features": {
+        "fips": {
+          "title": "[ZH] Fips Feature",
+          "desc": "[ZH] Decouple your business logic from vendor-specific APIs and regain full control of your digital estate."
+        },
+        "rbac": {
+          "title": "[ZH] Rbac Feature",
+          "desc": "[ZH] Achieve FIPS 140-2 Level 3 compliance with our shielded execution environments."
+        },
+        "vpc": {
+          "title": "[ZH] Vpc Feature",
+          "desc": "[ZH] OmniGCloud provides a unified control plane to enforce data sovereignty across all your cloud providers."
+        },
+        "audit": {
+          "title": "[ZH] Audit Feature",
+          "desc": "[ZH] Automate compliance with real-time drift detection and auto-remediation policies."
+        }
+      },
+      "title": "[ZH] Security",
+      "desc": "[ZH] Achieve FIPS 140-2 Level 3 compliance with our shielded execution environments.",
+      "cta": "[ZH] Explore Security",
+      "zerotrust": "[ZH] Zerotrust Details"
+    },
+    "comparison": {
+      "rows": {
+        "neutrality": "[ZH] Neutrality Details",
+        "audits": "[ZH] Audits Details",
+        "sync": "[ZH] Sync Details",
+        "refactoring": "[ZH] Refactoring Details",
+        "encryption": "[ZH] Encryption Details",
+        "iam": "[ZH] Iam Details",
+        "arbitrage": "[ZH] Arbitrage Details"
+      },
+      "limited": "[ZH] Limited Details",
+      "partial": "[ZH] Partial Details",
+      "title": "[ZH] Comparison",
+      "subtitle": "[ZH] Security, compliance, and velocity in one platform.",
+      "capability": "[ZH] Capability Details",
+      "legacy": "[ZH] Legacy Details",
+      "sovereign": "[ZH] Sovereign Details",
+      "footer": "[ZH] Footer Details"
+    },
+    "control": {
+      "observability": {
+        "title": "[ZH] Observability",
+        "desc": "[ZH] OmniGCloud provides a unified control plane to enforce data sovereignty across all your cloud providers."
+      },
+      "title": "[ZH] Control",
+      "subtitle": "[ZH] Security, compliance, and velocity in one platform.",
+      "fleet": "[ZH] Fleet Details",
+      "healing": "[ZH] Healing Details",
+      "gitops": "[ZH] Gitops Details",
+      "audit": "[ZH] Audit Details"
+    },
+    "arbitrage": {
+      "tag": "[ZH] Featured",
+      "title": "[ZH] Arbitrage",
+      "subtitle": "[ZH] Security, compliance, and velocity in one platform.",
+      "forecastTitle": "[ZH] Forecast Title",
+      "forecastDesc": "[ZH] Forecast Desc",
+      "lockinTitle": "[ZH] Lockin Title",
+      "lockinDesc": "[ZH] Lockin Desc",
+      "portabilityTitle": "[ZH] Portability Title",
+      "portabilityDesc": "[ZH] Portability Desc",
+      "switchTitle": "[ZH] Switch Title",
+      "switchDesc": "[ZH] Switch Desc",
+      "eb1aTag": "[ZH] Eb1a Tag",
+      "eb1aDesc": "[ZH] Eb1a Desc",
+      "auditor": "[ZH] Auditor Details",
+      "auditorTitle": "[ZH] Auditor Title"
+    },
+    "integrations": {
+      "title": "[ZH] Integrations",
+      "subtitle": "[ZH] Control your data. Control your future.",
+      "infra": "[ZH] Infra Details",
+      "obs": "[ZH] Obs Details",
+      "delivery": "[ZH] Delivery Details",
+      "identity": "[ZH] Identity Details"
+    },
+    "hero": {
+      "title": "[ZH] Hero",
+      "subtitle": "[ZH] The standard for autonomous cloud governance.",
+      "ctaPrimary": "[ZH] Cta Primary",
+      "ctaSecondary": "[ZH] Cta Secondary"
+    },
+    "core": {
+      "title": "[ZH] Core",
+      "desc": "[ZH] Seamlessly orchestrate workloads across AWS, Azure, and Google Cloud with strict governance boundaries."
+    },
+    "stack": {
+      "api": "[ZH] Api Details",
+      "shielded": "[ZH] Shielded Details",
+      "logic": "[ZH] Logic Details",
+      "active": "[ZH] Active Details",
+      "cluster": "[ZH] Cluster Details",
+      "scaling": "[ZH] Scaling Details",
+      "db": "[ZH] Db",
+      "verified": "[ZH] Verified Details"
+    }
+  },
+  "Docs": {
+    "sidebar": {
+      "links": {
+        "introduction": "[ZH] Introduction Details",
+        "architecture": "[ZH] Architecture Details",
+        "whitepaper": "[ZH] Whitepaper Details",
+        "security": "[ZH] Security Details"
+      },
+      "documentation": "[ZH] Documentation Details",
+      "blueprints": "[ZH] Blueprints Details",
+      "blueprint_links": "[ZH] Blueprint_links Details"
+    },
+    "cards": {
+      "architecture": {
+        "title": "[ZH] Architecture",
+        "exhibit": "[ZH] Exhibit Details",
+        "description": "[ZH] Ensure your data never leaves the jurisdiction you define, regardless of the underlying infrastructure.",
+        "cta": "[ZH] Explore Architecture"
+      },
+      "whitepaper": {
+        "title": "[ZH] Whitepaper",
+        "exhibit": "[ZH] Exhibit Details",
+        "description": "[ZH] Achieve FIPS 140-2 Level 3 compliance with our shielded execution environments.",
+        "cta": "[ZH] Explore Whitepaper"
+      },
+      "guide": {
+        "title": "[ZH] Guide",
+        "exhibit": "[ZH] Exhibit Details",
+        "description": "[ZH] Seamlessly orchestrate workloads across AWS, Azure, and Google Cloud with strict governance boundaries.",
+        "cta": "[ZH] Explore Guide"
+      },
+      "api": {
+        "title": "[ZH] Api",
+        "exhibit": "[ZH] Exhibit Details",
+        "description": "[ZH] OmniGCloud provides a unified control plane to enforce data sovereignty across all your cloud providers.",
+        "cta": "[ZH] Explore Api"
+      },
+      "_value": "[ZH] cards"
+    },
+    "meta": {
+      "title": "[ZH] Meta",
+      "description": "[ZH] Decouple your business logic from vendor-specific APIs and regain full control of your digital estate."
+    },
+    "hero": {
+      "title": "[ZH] Hero",
+      "badge": "[ZH] New",
+      "description": "[ZH] Automate compliance with real-time drift detection and auto-remediation policies."
+    },
+    "banner": {
+      "title": "[ZH] Banner",
+      "description": "[ZH] Seamlessly orchestrate workloads across AWS, Azure, and Google Cloud with strict governance boundaries.",
+      "cta": "[ZH] Explore Banner"
+    }
+  },
+  "Pricing": {
+    "faq": {
+      "q1": {
+        "q": "[ZH] Q",
+        "a": "[ZH] A"
+      },
+      "q2": {
+        "q": "[ZH] Q",
+        "a": "[ZH] A"
+      },
+      "q3": {
+        "q": "[ZH] Q",
+        "a": "[ZH] A"
+      }
+    },
+    "trust": {
+      "residency": {
+        "title": "[ZH] Residency",
+        "desc": "[ZH] Decouple your business logic from vendor-specific APIs and regain full control of your digital estate."
+      },
+      "neutrality": {
+        "title": "[ZH] Neutrality",
+        "desc": "[ZH] OmniGCloud provides a unified control plane to enforce data sovereignty across all your cloud providers."
+      },
+      "title": "[ZH] Trust",
+      "subtitle": "[ZH] Empowering the next generation of regulated enterprise."
+    },
+    "hero": {
+      "subtitle": "[ZH] The standard for autonomous cloud governance.",
+      "tag": "[ZH] Featured",
+      "title": "[ZH] Hero"
+    },
+    "plans": {
+      "popular": "[ZH] Popular Details",
+      "month": "[ZH] Month Details",
+      "_value": "[ZH] plans"
+    },
+    "cta": {
+      "title": "[ZH] Cta",
+      "subtitle": "[ZH] Empowering the next generation of regulated enterprise.",
+      "button": "[ZH] Explore Cta"
+    }
+  },
+  "Services": {
+    "Stack": {
+      "terraform": {
+        "title": "[ZH] Terraform",
+        "desc": "[ZH] Ensure your data never leaves the jurisdiction you define, regardless of the underlying infrastructure."
+      },
+      "ansible": {
+        "title": "[ZH] Ansible",
+        "desc": "[ZH] Decouple your business logic from vendor-specific APIs and regain full control of your digital estate."
+      },
+      "badge": "[ZH] New",
+      "title": "[ZH] Stack",
+      "subtitle": "[ZH] Empowering the next generation of regulated enterprise."
+    },
+    "Migration": {
+      "azure": {
+        "title": "[ZH] Azure",
+        "desc": "[ZH] OmniGCloud provides a unified control plane to enforce data sovereignty across all your cloud providers."
+      },
+      "ocp": {
+        "title": "[ZH] Ocp",
+        "desc": "[ZH] Achieve FIPS 140-2 Level 3 compliance with our shielded execution environments."
+      },
+      "provisioning": {
+        "title": "[ZH] Provisioning",
+        "desc": "[ZH] Seamlessly orchestrate workloads across AWS, Azure, and Google Cloud with strict governance boundaries."
+      },
+      "drift": {
+        "title": "[ZH] Drift",
+        "desc": "[ZH] Seamlessly orchestrate workloads across AWS, Azure, and Google Cloud with strict governance boundaries."
+      },
+      "title": "[ZH] Migration",
+      "subtitle": "[ZH] The standard for autonomous cloud governance."
+    },
+    "DataAI": {
+      "sovereignty": {
+        "title": "[ZH] Sovereignty",
+        "desc": "[ZH] Automate compliance with real-time drift detection and auto-remediation policies."
+      },
+      "fabric": {
+        "title": "[ZH] Fabric",
+        "desc": "[ZH] Seamlessly orchestrate workloads across AWS, Azure, and Google Cloud with strict governance boundaries."
+      },
+      "search": {
+        "title": "[ZH] Search",
+        "desc": "[ZH] Decouple your business logic from vendor-specific APIs and regain full control of your digital estate."
+      },
+      "analytics": {
+        "title": "[ZH] Analytics",
+        "desc": "[ZH] Decouple your business logic from vendor-specific APIs and regain full control of your digital estate."
+      },
+      "title": "[ZH] Data A I",
+      "subtitle": "[ZH] The standard for autonomous cloud governance.",
+      "uptime": "[ZH] Uptime Details"
+    },
+    "Operations": {
+      "sre": {
+        "title": "[ZH] Sre",
+        "desc": "[ZH] Decouple your business logic from vendor-specific APIs and regain full control of your digital estate."
+      },
+      "finops": {
+        "title": "[ZH] Finops",
+        "desc": "[ZH] OmniGCloud provides a unified control plane to enforce data sovereignty across all your cloud providers."
+      },
+      "healing": {
+        "title": "[ZH] Healing",
+        "desc": "[ZH] Decouple your business logic from vendor-specific APIs and regain full control of your digital estate."
+      },
+      "audit": {
+        "title": "[ZH] Audit",
+        "desc": "[ZH] Automate compliance with real-time drift detection and auto-remediation policies."
+      },
+      "title": "[ZH] Operations",
+      "subtitle": "[ZH] Empowering the next generation of regulated enterprise."
+    },
+    "Hero": {
+      "badge": "[ZH] New",
+      "cta": "[ZH] Explore Hero",
+      "velocity": "[ZH] Velocity Details",
+      "errors": "[ZH] Errors Details"
+    }
+  },
+  "Blog": {
+    "hero": {
+      "tag": "[ZH] Featured",
+      "title": "[ZH] Hero",
+      "subtitle": "[ZH] The standard for autonomous cloud governance.",
+      "search": "[ZH] Search Details"
+    },
+    "newsletter": {
+      "title": "[ZH] Newsletter",
+      "subtitle": "[ZH] Control your data. Control your future.",
+      "placeholder": "[ZH] Placeholder Details",
+      "button": "[ZH] Explore Newsletter",
+      "footer": "[ZH] Footer Details"
+    },
+    "posts": "[ZH] Posts Details"
+  },
+  "Investors": {
+    "hero": {
+      "tag": "[ZH] Featured",
+      "title": "[ZH] Hero",
+      "subtitle": "[ZH] The standard for autonomous cloud governance."
+    },
+    "opportunity": {
+      "title": "[ZH] Opportunity",
+      "content": "[ZH] OmniGCloud provides a unified control plane to enforce data sovereignty across all your cloud providers.",
+      "metrics": "[ZH] Metrics Details"
+    },
+    "vision": {
+      "title": "[ZH] Vision",
+      "content": "[ZH] Ensure your data never leaves the jurisdiction you define, regardless of the underlying infrastructure."
+    }
+  },
+  "Company": {
+    "email": {
+      "support": "[ZH] Support Details"
+    },
+    "location": "[ZH] Location Details"
+  },
+  "Industries": {
+    "cta": {
+      "title": "[ZH] Cta",
+      "subtitle": "[ZH] Empowering the next generation of regulated enterprise.",
+      "button": "[ZH] Explore Cta"
+    },
+    "badge": "[ZH] New",
+    "title": "[ZH] Industries",
+    "subtitle": "[ZH] Empowering the next generation of regulated enterprise.",
+    "challenges": "[ZH] Challenges Details",
+    "solution": "[ZH] Solution Details"
+  },
+  "Products": {
+    "hero": {
+      "tag": "[ZH] Platform Products",
+      "title": "[ZH] A Sovereign Suite",
+      "subtitle": "[ZH] Everything you need to build, secure, and scale compliant infrastructure."
+    },
+    "playground": {
+      "title": "[ZH] Sovereign Playground",
+      "shortDesc": "[ZH] IDE for prototyping cross-cloud infra.",
+      "description": "[ZH] Achieve FIPS 140-2 Level 3 compliance with our shielded execution environments."
+    },
+    "workflows": {
+      "title": "[ZH] G-Workflows",
+      "shortDesc": "[ZH] Visual multi-step orchestration engine.",
+      "description": "[ZH] Seamlessly orchestrate workloads across AWS, Azure, and Google Cloud with strict governance boundaries."
+    },
+    "guard": {
+      "title": "[ZH] Governance Guard",
+      "shortDesc": "[ZH] Real-time compliance auto-remediation.",
+      "description": "[ZH] Ensure your data never leaves the jurisdiction you define, regardless of the underlying infrastructure."
+    },
+    "knowledge": {
+      "title": "[ZH] Sovereign Knowledge",
+      "shortDesc": "[ZH] Secure RAG for regulatory data.",
+      "description": "[ZH] Automate compliance with real-time drift detection and auto-remediation policies."
+    },
+    "deploy": {
+      "title": "[ZH] Obsidian Deploy",
+      "shortDesc": "[ZH] Atomic, immutable production releases.",
+      "description": "[ZH] Achieve FIPS 140-2 Level 3 compliance with our shielded execution environments."
+    },
+    "nexus": {
+      "title": "[ZH] Cross-Cloud Nexus",
+      "shortDesc": "[ZH] Global telemetry and cost arbitrage.",
+      "description": "[ZH] Achieve FIPS 140-2 Level 3 compliance with our shielded execution environments."
+    },
+    "cta": "了解更多",
+    "explore": "[ZH] Explore Details",
+    "subtitle": "[ZH] Empowering the next generation of regulated enterprise.",
+    "tag": "[ZH] PRODUCTS",
+    "title": "[ZH] Infrastructure Sovereignty"
+  },
+  "UseCases": {
+    "hero": {
+      "tag": "[ZH] Proven Solutions",
+      "title": "[ZH] Use Cases",
+      "subtitle": "[ZH] Discover how regulated industries use OmniGCloud to achieve sovereignty."
+    }
+  },
+  "Enterprise": {
+    "partnership": {
+      "title": "[ZH] Partnership",
+      "subtitle": "[ZH] Empowering the next generation of regulated enterprise.",
+      "p1": "[ZH] Enforce auto-remediation policies.",
+      "p2": "[ZH] Monitor real-time infrastructure drift.",
+      "pillars": "[ZH] Pillars Details",
+      "steps": [
+        {
+          "title": "Consultation",
+          "desc": "We understand your needs"
+        },
+        {
+          "title": "Implementation",
+          "desc": "We build your solution"
+        },
+        {
+          "title": "Support",
+          "desc": "We grow with you"
+        }
+      ]
+    },
+    "approach": {
+      "title": "[ZH] Enterprise approach",
+      "subtitle": "[ZH] How we help you scale",
+      "pillars": [
+        {
+          "title": "Security",
+          "desc": "Enterprise-grade security"
+        },
+        {
+          "title": "Scale",
+          "desc": "Scale to millions"
+        },
+        {
+          "title": "Stability",
+          "desc": "99.999% uptime"
+        }
+      ]
+    },
+    "trust": {
+      "title": "[ZH] Trusted by Enterprises",
+      "p1": "[ZH] We provide the most secure platform.",
+      "p2": "[ZH] Used by Fortune 500 companies."
+    }
+  },
+  "Community": {
+    "cli": {
+      "title": "[ZH] Cli",
+      "cmd": "[ZH] Cmd Details"
+    },
+    "plugins": {
+      "title": "[ZH] Plugins",
+      "desc": "[ZH] Decouple your business logic from vendor-specific APIs and regain full control of your digital estate."
+    },
+    "maintainers": {
+      "title": "[ZH] Maintainers",
+      "desc": "[ZH] Automate compliance with real-time drift detection and auto-remediation policies."
+    },
+    "badge": "[ZH] New",
+    "subtitle": "[ZH] Security, compliance, and velocity in one platform.",
+    "join": "[ZH] Join Details",
+    "contribute": "[ZH] Contribute Details"
+  },
+  "DemoSection": {
+    "discovery": {
+      "title": "[ZH] Discovery",
+      "desc": "[ZH] Achieve FIPS 140-2 Level 3 compliance with our shielded execution environments.",
+      "code": "[ZH] Code Details"
+    },
+    "iac": {
+      "title": "[ZH] Iac",
+      "desc": "[ZH] Automate compliance with real-time drift detection and auto-remediation policies.",
+      "code": "[ZH] Code Details"
+    },
+    "sync": {
+      "title": "[ZH] Sync",
+      "desc": "[ZH] OmniGCloud provides a unified control plane to enforce data sovereignty across all your cloud providers.",
+      "code": "[ZH] Code Details"
+    },
+    "drift": {
+      "title": "[ZH] Drift",
+      "desc": "[ZH] Seamlessly orchestrate workloads across AWS, Azure, and Google Cloud with strict governance boundaries.",
+      "code": "[ZH] Code Details"
+    },
+    "badge": "[ZH] New",
+    "subtitle": "[ZH] The standard for autonomous cloud governance."
+  },
+  "Ecosystem": {
+    "governance": {
+      "title": "[ZH] Governance",
+      "desc": "[ZH] Decouple your business logic from vendor-specific APIs and regain full control of your digital estate.",
+      "status": "[ZH] Status Details",
+      "link": "[ZH] Link Details"
+    },
+    "mesh": {
+      "title": "[ZH] Mesh",
+      "desc": "[ZH] Automate compliance with real-time drift detection and auto-remediation policies.",
+      "status": "[ZH] Status Details",
+      "link": "[ZH] Link Details"
+    },
+    "ai": {
+      "title": "[ZH] Ai",
+      "desc": "[ZH] Achieve FIPS 140-2 Level 3 compliance with our shielded execution environments.",
+      "status": "[ZH] Status Details",
+      "link": "[ZH] Link Details"
+    },
+    "vault": {
+      "title": "[ZH] Vault",
+      "desc": "[ZH] Achieve FIPS 140-2 Level 3 compliance with our shielded execution environments.",
+      "status": "[ZH] Status Details",
+      "link": "[ZH] Link Details"
+    },
+    "badge": "[ZH] New",
+    "title": "[ZH] Ecosystem",
+    "subtitle": "[ZH] Empowering the next generation of regulated enterprise."
+  },
+  "Hero": {
+    "stats": {
+      "assets": "[ZH] Assets Managed",
+      "drift": "[ZH] Drift Detected",
+      "nodes": "[ZH] Active Nodes"
+    },
+    "systemStatus": {
+      "live": "[ZH] System Operational"
+    },
+    "experts": {
+      "count": "[ZH] Experts Available"
+    },
+    "badge": "[ZH] ENTERPRISE SOVEREIGNTY",
+    "title": "[ZH] The Autonomous Cloud",
+    "subtitle": "[ZH] Regain control of your digital estate with the world's first sovereign multi-cloud fabric. Enforce governance logic at the infrastructure level.",
+    "ctaPrimary": "[ZH] Explore Platform",
+    "ctaArchitecture": "[ZH] Visual Architecture",
+    "ctaWhitepaper": "[ZH] Read Whitepaper",
+    "trust": "[ZH] TRUSTED BY LEADING REGULATED INDUSTRIES"
+  },
+  "Problem": {
+    "fragmentation": {
+      "title": "[ZH] Fragmentation",
+      "desc": "[ZH] Automate compliance with real-time drift detection and auto-remediation policies."
+    },
+    "regulatory": {
+      "title": "[ZH] Regulatory",
+      "desc": "[ZH] Ensure your data never leaves the jurisdiction you define, regardless of the underlying infrastructure.",
+      "score": "[ZH] Score Details",
+      "risk": "[ZH] Risk Details"
+    },
+    "vendor": {
+      "title": "[ZH] Vendor",
+      "desc": "[ZH] Decouple your business logic from vendor-specific APIs and regain full control of your digital estate."
+    },
+    "opacity": {
+      "title": "[ZH] Opacity",
+      "desc": "[ZH] Seamlessly orchestrate workloads across AWS, Azure, and Google Cloud with strict governance boundaries.",
+      "scanning": "[ZH] Scanning Details"
+    },
+    "badge": "[ZH] New",
+    "title": "[ZH] Problem",
+    "subtitle": "[ZH] Control your data. Control your future."
+  },
+  "Visuals": {
+    "drift": {
+      "title": "[ZH] Drift",
+      "detected": "[ZH] Detected Details",
+      "remediate": "[ZH] Remediate Details"
+    },
+    "telemetry": {
+      "title": "[ZH] Telemetry",
+      "live": "[ZH] Live Details",
+      "latency": "[ZH] Latency Details",
+      "throughput": "[ZH] Throughput Details",
+      "loss": "[ZH] Loss Details"
+    }
+  },
+  "Dashboard": {
+    "title": "[ZH] Dashboard",
+    "welcome": "[ZH] Welcome Details",
+    "role": "[ZH] Role Details",
+    "logicMeshStatus": "[ZH] Logic Mesh Status",
+    "active": "[ZH] Active Details",
+    "badge": "[ZH] New",
+    "liveTitle": "[ZH] System Operational Status",
+    "liveSubtitle": "[ZH] Live Subtitle",
+    "roiTitle": "[ZH] Cost & ROI Analysis",
+    "roiSubtitle": "[ZH] Roi Subtitle",
+    "infraTitle": "[ZH] Infrastructure Health",
+    "infraSubtitle": "[ZH] Infra Subtitle",
+    "globalHealth": "[ZH] Global Health",
+    "optimizationTitle": "[ZH] Resource Optimization",
+    "trustTitle": "[ZH] Trust Compliance Score"
+  },
+  "SecuritySettings": {
+    "title": "[ZH] Security Settings",
+    "description": "[ZH] Ensure your data never leaves the jurisdiction you define, regardless of the underlying infrastructure.",
+    "ssoConfiguration": "[ZH] Sso Configuration",
+    "enabled": "[ZH] Enabled Details",
+    "disabled": "[ZH] Disabled Details",
+    "clientId": "[ZH] Client Id",
+    "tenantId": "[ZH] Tenant Id",
+    "outboundEmail": "[ZH] Outbound Email",
+    "advancedSecurity": "[ZH] Advanced Security",
+    "advancedDescription": "[ZH] Advanced Description",
+    "requestSaml": "[ZH] Request Saml"
+  },
+  "Compliance": {
+    "title": "[ZH] Compliance",
+    "subtitle": "[ZH] Security, compliance, and velocity in one platform.",
+    "transparency": "[ZH] Transparency Details",
+    "transparencyText": "[ZH] Transparency Text",
+    "active": "[ZH] Active Details",
+    "gdpr": "[ZH] Gdpr Details",
+    "gdprText": "[ZH] Gdpr Text",
+    "inProgress": "[ZH] In Progress",
+    "soc2": "[ZH] Soc2 Details",
+    "soc2Text": "[ZH] Soc2 Text",
+    "planned": "[ZH] Planned Details",
+    "iso27001": "[ZH] Iso27001 Details",
+    "iso27001Text": "[ZH] Iso27001 Text",
+    "dataHandling": "[ZH] Data Handling",
+    "encryption": "[ZH] Encryption Details",
+    "encryption1": "[ZH] Encryption1 Details",
+    "encryption2": "[ZH] Encryption2 Details",
+    "encryption3": "[ZH] Encryption3 Details",
+    "dataResidency": "[ZH] Data Residency",
+    "dataResidencyText": "[ZH] Data Residency Text",
+    "retention": "[ZH] Retention Details",
+    "operational": "[ZH] Operational Details",
+    "operationalText": "[ZH] Operational Text",
+    "audit": "[ZH] Audit Details",
+    "auditText": "[ZH] Audit Text",
+    "backups": "[ZH] Backups Details",
+    "backupsText": "[ZH] Backups Text",
+    "accessControls": "[ZH] Access Controls",
+    "authentication": "[ZH] Authentication Details",
+    "auth1": "[ZH] Auth1 Details",
+    "auth2": "[ZH] Auth2 Details",
+    "auth3": "[ZH] Auth3 Details",
+    "authorization": "[ZH] Authorization Details",
+    "authz1": "[ZH] Authz1 Details",
+    "authz2": "[ZH] Authz2 Details",
+    "authz3": "[ZH] Authz3 Details",
+    "incidentResponse": "[ZH] Incident Response",
+    "incidentResponseText": "[ZH] Incident Response Text",
+    "responseProcess": "[ZH] Response Process",
+    "response1": "[ZH] Response1 Details",
+    "response2": "[ZH] Response2 Details",
+    "response3": "[ZH] Response3 Details",
+    "response4": "[ZH] Response4 Details"
+  },
+  "Newsroom": {
+    "news": "[ZH] News Details",
+    "badge": "[ZH] New",
+    "title": "[ZH] Newsroom",
+    "link": "[ZH] Link Details",
+    "cta": "[ZH] Explore Newsroom"
+  },
+  "Privacy": {
+    "title": "[ZH] Privacy",
+    "lastUpdated": "[ZH] Last Updated",
+    "commitment": "[ZH] Commitment Details",
+    "commitmentText": "[ZH] Commitment Text",
+    "dataCollection": "[ZH] Data Collection",
+    "dataCollectionText": "[ZH] Data Collection Text",
+    "accountData": "[ZH] Account Data",
+    "accountDataText": "[ZH] Account Data Text",
+    "infrastructureData": "[ZH] Infrastructure Data",
+    "infrastructureDataText": "[ZH] Infrastructure Data Text",
+    "usageData": "[ZH] Usage Data",
+    "usageDataText": "[ZH] Usage Data Text",
+    "dataProtection": "[ZH] Data Protection",
+    "dataProtectionText": "[ZH] Data Protection Text",
+    "protection1": "[ZH] Protection1 Details",
+    "protection2": "[ZH] Protection2 Details",
+    "protection3": "[ZH] Protection3 Details",
+    "protection4": "[ZH] Protection4 Details",
+    "dataRetention": "[ZH] Data Retention",
+    "dataRetentionText": "[ZH] Data Retention Text",
+    "yourRights": "[ZH] Your Rights",
+    "yourRightsText": "[ZH] Your Rights Text",
+    "right1": "[ZH] Right1 Details",
+    "right2": "[ZH] Right2 Details",
+    "right3": "[ZH] Right3 Details",
+    "right4": "[ZH] Right4 Details",
+    "thirdParty": "[ZH] Third Party",
+    "thirdPartyText": "[ZH] Third Party Text",
+    "cookies": "[ZH] Cookies Details",
+    "cookiesText": "[ZH] Cookies Text",
+    "changes": "[ZH] Changes Details",
+    "changesText": "[ZH] Changes Text",
+    "contact": "[ZH] Contact Details",
+    "contactText": "[ZH] Contact Text"
+  },
+  "Breadcrumb": {
+    "home": "[ZH] Home Details",
+    "products": "[ZH] Products Details",
+    "pricing": "[ZH] Pricing Details",
+    "platform": "[ZH] Platform Details",
+    "services": "[ZH] Services Details",
+    "docs": "[ZH] Documentation",
+    "company": "[ZH] Company Details",
+    "contact": "[ZH] Contact Details",
+    "blog": "[ZH] Blog Details",
+    "research": "[ZH] Research Details",
+    "solutions": "[ZH] Solutions Details",
+    "industries": "[ZH] Industries Details",
+    "resources": "[ZH] Resources Details",
+    "onboarding": "[ZH] Onboarding Details",
+    "dashboard": "[ZH] Dashboard Details",
+    "compliance_maps": "[ZH] Compliance Maps",
+    "whitepaper": "[ZH] Whitepaper Details",
+    "papers": "[ZH] Papers Details",
+    "frameworks": "[ZH] Frameworks Details"
+  },
+  "Security": {
+    "title": "[ZH] Security",
+    "subtitle": "[ZH] Empowering the next generation of regulated enterprise.",
+    "encryption": "[ZH] Encryption Details",
+    "encryptionText": "[ZH] Encryption Text",
+    "authentication": "[ZH] Authentication Details",
+    "authenticationText": "[ZH] Authentication Text",
+    "responsibleDisclosure": "[ZH] Responsible Disclosure",
+    "disclosureIntro": "[ZH] Disclosure Intro",
+    "reportingProcess": "[ZH] Reporting Process",
+    "step1": "[ZH] Monitor real-time infrastructure drift.",
+    "step2": "[ZH] Deploy the control plane agent.",
+    "step3": "[ZH] Enforce auto-remediation policies.",
+    "step4": "[ZH] Define your governance intent.",
+    "scope": "[ZH] Scope Details",
+    "scope1": "[ZH] Scope1 Details",
+    "scope2": "[ZH] Scope2 Details",
+    "scope3": "[ZH] Scope3 Details",
+    "scope4": "[ZH] Scope4 Details",
+    "securityPractices": "[ZH] Security Practices",
+    "infrastructure": "[ZH] Infrastructure Details",
+    "infra1": "[ZH] Enforce auto-remediation policies.",
+    "infra2": "[ZH] Define your governance intent.",
+    "monitoring": "[ZH] Monitoring Details",
+    "monitor1": "[ZH] Monitor1 Details",
+    "monitor2": "[ZH] Monitor2 Details",
+    "contactSecurity": "[ZH] Contact Security",
+    "securityEmail": "[ZH] Security Email",
+    "pgpKey": "[ZH] Pgp Key"
+  },
+  "Terms": {
+    "title": "[ZH] Terms",
+    "lastUpdated": "[ZH] Last Updated",
+    "acceptance": "[ZH] Acceptance Details",
+    "acceptanceText": "[ZH] Acceptance Text",
+    "services": "[ZH] Services Details",
+    "servicesText": "[ZH] Services Text",
+    "service1": "[ZH] Service1 Details",
+    "service2": "[ZH] Service2 Details",
+    "service3": "[ZH] Service3 Details",
+    "service4": "[ZH] Service4 Details",
+    "userResponsibilities": "[ZH] User Responsibilities",
+    "userResponsibilitiesText": "[ZH] User Responsibilities Text",
+    "responsibility1": "[ZH] Responsibility1 Details",
+    "responsibility2": "[ZH] Responsibility2 Details",
+    "responsibility3": "[ZH] Responsibility3 Details",
+    "dataOwnership": "[ZH] Data Ownership",
+    "dataOwnershipText": "[ZH] Data Ownership Text",
+    "termination": "[ZH] Termination Details",
+    "terminationText": "[ZH] Termination Text",
+    "disclaimer": "[ZH] Disclaimer Details",
+    "disclaimerText": "[ZH] Disclaimer Text",
+    "governingLaw": "[ZH] Governing Law",
+    "governingLawText": "[ZH] Governing Law Text",
+    "contact": "[ZH] Contact Details",
+    "contactText": "[ZH] Contact Text"
+  },
+  "SovereignGallery": {
+    "title": "[ZH] Sovereign Gallery",
+    "subtitle": "[ZH] Empowering the next generation of regulated enterprise."
+  },
+  "CookieConsent": {
+    "title": "[ZH] Privacy & Sovereignty",
+    "close": "[ZH] Close Details",
+    "message": "[ZH] We use strictly necessary cookies to ensure platform security and data sovereignty compliance. Usage analytics are optional.",
+    "policyLink": "[ZH] Sovereignty Policy",
+    "accept": "[ZH] Accept Essential",
+    "decline": "[ZH] Decline Optional",
+    "sovereignNotice": "[ZH] Data resides in your jurisdiction"
+  },
+  "SEO_Content": {
+    "Home": {
+      "AboveTheFold": "[ZH] OmniGCloud is the first autonomous multi-cloud fabric that enforces data sovereignty at the infrastructure level, allowing enterprises to decouple logic from vendor-specific APIs.",
+      "HowItWorks": {
+        "title": "[ZH] Autonomous Synchronization",
+        "steps": [
+          {
+            "title": "Intent Definition",
+            "desc": "Define your governance and sovereignty rules in a vendor-agnostic format."
+          },
+          {
+            "title": "Fabric Arbitration",
+            "desc": "The AECP kernel continuously audits and corrects infrastructure drift."
+          },
+          {
+            "title": "State Enforcement",
+            "desc": "Logic is pushed to the edge, ensuring compliance regardless of the underlying cloud."
+          }
+        ]
+      },
+      "DeepDive": {
+        "title": "[ZH] Architectural Deep Dive",
+        "content": "[ZH] Our platform eliminates the complexity of multi-cloud management by abstracting provider APIs into a unified control plane. This ensures that your business logic remains portable and secure, preventing vendor lock-in and guaranteeing long-term operational resilience."
+      },
+      "WhyItMatters": {
+        "title": "[ZH] Why Sovereignty Matters",
+        "content": "[ZH] In an era of fragmenting regulations, data residency is no longer optional. OmniGCloud provides mathematical guarantees that your data stays where it needs to be."
+      },
+      "TechnicalApproach": {
+        "title": "[ZH] Technical Approach",
+        "content": "[ZH] We utilize a lattice-based state synchronization engine that operates on a millisecond scale, providing real-time remediation of non-compliant infrastructure states."
+      },
+      "FAQ": {
+        "title": "[ZH] F.A.Q",
+        "items": [
+          {
+            "q": "How does OmniGCloud differ from Terraform?",
+            "a": "Terraform is a deployment tool; OmniGCloud is an active state enforcement engine that corrects drift automatically."
+          },
+          {
+            "q": "Is it compatible with AWS and Azure?",
+            "a": "Yes, we support all major hyperscalers including AWS, Azure, GCP, and on-premise OpenShift clusters."
+          }
+        ]
+      },
+      "LeadCapture": {
+        "title": "[ZH] Ready to regain control?",
+        "subtitle": "[ZH] Schedule a comprehensive architecture review with our sovereign cloud experts.",
+        "cta": "[ZH] Book Consultation"
+      }
+    }
+  },
+  "Engagement": {
+    "title": "[ZH] Engagement",
+    "subtitle": "[ZH] Security, compliance, and velocity in one platform.",
+    "primary": "[ZH] Primary Details",
+    "secondary": "[ZH] Secondary Details"
+  },
+  "Capabilities": {
+    "tag": "[ZH] Capabilities",
+    "title": "[ZH] Core Capabilities",
+    "subtitle": "[ZH] Explore the building blocks of our sovereign cloud platform.",
+    "cta": "[ZH] View All Products",
+    "explore": "[ZH] Explore Details"
+  },
+  "WhitePaper": {
+    "contribution": "[ZH] Contribution Details",
+    "title": "[ZH] The Autonomous Sovereign Cloud Protocol",
+    "description": "[ZH] A comprehensive framework for achieving mathematical certainty in data sovereignty across multi-cloud environments.",
+    "peerReview": "[ZH] Peer Reviewed",
+    "pageCount": "[ZH] 42 Pages",
+    "badge": "[ZH] LATEST RESEARCH",
+    "downloadTitle": "[ZH] Download the Whitepaper",
+    "downloadSubtitle": "[ZH] Get the full technical specification, including architecture diagrams, decision frameworks, and implementation guides.",
+    "readOnline": "[ZH] Read Online",
+    "designPatterns": "[ZH] Design Patterns",
+    "footer": "[ZH] Available in PDF / ePub formats."
+  },
+  "ContactSales": {
+    "subject": "[ZH] Subject Details",
+    "bodyIntro": "[ZH] Body Intro",
+    "fallbackTitle": "[ZH] Fallback Title",
+    "fallbackInstruction": "[ZH] Fallback Instruction",
+    "copyLabel": "[ZH] Copy Label",
+    "whatsappLabel": "[ZH] Whatsapp Label",
+    "rateLimitMessage": "[ZH] Rate Limit Message",
+    "copyToast": "[ZH] Copy Toast"
+  },
+  "title": "[ZH] OmniGCloud Platform",
   "subtitle": "[ZH] The Sovereign Cloud Control Plane",
-  "title": "[ZH] OmniGCloud Platform"
+  "cta": "[ZH] Get Started",
+  "AboveTheFold": "[ZH] Above The Fold",
+  "content": "[ZH] Decouple your business logic from vendor-specific APIs and regain full control of your digital estate.",
+  "steps": "[ZH] Steps Details",
+  "items": "[ZH] Items Details",
+  "desc": "[ZH] Enterprise Grade Sovereignty",
+  "readOnline": "[ZH] Read Online",
+  "designPatterns": "[ZH] Design Patterns",
+  "downloadTitle": "[ZH] Download Whitepaper"
 }
