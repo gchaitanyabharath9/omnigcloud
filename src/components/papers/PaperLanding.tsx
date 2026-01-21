@@ -40,8 +40,8 @@ export const PaperLanding = ({ paper, locale }: PaperLandingProps) => {
                             <FileText size={12} /> {tPapers(getLocalKey(paper.titleKey)) /* Fallback or check if this works */}
                         </span>
                         <span className={`flex items-center gap-2 px-3 py-1 rounded-full border text-xs font-bold tracking-tighter uppercase ${paper.status === 'PUBLISHED'
-                                ? 'bg-green-500/10 border-green-500/20 text-green-400'
-                                : 'bg-yellow-500/10 border-yellow-500/20 text-yellow-400'
+                            ? 'bg-green-500/10 border-green-500/20 text-green-400'
+                            : 'bg-yellow-500/10 border-yellow-500/20 text-yellow-400'
                             }`}>
                             {paper.status}
                         </span>
@@ -104,7 +104,7 @@ export const PaperLanding = ({ paper, locale }: PaperLandingProps) => {
                                 </div>
                                 <div>
                                     <div className="text-sm font-bold text-white">{tPapers(getLocalKey(paper.authorsKey))}</div>
-                                    <div className="text-xs text-slate-500">Principal Architect</div>
+                                    <div className="text-xs text-slate-500">{tPapers('Common.authorsTitle')}</div>
                                 </div>
                             </div>
                         </div>
@@ -118,19 +118,19 @@ export const PaperLanding = ({ paper, locale }: PaperLandingProps) => {
                             <div className="space-y-3">
                                 {paper.links.arxiv && (
                                     <Link href={paper.links.arxiv} target="_blank" className="flex items-center justify-between p-3 rounded-lg bg-white/5 hover:bg-white/10 transition-colors border border-white/5 group">
-                                        <span className="text-sm font-mono text-slate-300">arXiv Preprint</span>
+                                        <span className="text-sm font-mono text-slate-300">{tPapers('Common.arxiv')}</span>
                                         <ArrowRight size={16} className="text-slate-500 group-hover:text-primary transition-colors" />
                                     </Link>
                                 )}
                                 {paper.links.ieee && (
                                     <Link href={paper.links.ieee} target="_blank" className="flex items-center justify-between p-3 rounded-lg bg-white/5 hover:bg-white/10 transition-colors border border-white/5 group">
-                                        <span className="text-sm font-mono text-slate-300">IEEE Xplore</span>
+                                        <span className="text-sm font-mono text-slate-300">{tPapers('Common.ieee')}</span>
                                         <ArrowRight size={16} className="text-slate-500 group-hover:text-primary transition-colors" />
                                     </Link>
                                 )}
                                 {paper.links.acm && (
                                     <Link href={paper.links.acm} target="_blank" className="flex items-center justify-between p-3 rounded-lg bg-white/5 hover:bg-white/10 transition-colors border border-white/5 group">
-                                        <span className="text-sm font-mono text-slate-300">ACM Digital Library</span>
+                                        <span className="text-sm font-mono text-slate-300">{tPapers('Common.acm')}</span>
                                         <ArrowRight size={16} className="text-slate-500 group-hover:text-primary transition-colors" />
                                     </Link>
                                 )}

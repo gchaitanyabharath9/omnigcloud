@@ -234,7 +234,7 @@ export default function CommandCenterPage() {
 
                     <div className="glass-panel" style={{ padding: '1.5rem', borderRadius: '1rem', background: 'rgba(10, 10, 10, 0.8)' }}>
                         <h4 style={{ fontSize: '0.9rem', fontWeight: 900, marginBottom: '0.5rem' }}>{tSafe(tTech, 'threatDesc', "Error Rate")}</h4>
-                        <p style={{ fontSize: '0.65rem', opacity: 0.5, marginBottom: '1rem' }}>Declining error trend</p>
+                        <p style={{ fontSize: '0.65rem', opacity: 0.5, marginBottom: '1rem' }}>{tSafe(t, 'errorTrend', "Declining error trend")}</p>
                         <ErrorRateTrend />
                     </div>
 
