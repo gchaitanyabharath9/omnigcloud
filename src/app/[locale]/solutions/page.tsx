@@ -49,6 +49,7 @@ export default async function SolutionsPage({ params }: { params: Promise<{ loca
     const { locale } = await params;
     const t = await getTranslations('Industries');
     const uct = await getTranslations('UseCases');
+    const st = await getTranslations('Solutions');
 
     return (
         <div className="flex-col">
@@ -57,17 +58,15 @@ export default async function SolutionsPage({ params }: { params: Promise<{ loca
                 <PageShell>
                     <div className="hero-grid-layout" style={{ gap: '2rem' }}>
                         <div>
-                            <div className="badge badge-primary-subtle" style={{ marginBottom: '1.5rem' }}>ENTERPRISE SOLUTIONS</div>
+                            <div className="badge badge-primary-subtle" style={{ marginBottom: '1.5rem' }}>{st('hero.badge')}</div>
                             <h1 style={{ fontSize: '3.5rem', fontWeight: 950, marginBottom: '1.5rem', lineHeight: '1.1' }}>
-                                Sovereign Cloud <br /><span className="text-gradient">Modernization</span>
+                                {st('hero.title')} <br /><span className="text-gradient">{st('hero.titleHighlight')}</span>
                             </h1>
                             <p style={{ fontSize: '1.1rem', opacity: 0.7, marginBottom: '2.5rem', lineHeight: '1.6', maxWidth: '600px' }}>
-                                OmniGCloud addresses the complexities of multi-regional cloud compliance
-                                with research-backed architectural patterns. We implement automated
-                                safeguards to secure platform stability across global markets.
+                                {st('hero.subtitle')}
                             </p>
                             <Link href={`/${locale}/contact`} className="btn-primary" style={{ padding: '1rem 2.5rem', borderRadius: '2rem' }}>
-                                Request Enterprise Evaluation <ArrowRight size={18} style={{ marginLeft: '8px' }} />
+                                {st('hero.cta')} <ArrowRight size={18} style={{ marginLeft: '8px' }} />
                             </Link>
                         </div>
                         <div className="relative justify-center" style={{ display: 'flex' }}>
@@ -83,10 +82,10 @@ export default async function SolutionsPage({ params }: { params: Promise<{ loca
             <section id="industries" className="snap-section" style={{ background: 'var(--bg-surface-2)', padding: '6rem 0' }}>
                 <PageShell>
                     <div className="text-center" style={{ marginBottom: '4rem' }}>
-                        <div className="badge badge-primary-subtle mb-4">SECTOR EXPERTISE</div>
-                        <h2 style={{ fontSize: '2.5rem', fontWeight: 900, marginBottom: '1rem' }}>Industry-Specific Governance</h2>
+                        <div className="badge badge-primary-subtle mb-4">{st('industries.badge')}</div>
+                        <h2 style={{ fontSize: '2.5rem', fontWeight: 900, marginBottom: '1rem' }}>{st('industries.title')}</h2>
                         <p style={{ opacity: 0.6, maxWidth: '700px', margin: '0 auto' }}>
-                            We provide tailored compliance and modernization frameworks for highly regulated industries.
+                            {st('industries.subtitle')}
                         </p>
                     </div>
 
@@ -115,10 +114,10 @@ export default async function SolutionsPage({ params }: { params: Promise<{ loca
             <section id="use-cases-intro" className="snap-section" style={{ padding: '6rem 0' }}>
                 <PageShell>
                     <div className="text-center" style={{ marginBottom: '4rem' }}>
-                        <div className="badge badge-primary-subtle mb-4">STRATEGIC IMPACT</div>
-                        <h2 style={{ fontSize: '2.5rem', fontWeight: 900, marginBottom: '1rem' }}>Featured Use Cases</h2>
+                        <div className="badge badge-primary-subtle mb-4">{st('useCases.badge')}</div>
+                        <h2 style={{ fontSize: '2.5rem', fontWeight: 900, marginBottom: '1rem' }}>{st('useCases.title')}</h2>
                         <p style={{ opacity: 0.6, maxWidth: '700px', margin: '0 auto' }}>
-                            Measurable velocity across regulated regions: Compliance, Security, and Intelligence.
+                            {st('useCases.subtitle')}
                         </p>
                     </div>
 
@@ -153,24 +152,24 @@ export default async function SolutionsPage({ params }: { params: Promise<{ loca
 
                     <div className="grid-3" style={{ gap: '2rem' }}>
                         <div className="glass-panel" style={{ background: 'var(--bg-surface-2)', padding: '2.5rem' }}>
-                            <div style={{ color: 'var(--primary)', marginBottom: '1.5rem', fontWeight: 900, fontSize: '0.8rem', textTransform: 'uppercase' }}>The Challenge</div>
-                            <h3 style={{ fontSize: '1.25rem', fontWeight: 900, marginBottom: '1rem' }}>Localized Data Drift</h3>
+                            <div style={{ color: 'var(--primary)', marginBottom: '1.5rem', fontWeight: 900, fontSize: '0.8rem', textTransform: 'uppercase' }}>{st('framework.challenge.label')}</div>
+                            <h3 style={{ fontSize: '1.25rem', fontWeight: 900, marginBottom: '1rem' }}>{st('framework.challenge.title')}</h3>
                             <p style={{ opacity: 0.6, fontSize: '0.85rem', lineHeight: 1.5 }}>
-                                Standard cloud infrastructures frequently fail to maintain content integrity across regions.
+                                {st('framework.challenge.description')}
                             </p>
                         </div>
                         <div className="glass-panel" style={{ background: 'var(--bg-surface-2)', padding: '2.5rem', border: '1px solid var(--primary-glow)' }}>
-                            <div style={{ color: 'var(--primary)', marginBottom: '1.5rem', fontWeight: 900, fontSize: '0.8rem', textTransform: 'uppercase' }}>The Solution</div>
-                            <h3 style={{ fontSize: '1.25rem', fontWeight: 900, marginBottom: '1rem' }}>Automated Gating</h3>
+                            <div style={{ color: 'var(--primary)', marginBottom: '1.5rem', fontWeight: 900, fontSize: '0.8rem', textTransform: 'uppercase' }}>{st('framework.solution.label')}</div>
+                            <h3 style={{ fontSize: '1.25rem', fontWeight: 900, marginBottom: '1rem' }}>{st('framework.solution.title')}</h3>
                             <p style={{ opacity: 0.6, fontSize: '0.85rem', lineHeight: 1.5 }}>
-                                We utilize proprietary release gates that audit over 400 unique endpoints per cycle.
+                                {st('framework.solution.description')}
                             </p>
                         </div>
                         <div className="glass-panel" style={{ background: 'var(--bg-surface-2)', padding: '2.5rem' }}>
-                            <div style={{ color: 'var(--primary)', marginBottom: '1.5rem', fontWeight: 900, fontSize: '0.8rem', textTransform: 'uppercase' }}>The Outcome</div>
-                            <h3 style={{ fontSize: '1.25rem', fontWeight: 900, marginBottom: '1rem' }}>Enterprise Compliance</h3>
+                            <div style={{ color: 'var(--primary)', marginBottom: '1.5rem', fontWeight: 900, fontSize: '0.8rem', textTransform: 'uppercase' }}>{st('framework.outcome.label')}</div>
+                            <h3 style={{ fontSize: '1.25rem', fontWeight: 900, marginBottom: '1rem' }}>{st('framework.outcome.title')}</h3>
                             <p style={{ opacity: 0.6, fontSize: '0.85rem', lineHeight: 1.5 }}>
-                                Guaranteed content synchronization across 8 global markets, reducing manual audit costs by 95%.
+                                {st('framework.outcome.description')}
                             </p>
                         </div>
                     </div>
@@ -183,15 +182,14 @@ export default async function SolutionsPage({ params }: { params: Promise<{ loca
                     <div className="glass-panel" style={{ padding: '4rem', borderRadius: '4rem', display: 'flex', flexWrap: 'wrap', alignItems: 'center', justifyContent: 'space-between', gap: '3rem', background: 'linear-gradient(to right, transparent, var(--primary-glow))', border: '1px solid var(--primary-glow)' }}>
                         <div style={{ flex: '1 1 500px' }}>
                             <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', color: 'var(--primary)', fontWeight: 700, marginBottom: '1rem' }}>
-                                <Award size={20} /> TECHNICAL RESEARCH EVIDENCE
+                                <Award size={20} /> {st('research.badge')}
                             </div>
-                            <h2 style={{ fontSize: '2rem', fontWeight: 900, marginBottom: '1.5rem' }}>Founded on Original Engineering</h2>
+                            <h2 style={{ fontSize: '2rem', fontWeight: 900, marginBottom: '1.5rem' }}>{st('research.title')}</h2>
                             <p style={{ opacity: 0.7, lineHeight: 1.6, marginBottom: '2rem' }}>
-                                The architectural foundation of OmniGCloud is documented in original technical research
-                                authored by our founding engineers.
+                                {st('research.description')}
                             </p>
                             <Link href={`/${locale}/research`} style={{ color: 'var(--primary)', fontWeight: 800, display: 'flex', alignItems: 'center', gap: '0.5rem', textDecoration: 'none' }}>
-                                Review Published Technical Research <ChevronRight size={18} />
+                                {st('research.cta')} <ChevronRight size={18} />
                             </Link>
                         </div>
                         <div style={{ display: 'flex', justifyContent: 'center' }}>
@@ -206,8 +204,8 @@ export default async function SolutionsPage({ params }: { params: Promise<{ loca
             <VisualSection
                 pageKey="Solutions"
                 imageUrl="/images/seo/architecture.png"
-                alt="Global Solution Fabric"
-                description="Our solutions are mapped to regional sovereign fabrics, ensuring that your modernization efforts are always in sync with local regulatory mandates."
+                alt={st('visual.alt')}
+                description={st('visual.description')}
             />
 
             <EnterprisePillars />
