@@ -1,97 +1,42 @@
 # i18n Coverage Report
 
-Generated on 2026-01-21T15:53:48.611Z
+Generated on 2026-01-21T16:30:48.932Z
 
 ## 🇬🇧 Base Locale (en.json) Health
 - **Total Keys:** 1530
 - ✅ All codebase keys found in en.json
 
-### ❌ es - ❌ FAIL (Tier 1 Strict)
+### ✅ es - ✅ PASS
 - **Tier:** 1
-- **Total Keys:** 1542
-- **Missing/Untranslated relative to en.json:** 1
+- **Total Keys:** 1530
+- **Missing/Untranslated relative to en.json:** 0
 
-<details><summary>View Missing Keys</summary>
-
-```
-Newsroom.news.4
-```
-</details>
-
-
-### ❌ fr - ❌ FAIL (Tier 1 Strict)
+### ✅ fr - ✅ PASS
 - **Tier:** 1
-- **Total Keys:** 1542
-- **Missing/Untranslated relative to en.json:** 1
+- **Total Keys:** 1530
+- **Missing/Untranslated relative to en.json:** 0
 
-<details><summary>View Missing Keys</summary>
-
-```
-Newsroom.news.4
-```
-</details>
-
-
-### ❌ de - ❌ FAIL (Tier 1 Strict)
+### ✅ de - ✅ PASS
 - **Tier:** 1
-- **Total Keys:** 1542
-- **Missing/Untranslated relative to en.json:** 1
+- **Total Keys:** 1530
+- **Missing/Untranslated relative to en.json:** 0
 
-<details><summary>View Missing Keys</summary>
-
-```
-Newsroom.news.4
-```
-</details>
-
-
-### ❌ zh - ❌ FAIL (Tier 1 Strict)
+### ✅ zh - ✅ PASS
 - **Tier:** 1
-- **Total Keys:** 1542
-- **Missing/Untranslated relative to en.json:** 1
+- **Total Keys:** 1530
+- **Missing/Untranslated relative to en.json:** 0
 
-<details><summary>View Missing Keys</summary>
-
-```
-Newsroom.news.4
-```
-</details>
-
-
-### ❌ hi - ❌ FAIL (Tier 1 Strict)
+### ✅ hi - ✅ PASS
 - **Tier:** 1
-- **Total Keys:** 1542
-- **Missing/Untranslated relative to en.json:** 1
+- **Total Keys:** 1530
+- **Missing/Untranslated relative to en.json:** 0
 
-<details><summary>View Missing Keys</summary>
-
-```
-Newsroom.news.4
-```
-</details>
-
-
-### ❌ ja - ❌ FAIL (Tier 1 Strict)
+### ✅ ja - ✅ PASS
 - **Tier:** 1
-- **Total Keys:** 1542
-- **Missing/Untranslated relative to en.json:** 1
+- **Total Keys:** 1530
+- **Missing/Untranslated relative to en.json:** 0
 
-<details><summary>View Missing Keys</summary>
-
-```
-Newsroom.news.4
-```
-</details>
-
-
-### ❌ ko - ❌ FAIL (Tier 1 Strict)
+### ✅ ko - ✅ PASS
 - **Tier:** 1
-- **Total Keys:** 1542
-- **Missing/Untranslated relative to en.json:** 1
-
-<details><summary>View Missing Keys</summary>
-
-```
-Newsroom.news.4
-```
-</details>
+- **Total Keys:** 1530
+- **Missing/Untranslated relative to en.json:** 0

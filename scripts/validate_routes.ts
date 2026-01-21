@@ -1,74 +1,69 @@
-
 import fs from 'fs';
 import path from 'path';
-// We use a dynamic import or relative import to avoid path alias issues in raw tsx
-// But for simplicity in this script, we'll just read the file and regex it or use a simplified check
-// Actually, let's try to just use a simplified version since we areGemini and can see the files.
+import { PUBLIC_ROUTES_MANIFEST } from '../src/config/routes';
+import { locales } from '../src/navigation';
+import { config } from '../src/config';
 
 const ROOT_DIR = process.cwd();
 const APP_DIR = path.join(ROOT_DIR, 'src', 'app', '[locale]');
-const ROUTES_FILE = path.join(ROOT_DIR, 'src', 'config', 'routes.ts');
 
 async function validateRoutes() {
     console.log('🔍 Validating Sitemap Routes...');
 
-    if (!fs.existsSync(ROUTES_FILE)) {
-        console.error('❌ Routes manifest file not found!');
-        process.exit(1);
-    }
-
-    const content = fs.readFileSync(ROUTES_FILE, 'utf-8');
-
-    // Extract paths using regex from the manifest
-    const pathRegex = /path:\s*['"](.*?)['"]/g;
-    const paths: string[] = [];
-    let match;
-    while ((match = pathRegex.exec(content)) !== null) {
-        paths.push(match[1]);
-    }
-
-    if (paths.length === 0) {
-        console.error('❌ No routes found in manifest!');
-        process.exit(1);
-    }
-
     let hasError = false;
     const missingRoutes: string[] = [];
+    const validPaths: string[] = [];
 
-    for (const route of paths) {
-        // Handle root path
-        const pagePath = route === ''
-            ? path.join(APP_DIR, 'page.tsx')
-            : path.join(APP_DIR, route, 'page.tsx');
+    // 1. Validate Base URL
+    const baseUrl = config.site.url;
+    if (!baseUrl || !baseUrl.startsWith('http')) {
+        console.error(`❌ Invalid base URL in config: ${baseUrl}`);
+        hasError = true;
+    } else {
+        console.log(`✅ Base URL: ${baseUrl}`);
+    }
 
-        if (!fs.existsSync(pagePath)) {
-            // Check if it's a dynamic route (folder exists but contains [slug] or similar)
-            // For now, let's assume all listed routes in sitemap should be literal matches to folders with page.tsx
-            // unless they are explicitly known dynamic routes handled elsewhere.
+    // 2. Validate Routes existence
+    for (const route of PUBLIC_ROUTES_MANIFEST) {
+        validPaths.push(route.path);
 
-            // Try to see if there's a parent folder with a page.tsx that handles it (not common in sitemap)
-            // or if the path matches a known dynamic structure.
+        // We only check one locale (en) as parity is handled by another gate
+        // but the sitemap generator uses all locales.
+        const relativePath = route.path === '' ? 'page.tsx' : path.join(route.path, 'page.tsx');
+        const absolutePath = path.join(APP_DIR, relativePath);
 
-            console.error(`❌ Route not found in filesystem: ${route} (Expected: ${pagePath})`);
-            missingRoutes.push(route);
+        if (!fs.existsSync(absolutePath)) {
+            // Check if it's a dynamic route that might exist as [slug]
+            // For now, we expect absolute paths in the manifest to match literal folders
+            console.error(`❌ Missing page.tsx for route: "${route.path}"`);
+            console.error(`   Expected: ${absolutePath}`);
+            missingRoutes.push(route.path);
             hasError = true;
         }
     }
 
-    // Duplicate check
-    const duplicates = paths.filter((item, index) => paths.indexOf(item) !== index);
+    // 3. Duplicate check
+    const duplicates = validPaths.filter((item, index) => validPaths.indexOf(item) !== index);
     if (duplicates.length > 0) {
-        console.error(`❌ Duplicate routes found: ${duplicates.join(', ')}`);
+        console.error(`❌ Duplicate routes found in manifest: ${Array.from(new Set(duplicates)).join(', ')}`);
         hasError = true;
     }
 
+    // 4. Summarize
     if (hasError) {
-        console.error(`🚨 Validation FAILED. ${missingRoutes.length} missing routes.`);
+        console.error('\n🚨 Sitemap validation FAILED.');
+        if (missingRoutes.length > 0) {
+            console.error(`Missing routes (${missingRoutes.length}):\n- ${missingRoutes.join('\n- ')}`);
+        }
         process.exit(1);
     }
 
-    console.log(`✅ ${paths.length} routes validated successfully.`);
+    console.log(`\n✅ ${PUBLIC_ROUTES_MANIFEST.length} routes validated successfully across ${locales.length} locales.`);
+    console.log(`📈 Total sitemap entries: ${PUBLIC_ROUTES_MANIFEST.length * locales.length}`);
     process.exit(0);
 }
 
-validateRoutes();
+validateRoutes().catch(err => {
+    console.error('💥 Fatal error during validation:', err);
+    process.exit(1);
+});

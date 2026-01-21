@@ -393,14 +393,6 @@
       "type": "t_call"
     },
     {
-      "file": "src\\components\\papers\\PaperLanding.tsx",
-      "line": 23,
-      "namespace": "Papers",
-      "key": "Items.a1.title",
-      "fullKey": "Papers.Items.a1.title",
-      "type": "t_call"
-    },
-    {
       "file": "src\\components\\seo\\Enrichment.tsx",
       "line": 24,
       "namespace": "Common",
@@ -502,6 +494,14 @@
       "namespace": "Header",
       "key": "latency_badge",
       "fullKey": "Header.latency_badge",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\components\\papers\\PaperLanding.tsx",
+      "line": 23,
+      "namespace": "Papers",
+      "key": "Items.a1.title",
+      "fullKey": "Papers.Items.a1.title",
       "type": "t_call"
     },
     {
@@ -1057,51 +1057,563 @@
       "type": "t_call"
     },
     {
-      "file": "src\\components\\sections\\enterprise\\EnterpriseApproach.tsx",
-      "line": 15,
-      "namespace": "Enterprise.partnership",
-      "key": "title",
-      "fullKey": "Enterprise.partnership.title",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\components\\sections\\enterprise\\EnterpriseApproach.tsx",
+      "file": "src\\components\\sections\\platform\\SecuritySection.tsx",
       "line": 16,
-      "namespace": "Enterprise.partnership",
-      "key": "subtitle",
-      "fullKey": "Enterprise.partnership.subtitle",
+      "namespace": "Platform.security",
+      "key": "title",
+      "fullKey": "Platform.security.title",
       "type": "t_call"
     },
     {
-      "file": "src\\components\\sections\\enterprise\\EnterpriseApproach.tsx",
+      "file": "src\\components\\sections\\platform\\SecuritySection.tsx",
+      "line": 18,
+      "namespace": "Platform.security",
+      "key": "desc",
+      "fullKey": "Platform.security.desc",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\components\\sections\\platform\\SecuritySection.tsx",
+      "line": 20,
+      "namespace": "Platform.security",
+      "key": "cta",
+      "fullKey": "Platform.security.cta",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\components\\sections\\platform\\SecuritySection.tsx",
+      "line": 40,
+      "namespace": "Platform.security",
+      "key": "zerotrust",
+      "fullKey": "Platform.security.zerotrust",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\components\\sections\\platform\\SecuritySection.tsx",
+      "line": 46,
+      "namespace": "Platform.security",
+      "key": "features.fips.title",
+      "fullKey": "Platform.security.features.fips.title",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\components\\sections\\platform\\SecuritySection.tsx",
+      "line": 46,
+      "namespace": "Platform.security",
+      "key": "features.fips.desc",
+      "fullKey": "Platform.security.features.fips.desc",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\components\\sections\\platform\\SecuritySection.tsx",
+      "line": 47,
+      "namespace": "Platform.security",
+      "key": "features.rbac.title",
+      "fullKey": "Platform.security.features.rbac.title",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\components\\sections\\platform\\SecuritySection.tsx",
+      "line": 47,
+      "namespace": "Platform.security",
+      "key": "features.rbac.desc",
+      "fullKey": "Platform.security.features.rbac.desc",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\components\\sections\\platform\\SecuritySection.tsx",
+      "line": 48,
+      "namespace": "Platform.security",
+      "key": "features.vpc.title",
+      "fullKey": "Platform.security.features.vpc.title",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\components\\sections\\platform\\SecuritySection.tsx",
+      "line": 48,
+      "namespace": "Platform.security",
+      "key": "features.vpc.desc",
+      "fullKey": "Platform.security.features.vpc.desc",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\components\\sections\\platform\\SecuritySection.tsx",
       "line": 49,
-      "namespace": "Enterprise.partnership",
-      "key": "title",
-      "fullKey": "Enterprise.partnership.title",
+      "namespace": "Platform.security",
+      "key": "features.audit.title",
+      "fullKey": "Platform.security.features.audit.title",
       "type": "t_call"
     },
     {
-      "file": "src\\components\\sections\\enterprise\\EnterpriseApproach.tsx",
+      "file": "src\\components\\sections\\platform\\SecuritySection.tsx",
+      "line": 49,
+      "namespace": "Platform.security",
+      "key": "features.audit.desc",
+      "fullKey": "Platform.security.features.audit.desc",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\components\\sections\\platform\\PlatformHero.tsx",
+      "line": 37,
+      "namespace": "Platform",
+      "key": "hero.title",
+      "fullKey": "Platform.hero.title",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\components\\sections\\platform\\PlatformHero.tsx",
+      "line": 40,
+      "namespace": "Platform",
+      "key": "hero.subtitle",
+      "fullKey": "Platform.hero.subtitle",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\components\\sections\\platform\\PlatformHero.tsx",
+      "line": 44,
+      "namespace": "Platform",
+      "key": "hero.ctaPrimary",
+      "fullKey": "Platform.hero.ctaPrimary",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\components\\sections\\platform\\PlatformHero.tsx",
+      "line": 45,
+      "namespace": "Platform",
+      "key": "hero.ctaSecondary",
+      "fullKey": "Platform.hero.ctaSecondary",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\components\\sections\\platform\\PlatformHero.tsx",
+      "line": 60,
+      "namespace": "Platform",
+      "key": "core.title",
+      "fullKey": "Platform.core.title",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\components\\sections\\platform\\PlatformHero.tsx",
+      "line": 62,
+      "namespace": "Platform",
+      "key": "core.desc",
+      "fullKey": "Platform.core.desc",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\components\\sections\\platform\\PlatformHero.tsx",
+      "line": 68,
+      "namespace": "Platform",
+      "key": "stack.api",
+      "fullKey": "Platform.stack.api",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\components\\sections\\platform\\PlatformHero.tsx",
+      "line": 68,
+      "namespace": "Platform",
+      "key": "stack.shielded",
+      "fullKey": "Platform.stack.shielded",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\components\\sections\\platform\\PlatformHero.tsx",
+      "line": 69,
+      "namespace": "Platform",
+      "key": "stack.logic",
+      "fullKey": "Platform.stack.logic",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\components\\sections\\platform\\PlatformHero.tsx",
+      "line": 69,
+      "namespace": "Platform",
+      "key": "stack.active",
+      "fullKey": "Platform.stack.active",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\components\\sections\\platform\\PlatformHero.tsx",
+      "line": 70,
+      "namespace": "Platform",
+      "key": "stack.cluster",
+      "fullKey": "Platform.stack.cluster",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\components\\sections\\platform\\PlatformHero.tsx",
+      "line": 70,
+      "namespace": "Platform",
+      "key": "stack.scaling",
+      "fullKey": "Platform.stack.scaling",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\components\\sections\\platform\\PlatformHero.tsx",
+      "line": 71,
+      "namespace": "Platform",
+      "key": "stack.db",
+      "fullKey": "Platform.stack.db",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\components\\sections\\platform\\PlatformHero.tsx",
+      "line": 71,
+      "namespace": "Platform",
+      "key": "stack.verified",
+      "fullKey": "Platform.stack.verified",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\components\\sections\\platform\\IntegrationsSection.tsx",
+      "line": 9,
+      "namespace": "Platform.integrations",
+      "key": "title",
+      "fullKey": "Platform.integrations.title",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\components\\sections\\platform\\IntegrationsSection.tsx",
+      "line": 10,
+      "namespace": "Platform.integrations",
+      "key": "subtitle",
+      "fullKey": "Platform.integrations.subtitle",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\components\\sections\\platform\\IntegrationsSection.tsx",
+      "line": 15,
+      "namespace": "Platform.integrations",
+      "key": "infra",
+      "fullKey": "Platform.integrations.infra",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\components\\sections\\platform\\IntegrationsSection.tsx",
+      "line": 28,
+      "namespace": "Platform.integrations",
+      "key": "obs",
+      "fullKey": "Platform.integrations.obs",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\components\\sections\\platform\\IntegrationsSection.tsx",
+      "line": 39,
+      "namespace": "Platform.integrations",
+      "key": "delivery",
+      "fullKey": "Platform.integrations.delivery",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\components\\sections\\platform\\IntegrationsSection.tsx",
       "line": 52,
-      "namespace": "Enterprise.partnership",
-      "key": "p1",
-      "fullKey": "Enterprise.partnership.p1",
+      "namespace": "Platform.integrations",
+      "key": "identity",
+      "fullKey": "Platform.integrations.identity",
       "type": "t_call"
     },
     {
-      "file": "src\\components\\sections\\enterprise\\EnterpriseApproach.tsx",
-      "line": 53,
-      "namespace": "Enterprise.partnership",
-      "key": "p2",
-      "fullKey": "Enterprise.partnership.p2",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\components\\sections\\enterprise\\EnterpriseApproach.tsx",
-      "line": 88,
-      "namespace": "Enterprise.partnership",
+      "file": "src\\components\\sections\\platform\\ControlPlaneSection.tsx",
+      "line": 11,
+      "namespace": "Platform.control",
       "key": "title",
-      "fullKey": "Enterprise.partnership.title",
+      "fullKey": "Platform.control.title",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\components\\sections\\platform\\ControlPlaneSection.tsx",
+      "line": 13,
+      "namespace": "Platform.control",
+      "key": "subtitle",
+      "fullKey": "Platform.control.subtitle",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\components\\sections\\platform\\ControlPlaneSection.tsx",
+      "line": 26,
+      "namespace": "Platform.control",
+      "key": "observability.title",
+      "fullKey": "Platform.control.observability.title",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\components\\sections\\platform\\ControlPlaneSection.tsx",
+      "line": 27,
+      "namespace": "Platform.control",
+      "key": "observability.desc",
+      "fullKey": "Platform.control.observability.desc",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\components\\sections\\platform\\ControlPlaneSection.tsx",
+      "line": 34,
+      "namespace": "Platform.control",
+      "key": "fleet",
+      "fullKey": "Platform.control.fleet",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\components\\sections\\platform\\ControlPlaneSection.tsx",
+      "line": 35,
+      "namespace": "Platform.control",
+      "key": "healing",
+      "fullKey": "Platform.control.healing",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\components\\sections\\platform\\ControlPlaneSection.tsx",
+      "line": 36,
+      "namespace": "Platform.control",
+      "key": "gitops",
+      "fullKey": "Platform.control.gitops",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\components\\sections\\platform\\ControlPlaneSection.tsx",
+      "line": 37,
+      "namespace": "Platform.control",
+      "key": "audit",
+      "fullKey": "Platform.control.audit",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\components\\sections\\platform\\ComparisonSection.tsx",
+      "line": 9,
+      "namespace": "Platform.comparison",
+      "key": "rows.neutrality",
+      "fullKey": "Platform.comparison.rows.neutrality",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\components\\sections\\platform\\ComparisonSection.tsx",
+      "line": 10,
+      "namespace": "Platform.comparison",
+      "key": "rows.audits",
+      "fullKey": "Platform.comparison.rows.audits",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\components\\sections\\platform\\ComparisonSection.tsx",
+      "line": 11,
+      "namespace": "Platform.comparison",
+      "key": "rows.sync",
+      "fullKey": "Platform.comparison.rows.sync",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\components\\sections\\platform\\ComparisonSection.tsx",
+      "line": 11,
+      "namespace": "Platform.comparison",
+      "key": "limited",
+      "fullKey": "Platform.comparison.limited",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\components\\sections\\platform\\ComparisonSection.tsx",
+      "line": 12,
+      "namespace": "Platform.comparison",
+      "key": "rows.refactoring",
+      "fullKey": "Platform.comparison.rows.refactoring",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\components\\sections\\platform\\ComparisonSection.tsx",
+      "line": 13,
+      "namespace": "Platform.comparison",
+      "key": "rows.encryption",
+      "fullKey": "Platform.comparison.rows.encryption",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\components\\sections\\platform\\ComparisonSection.tsx",
+      "line": 13,
+      "namespace": "Platform.comparison",
+      "key": "partial",
+      "fullKey": "Platform.comparison.partial",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\components\\sections\\platform\\ComparisonSection.tsx",
+      "line": 14,
+      "namespace": "Platform.comparison",
+      "key": "rows.iam",
+      "fullKey": "Platform.comparison.rows.iam",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\components\\sections\\platform\\ComparisonSection.tsx",
+      "line": 15,
+      "namespace": "Platform.comparison",
+      "key": "rows.arbitrage",
+      "fullKey": "Platform.comparison.rows.arbitrage",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\components\\sections\\platform\\ComparisonSection.tsx",
+      "line": 22,
+      "namespace": "Platform.comparison",
+      "key": "title",
+      "fullKey": "Platform.comparison.title",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\components\\sections\\platform\\ComparisonSection.tsx",
+      "line": 23,
+      "namespace": "Platform.comparison",
+      "key": "subtitle",
+      "fullKey": "Platform.comparison.subtitle",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\components\\sections\\platform\\ComparisonSection.tsx",
+      "line": 30,
+      "namespace": "Platform.comparison",
+      "key": "capability",
+      "fullKey": "Platform.comparison.capability",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\components\\sections\\platform\\ComparisonSection.tsx",
+      "line": 31,
+      "namespace": "Platform.comparison",
+      "key": "legacy",
+      "fullKey": "Platform.comparison.legacy",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\components\\sections\\platform\\ComparisonSection.tsx",
+      "line": 32,
+      "namespace": "Platform.comparison",
+      "key": "sovereign",
+      "fullKey": "Platform.comparison.sovereign",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\components\\sections\\platform\\ComparisonSection.tsx",
+      "line": 56,
+      "namespace": "Platform.comparison",
+      "key": "footer",
+      "fullKey": "Platform.comparison.footer",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\components\\sections\\platform\\ArbitrageSection.tsx",
+      "line": 13,
+      "namespace": "Platform.arbitrage",
+      "key": "tag",
+      "fullKey": "Platform.arbitrage.tag",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\components\\sections\\platform\\ArbitrageSection.tsx",
+      "line": 15,
+      "namespace": "Platform.arbitrage",
+      "key": "title",
+      "fullKey": "Platform.arbitrage.title",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\components\\sections\\platform\\ArbitrageSection.tsx",
+      "line": 18,
+      "namespace": "Platform.arbitrage",
+      "key": "subtitle",
+      "fullKey": "Platform.arbitrage.subtitle",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\components\\sections\\platform\\ArbitrageSection.tsx",
+      "line": 30,
+      "namespace": "Platform.arbitrage",
+      "key": "forecastTitle",
+      "fullKey": "Platform.arbitrage.forecastTitle",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\components\\sections\\platform\\ArbitrageSection.tsx",
+      "line": 32,
+      "namespace": "Platform.arbitrage",
+      "key": "forecastDesc",
+      "fullKey": "Platform.arbitrage.forecastDesc",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\components\\sections\\platform\\ArbitrageSection.tsx",
+      "line": 43,
+      "namespace": "Platform.arbitrage",
+      "key": "lockinTitle",
+      "fullKey": "Platform.arbitrage.lockinTitle",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\components\\sections\\platform\\ArbitrageSection.tsx",
+      "line": 45,
+      "namespace": "Platform.arbitrage",
+      "key": "lockinDesc",
+      "fullKey": "Platform.arbitrage.lockinDesc",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\components\\sections\\platform\\ArbitrageSection.tsx",
+      "line": 50,
+      "namespace": "Platform.arbitrage",
+      "key": "portabilityTitle",
+      "fullKey": "Platform.arbitrage.portabilityTitle",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\components\\sections\\platform\\ArbitrageSection.tsx",
+      "line": 52,
+      "namespace": "Platform.arbitrage",
+      "key": "portabilityDesc",
+      "fullKey": "Platform.arbitrage.portabilityDesc",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\components\\sections\\platform\\ArbitrageSection.tsx",
+      "line": 64,
+      "namespace": "Platform.arbitrage",
+      "key": "switchTitle",
+      "fullKey": "Platform.arbitrage.switchTitle",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\components\\sections\\platform\\ArbitrageSection.tsx",
+      "line": 66,
+      "namespace": "Platform.arbitrage",
+      "key": "switchDesc",
+      "fullKey": "Platform.arbitrage.switchDesc",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\components\\sections\\platform\\ArbitrageSection.tsx",
+      "line": 74,
+      "namespace": "Platform.arbitrage",
+      "key": "eb1aTag",
+      "fullKey": "Platform.arbitrage.eb1aTag",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\components\\sections\\platform\\ArbitrageSection.tsx",
+      "line": 76,
+      "namespace": "Platform.arbitrage",
+      "key": "eb1aDesc",
+      "fullKey": "Platform.arbitrage.eb1aDesc",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\components\\sections\\platform\\ArbitrageSection.tsx",
+      "line": 81,
+      "namespace": "Platform.arbitrage",
+      "key": "auditor",
+      "fullKey": "Platform.arbitrage.auditor",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\components\\sections\\platform\\ArbitrageSection.tsx",
+      "line": 82,
+      "namespace": "Platform.arbitrage",
+      "key": "auditorTitle",
+      "fullKey": "Platform.arbitrage.auditorTitle",
       "type": "t_call"
     },
     {
@@ -2209,563 +2721,51 @@
       "type": "t_call"
     },
     {
-      "file": "src\\components\\sections\\platform\\SecuritySection.tsx",
+      "file": "src\\components\\sections\\enterprise\\EnterpriseApproach.tsx",
+      "line": 15,
+      "namespace": "Enterprise.partnership",
+      "key": "title",
+      "fullKey": "Enterprise.partnership.title",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\components\\sections\\enterprise\\EnterpriseApproach.tsx",
       "line": 16,
-      "namespace": "Platform.security",
-      "key": "title",
-      "fullKey": "Platform.security.title",
+      "namespace": "Enterprise.partnership",
+      "key": "subtitle",
+      "fullKey": "Enterprise.partnership.subtitle",
       "type": "t_call"
     },
     {
-      "file": "src\\components\\sections\\platform\\SecuritySection.tsx",
-      "line": 18,
-      "namespace": "Platform.security",
-      "key": "desc",
-      "fullKey": "Platform.security.desc",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\components\\sections\\platform\\SecuritySection.tsx",
-      "line": 20,
-      "namespace": "Platform.security",
-      "key": "cta",
-      "fullKey": "Platform.security.cta",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\components\\sections\\platform\\SecuritySection.tsx",
-      "line": 40,
-      "namespace": "Platform.security",
-      "key": "zerotrust",
-      "fullKey": "Platform.security.zerotrust",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\components\\sections\\platform\\SecuritySection.tsx",
-      "line": 46,
-      "namespace": "Platform.security",
-      "key": "features.fips.title",
-      "fullKey": "Platform.security.features.fips.title",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\components\\sections\\platform\\SecuritySection.tsx",
-      "line": 46,
-      "namespace": "Platform.security",
-      "key": "features.fips.desc",
-      "fullKey": "Platform.security.features.fips.desc",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\components\\sections\\platform\\SecuritySection.tsx",
-      "line": 47,
-      "namespace": "Platform.security",
-      "key": "features.rbac.title",
-      "fullKey": "Platform.security.features.rbac.title",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\components\\sections\\platform\\SecuritySection.tsx",
-      "line": 47,
-      "namespace": "Platform.security",
-      "key": "features.rbac.desc",
-      "fullKey": "Platform.security.features.rbac.desc",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\components\\sections\\platform\\SecuritySection.tsx",
-      "line": 48,
-      "namespace": "Platform.security",
-      "key": "features.vpc.title",
-      "fullKey": "Platform.security.features.vpc.title",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\components\\sections\\platform\\SecuritySection.tsx",
-      "line": 48,
-      "namespace": "Platform.security",
-      "key": "features.vpc.desc",
-      "fullKey": "Platform.security.features.vpc.desc",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\components\\sections\\platform\\SecuritySection.tsx",
+      "file": "src\\components\\sections\\enterprise\\EnterpriseApproach.tsx",
       "line": 49,
-      "namespace": "Platform.security",
-      "key": "features.audit.title",
-      "fullKey": "Platform.security.features.audit.title",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\components\\sections\\platform\\SecuritySection.tsx",
-      "line": 49,
-      "namespace": "Platform.security",
-      "key": "features.audit.desc",
-      "fullKey": "Platform.security.features.audit.desc",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\components\\sections\\platform\\PlatformHero.tsx",
-      "line": 37,
-      "namespace": "Platform",
-      "key": "hero.title",
-      "fullKey": "Platform.hero.title",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\components\\sections\\platform\\PlatformHero.tsx",
-      "line": 40,
-      "namespace": "Platform",
-      "key": "hero.subtitle",
-      "fullKey": "Platform.hero.subtitle",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\components\\sections\\platform\\PlatformHero.tsx",
-      "line": 44,
-      "namespace": "Platform",
-      "key": "hero.ctaPrimary",
-      "fullKey": "Platform.hero.ctaPrimary",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\components\\sections\\platform\\PlatformHero.tsx",
-      "line": 45,
-      "namespace": "Platform",
-      "key": "hero.ctaSecondary",
-      "fullKey": "Platform.hero.ctaSecondary",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\components\\sections\\platform\\PlatformHero.tsx",
-      "line": 60,
-      "namespace": "Platform",
-      "key": "core.title",
-      "fullKey": "Platform.core.title",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\components\\sections\\platform\\PlatformHero.tsx",
-      "line": 62,
-      "namespace": "Platform",
-      "key": "core.desc",
-      "fullKey": "Platform.core.desc",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\components\\sections\\platform\\PlatformHero.tsx",
-      "line": 68,
-      "namespace": "Platform",
-      "key": "stack.api",
-      "fullKey": "Platform.stack.api",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\components\\sections\\platform\\PlatformHero.tsx",
-      "line": 68,
-      "namespace": "Platform",
-      "key": "stack.shielded",
-      "fullKey": "Platform.stack.shielded",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\components\\sections\\platform\\PlatformHero.tsx",
-      "line": 69,
-      "namespace": "Platform",
-      "key": "stack.logic",
-      "fullKey": "Platform.stack.logic",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\components\\sections\\platform\\PlatformHero.tsx",
-      "line": 69,
-      "namespace": "Platform",
-      "key": "stack.active",
-      "fullKey": "Platform.stack.active",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\components\\sections\\platform\\PlatformHero.tsx",
-      "line": 70,
-      "namespace": "Platform",
-      "key": "stack.cluster",
-      "fullKey": "Platform.stack.cluster",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\components\\sections\\platform\\PlatformHero.tsx",
-      "line": 70,
-      "namespace": "Platform",
-      "key": "stack.scaling",
-      "fullKey": "Platform.stack.scaling",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\components\\sections\\platform\\PlatformHero.tsx",
-      "line": 71,
-      "namespace": "Platform",
-      "key": "stack.db",
-      "fullKey": "Platform.stack.db",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\components\\sections\\platform\\PlatformHero.tsx",
-      "line": 71,
-      "namespace": "Platform",
-      "key": "stack.verified",
-      "fullKey": "Platform.stack.verified",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\components\\sections\\platform\\IntegrationsSection.tsx",
-      "line": 9,
-      "namespace": "Platform.integrations",
+      "namespace": "Enterprise.partnership",
       "key": "title",
-      "fullKey": "Platform.integrations.title",
+      "fullKey": "Enterprise.partnership.title",
       "type": "t_call"
     },
     {
-      "file": "src\\components\\sections\\platform\\IntegrationsSection.tsx",
-      "line": 10,
-      "namespace": "Platform.integrations",
-      "key": "subtitle",
-      "fullKey": "Platform.integrations.subtitle",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\components\\sections\\platform\\IntegrationsSection.tsx",
-      "line": 15,
-      "namespace": "Platform.integrations",
-      "key": "infra",
-      "fullKey": "Platform.integrations.infra",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\components\\sections\\platform\\IntegrationsSection.tsx",
-      "line": 28,
-      "namespace": "Platform.integrations",
-      "key": "obs",
-      "fullKey": "Platform.integrations.obs",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\components\\sections\\platform\\IntegrationsSection.tsx",
-      "line": 39,
-      "namespace": "Platform.integrations",
-      "key": "delivery",
-      "fullKey": "Platform.integrations.delivery",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\components\\sections\\platform\\IntegrationsSection.tsx",
+      "file": "src\\components\\sections\\enterprise\\EnterpriseApproach.tsx",
       "line": 52,
-      "namespace": "Platform.integrations",
-      "key": "identity",
-      "fullKey": "Platform.integrations.identity",
+      "namespace": "Enterprise.partnership",
+      "key": "p1",
+      "fullKey": "Enterprise.partnership.p1",
       "type": "t_call"
     },
     {
-      "file": "src\\components\\sections\\platform\\ControlPlaneSection.tsx",
-      "line": 11,
-      "namespace": "Platform.control",
+      "file": "src\\components\\sections\\enterprise\\EnterpriseApproach.tsx",
+      "line": 53,
+      "namespace": "Enterprise.partnership",
+      "key": "p2",
+      "fullKey": "Enterprise.partnership.p2",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\components\\sections\\enterprise\\EnterpriseApproach.tsx",
+      "line": 88,
+      "namespace": "Enterprise.partnership",
       "key": "title",
-      "fullKey": "Platform.control.title",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\components\\sections\\platform\\ControlPlaneSection.tsx",
-      "line": 13,
-      "namespace": "Platform.control",
-      "key": "subtitle",
-      "fullKey": "Platform.control.subtitle",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\components\\sections\\platform\\ControlPlaneSection.tsx",
-      "line": 26,
-      "namespace": "Platform.control",
-      "key": "observability.title",
-      "fullKey": "Platform.control.observability.title",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\components\\sections\\platform\\ControlPlaneSection.tsx",
-      "line": 27,
-      "namespace": "Platform.control",
-      "key": "observability.desc",
-      "fullKey": "Platform.control.observability.desc",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\components\\sections\\platform\\ControlPlaneSection.tsx",
-      "line": 34,
-      "namespace": "Platform.control",
-      "key": "fleet",
-      "fullKey": "Platform.control.fleet",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\components\\sections\\platform\\ControlPlaneSection.tsx",
-      "line": 35,
-      "namespace": "Platform.control",
-      "key": "healing",
-      "fullKey": "Platform.control.healing",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\components\\sections\\platform\\ControlPlaneSection.tsx",
-      "line": 36,
-      "namespace": "Platform.control",
-      "key": "gitops",
-      "fullKey": "Platform.control.gitops",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\components\\sections\\platform\\ControlPlaneSection.tsx",
-      "line": 37,
-      "namespace": "Platform.control",
-      "key": "audit",
-      "fullKey": "Platform.control.audit",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\components\\sections\\platform\\ComparisonSection.tsx",
-      "line": 9,
-      "namespace": "Platform.comparison",
-      "key": "rows.neutrality",
-      "fullKey": "Platform.comparison.rows.neutrality",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\components\\sections\\platform\\ComparisonSection.tsx",
-      "line": 10,
-      "namespace": "Platform.comparison",
-      "key": "rows.audits",
-      "fullKey": "Platform.comparison.rows.audits",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\components\\sections\\platform\\ComparisonSection.tsx",
-      "line": 11,
-      "namespace": "Platform.comparison",
-      "key": "rows.sync",
-      "fullKey": "Platform.comparison.rows.sync",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\components\\sections\\platform\\ComparisonSection.tsx",
-      "line": 11,
-      "namespace": "Platform.comparison",
-      "key": "limited",
-      "fullKey": "Platform.comparison.limited",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\components\\sections\\platform\\ComparisonSection.tsx",
-      "line": 12,
-      "namespace": "Platform.comparison",
-      "key": "rows.refactoring",
-      "fullKey": "Platform.comparison.rows.refactoring",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\components\\sections\\platform\\ComparisonSection.tsx",
-      "line": 13,
-      "namespace": "Platform.comparison",
-      "key": "rows.encryption",
-      "fullKey": "Platform.comparison.rows.encryption",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\components\\sections\\platform\\ComparisonSection.tsx",
-      "line": 13,
-      "namespace": "Platform.comparison",
-      "key": "partial",
-      "fullKey": "Platform.comparison.partial",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\components\\sections\\platform\\ComparisonSection.tsx",
-      "line": 14,
-      "namespace": "Platform.comparison",
-      "key": "rows.iam",
-      "fullKey": "Platform.comparison.rows.iam",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\components\\sections\\platform\\ComparisonSection.tsx",
-      "line": 15,
-      "namespace": "Platform.comparison",
-      "key": "rows.arbitrage",
-      "fullKey": "Platform.comparison.rows.arbitrage",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\components\\sections\\platform\\ComparisonSection.tsx",
-      "line": 22,
-      "namespace": "Platform.comparison",
-      "key": "title",
-      "fullKey": "Platform.comparison.title",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\components\\sections\\platform\\ComparisonSection.tsx",
-      "line": 23,
-      "namespace": "Platform.comparison",
-      "key": "subtitle",
-      "fullKey": "Platform.comparison.subtitle",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\components\\sections\\platform\\ComparisonSection.tsx",
-      "line": 30,
-      "namespace": "Platform.comparison",
-      "key": "capability",
-      "fullKey": "Platform.comparison.capability",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\components\\sections\\platform\\ComparisonSection.tsx",
-      "line": 31,
-      "namespace": "Platform.comparison",
-      "key": "legacy",
-      "fullKey": "Platform.comparison.legacy",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\components\\sections\\platform\\ComparisonSection.tsx",
-      "line": 32,
-      "namespace": "Platform.comparison",
-      "key": "sovereign",
-      "fullKey": "Platform.comparison.sovereign",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\components\\sections\\platform\\ComparisonSection.tsx",
-      "line": 56,
-      "namespace": "Platform.comparison",
-      "key": "footer",
-      "fullKey": "Platform.comparison.footer",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\components\\sections\\platform\\ArbitrageSection.tsx",
-      "line": 13,
-      "namespace": "Platform.arbitrage",
-      "key": "tag",
-      "fullKey": "Platform.arbitrage.tag",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\components\\sections\\platform\\ArbitrageSection.tsx",
-      "line": 15,
-      "namespace": "Platform.arbitrage",
-      "key": "title",
-      "fullKey": "Platform.arbitrage.title",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\components\\sections\\platform\\ArbitrageSection.tsx",
-      "line": 18,
-      "namespace": "Platform.arbitrage",
-      "key": "subtitle",
-      "fullKey": "Platform.arbitrage.subtitle",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\components\\sections\\platform\\ArbitrageSection.tsx",
-      "line": 30,
-      "namespace": "Platform.arbitrage",
-      "key": "forecastTitle",
-      "fullKey": "Platform.arbitrage.forecastTitle",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\components\\sections\\platform\\ArbitrageSection.tsx",
-      "line": 32,
-      "namespace": "Platform.arbitrage",
-      "key": "forecastDesc",
-      "fullKey": "Platform.arbitrage.forecastDesc",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\components\\sections\\platform\\ArbitrageSection.tsx",
-      "line": 43,
-      "namespace": "Platform.arbitrage",
-      "key": "lockinTitle",
-      "fullKey": "Platform.arbitrage.lockinTitle",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\components\\sections\\platform\\ArbitrageSection.tsx",
-      "line": 45,
-      "namespace": "Platform.arbitrage",
-      "key": "lockinDesc",
-      "fullKey": "Platform.arbitrage.lockinDesc",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\components\\sections\\platform\\ArbitrageSection.tsx",
-      "line": 50,
-      "namespace": "Platform.arbitrage",
-      "key": "portabilityTitle",
-      "fullKey": "Platform.arbitrage.portabilityTitle",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\components\\sections\\platform\\ArbitrageSection.tsx",
-      "line": 52,
-      "namespace": "Platform.arbitrage",
-      "key": "portabilityDesc",
-      "fullKey": "Platform.arbitrage.portabilityDesc",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\components\\sections\\platform\\ArbitrageSection.tsx",
-      "line": 64,
-      "namespace": "Platform.arbitrage",
-      "key": "switchTitle",
-      "fullKey": "Platform.arbitrage.switchTitle",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\components\\sections\\platform\\ArbitrageSection.tsx",
-      "line": 66,
-      "namespace": "Platform.arbitrage",
-      "key": "switchDesc",
-      "fullKey": "Platform.arbitrage.switchDesc",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\components\\sections\\platform\\ArbitrageSection.tsx",
-      "line": 74,
-      "namespace": "Platform.arbitrage",
-      "key": "eb1aTag",
-      "fullKey": "Platform.arbitrage.eb1aTag",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\components\\sections\\platform\\ArbitrageSection.tsx",
-      "line": 76,
-      "namespace": "Platform.arbitrage",
-      "key": "eb1aDesc",
-      "fullKey": "Platform.arbitrage.eb1aDesc",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\components\\sections\\platform\\ArbitrageSection.tsx",
-      "line": 81,
-      "namespace": "Platform.arbitrage",
-      "key": "auditor",
-      "fullKey": "Platform.arbitrage.auditor",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\components\\sections\\platform\\ArbitrageSection.tsx",
-      "line": 82,
-      "namespace": "Platform.arbitrage",
-      "key": "auditorTitle",
-      "fullKey": "Platform.arbitrage.auditorTitle",
+      "fullKey": "Enterprise.partnership.title",
       "type": "t_call"
     },
     {
@@ -3009,94 +3009,6 @@
       "type": "t_call"
     },
     {
-      "file": "src\\app\\[locale]\\register\\page.tsx",
-      "line": 191,
-      "namespace": "Auth.Register",
-      "key": "placeholders.name",
-      "fullKey": "Auth.Register.placeholders.name",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\register\\page.tsx",
-      "line": 198,
-      "namespace": "Auth.Register",
-      "key": "fields.email",
-      "fullKey": "Auth.Register.fields.email",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\register\\page.tsx",
-      "line": 215,
-      "namespace": "Auth.Register",
-      "key": "placeholders.email",
-      "fullKey": "Auth.Register.placeholders.email",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\register\\page.tsx",
-      "line": 222,
-      "namespace": "Auth.Register",
-      "key": "fields.company",
-      "fullKey": "Auth.Register.fields.company",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\register\\page.tsx",
-      "line": 239,
-      "namespace": "Auth.Register",
-      "key": "placeholders.company",
-      "fullKey": "Auth.Register.placeholders.company",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\register\\page.tsx",
-      "line": 246,
-      "namespace": "Auth.Register",
-      "key": "fields.phone",
-      "fullKey": "Auth.Register.fields.phone",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\register\\page.tsx",
-      "line": 262,
-      "namespace": "Auth.Register",
-      "key": "placeholders.phone",
-      "fullKey": "Auth.Register.placeholders.phone",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\register\\page.tsx",
-      "line": 269,
-      "namespace": "Auth.Register",
-      "key": "fields.password",
-      "fullKey": "Auth.Register.fields.password",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\register\\page.tsx",
-      "line": 286,
-      "namespace": "Auth.Register",
-      "key": "placeholders.password",
-      "fullKey": "Auth.Register.placeholders.password",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\register\\page.tsx",
-      "line": 293,
-      "namespace": "Auth.Register",
-      "key": "fields.confirmPassword",
-      "fullKey": "Auth.Register.fields.confirmPassword",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\register\\page.tsx",
-      "line": 310,
-      "namespace": "Auth.Register",
-      "key": "placeholders.confirmPassword",
-      "fullKey": "Auth.Register.placeholders.confirmPassword",
-      "type": "t_call"
-    },
-    {
       "file": "src\\app\\[locale]\\security\\page.tsx",
       "line": 24,
       "namespace": "Common",
@@ -3321,27 +3233,91 @@
       "type": "t_call"
     },
     {
-      "file": "src\\app\\[locale]\\products\\page.tsx",
-      "line": 56,
-      "namespace": "Common",
-      "key": "hero.tag",
-      "fullKey": "Common.hero.tag",
+      "file": "src\\app\\[locale]\\register\\page.tsx",
+      "line": 191,
+      "namespace": "Auth.Register",
+      "key": "placeholders.name",
+      "fullKey": "Auth.Register.placeholders.name",
       "type": "t_call"
     },
     {
-      "file": "src\\app\\[locale]\\products\\page.tsx",
-      "line": 69,
-      "namespace": "Common",
-      "key": "hero.title",
-      "fullKey": "Common.hero.title",
+      "file": "src\\app\\[locale]\\register\\page.tsx",
+      "line": 198,
+      "namespace": "Auth.Register",
+      "key": "fields.email",
+      "fullKey": "Auth.Register.fields.email",
       "type": "t_call"
     },
     {
-      "file": "src\\app\\[locale]\\products\\page.tsx",
-      "line": 79,
-      "namespace": "Common",
-      "key": "hero.subtitle",
-      "fullKey": "Common.hero.subtitle",
+      "file": "src\\app\\[locale]\\register\\page.tsx",
+      "line": 215,
+      "namespace": "Auth.Register",
+      "key": "placeholders.email",
+      "fullKey": "Auth.Register.placeholders.email",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\register\\page.tsx",
+      "line": 222,
+      "namespace": "Auth.Register",
+      "key": "fields.company",
+      "fullKey": "Auth.Register.fields.company",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\register\\page.tsx",
+      "line": 239,
+      "namespace": "Auth.Register",
+      "key": "placeholders.company",
+      "fullKey": "Auth.Register.placeholders.company",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\register\\page.tsx",
+      "line": 246,
+      "namespace": "Auth.Register",
+      "key": "fields.phone",
+      "fullKey": "Auth.Register.fields.phone",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\register\\page.tsx",
+      "line": 262,
+      "namespace": "Auth.Register",
+      "key": "placeholders.phone",
+      "fullKey": "Auth.Register.placeholders.phone",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\register\\page.tsx",
+      "line": 269,
+      "namespace": "Auth.Register",
+      "key": "fields.password",
+      "fullKey": "Auth.Register.fields.password",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\register\\page.tsx",
+      "line": 286,
+      "namespace": "Auth.Register",
+      "key": "placeholders.password",
+      "fullKey": "Auth.Register.placeholders.password",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\register\\page.tsx",
+      "line": 293,
+      "namespace": "Auth.Register",
+      "key": "fields.confirmPassword",
+      "fullKey": "Auth.Register.fields.confirmPassword",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\register\\page.tsx",
+      "line": 310,
+      "namespace": "Auth.Register",
+      "key": "placeholders.confirmPassword",
+      "fullKey": "Auth.Register.placeholders.confirmPassword",
       "type": "t_call"
     },
     {
@@ -3785,6 +3761,30 @@
       "type": "t_call"
     },
     {
+      "file": "src\\app\\[locale]\\products\\page.tsx",
+      "line": 56,
+      "namespace": "Common",
+      "key": "hero.tag",
+      "fullKey": "Common.hero.tag",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\products\\page.tsx",
+      "line": 69,
+      "namespace": "Common",
+      "key": "hero.title",
+      "fullKey": "Common.hero.title",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\products\\page.tsx",
+      "line": 79,
+      "namespace": "Common",
+      "key": "hero.subtitle",
+      "fullKey": "Common.hero.subtitle",
+      "type": "t_call"
+    },
+    {
       "file": "src\\app\\[locale]\\onboarding\\page.tsx",
       "line": 46,
       "namespace": "Auth.Onboarding",
@@ -4201,6 +4201,190 @@
       "type": "t_call"
     },
     {
+      "file": "src\\app\\[locale]\\contact\\page.tsx",
+      "line": 29,
+      "namespace": "Common",
+      "key": "email.support",
+      "fullKey": "Common.email.support",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\contact\\page.tsx",
+      "line": 31,
+      "namespace": "Common",
+      "key": "location",
+      "fullKey": "Common.location",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\company\\page.tsx",
+      "line": 170,
+      "namespace": "Common",
+      "key": "hero.tag",
+      "fullKey": "Common.hero.tag",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\company\\page.tsx",
+      "line": 171,
+      "namespace": "Common",
+      "key": "hero.title",
+      "fullKey": "Common.hero.title",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\company\\page.tsx",
+      "line": 172,
+      "namespace": "Common",
+      "key": "hero.subtitle",
+      "fullKey": "Common.hero.subtitle",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\company\\page.tsx",
+      "line": 190,
+      "namespace": "Common",
+      "key": "opportunity.title",
+      "fullKey": "Common.opportunity.title",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\company\\page.tsx",
+      "line": 191,
+      "namespace": "Common",
+      "key": "opportunity.content",
+      "fullKey": "Common.opportunity.content",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\company\\page.tsx",
+      "line": 194,
+      "namespace": "Common",
+      "key": "vision.title",
+      "fullKey": "Common.vision.title",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\company\\page.tsx",
+      "line": 195,
+      "namespace": "Common",
+      "key": "vision.content",
+      "fullKey": "Common.vision.content",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\blog\\page.tsx",
+      "line": 33,
+      "namespace": "Common",
+      "key": "hero.tag",
+      "fullKey": "Common.hero.tag",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\blog\\page.tsx",
+      "line": 36,
+      "namespace": "Common",
+      "key": "hero.title",
+      "fullKey": "Common.hero.title",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\blog\\page.tsx",
+      "line": 39,
+      "namespace": "Common",
+      "key": "hero.subtitle",
+      "fullKey": "Common.hero.subtitle",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\blog\\page.tsx",
+      "line": 45,
+      "namespace": "Common",
+      "key": "hero.search",
+      "fullKey": "Common.hero.search",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\blog\\page.tsx",
+      "line": 124,
+      "namespace": "Common",
+      "key": "newsletter.title",
+      "fullKey": "Common.newsletter.title",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\blog\\page.tsx",
+      "line": 125,
+      "namespace": "Common",
+      "key": "newsletter.subtitle",
+      "fullKey": "Common.newsletter.subtitle",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\blog\\page.tsx",
+      "line": 127,
+      "namespace": "Common",
+      "key": "newsletter.placeholder",
+      "fullKey": "Common.newsletter.placeholder",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\blog\\page.tsx",
+      "line": 128,
+      "namespace": "Common",
+      "key": "newsletter.button",
+      "fullKey": "Common.newsletter.button",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\blog\\page.tsx",
+      "line": 130,
+      "namespace": "Common",
+      "key": "newsletter.footer",
+      "fullKey": "Common.newsletter.footer",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\app\\page.tsx",
+      "line": 15,
+      "namespace": "Common",
+      "key": "title",
+      "fullKey": "Common.title",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\app\\page.tsx",
+      "line": 18,
+      "namespace": "Common",
+      "key": "welcome",
+      "fullKey": "Common.welcome",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\app\\page.tsx",
+      "line": 21,
+      "namespace": "Common",
+      "key": "role",
+      "fullKey": "Common.role",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\app\\page.tsx",
+      "line": 27,
+      "namespace": "Common",
+      "key": "logicMeshStatus",
+      "fullKey": "Common.logicMeshStatus",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\app\\page.tsx",
+      "line": 30,
+      "namespace": "Common",
+      "key": "active",
+      "fullKey": "Common.active",
+      "type": "t_call"
+    },
+    {
       "file": "src\\app\\[locale]\\compliance\\page.tsx",
       "line": 11,
       "namespace": "Common",
@@ -4542,190 +4726,6 @@
       "namespace": "Common",
       "key": "response4",
       "fullKey": "Common.response4",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\company\\page.tsx",
-      "line": 170,
-      "namespace": "Common",
-      "key": "hero.tag",
-      "fullKey": "Common.hero.tag",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\company\\page.tsx",
-      "line": 171,
-      "namespace": "Common",
-      "key": "hero.title",
-      "fullKey": "Common.hero.title",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\company\\page.tsx",
-      "line": 172,
-      "namespace": "Common",
-      "key": "hero.subtitle",
-      "fullKey": "Common.hero.subtitle",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\company\\page.tsx",
-      "line": 190,
-      "namespace": "Common",
-      "key": "opportunity.title",
-      "fullKey": "Common.opportunity.title",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\company\\page.tsx",
-      "line": 191,
-      "namespace": "Common",
-      "key": "opportunity.content",
-      "fullKey": "Common.opportunity.content",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\company\\page.tsx",
-      "line": 194,
-      "namespace": "Common",
-      "key": "vision.title",
-      "fullKey": "Common.vision.title",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\company\\page.tsx",
-      "line": 195,
-      "namespace": "Common",
-      "key": "vision.content",
-      "fullKey": "Common.vision.content",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\contact\\page.tsx",
-      "line": 29,
-      "namespace": "Common",
-      "key": "email.support",
-      "fullKey": "Common.email.support",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\contact\\page.tsx",
-      "line": 31,
-      "namespace": "Common",
-      "key": "location",
-      "fullKey": "Common.location",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\blog\\page.tsx",
-      "line": 33,
-      "namespace": "Common",
-      "key": "hero.tag",
-      "fullKey": "Common.hero.tag",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\blog\\page.tsx",
-      "line": 36,
-      "namespace": "Common",
-      "key": "hero.title",
-      "fullKey": "Common.hero.title",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\blog\\page.tsx",
-      "line": 39,
-      "namespace": "Common",
-      "key": "hero.subtitle",
-      "fullKey": "Common.hero.subtitle",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\blog\\page.tsx",
-      "line": 45,
-      "namespace": "Common",
-      "key": "hero.search",
-      "fullKey": "Common.hero.search",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\blog\\page.tsx",
-      "line": 124,
-      "namespace": "Common",
-      "key": "newsletter.title",
-      "fullKey": "Common.newsletter.title",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\blog\\page.tsx",
-      "line": 125,
-      "namespace": "Common",
-      "key": "newsletter.subtitle",
-      "fullKey": "Common.newsletter.subtitle",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\blog\\page.tsx",
-      "line": 127,
-      "namespace": "Common",
-      "key": "newsletter.placeholder",
-      "fullKey": "Common.newsletter.placeholder",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\blog\\page.tsx",
-      "line": 128,
-      "namespace": "Common",
-      "key": "newsletter.button",
-      "fullKey": "Common.newsletter.button",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\blog\\page.tsx",
-      "line": 130,
-      "namespace": "Common",
-      "key": "newsletter.footer",
-      "fullKey": "Common.newsletter.footer",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\app\\page.tsx",
-      "line": 15,
-      "namespace": "Common",
-      "key": "title",
-      "fullKey": "Common.title",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\app\\page.tsx",
-      "line": 18,
-      "namespace": "Common",
-      "key": "welcome",
-      "fullKey": "Common.welcome",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\app\\page.tsx",
-      "line": 21,
-      "namespace": "Common",
-      "key": "role",
-      "fullKey": "Common.role",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\app\\page.tsx",
-      "line": 27,
-      "namespace": "Common",
-      "key": "logicMeshStatus",
-      "fullKey": "Common.logicMeshStatus",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\app\\page.tsx",
-      "line": 30,
-      "namespace": "Common",
-      "key": "active",
-      "fullKey": "Common.active",
       "type": "t_call"
     },
     {
