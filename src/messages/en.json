@@ -830,7 +830,7 @@
     "intro": {
       "fundamentalFlaw": "The fundamental flaw in DevOps tooling is the assumption that infrastructure can be managed through imperative commands.",
       "paradigmShift": "We propose a paradigm shift: declarative, policy-driven infrastructure that self-heals and self-optimizes.",
-      "autonomousControl": "The Autonomous Enterprise Control Plane (AECP) represents this new approach."
+      "autonomousControl": "The Autonomous Enterprise Control Plane (AECP) represents this new approach to cloud infrastructure management."
     }
   },
   "HomeSections": {
@@ -1173,55 +1173,78 @@
     },
     "devops": {
       "hero": {
+        "badge": "PLATFORM ENGINEERING",
         "title": "Platform Engineering Services",
         "subtitle": "Transform your DevOps practice into a platform engineering powerhouse"
       },
       "overview": {
         "title": "Platform Overview",
-        "transition": "Transitioning to Platform Engineering",
-        "transitionDesc": "Move from manual DevOps to automated platform engineering",
-        "capabilities": "Core Capabilities",
-        "capabilitiesDesc": "Self-service infrastructure, policy enforcement, and observability"
+        "transition": {
+          "title": "Transitioning to Platform Engineering",
+          "description": "Move from manual DevOps to automated platform engineering with self-service infrastructure and policy-driven governance."
+        },
+        "capabilities": {
+          "title": "Core Capabilities",
+          "description": "Self-service infrastructure, policy enforcement, and observability built into every layer of your platform."
+        }
       }
     }
   },
   "Blog": {
     "sovereigntyFramework": {
       "hero": {
+        "badge": "TECHNICAL GUIDE",
         "title": "Data Sovereignty Framework",
         "subtitle": "A comprehensive guide to sovereign cloud architectures",
         "date": "January 15, 2026",
         "readTime": "12 MIN READ"
       },
       "sections": {
-        "dataInvariance": "Data Invariance",
-        "dataInvarianceDesc": "Ensuring data integrity across distributed systems",
-        "instructionalPortability": "Instructional Portability",
-        "instructionalDesc": "Platform-agnostic deployment patterns",
-        "policyEnforcement": "Policy Enforcement",
-        "policyDesc": "Automated compliance and governance"
+        "dataInvariance": {
+          "title": "Data Invariance",
+          "description": "Ensuring data integrity across distributed systems with cryptographic verification and immutable audit trails."
+        },
+        "instructionalPortability": {
+          "title": "Instructional Portability",
+          "description": "Platform-agnostic deployment patterns that enable true multi-cloud portability without vendor lock-in."
+        },
+        "policyEnforcement": {
+          "title": "Policy Enforcement",
+          "description": "Automated compliance and governance through policy-as-code and continuous validation."
+        }
       }
     },
     "cloudModernization": {
       "hero": {
+        "badge": "TECHNICAL DEEP DIVE",
         "title": "Cloud Modernization Guide",
         "subtitle": "The formal mathematical framework behind autonomous enterprise control planes",
         "date": "January 10, 2026",
         "readTime": "15 MIN READ"
       },
-      "intro": "The formal mathematical framework behind autonomous enterprise control planes provides a rigorous foundation for building sovereign cloud infrastructure."
+      "intro": "The formal mathematical framework behind autonomous enterprise control planes provides a rigorous foundation for building sovereign cloud infrastructure that scales across global markets."
     },
     "cioExitStrategy": {
       "hero": {
+        "badge": "EXECUTIVE GUIDE",
         "title": "CIO's Guide",
         "subtitle": "to Cloud Exit Strategies",
         "date": "January 5, 2026",
         "readTime": "18 MIN READ"
       },
       "sections": {
-        "vendorLock": "Understanding Vendor Lock-in",
-        "exitPlanning": "Strategic Exit Planning",
-        "implementation": "Implementation Roadmap"
+        "vendorLock": {
+          "title": "Understanding Vendor Lock-in",
+          "description": "The hidden costs of proprietary cloud services and how to identify lock-in risks in your current architecture."
+        },
+        "exitPlanning": {
+          "title": "Strategic Exit Planning",
+          "description": "A systematic approach to building portable infrastructure that enables seamless provider transitions."
+        },
+        "implementation": {
+          "title": "Implementation Roadmap",
+          "description": "Step-by-step guide to implementing a vendor-neutral architecture with minimal disruption to operations."
+        }
       }
     }
   },
@@ -2658,11 +2681,28 @@
       "date": "January 2026",
       "readTime": "45 min read",
       "abstract": "This paper presents a comprehensive framework for implementing sovereign cloud architectures at enterprise scale."
+    },
+    "page": {
+      "badge": "RESEARCH & PUBLICATIONS",
+      "title": "Technical Standards",
+      "titleHighlight": "and Scholarly Articles",
+      "subtitle": "Original research from our founding engineers",
+      "newPublication": "New Publication",
+      "featured": {
+        "badge": "FEATURED PAPER",
+        "title": "Reconciling Sovereignty, Scale, and Complexity",
+        "subtitle": "A formal framework for autonomous enterprise control planes",
+        "authors": "Chaitanya Bharath Gopu, et al.",
+        "date": "January 2026",
+        "readTime": "45 min read",
+        "abstract": "This paper presents a comprehensive framework for implementing sovereign cloud architectures at enterprise scale."
+      }
     }
   },
   "ResearchPages": {
     "distributedSystems": {
       "hero": {
+        "badge": "TECHNICAL RESEARCH",
         "title": "Distributed Systems Resilience",
         "subtitle": "Building fault-tolerant cloud-native architectures"
       },
@@ -2672,10 +2712,14 @@
         "recovery": "System self-heals. Full capacity restored."
       },
       "sections": {
-        "chaosEngineering": "4. Chaos Engineering",
-        "chaosDesc": "Proactive failure injection to validate resilience",
-        "circuitBreaker": "5. Circuit Breaker Pattern",
-        "circuitDesc": "Prevent cascade failures with intelligent request handling"
+        "chaosEngineering": {
+          "title": "4. Chaos Engineering",
+          "description": "Proactive failure injection to validate resilience and identify weaknesses before they impact production."
+        },
+        "circuitBreaker": {
+          "title": "5. Circuit Breaker Pattern",
+          "description": "Prevent cascade failures with intelligent request handling and automatic fallback mechanisms."
+        }
       }
     }
   }
