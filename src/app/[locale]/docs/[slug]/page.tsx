@@ -9,7 +9,7 @@ import { PageShell } from "@/components/layout/PageShell";
 interface DocMetadata {
     id: string;
     key: string;
-    icon: any;
+    icon: React.ReactNode;
 }
 
 export default async function DocDetailPage({ params }: { params: Promise<{ locale: string; slug: string }> }) {
@@ -38,7 +38,7 @@ export default async function DocDetailPage({ params }: { params: Promise<{ loca
             <Section className="py-20 border-b border-white/10" style={{ background: 'var(--bg-surface-2)', minHeight: '80vh' }}>
                 <PageShell>
                     <Link href={`/${locale}/docs`} className="inline-flex items-center gap-2 text-primary font-bold mb-8 hover:opacity-70 transition-opacity">
-                        <ArrowLeft size={16} /> Technical Library
+                        <ArrowLeft size={16} /> {t('technicalLibrary')}
                     </Link>
 
                     <div className="grid md:grid-cols-[1fr_300px] gap-12">
@@ -60,17 +60,13 @@ export default async function DocDetailPage({ params }: { params: Promise<{ loca
                             </p>
 
                             <div className="glass-panel p-10 rounded-[2.5rem] border border-white/10 bg-white/[0.02]">
-                                <h3 className="text-xl font-bold mb-6">Abstract</h3>
+                                <h3 className="text-xl font-bold mb-6">{t('abstract.title')}</h3>
                                 <div className="space-y-4 opacity-70 leading-relaxed text-sm">
                                     <p>
-                                        This technical volume formalizes the implementation details of the {t(`cards.${doc.key}.title`)}
-                                        within the Autonomous Sovereign Orchestration (ASO) framework.
-                                        It provides the necessary evidence for original contribution in cloud-agnostic systems.
+                                        {t('abstract.paragraph1', { title: t(`cards.${doc.key}.title`) })}
                                     </p>
                                     <p>
-                                        The following sections explore the empirical validation,
-                                        architectural constraints, and performance breakthroughs
-                                        associated with this specific exhibit.
+                                        {t('abstract.paragraph2')}
                                     </p>
                                 </div>
 
@@ -79,8 +75,8 @@ export default async function DocDetailPage({ params }: { params: Promise<{ loca
                                         <div className="flex items-center gap-4">
                                             <div className="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center font-bold text-primary">01</div>
                                             <div>
-                                                <h4 className="font-bold text-sm">Empirical Data Set</h4>
-                                                <p className="text-xs opacity-50">Verified multi-cloud telemetry</p>
+                                                <h4 className="font-bold text-sm">{t('sections.empiricalDataSet')}</h4>
+                                                <p className="text-xs opacity-50">{t('sections.empiricalDataSetDesc')}</p>
                                             </div>
                                         </div>
                                         <ChevronRight size={18} className="opacity-0 group-hover:opacity-100 transform translate-x-[-10px] group-hover:translate-x-0 transition-all" />
@@ -89,8 +85,8 @@ export default async function DocDetailPage({ params }: { params: Promise<{ loca
                                         <div className="flex items-center gap-4">
                                             <div className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center font-bold">02</div>
                                             <div>
-                                                <h4 className="font-bold text-sm">Validation Protocols</h4>
-                                                <p className="text-xs opacity-50">Autonomous gating logs</p>
+                                                <h4 className="font-bold text-sm">{t('sections.validationProtocols')}</h4>
+                                                <p className="text-xs opacity-50">{t('sections.autonomousGatingLogs')}</p>
                                             </div>
                                         </div>
                                         <ChevronRight size={18} className="opacity-0 group-hover:opacity-100 transform translate-x-[-10px] group-hover:translate-x-0 transition-all" />
