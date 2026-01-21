@@ -1,6 +1,7 @@
 import React from 'react';
 import { FileText, Layers, ShieldCheck, Award, ChevronRight, Network, BookOpen, ArrowRight, Activity } from 'lucide-react';
 import Link from 'next/link';
+import { getTranslations } from 'next-intl/server';
 import { Metadata } from 'next';
 
 export const revalidate = 86400; // Cache for 24 hours (ISR)
@@ -16,6 +17,8 @@ export const metadata: Metadata = {
 
 export default async function ResearchHubPage({ params }: { params: Promise<{ locale: string }> }) {
     const { locale } = await params;
+    const t = await getTranslations('Research.page');
+    const tp = await getTranslations('Papers');
 
     return (
         <div className="min-h-screen bg-[var(--background)]">
@@ -25,16 +28,15 @@ export default async function ResearchHubPage({ params }: { params: Promise<{ lo
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
                         <div className="text-left">
                             <div className="badge badge-primary-subtle mb-4 inline-flex items-center gap-2">
-                                <Award size={14} /> TECHNICAL RESEARCH REPOSITORY
+                                <Award size={14} /> {t('badge')}
                             </div>
                             <h1 className="text-3xl md:text-5xl font-bold tracking-tight">
-                                Software <span className="text-gradient">Architecture Research</span>
+                                {t('title')} <span className="text-gradient">{t('titleHighlight')}</span>
                             </h1>
                         </div>
                         <div className="text-left">
                             <p className="text-xl opacity-70 leading-relaxed text-balance">
-                                This repository documents original contributions to global software delivery systems,
-                                focusing on automated quality enforcement, request routing safety, and sovereign control planes.
+                                {t('subtitle')}
                             </p>
                         </div>
                     </div>
@@ -47,9 +49,9 @@ export default async function ResearchHubPage({ params }: { params: Promise<{ lo
                     <div className="mb-8">
                         <div className="flex items-center gap-2 mb-2 text-primary">
                             <Award size={18} />
-                            <span className="text-xs font-bold font-mono uppercase tracking-widest">Featured Publication</span>
+                            <span className="text-xs font-bold font-mono uppercase tracking-widest">{t('featured.badge')}</span>
                         </div>
-                        <h2 className="text-3xl font-bold tracking-tight">The Enterprise Architecture Tension</h2>
+                        <h2 className="text-3xl font-bold tracking-tight">{t('featured.sectionTitle')}</h2>
                     </div>
 
                     <Link href={`/${locale}/research/papers/scholarly-article`} className="glass-panel p-0 rounded-[2rem] border border-white/10 hover:border-primary/50 transition-all group relative overflow-hidden block">
@@ -68,29 +70,29 @@ export default async function ResearchHubPage({ params }: { params: Promise<{ lo
                         <div className="relative z-10 p-8 md:p-12 max-w-4xl">
                             <div className="flex items-center gap-3 mb-6">
                                 <span className="px-3 py-1 rounded-full bg-primary/20 text-primary text-xs font-mono font-bold uppercase tracking-wider border border-primary/20 shadow-[0_0_15px_rgba(var(--primary-rgb),0.3)]">
-                                    New Publication
+                                    {t('newPublication')}
                                 </span>
-                                <span className="text-muted-foreground text-xs font-mono uppercase">Jan 2026</span>
+                                <span className="text-muted-foreground text-xs font-mono uppercase">{t('featured.date')}</span>
                             </div>
 
                             <h3 className="text-3xl md:text-5xl font-black mb-6 leading-[1.1] tracking-tight text-white group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-white group-hover:to-slate-400 transition-all">
-                                Reconciling Sovereignty, Scale, and Complexity
+                                {t('featured.title')}
                             </h3>
 
                             <p className="text-xl text-muted-foreground leading-relaxed mb-8 max-w-2xl">
-                                Why do systems that work at 10k RPS fail at 100k RPS? This position paper analyzes the "Cliff of Failure" and proposes a <strong>Plane Separation</strong> model to resolve the enterprise architecture tension.
+                                {t('featured.abstract')}
                             </p>
 
                             <div className="flex flex-wrap gap-3 items-center">
                                 <span className="btn-primary rounded-full px-8 py-4 flex items-center gap-2 text-lg shadow-lg shadow-primary/20 group-hover:shadow-primary/40 transition-all">
-                                    Read Article <ArrowRight size={20} />
+                                    {t('featured.readArticle')} <ArrowRight size={20} />
                                 </span>
                                 <div className="hidden sm:flex items-center gap-3 ml-4">
                                     <span className="flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 text-sm font-mono text-slate-300 border border-white/10">
-                                        <FileText size={14} /> 5,400 Words
+                                        <FileText size={14} /> {t('featured.wordCount')}
                                     </span>
                                     <span className="flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 text-sm font-mono text-slate-300 border border-white/10">
-                                        <Layers size={14} /> 6 Diagrams
+                                        <Layers size={14} /> {t('featured.diagramCount')}
                                     </span>
                                 </div>
                             </div>
@@ -104,7 +106,7 @@ export default async function ResearchHubPage({ params }: { params: Promise<{ lo
                 <div className="container">
                     <div className="flex items-center gap-3 mb-8">
                         <Network className="text-primary" size={24} />
-                        <h2 className="text-2xl font-bold tracking-tight">Research Frameworks</h2>
+                        <h2 className="text-2xl font-bold tracking-tight">{t('frameworks.title')}</h2>
                     </div>
 
                     <div className="grid grid-cols-1">
@@ -117,31 +119,29 @@ export default async function ResearchHubPage({ params }: { params: Promise<{ lo
                                 <div className="flex-1 max-w-3xl">
                                     <div className="flex items-center gap-3 mb-4">
                                         <div className="flex items-center gap-2 px-3 py-1 rounded-md bg-blue-500/10 border border-blue-500/20 text-blue-400 text-xs font-bold font-mono uppercase tracking-widest">
-                                            <Layers size={12} /> Foundational Framework
+                                            <Layers size={12} /> {t('frameworks.aecp.badge')}
                                         </div>
-                                        <span className="text-muted-foreground text-xs font-mono uppercase">v3.0 (Gold)</span>
+                                        <span className="text-muted-foreground text-xs font-mono uppercase">{t('frameworks.aecp.version')}</span>
                                     </div>
 
                                     <h3 className="text-3xl md:text-4xl font-bold mb-4 text-white group-hover:text-blue-400 transition-colors">
-                                        Adaptive Enterprise Control Plane (AECP)
+                                        {t('frameworks.aecp.title')}
                                     </h3>
 
-                                    <p className="text-lg text-slate-400 leading-relaxed max-w-2xl mb-8">
-                                        A methodology for managing entropy in hyper-scale systems. Establishes the <strong>"Control Plane"</strong> as a sovereign primitive, using probabilistic failure injection and <span className="text-white">Policy-as-Code</span> governance to guarantee partial availability.
-                                    </p>
+                                    <p className="text-lg text-slate-400 leading-relaxed max-w-2xl mb-8" dangerouslySetInnerHTML={{ __html: t.raw('frameworks.aecp.description') }} />
 
                                     <div className="flex flex-wrap gap-4 md:gap-8">
                                         <div className="flex items-center gap-3 text-sm text-slate-400 font-mono">
                                             <ShieldCheck className="text-blue-500" size={16} />
-                                            <span>Sovereign Security</span>
+                                            <span>{t('frameworks.aecp.features.security')}</span>
                                         </div>
                                         <div className="flex items-center gap-3 text-sm text-slate-400 font-mono">
                                             <Network className="text-purple-500" size={16} />
-                                            <span>Mesh Topology</span>
+                                            <span>{t('frameworks.aecp.features.topology')}</span>
                                         </div>
                                         <div className="flex items-center gap-3 text-sm text-slate-400 font-mono">
                                             <Activity className="text-green-500" size={16} />
-                                            <span>Self-Healing</span>
+                                            <span>{t('frameworks.aecp.features.healing')}</span>
                                         </div>
                                     </div>
                                 </div>
@@ -162,7 +162,7 @@ export default async function ResearchHubPage({ params }: { params: Promise<{ lo
                 <div className="container">
                     <div className="flex items-center gap-3 mb-8">
                         <BookOpen className="text-primary" size={24} />
-                        <h2 className="text-2xl font-bold tracking-tight">Applied Architecture Papers</h2>
+                        <h2 className="text-2xl font-bold tracking-tight">{t('appliedPapers.title')}</h2>
                     </div>
 
                     <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -172,8 +172,8 @@ export default async function ResearchHubPage({ params }: { params: Promise<{ lo
                             locale={locale}
                             href="/research/papers/a1-cloud-native-enterprise-reference"
                             id="A1"
-                            title="Cloud-Native Enterprise Reference Architecture"
-                            desc="The flagship specification for scalable, sovereign enterprise platforms."
+                            title={tp('A1.meta.title')}
+                            desc={tp('A1.meta.description')}
                         />
 
                         {/* A2 */}
@@ -181,8 +181,8 @@ export default async function ResearchHubPage({ params }: { params: Promise<{ lo
                             locale={locale}
                             href="/research/papers/a2-high-throughput-distributed-systems"
                             id="A2"
-                            title="High-Throughput Distributed Systems"
-                            desc="Handling 500k RPS with sub-10ms latency budgets."
+                            title={tp('A2.meta.title')}
+                            desc={tp('A2.meta.description')}
                         />
 
                         {/* A3 */}
@@ -190,8 +190,8 @@ export default async function ResearchHubPage({ params }: { params: Promise<{ lo
                             locale={locale}
                             href="/research/papers/a3-enterprise-observability-operational-intelligence"
                             id="A3"
-                            title="Enterprise Observability & Operational Intelligence"
-                            desc="Moving beyond logs/metrics to symptom-based alerting."
+                            title={tp('A3.meta.title')}
+                            desc={tp('A3.meta.description')}
                         />
 
                         {/* A4 */}
@@ -199,8 +199,8 @@ export default async function ResearchHubPage({ params }: { params: Promise<{ lo
                             locale={locale}
                             href="/research/papers/a4-platform-governance-multicloud-hybrid"
                             id="A4"
-                            title="Platform Governance in Multi-Cloud"
-                            desc="Decentralized policy enforcement for hybrid estates."
+                            title={tp('A4.meta.title')}
+                            desc={tp('A4.meta.description')}
                         />
 
                         {/* A5 */}
@@ -208,8 +208,8 @@ export default async function ResearchHubPage({ params }: { params: Promise<{ lo
                             locale={locale}
                             href="/research/papers/a5-monolith-to-cloud-native-modernization"
                             id="A5"
-                            title="Monolith to Cloud-Native Modernization"
-                            desc="Strangler Fig patterns for fail-safe legacy migration."
+                            title={tp('A5.meta.title')}
+                            desc={tp('A5.meta.description')}
                         />
 
                         {/* A6 */}
@@ -217,8 +217,8 @@ export default async function ResearchHubPage({ params }: { params: Promise<{ lo
                             locale={locale}
                             href="/research/papers/a6-adaptive-policy-enforcement"
                             id="A6"
-                            title="Adaptive Policy Enforcement"
-                            desc="Late-binding governance for continuous compliance."
+                            title={tp('A6.meta.title')}
+                            desc={tp('A6.meta.description')}
                         />
 
                     </div>
@@ -231,14 +231,12 @@ export default async function ResearchHubPage({ params }: { params: Promise<{ lo
             <section className="py-20 border-t border-[var(--card-border)] footer-attribution">
                 <div className="container text-center">
                     <ShieldCheck size={40} className="mx-auto text-[var(--primary)] mb-6" />
-                    <p className="text-xs opacity-50 tracking-widest uppercase mb-4">Authorship Declaration</p>
+                    <p className="text-xs opacity-50 tracking-widest uppercase mb-4">{t('footer.authorshipRequest')}</p>
                     <p className="opacity-70 max-w-2xl mx-auto italic text-sm leading-relaxed">
-                        "The software systems and architectural patterns documented herein were independently designed
-                        and implemented by CHAITANYA BHARATH GOPU to secure the global surface area of the OmniGCloud platform.
-                        Public dissemination is provided for technical knowledge sharing."
+                        {t('footer.authorshipDisclaimer')}
                     </p>
                     <div className="mt-8 text-[10px] opacity-30 font-mono">
-                        © 2026 CHAITANYA BHARATH GOPU. ALL RIGHTS RESERVED.
+                        {t('footer.copyright')}
                     </div>
                 </div>
             </section>

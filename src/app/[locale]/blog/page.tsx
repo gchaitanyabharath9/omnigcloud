@@ -46,7 +46,7 @@ export default async function BlogPage() {
                             </div>
                             <div className="glass-panel" style={{ padding: '0.75rem 1.5rem', borderRadius: '1rem', display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
                                 <Filter size={18} />
-                                <span>Filter</span>
+                                <span>{t('ui.filter')}</span>
                             </div>
                         </div>
                     </div>
@@ -103,7 +103,7 @@ export default async function BlogPage() {
                                             <span style={{ fontSize: '0.9rem', fontWeight: 700 }}>{t(`posts.${post.id}.author`)}</span>
                                         </div>
                                         <Link href={getPostUrl(post, idx)} style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', fontWeight: 800, color: 'var(--primary)', fontSize: '0.9rem' }}>
-                                            Read More <ArrowRight size={16} />
+                                            {t('ui.readMore')} <ArrowRight size={16} />
                                         </Link>
                                     </div>
 

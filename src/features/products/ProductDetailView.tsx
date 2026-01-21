@@ -4,6 +4,8 @@ import React from 'react';
 import { BadgeCheck, Terminal, Activity, Zap, Shield, Globe, Cpu, Server, Play, ChevronRight, BarChart, Layers } from 'lucide-react';
 import Link from 'next/link';
 
+import { useTranslations } from 'next-intl';
+
 // Mock data for "dense" feel if real data is missing
 const MOCK_SPECS = [
     { label: "Latency", value: "12ms", icon: <Activity size={12} /> },
@@ -26,6 +28,7 @@ interface ProductDetailProps {
 const ProductDetailView: React.FC<ProductDetailProps> = ({
     id, icon, title, tag, description, explanation, images, visual
 }) => {
+    const t = useTranslations('Products.detail');
     return (
         <div className="animate-fade-in" style={{ paddingTop: '1rem' }}>
             <div className="hero-grid-layout">
@@ -49,13 +52,13 @@ const ProductDetailView: React.FC<ProductDetailProps> = ({
 
                         <div style={{ display: 'flex', flexWrap: 'wrap', gap: '1rem' }}>
                             <button className="btn-primary" style={{ padding: '0.8rem 1.8rem', fontSize: '1rem' }}>
-                                Explore Platform
+                                {t('explore')}
                             </button>
                             <button className="btn-secondary" style={{ padding: '0.8rem 1.8rem', fontSize: '1rem', display: 'flex', alignItems: 'center' }}>
-                                <Layers size={18} style={{ marginRight: '0.5rem' }} /> Architecture
+                                <Layers size={18} style={{ marginRight: '0.5rem' }} /> {t('architecture')}
                             </button>
                             <button className="btn-secondary" style={{ padding: '0.8rem 1.8rem', fontSize: '1rem', display: 'flex', alignItems: 'center', opacity: 0.8 }}>
-                                <Terminal size={18} style={{ marginRight: '0.5rem' }} /> Documentation
+                                <Terminal size={18} style={{ marginRight: '0.5rem' }} /> {t('documentation')}
                             </button>
                         </div>
                     </div>
@@ -72,10 +75,10 @@ const ProductDetailView: React.FC<ProductDetailProps> = ({
                     }}>
                         <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '1.5rem' }}>
                             <div>
-                                <h3 style={{ fontSize: '0.85rem', fontWeight: 800, textTransform: 'uppercase', color: 'var(--primary)', marginBottom: '0.5rem', letterSpacing: '0.1em' }}>Sovereignty Health Monitor</h3>
+                                <h3 style={{ fontSize: '0.85rem', fontWeight: 800, textTransform: 'uppercase', color: 'var(--primary)', marginBottom: '0.5rem', letterSpacing: '0.1em' }}>{t('healthMonitor')}</h3>
                                 <div style={{ display: 'flex', alignItems: 'baseline', gap: '0.75rem' }}>
                                     <span style={{ fontSize: '2.5rem', fontWeight: 900, color: 'white' }}>114ms</span>
-                                    <span style={{ fontSize: '1rem', color: '#10b981', fontWeight: 700 }}>● OPTIMAL</span>
+                                    <span style={{ fontSize: '1rem', color: '#10b981', fontWeight: 700 }}>● {t('optimal')}</span>
                                 </div>
                             </div>
                             <div style={{ width: '48px', height: '48px', background: 'rgba(59, 130, 246, 0.1)', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
@@ -112,7 +115,7 @@ const ProductDetailView: React.FC<ProductDetailProps> = ({
                     }}>
                         <div style={{ padding: '2rem', display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
                             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '1rem' }}>
-                                {[{ l: 'Assets', v: '$2.4B' }, { l: 'Drift', v: '0%', c: '#10b981' }, { l: 'Nodes', v: '4k+', c: 'var(--primary)' }].map((s, i) => (
+                                {[{ l: t('metrics.assets'), v: '$2.4B' }, { l: t('metrics.drift'), v: '0%', c: '#10b981' }, { l: t('metrics.nodes'), v: '4k+', c: 'var(--primary)' }].map((s, i) => (
                                     <div key={i} style={{ padding: '1rem', background: 'rgba(255,255,255,0.02)', borderRadius: '0.75rem', border: '1px solid var(--card-border)' }}>
                                         <div style={{ fontSize: '0.7rem', color: 'var(--muted)', textTransform: 'uppercase' }}>{s.l}</div>
                                         <div style={{ fontSize: '1.25rem', fontWeight: 900, color: s.c || 'white' }}>{s.v}</div>
@@ -140,12 +143,12 @@ const ProductDetailView: React.FC<ProductDetailProps> = ({
 
                     {/* Regional Compliance Widget (matches HeroSection) */}
                     <div className="glass-panel" style={{ padding: '2rem', borderRadius: '1.5rem', border: '1px solid var(--card-border)', background: 'rgba(59, 130, 246, 0.05)' }}>
-                        <h3 style={{ fontSize: '0.9rem', fontWeight: 900, textTransform: 'uppercase', marginBottom: '1.5rem', letterSpacing: '0.1em' }}>Sovereignty Compliance Index</h3>
+                        <h3 style={{ fontSize: '0.9rem', fontWeight: 900, textTransform: 'uppercase', marginBottom: '1.5rem', letterSpacing: '0.1em' }}>{t('complianceIndex')}</h3>
                         <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
                             {[
-                                { label: 'EU-West (GDPR Residency)', val: 98, color: '#10b981' },
-                                { label: 'US-East (HIPAA Sovereignty)', val: 94, color: '#3b82f6' },
-                                { label: 'Global (Threat Detection)', val: 89, color: '#f59e0b' }
+                                { label: t('regions.eu'), val: 98, color: '#10b981' },
+                                { label: t('regions.us'), val: 94, color: '#3b82f6' },
+                                { label: t('regions.global'), val: 89, color: '#f59e0b' }
                             ].map((reg, idx) => (
                                 <div key={idx} style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
                                     <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: '0.8rem' }}>
@@ -159,7 +162,7 @@ const ProductDetailView: React.FC<ProductDetailProps> = ({
                             ))}
                         </div>
                         <p style={{ fontSize: '0.8rem', color: 'var(--muted)', marginTop: '1.5rem' }}>
-                            Automated audit scores based on regional data residency and encryption standards across all cloud providers.
+                            {t('complianceDesc')}
                         </p>
                     </div>
                 </div>

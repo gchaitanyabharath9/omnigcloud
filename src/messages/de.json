@@ -1173,78 +1173,173 @@
     },
     "devops": {
       "hero": {
-        "badge": "PLATFORM ENGINEERING",
-        "title": "Platform Engineering Services",
-        "subtitle": "Transform your DevOps practice into a platform engineering powerhouse"
+        "badge": "CONTINUOUS DELIVERY & AUTOMATION",
+        "title": "Engineered for",
+        "titleHighlight": "Velocity & Governance",
+        "subtitle": "Traditional DevOps is fragmented. OmniGCloud's platform-level DevOps services unify CI/CD across AWS, Azure, and OpenShift, providing a single control plane for compliance-first delivery.",
+        "ctaPrimary": "Accelerate Pipeline",
+        "ctaSecondary": "Platform Overview"
       },
-      "overview": {
-        "title": "Platform Overview",
-        "transition": {
-          "title": "Transitioning to Platform Engineering",
-          "description": "Move from manual DevOps to automated platform engineering with self-service infrastructure and policy-driven governance."
-        },
-        "capabilities": {
-          "title": "Core Capabilities",
-          "description": "Self-service infrastructure, policy enforcement, and observability built into every layer of your platform."
+      "evolution": {
+        "badge": "Transitioning to Platform Engineering",
+        "title": "Why Static DevOps Silos Fail the Modern Enterprise",
+        "quote": "\"The complexity of modern multi-cloud environments has outpaced the capability of manual scripting. Enterprises need a sovereign, automated pipeline that enforces policy at the code level.\"",
+        "description1": "For years, DevOps was synonymous with Jenkins and manual YAML configuration. In the era of sovereign cloud and AI-driven infrastructure, this approach creates bottlenecks. OmniGCloud introduces <strong>Autonomous DevOps</strong>: an engineering model where infrastructure as code (IaC) is not just written, but continuously validated against global compliance mandates in real-time.",
+        "description2": "Our engineers deconstruct your delivery bottlenecks. By implementing 100% immutable pipelines, we ensure that every deployment—whether to a regional Azure node or a sovereign OpenShift cluster—is identical, secure, and fully audited.",
+        "features": {
+          "drift": {
+            "title": "Automated Drift Remediation",
+            "desc": "Instantly detect and reverse unauthorized manual changes to infrastructure state."
+          },
+          "gating": {
+            "title": "Policy-as-Code Gating",
+            "desc": "Integrate SOC2 and GDPR checks directly into your CI/CD feedback loop."
+          },
+          "parity": {
+            "title": "Cross-Cloud Parity",
+            "desc": "One manifest, multiple providers. Eliminate environmental drift across AWS, OCI, and Azure."
+          }
         }
+      },
+      "value": {
+        "title": "Enterprise Value Drivers",
+        "subtitle": "Measurable improvements in deployment frequency and security posture.",
+        "cards": {
+          "leadTime": {
+            "title": "Reduction in Lead Time",
+            "desc": "Automate the provisioning of complex multi-cloud environments from days to under 15 minutes using our Sovereign IaC modules."
+          },
+          "drift": {
+            "title": "Unmanaged Drift",
+            "desc": "Active state synchronization ensures that production environments never diverge from the git-defined desired state."
+          },
+          "audit": {
+            "title": "Audit Transparency",
+            "desc": "Every change is recorded in an immutable ledger, providing immediate proof of compliance for regulatory auditors."
+          }
+        }
+      },
+      "tech": {
+        "title": "Modernizing the CI/CD Stack",
+        "stackDesc": "To achieve true sovereignty, an organization cannot rely on a single vendor's proprietary automation tools. OmniGCloud's DevOps services prioritize open standards. We leverage <strong>Crossplane</strong> for cloud infrastructure management, <strong>ArgoCD</strong> for GitOps-driven deployment, and <strong>Terraform</strong> for baseline resource definition.",
+        "intentTitle": "Declarative Intent vs. Imperative Scripts",
+        "intentDesc": "We help teams move away from imperative shell scripts that fail silently. By using a declarative intent model, your infrastructure defines <em>what</em> it should be, and our control plane ensures it <em>becomes</em> that across every region. This is critical for maintaining high availability in regulated sectors where a misconfiguration can result in significant legal exposure.",
+        "securityTitle": "Secure Secret Management",
+        "securityDesc": "A major vulnerability in many DevOps pipelines is secret leakage. We implement localized, sovereign secret vaults based on HashiCorp Vault or cloud-native providers (Azure Key Vault, AWS KMS) with hardware security module (HSM) backing. This ensures that sensitive credentials never traverse border lines unless explicitly permitted by policy."
+      },
+      "faq": {
+        "title": "DevOps & Platform FAQ",
+        "items": [
+          {
+            "q": "How do you handle multi-cloud secret synchronization?",
+            "a": "We use a bi-directional sync engine that injects secrets into Kubernetes namespaces at runtime, ensuring that no sensitive data is stored in version control while maintaining parity across regions."
+          },
+          {
+            "q": "Do you support RedHat OpenShift in your DevOps workflows?",
+            "a": "Yes, we specialize in OpenShift fleet management. Our pipelines are designed to handle OCP-specific artifacts like BuildConfigs and DeploymentConfigs natively."
+          },
+          {
+            "q": "Can we integrate existing legacy Jenkins pipelines?",
+            "a": "Absolutely. We offer a 'Wrap-and-Replace' strategy where we encapsulate legacy Jenkins jobs into a modern GitOps-driven control plane, allowing for a phased transition to full automation."
+          },
+          {
+            "q": "What is the difference between DevOps and Platform Engineering in your model?",
+            "a": "DevOps is the methodology; Platform Engineering is the product. We build 'Internal Developer Platforms' (IDPs) that allow your devs to self-serve infrastructure while ensuring your Ops team maintains control over the guardrails."
+          }
+        ]
+      },
+      "footer": {
+        "title": "Explore Complementary Services",
+        "subtitle": "Unify your infrastructure modernization with our AI-driven assessment and cost optimization platforms.",
+        "links": {
+          "modernization": "Cloud Modernization",
+          "finops": "FinOps Intelligence"
+        },
+        "ready": "READY_TO_AUTO_GATE?"
       }
     }
   },
   "Blog": {
-    "sovereigntyFramework": {
-      "hero": {
-        "badge": "TECHNICAL GUIDE",
-        "title": "Data Sovereignty Framework",
-        "subtitle": "A comprehensive guide to sovereign cloud architectures",
-        "date": "January 15, 2026",
-        "readTime": "12 MIN READ"
-      },
-      "sections": {
-        "dataInvariance": {
-          "title": "Data Invariance",
-          "description": "Ensuring data integrity across distributed systems with cryptographic verification and immutable audit trails."
-        },
-        "instructionalPortability": {
-          "title": "Instructional Portability",
-          "description": "Platform-agnostic deployment patterns that enable true multi-cloud portability without vendor lock-in."
-        },
-        "policyEnforcement": {
-          "title": "Policy Enforcement",
-          "description": "Automated compliance and governance through policy-as-code and continuous validation."
-        }
-      }
+    "hero": {
+      "tag": "KNOWLEDGE HUB",
+      "title": "Strategic Impact",
+      "subtitle": "Architecture, Governance, and Engineering Insights for the Sovereign Enterprise.",
+      "search": "Search articles..."
     },
-    "cloudModernization": {
-      "hero": {
-        "badge": "TECHNICAL DEEP DIVE",
-        "title": "Cloud Modernization Guide",
-        "subtitle": "The formal mathematical framework behind autonomous enterprise control planes",
-        "date": "January 10, 2026",
-        "readTime": "15 MIN READ"
-      },
-      "intro": "The formal mathematical framework behind autonomous enterprise control planes provides a rigorous foundation for building sovereign cloud infrastructure that scales across global markets."
+    "newsletter": {
+      "title": "Join the Architects' Circle",
+      "subtitle": "Weekly deep-dives into sovereign architecture. No marketing. Pure engineering.",
+      "placeholder": "Enter your work email",
+      "button": "Subscribe",
+      "footer": "Join 15,000+ engineers from Fortune 500 companies."
     },
-    "cioExitStrategy": {
-      "hero": {
-        "badge": "EXECUTIVE GUIDE",
-        "title": "CIO's Guide",
-        "subtitle": "to Cloud Exit Strategies",
-        "date": "January 5, 2026",
-        "readTime": "18 MIN READ"
+    "ui": {
+      "filter": "Filter",
+      "readMore": "Read More"
+    },
+    "posts": {
+      "aso": {
+        "title": "The Multi-Cloud Sovereignty Framework",
+        "category": "Architecture",
+        "excerpt": "A formal mathematical model for evaluating and enforcing digital sovereignty in multi-cloud and hybrid environments.",
+        "author": "Architectural Board",
+        "impact": "High Strategy"
       },
-      "sections": {
-        "vendorLock": {
-          "title": "Understanding Vendor Lock-in",
-          "description": "The hidden costs of proprietary cloud services and how to identify lock-in risks in your current architecture."
-        },
-        "exitPlanning": {
-          "title": "Strategic Exit Planning",
-          "description": "A systematic approach to building portable infrastructure that enables seamless provider transitions."
-        },
-        "implementation": {
-          "title": "Implementation Roadmap",
-          "description": "Step-by-step guide to implementing a vendor-neutral architecture with minimal disruption to operations."
-        }
+      "modernization-guide": {
+        "title": "Enterprise Cloud Modernization Blueprint",
+        "category": "Strategy",
+        "excerpt": "Patterns for decomposing legacy monoliths into autonomous, portable microservices.",
+        "author": "OmniG Research",
+        "impact": "Technical Guide"
+      },
+      "sovereignty-framework": {
+        "title": "The Multi-Cloud Sovereignty Framework",
+        "category": "Architecture",
+        "excerpt": "A formal mathematical model for evaluating and enforcing digital sovereignty in multi-cloud and hybrid environments.",
+        "author": "Architectural Board",
+        "impact": "High Strategy"
+      },
+      "cio-exit-strategy": {
+        "title": "CIO's Guide to Cloud Exit Strategies",
+        "category": "Executive",
+        "excerpt": "A decision-making playbook for evaluating vendor lock-in risks and the ROI of portability.",
+        "author": "Exec Strategy",
+        "impact": "Executive"
+      },
+      "devops-practices": {
+        "title": "Sovereign DevOps Best Practices",
+        "category": "Engineering",
+        "excerpt": "Operational patterns for maintaining high-velocity delivery in regulated environments.",
+        "author": "DevOps Team",
+        "impact": "Engineering"
+      },
+      "prompt": {
+        "title": "Engineering Prompts for Sovereignty",
+        "category": "AI",
+        "excerpt": "How to structure LLM prompts to generate compliant Infrastructure-as-Code.",
+        "author": "AI Labs",
+        "impact": "AI Engineering"
+      },
+      "latency": {
+        "title": "The Physics of Digital Sovereignty",
+        "category": "Research",
+        "excerpt": "Understanding the impact of data gravity and speed-of-light latency on distributed systems.",
+        "author": "Core Eng",
+        "impact": "Research"
+      },
+      "rag": {
+        "title": "RAG for Regulatory Compliance",
+        "category": "AI",
+        "excerpt": "Building Retrieval-Augmented Generation systems that respect jurisdictional data boundaries.",
+        "author": "AI Labs",
+        "impact": "AI Engineering"
+      },
+      "bench": {
+        "title": "Benchmarking Cloud Egress",
+        "category": "Benchmarks",
+        "excerpt": "A comparative analysis of egress costs across AWS, Azure, and GCP for high-throughput apps.",
+        "author": "Perf Team",
+        "impact": "Engineering"
       }
     }
   },
@@ -1324,7 +1419,24 @@
     "tag": "PRODUCTS",
     "title": "Infrastructure Sovereignty",
     "detail": {
-      "platformMetrics": "PLATFORM METRICS"
+      "platformMetrics": "PLATFORM METRICS",
+      "explore": "Explore Platform",
+      "architecture": "Architecture",
+      "documentation": "Documentation",
+      "healthMonitor": "Sovereignty Health Monitor",
+      "optimal": "OPTIMAL",
+      "complianceIndex": "Sovereignty Compliance Index",
+      "complianceDesc": "Automated audit scores based on regional data residency and encryption standards across all cloud providers.",
+      "metrics": {
+        "assets": "Assets",
+        "drift": "Drift",
+        "nodes": "Nodes"
+      },
+      "regions": {
+        "eu": "EU-West (GDPR Residency)",
+        "us": "US-East (HIPAA Sovereignty)",
+        "global": "Global (Threat Detection)"
+      }
     }
   },
   "UseCases": {
@@ -2686,32 +2798,92 @@
         "authors": "Chaitanya Bharath Gopu, et al.",
         "date": "January 2026",
         "readTime": "45 min read",
-        "abstract": "This paper presents a comprehensive framework for implementing sovereign cloud architectures at enterprise scale."
+        "abstract": "This paper presents a comprehensive framework for implementing sovereign cloud architectures at enterprise scale.",
+        "sectionTitle": "The Enterprise Architecture Tension",
+        "readArticle": "Read Article",
+        "wordCount": "5,400 Words",
+        "diagramCount": "6 Diagrams"
+      },
+      "frameworks": {
+        "title": "Research Frameworks",
+        "aecp": {
+          "badge": "Foundational Framework",
+          "version": "v3.0 (Gold)",
+          "title": "Adaptive Enterprise Control Plane (AECP)",
+          "description": "A methodology for managing entropy in hyper-scale systems. Establishes the <strong>\"Control Plane\"</strong> as a sovereign primitive, using probabilistic failure injection and <span className=\"text-white\">Policy-as-Code</span> governance to guarantee partial availability.",
+          "features": {
+            "security": "Sovereign Security",
+            "topology": "Mesh Topology",
+            "healing": "Self-Healing"
+          }
+        }
+      },
+      "appliedPapers": {
+        "title": "Applied Architecture Papers"
+      },
+      "footer": {
+        "authorshipRequest": "Authorship Declaration",
+        "authorshipDisclaimer": "\"The software systems and architectural patterns documented herein were independently designed and implemented by CHAITANYA BHARATH GOPU to secure the global surface area of the OmniGCloud platform. Public dissemination is provided for technical knowledge sharing.\"",
+        "copyright": "© 2026 CHAITANYA BHARATH GOPU. ALL RIGHTS RESERVED."
       }
     }
   },
   "ResearchPages": {
     "distributedSystems": {
-      "hero": {
-        "badge": "TECHNICAL RESEARCH",
-        "title": "Distributed Systems Resilience",
-        "subtitle": "Building fault-tolerant cloud-native architectures"
+      "header": {
+        "category": "Research / Distributed Systems",
+        "title": "Distributed Systems Resilience & Scalability Patterns",
+        "description": "Failure is inevitable. This research explores how to build systems that embrace failure as a core architectural constraint.",
+        "lastUpdated": "Last updated: January 05, 2025",
+        "readTime": "22 min read"
       },
-      "scenarios": {
-        "normal": "Standard operation. Request flows through.",
-        "failure": "Node failure detected. Traffic rerouted.",
-        "recovery": "System self-heals. Full capacity restored."
+      "intro": "In distributed systems, the network is unreliable, latency is non-zero, and bandwidth is finite. Accepting these fallacies is the first step toward resilience. This paper outlines patterns that enable systems to maintain availability and consistency in the face of partial failures.",
+      "section1": {
+        "title": "1. Revisiting the CAP Theorem",
+        "p1": "The CAP theorem dictates that a distributed data store can only provide two of the following three guarantees: <strong>Consistency</strong>, <strong>Availability</strong>, and <strong>Partition Tolerance</strong>.",
+        "p2": "Since network partitions are unavoidable in cloud environments (P), we must choose between CP (Consistency) and AP (Availability).",
+        "strategy": "<em>OmniGCloud Strategy:</em> We often favor AP for customer-facing read paths (eventual consistency) while enforcing CP for financial transactions and configuration states (strong consistency)."
       },
-      "sections": {
-        "chaosEngineering": {
-          "title": "4. Chaos Engineering",
-          "description": "Proactive failure injection to validate resilience and identify weaknesses before they impact production."
-        },
-        "circuitBreaker": {
-          "title": "5. Circuit Breaker Pattern",
-          "description": "Prevent cascade failures with intelligent request handling and automatic fallback mechanisms."
+      "section2": {
+        "title": "2. The Circuit Breaker Pattern",
+        "description": "Cascading failures occur when a failing service consumes resources (threads, connections) from its callers, eventually bringing them down too. A <strong>Circuit Breaker</strong> wraps a protected function call and monitors for failures.",
+        "states": {
+          "closed": "<strong>Closed:</strong> Standard operation. Request flows through.",
+          "open": "<strong>Open:</strong> Error threshold exceeded. Request fails fast without calling dependency.",
+          "halfOpen": "<strong>Half-Open:</strong> Trial mode. A few requests are allowed to test if dependency has recovered."
         }
-      }
+      },
+      "section3": {
+        "title": "3. Bulkhead Pattern",
+        "description": "Just as a ship is divided into watertight compartments, a system should isolate critical resources. By creating separate thread pools or connection pools for distinct services, we ensure that a failure in the \"Recommendation Service\" does not starve the \"Checkout Service.\""
+      },
+      "section4": {
+        "title": "4. Chaos Engineering",
+        "description": "We cannot trust a recovery mechanism until not we have seen it work. Chaos Engineering involves intentionally injecting faults (latency, packet loss, pod kills) into the system to verify resilience.",
+        "hypothesisTitle": "Hypothesis Evaluation",
+        "hypothesis": "\"If we terminate the primary database node, the system should failover to the replica within 5 seconds with less than 0.1% error rate.\""
+      },
+      "section5": {
+        "title": "5. Idempotency & Retry Strategies",
+        "description": "Retrying failed requests is necessary but dangerous (retry storms). Smart clients use <strong>Exponential Backoff</strong> and <strong>Jitter</strong>. Crucially, the server must support <strong>Idempotency</strong>—handling the same request multiple times without changing the result beyond the initial application."
+      },
+      "relatedReading": [
+        {
+          "title": "Cloud-Native Reference Architecture",
+          "excerpt": "Building sovereign, portable, and scalable cloud-native systems.",
+          "category": "Architecture"
+        },
+        {
+          "title": "AI-Driven Enterprise Architecture",
+          "excerpt": "Predictive scaling and automated anomaly detection.",
+          "category": "Architecture"
+        },
+        {
+          "title": "Secure Mesh Networking",
+          "excerpt": "Implementing Zero Trust with Service Mesh.",
+          "category": "Security"
+        }
+      ]
     }
   }
 }
