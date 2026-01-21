@@ -3,6 +3,7 @@
 import { useEffect } from 'react';
 import { ShieldAlert, RefreshCcw, Home, Terminal } from 'lucide-react';
 import Link from 'next/link';
+import { useTranslations } from 'next-intl';
 
 export default function Error({
     error,
@@ -15,6 +16,8 @@ export default function Error({
         // Log the error to an error reporting service
         console.error('SYSTEM_CRITICAL_FAILURE:', error);
     }, [error]);
+
+    const t = useTranslations('System.Error');
 
     return (
         <div style={{
@@ -78,7 +81,7 @@ export default function Error({
                 </div>
 
                 <h1 style={{ fontSize: '2.5rem', fontWeight: 900, marginBottom: '1rem', letterSpacing: '-0.02em' }}>
-                    KERNEL_PANIC_<span style={{ color: '#ef4444' }}>500</span>
+                    {t('title', { fallback: 'KERNEL_PANIC_500' })}
                 </h1>
 
                 <div className="badge badge-primary-subtle" style={{
@@ -87,11 +90,11 @@ export default function Error({
                     borderColor: 'rgba(239, 68, 68, 0.2)',
                     marginBottom: '1.5rem'
                 }}>
-                    Integrity Breach Detected
+                    {t('subtitle', { fallback: 'Integrity Breach Detected' })}
                 </div>
 
                 <p style={{ fontSize: '1.1rem', opacity: 0.7, marginBottom: '2.5rem', lineHeight: 1.6 }}>
-                    A critical exception has occurred in the sovereign control plane. The G-Framework is attempting to isolate the affected node.
+                    {t('description', { fallback: 'A critical exception has occurred in the sovereign control plane.' })}
                 </p>
 
                 {/* Technical Snippet */}
@@ -107,7 +110,7 @@ export default function Error({
                     color: 'rgba(239, 68, 68, 0.8)'
                 }}>
                     <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.5rem', opacity: 0.5 }}>
-                        <Terminal size={12} /> <span>ERROR_STUB_v4</span>
+                        <Terminal size={12} /> <span>{t('stub', { fallback: 'ERROR_STUB_v4' })}</span>
                     </div>
                     <div style={{ wordBreak: 'break-all' }}>
                         {error.message || 'RUNTIME_EXCEPTION_0x884'}
@@ -116,10 +119,10 @@ export default function Error({
 
                 <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap' }}>
                     <button onClick={() => reset()} className="btn-primary" style={{ background: '#ef4444', border: 'none', boxShadow: '0 0 20px rgba(239, 68, 68, 0.3)' }}>
-                        <RefreshCcw size={18} style={{ marginRight: '0.5rem' }} /> Re-Initialize
+                        <RefreshCcw size={18} style={{ marginRight: '0.5rem' }} /> {t('retry', { fallback: 'Re-Initialize' })}
                     </button>
                     <Link href="/" className="btn-secondary">
-                        <Home size={18} style={{ marginRight: '0.5rem' }} /> Operations
+                        <Home size={18} style={{ marginRight: '0.5rem' }} /> {t('home', { fallback: 'Operations' })}
                     </Link>
                 </div>
             </div>

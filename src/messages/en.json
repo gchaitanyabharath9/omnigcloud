@@ -26,6 +26,13 @@
     }
   },
   "Common": {
+    "discovery": "Run Global Discovery",
+    "home": "Return to Operations",
+    "logs": {
+      "scanning": "SCANNING_NETWORK_NODES... [FAILED]",
+      "resolving": "RESOLVING_ROUTE_COORD: 40.7128 N, 74.0060 W [UNDEFINED]",
+      "correcting": "INITIATING_SELF_CORRECTION..."
+    },
     "loading": "Loading...",
     "error": "An error occurred",
     "AboveTheFold": "Above The Fold",
@@ -1955,5 +1962,91 @@
   "desc": "Enterprise Grade Sovereignty",
   "readOnline": "Read Online",
   "designPatterns": "Design Patterns",
-  "downloadTitle": "Download Whitepaper"
+  "downloadTitle": "Download Whitepaper",
+  "Auth": {
+    "Register": {
+      "title": "Create your account",
+      "subtitle": "Start managing your multi-cloud infrastructure",
+      "placeholders": {
+        "name": "John Doe",
+        "email": "john@company.com",
+        "company": "Acme Inc.",
+        "phone": "+1 (555) 123-4567",
+        "password": "Min. 8 characters",
+        "confirmPassword": "Re-enter password"
+      },
+      "fields": {
+        "email": "Work Email *",
+        "company": "Company Name *",
+        "phone": "Phone Number (Optional)",
+        "password": "Password *",
+        "confirmPassword": "Confirm Password *"
+      }
+    },
+    "Onboarding": {
+      "hero": {
+        "badge": "Start Your Journey",
+        "title": "Get Started with Omni",
+        "subtitle": "Standardizing your cloud-native onboarding through the world's first AI-powered Internal Cloud Foundation."
+      },
+      "modernize": {
+        "title": {
+          "p1": "How we modernize",
+          "p2": "your workforce."
+        }
+      },
+      "steps": {
+        "assess": {
+          "title": "Infrastructure Assessment",
+          "desc": "Our AI scans your existing cloud footprint to identify migration pathways."
+        },
+        "registry": {
+          "title": "Registry Selection",
+          "desc": "Select pre-approved blueprints from our Foundation Core."
+        },
+        "provision": {
+          "title": "Automated Provisioning",
+          "desc": "Deploy clusters in minutes with Crossplane-powered orchestration."
+        },
+        "scale": {
+          "title": "Enterprise Scaling",
+          "desc": "Onboard teams with self-service guardrails and FinOps monitoring."
+        }
+      },
+      "form": {
+        "email": {
+          "label": "Work Email",
+          "placeholder": "name@company.com"
+        }
+      }
+    }
+  },
+  "System": {
+    "Error": {
+      "title": "KERNEL_PANIC_500",
+      "subtitle": "Integrity Breach Detected",
+      "description": "A critical exception has occurred in the sovereign control plane. The G-Framework is attempting to isolate the affected node.",
+      "stub": "ERROR_STUB_v4",
+      "retry": "Re-Initialize",
+      "home": "Operations"
+    },
+    "NotFound": {
+      "title": "COORD_NOT_FOUND",
+      "subtitle": "404",
+      "badge": "Resource Out of Sovereignty Scope",
+      "description": "The requested coordinate does not exist in our global infrastructure map. It may have been decommissioned or moved to a higher security tier.",
+      "home": "Return to Operations",
+      "discovery": "Run Global Discovery",
+      "logs": {
+        "scanning": "SCANNING_NETWORK_NODES... [FAILED]",
+        "resolving": "RESOLVING_ROUTE_COORD: 40.7128 N, 74.0060 W [UNDEFINED]",
+        "correcting": "INITIATING_SELF_CORRECTION..."
+      }
+    },
+    "Global": {
+      "title": "SYSTEM_WIDE_FAILURE",
+      "description": "The catastrophic failure has occurred. Attempting manual override.",
+      "retry": "Force Reboot"
+    }
+  }
 }

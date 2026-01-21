@@ -4,7 +4,7 @@ import { getTranslations, getLocale } from 'next-intl/server';
 
 export default async function NotFound() {
     // In server component version, we use async translations
-    const t = await getTranslations('Metadata.Home');
+    const t = await getTranslations('System.NotFound');
     const locale = await getLocale();
 
     return (
@@ -75,7 +75,7 @@ export default async function NotFound() {
                     userSelect: 'none',
                     lineHeight: '1'
                 }}>
-                    404
+                    {t('subtitle')}
                 </h1>
 
                 <h2 style={{
@@ -85,11 +85,11 @@ export default async function NotFound() {
                     letterSpacing: '-0.02em',
                     marginTop: '-4rem'
                 }}>
-                    COORD_NOT_FOUND
+                    {t('title')}
                 </h2>
 
                 <div className="badge badge-primary-subtle" style={{ marginBottom: '2rem' }}>
-                    Resource Out of Sovereignty Scope
+                    {t('badge')}
                 </div>
 
                 <p style={{
@@ -100,7 +100,7 @@ export default async function NotFound() {
                     maxWidth: '450px',
                     marginInline: 'auto'
                 }}>
-                    The requested coordinate does not exist in our global infrastructure map. It may have been decommissioned or moved to a higher security tier.
+                    {t('description')}
                 </p>
 
                 <div style={{ display: 'flex', gap: '1.5rem', justifyContent: 'center', flexWrap: 'wrap', alignItems: 'center' }}>
@@ -109,7 +109,7 @@ export default async function NotFound() {
                         className="btn-primary"
                         style={{ padding: '1rem 2rem', borderRadius: '1rem', display: 'flex', alignItems: 'center', gap: '0.75rem' }}
                     >
-                        <Home size={20} /> Return to Operations <ArrowRight size={18} />
+                        <Home size={20} /> {t('home')} <ArrowRight size={18} />
                     </Link>
                     <button style={{
                         background: 'transparent',
@@ -124,7 +124,7 @@ export default async function NotFound() {
                         gap: '0.5rem',
                         cursor: 'pointer'
                     }}>
-                        <Search size={16} /> Run Global Discovery
+                        <Search size={16} /> {t('discovery')}
                     </button>
                 </div>
 
@@ -141,9 +141,9 @@ export default async function NotFound() {
                     width: 'fit-content',
                     marginInline: 'auto'
                 }}>
-                    <div>&gt; SCANNING_NETWORK_NODES... [FAILED]</div>
-                    <div>&gt; RESOLVING_ROUTE_COORD: 40.7128 N, 74.0060 W [UNDEFINED]</div>
-                    <div>&gt; INITIATING_SELF_CORRECTION...</div>
+                    <div>&gt; {t('logs.scanning')}</div>
+                    <div>&gt; {t('logs.resolving')}</div>
+                    <div>&gt; {t('logs.correcting')}</div>
                 </div>
             </div>
         </div>

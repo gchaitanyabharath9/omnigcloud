@@ -5,8 +5,10 @@ import { signIn } from 'next-auth/react';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import { Mail, Lock, User, Building, Phone, ArrowRight, Loader2 } from 'lucide-react';
+import { useTranslations } from 'next-intl';
 
 export default function RegisterPage() {
+    const t = useTranslations('Auth.Register');
     const router = useRouter();
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState('');
@@ -186,14 +188,14 @@ export default function RegisterPage() {
                                     borderColor: 'var(--card-border)',
                                     color: 'var(--foreground)',
                                 }}
-                                placeholder="John Doe"
+                                placeholder={t('placeholders.name', { fallback: 'John Doe' })}
                             />
                         </div>
                     </div>
 
                     <div>
                         <label htmlFor="email" className="block text-sm font-medium mb-1" style={{ color: 'var(--foreground)' }}>
-                            Work Email *
+                            {t('fields.email', { fallback: 'Work Email *' })}
                         </label>
                         <div className="relative">
                             <Mail className="absolute left-3 top-1/2 transform -translate-y-1/2" size={18} style={{ color: 'var(--muted)' }} />
@@ -210,14 +212,14 @@ export default function RegisterPage() {
                                     borderColor: 'var(--card-border)',
                                     color: 'var(--foreground)',
                                 }}
-                                placeholder="john@company.com"
+                                placeholder={t('placeholders.email', { fallback: 'john@company.com' })}
                             />
                         </div>
                     </div>
 
                     <div>
                         <label htmlFor="company" className="block text-sm font-medium mb-1" style={{ color: 'var(--foreground)' }}>
-                            Company Name *
+                            {t('fields.company', { fallback: 'Company Name *' })}
                         </label>
                         <div className="relative">
                             <Building className="absolute left-3 top-1/2 transform -translate-y-1/2" size={18} style={{ color: 'var(--muted)' }} />
@@ -234,14 +236,14 @@ export default function RegisterPage() {
                                     borderColor: 'var(--card-border)',
                                     color: 'var(--foreground)',
                                 }}
-                                placeholder="Acme Inc."
+                                placeholder={t('placeholders.company', { fallback: 'Acme Inc.' })}
                             />
                         </div>
                     </div>
 
                     <div>
                         <label htmlFor="phone" className="block text-sm font-medium mb-1" style={{ color: 'var(--foreground)' }}>
-                            Phone Number (Optional)
+                            {t('fields.phone', { fallback: 'Phone Number (Optional)' })}
                         </label>
                         <div className="relative">
                             <Phone className="absolute left-3 top-1/2 transform -translate-y-1/2" size={18} style={{ color: 'var(--muted)' }} />
@@ -257,14 +259,14 @@ export default function RegisterPage() {
                                     borderColor: 'var(--card-border)',
                                     color: 'var(--foreground)',
                                 }}
-                                placeholder="+1 (555) 123-4567"
+                                placeholder={t('placeholders.phone', { fallback: '+1 (555) 123-4567' })}
                             />
                         </div>
                     </div>
 
                     <div>
                         <label htmlFor="password" className="block text-sm font-medium mb-1" style={{ color: 'var(--foreground)' }}>
-                            Password *
+                            {t('fields.password', { fallback: 'Password *' })}
                         </label>
                         <div className="relative">
                             <Lock className="absolute left-3 top-1/2 transform -translate-y-1/2" size={18} style={{ color: 'var(--muted)' }} />
@@ -281,14 +283,14 @@ export default function RegisterPage() {
                                     borderColor: 'var(--card-border)',
                                     color: 'var(--foreground)',
                                 }}
-                                placeholder="Min. 8 characters"
+                                placeholder={t('placeholders.password', { fallback: 'Min. 8 characters' })}
                             />
                         </div>
                     </div>
 
                     <div>
                         <label htmlFor="confirmPassword" className="block text-sm font-medium mb-1" style={{ color: 'var(--foreground)' }}>
-                            Confirm Password *
+                            {t('fields.confirmPassword', { fallback: 'Confirm Password *' })}
                         </label>
                         <div className="relative">
                             <Lock className="absolute left-3 top-1/2 transform -translate-y-1/2" size={18} style={{ color: 'var(--muted)' }} />
@@ -305,7 +307,7 @@ export default function RegisterPage() {
                                     borderColor: 'var(--card-border)',
                                     color: 'var(--foreground)',
                                 }}
-                                placeholder="Re-enter password"
+                                placeholder={t('placeholders.confirmPassword', { fallback: 'Re-enter password' })}
                             />
                         </div>
                     </div>

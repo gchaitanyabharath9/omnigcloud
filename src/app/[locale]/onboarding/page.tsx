@@ -1,12 +1,13 @@
 import { Rocket, Shield, Globe, Cpu, CheckCircle, ArrowRight, Zap, RefreshCcw, ArrowLeft } from "lucide-react";
 import { Link } from "@/navigation";
-
+import { useTranslations } from "next-intl";
 
 export function generateStaticParams() {
     return ['en', 'es', 'fr', 'de', 'zh', 'hi', 'ja', 'ko'].map((locale) => ({ locale }));
 }
 
 export default function OnboardingPage() {
+    const t = useTranslations('Auth.Onboarding');
 
     return (
         <div className="animate-fade-in" style={{ paddingBottom: '4rem' }}>
@@ -42,13 +43,13 @@ export default function OnboardingPage() {
             <section className="container" style={{ padding: '0 0 6rem' }}>
                 <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '5rem', alignItems: 'center' }}>
                     <div>
-                        <h2 style={{ fontSize: '2.5rem', fontWeight: 900, marginBottom: '2rem', color: 'var(--foreground)' }}>How we modernize <br /><span style={{ color: 'var(--primary)' }}>your workforce.</span></h2>
+                        <h2 style={{ fontSize: '2.5rem', fontWeight: 900, marginBottom: '2rem', color: 'var(--foreground)' }}>{t('modernize.title.p1')} <br /><span style={{ color: 'var(--primary)' }}>{t('modernize.title.p2')}</span></h2>
                         <div style={{ display: 'flex', flexDirection: 'column', gap: '2rem' }}>
                             {[
-                                { step: "01", title: "Infrastructure Assessment", desc: "Our AI scans your existing cloud footprint to identify migration pathways.", icon: <Globe color="var(--primary)" /> },
-                                { step: "02", title: "Registry Selection", desc: "Select pre-approved blueprints from our Foundation Core.", icon: <Cpu color="var(--primary)" /> },
-                                { step: "03", title: "Automated Provisioning", desc: "Deploy clusters in minutes with Crossplane-powered orchestration.", icon: <Zap color="var(--primary)" /> },
-                                { step: "04", title: "Enterprise Scaling", desc: "Onboard teams with self-service guardrails and FinOps monitoring.", icon: <Rocket color="var(--primary)" /> }
+                                { step: "01", title: t('steps.assess.title'), desc: t('steps.assess.desc'), icon: <Globe color="var(--primary)" /> },
+                                { step: "02", title: t('steps.registry.title'), desc: t('steps.registry.desc'), icon: <Cpu color="var(--primary)" /> },
+                                { step: "03", title: t('steps.provision.title'), desc: t('steps.provision.desc'), icon: <Zap color="var(--primary)" /> },
+                                { step: "04", title: t('steps.scale.title'), desc: t('steps.scale.desc'), icon: <Rocket color="var(--primary)" /> }
                             ].map((s, i) => (
                                 <div key={i} style={{ display: 'flex', gap: '1.5rem' }}>
                                     <div style={{ fontSize: '1.5rem', fontWeight: 950, color: 'var(--primary)', opacity: 0.2, width: '40px' }}>{s.step}</div>
@@ -75,8 +76,8 @@ export default function OnboardingPage() {
                             <h3 style={{ fontSize: '1.8rem', color: 'white', marginBottom: '2rem', textAlign: 'center' }}>Create Your Account</h3>
                             <form style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
                                 <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
-                                    <label style={{ color: 'rgba(255,255,255,0.7)', fontSize: '0.9rem' }}>Work Email</label>
-                                    <input type="email" placeholder="name@company.com" style={{ background: 'rgba(255,255,255,0.05)', border: '1px solid rgba(255,255,255,0.2)', padding: '0.75rem 1rem', borderRadius: '0.5rem', color: 'white' }} />
+                                    <label style={{ color: 'rgba(255,255,255,0.7)', fontSize: '0.9rem' }}>{t('form.email.label')}</label>
+                                    <input type="email" placeholder={t('form.email.placeholder')} style={{ background: 'rgba(255,255,255,0.05)', border: '1px solid rgba(255,255,255,0.2)', padding: '0.75rem 1rem', borderRadius: '0.5rem', color: 'white' }} />
                                 </div>
                                 <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
                                     <label style={{ color: 'rgba(255,255,255,0.7)', fontSize: '0.9rem' }}>Primary Cloud Provider</label>
