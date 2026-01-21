@@ -101,7 +101,7 @@ export default async function DocDetailPage({ params }: { params: Promise<{ loca
 
                         <aside className="space-y-6">
                             <div className="glass-panel p-6 rounded-3xl border border-white/10">
-                                <h4 className="text-[0.65rem] font-black text-primary uppercase tracking-widest mb-4">Quick Links</h4>
+                                <h4 className="text-[0.65rem] font-black text-primary uppercase tracking-widest mb-4">{t('sidebar.quickLinksHeading')}</h4>
                                 <div className="flex flex-col gap-3">
                                     {docs.filter(d => d.id !== slug).map(other => (
                                         <Link key={other.id} href={`/${locale}/docs/${other.id}`} className="flex items-center gap-3 p-3 rounded-xl hover:bg-white/5 transition-colors text-sm font-semibold opacity-60 hover:opacity-100">
