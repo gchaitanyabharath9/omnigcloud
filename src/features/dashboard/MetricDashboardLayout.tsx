@@ -12,6 +12,10 @@ interface MetricDashboardLayoutProps {
     secondaryVisual: React.ReactNode;
 }
 
+import { useTranslations } from 'next-intl';
+import { tSafe } from '@/lib/i18n/tSafe';
+import { DemoBadge } from '@/components/demo/DemoBadge';
+
 export default function MetricDashboardLayout({
     title,
     subtitle,
@@ -20,12 +24,14 @@ export default function MetricDashboardLayout({
     analysis,
     secondaryVisual
 }: MetricDashboardLayoutProps) {
+    const t = useTranslations('Dashboard.Charts');
+
     return (
         <div className="w-full grid grid-cols-1 lg:grid-cols-2 gap-6 auto-rows-auto">
             {/* QUADRANT 1: Main Visual (Top-Left) */}
             <div className="glass-panel p-6 rounded-2xl flex flex-col relative overflow-hidden group">
-                <div className="absolute top-0 right-0 p-4 opacity-50">
-                    <div className="text-[10px] font-mono border border-white/20 px-2 py-1 rounded-full">LIVE VIEW</div>
+                <div className="absolute top-0 right-0 p-4 opacity-75">
+                    <DemoBadge label={tSafe(t, 'liveView', 'Live View')} />
                 </div>
                 <div className="mb-4">
                     <h2 className="text-2xl font-black tracking-tight text-foreground">{title}</h2>
@@ -62,7 +68,7 @@ export default function MetricDashboardLayout({
                     <div className="absolute top-4 left-4">
                         <ArrowUpRight className="text-primary/50" />
                     </div>
-                    <h3 className="text-lg font-bold text-primary mb-2 pl-8">AI Analysis</h3>
+                    <h3 className="text-lg font-bold text-primary mb-2 pl-8">{tSafe(t, 'aiAnalysis', 'AI Analysis')}</h3>
                     <p className="text-base text-muted-foreground leading-relaxed pl-8 border-l-2 border-primary/20">
                         {analysis}
                     </p>
@@ -72,7 +78,7 @@ export default function MetricDashboardLayout({
             {/* QUADRANT 3: Secondary Visual (Bottom-Left) */}
             <div className="glass-panel p-6 rounded-2xl flex flex-col min-h-[300px]">
                 <div className="mb-2 flex items-center justify-between">
-                    <span className="text-xs font-bold uppercase text-muted-foreground">Historical Trend</span>
+                    <span className="text-xs font-bold uppercase text-muted-foreground">{tSafe(t, 'historicalTrend', 'Historical Trend')}</span>
                     <div className="flex gap-1">
                         <div className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
                     </div>
@@ -87,7 +93,7 @@ export default function MetricDashboardLayout({
             {/* QUADRANT 4: Logs / Details (Bottom-Right) */}
             <div className="glass-panel p-0 rounded-2xl flex flex-col overflow-hidden min-h-[300px]">
                 <div className="p-4 border-b border-white/5 bg-white/5 flex items-center justify-between">
-                    <span className="text-xs font-mono text-muted-foreground">SYSTEM_LOGS.tail</span>
+                    <span className="text-xs font-mono text-muted-foreground">{tSafe(t, 'systemLogs', 'System Logs')}</span>
                     <div className="flex gap-1.5">
                         <div className="w-2 h-2 rounded-full bg-red-500/20" />
                         <div className="w-2 h-2 rounded-full bg-yellow-500/20" />

@@ -76,8 +76,12 @@ export const EnhancedCostSavingsChart = ({ height = 180 }: { height?: number }) 
     );
 };
 
+import { useTranslations } from 'next-intl';
+import { tSafe } from '@/lib/i18n/tSafe';
+
 // Real-time updating ROI Gauge
 export const LiveROIGauge = ({ value = 342 }: { value?: number }) => {
+    const t = useTranslations('Dashboard.Graphs');
     const [currentValue, setCurrentValue] = useState(0);
     const [isMounted, setIsMounted] = useState(false);
     const percentage = Math.min(value / 500 * 100, 100);
@@ -123,7 +127,7 @@ export const LiveROIGauge = ({ value = 342 }: { value?: number }) => {
             </svg>
             <div style={{ position: 'absolute', textAlign: 'center' }}>
                 <div style={{ fontSize: '2.5rem', fontWeight: 950, color: 'var(--primary)' }}>{currentValue}%</div>
-                <div style={{ fontSize: '0.7rem', opacity: 0.5, fontWeight: 700, textTransform: 'uppercase' }}>ROI</div>
+                <div style={{ fontSize: '0.7rem', opacity: 0.5, fontWeight: 700, textTransform: 'uppercase' }}>{tSafe(t, 'roi', "ROI")}</div>
             </div>
         </div>
     );
@@ -131,6 +135,7 @@ export const LiveROIGauge = ({ value = 342 }: { value?: number }) => {
 
 // Pulsing Security Score
 export const PulsingSecurityScore = ({ score = 94 }: { score?: number }) => {
+    const t = useTranslations('Dashboard.Graphs');
     const [isPulsing, setIsPulsing] = useState(false);
     const [isMounted, setIsMounted] = useState(false);
     const getColor = (s: number) => {
@@ -179,7 +184,8 @@ export const PulsingSecurityScore = ({ score = 94 }: { score?: number }) => {
                     opacity: isPulsing ? 1 : 0,
                     pointerEvents: 'none'
                 }} />
-                <div style={{ fontSize: '0.7rem', opacity: 0.5, fontWeight: 700, textTransform: 'uppercase' }}>Security Score</div>
+
+                <div style={{ fontSize: '0.7rem', opacity: 0.5, fontWeight: 700, textTransform: 'uppercase' }}>{tSafe(t, 'securityScore', "Security Score")}</div>
             </div>
             <div style={{ height: '12px', background: 'rgba(255,255,255,0.05)', borderRadius: '1rem', overflow: 'hidden' }}>
                 <div style={{

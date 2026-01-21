@@ -393,6 +393,14 @@
       "type": "t_call"
     },
     {
+      "file": "src\\components\\observability\\LiveLatencyBadge.tsx",
+      "line": 41,
+      "namespace": "Header",
+      "key": "latency_badge",
+      "fullKey": "Header.latency_badge",
+      "type": "t_call"
+    },
+    {
       "file": "src\\components\\seo\\Enrichment.tsx",
       "line": 24,
       "namespace": "Common",
@@ -486,14 +494,6 @@
       "namespace": "Common",
       "key": "title",
       "fullKey": "Common.title",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\components\\observability\\LiveLatencyBadge.tsx",
-      "line": 41,
-      "namespace": "Header",
-      "key": "latency_badge",
-      "fullKey": "Header.latency_badge",
       "type": "t_call"
     },
     {
@@ -2577,22 +2577,6 @@
       "type": "t_call"
     },
     {
-      "file": "src\\app\\[locale]\\visual-library\\page.tsx",
-      "line": 43,
-      "namespace": "Common",
-      "key": "title",
-      "fullKey": "Common.title",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\visual-library\\page.tsx",
-      "line": 46,
-      "namespace": "Common",
-      "key": "subtitle",
-      "fullKey": "Common.subtitle",
-      "type": "t_call"
-    },
-    {
       "file": "src\\app\\[locale]\\use-cases\\page.tsx",
       "line": 16,
       "namespace": "Common",
@@ -2614,6 +2598,222 @@
       "namespace": "Common",
       "key": "hero.subtitle",
       "fullKey": "Common.hero.subtitle",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\terms\\page.tsx",
+      "line": 11,
+      "namespace": "Common",
+      "key": "title",
+      "fullKey": "Common.title",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\terms\\page.tsx",
+      "line": 13,
+      "namespace": "Common",
+      "key": "lastUpdated",
+      "fullKey": "Common.lastUpdated",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\terms\\page.tsx",
+      "line": 21,
+      "namespace": "Common",
+      "key": "acceptance",
+      "fullKey": "Common.acceptance",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\terms\\page.tsx",
+      "line": 24,
+      "namespace": "Common",
+      "key": "acceptanceText",
+      "fullKey": "Common.acceptanceText",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\terms\\page.tsx",
+      "line": 29,
+      "namespace": "Common",
+      "key": "services",
+      "fullKey": "Common.services",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\terms\\page.tsx",
+      "line": 31,
+      "namespace": "Common",
+      "key": "servicesText",
+      "fullKey": "Common.servicesText",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\terms\\page.tsx",
+      "line": 34,
+      "namespace": "Common",
+      "key": "service1",
+      "fullKey": "Common.service1",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\terms\\page.tsx",
+      "line": 35,
+      "namespace": "Common",
+      "key": "service2",
+      "fullKey": "Common.service2",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\terms\\page.tsx",
+      "line": 36,
+      "namespace": "Common",
+      "key": "service3",
+      "fullKey": "Common.service3",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\terms\\page.tsx",
+      "line": 37,
+      "namespace": "Common",
+      "key": "service4",
+      "fullKey": "Common.service4",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\terms\\page.tsx",
+      "line": 42,
+      "namespace": "Common",
+      "key": "userResponsibilities",
+      "fullKey": "Common.userResponsibilities",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\terms\\page.tsx",
+      "line": 44,
+      "namespace": "Common",
+      "key": "userResponsibilitiesText",
+      "fullKey": "Common.userResponsibilitiesText",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\terms\\page.tsx",
+      "line": 47,
+      "namespace": "Common",
+      "key": "responsibility1",
+      "fullKey": "Common.responsibility1",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\terms\\page.tsx",
+      "line": 48,
+      "namespace": "Common",
+      "key": "responsibility2",
+      "fullKey": "Common.responsibility2",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\terms\\page.tsx",
+      "line": 49,
+      "namespace": "Common",
+      "key": "responsibility3",
+      "fullKey": "Common.responsibility3",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\terms\\page.tsx",
+      "line": 54,
+      "namespace": "Common",
+      "key": "dataOwnership",
+      "fullKey": "Common.dataOwnership",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\terms\\page.tsx",
+      "line": 56,
+      "namespace": "Common",
+      "key": "dataOwnershipText",
+      "fullKey": "Common.dataOwnershipText",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\terms\\page.tsx",
+      "line": 61,
+      "namespace": "Common",
+      "key": "termination",
+      "fullKey": "Common.termination",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\terms\\page.tsx",
+      "line": 63,
+      "namespace": "Common",
+      "key": "terminationText",
+      "fullKey": "Common.terminationText",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\terms\\page.tsx",
+      "line": 71,
+      "namespace": "Common",
+      "key": "disclaimer",
+      "fullKey": "Common.disclaimer",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\terms\\page.tsx",
+      "line": 73,
+      "namespace": "Common",
+      "key": "disclaimerText",
+      "fullKey": "Common.disclaimerText",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\terms\\page.tsx",
+      "line": 80,
+      "namespace": "Common",
+      "key": "governingLaw",
+      "fullKey": "Common.governingLaw",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\terms\\page.tsx",
+      "line": 82,
+      "namespace": "Common",
+      "key": "governingLawText",
+      "fullKey": "Common.governingLawText",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\terms\\page.tsx",
+      "line": 87,
+      "namespace": "Common",
+      "key": "contact",
+      "fullKey": "Common.contact",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\terms\\page.tsx",
+      "line": 89,
+      "namespace": "Common",
+      "key": "contactText",
+      "fullKey": "Common.contactText",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\visual-library\\page.tsx",
+      "line": 43,
+      "namespace": "Common",
+      "key": "title",
+      "fullKey": "Common.title",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\visual-library\\page.tsx",
+      "line": 46,
+      "namespace": "Common",
+      "key": "subtitle",
+      "fullKey": "Common.subtitle",
       "type": "t_call"
     },
     {
@@ -3305,86 +3505,6 @@
       "type": "t_call"
     },
     {
-      "file": "src\\app\\[locale]\\industries\\page.tsx",
-      "line": 64,
-      "namespace": "Common",
-      "key": "badge",
-      "fullKey": "Common.badge",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\industries\\page.tsx",
-      "line": 78,
-      "namespace": "Common",
-      "key": "title",
-      "fullKey": "Common.title",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\industries\\page.tsx",
-      "line": 89,
-      "namespace": "Common",
-      "key": "subtitle",
-      "fullKey": "Common.subtitle",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\industries\\page.tsx",
-      "line": 134,
-      "namespace": "Common",
-      "key": "challenges",
-      "fullKey": "Common.challenges",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\industries\\page.tsx",
-      "line": 148,
-      "namespace": "Common",
-      "key": "solution",
-      "fullKey": "Common.solution",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\industries\\page.tsx",
-      "line": 176,
-      "namespace": "Common",
-      "key": "challenges",
-      "fullKey": "Common.challenges",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\industries\\page.tsx",
-      "line": 190,
-      "namespace": "Common",
-      "key": "solution",
-      "fullKey": "Common.solution",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\industries\\page.tsx",
-      "line": 209,
-      "namespace": "Common",
-      "key": "cta.title",
-      "fullKey": "Common.cta.title",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\industries\\page.tsx",
-      "line": 211,
-      "namespace": "Common",
-      "key": "cta.subtitle",
-      "fullKey": "Common.cta.subtitle",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\industries\\page.tsx",
-      "line": 214,
-      "namespace": "Common",
-      "key": "cta.button",
-      "fullKey": "Common.cta.button",
-      "type": "t_call"
-    },
-    {
       "file": "src\\app\\[locale]\\docs\\page.tsx",
       "line": 14,
       "namespace": "Common",
@@ -3625,6 +3745,86 @@
       "type": "t_call"
     },
     {
+      "file": "src\\app\\[locale]\\industries\\page.tsx",
+      "line": 64,
+      "namespace": "Common",
+      "key": "badge",
+      "fullKey": "Common.badge",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\industries\\page.tsx",
+      "line": 78,
+      "namespace": "Common",
+      "key": "title",
+      "fullKey": "Common.title",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\industries\\page.tsx",
+      "line": 89,
+      "namespace": "Common",
+      "key": "subtitle",
+      "fullKey": "Common.subtitle",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\industries\\page.tsx",
+      "line": 134,
+      "namespace": "Common",
+      "key": "challenges",
+      "fullKey": "Common.challenges",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\industries\\page.tsx",
+      "line": 148,
+      "namespace": "Common",
+      "key": "solution",
+      "fullKey": "Common.solution",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\industries\\page.tsx",
+      "line": 176,
+      "namespace": "Common",
+      "key": "challenges",
+      "fullKey": "Common.challenges",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\industries\\page.tsx",
+      "line": 190,
+      "namespace": "Common",
+      "key": "solution",
+      "fullKey": "Common.solution",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\industries\\page.tsx",
+      "line": 209,
+      "namespace": "Common",
+      "key": "cta.title",
+      "fullKey": "Common.cta.title",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\industries\\page.tsx",
+      "line": 211,
+      "namespace": "Common",
+      "key": "cta.subtitle",
+      "fullKey": "Common.cta.subtitle",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\industries\\page.tsx",
+      "line": 214,
+      "namespace": "Common",
+      "key": "cta.button",
+      "fullKey": "Common.cta.button",
+      "type": "t_call"
+    },
+    {
       "file": "src\\app\\[locale]\\contact\\page.tsx",
       "line": 29,
       "namespace": "Common",
@@ -3638,62 +3838,6 @@
       "namespace": "Common",
       "key": "location",
       "fullKey": "Common.location",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\company\\page.tsx",
-      "line": 170,
-      "namespace": "Common",
-      "key": "hero.tag",
-      "fullKey": "Common.hero.tag",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\company\\page.tsx",
-      "line": 171,
-      "namespace": "Common",
-      "key": "hero.title",
-      "fullKey": "Common.hero.title",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\company\\page.tsx",
-      "line": 172,
-      "namespace": "Common",
-      "key": "hero.subtitle",
-      "fullKey": "Common.hero.subtitle",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\company\\page.tsx",
-      "line": 190,
-      "namespace": "Common",
-      "key": "opportunity.title",
-      "fullKey": "Common.opportunity.title",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\company\\page.tsx",
-      "line": 191,
-      "namespace": "Common",
-      "key": "opportunity.content",
-      "fullKey": "Common.opportunity.content",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\company\\page.tsx",
-      "line": 194,
-      "namespace": "Common",
-      "key": "vision.title",
-      "fullKey": "Common.vision.title",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\company\\page.tsx",
-      "line": 195,
-      "namespace": "Common",
-      "key": "vision.content",
-      "fullKey": "Common.vision.content",
       "type": "t_call"
     },
     {
@@ -4041,243 +4185,59 @@
       "type": "t_call"
     },
     {
-      "file": "src\\app\\[locale]\\terms\\page.tsx",
-      "line": 11,
+      "file": "src\\app\\[locale]\\company\\page.tsx",
+      "line": 170,
       "namespace": "Common",
-      "key": "title",
-      "fullKey": "Common.title",
+      "key": "hero.tag",
+      "fullKey": "Common.hero.tag",
       "type": "t_call"
     },
     {
-      "file": "src\\app\\[locale]\\terms\\page.tsx",
-      "line": 13,
+      "file": "src\\app\\[locale]\\company\\page.tsx",
+      "line": 171,
       "namespace": "Common",
-      "key": "lastUpdated",
-      "fullKey": "Common.lastUpdated",
+      "key": "hero.title",
+      "fullKey": "Common.hero.title",
       "type": "t_call"
     },
     {
-      "file": "src\\app\\[locale]\\terms\\page.tsx",
-      "line": 21,
+      "file": "src\\app\\[locale]\\company\\page.tsx",
+      "line": 172,
       "namespace": "Common",
-      "key": "acceptance",
-      "fullKey": "Common.acceptance",
+      "key": "hero.subtitle",
+      "fullKey": "Common.hero.subtitle",
       "type": "t_call"
     },
     {
-      "file": "src\\app\\[locale]\\terms\\page.tsx",
-      "line": 24,
+      "file": "src\\app\\[locale]\\company\\page.tsx",
+      "line": 190,
       "namespace": "Common",
-      "key": "acceptanceText",
-      "fullKey": "Common.acceptanceText",
+      "key": "opportunity.title",
+      "fullKey": "Common.opportunity.title",
       "type": "t_call"
     },
     {
-      "file": "src\\app\\[locale]\\terms\\page.tsx",
-      "line": 29,
+      "file": "src\\app\\[locale]\\company\\page.tsx",
+      "line": 191,
       "namespace": "Common",
-      "key": "services",
-      "fullKey": "Common.services",
+      "key": "opportunity.content",
+      "fullKey": "Common.opportunity.content",
       "type": "t_call"
     },
     {
-      "file": "src\\app\\[locale]\\terms\\page.tsx",
-      "line": 31,
+      "file": "src\\app\\[locale]\\company\\page.tsx",
+      "line": 194,
       "namespace": "Common",
-      "key": "servicesText",
-      "fullKey": "Common.servicesText",
+      "key": "vision.title",
+      "fullKey": "Common.vision.title",
       "type": "t_call"
     },
     {
-      "file": "src\\app\\[locale]\\terms\\page.tsx",
-      "line": 34,
+      "file": "src\\app\\[locale]\\company\\page.tsx",
+      "line": 195,
       "namespace": "Common",
-      "key": "service1",
-      "fullKey": "Common.service1",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\terms\\page.tsx",
-      "line": 35,
-      "namespace": "Common",
-      "key": "service2",
-      "fullKey": "Common.service2",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\terms\\page.tsx",
-      "line": 36,
-      "namespace": "Common",
-      "key": "service3",
-      "fullKey": "Common.service3",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\terms\\page.tsx",
-      "line": 37,
-      "namespace": "Common",
-      "key": "service4",
-      "fullKey": "Common.service4",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\terms\\page.tsx",
-      "line": 42,
-      "namespace": "Common",
-      "key": "userResponsibilities",
-      "fullKey": "Common.userResponsibilities",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\terms\\page.tsx",
-      "line": 44,
-      "namespace": "Common",
-      "key": "userResponsibilitiesText",
-      "fullKey": "Common.userResponsibilitiesText",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\terms\\page.tsx",
-      "line": 47,
-      "namespace": "Common",
-      "key": "responsibility1",
-      "fullKey": "Common.responsibility1",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\terms\\page.tsx",
-      "line": 48,
-      "namespace": "Common",
-      "key": "responsibility2",
-      "fullKey": "Common.responsibility2",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\terms\\page.tsx",
-      "line": 49,
-      "namespace": "Common",
-      "key": "responsibility3",
-      "fullKey": "Common.responsibility3",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\terms\\page.tsx",
-      "line": 54,
-      "namespace": "Common",
-      "key": "dataOwnership",
-      "fullKey": "Common.dataOwnership",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\terms\\page.tsx",
-      "line": 56,
-      "namespace": "Common",
-      "key": "dataOwnershipText",
-      "fullKey": "Common.dataOwnershipText",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\terms\\page.tsx",
-      "line": 61,
-      "namespace": "Common",
-      "key": "termination",
-      "fullKey": "Common.termination",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\terms\\page.tsx",
-      "line": 63,
-      "namespace": "Common",
-      "key": "terminationText",
-      "fullKey": "Common.terminationText",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\terms\\page.tsx",
-      "line": 71,
-      "namespace": "Common",
-      "key": "disclaimer",
-      "fullKey": "Common.disclaimer",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\terms\\page.tsx",
-      "line": 73,
-      "namespace": "Common",
-      "key": "disclaimerText",
-      "fullKey": "Common.disclaimerText",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\terms\\page.tsx",
-      "line": 80,
-      "namespace": "Common",
-      "key": "governingLaw",
-      "fullKey": "Common.governingLaw",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\terms\\page.tsx",
-      "line": 82,
-      "namespace": "Common",
-      "key": "governingLawText",
-      "fullKey": "Common.governingLawText",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\terms\\page.tsx",
-      "line": 87,
-      "namespace": "Common",
-      "key": "contact",
-      "fullKey": "Common.contact",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\terms\\page.tsx",
-      "line": 89,
-      "namespace": "Common",
-      "key": "contactText",
-      "fullKey": "Common.contactText",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\app\\page.tsx",
-      "line": 15,
-      "namespace": "Common",
-      "key": "title",
-      "fullKey": "Common.title",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\app\\page.tsx",
-      "line": 18,
-      "namespace": "Common",
-      "key": "welcome",
-      "fullKey": "Common.welcome",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\app\\page.tsx",
-      "line": 21,
-      "namespace": "Common",
-      "key": "role",
-      "fullKey": "Common.role",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\app\\page.tsx",
-      "line": 27,
-      "namespace": "Common",
-      "key": "logicMeshStatus",
-      "fullKey": "Common.logicMeshStatus",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\app\\page.tsx",
-      "line": 30,
-      "namespace": "Common",
-      "key": "active",
-      "fullKey": "Common.active",
+      "key": "vision.content",
+      "fullKey": "Common.vision.content",
       "type": "t_call"
     },
     {
@@ -4350,6 +4310,46 @@
       "namespace": "Common",
       "key": "newsletter.footer",
       "fullKey": "Common.newsletter.footer",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\app\\page.tsx",
+      "line": 15,
+      "namespace": "Common",
+      "key": "title",
+      "fullKey": "Common.title",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\app\\page.tsx",
+      "line": 18,
+      "namespace": "Common",
+      "key": "welcome",
+      "fullKey": "Common.welcome",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\app\\page.tsx",
+      "line": 21,
+      "namespace": "Common",
+      "key": "role",
+      "fullKey": "Common.role",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\app\\page.tsx",
+      "line": 27,
+      "namespace": "Common",
+      "key": "logicMeshStatus",
+      "fullKey": "Common.logicMeshStatus",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\app\\page.tsx",
+      "line": 30,
+      "namespace": "Common",
+      "key": "active",
+      "fullKey": "Common.active",
       "type": "t_call"
     },
     {

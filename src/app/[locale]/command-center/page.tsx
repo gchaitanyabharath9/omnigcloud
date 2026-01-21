@@ -6,11 +6,16 @@ import { EnhancedCostSavingsChart, LiveROIGauge, AnimatedResourceUtilization, Li
 import { ResponseTimeTrend, UptimeRing } from '@/components/visuals/MetricsGraphs';
 import { DataTransferVolume } from '@/components/visuals/AdvancedMetrics';
 import { ErrorRateTrend, QueryPerformance, AutoScalingEvents } from '@/components/visuals/PerformanceMetrics';
+import { useTranslations } from 'next-intl';
+import { tSafe } from '@/lib/i18n/tSafe';
 
 export default function CommandCenterPage() {
     const [currentTime, setCurrentTime] = useState(new Date());
     const [activeAlerts, setActiveAlerts] = useState(2);
     const [systemStatus, setSystemStatus] = useState<'operational' | 'degraded' | 'critical'>('operational');
+    const t = useTranslations('Dashboard.CommandCenter');
+    const tTech = useTranslations('Dashboard.Technical');
+    const tCommon = useTranslations('Dashboard.Shell');
 
     useEffect(() => {
         const timer = setInterval(() => setCurrentTime(new Date()), 1000);
@@ -33,10 +38,10 @@ export default function CommandCenterPage() {
                     <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
                         <div>
                             <h1 style={{ fontSize: '2rem', fontWeight: 950, margin: 0, color: '#60efff', letterSpacing: '-0.02em' }}>
-                                LIVE COMMAND & CONTROL
+                                {tSafe(t, 'title', "LIVE COMMAND & CONTROL")}
                             </h1>
                             <div style={{ fontSize: '0.75rem', opacity: 0.5, marginTop: '0.25rem', fontFamily: 'var(--font-mono)' }}>
-                                OMNIGCLOUD_CONTROL_PLANE_v4.2.1
+                                {tSafe(tTech, 'subtitle', "OMNIGCLOUD_CONTROL_PLANE_v4.2.1")}
                             </div>
                         </div>
                         <div style={{ display: 'flex', gap: '2rem', alignItems: 'center' }}>
@@ -89,12 +94,12 @@ export default function CommandCenterPage() {
                         border: '1px solid rgba(96, 239, 255, 0.2)'
                     }}>
                         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'start', marginBottom: '1rem' }}>
-                            <div style={{ fontSize: '0.65rem', opacity: 0.5, fontWeight: 700, textTransform: 'uppercase' }}>Active Nodes</div>
+                            <div style={{ fontSize: '0.65rem', opacity: 0.5, fontWeight: 700, textTransform: 'uppercase' }}>{tSafe(tTech, 'activeNodes', "Active Nodes")}</div>
                             <Server size={20} color="#60efff" />
                         </div>
                         <div style={{ fontSize: '2.5rem', fontWeight: 950, color: '#60efff' }}>142</div>
                         <div style={{ fontSize: '0.7rem', color: '#10b981', display: 'flex', alignItems: 'center', gap: '0.25rem', marginTop: '0.5rem' }}>
-                            <TrendingUp size={12} /> +8 (24h)
+                            <TrendingUp size={12} /> {tSafe(tTech, 'trend', "+8 (24h)")}
                         </div>
                     </div>
 
@@ -105,11 +110,11 @@ export default function CommandCenterPage() {
                         border: '1px solid rgba(16, 185, 129, 0.2)'
                     }}>
                         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'start', marginBottom: '1rem' }}>
-                            <div style={{ fontSize: '0.65rem', opacity: 0.5, fontWeight: 700, textTransform: 'uppercase' }}>Requests/sec</div>
+                            <div style={{ fontSize: '0.65rem', opacity: 0.5, fontWeight: 700, textTransform: 'uppercase' }}>{tSafe(tTech, 'requestsSec', "Requests/sec")}</div>
                             <Activity size={20} color="#10b981" />
                         </div>
                         <div style={{ fontSize: '2.5rem', fontWeight: 950, color: '#10b981' }}>8.4k</div>
-                        <div style={{ fontSize: '0.7rem', opacity: 0.5, marginTop: '0.5rem' }}>Avg: 7.2k</div>
+                        <div style={{ fontSize: '0.7rem', opacity: 0.5, marginTop: '0.5rem' }}>{tSafe(tTech, 'avg', "Avg: 7.2k")}</div>
                     </div>
 
                     <div className="glass-panel" style={{
@@ -119,11 +124,11 @@ export default function CommandCenterPage() {
                         border: '1px solid rgba(139, 92, 246, 0.2)'
                     }}>
                         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'start', marginBottom: '1rem' }}>
-                            <div style={{ fontSize: '0.65rem', opacity: 0.5, fontWeight: 700, textTransform: 'uppercase' }}>Data Transfer</div>
+                            <div style={{ fontSize: '0.65rem', opacity: 0.5, fontWeight: 700, textTransform: 'uppercase' }}>{tSafe(tTech, 'dataTransfer', "Data Transfer")}</div>
                             <Database size={20} color="#8b5cf6" />
                         </div>
                         <div style={{ fontSize: '2.5rem', fontWeight: 950, color: '#8b5cf6' }}>2.1TB</div>
-                        <div style={{ fontSize: '0.7rem', opacity: 0.5, marginTop: '0.5rem' }}>Last hour</div>
+                        <div style={{ fontSize: '0.7rem', opacity: 0.5, marginTop: '0.5rem' }}>{tSafe(tTech, 'lastHour', "Last hour")}</div>
                     </div>
 
                     <div className="glass-panel" style={{
@@ -135,12 +140,12 @@ export default function CommandCenterPage() {
                         border: `1px solid ${activeAlerts > 0 ? 'rgba(245, 158, 11, 0.2)' : 'rgba(16, 185, 129, 0.2)'}`
                     }}>
                         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'start', marginBottom: '1rem' }}>
-                            <div style={{ fontSize: '0.65rem', opacity: 0.5, fontWeight: 700, textTransform: 'uppercase' }}>Active Alerts</div>
+                            <div style={{ fontSize: '0.65rem', opacity: 0.5, fontWeight: 700, textTransform: 'uppercase' }}>{tSafe(tCommon, 'activeAlerts', "Active Alerts")}</div>
                             {activeAlerts > 0 ? <AlertTriangle size={20} color="#f59e0b" /> : <CheckCircle size={20} color="#10b981" />}
                         </div>
                         <div style={{ fontSize: '2.5rem', fontWeight: 950, color: activeAlerts > 0 ? '#f59e0b' : '#10b981' }}>{activeAlerts}</div>
                         <div style={{ fontSize: '0.7rem', opacity: 0.5, marginTop: '0.5rem' }}>
-                            {activeAlerts > 0 ? 'Requires attention' : 'All systems nominal'}
+                            {activeAlerts > 0 ? tSafe(tCommon, 'requiresAttention', "Requires attention") : tSafe(tCommon, 'nominal', "All systems nominal")}
                         </div>
                     </div>
                 </div>
@@ -150,11 +155,11 @@ export default function CommandCenterPage() {
                     <div className="glass-panel" style={{ padding: '2rem', borderRadius: '1.5rem', background: 'rgba(10, 10, 10, 0.8)' }}>
                         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'start', marginBottom: '1.5rem' }}>
                             <div>
-                                <h3 style={{ fontSize: '1.2rem', fontWeight: 900, margin: 0 }}>ROI Performance</h3>
-                                <p style={{ fontSize: '0.7rem', opacity: 0.5, margin: '0.25rem 0 0 0' }}>Real-time return on investment</p>
+                                <h3 style={{ fontSize: '1.2rem', fontWeight: 900, margin: 0 }}>{tSafe(t, 'roiTitle', "ROI Performance")}</h3>
+                                <p style={{ fontSize: '0.7rem', opacity: 0.5, margin: '0.25rem 0 0 0' }}>{tSafe(t, 'roiDesc', "Real-time return on investment")}</p>
                             </div>
                             <div className="badge badge-success-subtle" style={{ fontSize: '0.6rem' }}>
-                                <TrendingUp size={10} className="mr-1" /> GROWING
+                                <TrendingUp size={10} className="mr-1" /> {tSafe(t, 'growing', "GROWING")}
                             </div>
                         </div>
                         <LiveROIGauge value={342} />
@@ -163,8 +168,8 @@ export default function CommandCenterPage() {
                     <div className="glass-panel" style={{ padding: '2rem', borderRadius: '1.5rem', background: 'rgba(10, 10, 10, 0.8)' }}>
                         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'start', marginBottom: '1.5rem' }}>
                             <div>
-                                <h3 style={{ fontSize: '1.2rem', fontWeight: 900, margin: 0 }}>Cost Savings Trend</h3>
-                                <p style={{ fontSize: '0.7rem', opacity: 0.5, margin: '0.25rem 0 0 0' }}>Monthly infrastructure optimization</p>
+                                <h3 style={{ fontSize: '1.2rem', fontWeight: 900, margin: 0 }}>{tSafe(t, 'costTitle', "Cost Savings Trend")}</h3>
+                                <p style={{ fontSize: '0.7rem', opacity: 0.5, margin: '0.25rem 0 0 0' }}>{tSafe(t, 'costDesc', "Monthly infrastructure optimization")}</p>
                             </div>
                             <Zap size={20} color="#f59e0b" />
                         </div>
@@ -182,7 +187,7 @@ export default function CommandCenterPage() {
                             marginTop: '1rem'
                         }}>
                             <div className="animate-pulse" style={{ width: 6, height: 6, background: '#10b981', borderRadius: '50%' }}></div>
-                            $45K SAVED THIS MONTH • 275% YOY INCREASE
+                            {tSafe(t, 'savings', "$45K SAVED THIS MONTH • 275% YOY INCREASE")}
                         </div>
                     </div>
                 </div>
@@ -190,52 +195,52 @@ export default function CommandCenterPage() {
                 {/* BOTTOM GRID - Detailed Metrics */}
                 <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '1rem' }}>
                     <div className="glass-panel" style={{ padding: '1.5rem', borderRadius: '1rem', background: 'rgba(10, 10, 10, 0.8)' }}>
-                        <h4 style={{ fontSize: '0.9rem', fontWeight: 900, marginBottom: '0.5rem' }}>Resource Utilization</h4>
-                        <p style={{ fontSize: '0.65rem', opacity: 0.5, marginBottom: '1rem' }}>Live infrastructure metrics</p>
+                        <h4 style={{ fontSize: '0.9rem', fontWeight: 900, marginBottom: '0.5rem' }}>{tSafe(tTech, 'resourceTitle', "Resource Utilization")}</h4>
+                        <p style={{ fontSize: '0.65rem', opacity: 0.5, marginBottom: '1rem' }}>{tSafe(tTech, 'resourceDesc', "Live infrastructure metrics")}</p>
                         <AnimatedResourceUtilization />
                     </div>
 
                     <div className="glass-panel" style={{ padding: '1.5rem', borderRadius: '1rem', background: 'rgba(10, 10, 10, 0.8)' }}>
-                        <h4 style={{ fontSize: '0.9rem', fontWeight: 900, marginBottom: '0.5rem' }}>Deployment Activity</h4>
-                        <p style={{ fontSize: '0.65rem', opacity: 0.5, marginBottom: '1rem' }}>Weekly deployment frequency</p>
+                        <h4 style={{ fontSize: '0.9rem', fontWeight: 900, marginBottom: '0.5rem' }}>{tSafe(t, 'deploymentTitle', "Deployment Activity")}</h4>
+                        <p style={{ fontSize: '0.65rem', opacity: 0.5, marginBottom: '1rem' }}>{tSafe(tTech, 'velocityDesc', "Weekly deployment frequency")}</p>
                         <LiveDeploymentFrequency />
                     </div>
 
                     <div className="glass-panel" style={{ padding: '1.5rem', borderRadius: '1rem', background: 'rgba(10, 10, 10, 0.8)' }}>
-                        <h4 style={{ fontSize: '0.9rem', fontWeight: 900, marginBottom: '0.5rem' }}>Security Posture</h4>
-                        <p style={{ fontSize: '0.65rem', opacity: 0.5, marginBottom: '1rem' }}>Compliance & threat protection</p>
+                        <h4 style={{ fontSize: '0.9rem', fontWeight: 900, marginBottom: '0.5rem' }}>{tSafe(t, 'securityTitle', "Security Posture")}</h4>
+                        <p style={{ fontSize: '0.65rem', opacity: 0.5, marginBottom: '1rem' }}>{tSafe(t, 'securityDesc', "Compliance & threat protection")}</p>
                         <PulsingSecurityScore score={94} />
                     </div>
 
                     <div className="glass-panel" style={{ padding: '1.5rem', borderRadius: '1rem', background: 'rgba(10, 10, 10, 0.8)' }}>
-                        <h4 style={{ fontSize: '0.9rem', fontWeight: 900, marginBottom: '0.5rem' }}>Platform Uptime</h4>
-                        <p style={{ fontSize: '0.65rem', opacity: 0.5, marginBottom: '1rem' }}>30-day availability</p>
+                        <h4 style={{ fontSize: '0.9rem', fontWeight: 900, marginBottom: '0.5rem' }}>{tSafe(t, 'uptimeTitle', "Platform Uptime")}</h4>
+                        <p style={{ fontSize: '0.65rem', opacity: 0.5, marginBottom: '1rem' }}>{tSafe(t, 'uptimeDesc', "30-day availability")}</p>
                         <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', height: '100%' }}>
                             <UptimeRing uptime={99.99} />
                         </div>
                     </div>
 
                     <div className="glass-panel" style={{ padding: '1.5rem', borderRadius: '1rem', background: 'rgba(10, 10, 10, 0.8)' }}>
-                        <h4 style={{ fontSize: '0.9rem', fontWeight: 900, marginBottom: '0.5rem' }}>Response Time</h4>
-                        <p style={{ fontSize: '0.65rem', opacity: 0.5, marginBottom: '1rem' }}>API latency trend</p>
+                        <h4 style={{ fontSize: '0.9rem', fontWeight: 900, marginBottom: '0.5rem' }}>{tSafe(t, 'responseTimeTitle', "Response Time")}</h4>
+                        <p style={{ fontSize: '0.65rem', opacity: 0.5, marginBottom: '1rem' }}>{tSafe(t, 'responseTimeDesc', "API latency trend")}</p>
                         <ResponseTimeTrend />
                     </div>
 
                     <div className="glass-panel" style={{ padding: '1.5rem', borderRadius: '1rem', background: 'rgba(10, 10, 10, 0.8)' }}>
-                        <h4 style={{ fontSize: '0.9rem', fontWeight: 900, marginBottom: '0.5rem' }}>Auto-Scaling Events</h4>
-                        <p style={{ fontSize: '0.65rem', opacity: 0.5, marginBottom: '1rem' }}>24-hour scaling activity</p>
+                        <h4 style={{ fontSize: '0.9rem', fontWeight: 900, marginBottom: '0.5rem' }}>{tSafe(tTech, 'scalingTitle', "Auto-Scaling Events")}</h4>
+                        <p style={{ fontSize: '0.65rem', opacity: 0.5, marginBottom: '1rem' }}>{tSafe(tTech, 'scalingDesc', "24-hour scaling activity")}</p>
                         <AutoScalingEvents />
                     </div>
 
                     <div className="glass-panel" style={{ padding: '1.5rem', borderRadius: '1rem', background: 'rgba(10, 10, 10, 0.8)' }}>
-                        <h4 style={{ fontSize: '0.9rem', fontWeight: 900, marginBottom: '0.5rem' }}>Error Rate</h4>
+                        <h4 style={{ fontSize: '0.9rem', fontWeight: 900, marginBottom: '0.5rem' }}>{tSafe(tTech, 'threatDesc', "Error Rate")}</h4>
                         <p style={{ fontSize: '0.65rem', opacity: 0.5, marginBottom: '1rem' }}>Declining error trend</p>
                         <ErrorRateTrend />
                     </div>
 
                     <div className="glass-panel" style={{ padding: '1.5rem', borderRadius: '1rem', background: 'rgba(10, 10, 10, 0.8)' }}>
-                        <h4 style={{ fontSize: '0.9rem', fontWeight: 900, marginBottom: '0.5rem' }}>Query Performance</h4>
-                        <p style={{ fontSize: '0.65rem', opacity: 0.5, marginBottom: '1rem' }}>Database operations</p>
+                        <h4 style={{ fontSize: '0.9rem', fontWeight: 900, marginBottom: '0.5rem' }}>{tSafe(tTech, 'queryTitle', "Query Performance")}</h4>
+                        <p style={{ fontSize: '0.65rem', opacity: 0.5, marginBottom: '1rem' }}>{tSafe(tTech, 'queryDesc', "Database operations")}</p>
                         <QueryPerformance />
                     </div>
                 </div>

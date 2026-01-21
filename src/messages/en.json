@@ -1416,7 +1416,254 @@
     "infraSubtitle": "Global node status and uptime.",
     "globalHealth": "Global Health",
     "optimizationTitle": "Resource Optimization",
-    "trustTitle": "Trust Compliance Score"
+    "trustTitle": "Trust Compliance Score",
+    "Charts": {
+      "apiLatency": "API Latency (ms)",
+      "apiLatencyDistribution": "API Latency Distribution",
+      "latencyTrend": "API latency trend",
+      "systemLogs": "System Logs",
+      "aiAnalysis": "AI Analysis",
+      "realtimePerf": "Real-time system performance metrics",
+      "liveView": "Live View",
+      "historicalTrend": "Historical Trend",
+      "monthlyCost": "Monthly Cost Comparison ($)",
+      "hourlyRequestVolume": "Hourly Request Volume",
+      "multiCloudDistribution": "Multi-Cloud Distribution (%)",
+      "uptime30Day": "30-Day Uptime (%)",
+      "complianceScores": "Compliance Framework Scores",
+      "errorRateTrend": "Error Rate Trend (%)",
+      "featureAdoption": "Feature Adoption Rate (%)"
+    },
+    "Shell": {
+      "activeAssets": "Active Assets",
+      "revenueImpact": "Revenue Impact",
+      "cloudSpend": "Cloud Spend",
+      "activeAlerts": "Active Alerts",
+      "requiresAttention": "Requires attention",
+      "nominal": "All systems nominal"
+    },
+    "Distribution": {
+      "multiCloudTitle": "Multi-Cloud Workload Distribution",
+      "multiCloudDesc": "Active workloads across cloud providers",
+      "regionalTitle": "Regional Deployment Distribution",
+      "regionalDesc": "Workload distribution across global regions",
+      "complianceTitle": "Compliance Framework Scores",
+      "complianceDesc": "Current compliance status across all frameworks",
+      "featureTitle": "Feature Adoption Rate",
+      "featureDesc": "Active usage of key platform features",
+      "performanceTitle": "Performance Scorecard",
+      "performanceDesc": "Real-time system performance metrics",
+      "badges": {
+        "balanced": "BALANCED",
+        "global": "GLOBAL",
+        "audited": "AUDITED",
+        "tracked": "TRACKED",
+        "optimal": "OPTIMAL"
+      }
+    },
+    "TimeSeries": {
+      "latencyTitle": "API Latency Distribution",
+      "latencyDesc": "P50, P95, and P99 latency metrics over 24 hours",
+      "errorTitle": "Error Rate Trend",
+      "errorDesc": "30-day error rate showing improvement over time",
+      "throughputTitle": "Request Volume",
+      "throughputDesc": "Hourly request throughput with peak hour detection",
+      "costTitle": "Cost Comparison: Traditional vs OmniGCloud",
+      "costDesc": "Monthly infrastructure costs showing significant savings",
+      "slaTitle": "SLA Compliance",
+      "slaDesc": "Weekly SLA adherence tracking (target: 99.9%)",
+      "badges": {
+        "live": "LIVE",
+        "decreasing": "DECREASING",
+        "realtime": "REAL-TIME",
+        "projected": "PROJECTED",
+        "compliant": "✓ COMPLIANT"
+      }
+    },
+    "Technical": {
+      "title": "TECHNICAL OPERATIONS",
+      "subtitle": "OMNIGCLOUD_CONTROL_PLANE_v4.2.1",
+      "activeNodes": "Active Nodes",
+      "requestsSec": "Requests/sec",
+      "dataTransfer": "Data Transfer",
+      "avg": "Avg: 7.2k",
+      "lastHour": "Last hour",
+      "trend": "+8 (24h)",
+      "resourceTitle": "Resource Telemetry",
+      "resourceDesc": "Live infrastructure metrics",
+      "velocityTitle": "Velocity Metrics",
+      "velocityDesc": "Weekly deployment frequency",
+      "scalingTitle": "Auto-Scale Events",
+      "scalingDesc": "24-hour scaling activity",
+      "threatTitle": "Threat Analysis",
+      "threatDesc": "Error rate & threat trend",
+      "queryTitle": "Query Performance",
+      "queryDesc": "Database operations",
+      "latencyTitle": "Global Latency",
+      "latencyDesc": "Real-time system latency metrics"
+    },
+    "CommandCenter": {
+      "title": "LIVE COMMAND & CONTROL",
+      "roiTitle": "ROI Performance",
+      "roiDesc": "Real-time return on investment",
+      "costTitle": "Cost Savings Trend",
+      "costDesc": "Monthly infrastructure optimization",
+      "growing": "GROWING",
+      "savings": "$45K SAVED THIS MONTH • 275% YOY INCREASE",
+      "uptimeTitle": "Platform Uptime",
+      "uptimeDesc": "30-day availability",
+      "responseTimeTitle": "Response Time",
+      "responseTimeDesc": "API latency trend",
+      "securityTitle": "Security Posture",
+      "securityDesc": "Compliance & threat protection",
+      "deploymentTitle": "Deployment Activity"
+    },
+    "Graphs": {
+      "roi": "ROI",
+      "securityScore": "Security Score",
+      "uptime": "UPTIME",
+      "costPerTransaction": "COST PER TRANSACTION",
+      "errorRate": "ERROR RATE",
+      "cacheHitRate": "CACHE HIT RATE",
+      "hits": "Hits",
+      "misses": "Misses",
+      "totalInvocations": "TOTAL INVOCATIONS",
+      "cpuEfficiency": "CPU Efficiency",
+      "memoryEfficiency": "Memory Efficiency",
+      "networkEfficiency": "Network Efficiency"
+    },
+    "Metrics": {
+      "executive": {
+        "pageTitle": "Executive Overview",
+        "pageSubtitle": "Strategic alignment & KPI summary",
+        "title": "Strategic Alignment",
+        "subtitle": "Top-level business health indicators",
+        "analysis": "Overall system health is excellent. Strategic KPIs are trending positively with a significant reduction in operational overhead due to autonomous scaling.",
+        "stats": {
+          "activeUsers": "Active Users",
+          "mrr": "MRR",
+          "churn": "Churn",
+          "nps": "NPS"
+        }
+      },
+      "technical": {
+        "pageTitle": "Technical Operations",
+        "pageSubtitle": "System health & engineering metrics",
+        "title": "Ops Control Plane",
+        "subtitle": "Engineering velocity & stability",
+        "analysis": "Technical debt reduction sprint is showing results with improved build times and higher test coverage across core microservices.",
+        "stats": {
+          "prs": "Pull Requests",
+          "buildTime": "Avg Build",
+          "coverage": "Test Cov.",
+          "issues": "Issues"
+        }
+      },
+      "roi": {
+        "pageTitle": "ROI Performance",
+        "pageSubtitle": "Real-time return on investment",
+        "title": "ROI Performance",
+        "subtitle": "Real-time return on investment tracking",
+        "analysis": "AI-driven arbitrage has optimised spot instance usage, resulting in a significantly lower TCO compared to on-demand provisioning this quarter.",
+        "stats": {
+          "current": "Current ROI",
+          "savings": "Net Savings",
+          "efficiency": "Efficiency",
+          "projection": "Projection"
+        }
+      },
+      "cost": {
+        "pageTitle": "Cost Arbitrage",
+        "pageSubtitle": "Multi-cloud cost optimization",
+        "title": "Cost Savings",
+        "subtitle": "Multi-cloud cost optimization engine",
+        "analysis": "Multi-cloud routing is actively preventing vendor lock-in premiums by shifting non-critical workloads to OCI and Azure spot instances.",
+        "stats": {
+          "monthly": "Monthly Saved",
+          "avgNode": "Avg Cost/Node",
+          "spot": "Spot Usage",
+          "waste": "Waste Reduc."
+        }
+      },
+      "uptime": {
+        "pageTitle": "Global Connectivity",
+        "pageSubtitle": "Platform availability and uptime",
+        "title": "System Uptime",
+        "subtitle": "30-day global availability",
+        "analysis": "Global mesh routing automatically bypassed 3 regional carrier outages in the last 24 hours, preserving 100% application uptime.",
+        "stats": {
+          "availability": "Availability",
+          "downtime": "Downtime",
+          "mttr": "MTTR",
+          "incidents": "Incidents"
+        }
+      },
+      "security": {
+        "pageTitle": "Compliance Radar",
+        "pageSubtitle": "Security posture & threat protection",
+        "title": "Security Posture",
+        "subtitle": "Real-time compliance monitoring",
+        "analysis": "Automated compliance guardrails are active. No critical vulnerabilities detected in the latest continuous audit cycle.",
+        "stats": {
+          "score": "Security Score",
+          "threats": "Threats Blocked",
+          "compliance": "Compliance",
+          "issues": "Open Issues"
+        }
+      },
+      "resources": {
+        "pageTitle": "Resource Telemetry",
+        "pageSubtitle": "Live infrastructure metrics",
+        "title": "Cluster Resources",
+        "subtitle": "CPU, Memory, and Storage telemetry",
+        "analysis": "Cluster auto-scaling is maintaining optimal bin packing, ensuring resources are utilized efficiently without over-provisioning.",
+        "stats": {
+          "cpu": "CPU Usage",
+          "memory": "Memory",
+          "pods": "Active Pods",
+          "nodes": "Node Count"
+        }
+      },
+      "deployment": {
+        "pageTitle": "Velocity Metrics",
+        "pageSubtitle": "Weekly deployment frequency",
+        "title": "CI/CD Velocity",
+        "subtitle": "Pipeline throughput and failure rate",
+        "analysis": "CI/CD pipelines are operating at peak velocity with zero regressions detected in staging or production environments today.",
+        "stats": {
+          "deploys": "Deploys/Day",
+          "buildTime": "Build Time",
+          "success": "Success Rate",
+          "rollbacks": "Rollbacks"
+        }
+      },
+      "scaling": {
+        "pageTitle": "Auto-Scale Events",
+        "pageSubtitle": "24-hour scaling activity",
+        "title": "Scaling Activity",
+        "subtitle": "Dynamic provisioning log",
+        "analysis": "Predictive scaling preempted traffic spikes in EU-West-1, keeping latency below 50ms during global user wakeup.",
+        "stats": {
+          "ups": "Scale Ups",
+          "downs": "Scale Downs",
+          "savings": "Est. Savings",
+          "nodes": "Max Nodes"
+        }
+      },
+      "error": {
+        "pageTitle": "Threat Analysis",
+        "pageSubtitle": "Error rate & threat trend",
+        "title": "Error & Anomalies",
+        "subtitle": "System-wide anomaly detection",
+        "analysis": "Self-healing subsystems recovered 2 pods automatically after detecting memory leaks, preventing user-facing errors.",
+        "stats": {
+          "errorRate": "Global Error %",
+          "5xx": "5xx Rates",
+          "anomalies": "Anomalies",
+          "healed": "Self-Healed"
+        }
+      }
+    }
   },
   "SecuritySettings": {
     "title": "Security Settings",

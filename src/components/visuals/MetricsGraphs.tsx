@@ -3,6 +3,10 @@
 import React from 'react';
 import { TrendingUp, TrendingDown, DollarSign, Zap, Clock, Shield, Database, Activity } from 'lucide-react';
 
+import { useTranslations } from 'next-intl';
+import { tSafe } from '@/lib/i18n/tSafe';
+
+
 // 1. Cost Savings Over Time (Line Chart)
 export const CostSavingsChart = () => {
     const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun'];
@@ -46,6 +50,7 @@ export const CostSavingsChart = () => {
 
 // 2. ROI Gauge
 export const ROIGauge = ({ value = 342 }: { value?: number }) => {
+    const t = useTranslations('Dashboard.Graphs');
     const percentage = Math.min(value / 500 * 100, 100);
 
     return (
@@ -72,7 +77,7 @@ export const ROIGauge = ({ value = 342 }: { value?: number }) => {
             </svg>
             <div style={{ position: 'absolute', textAlign: 'center' }}>
                 <div style={{ fontSize: '2.5rem', fontWeight: 950, color: 'var(--primary)' }}>{value}%</div>
-                <div style={{ fontSize: '0.7rem', opacity: 0.5, fontWeight: 700, textTransform: 'uppercase' }}>ROI</div>
+                <div style={{ fontSize: '0.7rem', opacity: 0.5, fontWeight: 700, textTransform: 'uppercase' }}>{tSafe(t, 'roi', "ROI")}</div>
             </div>
         </div>
     );
@@ -151,6 +156,7 @@ export const ResponseTimeTrend = () => {
 
 // 5. Uptime Percentage Ring
 export const UptimeRing = ({ uptime = 99.99 }: { uptime?: number }) => {
+    const t = useTranslations('Dashboard.Graphs');
     const percentage = uptime;
     const circumference = 2 * Math.PI * 65;
     const offset = circumference - (percentage / 100) * circumference;
@@ -174,7 +180,7 @@ export const UptimeRing = ({ uptime = 99.99 }: { uptime?: number }) => {
             </svg>
             <div style={{ position: 'absolute', textAlign: 'center' }}>
                 <div style={{ fontSize: '2rem', fontWeight: 950, color: '#10b981' }}>{uptime}%</div>
-                <div style={{ fontSize: '0.65rem', opacity: 0.5, fontWeight: 700 }}>UPTIME</div>
+                <div style={{ fontSize: '0.65rem', opacity: 0.5, fontWeight: 700 }}>{tSafe(t, 'uptime', "UPTIME")}</div>
             </div>
         </div>
     );
@@ -251,6 +257,7 @@ export const DeploymentFrequency = () => {
 
 // 8. Security Score Meter
 export const SecurityScoreMeter = ({ score = 94 }: { score?: number }) => {
+    const t = useTranslations('Dashboard.Graphs');
     const getColor = (s: number) => {
         if (s >= 90) return '#10b981';
         if (s >= 70) return '#f59e0b';
@@ -261,7 +268,7 @@ export const SecurityScoreMeter = ({ score = 94 }: { score?: number }) => {
         <div style={{ width: '100%', height: '100%', display: 'flex', flexDirection: 'column', justifyContent: 'center', gap: '1rem' }}>
             <div style={{ textAlign: 'center' }}>
                 <div style={{ fontSize: '3rem', fontWeight: 950, color: getColor(score) }}>{score}</div>
-                <div style={{ fontSize: '0.7rem', opacity: 0.5, fontWeight: 700, textTransform: 'uppercase' }}>Security Score</div>
+                <div style={{ fontSize: '0.7rem', opacity: 0.5, fontWeight: 700, textTransform: 'uppercase' }}>{tSafe(t, 'securityScore', "Security Score")}</div>
             </div>
             <div style={{ height: '12px', background: 'rgba(255,255,255,0.05)', borderRadius: '1rem', overflow: 'hidden' }}>
                 <div style={{

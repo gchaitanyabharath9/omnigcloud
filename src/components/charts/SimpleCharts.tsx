@@ -1,5 +1,7 @@
 "use client";
 // @ts-nocheck
+import { useTranslations } from 'next-intl';
+import { tSafe } from '@/lib/i18n/tSafe';
 
 import React from 'react';
 import { LineChart, Line, AreaChart, Area, BarChart, Bar, PieChart, Pie, Cell, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
@@ -26,8 +28,10 @@ export const LatencyLineChart = ({ height = 180 }: { height?: number }) => {
         p99: Math.random() * 100 + 80
     }));
 
+    const t = useTranslations('Dashboard.Charts');
+
     return (
-        <ChartCard title="API Latency (ms)" height={height}>
+        <ChartCard title={tSafe(t, 'apiLatency', 'API Latency (ms)')} height={height}>
             <NoSSR>
                 <ResponsiveContainer width="99%" height="100%" minWidth={0} minHeight={0}>
                     <LineChart data={data}>
@@ -48,6 +52,7 @@ export const LatencyLineChart = ({ height = 180 }: { height?: number }) => {
 
 // 2. Area Chart - Cost Savings
 export const CostSavingsArea = ({ height = 180 }: { height?: number }) => {
+    const t = useTranslations('Dashboard.Charts');
     const data = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun'].map((month, i) => ({
         month,
         traditional: 35000 + i * 800,
@@ -55,7 +60,7 @@ export const CostSavingsArea = ({ height = 180 }: { height?: number }) => {
     }));
 
     return (
-        <ChartCard title="Monthly Cost Comparison ($)" height={height}>
+        <ChartCard title={tSafe(t, 'monthlyCost', "Monthly Cost Comparison ($)")} height={height}>
             <NoSSR>
                 <ResponsiveContainer width="99%" height="100%" minWidth={0} minHeight={0}>
                     <AreaChart data={data}>
@@ -75,13 +80,14 @@ export const CostSavingsArea = ({ height = 180 }: { height?: number }) => {
 
 // 3. Bar Chart - Request Volume
 export const RequestVolumeBar = ({ height = 180 }: { height?: number }) => {
+    const t = useTranslations('Dashboard.Charts');
     const data = Array.from({ length: 24 }, (_, i) => ({
         hour: `${i}:00`,
         requests: Math.floor(Math.random() * 2000 + 500) * (i >= 9 && i <= 17 ? 2 : 1)
     }));
 
     return (
-        <ChartCard title="Hourly Request Volume" height={height}>
+        <ChartCard title={tSafe(t, 'hourlyRequestVolume', "Hourly Request Volume")} height={height}>
             <NoSSR>
                 <ResponsiveContainer width="99%" height="100%" minWidth={0} minHeight={0}>
                     <BarChart data={data}>
@@ -99,6 +105,7 @@ export const RequestVolumeBar = ({ height = 180 }: { height?: number }) => {
 
 // 4. Pie Chart - Cloud Distribution
 export const CloudDistributionPie = ({ height = 180 }: { height?: number }) => {
+    const t = useTranslations('Dashboard.Charts');
     const data = [
         { name: 'AWS', value: 42 },
         { name: 'Azure', value: 28 },
@@ -107,7 +114,7 @@ export const CloudDistributionPie = ({ height = 180 }: { height?: number }) => {
     ];
 
     return (
-        <ChartCard title="Multi-Cloud Distribution (%)" height={height}>
+        <ChartCard title={tSafe(t, 'multiCloudDistribution', "Multi-Cloud Distribution (%)")} height={height}>
             <NoSSR>
                 <ResponsiveContainer width="99%" height="100%" minWidth={0} minHeight={0}>
                     <PieChart>
@@ -135,13 +142,14 @@ export const CloudDistributionPie = ({ height = 180 }: { height?: number }) => {
 
 // 5. Line Chart - Uptime
 export const UptimeTrend = ({ height = 180 }: { height?: number }) => {
+    const t = useTranslations('Dashboard.Charts');
     const data = Array.from({ length: 30 }, (_, i) => ({
         day: i + 1,
         uptime: 99.8 + Math.random() * 0.19
     }));
 
     return (
-        <ChartCard title="30-Day Uptime (%)" height={height}>
+        <ChartCard title={tSafe(t, 'uptime30Day', "30-Day Uptime (%)")} height={height}>
             <NoSSR>
                 <ResponsiveContainer width="99%" height="100%" minWidth={0} minHeight={0}>
                     <LineChart data={data}>
@@ -159,6 +167,7 @@ export const UptimeTrend = ({ height = 180 }: { height?: number }) => {
 
 // 6. Bar Chart - Compliance Scores
 export const ComplianceScoresBar = ({ height = 180 }: { height?: number }) => {
+    const t = useTranslations('Dashboard.Charts');
     const data = [
         { name: 'SOC 2', score: 98 },
         { name: 'GDPR', score: 95 },
@@ -167,7 +176,7 @@ export const ComplianceScoresBar = ({ height = 180 }: { height?: number }) => {
     ];
 
     return (
-        <ChartCard title="Compliance Framework Scores" height={height}>
+        <ChartCard title={tSafe(t, 'complianceScores', "Compliance Framework Scores")} height={height}>
             <NoSSR>
                 <ResponsiveContainer width="99%" height="100%" minWidth={0} minHeight={0}>
                     <BarChart data={data} layout="vertical">
@@ -189,13 +198,14 @@ export const ComplianceScoresBar = ({ height = 180 }: { height?: number }) => {
 
 // 7. Area Chart - Error Rate
 export const ErrorRateArea = ({ height = 180 }: { height?: number }) => {
+    const t = useTranslations('Dashboard.Charts');
     const data = Array.from({ length: 30 }, (_, i) => ({
         day: i + 1,
         errors: Math.max(0.1, 2 - (i * 0.05))
     }));
 
     return (
-        <ChartCard title="Error Rate Trend (%)" height={height}>
+        <ChartCard title={tSafe(t, 'errorRateTrend', "Error Rate Trend (%)")} height={height}>
             <NoSSR>
                 <ResponsiveContainer width="99%" height="100%" minWidth={0} minHeight={0}>
                     <AreaChart data={data}>
@@ -219,6 +229,7 @@ export const ErrorRateArea = ({ height = 180 }: { height?: number }) => {
 
 // 8. Bar Chart - Feature Usage
 export const FeatureUsageBar = ({ height = 180 }: { height?: number }) => {
+    const t = useTranslations('Dashboard.Charts');
     const data = [
         { feature: 'Multi-Cloud', usage: 85 },
         { feature: 'Auto-Scaling', usage: 72 },
@@ -227,7 +238,7 @@ export const FeatureUsageBar = ({ height = 180 }: { height?: number }) => {
     ];
 
     return (
-        <ChartCard title="Feature Adoption Rate (%)" height={height}>
+        <ChartCard title={tSafe(t, 'featureAdoption', "Feature Adoption Rate (%)")} height={height}>
             <NoSSR>
                 <ResponsiveContainer width="99%" height="100%" minWidth={0} minHeight={0}>
                     <BarChart data={data}>

@@ -184,16 +184,7 @@ export default async function RootLayout({
         >
           <NextIntlClientProvider
             messages={messages}
-            getMessageFallback={({ namespace, key, error }) => {
-              const path = [namespace, key].filter((part) => part != null).join('.');
-              if (error.code === 'MISSING_MESSAGE') {
-                if (process.env.NODE_ENV === 'production' || process.env.CI) {
-                  throw new Error(`MISSING_MESSAGE: ${path} is missing in en.json`);
-                }
-                console.warn(`[i18n] Missing message: ${path}`);
-              }
-              return `${path}`;
-            }}
+
           >
             <ObservabilityProvider locale={locale}>
               <UtmTracker />

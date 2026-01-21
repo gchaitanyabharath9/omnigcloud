@@ -1,9 +1,12 @@
 "use client";
 
 import React from 'react';
+import { useTranslations } from 'next-intl';
+import { tSafe } from '@/lib/i18n/tSafe';
 
 // 19. Auto-Scaling Events
 export const AutoScalingEvents = () => {
+    const t = useTranslations('Dashboard.Graphs');
     const hours = Array.from({ length: 24 }, (_, i) => i);
     const [events, setEvents] = React.useState(() => hours.map(() => 0)); // Initialize with zeros
     const maxEvents = Math.max(...events, 1); // Prevent division by zero
@@ -29,7 +32,7 @@ export const AutoScalingEvents = () => {
                         minHeight: '5px',
                         opacity: 0.8
                     }}
-                    title={`${i}:00 - ${count} events`}
+                    title={`${i}:00 - ${count} ${tSafe(t, 'events', 'events')}`}
                 />
             ))}
         </div>
@@ -38,6 +41,7 @@ export const AutoScalingEvents = () => {
 
 // 20. Cost Per Transaction
 export const CostPerTransaction = () => {
+    const t = useTranslations('Dashboard.Graphs');
     const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun'];
     const costs = [0.042, 0.038, 0.035, 0.031, 0.028, 0.024]; // dollars
 
@@ -47,7 +51,7 @@ export const CostPerTransaction = () => {
                 <div style={{ fontSize: '2.5rem', fontWeight: 950, color: 'var(--color-success)' }}>
                     ${costs[costs.length - 1].toFixed(3)}
                 </div>
-                <div style={{ fontSize: '0.65rem', opacity: 0.5, fontWeight: 700 }}>COST PER TRANSACTION</div>
+                <div style={{ fontSize: '0.65rem', opacity: 0.5, fontWeight: 700 }}>{tSafe(t, 'costPerTransaction', "COST PER TRANSACTION")}</div>
             </div>
             <div style={{ display: 'flex', alignItems: 'flex-end', gap: '0.5rem', height: '60px' }}>
                 {costs.map((cost, i) => (
@@ -69,6 +73,7 @@ export const CostPerTransaction = () => {
 
 // 21. Error Rate Trend
 export const ErrorRateTrend = () => {
+    const t = useTranslations('Dashboard.Graphs');
     const days = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'];
     const errorRates = [0.8, 0.6, 0.4, 0.3, 0.2, 0.15, 0.12]; // percentage
 
@@ -78,7 +83,7 @@ export const ErrorRateTrend = () => {
                 <div style={{ fontSize: '2rem', fontWeight: 950, color: 'var(--color-success)' }}>
                     {errorRates[errorRates.length - 1]}%
                 </div>
-                <div style={{ fontSize: '0.65rem', opacity: 0.5, fontWeight: 700 }}>ERROR RATE</div>
+                <div style={{ fontSize: '0.65rem', opacity: 0.5, fontWeight: 700 }}>{tSafe(t, 'errorRate', "ERROR RATE")}</div>
             </div>
             <svg width="100%" height="60" viewBox="0 0 200 60" preserveAspectRatio="none">
                 <defs>
@@ -134,21 +139,22 @@ export const QueryPerformance = () => {
 
 // 23. Cache Hit Rate
 export const CacheHitRate = ({ hitRate = 94.5 }: { hitRate?: number }) => {
+    const t = useTranslations('Dashboard.Graphs');
     return (
         <div style={{ width: '100%', height: '100%', display: 'flex', flexDirection: 'column', justifyContent: 'center', gap: '1.5rem' }}>
             <div style={{ textAlign: 'center' }}>
                 <div style={{ fontSize: '3rem', fontWeight: 950, color: 'var(--primary)' }}>{hitRate}%</div>
-                <div style={{ fontSize: '0.7rem', opacity: 0.5, fontWeight: 700 }}>CACHE HIT RATE</div>
+                <div style={{ fontSize: '0.7rem', opacity: 0.5, fontWeight: 700 }}>{tSafe(t, 'cacheHitRate', "CACHE HIT RATE")}</div>
             </div>
             <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center' }}>
                 <div style={{ textAlign: 'center' }}>
                     <div style={{ fontSize: '1.5rem', fontWeight: 900, color: 'var(--color-success)' }}>{hitRate}%</div>
-                    <div style={{ fontSize: '0.6rem', opacity: 0.5 }}>Hits</div>
+                    <div style={{ fontSize: '0.6rem', opacity: 0.5 }}>{tSafe(t, 'hits', "Hits")}</div>
                 </div>
                 <div style={{ width: '1px', background: 'var(--card-border)' }}></div>
                 <div style={{ textAlign: 'center' }}>
                     <div style={{ fontSize: '1.5rem', fontWeight: 900, color: 'var(--color-danger)' }}>{(100 - hitRate).toFixed(1)}%</div>
-                    <div style={{ fontSize: '0.6rem', opacity: 0.5 }}>Misses</div>
+                    <div style={{ fontSize: '0.6rem', opacity: 0.5 }}>{tSafe(t, 'misses', "Misses")}</div>
                 </div>
             </div>
         </div>
@@ -157,6 +163,7 @@ export const CacheHitRate = ({ hitRate = 94.5 }: { hitRate?: number }) => {
 
 // 24. Serverless Function Invocations
 export const ServerlessInvocations = () => {
+    const t = useTranslations('Dashboard.Graphs');
     const functions = [
         { name: 'auth', invocations: 45000, color: '#3b82f6' },
         { name: 'api', invocations: 38000, color: '#8b5cf6' },
@@ -171,7 +178,7 @@ export const ServerlessInvocations = () => {
                 <div style={{ fontSize: '2rem', fontWeight: 950, color: 'var(--primary)' }}>
                     {(total / 1000).toFixed(0)}k
                 </div>
-                <div style={{ fontSize: '0.65rem', opacity: 0.5, fontWeight: 700 }}>TOTAL INVOCATIONS</div>
+                <div style={{ fontSize: '0.65rem', opacity: 0.5, fontWeight: 700 }}>{tSafe(t, 'totalInvocations', "TOTAL INVOCATIONS")}</div>
             </div>
             <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
                 {functions.map((fn, i) => (
@@ -197,10 +204,11 @@ export const ServerlessInvocations = () => {
 
 // 25. Container Resource Efficiency
 export const ContainerEfficiency = () => {
+    const t = useTranslations('Dashboard.Graphs');
     const metrics = [
-        { name: 'CPU Efficiency', value: 87, target: 85, color: '#10b981' },
-        { name: 'Memory Efficiency', value: 82, target: 80, color: '#3b82f6' },
-        { name: 'Network Efficiency', value: 91, target: 85, color: '#8b5cf6' }
+        { name: tSafe(t, 'cpuEfficiency', 'CPU Efficiency'), value: 87, target: 85, color: '#10b981' },
+        { name: tSafe(t, 'memoryEfficiency', 'Memory Efficiency'), value: 82, target: 80, color: '#3b82f6' },
+        { name: tSafe(t, 'networkEfficiency', 'Network Efficiency'), value: 91, target: 85, color: '#8b5cf6' }
     ];
 
     return (
