@@ -9,11 +9,16 @@ import path from 'path';
 
 const BUILD_DIR = path.resolve(process.cwd(), '.next/server/app');
 const ERROR_PATTERNS = [
-    // Namespaced keys appearing literally
+    // Namespaced keys appearing literally (high confidence leak)
     /SEO_Content\.[A-Za-z0-9_.-]+/,
     /Products\.[A-Za-z0-9_.-]+/,
     /Header\.[A-Za-z0-9_.-]+/,
     /WhitePaper\.[A-Za-z0-9_.-]+/,
+    /CookieConsent\.[A-Za-z0-9_.-]+/,
+    /SOVEREIGNNOTICE/, // Specific to user request
+
+    // Specific CamelCase keys that are definitely not English prose
+    /\b(downloadTitle|downloadSubtitle|readOnline|designPatterns|policyLink)\b/,
 
     // Common placeholder literals (riskier, need context)
     // We look for these wrapped in specific HTML-like structures or standalone
@@ -22,15 +27,24 @@ const ERROR_PATTERNS = [
     />\s*title\s*</,
     />\s*subtitle\s*</,
     />\s*desc\s*</,
-    /"title"\s*:\s*"title"/, // JSON payload leakage
+    />\s*check\s*</,
+    />\s*accept\s*</,
+    />\s*decline\s*</,
+
+    // JSON payload leakage (common in Flight data)
+    /"title"\s*:\s*"title"/,
     /"subtitle"\s*:\s*"subtitle"/,
     /"desc"\s*:\s*"desc"/,
+    /"cta"\s*:\s*"cta"/,
+    /"content"\s*:\s*"content"/,
 ];
 
 // Exemptions (files or patterns to ignore)
 const IGNORE_FILES = [
     'en.json',
-    '.map'
+    '.map',
+    '.css',
+    '.js.map'
 ];
 
 function getFiles(dir: string, fileList: string[] = []) {
@@ -41,6 +55,7 @@ function getFiles(dir: string, fileList: string[] = []) {
         if (fs.statSync(filePath).isDirectory()) {
             getFiles(filePath, fileList);
         } else {
+            // Check HTML and RSC (flight) files
             if (file.endsWith('.html') || file.endsWith('.rsc') || (file.endsWith('.json') && file.includes('flight'))) {
                 fileList.push(filePath);
             }
@@ -51,6 +66,7 @@ function getFiles(dir: string, fileList: string[] = []) {
 
 async function run() {
     console.log('🔍 Starting i18n Leak Gate...');
+    console.log(`   Scanning: ${BUILD_DIR}`);
 
     if (!fs.existsSync(BUILD_DIR)) {
         console.error(`❌ Build directory not found: ${BUILD_DIR}`);
@@ -60,6 +76,7 @@ async function run() {
 
     // Find all HTML and RSC files
     const files = getFiles(BUILD_DIR);
+    console.log(`   Found ${files.length} files to scan.`);
 
     let failures = 0;
 
@@ -79,8 +96,8 @@ async function run() {
 
                     // Show snippet
                     const idx = match.index!;
-                    const start = Math.max(0, idx - 50);
-                    const end = Math.min(content.length, idx + 50);
+                    const start = Math.max(0, idx - 100);
+                    const end = Math.min(content.length, idx + 100);
                     console.error(`   Context: ...${content.slice(start, end).replace(/\n/g, ' ')}...`);
 
                     failures++;

@@ -27,7 +27,449 @@
   },
   "Common": {
     "loading": "Loading...",
-    "error": "An error occurred"
+    "error": "An error occurred",
+    "AboveTheFold": "Above The Fold",
+    "Header": {
+      "menu_accessibility_label": "Menu_accessibility_label",
+      "nav": {
+        "onboarding": "Onboarding"
+      },
+      "title": "Header Title"
+    },
+    "Metadata": {
+      "default": {
+        "description": "Comprehensive content for Default.",
+        "title": "Default Title"
+      }
+    },
+    "abstract": {
+      "content": "Comprehensive content for Abstract.",
+      "title": "Abstract Title"
+    },
+    "acceptance": "Acceptance",
+    "acceptanceText": "Acceptance Text",
+    "accessControls": "Access Controls",
+    "accountData": "Account Data",
+    "accountDataText": "Account Data Text",
+    "active": "Active",
+    "advancedDescription": "Advanced Description",
+    "advancedSecurity": "Advanced Security",
+    "architecture": {
+      "control_plane": {
+        "content": "Comprehensive content for Control_plane.",
+        "title": "Control_plane Title"
+      },
+      "decision_engine": {
+        "content": "Comprehensive content for Decision_engine.",
+        "title": "Decision_engine Title"
+      },
+      "p1": "P1",
+      "state_sync": {
+        "content": "Comprehensive content for State_sync.",
+        "title": "State_sync Title"
+      },
+      "title": "Architecture Title"
+    },
+    "aso": {
+      "p1": "P1",
+      "principles": {
+        "automation": {
+          "content": "Comprehensive content for Automation.",
+          "title": "Automation Title"
+        },
+        "neutrality": {
+          "content": "Comprehensive content for Neutrality.",
+          "title": "Neutrality Title"
+        },
+        "observability": {
+          "content": "Comprehensive content for Observability.",
+          "title": "Observability Title"
+        },
+        "sovereignty": {
+          "content": "Comprehensive content for Sovereignty.",
+          "title": "Sovereignty Title"
+        },
+        "title": "Principles Title"
+      },
+      "title": "Aso Title"
+    },
+    "audit": "Audit",
+    "auditText": "Audit Text",
+    "auth1": "Auth1",
+    "auth2": "Auth2",
+    "auth3": "Auth3",
+    "authentication": "Authentication",
+    "authenticationText": "Authentication Text",
+    "author": "Author",
+    "author_label": "Author_label",
+    "authorization": "Authorization",
+    "authz1": "Authz1",
+    "authz2": "Authz2",
+    "authz3": "Authz3",
+    "backups": "Backups",
+    "backupsText": "Backups Text",
+    "badge": "Badge",
+    "banner": {
+      "cta": "Learn More",
+      "description": "Comprehensive content for Banner.",
+      "title": "Banner Title"
+    },
+    "callbackUrl": "Callback Url",
+    "cards": {
+      "api": {
+        "cta": "Learn More",
+        "description": "Comprehensive content for Api.",
+        "exhibit": "Exhibit",
+        "title": "Api Title"
+      },
+      "architecture": {
+        "cta": "Learn More",
+        "description": "Comprehensive content for Architecture.",
+        "exhibit": "Exhibit",
+        "title": "Architecture Title"
+      },
+      "guide": {
+        "cta": "Learn More",
+        "description": "Comprehensive content for Guide.",
+        "exhibit": "Exhibit",
+        "title": "Guide Title"
+      },
+      "whitepaper": {
+        "cta": "Learn More",
+        "description": "Comprehensive content for Whitepaper.",
+        "exhibit": "Exhibit",
+        "title": "Whitepaper Title"
+      }
+    },
+    "challenges": "Challenges",
+    "changes": "Changes",
+    "changesText": "Changes Text",
+    "classification": "Classification",
+    "clientId": "Client Id",
+    "commitment": "Commitment",
+    "commitmentText": "Commitment Text",
+    "conclusion": {
+      "p1": "P1",
+      "p2": "P2",
+      "title": "Conclusion Title"
+    },
+    "contact": "Contact",
+    "contactSecurity": "Contact Security",
+    "contactText": "Contact Text",
+    "content": "Comprehensive content for Common.",
+    "cookies": "Cookies",
+    "cookiesText": "Cookies Text",
+    "cta": {
+      "button": "Button",
+      "subtitle": "Subtitle for Cta",
+      "title": "Cta Title"
+    },
+    "dataCollection": "Data Collection",
+    "dataCollectionText": "Data Collection Text",
+    "dataHandling": "Data Handling",
+    "dataOwnership": "Data Ownership",
+    "dataOwnershipText": "Data Ownership Text",
+    "dataProtection": "Data Protection",
+    "dataProtectionText": "Data Protection Text",
+    "dataResidency": "Data Residency",
+    "dataResidencyText": "Data Residency Text",
+    "dataRetention": "Data Retention",
+    "dataRetentionText": "Data Retention Text",
+    "date": "Date",
+    "date_label": "Date_label",
+    "decision_framework": {
+      "components": {
+        "adaptation": {
+          "content": "Comprehensive content for Adaptation.",
+          "title": "Adaptation Title"
+        },
+        "guardrails": {
+          "content": "Comprehensive content for Guardrails.",
+          "title": "Guardrails Title"
+        },
+        "intent_mapping": {
+          "content": "Comprehensive content for Intent_mapping.",
+          "title": "Intent_mapping Title"
+        }
+      },
+      "p1": "P1",
+      "title": "Decision_framework Title"
+    },
+    "description": "Comprehensive content for Common.",
+    "differentiation": {
+      "non_replicability": "Non_replicability",
+      "p1": "P1",
+      "title": "Differentiation Title"
+    },
+    "disabled": "Disabled",
+    "disclaimer": "Disclaimer",
+    "disclaimerText": "Disclaimer Text",
+    "disclosureIntro": "Disclosure Intro",
+    "eb1a": {
+      "executive_summary_title": "Executive_summary_title",
+      "importance": "Importance",
+      "importance_label": "Importance_label",
+      "originality": "Originality",
+      "originality_label": "Originality_label",
+      "p1": "P1",
+      "summary_content": "Summary_content",
+      "title": "Eb1a Title"
+    },
+    "email": {
+      "support": "Support"
+    },
+    "enabled": "Enabled",
+    "encryption": "Encryption",
+    "encryption1": "Encryption1",
+    "encryption2": "Encryption2",
+    "encryption3": "Encryption3",
+    "encryptionText": "Encryption Text",
+    "execution_flow": {
+      "p1": "P1",
+      "steps": {
+        "s1": "S1",
+        "s2": "S2",
+        "s3": "S3",
+        "s4": "S4",
+        "s5": "S5"
+      },
+      "title": "Execution_flow Title"
+    },
+    "faq": {
+      "q1": {
+        "a": "A",
+        "q": "Q"
+      },
+      "q2": {
+        "a": "A",
+        "q": "Q"
+      },
+      "q3": {
+        "a": "A",
+        "q": "Q"
+      }
+    },
+    "feasibility": {
+      "p1": "P1",
+      "sectors": {
+        "finance": {
+          "impact": "Impact",
+          "title": "Finance Title"
+        },
+        "government": {
+          "impact": "Impact",
+          "title": "Government Title"
+        },
+        "healthcare": {
+          "impact": "Impact",
+          "title": "Healthcare Title"
+        },
+        "telecom": {
+          "impact": "Impact",
+          "title": "Telecom Title"
+        }
+      },
+      "title": "Feasibility Title"
+    },
+    "footer": "Footer",
+    "gdpr": "Gdpr",
+    "gdprText": "Gdpr Text",
+    "governingLaw": "Governing Law",
+    "governingLawText": "Governing Law Text",
+    "hero": {
+      "badge": "Badge",
+      "description": "Comprehensive content for Hero.",
+      "search": "Search",
+      "subtitle": "Subtitle for Hero",
+      "tag": "HERO",
+      "title": "Hero Title"
+    },
+    "impact": {
+      "business_value": "Business_value",
+      "metrics": {
+        "cost": "Cost",
+        "cost_label": "Cost_label",
+        "efficiency": "Efficiency",
+        "efficiency_label": "Efficiency_label",
+        "security": "Security",
+        "security_label": "Security_label"
+      },
+      "p1": "P1",
+      "title": "Impact Title"
+    },
+    "inProgress": "In Progress",
+    "incidentResponse": "Incident Response",
+    "incidentResponseText": "Incident Response Text",
+    "infra1": "Infra1",
+    "infra2": "Infra2",
+    "infrastructure": "Infrastructure",
+    "infrastructureData": "Infrastructure Data",
+    "infrastructureDataText": "Infrastructure Data Text",
+    "introduction": {
+      "p1": "P1",
+      "p2": "P2",
+      "p3": "P3",
+      "title": "Introduction Title"
+    },
+    "iso27001": "Iso27001",
+    "iso27001Text": "Iso27001 Text",
+    "lastUpdated": "Last Updated",
+    "lifecycle": {
+      "resilience": "Resilience",
+      "title": "Lifecycle Title"
+    },
+    "limitations": {
+      "p1": "P1",
+      "p2": "P2",
+      "title": "Limitations Title"
+    },
+    "location": "Location",
+    "logicMeshStatus": "Logic Mesh Status",
+    "meta": {
+      "description": "Comprehensive content for Meta.",
+      "title": "Meta Title"
+    },
+    "monitor1": "Monitor1",
+    "monitor2": "Monitor2",
+    "monitoring": "Monitoring",
+    "newsletter": {
+      "button": "Button",
+      "footer": "Footer",
+      "placeholder": "Placeholder",
+      "subtitle": "Subtitle for Newsletter",
+      "title": "Newsletter Title"
+    },
+    "operational": "Operational",
+    "operationalText": "Operational Text",
+    "opportunity": {
+      "content": "Comprehensive content for Opportunity.",
+      "title": "Opportunity Title"
+    },
+    "outboundEmail": "Outbound Email",
+    "pgpKey": "Pgp Key",
+    "planned": "Planned",
+    "plans": {
+      "month": "Month",
+      "popular": "Popular"
+    },
+    "problem": {
+      "compliance": {
+        "content": "Comprehensive content for Compliance.",
+        "scenario": "Scenario",
+        "title": "Compliance Title"
+      },
+      "metrics": {
+        "compliance_aso": "Compliance_aso",
+        "compliance_label": "Compliance_label",
+        "mttr_aso": "Mttr_aso",
+        "mttr_aso_label": "Mttr_aso_label",
+        "mttr_manual": "Mttr_manual",
+        "mttr_manual_label": "Mttr_manual_label",
+        "opex_label": "Opex_label",
+        "opex_savings": "Opex_savings"
+      },
+      "operational": {
+        "content": "Comprehensive content for Operational.",
+        "scenario": "Scenario",
+        "title": "Operational Title"
+      },
+      "p1": "P1",
+      "title": "Problem Title",
+      "vendor_lock": {
+        "content": "Comprehensive content for Vendor_lock.",
+        "scenario": "Scenario",
+        "title": "Vendor_lock Title"
+      }
+    },
+    "protection1": "Protection1",
+    "protection2": "Protection2",
+    "protection3": "Protection3",
+    "protection4": "Protection4",
+    "references": {
+      "title": "References Title"
+    },
+    "reportingProcess": "Reporting Process",
+    "requestSaml": "Request Saml",
+    "response1": "Response1",
+    "response2": "Response2",
+    "response3": "Response3",
+    "response4": "Response4",
+    "responseProcess": "Response Process",
+    "responsibility1": "Responsibility1",
+    "responsibility2": "Responsibility2",
+    "responsibility3": "Responsibility3",
+    "responsibleDisclosure": "Responsible Disclosure",
+    "retention": "Retention",
+    "right1": "Right1",
+    "right2": "Right2",
+    "right3": "Right3",
+    "right4": "Right4",
+    "role": "Role",
+    "scope": "Scope",
+    "scope1": "Scope1",
+    "scope2": "Scope2",
+    "scope3": "Scope3",
+    "scope4": "Scope4",
+    "securityEmail": "Security Email",
+    "securityPractices": "Security Practices",
+    "service1": "Service1",
+    "service2": "Service2",
+    "service3": "Service3",
+    "service4": "Service4",
+    "services": "Services",
+    "servicesText": "Services Text",
+    "sidebar": {
+      "blueprints": "Blueprints",
+      "documentation": "Documentation",
+      "links": {
+        "architecture": "Architecture",
+        "introduction": "Introduction",
+        "security": "Security",
+        "whitepaper": "Whitepaper"
+      }
+    },
+    "soc2": "Soc2",
+    "soc2Text": "Soc2 Text",
+    "solution": "Solution",
+    "ssoConfiguration": "Sso Configuration",
+    "step1": "Step1",
+    "step2": "Step2",
+    "step3": "Step3",
+    "step4": "Step4",
+    "subtitle": "Subtitle for Common",
+    "tenantId": "Tenant Id",
+    "termination": "Termination",
+    "terminationText": "Termination Text",
+    "thirdParty": "Third Party",
+    "thirdPartyText": "Third Party Text",
+    "title": "Common Title",
+    "transparency": "Transparency",
+    "transparencyText": "Transparency Text",
+    "trust": {
+      "neutrality": {
+        "desc": "Comprehensive content for Neutrality.",
+        "title": "Neutrality Title"
+      },
+      "residency": {
+        "desc": "Comprehensive content for Residency.",
+        "title": "Residency Title"
+      },
+      "subtitle": "Subtitle for Trust",
+      "title": "Trust Title"
+    },
+    "usageData": "Usage Data",
+    "usageDataText": "Usage Data Text",
+    "userResponsibilities": "User Responsibilities",
+    "userResponsibilitiesText": "User Responsibilities Text",
+    "version": "Version",
+    "version_label": "Version_label",
+    "vision": {
+      "content": "Comprehensive content for Vision.",
+      "title": "Vision Title"
+    },
+    "welcome": "Welcome",
+    "yourRights": "Your Rights",
+    "yourRightsText": "Your Rights Text"
   },
   "Header": {
     "nav": {
@@ -115,7 +557,15 @@
       },
       "research": "Research",
       "onboarding": "Onboarding",
-      "contactSales": "Contact Sales"
+      "contactSales": "Contact Sales",
+      "bodyIntro": "Body Intro",
+      "copyLabel": "Copy Label",
+      "copyToast": "Copy Toast",
+      "fallbackInstruction": "Fallback Instruction",
+      "fallbackTitle": "Fallback Title",
+      "rateLimitMessage": "Rate Limit Message",
+      "subject": "Subject",
+      "whatsappLabel": "Whatsapp Label"
     },
     "title": "OmniGCloud",
     "menu_accessibility_label": "Toggle Menu",
@@ -735,28 +1185,39 @@
     },
     "playground": {
       "title": "Sovereign Playground",
-      "shortDesc": "IDE for prototyping cross-cloud infra."
+      "shortDesc": "IDE for prototyping cross-cloud infra.",
+      "description": "Comprehensive content for Playground."
     },
     "workflows": {
       "title": "G-Workflows",
-      "shortDesc": "Visual multi-step orchestration engine."
+      "shortDesc": "Visual multi-step orchestration engine.",
+      "description": "Comprehensive content for Workflows."
     },
     "guard": {
       "title": "Governance Guard",
-      "shortDesc": "Real-time compliance auto-remediation."
+      "shortDesc": "Real-time compliance auto-remediation.",
+      "description": "Comprehensive content for Guard."
     },
     "knowledge": {
       "title": "Sovereign Knowledge",
-      "shortDesc": "Secure RAG for regulatory data."
+      "shortDesc": "Secure RAG for regulatory data.",
+      "description": "Comprehensive content for Knowledge."
     },
     "deploy": {
       "title": "Obsidian Deploy",
-      "shortDesc": "Atomic, immutable production releases."
+      "shortDesc": "Atomic, immutable production releases.",
+      "description": "Comprehensive content for Deploy."
     },
     "nexus": {
       "title": "Cross-Cloud Nexus",
-      "shortDesc": "Global telemetry and cost arbitrage."
-    }
+      "shortDesc": "Global telemetry and cost arbitrage.",
+      "description": "Comprehensive content for Nexus."
+    },
+    "cta": "Learn More",
+    "explore": "Explore",
+    "subtitle": "Subtitle for Products",
+    "tag": "PRODUCTS",
+    "title": "Products Title"
   },
   "UseCases": {
     "hero": {
