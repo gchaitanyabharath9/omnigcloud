@@ -601,6 +601,14 @@
       "type": "t_call"
     },
     {
+      "file": "src\\components\\papers\\PaperLanding.tsx",
+      "line": 23,
+      "namespace": "Papers",
+      "key": "Items.a1.title",
+      "fullKey": "Papers.Items.a1.title",
+      "type": "t_call"
+    },
+    {
       "file": "src\\components\\seo\\Enrichment.tsx",
       "line": 24,
       "namespace": "Common",
@@ -697,19 +705,43 @@
       "type": "t_call"
     },
     {
-      "file": "src\\components\\papers\\PaperLanding.tsx",
-      "line": 23,
-      "namespace": "Papers",
-      "key": "Items.a1.title",
-      "fullKey": "Papers.Items.a1.title",
-      "type": "t_call"
-    },
-    {
       "file": "src\\components\\observability\\LiveLatencyBadge.tsx",
       "line": 41,
       "namespace": "Header",
       "key": "latency_badge",
       "fullKey": "Header.latency_badge",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\components\\header\\MobileMenuOverlay.tsx",
+      "line": 44,
+      "namespace": "Common",
+      "key": "Header.menu_accessibility_label",
+      "fullKey": "Common.Header.menu_accessibility_label",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\components\\header\\MobileMenuOverlay.tsx",
+      "line": 115,
+      "namespace": "Common",
+      "key": "Header.nav.onboarding",
+      "fullKey": "Common.Header.nav.onboarding",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\components\\header\\index.tsx",
+      "line": 186,
+      "namespace": "Common",
+      "key": "Header.nav.onboarding",
+      "fullKey": "Common.Header.nav.onboarding",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\components\\header\\index.tsx",
+      "line": 191,
+      "namespace": "Common",
+      "key": "Header.menu_accessibility_label",
+      "fullKey": "Common.Header.menu_accessibility_label",
       "type": "t_call"
     },
     {
@@ -750,38 +782,6 @@
       "namespace": "Demo",
       "key": "Badge",
       "fullKey": "Demo.Badge",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\components\\header\\MobileMenuOverlay.tsx",
-      "line": 44,
-      "namespace": "Common",
-      "key": "Header.menu_accessibility_label",
-      "fullKey": "Common.Header.menu_accessibility_label",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\components\\header\\MobileMenuOverlay.tsx",
-      "line": 115,
-      "namespace": "Common",
-      "key": "Header.nav.onboarding",
-      "fullKey": "Common.Header.nav.onboarding",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\components\\header\\index.tsx",
-      "line": 186,
-      "namespace": "Common",
-      "key": "Header.nav.onboarding",
-      "fullKey": "Common.Header.nav.onboarding",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\components\\header\\index.tsx",
-      "line": 191,
-      "namespace": "Common",
-      "key": "Header.menu_accessibility_label",
-      "fullKey": "Common.Header.menu_accessibility_label",
       "type": "t_call"
     },
     {
@@ -1286,566 +1286,6 @@
       "namespace": "Services.Stack",
       "key": "ansible.desc",
       "fullKey": "Services.Stack.ansible.desc",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\components\\sections\\platform\\SecuritySection.tsx",
-      "line": 16,
-      "namespace": "Platform.security",
-      "key": "title",
-      "fullKey": "Platform.security.title",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\components\\sections\\platform\\SecuritySection.tsx",
-      "line": 18,
-      "namespace": "Platform.security",
-      "key": "desc",
-      "fullKey": "Platform.security.desc",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\components\\sections\\platform\\SecuritySection.tsx",
-      "line": 20,
-      "namespace": "Platform.security",
-      "key": "cta",
-      "fullKey": "Platform.security.cta",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\components\\sections\\platform\\SecuritySection.tsx",
-      "line": 40,
-      "namespace": "Platform.security",
-      "key": "zerotrust",
-      "fullKey": "Platform.security.zerotrust",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\components\\sections\\platform\\SecuritySection.tsx",
-      "line": 46,
-      "namespace": "Platform.security",
-      "key": "features.fips.title",
-      "fullKey": "Platform.security.features.fips.title",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\components\\sections\\platform\\SecuritySection.tsx",
-      "line": 46,
-      "namespace": "Platform.security",
-      "key": "features.fips.desc",
-      "fullKey": "Platform.security.features.fips.desc",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\components\\sections\\platform\\SecuritySection.tsx",
-      "line": 47,
-      "namespace": "Platform.security",
-      "key": "features.rbac.title",
-      "fullKey": "Platform.security.features.rbac.title",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\components\\sections\\platform\\SecuritySection.tsx",
-      "line": 47,
-      "namespace": "Platform.security",
-      "key": "features.rbac.desc",
-      "fullKey": "Platform.security.features.rbac.desc",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\components\\sections\\platform\\SecuritySection.tsx",
-      "line": 48,
-      "namespace": "Platform.security",
-      "key": "features.vpc.title",
-      "fullKey": "Platform.security.features.vpc.title",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\components\\sections\\platform\\SecuritySection.tsx",
-      "line": 48,
-      "namespace": "Platform.security",
-      "key": "features.vpc.desc",
-      "fullKey": "Platform.security.features.vpc.desc",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\components\\sections\\platform\\SecuritySection.tsx",
-      "line": 49,
-      "namespace": "Platform.security",
-      "key": "features.audit.title",
-      "fullKey": "Platform.security.features.audit.title",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\components\\sections\\platform\\SecuritySection.tsx",
-      "line": 49,
-      "namespace": "Platform.security",
-      "key": "features.audit.desc",
-      "fullKey": "Platform.security.features.audit.desc",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\components\\sections\\platform\\PlatformHero.tsx",
-      "line": 37,
-      "namespace": "Platform",
-      "key": "hero.title",
-      "fullKey": "Platform.hero.title",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\components\\sections\\platform\\PlatformHero.tsx",
-      "line": 40,
-      "namespace": "Platform",
-      "key": "hero.subtitle",
-      "fullKey": "Platform.hero.subtitle",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\components\\sections\\platform\\PlatformHero.tsx",
-      "line": 44,
-      "namespace": "Platform",
-      "key": "hero.ctaPrimary",
-      "fullKey": "Platform.hero.ctaPrimary",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\components\\sections\\platform\\PlatformHero.tsx",
-      "line": 45,
-      "namespace": "Platform",
-      "key": "hero.ctaSecondary",
-      "fullKey": "Platform.hero.ctaSecondary",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\components\\sections\\platform\\PlatformHero.tsx",
-      "line": 60,
-      "namespace": "Platform",
-      "key": "core.title",
-      "fullKey": "Platform.core.title",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\components\\sections\\platform\\PlatformHero.tsx",
-      "line": 62,
-      "namespace": "Platform",
-      "key": "core.desc",
-      "fullKey": "Platform.core.desc",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\components\\sections\\platform\\PlatformHero.tsx",
-      "line": 68,
-      "namespace": "Platform",
-      "key": "stack.api",
-      "fullKey": "Platform.stack.api",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\components\\sections\\platform\\PlatformHero.tsx",
-      "line": 68,
-      "namespace": "Platform",
-      "key": "stack.shielded",
-      "fullKey": "Platform.stack.shielded",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\components\\sections\\platform\\PlatformHero.tsx",
-      "line": 69,
-      "namespace": "Platform",
-      "key": "stack.logic",
-      "fullKey": "Platform.stack.logic",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\components\\sections\\platform\\PlatformHero.tsx",
-      "line": 69,
-      "namespace": "Platform",
-      "key": "stack.active",
-      "fullKey": "Platform.stack.active",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\components\\sections\\platform\\PlatformHero.tsx",
-      "line": 70,
-      "namespace": "Platform",
-      "key": "stack.cluster",
-      "fullKey": "Platform.stack.cluster",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\components\\sections\\platform\\PlatformHero.tsx",
-      "line": 70,
-      "namespace": "Platform",
-      "key": "stack.scaling",
-      "fullKey": "Platform.stack.scaling",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\components\\sections\\platform\\PlatformHero.tsx",
-      "line": 71,
-      "namespace": "Platform",
-      "key": "stack.db",
-      "fullKey": "Platform.stack.db",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\components\\sections\\platform\\PlatformHero.tsx",
-      "line": 71,
-      "namespace": "Platform",
-      "key": "stack.verified",
-      "fullKey": "Platform.stack.verified",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\components\\sections\\platform\\IntegrationsSection.tsx",
-      "line": 9,
-      "namespace": "Platform.integrations",
-      "key": "title",
-      "fullKey": "Platform.integrations.title",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\components\\sections\\platform\\IntegrationsSection.tsx",
-      "line": 10,
-      "namespace": "Platform.integrations",
-      "key": "subtitle",
-      "fullKey": "Platform.integrations.subtitle",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\components\\sections\\platform\\IntegrationsSection.tsx",
-      "line": 15,
-      "namespace": "Platform.integrations",
-      "key": "infra",
-      "fullKey": "Platform.integrations.infra",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\components\\sections\\platform\\IntegrationsSection.tsx",
-      "line": 28,
-      "namespace": "Platform.integrations",
-      "key": "obs",
-      "fullKey": "Platform.integrations.obs",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\components\\sections\\platform\\IntegrationsSection.tsx",
-      "line": 39,
-      "namespace": "Platform.integrations",
-      "key": "delivery",
-      "fullKey": "Platform.integrations.delivery",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\components\\sections\\platform\\IntegrationsSection.tsx",
-      "line": 52,
-      "namespace": "Platform.integrations",
-      "key": "identity",
-      "fullKey": "Platform.integrations.identity",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\components\\sections\\platform\\ControlPlaneSection.tsx",
-      "line": 11,
-      "namespace": "Platform.control",
-      "key": "title",
-      "fullKey": "Platform.control.title",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\components\\sections\\platform\\ControlPlaneSection.tsx",
-      "line": 13,
-      "namespace": "Platform.control",
-      "key": "subtitle",
-      "fullKey": "Platform.control.subtitle",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\components\\sections\\platform\\ControlPlaneSection.tsx",
-      "line": 26,
-      "namespace": "Platform.control",
-      "key": "observability.title",
-      "fullKey": "Platform.control.observability.title",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\components\\sections\\platform\\ControlPlaneSection.tsx",
-      "line": 27,
-      "namespace": "Platform.control",
-      "key": "observability.desc",
-      "fullKey": "Platform.control.observability.desc",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\components\\sections\\platform\\ControlPlaneSection.tsx",
-      "line": 34,
-      "namespace": "Platform.control",
-      "key": "fleet",
-      "fullKey": "Platform.control.fleet",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\components\\sections\\platform\\ControlPlaneSection.tsx",
-      "line": 35,
-      "namespace": "Platform.control",
-      "key": "healing",
-      "fullKey": "Platform.control.healing",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\components\\sections\\platform\\ControlPlaneSection.tsx",
-      "line": 36,
-      "namespace": "Platform.control",
-      "key": "gitops",
-      "fullKey": "Platform.control.gitops",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\components\\sections\\platform\\ControlPlaneSection.tsx",
-      "line": 37,
-      "namespace": "Platform.control",
-      "key": "audit",
-      "fullKey": "Platform.control.audit",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\components\\sections\\platform\\ComparisonSection.tsx",
-      "line": 9,
-      "namespace": "Platform.comparison",
-      "key": "rows.neutrality",
-      "fullKey": "Platform.comparison.rows.neutrality",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\components\\sections\\platform\\ComparisonSection.tsx",
-      "line": 10,
-      "namespace": "Platform.comparison",
-      "key": "rows.audits",
-      "fullKey": "Platform.comparison.rows.audits",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\components\\sections\\platform\\ComparisonSection.tsx",
-      "line": 11,
-      "namespace": "Platform.comparison",
-      "key": "rows.sync",
-      "fullKey": "Platform.comparison.rows.sync",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\components\\sections\\platform\\ComparisonSection.tsx",
-      "line": 11,
-      "namespace": "Platform.comparison",
-      "key": "limited",
-      "fullKey": "Platform.comparison.limited",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\components\\sections\\platform\\ComparisonSection.tsx",
-      "line": 12,
-      "namespace": "Platform.comparison",
-      "key": "rows.refactoring",
-      "fullKey": "Platform.comparison.rows.refactoring",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\components\\sections\\platform\\ComparisonSection.tsx",
-      "line": 13,
-      "namespace": "Platform.comparison",
-      "key": "rows.encryption",
-      "fullKey": "Platform.comparison.rows.encryption",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\components\\sections\\platform\\ComparisonSection.tsx",
-      "line": 13,
-      "namespace": "Platform.comparison",
-      "key": "partial",
-      "fullKey": "Platform.comparison.partial",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\components\\sections\\platform\\ComparisonSection.tsx",
-      "line": 14,
-      "namespace": "Platform.comparison",
-      "key": "rows.iam",
-      "fullKey": "Platform.comparison.rows.iam",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\components\\sections\\platform\\ComparisonSection.tsx",
-      "line": 15,
-      "namespace": "Platform.comparison",
-      "key": "rows.arbitrage",
-      "fullKey": "Platform.comparison.rows.arbitrage",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\components\\sections\\platform\\ComparisonSection.tsx",
-      "line": 22,
-      "namespace": "Platform.comparison",
-      "key": "title",
-      "fullKey": "Platform.comparison.title",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\components\\sections\\platform\\ComparisonSection.tsx",
-      "line": 23,
-      "namespace": "Platform.comparison",
-      "key": "subtitle",
-      "fullKey": "Platform.comparison.subtitle",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\components\\sections\\platform\\ComparisonSection.tsx",
-      "line": 30,
-      "namespace": "Platform.comparison",
-      "key": "capability",
-      "fullKey": "Platform.comparison.capability",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\components\\sections\\platform\\ComparisonSection.tsx",
-      "line": 31,
-      "namespace": "Platform.comparison",
-      "key": "legacy",
-      "fullKey": "Platform.comparison.legacy",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\components\\sections\\platform\\ComparisonSection.tsx",
-      "line": 32,
-      "namespace": "Platform.comparison",
-      "key": "sovereign",
-      "fullKey": "Platform.comparison.sovereign",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\components\\sections\\platform\\ComparisonSection.tsx",
-      "line": 56,
-      "namespace": "Platform.comparison",
-      "key": "footer",
-      "fullKey": "Platform.comparison.footer",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\components\\sections\\platform\\ArbitrageSection.tsx",
-      "line": 13,
-      "namespace": "Platform.arbitrage",
-      "key": "tag",
-      "fullKey": "Platform.arbitrage.tag",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\components\\sections\\platform\\ArbitrageSection.tsx",
-      "line": 15,
-      "namespace": "Platform.arbitrage",
-      "key": "title",
-      "fullKey": "Platform.arbitrage.title",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\components\\sections\\platform\\ArbitrageSection.tsx",
-      "line": 18,
-      "namespace": "Platform.arbitrage",
-      "key": "subtitle",
-      "fullKey": "Platform.arbitrage.subtitle",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\components\\sections\\platform\\ArbitrageSection.tsx",
-      "line": 30,
-      "namespace": "Platform.arbitrage",
-      "key": "forecastTitle",
-      "fullKey": "Platform.arbitrage.forecastTitle",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\components\\sections\\platform\\ArbitrageSection.tsx",
-      "line": 32,
-      "namespace": "Platform.arbitrage",
-      "key": "forecastDesc",
-      "fullKey": "Platform.arbitrage.forecastDesc",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\components\\sections\\platform\\ArbitrageSection.tsx",
-      "line": 43,
-      "namespace": "Platform.arbitrage",
-      "key": "lockinTitle",
-      "fullKey": "Platform.arbitrage.lockinTitle",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\components\\sections\\platform\\ArbitrageSection.tsx",
-      "line": 45,
-      "namespace": "Platform.arbitrage",
-      "key": "lockinDesc",
-      "fullKey": "Platform.arbitrage.lockinDesc",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\components\\sections\\platform\\ArbitrageSection.tsx",
-      "line": 50,
-      "namespace": "Platform.arbitrage",
-      "key": "portabilityTitle",
-      "fullKey": "Platform.arbitrage.portabilityTitle",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\components\\sections\\platform\\ArbitrageSection.tsx",
-      "line": 52,
-      "namespace": "Platform.arbitrage",
-      "key": "portabilityDesc",
-      "fullKey": "Platform.arbitrage.portabilityDesc",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\components\\sections\\platform\\ArbitrageSection.tsx",
-      "line": 64,
-      "namespace": "Platform.arbitrage",
-      "key": "switchTitle",
-      "fullKey": "Platform.arbitrage.switchTitle",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\components\\sections\\platform\\ArbitrageSection.tsx",
-      "line": 66,
-      "namespace": "Platform.arbitrage",
-      "key": "switchDesc",
-      "fullKey": "Platform.arbitrage.switchDesc",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\components\\sections\\platform\\ArbitrageSection.tsx",
-      "line": 74,
-      "namespace": "Platform.arbitrage",
-      "key": "eb1aTag",
-      "fullKey": "Platform.arbitrage.eb1aTag",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\components\\sections\\platform\\ArbitrageSection.tsx",
-      "line": 76,
-      "namespace": "Platform.arbitrage",
-      "key": "eb1aDesc",
-      "fullKey": "Platform.arbitrage.eb1aDesc",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\components\\sections\\platform\\ArbitrageSection.tsx",
-      "line": 81,
-      "namespace": "Platform.arbitrage",
-      "key": "auditor",
-      "fullKey": "Platform.arbitrage.auditor",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\components\\sections\\platform\\ArbitrageSection.tsx",
-      "line": 82,
-      "namespace": "Platform.arbitrage",
-      "key": "auditorTitle",
-      "fullKey": "Platform.arbitrage.auditorTitle",
       "type": "t_call"
     },
     {
@@ -3033,6 +2473,566 @@
       "type": "t_call"
     },
     {
+      "file": "src\\components\\sections\\platform\\SecuritySection.tsx",
+      "line": 16,
+      "namespace": "Platform.security",
+      "key": "title",
+      "fullKey": "Platform.security.title",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\components\\sections\\platform\\SecuritySection.tsx",
+      "line": 18,
+      "namespace": "Platform.security",
+      "key": "desc",
+      "fullKey": "Platform.security.desc",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\components\\sections\\platform\\SecuritySection.tsx",
+      "line": 20,
+      "namespace": "Platform.security",
+      "key": "cta",
+      "fullKey": "Platform.security.cta",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\components\\sections\\platform\\SecuritySection.tsx",
+      "line": 40,
+      "namespace": "Platform.security",
+      "key": "zerotrust",
+      "fullKey": "Platform.security.zerotrust",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\components\\sections\\platform\\SecuritySection.tsx",
+      "line": 46,
+      "namespace": "Platform.security",
+      "key": "features.fips.title",
+      "fullKey": "Platform.security.features.fips.title",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\components\\sections\\platform\\SecuritySection.tsx",
+      "line": 46,
+      "namespace": "Platform.security",
+      "key": "features.fips.desc",
+      "fullKey": "Platform.security.features.fips.desc",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\components\\sections\\platform\\SecuritySection.tsx",
+      "line": 47,
+      "namespace": "Platform.security",
+      "key": "features.rbac.title",
+      "fullKey": "Platform.security.features.rbac.title",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\components\\sections\\platform\\SecuritySection.tsx",
+      "line": 47,
+      "namespace": "Platform.security",
+      "key": "features.rbac.desc",
+      "fullKey": "Platform.security.features.rbac.desc",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\components\\sections\\platform\\SecuritySection.tsx",
+      "line": 48,
+      "namespace": "Platform.security",
+      "key": "features.vpc.title",
+      "fullKey": "Platform.security.features.vpc.title",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\components\\sections\\platform\\SecuritySection.tsx",
+      "line": 48,
+      "namespace": "Platform.security",
+      "key": "features.vpc.desc",
+      "fullKey": "Platform.security.features.vpc.desc",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\components\\sections\\platform\\SecuritySection.tsx",
+      "line": 49,
+      "namespace": "Platform.security",
+      "key": "features.audit.title",
+      "fullKey": "Platform.security.features.audit.title",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\components\\sections\\platform\\SecuritySection.tsx",
+      "line": 49,
+      "namespace": "Platform.security",
+      "key": "features.audit.desc",
+      "fullKey": "Platform.security.features.audit.desc",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\components\\sections\\platform\\PlatformHero.tsx",
+      "line": 37,
+      "namespace": "Platform",
+      "key": "hero.title",
+      "fullKey": "Platform.hero.title",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\components\\sections\\platform\\PlatformHero.tsx",
+      "line": 40,
+      "namespace": "Platform",
+      "key": "hero.subtitle",
+      "fullKey": "Platform.hero.subtitle",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\components\\sections\\platform\\PlatformHero.tsx",
+      "line": 44,
+      "namespace": "Platform",
+      "key": "hero.ctaPrimary",
+      "fullKey": "Platform.hero.ctaPrimary",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\components\\sections\\platform\\PlatformHero.tsx",
+      "line": 45,
+      "namespace": "Platform",
+      "key": "hero.ctaSecondary",
+      "fullKey": "Platform.hero.ctaSecondary",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\components\\sections\\platform\\PlatformHero.tsx",
+      "line": 60,
+      "namespace": "Platform",
+      "key": "core.title",
+      "fullKey": "Platform.core.title",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\components\\sections\\platform\\PlatformHero.tsx",
+      "line": 62,
+      "namespace": "Platform",
+      "key": "core.desc",
+      "fullKey": "Platform.core.desc",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\components\\sections\\platform\\PlatformHero.tsx",
+      "line": 68,
+      "namespace": "Platform",
+      "key": "stack.api",
+      "fullKey": "Platform.stack.api",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\components\\sections\\platform\\PlatformHero.tsx",
+      "line": 68,
+      "namespace": "Platform",
+      "key": "stack.shielded",
+      "fullKey": "Platform.stack.shielded",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\components\\sections\\platform\\PlatformHero.tsx",
+      "line": 69,
+      "namespace": "Platform",
+      "key": "stack.logic",
+      "fullKey": "Platform.stack.logic",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\components\\sections\\platform\\PlatformHero.tsx",
+      "line": 69,
+      "namespace": "Platform",
+      "key": "stack.active",
+      "fullKey": "Platform.stack.active",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\components\\sections\\platform\\PlatformHero.tsx",
+      "line": 70,
+      "namespace": "Platform",
+      "key": "stack.cluster",
+      "fullKey": "Platform.stack.cluster",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\components\\sections\\platform\\PlatformHero.tsx",
+      "line": 70,
+      "namespace": "Platform",
+      "key": "stack.scaling",
+      "fullKey": "Platform.stack.scaling",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\components\\sections\\platform\\PlatformHero.tsx",
+      "line": 71,
+      "namespace": "Platform",
+      "key": "stack.db",
+      "fullKey": "Platform.stack.db",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\components\\sections\\platform\\PlatformHero.tsx",
+      "line": 71,
+      "namespace": "Platform",
+      "key": "stack.verified",
+      "fullKey": "Platform.stack.verified",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\components\\sections\\platform\\IntegrationsSection.tsx",
+      "line": 9,
+      "namespace": "Platform.integrations",
+      "key": "title",
+      "fullKey": "Platform.integrations.title",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\components\\sections\\platform\\IntegrationsSection.tsx",
+      "line": 10,
+      "namespace": "Platform.integrations",
+      "key": "subtitle",
+      "fullKey": "Platform.integrations.subtitle",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\components\\sections\\platform\\IntegrationsSection.tsx",
+      "line": 15,
+      "namespace": "Platform.integrations",
+      "key": "infra",
+      "fullKey": "Platform.integrations.infra",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\components\\sections\\platform\\IntegrationsSection.tsx",
+      "line": 28,
+      "namespace": "Platform.integrations",
+      "key": "obs",
+      "fullKey": "Platform.integrations.obs",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\components\\sections\\platform\\IntegrationsSection.tsx",
+      "line": 39,
+      "namespace": "Platform.integrations",
+      "key": "delivery",
+      "fullKey": "Platform.integrations.delivery",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\components\\sections\\platform\\IntegrationsSection.tsx",
+      "line": 52,
+      "namespace": "Platform.integrations",
+      "key": "identity",
+      "fullKey": "Platform.integrations.identity",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\components\\sections\\platform\\ControlPlaneSection.tsx",
+      "line": 11,
+      "namespace": "Platform.control",
+      "key": "title",
+      "fullKey": "Platform.control.title",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\components\\sections\\platform\\ControlPlaneSection.tsx",
+      "line": 13,
+      "namespace": "Platform.control",
+      "key": "subtitle",
+      "fullKey": "Platform.control.subtitle",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\components\\sections\\platform\\ControlPlaneSection.tsx",
+      "line": 26,
+      "namespace": "Platform.control",
+      "key": "observability.title",
+      "fullKey": "Platform.control.observability.title",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\components\\sections\\platform\\ControlPlaneSection.tsx",
+      "line": 27,
+      "namespace": "Platform.control",
+      "key": "observability.desc",
+      "fullKey": "Platform.control.observability.desc",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\components\\sections\\platform\\ControlPlaneSection.tsx",
+      "line": 34,
+      "namespace": "Platform.control",
+      "key": "fleet",
+      "fullKey": "Platform.control.fleet",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\components\\sections\\platform\\ControlPlaneSection.tsx",
+      "line": 35,
+      "namespace": "Platform.control",
+      "key": "healing",
+      "fullKey": "Platform.control.healing",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\components\\sections\\platform\\ControlPlaneSection.tsx",
+      "line": 36,
+      "namespace": "Platform.control",
+      "key": "gitops",
+      "fullKey": "Platform.control.gitops",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\components\\sections\\platform\\ControlPlaneSection.tsx",
+      "line": 37,
+      "namespace": "Platform.control",
+      "key": "audit",
+      "fullKey": "Platform.control.audit",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\components\\sections\\platform\\ComparisonSection.tsx",
+      "line": 9,
+      "namespace": "Platform.comparison",
+      "key": "rows.neutrality",
+      "fullKey": "Platform.comparison.rows.neutrality",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\components\\sections\\platform\\ComparisonSection.tsx",
+      "line": 10,
+      "namespace": "Platform.comparison",
+      "key": "rows.audits",
+      "fullKey": "Platform.comparison.rows.audits",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\components\\sections\\platform\\ComparisonSection.tsx",
+      "line": 11,
+      "namespace": "Platform.comparison",
+      "key": "rows.sync",
+      "fullKey": "Platform.comparison.rows.sync",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\components\\sections\\platform\\ComparisonSection.tsx",
+      "line": 11,
+      "namespace": "Platform.comparison",
+      "key": "limited",
+      "fullKey": "Platform.comparison.limited",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\components\\sections\\platform\\ComparisonSection.tsx",
+      "line": 12,
+      "namespace": "Platform.comparison",
+      "key": "rows.refactoring",
+      "fullKey": "Platform.comparison.rows.refactoring",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\components\\sections\\platform\\ComparisonSection.tsx",
+      "line": 13,
+      "namespace": "Platform.comparison",
+      "key": "rows.encryption",
+      "fullKey": "Platform.comparison.rows.encryption",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\components\\sections\\platform\\ComparisonSection.tsx",
+      "line": 13,
+      "namespace": "Platform.comparison",
+      "key": "partial",
+      "fullKey": "Platform.comparison.partial",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\components\\sections\\platform\\ComparisonSection.tsx",
+      "line": 14,
+      "namespace": "Platform.comparison",
+      "key": "rows.iam",
+      "fullKey": "Platform.comparison.rows.iam",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\components\\sections\\platform\\ComparisonSection.tsx",
+      "line": 15,
+      "namespace": "Platform.comparison",
+      "key": "rows.arbitrage",
+      "fullKey": "Platform.comparison.rows.arbitrage",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\components\\sections\\platform\\ComparisonSection.tsx",
+      "line": 22,
+      "namespace": "Platform.comparison",
+      "key": "title",
+      "fullKey": "Platform.comparison.title",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\components\\sections\\platform\\ComparisonSection.tsx",
+      "line": 23,
+      "namespace": "Platform.comparison",
+      "key": "subtitle",
+      "fullKey": "Platform.comparison.subtitle",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\components\\sections\\platform\\ComparisonSection.tsx",
+      "line": 30,
+      "namespace": "Platform.comparison",
+      "key": "capability",
+      "fullKey": "Platform.comparison.capability",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\components\\sections\\platform\\ComparisonSection.tsx",
+      "line": 31,
+      "namespace": "Platform.comparison",
+      "key": "legacy",
+      "fullKey": "Platform.comparison.legacy",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\components\\sections\\platform\\ComparisonSection.tsx",
+      "line": 32,
+      "namespace": "Platform.comparison",
+      "key": "sovereign",
+      "fullKey": "Platform.comparison.sovereign",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\components\\sections\\platform\\ComparisonSection.tsx",
+      "line": 56,
+      "namespace": "Platform.comparison",
+      "key": "footer",
+      "fullKey": "Platform.comparison.footer",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\components\\sections\\platform\\ArbitrageSection.tsx",
+      "line": 13,
+      "namespace": "Platform.arbitrage",
+      "key": "tag",
+      "fullKey": "Platform.arbitrage.tag",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\components\\sections\\platform\\ArbitrageSection.tsx",
+      "line": 15,
+      "namespace": "Platform.arbitrage",
+      "key": "title",
+      "fullKey": "Platform.arbitrage.title",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\components\\sections\\platform\\ArbitrageSection.tsx",
+      "line": 18,
+      "namespace": "Platform.arbitrage",
+      "key": "subtitle",
+      "fullKey": "Platform.arbitrage.subtitle",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\components\\sections\\platform\\ArbitrageSection.tsx",
+      "line": 30,
+      "namespace": "Platform.arbitrage",
+      "key": "forecastTitle",
+      "fullKey": "Platform.arbitrage.forecastTitle",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\components\\sections\\platform\\ArbitrageSection.tsx",
+      "line": 32,
+      "namespace": "Platform.arbitrage",
+      "key": "forecastDesc",
+      "fullKey": "Platform.arbitrage.forecastDesc",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\components\\sections\\platform\\ArbitrageSection.tsx",
+      "line": 43,
+      "namespace": "Platform.arbitrage",
+      "key": "lockinTitle",
+      "fullKey": "Platform.arbitrage.lockinTitle",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\components\\sections\\platform\\ArbitrageSection.tsx",
+      "line": 45,
+      "namespace": "Platform.arbitrage",
+      "key": "lockinDesc",
+      "fullKey": "Platform.arbitrage.lockinDesc",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\components\\sections\\platform\\ArbitrageSection.tsx",
+      "line": 50,
+      "namespace": "Platform.arbitrage",
+      "key": "portabilityTitle",
+      "fullKey": "Platform.arbitrage.portabilityTitle",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\components\\sections\\platform\\ArbitrageSection.tsx",
+      "line": 52,
+      "namespace": "Platform.arbitrage",
+      "key": "portabilityDesc",
+      "fullKey": "Platform.arbitrage.portabilityDesc",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\components\\sections\\platform\\ArbitrageSection.tsx",
+      "line": 64,
+      "namespace": "Platform.arbitrage",
+      "key": "switchTitle",
+      "fullKey": "Platform.arbitrage.switchTitle",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\components\\sections\\platform\\ArbitrageSection.tsx",
+      "line": 66,
+      "namespace": "Platform.arbitrage",
+      "key": "switchDesc",
+      "fullKey": "Platform.arbitrage.switchDesc",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\components\\sections\\platform\\ArbitrageSection.tsx",
+      "line": 74,
+      "namespace": "Platform.arbitrage",
+      "key": "eb1aTag",
+      "fullKey": "Platform.arbitrage.eb1aTag",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\components\\sections\\platform\\ArbitrageSection.tsx",
+      "line": 76,
+      "namespace": "Platform.arbitrage",
+      "key": "eb1aDesc",
+      "fullKey": "Platform.arbitrage.eb1aDesc",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\components\\sections\\platform\\ArbitrageSection.tsx",
+      "line": 81,
+      "namespace": "Platform.arbitrage",
+      "key": "auditor",
+      "fullKey": "Platform.arbitrage.auditor",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\components\\sections\\platform\\ArbitrageSection.tsx",
+      "line": 82,
+      "namespace": "Platform.arbitrage",
+      "key": "auditorTitle",
+      "fullKey": "Platform.arbitrage.auditorTitle",
+      "type": "t_call"
+    },
+    {
       "file": "src\\app\\[locale]\\visual-library\\page.tsx",
       "line": 43,
       "namespace": "Common",
@@ -3273,6 +3273,198 @@
       "type": "t_call"
     },
     {
+      "file": "src\\app\\[locale]\\research\\page.tsx",
+      "line": 31,
+      "namespace": "Common",
+      "key": "badge",
+      "fullKey": "Common.badge",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\research\\page.tsx",
+      "line": 34,
+      "namespace": "Common",
+      "key": "title",
+      "fullKey": "Common.title",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\research\\page.tsx",
+      "line": 34,
+      "namespace": "Common",
+      "key": "titleHighlight",
+      "fullKey": "Common.titleHighlight",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\research\\page.tsx",
+      "line": 39,
+      "namespace": "Common",
+      "key": "subtitle",
+      "fullKey": "Common.subtitle",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\research\\page.tsx",
+      "line": 52,
+      "namespace": "Common",
+      "key": "featured.badge",
+      "fullKey": "Common.featured.badge",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\research\\page.tsx",
+      "line": 54,
+      "namespace": "Common",
+      "key": "featured.sectionTitle",
+      "fullKey": "Common.featured.sectionTitle",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\research\\page.tsx",
+      "line": 73,
+      "namespace": "Common",
+      "key": "newPublication",
+      "fullKey": "Common.newPublication",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\research\\page.tsx",
+      "line": 75,
+      "namespace": "Common",
+      "key": "featured.date",
+      "fullKey": "Common.featured.date",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\research\\page.tsx",
+      "line": 79,
+      "namespace": "Common",
+      "key": "featured.title",
+      "fullKey": "Common.featured.title",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\research\\page.tsx",
+      "line": 83,
+      "namespace": "Common",
+      "key": "featured.abstract",
+      "fullKey": "Common.featured.abstract",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\research\\page.tsx",
+      "line": 88,
+      "namespace": "Common",
+      "key": "featured.readArticle",
+      "fullKey": "Common.featured.readArticle",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\research\\page.tsx",
+      "line": 92,
+      "namespace": "Common",
+      "key": "featured.wordCount",
+      "fullKey": "Common.featured.wordCount",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\research\\page.tsx",
+      "line": 95,
+      "namespace": "Common",
+      "key": "featured.diagramCount",
+      "fullKey": "Common.featured.diagramCount",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\research\\page.tsx",
+      "line": 109,
+      "namespace": "Common",
+      "key": "frameworks.title",
+      "fullKey": "Common.frameworks.title",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\research\\page.tsx",
+      "line": 122,
+      "namespace": "Common",
+      "key": "frameworks.aecp.badge",
+      "fullKey": "Common.frameworks.aecp.badge",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\research\\page.tsx",
+      "line": 124,
+      "namespace": "Common",
+      "key": "frameworks.aecp.version",
+      "fullKey": "Common.frameworks.aecp.version",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\research\\page.tsx",
+      "line": 128,
+      "namespace": "Common",
+      "key": "frameworks.aecp.title",
+      "fullKey": "Common.frameworks.aecp.title",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\research\\page.tsx",
+      "line": 136,
+      "namespace": "Common",
+      "key": "frameworks.aecp.features.security",
+      "fullKey": "Common.frameworks.aecp.features.security",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\research\\page.tsx",
+      "line": 140,
+      "namespace": "Common",
+      "key": "frameworks.aecp.features.topology",
+      "fullKey": "Common.frameworks.aecp.features.topology",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\research\\page.tsx",
+      "line": 144,
+      "namespace": "Common",
+      "key": "frameworks.aecp.features.healing",
+      "fullKey": "Common.frameworks.aecp.features.healing",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\research\\page.tsx",
+      "line": 165,
+      "namespace": "Common",
+      "key": "appliedPapers.title",
+      "fullKey": "Common.appliedPapers.title",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\research\\page.tsx",
+      "line": 234,
+      "namespace": "Common",
+      "key": "footer.authorshipRequest",
+      "fullKey": "Common.footer.authorshipRequest",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\research\\page.tsx",
+      "line": 236,
+      "namespace": "Common",
+      "key": "footer.authorshipDisclaimer",
+      "fullKey": "Common.footer.authorshipDisclaimer",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\research\\page.tsx",
+      "line": 239,
+      "namespace": "Common",
+      "key": "footer.copyright",
+      "fullKey": "Common.footer.copyright",
+      "type": "t_call"
+    },
+    {
       "file": "src\\app\\[locale]\\security\\page.tsx",
       "line": 24,
       "namespace": "Common",
@@ -3494,286 +3686,6 @@
       "namespace": "Common",
       "key": "pgpKey",
       "fullKey": "Common.pgpKey",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\research\\page.tsx",
-      "line": 31,
-      "namespace": "Common",
-      "key": "badge",
-      "fullKey": "Common.badge",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\research\\page.tsx",
-      "line": 34,
-      "namespace": "Common",
-      "key": "title",
-      "fullKey": "Common.title",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\research\\page.tsx",
-      "line": 34,
-      "namespace": "Common",
-      "key": "titleHighlight",
-      "fullKey": "Common.titleHighlight",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\research\\page.tsx",
-      "line": 39,
-      "namespace": "Common",
-      "key": "subtitle",
-      "fullKey": "Common.subtitle",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\research\\page.tsx",
-      "line": 52,
-      "namespace": "Common",
-      "key": "featured.badge",
-      "fullKey": "Common.featured.badge",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\research\\page.tsx",
-      "line": 54,
-      "namespace": "Common",
-      "key": "featured.sectionTitle",
-      "fullKey": "Common.featured.sectionTitle",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\research\\page.tsx",
-      "line": 73,
-      "namespace": "Common",
-      "key": "newPublication",
-      "fullKey": "Common.newPublication",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\research\\page.tsx",
-      "line": 75,
-      "namespace": "Common",
-      "key": "featured.date",
-      "fullKey": "Common.featured.date",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\research\\page.tsx",
-      "line": 79,
-      "namespace": "Common",
-      "key": "featured.title",
-      "fullKey": "Common.featured.title",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\research\\page.tsx",
-      "line": 83,
-      "namespace": "Common",
-      "key": "featured.abstract",
-      "fullKey": "Common.featured.abstract",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\research\\page.tsx",
-      "line": 88,
-      "namespace": "Common",
-      "key": "featured.readArticle",
-      "fullKey": "Common.featured.readArticle",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\research\\page.tsx",
-      "line": 92,
-      "namespace": "Common",
-      "key": "featured.wordCount",
-      "fullKey": "Common.featured.wordCount",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\research\\page.tsx",
-      "line": 95,
-      "namespace": "Common",
-      "key": "featured.diagramCount",
-      "fullKey": "Common.featured.diagramCount",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\research\\page.tsx",
-      "line": 109,
-      "namespace": "Common",
-      "key": "frameworks.title",
-      "fullKey": "Common.frameworks.title",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\research\\page.tsx",
-      "line": 122,
-      "namespace": "Common",
-      "key": "frameworks.aecp.badge",
-      "fullKey": "Common.frameworks.aecp.badge",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\research\\page.tsx",
-      "line": 124,
-      "namespace": "Common",
-      "key": "frameworks.aecp.version",
-      "fullKey": "Common.frameworks.aecp.version",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\research\\page.tsx",
-      "line": 128,
-      "namespace": "Common",
-      "key": "frameworks.aecp.title",
-      "fullKey": "Common.frameworks.aecp.title",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\research\\page.tsx",
-      "line": 136,
-      "namespace": "Common",
-      "key": "frameworks.aecp.features.security",
-      "fullKey": "Common.frameworks.aecp.features.security",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\research\\page.tsx",
-      "line": 140,
-      "namespace": "Common",
-      "key": "frameworks.aecp.features.topology",
-      "fullKey": "Common.frameworks.aecp.features.topology",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\research\\page.tsx",
-      "line": 144,
-      "namespace": "Common",
-      "key": "frameworks.aecp.features.healing",
-      "fullKey": "Common.frameworks.aecp.features.healing",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\research\\page.tsx",
-      "line": 165,
-      "namespace": "Common",
-      "key": "appliedPapers.title",
-      "fullKey": "Common.appliedPapers.title",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\research\\page.tsx",
-      "line": 234,
-      "namespace": "Common",
-      "key": "footer.authorshipRequest",
-      "fullKey": "Common.footer.authorshipRequest",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\research\\page.tsx",
-      "line": 236,
-      "namespace": "Common",
-      "key": "footer.authorshipDisclaimer",
-      "fullKey": "Common.footer.authorshipDisclaimer",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\research\\page.tsx",
-      "line": 239,
-      "namespace": "Common",
-      "key": "footer.copyright",
-      "fullKey": "Common.footer.copyright",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\register\\page.tsx",
-      "line": 191,
-      "namespace": "Auth.Register",
-      "key": "placeholders.name",
-      "fullKey": "Auth.Register.placeholders.name",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\register\\page.tsx",
-      "line": 198,
-      "namespace": "Auth.Register",
-      "key": "fields.email",
-      "fullKey": "Auth.Register.fields.email",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\register\\page.tsx",
-      "line": 215,
-      "namespace": "Auth.Register",
-      "key": "placeholders.email",
-      "fullKey": "Auth.Register.placeholders.email",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\register\\page.tsx",
-      "line": 222,
-      "namespace": "Auth.Register",
-      "key": "fields.company",
-      "fullKey": "Auth.Register.fields.company",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\register\\page.tsx",
-      "line": 239,
-      "namespace": "Auth.Register",
-      "key": "placeholders.company",
-      "fullKey": "Auth.Register.placeholders.company",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\register\\page.tsx",
-      "line": 246,
-      "namespace": "Auth.Register",
-      "key": "fields.phone",
-      "fullKey": "Auth.Register.fields.phone",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\register\\page.tsx",
-      "line": 262,
-      "namespace": "Auth.Register",
-      "key": "placeholders.phone",
-      "fullKey": "Auth.Register.placeholders.phone",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\register\\page.tsx",
-      "line": 269,
-      "namespace": "Auth.Register",
-      "key": "fields.password",
-      "fullKey": "Auth.Register.fields.password",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\register\\page.tsx",
-      "line": 286,
-      "namespace": "Auth.Register",
-      "key": "placeholders.password",
-      "fullKey": "Auth.Register.placeholders.password",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\register\\page.tsx",
-      "line": 293,
-      "namespace": "Auth.Register",
-      "key": "fields.confirmPassword",
-      "fullKey": "Auth.Register.fields.confirmPassword",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\register\\page.tsx",
-      "line": 310,
-      "namespace": "Auth.Register",
-      "key": "placeholders.confirmPassword",
-      "fullKey": "Auth.Register.placeholders.confirmPassword",
       "type": "t_call"
     },
     {
@@ -4070,6 +3982,94 @@
       "namespace": "Common",
       "key": "contactText",
       "fullKey": "Common.contactText",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\register\\page.tsx",
+      "line": 191,
+      "namespace": "Auth.Register",
+      "key": "placeholders.name",
+      "fullKey": "Auth.Register.placeholders.name",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\register\\page.tsx",
+      "line": 198,
+      "namespace": "Auth.Register",
+      "key": "fields.email",
+      "fullKey": "Auth.Register.fields.email",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\register\\page.tsx",
+      "line": 215,
+      "namespace": "Auth.Register",
+      "key": "placeholders.email",
+      "fullKey": "Auth.Register.placeholders.email",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\register\\page.tsx",
+      "line": 222,
+      "namespace": "Auth.Register",
+      "key": "fields.company",
+      "fullKey": "Auth.Register.fields.company",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\register\\page.tsx",
+      "line": 239,
+      "namespace": "Auth.Register",
+      "key": "placeholders.company",
+      "fullKey": "Auth.Register.placeholders.company",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\register\\page.tsx",
+      "line": 246,
+      "namespace": "Auth.Register",
+      "key": "fields.phone",
+      "fullKey": "Auth.Register.fields.phone",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\register\\page.tsx",
+      "line": 262,
+      "namespace": "Auth.Register",
+      "key": "placeholders.phone",
+      "fullKey": "Auth.Register.placeholders.phone",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\register\\page.tsx",
+      "line": 269,
+      "namespace": "Auth.Register",
+      "key": "fields.password",
+      "fullKey": "Auth.Register.fields.password",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\register\\page.tsx",
+      "line": 286,
+      "namespace": "Auth.Register",
+      "key": "placeholders.password",
+      "fullKey": "Auth.Register.placeholders.password",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\register\\page.tsx",
+      "line": 293,
+      "namespace": "Auth.Register",
+      "key": "fields.confirmPassword",
+      "fullKey": "Auth.Register.fields.confirmPassword",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\register\\page.tsx",
+      "line": 310,
+      "namespace": "Auth.Register",
+      "key": "placeholders.confirmPassword",
+      "fullKey": "Auth.Register.placeholders.confirmPassword",
       "type": "t_call"
     },
     {
@@ -5073,6 +5073,46 @@
       "type": "t_call"
     },
     {
+      "file": "src\\app\\[locale]\\app\\page.tsx",
+      "line": 15,
+      "namespace": "Common",
+      "key": "title",
+      "fullKey": "Common.title",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\app\\page.tsx",
+      "line": 18,
+      "namespace": "Common",
+      "key": "welcome",
+      "fullKey": "Common.welcome",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\app\\page.tsx",
+      "line": 21,
+      "namespace": "Common",
+      "key": "role",
+      "fullKey": "Common.role",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\app\\page.tsx",
+      "line": 27,
+      "namespace": "Common",
+      "key": "logicMeshStatus",
+      "fullKey": "Common.logicMeshStatus",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\app\\page.tsx",
+      "line": 30,
+      "namespace": "Common",
+      "key": "active",
+      "fullKey": "Common.active",
+      "type": "t_call"
+    },
+    {
       "file": "src\\app\\[locale]\\blog\\page.tsx",
       "line": 33,
       "namespace": "Common",
@@ -5161,43 +5201,227 @@
       "type": "t_call"
     },
     {
-      "file": "src\\app\\[locale]\\app\\page.tsx",
-      "line": 15,
+      "file": "src\\app\\[locale]\\services\\devops\\page.tsx",
+      "line": 41,
       "namespace": "Common",
-      "key": "title",
-      "fullKey": "Common.title",
+      "key": "hero.badge",
+      "fullKey": "Common.hero.badge",
       "type": "t_call"
     },
     {
-      "file": "src\\app\\[locale]\\app\\page.tsx",
-      "line": 18,
+      "file": "src\\app\\[locale]\\services\\devops\\page.tsx",
+      "line": 44,
       "namespace": "Common",
-      "key": "welcome",
-      "fullKey": "Common.welcome",
+      "key": "hero.title",
+      "fullKey": "Common.hero.title",
       "type": "t_call"
     },
     {
-      "file": "src\\app\\[locale]\\app\\page.tsx",
-      "line": 21,
+      "file": "src\\app\\[locale]\\services\\devops\\page.tsx",
+      "line": 44,
       "namespace": "Common",
-      "key": "role",
-      "fullKey": "Common.role",
+      "key": "hero.titleHighlight",
+      "fullKey": "Common.hero.titleHighlight",
       "type": "t_call"
     },
     {
-      "file": "src\\app\\[locale]\\app\\page.tsx",
-      "line": 27,
+      "file": "src\\app\\[locale]\\services\\devops\\page.tsx",
+      "line": 47,
       "namespace": "Common",
-      "key": "logicMeshStatus",
-      "fullKey": "Common.logicMeshStatus",
+      "key": "hero.subtitle",
+      "fullKey": "Common.hero.subtitle",
       "type": "t_call"
     },
     {
-      "file": "src\\app\\[locale]\\app\\page.tsx",
-      "line": 30,
+      "file": "src\\app\\[locale]\\services\\devops\\page.tsx",
+      "line": 50,
       "namespace": "Common",
-      "key": "active",
-      "fullKey": "Common.active",
+      "key": "hero.ctaPrimary",
+      "fullKey": "Common.hero.ctaPrimary",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\services\\devops\\page.tsx",
+      "line": 51,
+      "namespace": "Common",
+      "key": "hero.ctaSecondary",
+      "fullKey": "Common.hero.ctaSecondary",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\services\\devops\\page.tsx",
+      "line": 62,
+      "namespace": "Common",
+      "key": "evolution.badge",
+      "fullKey": "Common.evolution.badge",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\services\\devops\\page.tsx",
+      "line": 63,
+      "namespace": "Common",
+      "key": "evolution.title",
+      "fullKey": "Common.evolution.title",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\services\\devops\\page.tsx",
+      "line": 65,
+      "namespace": "Common",
+      "key": "evolution.quote",
+      "fullKey": "Common.evolution.quote",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\services\\devops\\page.tsx",
+      "line": 69,
+      "namespace": "Common",
+      "key": "evolution.description2",
+      "fullKey": "Common.evolution.description2",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\services\\devops\\page.tsx",
+      "line": 97,
+      "namespace": "Common",
+      "key": "value.title",
+      "fullKey": "Common.value.title",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\services\\devops\\page.tsx",
+      "line": 98,
+      "namespace": "Common",
+      "key": "value.subtitle",
+      "fullKey": "Common.value.subtitle",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\services\\devops\\page.tsx",
+      "line": 103,
+      "namespace": "Common",
+      "key": "value.cards.leadTime.title",
+      "fullKey": "Common.value.cards.leadTime.title",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\services\\devops\\page.tsx",
+      "line": 104,
+      "namespace": "Common",
+      "key": "value.cards.leadTime.desc",
+      "fullKey": "Common.value.cards.leadTime.desc",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\services\\devops\\page.tsx",
+      "line": 108,
+      "namespace": "Common",
+      "key": "value.cards.drift.title",
+      "fullKey": "Common.value.cards.drift.title",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\services\\devops\\page.tsx",
+      "line": 109,
+      "namespace": "Common",
+      "key": "value.cards.drift.desc",
+      "fullKey": "Common.value.cards.drift.desc",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\services\\devops\\page.tsx",
+      "line": 113,
+      "namespace": "Common",
+      "key": "value.cards.audit.title",
+      "fullKey": "Common.value.cards.audit.title",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\services\\devops\\page.tsx",
+      "line": 114,
+      "namespace": "Common",
+      "key": "value.cards.audit.desc",
+      "fullKey": "Common.value.cards.audit.desc",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\services\\devops\\page.tsx",
+      "line": 124,
+      "namespace": "Common",
+      "key": "tech.title",
+      "fullKey": "Common.tech.title",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\services\\devops\\page.tsx",
+      "line": 127,
+      "namespace": "Common",
+      "key": "tech.intentTitle",
+      "fullKey": "Common.tech.intentTitle",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\services\\devops\\page.tsx",
+      "line": 129,
+      "namespace": "Common",
+      "key": "tech.securityTitle",
+      "fullKey": "Common.tech.securityTitle",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\services\\devops\\page.tsx",
+      "line": 131,
+      "namespace": "Common",
+      "key": "tech.securityDesc",
+      "fullKey": "Common.tech.securityDesc",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\services\\devops\\page.tsx",
+      "line": 142,
+      "namespace": "Common",
+      "key": "faq.title",
+      "fullKey": "Common.faq.title",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\services\\devops\\page.tsx",
+      "line": 162,
+      "namespace": "Common",
+      "key": "footer.title",
+      "fullKey": "Common.footer.title",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\services\\devops\\page.tsx",
+      "line": 163,
+      "namespace": "Common",
+      "key": "footer.subtitle",
+      "fullKey": "Common.footer.subtitle",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\services\\devops\\page.tsx",
+      "line": 166,
+      "namespace": "Common",
+      "key": "footer.links.modernization",
+      "fullKey": "Common.footer.links.modernization",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\services\\devops\\page.tsx",
+      "line": 169,
+      "namespace": "Common",
+      "key": "footer.links.finops",
+      "fullKey": "Common.footer.links.finops",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\services\\devops\\page.tsx",
+      "line": 174,
+      "namespace": "Common",
+      "key": "footer.ready",
+      "fullKey": "Common.footer.ready",
       "type": "t_call"
     },
     {
@@ -6313,227 +6537,27 @@
       "type": "t_call"
     },
     {
-      "file": "src\\app\\[locale]\\services\\devops\\page.tsx",
-      "line": 41,
+      "file": "src\\app\\[locale]\\docs\\[slug]\\page.tsx",
+      "line": 116,
       "namespace": "Common",
-      "key": "hero.badge",
-      "fullKey": "Common.hero.badge",
+      "key": "sidebar.customBriefingTitle",
+      "fullKey": "Common.sidebar.customBriefingTitle",
       "type": "t_call"
     },
     {
-      "file": "src\\app\\[locale]\\services\\devops\\page.tsx",
-      "line": 44,
+      "file": "src\\app\\[locale]\\docs\\[slug]\\page.tsx",
+      "line": 117,
       "namespace": "Common",
-      "key": "hero.title",
-      "fullKey": "Common.hero.title",
+      "key": "sidebar.customBriefingText",
+      "fullKey": "Common.sidebar.customBriefingText",
       "type": "t_call"
     },
     {
-      "file": "src\\app\\[locale]\\services\\devops\\page.tsx",
-      "line": 44,
+      "file": "src\\app\\[locale]\\docs\\[slug]\\page.tsx",
+      "line": 118,
       "namespace": "Common",
-      "key": "hero.titleHighlight",
-      "fullKey": "Common.hero.titleHighlight",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\services\\devops\\page.tsx",
-      "line": 47,
-      "namespace": "Common",
-      "key": "hero.subtitle",
-      "fullKey": "Common.hero.subtitle",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\services\\devops\\page.tsx",
-      "line": 50,
-      "namespace": "Common",
-      "key": "hero.ctaPrimary",
-      "fullKey": "Common.hero.ctaPrimary",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\services\\devops\\page.tsx",
-      "line": 51,
-      "namespace": "Common",
-      "key": "hero.ctaSecondary",
-      "fullKey": "Common.hero.ctaSecondary",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\services\\devops\\page.tsx",
-      "line": 62,
-      "namespace": "Common",
-      "key": "evolution.badge",
-      "fullKey": "Common.evolution.badge",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\services\\devops\\page.tsx",
-      "line": 63,
-      "namespace": "Common",
-      "key": "evolution.title",
-      "fullKey": "Common.evolution.title",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\services\\devops\\page.tsx",
-      "line": 65,
-      "namespace": "Common",
-      "key": "evolution.quote",
-      "fullKey": "Common.evolution.quote",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\services\\devops\\page.tsx",
-      "line": 69,
-      "namespace": "Common",
-      "key": "evolution.description2",
-      "fullKey": "Common.evolution.description2",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\services\\devops\\page.tsx",
-      "line": 97,
-      "namespace": "Common",
-      "key": "value.title",
-      "fullKey": "Common.value.title",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\services\\devops\\page.tsx",
-      "line": 98,
-      "namespace": "Common",
-      "key": "value.subtitle",
-      "fullKey": "Common.value.subtitle",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\services\\devops\\page.tsx",
-      "line": 103,
-      "namespace": "Common",
-      "key": "value.cards.leadTime.title",
-      "fullKey": "Common.value.cards.leadTime.title",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\services\\devops\\page.tsx",
-      "line": 104,
-      "namespace": "Common",
-      "key": "value.cards.leadTime.desc",
-      "fullKey": "Common.value.cards.leadTime.desc",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\services\\devops\\page.tsx",
-      "line": 108,
-      "namespace": "Common",
-      "key": "value.cards.drift.title",
-      "fullKey": "Common.value.cards.drift.title",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\services\\devops\\page.tsx",
-      "line": 109,
-      "namespace": "Common",
-      "key": "value.cards.drift.desc",
-      "fullKey": "Common.value.cards.drift.desc",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\services\\devops\\page.tsx",
-      "line": 113,
-      "namespace": "Common",
-      "key": "value.cards.audit.title",
-      "fullKey": "Common.value.cards.audit.title",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\services\\devops\\page.tsx",
-      "line": 114,
-      "namespace": "Common",
-      "key": "value.cards.audit.desc",
-      "fullKey": "Common.value.cards.audit.desc",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\services\\devops\\page.tsx",
-      "line": 124,
-      "namespace": "Common",
-      "key": "tech.title",
-      "fullKey": "Common.tech.title",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\services\\devops\\page.tsx",
-      "line": 127,
-      "namespace": "Common",
-      "key": "tech.intentTitle",
-      "fullKey": "Common.tech.intentTitle",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\services\\devops\\page.tsx",
-      "line": 129,
-      "namespace": "Common",
-      "key": "tech.securityTitle",
-      "fullKey": "Common.tech.securityTitle",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\services\\devops\\page.tsx",
-      "line": 131,
-      "namespace": "Common",
-      "key": "tech.securityDesc",
-      "fullKey": "Common.tech.securityDesc",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\services\\devops\\page.tsx",
-      "line": 142,
-      "namespace": "Common",
-      "key": "faq.title",
-      "fullKey": "Common.faq.title",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\services\\devops\\page.tsx",
-      "line": 162,
-      "namespace": "Common",
-      "key": "footer.title",
-      "fullKey": "Common.footer.title",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\services\\devops\\page.tsx",
-      "line": 163,
-      "namespace": "Common",
-      "key": "footer.subtitle",
-      "fullKey": "Common.footer.subtitle",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\services\\devops\\page.tsx",
-      "line": 166,
-      "namespace": "Common",
-      "key": "footer.links.modernization",
-      "fullKey": "Common.footer.links.modernization",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\services\\devops\\page.tsx",
-      "line": 169,
-      "namespace": "Common",
-      "key": "footer.links.finops",
-      "fullKey": "Common.footer.links.finops",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\services\\devops\\page.tsx",
-      "line": 174,
-      "namespace": "Common",
-      "key": "footer.ready",
-      "fullKey": "Common.footer.ready",
+      "key": "sidebar.contactArchitectureOffice",
+      "fullKey": "Common.sidebar.contactArchitectureOffice",
       "type": "t_call"
     },
     {
@@ -7489,6 +7513,278 @@
       "type": "t_call"
     },
     {
+      "file": "src\\app\\[locale]\\dashboard\\executive\\page.tsx",
+      "line": 36,
+      "namespace": "Dashboard.Executive",
+      "key": "title",
+      "fullKey": "Dashboard.Executive.title",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\dashboard\\executive\\page.tsx",
+      "line": 39,
+      "namespace": "Dashboard.Executive",
+      "key": "version",
+      "fullKey": "Dashboard.Executive.version",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\dashboard\\executive\\page.tsx",
+      "line": 92,
+      "namespace": "Dashboard.Executive",
+      "key": "metrics.activeAssets",
+      "fullKey": "Dashboard.Executive.metrics.activeAssets",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\dashboard\\executive\\page.tsx",
+      "line": 105,
+      "namespace": "Dashboard.Executive",
+      "key": "metrics.revenueImpact",
+      "fullKey": "Dashboard.Executive.metrics.revenueImpact",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\dashboard\\executive\\page.tsx",
+      "line": 118,
+      "namespace": "Dashboard.Executive",
+      "key": "metrics.cloudSpend",
+      "fullKey": "Dashboard.Executive.metrics.cloudSpend",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\dashboard\\executive\\page.tsx",
+      "line": 131,
+      "namespace": "Dashboard.Executive",
+      "key": "metrics.systemHealth",
+      "fullKey": "Dashboard.Executive.metrics.systemHealth",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\dashboard\\executive\\page.tsx",
+      "line": 134,
+      "namespace": "Dashboard.Executive",
+      "key": "metrics.healthStatus",
+      "fullKey": "Dashboard.Executive.metrics.healthStatus",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\dashboard\\executive\\page.tsx",
+      "line": 145,
+      "namespace": "Dashboard.Executive",
+      "key": "roi.title",
+      "fullKey": "Dashboard.Executive.roi.title",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\dashboard\\executive\\page.tsx",
+      "line": 146,
+      "namespace": "Dashboard.Executive",
+      "key": "roi.subtitle",
+      "fullKey": "Dashboard.Executive.roi.subtitle",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\dashboard\\executive\\page.tsx",
+      "line": 149,
+      "namespace": "Dashboard.Executive",
+      "key": "roi.badge",
+      "fullKey": "Dashboard.Executive.roi.badge",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\dashboard\\executive\\page.tsx",
+      "line": 159,
+      "namespace": "Dashboard.Executive",
+      "key": "cost.title",
+      "fullKey": "Dashboard.Executive.cost.title",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\dashboard\\executive\\page.tsx",
+      "line": 160,
+      "namespace": "Dashboard.Executive",
+      "key": "cost.subtitle",
+      "fullKey": "Dashboard.Executive.cost.subtitle",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\dashboard\\executive\\page.tsx",
+      "line": 178,
+      "namespace": "Dashboard.Executive",
+      "key": "cost.impact",
+      "fullKey": "Dashboard.Executive.cost.impact",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\dashboard\\executive\\page.tsx",
+      "line": 186,
+      "namespace": "Dashboard.Executive",
+      "key": "uptime.title",
+      "fullKey": "Dashboard.Executive.uptime.title",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\dashboard\\executive\\page.tsx",
+      "line": 187,
+      "namespace": "Dashboard.Executive",
+      "key": "uptime.subtitle",
+      "fullKey": "Dashboard.Executive.uptime.subtitle",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\dashboard\\executive\\page.tsx",
+      "line": 200,
+      "namespace": "Dashboard.Executive",
+      "key": "compliance.title",
+      "fullKey": "Dashboard.Executive.compliance.title",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\dashboard\\executive\\page.tsx",
+      "line": 201,
+      "namespace": "Dashboard.Executive",
+      "key": "compliance.subtitle",
+      "fullKey": "Dashboard.Executive.compliance.subtitle",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\resources\\blog\\devops-best-practices\\page.tsx",
+      "line": 34,
+      "namespace": "Common",
+      "key": "hero.badge",
+      "fullKey": "Common.hero.badge",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\resources\\blog\\devops-best-practices\\page.tsx",
+      "line": 37,
+      "namespace": "Common",
+      "key": "hero.titlePrefix",
+      "fullKey": "Common.hero.titlePrefix",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\resources\\blog\\devops-best-practices\\page.tsx",
+      "line": 37,
+      "namespace": "Common",
+      "key": "hero.titleHighlight",
+      "fullKey": "Common.hero.titleHighlight",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\resources\\blog\\devops-best-practices\\page.tsx",
+      "line": 37,
+      "namespace": "Common",
+      "key": "hero.titleSuffix",
+      "fullKey": "Common.hero.titleSuffix",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\resources\\blog\\devops-best-practices\\page.tsx",
+      "line": 42,
+      "namespace": "Common",
+      "key": "hero.author",
+      "fullKey": "Common.hero.author",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\resources\\blog\\devops-best-practices\\page.tsx",
+      "line": 44,
+      "namespace": "Common",
+      "key": "hero.date",
+      "fullKey": "Common.hero.date",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\resources\\blog\\devops-best-practices\\page.tsx",
+      "line": 45,
+      "namespace": "Common",
+      "key": "hero.readTime",
+      "fullKey": "Common.hero.readTime",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\resources\\blog\\devops-best-practices\\page.tsx",
+      "line": 50,
+      "namespace": "Common",
+      "key": "intro.quote",
+      "fullKey": "Common.intro.quote",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\resources\\blog\\devops-best-practices\\page.tsx",
+      "line": 53,
+      "namespace": "Common",
+      "key": "body.introTitle",
+      "fullKey": "Common.body.introTitle",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\resources\\blog\\devops-best-practices\\page.tsx",
+      "line": 55,
+      "namespace": "Common",
+      "key": "body.p1",
+      "fullKey": "Common.body.p1",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\resources\\blog\\devops-best-practices\\page.tsx",
+      "line": 59,
+      "namespace": "Common",
+      "key": "body.dist1.title",
+      "fullKey": "Common.body.dist1.title",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\resources\\blog\\devops-best-practices\\page.tsx",
+      "line": 62,
+      "namespace": "Common",
+      "key": "body.dist2.title",
+      "fullKey": "Common.body.dist2.title",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\resources\\blog\\devops-best-practices\\page.tsx",
+      "line": 65,
+      "namespace": "Common",
+      "key": "body.dist3.title",
+      "fullKey": "Common.body.dist3.title",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\resources\\blog\\devops-best-practices\\page.tsx",
+      "line": 68,
+      "namespace": "Common",
+      "key": "body.dist4.title",
+      "fullKey": "Common.body.dist4.title",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\resources\\blog\\devops-best-practices\\page.tsx",
+      "line": 71,
+      "namespace": "Common",
+      "key": "faq.title",
+      "fullKey": "Common.faq.title",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\resources\\blog\\devops-best-practices\\page.tsx",
+      "line": 97,
+      "namespace": "Common",
+      "key": "nav.prev",
+      "fullKey": "Common.nav.prev",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\resources\\blog\\devops-best-practices\\page.tsx",
+      "line": 100,
+      "namespace": "Common",
+      "key": "nav.back",
+      "fullKey": "Common.nav.back",
+      "type": "t_call"
+    },
+    {
       "file": "src\\app\\[locale]\\resources\\blog\\sovereignty-framework\\page.tsx",
       "line": 35,
       "namespace": "Common",
@@ -7702,142 +7998,6 @@
       "namespace": "Common",
       "key": "related.readPost",
       "fullKey": "Common.related.readPost",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\resources\\blog\\devops-best-practices\\page.tsx",
-      "line": 34,
-      "namespace": "Common",
-      "key": "hero.badge",
-      "fullKey": "Common.hero.badge",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\resources\\blog\\devops-best-practices\\page.tsx",
-      "line": 37,
-      "namespace": "Common",
-      "key": "hero.titlePrefix",
-      "fullKey": "Common.hero.titlePrefix",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\resources\\blog\\devops-best-practices\\page.tsx",
-      "line": 37,
-      "namespace": "Common",
-      "key": "hero.titleHighlight",
-      "fullKey": "Common.hero.titleHighlight",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\resources\\blog\\devops-best-practices\\page.tsx",
-      "line": 37,
-      "namespace": "Common",
-      "key": "hero.titleSuffix",
-      "fullKey": "Common.hero.titleSuffix",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\resources\\blog\\devops-best-practices\\page.tsx",
-      "line": 42,
-      "namespace": "Common",
-      "key": "hero.author",
-      "fullKey": "Common.hero.author",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\resources\\blog\\devops-best-practices\\page.tsx",
-      "line": 44,
-      "namespace": "Common",
-      "key": "hero.date",
-      "fullKey": "Common.hero.date",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\resources\\blog\\devops-best-practices\\page.tsx",
-      "line": 45,
-      "namespace": "Common",
-      "key": "hero.readTime",
-      "fullKey": "Common.hero.readTime",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\resources\\blog\\devops-best-practices\\page.tsx",
-      "line": 50,
-      "namespace": "Common",
-      "key": "intro.quote",
-      "fullKey": "Common.intro.quote",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\resources\\blog\\devops-best-practices\\page.tsx",
-      "line": 53,
-      "namespace": "Common",
-      "key": "body.introTitle",
-      "fullKey": "Common.body.introTitle",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\resources\\blog\\devops-best-practices\\page.tsx",
-      "line": 55,
-      "namespace": "Common",
-      "key": "body.p1",
-      "fullKey": "Common.body.p1",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\resources\\blog\\devops-best-practices\\page.tsx",
-      "line": 59,
-      "namespace": "Common",
-      "key": "body.dist1.title",
-      "fullKey": "Common.body.dist1.title",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\resources\\blog\\devops-best-practices\\page.tsx",
-      "line": 62,
-      "namespace": "Common",
-      "key": "body.dist2.title",
-      "fullKey": "Common.body.dist2.title",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\resources\\blog\\devops-best-practices\\page.tsx",
-      "line": 65,
-      "namespace": "Common",
-      "key": "body.dist3.title",
-      "fullKey": "Common.body.dist3.title",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\resources\\blog\\devops-best-practices\\page.tsx",
-      "line": 68,
-      "namespace": "Common",
-      "key": "body.dist4.title",
-      "fullKey": "Common.body.dist4.title",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\resources\\blog\\devops-best-practices\\page.tsx",
-      "line": 71,
-      "namespace": "Common",
-      "key": "faq.title",
-      "fullKey": "Common.faq.title",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\resources\\blog\\devops-best-practices\\page.tsx",
-      "line": 97,
-      "namespace": "Common",
-      "key": "nav.prev",
-      "fullKey": "Common.nav.prev",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\resources\\blog\\devops-best-practices\\page.tsx",
-      "line": 100,
-      "namespace": "Common",
-      "key": "nav.back",
-      "fullKey": "Common.nav.back",
       "type": "t_call"
     },
     {
@@ -8393,6 +8553,150 @@
       "type": "t_call"
     },
     {
+      "file": "src\\app\\[locale]\\research\\papers\\scholarly-article\\page.tsx",
+      "line": 10,
+      "namespace": "Common",
+      "key": "meta.title",
+      "fullKey": "Common.meta.title",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\research\\papers\\scholarly-article\\page.tsx",
+      "line": 10,
+      "namespace": "Common",
+      "key": "meta.description",
+      "fullKey": "Common.meta.description",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\research\\papers\\scholarly-article\\page.tsx",
+      "line": 14,
+      "namespace": "Common",
+      "key": "badge.standard",
+      "fullKey": "Common.badge.standard",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\research\\papers\\scholarly-article\\page.tsx",
+      "line": 14,
+      "namespace": "Common",
+      "key": "title",
+      "fullKey": "Common.title",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\research\\papers\\scholarly-article\\page.tsx",
+      "line": 14,
+      "namespace": "Common",
+      "key": "meta.date",
+      "fullKey": "Common.meta.date",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\research\\papers\\scholarly-article\\page.tsx",
+      "line": 14,
+      "namespace": "Common",
+      "key": "meta.category",
+      "fullKey": "Common.meta.category",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\research\\papers\\scholarly-article\\page.tsx",
+      "line": 14,
+      "namespace": "Common",
+      "key": "abstract.title",
+      "fullKey": "Common.abstract.title",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\research\\papers\\scholarly-article\\page.tsx",
+      "line": 14,
+      "namespace": "Common",
+      "key": "abstract.content",
+      "fullKey": "Common.abstract.content",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\research\\papers\\scholarly-article\\page.tsx",
+      "line": 14,
+      "namespace": "Common",
+      "key": "cta.request",
+      "fullKey": "Common.cta.request",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\research\\papers\\a6-adaptive-policy-enforcement\\page.tsx",
+      "line": 10,
+      "namespace": "Common",
+      "key": "meta.title",
+      "fullKey": "Common.meta.title",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\research\\papers\\a6-adaptive-policy-enforcement\\page.tsx",
+      "line": 10,
+      "namespace": "Common",
+      "key": "meta.description",
+      "fullKey": "Common.meta.description",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\research\\papers\\a6-adaptive-policy-enforcement\\page.tsx",
+      "line": 14,
+      "namespace": "Common",
+      "key": "badge.standard",
+      "fullKey": "Common.badge.standard",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\research\\papers\\a6-adaptive-policy-enforcement\\page.tsx",
+      "line": 14,
+      "namespace": "Common",
+      "key": "title",
+      "fullKey": "Common.title",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\research\\papers\\a6-adaptive-policy-enforcement\\page.tsx",
+      "line": 14,
+      "namespace": "Common",
+      "key": "meta.date",
+      "fullKey": "Common.meta.date",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\research\\papers\\a6-adaptive-policy-enforcement\\page.tsx",
+      "line": 14,
+      "namespace": "Common",
+      "key": "meta.category",
+      "fullKey": "Common.meta.category",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\research\\papers\\a6-adaptive-policy-enforcement\\page.tsx",
+      "line": 14,
+      "namespace": "Common",
+      "key": "abstract.title",
+      "fullKey": "Common.abstract.title",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\research\\papers\\a6-adaptive-policy-enforcement\\page.tsx",
+      "line": 14,
+      "namespace": "Common",
+      "key": "abstract.content",
+      "fullKey": "Common.abstract.content",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\research\\papers\\a6-adaptive-policy-enforcement\\page.tsx",
+      "line": 14,
+      "namespace": "Common",
+      "key": "cta.request",
+      "fullKey": "Common.cta.request",
+      "type": "t_call"
+    },
+    {
       "file": "src\\app\\[locale]\\research\\papers\\a5-monolith-to-cloud-native-modernization\\page.tsx",
       "line": 10,
       "namespace": "Common",
@@ -8531,222 +8835,6 @@
     {
       "file": "src\\app\\[locale]\\research\\papers\\a4-platform-governance-multicloud-hybrid\\page.tsx",
       "line": 14,
-      "namespace": "Common",
-      "key": "cta.request",
-      "fullKey": "Common.cta.request",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\research\\papers\\a6-adaptive-policy-enforcement\\page.tsx",
-      "line": 10,
-      "namespace": "Common",
-      "key": "meta.title",
-      "fullKey": "Common.meta.title",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\research\\papers\\a6-adaptive-policy-enforcement\\page.tsx",
-      "line": 10,
-      "namespace": "Common",
-      "key": "meta.description",
-      "fullKey": "Common.meta.description",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\research\\papers\\a6-adaptive-policy-enforcement\\page.tsx",
-      "line": 14,
-      "namespace": "Common",
-      "key": "badge.standard",
-      "fullKey": "Common.badge.standard",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\research\\papers\\a6-adaptive-policy-enforcement\\page.tsx",
-      "line": 14,
-      "namespace": "Common",
-      "key": "title",
-      "fullKey": "Common.title",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\research\\papers\\a6-adaptive-policy-enforcement\\page.tsx",
-      "line": 14,
-      "namespace": "Common",
-      "key": "meta.date",
-      "fullKey": "Common.meta.date",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\research\\papers\\a6-adaptive-policy-enforcement\\page.tsx",
-      "line": 14,
-      "namespace": "Common",
-      "key": "meta.category",
-      "fullKey": "Common.meta.category",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\research\\papers\\a6-adaptive-policy-enforcement\\page.tsx",
-      "line": 14,
-      "namespace": "Common",
-      "key": "abstract.title",
-      "fullKey": "Common.abstract.title",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\research\\papers\\a6-adaptive-policy-enforcement\\page.tsx",
-      "line": 14,
-      "namespace": "Common",
-      "key": "abstract.content",
-      "fullKey": "Common.abstract.content",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\research\\papers\\a6-adaptive-policy-enforcement\\page.tsx",
-      "line": 14,
-      "namespace": "Common",
-      "key": "cta.request",
-      "fullKey": "Common.cta.request",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\research\\papers\\scholarly-article\\page.tsx",
-      "line": 10,
-      "namespace": "Common",
-      "key": "meta.title",
-      "fullKey": "Common.meta.title",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\research\\papers\\scholarly-article\\page.tsx",
-      "line": 10,
-      "namespace": "Common",
-      "key": "meta.description",
-      "fullKey": "Common.meta.description",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\research\\papers\\scholarly-article\\page.tsx",
-      "line": 14,
-      "namespace": "Common",
-      "key": "badge.standard",
-      "fullKey": "Common.badge.standard",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\research\\papers\\scholarly-article\\page.tsx",
-      "line": 14,
-      "namespace": "Common",
-      "key": "title",
-      "fullKey": "Common.title",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\research\\papers\\scholarly-article\\page.tsx",
-      "line": 14,
-      "namespace": "Common",
-      "key": "meta.date",
-      "fullKey": "Common.meta.date",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\research\\papers\\scholarly-article\\page.tsx",
-      "line": 14,
-      "namespace": "Common",
-      "key": "meta.category",
-      "fullKey": "Common.meta.category",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\research\\papers\\scholarly-article\\page.tsx",
-      "line": 14,
-      "namespace": "Common",
-      "key": "abstract.title",
-      "fullKey": "Common.abstract.title",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\research\\papers\\scholarly-article\\page.tsx",
-      "line": 14,
-      "namespace": "Common",
-      "key": "abstract.content",
-      "fullKey": "Common.abstract.content",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\research\\papers\\scholarly-article\\page.tsx",
-      "line": 14,
-      "namespace": "Common",
-      "key": "cta.request",
-      "fullKey": "Common.cta.request",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\research\\papers\\a3-enterprise-observability-operational-intelligence\\page.tsx",
-      "line": 14,
-      "namespace": "Common",
-      "key": "meta.title",
-      "fullKey": "Common.meta.title",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\research\\papers\\a3-enterprise-observability-operational-intelligence\\page.tsx",
-      "line": 14,
-      "namespace": "Common",
-      "key": "meta.description",
-      "fullKey": "Common.meta.description",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\research\\papers\\a3-enterprise-observability-operational-intelligence\\page.tsx",
-      "line": 24,
-      "namespace": "Common",
-      "key": "badge.standard",
-      "fullKey": "Common.badge.standard",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\research\\papers\\a3-enterprise-observability-operational-intelligence\\page.tsx",
-      "line": 25,
-      "namespace": "Common",
-      "key": "title",
-      "fullKey": "Common.title",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\research\\papers\\a3-enterprise-observability-operational-intelligence\\page.tsx",
-      "line": 27,
-      "namespace": "Common",
-      "key": "meta.date",
-      "fullKey": "Common.meta.date",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\research\\papers\\a3-enterprise-observability-operational-intelligence\\page.tsx",
-      "line": 28,
-      "namespace": "Common",
-      "key": "meta.category",
-      "fullKey": "Common.meta.category",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\research\\papers\\a3-enterprise-observability-operational-intelligence\\page.tsx",
-      "line": 34,
-      "namespace": "Common",
-      "key": "abstract.title",
-      "fullKey": "Common.abstract.title",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\research\\papers\\a3-enterprise-observability-operational-intelligence\\page.tsx",
-      "line": 35,
-      "namespace": "Common",
-      "key": "abstract.content",
-      "fullKey": "Common.abstract.content",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\research\\papers\\a3-enterprise-observability-operational-intelligence\\page.tsx",
-      "line": 36,
       "namespace": "Common",
       "key": "cta.request",
       "fullKey": "Common.cta.request",
@@ -8819,6 +8907,78 @@
     {
       "file": "src\\app\\[locale]\\research\\papers\\a2-high-throughput-distributed-systems\\page.tsx",
       "line": 54,
+      "namespace": "Common",
+      "key": "cta.request",
+      "fullKey": "Common.cta.request",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\research\\papers\\a3-enterprise-observability-operational-intelligence\\page.tsx",
+      "line": 14,
+      "namespace": "Common",
+      "key": "meta.title",
+      "fullKey": "Common.meta.title",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\research\\papers\\a3-enterprise-observability-operational-intelligence\\page.tsx",
+      "line": 14,
+      "namespace": "Common",
+      "key": "meta.description",
+      "fullKey": "Common.meta.description",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\research\\papers\\a3-enterprise-observability-operational-intelligence\\page.tsx",
+      "line": 24,
+      "namespace": "Common",
+      "key": "badge.standard",
+      "fullKey": "Common.badge.standard",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\research\\papers\\a3-enterprise-observability-operational-intelligence\\page.tsx",
+      "line": 25,
+      "namespace": "Common",
+      "key": "title",
+      "fullKey": "Common.title",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\research\\papers\\a3-enterprise-observability-operational-intelligence\\page.tsx",
+      "line": 27,
+      "namespace": "Common",
+      "key": "meta.date",
+      "fullKey": "Common.meta.date",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\research\\papers\\a3-enterprise-observability-operational-intelligence\\page.tsx",
+      "line": 28,
+      "namespace": "Common",
+      "key": "meta.category",
+      "fullKey": "Common.meta.category",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\research\\papers\\a3-enterprise-observability-operational-intelligence\\page.tsx",
+      "line": 34,
+      "namespace": "Common",
+      "key": "abstract.title",
+      "fullKey": "Common.abstract.title",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\research\\papers\\a3-enterprise-observability-operational-intelligence\\page.tsx",
+      "line": 35,
+      "namespace": "Common",
+      "key": "abstract.content",
+      "fullKey": "Common.abstract.content",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\research\\papers\\a3-enterprise-observability-operational-intelligence\\page.tsx",
+      "line": 36,
       "namespace": "Common",
       "key": "cta.request",
       "fullKey": "Common.cta.request",
@@ -9996,6 +10156,9 @@
     "Common.services",
     "Common.servicesText",
     "Common.sidebar.blueprints",
+    "Common.sidebar.contactArchitectureOffice",
+    "Common.sidebar.customBriefingText",
+    "Common.sidebar.customBriefingTitle",
     "Common.sidebar.documentation",
     "Common.sidebar.links.architecture",
     "Common.sidebar.links.introduction",
@@ -10071,6 +10234,23 @@
     "CookieConsent.policyLink",
     "CookieConsent.sovereignNotice",
     "CookieConsent.title",
+    "Dashboard.Executive.compliance.subtitle",
+    "Dashboard.Executive.compliance.title",
+    "Dashboard.Executive.cost.impact",
+    "Dashboard.Executive.cost.subtitle",
+    "Dashboard.Executive.cost.title",
+    "Dashboard.Executive.metrics.activeAssets",
+    "Dashboard.Executive.metrics.cloudSpend",
+    "Dashboard.Executive.metrics.healthStatus",
+    "Dashboard.Executive.metrics.revenueImpact",
+    "Dashboard.Executive.metrics.systemHealth",
+    "Dashboard.Executive.roi.badge",
+    "Dashboard.Executive.roi.subtitle",
+    "Dashboard.Executive.roi.title",
+    "Dashboard.Executive.title",
+    "Dashboard.Executive.uptime.subtitle",
+    "Dashboard.Executive.uptime.title",
+    "Dashboard.Executive.version",
     "Dashboard.badge",
     "Dashboard.globalHealth",
     "Dashboard.infraSubtitle",

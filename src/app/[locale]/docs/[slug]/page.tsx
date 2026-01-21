@@ -113,9 +113,9 @@ export default async function DocDetailPage({ params }: { params: Promise<{ loca
                             </div>
 
                             <div className="glass-panel p-6 rounded-3xl border border-primary/20 bg-primary/5">
-                                <h4 className="font-bold text-sm mb-2">Need a customized briefing?</h4>
-                                <p className="text-xs opacity-60 mb-4">Speak with our founding engineering team about specific ASO implementations.</p>
-                                <Link href={`/${locale}/contact`} className="btn-primary w-full py-2 rounded-xl text-xs text-center">Contact Architecture Office</Link>
+                                <h4 className="font-bold text-sm mb-2">{t('sidebar.customBriefingTitle')}</h4>
+                                <p className="text-xs opacity-60 mb-4">{t('sidebar.customBriefingText')}</p>
+                                <Link href={`/${locale}/contact`} className="btn-primary w-full py-2 rounded-xl text-xs text-center">{t('sidebar.contactArchitectureOffice')}</Link>
                             </div>
                         </aside>
                     </div>
