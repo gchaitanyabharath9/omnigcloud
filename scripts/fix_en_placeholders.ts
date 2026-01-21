@@ -61,8 +61,11 @@ function processValue(key: string, value: string, parentKey: string = ''): strin
 
     // Explicit Fixes (User Request)
     if (key === 'liveTitle') return "System Operational Status";
+    if (key === 'liveSubtitle') return "Real-time system performance metrics.";
     if (key === 'roiTitle') return "Cost & ROI Analysis";
+    if (key === 'roiSubtitle') return "Projected savings and efficiency gains.";
     if (key === 'infraTitle') return "Infrastructure Health";
+    if (key === 'infraSubtitle') return "Global node status and uptime.";
     if (key === 'trustTitle') return "Trust Compliance Score";
     if (key === 'optimizationTitle') return "Resource Optimization";
 
@@ -76,8 +79,8 @@ function processValue(key: string, value: string, parentKey: string = ''): strin
         return getRandom(SUBTITLES, key + parentKey);
     }
 
-    // Pattern 3: Subtitle for...
-    if (/^Subtitle for/.test(trimmed)) {
+    // Pattern 3: Subtitle placeholders
+    if (/Subtitle/i.test(trimmed) || trimmed === 'Live Subtitle' || trimmed === 'Roi Subtitle' || trimmed === 'Infra Subtitle') {
         return getRandom(SUBTITLES, key + parentKey);
     }
 
@@ -98,11 +101,12 @@ function processValue(key: string, value: string, parentKey: string = ''): strin
         return getRandom(STEPS, key + parentKey);
     }
 
-    // Pattern 6: Single word Title Case that equals key (e.g. "Challenge" for "challenge")
-    // (Be careful not to change real words too much, but if it looks like a placeholder...)
+    // Pattern 6: Single word Title Case that equals key
     if (key.length > 2 && trimmed.toLowerCase() === key.toLowerCase() && !trimmed.includes(' ')) {
-        // e.g. "Encryption": "Encryption" -> "Data Encryption"
-        return `${trimmed} Details`;
+        if (key === 'active') return "Active Status";
+        if (key === 'role') return "User Role";
+        if (key === 'welcome') return "Welcome Back";
+        return `${trimmed} Overview`;
     }
 
     // Pattern 7: "Link", "Status"
