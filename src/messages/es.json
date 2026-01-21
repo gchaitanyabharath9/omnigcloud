@@ -1392,7 +1392,10 @@
     },
     "badge": "New",
     "title": "Problem",
-    "subtitle": "Control your data. Control your future."
+    "subtitle": "Control your data. Control your future.",
+    "mitigationLabel": "Immediate Mitigation:",
+    "auditRequest": "Request Security Audit",
+    "tcoRequest": "Request TCO Analysis"
   },
   "Visuals": {
     "drift": {
@@ -1439,7 +1442,21 @@
       "uptime30Day": "30-Day Uptime (%)",
       "complianceScores": "Compliance Framework Scores",
       "errorRateTrend": "Error Rate Trend (%)",
-      "featureAdoption": "Feature Adoption Rate (%)"
+      "featureAdoption": "Feature Adoption Rate (%)",
+      "Logs": {
+        "optimizing": "[Orchestrator] Optimizing bin packing for region us-east-1...",
+        "rebalanced": "Rebalanced 4 nodes. Savings: $4.20/hr",
+        "synced": "Telemetry stream synced. Latency: 12ms",
+        "checking": "Checking compliance policies for new buckets...",
+        "verified": "SOC2 Control 4.1 verified.",
+        "scaling": "Scaling event triggered by load predictor.",
+        "levels": {
+          "info": "INFO",
+          "success": "SUCCESS",
+          "debug": "DEBUG",
+          "pass": "PASS"
+        }
+      }
     },
     "Shell": {
       "activeAssets": "Active Assets",

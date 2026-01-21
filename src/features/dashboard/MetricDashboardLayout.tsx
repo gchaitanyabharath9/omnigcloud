@@ -102,12 +102,24 @@ export default function MetricDashboardLayout({
                 </div>
                 <div className="flex-1 p-4 font-mono text-xs text-muted-foreground/70 overflow-hidden relative">
                     <div className="absolute inset-0 p-4 space-y-2">
-                        <div className="flex gap-2"><span className="text-blue-400">INFO</span> <span>[Orchestrator] Optimizing bin packing for region us-east-1...</span></div>
-                        <div className="flex gap-2"><span className="text-emerald-400">SUCCESS</span> <span>Rebalanced 4 nodes. Savings: $4.20/hr</span></div>
-                        <div className="flex gap-2"><span className="text-blue-400">INFO</span> <span>Telemetry stream synced. Latency: 12ms</span></div>
-                        <div className="flex gap-2"><span className="text-purple-400">DEBUG</span> <span>Checking compliance policies for new buckets...</span></div>
-                        <div className="flex gap-2"><span className="text-emerald-400">PASS</span> <span>SOC2 Control 4.1 verified.</span></div>
-                        <div className="flex gap-2"><span className="text-blue-400">INFO</span> <span>Scaling event triggered by load predictor.</span></div>
+                        {[
+                            { level: 'info', msg: 'optimizing' },
+                            { level: 'success', msg: 'rebalanced' },
+                            { level: 'info', msg: 'synced' },
+                            { level: 'debug', msg: 'checking' },
+                            { level: 'success', msg: 'verified' },
+                            { level: 'info', msg: 'scaling' }
+                        ].map((log, i) => (
+                            <div key={i} className="flex gap-2">
+                                <span className={
+                                    log.level === 'success' || log.level === 'pass' ? "text-emerald-400" :
+                                        log.level === 'debug' ? "text-purple-400" : "text-blue-400"
+                                }>
+                                    {tSafe(t, `Logs.levels.${log.level}`, log.level.toUpperCase())}
+                                </span>
+                                <span>{tSafe(t, `Logs.${log.msg}`, log.msg)}</span>
+                            </div>
+                        ))}
                     </div>
                     {/* Fade out bottom */}
                     <div className="absolute bottom-0 left-0 right-0 h-12 bg-gradient-to-t from-black to-transparent" />
