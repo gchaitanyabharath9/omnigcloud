@@ -17,7 +17,7 @@ export const WhitepaperHeader = () => {
                 </div>
 
                 <h1 style={{ fontSize: '2.5rem', fontWeight: 800, textAlign: 'center', lineHeight: 1.2, marginBottom: '2rem', color: 'var(--foreground)', letterSpacing: '-0.02em' }}>
-                    Autonomous Enterprise Control Plane (AECP): <br />
+                    {t('title')} <br />
                     <span style={{ fontWeight: 400, color: 'var(--muted)', fontSize: '1.5rem', display: 'block', marginTop: '0.75rem' }}>{t('subtitle')}</span>
                 </h1>
 

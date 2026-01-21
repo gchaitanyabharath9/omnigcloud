@@ -50,8 +50,8 @@
       }
     },
     "abstract": {
-      "content": "Achieve FIPS 140-2 Level 3 compliance with our shielded execution environments.",
-      "title": "Abstract Title"
+      "content": "Abstract content",
+      "title": "Abstract"
     },
     "acceptance": "Acceptance Details",
     "acceptanceText": "Acceptance Text",
@@ -115,7 +115,11 @@
     "authz3": "Authz3 Details",
     "backups": "Backups Details",
     "backupsText": "Backups Text",
-    "badge": "Badge Details",
+    "badge": {
+      "_value": "Badge Details",
+      "standard": "Standard",
+      "version": "Version"
+    },
     "banner": {
       "cta": "Learn More",
       "description": "Seamlessly orchestrate workloads across AWS, Azure, and Google Cloud with strict governance boundaries.",
@@ -169,7 +173,8 @@
     "cta": {
       "button": "Button Details",
       "subtitle": "Empowering the next generation of regulated enterprise.",
-      "title": "Cta Title"
+      "title": "Cta Title",
+      "request": "Request"
     },
     "dataCollection": "Data Collection",
     "dataCollectionText": "Data Collection Text",
@@ -334,7 +339,10 @@
     "logicMeshStatus": "Logic Mesh Status",
     "meta": {
       "description": "Decouple your business logic from vendor-specific APIs and regain full control of your digital estate.",
-      "title": "Meta Title"
+      "title": "Meta Title",
+      "category": "Category",
+      "date": "Date",
+      "pages": "Pages"
     },
     "monitor1": "Monitor1 Details",
     "monitor2": "Monitor2 Details",
@@ -449,7 +457,12 @@
     "terminationText": "Termination Text",
     "thirdParty": "Third Party",
     "thirdPartyText": "Third Party Text",
-    "title": "Multi-Cloud Compliance",
+    "title": {
+      "_value": "Multi-Cloud Compliance",
+      "line1": "Line 1",
+      "line2": "Line 2",
+      "line3": "Line 3"
+    },
     "transparency": "Transparency Details",
     "transparencyText": "Transparency Text",
     "trust": {
@@ -476,7 +489,21 @@
     },
     "welcome": "Welcome Details",
     "yourRights": "Your Rights",
-    "yourRightsText": "Your Rights Text"
+    "yourRightsText": "Your Rights Text",
+    "details": {
+      "classification": {
+        "label": "Classification",
+        "value": "Value"
+      },
+      "security": {
+        "label": "Security",
+        "value": "Value"
+      },
+      "status": {
+        "label": "Status",
+        "value": "Value"
+      }
+    }
   },
   "Header": {
     "nav": {
@@ -2252,12 +2279,185 @@
       }
     },
     "Header": {
-      "protocol": "Technical Research Protocol",
+      "protocol": "Technical Protocol",
+      "subtitle": "A Formal Specification",
       "principalAuthor": "Principal Author",
-      "publicationDate": "Publication Date",
       "authorName": "Chaitanya Bharath Gopu",
-      "subtitle": "A Formal Framework for AI-Driven Cloud-Agnostic Governance",
-      "rev": "Q4 2024 (Rev. 4.0)"
+      "publicationDate": "Publication Date",
+      "rev": "Rev. 3.0 (Jan 2026)",
+      "title": "Autonomous Enterprise Control Plane (AECP)"
+    },
+    "A1": {
+      "meta": {
+        "title": "A1: Cloud-Native Enterprise Reference Architecture",
+        "description": "The canonical A1 technical standard for implementing sovereign, multi-cloud platforms.",
+        "date": "Jan 2026",
+        "category": "Distributed Systems",
+        "pages": "65-Page Spec"
+      },
+      "badge": {
+        "standard": "Technical Standard",
+        "version": "Version 3.0 (Gold)"
+      },
+      "title": {
+        "line1": "Cloud-Native",
+        "line2": "Enterprise Reference",
+        "line3": "Architecture (A1)"
+      },
+      "abstract": {
+        "title": "Paper Abstract",
+        "content": "This standard establishes a sovereign boundary between application logic and infrastructure primitives, ensuring infinite portability across heterogeneous cloud providers while maintaining centralized governance."
+      },
+      "cta": {
+        "request": "Request Full Paper (PDF)"
+      },
+      "details": {
+        "classification": {
+          "label": "Classification",
+          "value": "Technical Standard"
+        },
+        "security": {
+          "label": "Security Rigor",
+          "value": "NIST-800-207+"
+        },
+        "status": {
+          "label": "Release Status",
+          "value": "Gold Standard"
+        }
+      }
+    },
+    "A2": {
+      "meta": {
+        "title": "A2: High-Throughput Distributed Systems",
+        "description": "Design patterns for high-throughput distributed systems.",
+        "date": "Jan 2026",
+        "category": "Distributed Systems"
+      },
+      "badge": {
+        "standard": "Technical Standard"
+      },
+      "title": "High-Throughput Distributed Systems",
+      "abstract": {
+        "title": "Abstract",
+        "content": "This paper presents design patterns and architectural principles for building high-throughput distributed systems at enterprise scale."
+      },
+      "cta": {
+        "request": "Request Full Paper (PDF)"
+      }
+    },
+    "A3": {
+      "meta": {
+        "title": "A3: Enterprise Observability & Operational Intelligence",
+        "description": "Comprehensive observability framework for enterprise systems.",
+        "date": "Jan 2026",
+        "category": "Observability"
+      },
+      "badge": {
+        "standard": "Technical Standard"
+      },
+      "title": "Enterprise Observability & Operational Intelligence",
+      "abstract": {
+        "title": "Abstract",
+        "content": "A comprehensive framework for implementing enterprise-grade observability and operational intelligence across distributed systems."
+      },
+      "cta": {
+        "request": "Request Full Paper (PDF)"
+      }
+    },
+    "A4": {
+      "meta": {
+        "title": "A4: Platform Governance for Multi-Cloud & Hybrid Environments",
+        "description": "Governance framework for multi-cloud platforms.",
+        "date": "Jan 2026",
+        "category": "Governance"
+      },
+      "badge": {
+        "standard": "Technical Standard"
+      },
+      "title": "Platform Governance for Multi-Cloud & Hybrid Environments",
+      "abstract": {
+        "title": "Abstract",
+        "content": "This standard defines governance patterns and controls for managing multi-cloud and hybrid infrastructure at enterprise scale."
+      },
+      "cta": {
+        "request": "Request Full Paper (PDF)"
+      }
+    },
+    "A5": {
+      "meta": {
+        "title": "A5: Monolith to Cloud-Native Modernization",
+        "description": "Systematic approach to cloud-native modernization.",
+        "date": "Jan 2026",
+        "category": "Modernization"
+      },
+      "badge": {
+        "standard": "Technical Standard"
+      },
+      "title": "Monolith to Cloud-Native Modernization",
+      "abstract": {
+        "title": "Abstract",
+        "content": "A systematic methodology for modernizing monolithic applications to cloud-native architectures while maintaining business continuity."
+      },
+      "cta": {
+        "request": "Request Full Paper (PDF)"
+      }
+    },
+    "A6": {
+      "meta": {
+        "title": "A6: Adaptive Policy Enforcement",
+        "description": "Dynamic policy enforcement for cloud platforms.",
+        "date": "Jan 2026",
+        "category": "Policy & Compliance"
+      },
+      "badge": {
+        "standard": "Technical Standard"
+      },
+      "title": "Adaptive Policy Enforcement",
+      "abstract": {
+        "title": "Abstract",
+        "content": "This paper presents an adaptive policy enforcement framework for dynamic compliance and governance in cloud environments."
+      },
+      "cta": {
+        "request": "Request Full Paper (PDF)"
+      }
+    },
+    "AECP": {
+      "meta": {
+        "title": "AECP: Autonomous Enterprise Control Plane",
+        "description": "The foundational AECP whitepaper.",
+        "date": "Jan 2026",
+        "category": "Control Plane"
+      },
+      "badge": {
+        "standard": "Technical Protocol"
+      },
+      "title": "Autonomous Enterprise Control Plane (AECP)",
+      "abstract": {
+        "title": "Abstract",
+        "content": "The Autonomous Enterprise Control Plane (AECP) is a unified governance framework for multi-cloud and hybrid infrastructure management."
+      },
+      "cta": {
+        "request": "Request Full Paper (PDF)"
+      }
+    },
+    "ARCH": {
+      "meta": {
+        "title": "ARCH: Scholarly Architecture Article",
+        "description": "Comprehensive architectural analysis.",
+        "date": "Jan 2026",
+        "category": "Architecture"
+      },
+      "badge": {
+        "standard": "Scholarly Article"
+      },
+      "title": "Cloud-Native Architecture: A Scholarly Perspective",
+      "abstract": {
+        "title": "Abstract",
+        "content": "A comprehensive scholarly analysis of cloud-native architectural patterns and their application in enterprise systems."
+      },
+      "cta": {
+        "request": "Request Full Paper (PDF)"
+      }
     }
   },
   "Demo": {
