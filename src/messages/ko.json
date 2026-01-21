@@ -1,983 +1,1245 @@
 {
-  "AboveTheFold": "[KO] Above The Fold",
-  "Blog": {
-    "hero": {
-      "search": "[KO] Search Details",
-      "subtitle": "[KO] The standard for autonomous cloud governance.",
-      "tag": "[KO] Featured",
-      "title": "[KO] Hero"
+  "Metadata": {
+    "Home": {
+      "title": "OmnigCloud",
+      "description": "Enterprise Cloud Solutions"
     },
-    "newsletter": {
-      "button": "[KO] Explore Newsletter",
-      "footer": "[KO] Footer Details",
-      "placeholder": "[KO] Placeholder Details",
-      "subtitle": "[KO] Control your data. Control your future.",
-      "title": "[KO] Newsletter"
+    "Company": {
+      "title": "Company",
+      "description": "Achieve FIPS 140-2 Level 3 compliance with our shielded execution environments."
     },
-    "posts": "[KO] Posts Details"
-  },
-  "Breadcrumb": {
-    "blog": "[KO] Blog Details",
-    "company": "[KO] Company Details",
-    "compliance_maps": "[KO] Compliance Maps",
-    "contact": "[KO] Contact Details",
-    "dashboard": "[KO] Dashboard Details",
-    "docs": "[KO] Documentation",
-    "frameworks": "[KO] Frameworks Details",
-    "home": "[KO] Home Details",
-    "industries": "[KO] Industries Details",
-    "onboarding": "[KO] Onboarding Details",
-    "papers": "[KO] Papers Details",
-    "platform": "[KO] Platform Details",
-    "pricing": "[KO] Pricing Details",
-    "products": "[KO] Products Details",
-    "research": "[KO] Research Details",
-    "resources": "[KO] Resources Details",
-    "services": "[KO] Services Details",
-    "solutions": "[KO] Solutions Details",
-    "whitepaper": "[KO] Whitepaper Details"
-  },
-  "Capabilities": {
-    "cta": "[KO] View All Products",
-    "explore": "[KO] Explore Details",
-    "subtitle": "[KO] Explore the building blocks of our sovereign cloud platform.",
-    "tag": "[KO] Capabilities",
-    "title": "[KO] Core Capabilities"
+    "default": {
+      "title": "Default",
+      "description": "Ensure your data never leaves the jurisdiction you define, regardless of the underlying infrastructure."
+    },
+    "Pricing": {
+      "title": "Pricing",
+      "description": "OmniGCloud provides a unified control plane to enforce data sovereignty across all your cloud providers."
+    },
+    "Products": {
+      "title": "Products",
+      "description": "Automate compliance with real-time drift detection and auto-remediation policies."
+    },
+    "Solutions": {
+      "title": "Solutions",
+      "description": "Automate compliance with real-time drift detection and auto-remediation policies."
+    }
   },
   "Common": {
-    "AboveTheFold": "[KO] Above The Fold",
+    "discovery": "Run Global Discovery",
+    "home": "Return to Operations",
+    "logs": {
+      "scanning": "SCANNING_NETWORK_NODES... [FAILED]",
+      "resolving": "RESOLVING_ROUTE_COORD: 40.7128 N, 74.0060 W [UNDEFINED]",
+      "correcting": "INITIATING_SELF_CORRECTION..."
+    },
+    "loading": "Loading...",
+    "error": "An error occurred",
+    "AboveTheFold": "Above The Fold",
     "Header": {
-      "menu_accessibility_label": "[KO] Menu_accessibility_label Details",
+      "menu_accessibility_label": "Menu_accessibility_label Details",
       "nav": {
-        "onboarding": "[KO] Onboarding Details"
+        "onboarding": "Onboarding Details"
       },
-      "title": "[KO] Data Residency Control"
+      "title": "Data Residency Control"
     },
     "Metadata": {
       "default": {
-        "description": "[KO] Ensure your data never leaves the jurisdiction you define, regardless of the underlying infrastructure.",
-        "title": "[KO] Default Title"
+        "description": "Ensure your data never leaves the jurisdiction you define, regardless of the underlying infrastructure.",
+        "title": "Default Title"
       }
     },
     "abstract": {
-      "content": "[KO] Achieve FIPS 140-2 Level 3 compliance with our shielded execution environments.",
-      "title": "[KO] Abstract Title"
+      "content": "Achieve FIPS 140-2 Level 3 compliance with our shielded execution environments.",
+      "title": "Abstract Title"
     },
-    "acceptance": "[KO] Acceptance Details",
-    "acceptanceText": "[KO] Acceptance Text",
-    "accessControls": "[KO] Access Controls",
-    "accountData": "[KO] Account Data",
-    "accountDataText": "[KO] Account Data Text",
-    "active": "[KO] Active Details",
-    "advancedDescription": "[KO] Advanced Description",
-    "advancedSecurity": "[KO] Advanced Security",
+    "acceptance": "Acceptance Details",
+    "acceptanceText": "Acceptance Text",
+    "accessControls": "Access Controls",
+    "accountData": "Account Data",
+    "accountDataText": "Account Data Text",
+    "active": "Active Details",
+    "advancedDescription": "Advanced Description",
+    "advancedSecurity": "Advanced Security",
     "architecture": {
       "control_plane": {
-        "content": "[KO] Decouple your business logic from vendor-specific APIs and regain full control of your digital estate.",
-        "title": "[KO] Control_plane Title"
+        "content": "Decouple your business logic from vendor-specific APIs and regain full control of your digital estate.",
+        "title": "Control_plane Title"
       },
       "decision_engine": {
-        "content": "[KO] OmniGCloud provides a unified control plane to enforce data sovereignty across all your cloud providers.",
-        "title": "[KO] Decision_engine Title"
+        "content": "OmniGCloud provides a unified control plane to enforce data sovereignty across all your cloud providers.",
+        "title": "Decision_engine Title"
       },
-      "p1": "[KO] Monitor real-time infrastructure drift.",
+      "p1": "Monitor real-time infrastructure drift.",
       "state_sync": {
-        "content": "[KO] Automate compliance with real-time drift detection and auto-remediation policies.",
-        "title": "[KO] State_sync Title"
+        "content": "Automate compliance with real-time drift detection and auto-remediation policies.",
+        "title": "State_sync Title"
       },
-      "title": "[KO] Architecture Title"
+      "title": "Architecture Title"
     },
     "aso": {
-      "p1": "[KO] Generate audit-ready compliance reports.",
+      "p1": "Generate audit-ready compliance reports.",
       "principles": {
         "automation": {
-          "content": "[KO] OmniGCloud provides a unified control plane to enforce data sovereignty across all your cloud providers.",
-          "title": "[KO] Automation Title"
+          "content": "OmniGCloud provides a unified control plane to enforce data sovereignty across all your cloud providers.",
+          "title": "Automation Title"
         },
         "neutrality": {
-          "content": "[KO] OmniGCloud provides a unified control plane to enforce data sovereignty across all your cloud providers.",
-          "title": "[KO] Neutrality Title"
+          "content": "OmniGCloud provides a unified control plane to enforce data sovereignty across all your cloud providers.",
+          "title": "Neutrality Title"
         },
         "observability": {
-          "content": "[KO] OmniGCloud provides a unified control plane to enforce data sovereignty across all your cloud providers.",
-          "title": "[KO] Observability Title"
+          "content": "OmniGCloud provides a unified control plane to enforce data sovereignty across all your cloud providers.",
+          "title": "Observability Title"
         },
         "sovereignty": {
-          "content": "[KO] OmniGCloud provides a unified control plane to enforce data sovereignty across all your cloud providers.",
-          "title": "[KO] Sovereignty Title"
+          "content": "OmniGCloud provides a unified control plane to enforce data sovereignty across all your cloud providers.",
+          "title": "Sovereignty Title"
         },
-        "title": "[KO] Principles Title"
+        "title": "Principles Title"
       },
-      "title": "[KO] Aso Title"
+      "title": "Aso Title"
     },
-    "audit": "[KO] Audit Details",
-    "auditText": "[KO] Audit Text",
-    "auth1": "[KO] Auth1 Details",
-    "auth2": "[KO] Auth2 Details",
-    "auth3": "[KO] Auth3 Details",
-    "authentication": "[KO] Authentication Details",
-    "authenticationText": "[KO] Authentication Text",
-    "author": "[KO] Author Details",
-    "author_label": "[KO] Author_label Details",
-    "authorization": "[KO] Authorization Details",
-    "authz1": "[KO] Authz1 Details",
-    "authz2": "[KO] Authz2 Details",
-    "authz3": "[KO] Authz3 Details",
-    "backups": "[KO] Backups Details",
-    "backupsText": "[KO] Backups Text",
-    "badge": "[KO] Badge Details",
+    "audit": "Audit Details",
+    "auditText": "Audit Text",
+    "auth1": "Auth1 Details",
+    "auth2": "Auth2 Details",
+    "auth3": "Auth3 Details",
+    "authentication": "Authentication Details",
+    "authenticationText": "Authentication Text",
+    "author": "Author Details",
+    "author_label": "Author_label Details",
+    "authorization": "Authorization Details",
+    "authz1": "Authz1 Details",
+    "authz2": "Authz2 Details",
+    "authz3": "Authz3 Details",
+    "backups": "Backups Details",
+    "backupsText": "Backups Text",
+    "badge": "Badge Details",
     "banner": {
-      "cta": "자세히 보기",
-      "description": "[KO] Seamlessly orchestrate workloads across AWS, Azure, and Google Cloud with strict governance boundaries.",
-      "title": "[KO] Banner Title"
+      "cta": "Learn More",
+      "description": "Seamlessly orchestrate workloads across AWS, Azure, and Google Cloud with strict governance boundaries.",
+      "title": "Banner Title"
     },
-    "callbackUrl": "[KO] Callback Url",
+    "callbackUrl": "Callback Url",
     "cards": {
       "api": {
-        "cta": "자세히 보기",
-        "description": "[KO] OmniGCloud provides a unified control plane to enforce data sovereignty across all your cloud providers.",
-        "exhibit": "[KO] Exhibit Details",
-        "title": "[KO] Api Title"
+        "cta": "Learn More",
+        "description": "OmniGCloud provides a unified control plane to enforce data sovereignty across all your cloud providers.",
+        "exhibit": "Exhibit Details",
+        "title": "Api Title"
       },
       "architecture": {
-        "cta": "자세히 보기",
-        "description": "[KO] Ensure your data never leaves the jurisdiction you define, regardless of the underlying infrastructure.",
-        "exhibit": "[KO] Exhibit Details",
-        "title": "[KO] Architecture Title"
+        "cta": "Learn More",
+        "description": "Ensure your data never leaves the jurisdiction you define, regardless of the underlying infrastructure.",
+        "exhibit": "Exhibit Details",
+        "title": "Architecture Title"
       },
       "guide": {
-        "cta": "자세히 보기",
-        "description": "[KO] Seamlessly orchestrate workloads across AWS, Azure, and Google Cloud with strict governance boundaries.",
-        "exhibit": "[KO] Exhibit Details",
-        "title": "[KO] Guide Title"
+        "cta": "Learn More",
+        "description": "Seamlessly orchestrate workloads across AWS, Azure, and Google Cloud with strict governance boundaries.",
+        "exhibit": "Exhibit Details",
+        "title": "Guide Title"
       },
       "whitepaper": {
-        "cta": "자세히 보기",
-        "description": "[KO] Achieve FIPS 140-2 Level 3 compliance with our shielded execution environments.",
-        "exhibit": "[KO] Exhibit Details",
-        "title": "[KO] Whitepaper Title"
+        "cta": "Learn More",
+        "description": "Achieve FIPS 140-2 Level 3 compliance with our shielded execution environments.",
+        "exhibit": "Exhibit Details",
+        "title": "Whitepaper Title"
       }
     },
-    "challenges": "[KO] Challenges Details",
-    "changes": "[KO] Changes Details",
-    "changesText": "[KO] Changes Text",
-    "classification": "[KO] Classification Details",
-    "clientId": "[KO] Client Id",
-    "commitment": "[KO] Commitment Details",
-    "commitmentText": "[KO] Commitment Text",
+    "challenges": "Challenges Details",
+    "changes": "Changes Details",
+    "changesText": "Changes Text",
+    "classification": "Classification Details",
+    "clientId": "Client Id",
+    "commitment": "Commitment Details",
+    "commitmentText": "Commitment Text",
     "conclusion": {
-      "p1": "[KO] Monitor real-time infrastructure drift.",
-      "p2": "[KO] Enforce auto-remediation policies.",
-      "title": "[KO] Conclusion Title"
+      "p1": "Monitor real-time infrastructure drift.",
+      "p2": "Enforce auto-remediation policies.",
+      "title": "Conclusion Title"
     },
-    "contact": "[KO] Contact Details",
-    "contactSecurity": "[KO] Contact Security",
-    "contactText": "[KO] Contact Text",
-    "content": "[KO] Automate compliance with real-time drift detection and auto-remediation policies.",
-    "cookies": "[KO] Cookies Details",
-    "cookiesText": "[KO] Cookies Text",
+    "contact": "Contact Details",
+    "contactSecurity": "Contact Security",
+    "contactText": "Contact Text",
+    "content": "Automate compliance with real-time drift detection and auto-remediation policies.",
+    "cookies": "Cookies Details",
+    "cookiesText": "Cookies Text",
     "cta": {
-      "button": "[KO] Button Details",
-      "subtitle": "[KO] Empowering the next generation of regulated enterprise.",
-      "title": "[KO] Cta Title"
+      "button": "Button Details",
+      "subtitle": "Empowering the next generation of regulated enterprise.",
+      "title": "Cta Title"
     },
-    "dataCollection": "[KO] Data Collection",
-    "dataCollectionText": "[KO] Data Collection Text",
-    "dataHandling": "[KO] Data Handling",
-    "dataOwnership": "[KO] Data Ownership",
-    "dataOwnershipText": "[KO] Data Ownership Text",
-    "dataProtection": "[KO] Data Protection",
-    "dataProtectionText": "[KO] Data Protection Text",
-    "dataResidency": "[KO] Data Residency",
-    "dataResidencyText": "[KO] Data Residency Text",
-    "dataRetention": "[KO] Data Retention",
-    "dataRetentionText": "[KO] Data Retention Text",
-    "date": "[KO] Date Details",
-    "date_label": "[KO] Date_label Details",
+    "dataCollection": "Data Collection",
+    "dataCollectionText": "Data Collection Text",
+    "dataHandling": "Data Handling",
+    "dataOwnership": "Data Ownership",
+    "dataOwnershipText": "Data Ownership Text",
+    "dataProtection": "Data Protection",
+    "dataProtectionText": "Data Protection Text",
+    "dataResidency": "Data Residency",
+    "dataResidencyText": "Data Residency Text",
+    "dataRetention": "Data Retention",
+    "dataRetentionText": "Data Retention Text",
+    "date": "Date Details",
+    "date_label": "Date_label Details",
     "decision_framework": {
       "components": {
         "adaptation": {
-          "content": "[KO] Automate compliance with real-time drift detection and auto-remediation policies.",
-          "title": "[KO] Adaptation Title"
+          "content": "Automate compliance with real-time drift detection and auto-remediation policies.",
+          "title": "Adaptation Title"
         },
         "guardrails": {
-          "content": "[KO] Decouple your business logic from vendor-specific APIs and regain full control of your digital estate.",
-          "title": "[KO] Guardrails Title"
+          "content": "Decouple your business logic from vendor-specific APIs and regain full control of your digital estate.",
+          "title": "Guardrails Title"
         },
         "intent_mapping": {
-          "content": "[KO] Seamlessly orchestrate workloads across AWS, Azure, and Google Cloud with strict governance boundaries.",
-          "title": "[KO] Intent_mapping Title"
+          "content": "Seamlessly orchestrate workloads across AWS, Azure, and Google Cloud with strict governance boundaries.",
+          "title": "Intent_mapping Title"
         }
       },
-      "p1": "[KO] Generate audit-ready compliance reports.",
-      "title": "[KO] Decision_framework Title"
+      "p1": "Generate audit-ready compliance reports.",
+      "title": "Decision_framework Title"
     },
-    "description": "[KO] Achieve FIPS 140-2 Level 3 compliance with our shielded execution environments.",
+    "description": "Achieve FIPS 140-2 Level 3 compliance with our shielded execution environments.",
     "differentiation": {
-      "non_replicability": "[KO] Non_replicability Details",
-      "p1": "[KO] Define your governance intent.",
-      "title": "[KO] Differentiation Title"
+      "non_replicability": "Non_replicability Details",
+      "p1": "Define your governance intent.",
+      "title": "Differentiation Title"
     },
-    "disabled": "[KO] Disabled Details",
-    "disclaimer": "[KO] Disclaimer Details",
-    "disclaimerText": "[KO] Disclaimer Text",
-    "disclosureIntro": "[KO] Disclosure Intro",
+    "disabled": "Disabled Details",
+    "disclaimer": "Disclaimer Details",
+    "disclaimerText": "Disclaimer Text",
+    "disclosureIntro": "Disclosure Intro",
     "eb1a": {
-      "executive_summary_title": "[KO] Executive_summary_title Details",
-      "importance": "[KO] Importance Details",
-      "importance_label": "[KO] Importance_label Details",
-      "originality": "[KO] Originality Details",
-      "originality_label": "[KO] Originality_label Details",
-      "p1": "[KO] Define your governance intent.",
-      "summary_content": "[KO] Summary_content Details",
-      "title": "[KO] Eb1a Title"
+      "executive_summary_title": "Executive_summary_title Details",
+      "importance": "Importance Details",
+      "importance_label": "Importance_label Details",
+      "originality": "Originality Details",
+      "originality_label": "Originality_label Details",
+      "p1": "Define your governance intent.",
+      "summary_content": "Summary_content Details",
+      "title": "Eb1a Title"
     },
     "email": {
-      "support": "[KO] Support Details"
+      "support": "Support Details"
     },
-    "enabled": "[KO] Enabled Details",
-    "encryption": "[KO] Encryption Details",
-    "encryption1": "[KO] Encryption1 Details",
-    "encryption2": "[KO] Encryption2 Details",
-    "encryption3": "[KO] Encryption3 Details",
-    "encryptionText": "[KO] Encryption Text",
-    "error": "[KO] An error occurred",
+    "enabled": "Enabled Details",
+    "encryption": "Encryption Details",
+    "encryption1": "Encryption1 Details",
+    "encryption2": "Encryption2 Details",
+    "encryption3": "Encryption3 Details",
+    "encryptionText": "Encryption Text",
     "execution_flow": {
-      "p1": "[KO] Define your governance intent.",
+      "p1": "Define your governance intent.",
       "steps": {
-        "s1": "[KO] Generate audit-ready compliance reports.",
-        "s2": "[KO] Define your governance intent.",
-        "s3": "[KO] Deploy the control plane agent.",
-        "s4": "[KO] Monitor real-time infrastructure drift.",
-        "s5": "[KO] Enforce auto-remediation policies."
+        "s1": "Generate audit-ready compliance reports.",
+        "s2": "Define your governance intent.",
+        "s3": "Deploy the control plane agent.",
+        "s4": "Monitor real-time infrastructure drift.",
+        "s5": "Enforce auto-remediation policies."
       },
-      "title": "[KO] Execution_flow Title"
+      "title": "Execution_flow Title"
     },
     "faq": {
       "q1": {
-        "a": "[KO] A",
-        "q": "[KO] Q"
+        "a": "A",
+        "q": "Q"
       },
       "q2": {
-        "a": "[KO] A",
-        "q": "[KO] Q"
+        "a": "A",
+        "q": "Q"
       },
       "q3": {
-        "a": "[KO] A",
-        "q": "[KO] Q"
+        "a": "A",
+        "q": "Q"
       }
     },
     "feasibility": {
-      "p1": "[KO] Generate audit-ready compliance reports.",
+      "p1": "Generate audit-ready compliance reports.",
       "sectors": {
         "finance": {
-          "impact": "[KO] Impact Details",
-          "title": "[KO] Finance Title"
+          "impact": "Impact Details",
+          "title": "Finance Title"
         },
         "government": {
-          "impact": "[KO] Impact Details",
-          "title": "[KO] Government Title"
+          "impact": "Impact Details",
+          "title": "Government Title"
         },
         "healthcare": {
-          "impact": "[KO] Impact Details",
-          "title": "[KO] Healthcare Title"
+          "impact": "Impact Details",
+          "title": "Healthcare Title"
         },
         "telecom": {
-          "impact": "[KO] Impact Details",
-          "title": "[KO] Telecom Title"
+          "impact": "Impact Details",
+          "title": "Telecom Title"
         }
       },
-      "title": "[KO] Feasibility Title"
+      "title": "Feasibility Title"
     },
-    "footer": "[KO] Footer Details",
-    "gdpr": "[KO] Gdpr Details",
-    "gdprText": "[KO] Gdpr Text",
-    "governingLaw": "[KO] Governing Law",
-    "governingLawText": "[KO] Governing Law Text",
+    "footer": "Footer Details",
+    "gdpr": "Gdpr Details",
+    "gdprText": "Gdpr Text",
+    "governingLaw": "Governing Law",
+    "governingLawText": "Governing Law Text",
     "hero": {
-      "badge": "[KO] Badge Details",
-      "description": "[KO] Automate compliance with real-time drift detection and auto-remediation policies.",
-      "search": "[KO] Search Details",
-      "subtitle": "[KO] The standard for autonomous cloud governance.",
-      "tag": "[KO] HERO",
-      "title": "[KO] Hero Title"
+      "badge": "Badge Details",
+      "description": "Automate compliance with real-time drift detection and auto-remediation policies.",
+      "search": "Search Details",
+      "subtitle": "The standard for autonomous cloud governance.",
+      "tag": "HERO",
+      "title": "Hero Title"
     },
     "impact": {
-      "business_value": "[KO] Business_value Details",
+      "business_value": "Business_value Details",
       "metrics": {
-        "cost": "[KO] Cost Details",
-        "cost_label": "[KO] Cost_label Details",
-        "efficiency": "[KO] Efficiency Details",
-        "efficiency_label": "[KO] Efficiency_label Details",
-        "security": "[KO] Security Details",
-        "security_label": "[KO] Security_label Details"
+        "cost": "Cost Details",
+        "cost_label": "Cost_label Details",
+        "efficiency": "Efficiency Details",
+        "efficiency_label": "Efficiency_label Details",
+        "security": "Security Details",
+        "security_label": "Security_label Details"
       },
-      "p1": "[KO] Deploy the control plane agent.",
-      "title": "[KO] Impact Title"
+      "p1": "Deploy the control plane agent.",
+      "title": "Impact Title"
     },
-    "inProgress": "[KO] In Progress",
-    "incidentResponse": "[KO] Incident Response",
-    "incidentResponseText": "[KO] Incident Response Text",
-    "infra1": "[KO] Define your governance intent.",
-    "infra2": "[KO] Define your governance intent.",
-    "infrastructure": "[KO] Infrastructure Details",
-    "infrastructureData": "[KO] Infrastructure Data",
-    "infrastructureDataText": "[KO] Infrastructure Data Text",
+    "inProgress": "In Progress",
+    "incidentResponse": "Incident Response",
+    "incidentResponseText": "Incident Response Text",
+    "infra1": "Define your governance intent.",
+    "infra2": "Define your governance intent.",
+    "infrastructure": "Infrastructure Details",
+    "infrastructureData": "Infrastructure Data",
+    "infrastructureDataText": "Infrastructure Data Text",
     "introduction": {
-      "p1": "[KO] Deploy the control plane agent.",
-      "p2": "[KO] Enforce auto-remediation policies.",
-      "p3": "[KO] Define your governance intent.",
-      "title": "[KO] Introduction Title"
+      "p1": "Deploy the control plane agent.",
+      "p2": "Enforce auto-remediation policies.",
+      "p3": "Define your governance intent.",
+      "title": "Introduction Title"
     },
-    "iso27001": "[KO] Iso27001 Details",
-    "iso27001Text": "[KO] Iso27001 Text",
-    "lastUpdated": "[KO] Last Updated",
+    "iso27001": "Iso27001 Details",
+    "iso27001Text": "Iso27001 Text",
+    "lastUpdated": "Last Updated",
     "lifecycle": {
-      "resilience": "[KO] Resilience Details",
-      "title": "[KO] Lifecycle Title"
+      "resilience": "Resilience Details",
+      "title": "Lifecycle Title"
     },
     "limitations": {
-      "p1": "[KO] Enforce auto-remediation policies.",
-      "p2": "[KO] Monitor real-time infrastructure drift.",
-      "title": "[KO] Limitations Title"
+      "p1": "Enforce auto-remediation policies.",
+      "p2": "Monitor real-time infrastructure drift.",
+      "title": "Limitations Title"
     },
-    "loading": "[KO] Loading...",
-    "location": "[KO] Location Details",
-    "logicMeshStatus": "[KO] Logic Mesh Status",
+    "location": "Location Details",
+    "logicMeshStatus": "Logic Mesh Status",
     "meta": {
-      "description": "[KO] Decouple your business logic from vendor-specific APIs and regain full control of your digital estate.",
-      "title": "[KO] Meta Title"
+      "description": "Decouple your business logic from vendor-specific APIs and regain full control of your digital estate.",
+      "title": "Meta Title"
     },
-    "monitor1": "[KO] Monitor1 Details",
-    "monitor2": "[KO] Monitor2 Details",
-    "monitoring": "[KO] Monitoring Details",
+    "monitor1": "Monitor1 Details",
+    "monitor2": "Monitor2 Details",
+    "monitoring": "Monitoring Details",
     "newsletter": {
-      "button": "[KO] Button Details",
-      "footer": "[KO] Footer Details",
-      "placeholder": "[KO] Placeholder Details",
-      "subtitle": "[KO] Control your data. Control your future.",
-      "title": "[KO] Newsletter Title"
+      "button": "Button Details",
+      "footer": "Footer Details",
+      "placeholder": "Placeholder Details",
+      "subtitle": "Control your data. Control your future.",
+      "title": "Newsletter Title"
     },
-    "operational": "[KO] Operational Details",
-    "operationalText": "[KO] Operational Text",
+    "operational": "Operational Details",
+    "operationalText": "Operational Text",
     "opportunity": {
-      "content": "[KO] OmniGCloud provides a unified control plane to enforce data sovereignty across all your cloud providers.",
-      "title": "[KO] Opportunity Title"
+      "content": "OmniGCloud provides a unified control plane to enforce data sovereignty across all your cloud providers.",
+      "title": "Opportunity Title"
     },
-    "outboundEmail": "[KO] Outbound Email",
-    "pgpKey": "[KO] Pgp Key",
-    "planned": "[KO] Planned Details",
+    "outboundEmail": "Outbound Email",
+    "pgpKey": "Pgp Key",
+    "planned": "Planned Details",
     "plans": {
-      "month": "[KO] Month Details",
-      "popular": "[KO] Popular Details"
+      "month": "Month Details",
+      "popular": "Popular Details"
     },
     "problem": {
       "compliance": {
-        "content": "[KO] Automate compliance with real-time drift detection and auto-remediation policies.",
-        "scenario": "[KO] Scenario Details",
-        "title": "[KO] Compliance Title"
+        "content": "Automate compliance with real-time drift detection and auto-remediation policies.",
+        "scenario": "Scenario Details",
+        "title": "Compliance Title"
       },
       "metrics": {
-        "compliance_aso": "[KO] Compliance_aso Details",
-        "compliance_label": "[KO] Compliance_label Details",
-        "mttr_aso": "[KO] Mttr_aso Details",
-        "mttr_aso_label": "[KO] Mttr_aso_label Details",
-        "mttr_manual": "[KO] Mttr_manual Details",
-        "mttr_manual_label": "[KO] Mttr_manual_label Details",
-        "opex_label": "[KO] Opex_label Details",
-        "opex_savings": "[KO] Opex_savings Details"
+        "compliance_aso": "Compliance_aso Details",
+        "compliance_label": "Compliance_label Details",
+        "mttr_aso": "Mttr_aso Details",
+        "mttr_aso_label": "Mttr_aso_label Details",
+        "mttr_manual": "Mttr_manual Details",
+        "mttr_manual_label": "Mttr_manual_label Details",
+        "opex_label": "Opex_label Details",
+        "opex_savings": "Opex_savings Details"
       },
       "operational": {
-        "content": "[KO] Decouple your business logic from vendor-specific APIs and regain full control of your digital estate.",
-        "scenario": "[KO] Scenario Details",
-        "title": "[KO] Operational Title"
+        "content": "Decouple your business logic from vendor-specific APIs and regain full control of your digital estate.",
+        "scenario": "Scenario Details",
+        "title": "Operational Title"
       },
-      "p1": "[KO] Define your governance intent.",
-      "title": "[KO] Problem Title",
+      "p1": "Define your governance intent.",
+      "title": "Problem Title",
       "vendor_lock": {
-        "content": "[KO] Achieve FIPS 140-2 Level 3 compliance with our shielded execution environments.",
-        "scenario": "[KO] Scenario Details",
-        "title": "[KO] Vendor_lock Title"
+        "content": "Achieve FIPS 140-2 Level 3 compliance with our shielded execution environments.",
+        "scenario": "Scenario Details",
+        "title": "Vendor_lock Title"
       }
     },
-    "protection1": "[KO] Protection1 Details",
-    "protection2": "[KO] Protection2 Details",
-    "protection3": "[KO] Protection3 Details",
-    "protection4": "[KO] Protection4 Details",
+    "protection1": "Protection1 Details",
+    "protection2": "Protection2 Details",
+    "protection3": "Protection3 Details",
+    "protection4": "Protection4 Details",
     "references": {
-      "title": "[KO] References Title"
+      "title": "References Title"
     },
-    "reportingProcess": "[KO] Reporting Process",
-    "requestSaml": "[KO] Request Saml",
-    "response1": "[KO] Response1 Details",
-    "response2": "[KO] Response2 Details",
-    "response3": "[KO] Response3 Details",
-    "response4": "[KO] Response4 Details",
-    "responseProcess": "[KO] Response Process",
-    "responsibility1": "[KO] Responsibility1 Details",
-    "responsibility2": "[KO] Responsibility2 Details",
-    "responsibility3": "[KO] Responsibility3 Details",
-    "responsibleDisclosure": "[KO] Responsible Disclosure",
-    "retention": "[KO] Retention Details",
-    "right1": "[KO] Right1 Details",
-    "right2": "[KO] Right2 Details",
-    "right3": "[KO] Right3 Details",
-    "right4": "[KO] Right4 Details",
-    "role": "[KO] Role Details",
-    "scope": "[KO] Scope Details",
-    "scope1": "[KO] Scope1 Details",
-    "scope2": "[KO] Scope2 Details",
-    "scope3": "[KO] Scope3 Details",
-    "scope4": "[KO] Scope4 Details",
-    "securityEmail": "[KO] Security Email",
-    "securityPractices": "[KO] Security Practices",
-    "service1": "[KO] Service1 Details",
-    "service2": "[KO] Service2 Details",
-    "service3": "[KO] Service3 Details",
-    "service4": "[KO] Service4 Details",
-    "services": "[KO] Services Details",
-    "servicesText": "[KO] Services Text",
+    "reportingProcess": "Reporting Process",
+    "requestSaml": "Request Saml",
+    "response1": "Response1 Details",
+    "response2": "Response2 Details",
+    "response3": "Response3 Details",
+    "response4": "Response4 Details",
+    "responseProcess": "Response Process",
+    "responsibility1": "Responsibility1 Details",
+    "responsibility2": "Responsibility2 Details",
+    "responsibility3": "Responsibility3 Details",
+    "responsibleDisclosure": "Responsible Disclosure",
+    "retention": "Retention Details",
+    "right1": "Right1 Details",
+    "right2": "Right2 Details",
+    "right3": "Right3 Details",
+    "right4": "Right4 Details",
+    "role": "Role Details",
+    "scope": "Scope Details",
+    "scope1": "Scope1 Details",
+    "scope2": "Scope2 Details",
+    "scope3": "Scope3 Details",
+    "scope4": "Scope4 Details",
+    "securityEmail": "Security Email",
+    "securityPractices": "Security Practices",
+    "service1": "Service1 Details",
+    "service2": "Service2 Details",
+    "service3": "Service3 Details",
+    "service4": "Service4 Details",
+    "services": "Services Details",
+    "servicesText": "Services Text",
     "sidebar": {
-      "blueprints": "[KO] Blueprints Details",
-      "documentation": "[KO] Documentation Details",
+      "blueprints": "Blueprints Details",
+      "documentation": "Documentation Details",
       "links": {
-        "architecture": "[KO] Architecture Details",
-        "introduction": "[KO] Introduction Details",
-        "security": "[KO] Security Details",
-        "whitepaper": "[KO] Whitepaper Details"
+        "architecture": "Architecture Details",
+        "introduction": "Introduction Details",
+        "security": "Security Details",
+        "whitepaper": "Whitepaper Details"
       }
     },
-    "soc2": "[KO] Soc2 Details",
-    "soc2Text": "[KO] Soc2 Text",
-    "solution": "[KO] Solution Details",
-    "ssoConfiguration": "[KO] Sso Configuration",
-    "step1": "[KO] Enforce auto-remediation policies.",
-    "step2": "[KO] Generate audit-ready compliance reports.",
-    "step3": "[KO] Deploy the control plane agent.",
-    "step4": "[KO] Define your governance intent.",
-    "subtitle": "[KO] Security, compliance, and velocity in one platform.",
-    "tenantId": "[KO] Tenant Id",
-    "termination": "[KO] Termination Details",
-    "terminationText": "[KO] Termination Text",
-    "thirdParty": "[KO] Third Party",
-    "thirdPartyText": "[KO] Third Party Text",
-    "title": "[KO] Multi-Cloud Compliance",
-    "transparency": "[KO] Transparency Details",
-    "transparencyText": "[KO] Transparency Text",
+    "soc2": "Soc2 Details",
+    "soc2Text": "Soc2 Text",
+    "solution": "Solution Details",
+    "ssoConfiguration": "Sso Configuration",
+    "step1": "Enforce auto-remediation policies.",
+    "step2": "Generate audit-ready compliance reports.",
+    "step3": "Deploy the control plane agent.",
+    "step4": "Define your governance intent.",
+    "subtitle": "Security, compliance, and velocity in one platform.",
+    "tenantId": "Tenant Id",
+    "termination": "Termination Details",
+    "terminationText": "Termination Text",
+    "thirdParty": "Third Party",
+    "thirdPartyText": "Third Party Text",
+    "title": "Multi-Cloud Compliance",
+    "transparency": "Transparency Details",
+    "transparencyText": "Transparency Text",
     "trust": {
       "neutrality": {
-        "desc": "[KO] OmniGCloud provides a unified control plane to enforce data sovereignty across all your cloud providers.",
-        "title": "[KO] Neutrality Title"
+        "desc": "OmniGCloud provides a unified control plane to enforce data sovereignty across all your cloud providers.",
+        "title": "Neutrality Title"
       },
       "residency": {
-        "desc": "[KO] Decouple your business logic from vendor-specific APIs and regain full control of your digital estate.",
-        "title": "[KO] Residency Title"
+        "desc": "Decouple your business logic from vendor-specific APIs and regain full control of your digital estate.",
+        "title": "Residency Title"
       },
-      "subtitle": "[KO] Empowering the next generation of regulated enterprise.",
-      "title": "[KO] Trust Title"
+      "subtitle": "Empowering the next generation of regulated enterprise.",
+      "title": "Trust Title"
     },
-    "usageData": "[KO] Usage Data",
-    "usageDataText": "[KO] Usage Data Text",
-    "userResponsibilities": "[KO] User Responsibilities",
-    "userResponsibilitiesText": "[KO] User Responsibilities Text",
-    "version": "[KO] Version Details",
-    "version_label": "[KO] Version_label Details",
+    "usageData": "Usage Data",
+    "usageDataText": "Usage Data Text",
+    "userResponsibilities": "User Responsibilities",
+    "userResponsibilitiesText": "User Responsibilities Text",
+    "version": "Version Details",
+    "version_label": "Version_label Details",
     "vision": {
-      "content": "[KO] Ensure your data never leaves the jurisdiction you define, regardless of the underlying infrastructure.",
-      "title": "[KO] Vision Title"
+      "content": "Ensure your data never leaves the jurisdiction you define, regardless of the underlying infrastructure.",
+      "title": "Vision Title"
     },
-    "welcome": "[KO] Welcome Details",
-    "yourRights": "[KO] Your Rights",
-    "yourRightsText": "[KO] Your Rights Text"
+    "welcome": "Welcome Details",
+    "yourRights": "Your Rights",
+    "yourRightsText": "Your Rights Text"
   },
-  "Community": {
-    "badge": "[KO] New",
-    "cli": {
-      "cmd": "[KO] Cmd Details",
-      "title": "[KO] Cli"
+  "Header": {
+    "nav": {
+      "dashboard": "Dashboard Details",
+      "products": "Products Details",
+      "solutions": "Solutions Details",
+      "docs": "Documentation",
+      "pricing": "Pricing Details",
+      "company": "Company Details",
+      "performance": "Performance Details",
+      "telemetry": "Telemetry Details",
+      "pillars": "Core Products",
+      "advanced": "Advanced Features",
+      "industries": "Industries Details",
+      "useCases": "Use Cases",
+      "documentation": "Documentation Details",
+      "community": "Community Details",
+      "tiers": "Pricing Tiers",
+      "analysis": "Analysis & Value",
+      "trust_compliance": "Trust & Compliance",
+      "organization": "Organization Details",
+      "contact_us": "Contact Us",
+      "dashboard_links": {
+        "executive": "Executive Dashboard",
+        "roi": "ROI Analysis",
+        "cost": "Cost Optimization",
+        "uptime": "Uptime Monitoring",
+        "security": "Security Overview",
+        "technical": "Technical Metrics",
+        "resources": "Resource Utilization",
+        "deployment": "Deployment Status",
+        "scaling": "Auto-Scaling",
+        "error": "Error Tracking"
+      },
+      "products_links": {
+        "playground": "Sovereign Playground",
+        "workflows": "G-Workflows",
+        "guard": "Governance Guard",
+        "knowledge": "Sovereign Knowledge",
+        "deploy": "Obsidian Deploy",
+        "nexus": "Cross-Cloud Nexus"
+      },
+      "solutions_links": {
+        "financial": "Financial Services",
+        "insurance": "Insurance Details",
+        "telecom": "Telecommunications",
+        "healthcare": "Healthcare Details",
+        "logistics": "Logistics Details",
+        "finance_mod": "Financial Modernization",
+        "health_mod": "Healthcare Compliance",
+        "gov_trust": "Government Trust"
+      },
+      "docs_links": {
+        "tech_docs": "Technical Documentation",
+        "patterns": "Architecture Patterns",
+        "api": "API Reference",
+        "visual_library": "Visual Library",
+        "newsroom": "Newsroom Details",
+        "open_source": "Open Source"
+      },
+      "pricing_links": {
+        "developer": "Developer Details",
+        "professional": "Professional Details",
+        "business": "Business Details",
+        "sovereign": "Sovereign Details",
+        "savings_analysis": "Savings Analysis",
+        "value_economy": "Value Economy",
+        "visual_architecture": "Visual Architecture",
+        "compliance": "Compliance Details",
+        "trust": "Trust Details",
+        "faq": "FAQ Details"
+      },
+      "company_links": {
+        "about": "About Us",
+        "leadership": "Leadership Details",
+        "operations": "Global Operations",
+        "newsroom": "Newsroom Details",
+        "investors": "Investors Details",
+        "executive": "Executive Office",
+        "contact": "Contact Details",
+        "global_hq": "Global HQ"
+      },
+      "trust_links": {
+        "compliance_maps": "Compliance Maps"
+      },
+      "research": "Research Details",
+      "onboarding": "Onboarding Details",
+      "contactSales": "Contact Sales",
+      "bodyIntro": "Body Intro",
+      "copyLabel": "Copy Label",
+      "copyToast": "Copy Toast",
+      "fallbackInstruction": "Fallback Instruction",
+      "fallbackTitle": "Fallback Title",
+      "rateLimitMessage": "Rate Limit Message",
+      "subject": "Subject Details",
+      "whatsappLabel": "Whatsapp Label"
     },
-    "contribute": "[KO] Contribute Details",
-    "join": "[KO] Join Details",
-    "maintainers": {
-      "desc": "[KO] Automate compliance with real-time drift detection and auto-remediation policies.",
-      "title": "[KO] Maintainers"
-    },
-    "plugins": {
-      "desc": "[KO] Decouple your business logic from vendor-specific APIs and regain full control of your digital estate.",
-      "title": "[KO] Plugins"
-    },
-    "subtitle": "[KO] Security, compliance, and velocity in one platform."
+    "title": "OmniGCloud",
+    "menu_accessibility_label": "Toggle Menu",
+    "latency_badge": "Global Latency"
   },
-  "Company": {
-    "email": {
-      "support": "[KO] Support Details"
+  "Footer": {
+    "company": {
+      "_value": "Company",
+      "label": "Company",
+      "about": "About Us",
+      "leadership": "Leadership Details",
+      "contact": "Contact Details"
     },
-    "location": "[KO] Location Details"
+    "platform": {
+      "label": "Platform",
+      "control": "Control Plane",
+      "policy": "Policy Engine",
+      "iac": "Infrastructure as Code",
+      "obs": "Observability"
+    },
+    "services": {
+      "label": "Services"
+    },
+    "resources": {
+      "label": "Resources",
+      "docs": "Documentation",
+      "visual_library": "Visual Library"
+    },
+    "trust": {
+      "security": "Security Details",
+      "privacy": "Privacy Details"
+    },
+    "tagline": "The Sovereign Cloud for the AI Era",
+    "directory": "Directory Details",
+    "status": "System Status",
+    "copyright": "© 2026 OmniGCloud Inc. All rights reserved.",
+    "footerText": "OmniGCloud - Enforce Sovereignty."
   },
-  "Compliance": {
-    "accessControls": "[KO] Access Controls",
-    "active": "[KO] Active Details",
-    "audit": "[KO] Audit Details",
-    "auditText": "[KO] Audit Text",
-    "auth1": "[KO] Auth1 Details",
-    "auth2": "[KO] Auth2 Details",
-    "auth3": "[KO] Auth3 Details",
-    "authentication": "[KO] Authentication Details",
-    "authorization": "[KO] Authorization Details",
-    "authz1": "[KO] Authz1 Details",
-    "authz2": "[KO] Authz2 Details",
-    "authz3": "[KO] Authz3 Details",
-    "backups": "[KO] Backups Details",
-    "backupsText": "[KO] Backups Text",
-    "dataHandling": "[KO] Data Handling",
-    "dataResidency": "[KO] Data Residency",
-    "dataResidencyText": "[KO] Data Residency Text",
-    "encryption": "[KO] Encryption Details",
-    "encryption1": "[KO] Encryption1 Details",
-    "encryption2": "[KO] Encryption2 Details",
-    "encryption3": "[KO] Encryption3 Details",
-    "gdpr": "[KO] Gdpr Details",
-    "gdprText": "[KO] Gdpr Text",
-    "inProgress": "[KO] In Progress",
-    "incidentResponse": "[KO] Incident Response",
-    "incidentResponseText": "[KO] Incident Response Text",
-    "iso27001": "[KO] Iso27001 Details",
-    "iso27001Text": "[KO] Iso27001 Text",
-    "operational": "[KO] Operational Details",
-    "operationalText": "[KO] Operational Text",
-    "planned": "[KO] Planned Details",
-    "response1": "[KO] Response1 Details",
-    "response2": "[KO] Response2 Details",
-    "response3": "[KO] Response3 Details",
-    "response4": "[KO] Response4 Details",
-    "responseProcess": "[KO] Response Process",
-    "retention": "[KO] Retention Details",
-    "soc2": "[KO] Soc2 Details",
-    "soc2Text": "[KO] Soc2 Text",
-    "subtitle": "[KO] Security, compliance, and velocity in one platform.",
-    "title": "[KO] Compliance",
-    "transparency": "[KO] Transparency Details",
-    "transparencyText": "[KO] Transparency Text"
+  "Whitepaper": {
+    "aso": {
+      "principles": {
+        "neutrality": {
+          "title": "Neutrality Principle",
+          "content": "OmniGCloud provides a unified control plane to enforce data sovereignty across all your cloud providers."
+        },
+        "automation": {
+          "title": "Automation Principle",
+          "content": "OmniGCloud provides a unified control plane to enforce data sovereignty across all your cloud providers."
+        },
+        "sovereignty": {
+          "title": "Sovereignty Principle",
+          "content": "OmniGCloud provides a unified control plane to enforce data sovereignty across all your cloud providers."
+        },
+        "observability": {
+          "title": "Observability Principle",
+          "content": "OmniGCloud provides a unified control plane to enforce data sovereignty across all your cloud providers."
+        },
+        "title": "Principles"
+      },
+      "title": "Aso",
+      "p1": "Generate audit-ready compliance reports."
+    },
+    "decision_framework": {
+      "components": {
+        "guardrails": {
+          "title": "Guardrails",
+          "content": "Decouple your business logic from vendor-specific APIs and regain full control of your digital estate."
+        },
+        "adaptation": {
+          "title": "Adaptation",
+          "content": "Automate compliance with real-time drift detection and auto-remediation policies."
+        },
+        "intent_mapping": {
+          "title": "Intent_mapping",
+          "content": "Seamlessly orchestrate workloads across AWS, Azure, and Google Cloud with strict governance boundaries."
+        }
+      },
+      "title": "Decision_framework",
+      "p1": "Generate audit-ready compliance reports."
+    },
+    "feasibility": {
+      "sectors": {
+        "finance": {
+          "title": "Finance",
+          "impact": "Impact Details"
+        },
+        "healthcare": {
+          "title": "Healthcare",
+          "impact": "Impact Details"
+        },
+        "telecom": {
+          "title": "Telecom",
+          "impact": "Impact Details"
+        },
+        "government": {
+          "title": "Government",
+          "impact": "Impact Details"
+        }
+      },
+      "title": "Feasibility",
+      "p1": "Generate audit-ready compliance reports."
+    },
+    "problem": {
+      "vendor_lock": {
+        "title": "Vendor_lock",
+        "content": "Achieve FIPS 140-2 Level 3 compliance with our shielded execution environments.",
+        "scenario": "Scenario Details"
+      },
+      "compliance": {
+        "title": "Compliance",
+        "content": "Automate compliance with real-time drift detection and auto-remediation policies.",
+        "scenario": "Scenario Details"
+      },
+      "operational": {
+        "title": "Operational",
+        "content": "Decouple your business logic from vendor-specific APIs and regain full control of your digital estate.",
+        "scenario": "Scenario Details"
+      },
+      "metrics": {
+        "mttr_manual_label": "Mttr_manual_label Details",
+        "mttr_manual": "Mttr_manual Details",
+        "mttr_aso_label": "Mttr_aso_label Details",
+        "mttr_aso": "Mttr_aso Details",
+        "compliance_label": "Compliance_label Details",
+        "compliance_aso": "Compliance_aso Details",
+        "opex_label": "Opex_label Details",
+        "opex_savings": "Opex_savings Details"
+      },
+      "title": "Problem",
+      "p1": "Define your governance intent."
+    },
+    "architecture": {
+      "control_plane": {
+        "title": "Control_plane",
+        "content": "Decouple your business logic from vendor-specific APIs and regain full control of your digital estate."
+      },
+      "decision_engine": {
+        "title": "Decision_engine",
+        "content": "OmniGCloud provides a unified control plane to enforce data sovereignty across all your cloud providers."
+      },
+      "state_sync": {
+        "title": "State_sync",
+        "content": "Automate compliance with real-time drift detection and auto-remediation policies."
+      },
+      "title": "Architecture",
+      "p1": "Monitor real-time infrastructure drift."
+    },
+    "execution_flow": {
+      "steps": {
+        "s1": "Generate audit-ready compliance reports.",
+        "s2": "Define your governance intent.",
+        "s3": "Deploy the control plane agent.",
+        "s4": "Monitor real-time infrastructure drift.",
+        "s5": "Enforce auto-remediation policies."
+      },
+      "title": "Execution_flow",
+      "p1": "Define your governance intent."
+    },
+    "impact": {
+      "metrics": {
+        "efficiency_label": "Efficiency_label Details",
+        "efficiency": "Efficiency Details",
+        "cost_label": "Cost_label Details",
+        "cost": "Cost Details",
+        "security_label": "Security_label Details",
+        "security": "Security Details"
+      },
+      "title": "Impact",
+      "p1": "Deploy the control plane agent.",
+      "business_value": "Business_value Details"
+    },
+    "meta": {
+      "title": "Meta",
+      "description": "Decouple your business logic from vendor-specific APIs and regain full control of your digital estate."
+    },
+    "abstract": {
+      "title": "Abstract",
+      "content": "Achieve FIPS 140-2 Level 3 compliance with our shielded execution environments."
+    },
+    "introduction": {
+      "title": "Introduction",
+      "p1": "Deploy the control plane agent.",
+      "p2": "Enforce auto-remediation policies.",
+      "p3": "Define your governance intent."
+    },
+    "limitations": {
+      "title": "Limitations",
+      "p1": "Enforce auto-remediation policies.",
+      "p2": "Monitor real-time infrastructure drift."
+    },
+    "lifecycle": {
+      "title": "Lifecycle",
+      "resilience": "Resilience Details"
+    },
+    "differentiation": {
+      "title": "Differentiation",
+      "p1": "Define your governance intent.",
+      "non_replicability": "Non_replicability Details",
+      "comparison": "Comparison Details"
+    },
+    "eb1a": {
+      "title": "Eb1a",
+      "p1": "Define your governance intent.",
+      "originality_label": "Originality_label Details",
+      "originality": "Originality Details",
+      "importance_label": "Importance_label Details",
+      "importance": "Importance Details",
+      "executive_summary_title": "Executive_summary_title Details",
+      "summary_content": "Summary_content Details"
+    },
+    "conclusion": {
+      "title": "Conclusion",
+      "p1": "Monitor real-time infrastructure drift.",
+      "p2": "Enforce auto-remediation policies."
+    },
+    "references": {
+      "title": "References"
+    },
+    "title": "Whitepaper",
+    "classification": "Classification Details",
+    "author_label": "Author_label Details",
+    "author": "Author Details",
+    "version_label": "Version_label Details",
+    "version": "Version Details",
+    "date_label": "Date_label Details",
+    "date": "Date Details",
+    "footer": "Footer Details"
   },
-  "ContactSales": {
-    "bodyIntro": "[KO] Body Intro",
-    "copyLabel": "[KO] Copy Label",
-    "copyToast": "[KO] Copy Toast",
-    "fallbackInstruction": "[KO] Fallback Instruction",
-    "fallbackTitle": "[KO] Fallback Title",
-    "rateLimitMessage": "[KO] Rate Limit Message",
-    "subject": "[KO] Subject Details",
-    "whatsappLabel": "[KO] Whatsapp Label"
+  "HomeSections": {
+    "Pricing": {
+      "core": {
+        "features": {
+          "nodes": "Up to 50 Nodes",
+          "drift": "Standard Drift Detection",
+          "sla": "99.9% SLA",
+          "support": "Email Support"
+        },
+        "badge": "STARTER",
+        "price": "Free",
+        "unit": "/month",
+        "desc": "Perfect for testing sovereignty patterns.",
+        "cta": "Start Building"
+      },
+      "enterprise": {
+        "features": {
+          "nodes": "Unlimited Nodes",
+          "remediation": "Auto-Remediation",
+          "finops": "FinOps Dashboard",
+          "rbac": "Advanced RBAC",
+          "support": "24/7 Dedicated Support"
+        },
+        "popular": "MOST POPULAR",
+        "badge": "PROFESSIONAL",
+        "price": "Custom",
+        "desc": "Full autonomous control for regulated workloads.",
+        "cta": "Contact Sales"
+      },
+      "federal": {
+        "features": {
+          "onprem": "Air-Gapped Support",
+          "byok": "Bring Your Own Key",
+          "security": "FIPS 140-2 Level 3",
+          "audit": "Continuous Audit"
+        },
+        "badge": "FEDERAL",
+        "price": "Restricted",
+        "desc": "For government and defense sectors.",
+        "cta": "Verify Clearance"
+      },
+      "title": "Transparent Pricing",
+      "subtitle": "No hidden costs. Pay for the control plane, bring your own cloud."
+    },
+    "Cta": {
+      "title": "Start your sovereign journey",
+      "subtitle": "Join the revolution today.",
+      "primary": "Get Started",
+      "secondary": "Contact Sales",
+      "disclaimer": "Free tier available."
+    }
   },
-  "CookieConsent": {
-    "accept": "[KO] Accept Essential",
-    "close": "[KO] Close Details",
-    "decline": "[KO] Decline Optional",
-    "message": "[KO] We use strictly necessary cookies to ensure platform security and data sovereignty compliance. Usage analytics are optional.",
-    "policyLink": "[KO] Sovereignty Policy",
-    "sovereignNotice": "[KO] Data resides in your jurisdiction",
-    "title": "[KO] Privacy & Sovereignty"
-  },
-  "Dashboard": {
-    "Charts": {
-      "aiAnalysis": "[KO] AI Analysis",
-      "apiLatency": "[KO] API Latency (ms)",
-      "apiLatencyDistribution": "[KO] API Latency Distribution",
-      "complianceScores": "[TODO_TRANSLATE] Compliance Framework Scores",
-      "errorRateTrend": "[TODO_TRANSLATE] Error Rate Trend (%)",
-      "featureAdoption": "[TODO_TRANSLATE] Feature Adoption Rate (%)",
-      "historicalTrend": "[TODO_TRANSLATE] Historical Trend",
-      "hourlyRequestVolume": "[TODO_TRANSLATE] Hourly Request Volume",
-      "latencyTrend": "[KO] API latency trend",
-      "liveView": "[TODO_TRANSLATE] Live View",
-      "monthlyCost": "[TODO_TRANSLATE] Monthly Cost Comparison ($)",
-      "multiCloudDistribution": "[TODO_TRANSLATE] Multi-Cloud Distribution (%)",
-      "realtimePerf": "[KO] Real-time system performance metrics",
-      "systemLogs": "[KO] SYSTEM_LOGS.tail",
-      "uptime30Day": "[TODO_TRANSLATE] 30-Day Uptime (%)"
-    },
-    "CommandCenter": {
-      "costDesc": "[TODO_TRANSLATE] Monthly infrastructure optimization",
-      "costTitle": "[TODO_TRANSLATE] Cost Savings Trend",
-      "deploymentTitle": "[TODO_TRANSLATE] Deployment Activity",
-      "growing": "[TODO_TRANSLATE] GROWING",
-      "responseTimeDesc": "[TODO_TRANSLATE] API latency trend",
-      "responseTimeTitle": "[TODO_TRANSLATE] Response Time",
-      "roiDesc": "[TODO_TRANSLATE] Real-time return on investment",
-      "roiTitle": "[TODO_TRANSLATE] ROI Performance",
-      "savings": "[TODO_TRANSLATE] $45K SAVED THIS MONTH • 275% YOY INCREASE",
-      "securityDesc": "[TODO_TRANSLATE] Compliance & threat protection",
-      "securityTitle": "[TODO_TRANSLATE] Security Posture",
-      "title": "[TODO_TRANSLATE] LIVE COMMAND & CONTROL",
-      "uptimeDesc": "[TODO_TRANSLATE] 30-day availability",
-      "uptimeTitle": "[TODO_TRANSLATE] Platform Uptime"
-    },
-    "Distribution": {
-      "badges": {
-        "audited": "[TODO_TRANSLATE] AUDITED",
-        "balanced": "[TODO_TRANSLATE] BALANCED",
-        "global": "[TODO_TRANSLATE] GLOBAL",
-        "optimal": "[TODO_TRANSLATE] OPTIMAL",
-        "tracked": "[TODO_TRANSLATE] TRACKED"
-      },
-      "complianceDesc": "[TODO_TRANSLATE] Current compliance status across all frameworks",
-      "complianceTitle": "[TODO_TRANSLATE] Compliance Framework Scores",
-      "featureDesc": "[TODO_TRANSLATE] Active usage of key platform features",
-      "featureTitle": "[TODO_TRANSLATE] Feature Adoption Rate",
-      "multiCloudDesc": "[TODO_TRANSLATE] Active workloads across cloud providers",
-      "multiCloudTitle": "[TODO_TRANSLATE] Multi-Cloud Workload Distribution",
-      "performanceDesc": "[TODO_TRANSLATE] Real-time system performance metrics",
-      "performanceTitle": "[TODO_TRANSLATE] Performance Scorecard",
-      "regionalDesc": "[TODO_TRANSLATE] Workload distribution across global regions",
-      "regionalTitle": "[TODO_TRANSLATE] Regional Deployment Distribution"
-    },
-    "Graphs": {
-      "cacheHitRate": "[TODO_TRANSLATE] CACHE HIT RATE",
-      "costPerTransaction": "[TODO_TRANSLATE] COST PER TRANSACTION",
-      "cpuEfficiency": "[TODO_TRANSLATE] CPU Efficiency",
-      "errorRate": "[TODO_TRANSLATE] ERROR RATE",
-      "hits": "[TODO_TRANSLATE] Hits",
-      "memoryEfficiency": "[TODO_TRANSLATE] Memory Efficiency",
-      "misses": "[TODO_TRANSLATE] Misses",
-      "networkEfficiency": "[TODO_TRANSLATE] Network Efficiency",
-      "roi": "[TODO_TRANSLATE] ROI",
-      "securityScore": "[TODO_TRANSLATE] Security Score",
-      "totalInvocations": "[TODO_TRANSLATE] TOTAL INVOCATIONS",
-      "uptime": "[TODO_TRANSLATE] UPTIME"
-    },
-    "Metrics": {
-      "cost": {
-        "analysis": "[TODO_TRANSLATE] Multi-cloud routing is actively preventing vendor lock-in premiums by shifting non-critical workloads to OCI and Azure spot instances.",
-        "pageSubtitle": "[TODO_TRANSLATE] Multi-cloud cost optimization",
-        "pageTitle": "[TODO_TRANSLATE] Cost Arbitrage",
-        "stats": {
-          "avgNode": "[TODO_TRANSLATE] Avg Cost/Node",
-          "monthly": "[TODO_TRANSLATE] Monthly Saved",
-          "spot": "[TODO_TRANSLATE] Spot Usage",
-          "waste": "[TODO_TRANSLATE] Waste Reduc."
+  "Platform": {
+    "security": {
+      "features": {
+        "fips": {
+          "title": "Fips Feature",
+          "desc": "Decouple your business logic from vendor-specific APIs and regain full control of your digital estate."
         },
-        "subtitle": "[TODO_TRANSLATE] Multi-cloud cost optimization engine",
-        "title": "[TODO_TRANSLATE] Cost Savings"
-      },
-      "deployment": {
-        "analysis": "[TODO_TRANSLATE] CI/CD pipelines are operating at peak velocity with zero regressions detected in staging or production environments today.",
-        "pageSubtitle": "[TODO_TRANSLATE] Weekly deployment frequency",
-        "pageTitle": "[TODO_TRANSLATE] Velocity Metrics",
-        "stats": {
-          "buildTime": "[TODO_TRANSLATE] Build Time",
-          "deploys": "[TODO_TRANSLATE] Deploys/Day",
-          "rollbacks": "[TODO_TRANSLATE] Rollbacks",
-          "success": "[TODO_TRANSLATE] Success Rate"
+        "rbac": {
+          "title": "Rbac Feature",
+          "desc": "Achieve FIPS 140-2 Level 3 compliance with our shielded execution environments."
         },
-        "subtitle": "[TODO_TRANSLATE] Pipeline throughput and failure rate",
-        "title": "[TODO_TRANSLATE] CI/CD Velocity"
-      },
-      "error": {
-        "analysis": "[TODO_TRANSLATE] Self-healing subsystems recovered 2 pods automatically after detecting memory leaks, preventing user-facing errors.",
-        "pageSubtitle": "[TODO_TRANSLATE] Error rate & threat trend",
-        "pageTitle": "[TODO_TRANSLATE] Threat Analysis",
-        "stats": {
-          "5xx": "[TODO_TRANSLATE] 5xx Rates",
-          "anomalies": "[TODO_TRANSLATE] Anomalies",
-          "errorRate": "[TODO_TRANSLATE] Global Error %",
-          "healed": "[TODO_TRANSLATE] Self-Healed"
+        "vpc": {
+          "title": "Vpc Feature",
+          "desc": "OmniGCloud provides a unified control plane to enforce data sovereignty across all your cloud providers."
         },
-        "subtitle": "[TODO_TRANSLATE] System-wide anomaly detection",
-        "title": "[TODO_TRANSLATE] Error & Anomalies"
+        "audit": {
+          "title": "Audit Feature",
+          "desc": "Automate compliance with real-time drift detection and auto-remediation policies."
+        }
       },
-      "executive": {
-        "analysis": "[TODO_TRANSLATE] Overall system health is excellent. Strategic KPIs are trending positively with a significant reduction in operational overhead due to autonomous scaling.",
-        "pageSubtitle": "[TODO_TRANSLATE] Strategic alignment & KPI summary",
-        "pageTitle": "[TODO_TRANSLATE] Executive Overview",
-        "stats": {
-          "activeUsers": "[TODO_TRANSLATE] Active Users",
-          "churn": "[TODO_TRANSLATE] Churn",
-          "mrr": "[TODO_TRANSLATE] MRR",
-          "nps": "[TODO_TRANSLATE] NPS"
-        },
-        "subtitle": "[TODO_TRANSLATE] Top-level business health indicators",
-        "title": "[TODO_TRANSLATE] Strategic Alignment"
-      },
-      "resources": {
-        "analysis": "[TODO_TRANSLATE] Cluster auto-scaling is maintaining optimal bin packing, ensuring resources are utilized efficiently without over-provisioning.",
-        "pageSubtitle": "[TODO_TRANSLATE] Live infrastructure metrics",
-        "pageTitle": "[TODO_TRANSLATE] Resource Telemetry",
-        "stats": {
-          "cpu": "[TODO_TRANSLATE] CPU Usage",
-          "memory": "[TODO_TRANSLATE] Memory",
-          "nodes": "[TODO_TRANSLATE] Node Count",
-          "pods": "[TODO_TRANSLATE] Active Pods"
-        },
-        "subtitle": "[TODO_TRANSLATE] CPU, Memory, and Storage telemetry",
-        "title": "[TODO_TRANSLATE] Cluster Resources"
-      },
-      "roi": {
-        "analysis": "[TODO_TRANSLATE] AI-driven arbitrage has optimised spot instance usage, resulting in a significantly lower TCO compared to on-demand provisioning this quarter.",
-        "pageSubtitle": "[TODO_TRANSLATE] Real-time return on investment",
-        "pageTitle": "[TODO_TRANSLATE] ROI Performance",
-        "stats": {
-          "current": "[TODO_TRANSLATE] Current ROI",
-          "efficiency": "[TODO_TRANSLATE] Efficiency",
-          "projection": "[TODO_TRANSLATE] Projection",
-          "savings": "[TODO_TRANSLATE] Net Savings"
-        },
-        "subtitle": "[TODO_TRANSLATE] Real-time return on investment tracking",
-        "title": "[TODO_TRANSLATE] ROI Performance"
-      },
-      "scaling": {
-        "analysis": "[TODO_TRANSLATE] Predictive scaling preempted traffic spikes in EU-West-1, keeping latency below 50ms during global user wakeup.",
-        "pageSubtitle": "[TODO_TRANSLATE] 24-hour scaling activity",
-        "pageTitle": "[TODO_TRANSLATE] Auto-Scale Events",
-        "stats": {
-          "downs": "[TODO_TRANSLATE] Scale Downs",
-          "nodes": "[TODO_TRANSLATE] Max Nodes",
-          "savings": "[TODO_TRANSLATE] Est. Savings",
-          "ups": "[TODO_TRANSLATE] Scale Ups"
-        },
-        "subtitle": "[TODO_TRANSLATE] Dynamic provisioning log",
-        "title": "[TODO_TRANSLATE] Scaling Activity"
-      },
-      "security": {
-        "analysis": "[TODO_TRANSLATE] Automated compliance guardrails are active. No critical vulnerabilities detected in the latest continuous audit cycle.",
-        "pageSubtitle": "[TODO_TRANSLATE] Security posture & threat protection",
-        "pageTitle": "[TODO_TRANSLATE] Compliance Radar",
-        "stats": {
-          "compliance": "[TODO_TRANSLATE] Compliance",
-          "issues": "[TODO_TRANSLATE] Open Issues",
-          "score": "[TODO_TRANSLATE] Security Score",
-          "threats": "[TODO_TRANSLATE] Threats Blocked"
-        },
-        "subtitle": "[TODO_TRANSLATE] Real-time compliance monitoring",
-        "title": "[TODO_TRANSLATE] Security Posture"
-      },
-      "technical": {
-        "analysis": "[TODO_TRANSLATE] Technical debt reduction sprint is showing results with improved build times and higher test coverage across core microservices.",
-        "pageSubtitle": "[TODO_TRANSLATE] System health & engineering metrics",
-        "pageTitle": "[TODO_TRANSLATE] Technical Operations",
-        "stats": {
-          "buildTime": "[TODO_TRANSLATE] Avg Build",
-          "coverage": "[TODO_TRANSLATE] Test Cov.",
-          "issues": "[TODO_TRANSLATE] Issues",
-          "prs": "[TODO_TRANSLATE] Pull Requests"
-        },
-        "subtitle": "[TODO_TRANSLATE] Engineering velocity & stability",
-        "title": "[TODO_TRANSLATE] Ops Control Plane"
-      },
-      "uptime": {
-        "analysis": "[TODO_TRANSLATE] Global mesh routing automatically bypassed 3 regional carrier outages in the last 24 hours, preserving 100% application uptime.",
-        "pageSubtitle": "[TODO_TRANSLATE] Platform availability and uptime",
-        "pageTitle": "[TODO_TRANSLATE] Global Connectivity",
-        "stats": {
-          "availability": "[TODO_TRANSLATE] Availability",
-          "downtime": "[TODO_TRANSLATE] Downtime",
-          "incidents": "[TODO_TRANSLATE] Incidents",
-          "mttr": "[TODO_TRANSLATE] MTTR"
-        },
-        "subtitle": "[TODO_TRANSLATE] 30-day global availability",
-        "title": "[TODO_TRANSLATE] System Uptime"
-      }
+      "title": "Security",
+      "desc": "Achieve FIPS 140-2 Level 3 compliance with our shielded execution environments.",
+      "cta": "Explore Security",
+      "zerotrust": "Zerotrust Details"
     },
-    "Shell": {
-      "activeAlerts": "[TODO_TRANSLATE] Active Alerts",
-      "activeAssets": "[TODO_TRANSLATE] Active Assets",
-      "cloudSpend": "[TODO_TRANSLATE] Cloud Spend",
-      "nominal": "[TODO_TRANSLATE] All systems nominal",
-      "requiresAttention": "[TODO_TRANSLATE] Requires attention",
-      "revenueImpact": "[TODO_TRANSLATE] Revenue Impact"
-    },
-    "Technical": {
-      "activeNodes": "[TODO_TRANSLATE] Active Nodes",
-      "avg": "[TODO_TRANSLATE] Avg: 7.2k",
-      "dataTransfer": "[TODO_TRANSLATE] Data Transfer",
-      "lastHour": "[TODO_TRANSLATE] Last hour",
-      "latencyDesc": "[TODO_TRANSLATE] Real-time system latency metrics",
-      "latencyTitle": "[TODO_TRANSLATE] Global Latency",
-      "queryDesc": "[TODO_TRANSLATE] Database operations",
-      "queryTitle": "[TODO_TRANSLATE] Query Performance",
-      "requestsSec": "[TODO_TRANSLATE] Requests/sec",
-      "resourceDesc": "[TODO_TRANSLATE] Live infrastructure metrics",
-      "resourceTitle": "[TODO_TRANSLATE] Resource Telemetry",
-      "scalingDesc": "[TODO_TRANSLATE] 24-hour scaling activity",
-      "scalingTitle": "[TODO_TRANSLATE] Auto-Scale Events",
-      "subtitle": "[TODO_TRANSLATE] OMNIGCLOUD_CONTROL_PLANE_v4.2.1",
-      "threatDesc": "[TODO_TRANSLATE] Error rate & threat trend",
-      "threatTitle": "[TODO_TRANSLATE] Threat Analysis",
-      "title": "[TODO_TRANSLATE] TECHNICAL OPERATIONS",
-      "trend": "[TODO_TRANSLATE] +8 (24h)",
-      "velocityDesc": "[TODO_TRANSLATE] Weekly deployment frequency",
-      "velocityTitle": "[TODO_TRANSLATE] Velocity Metrics"
-    },
-    "TimeSeries": {
-      "badges": {
-        "compliant": "[TODO_TRANSLATE] ✓ COMPLIANT",
-        "decreasing": "[TODO_TRANSLATE] DECREASING",
-        "live": "[TODO_TRANSLATE] LIVE",
-        "projected": "[TODO_TRANSLATE] PROJECTED",
-        "realtime": "[TODO_TRANSLATE] REAL-TIME"
+    "comparison": {
+      "rows": {
+        "neutrality": "Neutrality Details",
+        "audits": "Audits Details",
+        "sync": "Sync Details",
+        "refactoring": "Refactoring Details",
+        "encryption": "Encryption Details",
+        "iam": "Iam Details",
+        "arbitrage": "Arbitrage Details"
       },
-      "costDesc": "[TODO_TRANSLATE] Monthly infrastructure costs showing significant savings",
-      "costTitle": "[TODO_TRANSLATE] Cost Comparison: Traditional vs OmniGCloud",
-      "errorDesc": "[TODO_TRANSLATE] 30-day error rate showing improvement over time",
-      "errorTitle": "[TODO_TRANSLATE] Error Rate Trend",
-      "latencyDesc": "[TODO_TRANSLATE] P50, P95, and P99 latency metrics over 24 hours",
-      "latencyTitle": "[TODO_TRANSLATE] API Latency Distribution",
-      "slaDesc": "[TODO_TRANSLATE] Weekly SLA adherence tracking (target: 99.9%)",
-      "slaTitle": "[TODO_TRANSLATE] SLA Compliance",
-      "throughputDesc": "[TODO_TRANSLATE] Hourly request throughput with peak hour detection",
-      "throughputTitle": "[TODO_TRANSLATE] Request Volume"
+      "limited": "Limited Details",
+      "partial": "Partial Details",
+      "title": "Comparison",
+      "subtitle": "Security, compliance, and velocity in one platform.",
+      "capability": "Capability Details",
+      "legacy": "Legacy Details",
+      "sovereign": "Sovereign Details",
+      "footer": "Footer Details"
     },
-    "active": "[KO] Active Details",
-    "badge": "[KO] New",
-    "globalHealth": "[KO] Global Health",
-    "infraSubtitle": "[KO] Global node status and uptime.",
-    "infraTitle": "[KO] Infrastructure Health",
-    "liveSubtitle": "[KO] Real-time system performance metrics.",
-    "liveTitle": "[KO] System Operational Status",
-    "logicMeshStatus": "[KO] Logic Mesh Status",
-    "optimizationTitle": "[KO] Resource Optimization",
-    "roiSubtitle": "[KO] Projected savings and efficiency gains.",
-    "roiTitle": "[KO] Cost & ROI Analysis",
-    "role": "[KO] Role Details",
-    "title": "[KO] Dashboard",
-    "trustTitle": "[KO] Trust Compliance Score",
-    "welcome": "[KO] Welcome Details"
-  },
-  "DemoSection": {
-    "badge": "[KO] New",
-    "discovery": {
-      "code": "[KO] Code Details",
-      "desc": "[KO] Achieve FIPS 140-2 Level 3 compliance with our shielded execution environments.",
-      "title": "[KO] Discovery"
+    "control": {
+      "observability": {
+        "title": "Observability",
+        "desc": "OmniGCloud provides a unified control plane to enforce data sovereignty across all your cloud providers."
+      },
+      "title": "Control",
+      "subtitle": "Security, compliance, and velocity in one platform.",
+      "fleet": "Fleet Details",
+      "healing": "Healing Details",
+      "gitops": "Gitops Details",
+      "audit": "Audit Details"
     },
-    "drift": {
-      "code": "[KO] Code Details",
-      "desc": "[KO] Seamlessly orchestrate workloads across AWS, Azure, and Google Cloud with strict governance boundaries.",
-      "title": "[KO] Drift"
+    "arbitrage": {
+      "tag": "Featured",
+      "title": "Arbitrage",
+      "subtitle": "Security, compliance, and velocity in one platform.",
+      "forecastTitle": "Forecast Title",
+      "forecastDesc": "Forecast Desc",
+      "lockinTitle": "Lockin Title",
+      "lockinDesc": "Lockin Desc",
+      "portabilityTitle": "Portability Title",
+      "portabilityDesc": "Portability Desc",
+      "switchTitle": "Switch Title",
+      "switchDesc": "Switch Desc",
+      "eb1aTag": "Eb1a Tag",
+      "eb1aDesc": "Eb1a Desc",
+      "auditor": "Auditor Details",
+      "auditorTitle": "Auditor Title"
     },
-    "iac": {
-      "code": "[KO] Code Details",
-      "desc": "[KO] Automate compliance with real-time drift detection and auto-remediation policies.",
-      "title": "[KO] Iac"
+    "integrations": {
+      "title": "Integrations",
+      "subtitle": "Control your data. Control your future.",
+      "infra": "Infra Details",
+      "obs": "Obs Details",
+      "delivery": "Delivery Details",
+      "identity": "Identity Details"
     },
-    "subtitle": "[KO] The standard for autonomous cloud governance.",
-    "sync": {
-      "code": "[KO] Code Details",
-      "desc": "[KO] OmniGCloud provides a unified control plane to enforce data sovereignty across all your cloud providers.",
-      "title": "[KO] Sync"
+    "hero": {
+      "title": "Hero",
+      "subtitle": "The standard for autonomous cloud governance.",
+      "ctaPrimary": "Cta Primary",
+      "ctaSecondary": "Cta Secondary"
+    },
+    "core": {
+      "title": "Core",
+      "desc": "Seamlessly orchestrate workloads across AWS, Azure, and Google Cloud with strict governance boundaries."
+    },
+    "stack": {
+      "api": "Api Details",
+      "shielded": "Shielded Details",
+      "logic": "Logic Details",
+      "active": "Active Details",
+      "cluster": "Cluster Details",
+      "scaling": "Scaling Details",
+      "db": "Db",
+      "verified": "Verified Details"
     }
   },
   "Docs": {
-    "banner": {
-      "cta": "[KO] Explore Banner",
-      "description": "[KO] Seamlessly orchestrate workloads across AWS, Azure, and Google Cloud with strict governance boundaries.",
-      "title": "[KO] Banner"
+    "sidebar": {
+      "links": {
+        "introduction": "Introduction Details",
+        "architecture": "Architecture Details",
+        "whitepaper": "Whitepaper Details",
+        "security": "Security Details"
+      },
+      "documentation": "Documentation Details",
+      "blueprints": "Blueprints Details",
+      "blueprint_links": "Blueprint_links Details"
     },
     "cards": {
-      "_value": "[KO] cards",
-      "api": {
-        "cta": "[KO] Explore Api",
-        "description": "[KO] OmniGCloud provides a unified control plane to enforce data sovereignty across all your cloud providers.",
-        "exhibit": "[KO] Exhibit Details",
-        "title": "[KO] Api"
-      },
       "architecture": {
-        "cta": "[KO] Explore Architecture",
-        "description": "[KO] Ensure your data never leaves the jurisdiction you define, regardless of the underlying infrastructure.",
-        "exhibit": "[KO] Exhibit Details",
-        "title": "[KO] Architecture"
-      },
-      "guide": {
-        "cta": "[KO] Explore Guide",
-        "description": "[KO] Seamlessly orchestrate workloads across AWS, Azure, and Google Cloud with strict governance boundaries.",
-        "exhibit": "[KO] Exhibit Details",
-        "title": "[KO] Guide"
+        "title": "Architecture",
+        "exhibit": "Exhibit Details",
+        "description": "Ensure your data never leaves the jurisdiction you define, regardless of the underlying infrastructure.",
+        "cta": "Explore Architecture"
       },
       "whitepaper": {
-        "cta": "[KO] Explore Whitepaper",
-        "description": "[KO] Achieve FIPS 140-2 Level 3 compliance with our shielded execution environments.",
-        "exhibit": "[KO] Exhibit Details",
-        "title": "[KO] Whitepaper"
-      }
-    },
-    "hero": {
-      "badge": "[KO] New",
-      "description": "[KO] Automate compliance with real-time drift detection and auto-remediation policies.",
-      "title": "[KO] Hero"
+        "title": "Whitepaper",
+        "exhibit": "Exhibit Details",
+        "description": "Achieve FIPS 140-2 Level 3 compliance with our shielded execution environments.",
+        "cta": "Explore Whitepaper"
+      },
+      "guide": {
+        "title": "Guide",
+        "exhibit": "Exhibit Details",
+        "description": "Seamlessly orchestrate workloads across AWS, Azure, and Google Cloud with strict governance boundaries.",
+        "cta": "Explore Guide"
+      },
+      "api": {
+        "title": "Api",
+        "exhibit": "Exhibit Details",
+        "description": "OmniGCloud provides a unified control plane to enforce data sovereignty across all your cloud providers.",
+        "cta": "Explore Api"
+      },
+      "_value": "cards"
     },
     "meta": {
-      "description": "[KO] Decouple your business logic from vendor-specific APIs and regain full control of your digital estate.",
-      "title": "[KO] Meta"
+      "title": "Meta",
+      "description": "Decouple your business logic from vendor-specific APIs and regain full control of your digital estate."
     },
-    "sidebar": {
-      "blueprint_links": "[KO] Blueprint_links Details",
-      "blueprints": "[KO] Blueprints Details",
-      "documentation": "[KO] Documentation Details",
-      "links": {
-        "architecture": "[KO] Architecture Details",
-        "introduction": "[KO] Introduction Details",
-        "security": "[KO] Security Details",
-        "whitepaper": "[KO] Whitepaper Details"
+    "hero": {
+      "title": "Hero",
+      "badge": "New",
+      "description": "Automate compliance with real-time drift detection and auto-remediation policies."
+    },
+    "banner": {
+      "title": "Banner",
+      "description": "Seamlessly orchestrate workloads across AWS, Azure, and Google Cloud with strict governance boundaries.",
+      "cta": "Explore Banner"
+    }
+  },
+  "Pricing": {
+    "faq": {
+      "q1": {
+        "q": "Q",
+        "a": "A"
+      },
+      "q2": {
+        "q": "Q",
+        "a": "A"
+      },
+      "q3": {
+        "q": "Q",
+        "a": "A"
       }
+    },
+    "trust": {
+      "residency": {
+        "title": "Residency",
+        "desc": "Decouple your business logic from vendor-specific APIs and regain full control of your digital estate."
+      },
+      "neutrality": {
+        "title": "Neutrality",
+        "desc": "OmniGCloud provides a unified control plane to enforce data sovereignty across all your cloud providers."
+      },
+      "title": "Trust",
+      "subtitle": "Empowering the next generation of regulated enterprise."
+    },
+    "hero": {
+      "subtitle": "The standard for autonomous cloud governance.",
+      "tag": "Featured",
+      "title": "Hero"
+    },
+    "plans": {
+      "popular": "Popular Details",
+      "month": "Month Details",
+      "_value": "plans"
+    },
+    "cta": {
+      "title": "Cta",
+      "subtitle": "Empowering the next generation of regulated enterprise.",
+      "button": "Explore Cta"
     }
   },
-  "Ecosystem": {
-    "ai": {
-      "desc": "[KO] Achieve FIPS 140-2 Level 3 compliance with our shielded execution environments.",
-      "link": "[KO] Link Details",
-      "status": "[KO] Status Details",
-      "title": "[KO] Ai"
+  "Services": {
+    "Stack": {
+      "terraform": {
+        "title": "Terraform",
+        "desc": "Ensure your data never leaves the jurisdiction you define, regardless of the underlying infrastructure."
+      },
+      "ansible": {
+        "title": "Ansible",
+        "desc": "Decouple your business logic from vendor-specific APIs and regain full control of your digital estate."
+      },
+      "badge": "New",
+      "title": "Stack",
+      "subtitle": "Empowering the next generation of regulated enterprise."
     },
-    "badge": "[KO] New",
-    "governance": {
-      "desc": "[KO] Decouple your business logic from vendor-specific APIs and regain full control of your digital estate.",
-      "link": "[KO] Link Details",
-      "status": "[KO] Status Details",
-      "title": "[KO] Governance"
+    "Migration": {
+      "azure": {
+        "title": "Azure",
+        "desc": "OmniGCloud provides a unified control plane to enforce data sovereignty across all your cloud providers."
+      },
+      "ocp": {
+        "title": "Ocp",
+        "desc": "Achieve FIPS 140-2 Level 3 compliance with our shielded execution environments."
+      },
+      "provisioning": {
+        "title": "Provisioning",
+        "desc": "Seamlessly orchestrate workloads across AWS, Azure, and Google Cloud with strict governance boundaries."
+      },
+      "drift": {
+        "title": "Drift",
+        "desc": "Seamlessly orchestrate workloads across AWS, Azure, and Google Cloud with strict governance boundaries."
+      },
+      "title": "Migration",
+      "subtitle": "The standard for autonomous cloud governance."
     },
-    "mesh": {
-      "desc": "[KO] Automate compliance with real-time drift detection and auto-remediation policies.",
-      "link": "[KO] Link Details",
-      "status": "[KO] Status Details",
-      "title": "[KO] Mesh"
+    "DataAI": {
+      "sovereignty": {
+        "title": "Sovereignty",
+        "desc": "Automate compliance with real-time drift detection and auto-remediation policies."
+      },
+      "fabric": {
+        "title": "Fabric",
+        "desc": "Seamlessly orchestrate workloads across AWS, Azure, and Google Cloud with strict governance boundaries."
+      },
+      "search": {
+        "title": "Search",
+        "desc": "Decouple your business logic from vendor-specific APIs and regain full control of your digital estate."
+      },
+      "analytics": {
+        "title": "Analytics",
+        "desc": "Decouple your business logic from vendor-specific APIs and regain full control of your digital estate."
+      },
+      "title": "Data A I",
+      "subtitle": "The standard for autonomous cloud governance.",
+      "uptime": "Uptime Details"
     },
-    "subtitle": "[KO] Empowering the next generation of regulated enterprise.",
-    "title": "[KO] Ecosystem",
-    "vault": {
-      "desc": "[KO] Achieve FIPS 140-2 Level 3 compliance with our shielded execution environments.",
-      "link": "[KO] Link Details",
-      "status": "[KO] Status Details",
-      "title": "[KO] Vault"
+    "Operations": {
+      "sre": {
+        "title": "Sre",
+        "desc": "Decouple your business logic from vendor-specific APIs and regain full control of your digital estate."
+      },
+      "finops": {
+        "title": "Finops",
+        "desc": "OmniGCloud provides a unified control plane to enforce data sovereignty across all your cloud providers."
+      },
+      "healing": {
+        "title": "Healing",
+        "desc": "Decouple your business logic from vendor-specific APIs and regain full control of your digital estate."
+      },
+      "audit": {
+        "title": "Audit",
+        "desc": "Automate compliance with real-time drift detection and auto-remediation policies."
+      },
+      "title": "Operations",
+      "subtitle": "Empowering the next generation of regulated enterprise."
+    },
+    "Hero": {
+      "badge": "New",
+      "cta": "Explore Hero",
+      "velocity": "Velocity Details",
+      "errors": "Errors Details"
     }
   },
-  "Engagement": {
-    "primary": "[KO] Primary Details",
-    "secondary": "[KO] Secondary Details",
-    "subtitle": "[KO] Security, compliance, and velocity in one platform.",
-    "title": "[KO] Engagement"
+  "Blog": {
+    "hero": {
+      "tag": "Featured",
+      "title": "Hero",
+      "subtitle": "The standard for autonomous cloud governance.",
+      "search": "Search Details"
+    },
+    "newsletter": {
+      "title": "Newsletter",
+      "subtitle": "Control your data. Control your future.",
+      "placeholder": "Placeholder Details",
+      "button": "Explore Newsletter",
+      "footer": "Footer Details"
+    },
+    "posts": "Posts Details"
+  },
+  "Investors": {
+    "hero": {
+      "tag": "Featured",
+      "title": "Hero",
+      "subtitle": "The standard for autonomous cloud governance."
+    },
+    "opportunity": {
+      "title": "Opportunity",
+      "content": "OmniGCloud provides a unified control plane to enforce data sovereignty across all your cloud providers.",
+      "metrics": "Metrics Details"
+    },
+    "vision": {
+      "title": "Vision",
+      "content": "Ensure your data never leaves the jurisdiction you define, regardless of the underlying infrastructure."
+    }
+  },
+  "Company": {
+    "email": {
+      "support": "Support Details"
+    },
+    "location": "Location Details"
+  },
+  "Industries": {
+    "cta": {
+      "title": "Cta",
+      "subtitle": "Empowering the next generation of regulated enterprise.",
+      "button": "Explore Cta"
+    },
+    "badge": "New",
+    "title": "Industries",
+    "subtitle": "Empowering the next generation of regulated enterprise.",
+    "challenges": "Challenges Details",
+    "solution": "Solution Details"
+  },
+  "Products": {
+    "hero": {
+      "tag": "Platform Products",
+      "title": "A Sovereign Suite",
+      "subtitle": "Everything you need to build, secure, and scale compliant infrastructure."
+    },
+    "playground": {
+      "title": "Sovereign Playground",
+      "shortDesc": "IDE for prototyping cross-cloud infra.",
+      "description": "Achieve FIPS 140-2 Level 3 compliance with our shielded execution environments."
+    },
+    "workflows": {
+      "title": "G-Workflows",
+      "shortDesc": "Visual multi-step orchestration engine.",
+      "description": "Seamlessly orchestrate workloads across AWS, Azure, and Google Cloud with strict governance boundaries."
+    },
+    "guard": {
+      "title": "Governance Guard",
+      "shortDesc": "Real-time compliance auto-remediation.",
+      "description": "Ensure your data never leaves the jurisdiction you define, regardless of the underlying infrastructure."
+    },
+    "knowledge": {
+      "title": "Sovereign Knowledge",
+      "shortDesc": "Secure RAG for regulatory data.",
+      "description": "Automate compliance with real-time drift detection and auto-remediation policies."
+    },
+    "deploy": {
+      "title": "Obsidian Deploy",
+      "shortDesc": "Atomic, immutable production releases.",
+      "description": "Achieve FIPS 140-2 Level 3 compliance with our shielded execution environments."
+    },
+    "nexus": {
+      "title": "Cross-Cloud Nexus",
+      "shortDesc": "Global telemetry and cost arbitrage.",
+      "description": "Achieve FIPS 140-2 Level 3 compliance with our shielded execution environments."
+    },
+    "cta": "Learn More",
+    "explore": "Explore Details",
+    "subtitle": "Empowering the next generation of regulated enterprise.",
+    "tag": "PRODUCTS",
+    "title": "Infrastructure Sovereignty"
+  },
+  "UseCases": {
+    "hero": {
+      "tag": "Proven Solutions",
+      "title": "Use Cases",
+      "subtitle": "Discover how regulated industries use OmniGCloud to achieve sovereignty."
+    }
   },
   "Enterprise": {
-    "approach": {
-      "pillars": [
-        {
-          "title": "Security",
-          "desc": "Enterprise-grade security"
-        },
-        {
-          "title": "Scale",
-          "desc": "Scale to millions"
-        },
-        {
-          "title": "Stability",
-          "desc": "99.999% uptime"
-        }
-      ],
-      "subtitle": "[KO] How we help you scale",
-      "title": "[KO] Enterprise approach"
-    },
     "partnership": {
-      "p1": "[KO] Enforce auto-remediation policies.",
-      "p2": "[KO] Monitor real-time infrastructure drift.",
-      "pillars": "[KO] Pillars Details",
+      "title": "Partnership",
+      "subtitle": "Empowering the next generation of regulated enterprise.",
+      "p1": "Enforce auto-remediation policies.",
+      "p2": "Monitor real-time infrastructure drift.",
+      "pillars": "Pillars Details",
       "steps": [
         {
           "title": "Consultation",
@@ -991,550 +1253,622 @@
           "title": "Support",
           "desc": "We grow with you"
         }
-      ],
-      "subtitle": "[KO] Empowering the next generation of regulated enterprise.",
-      "title": "[KO] Partnership"
+      ]
+    },
+    "approach": {
+      "title": "Enterprise approach",
+      "subtitle": "How we help you scale",
+      "pillars": [
+        {
+          "title": "Security",
+          "desc": "Enterprise-grade security"
+        },
+        {
+          "title": "Scale",
+          "desc": "Scale to millions"
+        },
+        {
+          "title": "Stability",
+          "desc": "99.999% uptime"
+        }
+      ]
     },
     "trust": {
-      "p1": "[KO] We provide the most secure platform.",
-      "p2": "[KO] Used by Fortune 500 companies.",
-      "title": "[KO] Trusted by Enterprises"
+      "title": "Trusted by Enterprises",
+      "p1": "We provide the most secure platform.",
+      "p2": "Used by Fortune 500 companies."
     }
   },
-  "Footer": {
-    "company": {
-      "_value": "[KO] Company",
-      "about": "[KO] About Us",
-      "contact": "[KO] Contact Details",
-      "label": "[KO] Company",
-      "leadership": "[KO] Leadership Details"
+  "Community": {
+    "cli": {
+      "title": "Cli",
+      "cmd": "Cmd Details"
     },
-    "copyright": "[KO] © 2026 OmniGCloud Inc. All rights reserved.",
-    "directory": "[KO] Directory Details",
-    "footerText": "[KO] OmniGCloud - Enforce Sovereignty.",
-    "platform": {
-      "control": "[KO] Control Plane",
-      "iac": "[KO] Infrastructure as Code",
-      "label": "[KO] Platform",
-      "obs": "[KO] Observability",
-      "policy": "[KO] Policy Engine"
+    "plugins": {
+      "title": "Plugins",
+      "desc": "Decouple your business logic from vendor-specific APIs and regain full control of your digital estate."
     },
-    "resources": {
-      "docs": "[KO] Documentation",
-      "label": "[KO] Resources",
-      "visual_library": "[KO] Visual Library"
+    "maintainers": {
+      "title": "Maintainers",
+      "desc": "Automate compliance with real-time drift detection and auto-remediation policies."
     },
-    "services": {
-      "label": "[KO] Services"
-    },
-    "status": "[KO] System Status",
-    "tagline": "[KO] The Sovereign Cloud for the AI Era",
-    "trust": {
-      "privacy": "[KO] Privacy Details",
-      "security": "[KO] Security Details"
-    }
+    "badge": "New",
+    "subtitle": "Security, compliance, and velocity in one platform.",
+    "join": "Join Details",
+    "contribute": "Contribute Details"
   },
-  "Header": {
-    "latency_badge": "[KO] Global Latency",
-    "menu_accessibility_label": "[KO] Toggle Menu",
-    "nav": {
-      "advanced": "[KO] Advanced Features",
-      "analysis": "[KO] Analysis & Value",
-      "bodyIntro": "[KO] Body Intro",
-      "community": "[KO] Community Details",
-      "company": "[KO] Company Details",
-      "company_links": {
-        "about": "[KO] About Us",
-        "contact": "[KO] Contact Details",
-        "executive": "[KO] Executive Office",
-        "global_hq": "[KO] Global HQ",
-        "investors": "[KO] Investors Details",
-        "leadership": "[KO] Leadership Details",
-        "newsroom": "[KO] Newsroom Details",
-        "operations": "[KO] Global Operations"
-      },
-      "contactSales": "[KO] Contact Sales",
-      "contact_us": "[KO] Contact Us",
-      "copyLabel": "[KO] Copy Label",
-      "copyToast": "[KO] Copy Toast",
-      "dashboard": "[KO] Dashboard Details",
-      "dashboard_links": {
-        "cost": "[KO] Cost Optimization",
-        "deployment": "[KO] Deployment Status",
-        "error": "[KO] Error Tracking",
-        "executive": "[KO] Executive Dashboard",
-        "resources": "[KO] Resource Utilization",
-        "roi": "[KO] ROI Analysis",
-        "scaling": "[KO] Auto-Scaling",
-        "security": "[KO] Security Overview",
-        "technical": "[KO] Technical Metrics",
-        "uptime": "[KO] Uptime Monitoring"
-      },
-      "docs": "[KO] Documentation",
-      "docs_links": {
-        "api": "[KO] API Reference",
-        "newsroom": "[KO] Newsroom Details",
-        "open_source": "[KO] Open Source",
-        "patterns": "[KO] Architecture Patterns",
-        "tech_docs": "[KO] Technical Documentation",
-        "visual_library": "[KO] Visual Library"
-      },
-      "documentation": "[KO] Documentation Details",
-      "fallbackInstruction": "[KO] Fallback Instruction",
-      "fallbackTitle": "[KO] Fallback Title",
-      "industries": "[KO] Industries Details",
-      "onboarding": "[KO] Onboarding Details",
-      "organization": "[KO] Organization Details",
-      "performance": "[KO] Performance Details",
-      "pillars": "[KO] Core Products",
-      "pricing": "[KO] Pricing Details",
-      "pricing_links": {
-        "business": "[KO] Business Details",
-        "compliance": "[KO] Compliance Details",
-        "developer": "[KO] Developer Details",
-        "faq": "[KO] FAQ Details",
-        "professional": "[KO] Professional Details",
-        "savings_analysis": "[KO] Savings Analysis",
-        "sovereign": "[KO] Sovereign Details",
-        "trust": "[KO] Trust Details",
-        "value_economy": "[KO] Value Economy",
-        "visual_architecture": "[KO] Visual Architecture"
-      },
-      "products": "[KO] Products Details",
-      "products_links": {
-        "deploy": "[KO] Obsidian Deploy",
-        "guard": "[KO] Governance Guard",
-        "knowledge": "[KO] Sovereign Knowledge",
-        "nexus": "[KO] Cross-Cloud Nexus",
-        "playground": "[KO] Sovereign Playground",
-        "workflows": "[KO] G-Workflows"
-      },
-      "rateLimitMessage": "[KO] Rate Limit Message",
-      "research": "[KO] Research Details",
-      "solutions": "[KO] Solutions Details",
-      "solutions_links": {
-        "finance_mod": "[KO] Financial Modernization",
-        "financial": "[KO] Financial Services",
-        "gov_trust": "[KO] Government Trust",
-        "health_mod": "[KO] Healthcare Compliance",
-        "healthcare": "[KO] Healthcare Details",
-        "insurance": "[KO] Insurance Details",
-        "logistics": "[KO] Logistics Details",
-        "telecom": "[KO] Telecommunications"
-      },
-      "subject": "[KO] Subject Details",
-      "telemetry": "[KO] Telemetry Details",
-      "tiers": "[KO] Pricing Tiers",
-      "trust_compliance": "[KO] Trust & Compliance",
-      "trust_links": {
-        "compliance_maps": "[KO] Compliance Maps"
-      },
-      "useCases": "[KO] Use Cases",
-      "whatsappLabel": "[KO] Whatsapp Label"
+  "DemoSection": {
+    "discovery": {
+      "title": "Discovery",
+      "desc": "Achieve FIPS 140-2 Level 3 compliance with our shielded execution environments.",
+      "code": "Code Details"
     },
-    "title": "OmniGCloud"
+    "iac": {
+      "title": "Iac",
+      "desc": "Automate compliance with real-time drift detection and auto-remediation policies.",
+      "code": "Code Details"
+    },
+    "sync": {
+      "title": "Sync",
+      "desc": "OmniGCloud provides a unified control plane to enforce data sovereignty across all your cloud providers.",
+      "code": "Code Details"
+    },
+    "drift": {
+      "title": "Drift",
+      "desc": "Seamlessly orchestrate workloads across AWS, Azure, and Google Cloud with strict governance boundaries.",
+      "code": "Code Details"
+    },
+    "badge": "New",
+    "subtitle": "The standard for autonomous cloud governance."
+  },
+  "Ecosystem": {
+    "governance": {
+      "title": "Governance",
+      "desc": "Decouple your business logic from vendor-specific APIs and regain full control of your digital estate.",
+      "status": "Status Details",
+      "link": "Link Details"
+    },
+    "mesh": {
+      "title": "Mesh",
+      "desc": "Automate compliance with real-time drift detection and auto-remediation policies.",
+      "status": "Status Details",
+      "link": "Link Details"
+    },
+    "ai": {
+      "title": "Ai",
+      "desc": "Achieve FIPS 140-2 Level 3 compliance with our shielded execution environments.",
+      "status": "Status Details",
+      "link": "Link Details"
+    },
+    "vault": {
+      "title": "Vault",
+      "desc": "Achieve FIPS 140-2 Level 3 compliance with our shielded execution environments.",
+      "status": "Status Details",
+      "link": "Link Details"
+    },
+    "badge": "New",
+    "title": "Ecosystem",
+    "subtitle": "Empowering the next generation of regulated enterprise."
   },
   "Hero": {
-    "badge": "[KO] ENTERPRISE SOVEREIGNTY",
-    "ctaArchitecture": "[KO] Visual Architecture",
-    "ctaPrimary": "[KO] Explore Platform",
-    "ctaWhitepaper": "[KO] Read Whitepaper",
-    "experts": {
-      "count": "[KO] Experts Available"
-    },
     "stats": {
-      "assets": "[KO] Assets Managed",
-      "drift": "[KO] Drift Detected",
-      "nodes": "[KO] Active Nodes"
+      "assets": "Assets Managed",
+      "drift": "Drift Detected",
+      "nodes": "Active Nodes"
     },
-    "subtitle": "[KO] Regain control of your digital estate with the world's first sovereign multi-cloud fabric. Enforce governance logic at the infrastructure level.",
     "systemStatus": {
-      "live": "[KO] System Operational"
+      "live": "System Operational"
     },
-    "title": "[KO] The Autonomous Cloud",
-    "trust": "[KO] TRUSTED BY LEADING REGULATED INDUSTRIES"
-  },
-  "HomeSections": {
-    "Cta": {
-      "disclaimer": "[KO] Free tier available.",
-      "primary": "[KO] Get Started",
-      "secondary": "[KO] Contact Sales",
-      "subtitle": "[KO] Join the revolution today.",
-      "title": "[KO] Start your sovereign journey"
+    "experts": {
+      "count": "Experts Available"
     },
-    "Pricing": {
-      "core": {
-        "badge": "[KO] STARTER",
-        "cta": "[KO] Start Building",
-        "desc": "[KO] Perfect for testing sovereignty patterns.",
-        "features": {
-          "drift": "[KO] Standard Drift Detection",
-          "nodes": "[KO] Up to 50 Nodes",
-          "sla": "[KO] 99.9% SLA",
-          "support": "[KO] Email Support"
-        },
-        "price": "[KO] Free",
-        "unit": "[KO] /month"
-      },
-      "enterprise": {
-        "badge": "[KO] PROFESSIONAL",
-        "cta": "[KO] Contact Sales",
-        "desc": "[KO] Full autonomous control for regulated workloads.",
-        "features": {
-          "finops": "[KO] FinOps Dashboard",
-          "nodes": "[KO] Unlimited Nodes",
-          "rbac": "[KO] Advanced RBAC",
-          "remediation": "[KO] Auto-Remediation",
-          "support": "[KO] 24/7 Dedicated Support"
-        },
-        "popular": "[KO] MOST POPULAR",
-        "price": "[KO] Custom"
-      },
-      "federal": {
-        "badge": "[KO] FEDERAL",
-        "cta": "[KO] Verify Clearance",
-        "desc": "[KO] For government and defense sectors.",
-        "features": {
-          "audit": "[KO] Continuous Audit",
-          "byok": "[KO] Bring Your Own Key",
-          "onprem": "[KO] Air-Gapped Support",
-          "security": "[KO] FIPS 140-2 Level 3"
-        },
-        "price": "[KO] Restricted"
-      },
-      "subtitle": "[KO] No hidden costs. Pay for the control plane, bring your own cloud.",
-      "title": "[KO] Transparent Pricing"
-    }
-  },
-  "Industries": {
-    "badge": "[KO] New",
-    "challenges": "[KO] Challenges Details",
-    "cta": {
-      "button": "[KO] Explore Cta",
-      "subtitle": "[KO] Empowering the next generation of regulated enterprise.",
-      "title": "[KO] Cta"
-    },
-    "solution": "[KO] Solution Details",
-    "subtitle": "[KO] Empowering the next generation of regulated enterprise.",
-    "title": "[KO] Industries"
-  },
-  "Investors": {
-    "hero": {
-      "subtitle": "[KO] The standard for autonomous cloud governance.",
-      "tag": "[KO] Featured",
-      "title": "[KO] Hero"
-    },
-    "opportunity": {
-      "content": "[KO] OmniGCloud provides a unified control plane to enforce data sovereignty across all your cloud providers.",
-      "metrics": "[KO] Metrics Details",
-      "title": "[KO] Opportunity"
-    },
-    "vision": {
-      "content": "[KO] Ensure your data never leaves the jurisdiction you define, regardless of the underlying infrastructure.",
-      "title": "[KO] Vision"
-    }
-  },
-  "Metadata": {
-    "Company": {
-      "description": "[KO] Achieve FIPS 140-2 Level 3 compliance with our shielded execution environments.",
-      "title": "[KO] Company"
-    },
-    "Home": {
-      "description": "[KO] Enterprise Cloud Solutions",
-      "title": "[KO] OmnigCloud"
-    },
-    "Pricing": {
-      "description": "[KO] OmniGCloud provides a unified control plane to enforce data sovereignty across all your cloud providers.",
-      "title": "[KO] Pricing"
-    },
-    "Products": {
-      "description": "[KO] Automate compliance with real-time drift detection and auto-remediation policies.",
-      "title": "[KO] Products"
-    },
-    "Solutions": {
-      "description": "[KO] Automate compliance with real-time drift detection and auto-remediation policies.",
-      "title": "[KO] Solutions"
-    },
-    "default": {
-      "description": "[KO] Ensure your data never leaves the jurisdiction you define, regardless of the underlying infrastructure.",
-      "title": "[KO] Default"
-    }
-  },
-  "Newsroom": {
-    "badge": "[KO] New",
-    "cta": "[KO] Explore Newsroom",
-    "link": "[KO] Link Details",
-    "news": "[KO] News Details",
-    "title": "[KO] Newsroom"
-  },
-  "Platform": {
-    "arbitrage": {
-      "auditor": "[KO] Auditor Details",
-      "auditorTitle": "[KO] Auditor Title",
-      "eb1aDesc": "[KO] Eb1a Desc",
-      "eb1aTag": "[KO] Eb1a Tag",
-      "forecastDesc": "[KO] Forecast Desc",
-      "forecastTitle": "[KO] Forecast Title",
-      "lockinDesc": "[KO] Lockin Desc",
-      "lockinTitle": "[KO] Lockin Title",
-      "portabilityDesc": "[KO] Portability Desc",
-      "portabilityTitle": "[KO] Portability Title",
-      "subtitle": "[KO] Security, compliance, and velocity in one platform.",
-      "switchDesc": "[KO] Switch Desc",
-      "switchTitle": "[KO] Switch Title",
-      "tag": "[KO] Featured",
-      "title": "[KO] Arbitrage"
-    },
-    "comparison": {
-      "capability": "[KO] Capability Details",
-      "footer": "[KO] Footer Details",
-      "legacy": "[KO] Legacy Details",
-      "limited": "[KO] Limited Details",
-      "partial": "[KO] Partial Details",
-      "rows": {
-        "arbitrage": "[KO] Arbitrage Details",
-        "audits": "[KO] Audits Details",
-        "encryption": "[KO] Encryption Details",
-        "iam": "[KO] Iam Details",
-        "neutrality": "[KO] Neutrality Details",
-        "refactoring": "[KO] Refactoring Details",
-        "sync": "[KO] Sync Details"
-      },
-      "sovereign": "[KO] Sovereign Details",
-      "subtitle": "[KO] Security, compliance, and velocity in one platform.",
-      "title": "[KO] Comparison"
-    },
-    "control": {
-      "audit": "[KO] Audit Details",
-      "fleet": "[KO] Fleet Details",
-      "gitops": "[KO] Gitops Details",
-      "healing": "[KO] Healing Details",
-      "observability": {
-        "desc": "[KO] OmniGCloud provides a unified control plane to enforce data sovereignty across all your cloud providers.",
-        "title": "[KO] Observability"
-      },
-      "subtitle": "[KO] Security, compliance, and velocity in one platform.",
-      "title": "[KO] Control"
-    },
-    "core": {
-      "desc": "[KO] Seamlessly orchestrate workloads across AWS, Azure, and Google Cloud with strict governance boundaries.",
-      "title": "[KO] Core"
-    },
-    "hero": {
-      "ctaPrimary": "[KO] Cta Primary",
-      "ctaSecondary": "[KO] Cta Secondary",
-      "subtitle": "[KO] The standard for autonomous cloud governance.",
-      "title": "[KO] Hero"
-    },
-    "integrations": {
-      "delivery": "[KO] Delivery Details",
-      "identity": "[KO] Identity Details",
-      "infra": "[KO] Infra Details",
-      "obs": "[KO] Obs Details",
-      "subtitle": "[KO] Control your data. Control your future.",
-      "title": "[KO] Integrations"
-    },
-    "security": {
-      "cta": "[KO] Explore Security",
-      "desc": "[KO] Achieve FIPS 140-2 Level 3 compliance with our shielded execution environments.",
-      "features": {
-        "audit": {
-          "desc": "[KO] Automate compliance with real-time drift detection and auto-remediation policies.",
-          "title": "[KO] Audit Feature"
-        },
-        "fips": {
-          "desc": "[KO] Decouple your business logic from vendor-specific APIs and regain full control of your digital estate.",
-          "title": "[KO] Fips Feature"
-        },
-        "rbac": {
-          "desc": "[KO] Achieve FIPS 140-2 Level 3 compliance with our shielded execution environments.",
-          "title": "[KO] Rbac Feature"
-        },
-        "vpc": {
-          "desc": "[KO] OmniGCloud provides a unified control plane to enforce data sovereignty across all your cloud providers.",
-          "title": "[KO] Vpc Feature"
-        }
-      },
-      "title": "[KO] Security",
-      "zerotrust": "[KO] Zerotrust Details"
-    },
-    "stack": {
-      "active": "[KO] Active Details",
-      "api": "[KO] Api Details",
-      "cluster": "[KO] Cluster Details",
-      "db": "[KO] Db",
-      "logic": "[KO] Logic Details",
-      "scaling": "[KO] Scaling Details",
-      "shielded": "[KO] Shielded Details",
-      "verified": "[KO] Verified Details"
-    }
-  },
-  "Pricing": {
-    "cta": {
-      "button": "[KO] Explore Cta",
-      "subtitle": "[KO] Empowering the next generation of regulated enterprise.",
-      "title": "[KO] Cta"
-    },
-    "faq": {
-      "q1": {
-        "a": "[KO] A",
-        "q": "[KO] Q"
-      },
-      "q2": {
-        "a": "[KO] A",
-        "q": "[KO] Q"
-      },
-      "q3": {
-        "a": "[KO] A",
-        "q": "[KO] Q"
-      }
-    },
-    "hero": {
-      "subtitle": "[KO] The standard for autonomous cloud governance.",
-      "tag": "[KO] Featured",
-      "title": "[KO] Hero"
-    },
-    "plans": {
-      "_value": "[KO] plans",
-      "month": "[KO] Month Details",
-      "popular": "[KO] Popular Details"
-    },
-    "trust": {
-      "neutrality": {
-        "desc": "[KO] OmniGCloud provides a unified control plane to enforce data sovereignty across all your cloud providers.",
-        "title": "[KO] Neutrality"
-      },
-      "residency": {
-        "desc": "[KO] Decouple your business logic from vendor-specific APIs and regain full control of your digital estate.",
-        "title": "[KO] Residency"
-      },
-      "subtitle": "[KO] Empowering the next generation of regulated enterprise.",
-      "title": "[KO] Trust"
-    }
-  },
-  "Privacy": {
-    "accountData": "[KO] Account Data",
-    "accountDataText": "[KO] Account Data Text",
-    "changes": "[KO] Changes Details",
-    "changesText": "[KO] Changes Text",
-    "commitment": "[KO] Commitment Details",
-    "commitmentText": "[KO] Commitment Text",
-    "contact": "[KO] Contact Details",
-    "contactText": "[KO] Contact Text",
-    "cookies": "[KO] Cookies Details",
-    "cookiesText": "[KO] Cookies Text",
-    "dataCollection": "[KO] Data Collection",
-    "dataCollectionText": "[KO] Data Collection Text",
-    "dataProtection": "[KO] Data Protection",
-    "dataProtectionText": "[KO] Data Protection Text",
-    "dataRetention": "[KO] Data Retention",
-    "dataRetentionText": "[KO] Data Retention Text",
-    "infrastructureData": "[KO] Infrastructure Data",
-    "infrastructureDataText": "[KO] Infrastructure Data Text",
-    "lastUpdated": "[KO] Last Updated",
-    "protection1": "[KO] Protection1 Details",
-    "protection2": "[KO] Protection2 Details",
-    "protection3": "[KO] Protection3 Details",
-    "protection4": "[KO] Protection4 Details",
-    "right1": "[KO] Right1 Details",
-    "right2": "[KO] Right2 Details",
-    "right3": "[KO] Right3 Details",
-    "right4": "[KO] Right4 Details",
-    "thirdParty": "[KO] Third Party",
-    "thirdPartyText": "[KO] Third Party Text",
-    "title": "[KO] Privacy",
-    "usageData": "[KO] Usage Data",
-    "usageDataText": "[KO] Usage Data Text",
-    "yourRights": "[KO] Your Rights",
-    "yourRightsText": "[KO] Your Rights Text"
+    "badge": "ENTERPRISE SOVEREIGNTY",
+    "title": "The Autonomous Cloud",
+    "subtitle": "Regain control of your digital estate with the world's first sovereign multi-cloud fabric. Enforce governance logic at the infrastructure level.",
+    "ctaPrimary": "Explore Platform",
+    "ctaArchitecture": "Visual Architecture",
+    "ctaWhitepaper": "Read Whitepaper",
+    "trust": "TRUSTED BY LEADING REGULATED INDUSTRIES"
   },
   "Problem": {
-    "badge": "[KO] New",
     "fragmentation": {
-      "desc": "[KO] Automate compliance with real-time drift detection and auto-remediation policies.",
-      "title": "[KO] Fragmentation"
-    },
-    "opacity": {
-      "desc": "[KO] Seamlessly orchestrate workloads across AWS, Azure, and Google Cloud with strict governance boundaries.",
-      "scanning": "[KO] Scanning Details",
-      "title": "[KO] Opacity"
+      "title": "Fragmentation",
+      "desc": "Automate compliance with real-time drift detection and auto-remediation policies."
     },
     "regulatory": {
-      "desc": "[KO] Ensure your data never leaves the jurisdiction you define, regardless of the underlying infrastructure.",
-      "risk": "[KO] Risk Details",
-      "score": "[KO] Score Details",
-      "title": "[KO] Regulatory"
+      "title": "Regulatory",
+      "desc": "Ensure your data never leaves the jurisdiction you define, regardless of the underlying infrastructure.",
+      "score": "Score Details",
+      "risk": "Risk Details"
     },
-    "subtitle": "[KO] Control your data. Control your future.",
-    "title": "[KO] Problem",
     "vendor": {
-      "desc": "[KO] Decouple your business logic from vendor-specific APIs and regain full control of your digital estate.",
-      "title": "[KO] Vendor"
+      "title": "Vendor",
+      "desc": "Decouple your business logic from vendor-specific APIs and regain full control of your digital estate."
+    },
+    "opacity": {
+      "title": "Opacity",
+      "desc": "Seamlessly orchestrate workloads across AWS, Azure, and Google Cloud with strict governance boundaries.",
+      "scanning": "Scanning Details"
+    },
+    "badge": "New",
+    "title": "Problem",
+    "subtitle": "Control your data. Control your future."
+  },
+  "Visuals": {
+    "drift": {
+      "title": "Drift",
+      "detected": "Detected Details",
+      "remediate": "Remediate Details"
+    },
+    "telemetry": {
+      "title": "Telemetry",
+      "live": "Live Details",
+      "latency": "Latency Details",
+      "throughput": "Throughput Details",
+      "loss": "Loss Details"
     }
   },
-  "Products": {
-    "cta": "자세히 보기",
-    "deploy": {
-      "description": "[KO] Achieve FIPS 140-2 Level 3 compliance with our shielded execution environments.",
-      "shortDesc": "[KO] Atomic, immutable production releases.",
-      "title": "[KO] Obsidian Deploy"
+  "Dashboard": {
+    "title": "Dashboard",
+    "welcome": "Welcome Details",
+    "role": "Role Details",
+    "logicMeshStatus": "Logic Mesh Status",
+    "active": "Active Details",
+    "badge": "New",
+    "liveTitle": "System Operational Status",
+    "liveSubtitle": "Real-time system performance metrics.",
+    "roiTitle": "Cost & ROI Analysis",
+    "roiSubtitle": "Projected savings and efficiency gains.",
+    "infraTitle": "Infrastructure Health",
+    "infraSubtitle": "Global node status and uptime.",
+    "globalHealth": "Global Health",
+    "optimizationTitle": "Resource Optimization",
+    "trustTitle": "Trust Compliance Score",
+    "Charts": {
+      "apiLatency": "API Latency (ms)",
+      "apiLatencyDistribution": "API Latency Distribution",
+      "latencyTrend": "API latency trend",
+      "systemLogs": "System Logs",
+      "aiAnalysis": "AI Analysis",
+      "realtimePerf": "Real-time system performance metrics",
+      "liveView": "Live View",
+      "historicalTrend": "Historical Trend",
+      "monthlyCost": "Monthly Cost Comparison ($)",
+      "hourlyRequestVolume": "Hourly Request Volume",
+      "multiCloudDistribution": "Multi-Cloud Distribution (%)",
+      "uptime30Day": "30-Day Uptime (%)",
+      "complianceScores": "Compliance Framework Scores",
+      "errorRateTrend": "Error Rate Trend (%)",
+      "featureAdoption": "Feature Adoption Rate (%)"
     },
-    "explore": "[KO] Explore Details",
-    "guard": {
-      "description": "[KO] Ensure your data never leaves the jurisdiction you define, regardless of the underlying infrastructure.",
-      "shortDesc": "[KO] Real-time compliance auto-remediation.",
-      "title": "[KO] Governance Guard"
+    "Shell": {
+      "activeAssets": "Active Assets",
+      "revenueImpact": "Revenue Impact",
+      "cloudSpend": "Cloud Spend",
+      "activeAlerts": "Active Alerts",
+      "requiresAttention": "Requires attention",
+      "nominal": "All systems nominal"
     },
-    "hero": {
-      "subtitle": "[KO] Everything you need to build, secure, and scale compliant infrastructure.",
-      "tag": "[KO] Platform Products",
-      "title": "[KO] A Sovereign Suite"
+    "Distribution": {
+      "multiCloudTitle": "Multi-Cloud Workload Distribution",
+      "multiCloudDesc": "Active workloads across cloud providers",
+      "regionalTitle": "Regional Deployment Distribution",
+      "regionalDesc": "Workload distribution across global regions",
+      "complianceTitle": "Compliance Framework Scores",
+      "complianceDesc": "Current compliance status across all frameworks",
+      "featureTitle": "Feature Adoption Rate",
+      "featureDesc": "Active usage of key platform features",
+      "performanceTitle": "Performance Scorecard",
+      "performanceDesc": "Real-time system performance metrics",
+      "badges": {
+        "balanced": "BALANCED",
+        "global": "GLOBAL",
+        "audited": "AUDITED",
+        "tracked": "TRACKED",
+        "optimal": "OPTIMAL"
+      }
     },
-    "knowledge": {
-      "description": "[KO] Automate compliance with real-time drift detection and auto-remediation policies.",
-      "shortDesc": "[KO] Secure RAG for regulatory data.",
-      "title": "[KO] Sovereign Knowledge"
+    "TimeSeries": {
+      "latencyTitle": "API Latency Distribution",
+      "latencyDesc": "P50, P95, and P99 latency metrics over 24 hours",
+      "errorTitle": "Error Rate Trend",
+      "errorDesc": "30-day error rate showing improvement over time",
+      "throughputTitle": "Request Volume",
+      "throughputDesc": "Hourly request throughput with peak hour detection",
+      "costTitle": "Cost Comparison: Traditional vs OmniGCloud",
+      "costDesc": "Monthly infrastructure costs showing significant savings",
+      "slaTitle": "SLA Compliance",
+      "slaDesc": "Weekly SLA adherence tracking (target: 99.9%)",
+      "badges": {
+        "live": "LIVE",
+        "decreasing": "DECREASING",
+        "realtime": "REAL-TIME",
+        "projected": "PROJECTED",
+        "compliant": "✓ COMPLIANT"
+      }
     },
-    "nexus": {
-      "description": "[KO] Achieve FIPS 140-2 Level 3 compliance with our shielded execution environments.",
-      "shortDesc": "[KO] Global telemetry and cost arbitrage.",
-      "title": "[KO] Cross-Cloud Nexus"
+    "Technical": {
+      "title": "TECHNICAL OPERATIONS",
+      "subtitle": "OMNIGCLOUD_CONTROL_PLANE_v4.2.1",
+      "activeNodes": "Active Nodes",
+      "requestsSec": "Requests/sec",
+      "dataTransfer": "Data Transfer",
+      "avg": "Avg: 7.2k",
+      "lastHour": "Last hour",
+      "trend": "+8 (24h)",
+      "resourceTitle": "Resource Telemetry",
+      "resourceDesc": "Live infrastructure metrics",
+      "velocityTitle": "Velocity Metrics",
+      "velocityDesc": "Weekly deployment frequency",
+      "scalingTitle": "Auto-Scale Events",
+      "scalingDesc": "24-hour scaling activity",
+      "threatTitle": "Threat Analysis",
+      "threatDesc": "Error rate & threat trend",
+      "queryTitle": "Query Performance",
+      "queryDesc": "Database operations",
+      "latencyTitle": "Global Latency",
+      "latencyDesc": "Real-time system latency metrics"
     },
-    "playground": {
-      "description": "[KO] Achieve FIPS 140-2 Level 3 compliance with our shielded execution environments.",
-      "shortDesc": "[KO] IDE for prototyping cross-cloud infra.",
-      "title": "[KO] Sovereign Playground"
+    "CommandCenter": {
+      "title": "LIVE COMMAND & CONTROL",
+      "roiTitle": "ROI Performance",
+      "roiDesc": "Real-time return on investment",
+      "costTitle": "Cost Savings Trend",
+      "costDesc": "Monthly infrastructure optimization",
+      "growing": "GROWING",
+      "savings": "$45K SAVED THIS MONTH • 275% YOY INCREASE",
+      "uptimeTitle": "Platform Uptime",
+      "uptimeDesc": "30-day availability",
+      "responseTimeTitle": "Response Time",
+      "responseTimeDesc": "API latency trend",
+      "securityTitle": "Security Posture",
+      "securityDesc": "Compliance & threat protection",
+      "deploymentTitle": "Deployment Activity"
     },
-    "subtitle": "[KO] Empowering the next generation of regulated enterprise.",
-    "tag": "[KO] PRODUCTS",
-    "title": "[KO] Infrastructure Sovereignty",
-    "workflows": {
-      "description": "[KO] Seamlessly orchestrate workloads across AWS, Azure, and Google Cloud with strict governance boundaries.",
-      "shortDesc": "[KO] Visual multi-step orchestration engine.",
-      "title": "[KO] G-Workflows"
+    "Graphs": {
+      "roi": "ROI",
+      "securityScore": "Security Score",
+      "uptime": "UPTIME",
+      "costPerTransaction": "COST PER TRANSACTION",
+      "errorRate": "ERROR RATE",
+      "cacheHitRate": "CACHE HIT RATE",
+      "hits": "Hits",
+      "misses": "Misses",
+      "totalInvocations": "TOTAL INVOCATIONS",
+      "cpuEfficiency": "CPU Efficiency",
+      "memoryEfficiency": "Memory Efficiency",
+      "networkEfficiency": "Network Efficiency"
+    },
+    "Metrics": {
+      "executive": {
+        "pageTitle": "Executive Overview",
+        "pageSubtitle": "Strategic alignment & KPI summary",
+        "title": "Strategic Alignment",
+        "subtitle": "Top-level business health indicators",
+        "analysis": "Overall system health is excellent. Strategic KPIs are trending positively with a significant reduction in operational overhead due to autonomous scaling.",
+        "stats": {
+          "activeUsers": "Active Users",
+          "mrr": "MRR",
+          "churn": "Churn",
+          "nps": "NPS"
+        }
+      },
+      "technical": {
+        "pageTitle": "Technical Operations",
+        "pageSubtitle": "System health & engineering metrics",
+        "title": "Ops Control Plane",
+        "subtitle": "Engineering velocity & stability",
+        "analysis": "Technical debt reduction sprint is showing results with improved build times and higher test coverage across core microservices.",
+        "stats": {
+          "prs": "Pull Requests",
+          "buildTime": "Avg Build",
+          "coverage": "Test Cov.",
+          "issues": "Issues"
+        }
+      },
+      "roi": {
+        "pageTitle": "ROI Performance",
+        "pageSubtitle": "Real-time return on investment",
+        "title": "ROI Performance",
+        "subtitle": "Real-time return on investment tracking",
+        "analysis": "AI-driven arbitrage has optimised spot instance usage, resulting in a significantly lower TCO compared to on-demand provisioning this quarter.",
+        "stats": {
+          "current": "Current ROI",
+          "savings": "Net Savings",
+          "efficiency": "Efficiency",
+          "projection": "Projection"
+        }
+      },
+      "cost": {
+        "pageTitle": "Cost Arbitrage",
+        "pageSubtitle": "Multi-cloud cost optimization",
+        "title": "Cost Savings",
+        "subtitle": "Multi-cloud cost optimization engine",
+        "analysis": "Multi-cloud routing is actively preventing vendor lock-in premiums by shifting non-critical workloads to OCI and Azure spot instances.",
+        "stats": {
+          "monthly": "Monthly Saved",
+          "avgNode": "Avg Cost/Node",
+          "spot": "Spot Usage",
+          "waste": "Waste Reduc."
+        }
+      },
+      "uptime": {
+        "pageTitle": "Global Connectivity",
+        "pageSubtitle": "Platform availability and uptime",
+        "title": "System Uptime",
+        "subtitle": "30-day global availability",
+        "analysis": "Global mesh routing automatically bypassed 3 regional carrier outages in the last 24 hours, preserving 100% application uptime.",
+        "stats": {
+          "availability": "Availability",
+          "downtime": "Downtime",
+          "mttr": "MTTR",
+          "incidents": "Incidents"
+        }
+      },
+      "security": {
+        "pageTitle": "Compliance Radar",
+        "pageSubtitle": "Security posture & threat protection",
+        "title": "Security Posture",
+        "subtitle": "Real-time compliance monitoring",
+        "analysis": "Automated compliance guardrails are active. No critical vulnerabilities detected in the latest continuous audit cycle.",
+        "stats": {
+          "score": "Security Score",
+          "threats": "Threats Blocked",
+          "compliance": "Compliance",
+          "issues": "Open Issues"
+        }
+      },
+      "resources": {
+        "pageTitle": "Resource Telemetry",
+        "pageSubtitle": "Live infrastructure metrics",
+        "title": "Cluster Resources",
+        "subtitle": "CPU, Memory, and Storage telemetry",
+        "analysis": "Cluster auto-scaling is maintaining optimal bin packing, ensuring resources are utilized efficiently without over-provisioning.",
+        "stats": {
+          "cpu": "CPU Usage",
+          "memory": "Memory",
+          "pods": "Active Pods",
+          "nodes": "Node Count"
+        }
+      },
+      "deployment": {
+        "pageTitle": "Velocity Metrics",
+        "pageSubtitle": "Weekly deployment frequency",
+        "title": "CI/CD Velocity",
+        "subtitle": "Pipeline throughput and failure rate",
+        "analysis": "CI/CD pipelines are operating at peak velocity with zero regressions detected in staging or production environments today.",
+        "stats": {
+          "deploys": "Deploys/Day",
+          "buildTime": "Build Time",
+          "success": "Success Rate",
+          "rollbacks": "Rollbacks"
+        }
+      },
+      "scaling": {
+        "pageTitle": "Auto-Scale Events",
+        "pageSubtitle": "24-hour scaling activity",
+        "title": "Scaling Activity",
+        "subtitle": "Dynamic provisioning log",
+        "analysis": "Predictive scaling preempted traffic spikes in EU-West-1, keeping latency below 50ms during global user wakeup.",
+        "stats": {
+          "ups": "Scale Ups",
+          "downs": "Scale Downs",
+          "savings": "Est. Savings",
+          "nodes": "Max Nodes"
+        }
+      },
+      "error": {
+        "pageTitle": "Threat Analysis",
+        "pageSubtitle": "Error rate & threat trend",
+        "title": "Error & Anomalies",
+        "subtitle": "System-wide anomaly detection",
+        "analysis": "Self-healing subsystems recovered 2 pods automatically after detecting memory leaks, preventing user-facing errors.",
+        "stats": {
+          "errorRate": "Global Error %",
+          "5xx": "5xx Rates",
+          "anomalies": "Anomalies",
+          "healed": "Self-Healed"
+        }
+      }
     }
+  },
+  "SecuritySettings": {
+    "title": "Security Settings",
+    "description": "Ensure your data never leaves the jurisdiction you define, regardless of the underlying infrastructure.",
+    "ssoConfiguration": "Sso Configuration",
+    "enabled": "Enabled Details",
+    "disabled": "Disabled Details",
+    "clientId": "Client Id",
+    "tenantId": "Tenant Id",
+    "outboundEmail": "Outbound Email",
+    "advancedSecurity": "Advanced Security",
+    "advancedDescription": "Advanced Description",
+    "requestSaml": "Request Saml"
+  },
+  "Compliance": {
+    "title": "Compliance",
+    "subtitle": "Security, compliance, and velocity in one platform.",
+    "transparency": "Transparency Details",
+    "transparencyText": "Transparency Text",
+    "active": "Active Details",
+    "gdpr": "Gdpr Details",
+    "gdprText": "Gdpr Text",
+    "inProgress": "In Progress",
+    "soc2": "Soc2 Details",
+    "soc2Text": "Soc2 Text",
+    "planned": "Planned Details",
+    "iso27001": "Iso27001 Details",
+    "iso27001Text": "Iso27001 Text",
+    "dataHandling": "Data Handling",
+    "encryption": "Encryption Details",
+    "encryption1": "Encryption1 Details",
+    "encryption2": "Encryption2 Details",
+    "encryption3": "Encryption3 Details",
+    "dataResidency": "Data Residency",
+    "dataResidencyText": "Data Residency Text",
+    "retention": "Retention Details",
+    "operational": "Operational Details",
+    "operationalText": "Operational Text",
+    "audit": "Audit Details",
+    "auditText": "Audit Text",
+    "backups": "Backups Details",
+    "backupsText": "Backups Text",
+    "accessControls": "Access Controls",
+    "authentication": "Authentication Details",
+    "auth1": "Auth1 Details",
+    "auth2": "Auth2 Details",
+    "auth3": "Auth3 Details",
+    "authorization": "Authorization Details",
+    "authz1": "Authz1 Details",
+    "authz2": "Authz2 Details",
+    "authz3": "Authz3 Details",
+    "incidentResponse": "Incident Response",
+    "incidentResponseText": "Incident Response Text",
+    "responseProcess": "Response Process",
+    "response1": "Response1 Details",
+    "response2": "Response2 Details",
+    "response3": "Response3 Details",
+    "response4": "Response4 Details"
+  },
+  "Newsroom": {
+    "news": "News Details",
+    "badge": "New",
+    "title": "Newsroom",
+    "link": "Link Details",
+    "cta": "Explore Newsroom"
+  },
+  "Privacy": {
+    "title": "Privacy",
+    "lastUpdated": "Last Updated",
+    "commitment": "Commitment Details",
+    "commitmentText": "Commitment Text",
+    "dataCollection": "Data Collection",
+    "dataCollectionText": "Data Collection Text",
+    "accountData": "Account Data",
+    "accountDataText": "Account Data Text",
+    "infrastructureData": "Infrastructure Data",
+    "infrastructureDataText": "Infrastructure Data Text",
+    "usageData": "Usage Data",
+    "usageDataText": "Usage Data Text",
+    "dataProtection": "Data Protection",
+    "dataProtectionText": "Data Protection Text",
+    "protection1": "Protection1 Details",
+    "protection2": "Protection2 Details",
+    "protection3": "Protection3 Details",
+    "protection4": "Protection4 Details",
+    "dataRetention": "Data Retention",
+    "dataRetentionText": "Data Retention Text",
+    "yourRights": "Your Rights",
+    "yourRightsText": "Your Rights Text",
+    "right1": "Right1 Details",
+    "right2": "Right2 Details",
+    "right3": "Right3 Details",
+    "right4": "Right4 Details",
+    "thirdParty": "Third Party",
+    "thirdPartyText": "Third Party Text",
+    "cookies": "Cookies Details",
+    "cookiesText": "Cookies Text",
+    "changes": "Changes Details",
+    "changesText": "Changes Text",
+    "contact": "Contact Details",
+    "contactText": "Contact Text"
+  },
+  "Breadcrumb": {
+    "home": "Home Details",
+    "products": "Products Details",
+    "pricing": "Pricing Details",
+    "platform": "Platform Details",
+    "services": "Services Details",
+    "docs": "Documentation",
+    "company": "Company Details",
+    "contact": "Contact Details",
+    "blog": "Blog Details",
+    "research": "Research Details",
+    "solutions": "Solutions Details",
+    "industries": "Industries Details",
+    "resources": "Resources Details",
+    "onboarding": "Onboarding Details",
+    "dashboard": "Dashboard Details",
+    "compliance_maps": "Compliance Maps",
+    "whitepaper": "Whitepaper Details",
+    "papers": "Papers Details",
+    "frameworks": "Frameworks Details"
+  },
+  "Security": {
+    "title": "Security",
+    "subtitle": "Empowering the next generation of regulated enterprise.",
+    "encryption": "Encryption Details",
+    "encryptionText": "Encryption Text",
+    "authentication": "Authentication Details",
+    "authenticationText": "Authentication Text",
+    "responsibleDisclosure": "Responsible Disclosure",
+    "disclosureIntro": "Disclosure Intro",
+    "reportingProcess": "Reporting Process",
+    "step1": "Monitor real-time infrastructure drift.",
+    "step2": "Deploy the control plane agent.",
+    "step3": "Enforce auto-remediation policies.",
+    "step4": "Define your governance intent.",
+    "scope": "Scope Details",
+    "scope1": "Scope1 Details",
+    "scope2": "Scope2 Details",
+    "scope3": "Scope3 Details",
+    "scope4": "Scope4 Details",
+    "securityPractices": "Security Practices",
+    "infrastructure": "Infrastructure Details",
+    "infra1": "Enforce auto-remediation policies.",
+    "infra2": "Define your governance intent.",
+    "monitoring": "Monitoring Details",
+    "monitor1": "Monitor1 Details",
+    "monitor2": "Monitor2 Details",
+    "contactSecurity": "Contact Security",
+    "securityEmail": "Security Email",
+    "pgpKey": "Pgp Key"
+  },
+  "Terms": {
+    "title": "Terms",
+    "lastUpdated": "Last Updated",
+    "acceptance": "Acceptance Details",
+    "acceptanceText": "Acceptance Text",
+    "services": "Services Details",
+    "servicesText": "Services Text",
+    "service1": "Service1 Details",
+    "service2": "Service2 Details",
+    "service3": "Service3 Details",
+    "service4": "Service4 Details",
+    "userResponsibilities": "User Responsibilities",
+    "userResponsibilitiesText": "User Responsibilities Text",
+    "responsibility1": "Responsibility1 Details",
+    "responsibility2": "Responsibility2 Details",
+    "responsibility3": "Responsibility3 Details",
+    "dataOwnership": "Data Ownership",
+    "dataOwnershipText": "Data Ownership Text",
+    "termination": "Termination Details",
+    "terminationText": "Termination Text",
+    "disclaimer": "Disclaimer Details",
+    "disclaimerText": "Disclaimer Text",
+    "governingLaw": "Governing Law",
+    "governingLawText": "Governing Law Text",
+    "contact": "Contact Details",
+    "contactText": "Contact Text"
+  },
+  "SovereignGallery": {
+    "title": "Sovereign Gallery",
+    "subtitle": "Empowering the next generation of regulated enterprise."
+  },
+  "CookieConsent": {
+    "title": "Privacy & Sovereignty",
+    "close": "Close Details",
+    "message": "We use strictly necessary cookies to ensure platform security and data sovereignty compliance. Usage analytics are optional.",
+    "policyLink": "Sovereignty Policy",
+    "accept": "Accept Essential",
+    "decline": "Decline Optional",
+    "sovereignNotice": "Data resides in your jurisdiction"
   },
   "SEO_Content": {
     "Home": {
-      "AboveTheFold": "[KO] OmniGCloud is the first autonomous multi-cloud fabric that enforces data sovereignty at the infrastructure level, allowing enterprises to decouple logic from vendor-specific APIs.",
-      "DeepDive": {
-        "content": "[KO] Our platform eliminates the complexity of multi-cloud management by abstracting provider APIs into a unified control plane. This ensures that your business logic remains portable and secure, preventing vendor lock-in and guaranteeing long-term operational resilience.",
-        "title": "[KO] Architectural Deep Dive"
-      },
-      "FAQ": {
-        "items": [
-          {
-            "q": "How does OmniGCloud differ from Terraform?",
-            "a": "Terraform is a deployment tool; OmniGCloud is an active state enforcement engine that corrects drift automatically."
-          },
-          {
-            "q": "Is it compatible with AWS and Azure?",
-            "a": "Yes, we support all major hyperscalers including AWS, Azure, GCP, and on-premise OpenShift clusters."
-          }
-        ],
-        "title": "[KO] F.A.Q"
-      },
+      "AboveTheFold": "OmniGCloud is the first autonomous multi-cloud fabric that enforces data sovereignty at the infrastructure level, allowing enterprises to decouple logic from vendor-specific APIs.",
       "HowItWorks": {
+        "title": "Autonomous Synchronization",
         "steps": [
           {
             "title": "Intent Definition",
@@ -1548,412 +1882,267 @@
             "title": "State Enforcement",
             "desc": "Logic is pushed to the edge, ensuring compliance regardless of the underlying cloud."
           }
-        ],
-        "title": "[KO] Autonomous Synchronization"
+        ]
       },
-      "LeadCapture": {
-        "cta": "[KO] Book Consultation",
-        "subtitle": "[KO] Schedule a comprehensive architecture review with our sovereign cloud experts.",
-        "title": "[KO] Ready to regain control?"
-      },
-      "TechnicalApproach": {
-        "content": "[KO] We utilize a lattice-based state synchronization engine that operates on a millisecond scale, providing real-time remediation of non-compliant infrastructure states.",
-        "title": "[KO] Technical Approach"
+      "DeepDive": {
+        "title": "Architectural Deep Dive",
+        "content": "Our platform eliminates the complexity of multi-cloud management by abstracting provider APIs into a unified control plane. This ensures that your business logic remains portable and secure, preventing vendor lock-in and guaranteeing long-term operational resilience."
       },
       "WhyItMatters": {
-        "content": "[KO] In an era of fragmenting regulations, data residency is no longer optional. OmniGCloud provides mathematical guarantees that your data stays where it needs to be.",
-        "title": "[KO] Why Sovereignty Matters"
+        "title": "Why Sovereignty Matters",
+        "content": "In an era of fragmenting regulations, data residency is no longer optional. OmniGCloud provides mathematical guarantees that your data stays where it needs to be."
+      },
+      "TechnicalApproach": {
+        "title": "Technical Approach",
+        "content": "We utilize a lattice-based state synchronization engine that operates on a millisecond scale, providing real-time remediation of non-compliant infrastructure states."
+      },
+      "FAQ": {
+        "title": "F.A.Q",
+        "items": [
+          {
+            "q": "How does OmniGCloud differ from Terraform?",
+            "a": "Terraform is a deployment tool; OmniGCloud is an active state enforcement engine that corrects drift automatically."
+          },
+          {
+            "q": "Is it compatible with AWS and Azure?",
+            "a": "Yes, we support all major hyperscalers including AWS, Azure, GCP, and on-premise OpenShift clusters."
+          }
+        ]
+      },
+      "LeadCapture": {
+        "title": "Ready to regain control?",
+        "subtitle": "Schedule a comprehensive architecture review with our sovereign cloud experts.",
+        "cta": "Book Consultation"
       }
     }
   },
-  "Security": {
-    "authentication": "[KO] Authentication Details",
-    "authenticationText": "[KO] Authentication Text",
-    "contactSecurity": "[KO] Contact Security",
-    "disclosureIntro": "[KO] Disclosure Intro",
-    "encryption": "[KO] Encryption Details",
-    "encryptionText": "[KO] Encryption Text",
-    "infra1": "[KO] Enforce auto-remediation policies.",
-    "infra2": "[KO] Define your governance intent.",
-    "infrastructure": "[KO] Infrastructure Details",
-    "monitor1": "[KO] Monitor1 Details",
-    "monitor2": "[KO] Monitor2 Details",
-    "monitoring": "[KO] Monitoring Details",
-    "pgpKey": "[KO] Pgp Key",
-    "reportingProcess": "[KO] Reporting Process",
-    "responsibleDisclosure": "[KO] Responsible Disclosure",
-    "scope": "[KO] Scope Details",
-    "scope1": "[KO] Scope1 Details",
-    "scope2": "[KO] Scope2 Details",
-    "scope3": "[KO] Scope3 Details",
-    "scope4": "[KO] Scope4 Details",
-    "securityEmail": "[KO] Security Email",
-    "securityPractices": "[KO] Security Practices",
-    "step1": "[KO] Monitor real-time infrastructure drift.",
-    "step2": "[KO] Deploy the control plane agent.",
-    "step3": "[KO] Enforce auto-remediation policies.",
-    "step4": "[KO] Define your governance intent.",
-    "subtitle": "[KO] Empowering the next generation of regulated enterprise.",
-    "title": "[KO] Security"
+  "Engagement": {
+    "title": "Engagement",
+    "subtitle": "Security, compliance, and velocity in one platform.",
+    "primary": "Primary Details",
+    "secondary": "Secondary Details"
   },
-  "SecuritySettings": {
-    "advancedDescription": "[KO] Advanced Description",
-    "advancedSecurity": "[KO] Advanced Security",
-    "clientId": "[KO] Client Id",
-    "description": "[KO] Ensure your data never leaves the jurisdiction you define, regardless of the underlying infrastructure.",
-    "disabled": "[KO] Disabled Details",
-    "enabled": "[KO] Enabled Details",
-    "outboundEmail": "[KO] Outbound Email",
-    "requestSaml": "[KO] Request Saml",
-    "ssoConfiguration": "[KO] Sso Configuration",
-    "tenantId": "[KO] Tenant Id",
-    "title": "[KO] Security Settings"
-  },
-  "Services": {
-    "DataAI": {
-      "analytics": {
-        "desc": "[KO] Decouple your business logic from vendor-specific APIs and regain full control of your digital estate.",
-        "title": "[KO] Analytics"
-      },
-      "fabric": {
-        "desc": "[KO] Seamlessly orchestrate workloads across AWS, Azure, and Google Cloud with strict governance boundaries.",
-        "title": "[KO] Fabric"
-      },
-      "search": {
-        "desc": "[KO] Decouple your business logic from vendor-specific APIs and regain full control of your digital estate.",
-        "title": "[KO] Search"
-      },
-      "sovereignty": {
-        "desc": "[KO] Automate compliance with real-time drift detection and auto-remediation policies.",
-        "title": "[KO] Sovereignty"
-      },
-      "subtitle": "[KO] The standard for autonomous cloud governance.",
-      "title": "[KO] Data A I",
-      "uptime": "[KO] Uptime Details"
-    },
-    "Hero": {
-      "badge": "[KO] New",
-      "cta": "[KO] Explore Hero",
-      "errors": "[KO] Errors Details",
-      "velocity": "[KO] Velocity Details"
-    },
-    "Migration": {
-      "azure": {
-        "desc": "[KO] OmniGCloud provides a unified control plane to enforce data sovereignty across all your cloud providers.",
-        "title": "[KO] Azure"
-      },
-      "drift": {
-        "desc": "[KO] Seamlessly orchestrate workloads across AWS, Azure, and Google Cloud with strict governance boundaries.",
-        "title": "[KO] Drift"
-      },
-      "ocp": {
-        "desc": "[KO] Achieve FIPS 140-2 Level 3 compliance with our shielded execution environments.",
-        "title": "[KO] Ocp"
-      },
-      "provisioning": {
-        "desc": "[KO] Seamlessly orchestrate workloads across AWS, Azure, and Google Cloud with strict governance boundaries.",
-        "title": "[KO] Provisioning"
-      },
-      "subtitle": "[KO] The standard for autonomous cloud governance.",
-      "title": "[KO] Migration"
-    },
-    "Operations": {
-      "audit": {
-        "desc": "[KO] Automate compliance with real-time drift detection and auto-remediation policies.",
-        "title": "[KO] Audit"
-      },
-      "finops": {
-        "desc": "[KO] OmniGCloud provides a unified control plane to enforce data sovereignty across all your cloud providers.",
-        "title": "[KO] Finops"
-      },
-      "healing": {
-        "desc": "[KO] Decouple your business logic from vendor-specific APIs and regain full control of your digital estate.",
-        "title": "[KO] Healing"
-      },
-      "sre": {
-        "desc": "[KO] Decouple your business logic from vendor-specific APIs and regain full control of your digital estate.",
-        "title": "[KO] Sre"
-      },
-      "subtitle": "[KO] Empowering the next generation of regulated enterprise.",
-      "title": "[KO] Operations"
-    },
-    "Stack": {
-      "ansible": {
-        "desc": "[KO] Decouple your business logic from vendor-specific APIs and regain full control of your digital estate.",
-        "title": "[KO] Ansible"
-      },
-      "badge": "[KO] New",
-      "subtitle": "[KO] Empowering the next generation of regulated enterprise.",
-      "terraform": {
-        "desc": "[KO] Ensure your data never leaves the jurisdiction you define, regardless of the underlying infrastructure.",
-        "title": "[KO] Terraform"
-      },
-      "title": "[KO] Stack"
-    }
-  },
-  "SovereignGallery": {
-    "subtitle": "[KO] Empowering the next generation of regulated enterprise.",
-    "title": "[KO] Sovereign Gallery"
-  },
-  "Terms": {
-    "acceptance": "[KO] Acceptance Details",
-    "acceptanceText": "[KO] Acceptance Text",
-    "contact": "[KO] Contact Details",
-    "contactText": "[KO] Contact Text",
-    "dataOwnership": "[KO] Data Ownership",
-    "dataOwnershipText": "[KO] Data Ownership Text",
-    "disclaimer": "[KO] Disclaimer Details",
-    "disclaimerText": "[KO] Disclaimer Text",
-    "governingLaw": "[KO] Governing Law",
-    "governingLawText": "[KO] Governing Law Text",
-    "lastUpdated": "[KO] Last Updated",
-    "responsibility1": "[KO] Responsibility1 Details",
-    "responsibility2": "[KO] Responsibility2 Details",
-    "responsibility3": "[KO] Responsibility3 Details",
-    "service1": "[KO] Service1 Details",
-    "service2": "[KO] Service2 Details",
-    "service3": "[KO] Service3 Details",
-    "service4": "[KO] Service4 Details",
-    "services": "[KO] Services Details",
-    "servicesText": "[KO] Services Text",
-    "termination": "[KO] Termination Details",
-    "terminationText": "[KO] Termination Text",
-    "title": "[KO] Terms",
-    "userResponsibilities": "[KO] User Responsibilities",
-    "userResponsibilitiesText": "[KO] User Responsibilities Text"
-  },
-  "UseCases": {
-    "hero": {
-      "subtitle": "[KO] Discover how regulated industries use OmniGCloud to achieve sovereignty.",
-      "tag": "[KO] Proven Solutions",
-      "title": "[KO] Use Cases"
-    }
-  },
-  "Visuals": {
-    "drift": {
-      "detected": "[KO] Detected Details",
-      "remediate": "[KO] Remediate Details",
-      "title": "[KO] Drift"
-    },
-    "telemetry": {
-      "latency": "[KO] Latency Details",
-      "live": "[KO] Live Details",
-      "loss": "[KO] Loss Details",
-      "throughput": "[KO] Throughput Details",
-      "title": "[KO] Telemetry"
-    }
+  "Capabilities": {
+    "tag": "Capabilities",
+    "title": "Core Capabilities",
+    "subtitle": "Explore the building blocks of our sovereign cloud platform.",
+    "cta": "View All Products",
+    "explore": "Explore Details"
   },
   "WhitePaper": {
-    "badge": "[KO] LATEST RESEARCH",
-    "contribution": "[KO] Contribution Details",
-    "description": "[KO] A comprehensive framework for achieving mathematical certainty in data sovereignty across multi-cloud environments.",
-    "designPatterns": "[KO] Design Patterns",
-    "downloadSubtitle": "[KO] Get the full technical specification, including architecture diagrams, decision frameworks, and implementation guides.",
-    "downloadTitle": "[KO] Download the Whitepaper",
-    "footer": "[KO] Available in PDF / ePub formats.",
-    "pageCount": "[KO] 42 Pages",
-    "peerReview": "[KO] Peer Reviewed",
-    "readOnline": "[KO] Read Online",
-    "title": "[KO] The Autonomous Sovereign Cloud Protocol"
-  },
-  "Whitepaper": {
-    "abstract": {
-      "content": "[KO] Achieve FIPS 140-2 Level 3 compliance with our shielded execution environments.",
-      "title": "[KO] Abstract"
-    },
-    "architecture": {
-      "control_plane": {
-        "content": "[KO] Decouple your business logic from vendor-specific APIs and regain full control of your digital estate.",
-        "title": "[KO] Control_plane"
-      },
-      "decision_engine": {
-        "content": "[KO] OmniGCloud provides a unified control plane to enforce data sovereignty across all your cloud providers.",
-        "title": "[KO] Decision_engine"
-      },
-      "p1": "[KO] Monitor real-time infrastructure drift.",
-      "state_sync": {
-        "content": "[KO] Automate compliance with real-time drift detection and auto-remediation policies.",
-        "title": "[KO] State_sync"
-      },
-      "title": "[KO] Architecture"
-    },
-    "aso": {
-      "p1": "[KO] Generate audit-ready compliance reports.",
-      "principles": {
-        "automation": {
-          "content": "[KO] OmniGCloud provides a unified control plane to enforce data sovereignty across all your cloud providers.",
-          "title": "[KO] Automation Principle"
+    "contribution": "Contribution Details",
+    "title": "The Autonomous Sovereign Cloud Protocol",
+    "description": "A comprehensive framework for achieving mathematical certainty in data sovereignty across multi-cloud environments.",
+    "peerReview": "Peer Reviewed",
+    "pageCount": "42 Pages",
+    "badge": "LATEST RESEARCH",
+    "downloadTitle": "Download the Whitepaper",
+    "downloadSubtitle": "Get the full technical specification, including architecture diagrams, decision frameworks, and implementation guides.",
+    "readOnline": "Read Online",
+    "designPatterns": "Design Patterns",
+    "detailedDiagrams": {
+      "context": {
+        "devOps": {
+          "title": "DevOps Team",
+          "desc": "Define Policy"
         },
-        "neutrality": {
-          "content": "[KO] OmniGCloud provides a unified control plane to enforce data sovereignty across all your cloud providers.",
-          "title": "[KO] Neutrality Principle"
+        "compliance": {
+          "title": "Compliance",
+          "desc": "Audit Logs"
         },
-        "observability": {
-          "content": "[KO] OmniGCloud provides a unified control plane to enforce data sovereignty across all your cloud providers.",
-          "title": "[KO] Observability Principle"
+        "controlPlane": "AECP CONTROL PLANE",
+        "interpreter": "Intent Interpreter",
+        "decisionEngine": "Decision Engine (AI)",
+        "reconciliation": {
+          "title": "State Reconciliation Loop",
+          "desc": "(Current State → Target State)"
         },
-        "sovereignty": {
-          "content": "[KO] OmniGCloud provides a unified control plane to enforce data sovereignty across all your cloud providers.",
-          "title": "[KO] Sovereignty Principle"
-        },
-        "title": "[KO] Principles"
-      },
-      "title": "[KO] Aso"
-    },
-    "author": "[KO] Author Details",
-    "author_label": "[KO] Author_label Details",
-    "classification": "[KO] Classification Details",
-    "conclusion": {
-      "p1": "[KO] Monitor real-time infrastructure drift.",
-      "p2": "[KO] Enforce auto-remediation policies.",
-      "title": "[KO] Conclusion"
-    },
-    "date": "[KO] Date Details",
-    "date_label": "[KO] Date_label Details",
-    "decision_framework": {
-      "components": {
-        "adaptation": {
-          "content": "[KO] Automate compliance with real-time drift detection and auto-remediation policies.",
-          "title": "[KO] Adaptation"
-        },
-        "guardrails": {
-          "content": "[KO] Decouple your business logic from vendor-specific APIs and regain full control of your digital estate.",
-          "title": "[KO] Guardrails"
-        },
-        "intent_mapping": {
-          "content": "[KO] Seamlessly orchestrate workloads across AWS, Azure, and Google Cloud with strict governance boundaries.",
-          "title": "[KO] Intent_mapping"
+        "clouds": {
+          "aws": "AWS (US)",
+          "azure": "Azure (EU)",
+          "gcp": "GCP (Asia)"
         }
       },
-      "p1": "[KO] Generate audit-ready compliance reports.",
-      "title": "[KO] Decision_framework"
-    },
-    "differentiation": {
-      "comparison": "[KO] Comparison Details",
-      "non_replicability": "[KO] Non_replicability Details",
-      "p1": "[KO] Define your governance intent.",
-      "title": "[KO] Differentiation"
-    },
-    "eb1a": {
-      "executive_summary_title": "[KO] Executive_summary_title Details",
-      "importance": "[KO] Importance Details",
-      "importance_label": "[KO] Importance_label Details",
-      "originality": "[KO] Originality Details",
-      "originality_label": "[KO] Originality_label Details",
-      "p1": "[KO] Define your governance intent.",
-      "summary_content": "[KO] Summary_content Details",
-      "title": "[KO] Eb1a"
-    },
-    "execution_flow": {
-      "p1": "[KO] Define your governance intent.",
-      "steps": {
-        "s1": "[KO] Generate audit-ready compliance reports.",
-        "s2": "[KO] Define your governance intent.",
-        "s3": "[KO] Deploy the control plane agent.",
-        "s4": "[KO] Monitor real-time infrastructure drift.",
-        "s5": "[KO] Enforce auto-remediation policies."
-      },
-      "title": "[KO] Execution_flow"
-    },
-    "feasibility": {
-      "p1": "[KO] Generate audit-ready compliance reports.",
-      "sectors": {
-        "finance": {
-          "impact": "[KO] Impact Details",
-          "title": "[KO] Finance"
+      "security": {
+        "zeroTrust": {
+          "title": "Zero Trust Injection",
+          "desc": "Identity is injected at runtime via SPIFFE/SPIRE. No static keys."
         },
-        "government": {
-          "impact": "[KO] Impact Details",
-          "title": "[KO] Government"
+        "fence": {
+          "title": "Data Residency Fence",
+          "desc": "Geospatial policy enforcement prevents egress to non-compliant zones."
         },
-        "healthcare": {
-          "impact": "[KO] Impact Details",
-          "title": "[KO] Healthcare"
-        },
-        "telecom": {
-          "impact": "[KO] Impact Details",
-          "title": "[KO] Telecom"
+        "audit": {
+          "title": "Immutable Audit",
+          "desc": "Every state change is cryptographically signed and stored in ledger."
         }
       },
-      "title": "[KO] Feasibility"
-    },
-    "footer": "[KO] Footer Details",
-    "impact": {
-      "business_value": "[KO] Business_value Details",
-      "metrics": {
-        "cost": "[KO] Cost Details",
-        "cost_label": "[KO] Cost_label Details",
-        "efficiency": "[KO] Efficiency Details",
-        "efficiency_label": "[KO] Efficiency_label Details",
-        "security": "[KO] Security Details",
-        "security_label": "[KO] Security_label Details"
+      "governance": {
+        "signal": {
+          "title": "1. SIGNAL",
+          "desc": "Multi-cloud Telemetry"
+        },
+        "decision": {
+          "title": "2. DECISION",
+          "desc": "AECP Graph Engine"
+        },
+        "action": {
+          "title": "3. ACTION",
+          "desc": "Targeted API Call"
+        },
+        "validation": {
+          "title": "4. VALIDATION",
+          "desc": "State Confirmed"
+        },
+        "cycleTime": "Autonomous Control Loop Cycle Time: < 200ms"
       },
-      "p1": "[KO] Deploy the control plane agent.",
-      "title": "[KO] Impact"
-    },
-    "introduction": {
-      "p1": "[KO] Deploy the control plane agent.",
-      "p2": "[KO] Enforce auto-remediation policies.",
-      "p3": "[KO] Define your governance intent.",
-      "title": "[KO] Introduction"
-    },
-    "lifecycle": {
-      "resilience": "[KO] Resilience Details",
-      "title": "[KO] Lifecycle"
-    },
-    "limitations": {
-      "p1": "[KO] Enforce auto-remediation policies.",
-      "p2": "[KO] Monitor real-time infrastructure drift.",
-      "title": "[KO] Limitations"
-    },
-    "meta": {
-      "description": "[KO] Decouple your business logic from vendor-specific APIs and regain full control of your digital estate.",
-      "title": "[KO] Meta"
-    },
-    "problem": {
-      "compliance": {
-        "content": "[KO] Automate compliance with real-time drift detection and auto-remediation policies.",
-        "scenario": "[KO] Scenario Details",
-        "title": "[KO] Compliance"
+      "impact": {
+        "mttr": {
+          "value": "-94%",
+          "title": "MTTR Reduction",
+          "desc": "From 14 days to 4 minutes"
+        },
+        "opex": {
+          "value": "-31%",
+          "title": "Cloud OpEx",
+          "desc": "Verified Arbitrage Savings"
+        },
+        "compliance": {
+          "value": "99.7%",
+          "title": "Compliance Rate",
+          "desc": "Automated Audit Pass"
+        }
       },
-      "metrics": {
-        "compliance_aso": "[KO] Compliance_aso Details",
-        "compliance_label": "[KO] Compliance_label Details",
-        "mttr_aso": "[KO] Mttr_aso Details",
-        "mttr_aso_label": "[KO] Mttr_aso_label Details",
-        "mttr_manual": "[KO] Mttr_manual Details",
-        "mttr_manual_label": "[KO] Mttr_manual_label Details",
-        "opex_label": "[KO] Opex_label Details",
-        "opex_savings": "[KO] Opex_savings Details"
-      },
-      "operational": {
-        "content": "[KO] Decouple your business logic from vendor-specific APIs and regain full control of your digital estate.",
-        "scenario": "[KO] Scenario Details",
-        "title": "[KO] Operational"
-      },
-      "p1": "[KO] Define your governance intent.",
-      "title": "[KO] Problem",
-      "vendor_lock": {
-        "content": "[KO] Achieve FIPS 140-2 Level 3 compliance with our shielded execution environments.",
-        "scenario": "[KO] Scenario Details",
-        "title": "[KO] Vendor_lock"
+      "federation": {
+        "us": {
+          "title": "US-EAST-SOVEREIGN",
+          "policy": "Policy: FIPS-140-2"
+        },
+        "eu": {
+          "title": "EU-CENTRAL-PRIVACY",
+          "policy": "Policy: GDPR-STRICT"
+        },
+        "ap": {
+          "title": "AP-SOUTH-SHARED",
+          "policy": "Policy: PERMISSIVE"
+        },
+        "protocol": "Federated Trust Protocol (FTP) Active"
       }
     },
-    "references": {
-      "title": "[KO] References"
-    },
-    "title": "[KO] Whitepaper",
-    "version": "[KO] Version Details",
-    "version_label": "[KO] Version_label Details"
+    "footer": "Available in PDF / ePub formats."
   },
-  "content": "[KO] Decouple your business logic from vendor-specific APIs and regain full control of your digital estate.",
-  "cta": "[KO] Get Started",
-  "desc": "[KO] Enterprise Grade Sovereignty",
-  "designPatterns": "[KO] Design Patterns",
-  "downloadTitle": "[KO] Download Whitepaper",
-  "items": "[KO] Items Details",
-  "readOnline": "[KO] Read Online",
-  "steps": "[KO] Steps Details",
-  "subtitle": "[KO] The Sovereign Cloud Control Plane",
-  "title": "[KO] OmniGCloud Platform"
+  "ContactSales": {
+    "subject": "Subject Details",
+    "bodyIntro": "Body Intro",
+    "fallbackTitle": "Fallback Title",
+    "fallbackInstruction": "Fallback Instruction",
+    "copyLabel": "Copy Label",
+    "whatsappLabel": "Whatsapp Label",
+    "rateLimitMessage": "Rate Limit Message",
+    "copyToast": "Copy Toast"
+  },
+  "title": "OmniGCloud Platform",
+  "subtitle": "The Sovereign Cloud Control Plane",
+  "cta": "Get Started",
+  "AboveTheFold": "Above The Fold",
+  "content": "Decouple your business logic from vendor-specific APIs and regain full control of your digital estate.",
+  "steps": "Steps Details",
+  "items": "Items Details",
+  "desc": "Enterprise Grade Sovereignty",
+  "readOnline": "Read Online",
+  "designPatterns": "Design Patterns",
+  "downloadTitle": "Download Whitepaper",
+  "Auth": {
+    "Register": {
+      "title": "Create your account",
+      "subtitle": "Start managing your multi-cloud infrastructure",
+      "placeholders": {
+        "name": "John Doe",
+        "email": "john@company.com",
+        "company": "Acme Inc.",
+        "phone": "+1 (555) 123-4567",
+        "password": "Min. 8 characters",
+        "confirmPassword": "Re-enter password"
+      },
+      "fields": {
+        "email": "Work Email *",
+        "company": "Company Name *",
+        "phone": "Phone Number (Optional)",
+        "password": "Password *",
+        "confirmPassword": "Confirm Password *"
+      }
+    },
+    "Onboarding": {
+      "hero": {
+        "badge": "Start Your Journey",
+        "title": "Get Started with Omni",
+        "subtitle": "Standardizing your cloud-native onboarding through the world's first AI-powered Internal Cloud Foundation."
+      },
+      "modernize": {
+        "title": {
+          "p1": "How we modernize",
+          "p2": "your workforce."
+        }
+      },
+      "steps": {
+        "assess": {
+          "title": "Infrastructure Assessment",
+          "desc": "Our AI scans your existing cloud footprint to identify migration pathways."
+        },
+        "registry": {
+          "title": "Registry Selection",
+          "desc": "Select pre-approved blueprints from our Foundation Core."
+        },
+        "provision": {
+          "title": "Automated Provisioning",
+          "desc": "Deploy clusters in minutes with Crossplane-powered orchestration."
+        },
+        "scale": {
+          "title": "Enterprise Scaling",
+          "desc": "Onboard teams with self-service guardrails and FinOps monitoring."
+        }
+      },
+      "form": {
+        "email": {
+          "label": "Work Email",
+          "placeholder": "name@company.com"
+        }
+      }
+    }
+  },
+  "System": {
+    "Error": {
+      "title": "KERNEL_PANIC_500",
+      "subtitle": "Integrity Breach Detected",
+      "description": "A critical exception has occurred in the sovereign control plane. The G-Framework is attempting to isolate the affected node.",
+      "stub": "ERROR_STUB_v4",
+      "retry": "Re-Initialize",
+      "home": "Operations"
+    },
+    "NotFound": {
+      "title": "COORD_NOT_FOUND",
+      "subtitle": "404",
+      "badge": "Resource Out of Sovereignty Scope",
+      "description": "The requested coordinate does not exist in our global infrastructure map. It may have been decommissioned or moved to a higher security tier.",
+      "home": "Return to Operations",
+      "discovery": "Run Global Discovery",
+      "logs": {
+        "scanning": "SCANNING_NETWORK_NODES... [FAILED]",
+        "resolving": "RESOLVING_ROUTE_COORD: 40.7128 N, 74.0060 W [UNDEFINED]",
+        "correcting": "INITIATING_SELF_CORRECTION..."
+      }
+    },
+    "Global": {
+      "title": "SYSTEM_WIDE_FAILURE",
+      "description": "The catastrophic failure has occurred. Attempting manual override.",
+      "retry": "Force Reboot"
+    }
+  },
+  "Demo": {
+    "Badge": "Live view (demo)",
+    "Charts": {
+      "empty": "No data available in demo mode",
+      "loading": "Simulating real-time data frame..."
+    }
+  }
 }

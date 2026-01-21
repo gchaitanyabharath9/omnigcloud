@@ -1940,6 +1940,95 @@
     "downloadSubtitle": "Get the full technical specification, including architecture diagrams, decision frameworks, and implementation guides.",
     "readOnline": "Read Online",
     "designPatterns": "Design Patterns",
+    "detailedDiagrams": {
+      "context": {
+        "devOps": {
+          "title": "DevOps Team",
+          "desc": "Define Policy"
+        },
+        "compliance": {
+          "title": "Compliance",
+          "desc": "Audit Logs"
+        },
+        "controlPlane": "AECP CONTROL PLANE",
+        "interpreter": "Intent Interpreter",
+        "decisionEngine": "Decision Engine (AI)",
+        "reconciliation": {
+          "title": "State Reconciliation Loop",
+          "desc": "(Current State → Target State)"
+        },
+        "clouds": {
+          "aws": "AWS (US)",
+          "azure": "Azure (EU)",
+          "gcp": "GCP (Asia)"
+        }
+      },
+      "security": {
+        "zeroTrust": {
+          "title": "Zero Trust Injection",
+          "desc": "Identity is injected at runtime via SPIFFE/SPIRE. No static keys."
+        },
+        "fence": {
+          "title": "Data Residency Fence",
+          "desc": "Geospatial policy enforcement prevents egress to non-compliant zones."
+        },
+        "audit": {
+          "title": "Immutable Audit",
+          "desc": "Every state change is cryptographically signed and stored in ledger."
+        }
+      },
+      "governance": {
+        "signal": {
+          "title": "1. SIGNAL",
+          "desc": "Multi-cloud Telemetry"
+        },
+        "decision": {
+          "title": "2. DECISION",
+          "desc": "AECP Graph Engine"
+        },
+        "action": {
+          "title": "3. ACTION",
+          "desc": "Targeted API Call"
+        },
+        "validation": {
+          "title": "4. VALIDATION",
+          "desc": "State Confirmed"
+        },
+        "cycleTime": "Autonomous Control Loop Cycle Time: < 200ms"
+      },
+      "impact": {
+        "mttr": {
+          "value": "-94%",
+          "title": "MTTR Reduction",
+          "desc": "From 14 days to 4 minutes"
+        },
+        "opex": {
+          "value": "-31%",
+          "title": "Cloud OpEx",
+          "desc": "Verified Arbitrage Savings"
+        },
+        "compliance": {
+          "value": "99.7%",
+          "title": "Compliance Rate",
+          "desc": "Automated Audit Pass"
+        }
+      },
+      "federation": {
+        "us": {
+          "title": "US-EAST-SOVEREIGN",
+          "policy": "Policy: FIPS-140-2"
+        },
+        "eu": {
+          "title": "EU-CENTRAL-PRIVACY",
+          "policy": "Policy: GDPR-STRICT"
+        },
+        "ap": {
+          "title": "AP-SOUTH-SHARED",
+          "policy": "Policy: PERMISSIVE"
+        },
+        "protocol": "Federated Trust Protocol (FTP) Active"
+      }
+    },
     "footer": "Available in PDF / ePub formats."
   },
   "ContactSales": {
@@ -2047,6 +2136,13 @@
       "title": "SYSTEM_WIDE_FAILURE",
       "description": "The catastrophic failure has occurred. Attempting manual override.",
       "retry": "Force Reboot"
+    }
+  },
+  "Demo": {
+    "Badge": "Live view (demo)",
+    "Charts": {
+      "empty": "No data available in demo mode",
+      "loading": "Simulating real-time data frame..."
     }
   }
 }

@@ -1,23 +1,15 @@
 import React from 'react';
+import { useTranslations } from 'next-intl';
 
 interface DemoBadgeProps {
-    label?: string; // e.g. "Demo View"
-    tooltip?: string;
-    className?: string;
+    label?: string;
 }
 
-export const DemoBadge: React.FC<DemoBadgeProps> = ({
-    label = "Demo View",
-    tooltip = "This data is simulated for demonstration purposes.",
-    className = ""
-}) => {
+export const DemoBadge = ({ label }: DemoBadgeProps) => {
+    const t = useTranslations('Demo');
     return (
-        <div className={`inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 text-xs font-medium border border-blue-200 dark:border-blue-800 ${className}`} title={tooltip}>
-            <span className="relative flex h-2 w-2">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
-                <span className="relative inline-flex rounded-full h-2 w-2 bg-blue-500"></span>
-            </span>
-            {label}
-        </div>
+        <span className="inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-blue-100 text-blue-800 dark:bg-blue-900/30 dark:text-blue-300">
+            {label || t('Badge')}
+        </span>
     );
 };
