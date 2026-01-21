@@ -62,7 +62,7 @@ export default function WhitePaperSection() {
                                 <FileText size={20} /> {t('designPatterns')}
                             </Link>
                             <p style={{ fontSize: '0.7rem', textAlign: 'center', opacity: 0.5 }}>
-                                {t('footer')}
+                                {t('footer.copyright')}
                             </p>
                         </div>
                     </div>

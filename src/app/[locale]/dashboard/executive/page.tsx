@@ -1,13 +1,16 @@
 "use client";
 
 import React, { useState, useEffect } from 'react';
-import { Activity, Zap, Shield, Globe, Server, Database, Cloud, AlertTriangle, CheckCircle, TrendingUp } from 'lucide-react';
+import { Activity, Zap, Shield, Globe, Server, Database, CheckCircle, TrendingUp } from 'lucide-react';
 import { EnhancedCostSavingsChart, LiveROIGauge, PulsingSecurityScore } from '@/components/visuals/EnhancedGraphs';
 import { UptimeRing } from '@/components/visuals/MetricsGraphs';
 import { useTranslations } from 'next-intl';
+import { useParams } from 'next/navigation';
 
 export default function ExecutiveDashboardPage() {
     const t = useTranslations('Dashboard.Executive');
+    const params = useParams();
+    const locale = params.locale as string || 'en';
     const [currentTime, setCurrentTime] = useState(new Date());
     const [activeAlerts, setActiveAlerts] = useState(2);
     const [systemStatus, setSystemStatus] = useState<'operational' | 'degraded' | 'critical'>('operational');
@@ -42,10 +45,10 @@ export default function ExecutiveDashboardPage() {
                         <div style={{ display: 'flex', gap: '2rem', alignItems: 'center' }}>
                             <div style={{ textAlign: 'right' }}>
                                 <div style={{ fontSize: '1.5rem', fontWeight: 900, fontFamily: 'var(--font-mono)' }}>
-                                    {currentTime.toLocaleTimeString('en-US', { hour12: false })}
+                                    {currentTime.toLocaleTimeString(locale, { hour12: false })}
                                 </div>
                                 <div style={{ fontSize: '0.65rem', opacity: 0.5 }}>
-                                    {currentTime.toLocaleDateString('en-US', { weekday: 'short', month: 'short', day: 'numeric' })}
+                                    {currentTime.toLocaleDateString(locale, { weekday: 'short', month: 'short', day: 'numeric' })}
                                 </div>
                             </div>
                             <div style={{
@@ -92,7 +95,7 @@ export default function ExecutiveDashboardPage() {
                             <div style={{ fontSize: '0.65rem', opacity: 0.5, fontWeight: 700, textTransform: 'uppercase' }}>{t('metrics.activeAssets')}</div>
                             <Server size={20} color="#60efff" />
                         </div>
-                        <div style={{ fontSize: '2.5rem', fontWeight: 950, color: '#60efff' }}>142</div>
+                        <div style={{ fontSize: '2.5rem', fontWeight: 950, color: '#60efff' }}>{t('metrics.activeAssetsValue')}</div>
                     </div>
 
                     <div className="glass-panel" style={{
@@ -105,7 +108,7 @@ export default function ExecutiveDashboardPage() {
                             <div style={{ fontSize: '0.65rem', opacity: 0.5, fontWeight: 700, textTransform: 'uppercase' }}>{t('metrics.revenueImpact')}</div>
                             <Activity size={20} color="#10b981" />
                         </div>
-                        <div style={{ fontSize: '2.5rem', fontWeight: 950, color: '#10b981' }}>+18%</div>
+                        <div style={{ fontSize: '2.5rem', fontWeight: 950, color: '#10b981' }}>{t('metrics.revenueImpactValue')}</div>
                     </div>
 
                     <div className="glass-panel" style={{
@@ -118,7 +121,7 @@ export default function ExecutiveDashboardPage() {
                             <div style={{ fontSize: '0.65rem', opacity: 0.5, fontWeight: 700, textTransform: 'uppercase' }}>{t('metrics.cloudSpend')}</div>
                             <Database size={20} color="#8b5cf6" />
                         </div>
-                        <div style={{ fontSize: '2.5rem', fontWeight: 950, color: '#8b5cf6' }}>-40%</div>
+                        <div style={{ fontSize: '2.5rem', fontWeight: 950, color: '#8b5cf6' }}>{t('metrics.cloudSpendValue')}</div>
                     </div>
 
                     <div className="glass-panel" style={{
@@ -175,7 +178,7 @@ export default function ExecutiveDashboardPage() {
                             marginTop: '1rem'
                         }}>
                             <div className="animate-pulse" style={{ width: 6, height: 6, background: '#10b981', borderRadius: '50%' }}></div>
-                            {t('cost.impact')}
+                            {t('cost.impactTemplate', { amount: '$45k', percent: '275' })}
                         </div>
                     </div>
 

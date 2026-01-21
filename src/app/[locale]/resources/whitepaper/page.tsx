@@ -404,7 +404,7 @@ export default async function WhitepaperPage({ params }: { params: Promise<{ loc
 
                 {/* Footer */}
                 <footer className={styles.footer}>
-                    <p className={styles.footerText}>{t('footer')}</p>
+                    <p className={styles.footerText}>{t('footer.copyright')}</p>
                 </footer>
             </article>
         </div>

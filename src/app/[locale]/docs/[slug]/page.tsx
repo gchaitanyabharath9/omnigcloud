@@ -49,7 +49,7 @@ export default async function DocDetailPage({ params }: { params: Promise<{ loca
                                 </div>
                                 <div>
                                     <div className="text-[0.65rem] font-black text-primary uppercase tracking-widest mb-1">
-                                        Documentation // {t(`cards.${doc.key}.exhibit`)}
+                                        {t('documentation_label')} // {t(`cards.${doc.key}.exhibit`)}
                                     </div>
                                     <h1 className="text-4xl font-black tracking-tight">{t(`cards.${doc.key}.title`)}</h1>
                                 </div>

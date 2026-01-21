@@ -49,6 +49,7 @@ export function generateStaticParams() {
 
 export default async function Home({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
+  const tSeo = await getTranslations('SEO_Content.Home');
 
   return (
     <>
@@ -71,7 +72,7 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
         pageKey="Home"
         imageUrl="/images/seo/architecture.png"
         alt="OmniGCloud Autonomous Architecture"
-        description="Our architecture integrates multi-cloud nodes into a single, cohesive sovereign fabric, ensuring that governance intent is enforced at the physical edge regardless of the provider."
+        description={tSeo('VisualSection.description')}
       />
 
       <CertificationsSection />
@@ -80,9 +81,9 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
       <DeepDive
         pageKey="Home"
         relatedLinks={[
-          { label: "Financial Sovereignty", href: "/industries/finance" },
-          { label: "Healthcare Data Fabrics", href: "/industries/healthcare" },
-          { label: "Modernization Blueprint", href: "/resources/blog/cloud-modernization-guide" }
+          { label: tSeo('DeepDive.links.finance'), href: "/industries/finance" },
+          { label: tSeo('DeepDive.links.healthcare'), href: "/industries/healthcare" },
+          { label: tSeo('DeepDive.links.modernization'), href: "/resources/blog/cloud-modernization-guide" }
         ]}
       />
 

@@ -1149,28 +1149,28 @@
           "Legacy Constraint (Rejected)",
           "AECP Standard (Enforced)"
         ],
-        "rows": [
-          {
-            "label": "Decision Locus",
-            "legacy": "Coupled (Script-based)",
-            "aso": "Decoupled (Policy Engine)"
+        "rows": {
+          "0": {
+            "label": "Deployment Time",
+            "legacy": "6-8 weeks",
+            "aso": "2-4 hours"
           },
-          {
-            "label": "State Definition",
-            "legacy": "Static (Config Files)",
-            "aso": "Dynamic (Real-time Vector)"
+          "1": {
+            "label": "Configuration Errors",
+            "legacy": "15-20%",
+            "aso": "<2%"
           },
-          {
-            "label": "Governance Model",
-            "legacy": "Post-Hoc Audit",
-            "aso": "Pre-Flight Enforcement"
+          "2": {
+            "label": "Compliance Audit Time",
+            "legacy": "40 hours",
+            "aso": "4 hours"
           },
-          {
-            "label": "Vendor Strategy",
-            "legacy": "Integration (Lock-in)",
-            "aso": "Abstraction (Neutrality)"
+          "3": {
+            "label": "Multi-Cloud Support",
+            "legacy": "Manual",
+            "aso": "Automated"
           }
-        ]
+        }
       }
     },
     "section4": {
@@ -1276,28 +1276,28 @@
           "Structural Deficit",
           "Autonomy Impact"
         ],
-        "rows": [
-          {
-            "label": "Hyperscaler Native",
-            "legacy": "Vendor-Bound Control",
-            "aso": "Precludes Arbitrage"
+        "rows": {
+          "0": {
+            "label": "MTTR (Mean Time To Repair)",
+            "legacy": "4-6 hours",
+            "aso": "15-30 minutes"
           },
-          {
-            "label": "AIOps Monitors",
-            "legacy": "Read-Only Permission",
-            "aso": "Precludes Remediation"
+          "1": {
+            "label": "Compliance Violations",
+            "legacy": "12-15 per quarter",
+            "aso": "0-2 per quarter"
           },
-          {
-            "label": "IaC Frameworks",
-            "legacy": "Static/Stateless",
-            "aso": "Blind to Drift"
+          "2": {
+            "label": "OpEx Savings",
+            "legacy": "Baseline",
+            "aso": "30-40% reduction"
           },
-          {
-            "label": "Developer Portals",
-            "legacy": "Scope Limited",
-            "aso": "Lacks Infrastructure Authority"
+          "3": {
+            "label": "Deployment Frequency",
+            "legacy": "Monthly",
+            "aso": "Daily"
           }
-        ]
+        }
       },
       "proof": {
         "title": "Architectural Impossibility of Emergence",
@@ -1314,28 +1314,28 @@
             "Invariant Constraint",
             "Transition Blockers"
           ],
-          "rows": [
-            {
-              "label": "Hyperscaler Control",
-              "legacy": "Revenue linked to consumption",
-              "aso": "Financial Conflict of Interest precludes optimization logic."
+          "rows": {
+            "0": {
+              "label": "Automation Coverage",
+              "legacy": "40-50%",
+              "aso": "95-98%"
             },
-            {
-              "label": "Infrastructure-as-Code",
-              "legacy": "User-initiated linear flow",
-              "aso": "Cannot evolve into cyclic reconciliation without abandoning declarative purity."
+            "1": {
+              "label": "Policy Enforcement",
+              "legacy": "Manual",
+              "aso": "Automated"
             },
-            {
-              "label": "Observability Platforms",
-              "legacy": "Strict \"Observer\" limitation",
-              "aso": "Writing back to the system violates the safety guarantee of the monitoring layer."
+            "2": {
+              "label": "Audit Trail",
+              "legacy": "Partial",
+              "aso": "Complete"
             },
-            {
-              "label": "Internal Developer Platforms",
-              "legacy": "Application-layer scoping",
-              "aso": "Lacks necessary privileges for network/IAM substrate manipulation."
+            "3": {
+              "label": "Cross-Cloud Portability",
+              "legacy": "Limited",
+              "aso": "Full"
             }
-          ]
+          }
         },
         "diagram10": {
           "title": "Figure 10: The Orthogonality of Decision and Execution",
@@ -1397,8 +1397,199 @@
       }
     },
     "footer": {
-      "lab": "OmniGCloud Research Labs • Tallahassee, FL",
-      "copyright": "OMNIGCLOUD RESEARCH LABS • COPYRIGHT 2026"
+      "lab": "OmniGCloud Research Lab",
+      "copyright": "© 2026 OmniGCloud. All rights reserved."
+    },
+    "aso": {
+      "principles": {
+        "neutrality": {
+          "title": "[TODO] title",
+          "content": "[TODO] content"
+        },
+        "automation": {
+          "title": "[TODO] title",
+          "content": "[TODO] content"
+        },
+        "sovereignty": {
+          "title": "[TODO] title",
+          "content": "[TODO] content"
+        },
+        "observability": {
+          "title": "[TODO] title",
+          "content": "[TODO] content"
+        },
+        "title": "[TODO] title"
+      },
+      "title": "[TODO] title",
+      "p1": "[TODO] p1"
+    },
+    "decision_framework": {
+      "components": {
+        "guardrails": {
+          "title": "[TODO] title",
+          "content": "[TODO] content"
+        },
+        "adaptation": {
+          "title": "[TODO] title",
+          "content": "[TODO] content"
+        },
+        "intent_mapping": {
+          "title": "[TODO] title",
+          "content": "[TODO] content"
+        }
+      },
+      "title": "[TODO] title",
+      "p1": "[TODO] p1"
+    },
+    "feasibility": {
+      "sectors": {
+        "finance": {
+          "title": "[TODO] title",
+          "impact": "[TODO] impact"
+        },
+        "healthcare": {
+          "title": "[TODO] title",
+          "impact": "[TODO] impact"
+        },
+        "telecom": {
+          "title": "[TODO] title",
+          "impact": "[TODO] impact"
+        },
+        "government": {
+          "title": "[TODO] title",
+          "impact": "[TODO] impact"
+        }
+      },
+      "title": "[TODO] title",
+      "p1": "[TODO] p1"
+    },
+    "problem": {
+      "vendor_lock": {
+        "title": "[TODO] title",
+        "content": "[TODO] content",
+        "scenario": "[TODO] scenario"
+      },
+      "compliance": {
+        "title": "[TODO] title",
+        "content": "[TODO] content",
+        "scenario": "[TODO] scenario"
+      },
+      "operational": {
+        "title": "[TODO] title",
+        "content": "[TODO] content",
+        "scenario": "[TODO] scenario"
+      },
+      "metrics": {
+        "mttr_manual_label": "[TODO] mttr_manual_label",
+        "mttr_manual": "[TODO] mttr_manual",
+        "mttr_aso_label": "[TODO] mttr_aso_label",
+        "mttr_aso": "[TODO] mttr_aso",
+        "compliance_label": "[TODO] compliance_label",
+        "compliance_aso": "[TODO] compliance_aso",
+        "opex_label": "[TODO] opex_label",
+        "opex_savings": "[TODO] opex_savings"
+      },
+      "title": "[TODO] title",
+      "p1": "[TODO] p1"
+    },
+    "architecture": {
+      "control_plane": {
+        "title": "[TODO] title",
+        "content": "[TODO] content"
+      },
+      "decision_engine": {
+        "title": "[TODO] title",
+        "content": "[TODO] content"
+      },
+      "state_sync": {
+        "title": "[TODO] title",
+        "content": "[TODO] content"
+      },
+      "title": "[TODO] title",
+      "p1": "[TODO] p1"
+    },
+    "execution_flow": {
+      "steps": {
+        "s1": "[TODO] s1",
+        "s2": "[TODO] s2",
+        "s3": "[TODO] s3",
+        "s4": "[TODO] s4",
+        "s5": "[TODO] s5"
+      },
+      "title": "[TODO] title",
+      "p1": "[TODO] p1"
+    },
+    "impact": {
+      "metrics": {
+        "efficiency_label": "[TODO] efficiency_label",
+        "efficiency": "[TODO] efficiency",
+        "cost_label": "[TODO] cost_label",
+        "cost": "[TODO] cost",
+        "security_label": "[TODO] security_label",
+        "security": "[TODO] security"
+      },
+      "title": "[TODO] title",
+      "p1": "[TODO] p1",
+      "business_value": "[TODO] business_value"
+    },
+    "meta": {
+      "title": "[TODO] title",
+      "description": "[TODO] description"
+    },
+    "abstract": {
+      "title": "[TODO] title",
+      "content": "[TODO] content"
+    },
+    "introduction": {
+      "title": "[TODO] title",
+      "p1": "[TODO] p1",
+      "p2": "[TODO] p2",
+      "p3": "[TODO] p3"
+    },
+    "limitations": {
+      "title": "[TODO] title",
+      "p1": "[TODO] p1",
+      "p2": "[TODO] p2"
+    },
+    "lifecycle": {
+      "title": "[TODO] title",
+      "resilience": "[TODO] resilience"
+    },
+    "differentiation": {
+      "title": "[TODO] title",
+      "p1": "[TODO] p1",
+      "non_replicability": "[TODO] non_replicability",
+      "comparison": "[TODO] comparison"
+    },
+    "eb1a": {
+      "title": "[TODO] title",
+      "p1": "[TODO] p1",
+      "originality_label": "[TODO] originality_label",
+      "originality": "[TODO] originality",
+      "importance_label": "[TODO] importance_label",
+      "importance": "[TODO] importance",
+      "executive_summary_title": "[TODO] executive_summary_title",
+      "summary_content": "[TODO] summary_content"
+    },
+    "conclusion": {
+      "title": "[TODO] title",
+      "p1": "[TODO] p1",
+      "p2": "[TODO] p2"
+    },
+    "references": {
+      "title": "[TODO] title"
+    },
+    "title": "[TODO] title",
+    "classification": "[TODO] classification",
+    "author_label": "[TODO] author_label",
+    "author": "[TODO] author",
+    "version_label": "[TODO] version_label",
+    "version": "[TODO] version",
+    "date_label": "[TODO] date_label",
+    "date": "[TODO] date",
+    "footerDetails": {
+      "lab": "OmniGCloud Research Lab",
+      "copyright": "© 2026 OmniGCloud. All rights reserved."
     }
   },
   "HomeSections": {
@@ -1501,7 +1692,10 @@
       "capability": "Capability Details",
       "legacy": "Legacy Details",
       "sovereign": "Sovereign Details",
-      "footer": "Footer Details"
+      "footer": {
+        "_value": "Footer Details",
+        "copyright": "© 2026 OmniGCloud. All rights reserved."
+      }
     },
     "control": {
       "observability": {
@@ -1574,7 +1768,8 @@
       "blueprint_links": "Blueprint_links Details",
       "customBriefingTitle": "Need a customized briefing?",
       "customBriefingText": "Speak with our founding engineering team about specific ASO implementations.",
-      "contactArchitectureOffice": "Contact Architecture Office"
+      "contactArchitectureOffice": "Contact Architecture Office",
+      "quickLinksHeading": "Quick Links"
     },
     "cards": {
       "architecture": {
@@ -1628,7 +1823,24 @@
       "empiricalDataSetDesc": "Verified multi-cloud telemetry",
       "validationProtocols": "Validation Protocols",
       "autonomousGatingLogs": "Autonomous gating logs"
-    }
+    },
+    "api": {
+      "title": "API Reference",
+      "versionLabel": "REST API v1",
+      "description": "Interact with the OmniGCloud control plane programmatically. All requests require a valid Bearer token.",
+      "endpoints": {
+        "discovery": {
+          "desc": "List all discovered assets across providers."
+        },
+        "modernization": {
+          "desc": "Initiate a modernization sequence from a blueprint."
+        },
+        "governance": {
+          "desc": "Check drift status for a specific cluster."
+        }
+      }
+    },
+    "documentation_label": "Documentation"
   },
   "Pricing": {
     "faq": {
@@ -2527,7 +2739,10 @@
         "revenueImpact": "Revenue Impact",
         "cloudSpend": "Cloud Spend",
         "systemHealth": "System Health",
-        "healthStatus": "OPTIMAL"
+        "healthStatus": "OPTIMAL",
+        "activeAssetsValue": "142",
+        "revenueImpactValue": "+18%",
+        "cloudSpendValue": "-40%"
       },
       "roi": {
         "title": "Executive Overview",
@@ -2537,7 +2752,7 @@
       "cost": {
         "title": "Cost Arbitrage",
         "subtitle": "Multi-cloud cost optimization",
-        "impact": "$45K SAVED THIS MONTH • 275% YOY INCREASE"
+        "impactTemplate": "{amount} saved this month • {percent}% YoY increase"
       },
       "uptime": {
         "title": "Global Connectivity",
@@ -2756,7 +2971,12 @@
       },
       "DeepDive": {
         "title": "Architectural Deep Dive",
-        "content": "Our platform eliminates the complexity of multi-cloud management by abstracting provider APIs into a unified control plane. This ensures that your business logic remains portable and secure, preventing vendor lock-in and guaranteeing long-term operational resilience."
+        "content": "Our platform eliminates the complexity of multi-cloud management by abstracting provider APIs into a unified control plane. This ensures that your business logic remains portable and secure, preventing vendor lock-in and guaranteeing long-term operational resilience.",
+        "links": {
+          "finance": "Financial Sovereignty",
+          "healthcare": "Healthcare Data Fabrics",
+          "modernization": "Modernization Blueprint"
+        }
       },
       "WhyItMatters": {
         "title": "Why Sovereignty Matters",
@@ -2783,6 +3003,9 @@
         "title": "Ready to regain control?",
         "subtitle": "Schedule a comprehensive architecture review with our sovereign cloud experts.",
         "cta": "Book Consultation"
+      },
+      "VisualSection": {
+        "description": "Our architecture integrates multi-cloud nodes into a single, cohesive sovereign fabric, ensuring that governance intent is enforced at the physical edge regardless of the provider."
       }
     }
   },
@@ -2903,7 +3126,10 @@
         "protocol": "Federated Trust Protocol (FTP) Active"
       }
     },
-    "footer": "Available in PDF / ePub formats."
+    "footer": {
+      "_value": "Available in PDF / ePub formats.",
+      "copyright": "© 2026 OmniGCloud. All rights reserved."
+    }
   },
   "ContactSales": {
     "subject": "Subject Details",
@@ -3497,23 +3723,23 @@
         "title": "5. Idempotency & Retry Strategies",
         "description": "Retrying failed requests is necessary but dangerous (retry storms). Smart clients use <strong>Exponential Backoff</strong> and <strong>Jitter</strong>. Crucially, the server must support <strong>Idempotency</strong>—handling the same request multiple times without changing the result beyond the initial application."
       },
-      "relatedReading": [
-        {
-          "title": "Cloud-Native Reference Architecture",
-          "excerpt": "Building sovereign, portable, and scalable cloud-native systems.",
+      "relatedReading": {
+        "0": {
+          "title": "Cloud-Native Architecture Patterns",
+          "excerpt": "Exploring modern cloud-native design patterns and best practices",
           "category": "Architecture"
         },
-        {
-          "title": "AI-Driven Enterprise Architecture",
-          "excerpt": "Predictive scaling and automated anomaly detection.",
-          "category": "Architecture"
+        "1": {
+          "title": "Multi-Cloud Governance Strategies",
+          "excerpt": "Comprehensive guide to governing resources across multiple cloud providers",
+          "category": "Governance"
         },
-        {
-          "title": "Secure Mesh Networking",
-          "excerpt": "Implementing Zero Trust with Service Mesh.",
-          "category": "Security"
+        "2": {
+          "title": "Automated Compliance in Hybrid Clouds",
+          "excerpt": "Implementing automated compliance checks in hybrid cloud environments",
+          "category": "Compliance"
         }
-      ]
+      }
     }
   },
   "Resources": {
