@@ -2294,7 +2294,16 @@
     "Visuals": {
       "AdvancedMetrics": {
         "avgResponseTime": "AVG RESPONSE TIME",
-        "storageSaved": "STORAGE SAVED"
+        "storageSaved": "STORAGE SAVED",
+        "before": "Before",
+        "after": "After",
+        "reduction": "{percentage}% Reduction",
+        "successRate30d": "SUCCESS RATE (30D)",
+        "licenseTypes": {
+          "unused": "Unused",
+          "underused": "Underused",
+          "optimized": "Optimized"
+        }
       },
       "BillingForecast": {
         "arbitrageReliability": "Arbitrage Reliability",
