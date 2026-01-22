@@ -14,7 +14,7 @@ export default function ProductScroller({ activeProduct, products }: ProductScro
         <div className="flex flex-col w-full max-w-full mx-auto pb-32">
             {products.map((product) => {
                 return (
-                    <div
+                    <section
                         key={product.id}
                         id={product.id}
                         className="w-full flex flex-col justify-start relative border-b border-white/5 last:border-0"
@@ -30,7 +30,7 @@ export default function ProductScroller({ activeProduct, products }: ProductScro
                         <div className="container">
                             <ProductDetailView {...product} />
                         </div>
-                    </div>
+                    </section>
                 );
             })}
         </div>
