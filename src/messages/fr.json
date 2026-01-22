@@ -2888,6 +2888,12 @@
         "title": "Whitepaper"
       }
     },
+    "certifications": {
+      "gdpr": "GDPR",
+      "iso": "ISO 27001",
+      "soc": "SOC 2",
+      "title": "Certifications"
+    },
     "documentation_label": "Documentation",
     "governance": {
       "blueprints": [
@@ -2974,6 +2980,15 @@
       "quickLinksHeading": "Quick Links"
     },
     "technicalLibrary": "Technical Library",
+    "transparency": {
+      "desc": "Clear, auditable practices across security, reliability, and operations.",
+      "list": [
+        "Public roadmap and release notes",
+        "Security posture and incident communication",
+        "Cost and performance visibility"
+      ],
+      "title": "Transparency"
+    },
     "whitepaper": {
       "charts": {
         "compliance": {
@@ -5390,6 +5405,8 @@
         "desc": "Automate configuration, patching, and day-2 operations at scale.",
         "title": "Ansible"
       },
+      "applyingPlan": "> Applying plan... 142 resources added.",
+      "complianceValue": "compliance = \"strict\"",
       "badge": "IaC + Automation",
       "subtitle": "Infrastructure as code and configuration automation you can trust.",
       "terraform": {
