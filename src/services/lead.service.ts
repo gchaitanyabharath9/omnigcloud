@@ -2,6 +2,7 @@ import { getRedis } from '@/lib/redis';
 import { withRetry } from '@/lib/retry';
 import { getSecret } from '@/secrets';
 import { logger } from '@/lib/logger';
+import { getTranslations } from 'next-intl/server';
 
 // Optional imports
 let Resend: unknown = null;
@@ -16,6 +17,7 @@ export interface ContactSubmission {
     email: string;
     message: string;
     website?: string;
+    locale?: string;
 }
 
 export interface SubmissionResult {
@@ -32,7 +34,8 @@ export class LeadService {
      * Process a new contact form submission
      */
     static async submitContactForm(data: ContactSubmission): Promise<SubmissionResult> {
-        const { firstName, lastName, email, message } = data;
+        const { firstName, lastName, email, message, locale = 'en' } = data;
+        const t = await getTranslations({ locale, namespace: 'LeadService' });
 
         // Generate Metadata
         const submissionId = `SOV-${Math.random().toString(36).substring(2, 9).toUpperCase()}`;
@@ -86,8 +89,8 @@ export class LeadService {
                     await resend.emails.send({
                         from: resendFrom,
                         to: resendTo,
-                        subject: `🔔 New Lead: ${firstName} ${lastName} - ${submissionId}`,
-                        html: this.generateEmailHtml(data, submissionId, timestamp)
+                        subject: t('email.subject', { firstName, lastName, submissionId }),
+                        html: this.generateEmailHtml(data, submissionId, timestamp, t)
                     });
                 }, { maxAttempts: 3, timeoutMs: 5000 }, 'ResendEmail');
 
@@ -103,25 +106,25 @@ export class LeadService {
             submissionId,
             saved,
             notified,
-            message: 'Briefing received and encrypted in sovereign storage.'
+            message: t('successMessage')
         };
     }
 
-    private static generateEmailHtml(data: ContactSubmission, id: string, timestamp: string): string {
+    private static generateEmailHtml(data: ContactSubmission, id: string, timestamp: string, t: any): string {
         return `
             <!DOCTYPE html>
             <html>
             <body style="font-family: sans-serif; line-height: 1.6; color: #333;">
                 <div style="max-width: 600px; margin: 0 auto; padding: 20px;">
-                    <h2 style="color: #4f46e5; border-bottom: 2px solid #eee; padding-bottom: 10px;">New Lead Captured</h2>
-                    <p><strong>ID:</strong> <code>${id}</code></p>
-                    <p><strong>Name:</strong> ${data.firstName} ${data.lastName}</p>
-                    <p><strong>Email:</strong> <a href="mailto:${data.email}">${data.email}</a></p>
+                    <h2 style="color: #4f46e5; border-bottom: 2px solid #eee; padding-bottom: 10px;">${t('email.title')}</h2>
+                    <p><strong>${t('email.idLabel')}</strong> <code>${id}</code></p>
+                    <p><strong>${t('email.nameLabel')}</strong> ${data.firstName} ${data.lastName}</p>
+                    <p><strong>${t('email.emailLabel')}</strong> <a href="mailto:${data.email}">${data.email}</a></p>
                     <div style="background: #f9fafb; padding: 15px; border-radius: 8px; margin: 20px 0;">
-                        <strong>Message:</strong><br/>
+                        <strong>${t('email.messageLabel')}</strong><br/>
                         ${data.message.replace(/\n/g, '<br>')}
                     </div>
-                    <p style="color: #666; font-size: 12px;">Submitted: ${new Date(timestamp).toLocaleString()}</p>
+                    <p style="color: #666; font-size: 12px;">${t('email.submittedLabel')} ${new Date(timestamp).toLocaleString()}</p>
                 </div>
             </body>
             </html>

@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import { Link } from '@/navigation';
 import Footer from '@/components/Footer';
 import { useLocale, useTranslations } from 'next-intl';
 import { ErrorRateArea, UptimeTrend, FeatureUsageBar, CostSavingsArea } from '@/components/charts/SimpleCharts';
@@ -21,7 +21,7 @@ export default function CtaSection() {
                                 {t('realResults')}
                             </h2>
                             <p style={{ opacity: 0.7, maxWidth: '700px', margin: '0 auto', fontSize: '0.95rem' }}>
-                                See how enterprises are transforming their multi-cloud operations
+                                {t('metricsDesc')}
                             </p>
                         </div>
 
@@ -61,7 +61,7 @@ export default function CtaSection() {
                                         <span style={{ fontSize: '1.25rem', fontWeight: 900, color: '#f59e0b' }}>$2.8M</span>
                                     </div>
                                     <p style={{ fontSize: '0.75rem', opacity: 0.7, margin: 0, lineHeight: 1.3 }}>
-                                        Annual savings via resource optimization
+                                        {t('metrics.annualSavings')}
                                     </p>
                                 </div>
                             </div>
@@ -74,7 +74,7 @@ export default function CtaSection() {
                                         <span style={{ fontSize: '1.25rem', fontWeight: 900, color: '#8b5cf6' }}>87%</span>
                                     </div>
                                     <p style={{ fontSize: '0.75rem', opacity: 0.7, margin: 0, lineHeight: 1.3 }}>
-                                        Adoption rate in 90 days
+                                        {t('metrics.adoptionRate')}
                                     </p>
                                 </div>
                             </div>
@@ -88,10 +88,10 @@ export default function CtaSection() {
                             {t('subtitle')}
                         </p>
                         <div className="flex justify-center gap-4 flex-wrap">
-                            <Link href={`/${locale}/onboarding`} className="btn-primary" style={{ padding: '0.75rem 2.5rem', fontSize: '0.95rem', borderRadius: '0.75rem' }}>
+                            <Link href="/onboarding" className="btn-primary" style={{ padding: '0.75rem 2.5rem', fontSize: '0.95rem', borderRadius: '0.75rem' }}>
                                 {t('primary')}
                             </Link>
-                            <Link href={`/${locale}/contact`} className="btn-secondary" style={{ padding: '0.75rem 2.5rem', fontSize: '0.95rem', borderRadius: '0.75rem' }}>
+                            <Link href="/contact" className="btn-secondary" style={{ padding: '0.75rem 2.5rem', fontSize: '0.95rem', borderRadius: '0.75rem' }}>
                                 {t('secondary')}
                             </Link>
                         </div>

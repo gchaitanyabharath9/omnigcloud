@@ -3,7 +3,6 @@
 import React, { useState, useEffect } from 'react';
 import { Activity, Server, Database, AlertTriangle, CheckCircle, TrendingUp } from 'lucide-react';
 import { useTranslations, useLocale } from 'next-intl';
-import { tSafe } from '@/lib/i18n/tSafe';
 
 interface DashboardShellProps {
     title: string;
@@ -22,6 +21,8 @@ export default function DashboardShell({ title, subtitle, children }: DashboardS
         const timer = setInterval(() => setCurrentTime(new Date()), 1000);
         return () => clearInterval(timer);
     }, []);
+
+    const tExec = useTranslations('Dashboard.Executive');
 
     return (
         <div style={{ background: 'var(--background)', minHeight: '100vh', color: 'var(--foreground)' }}>
@@ -77,7 +78,7 @@ export default function DashboardShell({ title, subtitle, children }: DashboardS
                                     color: systemStatus === 'operational' ? '#10b981' : '#ef4444',
                                     textTransform: 'uppercase'
                                 }}>
-                                    {systemStatus}
+                                    {tExec(`status.${systemStatus}`)}
                                 </span>
                             </div>
                         </div>
@@ -97,7 +98,7 @@ export default function DashboardShell({ title, subtitle, children }: DashboardS
                         border: '1px solid rgba(96, 239, 255, 0.2)'
                     }}>
                         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'start', marginBottom: '1rem' }}>
-                            <div style={{ fontSize: '0.65rem', opacity: 0.5, fontWeight: 700, textTransform: 'uppercase' }}>{tSafe(t, 'activeAssets', "Active Assets")}</div>
+                            <div style={{ fontSize: '0.65rem', opacity: 0.5, fontWeight: 700, textTransform: 'uppercase' }}>{t('activeAssets')}</div>
                             <Server size={20} color="#60efff" />
                         </div>
                         <div style={{ fontSize: '2.5rem', fontWeight: 950, color: '#60efff' }}>142</div>
@@ -110,7 +111,7 @@ export default function DashboardShell({ title, subtitle, children }: DashboardS
                         border: '1px solid rgba(16, 185, 129, 0.2)'
                     }}>
                         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'start', marginBottom: '1rem' }}>
-                            <div style={{ fontSize: '0.65rem', opacity: 0.5, fontWeight: 700, textTransform: 'uppercase' }}>{tSafe(t, 'revenueImpact', "Revenue Impact")}</div>
+                            <div style={{ fontSize: '0.65rem', opacity: 0.5, fontWeight: 700, textTransform: 'uppercase' }}>{t('revenueImpact')}</div>
                             <Activity size={20} color="#10b981" />
                         </div>
                         <div style={{ fontSize: '2.5rem', fontWeight: 950, color: '#10b981' }}>+18%</div>
@@ -123,7 +124,7 @@ export default function DashboardShell({ title, subtitle, children }: DashboardS
                         border: '1px solid rgba(139, 92, 246, 0.2)'
                     }}>
                         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'start', marginBottom: '1rem' }}>
-                            <div style={{ fontSize: '0.65rem', opacity: 0.5, fontWeight: 700, textTransform: 'uppercase' }}>{tSafe(t, 'cloudSpend', "Cloud Spend")}</div>
+                            <div style={{ fontSize: '0.65rem', opacity: 0.5, fontWeight: 700, textTransform: 'uppercase' }}>{t('cloudSpend')}</div>
                             <Database size={20} color="#8b5cf6" />
                         </div>
                         <div style={{ fontSize: '2.5rem', fontWeight: 950, color: '#8b5cf6' }}>-40%</div>
@@ -138,12 +139,12 @@ export default function DashboardShell({ title, subtitle, children }: DashboardS
                         border: `1px solid ${activeAlerts > 0 ? 'rgba(245, 158, 11, 0.2)' : 'rgba(16, 185, 129, 0.2)'}`
                     }}>
                         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'start', marginBottom: '1rem' }}>
-                            <div style={{ fontSize: '0.65rem', opacity: 0.5, fontWeight: 700, textTransform: 'uppercase' }}>{tSafe(t, 'activeAlerts', "Active Alerts")}</div>
+                            <div style={{ fontSize: '0.65rem', opacity: 0.5, fontWeight: 700, textTransform: 'uppercase' }}>{t('activeAlerts')}</div>
                             {activeAlerts > 0 ? <AlertTriangle size={20} color="#f59e0b" /> : <CheckCircle size={20} color="#10b981" />}
                         </div>
                         <div style={{ fontSize: '2.5rem', fontWeight: 950, color: activeAlerts > 0 ? '#f59e0b' : '#10b981' }}>{activeAlerts}</div>
                         <div style={{ fontSize: '0.7rem', opacity: 0.5, marginTop: '0.5rem' }}>
-                            {activeAlerts > 0 ? tSafe(t, 'requiresAttention', "Requires attention") : tSafe(t, 'nominal', "All systems nominal")}
+                            {activeAlerts > 0 ? t('requiresAttention') : t('nominal')}
                         </div>
                     </div>
                 </div>

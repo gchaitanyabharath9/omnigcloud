@@ -16,8 +16,8 @@ export default function DashboardPage() {
     const t = useTranslations('Dashboard.Metrics');
     const METRIC_CONFIG = getDashboardMetrics(t) as Record<string, any>;
     const [activeMetric, setActiveMetric] = useState('executive');
-    const [title, setTitle] = useState(METRIC_CONFIG['executive']?.title || 'Executive Overview');
-    const [subtitle, setSubtitle] = useState(METRIC_CONFIG['executive']?.subtitle || 'Strategic alignment & KPI summary');
+    const [title, setTitle] = useState(METRIC_CONFIG['executive']?.title || '');
+    const [subtitle, setSubtitle] = useState(METRIC_CONFIG['executive']?.subtitle || '');
 
     // Define explicit order for scrollable stream
     const METRIC_ORDER = [

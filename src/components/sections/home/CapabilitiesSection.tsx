@@ -1,5 +1,5 @@
 import { useTranslations } from 'next-intl';
-import Link from 'next/link';
+import { Link } from '@/navigation';
 import { ArrowRight } from 'lucide-react';
 import { PRODUCTS } from '@/data/products';
 
@@ -46,8 +46,8 @@ export default function CapabilitiesSection() {
                     </div>
                 </div>
                 <div style={{ marginTop: '3rem', display: 'flex', justifyContent: 'flex-end' }}>
-                    <Link href={`/contact`} className="hover:text-primary transition-colors font-bold text-sm flex items-center gap-2 group">
-                        Need a custom assessment? <span className="text-primary underline font-black">Talk to a Cloud Expert</span> <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
+                    <Link href="/contact" className="hover:text-primary transition-colors font-bold text-sm flex items-center gap-2 group">
+                        {t('assessment')} <span className="text-primary underline font-black">{t('talkToExpert')}</span> <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
                     </Link>
                 </div>
             </div>

@@ -1,6 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
-import Link from 'next/link';
+import { Link } from '@/navigation';
 import { notFound } from 'next/navigation';
 import { Clock, Calendar, Share2 } from 'lucide-react';
 import { getTranslations } from 'next-intl/server';
@@ -51,7 +51,7 @@ export default async function NewsArticlePage({ params }: { params: Promise<{ lo
                                 <Calendar size={14} /> {date}
                             </span>
                             <span className="text-slate-300 flex items-center gap-2 text-sm font-medium">
-                                <Clock size={14} /> 5 min read
+                                <Clock size={14} /> {t('article.minRead')}
                             </span>
                         </div>
 
@@ -74,38 +74,37 @@ export default async function NewsArticlePage({ params }: { params: Promise<{ lo
                     </p>
 
                     <p>
-                        <strong>LONDON, {date}</strong> — As enterprises face increasing pressure to maintain digital sovereignty while modernizing their infrastructure, OmniGCloud has released new capabilities addressing the critical needs of the {tag} sector.
+                        <strong>{t('article.intro', { date, tag })}</strong>
                     </p>
 
-                    <h3>The Sovereign Challenge</h3>
+                    <h3>{t('article.challengeTitle')}</h3>
                     <p>
-                        Traditionally, cross-border data replication has been a compliance nightmare. Latency penalties and legal jurisdiction issues often force companies to maintain siloed infrastructure stacks.
-                        This fragmentation leads to:
+                        {t('article.challengeDesc')}
                     </p>
                     <ul>
-                        <li>Increased operational overhead (OpEx)</li>
-                        <li>Inconsistent security posture processing</li>
-                        <li>Slow deployment velocity for global features</li>
+                        <li>{t('article.challengeList.0')}</li>
+                        <li>{t('article.challengeList.1')}</li>
+                        <li>{t('article.challengeList.2')}</li>
                     </ul>
 
-                    <h3>The OmniG Solution</h3>
+                    <h3>{t('article.solutionTitle')}</h3>
                     <p>
-                        By leveraging our new <strong>Autonomous Sovereign Orchestration (ASO)</strong> engine, we have demonstrated a reduction in cross-border latency by up to 40% while maintaining strict compliance locks.
+                        {t('article.solutionDesc')}
                     </p>
 
                     <div className="bg-slate-900 border-l-4 border-blue-500 p-6 my-8 rounded-r-xl">
                         <p className="italic text-slate-300 m-0">
-                            "This is not just about speed. It is about mathematical certainty that data never crosses a border it is not supposed to. We encode the law into the network layer."
+                            "{t('article.quote')}"
                         </p>
-                        <div className="mt-4 font-bold text-white">— Marcus Thorne, CTO</div>
+                        <div className="mt-4 font-bold text-white">{t('article.quoteAuthor')}</div>
                     </div>
 
-                    <h3>Impact and Future Vision</h3>
+                    <h3>{t('article.impactTitle')}</h3>
                     <p>
-                        The deployment of these new protocols is already underway with our Tier-1 partners. We expect full rollout to the public Sovereign Cloud regions by Q3 2026.
+                        {t('article.impactDesc')}
                     </p>
                     <p>
-                        For technical documentation on implementing these patterns, verify your credentials in the <Link href={`/${locale}/docs`}>Developer Portal</Link>.
+                        {t('article.docsLinkPrefix')} <Link href="/docs">{t('article.docsLinkText')}</Link>{t('article.docsLinkSuffix')}
                     </p>
                 </div>
 
@@ -114,11 +113,11 @@ export default async function NewsArticlePage({ params }: { params: Promise<{ lo
                 <div className="flex justify-between items-center">
                     <div className="flex gap-4">
                         <button className="flex items-center gap-2 text-slate-400 hover:text-white transition-colors">
-                            <Share2 size={18} /> Share Analysis
+                            <Share2 size={18} /> {t('article.share')}
                         </button>
                     </div>
-                    <Link href={`/${locale}/contact`} className="btn-primary px-8 py-3 rounded-full text-sm font-bold">
-                        Talk to an Expert
+                    <Link href="/contact" className="btn-primary px-8 py-3 rounded-full text-sm font-bold">
+                        {t('article.cta')}
                     </Link>
                 </div>
             </div>

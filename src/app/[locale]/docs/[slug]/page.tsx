@@ -6,10 +6,33 @@ import Footer from "@/components/Footer";
 import { Section } from "@/components/layout/Section";
 import { PageShell } from "@/components/layout/PageShell";
 
+import { Metadata } from 'next';
+import { generateSEOMetadata, SEO_KEYWORDS } from '@/utils/seo';
+
 interface DocMetadata {
     id: string;
     key: string;
     icon: React.ReactNode;
+}
+
+export async function generateMetadata({ params }: { params: Promise<{ locale: string; slug: string }> }): Promise<Metadata> {
+    const { locale, slug } = await params;
+    const t = await getTranslations({ locale, namespace: 'Docs' });
+
+    // Fallback if metadata is missing for a specific slug
+    const title = t(`cards.${slug}.title`) || t('meta.title');
+    const description = t(`cards.${slug}.description`) || t('meta.description');
+
+    return generateSEOMetadata({
+        title,
+        description,
+        keywords: [
+            ...SEO_KEYWORDS.modernization,
+            "Sovereign Documentation",
+            slug,
+        ],
+        canonical: `https://www.omnigcloud.com/${locale}/docs/${slug}`,
+    }, locale);
 }
 
 export default async function DocDetailPage({ params }: { params: Promise<{ locale: string; slug: string }> }) {

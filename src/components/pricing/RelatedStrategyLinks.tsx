@@ -1,37 +1,23 @@
 "use client";
 
-import Link from 'next/link';
-import { useParams } from 'next/navigation';
+import { Link } from '@/navigation';
+import { useTranslations } from 'next-intl';
 
 export default function RelatedStrategyLinks() {
-    const params = useParams();
-    const locale = params.locale as string;
+    const t = useTranslations('Pricing.relatedStrategy');
+    const links = t.raw('links') as Array<{ category: string; title: string; description: string }>;
 
-    const links = [
-        {
-            href: `/resources/blog/cloud-modernization-guide`,
-            category: 'STRATEGY',
-            title: 'Cloud Modernization',
-            description: 'Comprehensive guide to modernizing your cloud infrastructure'
-        },
-        {
-            href: `/resources/blog/sovereignty-framework`,
-            category: 'FRAMEWORK',
-            title: 'Sovereign Finance',
-            description: 'Financial sovereignty through cloud-agnostic architecture'
-        },
-        {
-            href: `/resources/blog/devops-best-practices`,
-            category: 'BLUEPRINT',
-            title: 'Modernization Blueprint',
-            description: 'Step-by-step DevOps transformation roadmap'
-        }
+    // We keep the hrefs as they are since they are relative to the root and Link from @/navigation handles locale
+    const hrefs = [
+        '/resources/blog/cloud-modernization-guide',
+        '/resources/blog/sovereignty-framework',
+        '/resources/blog/devops-best-practices'
     ];
 
     return (
         <div style={{ marginTop: '3rem' }}>
             <h3 style={{ fontSize: '1.2rem', fontWeight: 900, marginBottom: '1.5rem', opacity: 0.9 }}>
-                Related Strategy & Insights
+                {t('title')}
             </h3>
             <div style={{
                 display: 'grid',
@@ -41,7 +27,7 @@ export default function RelatedStrategyLinks() {
                 {links.map((link, idx) => (
                     <Link
                         key={idx}
-                        href={`/${locale}${link.href}`}
+                        href={hrefs[idx]}
                         style={{
                             padding: '1.5rem',
                             borderRadius: '1rem',

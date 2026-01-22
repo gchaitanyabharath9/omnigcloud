@@ -13,6 +13,7 @@ interface EnrichmentProps {
 
 export const LeadCaptureCTA = ({ pageKey }: { pageKey: string }) => {
     const t = useTranslations(`SEO_Content.${pageKey}.LeadCapture`);
+    const tEnrichment = useTranslations('Enrichment');
     const locale = useLocale();
 
     return (
@@ -36,7 +37,7 @@ export const LeadCaptureCTA = ({ pageKey }: { pageKey: string }) => {
                         href="mailto:architects@omnigcloud.com?subject=Architecture%20Review%20Request"
                         className="btn-secondary py-3 px-8 rounded-xl border-white/10 hover:bg-white/5 transition-all text-sm font-bold"
                     >
-                        Direct Email Fallback
+                        {tEnrichment('leadCapture.fallback')}
                     </a>
                 </div>
             </div>
@@ -57,6 +58,7 @@ export const AboveTheFoldDescription = ({ pageKey }: { pageKey: string }) => {
 
 export const HowItWorks = ({ pageKey }: { pageKey: string }) => {
     const t = useTranslations(`SEO_Content.${pageKey}.HowItWorks`);
+    const tEnrichment = useTranslations('Enrichment');
     const steps = [0, 1, 2];
 
     return (
@@ -67,7 +69,7 @@ export const HowItWorks = ({ pageKey }: { pageKey: string }) => {
                         <Zap className="text-primary" /> {t('title')}
                     </h2>
                     <p className="text-muted-foreground max-w-2xl">
-                        Our autonomous framework follows a rigorous 3-step synchronization process to ensure absolute sovereignty and compliance across your multi-cloud estate.
+                        {tEnrichment('howItWorks')}
                     </p>
                 </div>
                 <div className="grid md:grid-cols-3 gap-8">
@@ -87,6 +89,7 @@ export const HowItWorks = ({ pageKey }: { pageKey: string }) => {
 };
 
 export const VisualSection = ({ pageKey, imageUrl, alt, description }: { pageKey: string; imageUrl: string; alt: string; description: string }) => {
+    const tEnrichment = useTranslations('Enrichment');
     return (
         <Section className="py-20">
             <PageShell>
@@ -102,19 +105,19 @@ export const VisualSection = ({ pageKey, imageUrl, alt, description }: { pageKey
                         <div className="absolute inset-0 bg-gradient-to-t from-background to-transparent opacity-60"></div>
                         <div className="absolute bottom-6 left-6 right-6 p-4 backdrop-blur-md bg-black/40 rounded-xl border border-white/10">
                             <p className="text-xs font-mono text-primary flex items-center gap-2">
-                                <Globe size={12} /> ARCHITECTURE_VISUAL_01 // SECURE_MESH
+                                <Globe size={12} /> {tEnrichment('visualSection.tag')}
                             </p>
                         </div>
                     </div>
                     <div>
-                        <h2 className="text-3xl font-black mb-6">Visual Architecture Breakdown</h2>
+                        <h2 className="text-3xl font-black mb-6">{tEnrichment('visualSection.title')}</h2>
                         <p className="text-lg text-muted-foreground leading-relaxed mb-8">
                             {description}
                         </p>
                         <div className="flex items-center gap-4 p-4 rounded-2xl bg-primary/5 border border-primary/20">
                             <Info className="text-primary shrink-0" />
                             <p className="text-sm italic">
-                                This diagram is updated in real-time as your multi-cloud orchestration logic evolves within the AECP kernel.
+                                {tEnrichment('visualSection.note')}
                             </p>
                         </div>
                     </div>
@@ -126,6 +129,7 @@ export const VisualSection = ({ pageKey, imageUrl, alt, description }: { pageKey
 
 export const DeepDive = ({ pageKey, relatedLinks }: EnrichmentProps) => {
     const t = useTranslations(`SEO_Content.${pageKey}.DeepDive`);
+    const tEnrichment = useTranslations('Enrichment');
     const locale = useLocale();
 
     return (
@@ -145,7 +149,7 @@ export const DeepDive = ({ pageKey, relatedLinks }: EnrichmentProps) => {
 
                     {relatedLinks && (
                         <div className="mt-16 pt-16 border-t border-white/5">
-                            <h4 className="text-sm font-black uppercase tracking-widest text-primary mb-8">Related Strategy & Insights</h4>
+                            <h4 className="text-sm font-black uppercase tracking-widest text-primary mb-8">{tEnrichment('relatedLinks.title')}</h4>
                             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
                                 {relatedLinks.map((link, i) => (
                                     <Link key={i} href={link.href.startsWith('/') ? `/${locale}${link.href}` : link.href} className="glass-panel p-6 rounded-2xl hover:border-primary/50 transition-all flex justify-between items-center group">

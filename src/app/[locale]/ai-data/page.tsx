@@ -1,6 +1,9 @@
 import { Brain, Database, Bot, BarChart, Server, Cpu, Zap } from "lucide-react";
+import { getTranslations } from 'next-intl/server';
 
-export default function AiDataPage() {
+export default async function AiDataPage() {
+    const t = await getTranslations("AiData");
+
     return (
         <section className="snap-section" style={{ minHeight: '100vh', display: 'flex', alignItems: 'center', paddingTop: 'var(--section-pt)' }}>
             <div className="container">
@@ -9,13 +12,13 @@ export default function AiDataPage() {
                     {/* Left Column: Text Content */}
                     <div className="flex-col gap-6">
                         <div className="badge badge-primary-subtle w-fit">
-                            <Brain size={16} /> AI ENGINEERING
+                            <Brain size={16} /> {t("hero.badge")}
                         </div>
                         <h1 className="text-gradient" style={{ fontSize: '3.5rem', fontWeight: 950, lineHeight: 1.1 }}>
-                            AI & Data <br /> Engineering
+                            {t.raw("hero.title")}
                         </h1>
                         <p style={{ fontSize: '1.25rem', opacity: 0.8, lineHeight: 1.6, maxWidth: '500px' }}>
-                            Unlocking the value of your data with advanced pipelines, generative AI, and predictive analytics.
+                            {t("hero.subtitle")}
                         </p>
                     </div>
 
@@ -45,8 +48,8 @@ export default function AiDataPage() {
                         {/* Overlay Card */}
                         <div style={{ position: 'absolute', bottom: '2rem', left: '2rem', right: '2rem' }}>
                             <div style={{ backdropFilter: 'blur(12px)', padding: '1.5rem', background: 'rgba(255,255,255,0.05)', borderRadius: '1rem', border: '1px solid rgba(255,255,255,0.1)' }}>
-                                <h2 style={{ fontSize: '1.25rem', marginBottom: '0.25rem', color: 'white', fontWeight: 700 }}>AI-Native Infrastructure</h2>
-                                <p style={{ color: 'rgba(255,255,255,0.7)', fontSize: '0.9rem' }}>Deploy Training & Inference Clusters in Minutes</p>
+                                <h2 style={{ fontSize: '1.25rem', marginBottom: '0.25rem', color: 'white', fontWeight: 700 }}>{t("visual.title")}</h2>
+                                <p style={{ color: 'rgba(255,255,255,0.7)', fontSize: '0.9rem' }}>{t("visual.subtitle")}</p>
                             </div>
                         </div>
                     </div>
@@ -61,8 +64,8 @@ export default function AiDataPage() {
                             <Brain size={28} color="white" />
                         </div>
                         <div style={{ padding: '1.5rem' }}>
-                            <h3 style={{ fontSize: '1.25rem', marginBottom: '0.5rem' }}>Generative AI Solutions</h3>
-                            <p style={{ color: 'rgba(255, 255, 255, 0.8)', marginTop: '0.5rem', fontSize: '0.95rem' }}>Custom LLM deployment (Llama 3, Mistral) and RAG architectures for enterprise knowledge bases.</p>
+                            <h3 style={{ fontSize: '1.25rem', marginBottom: '0.5rem' }}>{t("cards.genAI.title")}</h3>
+                            <p style={{ color: 'rgba(255, 255, 255, 0.8)', marginTop: '0.5rem', fontSize: '0.95rem' }}>{t("cards.genAI.desc")}</p>
                         </div>
                     </div>
 
@@ -74,8 +77,8 @@ export default function AiDataPage() {
                             <div className="mb-2 p-2 bg-blue-500/20 rounded backdrop-blur w-fit">
                                 <Database size={24} color="var(--primary)" />
                             </div>
-                            <h3 className="text-xl font-bold mb-1 text-white">Data Modernization</h3>
-                            <p className="text-sm text-white/80">Migrate legacy warehouses to modern lakehouses (Snowflake, Databricks).</p>
+                            <h3 className="text-xl font-bold mb-1 text-white">{t("cards.dataMod.title")}</h3>
+                            <p className="text-sm text-white/80">{t("cards.dataMod.desc")}</p>
                         </div>
                     </div>
 
@@ -85,8 +88,8 @@ export default function AiDataPage() {
                             <Cpu size={28} color="white" />
                         </div>
                         <div style={{ padding: '1.5rem' }}>
-                            <h3 style={{ fontSize: '1.25rem', marginBottom: '0.5rem' }}>Enterprise MLOps</h3>
-                            <p style={{ color: 'rgba(255, 255, 255, 0.8)', marginTop: '0.5rem', fontSize: '0.95rem' }}>End-to-end machine learning pipelines with automated retraining, versioning, and drift detection.</p>
+                            <h3 style={{ fontSize: '1.25rem', marginBottom: '0.5rem' }}>{t("cards.mlOps.title")}</h3>
+                            <p style={{ color: 'rgba(255, 255, 255, 0.8)', marginTop: '0.5rem', fontSize: '0.95rem' }}>{t("cards.mlOps.desc")}</p>
                         </div>
                     </div>
                 </div>
@@ -113,8 +116,8 @@ export default function AiDataPage() {
                         padding: '3rem 2rem 2rem',
                         color: 'white'
                     }}>
-                        <h3 style={{ fontSize: '2rem', marginBottom: '0.75rem' }}>Data-Driven Decision Making</h3>
-                        <p style={{ fontSize: '1.1rem', opacity: 0.9, maxWidth: '800px' }}>10x faster insights with cloud-native data lakes. Transform raw data into actionable intelligence with advanced analytics and visualization.</p>
+                        <h3 style={{ fontSize: '2rem', marginBottom: '0.75rem' }}>{t("visuals.dataDriven.title")}</h3>
+                        <p style={{ fontSize: '1.1rem', opacity: 0.9, maxWidth: '800px' }}>{t("visuals.dataDriven.desc")}</p>
                     </div>
                 </div>
 
@@ -140,8 +143,8 @@ export default function AiDataPage() {
                         padding: '3rem 2rem 2rem',
                         color: 'white'
                     }}>
-                        <h3 style={{ fontSize: '2rem', marginBottom: '0.75rem' }}>Enterprise AI at Scale</h3>
-                        <p style={{ fontSize: '1.1rem', opacity: 0.9, maxWidth: '800px' }}>Deploy production-ready AI models with automated MLOps pipelines. From experimentation to deployment in days, not months.</p>
+                        <h3 style={{ fontSize: '2rem', marginBottom: '0.75rem' }}>{t("visuals.enterpriseAI.title")}</h3>
+                        <p style={{ fontSize: '1.1rem', opacity: 0.9, maxWidth: '800px' }}>{t("visuals.enterpriseAI.desc")}</p>
                     </div>
                 </div>
 
@@ -151,8 +154,8 @@ export default function AiDataPage() {
                             <BarChart size={28} color="white" />
                         </div>
                         <div style={{ padding: '1.5rem' }}>
-                            <h3 style={{ fontSize: '1.25rem', marginBottom: '0.5rem' }}>Predictive Analytics</h3>
-                            <p style={{ color: 'rgba(255, 255, 255, 0.8)', fontSize: '0.95rem' }}>Turn historical data into actionable insights for forecasting, churn prediction, and risk analysis.</p>
+                            <h3 style={{ fontSize: '1.25rem', marginBottom: '0.5rem' }}>{t("cards.predictive.title")}</h3>
+                            <p style={{ color: 'rgba(255, 255, 255, 0.8)', fontSize: '0.95rem' }}>{t("cards.predictive.desc")}</p>
                         </div>
                     </div>
 
@@ -162,8 +165,8 @@ export default function AiDataPage() {
                             <Bot size={28} color="white" />
                         </div>
                         <div style={{ padding: '1.5rem' }}>
-                            <h3 style={{ fontSize: '1.25rem', marginBottom: '0.5rem' }}>Autonomous AI Agents</h3>
-                            <p style={{ color: 'rgba(255, 255, 255, 0.8)', fontSize: '0.95rem' }}>Deploy intelligent agents to automate customer support, IT operations, and workflow orchestration.</p>
+                            <h3 style={{ fontSize: '1.25rem', marginBottom: '0.5rem' }}>{t("cards.agents.title")}</h3>
+                            <p style={{ color: 'rgba(255, 255, 255, 0.8)', fontSize: '0.95rem' }}>{t("cards.agents.desc")}</p>
                         </div>
                     </div>
 
@@ -173,8 +176,8 @@ export default function AiDataPage() {
                             <Server size={28} color="white" />
                         </div>
                         <div style={{ padding: '1.5rem' }}>
-                            <h3 style={{ fontSize: '1.25rem', marginBottom: '0.5rem' }}>Data Governance & Security</h3>
-                            <p style={{ color: 'rgba(255, 255, 255, 0.8)', fontSize: '0.95rem' }}>Ensure data quality, lineage, and compliance (PII/PHI) with automated governance frameworks.</p>
+                            <h3 style={{ fontSize: '1.25rem', marginBottom: '0.5rem' }}>{t("cards.governance.title")}</h3>
+                            <p style={{ color: 'rgba(255, 255, 255, 0.8)', fontSize: '0.95rem' }}>{t("cards.governance.desc")}</p>
                         </div>
                     </div>
 
@@ -184,8 +187,8 @@ export default function AiDataPage() {
                             <Database size={28} color="white" />
                         </div>
                         <div style={{ padding: '1.5rem' }}>
-                            <h3 style={{ fontSize: '1.25rem', marginBottom: '0.5rem' }}>Vector Database Management</h3>
-                            <p style={{ color: 'rgba(255, 255, 255, 0.8)', fontSize: '0.95rem' }}>Implementation of Pinecone/Milvus for semantic search and high-dimensional vector storage.</p>
+                            <h3 style={{ fontSize: '1.25rem', marginBottom: '0.5rem' }}>{t("cards.vector.title")}</h3>
+                            <p style={{ color: 'rgba(255, 255, 255, 0.8)', fontSize: '0.95rem' }}>{t("cards.vector.desc")}</p>
                         </div>
                     </div>
 
@@ -195,8 +198,8 @@ export default function AiDataPage() {
                             <Zap size={28} color="white" />
                         </div>
                         <div style={{ padding: '1.5rem' }}>
-                            <h3 style={{ fontSize: '1.25rem', marginBottom: '0.5rem' }}>Real-Time Streaming</h3>
-                            <p style={{ color: 'rgba(255, 255, 255, 0.8)', fontSize: '0.95rem' }}>Event-driven architectures using Kafka and Flink for sub-millisecond data processing.</p>
+                            <h3 style={{ fontSize: '1.25rem', marginBottom: '0.5rem' }}>{t("cards.streaming.title")}</h3>
+                            <p style={{ color: 'rgba(255, 255, 255, 0.8)', fontSize: '0.95rem' }}>{t("cards.streaming.desc")}</p>
                         </div>
                     </div>
 
@@ -208,8 +211,8 @@ export default function AiDataPage() {
                             <div className="mb-2 p-2 bg-pink-500/20 rounded backdrop-blur w-fit">
                                 <Bot size={24} color="#ec4899" />
                             </div>
-                            <h3 className="text-xl font-bold mb-1 text-white">Industrial Vision</h3>
-                            <p className="text-sm text-white/80">Automated quality control and safety monitoring using edge-deployed vision models.</p>
+                            <h3 className="text-xl font-bold mb-1 text-white">{t("cards.vision.title")}</h3>
+                            <p className="text-sm text-white/80">{t("cards.vision.desc")}</p>
                         </div>
                     </div>
                 </div>

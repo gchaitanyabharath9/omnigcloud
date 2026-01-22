@@ -1,16 +1,27 @@
-"use client";
-
 import Link from "next/link";
 import Footer from "@/components/Footer";
+import { getTranslations } from "next-intl/server";
+import type { Metadata } from 'next';
+import { generateSEOMetadata, SEO_KEYWORDS } from '@/utils/seo';
 
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+    const { locale } = await params;
+    const t = await getTranslations({ locale, namespace: 'Docs.api' });
+    return generateSEOMetadata({
+        title: t('title'),
+        description: t('description'),
+        keywords: [...SEO_KEYWORDS.modernization, ...t.raw('keywords')],
+        canonical: `https://www.omnigcloud.com/${locale}/docs/api`,
+    }, locale);
+}
 
-import { useTranslations } from "next-intl";
+export default async function ApiPage({ params }: { params: Promise<{ locale: string }> }) {
+    const { locale } = await params;
+    const t = await getTranslations('Docs.api');
 
-export default function ApiPage() {
-    const t = useTranslations('Docs.api');
     return (
         <>
-            <section className="snap-section" style={{ minHeight: 'calc(100vh - var(--header-height) - var(--breadcrumb-height))', display: 'flex', alignItems: 'center' }}>
+            <section className="snap-section" style={{ minHeight: 'calc(100vh - var(--header-height) - var(--breadcrumb-height))', display: 'flex', alignItems: 'center', background: 'var(--background)' }}>
                 <div className="container">
                     <div style={{ marginBottom: '2rem' }}></div>
                     <h1 style={{ fontSize: '3rem', fontWeight: 950, marginBottom: '2rem' }}>{t('title')}</h1>

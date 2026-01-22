@@ -115,14 +115,15 @@ export default function EcosystemSection() {
                 </div>
 
                 {/* Integrations & Partners */}
+                {/* Integrations & Partners */}
                 <div style={{ marginBottom: '3rem' }}>
                     <h3 style={{ fontSize: '1.5rem', fontWeight: 900, marginBottom: '1.5rem', textAlign: 'center' }}>
-                        Trusted Integrations & Partners
+                        {t('partners.title')}
                     </h3>
                     <div className="glass-panel" style={{ padding: '2rem', borderRadius: '1.5rem' }}>
                         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(150px, 1fr))', gap: '2rem', alignItems: 'center' }}>
-                            {['AWS', 'Azure', 'GCP', 'Oracle Cloud', 'HashiCorp', 'RedHat', 'VMware', 'Cisco'].map((partner) => (
-                                <div key={partner} style={{
+                            {['aws', 'azure', 'gcp', 'oracle', 'hashicorp', 'redhat', 'vmware', 'cisco'].map((partnerKey) => (
+                                <div key={partnerKey} style={{
                                     textAlign: 'center',
                                     padding: '1rem',
                                     fontWeight: 700,
@@ -131,7 +132,7 @@ export default function EcosystemSection() {
                                     transition: 'opacity 0.2s',
                                     cursor: 'pointer'
                                 }}>
-                                    {partner}
+                                    {t(`partners.items.${partnerKey}`)}
                                 </div>
                             ))}
                         </div>
@@ -141,28 +142,28 @@ export default function EcosystemSection() {
                 {/* Deployment Stats */}
                 <div>
                     <h3 style={{ fontSize: '1.5rem', fontWeight: 900, marginBottom: '1.5rem', textAlign: 'center' }}>
-                        Global Deployment Statistics
+                        {t('stats.title')}
                     </h3>
                     <div className="grid-4" style={{ gap: '1.5rem' }}>
                         <div className="glass-panel" style={{ padding: '2rem', borderRadius: '1.5rem', textAlign: 'center' }}>
                             <CheckCircle size={28} color="#10b981" style={{ margin: '0 auto 1rem' }} />
-                            <div style={{ fontSize: '2.5rem', fontWeight: 950, color: 'var(--primary)' }}>450+</div>
-                            <div style={{ fontSize: '0.9rem', opacity: 0.6 }}>Active Deployments</div>
+                            <div style={{ fontSize: '2.5rem', fontWeight: 950, color: 'var(--primary)' }}>{t('stats.deploymentsVal')}</div>
+                            <div style={{ fontSize: '0.9rem', opacity: 0.6 }}>{t('stats.deployments')}</div>
                         </div>
                         <div className="glass-panel" style={{ padding: '2rem', borderRadius: '1.5rem', textAlign: 'center' }}>
                             <Server size={28} color="#3b82f6" style={{ margin: '0 auto 1rem' }} />
-                            <div style={{ fontSize: '2.5rem', fontWeight: 950, color: 'var(--primary)' }}>12.5K</div>
-                            <div style={{ fontSize: '0.9rem', opacity: 0.6 }}>Cloud Accounts Managed</div>
+                            <div style={{ fontSize: '2.5rem', fontWeight: 950, color: 'var(--primary)' }}>{t('stats.accountsVal')}</div>
+                            <div style={{ fontSize: '0.9rem', opacity: 0.6 }}>{t('stats.accounts')}</div>
                         </div>
                         <div className="glass-panel" style={{ padding: '2rem', borderRadius: '1.5rem', textAlign: 'center' }}>
                             <Lock size={28} color="#8b5cf6" style={{ margin: '0 auto 1rem' }} />
-                            <div style={{ fontSize: '2.5rem', fontWeight: 950, color: 'var(--primary)' }}>99.98%</div>
-                            <div style={{ fontSize: '0.9rem', opacity: 0.6 }}>Compliance Rate</div>
+                            <div style={{ fontSize: '2.5rem', fontWeight: 950, color: 'var(--primary)' }}>{t('stats.complianceVal')}</div>
+                            <div style={{ fontSize: '0.9rem', opacity: 0.6 }}>{t('stats.compliance')}</div>
                         </div>
                         <div className="glass-panel" style={{ padding: '2rem', borderRadius: '1.5rem', textAlign: 'center' }}>
                             <Award size={28} color="#f59e0b" style={{ margin: '0 auto 1rem' }} />
-                            <div style={{ fontSize: '2.5rem', fontWeight: 950, color: 'var(--primary)' }}>45</div>
-                            <div style={{ fontSize: '0.9rem', opacity: 0.6 }}>Countries</div>
+                            <div style={{ fontSize: '2.5rem', fontWeight: 950, color: 'var(--primary)' }}>{t('stats.countriesVal')}</div>
+                            <div style={{ fontSize: '0.9rem', opacity: 0.6 }}>{t('stats.countries')}</div>
                         </div>
                     </div>
                 </div>

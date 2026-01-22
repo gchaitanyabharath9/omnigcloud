@@ -14,7 +14,7 @@ export default function ManagedOperationsSection() {
                 <div className="grid-2x2-strict">
                     {/* Card 1: 24/7 - Image */}
                     <div className="img-card-container">
-                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&fit=crop" alt="NOC Room" className="img-cover" />
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&fit=crop" alt={t('images.noc')} className="img-cover" />
                         <div className="card-overlay" style={{ background: 'linear-gradient(0deg, rgba(88, 28, 135, 0.9) 0%, rgba(88, 28, 135, 0.4) 100%)' }}></div>
                         <div className="card-content-overlay p-6 justify-end">
                             <div className="icon-circle mb-2 bg-white/10"><Globe size={20} color="#fff" /></div>
@@ -39,7 +39,7 @@ export default function ManagedOperationsSection() {
 
                     {/* Card 4: Compliance - Image */}
                     <div className="img-card-container">
-                        <img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=800&fit=crop" alt="Audit Papers" className="img-cover" />
+                        <img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=800&fit=crop" alt={t('images.audit')} className="img-cover" />
                         <div className="card-overlay"></div>
                         <div className="card-content-overlay p-6 justify-end">
                             <div className="icon-circle mb-2 bg-white/10"><ShieldCheck size={20} color="#fff" /></div>

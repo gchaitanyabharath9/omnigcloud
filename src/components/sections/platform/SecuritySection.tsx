@@ -21,11 +21,11 @@ export default function SecuritySection() {
                         </div>
 
                         <div className="dashboard-console border border-white/10 bg-black/40 backdrop-blur-md rounded-lg p-4 font-mono text-xs">
-                            <div className="text-cyan-400 mb-2">&gt; AUDIT_STREAM_ACTIVE</div>
+                            <div className="text-cyan-400 mb-2">{t('logs.auditStream')}</div>
                             <div className="flex flex-col gap-1 opacity-70">
-                                <div>[14:02:41] USER_AUTH_SUCCESS (US-EAST-1)</div>
-                                <div>[14:02:42] POLICY_CHECK_Orchestrator... OK</div>
-                                <div className="text-green-400">[14:02:42] DATA_ACCESS_GRANT [READ] -&gt; APPROVED</div>
+                                <div>{t('logs.authSuccess')}</div>
+                                <div>{t('logs.policyCheck')}</div>
+                                <div className="text-green-400">{t('logs.dataAccess')}</div>
                             </div>
                         </div>
                     </div>

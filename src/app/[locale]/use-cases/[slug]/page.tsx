@@ -1,6 +1,6 @@
 import { getTranslations, getLocale } from 'next-intl/server';
 import { ArrowLeft, CheckCircle } from 'lucide-react';
-import Link from 'next/link';
+import { Link } from '@/navigation';
 import { notFound } from 'next/navigation';
 import Footer from '@/components/Footer';
 import { Section } from '@/components/layout/Section';
@@ -23,8 +23,8 @@ export default async function UseCaseDetailPage({ params }: { params: Promise<{ 
         <div className="animate-fade-in">
             <Section className="py-20 border-b border-white/10" style={{ background: 'var(--bg-surface-2)' }}>
                 <PageShell>
-                    <Link href={`/${locale}/use-cases`} className="inline-flex items-center gap-2 text-primary font-bold mb-8 hover:opacity-70 transition-opacity">
-                        <ArrowLeft size={16} /> All Use Cases
+                    <Link href="/use-cases" className="inline-flex items-center gap-2 text-primary font-bold mb-8 hover:opacity-70 transition-opacity">
+                        <ArrowLeft size={16} /> {t("allUseCases")}
                     </Link>
 
                     <div className="max-w-4xl">

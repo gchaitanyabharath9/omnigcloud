@@ -26,7 +26,7 @@ export const getDashboardMetrics = (t: any) => ({
             mainVisual={
                 <div className="flex flex-col items-center justify-center h-full gap-4">
                     <div className="text-6xl font-black text-white">98.4%</div>
-                    <div className="text-sm font-mono text-emerald-400">HEALTH SCORE</div>
+                    <div className="text-sm font-mono text-emerald-400">{tSafe(t, 'common.healthScore', 'HEALTH SCORE')}</div>
                     <div className="w-full max-w-md h-2 bg-white/10 rounded-full overflow-hidden">
                         <div className="h-full bg-gradient-to-r from-emerald-500 to-cyan-500 w-[98.4%]" />
                     </div>
