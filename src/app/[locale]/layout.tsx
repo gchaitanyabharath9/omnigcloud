@@ -1,4 +1,4 @@
-import { NextIntlClientProvider } from 'next-intl';
+import ClientIntlProvider from '@/components/i18n/ClientIntlProvider';
 import { getMessages } from 'next-intl/server';
 import type { Metadata, Viewport } from "next";
 import { Inter, Plus_Jakarta_Sans } from "next/font/google"; // Premium fonts
@@ -184,11 +184,9 @@ export default async function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <NextIntlClientProvider
+          <ClientIntlProvider
             messages={messages}
-            getMessageFallback={({ namespace, key }) => {
-              return namespace ? `${namespace}.${key}` : key;
-            }}
+            locale={locale}
           >
             <ObservabilityProvider locale={locale}>
               <UtmTracker />
@@ -202,7 +200,7 @@ export default async function RootLayout({
               <FloatingActions />
               <CookieConsent />
             </ObservabilityProvider>
-          </NextIntlClientProvider>
+          </ClientIntlProvider>
         </ThemeProvider>
         {/* Load analytics after main content */}
         <SpeedInsights />
