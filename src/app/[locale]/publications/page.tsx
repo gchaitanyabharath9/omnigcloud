@@ -1,5 +1,6 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
+import { getTranslations } from 'next-intl/server';
 
 export async function generateMetadata(): Promise<Metadata> {
     return {
@@ -10,6 +11,7 @@ export async function generateMetadata(): Promise<Metadata> {
 
 export default async function PublicationsPage({ params }: { params: Promise<{ locale: string }> }) {
     const { locale } = await params;
+    const pt = await getTranslations('Pages.Publications');
 
     const publications = [
         {
@@ -82,10 +84,10 @@ export default async function PublicationsPage({ params }: { params: Promise<{ l
             <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                 <header className="mb-16 text-center max-w-3xl mx-auto">
                     <span className="text-primary font-mono text-sm tracking-wider uppercase mb-4 block">
-                        Technical Library
+                        {pt('libraryTitle')}
                     </span>
                     <h1 className="text-4xl md:text-6xl font-black tracking-tight mb-6">
-                        Publications
+                        {pt('publicationsTitle')}
                     </h1>
                     <p className="text-xl text-muted-foreground leading-relaxed">
                         A collection of technical papers, architectural standards, and research findings derived from enterprise-scale implementations.

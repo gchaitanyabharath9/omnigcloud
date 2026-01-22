@@ -2,8 +2,10 @@
 
 import React, { useState } from 'react';
 import { RefreshCw, ArrowRight, Shield, Database, Cpu, Globe } from 'lucide-react';
+import { useTranslations } from 'next-intl';
 
 export default function CloudSwitchSim() {
+    const t = useTranslations('Components.Visuals.CloudSwitchSim');
     const [status, setStatus] = useState('idle'); // idle, transferring, success
     const [progress, setProgress] = useState(0);
     const [targetCloud, setTargetCloud] = useState('OCI Frankfurt');
@@ -85,7 +87,7 @@ export default function CloudSwitchSim() {
                                 className="btn-primary py-2 px-6 flex items-center gap-2 group transform hover:scale-105 active:scale-95 transition-all"
                             >
                                 <RefreshCw size={16} className="group-hover:rotate-180 transition-transform duration-500" />
-                                Initiate Arbitrage Switch
+                                {t('initiateSwitch')}
                             </button>
                         )}
 
@@ -94,7 +96,7 @@ export default function CloudSwitchSim() {
                                 onClick={reset}
                                 className="text-[10px] font-black uppercase tracking-widest text-primary hover:text-white transition-colors"
                             >
-                                Reset Simulation
+                                {t('resetSimulation')}
                             </button>
                         )}
 
@@ -110,7 +112,7 @@ export default function CloudSwitchSim() {
                             <Shield size={24} className={status === 'success' ? 'text-primary' : 'opacity-20'} />
                         </div>
                         <div className="text-center">
-                            <div className="text-[8px] opacity-40 uppercase font-black">Destination</div>
+                            <div className="text-[8px] opacity-40 uppercase font-black">{t('destination')}</div>
                             <div className="text-xs font-bold">{targetCloud}</div>
                         </div>
                         <div className="flex gap-1">

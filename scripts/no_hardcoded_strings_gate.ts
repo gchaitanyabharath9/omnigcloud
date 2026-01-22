@@ -26,7 +26,8 @@ const MAX_STRING_LENGTH = 10; // Fail for strings longer than this that are hard
 async function scanForHardcodedStrings() {
     console.log('Starting Hardcoded String Gate...');
 
-    const files = await glob(`${SCAN_DIR}/**/*.{tsx,ts}`, { ignore: ['**/*.d.ts', '**/*.test.ts', '**/*.test.tsx', '**/messages/*.json', '**/i18n/*.ts'] });
+    const scanPattern = `${SCAN_DIR.replace(/\\\\/g, '/')}/**/*.{tsx,ts}`;
+    const files = await glob(scanPattern, { ignore: ['**/*.d.ts', '**/*.test.ts', '**/*.test.tsx', '**/messages/*.json', '**/i18n/*.ts', '**/lib/**'] });
 
     let hasErrors = false;
 

@@ -1,8 +1,10 @@
 "use client";
 
 import React, { useState, useEffect } from 'react';
+import { useTranslations } from 'next-intl';
 
 export default function BillingForecast() {
+    const t = useTranslations('Components.Visuals.BillingForecast');
     const [activeCloud, setActiveCloud] = useState('all');
 
     const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
@@ -21,7 +23,7 @@ export default function BillingForecast() {
         <div className="glass-panel p-6" style={{ borderRadius: '1.5rem', border: '1px solid var(--card-border)', background: 'rgba(0,0,0,0.4)', backdropFilter: 'blur(20px)' }}>
             <div className="flex justify-between items-center mb-8">
                 <div>
-                    <h3 className="text-xl font-bold mb-1">Billing Forecast & Arbitrage</h3>
+                    <h3 className="text-xl font-bold mb-1">{t('title')}</h3>
                     <p className="text-xs opacity-60 font-mono uppercase tracking-widest text-primary">Algorithm: EAB-Forecast-v4</p>
                 </div>
                 <div className="flex gap-2 bg-white/5 p-1 rounded-lg border border-white/10">
@@ -103,11 +105,11 @@ export default function BillingForecast() {
 
             <div className="mt-8 grid grid-cols-3 gap-4">
                 <div className="p-3 rounded-xl bg-white/5 border border-white/10">
-                    <div className="text-[10px] opacity-40 uppercase font-black mb-1">Projected Annual Savings</div>
+                    <div className="text-[10px] opacity-40 uppercase font-black mb-1">{t('projectedSavings')}</div>
                     <div className="text-xl font-black text-green-400">$2.4M</div>
                 </div>
                 <div className="p-3 rounded-xl bg-white/5 border border-white/10">
-                    <div className="text-[10px] opacity-40 uppercase font-black mb-1">Arbitrage Reliability</div>
+                    <div className="text-[10px] opacity-40 uppercase font-black mb-1">{t('arbitrageReliability')}</div>
                     <div className="text-xl font-black text-primary">99.8%</div>
                 </div>
                 <div className="p-3 rounded-xl bg-white/5 border border-white/10">

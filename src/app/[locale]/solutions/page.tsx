@@ -2,7 +2,7 @@ import { PageShell } from '@/components/layout/PageShell';
 import { Section } from '@/components/layout/Section';
 import React from 'react';
 import { Shield, Globe, Layers, ArrowRight, ChevronRight, Award, Landmark, Phone, HeartPulse, Truck, Activity, BarChart3, Building2, CheckCircle } from 'lucide-react';
-import Link from 'next/link';
+import { Link } from '@/navigation';
 import { getTranslations } from 'next-intl/server';
 import { generateSEOMetadata, SEO_KEYWORDS } from '@/utils/seo';
 import { USE_CASES } from '@/data/use-cases';
@@ -50,6 +50,7 @@ export default async function SolutionsPage({ params }: { params: Promise<{ loca
     const t = await getTranslations('Industries');
     const uct = await getTranslations('UseCases');
     const st = await getTranslations('Solutions');
+    const pt = await getTranslations('Pages.Solutions');
 
     return (
         <div className="flex-col">
@@ -65,7 +66,7 @@ export default async function SolutionsPage({ params }: { params: Promise<{ loca
                             <p style={{ fontSize: '1.1rem', opacity: 0.7, marginBottom: '2.5rem', lineHeight: '1.6', maxWidth: '600px' }}>
                                 {st('hero.subtitle')}
                             </p>
-                            <Link href={`/${locale}/contact`} className="btn-primary" style={{ padding: '1rem 2.5rem', borderRadius: '2rem' }}>
+                            <Link href="/contact" className="btn-primary" style={{ padding: '1rem 2.5rem', borderRadius: '2rem' }}>
                                 {st('hero.cta')} <ArrowRight size={18} style={{ marginLeft: '8px' }} />
                             </Link>
                         </div>
@@ -143,7 +144,7 @@ export default async function SolutionsPage({ params }: { params: Promise<{ loca
             <section className="snap-section" style={{ background: 'var(--bg-card)', padding: '6rem 0' }}>
                 <PageShell>
                     <div className="text-center" style={{ marginBottom: '4rem' }}>
-                        <h2 style={{ fontSize: '2.5rem', fontWeight: 900, marginBottom: '1rem' }}>A Framework of Reliability</h2>
+                        <h2 style={{ fontSize: '2.5rem', fontWeight: 900, marginBottom: '1rem' }}>{pt('frameworkTitle')}</h2>
                         <p style={{ opacity: 0.6, maxWidth: '700px', margin: '0 auto' }}>
                             OmniGCloud’s infrastructure is engineered to mitigate risks in global
                             user experienced through research-backed technical safeguards.
@@ -188,7 +189,7 @@ export default async function SolutionsPage({ params }: { params: Promise<{ loca
                             <p style={{ opacity: 0.7, lineHeight: 1.6, marginBottom: '2rem' }}>
                                 {st('research.description')}
                             </p>
-                            <Link href={`/${locale}/research`} style={{ color: 'var(--primary)', fontWeight: 800, display: 'flex', alignItems: 'center', gap: '0.5rem', textDecoration: 'none' }}>
+                            <Link href="/research" style={{ color: 'var(--primary)', fontWeight: 800, display: 'flex', alignItems: 'center', gap: '0.5rem', textDecoration: 'none' }}>
                                 {st('research.cta')} <ChevronRight size={18} />
                             </Link>
                         </div>

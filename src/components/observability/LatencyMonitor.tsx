@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { Activity, Globe, Zap, Server } from 'lucide-react';
+import { useTranslations } from 'next-intl';
 
 interface NodeStatus {
     id: string;
@@ -21,6 +22,7 @@ const REGIONS = [
 ];
 
 export default function LatencyMonitor() {
+    const t = useTranslations('Components.Visuals.LatencyMonitor');
     const [nodes, setNodes] = useState<NodeStatus[]>([]);
     const [avgLatency, setAvgLatency] = useState(0);
 
@@ -71,7 +73,7 @@ export default function LatencyMonitor() {
                         <Zap size={20} />
                     </div>
                     <div>
-                        <h4 style={{ fontSize: '1rem', fontWeight: 800, margin: 0 }}>Global Mesh Latency</h4>
+                        <h4 style={{ fontSize: '1rem', fontWeight: 800, margin: 0 }}>{t('title')}</h4>
                         <p style={{ fontSize: '0.7rem', color: 'var(--muted)', margin: 0 }}>OmniGCloud Autonomous Discovery</p>
                     </div>
                 </div>
@@ -114,7 +116,7 @@ export default function LatencyMonitor() {
 
             <div style={{ marginTop: '1.5rem', borderTop: '1px solid var(--card-border)', paddingTop: '1rem' }}>
                 <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: '0.65rem', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.05em', color: 'var(--muted)' }}>
-                    <span>Mesh Scan Pattern</span>
+                    <span>{t('meshScanPattern')}</span>
                     <span style={{ color: 'var(--primary)' }}>Real-time Analysis Active</span>
                 </div>
                 <div style={{ marginTop: '0.5rem', height: '2px', background: 'rgba(59, 130, 246, 0.1)', borderRadius: '1px', overflow: 'hidden' }}>

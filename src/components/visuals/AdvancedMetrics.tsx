@@ -1,6 +1,7 @@
 "use client";
 
 import React from 'react';
+import { useTranslations } from 'next-intl';
 
 // 9. Cloud Provider Cost Comparison
 export const CloudCostComparison = () => {
@@ -142,8 +143,8 @@ export const DataTransferVolume = () => {
     );
 };
 
-// 13. Incident Response Time
 export const IncidentResponseTime = () => {
+    const t = useTranslations('Components.Visuals.AdvancedMetrics');
     const weeks = ['W1', 'W2', 'W3', 'W4'];
     const avgTimes = [45, 38, 32, 28]; // minutes
     const maxTime = 60;
@@ -152,7 +153,7 @@ export const IncidentResponseTime = () => {
         <div style={{ width: '100%', height: '100%', display: 'flex', flexDirection: 'column', justifyContent: 'center', gap: '1rem' }}>
             <div style={{ textAlign: 'center' }}>
                 <div style={{ fontSize: '2.5rem', fontWeight: 950, color: 'var(--color-success)' }}>{avgTimes[avgTimes.length - 1]}<span style={{ fontSize: '1rem', opacity: 0.5 }}>min</span></div>
-                <div style={{ fontSize: '0.65rem', opacity: 0.5, fontWeight: 700 }}>AVG RESPONSE TIME</div>
+                <div style={{ fontSize: '0.65rem', opacity: 0.5, fontWeight: 700 }}>{t('avgResponseTime')}</div>
             </div>
             <div style={{ display: 'flex', alignItems: 'flex-end', gap: '0.5rem', height: '60px' }}>
                 {avgTimes.map((time, i) => (
@@ -172,8 +173,8 @@ export const IncidentResponseTime = () => {
     );
 };
 
-// 14. Storage Optimization Savings
 export const StorageOptimization = () => {
+    const t = useTranslations('Components.Visuals.AdvancedMetrics');
     const before = 2400; // GB
     const after = 1650; // GB
     const saved = before - after;
@@ -183,7 +184,7 @@ export const StorageOptimization = () => {
         <div style={{ width: '100%', height: '100%', display: 'flex', flexDirection: 'column', justifyContent: 'center', gap: '1.5rem' }}>
             <div style={{ textAlign: 'center' }}>
                 <div style={{ fontSize: '2.5rem', fontWeight: 950, color: 'var(--primary)' }}>{saved}<span style={{ fontSize: '1rem', opacity: 0.5 }}>GB</span></div>
-                <div style={{ fontSize: '0.65rem', opacity: 0.5, fontWeight: 700 }}>STORAGE SAVED</div>
+                <div style={{ fontSize: '0.65rem', opacity: 0.5, fontWeight: 700 }}>{t('storageSaved')}</div>
             </div>
             <div style={{ display: 'flex', gap: '0.5rem', alignItems: 'center' }}>
                 <div style={{ flex: 1, height: '40px', background: 'rgba(239, 68, 68, 0.2)', borderRadius: '0.5rem', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '0.7rem', fontWeight: 800 }}>
