@@ -150,38 +150,38 @@
     "layers": {
       "0": {
         "desc": "Ingests legacy application signatures, network topology, and security policies using AI scan engines. Maps 100% of dependencies without agent installation.",
-        "tech": [
-          "Legacy Scan Engine",
-          "Dependency Mapper",
-          "Policy Ingestor"
-        ],
+        "tech": {
+          "0": "Legacy Scan Engine",
+          "1": "Dependency Mapper",
+          "2": "Policy Ingestor"
+        },
         "title": "Autonomous Discovery Layer"
       },
       "1": {
         "desc": "A centralized control plane where sovereign compliance rules (GDPR, HIPAA, SOC2) are defined once and enforced globally across all cloud regions.",
-        "tech": [
-          "Open Policy Agent",
-          "Sovereign Rule Engine",
-          "Compliance Guard"
-        ],
+        "tech": {
+          "0": "Open Policy Agent",
+          "1": "Sovereign Rule Engine",
+          "2": "Compliance Guard"
+        },
         "title": "Policy & Governance Plane"
       },
       "2": {
         "desc": "The AECP core analyze legacy code (Java, .NET) and automatically generates modernization blueprints for RedHat OCP or Azure native services.",
-        "tech": [
-          "LLM Blueprinting",
-          "Refactor AI",
-          "IaC Generator"
-        ],
+        "tech": {
+          "0": "LLM Blueprinting",
+          "1": "Refactor AI",
+          "2": "IaC Generator"
+        },
         "title": "AI Modernization Engine"
       },
       "3": {
         "desc": "Orchestrates deployment and state synchronization across AWS, Azure, GCP, and private cloud nodes. Ensures 100% vendor agnostic runtime.",
-        "tech": [
-          "Cross-Cloud Mesh",
-          "State Synchronizer",
-          "Edge Broker"
-        ],
+        "tech": {
+          "0": "Cross-Cloud Mesh",
+          "1": "State Synchronizer",
+          "2": "Edge Broker"
+        },
         "title": "Multi-Cloud Execution Mesh"
       }
     },
@@ -438,6 +438,7 @@
     "compliance_maps": "Compliance Maps",
     "contact": "Contact Details",
     "dashboard": "Dashboard Details",
+    "distributed-systems-resilience": "Distributed Systems Resilience",
     "docs": "Documentation",
     "frameworks": "Frameworks Details",
     "home": "Home Details",
@@ -649,11 +650,11 @@
     },
     "article": {
       "challengeDesc": "Challenge Desc",
-      "challengeList": [
-        "Item 0",
-        "Item 1",
-        "Item 2"
-      ],
+      "challengeList": {
+        "0": "Item 0",
+        "1": "Item 1",
+        "2": "Item 2"
+      },
       "challengeTitle": "Challenge Title",
       "cta": "Cta",
       "docsLinkPrefix": "Docs Link Prefix",
@@ -782,26 +783,26 @@
     "breadcrumb": "Breadcrumb",
     "callbackUrl": "Callback Url",
     "canonical": "Canonical",
-    "cards": [
-      {
+    "cards": {
+      "0": {
         "badge": "Featured",
         "desc": "Card description 1",
         "link": "/link-1",
         "title": "Card Title 1"
       },
-      {
+      "1": {
         "badge": "Featured",
         "desc": "Card description 2",
         "link": "/link-2",
         "title": "Card Title 2"
       },
-      {
+      "2": {
         "badge": "Featured",
         "desc": "Card description 3",
         "link": "/link-3",
         "title": "Card Title 3"
       }
-    ],
+    },
     "catalog": {
       "aecp": {
         "desc": "Desc description",
@@ -875,17 +876,17 @@
         "latency": "Latency"
       },
       "description": "Description description",
-      "points": [
-        "Item 0",
-        "Item 1",
-        "Item 2"
-      ],
-      "steps": [
-        "Item 0",
-        "Item 1",
-        "Item 2",
-        "Item 3"
-      ],
+      "points": {
+        "0": "Item 0",
+        "1": "Item 1",
+        "2": "Item 2"
+      },
+      "steps": {
+        "0": "Item 0",
+        "1": "Item 1",
+        "2": "Item 2",
+        "3": "Item 3"
+      },
       "title": "Title"
     },
     "clientId": "Client Id",
@@ -1029,21 +1030,21 @@
         "desc": "Desc description",
         "title": "Title"
       },
-      "steps": [
-        {},
-        {
+      "steps": {
+        "0": {},
+        "1": {
           "desc": "Desc description",
           "title": "Title"
         },
-        {
+        "2": {
           "desc": "Desc description",
           "title": "Title"
         },
-        {
+        "3": {
           "desc": "Desc description",
           "title": "Title"
         }
-      ],
+      },
       "subtitle": "Subtitle description",
       "title": "Title"
     },
@@ -1330,23 +1331,23 @@
     "iso27001": "Iso27001 Details",
     "iso27001Text": "Iso27001 Text",
     "itemStatus": "Item Status",
-    "items": [
-      {
+    "items": {
+      "0": {
         "date": "Date",
         "title": "Title",
         "type": "Type"
       },
-      {
+      "1": {
         "date": "Date",
         "title": "Title",
         "type": "Type"
       },
-      {
+      "2": {
         "date": "Date",
         "title": "Title",
         "type": "Type"
       }
-    ],
+    },
     "journey": {
       "badge": "Badge",
       "p1": "P1",
@@ -1429,20 +1430,20 @@
       "title": "Newsletter Title"
     },
     "newsroom": {
-      "items": [
-        {
+      "items": {
+        "0": {
           "desc": "Desc description",
           "title": "Title"
         },
-        {
+        "1": {
           "desc": "Desc description",
           "title": "Title"
         },
-        {
+        "2": {
           "desc": "Desc description",
           "title": "Title"
         }
-      ],
+      },
       "readArticle": "Read Article",
       "title": "Title"
     },
@@ -1462,38 +1463,38 @@
       "badge": "Badge",
       "title": "Title"
     },
-    "patterns": [
-      {
+    "patterns": {
+      "0": {
         "description": "0 description",
         "explanation": "Explanation Details",
         "impact": "Impact Details",
         "title": "0 Title"
       },
-      {
+      "1": {
         "description": "1 description",
         "explanation": "Explanation Details",
         "impact": "Impact Details",
         "title": "1 Title"
       },
-      {
+      "2": {
         "description": "2 description",
         "explanation": "Explanation Details",
         "impact": "Impact Details",
         "title": "2 Title"
       },
-      {
+      "3": {
         "description": "3 description",
         "explanation": "Explanation Details",
         "impact": "Impact Details",
         "title": "3 Title"
       },
-      {
+      "4": {
         "description": "4 description",
         "explanation": "Explanation Details",
         "impact": "Impact Details",
         "title": "4 Title"
       }
-    ],
+    },
     "pgpKey": "Pgp Key",
     "pillars": {
       "item1Desc": "Item1 Desc",
@@ -1933,11 +1934,11 @@
     "titleHighlight": "titleHighlight Details",
     "transparency": {
       "desc": "Clear, auditable practices across security, reliability, and operations.",
-      "list": [
-        "Public roadmap and release notes",
-        "Security posture and incident communication",
-        "Cost and performance visibility"
-      ],
+      "list": {
+        "0": "Public roadmap and release notes",
+        "1": "Security posture and incident communication",
+        "2": "Cost and performance visibility"
+      },
       "title": "Transparency"
     },
     "transparencyText": "Transparency Text",
@@ -2029,6 +2030,10 @@
   },
   "Community": {
     "callout": {
+      "charts": {
+        "commits": "Commits",
+        "prs": "Pull Requests"
+      },
       "cli": {
         "badge": "Badge",
         "description": "Description description"
@@ -2048,6 +2053,15 @@
         "github": {
           "name": "Name"
         }
+      },
+      "stack": {
+        "title": "AECP Community Stack"
+      },
+      "stats": {
+        "contribs": "Contributors",
+        "forks": "Forks",
+        "pkgs": "Packages",
+        "stars": "Stars"
       }
     },
     "cli": {
@@ -2069,17 +2083,17 @@
         "latency": "Latency Details"
       },
       "description": "Cli description",
-      "points": [
-        "0 Details",
-        "1 Details",
-        "2 Details"
-      ],
-      "steps": [
-        "0 Details",
-        "1 Details",
-        "2 Details",
-        "3 Details"
-      ],
+      "points": {
+        "0": "Automated Infrastructure Discovery",
+        "1": "Policy-as-Logic Enforcement",
+        "2": "Real-time Compliance Auditing"
+      },
+      "steps": {
+        "0": "Install the CLI tool",
+        "1": "Initialize your project",
+        "2": "Run a security audit",
+        "3": "SUCCESS: All policies verified."
+      },
       "title": "Cli Title"
     },
     "hero": {
@@ -2126,10 +2140,19 @@
     "contact": {
       "addressLine1": "3354 Jasmine Hill Rd",
       "addressLine2": "Tallahassee, Florida 32311",
+      "badge": "Global Connectivity",
       "country": "United States",
+      "coverageLabel": "Compliance Footprint",
+      "coverageVal": "94% Global GDP",
       "description": "Strategic inquiries, partnership proposals, and global modernization roadmaps.",
       "email": "omnigcloud@gmail.com",
+      "executiveLineLabel": "Executive Liaison",
+      "hqLabel": "Global HQ",
       "phone": "+1 (850) 443-1481",
+      "sitemapSubtitle": "Direct Access to Research",
+      "sitemapTitle": "Enterprise Sitemap",
+      "subtitle": "Jurisdictional Control at Global Scale",
+      "supportLabel": "Architecture Support",
       "title": "Contact Chief Executive Office"
     },
     "cta": {
@@ -2137,28 +2160,27 @@
       "read": "Read",
       "text": "Text"
     },
-    "email": {
-      "support": "Support Details"
-    },
+    "email": "research@omnigcloud.com",
+    "email_support": "support@omnigcloud.com",
     "experience": {
-      "items": [
-        {
+      "items": {
+        "0": {
           "desc": "Desc description",
           "title": "Title"
         },
-        {
+        "1": {
           "desc": "Desc description",
           "title": "Title"
         },
-        {
+        "2": {
           "desc": "Desc description",
           "title": "Title"
         },
-        {
+        "3": {
           "desc": "Desc description",
           "title": "Title"
         }
-      ],
+      },
       "title": "Title"
     },
     "hero": {
@@ -2222,12 +2244,12 @@
       "title": "Global Ops"
     },
     "research": {
-      "items": [
-        "Item 0",
-        "Item 1",
-        "Item 2",
-        "Item 3"
-      ],
+      "items": {
+        "0": "Item 0",
+        "1": "Item 1",
+        "2": "Item 2",
+        "3": "Item 3"
+      },
       "title": "Title",
       "viewRepo": "View Repo"
     },
@@ -2293,17 +2315,17 @@
     },
     "Visuals": {
       "AdvancedMetrics": {
-        "avgResponseTime": "AVG RESPONSE TIME",
-        "storageSaved": "STORAGE SAVED",
-        "before": "Before",
         "after": "After",
-        "reduction": "{percentage}% Reduction",
-        "successRate30d": "SUCCESS RATE (30D)",
+        "avgResponseTime": "AVG RESPONSE TIME",
+        "before": "Before",
         "licenseTypes": {
-          "unused": "Unused",
+          "optimized": "Optimized",
           "underused": "Underused",
-          "optimized": "Optimized"
-        }
+          "unused": "Unused"
+        },
+        "reduction": "{percentage}% Reduction",
+        "storageSaved": "STORAGE SAVED",
+        "successRate30d": "SUCCESS RATE (30D)"
       },
       "BillingForecast": {
         "arbitrageReliability": "Arbitrage Reliability",
@@ -2791,12 +2813,12 @@
           "desc": "Initiate a modernization workflow for a specific application or cluster."
         }
       },
-      "keywords": [
-        "OmniGCloud API",
-        "REST API v1",
-        "Cloud Governance API",
-        "Infrastructure as Code API"
-      ],
+      "keywords": {
+        "0": "OmniGCloud API",
+        "1": "REST API v1",
+        "2": "Cloud Governance API",
+        "3": "Infrastructure as Code API"
+      },
       "title": "OmniGCloud REST API",
       "versionLabel": "API Version: v1.0.4 (LTS)"
     },
@@ -2804,67 +2826,69 @@
       "compendium": {
         "description": "The ASO framework has been peer-reviewed and recognized by leading infrastructure architects. This compendium serves as the primary technical evidence for our **Original Contribution to the Field**.",
         "impactBadge": "{impact} Impact",
-        "journals": [
-          {
+        "journals": {
+          "0": {
             "impact": "High",
             "journal": "IEEE Infrastructure Journal",
             "status": "Published Oct 2024"
           },
-          {
+          "1": {
             "impact": "Major",
             "journal": "Cloud Sovereignty Quarterly",
             "status": "Peer-Reviewed"
           },
-          {
+          "2": {
             "impact": "Breaking",
             "journal": "ACM Dist. Systems",
             "status": "Nominated"
           }
-        ],
+        },
         "title": "Original Research Compendium"
       },
       "cta": {
         "scale": "Scale Now",
         "whitepaper": "Access Scholarly White Paper"
       },
+      "description": "A formal framework for multi-cloud sovereign orchestration.",
       "hero": {
         "badge": "RESEARCH COMPENDIUM",
         "description": "These original contributions formalize the methodology for **Autonomous Sovereign Orchestration (ASO)**, addressing the critical conflict between global scale and national law.",
         "titleHighlight": "Design Patterns",
         "titlePart1": "Architectural"
       },
-      "patterns": [
-        {
+      "patterns": {
+        "0": {
           "description": "Decouples business intent from cloud-specific APIs. Ensures 100% provider neutrality via a standardized 'Logic-Driven Orchestration' model.",
           "explanation": "Image A displays the unified state tree across 32 geographic regions. Image B showcases the real-time translation of a single 'Intent' into distinct provider orchestrations.",
           "impact": "Innovation: 100% Provider Neutrality",
           "title": "Sovereign Control Plane (SCP)"
         },
-        {
+        "1": {
           "description": "Executes real-time compliance audits using Formal Verification Logic. Uniform enforcement of GDPR, HIPAA, and EU AI Act at sub-millisecond speeds.",
           "explanation": "In Image A, we see the PALM intercepting a cross-region API call. Image B confirms the 'Geofence Permit' was validated against active national mandates.",
           "impact": "Research: Real-time Compliance Logic",
           "title": "Policy-as-Logic Middleware (PALM)"
         },
-        {
+        "2": {
           "description": "Resiliency pattern leveraging Byzantine Fault Tolerance to monitor regional cloud health. Triggers atomic failover across providers in under 240 seconds.",
           "explanation": "Image A captures the global latency map just before a regional provider failure. Image B displays the MCCB execution log as it re-reoutes 1,000+ nodes.",
           "impact": "Outcome: 99.999% Service Continuity",
           "title": "Multi-Cloud Circuit Breaker (MCCB)"
         },
-        {
+        "3": {
           "description": "Financial governance pattern performing real-time cost-analysis to predict expenditure and recommend 'Arbitrage Re-homing' based on global spot pricing.",
           "explanation": "In Image A, we see the predictive billing engine analyzing the next 12 months. Image B shows the EABF algorithm recommending a shift to OCI for a 34% cost reduction.",
           "impact": "Impact: 34% OpEx Reduction",
           "title": "Economic Arbitrage (EABF)"
         },
-        {
+        "4": {
           "description": "Allows instantaneous transfer of production logic, state, and networking from one cloud provider to another without operational downtime.",
           "explanation": "Image A displays the initiation of a 5.2TB state migration. Image B captures the 'Verified Sovereign' status on the target provider 300 seconds later.",
           "impact": "Velocity: 100x Faster Migration",
           "title": "Atomic Cross-Cloud Migration (ACCM)"
         }
-      ]
+      },
+      "title": "Reference Architecture"
     },
     "banner": {
       "cta": "Explore Blueprints",
@@ -2905,31 +2929,34 @@
     },
     "documentation_label": "Documentation",
     "governance": {
-      "blueprints": [
-        {
+      "blueprints": {
+        "0": {
           "desc": "Automated audit logging and per-resource encryption policies.",
           "title": "SOC 2 Type II Blueprint"
         },
-        {
+        "1": {
           "desc": "Regional isolation and data residency enforcement for EU clusters.",
           "title": "GDPR Sovereign Hub"
         },
-        {
+        "2": {
           "desc": "Strict PHI data handling and VPC-isolated compute zones.",
           "title": "HIPAA Guardrails"
         },
-        {
+        "3": {
           "desc": "Comprehensive asset management and access control frameworks.",
           "title": "ISO 27001 Controls"
         }
-      ],
+      },
+      "description": "Managing digital sovereignty through automated policy enforcement.",
       "download": "Download Blueprint",
       "hero": {
         "description": "OmniGCloud provides pre-validated blueprints to ensure your multi-cloud deployments meet the most rigorous global compliance standards.",
         "title": "Governance Blueprints"
-      }
+      },
+      "title": "Governance Framework"
     },
     "guide": {
+      "description": "Step-by-step implementation of sovereign cloud fabrics.",
       "hero": {
         "cta": "Connect Your First Cloud",
         "step1": {
@@ -2945,7 +2972,8 @@
           "title": "2. Connect Providers"
         },
         "title": "Getting Started with OmniGCloud"
-      }
+      },
+      "title": "Architect's Guide"
     },
     "hero": {
       "badge": "LATEST STACK",
@@ -2954,12 +2982,12 @@
     },
     "meta": {
       "description": "Comprehensive technical documentation for the OmniGCloud platform. Access architecture patterns, APIs, and whitepapers.",
-      "keywords": [
-        "ASO framework",
-        "cloud governance patterns",
-        "autonomous orchestration",
-        "scholarly whitepaper"
-      ],
+      "keywords": {
+        "0": "ASO framework",
+        "1": "cloud governance patterns",
+        "2": "autonomous orchestration",
+        "3": "scholarly whitepaper"
+      },
       "title": "Technical Documentation | OmniGCloud Platform"
     },
     "sections": {
@@ -2991,11 +3019,11 @@
     "technicalLibrary": "Technical Library",
     "transparency": {
       "desc": "Clear, auditable practices across security, reliability, and operations.",
-      "list": [
-        "Public roadmap and release notes",
-        "Security posture and incident communication",
-        "Cost and performance visibility"
-      ],
+      "list": {
+        "0": "Public roadmap and release notes",
+        "1": "Security posture and incident communication",
+        "2": "Cost and performance visibility"
+      },
       "title": "Transparency"
     },
     "whitepaper": {
@@ -3103,20 +3131,20 @@
     "approach": {
       "p1": "P1 Details",
       "p2": "P2 Details",
-      "pillars": [
-        {
+      "pillars": {
+        "0": {
           "desc": "Enterprise-grade security",
           "title": "Security"
         },
-        {
+        "1": {
           "desc": "Scale to millions",
           "title": "Scale"
         },
-        {
+        "2": {
           "desc": "99.999% uptime",
           "title": "Stability"
         }
-      ],
+      },
       "subtitle": "How we help you scale",
       "title": "Enterprise approach"
     },
@@ -3124,20 +3152,20 @@
       "p1": "Enforce auto-remediation policies.",
       "p2": "Monitor real-time infrastructure drift.",
       "pillars": "Pillars Details",
-      "steps": [
-        {
+      "steps": {
+        "0": {
           "desc": "We understand your needs",
           "title": "Consultation"
         },
-        {
+        "1": {
           "desc": "We build your solution",
           "title": "Implementation"
         },
-        {
+        "2": {
           "desc": "We grow with you",
           "title": "Support"
         }
-      ],
+      },
       "subtitle": "Empowering the next generation of regulated enterprise.",
       "title": "Partnership"
     },
@@ -3565,45 +3593,45 @@
       },
       "liveMetrics": {
         "description": "Our real-time engine aggregates telemetry from AWS, Azure, GCP, and on-premise clusters to provide a unified view of your global operational footprint.",
-        "items": [
-          {
+        "items": {
+          "0": {
             "color": "#3b82f6",
             "label": "Active Deployments",
             "value": "847"
           },
-          {
+          "1": {
             "color": "#10b981",
             "label": "Resources Managed",
             "value": "45.2K"
           },
-          {
+          "2": {
             "color": "#f59e0b",
             "label": "Cost Saved MTD",
             "value": "$1.2M"
           },
-          {
+          "3": {
             "color": "#8b5cf6",
             "label": "Operational Regions",
             "value": "34"
           }
-        ],
+        },
         "title": "Live Infrastructure Metrics"
       },
       "networkStatus": {
-        "items": [
-          {
-            "desc": "Multi-region reconciliation in progress",
-            "title": "Cloud Sync Active"
+        "items": {
+          "0": {
+            "desc": "Average packet delay across global nodes.",
+            "title": "Latency Buffer"
           },
-          {
-            "desc": "Zero-trust rules applied to 100% of traffic",
-            "title": "Policy Engine Enforcing"
+          "1": {
+            "desc": "Speed of policy reconciliation cycles.",
+            "title": "Audit Velocity"
           },
-          {
-            "desc": "Scanning for anomalies in egress patterns",
-            "title": "Threat Guard Monitoring"
+          "2": {
+            "desc": "Deviation from target compliance state.",
+            "title": "Drift Buffer"
           }
-        ],
+        },
         "live": "LIVE",
         "title": "Network Core Status"
       },
@@ -3774,20 +3802,20 @@
       "title": "Leadership Title"
     },
     "newsroom": {
-      "items": [
-        {
+      "items": {
+        "0": {
           "desc": "0 description",
           "title": "0 Title"
         },
-        {
+        "1": {
           "desc": "1 description",
           "title": "1 Title"
         },
-        {
+        "2": {
           "desc": "2 description",
           "title": "2 Title"
         }
-      ],
+      },
       "readArticle": "Readarticle Details",
       "title": "Newsroom Title"
     },
@@ -3845,13 +3873,13 @@
             "desc": "Deploy modernized workloads with automated orchestration"
           }
         },
-        "keywords": [
-          "REST API",
-          "cloud API",
-          "multi-cloud control",
-          "sovereign API",
-          "infrastructure API"
-        ],
+        "keywords": {
+          "0": "REST API",
+          "1": "cloud API",
+          "2": "multi-cloud control",
+          "3": "sovereign API",
+          "4": "infrastructure API"
+        },
         "title": "API Reference",
         "versionLabel": "REST API v1"
       },
@@ -3884,13 +3912,13 @@
     },
     "Pricing": {
       "description": "Transparent, value-based pricing for your sovereign cloud modernization journey. Compare plans and calculate ROI.",
-      "keywords": [
-        "cloud pricing",
-        "enterprise pricing",
-        "sovereign cloud cost",
-        "multi-cloud pricing",
-        "infrastructure cost"
-      ],
+      "keywords": {
+        "0": "cloud pricing",
+        "1": "enterprise pricing",
+        "2": "sovereign cloud cost",
+        "3": "multi-cloud pricing",
+        "4": "infrastructure cost"
+      },
       "title": "Pricing & Value Economy | OmniGCloud Platform"
     },
     "Products": {
@@ -4462,6 +4490,7 @@
       "desc": "Seamlessly orchestrate workloads across AWS, Azure, and Google Cloud with strict governance boundaries.",
       "title": "Core"
     },
+    "description": "The world's first autonomous, AI-governed cloud control plane.",
     "hero": {
       "ctaPrimary": "Cta Primary",
       "ctaSecondary": "Cta Secondary",
@@ -4515,7 +4544,8 @@
       "scaling": "Scaling Details",
       "shielded": "Shielded Details",
       "verified": "Verified Details"
-    }
+    },
+    "title": "OmniGCloud Platform"
   },
   "Pricing": {
     "compliance": {
@@ -4588,92 +4618,92 @@
       "business": {
         "cta": "Start Business",
         "desc": "Enterprise-grade features with advanced SSO and role-based access control.",
-        "features": [
-          "Unlimited Regions",
-          "5,000 Automated Audits/mo",
-          "Priority 24/7 Support",
-          "Full Governance Blueprints",
-          "SSO & Directory Sync",
-          "Advanced Role-Based Access",
-          "Custom Compliance Engine"
-        ],
+        "features": {
+          "0": "Unlimited Regions",
+          "1": "5,000 Automated Audits/mo",
+          "2": "Priority 24/7 Support",
+          "3": "Full Governance Blueprints",
+          "4": "SSO & Directory Sync",
+          "5": "Advanced Role-Based Access",
+          "6": "Custom Compliance Engine"
+        },
         "name": "Business",
-        "notIncluded": [
-          "Dedicated Private Cluster",
-          "On-Premise Deployment"
-        ]
+        "notIncluded": {
+          "0": "Dedicated Private Cluster",
+          "1": "On-Premise Deployment"
+        }
       },
       "developer": {
         "cta": "Get Started",
         "desc": "For small teams and experimental projects starting their sovereign journey.",
-        "features": [
-          "1 Sovereign Region",
-          "10 Automated Audits/mo",
-          "Community Discord Access",
-          "G-Framework CLI Access",
-          "Basic Governance Templates"
-        ],
+        "features": {
+          "0": "1 Sovereign Region",
+          "1": "10 Automated Audits/mo",
+          "2": "Community Discord Access",
+          "3": "G-Framework CLI Access",
+          "4": "Basic Governance Templates"
+        },
         "name": "Developer",
-        "notIncluded": [
-          "Custom Compliance Packs",
-          "Multi-Cloud Failover",
-          "Priority SRE Support",
-          "Dedicated Private Cluster"
-        ]
+        "notIncluded": {
+          "0": "Custom Compliance Packs",
+          "1": "Multi-Cloud Failover",
+          "2": "Priority SRE Support",
+          "3": "Dedicated Private Cluster"
+        }
       },
       "month": "/mo",
       "popular": "MOST POPULAR",
       "professional": {
         "cta": "Start Professional",
         "desc": "Scale your applications across multiple regions with professional governance.",
-        "features": [
-          "3 Sovereign Regions",
-          "500 Automated Audits/mo",
-          "Standard Email Support",
-          "Multi-Cloud Circuit Breakers",
-          "Advanced Policy-as-Logic",
-          "Custom Audit Export (PDF/JSON)"
-        ],
+        "features": {
+          "0": "3 Sovereign Regions",
+          "1": "500 Automated Audits/mo",
+          "2": "Standard Email Support",
+          "3": "Multi-Cloud Circuit Breakers",
+          "4": "Advanced Policy-as-Logic",
+          "5": "Custom Audit Export (PDF/JSON)"
+        },
         "name": "Professional",
-        "notIncluded": [
-          "Dedicated Private Cluster",
-          "SLA-Backed Performance",
-          "SSO & RBAC (Advanced)"
-        ]
+        "notIncluded": {
+          "0": "Dedicated Private Cluster",
+          "1": "SLA-Backed Performance",
+          "2": "SSO & RBAC (Advanced)"
+        }
       },
       "sovereign": {
         "cta": "Contact Sales",
         "desc": "Maximum control with dedicated private clusters and white-glove support.",
-        "features": [
-          "Dedicated OKE Cluster",
-          "Unlimited Audits & Logs",
-          "Dedicated Solutions Architect",
-          "White-Glove Onboarding",
-          "Custom Legal/GDPR Hardening",
-          "On-Premise / Air-Gapped",
-          "FedRAMP / ISO Assistance"
-        ],
+        "features": {
+          "0": "Dedicated OKE Cluster",
+          "1": "Unlimited Audits & Logs",
+          "2": "Dedicated Solutions Architect",
+          "3": "White-Glove Onboarding",
+          "4": "Custom Legal/GDPR Hardening",
+          "5": "On-Premise / Air-Gapped",
+          "6": "FedRAMP / ISO Assistance"
+        },
         "name": "Sovereign Elite"
       }
     },
     "relatedStrategy": {
-      "links": [
-        {
+      "links": {
+        "0": {
           "category": "STRATEGY",
           "description": "Comprehensive guide to modernizing your cloud infrastructure",
           "title": "Cloud Modernization"
         },
-        {
+        "1": {
           "category": "FRAMEWORK",
           "description": "Financial sovereignty through cloud-agnostic architecture",
           "title": "Sovereign Finance"
         },
-        {
+        "2": {
           "category": "BLUEPRINT",
           "description": "Step-by-step DevOps transformation roadmap",
           "title": "Modernization Blueprint"
         }
-      ],
+      },
       "title": "Related Strategy & Insights"
     },
     "roi": {
@@ -5101,20 +5131,20 @@
           "title": "2. The Exit Strategy Matrix"
         },
         "faq": {
-          "items": [
-            {
+          "items": {
+            "0": {
               "a": "Initially, yes. But it accelerates innovation in the long term by ensuring that your developers are learning open standards (Kubernetes, OCP, Terraform) that are portable, rather than proprietary APIs that have a shelf life.",
               "q": "Doesn't an exit strategy slow down innovation?"
             },
-            {
+            "1": {
               "a": "Frame it as 'Infrastructure Insurance.' The cost of building agnostic architecture is a fraction of the cost of a provider-level outage or a 400% price hike during a contract renewal.",
               "q": "How do we talk to the board about the cost of portability?"
             },
-            {
+            "2": {
               "a": "Yes. In fact, that is the core of OmniGCloud—using Generative Agents to autonomously map and refactor infrastructure intent into clean manifests for the next provider.",
               "q": "Can we use AI to automate the exit strategy?"
             }
-          ],
+          },
           "title": "The CIO Playbook FAQ"
         },
         "geopolitics": {
@@ -5186,20 +5216,20 @@
           }
         },
         "faq": {
-          "items": [
-            {
+          "items": {
+            "0": {
               "a": "While migration is cheaper upfront, modernization usually delivers a 40% reduction in long-term operational costs and a 3x increase in deployment velocity.",
               "q": "What is the ROI on modernization vs. migration?"
             },
-            {
+            "1": {
               "a": "We utilize 'Data Kernels'—managed, resilient storage layers that provide persistent volumes to containers while ensuring bi-directional state sync across regions.",
               "q": "How do we handle stateful legacy workloads?"
             },
-            {
+            "2": {
               "a": "Yes. Using tools like RedHat's Migration Toolkit for Runtimes (MTR), we can automate the identification of code changes required for containerization.",
               "q": "Can we modernize legacy .NET or Java applications?"
             }
-          ],
+          },
           "title": "Executive Decision FAQ"
         },
         "hero": {
@@ -5251,20 +5281,20 @@
           "p2": "At OmniGCloud, we've distilled hundreds of enterprise deployments into a core set of <strong>Sovereign DevOps Best Practices</strong> designed to maintain velocity without sacrificing compliance."
         },
         "faq": {
-          "items": [
-            {
+          "items": {
+            "0": {
               "a": "We recommend using tools like Liquibase or Flyway. These allow you to treat database schema changes as versioned artifacts that are applied in the same pipeline as your application code.",
               "q": "How do we handle stateful database migrations in CI/CD?"
             },
-            {
+            "1": {
               "a": "A Golden Path is a pre-architected, opinionated path for developers to deploy their apps. It handles all the networking, security, and logging boilerplate, allowing devs to focus purely on business logic.",
               "q": "What is the 'Golden Path' in Platform Engineering?"
             },
-            {
+            "2": {
               "a": "With automated gating, even banks can deploy multiple times per day. The frequency depends on your automated test coverage, not your regulatory status.",
               "q": "How frequently should we deploy in a regulated environment?"
             }
-          ],
+          },
           "title": "DevOps Maturity FAQ"
         },
         "hero": {
@@ -5307,20 +5337,20 @@
           "p1": "In the modern enterprise, 'Digital Sovereignty' is often conflated with 'Data Residency.' While residency is a compliance requirement, true sovereignty is the technical and legal capability to relocate critical business logic and data across provider boundaries without operational friction or prohibitive cost.",
           "p2": "This framework provides a quantitative model for evaluating sovereignty across three dimensions: <strong>Data Invariance</strong>, <strong>Instructional Portability</strong>, and <strong>Jurisdictional Integrity</strong>.",
           "quote2": "\"The goal of the framework is not to avoid the cloud, but to own the cloud's value while neutralizing the cloud's leverage.\"",
-          "steps": [
-            {
+          "steps": {
+            "0": {
               "id": 1,
               "text": "<strong>Identify Gravity Points:</strong> Map where data is generated and where it must reside legally."
             },
-            {
+            "1": {
               "id": 2,
               "text": "<strong>Decouple Secrets:</strong> Move from cloud-specific Secret Managers to a unified, multi-cloud cryptographic hub."
             },
-            {
+            "2": {
               "id": 3,
               "text": "<strong>Inject Mesh Governance:</strong> Use a service mesh to enforce policy at the container level across all clouds."
             }
-          ]
+          }
         },
         "hero": {
           "author": "Architectural Board",
@@ -5361,33 +5391,33 @@
         "title": "Architectural Deep Dive"
       },
       "FAQ": {
-        "items": [
-          {
+        "items": {
+          "0": {
             "a": "Terraform is a deployment tool; OmniGCloud is an active state enforcement engine that corrects drift automatically.",
             "q": "How does OmniGCloud differ from Terraform?"
           },
-          {
+          "1": {
             "a": "Yes, we support all major hyperscalers including AWS, Azure, GCP, and on-premise OpenShift clusters.",
             "q": "Is it compatible with AWS and Azure?"
           }
-        ],
+        },
         "title": "F.A.Q"
       },
       "HowItWorks": {
-        "steps": [
-          {
+        "steps": {
+          "0": {
             "desc": "Define your governance and sovereignty rules in a vendor-agnostic format.",
             "title": "Intent Definition"
           },
-          {
+          "1": {
             "desc": "The AECP kernel continuously audits and corrects infrastructure drift.",
             "title": "Fabric Arbitration"
           },
-          {
+          "2": {
             "desc": "Logic is pushed to the edge, ensuring compliance regardless of the underlying cloud.",
             "title": "State Enforcement"
           }
-        ],
+        },
         "title": "Autonomous Synchronization"
       },
       "LeadCapture": {
@@ -5405,6 +5435,30 @@
       "WhyItMatters": {
         "content": "In an era of fragmenting regulations, data residency is no longer optional. OmniGCloud provides mathematical guarantees that your data stays where it needs to be.",
         "title": "Why Sovereignty Matters"
+      }
+    },
+    "Platform": {
+      "DeepDive": {
+        "links": {
+          "aecp": "AECP Engine",
+          "docs": "Technical Documentation",
+          "observability": "Sovereignty Observability"
+        }
+      },
+      "VisualSection": {
+        "description": "Visual representation of the AECP core components and data flow."
+      }
+    },
+    "Services": {
+      "DeepDive": {
+        "links": {
+          "devops": "Sovereign DevOps",
+          "finops": "Cloud FinOps",
+          "modernization": "Cloud Modernization"
+        }
+      },
+      "VisualSection": {
+        "description": "Overview of our modernization and optimization service layers."
       }
     }
   },
@@ -5602,12 +5656,12 @@
     "ai-cloud-platform": {
       "challenge": {
         "badge": "The AI Bottleneck",
-        "items": [
-          "GPU scarcity and provisioning delays",
-          "Insecure data pipelines for training",
-          "Lack of agentic governance controls",
-          "Expensive GPU-to-CPU latency"
-        ],
+        "items": {
+          "0": "GPU scarcity and provisioning delays",
+          "1": "Insecure data pipelines for training",
+          "2": "Lack of agentic governance controls",
+          "3": "Expensive GPU-to-CPU latency"
+        },
         "mesh": "GPU_MESH",
         "p1": "AI teams are blocked by lack of GPU availability and high egress costs for large model training. OmniGCloud unifies distributed GPU capacity into a single, sovereign compute fabric.",
         "quote": "\"OmniGCloud allowed us to use GPUs across three different providers as if they were in one data center, reducing training time by 60%.\" — Head of AI Engineering",
@@ -5658,12 +5712,12 @@
       "challenge": {
         "badge": "The Legacy Burden",
         "debt": "TECH_DEBT",
-        "items": [
-          "Hardcoded environment dependencies",
-          "Monolithic database constraints",
-          "Lack of automated test coverage",
-          "Complex inter-service coupling"
-        ],
+        "items": {
+          "0": "Hardcoded environment dependencies",
+          "1": "Monolithic database constraints",
+          "2": "Lack of automated test coverage",
+          "3": "Complex inter-service coupling"
+        },
         "p1": "Decades-old Java or .NET applications often contain millions of lines of tightly coupled logic. Manual refactoring is slow, error-prone, and expensive. OmniGCloud uses AI to deconstruct these monoliths into manageable services.",
         "quote": "\"Our legacy CORE-banking system was a black box. OmniGCloud's AI scan mapped 4,000 hidden dependencies in 24 hours.\" — CTO, Regional Bank",
         "title": "Fossilized Codebases"
@@ -5870,12 +5924,12 @@
       "challenge": {
         "badge": "The Challenge",
         "errorCode": "ERROR_CODE: INFRA_STAGNATION_v4.2",
-        "items": [
-          "Proprietary cloud lock-in via specialized APIs",
-          "Stretched security perimeters and lack of identity",
-          "Inefficient resource utilization (Zombie VMs)",
-          "Manual deployment bottlenecks and ivory-tower ops"
-        ],
+        "items": {
+          "0": "Proprietary cloud lock-in via specialized APIs",
+          "1": "Stretched security perimeters and lack of identity",
+          "2": "Inefficient resource utilization (Zombie VMs)",
+          "3": "Manual deployment bottlenecks and ivory-tower ops"
+        },
         "lostRoi": "LOST_ROI",
         "p1": "Studies show that 70% of cloud migrations fail to deliver expected ROI because organizations simply move legacy monoliths to VM-based cloud instances. This creates Cloud Technical Debt, higher latency, and redundant operational costs without any of the agility benefits of cloud-native architecture.",
         "quote": "\"We moved 500 applications to AWS, but our hosting bill doubled and our release cycle didn't change.\" — Fortune 500 CIO",
@@ -5944,6 +5998,7 @@
       },
       "title": "Cloud-modernization Title"
     },
+    "description": "Managed engineering services for global cloud modernization.",
     "devops": {
       "evolution": {
         "badge": "Transitioning to Platform Engineering",
@@ -5967,24 +6022,24 @@
         "title": "Why Static DevOps Silos Fail the Modern Enterprise"
       },
       "faq": {
-        "items": [
-          {
+        "items": {
+          "0": {
             "a": "We use a bi-directional sync engine that injects secrets into Kubernetes namespaces at runtime, ensuring that no sensitive data is stored in version control while maintaining parity across regions.",
             "q": "How do you handle multi-cloud secret synchronization?"
           },
-          {
+          "1": {
             "a": "Yes, we specialize in OpenShift fleet management. Our pipelines are designed to handle OCP-specific artifacts like BuildConfigs and DeploymentConfigs natively.",
             "q": "Do you support RedHat OpenShift in your DevOps workflows?"
           },
-          {
+          "2": {
             "a": "Absolutely. We offer a 'Wrap-and-Replace' strategy where we encapsulate legacy Jenkins jobs into a modern GitOps-driven control plane, allowing for a phased transition to full automation.",
             "q": "Can we integrate existing legacy Jenkins pipelines?"
           },
-          {
+          "3": {
             "a": "DevOps is the methodology; Platform Engineering is the product. We build 'Internal Developer Platforms' (IDPs) that allow your devs to self-serve infrastructure while ensuring your Ops team maintains control over the guardrails.",
             "q": "What is the difference between DevOps and Platform Engineering in your model?"
           }
-        ],
+        },
         "title": "DevOps & Platform FAQ"
       },
       "footer": {
@@ -6161,7 +6216,8 @@
         "title": "RedHat OpenShift Fleet Mastery"
       },
       "title": "Openshift-modernization Title"
-    }
+    },
+    "title": "Sovereign Services"
   },
   "Solutions": {
     "framework": {
@@ -6551,124 +6607,124 @@
   },
   "Whitepaper": {
     "abstract": {
-      "content": "[TODO] content",
-      "title": "[TODO] title"
+      "content": "content",
+      "title": "title"
     },
     "architecture": {
       "control_plane": {
-        "content": "[TODO] content",
-        "title": "[TODO] title"
+        "content": "content",
+        "title": "title"
       },
       "decision_engine": {
-        "content": "[TODO] content",
-        "title": "[TODO] title"
+        "content": "content",
+        "title": "title"
       },
-      "p1": "[TODO] p1",
+      "p1": "p1",
       "state_sync": {
-        "content": "[TODO] content",
-        "title": "[TODO] title"
+        "content": "content",
+        "title": "title"
       },
-      "title": "[TODO] title"
+      "title": "title"
     },
     "aso": {
-      "p1": "[TODO] p1",
+      "p1": "p1",
       "principles": {
         "automation": {
-          "content": "[TODO] content",
-          "title": "[TODO] title"
+          "content": "content",
+          "title": "title"
         },
         "neutrality": {
-          "content": "[TODO] content",
-          "title": "[TODO] title"
+          "content": "content",
+          "title": "title"
         },
         "observability": {
-          "content": "[TODO] content",
-          "title": "[TODO] title"
+          "content": "content",
+          "title": "title"
         },
         "sovereignty": {
-          "content": "[TODO] content",
-          "title": "[TODO] title"
+          "content": "content",
+          "title": "title"
         },
-        "title": "[TODO] title"
+        "title": "title"
       },
-      "title": "[TODO] title"
+      "title": "title"
     },
-    "author": "[TODO] author",
-    "author_label": "[TODO] author_label",
-    "classification": "[TODO] classification",
+    "author": "author",
+    "author_label": "author_label",
+    "classification": "classification",
     "conclusion": {
-      "p1": "[TODO] p1",
-      "p2": "[TODO] p2",
-      "title": "[TODO] title"
+      "p1": "p1",
+      "p2": "p2",
+      "title": "title"
     },
-    "date": "[TODO] date",
-    "date_label": "[TODO] date_label",
+    "date": "date",
+    "date_label": "date_label",
     "decision_framework": {
       "components": {
         "adaptation": {
-          "content": "[TODO] content",
-          "title": "[TODO] title"
+          "content": "content",
+          "title": "title"
         },
         "guardrails": {
-          "content": "[TODO] content",
-          "title": "[TODO] title"
+          "content": "content",
+          "title": "title"
         },
         "intent_mapping": {
-          "content": "[TODO] content",
-          "title": "[TODO] title"
+          "content": "content",
+          "title": "title"
         }
       },
-      "p1": "[TODO] p1",
-      "title": "[TODO] title"
+      "p1": "p1",
+      "title": "title"
     },
     "differentiation": {
-      "comparison": "[TODO] comparison",
-      "non_replicability": "[TODO] non_replicability",
-      "p1": "[TODO] p1",
-      "title": "[TODO] title"
+      "comparison": "comparison",
+      "non_replicability": "non_replicability",
+      "p1": "p1",
+      "title": "title"
     },
     "eb1a": {
-      "executive_summary_title": "[TODO] executive_summary_title",
-      "importance": "[TODO] importance",
-      "importance_label": "[TODO] importance_label",
-      "originality": "[TODO] originality",
-      "originality_label": "[TODO] originality_label",
-      "p1": "[TODO] p1",
-      "summary_content": "[TODO] summary_content",
-      "title": "[TODO] title"
+      "executive_summary_title": "executive_summary_title",
+      "importance": "importance",
+      "importance_label": "importance_label",
+      "originality": "originality",
+      "originality_label": "originality_label",
+      "p1": "p1",
+      "summary_content": "summary_content",
+      "title": "title"
     },
     "execution_flow": {
-      "p1": "[TODO] p1",
+      "p1": "p1",
       "steps": {
-        "s1": "[TODO] s1",
-        "s2": "[TODO] s2",
-        "s3": "[TODO] s3",
-        "s4": "[TODO] s4",
-        "s5": "[TODO] s5"
+        "s1": "s1",
+        "s2": "s2",
+        "s3": "s3",
+        "s4": "s4",
+        "s5": "s5"
       },
-      "title": "[TODO] title"
+      "title": "title"
     },
     "feasibility": {
-      "p1": "[TODO] p1",
+      "p1": "p1",
       "sectors": {
         "finance": {
-          "impact": "[TODO] impact",
-          "title": "[TODO] title"
+          "impact": "impact",
+          "title": "title"
         },
         "government": {
-          "impact": "[TODO] impact",
-          "title": "[TODO] title"
+          "impact": "impact",
+          "title": "title"
         },
         "healthcare": {
-          "impact": "[TODO] impact",
-          "title": "[TODO] title"
+          "impact": "impact",
+          "title": "title"
         },
         "telecom": {
-          "impact": "[TODO] impact",
-          "title": "[TODO] title"
+          "impact": "impact",
+          "title": "title"
         }
       },
-      "title": "[TODO] title"
+      "title": "title"
     },
     "footer": {
       "copyright": "© 2026 OmniGCloud. All rights reserved.",
@@ -6679,68 +6735,68 @@
       "lab": "OmniGCloud Research Lab"
     },
     "impact": {
-      "business_value": "[TODO] business_value",
+      "business_value": "business_value",
       "metrics": {
-        "cost": "[TODO] cost",
-        "cost_label": "[TODO] cost_label",
-        "efficiency": "[TODO] efficiency",
-        "efficiency_label": "[TODO] efficiency_label",
-        "security": "[TODO] security",
-        "security_label": "[TODO] security_label"
+        "cost": "cost",
+        "cost_label": "cost_label",
+        "efficiency": "efficiency",
+        "efficiency_label": "efficiency_label",
+        "security": "security",
+        "security_label": "security_label"
       },
-      "p1": "[TODO] p1",
-      "title": "[TODO] title"
+      "p1": "p1",
+      "title": "title"
     },
     "introduction": {
-      "p1": "[TODO] p1",
-      "p2": "[TODO] p2",
-      "p3": "[TODO] p3",
-      "title": "[TODO] title"
+      "p1": "p1",
+      "p2": "p2",
+      "p3": "p3",
+      "title": "title"
     },
     "lifecycle": {
-      "resilience": "[TODO] resilience",
-      "title": "[TODO] title"
+      "resilience": "resilience",
+      "title": "title"
     },
     "limitations": {
-      "p1": "[TODO] p1",
-      "p2": "[TODO] p2",
-      "title": "[TODO] title"
+      "p1": "p1",
+      "p2": "p2",
+      "title": "title"
     },
     "meta": {
-      "description": "[TODO] description",
-      "title": "[TODO] title"
+      "description": "description",
+      "title": "title"
     },
     "problem": {
       "compliance": {
-        "content": "[TODO] content",
-        "scenario": "[TODO] scenario",
-        "title": "[TODO] title"
+        "content": "content",
+        "scenario": "scenario",
+        "title": "title"
       },
       "metrics": {
-        "compliance_aso": "[TODO] compliance_aso",
-        "compliance_label": "[TODO] compliance_label",
-        "mttr_aso": "[TODO] mttr_aso",
-        "mttr_aso_label": "[TODO] mttr_aso_label",
-        "mttr_manual": "[TODO] mttr_manual",
-        "mttr_manual_label": "[TODO] mttr_manual_label",
-        "opex_label": "[TODO] opex_label",
-        "opex_savings": "[TODO] opex_savings"
+        "compliance_aso": "compliance_aso",
+        "compliance_label": "compliance_label",
+        "mttr_aso": "mttr_aso",
+        "mttr_aso_label": "mttr_aso_label",
+        "mttr_manual": "mttr_manual",
+        "mttr_manual_label": "mttr_manual_label",
+        "opex_label": "opex_label",
+        "opex_savings": "opex_savings"
       },
       "operational": {
-        "content": "[TODO] content",
-        "scenario": "[TODO] scenario",
-        "title": "[TODO] title"
+        "content": "content",
+        "scenario": "scenario",
+        "title": "title"
       },
-      "p1": "[TODO] p1",
-      "title": "[TODO] title",
+      "p1": "p1",
+      "title": "title",
       "vendor_lock": {
-        "content": "[TODO] content",
-        "scenario": "[TODO] scenario",
-        "title": "[TODO] title"
+        "content": "content",
+        "scenario": "scenario",
+        "title": "title"
       }
     },
     "references": {
-      "title": "[TODO] title"
+      "title": "title"
     },
     "section1": {
       "box": {
@@ -6797,11 +6853,11 @@
         "p1": "This reference confirms that the AECP <strong>cannot emerge via the composition</strong> of existing tools. The limitation is derived from <strong>architectural invariant constraints</strong>, not feature deficits.",
         "p2": "A system architected for <em>Execution</em> cannot structurally house the <em>Decision</em> logic required for its own governance. This introduces a recursive dependency (\"Judge-Jury Paradox\") that violates the fundamental requirement for conflict-free auditing.",
         "table3": {
-          "headers": [
-            "Platform Category",
-            "Invariant Constraint",
-            "Transition Blockers"
-          ],
+          "headers": {
+            "0": "Platform Category",
+            "1": "Invariant Constraint",
+            "2": "Transition Blockers"
+          },
           "rows": {
             "0": {
               "aso": "95-98%",
@@ -6829,11 +6885,11 @@
         "title": "Architectural Impossibility of Emergence"
       },
       "table2": {
-        "headers": [
-          "System Type",
-          "Structural Deficit",
-          "Autonomy Impact"
-        ],
+        "headers": {
+          "0": "System Type",
+          "1": "Structural Deficit",
+          "2": "Autonomy Impact"
+        },
         "rows": {
           "0": {
             "aso": "15-30 minutes",
@@ -6917,11 +6973,11 @@
     "section3": {
       "p1": "The AECP standard functions under five non-negotiable constraints. These are not features, but the axioms upon which this new architectural class rests.",
       "table1": {
-        "headers": [
-          "Domain",
-          "Legacy Constraint (Rejected)",
-          "AECP Standard (Enforced)"
-        ],
+        "headers": {
+          "0": "Domain",
+          "1": "Legacy Constraint (Rejected)",
+          "2": "AECP Standard (Enforced)"
+        },
         "rows": {
           "0": {
             "aso": "2-4 hours",
@@ -7022,9 +7078,9 @@
       "p1": "<strong>Risk Evaluation Strategy:</strong> In autonomous control, the cost of a \"Hallucinated Remediation\" (taking the wrong action) is existential. Therefore, AECP dictates a <strong>\"Safe-Fail\" protocol</strong>: in the event of any state ambiguity, the system chooses <strong>Isolation over Action</strong>, accepting reduced availability to preserve fatal integrity.",
       "title": "9. Safe-Fail Autonomy Protocols"
     },
-    "title": "[TODO] title",
-    "version": "[TODO] version",
-    "version_label": "[TODO] version_label",
+    "title": "title",
+    "version": "version",
+    "version_label": "version_label",
     "watermark": "OMNIGCLOUD RESEARCH  •  COPYRIGHT 2026  •  DO NOT DISTRIBUTE"
   },
   "content": "Decouple your business logic from vendor-specific APIs and regain full control of your digital estate.",

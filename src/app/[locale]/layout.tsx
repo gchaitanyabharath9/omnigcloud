@@ -186,7 +186,9 @@ export default async function RootLayout({
         >
           <NextIntlClientProvider
             messages={messages}
-
+            getMessageFallback={({ namespace, key }) => {
+              return namespace ? `${namespace}.${key}` : key;
+            }}
           >
             <ObservabilityProvider locale={locale}>
               <UtmTracker />

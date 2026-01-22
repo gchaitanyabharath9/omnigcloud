@@ -31,7 +31,7 @@ export default async function ContactPage() {
 
                         <div className="grid-2" style={{ gap: '1rem' }}>
                             {[
-                                { icon: <Mail color="#60efff" size={20} />, label: tContact('supportLabel'), val: t('email.support') },
+                                { icon: <Mail color="#60efff" size={20} />, label: tContact('supportLabel'), val: t('email_support') },
                                 { icon: <Phone color="#60efff" size={20} />, label: tContact('executiveLineLabel'), val: "+1 (850) 443-1481" },
                                 { icon: <MapPin color="#60efff" size={20} />, label: tContact('hqLabel'), val: t('location') },
                                 { icon: <Globe color="#60efff" size={20} />, label: tContact('coverageLabel'), val: tContact('coverageVal') }
