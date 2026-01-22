@@ -15,7 +15,6 @@ const SCAN_DIR = path.resolve(process.cwd(), 'src');
 const OUTPUT_FILE = path.resolve(process.cwd(), 'scripts/i18n_found_keys.json');
 
 // Patterns
-const USE_TRANS_PATTERN = /useTranslations\(\s*['"]([^'"]+)['"]\s*\)/g;
 const T_CALL_PATTERN = /\bt\(\s*['"]([^'"]+)['"]\s*\)/g; // simple t('key')
 const T_CALL_COMPLEX = /\bt\(\s*['"]([^'"]+)['"]\s*,/g; // t('key', { ... })
 
@@ -67,16 +66,10 @@ async function run() {
         // We'll collect all namespaces found in the file.
         // For simplicity, if we find any key that doesn't exist in the first NS,
         // we might check others. But usually it's one main NS.
-        let fileNamespaces = nsMatches.map(m => m[1]);
-        if (fileNamespaces.length === 0) {
-            fileNamespaces = ['Common']; // Default fallback
-        }
-
-        // Use the first namespace found as the primary one for this file's t() calls
-        let namespace = fileNamespaces[0];
+        const fileNamespaces = nsMatches.map(m => m[1]);
+        const primaryNamespace = fileNamespaces.length > 0 ? fileNamespaces[0] : 'Common';
 
         // 2. Scan for t('key') calls
-        let tMatch;
         // Reset regex state if needed (global)
         const allTMatches = [...content.matchAll(T_CALL_PATTERN), ...content.matchAll(T_CALL_COMPLEX)];
 
@@ -88,17 +81,17 @@ async function run() {
             // If it starts with raw key, usually relative to namespace.
 
             let fullKey = key;
-            if (!key.includes('.') && namespace) {
-                fullKey = `${namespace}.${key}`;
-            } else if (namespace && !key.startsWith(namespace)) {
+            if (!key.includes('.') && primaryNamespace) {
+                fullKey = `${primaryNamespace}.${key}`;
+            } else if (primaryNamespace && !key.startsWith(primaryNamespace)) {
                 // heuristic: assume relative if a namespace is active
-                fullKey = `${namespace}.${key}`;
+                fullKey = `${primaryNamespace}.${key}`;
             }
 
             foundKeys.push({
                 file: relativeFile,
                 line: getLineNumber(content, idx),
-                namespace,
+                namespace: primaryNamespace,
                 key,
                 fullKey,
                 type: 't_call'

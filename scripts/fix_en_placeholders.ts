@@ -39,13 +39,6 @@ const STEPS = [
     "Generate audit-ready compliance reports."
 ];
 
-const CTAS = [
-    "Start Building",
-    "Request Demo",
-    "Read Whitepaper",
-    "Contact Sales",
-    "View Documentation"
-];
 
 function getRandom(arr: string[], salt: string) {
     let hash = 0;
@@ -117,14 +110,14 @@ function processValue(key: string, value: string, parentKey: string = ''): strin
     return value;
 }
 
-function traverse(obj: any, parentKey: string = '') {
+function traverse(obj: Record<string, any>, parentKey: string = '') {
     for (const key in obj) {
         if (typeof obj[key] === 'object' && obj[key] !== null && !Array.isArray(obj[key])) {
             traverse(obj[key], key);
         } else if (typeof obj[key] === 'string') {
             obj[key] = processValue(key, obj[key], parentKey);
         } else if (Array.isArray(obj[key])) {
-            obj[key].forEach((item: any) => {
+            obj[key].forEach((item: Record<string, any>) => {
                 if (typeof item === 'object') traverse(item, key);
                 // if string array?
             });

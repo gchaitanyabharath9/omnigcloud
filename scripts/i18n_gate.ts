@@ -9,7 +9,7 @@ const TARGET_LOCALES = ['es', 'fr', 'de', 'zh', 'hi', 'ja', 'ko'];
 // Minimal gate to ensure structure match
 // returns 0 if all locales satisfy baseline, 1 otherwise.
 
-function getKeys(obj: any, prefix = ''): string[] {
+function getKeys(obj: Record<string, any>, prefix = ''): string[] {
     let keys: string[] = [];
     for (const key in obj) {
         if (typeof obj[key] === 'object' && obj[key] !== null && !Array.isArray(obj[key])) {
@@ -55,7 +55,7 @@ try {
                 console.log(`✅ ${locale} matches EN key coverage.`);
             }
 
-        } catch (e) {
+        } catch (_e) {
             console.error(`❌ Invalid JSON in ${locale}.json`);
             hasError = true;
         }

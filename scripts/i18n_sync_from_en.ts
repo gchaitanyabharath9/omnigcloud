@@ -54,7 +54,7 @@ try {
         if (fs.existsSync(localePath)) {
             try {
                 localeContent = JSON.parse(fs.readFileSync(localePath, 'utf-8'));
-            } catch (e) {
+            } catch (_e) {
                 console.warn(`⚠️ Could not parse ${locale}.json, starting fresh.`);
             }
         } else {
