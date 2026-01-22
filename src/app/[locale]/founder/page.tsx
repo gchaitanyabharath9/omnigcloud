@@ -4,6 +4,7 @@ import React from 'react';
 import { Award, BookOpen, Briefcase, GraduationCap, Link as LinkIcon, Linkedin, Mail, Twitter, ChevronRight, Verified, CheckCircle, Globe } from 'lucide-react';
 import { Link } from '@/navigation';
 import { useTranslations } from 'next-intl';
+import Footer from "@/components/Footer";
 
 export default function FounderPage() {
     const t = useTranslations("Founder");
@@ -31,9 +32,9 @@ export default function FounderPage() {
     ];
 
     return (
-        <div className="bg-background min-h-screen">
+        <div className="snap-container">
             {/* HERO SECTION */}
-            <section className="relative py-24 border-b border-white/5 overflow-hidden">
+            <section className="snap-section relative py-24 border-b border-white/5 overflow-hidden" style={{ minHeight: 'calc(100vh - var(--header-height) - var(--breadcrumb-height))', display: 'flex', alignItems: 'center' }}>
                 <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-blue-500/5 to-transparent pointer-events-none"></div>
                 <div className="container relative z-10">
                     <div className="flex flex-col lg:flex-row gap-16 items-center">
@@ -83,7 +84,7 @@ export default function FounderPage() {
             </section>
 
             {/* EXPERIENCE & CONTRIBUTIONS */}
-            <section className="py-24 bg-[#050810]">
+            <section className="snap-section py-24 bg-[#050810]">
                 <div className="container">
                     <div className="grid lg:grid-cols-2 gap-16">
                         {/* Expertise */}
@@ -124,7 +125,7 @@ export default function FounderPage() {
             </section>
 
             {/* CALL TO ARCHITECT */}
-            <section className="py-24">
+            <section className="snap-section py-24">
                 <div className="container text-center">
                     <div className="max-w-4xl mx-auto bg-gradient-to-br from-blue-600 to-blue-800 p-1 rounded-3xl overflow-hidden shadow-2xl shadow-blue-500/20">
                         <div className="bg-[#0a0f1d] p-12 lg:p-20 rounded-[22px]">
@@ -147,6 +148,9 @@ export default function FounderPage() {
                         </div>
                     </div>
                 </div>
+            </section>
+            <section id="sitemap" className="snap-section" style={{ background: 'var(--background)', borderTop: '1px solid var(--card-border)' }}>
+                <Footer />
             </section>
         </div>
     );

@@ -9,6 +9,7 @@ import { USE_CASES } from '@/data/use-cases';
 import Grid2x2Section from '@/components/layout/Grid2x2Section';
 import { HowItWorks, VisualSection, DeepDive, TopicalAuthority, TechnicalInsights, FAQSection } from '@/components/seo/Enrichment';
 import EnterprisePillars from "@/components/sections/enterprise/EnterpriseApproach";
+import Footer from "@/components/Footer";
 
 const industryConfigs = [
     { id: "financial-services", key: "financial", icon: <Landmark size={32} /> },
@@ -39,8 +40,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
             'cloud transformation',
             'digital modernization',
         ],
-        canonical: `https://www.omnigcloud.com/${locale}/solutions`,
-        ogImage: `https://www.omnigcloud.com/og-images/solutions.png`,
+        ogImage: `/og-images/solutions.png`,
         ogType: 'website',
     }, locale);
 }
@@ -53,9 +53,9 @@ export default async function SolutionsPage({ params }: { params: Promise<{ loca
     const pt = await getTranslations('Pages.Solutions');
 
     return (
-        <div className="flex-col">
+        <div className="snap-container">
             {/* HERO */}
-            <section className="snap-section" style={{ minHeight: '70vh', display: 'flex', alignItems: 'center', background: 'linear-gradient(to bottom, #020617, var(--background))' }}>
+            <section className="snap-section" style={{ minHeight: 'calc(100vh - var(--header-height) - var(--breadcrumb-height))', display: 'flex', alignItems: 'center', background: 'linear-gradient(to bottom, #020617, var(--background))' }}>
                 <PageShell>
                     <div className="hero-grid-layout" style={{ gap: '2rem' }}>
                         <div>
@@ -223,6 +223,9 @@ export default async function SolutionsPage({ params }: { params: Promise<{ loca
             <TopicalAuthority pageKey="Solutions" />
             <TechnicalInsights pageKey="Solutions" />
             <FAQSection pageKey="Solutions" />
+            <section id="sitemap" className="snap-section" style={{ background: 'var(--background)', borderTop: '1px solid var(--card-border)' }}>
+                <Footer />
+            </section>
         </div>
     );
 }

@@ -10,13 +10,24 @@ import AutomationStackSection from "@/components/sections/services/AutomationSta
 import ManagedOperationsSection from "@/components/sections/services/ManagedOperationsSection";
 import DataAiFabricSection from "@/components/sections/services/DataAiFabricSection";
 
+import { generateSEOMetadata, SEO_KEYWORDS } from '@/utils/seo';
+
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
     const { locale } = await params;
-    const t = await getTranslations({ locale, namespace: 'Metadata.Services' });
-    return {
-        title: t('title'),
-        description: t('description'),
-    };
+    const tm = await getTranslations({ locale, namespace: 'Metadata.Services' });
+
+    return generateSEOMetadata({
+        title: tm('title'),
+        description: tm('description'),
+        keywords: [
+            ...SEO_KEYWORDS.modernization,
+            'cloud services',
+            'managed infrastructure',
+            'enterprise automation',
+            'sovereign cloud delivery',
+        ],
+        ogImage: `/og-images/services.png`,
+    }, locale);
 }
 
 export function generateStaticParams() {

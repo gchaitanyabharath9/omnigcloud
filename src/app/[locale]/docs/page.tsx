@@ -5,16 +5,26 @@ import Footer from "@/components/Footer";
 import type { Metadata } from "next";
 import { useTranslations } from "next-intl";
 import { getTranslations } from "next-intl/server";
+import { generateSEOMetadata, SEO_KEYWORDS } from '@/utils/seo';
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
     const { locale } = await params;
-    const t = await getTranslations({ locale, namespace: 'Docs' });
+    const tm = await getTranslations({ locale, namespace: 'Metadata.Docs' });
 
-    return {
-        title: t('meta.title'),
-        description: t('meta.description'),
-        keywords: t.raw('meta.keywords'),
-    };
+    return generateSEOMetadata({
+        title: tm('title'),
+        description: tm('description'),
+        keywords: [
+            ...SEO_KEYWORDS.platform,
+            ...SEO_KEYWORDS.modernization,
+            'technical documentation',
+            'architecture guide',
+            'api reference',
+            'governance blueprints',
+        ],
+        ogImage: `/og-images/docs.png`,
+        ogType: 'website',
+    }, locale);
 }
 
 export function generateStaticParams() {

@@ -2,12 +2,13 @@ import React from 'react';
 import { Github, Users, Star, GitFork, MessageSquare, Terminal, Code, Award } from 'lucide-react';
 import { Link } from '@/navigation';
 import { getTranslations } from 'next-intl/server';
+import Footer from "@/components/Footer";
 
 export default async function CommunityPage() {
     const t = await getTranslations("Community");
 
     return (
-        <>
+        <div className="snap-container">
             {/* HERO SECTION */}
             <section style={{
                 padding: '2rem 0',
@@ -136,7 +137,7 @@ export default async function CommunityPage() {
             </section>
 
             {/* COMMUNITY LINKS */}
-            <section style={{ padding: '4rem 0', background: 'var(--bg-surface-2)', textAlign: 'center' }}>
+            <section className="snap-section" style={{ padding: '4rem 0', background: 'var(--bg-surface-2)', textAlign: 'center' }}>
                 <div className="container">
                     <h2 style={{ fontSize: '2rem', fontWeight: 900, marginBottom: '3rem' }}>{t("network.title")}</h2>
                     <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '1.5rem' }}>
@@ -157,6 +158,10 @@ export default async function CommunityPage() {
                     </div>
                 </div>
             </section>
-        </>
+
+            <section id="sitemap" className="snap-section" style={{ background: 'var(--background)', borderTop: '1px solid var(--card-border)' }}>
+                <Footer />
+            </section>
+        </div>
     );
 }

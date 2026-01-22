@@ -1,110 +1,34 @@
 import React from 'react';
-import { config } from '@/config';
+import {
+    generateOrganizationSchema,
+    generateSoftwareAppSchema,
+    generateServiceSchema,
+    generateWebSiteSchema
+} from '@/utils/seo';
+import { safeJsonLd } from '@/lib/security';
 
+/**
+ * Standardized Schema.org Structured Data
+ * Injected globally into all pages for maximum SEO benefit.
+ */
 const SchemaOrg = () => {
-    const siteUrl = config.site.url;
-
-    const orgSchema = {
-        "@context": "https://schema.org",
-        "@type": "Organization",
-        "name": "OmniGCloud",
-        "url": siteUrl,
-        "logo": `${siteUrl}/logo.png`,
-        "description": "Global Cloud-Agnostic Modernization & AI Engineering platform for enterprise sovereignty.",
-        "sameAs": [
-            "https://twitter.com/omnigcloud",
-            "https://www.linkedin.com/company/omnigcloud",
-            "https://github.com/omnigcloud"
-        ],
-        "contactPoint": {
-            "@type": "ContactPoint",
-            "telephone": "+1-212-OMNIGCLOUD",
-            "contactType": "customer service",
-            "areaServed": "Global",
-            "availableLanguage": ["English", "Spanish", "French", "German", "Chinese", "Hindi", "Japanese"]
-        }
-    };
-
-    const softwareSchema = {
-        "@context": "https://schema.org",
-        "@type": "SoftwareApplication",
-        "name": "OmniGCloud Platform",
-        "operatingSystem": "Cloud-Native",
-        "applicationCategory": "EnterpriseSoftware",
-        "offers": {
-            "@type": "Offer",
-            "price": "0",
-            "priceCurrency": "USD"
-        }
-    };
-
-    const serviceSchema = {
-        "@context": "https://schema.org",
-        "@type": "Service",
-        "serviceType": "Cloud Modernization & AI Engineering",
-        "provider": {
-            "@type": "Organization",
-            "name": "OmniGCloud"
-        },
-        "areaServed": "Global",
-        "hasOfferCatalog": {
-            "@type": "OfferCatalog",
-            "name": "Cloud Services",
-            "itemListElement": [
-                {
-                    "@type": "Offer",
-                    "itemOffered": {
-                        "@type": "Service",
-                        "name": "Azure Modernization"
-                    }
-                },
-                {
-                    "@type": "Offer",
-                    "itemOffered": {
-                        "@type": "Service",
-                        "name": "RedHat OpenShift Modernization"
-                    }
-                },
-                {
-                    "@type": "Offer",
-                    "itemOffered": {
-                        "@type": "Service",
-                        "name": "Cloud Cost Optimization"
-                    }
-                }
-            ]
-        }
-    };
-
-    const websiteSchema = {
-        "@context": "https://schema.org",
-        "@type": "WebSite",
-        "name": "OmniGCloud",
-        "url": siteUrl,
-        "potentialAction": {
-            "@type": "SearchAction",
-            "target": `${siteUrl}/search?q={search_term_string}`,
-            "query-input": "required name=search_term_string"
-        }
-    };
-
     return (
         <>
             <script
                 type="application/ld+json"
-                dangerouslySetInnerHTML={{ __html: JSON.stringify(orgSchema) }}
+                dangerouslySetInnerHTML={{ __html: safeJsonLd(generateOrganizationSchema() as any) }}
             />
             <script
                 type="application/ld+json"
-                dangerouslySetInnerHTML={{ __html: JSON.stringify(softwareSchema) }}
+                dangerouslySetInnerHTML={{ __html: safeJsonLd(generateSoftwareAppSchema() as any) }}
             />
             <script
                 type="application/ld+json"
-                dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
+                dangerouslySetInnerHTML={{ __html: safeJsonLd(generateServiceSchema() as any) }}
             />
             <script
                 type="application/ld+json"
-                dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
+                dangerouslySetInnerHTML={{ __html: safeJsonLd(generateWebSiteSchema() as any) }}
             />
         </>
     );

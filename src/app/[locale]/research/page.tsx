@@ -10,10 +10,26 @@ export function generateStaticParams() {
     return ['en', 'es', 'fr', 'de', 'zh', 'hi', 'ja', 'ko'].map((locale) => ({ locale }));
 }
 
-export const metadata: Metadata = {
-    title: 'Research Repository | OmniGCloud',
-    description: 'Independent technical research frameworks and architecture specifications.',
-};
+import { generateSEOMetadata, SEO_KEYWORDS } from '@/utils/seo';
+
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
+    const { locale } = await params;
+    const tm = await getTranslations({ locale, namespace: 'Metadata.Dashboard' }); // Using Dashboard for now or add Research
+
+    return generateSEOMetadata({
+        title: 'Research & Technical Specifications',
+        description: 'Explore OmniGCloud Systems research on cloud-native architecture, distributed systems, and sovereign governance.',
+        keywords: [
+            ...SEO_KEYWORDS.platform,
+            ...SEO_KEYWORDS.performance,
+            'technical research',
+            'architecture specifications',
+            'cloud governance research',
+        ],
+        ogImage: `/og-images/research.png`,
+        ogType: 'website',
+    }, locale);
+}
 
 export default async function ResearchHubPage({ params }: { params: Promise<{ locale: string }> }) {
     const { locale } = await params;

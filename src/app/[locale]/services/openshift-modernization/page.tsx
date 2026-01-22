@@ -6,6 +6,7 @@ import Link from 'next/link';
 import type { Metadata } from 'next';
 import { generateSEOMetadata, SEO_KEYWORDS } from '@/utils/seo';
 import { getTranslations } from "next-intl/server";
+import Footer from "@/components/Footer";
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
     const { locale } = await params;
@@ -34,8 +35,8 @@ export default async function OpenShiftModernizationPage({ params }: { params: P
     const tCommon = await getTranslations('Common');
 
     return (
-        <div className="bg-background min-h-screen">
-            <Section className="py-24 bg-gradient-to-b from-[#020617] to-[var(--background)]">
+        <div className="snap-container">
+            <section className="snap-section" style={{ minHeight: 'calc(100vh - var(--header-height) - var(--breadcrumb-height))', display: 'flex', alignItems: 'center', background: 'linear-gradient(to bottom, #020617, var(--background))' }}>
                 <PageShell>
                     <div className="max-w-4xl">
                         <div className="flex items-center gap-2 text-red-500 font-mono text-sm font-black uppercase tracking-widest mb-4">
@@ -53,10 +54,10 @@ export default async function OpenShiftModernizationPage({ params }: { params: P
                         </div>
                     </div>
                 </PageShell>
-            </Section>
+            </section>
 
             {/* DETAILED CONTENT SECTION 1 */}
-            <Section className="py-24 border-y border-white/5 bg-red-900/5">
+            <Section className="snap-section py-24 border-y border-white/5 bg-red-900/5">
                 <PageShell>
                     <div className="grid lg:grid-cols-2 gap-16 items-start">
                         <div>
@@ -89,7 +90,7 @@ export default async function OpenShiftModernizationPage({ params }: { params: P
             </Section>
 
             {/* STRATEGY SECTION */}
-            <Section className="py-24">
+            <Section className="snap-section py-24">
                 <PageShell>
                     <div className="max-w-3xl mx-auto">
                         <h2 className="text-3xl font-black mb-10 text-center">{t('factory.title')}</h2>
@@ -112,7 +113,7 @@ export default async function OpenShiftModernizationPage({ params }: { params: P
             </Section>
 
             {/* FAQ SECTION */}
-            <Section className="py-24 bg-[var(--bg-card)]">
+            <Section className="snap-section py-24 bg-[var(--bg-card)]">
                 <PageShell>
                     <div className="max-w-3xl mx-auto">
                         <h2 className="text-3xl font-black mb-12 text-center">{t('faq.title')}</h2>
@@ -131,7 +132,7 @@ export default async function OpenShiftModernizationPage({ params }: { params: P
             </Section>
 
             {/* INTERNAL LINKS */}
-            <Section className="py-24 border-t border-white/5">
+            <Section className="snap-section py-24 border-t border-white/5">
                 <PageShell>
                     <div className="grid md:grid-cols-2 gap-8">
                         <Link href={`/${locale}/services/devops`} className="glass-panel p-10 rounded-[2.5rem] group hover:border-red-500/50 transition-all border-red-500/10 bg-red-500/5">
@@ -147,6 +148,9 @@ export default async function OpenShiftModernizationPage({ params }: { params: P
                     </div>
                 </PageShell>
             </Section>
+            <section id="sitemap" className="snap-section" style={{ background: 'var(--background)', borderTop: '1px solid var(--card-border)' }}>
+                <Footer />
+            </section>
         </div>
     );
 }

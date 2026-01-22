@@ -28,8 +28,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
             'infrastructure automation',
             'sovereign products',
         ],
-        canonical: `https://www.omnigcloud.com/${locale}/products`,
-        ogImage: `https://www.omnigcloud.com/og-images/products.png`,
+        ogImage: `/og-images/products.png`,
         ogType: 'website',
     }, locale);
 }

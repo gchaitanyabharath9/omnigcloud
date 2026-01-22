@@ -3851,88 +3851,80 @@
     "successMessage": "Briefing received and encrypted in sovereign storage. (ZH)"
   },
   "Metadata": {
+    "Architecture": {
+      "description": "Technical blueprints and architectural primitives of the OmniGCloud G-Framework. Learn about cellular architecture and plane separation.",
+      "title": "System Architecture & Deep Engineering"
+    },
+    "CaseStudies": {
+      "description": "Real-world implementations of the sovereign cloud protocol across finance, healthcare, and government sectors.",
+      "title": "Impact & Case Studies"
+    },
+    "Community": {
+      "description": "Join the global ecosystem of engineers and architects building the future of sovereign multi-cloud infrastructure.",
+      "title": "Community & Ecosystem"
+    },
     "Company": {
-      "description": "Achieve FIPS 140-2 Level 3 compliance with our shielded execution environments.",
-      "title": "Company"
+      "description": "Global operations and sovereign infrastructure management. Learn about OmniGCloud Systems' commitment to data residency and cloud neutrality.",
+      "title": "Global Operations & Company"
+    },
+    "Contact": {
+      "description": "Connect with OmniGCloud Systems executive office for partnership inquiries, pilot programs, and strategic cloud consulting.",
+      "title": "Executive Office & Global Contact"
     },
     "Dashboard": {
       "description": "Monitor your multi-cloud infrastructure in real-time with comprehensive analytics, cost optimization, and security insights.",
-      "title": "Dashboard - Real-Time Infrastructure Monitoring"
+      "title": "Command Center & Real-Time Monitoring"
     },
     "Docs": {
+      "description": "Comprehensive technical documentation for the OmniGCloud platform. Architecture plans, API references, and governance guides.",
+      "title": "Documentation & Technical Compendium",
       "api": {
         "description": "Comprehensive API documentation for the OmniGCloud platform. Control your entire multi-cloud estate through our secure, RESTful endpoints.",
-        "endpoints": {
-          "discovery": {
-            "desc": "Discover and inventory all cloud resources across providers"
-          },
-          "governance": {
-            "desc": "Monitor compliance drift and policy violations in real-time"
-          },
-          "modernization": {
-            "desc": "Deploy modernized workloads with automated orchestration"
-          }
-        },
-        "keywords": {
-          "0": "REST API",
-          "1": "cloud API",
-          "2": "multi-cloud control",
-          "3": "sovereign API",
-          "4": "infrastructure API"
-        },
-        "title": "API Reference",
-        "versionLabel": "REST API v1"
+        "title": "API Reference"
       },
       "architecture": {
         "description": "Original contributions formalizing the methodology for Autonomous Sovereign Orchestration (ASO), addressing the conflict between global scale and national law.",
-        "title": "Architectural Design Patterns | Autonomous Sovereign Orchestration"
+        "title": "Architectural Design Patterns"
       },
       "governance": {
         "description": "Pre-validated blueprints to ensure your multi-cloud deployments meet the most rigorous global compliance standards.",
-        "title": "Governance Blueprints | Sovereign Compliance Standards"
+        "title": "Governance Blueprints"
       },
       "guide": {
         "description": "Learn how to initialize your environment and connect your first cloud provider with the OmniGCloud platform.",
-        "title": "Getting Started Guide | OmniGCloud Platform Onboarding"
+        "title": "Getting Started Guide"
       }
     },
     "Home": {
-      "description": "Enterprise Cloud Solutions",
-      "title": "OmnigCloud"
+      "description": "Modernize your enterprise infrastructure with OmniGCloud. Cloud-agnostic platforms, autonomous governance, and AI-native architecture for the sovereign era.",
+      "title": "Sovereign Multi-Cloud & AI Infrastructure"
     },
     "Industries": {
       "finance": {
         "description": "Secure, high-frequency cloud infrastructure for the financial sector. We ensure PCI-DSS compliance, data residency, and micro-latency performance.",
-        "title": "Financial Services Cloud Infrastructure | PCI-DSS Compliant"
+        "title": "Financial Services Cloud Infrastructure"
       },
       "healthcare": {
         "description": "HIPAA-compliant cloud infrastructure for healthcare providers. Secure patient data storage, interoperable FHIR APIs, and medical imaging storage.",
-        "title": "Healthcare Cloud Solutions | HIPAA & GDPR Compliant"
+        "title": "Healthcare Cloud Solutions"
       }
     },
     "Platform": {
       "description": "Deep dive into the Autonomous Enterprise Control Plane, the kernel of sovereign multi-cloud orchestration.",
-      "title": "The AECP Platform | OmniGCloud"
+      "title": "The AECP Platform"
     },
     "Pricing": {
       "description": "Transparent, value-based pricing for your sovereign cloud modernization journey. Compare plans and calculate ROI.",
-      "keywords": {
-        "0": "cloud pricing",
-        "1": "enterprise pricing",
-        "2": "sovereign cloud cost",
-        "3": "multi-cloud pricing",
-        "4": "infrastructure cost"
-      },
-      "title": "Pricing & Value Economy | OmniGCloud Platform"
+      "title": "Pricing & Value Economy"
     },
     "Products": {
-      "description": "Automate compliance with real-time drift detection and auto-remediation policies.",
-      "title": "Products"
+      "description": "Automate compliance with real-time drift detection and auto-remediation policies. Explore our suite of sovereign cloud products.",
+      "title": "Sovereign Product Suite"
     },
     "Services": {
       "ai-cloud-platform": {
         "description": "Scale your AI workloads with secure, sovereign GPU orchestration. OmniGCloud provides the control plane for enterprise LLMs and generative AI.",
-        "title": "AI Cloud Infrastructure & Managed GPUs | OmniGCloud"
+        "title": "AI Cloud Infrastructure & Managed GPUs"
       },
       "application-modernization": {
         "description": "Transform legacy codebases into cloud-native microservices with AI precision. OmniGCloud provides autonomous refactoring for Java, .NET, and more.",
@@ -3948,7 +3940,7 @@
       },
       "cloud-modernization": {
         "description": "Transform legacy monoliths into scalable microservices using our automated 6R methodology (Rehost, Replatform, Refactor).",
-        "title": "Application Modernization Services | Cloud Native Transformation"
+        "title": "Application Modernization Services"
       },
       "description": "Comprehensive modernization services including cloud migration, DevOps, and OpenShift transformation governed by autonomous policy mesh.",
       "devops": {
@@ -3957,21 +3949,29 @@
       },
       "microservices": {
         "description": "Design and deploy resilient microservices architectures. We help you decompose monoliths, implement service meshes, and establish event-driven patterns.",
-        "title": "Microservices Architecture & Consulting | Decoupled Systems"
+        "title": "Microservices Architecture & Consulting"
       },
       "openshift-modernization": {
         "description": "Scale your hybrid cloud with confidence. OmniGCloud provides expert OpenShift modernization services, ensuring your OCP clusters are secure and compliant.",
-        "title": "RedHat OpenShift Modernization | Enterprise Cluster Management"
+        "title": "RedHat OpenShift Modernization"
       },
       "title": "Sovereign Services | OmniGCloud"
     },
+    "Research": {
+      "description": "Explore OmniGCloud Systems research on cloud-native architecture, distributed systems, and sovereign governance.",
+      "title": "Research & Technical Specifications"
+    },
     "Solutions": {
-      "description": "Automate compliance with real-time drift detection and auto-remediation policies.",
-      "title": "Solutions"
+      "description": "Tailored cloud modernization solutions for finance, healthcare, and regulated industries. Achieve digital sovereignty with confidence.",
+      "title": "Enterprise Solutions"
+    },
+    "VisualLibrary": {
+      "description": "Technical diagrams, architectural schemas, and visual evidence of the OmniGCloud G-Framework implementation.",
+      "title": "Visual Evidence & Architecture Library"
     },
     "default": {
-      "description": "Ensure your data never leaves the jurisdiction you define, regardless of the underlying infrastructure.",
-      "title": "Default"
+      "description": "OmniGCloud Systems (OmniGCloud) provides high-performance, cloud-agnostic infrastructure modernization with built-in data sovereignty and autonomous governance.",
+      "title": "OmniGCloud Systems | Sovereign Multi-Cloud Platform"
     }
   },
   "Newsroom": {
@@ -6592,8 +6592,8 @@
     "detailedDiagrams": {
       "context": {
         "clouds": {
-          "aws": "AWS (US)",
-          "azure": "Azure (EU)",
+          "aws": "AWS",
+          "azure": "Azure",
           "gcp": "GCP (Asia)"
         },
         "compliance": {
@@ -6601,7 +6601,7 @@
           "title": "Compliance"
         },
         "controlPlane": "AECP CONTROL PLANE",
-        "decisionEngine": "Decision Engine (AI)",
+        "decisionEngine": "Decision Engine",
         "devOps": {
           "desc": "Define Policy",
           "title": "DevOps Team"
@@ -6709,75 +6709,75 @@
   },
   "Whitepaper": {
     "abstract": {
-      "content": "content (ZH)",
-      "title": "title (ZH)"
+      "content": "The mathematical foundation of autonomous cloud sovereignty.",
+      "title": "Abstract"
     },
     "architecture": {
       "control_plane": {
-        "content": "content (ZH)",
-        "title": "title (ZH)"
+        "content": "The centralized brain of the sovereign fabric.",
+        "title": "Control Plane"
       },
       "decision_engine": {
-        "content": "content (ZH)",
-        "title": "title (ZH)"
+        "content": "Autonomous policy solver.",
+        "title": "Decision Engine"
       },
-      "p1": "p1 (ZH)",
+      "p1": "The AECP kernel sits above the hyperscale providers.",
       "state_sync": {
-        "content": "content (ZH)",
-        "title": "title (ZH)"
+        "content": "Continuous reconciliation of reality.",
+        "title": "State Sync"
       },
-      "title": "title (ZH)"
+      "title": "System Architecture"
     },
     "aso": {
-      "p1": "p1 (ZH)",
+      "p1": "A sovereign abstraction layer for global workloads.",
       "principles": {
         "automation": {
-          "content": "content (ZH)",
-          "title": "title (ZH)"
+          "content": "Policy as execution.",
+          "title": "Automation"
         },
         "neutrality": {
-          "content": "content (ZH)",
-          "title": "title (ZH)"
+          "content": "Vendor agnostic control.",
+          "title": "Neutrality"
         },
         "observability": {
-          "content": "content (ZH)",
-          "title": "title (ZH)"
+          "content": "Audit everywhere.",
+          "title": "Observability"
         },
         "sovereignty": {
-          "content": "content (ZH)",
-          "title": "title (ZH)"
+          "content": "Mathematical guarantees.",
+          "title": "Sovereignty"
         },
-        "title": "title (ZH)"
+        "title": "Design Principles"
       },
-      "title": "title (ZH)"
+      "title": "The ASO Framework"
     },
-    "author": "author (ZH)",
-    "author_label": "author_label (ZH)",
-    "classification": "classification (ZH)",
+    "author": "Chaitanya Bharath Gopu",
+    "author_label": "Principal Author",
+    "classification": "Technical Publication",
     "conclusion": {
-      "p1": "p1 (ZH)",
-      "p2": "p2 (ZH)",
-      "title": "title (ZH)"
+      "p1": "Sovereignty is no longer a policy; it is a physical property.",
+      "p2": "The AECP framework provides the path forward.",
+      "title": "Conclusion"
     },
-    "date": "date (ZH)",
-    "date_label": "date_label (ZH)",
+    "date": "December 2024",
+    "date_label": "Publication Date",
     "decision_framework": {
       "components": {
         "adaptation": {
-          "content": "content (ZH)",
-          "title": "title (ZH)"
+          "content": "Real-time drift correction.",
+          "title": "Adaptation"
         },
         "guardrails": {
-          "content": "content (ZH)",
-          "title": "title (ZH)"
+          "content": "Deterministic policy enforcement.",
+          "title": "Guardrails"
         },
         "intent_mapping": {
-          "content": "content (ZH)",
-          "title": "title (ZH)"
+          "content": "Business logic to cloud infra.",
+          "title": "Intent Mapping"
         }
       },
-      "p1": "p1 (ZH)",
-      "title": "title (ZH)"
+      "p1": "Closed-loop intelligence for infrastructure.",
+      "title": "Decision Framework"
     },
     "differentiation": {
       "comparison": {
@@ -6794,52 +6794,52 @@
           "3": "Autonomous"
         }
       },
-      "non_replicability": "non_replicability (ZH)",
-      "p1": "p1 (ZH)",
-      "title": "title (ZH)"
+      "non_replicability": "This architecture cannot be replicated with legacy tools.",
+      "p1": "Why AECP is fundamentally different from IaC.",
+      "title": "Differentiation"
     },
     "ebu1a": {
-      "executive_summary_title": "executive_summary_title (ZH)",
-      "importance": "importance (ZH)",
-      "importance_label": "importance_label (ZH)",
-      "originality": "originality (ZH)",
-      "originality_label": "originality_label (ZH)",
-      "p1": "p1 (ZH)",
-      "summary_content": "summary_content (ZH)",
-      "title": "title (ZH)"
+      "executive_summary_title": "Executive Summary",
+      "importance": "Critical architectural contribution to digital sovereignty.",
+      "importance_label": "Contribution Importance",
+      "originality": "Novel multi-plane isolation protocol.",
+      "originality_label": "Innovation Class",
+      "p1": "The EBU1A standard defines the baseline for secure, multi-cloud communications in regulated industries.",
+      "summary_content": "This section outlines the compliance requirements for the EBU1A framework.",
+      "title": "EBU1A Compliance"
     },
     "execution_flow": {
-      "p1": "p1 (ZH)",
+      "p1": "The lifecycle of a sovereign instruction.",
       "steps": {
-        "s1": "s1 (ZH)",
-        "s2": "s2 (ZH)",
-        "s3": "s3 (ZH)",
-        "s4": "s4 (ZH)",
-        "s5": "s5 (ZH)"
+        "s1": "Signal Intake",
+        "s2": "Intent Parsing",
+        "s3": "Conflict Check",
+        "s4": "Actuation Signal",
+        "s5": "Verification Loop"
       },
-      "title": "title (ZH)"
+      "title": "Execution Flow"
     },
     "feasibility": {
-      "p1": "p1 (ZH)",
+      "p1": "Applicability across highly regulated sectors.",
       "sectors": {
         "finance": {
-          "impact": "impact (ZH)",
-          "title": "title (ZH)"
+          "impact": "Sovereign financial fabrics.",
+          "title": "Finance"
         },
         "government": {
-          "impact": "impact (ZH)",
-          "title": "title (ZH)"
+          "impact": "National digital sovereignty.",
+          "title": "Government"
         },
         "healthcare": {
-          "impact": "impact (ZH)",
-          "title": "title (ZH)"
+          "impact": "PII-safe multi-cloud.",
+          "title": "Healthcare"
         },
         "telecom": {
-          "impact": "impact (ZH)",
-          "title": "title (ZH)"
+          "impact": "Edge sovereign nodes.",
+          "title": "Telecom"
         }
       },
-      "title": "title (ZH)"
+      "title": "Industry Feasibility"
     },
     "footer": {
       "copyright": "© 2026 OmniGCloud. All rights reserved.",
@@ -6850,70 +6850,70 @@
       "lab": "OmniGCloud Research Lab"
     },
     "impact": {
-      "business_value": "business_value (ZH)",
+      "business_value": "OmniGCloud is the engine of the sovereign enterprise.",
       "metrics": {
-        "cost": "cost (ZH)",
-        "cost_label": "cost_label (ZH)",
-        "efficiency": "efficiency (ZH)",
-        "efficiency_label": "efficiency_label (ZH)",
-        "security": "security (ZH)",
-        "security_label": "security_label (ZH)"
+        "cost": "$2M+",
+        "cost_label": "Cost Savings",
+        "efficiency": "95%",
+        "efficiency_label": "Efficiency",
+        "security": "Gold Standard",
+        "security_label": "Security Compliance"
       },
-      "p1": "p1 (ZH)",
-      "title": "title (ZH)"
+      "p1": "Quantifiable gains in security and efficiency.",
+      "title": "Strategic Impact"
     },
     "introduction": {
-      "p1": "p1 (ZH)",
-      "p2": "p2 (ZH)",
-      "p3": "p3 (ZH)",
-      "title": "title (ZH)"
+      "p1": "The standard for autonomous cloud governance.",
+      "p2": "Modernization requires radical visibility.",
+      "p3": "Control your data. Control your future.",
+      "title": "Introduction"
     },
     "lifecycle": {
-      "resilience": "resilience (ZH)",
-      "title": "title (ZH)"
+      "resilience": "Built-in failure tolerance at every node.",
+      "title": "Cognitive Lifecycle"
     },
     "limitations": {
-      "p1": "p1 (ZH)",
-      "p2": "p2 (ZH)",
-      "title": "title (ZH)"
+      "p1": "Current research focuses on high-level orchestration.",
+      "p2": "Hardware-level isolation is out of scope.",
+      "title": "Limitations"
     },
     "meta": {
-      "description": "description (ZH)",
-      "title": "title (ZH)"
+      "description": "Technical specification of the Autonomous Sovereign Cloud Protocol (AECP).",
+      "title": "AECP Whitepaper Metadata"
     },
     "problem": {
       "compliance": {
-        "content": "content (ZH)",
-        "scenario": "scenario (ZH)",
-        "title": "title (ZH)"
+        "content": "Global regulations are diverging.",
+        "scenario": "Scenario: Data residency violations.",
+        "title": "Regulatory Fragmentation"
       },
       "metrics": {
-        "compliance_aso": "compliance_aso (ZH)",
-        "compliance_label": "compliance_label (ZH)",
-        "mttr_aso": "mttr_aso (ZH)",
-        "mttr_aso_label": "mttr_aso_label (ZH)",
-        "mttr_manual": "mttr_manual (ZH)",
-        "mttr_manual_label": "mttr_manual_label (ZH)",
-        "opex_label": "opex_label (ZH)",
-        "opex_savings": "opex_savings (ZH)"
+        "compliance_aso": "100%",
+        "compliance_label": "Compliance Rate",
+        "mttr_aso": "4 Minutes",
+        "mttr_aso_label": "MTTR (ASO Enabled)",
+        "mttr_manual": "14 Days",
+        "mttr_manual_label": "MTTR (Manual)",
+        "opex_label": "OpEx Reduction",
+        "opex_savings": "30%"
       },
       "operational": {
-        "content": "content (ZH)",
-        "scenario": "scenario (ZH)",
-        "title": "title (ZH)"
+        "content": "Manual governance cannot scale.",
+        "scenario": "Scenario: Outage due to drift.",
+        "title": "Operational Complexity"
       },
-      "p1": "p1 (ZH)",
-      "title": "title (ZH)",
+      "p1": "Legacy cloud management is broken.",
+      "title": "Problem Statement",
       "vendor_lock": {
-        "content": "content (ZH)",
-        "scenario": "scenario (ZH)",
-        "title": "title (ZH)"
+        "content": "Proprietary APIs create artificial gravity.",
+        "scenario": "Scenario: Forced ecosystem expansion.",
+        "title": "Vendor Lock-in"
       }
     },
     "references": {
       "ref1": "AECP Core Specifications (2024)",
       "ref2": "Sovereignty Lattice Theory",
-      "title": "title (ZH)"
+      "title": "References"
     },
     "section1": {
       "box": {
@@ -7159,7 +7159,7 @@
         "caption": "<strong>Figure 6: Necessity of Deterministic Logic:</strong> The design enforces a strict constraint solver path, rejecting all probabilistic inputs for actuation. <strong>Failure Mode:</strong> Allowing probabilistic (LLM) decision-making in the control loop introduces \"Black Box\" non-determinism, rendering the entire system legally indefensible during a forensic audit.",
         "labels": {
           "alert": "Constraint: Confidence < 99.9% mandates Human Operator review.",
-          "command": "COMMAND (ZH)",
+          "command": "COMMAND",
           "commandSub": "Signed Action",
           "input": "INPUT VECTOR",
           "inputSub": "Telemetry Signal",
@@ -7195,10 +7195,10 @@
       "p1": "<strong>Risk Evaluation Strategy:</strong> In autonomous control, the cost of a \"Hallucinated Remediation\" (taking the wrong action) is existential. Therefore, AECP dictates a <strong>\"Safe-Fail\" protocol</strong>: in the event of any state ambiguity, the system chooses <strong>Isolation over Action</strong>, accepting reduced availability to preserve fatal integrity.",
       "title": "9. Safe-Fail Autonomy Protocols"
     },
-    "title": "ASO Whitepaper (ZH)",
-    "version": "8.4 (ZH)",
-    "version_label": "Version (ZH)",
-    "watermark": "OMNIGCLOUD RESEARCH  •  COPYRIGHT 2026  •  DO NOT DISTRIBUTE"
+    "title": "The Autonomous Sovereign Cloud Protocol",
+    "version": "8.4 (Stable)",
+    "version_label": "Whitepaper Version_label",
+    "watermark": "OMNIGCLOUD RESEARCH  •  COPYRIGHT 2026"
   },
   "content": "Decouple your business logic from vendor-specific APIs and regain full control of your digital estate. (ZH)",
   "cta": "Get Started (ZH)",

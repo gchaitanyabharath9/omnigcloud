@@ -63,7 +63,7 @@ export const HowItWorks = ({ pageKey }: { pageKey: string }) => {
     const steps = [0, 1, 2];
 
     return (
-        <Section className="py-20 bg-[var(--bg-surface-2)]">
+        <Section className="snap-section py-20 bg-[var(--bg-surface-2)]">
             <PageShell>
                 <div className="mb-12">
                     <h2 className="text-3xl font-black mb-4 flex items-center gap-3">
@@ -92,7 +92,7 @@ export const HowItWorks = ({ pageKey }: { pageKey: string }) => {
 export const VisualSection = ({ pageKey, imageUrl, alt, description }: { pageKey: string; imageUrl: string; alt: string; description: string }) => {
     const tEnrichment = useTranslations('Enrichment');
     return (
-        <Section className="py-20">
+        <Section className="snap-section py-20">
             <PageShell>
                 <div className="grid lg:grid-cols-2 gap-16 items-center">
                     <div className="relative aspect-video rounded-[2rem] overflow-hidden border border-white/10 shadow-2xl">
@@ -134,7 +134,7 @@ export const DeepDive = ({ pageKey, relatedLinks }: EnrichmentProps) => {
     const locale = useLocale();
 
     return (
-        <Section className="py-20 border-t border-white/5">
+        <Section className="snap-section py-20 border-t border-white/5">
             <PageShell>
                 <div className="max-w-4xl">
                     <h2 className="text-3xl font-black mb-8 flex items-center gap-3">
@@ -170,7 +170,7 @@ export const DeepDive = ({ pageKey, relatedLinks }: EnrichmentProps) => {
 export const TopicalAuthority = ({ pageKey }: { pageKey: string }) => {
     const t = useTranslations(`SEO_Content.${pageKey}.WhyItMatters`);
     return (
-        <Section className="py-16 bg-gradient-to-b from-transparent to-primary/5">
+        <Section className="snap-section py-16 bg-gradient-to-b from-transparent to-primary/5">
             <PageShell>
                 <div className="max-w-3xl">
                     <h2 className="text-2xl font-black mb-6 uppercase tracking-tight text-primary">{tSafe(t, 'title', 'Why Sovereignty Matters')}</h2>
@@ -186,7 +186,7 @@ export const TopicalAuthority = ({ pageKey }: { pageKey: string }) => {
 export const TechnicalInsights = ({ pageKey }: { pageKey: string }) => {
     const t = useTranslations(`SEO_Content.${pageKey}.TechnicalApproach`);
     return (
-        <Section className="py-20">
+        <Section className="snap-section py-20">
             <PageShell>
                 <div className="glass-panel p-10 md:p-16 rounded-[3rem] border-primary/20 bg-primary/5">
                     <div className="flex flex-col md:flex-row gap-12 items-start">
@@ -211,7 +211,7 @@ export const FAQSection = ({ pageKey }: { pageKey: string }) => {
     const count = [0, 1]; // Support at least 2 for now based on en.json updates
 
     return (
-        <Section className="py-20 bg-[var(--bg-surface-2)]">
+        <Section className="snap-section py-20 bg-[var(--bg-surface-2)]">
             <PageShell>
                 <div className="max-w-4xl">
                     <h2 className="text-3xl font-black mb-12 flex items-center gap-3">

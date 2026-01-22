@@ -3,6 +3,29 @@ import Image from 'next/image';
 import { Camera, ArrowRight, Layers, Shield, Zap, Globe } from 'lucide-react';
 import { Link } from '@/navigation';
 import Footer from '@/components/Footer';
+import { generateSEOMetadata, SEO_KEYWORDS } from '@/utils/seo';
+
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
+    const { locale } = await params;
+    const tm = await getTranslations({ locale, namespace: 'Metadata.VisualLibrary' });
+
+    return generateSEOMetadata({
+        title: tm('title'),
+        description: tm('description'),
+        keywords: [
+            ...SEO_KEYWORDS.platform,
+            'architectural diagrams',
+            'cloud schemas',
+            'technical visualization',
+            'system models',
+        ],
+        ogImage: `/og-images/visual-library.png`,
+    }, locale);
+}
+
+export function generateStaticParams() {
+    return ['en', 'es', 'fr', 'de', 'zh', 'hi', 'ja', 'ko'].map((locale) => ({ locale }));
+}
 
 export const revalidate = 86400; // Cache for 24 hours (ISR)
 

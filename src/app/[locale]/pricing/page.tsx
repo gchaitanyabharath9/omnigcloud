@@ -38,8 +38,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
         title: tm.has('title') ? tm('title') : 'Pricing & Value Economy',
         description: tm.has('description') ? tm('description') : 'Transparent, value-based pricing for your sovereign cloud modernization journey.',
         keywords: keywordsArray as string[],
-        canonical: `https://www.omnigcloud.com/${locale}/pricing`,
-        ogImage: `https://www.omnigcloud.com/og-images/pricing.png`,
+        ogImage: `/og-images/pricing.png`,
         ogType: 'website',
     }, locale);
 }
