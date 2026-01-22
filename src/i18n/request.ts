@@ -61,7 +61,11 @@ export default getRequestConfig(async ({ requestLocale }) => {
         messages,
         onError(error) {
             if (error.code === 'MISSING_MESSAGE') {
-                const key = error.message.match(/key "([^"]+)"/)?.[1] || 'unknown';
+                const match = error.message.match(/key "([^"]+)"/);
+                const key = match?.[1] || 'unknown';
+                if (key === 'unknown') {
+                    console.error(`[i18n-Missing] Full message: ${error.message}`);
+                }
                 logMissingKey(locale as string, key);
             } else {
                 console.error(`[i18n-Config Error]:`, error);

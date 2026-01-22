@@ -3900,6 +3900,10 @@
       "description": "Enterprise Cloud Solutions",
       "title": "OmnigCloud"
     },
+    "Platform": {
+      "title": "The AECP Platform | OmniGCloud",
+      "description": "Deep dive into the Autonomous Enterprise Control Plane, the kernel of sovereign multi-cloud orchestration."
+    },
     "Industries": {
       "finance": {
         "description": "Secure, high-frequency cloud infrastructure for the financial sector. We ensure PCI-DSS compliance, data residency, and micro-latency performance.",
@@ -3926,6 +3930,8 @@
       "title": "Products"
     },
     "Services": {
+      "title": "Sovereign Services | OmniGCloud",
+      "description": "Comprehensive modernization services including cloud migration, DevOps, and OpenShift transformation governed by autonomous policy mesh.",
       "ai-cloud-platform": {
         "description": "Scale your AI workloads with secure, sovereign GPU orchestration. OmniGCloud provides the control plane for enterprise LLMs and generative AI.",
         "title": "AI Cloud Infrastructure & Managed GPUs | OmniGCloud"
@@ -4023,6 +4029,13 @@
         "source": "Global FinTech Review",
         "tag": "FinTech",
         "title": "Central Bank Digital Sovereignty Framework"
+      },
+      "egress": {
+        "date": "Jan 08, 2025",
+        "desc": "How AI-driven BGP optimization and automated egress arbitrage are redefining the economics of sovereign multi-cloud.",
+        "source": "Cloud Infrastructure Journal",
+        "tag": "FinOps",
+        "title": "Optimizing Cross-Cloud Egress Costs"
       },
       "integration": {
         "date": "Dec 05, 2024",
@@ -5447,6 +5460,64 @@
       },
       "VisualSection": {
         "description": "Visual representation of the AECP core components and data flow."
+      }
+    },
+    "Pricing": {
+      "AboveTheFold": "Achieve total cloud sovereignty with transparent, value-based units. Decouple your infrastructure costs from vendor lock-in and optimize for regulatory compliance and performance.",
+      "DeepDive": {
+        "content": "Our economic model is built on the principle of technical sovereignty. By abstracting resource consumption into predictable units, we enable organizations to forecast multi-cloud OpEx with 99.8% precision while maintaining strict data residency.",
+        "links": {
+          "finance": "Financial Sovereignty",
+          "modernization": "Modernization Blueprint",
+          "savings": "Savings Analysis"
+        },
+        "title": "Sovereign Economic Architecture"
+      },
+      "FAQ": {
+        "items": {
+          "0": {
+            "a": "Unlike traditional providers that charge for opaque abstractions, OmniGCloud uses predictable sovereign nodes as the base unit of cost.",
+            "q": "How is OmniGCloud pricing calculated?"
+          },
+          "1": {
+            "a": "Yes, our savings analysis engine provides real-time arbitrage across all supported regions and providers.",
+            "q": "Can I see my potential savings before migrating?"
+          }
+        },
+        "title": "Pricing F.A.Q"
+      },
+      "HowItWorks": {
+        "steps": {
+          "0": {
+            "desc": "Select the governance tier that matches your regulatory requirements.",
+            "title": "Tier Selection"
+          },
+          "1": {
+            "desc": "Define your residency boundaries across OCI, AWS, Azure, or private hardware.",
+            "title": "Region Activation"
+          },
+          "2": {
+            "desc": "Our engine identifies the most cost-effective compliant route for your workloads.",
+            "title": "Economic Sync"
+          }
+        },
+        "title": "Onboarding Process"
+      },
+      "LeadCapture": {
+        "cta": "Get Started",
+        "subtitle": "Join the enterprises achieving economic sovereignty in the multi-cloud era.",
+        "title": "Ready to optimize?"
+      },
+      "TechnicalApproach": {
+        "content": "Our platform utilizes an automated cost arbitrage engine that continuously evaluates region-specific pricing APIs against compliance constraints to ensure the absolute lowest TCO for sovereign workloads.",
+        "title": "Economic Kernel"
+      },
+      "VisualSection": {
+        "description": "The OmniGCloud pricing fabric integrates real-time cost signals with compliance metadata to provide a unified value layer across your entire multi-cloud estate."
+      },
+      "WhyItMatters": {
+        "content": "Without economic predictability, cloud sovereignty is an illusion. We provide the tools to ensure your infrastructure remains financially sustainable and strategically independent.",
+        "title": "Economic Autonomy"
       }
     },
     "Services": {

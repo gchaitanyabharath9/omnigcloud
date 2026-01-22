@@ -8,7 +8,7 @@ import { getTranslations } from 'next-intl/server';
 export default async function NewsArticlePage({ params }: { params: Promise<{ locale: string; slug: string }> }) {
     const { slug, locale } = await params;
 
-    const validSlugs = ['bank', 'egress', 'integration'];
+    const validSlugs = ['bank', 'egress', 'integration', 'security'];
     if (!validSlugs.includes(slug)) {
         notFound();
     }
@@ -126,7 +126,7 @@ export default async function NewsArticlePage({ params }: { params: Promise<{ lo
 }
 export async function generateStaticParams() {
     const locales = ['en', 'es', 'fr', 'de', 'zh', 'hi', 'ja', 'ko'];
-    const slugs = ['bank', 'egress', 'integration'];
+    const slugs = ['bank', 'egress', 'integration', 'security'];
 
     return locales.flatMap((locale) =>
         slugs.map((slug) => ({ locale, slug }))

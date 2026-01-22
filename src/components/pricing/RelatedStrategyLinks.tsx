@@ -5,7 +5,8 @@ import { useTranslations } from 'next-intl';
 
 export default function RelatedStrategyLinks() {
     const t = useTranslations('Pricing.relatedStrategy');
-    const links = t.raw('links') as Array<{ category: string; title: string; description: string }>;
+    const rawLinks = t.raw('links');
+    const links = Array.isArray(rawLinks) ? rawLinks : (rawLinks && typeof rawLinks === 'object' ? Object.values(rawLinks) : []) as Array<{ category: string; title: string; description: string }>;
 
     // We keep the hrefs as they are since they are relative to the root and Link from @/navigation handles locale
     const hrefs = [

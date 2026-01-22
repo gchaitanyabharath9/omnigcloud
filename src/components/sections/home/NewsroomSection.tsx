@@ -12,8 +12,8 @@ export default function NewsroomSection() {
             img: "https://images.unsplash.com/photo-1504711331083-9c895941bf81?w=900&auto=format&fit=crop&q=75"
         },
         {
-            id: 'bank',
-            img: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=600&auto=format&fit=crop&q=75"
+            id: 'egress',
+            img: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=600&auto=format&fit=crop&q=75"
         },
         {
             id: 'security',
@@ -21,7 +21,7 @@ export default function NewsroomSection() {
         },
         {
             id: 'integration',
-            img: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=600&auto=format&fit=crop&q=75"
+            img: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&auto=format&fit=crop&q=75"
         }
     ];
 
