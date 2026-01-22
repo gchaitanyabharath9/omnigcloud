@@ -2,14 +2,16 @@
 import React from 'react';
 import { Metadata } from 'next';
 import { generateSEOMetadata, SEO_KEYWORDS } from '@/utils/seo';
+import { getTranslations } from 'next-intl/server';
 
 // Dashboard metadata with noindex (secure area)
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
     const { locale } = await params;
+    const t = await getTranslations({ locale, namespace: 'Metadata.Dashboard' });
 
     const baseMetadata = generateSEOMetadata({
-        title: 'Dashboard - Real-Time Infrastructure Monitoring',
-        description: 'Monitor your multi-cloud infrastructure in real-time with comprehensive analytics, cost optimization, and security insights.',
+        title: t('title'),
+        description: t('description'),
         keywords: [
             ...SEO_KEYWORDS.performance,
             ...SEO_KEYWORDS.platform,

@@ -1,6 +1,6 @@
 import Footer from "@/components/Footer";
 import { Link } from "@/navigation";
-
+import { getTranslations } from "next-intl/server";
 import { ArrowRight } from "lucide-react";
 import PlatformHero from "@/components/sections/platform/PlatformHero";
 import ControlPlaneSection from "@/components/sections/platform/ControlPlaneSection";
@@ -11,17 +11,26 @@ import IntegrationsSection from "@/components/sections/platform/IntegrationsSect
 import ComparisonSection from "@/components/sections/platform/ComparisonSection";
 import type { Metadata } from "next";
 
-export const metadata: Metadata = {
-    title: "The G-Framework Platform | Cloud-Agnostic Control Plane",
-    description: "Deep dive into the architecture of OmniGCloud. Explore our Cloud-Agnostic Control Plane, Policy Engine, and IaC Factory for sovereign multi-cloud orchestration.",
-};
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+    const { locale } = await params;
+    const t = await getTranslations({ locale, namespace: 'Metadata.Platform' });
+    return {
+        title: t('title'),
+        description: t('description'),
+    };
+}
 
 export function generateStaticParams() {
     return ['en', 'es', 'fr', 'de', 'zh', 'hi', 'ja', 'ko'].map((locale) => ({ locale }));
 }
 
 
-export default function PlatformPage() {
+export default async function PlatformPage({ params }: { params: Promise<{ locale: string }> }) {
+    const { locale } = await params;
+    const t = await getTranslations({ locale, namespace: 'Platform' });
+    const tCommon = await getTranslations({ locale, namespace: 'Common' });
+    const tSeo = await getTranslations({ locale, namespace: 'SEO_Content.Platform' });
+
     return (
         <>
             <PlatformHero />
@@ -29,8 +38,8 @@ export default function PlatformPage() {
             <div className="container py-20">
                 <div className="grid md:grid-cols-2 gap-8">
                     {[
-                        { title: "The AECP Engine", path: "/platform/ai-engine", desc: "Autonomous Enterprise Cloud Protocol: The neural core of our modernization platform." },
-                        { title: "Sovereign Observability", path: "/platform/observability", desc: "Unified visibility and audit trails across hybrid sovereign environments." }
+                        { title: t('catalog.aecp.title'), path: "/platform/ai-engine", desc: t('catalog.aecp.desc') },
+                        { title: t('catalog.observability.title'), path: "/platform/observability", desc: t('catalog.observability.desc') }
 
                     ].map((item, i) => (
                         <Link href={item.path} key={i} className="glass-panel p-10 hover:border-primary/50 transition-colors group">
@@ -38,7 +47,7 @@ export default function PlatformPage() {
                             <h3 className="text-2xl font-black mb-4 group-hover:text-primary transition-colors">{item.title}</h3>
                             <p className="text-muted-foreground mb-6">{item.desc}</p>
                             <div className="text-primary font-bold flex items-center gap-2">
-                                Deep Dive <ArrowRight size={18} />
+                                {t('catalog.deepDive')} <ArrowRight size={18} />
                             </div>
                         </Link>
                     ))}
@@ -54,7 +63,7 @@ export default function PlatformPage() {
                 pageKey="Platform"
                 imageUrl="/images/seo/architecture.png"
                 alt="OmniGCloud Platform Architecture"
-                description="The Platform architecture utilizes sovereign nodes connected via a global intent mesh, ensuring that policy is decoupled from infrastructure for maximum resilience."
+                description={tSeo('VisualSection.description')}
             />
 
             <ArbitrageSection />
@@ -64,9 +73,9 @@ export default function PlatformPage() {
             <DeepDive
                 pageKey="Platform"
                 relatedLinks={[
-                    { label: "AECP Engine Detail", href: "/platform/ai-engine" },
-                    { label: "Sovereign Observability", href: "/platform/observability" },
-                    { label: "Technical Reference", href: "/docs" }
+                    { label: tSeo('DeepDive.links.aecp'), href: "/platform/ai-engine" },
+                    { label: tSeo('DeepDive.links.observability'), href: "/platform/observability" },
+                    { label: tSeo('DeepDive.links.docs'), href: "/docs" }
                 ]}
             />
 

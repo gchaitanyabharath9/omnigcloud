@@ -4,7 +4,7 @@ import LatencyMonitor from '@/components/observability/LatencyMonitor';
 import { Activity, ShieldCheck, Cpu, Database } from 'lucide-react';
 
 export default function ObservabilitySection() {
-    const t = useTranslations('Platform');
+    const t = useTranslations('Platform.Sections.Observability');
 
     return (
         <section id="observability" className="snap-section container">
@@ -26,13 +26,13 @@ export default function ObservabilitySection() {
                 {/* Content */}
                 <div>
                     <div className="badge badge-primary-subtle mb-4">
-                        <Activity size={14} /> Mesh Observability
+                        <Activity size={14} /> {t('badge')}
                     </div>
                     <h2 className="mb-6" style={{ fontSize: 'clamp(2rem, 5vw, 2.5rem)', fontWeight: 900 }}>
-                        Real-time Latency <span className="text-gradient">Analysis</span>
+                        {t('title')} <span className="text-gradient">{t('titleHighlight')}</span>
                     </h2>
                     <p className="text-lead mb-8">
-                        OmniGCloud's autonomous control plane continuously analyzes network paths across global cloud providers. Our mesh architecture ensures the lowest possible latency for sovereign workloads.
+                        {t('description')}
                     </p>
 
                     <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1.5rem' }}>
@@ -40,15 +40,15 @@ export default function ObservabilitySection() {
                             <div style={{ color: 'var(--primary)', marginBottom: '0.75rem' }}>
                                 <ShieldCheck size={20} />
                             </div>
-                            <h4 style={{ fontSize: '0.9rem', fontWeight: 800, marginBottom: '0.5rem' }}>Path Validation</h4>
-                            <p style={{ fontSize: '0.75rem', opacity: 0.7, margin: 0 }}>Every packet path is cryptographically signed and validated for sovereignty compliance.</p>
+                            <h4 style={{ fontSize: '0.9rem', fontWeight: 800, marginBottom: '0.5rem' }}>{t('features.path.title')}</h4>
+                            <p style={{ fontSize: '0.75rem', opacity: 0.7, margin: 0 }}>{t('features.path.desc')}</p>
                         </div>
                         <div className="glass-panel" style={{ padding: '1.25rem', borderRadius: '1rem', border: '1px solid var(--card-border)' }}>
                             <div style={{ color: 'var(--color-success)', marginBottom: '0.75rem' }}>
                                 <Cpu size={20} />
                             </div>
-                            <h4 style={{ fontSize: '0.9rem', fontWeight: 800, marginBottom: '0.5rem' }}>Smart Routing</h4>
-                            <p style={{ fontSize: '0.75rem', opacity: 0.7, margin: 0 }}>AI-driven BGP optimization reduces inter-cloud egress latency by up to 40%.</p>
+                            <h4 style={{ fontSize: '0.9rem', fontWeight: 800, marginBottom: '0.5rem' }}>{t('features.routing.title')}</h4>
+                            <p style={{ fontSize: '0.75rem', opacity: 0.7, margin: 0 }}>{t('features.routing.desc')}</p>
                         </div>
                     </div>
                 </div>

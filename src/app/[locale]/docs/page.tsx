@@ -13,7 +13,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
     return {
         title: t('meta.title'),
         description: t('meta.description'),
-        keywords: ['ASO framework', 'cloud governance patterns', 'autonomous orchestration', 'scholarly whitepaper'],
+        keywords: t.raw('meta.keywords'),
     };
 }
 

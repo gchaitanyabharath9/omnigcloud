@@ -1,9 +1,10 @@
 import React from 'react';
 import { ChevronLeft } from 'lucide-react';
-import Link from 'next/link';
+import { Link } from '@/navigation';
 import { Metadata } from 'next';
 import { generateSEOMetadata, SEO_KEYWORDS } from '@/utils/seo';
 import { WatermarkOverlay } from '@/components/WatermarkOverlay';
+import { getTranslations } from 'next-intl/server';
 
 // Modular Components
 import { ResearchHeader } from '@/features/resources/research/ResearchHeader';
@@ -13,10 +14,11 @@ import { ResearchFooter } from '@/features/resources/research/ResearchFooter';
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
     const { locale } = await params;
+    const t = await getTranslations({ locale, namespace: 'Research.QA_Paper' });
 
     return generateSEOMetadata({
-        title: 'Automated Multilingual Quality Assurance Framework',
-        description: 'A deterministic framework for automated multilingual quality assurance in global-scale web applications.',
+        title: t('meta.title'),
+        description: t('meta.description'),
         keywords: [
             ...SEO_KEYWORDS.platform,
             'quality assurance',
@@ -38,6 +40,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
 
 export default async function PublicationPage({ params }: { params: Promise<{ locale: string }> }) {
     const { locale } = await params;
+    const t = await getTranslations('Research.QA_Paper');
 
     return (
         <div className="min-h-screen bg-[var(--background)] py-20 text-balance relative">
@@ -45,8 +48,8 @@ export default async function PublicationPage({ params }: { params: Promise<{ lo
             <WatermarkOverlay />
 
             <div className="container max-w-4xl mx-auto relative z-10 px-4 md:px-0">
-                <Link href={`/${locale}/research`} className="flex items-center gap-2 text-[var(--primary)] mb-12 hover:translate-x-[-4px] transition-transform no-print">
-                    <ChevronLeft size={18} /> Back to Research Repository
+                <Link href="/research" className="flex items-center gap-2 text-[var(--primary)] mb-12 hover:translate-x-[-4px] transition-transform no-print">
+                    <ChevronLeft size={18} /> {t('backToRepository')}
                 </Link>
 
                 <ResearchHeader />

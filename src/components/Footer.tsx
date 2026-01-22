@@ -44,27 +44,27 @@ const Footer = () => {
                             },
                             {
                                 label: t('services.label'), color: "#10b981", links: [
-                                    { name: "Cloud Modernization", href: "/services/cloud-modernization" },
-                                    { name: "OpenShift Strategy", href: "/services/openshift-modernization" },
-                                    { name: "App Engineering", href: "/services/application-modernization" },
-                                    { name: "FinOps Intelligence", href: "/services/cloud-cost-optimization" },
-                                    { name: "AI Infrastructure", href: "/services/ai-cloud-platform" }
+                                    { name: t('services.cloud_modernization'), href: "/services/cloud-modernization" },
+                                    { name: t('services.openshift'), href: "/services/openshift-modernization" },
+                                    { name: t('services.app_eng'), href: "/services/application-modernization" },
+                                    { name: t('services.finops'), href: "/services/cloud-cost-optimization" },
+                                    { name: t('services.ai_infra'), href: "/services/ai-cloud-platform" }
                                 ]
                             },
                             {
-                                label: "Authority", color: "#8b5cf6", links: [
-                                    { name: "Technical Founder", href: "/founder" },
-                                    { name: "System Architecture", href: "/research/papers" },
-                                    { name: "Strategic Playbooks", href: "/blog" },
-                                    { name: "Case Studies", href: "/case-studies" }
+                                label: t('authority.label'), color: "#8b5cf6", links: [
+                                    { name: t('authority.founder'), href: "/founder" },
+                                    { name: t('authority.architecture'), href: "/research/papers" },
+                                    { name: t('authority.playbooks'), href: "/blog" },
+                                    { name: t('authority.case_studies'), href: "/case-studies" }
                                 ]
                             },
                             {
                                 label: t('resources.label'), color: "#f59e0b", links: [
                                     { name: t('resources.docs'), href: "/docs" },
-                                    { name: "Sovereign Whitepaper", href: "/docs/whitepaper" },
-                                    { name: "AECP Engine", href: "/research/papers/aecp" },
-                                    { name: "Reference Standards", href: "/research/papers" },
+                                    { name: t('resources.whitepaper'), href: "/docs/whitepaper" },
+                                    { name: t('resources.aecp'), href: "/research/papers/aecp" },
+                                    { name: t('resources.standards'), href: "/research/papers" },
                                     { name: t('resources.visual_library'), href: "/visual-library" }
                                 ]
                             },
@@ -72,7 +72,7 @@ const Footer = () => {
                                 label: t('company.label'), color: "#ec4899", links: [
                                     { name: t('company.about'), href: "/company#about" },
                                     { name: t('company.leadership'), href: "/company#leadership" },
-                                    { name: "Strategic Engineering", href: "/blog" },
+                                    { name: t('company.strategy'), href: "/blog" },
                                     { name: t('trust.security'), href: "/security" },
                                     { name: t('trust.privacy'), href: "/privacy" },
                                     { name: t('company.contact'), href: "/contact" }

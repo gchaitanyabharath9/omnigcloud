@@ -116,13 +116,13 @@ export default function ProblemSection() {
                     </div>
                 </div>
                 <div className="flex justify-center mt-8 space-x-8 items-center border-t border-white/5 pt-8">
-                    <p className="text-xs font-bold text-muted-foreground uppercase tracking-widest">Immediate Mitigation:</p>
+                    <p className="text-xs font-bold text-muted-foreground uppercase tracking-widest">{t('mitigationLabel')}</p>
                     <a href="mailto:architects@omnigcloud.com?subject=Drift%20Mitigation%20Request" className="text-sm font-black text-primary hover:underline underline-offset-4">
-                        Request Security Audit
+                        {t('auditRequest')}
                     </a>
                     <span className="opacity-20">|</span>
                     <a href="mailto:architects@omnigcloud.com?subject=TCO%20Analysis%20Request" className="text-sm font-black text-primary hover:underline underline-offset-4">
-                        Request TCO Analysis
+                        {t('tcoRequest')}
                     </a>
                 </div>
             </div>

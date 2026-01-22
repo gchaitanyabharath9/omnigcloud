@@ -5,20 +5,21 @@ import { Check, X, Shield, Globe, Cpu, Zap, Award, HelpCircle, ArrowRight } from
 import { Link } from '@/navigation';
 import type { Metadata } from 'next';
 import Footer from '@/components/Footer';
-import dynamic from 'next/dynamic';
+import nextDynamic from 'next/dynamic';
 import Image from 'next/image';
 import { safeJsonLd } from '@/lib/security';
 
-const CostSavingsArea = dynamic(() => import('@/components/charts/SimpleCharts').then(mod => mod.CostSavingsArea));
-const CloudDistributionPie = dynamic(() => import('@/components/charts/SimpleCharts').then(mod => mod.CloudDistributionPie));
-const FeatureUsageBar = dynamic(() => import('@/components/charts/SimpleCharts').then(mod => mod.FeatureUsageBar));
-const RelatedStrategyLinks = dynamic(() => import('@/components/pricing/RelatedStrategyLinks'));
+const CostSavingsArea = nextDynamic(() => import('@/components/charts/SimpleCharts').then(mod => mod.CostSavingsArea));
+const CloudDistributionPie = nextDynamic(() => import('@/components/charts/SimpleCharts').then(mod => mod.CloudDistributionPie));
+const FeatureUsageBar = nextDynamic(() => import('@/components/charts/SimpleCharts').then(mod => mod.FeatureUsageBar));
+const RelatedStrategyLinks = nextDynamic(() => import('@/components/pricing/RelatedStrategyLinks'));
 // ComplianceScoresBar is unused
 
 export function generateStaticParams() {
     return ['en', 'es', 'fr', 'de', 'zh', 'hi', 'ja', 'ko'].map((locale) => ({ locale }));
 }
 
+export const dynamic = 'force-static';
 export const revalidate = 3600;
 
 const PRICING_SECTION_IDS = ['developer', 'professional', 'business', 'sovereign', 'savings-analysis', 'value-economy', 'visual-architecture', 'compliance', 'trust', 'faq'];
@@ -27,17 +28,16 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
     const { locale } = await params;
     const tm = await getTranslations({ locale, namespace: 'Metadata.Pricing' });
 
+    let keywordsArray: string[] = [];
+    if (tm.has('keywords')) {
+        const keywords = tm.raw('keywords');
+        keywordsArray = Array.isArray(keywords) ? keywords : (keywords && typeof keywords === 'object' ? Object.values(keywords) : []);
+    }
+
     return generateSEOMetadata({
-        title: tm('title'),
-        description: tm('description'),
-        keywords: [
-            ...SEO_KEYWORDS.platform,
-            'cloud pricing',
-            'enterprise pricing',
-            'sovereign cloud cost',
-            'multi-cloud pricing',
-            'infrastructure cost',
-        ],
+        title: tm.has('title') ? tm('title') : 'Pricing & Value Economy',
+        description: tm.has('description') ? tm('description') : 'Transparent, value-based pricing for your sovereign cloud modernization journey.',
+        keywords: keywordsArray as string[],
         canonical: `https://www.omnigcloud.com/${locale}/pricing`,
         ogImage: `https://www.omnigcloud.com/og-images/pricing.png`,
         ogType: 'website',
@@ -48,73 +48,40 @@ export default async function PricingPage({ params }: { params: Promise<{ locale
     const { locale } = await params;
     const t = await getTranslations('Pricing');
 
+    const getRawArray = (key: string) => {
+        if (!t.has(key)) return [];
+        const value = t.raw(key);
+        if (Array.isArray(value)) return value;
+        if (value && typeof value === 'object') return Object.values(value);
+        return [];
+    };
+
     const plans = [
         {
             id: "developer",
             price: "0",
-            features: [
-                "1 Sovereign Region",
-                "10 Automated Audits/mo",
-                "Community Discord Access",
-                "G-Framework CLI Access",
-                "Basic Governance Templates"
-            ],
-            notIncluded: [
-                "Custom Compliance Packs",
-                "Multi-Cloud Failover",
-                "Priority SRE Support",
-                "Dedicated Private Cluster"
-            ],
+            features: getRawArray('plans.developer.features'),
+            notIncluded: getRawArray('plans.developer.notIncluded'),
             highlight: false
         },
         {
             id: "professional",
             price: "250",
-            features: [
-                "3 Sovereign Regions",
-                "500 Automated Audits/mo",
-                "Standard Email Support",
-                "Multi-Cloud Circuit Breakers",
-                "Advanced Policy-as-Logic",
-                "Custom Audit Export (PDF/JSON)"
-            ],
-            notIncluded: [
-                "Dedicated Private Cluster",
-                "SLA-Backed Performance",
-                "SSO & RBAC (Advanced)"
-            ],
+            features: getRawArray('plans.professional.features'),
+            notIncluded: getRawArray('plans.professional.notIncluded'),
             highlight: true
         },
         {
             id: "business",
             price: "950",
-            features: [
-                "Unlimited Regions",
-                "5,000 Automated Audits/mo",
-                "Priority 24/7 Support",
-                "Full Governance Blueprints",
-                "SSO & Directory Sync",
-                "Advanced Role-Based Access",
-                "Custom Compliance Engine"
-            ],
-            notIncluded: [
-                "Dedicated Private Cluster",
-                "On-Premise Deployment"
-            ],
+            features: getRawArray('plans.business.features'),
+            notIncluded: getRawArray('plans.business.notIncluded'),
             highlight: false
         },
         {
             id: "sovereign",
             price: "Custom",
-            features: [
-                "Dedicated OKE Cluster",
-                "Unlimited Audits & Logs",
-                "Dedicated Solutions Architect",
-                "White-Glove Onboarding",
-                "Custom Legal/GDPR Hardening",
-                "On-Premise / Air-Gapped",
-                "FedRAMP / ISO Assistance"
-            ],
+            features: getRawArray('plans.sovereign.features'),
             notIncluded: [],
             highlight: false
         }
@@ -122,7 +89,7 @@ export default async function PricingPage({ params }: { params: Promise<{ locale
 
     const jsonLd = generateProductSchema({
         name: "OmniGCloud Platform",
-        description: t('hero.subtitle'),
+        description: tSafe(t, 'hero.subtitle', 'The standard for autonomous cloud governance.'),
         image: "https://www.omnigcloud.com/og-images/pricing.png",
         sku: "OMNIG-PLATFORM-V3",
         brand: "OmniGCloud",
@@ -143,12 +110,12 @@ export default async function PricingPage({ params }: { params: Promise<{ locale
             <section className="snap-section" style={{ minHeight: 'calc(100vh - var(--header-height) - var(--breadcrumb-height))', display: 'flex', flexDirection: 'column', justifyContent: 'center', paddingTop: '1rem', paddingBottom: '1rem' }}>
                 <PageShell>
                     <div style={{ textAlign: 'center', marginBottom: '1.5rem' }}>
-                        <div className="badge badge-primary-subtle mb-3">{t('hero.tag')}</div>
+                        <div className="badge badge-primary-subtle mb-3">{tSafe(t, 'hero.tag', 'Featured')}</div>
                         <h1 style={{ fontSize: 'clamp(2rem, 5vw, 2.5rem)', fontWeight: 950, marginBottom: '0.75rem', letterSpacing: '-1px' }}>
-                            {t('hero.title')}
+                            {tSafe(t, 'hero.title', 'Transparent Pricing')}
                         </h1>
                         <p style={{ fontSize: '0.95rem', opacity: 0.7, maxWidth: '650px', margin: '0 auto 1rem', lineHeight: '1.4' }}>
-                            {t('hero.subtitle')}
+                            {tSafe(t, 'hero.subtitle', 'Choose the plan that fits your needs.')}
                         </p>
                         <div className="max-w-2xl mx-auto">
                             <AboveTheFoldDescription pageKey="Pricing" />
@@ -181,20 +148,20 @@ export default async function PricingPage({ params }: { params: Promise<{ locale
                                         fontWeight: 900,
                                         letterSpacing: '0.1em'
                                     }}>
-                                        {t('plans.popular')}
+                                        {tSafe(t, 'plans.popular', 'MOST POPULAR')}
                                     </div>
                                 )}
-                                <h3 style={{ fontSize: '1rem', fontWeight: 900, marginBottom: '0.2rem' }}>{t(`plans.${plan.id}.name`)}</h3>
-                                <p style={{ fontSize: '0.7rem', opacity: 0.6, marginBottom: '0.75rem', height: '2.2rem', lineHeight: '1.2' }}>{t(`plans.${plan.id}.desc`)}</p>
+                                <h3 style={{ fontSize: '1rem', fontWeight: 900, marginBottom: '0.2rem' }}>{tSafe(t, `plans.${plan.id}.name`, plan.id.toUpperCase())}</h3>
+                                <p style={{ fontSize: '0.7rem', opacity: 0.6, marginBottom: '0.75rem', height: '2.2rem', lineHeight: '1.2' }}>{tSafe(t, `plans.${plan.id}.desc`, 'Empowering your cloud journey.')}</p>
 
                                 <div style={{ marginBottom: '0.75rem' }}>
                                     <span style={{ fontSize: '1.5rem', fontWeight: 950 }}>{plan.price !== "Custom" ? `$${plan.price}` : plan.price}</span>
-                                    {plan.price !== "Custom" && <span style={{ opacity: 0.5, fontSize: '0.7rem' }}> {t('plans.month')}</span>}
+                                    {plan.price !== "Custom" && <span style={{ opacity: 0.5, fontSize: '0.7rem' }}> {tSafe(t, 'plans.month', '/ month')}</span>}
                                 </div>
 
                                 <div style={{ flexGrow: 1, marginBottom: '0.75rem' }}>
                                     <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '0.4rem' }}>
-                                        {plan.features.slice(0, 7).map((feature, fidx) => (
+                                        {plan.features.slice(0, 7).map((feature: string, fidx: number) => (
                                             <li key={fidx} style={{ display: 'flex', gap: '0.4rem', alignItems: 'center', fontSize: '0.7rem' }}>
                                                 <div style={{ background: 'rgba(16, 185, 129, 0.1)', color: '#10b981', borderRadius: '50%', padding: '2px', flexShrink: 0 }}>
                                                     <Check size={9} />
@@ -206,7 +173,7 @@ export default async function PricingPage({ params }: { params: Promise<{ locale
                                 </div>
 
                                 <Link href={`/${locale}/contact`} className={plan.highlight ? 'btn-primary' : 'btn-secondary'} style={{ width: '100%', textAlign: 'center', padding: '0.4rem', fontSize: '0.75rem' }}>
-                                    {t(`plans.${plan.id}.cta`)}
+                                    {tSafe(t, `plans.${plan.id}.cta`, 'Get Started')}
                                 </Link>
                             </div>
                         ))}
@@ -218,9 +185,9 @@ export default async function PricingPage({ params }: { params: Promise<{ locale
             <section id="savings-analysis" className="snap-section" style={{ background: 'var(--background)' }}>
                 <div className="container">
                     <div style={{ textAlign: 'center', marginBottom: '2rem' }}>
-                        <div className="badge badge-primary-subtle mb-3">COST INTELLIGENCE</div>
-                        <h2 style={{ fontSize: '2.5rem', fontWeight: 950, marginBottom: '0.5rem' }}>Analyze Your Savings Potential</h2>
-                        <p style={{ opacity: 0.7, maxWidth: '700px', margin: '0 auto', fontSize: '0.95rem' }}>Get a custom TCO analysis to compare your current cloud spend against a sovereign architecture.</p>
+                        <div className="badge badge-primary-subtle mb-3">{tSafe(t, 'savings.badge', 'SAVINGS')}</div>
+                        <h2 style={{ fontSize: '2.5rem', fontWeight: 950, marginBottom: '0.5rem' }}>{tSafe(t, 'savings.title', 'Analyze Your Savings Potential')}</h2>
+                        <p style={{ opacity: 0.7, maxWidth: '700px', margin: '0 auto', fontSize: '0.95rem' }}>{tSafe(t, 'savings.subtitle', 'Our arbitrage engine identifies optimization opportunities in real-time.')}</p>
                     </div>
 
                     <div className="grid-2x2-strict" style={{ gap: '1.5rem', gridTemplateRows: 'auto' }}>
@@ -249,39 +216,39 @@ export default async function PricingPage({ params }: { params: Promise<{ locale
                 <div className="container">
                     <div style={{ textAlign: 'center', marginBottom: '3rem' }}>
                         <Zap size={40} color="var(--primary)" style={{ margin: '0 auto 1rem' }} />
-                        <h2 style={{ fontSize: '2.5rem', fontWeight: 950, marginBottom: '1rem' }}>Value-Based Infrastructure Economy</h2>
-                        <p style={{ opacity: 0.7, maxWidth: '800px', margin: '0 auto', fontSize: '1rem' }}>Our autonomous framework follows a rigorous 3-step synchronization process to ensure absolute sovereignty and compliance across your multi-cloud estate.</p>
+                        <h2 style={{ fontSize: '2.5rem', fontWeight: 950, marginBottom: '1rem' }}>{tSafe(t, 'economy.title', 'Value-Based Infrastructure Economy')}</h2>
+                        <p style={{ opacity: 0.7, maxWidth: '800px', margin: '0 auto', fontSize: '1rem' }}>{tSafe(t, 'economy.subtitle', 'Our autonomous framework ensure absolute sovereignty and compliance.')}</p>
                     </div>
 
                     <div style={{ display: 'grid', gridTemplateColumns: '1fr', gap: '1.5rem', maxWidth: '900px', margin: '0 auto' }}>
                         <div className="glass-panel" style={{ padding: '2rem', borderRadius: '1.5rem', borderLeft: '4px solid var(--primary)' }}>
                             <div style={{ fontSize: '0.75rem', opacity: 0.5, marginBottom: '0.5rem', fontWeight: 900 }}>01</div>
-                            <h3 style={{ fontSize: '1.5rem', fontWeight: 900, marginBottom: '1rem' }}>Transparent Units</h3>
-                            <p style={{ opacity: 0.7, lineHeight: 1.6 }}>Pricing based on managed sovereign nodes rather than complex CPU/Memory abstractions.</p>
+                            <h3 style={{ fontSize: '1.5rem', fontWeight: 900, marginBottom: '1rem' }}>{tSafe(t, 'economy.steps.1.title', 'Transparent Units')}</h3>
+                            <p style={{ opacity: 0.7, lineHeight: 1.6 }}>{tSafe(t, 'economy.steps.1.desc', 'Pricing based on managed sovereign nodes.')}</p>
                         </div>
 
                         <div className="glass-panel" style={{ padding: '2rem', borderRadius: '1.5rem', borderLeft: '4px solid var(--primary)' }}>
                             <div style={{ fontSize: '0.75rem', opacity: 0.5, marginBottom: '0.5rem', fontWeight: 900 }}>02</div>
-                            <h3 style={{ fontSize: '1.5rem', fontWeight: 900, marginBottom: '1rem' }}>Egress Arbitrage</h3>
-                            <p style={{ opacity: 0.7, lineHeight: 1.6 }}>Our platform automatically identifies and utilizes the most cost-effective compliant route for data.</p>
+                            <h3 style={{ fontSize: '1.5rem', fontWeight: 900, marginBottom: '1rem' }}>{tSafe(t, 'economy.steps.2.title', 'Egress Arbitrage')}</h3>
+                            <p style={{ opacity: 0.7, lineHeight: 1.6 }}>{tSafe(t, 'economy.steps.2.desc', 'Automatically identify the most cost-effective compliant route.')}</p>
                         </div>
 
                         <div className="glass-panel" style={{ padding: '2rem', borderRadius: '1.5rem', borderLeft: '4px solid var(--primary)' }}>
                             <div style={{ fontSize: '0.75rem', opacity: 0.5, marginBottom: '0.5rem', fontWeight: 900 }}>03</div>
-                            <h3 style={{ fontSize: '1.5rem', fontWeight: 900, marginBottom: '1rem' }}>Predictive Burn Rate</h3>
-                            <p style={{ opacity: 0.7, lineHeight: 1.6 }}>Real-time cost forecasting across OCI, AWS, and Azure with 99.8% precision.</p>
+                            <h3 style={{ fontSize: '1.5rem', fontWeight: 900, marginBottom: '1rem' }}>{tSafe(t, 'economy.steps.3.title', 'Predictive Burn Rate')}</h3>
+                            <p style={{ opacity: 0.7, lineHeight: 1.6 }}>{tSafe(t, 'economy.steps.3.desc', 'Real-time cost forecasting with high precision.')}</p>
                         </div>
                     </div>
 
                     {/* Economic Sovereignty */}
                     <div style={{ marginTop: '3rem', padding: '2rem', background: 'rgba(59, 130, 246, 0.05)', borderRadius: '1.5rem', border: '1px solid rgba(59, 130, 246, 0.2)' }}>
-                        <h3 style={{ fontSize: '1.8rem', fontWeight: 900, marginBottom: '1rem' }}>Economic Sovereignty</h3>
-                        <p style={{ opacity: 0.8, lineHeight: 1.7, marginBottom: '1.5rem' }}>Digital sovereignty is impossible without economic sovereignty. If your cloud costs are non-negotiable due to technical debt, you are not truly in control. Our pricing and platform model restores that bargaining power.</p>
+                        <h3 style={{ fontSize: '1.8rem', fontWeight: 900, marginBottom: '1rem' }}>{tSafe(t, 'economy.sovereignty.title', 'Economic Sovereignty')}</h3>
+                        <p style={{ opacity: 0.8, lineHeight: 1.7, marginBottom: '1.5rem' }}>{tSafe(t, 'economy.sovereignty.desc', 'Digital sovereignty is impossible without economic sovereignty.')}</p>
 
                         <div className="glass-panel" style={{ padding: '1.5rem', borderRadius: '1rem', background: 'var(--card-bg)' }}>
                             <Zap size={32} color="var(--primary)" style={{ marginBottom: '1rem' }} />
-                            <h4 style={{ fontSize: '1.3rem', fontWeight: 900, marginBottom: '1rem' }}>Automated Cost Arbitrage</h4>
-                            <p style={{ opacity: 0.7, lineHeight: 1.6 }}>The platform's arbitrage engine continuously scans across thousands of region-specific pricing APIs to identify the most cost-effective compliant route for your workloads, often reducing OpEx by 30% or more.</p>
+                            <h4 style={{ fontSize: '1.3rem', fontWeight: 900, marginBottom: '1rem' }}>{tSafe(t, 'economy.sovereignty.arbitrage.title', 'Automated Cost Arbitrage')}</h4>
+                            <p style={{ opacity: 0.7, lineHeight: 1.6 }}>{tSafe(t, 'economy.sovereignty.arbitrage.desc', 'Arbitrage engine continuously scans across pricing APIs.')}</p>
                         </div>
                     </div>
                 </div>
@@ -291,8 +258,8 @@ export default async function PricingPage({ params }: { params: Promise<{ locale
             <section id="visual-architecture" className="snap-section" style={{ background: 'var(--background)' }}>
                 <div className="container">
                     <div style={{ marginBottom: '2rem' }}>
-                        <h2 style={{ fontSize: '2.5rem', fontWeight: 950, marginBottom: '1rem' }}>Visual Architecture Breakdown</h2>
-                        <p style={{ opacity: 0.7, maxWidth: '900px', fontSize: '1rem', lineHeight: 1.6 }}>Our pricing is aligned with the sovereign nodes you manage, ensuring that your costs scale linearly with your infrastructure value, not your provider's proprietary egress fees.</p>
+                        <h2 style={{ fontSize: '2.5rem', fontWeight: 950, marginBottom: '1rem' }}>{tSafe(t, 'visual.title', 'Visual Architecture Breakdown')}</h2>
+                        <p style={{ opacity: 0.7, maxWidth: '900px', fontSize: '1rem', lineHeight: 1.6 }}>{tSafe(t, 'visual.subtitle', 'Understanding the layers of sovereign cost management.')}</p>
                     </div>
 
                     <div className="glass-panel" style={{ padding: '2rem', borderRadius: '1.5rem', marginBottom: '2rem', background: 'rgba(59, 130, 246, 0.03)' }}>
@@ -300,17 +267,17 @@ export default async function PricingPage({ params }: { params: Promise<{ locale
                             <div style={{ width: '40px', height: '40px', borderRadius: '50%', background: 'var(--primary)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                                 <span style={{ fontSize: '1.2rem' }}>ℹ️</span>
                             </div>
-                            <p style={{ fontSize: '0.9rem', opacity: 0.8, margin: 0 }}>This diagram is updated in real-time as your multi-cloud orchestration logic evolves within the AECP kernel.</p>
+                            <p style={{ fontSize: '0.9rem', opacity: 0.8, margin: 0 }}>{tSafe(t, 'visual.diagram', 'Interactive Architecture Schematic')}</p>
                         </div>
                     </div>
 
                     <div className="glass-panel" style={{ padding: '2.5rem', borderRadius: '1.5rem', background: 'linear-gradient(135deg, rgba(59, 130, 246, 0.1) 0%, rgba(139, 92, 246, 0.1) 100%)' }}>
                         <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', marginBottom: '2rem' }}>
                             <Shield size={32} color="var(--primary)" />
-                            <h3 style={{ fontSize: '1.8rem', fontWeight: 900, margin: 0 }}>The Hidden Costs of Cloud Lock-In</h3>
+                            <h3 style={{ fontSize: '1.8rem', fontWeight: 900, margin: 0 }}>{tSafe(t, 'visual.lockin.title', 'Zero Lock-in Guarantee')}</h3>
                         </div>
-                        <p style={{ opacity: 0.8, lineHeight: 1.7, fontSize: '1rem', marginBottom: '1.5rem' }}>Vendor lock-in isn't just a technical problem: it's a massive financial risk. Egress fees and proprietary services can increase your long-term cloud spend by up to 90% through artificial gravity.</p>
-                        <p style={{ opacity: 0.8, lineHeight: 1.7, fontSize: '1rem' }}>OmniGCloud's pricing philosophy is built on 'Economic Neutrality'. By enabling workload portability, we allow you to arbitrage cloud providers against each other, ensuring you always get the best market rate for your sovereign compute and storage requirements.</p>
+                        <p style={{ opacity: 0.8, lineHeight: 1.7, fontSize: '1rem', marginBottom: '1.5rem' }}>{tSafe(t, 'visual.lockin.desc1', 'Our abstraction layer ensures logic portability.')}</p>
+                        <p style={{ opacity: 0.8, lineHeight: 1.7, fontSize: '1rem' }}>{tSafe(t, 'visual.lockin.desc2', 'Maintain full control over your cloud spending.')}</p>
                     </div>
                 </div>
             </section>
@@ -320,18 +287,18 @@ export default async function PricingPage({ params }: { params: Promise<{ locale
                 <div className="container">
                     <div style={{ textAlign: 'center', marginBottom: '3rem' }}>
                         <Shield size={40} color="var(--primary)" style={{ margin: '0 auto 1rem' }} />
-                        <h2 style={{ fontSize: '2.5rem', fontWeight: 950, marginBottom: '1rem' }}>Enterprise-Grade Compliance</h2>
-                        <p style={{ opacity: 0.7, maxWidth: '700px', margin: '0 auto', fontSize: '1rem' }}>Built for regulated industries with strict data residency and sovereignty requirements.</p>
+                        <h2 style={{ fontSize: '2.5rem', fontWeight: 950, marginBottom: '1rem' }}>{tSafe(t, 'compliance.title', 'Enterprise-Grade Compliance')}</h2>
+                        <p style={{ opacity: 0.7, maxWidth: '700px', margin: '0 auto', fontSize: '1rem' }}>{tSafe(t, 'compliance.subtitle', 'Built for regulated industries with strict data residency.')}</p>
                     </div>
 
                     {/* FAQ Section */}
                     <div id="faq" style={{ maxWidth: '900px', margin: '0 auto' }}>
-                        <h3 style={{ fontSize: '1.8rem', fontWeight: 900, marginBottom: '2rem', textAlign: 'center' }}>Frequently Asked Questions</h3>
+                        <h3 style={{ fontSize: '1.8rem', fontWeight: 900, marginBottom: '2rem', textAlign: 'center' }}>{tSafe(t, 'FAQ.title', 'Pricing F.A.Q')}</h3>
                         <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
                             {[
-                                { q: t('faq.q1.q'), a: t('faq.q1.a') },
-                                { q: t('faq.q2.q'), a: t('faq.q2.a') },
-                                { q: t('faq.q3.q'), a: t('faq.q3.a') }
+                                { q: tSafe(t, 'FAQ.items.0.q', 'How is pricing calculated?'), a: tSafe(t, 'FAQ.items.0.a', 'Predictable sovereign node units.') },
+                                { q: tSafe(t, 'FAQ.items.1.q', 'Can I switch plans?'), a: tSafe(t, 'FAQ.items.1.a', 'Yes, any time with prorated adjustments.') },
+                                { q: tSafe(t, 'FAQ.items.2.q', 'Do you offer custom tiers?'), a: tSafe(t, 'FAQ.items.2.a', 'Yes, for large enterprise and government entities.') }
                             ].map((faq, idx) => (
                                 <div key={idx} className="glass-panel" style={{ padding: '1.5rem', borderRadius: '1rem' }}>
                                     <div style={{ display: 'flex', gap: '1rem', alignItems: 'flex-start', marginBottom: '0.75rem' }}>
@@ -350,19 +317,19 @@ export default async function PricingPage({ params }: { params: Promise<{ locale
             <section id="trust" className="snap-section" style={{ background: 'var(--background)' }}>
                 <div className="container">
                     <div style={{ textAlign: 'center', marginBottom: '3rem' }}>
-                        <h2 style={{ fontSize: '2.5rem', fontWeight: 950, marginBottom: '1rem' }}>{t('trust.title')}</h2>
-                        <p style={{ opacity: 0.7, maxWidth: '700px', margin: '0 auto', fontSize: '1rem' }}>{t('trust.subtitle')}</p>
+                        <h2 style={{ fontSize: '2.5rem', fontWeight: 950, marginBottom: '1rem' }}>{tSafe(t, 'trust.title', 'Trust & Neutrality')}</h2>
+                        <p style={{ opacity: 0.7, maxWidth: '700px', margin: '0 auto', fontSize: '1rem' }}>{tSafe(t, 'trust.subtitle', 'Dedicated to ethical cloud stewardship.')}</p>
                     </div>
                     <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '2rem', maxWidth: '800px', margin: '0 auto' }}>
                         <div className="glass-panel" style={{ padding: '2rem', borderRadius: '1.25rem' }}>
                             <Shield color="var(--primary)" size={32} className="mb-3" />
-                            <h4 style={{ fontSize: '1.2rem', fontWeight: 800, marginBottom: '1rem' }}>{t('trust.residency.title')}</h4>
-                            <p style={{ fontSize: '0.95rem', opacity: 0.7, lineHeight: 1.6 }}>{t('trust.residency.desc')}</p>
+                            <h4 style={{ fontSize: '1.2rem', fontWeight: 800, marginBottom: '1rem' }}>{tSafe(t, 'trust.residency.title', 'Strict Residency')}</h4>
+                            <p style={{ fontSize: '0.95rem', opacity: 0.7, lineHeight: 1.6 }}>{tSafe(t, 'trust.residency.desc', 'Data never leaves your defined jurisdiction.')}</p>
                         </div>
                         <div className="glass-panel" style={{ padding: '2rem', borderRadius: '1.25rem' }}>
                             <Globe color="var(--primary)" size={32} className="mb-3" />
-                            <h4 style={{ fontSize: '1.2rem', fontWeight: 800, marginBottom: '1rem' }}>{t('trust.neutrality.title')}</h4>
-                            <p style={{ fontSize: '0.95rem', opacity: 0.7, lineHeight: 1.6 }}>{t('trust.neutrality.desc')}</p>
+                            <h4 style={{ fontSize: '1.2rem', fontWeight: 800, marginBottom: '1rem' }}>{tSafe(t, 'trust.neutrality.title', 'Cloud Neutrality')}</h4>
+                            <p style={{ fontSize: '0.95rem', opacity: 0.7, lineHeight: 1.6 }}>{tSafe(t, 'trust.neutrality.desc', 'Decoupled from any single hyperscale provider.')}</p>
                         </div>
                     </div>
                 </div>
@@ -381,10 +348,10 @@ export default async function PricingPage({ params }: { params: Promise<{ locale
                         textAlign: 'center'
                     }}>
                         <h2 style={{ fontSize: '2.5rem', fontWeight: 950, marginBottom: '1.5rem', color: 'white' }}>
-                            {t('cta.title')}
+                            {tSafe(t, 'LeadCapture.title', 'Ready to optimize?')}
                         </h2>
                         <p style={{ opacity: 0.9, marginBottom: '2.5rem', fontSize: '1.1rem', maxWidth: '600px', margin: '0 auto 2.5rem' }}>
-                            {t('cta.subtitle')}
+                            {tSafe(t, 'LeadCapture.subtitle', 'Empowering the next generation of regulated enterprise.')}
                         </p>
                         <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '1.5rem' }}>
                             <Link href={`/${locale}/contact`} className="btn-primary" style={{
@@ -395,10 +362,10 @@ export default async function PricingPage({ params }: { params: Promise<{ locale
                                 fontSize: '1rem',
                                 fontWeight: 900
                             }}>
-                                {t('cta.button') || 'Get Started Now'} <ArrowRight size={20} className="ml-2" />
+                                {tSafe(t, 'LeadCapture.cta', 'Get Started')} <ArrowRight size={20} className="ml-2" />
                             </Link>
                             <p style={{ fontSize: '0.7rem', opacity: 0.7, fontWeight: 700, letterSpacing: '0.1em' }}>
-                                NO CREDIT CARD REQUIRED • SOC-2 COMPLIANT ONBOARDING
+                                {tSafe(t, 'footer.legal', 'NO CREDIT CARD REQUIRED • SOC-2 COMPLIANT ONBOARDING')}
                             </p>
                         </div>
                     </div>
@@ -410,9 +377,9 @@ export default async function PricingPage({ params }: { params: Promise<{ locale
             <DeepDive
                 pageKey="Pricing"
                 relatedLinks={[
-                    { label: "Cloud Modernization", href: "/services/cloud-modernization" },
-                    { label: "Sovereign Finance", href: "/industries/finance" },
-                    { label: "Modernization Blueprint", href: "/resources/blog/cloud-modernization-guide" }
+                    { label: tSafe(t, 'DeepDive.links.modernization', 'Cloud Modernization'), href: "/services/cloud-modernization" },
+                    { label: tSafe(t, 'DeepDive.links.finance', 'Sovereign Finance'), href: "/industries/finance" },
+                    { label: tSafe(t, 'DeepDive.links.blueprint', 'Modernization Blueprint'), href: "/resources/blog/cloud-modernization-guide" }
                 ]}
             />
 
@@ -429,3 +396,4 @@ export default async function PricingPage({ params }: { params: Promise<{ locale
 }
 
 import { AboveTheFoldDescription, HowItWorks, VisualSection, DeepDive, TopicalAuthority, TechnicalInsights, FAQSection } from '@/components/seo/Enrichment';
+import { tSafe } from '@/lib/i18n/tSafe';

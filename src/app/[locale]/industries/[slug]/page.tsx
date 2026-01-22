@@ -1,5 +1,5 @@
 import { Landmark, Shield, Phone, HeartPulse, Truck, CheckCircle, ArrowLeft } from "lucide-react";
-import Link from "next/link";
+import { Link } from '@/navigation';
 import { getTranslations, getLocale } from "next-intl/server";
 import { notFound } from "next/navigation";
 import Footer from "@/components/Footer";
@@ -29,8 +29,8 @@ export default async function IndustryDetailPage({ params }: { params: Promise<{
         <div className="animate-fade-in">
             <Section className="py-20 border-b border-white/10" style={{ background: 'var(--bg-surface-2)' }}>
                 <PageShell>
-                    <Link href={`/${locale}/industries`} className="inline-flex items-center gap-2 text-primary font-bold mb-8 hover:opacity-70 transition-opacity">
-                        <ArrowLeft size={16} /> All Industries
+                    <Link href="/industries" className="inline-flex items-center gap-2 text-primary font-bold mb-8 hover:opacity-70 transition-opacity">
+                        <ArrowLeft size={16} /> {t("allIndustries")}
                     </Link>
 
                     <div className="grid md:grid-cols-2 gap-12 items-center">
@@ -44,7 +44,7 @@ export default async function IndustryDetailPage({ params }: { params: Promise<{
                             </p>
 
                             <div className="glass-panel p-8 rounded-3xl border border-white/5 mb-8">
-                                <h3 className="text-sm font-black uppercase tracking-widest text-primary mb-6">Strategic Challenges</h3>
+                                <h3 className="text-sm font-black uppercase tracking-widest text-primary mb-6">{t("strategicChallenges")}</h3>
                                 <div className="flex flex-col gap-4">
                                     {[1, 2, 3].map(idx => (
                                         <div key={idx} className="flex gap-4 items-start">
@@ -68,7 +68,7 @@ export default async function IndustryDetailPage({ params }: { params: Promise<{
                             <div className="absolute -bottom-6 -left-6 glass-panel p-8 rounded-3xl border border-primary/20 bg-primary/10 backdrop-blur-xl max-w-xs shadow-xl animate-float">
                                 <div className="flex items-center gap-3 mb-3">
                                     <CheckCircle size={24} className="text-emerald-400" />
-                                    <h4 className="font-bold text-lg">Solution</h4>
+                                    <h4 className="font-bold text-lg">{t("solutionLabel")}</h4>
                                 </div>
                                 <p className="text-sm opacity-90 leading-relaxed">
                                     {t(`${industry.key}.sol`)}

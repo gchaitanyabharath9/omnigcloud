@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useEffect, useRef, useState } from 'react';
+import { useTranslations } from 'next-intl';
 
 
 interface MermaidDiagramProps {
@@ -10,6 +11,7 @@ interface MermaidDiagramProps {
 }
 
 export default function MermaidDiagram({ chart, caption, figureId }: MermaidDiagramProps) {
+    const t = useTranslations('Components.Visuals.MermaidDiagram');
     const elementRef = useRef<HTMLDivElement>(null);
     const [svg, setSvg] = useState<string>('');
     const [error, setError] = useState<string>('');
@@ -59,7 +61,7 @@ export default function MermaidDiagram({ chart, caption, figureId }: MermaidDiag
                 ) : svg ? (
                     <div dangerouslySetInnerHTML={{ __html: svg }} className="w-full" />
                 ) : (
-                    <div className="text-muted-foreground animate-pulse font-mono text-xs">Generating Visualization...</div>
+                    <div className="text-muted-foreground animate-pulse font-mono text-xs">{t('generating')}</div>
                 )}
             </div>
             {caption && (

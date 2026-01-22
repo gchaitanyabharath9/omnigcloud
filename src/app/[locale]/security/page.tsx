@@ -2,6 +2,7 @@ import { getTranslations } from "next-intl/server";
 import { Shield, Bug, Lock, AlertTriangle, CheckCircle, Mail } from "lucide-react";
 import SecurityPerformanceSection from "@/components/sections/security/SecurityPerformanceSection";
 import Footer from "@/components/Footer";
+import { AboveTheFoldDescription, HowItWorks, VisualSection, DeepDive } from '@/components/seo/Enrichment';
 
 const SECURITY_SECTION_IDS = ['compliance-maps'];
 
@@ -13,6 +14,7 @@ export const revalidate = 3600;
 
 export default async function SecurityPage() {
     const t = await getTranslations("Security");
+    const pt = await getTranslations("Pages.Security");
 
     return (
         <>
@@ -86,31 +88,31 @@ export default async function SecurityPage() {
                 <div className="container" style={{ maxWidth: '1200px' }}>
                     <div className="grid md:grid-cols-2 gap-8">
                         <div className="glass-panel p-8 rounded-xl">
-                            <h2 className="text-3xl font-bold mb-6">Transparency & Governance</h2>
+                            <h2 className="text-3xl font-bold mb-6">{t("transparency.title")}</h2>
                             <p className="text-zinc-700 dark:text-zinc-300 mb-4">
-                                At OmniGCloud, we believe in radical transparency. Our governance framework ensures that every operation is auditable, secure, and aligned with international standards.
+                                {t("transparency.desc")}
                             </p>
                             <ul className="list-disc list-inside space-y-2 text-zinc-700 dark:text-zinc-300">
-                                <li>Real-time security auditing</li>
-                                <li>Open documentation for all security protocols</li>
-                                <li>Third-party penetration testing summaries</li>
+                                <li>{t("transparency.list.0")}</li>
+                                <li>{t("transparency.list.1")}</li>
+                                <li>{t("transparency.list.2")}</li>
                             </ul>
                         </div>
 
                         <div className="glass-panel p-8 rounded-xl">
-                            <h2 className="text-3xl font-bold mb-6">Certifications</h2>
+                            <h2 className="text-3xl font-bold mb-6">{t("certifications.title")}</h2>
                             <div className="flex flex-wrap gap-4">
                                 <div className="bg-zinc-100 dark:bg-zinc-800 p-4 rounded-lg flex items-center gap-2 border border-white/5 w-full">
                                     <CheckCircle className="text-green-500 w-5 h-5" />
-                                    <span>ISO 27001 - Information Security Management</span>
+                                    <span>{t("certifications.iso")}</span>
                                 </div>
                                 <div className="bg-zinc-100 dark:bg-zinc-800 p-4 rounded-lg flex items-center gap-2 border border-white/5 w-full">
                                     <CheckCircle className="text-green-500 w-5 h-5" />
-                                    <span>SOC 2 Type II - Security & Privacy</span>
+                                    <span>{t("certifications.soc")}</span>
                                 </div>
                                 <div className="bg-zinc-100 dark:bg-zinc-800 p-4 rounded-lg flex items-center gap-2 border border-white/5 w-full">
                                     <CheckCircle className="text-green-500 w-5 h-5" />
-                                    <span>GDPR Compliant - EU Data Protection</span>
+                                    <span>{t("certifications.gdpr")}</span>
                                 </div>
                             </div>
                         </div>
@@ -165,14 +167,14 @@ export default async function SecurityPage() {
                                 <h3 className="text-2xl font-bold">{t("contactSecurity")}</h3>
                             </div>
                             <p className="text-zinc-700 dark:text-zinc-300 mb-6">
-                                If you believe you have discovered a vulnerability, please contact our security team immediately. We value the contribution of security researchers.
+                                {t("contactText")}
                             </p>
                             <div className="bg-zinc-100 dark:bg-zinc-800 p-6 rounded-lg">
                                 <p className="text-zinc-700 dark:text-zinc-300 mb-2">
-                                    {t("securityEmail")}: <a href="mailto:omnigcloud@gmail.com" className="text-blue-500 hover:underline font-bold">omnigcloud@gmail.com</a>
+                                    {t("securityEmail")}: <a href="mailto:omnigcloud@gmail.com" className="text-blue-500 hover:underline font-bold">{pt('contactEmail')}</a>
                                 </p>
                                 <p className="text-sm text-zinc-600 dark:text-zinc-400">
-                                    {t("pgpKey")}: <code className="bg-zinc-200 dark:bg-zinc-700 px-2 py-1 rounded">Available upon request</code>
+                                    {t("pgpKey")}: <code className="bg-zinc-200 dark:bg-zinc-700 px-2 py-1 rounded">{pt('pgpAvailability')}</code>
                                 </p>
                             </div>
                         </div>
@@ -205,5 +207,3 @@ export default async function SecurityPage() {
         </>
     );
 }
-
-import { AboveTheFoldDescription, HowItWorks, VisualSection, DeepDive } from '@/components/seo/Enrichment';

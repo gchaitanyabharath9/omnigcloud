@@ -28,6 +28,11 @@ export function tSafe(t: any, key: string, fallback?: string): string {
         return t(key);
     }
 
+    // Logging for development visibility
+    if (process.env.NODE_ENV === 'development') {
+        console.warn(`[i18n] Missing key: "${key}". Using fallback: "${fallback || 'Prettified Key'}"`);
+    }
+
     // 2. Fallback if provided
     if (fallback) {
         return fallback;

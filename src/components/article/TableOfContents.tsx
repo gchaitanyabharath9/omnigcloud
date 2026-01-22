@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from 'react';
+import { useTranslations } from 'next-intl';
 
 interface TOCItem {
     id: string;
@@ -9,6 +10,7 @@ interface TOCItem {
 }
 
 export default function TableOfContents() {
+    const t = useTranslations('Components.Article.TableOfContents');
     const [headings, setHeadings] = useState<TOCItem[]>([]);
     const [activeId, setActiveId] = useState<string>("");
 
@@ -44,7 +46,7 @@ export default function TableOfContents() {
 
     return (
         <nav className="hidden lg:block sticky top-24 w-64 flex-shrink-0 h-fit pl-4 border-l border-border/40">
-            <p className="font-semibold text-sm mb-4 text-foreground uppercase tracking-widest">On This Page</p>
+            <p className="font-semibold text-sm mb-4 text-foreground uppercase tracking-widest">{t('title')}</p>
             <ul className="space-y-3 text-sm">
                 {headings.map((heading) => (
                     <li
@@ -54,8 +56,8 @@ export default function TableOfContents() {
                         <a
                             href={`#${heading.id}`}
                             className={`block transition-colors hover:text-primary ${activeId === heading.id
-                                    ? "text-primary font-medium"
-                                    : "text-muted-foreground"
+                                ? "text-primary font-medium"
+                                : "text-muted-foreground"
                                 }`}
                             onClick={(e) => {
                                 e.preventDefault();

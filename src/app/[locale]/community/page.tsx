@@ -1,8 +1,11 @@
 import React from 'react';
 import { Github, Users, Star, GitFork, MessageSquare, Terminal, Code, Award } from 'lucide-react';
-import Link from 'next/link';
+import { Link } from '@/navigation';
+import { getTranslations } from 'next-intl/server';
 
-export default function CommunityPage() {
+export default async function CommunityPage() {
+    const t = await getTranslations("Community");
+
     return (
         <>
             {/* HERO SECTION */}
@@ -16,19 +19,21 @@ export default function CommunityPage() {
             }}>
                 <div className="container">
                     <div style={{ maxWidth: '800px' }}>
-                        <div className="badge badge-primary-subtle mb-4">OPEN SCIENCE & COMMUNITY</div>
+                        <div className="badge badge-primary-subtle mb-4">{t("hero.badge")}</div>
                         <h1 style={{ fontSize: '3.5rem', fontWeight: 950, marginBottom: '1.5rem', lineHeight: '1.1' }}>
-                            The G-Framework <br /><span style={{ color: 'var(--primary)' }}>Open Source Core</span>
+                            {t.rich("hero.title", {
+                                highlight: (chunks) => <span style={{ color: 'var(--primary)' }}>{chunks}</span>
+                            })}
                         </h1>
                         <p style={{ fontSize: '1.25rem', opacity: 0.8, lineHeight: 1.6, marginBottom: '2.5rem' }}>
-                            Join a global community of platform engineers, security researchers, and sovereign organizations building the future of cloud-agnostic infrastructure.
+                            {t("hero.subtitle")}
                         </p>
                         <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
                             <Link href="https://github.com/omnigcloud" className="btn-primary" style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
-                                <Github size={20} /> View on GitHub
+                                <Github size={20} /> {t("hero.github")}
                             </Link>
                             <Link href="/docs/contributing" className="btn-secondary" style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
-                                <Code size={20} /> Build a Plugin
+                                <Code size={20} /> {t("hero.plugin")}
                             </Link>
                         </div>
                     </div>
@@ -41,21 +46,21 @@ export default function CommunityPage() {
                     <div className="glass-panel" style={{ padding: '2rem', borderRadius: '1.5rem', border: '1px solid var(--card-border)' }}>
                         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '2rem' }}>
                             <div>
-                                <h3 style={{ fontSize: '1.25rem', fontWeight: 800 }}>Community Velocity</h3>
-                                <p style={{ fontSize: '0.8rem', opacity: 0.6 }}>Year-to-date framework contributions</p>
+                                <h3 style={{ fontSize: '1.25rem', fontWeight: 800 }}>{t("velocity.title")}</h3>
+                                <p style={{ fontSize: '0.8rem', opacity: 0.6 }}>{t("velocity.subtitle")}</p>
                             </div>
                             <div style={{ display: 'flex', gap: '1.5rem' }}>
                                 <div style={{ textAlign: 'center' }}>
-                                    <div style={{ fontSize: '1.25rem', fontWeight: 900, color: 'var(--primary)' }}>4.2k</div>
-                                    <div style={{ fontSize: '0.6rem', fontWeight: 700, opacity: 0.5 }}>STARS</div>
+                                    <div style={{ fontSize: '1.25rem', fontWeight: 900, color: 'var(--primary)' }}>{t("velocity.statsValues.stars")}</div>
+                                    <div style={{ fontSize: '0.6rem', fontWeight: 700, opacity: 0.5 }}>{t("velocity.stars")}</div>
                                 </div>
                                 <div style={{ textAlign: 'center' }}>
-                                    <div style={{ fontSize: '1.25rem', fontWeight: 900, color: '#10b981' }}>850+</div>
-                                    <div style={{ fontSize: '0.6rem', fontWeight: 700, opacity: 0.5 }}>FORKS</div>
+                                    <div style={{ fontSize: '1.25rem', fontWeight: 900, color: '#10b981' }}>{t("velocity.statsValues.forks")}</div>
+                                    <div style={{ fontSize: '0.6rem', fontWeight: 700, opacity: 0.5 }}>{t("velocity.forks")}</div>
                                 </div>
                                 <div style={{ textAlign: 'center' }}>
-                                    <div style={{ fontSize: '1.25rem', fontWeight: 900, color: '#f59e0b' }}>120+</div>
-                                    <div style={{ fontSize: '0.6rem', fontWeight: 700, opacity: 0.5 }}>CONTRIBUTORS</div>
+                                    <div style={{ fontSize: '1.25rem', fontWeight: 900, color: '#f59e0b' }}>{t("velocity.statsValues.contributors")}</div>
+                                    <div style={{ fontSize: '0.6rem', fontWeight: 700, opacity: 0.5 }}>{t("velocity.contributors")}</div>
                                 </div>
                             </div>
                         </div>
@@ -73,12 +78,12 @@ export default function CommunityPage() {
                             ))}
                         </div>
                         <div style={{ display: 'flex', justifyContent: 'flex-end', marginTop: '0.75rem', gap: '0.5rem', fontSize: '0.65rem', color: 'var(--muted)' }}>
-                            <span>Less</span>
+                            <span>{t("velocity.less")}</span>
                             <div style={{ width: '10px', height: '10px', background: 'rgba(255,255,255,0.05)', borderRadius: '2px' }}></div>
                             <div style={{ width: '10px', height: '10px', background: 'rgba(59, 130, 246, 0.3)', borderRadius: '2px' }}></div>
                             <div style={{ width: '10px', height: '10px', background: 'rgba(59, 130, 246, 0.6)', borderRadius: '2px' }}></div>
                             <div style={{ width: '10px', height: '10px', background: 'var(--primary)', borderRadius: '2px' }}></div>
-                            <span>More</span>
+                            <span>{t("velocity.more")}</span>
                         </div>
                     </div>
                 </div>
@@ -89,20 +94,20 @@ export default function CommunityPage() {
                 <div className="container">
                     <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '4rem', alignItems: 'center' }}>
                         <div>
-                            <div className="badge badge-success-subtle mb-4">DEVELOPER FIRST</div>
-                            <h2 style={{ fontSize: '2.5rem', fontWeight: 900, marginBottom: '1.5rem' }}>Install the G-Framework CLI</h2>
+                            <div className="badge badge-success-subtle mb-4">{t("cli.badge")}</div>
+                            <h2 style={{ fontSize: '2.5rem', fontWeight: 900, marginBottom: '1.5rem' }}>{t("cli.title")}</h2>
                             <p style={{ opacity: 0.8, marginBottom: '2rem', lineHeight: 1.6 }}>
-                                Bring autonomous orchestration to your local workstation. The G-CLI allows you to audit infrastructure, detect drift, and generate sovereign multi-cloud manifests in seconds.
+                                {t("cli.description")}
                             </p>
                             <ul style={{ listStyle: 'none', padding: 0, display: 'flex', flexDirection: 'column', gap: '1rem', marginBottom: '2.5rem' }}>
                                 <li style={{ display: 'flex', alignItems: 'center', gap: '1rem', fontWeight: 600 }}>
-                                    <Terminal size={18} color="var(--primary)" /> Full support for AWS, Azure, OCI, and OCP.
+                                    <Terminal size={18} color="var(--primary)" /> {t("cli.points.0")}
                                 </li>
                                 <li style={{ display: 'flex', alignItems: 'center', gap: '1rem', fontWeight: 600 }}>
-                                    <Code size={18} color="var(--primary)" /> Extensible plugin architecture with TypeScript.
+                                    <Code size={18} color="var(--primary)" /> {t("cli.points.1")}
                                 </li>
                                 <li style={{ display: 'flex', alignItems: 'center', gap: '1rem', fontWeight: 600 }}>
-                                    <Award size={18} color="var(--primary)" /> SOC2 and GDPR audit templates included.
+                                    <Award size={18} color="var(--primary)" /> {t("cli.points.2")}
                                 </li>
                             </ul>
                         </div>
@@ -112,18 +117,18 @@ export default function CommunityPage() {
                                 <div style={{ width: '12px', height: '12px', borderRadius: '50%', background: '#ffdb2d' }}></div>
                                 <div style={{ width: '12px', height: '12px', borderRadius: '50%', background: '#27c93f' }}></div>
                             </div>
-                            <div style={{ color: '#94a3b8' }}># Install the core engine</div>
-                            <div style={{ marginBottom: '1rem' }}><span style={{ color: '#31c7e2' }}>npm install</span> -g @omnig/cli</div>
+                            <div style={{ color: '#94a3b8' }}>{t("cli.steps.0")}</div>
+                            <div style={{ marginBottom: '1rem' }}><span style={{ color: '#31c7e2' }}>{t("cli.commands.install.prefix")}</span> {t("cli.commands.install.suffix")}</div>
 
-                            <div style={{ color: '#94a3b8' }}># Initialize a sovereign zone</div>
-                            <div style={{ marginBottom: '1rem' }}><span style={{ color: '#a78bfa' }}>omnig</span> init --sovereign us-east</div>
+                            <div style={{ color: '#94a3b8' }}>{t("cli.steps.1")}</div>
+                            <div style={{ marginBottom: '1rem' }}><span style={{ color: '#a78bfa' }}>{t("cli.commands.init.prefix")}</span> {t("cli.commands.init.suffix")}</div>
 
-                            <div style={{ color: '#94a3b8' }}># Audit infrastructure for drift</div>
-                            <div style={{ marginBottom: '1rem' }}><span style={{ color: '#a78bfa' }}>omnig</span> audit --drift-only</div>
+                            <div style={{ color: '#94a3b8' }}>{t("cli.steps.2")}</div>
+                            <div style={{ marginBottom: '1rem' }}><span style={{ color: '#a78bfa' }}>{t("cli.commands.audit.prefix")}</span> {t("cli.commands.audit.suffix")}</div>
 
                             <div style={{ display: 'flex', justifyContent: 'space-between', marginTop: '2rem', paddingTop: '1rem', borderTop: '1px solid rgba(255,255,255,0.1)', fontSize: '0.8rem' }}>
-                                <span style={{ color: '#10b981' }}>✓ Audit Complete (0 Drift)</span>
-                                <span style={{ opacity: 0.4 }}>450ms</span>
+                                <span style={{ color: '#10b981' }}>{t("cli.steps.3")}</span>
+                                <span style={{ opacity: 0.4 }}>{t("cli.commands.latency")}</span>
                             </div>
                         </div>
                     </div>
@@ -133,13 +138,13 @@ export default function CommunityPage() {
             {/* COMMUNITY LINKS */}
             <section style={{ padding: '4rem 0', background: 'var(--bg-surface-2)', textAlign: 'center' }}>
                 <div className="container">
-                    <h2 style={{ fontSize: '2rem', fontWeight: 900, marginBottom: '3rem' }}>Join the Global Network</h2>
+                    <h2 style={{ fontSize: '2rem', fontWeight: 900, marginBottom: '3rem' }}>{t("network.title")}</h2>
                     <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '1.5rem' }}>
                         {[
-                            { icon: <MessageSquare size={24} />, name: "Discord", text: "8.4k members", color: "#5865F2" },
-                            { icon: <Github size={24} />, name: "GitHub", text: "Open Source Core", color: "var(--foreground)" },
-                            { icon: <Users size={24} />, name: "Advisory Board", text: "Industry Experts", color: "var(--primary)" },
-                            { icon: <Code size={24} />, name: "Package Registry", text: "200+ Plugins", color: "#10b981" }
+                            { icon: <MessageSquare size={24} />, name: t("network.discord.name"), text: t("network.discord.text"), color: "#5865F2" },
+                            { icon: <Github size={24} />, name: t("network.github.name"), text: t("network.github.text"), color: "var(--foreground)" },
+                            { icon: <Users size={24} />, name: t("network.advisory.name"), text: t("network.advisory.text"), color: "var(--primary)" },
+                            { icon: <Code size={24} />, name: t("network.registry.name"), text: t("network.registry.text"), color: "#10b981" }
                         ].map((item, i) => (
                             <div key={i} className="glass-panel" style={{ padding: '2rem', borderRadius: '1.25rem', border: '1px solid var(--card-border)', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '1rem' }}>
                                 <div style={{ color: item.color }}>{item.icon}</div>

@@ -53,10 +53,17 @@ export function generateSEOMetadata(config: SEOConfig, locale: string = 'en'): M
     const fullTitle = `${title} | ${SITE_NAME}`;
     const canonicalUrl = canonical || `${SITE_URL}/${locale}`;
 
+    // Ensure keywords is an array even if it's an object from next-intl
+    const keywordsArray = Array.isArray(keywords)
+        ? keywords
+        : (typeof keywords === 'object' && keywords !== null)
+            ? Object.values(keywords)
+            : [];
+
     return {
         title: fullTitle,
         description,
-        keywords: keywords.join(', '),
+        keywords: keywordsArray.join(', '),
         authors: author ? [{ name: author }] : undefined,
 
         // Canonical URL

@@ -4,6 +4,7 @@ import React, { useEffect, useState } from 'react';
 import { Activity, CheckCircle, AlertTriangle, AlertOctagon } from 'lucide-react';
 import { twMerge } from 'tailwind-merge';
 import { safeFetch } from '@/lib/safe-fetch';
+import { useTranslations } from 'next-intl';
 
 interface MetricsData {
     latencyMs: {
@@ -17,6 +18,7 @@ interface MetricsData {
 }
 
 export default function PerformanceStatusWidget() {
+    const t = useTranslations('Components.Widgets.PerformanceStatus');
     const [metrics, setMetrics] = useState<MetricsData | null>(null);
     const [loading, setLoading] = useState(true);
 
@@ -42,7 +44,7 @@ export default function PerformanceStatusWidget() {
         return (
             <div className="flex items-center gap-2 px-4 py-2 rounded-full bg-slate-900/50 border border-slate-800 backdrop-blur-sm animate-pulse">
                 <div className="w-2 h-2 rounded-full bg-slate-600" />
-                <span className="text-xs font-mono text-slate-400">CONNECTING...</span>
+                <span className="text-xs font-mono text-slate-400">{t('connecting')}</span>
             </div>
         );
     }

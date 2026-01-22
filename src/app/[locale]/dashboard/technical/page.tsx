@@ -5,15 +5,16 @@ import { Activity, Zap, Shield, Globe, Server, Database, Cloud, AlertTriangle, C
 import { AnimatedResourceUtilization, LiveDeploymentFrequency } from '@/components/visuals/EnhancedGraphs';
 import { ResponseTimeTrend } from '@/components/visuals/MetricsGraphs';
 import { ErrorRateTrend, QueryPerformance, AutoScalingEvents } from '@/components/visuals/PerformanceMetrics';
-import { useTranslations } from 'next-intl';
-import { tSafe } from '@/lib/i18n/tSafe';
+import { useTranslations, useLocale } from 'next-intl';
 
 export default function TechnicalDashboardPage() {
+    const locale = useLocale();
     const [currentTime, setCurrentTime] = useState(new Date());
     const [activeAlerts, setActiveAlerts] = useState(2);
     const [systemStatus, setSystemStatus] = useState<'operational' | 'degraded' | 'critical'>('operational');
     const t = useTranslations('Dashboard.Technical');
     const tCommon = useTranslations('Dashboard.Shell');
+    const tExec = useTranslations('Dashboard.Executive');
 
     useEffect(() => {
         const timer = setInterval(() => setCurrentTime(new Date()), 1000);
@@ -36,19 +37,19 @@ export default function TechnicalDashboardPage() {
                     <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
                         <div>
                             <h1 style={{ fontSize: '2rem', fontWeight: 950, margin: 0, color: '#60efff', letterSpacing: '-0.02em' }}>
-                                {tSafe(t, 'title', "TECHNICAL OPERATIONS")}
+                                {t('title')}
                             </h1>
                             <div style={{ fontSize: '0.75rem', opacity: 0.5, marginTop: '0.25rem', fontFamily: 'var(--font-mono)' }}>
-                                {tSafe(t, 'subtitle', "OMNIGCLOUD_CONTROL_PLANE_v4.2.1")}
+                                {t('subtitle')}
                             </div>
                         </div>
                         <div style={{ display: 'flex', gap: '2rem', alignItems: 'center' }}>
                             <div style={{ textAlign: 'right' }}>
                                 <div style={{ fontSize: '1.5rem', fontWeight: 900, fontFamily: 'var(--font-mono)' }}>
-                                    {currentTime.toLocaleTimeString('en-US', { hour12: false })}
+                                    {currentTime.toLocaleTimeString(locale, { hour12: false })}
                                 </div>
                                 <div style={{ fontSize: '0.65rem', opacity: 0.5 }}>
-                                    {currentTime.toLocaleDateString('en-US', { weekday: 'short', month: 'short', day: 'numeric' })}
+                                    {currentTime.toLocaleDateString(locale, { weekday: 'short', month: 'short', day: 'numeric' })}
                                 </div>
                             </div>
                             <div style={{
@@ -73,7 +74,7 @@ export default function TechnicalDashboardPage() {
                                     color: systemStatus === 'operational' ? '#10b981' : '#ef4444',
                                     textTransform: 'uppercase'
                                 }}>
-                                    {systemStatus}
+                                    {tExec(`status.${systemStatus}`)}
                                 </span>
                             </div>
                         </div>
@@ -92,12 +93,12 @@ export default function TechnicalDashboardPage() {
                         border: '1px solid rgba(96, 239, 255, 0.2)'
                     }}>
                         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'start', marginBottom: '1rem' }}>
-                            <div style={{ fontSize: '0.65rem', opacity: 0.5, fontWeight: 700, textTransform: 'uppercase' }}>{tSafe(t, 'activeNodes', "Active Nodes")}</div>
+                            <div style={{ fontSize: '0.65rem', opacity: 0.5, fontWeight: 700, textTransform: 'uppercase' }}>{t('activeNodes')}</div>
                             <Server size={20} color="#60efff" />
                         </div>
-                        <div style={{ fontSize: '2.5rem', fontWeight: 950, color: '#60efff' }}>142</div>
+                        <div style={{ fontSize: '2.5rem', fontWeight: 950, color: '#60efff' }}>{t('activeNodesValue')}</div>
                         <div style={{ fontSize: '0.7rem', color: '#10b981', display: 'flex', alignItems: 'center', gap: '0.25rem', marginTop: '0.5rem' }}>
-                            <TrendingUp size={12} /> {tSafe(t, 'trend', "+8 (24h)")}
+                            <TrendingUp size={12} /> {t('trend')}
                         </div>
                     </div>
 
@@ -108,11 +109,11 @@ export default function TechnicalDashboardPage() {
                         border: '1px solid rgba(16, 185, 129, 0.2)'
                     }}>
                         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'start', marginBottom: '1rem' }}>
-                            <div style={{ fontSize: '0.65rem', opacity: 0.5, fontWeight: 700, textTransform: 'uppercase' }}>{tSafe(t, 'requestsSec', "Requests/sec")}</div>
+                            <div style={{ fontSize: '0.65rem', opacity: 0.5, fontWeight: 700, textTransform: 'uppercase' }}>{t('requestsSec')}</div>
                             <Activity size={20} color="#10b981" />
                         </div>
-                        <div style={{ fontSize: '2.5rem', fontWeight: 950, color: '#10b981' }}>8.4k</div>
-                        <div style={{ fontSize: '0.7rem', opacity: 0.5, marginTop: '0.5rem' }}>{tSafe(t, 'avg', "Avg: 7.2k")}</div>
+                        <div style={{ fontSize: '2.5rem', fontWeight: 950, color: '#10b981' }}>{t('requestsSecValue')}</div>
+                        <div style={{ fontSize: '0.7rem', opacity: 0.5, marginTop: '0.5rem' }}>{t('avg')}</div>
                     </div>
 
                     <div className="glass-panel" style={{
@@ -122,11 +123,11 @@ export default function TechnicalDashboardPage() {
                         border: '1px solid rgba(139, 92, 246, 0.2)'
                     }}>
                         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'start', marginBottom: '1rem' }}>
-                            <div style={{ fontSize: '0.65rem', opacity: 0.5, fontWeight: 700, textTransform: 'uppercase' }}>{tSafe(t, 'dataTransfer', "Data Transfer")}</div>
+                            <div style={{ fontSize: '0.65rem', opacity: 0.5, fontWeight: 700, textTransform: 'uppercase' }}>{t('dataTransfer')}</div>
                             <Database size={20} color="#8b5cf6" />
                         </div>
-                        <div style={{ fontSize: '2.5rem', fontWeight: 950, color: '#8b5cf6' }}>2.1TB</div>
-                        <div style={{ fontSize: '0.7rem', opacity: 0.5, marginTop: '0.5rem' }}>{tSafe(t, 'lastHour', "Last hour")}</div>
+                        <div style={{ fontSize: '2.5rem', fontWeight: 950, color: '#8b5cf6' }}>{t('dataTransferValue')}</div>
+                        <div style={{ fontSize: '0.7rem', opacity: 0.5, marginTop: '0.5rem' }}>{t('lastHour')}</div>
                     </div>
 
                     <div className="glass-panel" style={{
@@ -138,12 +139,12 @@ export default function TechnicalDashboardPage() {
                         border: `1px solid ${activeAlerts > 0 ? 'rgba(245, 158, 11, 0.2)' : 'rgba(16, 185, 129, 0.2)'}`
                     }}>
                         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'start', marginBottom: '1rem' }}>
-                            <div style={{ fontSize: '0.65rem', opacity: 0.5, fontWeight: 700, textTransform: 'uppercase' }}>{tSafe(tCommon, 'activeAlerts', "Active Alerts")}</div>
+                            <div style={{ fontSize: '0.65rem', opacity: 0.5, fontWeight: 700, textTransform: 'uppercase' }}>{tCommon('activeAlerts')}</div>
                             {activeAlerts > 0 ? <AlertTriangle size={20} color="#f59e0b" /> : <CheckCircle size={20} color="#10b981" />}
                         </div>
                         <div style={{ fontSize: '2.5rem', fontWeight: 950, color: activeAlerts > 0 ? '#f59e0b' : '#10b981' }}>{activeAlerts}</div>
                         <div style={{ fontSize: '0.7rem', opacity: 0.5, marginTop: '0.5rem' }}>
-                            {activeAlerts > 0 ? tSafe(tCommon, 'requiresAttention', "Requires attention") : tSafe(tCommon, 'nominal', "All systems nominal")}
+                            {activeAlerts > 0 ? tCommon('requiresAttention') : tCommon('nominal')}
                         </div>
                     </div>
                 </div>
@@ -151,38 +152,38 @@ export default function TechnicalDashboardPage() {
                 {/* TECHNICAL GRID */}
                 <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '1rem' }}>
                     <div id="resources" className="glass-panel" style={{ padding: '1.5rem', borderRadius: '1rem', background: 'rgba(10, 10, 10, 0.8)', scrollMarginTop: '120px' }}>
-                        <h4 style={{ fontSize: '0.9rem', fontWeight: 900, marginBottom: '0.5rem' }}>{tSafe(t, 'resourceTitle', "Resource Telemetry")}</h4>
-                        <p style={{ fontSize: '0.65rem', opacity: 0.5, marginBottom: '1rem' }}>{tSafe(t, 'resourceDesc', "Live infrastructure metrics")}</p>
+                        <h4 style={{ fontSize: '0.9rem', fontWeight: 900, marginBottom: '0.5rem' }}>{t('resourceTitle')}</h4>
+                        <p style={{ fontSize: '0.65rem', opacity: 0.5, marginBottom: '1rem' }}>{t('resourceDesc')}</p>
                         <AnimatedResourceUtilization />
                     </div>
 
                     <div id="deployment" className="glass-panel" style={{ padding: '1.5rem', borderRadius: '1rem', background: 'rgba(10, 10, 10, 0.8)', scrollMarginTop: '120px' }}>
-                        <h4 style={{ fontSize: '0.9rem', fontWeight: 900, marginBottom: '0.5rem' }}>{tSafe(t, 'velocityTitle', "Velocity Metrics")}</h4>
-                        <p style={{ fontSize: '0.65rem', opacity: 0.5, marginBottom: '1rem' }}>{tSafe(t, 'velocityDesc', "Weekly deployment frequency")}</p>
+                        <h4 style={{ fontSize: '0.9rem', fontWeight: 900, marginBottom: '0.5rem' }}>{t('velocityTitle')}</h4>
+                        <p style={{ fontSize: '0.65rem', opacity: 0.5, marginBottom: '1rem' }}>{t('velocityDesc')}</p>
                         <LiveDeploymentFrequency />
                     </div>
 
                     <div id="scaling" className="glass-panel" style={{ padding: '1.5rem', borderRadius: '1rem', background: 'rgba(10, 10, 10, 0.8)', scrollMarginTop: '120px' }}>
-                        <h4 style={{ fontSize: '0.9rem', fontWeight: 900, marginBottom: '0.5rem' }}>{tSafe(t, 'scalingTitle', "Auto-Scale Events")}</h4>
-                        <p style={{ fontSize: '0.65rem', opacity: 0.5, marginBottom: '1rem' }}>{tSafe(t, 'scalingDesc', "24-hour scaling activity")}</p>
+                        <h4 style={{ fontSize: '0.9rem', fontWeight: 900, marginBottom: '0.5rem' }}>{t('scalingTitle')}</h4>
+                        <p style={{ fontSize: '0.65rem', opacity: 0.5, marginBottom: '1rem' }}>{t('scalingDesc')}</p>
                         <AutoScalingEvents />
                     </div>
 
                     <div id="errors" className="glass-panel" style={{ padding: '1.5rem', borderRadius: '1rem', background: 'rgba(10, 10, 10, 0.8)', scrollMarginTop: '120px' }}>
-                        <h4 style={{ fontSize: '0.9rem', fontWeight: 900, marginBottom: '0.5rem' }}>{tSafe(t, 'threatTitle', "Threat Analysis")}</h4>
-                        <p style={{ fontSize: '0.65rem', opacity: 0.5, marginBottom: '1rem' }}>{tSafe(t, 'threatDesc', "Error rate & threat trend")}</p>
+                        <h4 style={{ fontSize: '0.9rem', fontWeight: 900, marginBottom: '0.5rem' }}>{t('threatTitle')}</h4>
+                        <p style={{ fontSize: '0.65rem', opacity: 0.5, marginBottom: '1rem' }}>{t('threatDesc')}</p>
                         <ErrorRateTrend />
                     </div>
 
                     <div className="glass-panel" style={{ padding: '1.5rem', borderRadius: '1rem', background: 'rgba(10, 10, 10, 0.8)' }}>
-                        <h4 style={{ fontSize: '0.9rem', fontWeight: 900, marginBottom: '0.5rem' }}>{tSafe(t, 'queryTitle', "Query Performance")}</h4>
-                        <p style={{ fontSize: '0.65rem', opacity: 0.5, marginBottom: '1rem' }}>{tSafe(t, 'queryDesc', "Database operations")}</p>
+                        <h4 style={{ fontSize: '0.9rem', fontWeight: 900, marginBottom: '0.5rem' }}>{t('queryTitle')}</h4>
+                        <p style={{ fontSize: '0.65rem', opacity: 0.5, marginBottom: '1rem' }}>{t('queryDesc')}</p>
                         <QueryPerformance />
                     </div>
 
                     <div className="glass-panel" style={{ padding: '1.5rem', borderRadius: '1rem', background: 'rgba(10, 10, 10, 0.8)' }}>
-                        <h4 style={{ fontSize: '0.9rem', fontWeight: 900, marginBottom: '0.5rem' }}>{tSafe(t, 'latencyTitle', "Global Latency")}</h4>
-                        <p style={{ fontSize: '0.65rem', opacity: 0.5, marginBottom: '1rem' }}>{tSafe(t, 'latencyDesc', "Real-time system latency metrics")}</p>
+                        <h4 style={{ fontSize: '0.9rem', fontWeight: 900, marginBottom: '0.5rem' }}>{t('latencyTitle')}</h4>
+                        <p style={{ fontSize: '0.65rem', opacity: 0.5, marginBottom: '1rem' }}>{t('latencyDesc')}</p>
                         <ResponseTimeTrend />
                     </div>
 

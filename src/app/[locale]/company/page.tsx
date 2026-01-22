@@ -33,7 +33,9 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
 }
 
 export default async function CompanyPage() {
-    const t = await getTranslations("Investors");
+    const tInvestors = await getTranslations("Investors");
+    const t = await getTranslations("Company");
+    const tGlobal = await getTranslations("Global");
 
     return (
         <div className="snap-container">
@@ -60,11 +62,10 @@ export default async function CompanyPage() {
                             marginBottom: '2rem',
                             textTransform: 'uppercase'
                         }}>
-                            OmniGCloud Global
+                            {t('hero.badge')}
                         </div>
-                        <h1 style={{ fontSize: '4rem', fontWeight: 900, marginBottom: '1.5rem', lineHeight: 1.1, background: 'linear-gradient(135deg, var(--foreground) 0%, var(--primary) 100%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>Engineering the <br />Cloud-Agnostic Future</h1>
-                        <p style={{ fontSize: '1.3rem', color: 'var(--foreground)', opacity: 0.8, maxWidth: '900px', lineHeight: 1.6 }}>
-                            A team of systems architects, AI engineers, and cloud pioneers dedicated to restoring <span style={{ color: 'var(--primary)', fontWeight: 800 }}>Enterprise Sovereignty</span> through autonomous modernization.
+                        <h1 style={{ fontSize: '4rem', fontWeight: 900, marginBottom: '1.5rem', lineHeight: 1.1, background: 'linear-gradient(135deg, var(--foreground) 0%, var(--primary) 100%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }} dangerouslySetInnerHTML={{ __html: t.raw('hero.title').replace('\n', '<br />') }}></h1>
+                        <p style={{ fontSize: '1.3rem', color: 'var(--foreground)', opacity: 0.8, maxWidth: '900px', lineHeight: 1.6 }} dangerouslySetInnerHTML={{ __html: t.raw('hero.subtitle') }}>
                         </p>
                     </div>
                 </div>
@@ -73,22 +74,22 @@ export default async function CompanyPage() {
             {/* LEADERSHIP - Snap 2 */}
             <section id="leadership" className="snap-section container">
                 <div style={{ textAlign: 'center', marginBottom: '3rem' }}>
-                    <h2 style={{ fontSize: '3rem', fontWeight: 900 }}>Executive Leadership</h2>
-                    <p style={{ color: 'var(--foreground)', opacity: 0.6 }}>Visionaries defining the next era of sovereign cloud.</p>
+                    <h2 style={{ fontSize: '3rem', fontWeight: 900 }}>{t('leadership.title')}</h2>
+                    <p style={{ color: 'var(--foreground)', opacity: 0.6 }}>{t('leadership.subtitle')}</p>
                 </div>
                 <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '3rem', maxWidth: '1000px', margin: '0 auto' }}>
                     {[
                         {
-                            name: "Jyothsna Devi Gopu",
-                            role: "Founder & Chief Executive Officer",
-                            bio: "Leading the strategic vision and global market direction. Jyothsna provides the foundational enterprise strategy required to steer the company towards becoming a global standard in sovereign cloud orchestration.",
-                            placeholder: "Founder portrait coming soon"
+                            name: t('leadership.jyothsna.name'),
+                            role: t('leadership.jyothsna.role'),
+                            bio: t('leadership.jyothsna.bio'),
+                            placeholder: t('leadership.jyothsna.placeholder')
                         },
                         {
-                            name: "Chaitanya Bharath Gopu",
-                            role: "Founder & Chief Technology Officer",
-                            bio: "Distinguished Platform Architect providing the high-level technical direction for the G-Framework. Chaitanya defines the architectural standards and innovation roadmap that power the platform's autonomous capabilities.",
-                            placeholder: "Leadership profile image to be added"
+                            name: t('leadership.chaitanya.name'),
+                            role: t('leadership.chaitanya.role'),
+                            bio: t('leadership.chaitanya.bio'),
+                            placeholder: t('leadership.chaitanya.placeholder')
                         }
                     ].map((leader, i) => (
                         <div key={i} className="glass-panel" style={{ padding: '0', borderRadius: '2rem', overflow: 'hidden' }}>
@@ -118,20 +119,20 @@ export default async function CompanyPage() {
                         <div style={{ position: 'relative', zIndex: 1 }}>
                             <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', marginBottom: '1rem' }}>
                                 <Globe size={40} color="var(--primary)" />
-                                <h2 style={{ fontSize: '3rem', fontWeight: 900 }}>Global Ops</h2>
+                                <h2 style={{ fontSize: '3rem', fontWeight: 900 }}>{t('operations.title')}</h2>
                             </div>
                             <p style={{ fontSize: '1.2rem', color: 'var(--foreground)', opacity: 0.7, lineHeight: 1.8, marginBottom: '1.5rem' }}>
-                                Headquartered in Florida with a distributed network of enterprise architects supporting mission-critical infrastructure modernizations globally.
+                                {t('operations.description')}
                             </p>
                             <div style={{ display: 'grid', gridTemplateColumns: '1fr', gap: '2rem' }}>
                                 <div>
-                                    <div style={{ fontWeight: 800, fontSize: '0.9rem', marginBottom: '1rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}><MapPin size={16} color="var(--primary)" /> Corporate Headquarters</div>
+                                    <div style={{ fontWeight: 800, fontSize: '0.9rem', marginBottom: '1rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}><MapPin size={16} color="var(--primary)" /> {t('operations.headquarters')}</div>
                                     <div style={{ opacity: 0.7, fontSize: '0.9rem', lineHeight: 1.6 }}>
-                                        3354 Jasmine Hill Rd<br />
-                                        Tallahassee, Florida 32311<br />
-                                        United States
+                                        {t('contact.addressLine1')}<br />
+                                        {t('contact.addressLine2')}<br />
+                                        {t('contact.country')}
                                     </div>
-                                    <div style={{ marginTop: '1rem', fontWeight: 800, fontSize: '0.9rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}><Phone size={16} color="var(--primary)" /> +1 (850) 443-1481</div>
+                                    <div style={{ marginTop: '1rem', fontWeight: 800, fontSize: '0.9rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}><Phone size={16} color="var(--primary)" /> {t('contact.phone')}</div>
                                 </div>
                             </div>
                         </div>
@@ -143,20 +144,20 @@ export default async function CompanyPage() {
             <section id="newsroom" className="snap-section container">
                 <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', marginBottom: '3rem' }}>
                     <Newspaper size={40} color="var(--primary)" />
-                    <h2 style={{ fontSize: '3rem', fontWeight: 900 }}>Global Newsroom</h2>
+                    <h2 style={{ fontSize: '3rem', fontWeight: 900 }}>{t('newsroom.title')}</h2>
                 </div>
                 <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '2rem' }}>
                     {[
-                        { title: "OmniGCloud Awarded 'Sovereign Provider of the Year'", date: "May 12, 2025", desc: "Recognized for breakthroughs in automated cloud re-platforming." },
-                        { title: "Strategic Partnership with NeoCloud GPU", date: "April 28, 2025", desc: "Expanding high-density compute for agentic AI workloads." },
-                        { title: "New AI Control Plane Released", date: "March 15, 2025", desc: "Unifying LLM orchestration with infrastructure-as-code." }
+                        { title: t('newsroom.items.0.title'), date: "May 12, 2025", desc: t('newsroom.items.0.desc') },
+                        { title: t('newsroom.items.1.title'), date: "April 28, 2025", desc: t('newsroom.items.1.desc') },
+                        { title: t('newsroom.items.2.title'), date: "March 15, 2025", desc: t('newsroom.items.2.desc') }
                     ].map((news, i) => (
                         <div key={i} className="glass-panel" style={{ padding: '2.5rem', borderRadius: '2rem' }}>
                             <div style={{ color: 'var(--primary)', fontSize: '0.75rem', fontWeight: 800, marginBottom: '1rem' }}>{news.date}</div>
                             <h4 style={{ fontSize: '1.25rem', fontWeight: 800, marginBottom: '1rem' }}>{news.title}</h4>
                             <p style={{ fontSize: '0.85rem', opacity: 0.6, marginBottom: '1.5rem' }}>{news.desc}</p>
                             <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', color: 'var(--primary)', fontSize: '0.85rem', fontWeight: 700, cursor: 'pointer' }}>
-                                Read Article <ExternalLink size={14} />
+                                {t('newsroom.readArticle')} <ExternalLink size={14} />
                             </div>
                         </div>
                     ))}
@@ -167,9 +168,9 @@ export default async function CompanyPage() {
             <section id="investors" className="snap-section container">
                 <div className="grid-2 px-1 gap-16 items-center">
                     <div>
-                        <div style={{ color: 'var(--primary)', fontWeight: 800, fontSize: '0.75rem', textTransform: 'uppercase', letterSpacing: '0.1em', marginBottom: '1rem' }}>{t('hero.tag')}</div>
-                        <h2 style={{ fontSize: '3.5rem', fontWeight: 900, marginBottom: '1.5rem', lineHeight: 1.1 }}>{t('hero.title')}</h2>
-                        <p style={{ fontSize: '1.1rem', opacity: 0.7, lineHeight: 1.7, marginBottom: '2.5rem' }}>{t('hero.subtitle')}</p>
+                        <div style={{ color: 'var(--primary)', fontWeight: 800, fontSize: '0.75rem', textTransform: 'uppercase', letterSpacing: '0.1em', marginBottom: '1rem' }}>{tInvestors('hero.tag')}</div>
+                        <h2 style={{ fontSize: '3.5rem', fontWeight: 900, marginBottom: '1.5rem', lineHeight: 1.1 }}>{tInvestors('hero.title')}</h2>
+                        <p style={{ fontSize: '1.1rem', opacity: 0.7, lineHeight: 1.7, marginBottom: '2.5rem' }}>{tInvestors('hero.subtitle')}</p>
 
                         <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
                             {[0, 1, 2].map(i => (
@@ -178,8 +179,8 @@ export default async function CompanyPage() {
                                         {i === 0 ? <BarChart3 size={20} /> : i === 1 ? <TrendingUp size={20} /> : <Layers size={20} />}
                                     </div>
                                     <div>
-                                        <div style={{ fontSize: '1.5rem', fontWeight: 900 }}>{t(`opportunity.metrics.${i}.value`)}</div>
-                                        <div style={{ fontSize: '0.75rem', opacity: 0.5, textTransform: 'uppercase', fontWeight: 700 }}>{t(`opportunity.metrics.${i}.label`)}</div>
+                                        <div style={{ fontSize: '1.5rem', fontWeight: 900 }}>{tInvestors(`opportunity.metrics.${i}.value`)}</div>
+                                        <div style={{ fontSize: '0.75rem', opacity: 0.5, textTransform: 'uppercase', fontWeight: 700 }}>{tInvestors(`opportunity.metrics.${i}.label`)}</div>
                                     </div>
                                 </div>
                             ))}
@@ -187,12 +188,12 @@ export default async function CompanyPage() {
                     </div>
 
                     <div className="glass-panel" style={{ padding: '3.5rem', borderRadius: '3.5rem' }}>
-                        <h3 style={{ fontSize: '2rem', fontWeight: 900, marginBottom: '1.5rem' }}>{t('opportunity.title')}</h3>
-                        <p style={{ fontSize: '1.1rem', opacity: 0.8, lineHeight: 1.8, marginBottom: '2.5rem' }}>{t('opportunity.content')}</p>
+                        <h3 style={{ fontSize: '2rem', fontWeight: 900, marginBottom: '1.5rem' }}>{tInvestors('opportunity.title')}</h3>
+                        <p style={{ fontSize: '1.1rem', opacity: 0.8, lineHeight: 1.8, marginBottom: '2.5rem' }}>{tInvestors('opportunity.content')}</p>
 
                         <div style={{ borderTop: '1px solid var(--card-border)', paddingTop: '2rem' }}>
-                            <h4 style={{ fontSize: '0.9rem', fontWeight: 800, marginBottom: '1rem', textTransform: 'uppercase', opacity: 0.6 }}>{t('vision.title')}</h4>
-                            <p style={{ fontSize: '0.95rem', opacity: 0.7, fontStyle: 'italic', lineHeight: 1.7 }}>"{t('vision.content')}"</p>
+                            <h4 style={{ fontSize: '0.9rem', fontWeight: 800, marginBottom: '1rem', textTransform: 'uppercase', opacity: 0.6 }}>{tInvestors('vision.title')}</h4>
+                            <p style={{ fontSize: '0.95rem', opacity: 0.7, fontStyle: 'italic', lineHeight: 1.7 }}>"{tInvestors('vision.content')}"</p>
                         </div>
                     </div>
                 </div>
@@ -201,18 +202,18 @@ export default async function CompanyPage() {
             {/* EXECUTIVE OFFICE - Snap 6 */}
             <section id="executive-office" className="snap-section container">
                 <div className="glass-panel" style={{ padding: '5rem', borderRadius: '4rem', textAlign: 'center', background: 'var(--primary-glow)' }}>
-                    <h2 style={{ fontSize: '3.5rem', fontWeight: 900, marginBottom: '1.5rem' }}>Contact Chief Executive Office</h2>
+                    <h2 style={{ fontSize: '3.5rem', fontWeight: 900, marginBottom: '1.5rem' }}>{t('contact.title')}</h2>
                     <p style={{ fontSize: '1.2rem', opacity: 0.7, maxWidth: '700px', margin: '0 auto 3rem' }}>
-                        Strategic inquiries, partnership proposals, and global modernization roadmaps.
+                        {t('contact.description')}
                     </p>
                     <div style={{ display: 'flex', justifyContent: 'center', gap: '3rem' }}>
                         <div style={{ textAlign: 'center' }}>
                             <div style={{ background: 'var(--primary)', color: 'var(--background)', width: '60px', height: '60px', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto 1rem' }}><Mail size={24} /></div>
-                            <div style={{ fontWeight: 800 }}>omnigcloud@gmail.com</div>
+                            <div style={{ fontWeight: 800 }}>{t('email')}</div>
                         </div>
                         <div style={{ textAlign: 'center' }}>
                             <div style={{ background: 'var(--primary)', color: 'var(--background)', width: '60px', height: '60px', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto 1rem' }}><Phone size={24} /></div>
-                            <div style={{ fontWeight: 800 }}>+1 (850) 443-1481</div>
+                            <div style={{ fontWeight: 800 }}>{t('contact.phone')}</div>
                         </div>
                     </div>
                 </div>
@@ -222,8 +223,8 @@ export default async function CompanyPage() {
             <section id="sitemap" className="snap-section" style={{ background: 'var(--background)' }}>
                 <div style={{ flex: 1, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                     <div style={{ textAlign: 'center' }}>
-                        <div style={{ color: 'var(--primary)', fontWeight: 800, fontSize: '0.8rem', letterSpacing: '0.2em', textTransform: 'uppercase', marginBottom: '1rem' }}>Global Corporate Sitemap</div>
-                        <h2 style={{ fontSize: '2.5rem', fontWeight: 900 }}>Company <span style={{ opacity: 0.3 }}>Directory</span></h2>
+                        <div style={{ color: 'var(--primary)', fontWeight: 800, fontSize: '0.8rem', letterSpacing: '0.2em', textTransform: 'uppercase', marginBottom: '1rem' }}>{t('sitemap.title')}</div>
+                        <h2 style={{ fontSize: '2.5rem', fontWeight: 900 }}>{t('sitemap.directory').split(' ')[0]} <span style={{ opacity: 0.3 }}>{t('sitemap.directory').split(' ').slice(1).join(' ')}</span></h2>
                     </div>
                 </div>
                 <Footer />

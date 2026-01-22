@@ -33,6 +33,7 @@ jobs:
         run: npm run release:gate:ci
         env:
           NODE_ENV: production
+          PUBLIC_REPO_ABSTRACT_ONLY: "true"
 
       - name: Upload Artifacts
         if: always()

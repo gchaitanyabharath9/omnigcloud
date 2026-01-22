@@ -3,16 +3,21 @@ import type { Metadata } from "next";
 import { Link } from "@/navigation";
 
 import { ArrowRight } from "lucide-react";
+import { getTranslations } from "next-intl/server";
 import ServicesHero from "@/components/sections/services/ServicesHero";
 import CloudFactorySection from "@/components/sections/services/CloudFactorySection";
 import AutomationStackSection from "@/components/sections/services/AutomationStackSection";
 import ManagedOperationsSection from "@/components/sections/services/ManagedOperationsSection";
 import DataAiFabricSection from "@/components/sections/services/DataAiFabricSection";
 
-export const metadata: Metadata = {
-    title: "Cloud Modernization & Automation | OmniGCloud",
-    description: "Cloud-agnostic modernization, AI-driven automation, and enterprise platform engineering.",
-};
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+    const { locale } = await params;
+    const t = await getTranslations({ locale, namespace: 'Metadata.Services' });
+    return {
+        title: t('title'),
+        description: t('description'),
+    };
+}
 
 export function generateStaticParams() {
     return ['en', 'es', 'fr', 'de', 'zh', 'hi', 'ja', 'ko'].map((locale) => ({ locale }));
@@ -21,6 +26,10 @@ export function generateStaticParams() {
 
 export default async function ServicesPage({ params }: { params: Promise<{ locale: string }> }) {
     const { locale } = await params;
+    const t = await getTranslations({ locale, namespace: 'Services' });
+    const tCommon = await getTranslations({ locale, namespace: 'Common' });
+    const tSeo = await getTranslations({ locale, namespace: 'SEO_Content.Services' });
+
     return (
         <>
             <ServicesHero />
@@ -28,19 +37,19 @@ export default async function ServicesPage({ params }: { params: Promise<{ local
             <div className="container py-20">
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                     {[
-                        { title: "Cloud Modernization", path: `/services/cloud-modernization`, desc: "AI-driven assessment and refactoring of legacy application portfolios." },
-                        { title: "DevOps & Automation", path: `/services/devops`, desc: "Automated Platform Engineering and CI/CD for sovereign clouds." },
-                        { title: "Microservices", path: `/services/microservices`, desc: "Deconstructing monoliths into resilient distributed systems." },
-                        { title: "Cloud Migration", path: `/services/cloud-migration`, desc: "Strategic transformation and low-risk multi-cloud transition." },
-                        { title: "OpenShift Strategy", path: `/services/openshift-modernization`, desc: "Enterprise-scale fleet management for RedHat OCP clusters." },
-                        { title: "FinOps Intelligence", path: `/services/cloud-cost-optimization`, desc: "Autonomous cost reduction and infrastructure rightsizing." }
+                        { title: t('catalog.modernization.title'), path: `/services/cloud-modernization`, desc: t('catalog.modernization.desc') },
+                        { title: t('catalog.devops.title'), path: `/services/devops`, desc: t('catalog.devops.desc') },
+                        { title: t('catalog.microservices.title'), path: `/services/microservices`, desc: t('catalog.microservices.desc') },
+                        { title: t('catalog.migration.title'), path: `/services/cloud-migration`, desc: t('catalog.migration.desc') },
+                        { title: t('catalog.openshift.title'), path: `/services/openshift-modernization`, desc: t('catalog.openshift.desc') },
+                        { title: t('catalog.finops.title'), path: `/services/cloud-cost-optimization`, desc: t('catalog.finops.desc') }
 
                     ].map((service, i) => (
                         <Link href={service.path} key={i} className="glass-panel p-8 hover:border-primary/50 transition-colors group">
                             <h3 className="text-xl font-bold mb-4 group-hover:text-primary transition-colors">{service.title}</h3>
                             <p className="text-muted-foreground text-sm mb-6">{service.desc}</p>
                             <div className="text-primary font-bold text-sm flex items-center gap-2">
-                                Explore Service <ArrowRight size={14} />
+                                {tCommon('explore_service')} <ArrowRight size={14} />
                             </div>
                         </Link>
                     ))}
@@ -55,7 +64,7 @@ export default async function ServicesPage({ params }: { params: Promise<{ local
                 pageKey="Services"
                 imageUrl="/images/seo/architecture.png"
                 alt="OmniGCloud Modernization Pipeline"
-                description="Our services are powered by an autonomous pipeline that discovers, refactors, and orchestrates assets into a sovereign multi-cloud mesh."
+                description={tSeo('VisualSection.description')}
             />
 
             <ManagedOperationsSection />
@@ -66,9 +75,9 @@ export default async function ServicesPage({ params }: { params: Promise<{ local
             <DeepDive
                 pageKey="Services"
                 relatedLinks={[
-                    { label: "Cloud Modernization Guide", href: "/resources/blog/cloud-modernization-guide" },
-                    { label: "Sovereign DevOps", href: "/services/devops" },
-                    { label: "FinOps Strategy", href: "/services/cloud-cost-optimization" }
+                    { label: tSeo('DeepDive.links.modernization'), href: "/resources/blog/cloud-modernization-guide" },
+                    { label: tSeo('DeepDive.links.devops'), href: "/services/devops" },
+                    { label: tSeo('DeepDive.links.finops'), href: "/services/cloud-cost-optimization" }
                 ]}
             />
 

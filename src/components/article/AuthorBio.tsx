@@ -1,6 +1,7 @@
+"use client";
 
-
-'use client';
+import React from 'react';
+import { useTranslations } from 'next-intl';
 
 interface AuthorBioProps {
     author?: {
@@ -13,10 +14,11 @@ interface AuthorBioProps {
 }
 
 export default function AuthorBio({ author }: AuthorBioProps) {
+    const t = useTranslations('Common.author');
     const defaultAuthor = {
-        name: "CHAITANYA BHARATH GOPU",
-        role: "Principal Cloud Architect",
-        bio: "Specializing in distributed systems, sovereign cloud governance, and AI-driven enterprise modernization.",
+        name: t('name'),
+        role: t('role'),
+        bio: t('bio'),
         image: "/images/authors/omnigcloud-team.jpg"
     };
 

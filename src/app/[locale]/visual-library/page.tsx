@@ -1,7 +1,7 @@
 import { getTranslations, getLocale } from 'next-intl/server';
 import Image from 'next/image';
 import { Camera, ArrowRight, Layers, Shield, Zap, Globe } from 'lucide-react';
-import Link from 'next/link';
+import { Link } from '@/navigation';
 import Footer from '@/components/Footer';
 
 export const revalidate = 86400; // Cache for 24 hours (ISR)
@@ -14,7 +14,7 @@ export default async function VisualLibraryPage() {
         {
             id: "control",
             icon: <Globe size={32} />,
-            badge: "CORE_TELEMETRY",
+            badge: t("control.badge"),
             images: [
                 "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=75&w=900",
                 "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=75&w=900"
@@ -23,7 +23,7 @@ export default async function VisualLibraryPage() {
         {
             id: "failover",
             icon: <Zap size={32} />,
-            badge: "MCCB_ACTIVE",
+            badge: t("failover.badge"),
             images: [
                 "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=75&w=900",
                 "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&q=75&w=900"
@@ -37,7 +37,7 @@ export default async function VisualLibraryPage() {
             <section style={{ padding: '2rem 0', background: 'var(--bg-surface-2)', borderBottom: '1px solid var(--card-border)', minHeight: 'calc(100vh - var(--header-height) - var(--breadcrumb-height))', display: 'flex', alignItems: 'center' }}>
                 <div className="container">
                     <div className="badge badge-primary-subtle mb-4">
-                        <Camera size={14} className="mr-2" /> 4K ARCHITECTURAL CAPTURES
+                        <Camera size={14} className="mr-2" /> {t("badge")}
                     </div>
                     <h1 style={{ fontSize: '4rem', fontWeight: 950, marginBottom: '2rem', lineHeight: '1.05' }}>
                         {t('title')}
@@ -69,17 +69,17 @@ export default async function VisualLibraryPage() {
                                             {t(`${item.id}.description`)}
                                         </p>
                                         <Link href="/contact" className="btn-primary" style={{ padding: '1rem 2rem' }}>
-                                            Request Technical Briefing
+                                            {t("cta")}
                                         </Link>
                                     </div>
                                     <div style={{ display: 'grid', gridTemplateColumns: '1fr', gap: '2rem' }}>
                                         <div className="glass-panel" style={{ borderRadius: '2rem', overflow: 'hidden', height: '320px', border: '1px solid var(--card-border)' }}>
                                             <Image src={item.images[0]} alt="Schema A" fill style={{ objectFit: 'cover' }} />
-                                            <div style={{ position: 'absolute', top: '1.5rem', right: '1.5rem', background: 'rgba(2, 6, 23, 0.8)', padding: '0.5rem 1rem', borderRadius: '0.75rem', fontSize: '0.7rem', fontWeight: 900 }}>IMAGE A</div>
+                                            <div style={{ position: 'absolute', top: '1.5rem', right: '1.5rem', background: 'rgba(2, 6, 23, 0.8)', padding: '0.5rem 1rem', borderRadius: '0.75rem', fontSize: '0.7rem', fontWeight: 900 }}>{t("imageA")}</div>
                                         </div>
                                         <div className="glass-panel" style={{ borderRadius: '2rem', overflow: 'hidden', height: '320px', border: '1px solid var(--card-border)' }}>
                                             <Image src={item.images[1]} alt="Schema B" fill style={{ objectFit: 'cover' }} />
-                                            <div style={{ position: 'absolute', top: '1.5rem', right: '1.5rem', background: 'rgba(2, 6, 23, 0.8)', padding: '0.5rem 1rem', borderRadius: '0.75rem', fontSize: '0.7rem', fontWeight: 900 }}>IMAGE B</div>
+                                            <div style={{ position: 'absolute', top: '1.5rem', right: '1.5rem', background: 'rgba(2, 6, 23, 0.8)', padding: '0.5rem 1rem', borderRadius: '0.75rem', fontSize: '0.7rem', fontWeight: 900 }}>{t("imageB")}</div>
                                         </div>
                                     </div>
                                 </>
@@ -88,11 +88,11 @@ export default async function VisualLibraryPage() {
                                     <div style={{ display: 'grid', gridTemplateColumns: '1fr', gap: '2rem' }}>
                                         <div className="glass-panel" style={{ borderRadius: '2rem', overflow: 'hidden', height: '320px', border: '1px solid var(--card-border)' }}>
                                             <Image src={item.images[0]} alt="Schema A" fill style={{ objectFit: 'cover' }} unoptimized />
-                                            <div style={{ position: 'absolute', top: '1.5rem', right: '1.5rem', background: 'rgba(2, 6, 23, 0.8)', padding: '0.5rem 1rem', borderRadius: '0.75rem', fontSize: '0.7rem', fontWeight: 900 }}>IMAGE A</div>
+                                            <div style={{ position: 'absolute', top: '1.5rem', right: '1.5rem', background: 'rgba(2, 6, 23, 0.8)', padding: '0.5rem 1rem', borderRadius: '0.75rem', fontSize: '0.7rem', fontWeight: 900 }}>{t("imageA")}</div>
                                         </div>
                                         <div className="glass-panel" style={{ borderRadius: '2rem', overflow: 'hidden', height: '320px', border: '1px solid var(--card-border)' }}>
                                             <Image src={item.images[1]} alt="Schema B" fill style={{ objectFit: 'cover' }} unoptimized />
-                                            <div style={{ position: 'absolute', top: '1.5rem', right: '1.5rem', background: 'rgba(2, 6, 23, 0.8)', padding: '0.5rem 1rem', borderRadius: '0.75rem', fontSize: '0.7rem', fontWeight: 900 }}>IMAGE B</div>
+                                            <div style={{ position: 'absolute', top: '1.5rem', right: '1.5rem', background: 'rgba(2, 6, 23, 0.8)', padding: '0.5rem 1rem', borderRadius: '0.75rem', fontSize: '0.7rem', fontWeight: 900 }}>{t("imageB")}</div>
                                         </div>
                                     </div>
                                     <div className="glass-panel" style={{ padding: '4rem', borderRadius: '3rem' }}>
@@ -105,7 +105,7 @@ export default async function VisualLibraryPage() {
                                             {t(`${item.id}.description`)}
                                         </p>
                                         <Link href="/contact" className="btn-primary" style={{ padding: '1rem 2rem' }}>
-                                            Request Technical Briefing
+                                            {t("cta")}
                                         </Link>
                                     </div>
                                 </>

@@ -1,78 +1,75 @@
+
 import fs from 'fs';
 import path from 'path';
-import { fileURLToPath } from 'url';
 
-// ESM path handling
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
-const ROOT_DIR = path.resolve(__dirname, '..');
+const LOCALE_DIR = path.join(process.cwd(), 'src', 'messages');
+const EN_PATH = path.join(LOCALE_DIR, 'en.json');
+const TARGET_LOCALES = ['es', 'fr', 'de', 'zh', 'hi', 'ja', 'ko'];
 
-const MESSAGES_DIR = path.join(ROOT_DIR, 'src/messages');
-const EN_PATH = path.join(MESSAGES_DIR, 'en.json');
+// Minimal gate to ensure structure match
+// returns 0 if all locales satisfy baseline, 1 otherwise.
 
-const BAD_PLACEHOLDERS = new Set([
-    'title', 'subtitle', 'message', 'policyLink', 'accept', 'decline',
-    'description', 'content', 'label', 'tag', 'placeholder', 'button'
-]);
-
-// Namespaces that MUST be correct now
-const STRICT_NAMESPACES = ['Hero', 'CookieConsent', 'SEO_Content', 'Header', 'Footer', 'HomeSections', 'Products', 'WhitePaper', 'Capabilities', 'UseCases'];
-
-function getBadKeys(obj: any, prefix = ''): string[] {
-    const bad: string[] = [];
+function getKeys(obj: Record<string, any>, prefix = ''): string[] {
+    let keys: string[] = [];
     for (const key in obj) {
-        const fullKey = prefix ? `${prefix}.${key}` : key;
-        const val = obj[key];
-
-        if (typeof val === 'object' && val !== null) {
-            bad.push(...getBadKeys(val, fullKey));
-        } else if (typeof val === 'string') {
-            const trimmed = val.trim();
-            // 1. Value equals Key (e.g. "title": "title")
-            // We only check this for non-leaf nodes typically, but here everything is leaf.
-            // Exception: Some keys naturally equal their value? e.g. "OK": "OK". But "title": "title" is definitely wrong.
-            if (trimmed === key && trimmed.length > 2) {
-                bad.push(`${fullKey} (Value equals key)`);
-            }
-            // 2. Value is a known placeholder
-            else if (BAD_PLACEHOLDERS.has(trimmed)) {
-                bad.push(`${fullKey} (Value is forbidden placeholder "${trimmed}")`);
-            }
-            // 3. Known TODOs
-            else if (trimmed.includes('[TODO]') || trimmed === '') {
-                bad.push(`${fullKey} (Empty or TODO)`);
-            }
+        if (typeof obj[key] === 'object' && obj[key] !== null && !Array.isArray(obj[key])) {
+            keys = keys.concat(getKeys(obj[key], prefix + key + '.'));
+        } else {
+            keys.push(prefix + key);
         }
     }
-    return bad;
+    return keys;
 }
 
-function main() {
-    console.log("🔍 i18n Quality Gate: Scanning en.json...");
-
+try {
     if (!fs.existsSync(EN_PATH)) {
-        console.error("❌ en.json not found!");
+        console.error('❌ EN source file missing!');
         process.exit(1);
     }
 
-    const json = JSON.parse(fs.readFileSync(EN_PATH, 'utf-8'));
-    const badKeys = getBadKeys(json);
+    const en = JSON.parse(fs.readFileSync(EN_PATH, 'utf-8'));
+    const enKeys = new Set(getKeys(en));
+    let hasError = false;
 
-    const errors = badKeys.filter(k => STRICT_NAMESPACES.some(ns => k.startsWith(ns + '.') || k === ns));
-    const warnings = badKeys.filter(k => !STRICT_NAMESPACES.some(ns => k.startsWith(ns + '.') || k === ns));
+    TARGET_LOCALES.forEach(locale => {
+        const p = path.join(LOCALE_DIR, `${locale}.json`);
+        if (!fs.existsSync(p)) {
+            console.error(`❌ Missing locale file: ${locale}.json`);
+            hasError = true;
+            return;
+        }
 
-    if (warnings.length > 0) {
-        console.warn(`⚠️ Found ${warnings.length} placeholder translations in non-strict namespaces (Technical Debt).`);
-    }
+        try {
+            const loc = JSON.parse(fs.readFileSync(p, 'utf-8'));
+            const locKeys = new Set(getKeys(loc));
 
-    if (errors.length > 0) {
-        console.error(`❌ Found ${errors.length} invalid translations in STRICT namespaces (${STRICT_NAMESPACES.join(', ')}):`);
-        errors.forEach(e => console.error(`   - ${e}`));
-        console.error("\nRun 'npm run qa:i18n:fill' or manually edit src/messages/en.json to fix.");
+            const missing = [...enKeys].filter(k => !locKeys.has(k));
+            if (missing.length > 0) {
+                console.error(`❌ ${locale} has ${missing.length} missing keys vs EN.`);
+                // Optional: List top 5
+                console.error(`   Example: ${missing.slice(0, 5).join(', ')}...`);
+                hasError = true;
+                // We might choose to NOT fail if we rely on runtime fallback, 
+                // but robust gates usually require key presence to ensure at least English copy is there physically.
+            } else {
+                console.log(`✅ ${locale} matches EN key coverage.`);
+            }
+
+        } catch (_e) {
+            console.error(`❌ Invalid JSON in ${locale}.json`);
+            hasError = true;
+        }
+    });
+
+    if (hasError) {
+        console.error('🚨 i18n Gate FAILED.');
         process.exit(1);
+    } else {
+        console.log('🟢 i18n Gate PASSED.');
+        process.exit(0);
     }
 
-    console.log("✅ i18n Quality Gate Passed in Strict Namespaces.");
+} catch (e) {
+    console.error('❌ Gate script crash:', e);
+    process.exit(1);
 }
-
-main();

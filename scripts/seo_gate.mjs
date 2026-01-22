@@ -13,14 +13,14 @@ const PORT = 3001;
 const BASE_URL = `http://localhost:${PORT}`;
 const MAX_URLS = isLocal ? 50 : 200; // Reduced for local mode
 const REQUIRED_PAPERS = [
-    '/research/papers/a1-cloud-native-enterprise-reference',
-    '/research/papers/a2-high-throughput-distributed-systems',
-    '/research/papers/a3-enterprise-observability-operational-intelligence',
-    '/research/papers/a4-platform-governance-multicloud-hybrid',
-    '/research/papers/a5-monolith-to-cloud-native-modernization',
-    '/research/papers/a6-adaptive-policy-enforcement',
-    '/research/papers/aecp',
-    '/research/papers/scholarly-article'
+    '/en/research/papers/a1-cloud-native-enterprise-reference',
+    '/en/research/papers/a2-high-throughput-distributed-systems',
+    '/en/research/papers/a3-enterprise-observability-operational-intelligence',
+    '/en/research/papers/a4-platform-governance-multicloud-hybrid',
+    '/en/research/papers/a5-monolith-to-cloud-native-modernization',
+    '/en/research/papers/a6-adaptive-policy-enforcement',
+    '/en/research/papers/aecp',
+    '/en/research/papers/scholarly-article'
 ];
 
 // Paths that are allowed to have noindex (secure areas)

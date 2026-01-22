@@ -3,6 +3,7 @@ import { useTranslations } from 'next-intl';
 
 export default function AutomationStackSection() {
     const t = useTranslations('Services.Stack');
+    const st = useTranslations('Sections.AutomationStack');
     return (
         <section id="automation-stack" className="snap-section" style={{ background: 'var(--bg-surface-2)', minHeight: '100vh', display: 'flex', alignItems: 'center', paddingTop: 'var(--section-pt)', paddingBottom: '4rem' }}>
             <div className="container">
@@ -47,9 +48,9 @@ export default function AutomationStackSection() {
                                 <div className="text-xs font-mono text-blue-400">module "azure-landing-zone" &#123;</div>
                                 <div className="text-xs font-mono text-white pl-4">source = "./modules/lz-vwan"</div>
                                 <div className="text-xs font-mono text-white pl-4">regions = ["us-east", "eu-west"]</div>
-                                <div className="text-xs font-mono text-white pl-4">compliance = "strict"</div>
+                                <div className="text-xs font-mono text-white pl-4">{st('complianceValue')}</div>
                                 <div className="text-xs font-mono text-blue-400">&#125;</div>
-                                <div className="mt-2 text-xs font-mono text-green-400">&gt; Applying plan... 142 resources added.</div>
+                                <div className="mt-2 text-xs font-mono text-green-400">{st('applyingPlan')}</div>
                             </div>
                         </div>
                     </div>

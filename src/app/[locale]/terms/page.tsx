@@ -3,6 +3,7 @@ import { Scale, FileText, AlertCircle } from "lucide-react";
 
 export default async function TermsPage() {
     const t = await getTranslations("Terms");
+    const tCompany = await getTranslations("Company");
 
     return (
         <div className="container" style={{ padding: '6rem 0', maxWidth: '900px' }}>
@@ -10,11 +11,12 @@ export default async function TermsPage() {
                 <Scale className="w-16 h-16 mx-auto mb-4 text-blue-500" />
                 <h1 className="text-4xl font-bold mb-4">{t("title")}</h1>
                 <p className="text-zinc-600 dark:text-zinc-400">
-                    {t("lastUpdated")}: December 29, 2025
+                    {t("lastUpdated")}: {t("lastUpdatedDate")}
                 </p>
             </div>
 
             <div className="space-y-8">
+                {/* ... other sections ... */}
                 <section className="glass-panel p-6 rounded-xl">
                     <h2 className="text-2xl font-bold mb-4 flex items-center gap-2">
                         <FileText className="w-6 h-6" />
@@ -86,7 +88,7 @@ export default async function TermsPage() {
                 <section className="glass-panel p-6 rounded-xl">
                     <h2 className="text-2xl font-bold mb-4">{t("contact")}</h2>
                     <p className="text-zinc-700 dark:text-zinc-300 leading-relaxed">
-                        {t("contactText")}: <a href="mailto:omnigcloud@gmail.com" className="text-blue-500 hover:underline">omnigcloud@gmail.com</a>
+                        {t("contactText")}: <a href={`mailto:${tCompany('email')}`} className="text-blue-500 hover:underline">{tCompany('email')}</a>
                     </p>
                 </section>
             </div>

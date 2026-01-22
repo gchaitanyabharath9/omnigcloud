@@ -53,7 +53,7 @@ export default function ComparisonSection() {
                 </div>
 
                 <div style={{ marginTop: '3rem', fontSize: '0.8rem', opacity: 0.5, textAlign: 'center' }}>
-                    {t('footer')}
+                    {t('footer.copyright')}
                 </div>
             </div>
         </section>

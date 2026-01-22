@@ -1,8 +1,6 @@
 import { getRequestConfig } from 'next-intl/server';
 import { logMissingKey } from '../lib/i18n-logger';
-
-// Supported locales list
-export const locales = ['en', 'es', 'fr', 'de', 'zh', 'hi', 'ja', 'ko'];
+import { locales } from '@/navigation';
 
 function isObject(item: any) {
     return (item && typeof item === 'object' && !Array.isArray(item));
@@ -52,7 +50,7 @@ export async function getMessages(locale: string) {
 export default getRequestConfig(async ({ requestLocale }) => {
     let locale = await requestLocale;
 
-    if (!locale || !locales.includes(locale)) {
+    if (!locale || !locales.includes(locale as any)) {
         locale = 'en';
     }
 
@@ -63,7 +61,11 @@ export default getRequestConfig(async ({ requestLocale }) => {
         messages,
         onError(error) {
             if (error.code === 'MISSING_MESSAGE') {
-                const key = error.message.match(/key "([^"]+)"/)?.[1] || 'unknown';
+                const match = error.message.match(/key "([^"]+)"/);
+                const key = match?.[1] || 'unknown';
+                if (key === 'unknown') {
+                    console.error(`[i18n-Missing] Full message: ${error.message}`);
+                }
                 logMissingKey(locale as string, key);
             } else {
                 console.error(`[i18n-Config Error]:`, error);

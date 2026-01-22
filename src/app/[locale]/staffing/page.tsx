@@ -1,13 +1,15 @@
 import { Users, Shield, Brain, UserCheck, Briefcase, Calculator } from "lucide-react";
+import { useTranslations } from "next-intl";
 
 export default function StaffingPage() {
+    const t = useTranslations('Staffing');
     return (
         <section className="container section-padding">
             <div className="animate-fade-in">
                 <div style={{ textAlign: 'center', marginBottom: '4rem' }}>
-                    <h1 className="text-gradient" style={{ fontSize: '3.5rem', marginBottom: '1.5rem', fontWeight: 800 }}>Global Talent Solutions</h1>
+                    <h1 className="text-gradient" style={{ fontSize: '3.5rem', marginBottom: '1.5rem', fontWeight: 800 }}>{t('title')}</h1>
                     <p style={{ fontSize: '1.25rem', color: 'rgba(255, 255, 255, 0.9)', maxWidth: '850px', margin: '0 auto', lineHeight: '1.7' }}>
-                        Deploy elite engineering squads within 48 hours. Our vetted talent pool spans 30+ countries, delivering specialized expertise for your most critical cloud initiatives.
+                        {t('subtitle')}
                     </p>
                 </div>
 
@@ -33,8 +35,8 @@ export default function StaffingPage() {
                         padding: '3rem 2rem 2rem',
                         color: 'white'
                     }}>
-                        <h3 style={{ fontSize: '2rem', marginBottom: '0.75rem' }}>Elite Engineering Talent, On Demand</h3>
-                        <p style={{ fontSize: '1.1rem', opacity: 0.9, maxWidth: '800px' }}>Deploy vetted cloud architects, DevOps engineers, and AI specialists within 48 hours. Our global talent pool spans 30+ countries.</p>
+                        <h3 style={{ fontSize: '2rem', marginBottom: '0.75rem' }}>{t('visual.title')}</h3>
+                        <p style={{ fontSize: '1.1rem', opacity: 0.9, maxWidth: '800px' }}>{t('visual.subtitle')}</p>
                     </div>
                 </div>
 
@@ -48,8 +50,8 @@ export default function StaffingPage() {
                             </div>
                         </div>
                         <div style={{ padding: '2rem', textAlign: 'center' }}>
-                            <h3 style={{ fontSize: '1.5rem', color: 'white', marginBottom: '0.75rem' }}>Cloud Architects</h3>
-                            <p style={{ color: 'rgba(255, 255, 255, 0.75)', fontSize: '1rem' }}>AWS/Azure/GCP certified experts to design resilient high-availability systems.</p>
+                            <h3 style={{ fontSize: '1.5rem', color: 'white', marginBottom: '0.75rem' }}>{t('roles.architects.title')}</h3>
+                            <p style={{ color: 'rgba(255, 255, 255, 0.75)', fontSize: '1rem' }}>{t('roles.architects.desc')}</p>
                         </div>
                     </div>
 
@@ -60,8 +62,8 @@ export default function StaffingPage() {
                             </div>
                         </div>
                         <div style={{ padding: '2rem', textAlign: 'center' }}>
-                            <h3 style={{ fontSize: '1.5rem', color: 'white', marginBottom: '0.75rem' }}>Security Engineers</h3>
-                            <p style={{ color: 'rgba(255, 255, 255, 0.75)', fontSize: '1rem' }}>DevSecOps specialists to harden your supply chain (CIS, NIST frameworks).</p>
+                            <h3 style={{ fontSize: '1.5rem', color: 'white', marginBottom: '0.75rem' }}>{t('roles.security.title')}</h3>
+                            <p style={{ color: 'rgba(255, 255, 255, 0.75)', fontSize: '1rem' }}>{t('roles.security.desc')}</p>
                         </div>
                     </div>
 
@@ -72,23 +74,23 @@ export default function StaffingPage() {
                             </div>
                         </div>
                         <div style={{ padding: '2rem', textAlign: 'center' }}>
-                            <h3 style={{ fontSize: '1.5rem', color: 'white', marginBottom: '0.75rem' }}>AI/ML Researchers</h3>
-                            <p style={{ color: 'rgba(255, 255, 255, 0.75)', fontSize: '1rem' }}>Data scientists building predictive models and advanced Generative AI agents.</p>
+                            <h3 style={{ fontSize: '1.5rem', color: 'white', marginBottom: '0.75rem' }}>{t('roles.ai.title')}</h3>
+                            <p style={{ color: 'rgba(255, 255, 255, 0.75)', fontSize: '1rem' }}>{t('roles.ai.desc')}</p>
                         </div>
                     </div>
                 </div>
                 <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '2rem' }}>
                     <div className="glass-panel" style={{ padding: '2rem', borderRadius: 'var(--radius)' }}>
-                        <h3 style={{ color: 'white', marginBottom: '0.5rem' }}>Contract Hire</h3>
-                        <p style={{ color: 'rgba(255, 255, 255, 0.75)' }}>Flexible engagement models for short-term projects and rapid scaling.</p>
+                        <h3 style={{ color: 'white', marginBottom: '0.5rem' }}>{t('engagement.contract.title')}</h3>
+                        <p style={{ color: 'rgba(255, 255, 255, 0.75)' }}>{t('engagement.contract.desc')}</p>
                     </div>
                     <div className="glass-panel" style={{ padding: '2rem', borderRadius: 'var(--radius)' }}>
-                        <h3 style={{ color: 'white', marginBottom: '0.5rem' }}>Managed Teams</h3>
-                        <p style={{ color: 'rgba(255, 255, 255, 0.75)' }}>End-to-end delivery teams managed by OmniGCloud for turnkey implementations.</p>
+                        <h3 style={{ color: 'white', marginBottom: '0.5rem' }}>{t('engagement.managed.title')}</h3>
+                        <p style={{ color: 'rgba(255, 255, 255, 0.75)' }}>{t('engagement.managed.desc')}</p>
                     </div>
                     <div className="glass-panel" style={{ padding: '2rem', borderRadius: 'var(--radius)' }}>
-                        <h3 style={{ color: 'white', marginBottom: '0.5rem' }}>Strategic Consulting</h3>
-                        <p style={{ color: 'rgba(255, 255, 255, 0.75)' }}>Advisory services from veteran CTOs and Enterprise Architects.</p>
+                        <h3 style={{ color: 'white', marginBottom: '0.5rem' }}>{t('engagement.consulting.title')}</h3>
+                        <p style={{ color: 'rgba(255, 255, 255, 0.75)' }}>{t('engagement.consulting.desc')}</p>
                     </div>
                 </div>
             </div>

@@ -59,18 +59,21 @@ async function run() {
         const relativeFile = path.relative(process.cwd(), file);
 
         // 1. Detect Namespaces in the file
-        // Limits: simpler parser assumes one main namespace per component or locally scoped
-        // We'll scan for all useTranslations and map variable names? 
-        // e.g. const t = useTranslations('Header');
+        const nsMatches = [
+            ...content.matchAll(/useTranslations\(\s*['"]([^'"]+)['"]\s*\)/g),
+            ...content.matchAll(/getTranslations\(\s*['"]([^'"]+)['"]\s*\)/g)
+        ];
 
-        // Simple approach: Find all `useTranslations('NS')` and assume `t` uses it.
-        // If multiple `t` variables (t1, t2), this simple scan might fail, but it's a start.
-
-        let namespace = 'Common'; // Default fallback? Or undefined?
-        let nsMatch;
-        while ((nsMatch = USE_TRANS_PATTERN.exec(content)) !== null) {
-            namespace = nsMatch[1];
+        // We'll collect all namespaces found in the file.
+        // For simplicity, if we find any key that doesn't exist in the first NS,
+        // we might check others. But usually it's one main NS.
+        let fileNamespaces = nsMatches.map(m => m[1]);
+        if (fileNamespaces.length === 0) {
+            fileNamespaces = ['Common']; // Default fallback
         }
+
+        // Use the first namespace found as the primary one for this file's t() calls
+        const namespace = fileNamespaces[0];
 
         // 2. Scan for t('key') calls
         let tMatch;
@@ -95,7 +98,7 @@ async function run() {
             foundKeys.push({
                 file: relativeFile,
                 line: getLineNumber(content, idx),
-                namespace,
+                namespace: namespace,
                 key,
                 fullKey,
                 type: 't_call'

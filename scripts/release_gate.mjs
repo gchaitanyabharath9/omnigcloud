@@ -185,7 +185,7 @@ async function runGateD() {
 async function runGateE() {
     log.section('Running Gate E: i18n...');
     const start = Date.now();
-    const code = await runCommand('node', ['scripts/i18n_gate.mjs']);
+    const code = await runCommand('npx', ['tsx', 'scripts/i18n_gate.ts']);
     const duration = ((Date.now() - start) / 1000).toFixed(2);
 
     if (code !== 0) {

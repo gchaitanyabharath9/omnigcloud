@@ -80,10 +80,10 @@ export default async function ProductsPage() {
                             </p>
                             <div className="flex gap-4 animate-fade-in-up" style={{ animationDelay: '0.4s' }}>
                                 <Link href={`/${locale}/contact`} className="btn-primary" style={{ padding: '0.8rem 1.8rem', borderRadius: '0.75rem' }}>
-                                    Book Demo
+                                    {t('hero.ctaPrimary')}
                                 </Link>
                                 <Link href="#product-stream" className="btn-secondary" style={{ padding: '0.8rem 1.8rem', borderRadius: '0.75rem' }}>
-                                    View Suite
+                                    {t('hero.ctaSecondary')}
                                 </Link>
                             </div>
                         </div>
@@ -123,15 +123,15 @@ export default async function ProductsPage() {
                 pageKey="Products"
                 imageUrl="/images/seo/architecture.png"
                 alt="Product Orchestration Map"
-                description="Our product suite operates as a unified kernel, ensuring that every modernization action—from refactor to deploy—is governed by the same sovereign intent mesh."
+                description={t('visualSectionDesc')}
             />
 
             <DeepDive
                 pageKey="Products"
                 relatedLinks={[
-                    { label: "Executive Dashboard", href: "/dashboard" },
-                    { label: "Sovereign Solutions", href: "/solutions" },
-                    { label: "Platform Deep Dive", href: "/platform" }
+                    { label: t('deepDive.links.dashboard'), href: "/dashboard" },
+                    { label: t('deepDive.links.solutions'), href: "/solutions" },
+                    { label: t('deepDive.links.platform'), href: "/platform" }
                 ]}
             />
 

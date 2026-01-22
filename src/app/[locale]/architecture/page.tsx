@@ -2,50 +2,38 @@
 
 import React from 'react';
 import { Layers, Shield, Cpu, Zap, Share2, Server, Database, Lock, Search, Code, Workflow, BarChart4 } from 'lucide-react';
-import { useLocale } from 'next-intl';
+import { useTranslations } from 'next-intl';
+import { Link } from '@/navigation';
 
-const layers = [
-    {
-        title: "Autonomous Discovery Layer",
-        icon: Search,
-        desc: "Ingests legacy application signatures, network topology, and security policies using AI scan engines. Maps 100% of dependencies without agent installation.",
-        tech: ["Legacy Scan Engine", "Dependency Mapper", "Policy Ingestor"]
-    },
-    {
-        title: "Policy & Governance Plane",
-        icon: Shield,
-        desc: "A centralized control plane where sovereign compliance rules (GDPR, HIPAA, SOC2) are defined once and enforced globally across all cloud regions.",
-        tech: ["Open Policy Agent", "Sovereign Rule Engine", "Compliance Guard"]
-    },
-    {
-        title: "AI Modernization Engine",
-        icon: Cpu,
-        desc: "The AECP core analyze legacy code (Java, .NET) and automatically generates modernization blueprints for RedHat OCP or Azure native services.",
-        tech: ["LLM Blueprinting", "Refactor AI", "IaC Generator"]
-    },
-    {
-        title: "Multi-Cloud Execution Mesh",
-        icon: Share2,
-        desc: "Orchestrates deployment and state synchronization across AWS, Azure, GCP, and private cloud nodes. Ensures 100% vendor agnostic runtime.",
-        tech: ["Cross-Cloud Mesh", "State Synchronizer", "Edge Broker"]
-    }
-];
+const layerIcons = [Search, Shield, Cpu, Share2];
 
 export default function ArchitecturePage() {
-    const locale = useLocale();
+    const t = useTranslations("Architecture");
+
+    const layers = [0, 1, 2, 3].map(i => ({
+        title: t(`layers.${i}.title`),
+        icon: layerIcons[i],
+        desc: t(`layers.${i}.desc`),
+        tech: [0, 1, 2].map(j => t(`layers.${i}.tech.${j}`))
+    }));
+
+    const securityItems = [0, 1, 2].map(i => ({
+        t: t(`security.items.${i}.t`),
+        d: t(`security.items.${i}.d`)
+    }));
+
     return (
         <div className="bg-background min-h-screen pt-24">
             <div className="container">
                 {/* Header Section */}
                 <div className="max-w-4xl mb-20">
                     <div className="flex items-center gap-2 text-primary font-mono text-sm font-black uppercase tracking-widest mb-4">
-                        <Layers size={18} /> Architecture & System Design
+                        <Layers size={18} /> {t("hero.badge")}
                     </div>
-                    <h1 className="text-5xl lg:text-7xl font-black mb-8 leading-tight tracking-tighter">
-                        The Sovereign <br /><span className="text-primary text-gradient">G-Framework</span>
+                    <h1 className="text-5xl lg:text-7xl font-black mb-8 leading-tight tracking-tighter" dangerouslySetInnerHTML={{ __html: t.raw("hero.title").replace("G-Framework", "<span class='text-primary text-gradient'>G-Framework</span>") }}>
                     </h1>
                     <p className="text-xl text-muted-foreground leading-relaxed">
-                        OmniGCloud's architecture is built on the principle of <strong>Absolute Abstraction</strong>. Our framework disconnects policy from infrastructure, allowing enterprises to move workloads across any cloud provider while maintaining 100% governance continuity.
+                        {t("hero.subtitle")}
                     </p>
                 </div>
 
@@ -55,13 +43,13 @@ export default function ArchitecturePage() {
                     <div className="relative text-center flex flex-col items-center gap-6">
                         <Share2 size={80} className="text-primary animate-pulse" />
                         <div>
-                            <h3 className="text-2xl font-bold mb-2">OmniGCloud Unified Control Plane</h3>
-                            <p className="text-muted-foreground">Reference Model v8.4.2 // Autonomous Orchestration</p>
+                            <h3 className="text-2xl font-bold mb-2">{t("diagram.title")}</h3>
+                            <p className="text-muted-foreground">{t("diagram.subtitle")}</p>
                         </div>
                         <div className="flex gap-4">
-                            <span className="px-4 py-2 bg-blue-500/10 border border-blue-500/20 rounded-full text-xs font-mono">SOVEREIGN_MESH</span>
-                            <span className="px-4 py-2 bg-purple-500/10 border border-purple-500/20 rounded-full text-xs font-mono">AI_BRAIN_V2</span>
-                            <span className="px-4 py-2 bg-emerald-500/10 border border-emerald-500/20 rounded-full text-xs font-mono">POLICY_SYNC</span>
+                            <span className="px-4 py-2 bg-blue-500/10 border border-blue-500/20 rounded-full text-xs font-mono">{t("diagram.labels.mesh")}</span>
+                            <span className="px-4 py-2 bg-purple-500/10 border border-purple-500/20 rounded-full text-xs font-mono">{t("diagram.labels.brain")}</span>
+                            <span className="px-4 py-2 bg-emerald-500/10 border border-emerald-500/20 rounded-full text-xs font-mono">{t("diagram.labels.sync")}</span>
                         </div>
                     </div>
                 </div>
@@ -91,18 +79,14 @@ export default function ArchitecturePage() {
                     <div className="grid lg:grid-cols-2 gap-16 items-center">
                         <div>
                             <div className="flex items-center gap-2 text-emerald-500 font-mono text-sm font-black uppercase tracking-widest mb-4">
-                                <Lock size={16} /> Security-Integrated Design
+                                <Lock size={16} /> {t("security.badge")}
                             </div>
-                            <h2 className="text-4xl font-black mb-6">Zero-Trust Modernization</h2>
+                            <h2 className="text-4xl font-black mb-6">{t("security.title")}</h2>
                             <p className="text-lg text-muted-foreground mb-10 leading-relaxed">
-                                Security is not a layer on top of OmniGCloud—it is the material the framework is built from. We implement <strong>Adversary-Aware Pathing</strong> and <strong>Cryptographic Isolation</strong> for every service modernizing on our platform.
+                                {t("security.desc")}
                             </p>
                             <div className="space-y-6">
-                                {[
-                                    { t: "FIPS 140-3 Compliance", d: "End-to-end encryption for metadata synchronization." },
-                                    { t: "Identity Federation", d: "Deep integration with Azure AD, Okta, and sovereign IDP." },
-                                    { t: "Isolation Protocols", d: "Logical and physical separation for multi-tenant high-security grids." }
-                                ].map((s, i) => (
+                                {securityItems.map((s, i) => (
                                     <div key={i} className="flex gap-4">
                                         <CheckCircle className="text-emerald-500 shrink-0" size={20} />
                                         <div>
@@ -116,8 +100,8 @@ export default function ArchitecturePage() {
                         <div className="bg-slate-900/80 border border-white/5 rounded-3xl p-8 relative overflow-hidden aspect-square flex items-center justify-center">
                             <Shield size={160} className="text-emerald-500/20 absolute" />
                             <div className="relative text-center">
-                                <div className="text-5xl font-black text-emerald-500 mb-2">99.99%</div>
-                                <div className="text-xs font-mono text-emerald-400">POLICY_ENFORCEMENT_ACCURACY</div>
+                                <div className="text-5xl font-black text-emerald-500 mb-2">{t("security.stat.val")}</div>
+                                <div className="text-xs font-mono text-emerald-400">{t("security.stat.label")}</div>
                             </div>
                         </div>
                     </div>
@@ -125,73 +109,73 @@ export default function ArchitecturePage() {
 
                 {/* Reference Architectures List */}
                 <div className="mb-24">
-                    <h2 className="text-3xl font-black mb-12">Reference Standards</h2>
+                    <h2 className="text-3xl font-black mb-12">{t("standards.title")}</h2>
                     <div className="grid md:grid-cols-2 gap-8">
                         {/* Flagship A1 Paper */}
-                        <a href={`/${locale}/research/papers/a1-cloud-native-enterprise-reference`} className="glass-panel p-8 rounded-2xl group border border-emerald-500/20 hover:border-emerald-500/50 transition-all md:col-span-2 relative overflow-hidden">
-                            <div className="absolute top-0 right-0 bg-emerald-500 text-black text-[10px] font-bold px-3 py-1 uppercase tracking-widest rounded-bl-xl">Flagship Standard</div>
-                            <span className="text-xs font-mono text-emerald-500 mb-4 block">A1-REF-STD</span>
-                            <h3 className="text-3xl font-bold mb-4 group-hover:text-emerald-400 transition-colors">A1: Reference Architecture for Cloud-Native Enterprise Platforms</h3>
+                        <Link href="/research/papers/a1-cloud-native-enterprise-reference" className="glass-panel p-8 rounded-2xl group border border-emerald-500/20 hover:border-emerald-500/50 transition-all md:col-span-2 relative overflow-hidden">
+                            <div className="absolute top-0 right-0 bg-emerald-500 text-black text-[10px] font-bold px-3 py-1 uppercase tracking-widest rounded-bl-xl">{t("standards.items.a1.badge")}</div>
+                            <span className="text-xs font-mono text-emerald-500 mb-4 block">{t("standards.items.a1.code")}</span>
+                            <h3 className="text-3xl font-bold mb-4 group-hover:text-emerald-400 transition-colors">{t("standards.items.a1.title")}</h3>
                             <p className="text-muted-foreground mb-6 text-lg max-w-3xl">
-                                The definitive technical standard for implementing sovereign, multi-cloud platforms maximizing latency budgets and governance. Covers domain isolation, cell-based topology, and predictive capacity modeling.
+                                {t("standards.items.a1.desc")}
                             </p>
                             <div className="flex items-center text-sm font-bold mt-auto text-emerald-500">
-                                Read A1 Specification <span className="ml-2 group-hover:translate-x-1 transition-transform">→</span>
+                                {t("standards.items.a1.link")} <span className="ml-2 group-hover:translate-x-1 transition-transform">→</span>
                             </div>
-                        </a>
+                        </Link>
 
-                        <a href={`/${locale}/research/papers/a2-high-throughput-distributed-systems`} className="glass-panel p-8 rounded-2xl group border border-white/5 hover:border-primary/50 transition-all">
-                            <span className="text-xs font-mono text-primary mb-4 block">A2-DIST-SYS</span>
-                            <h3 className="text-2xl font-bold mb-4 group-hover:text-primary transition-colors">A2: High-Throughput Distributed Systems</h3>
+                        <Link href="/research/papers/a2-high-throughput-distributed-systems" className="glass-panel p-8 rounded-2xl group border border-white/5 hover:border-primary/50 transition-all">
+                            <span className="text-xs font-mono text-primary mb-4 block">{t("standards.items.a2.code")}</span>
+                            <h3 className="text-2xl font-bold mb-4 group-hover:text-primary transition-colors">{t("standards.items.a2.title")}</h3>
                             <p className="text-muted-foreground mb-6">
-                                Handling massive concurrency with non-blocking I/O and reactive streams.
+                                {t("standards.items.a2.desc")}
                             </p>
                             <div className="flex items-center text-sm font-bold mt-auto">
-                                Read A2 <span className="ml-2 group-hover:translate-x-1 transition-transform">→</span>
+                                {t("standards.items.a2.link")} <span className="ml-2 group-hover:translate-x-1 transition-transform">→</span>
                             </div>
-                        </a>
+                        </Link>
 
-                        <a href={`/${locale}/research/papers/a3-enterprise-observability-operational-intelligence`} className="glass-panel p-8 rounded-2xl group border border-white/5 hover:border-primary/50 transition-all">
-                            <span className="text-xs font-mono text-primary mb-4 block">A3-OBSERVABILITY</span>
-                            <h3 className="text-2xl font-bold mb-4 group-hover:text-primary transition-colors">A3: Enterprise Observability Patterns</h3>
+                        <Link href="/research/papers/a3-enterprise-observability-operational-intelligence" className="glass-panel p-8 rounded-2xl group border border-white/5 hover:border-primary/50 transition-all">
+                            <span className="text-xs font-mono text-primary mb-4 block">{t("standards.items.a3.code")}</span>
+                            <h3 className="text-2xl font-bold mb-4 group-hover:text-primary transition-colors">{t("standards.items.a3.title")}</h3>
                             <p className="text-muted-foreground mb-6">
-                                Beyond logging: Distributed tracing, correlation IDs, and AI-driven alerting.
+                                {t("standards.items.a3.desc")}
                             </p>
                             <div className="flex items-center text-sm font-bold mt-auto">
-                                Read A3 <span className="ml-2 group-hover:translate-x-1 transition-transform">→</span>
+                                {t("standards.items.a3.link")} <span className="ml-2 group-hover:translate-x-1 transition-transform">→</span>
                             </div>
-                        </a>
+                        </Link>
 
-                        <a href={`/${locale}/research/papers/a4-platform-governance-multicloud-hybrid`} className="glass-panel p-8 rounded-2xl group border border-white/5 hover:border-primary/50 transition-all">
-                            <span className="text-xs font-mono text-primary mb-4 block">A4-GOVERNANCE</span>
-                            <h3 className="text-2xl font-bold mb-4 group-hover:text-primary transition-colors">A4: Platform Governance & Policy-as-Code</h3>
+                        <Link href="/research/papers/a4-platform-governance-multicloud-hybrid" className="glass-panel p-8 rounded-2xl group border border-white/5 hover:border-primary/50 transition-all">
+                            <span className="text-xs font-mono text-primary mb-4 block">{t("standards.items.a4.code")}</span>
+                            <h3 className="text-2xl font-bold mb-4 group-hover:text-primary transition-colors">{t("standards.items.a4.title")}</h3>
                             <p className="text-muted-foreground mb-6">
-                                Decentralized enforcement of security policies across hybrid cloud estates.
+                                {t("standards.items.a4.desc")}
                             </p>
                             <div className="flex items-center text-sm font-bold mt-auto">
-                                Read A4 <span className="ml-2 group-hover:translate-x-1 transition-transform">→</span>
+                                {t("standards.items.a4.link")} <span className="ml-2 group-hover:translate-x-1 transition-transform">→</span>
                             </div>
-                        </a>
+                        </Link>
 
-                        <a href={`/${locale}/research/papers/a5-monolith-to-cloud-native-modernization`} className="glass-panel p-8 rounded-2xl group border border-white/5 hover:border-primary/50 transition-all">
-                            <span className="text-xs font-mono text-primary mb-4 block">A5-MODERNIZATION</span>
-                            <h3 className="text-2xl font-bold mb-4 group-hover:text-primary transition-colors">A5: Monolith Modernization Strategy</h3>
+                        <Link href="/research/papers/a5-monolith-to-cloud-native-modernization" className="glass-panel p-8 rounded-2xl group border border-white/5 hover:border-primary/50 transition-all">
+                            <span className="text-xs font-mono text-primary mb-4 block">{t("standards.items.a5.code")}</span>
+                            <h3 className="text-2xl font-bold mb-4 group-hover:text-primary transition-colors">{t("standards.items.a5.title")}</h3>
                             <p className="text-muted-foreground mb-6">
-                                The Strangler Fig pattern applied to large-scale enterprise legacy systems.
+                                {t("standards.items.a5.desc")}
                             </p>
                             <div className="flex items-center text-sm font-bold mt-auto">
-                                Read A5 <span className="ml-2 group-hover:translate-x-1 transition-transform">→</span>
+                                {t("standards.items.a5.link")} <span className="ml-2 group-hover:translate-x-1 transition-transform">→</span>
                             </div>
-                        </a>
+                        </Link>
                     </div>
                 </div>
 
                 {/* Architecture CTA */}
                 <div className="py-24 text-center">
-                    <h2 className="text-3xl font-black mb-8 opacity-50">Peer-Reviewed architecture frameworks for regulated enterprise.</h2>
+                    <h2 className="text-3xl font-black mb-8 opacity-50">{t("cta.title")}</h2>
                     <div className="flex flex-wrap justify-center gap-4">
-                        <a href="/en/docs/whitepaper" className="btn-primary py-4 px-10">Read Whitepaper</a>
-                        <a href="/en/research" className="btn-secondary py-4 px-10">Technical Library</a>
+                        <Link href="/docs/whitepaper" className="btn-primary py-4 px-10">{t("cta.whitepaper")}</Link>
+                        <Link href="/research" className="btn-secondary py-4 px-10">{t("cta.library")}</Link>
                     </div>
                 </div>
             </div>

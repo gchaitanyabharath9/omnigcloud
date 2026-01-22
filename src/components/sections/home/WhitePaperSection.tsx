@@ -49,20 +49,20 @@ export default function WhitePaperSection() {
                     {/* Right side: Download & Info */}
                     <div>
                         <div className="badge badge-primary-subtle mb-4">{t('badge')}</div>
-                        <h3 style={{ fontSize: '1.75rem', fontWeight: 800, marginBottom: '1.5rem' }}>{t('downloadTitle')}</h3>
+                        <h3 style={{ fontSize: '1.75rem', fontWeight: 800, marginBottom: '1.5rem' }}>{t('download_title')}</h3>
                         <p style={{ opacity: 0.7, marginBottom: '2rem', lineHeight: 1.6 }}>
-                            {t('downloadSubtitle')}
+                            {t('download_subtitle')}
                         </p>
 
                         <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
                             <Link href="/docs/whitepaper" className="btn-primary" style={{ display: 'inline-flex', alignItems: 'center', justifyContent: 'center', gap: '0.75rem' }}>
-                                <Download size={20} /> {t('readOnline')}
+                                <Download size={20} /> {t('read_online')}
                             </Link>
                             <Link href="/docs/architecture" className="btn-secondary" style={{ display: 'inline-flex', alignItems: 'center', justifyContent: 'center', gap: '0.75rem' }}>
-                                <FileText size={20} /> {t('designPatterns')}
+                                <FileText size={20} /> {t('design_patterns')}
                             </Link>
                             <p style={{ fontSize: '0.7rem', textAlign: 'center', opacity: 0.5 }}>
-                                {t('footer')}
+                                {t('footer.copyright')}
                             </p>
                         </div>
                     </div>
@@ -71,31 +71,31 @@ export default function WhitePaperSection() {
                 {/* Research Impact Stats */}
                 <div style={{ marginBottom: '3rem', marginTop: '6rem' }}>
                     <h3 style={{ fontSize: '1.5rem', fontWeight: 900, marginBottom: '1.5rem', textAlign: 'center' }}>
-                        Research Impact & Citations
+                        {t('impact.title')}
                     </h3>
                     <div className="grid-3">
                         <div className="glass-panel" style={{ padding: '2rem', borderRadius: '1.5rem', textAlign: 'center' }}>
                             <TrendingUp size={28} color="#10b981" style={{ margin: '0 auto 1rem' }} />
-                            <div style={{ fontSize: '2.5rem', fontWeight: 950, color: 'var(--primary)', marginBottom: '0.5rem' }}>847</div>
-                            <div style={{ fontSize: '0.9rem', opacity: 0.6 }}>Academic Citations</div>
+                            <div style={{ fontSize: '2.5rem', fontWeight: 950, color: 'var(--primary)', marginBottom: '0.5rem' }}>{t('impact.citations.value')}</div>
+                            <div style={{ fontSize: '0.9rem', opacity: 0.6 }}>{t('impact.citations.label')}</div>
                             <p style={{ fontSize: '0.75rem', opacity: 0.5, marginTop: '0.75rem' }}>
-                                Referenced in cloud governance research
+                                {t('impact.citations.desc')}
                             </p>
                         </div>
                         <div className="glass-panel" style={{ padding: '2rem', borderRadius: '1.5rem', textAlign: 'center' }}>
                             <Users size={28} color="#3b82f6" style={{ margin: '0 auto 1rem' }} />
-                            <div style={{ fontSize: '2.5rem', fontWeight: 950, color: 'var(--primary)', marginBottom: '0.5rem' }}>12K+</div>
-                            <div style={{ fontSize: '0.9rem', opacity: 0.6 }}>Downloads</div>
+                            <div style={{ fontSize: '2.5rem', fontWeight: 950, color: 'var(--primary)', marginBottom: '0.5rem' }}>{t('impact.downloads.value')}</div>
+                            <div style={{ fontSize: '0.9rem', opacity: 0.6 }}>{t('impact.downloads.label')}</div>
                             <p style={{ fontSize: '0.75rem', opacity: 0.5, marginTop: '0.75rem' }}>
-                                By CTOs, architects, and compliance officers
+                                {t('impact.downloads.desc')}
                             </p>
                         </div>
                         <div className="glass-panel" style={{ padding: '2rem', borderRadius: '1.5rem', textAlign: 'center' }}>
                             <Building size={28} color="#f59e0b" style={{ margin: '0 auto 1rem' }} />
-                            <div style={{ fontSize: '2.5rem', fontWeight: 950, color: 'var(--primary)', marginBottom: '0.5rem' }}>340+</div>
-                            <div style={{ fontSize: '0.9rem', opacity: 0.6 }}>Enterprise Implementations</div>
+                            <div style={{ fontSize: '2.5rem', fontWeight: 950, color: 'var(--primary)', marginBottom: '0.5rem' }}>{t('impact.implementations.value')}</div>
+                            <div style={{ fontSize: '0.9rem', opacity: 0.6 }}>{t('impact.implementations.label')}</div>
                             <p style={{ fontSize: '0.75rem', opacity: 0.5, marginTop: '0.75rem' }}>
-                                Framework adopted in production environments
+                                {t('impact.implementations.desc')}
                             </p>
                         </div>
                     </div>
@@ -104,49 +104,49 @@ export default function WhitePaperSection() {
                 {/* Case Study Previews */}
                 <div style={{ marginTop: '6rem' }}>
                     <h3 style={{ fontSize: '1.5rem', fontWeight: 900, marginBottom: '1.5rem', textAlign: 'center' }}>
-                        Featured Implementation Case Studies
+                        {t('caseStudies.title')}
                     </h3>
                     <div className="grid-2">
                         <div className="glass-panel" style={{ padding: '2rem', borderRadius: '1.5rem', borderLeft: '4px solid #10b981' }}>
                             <div style={{ fontSize: '0.7rem', fontWeight: 800, color: '#10b981', marginBottom: '0.75rem', letterSpacing: '0.05em' }}>
-                                FINANCIAL SERVICES
+                                {t('caseStudies.finance.badge')}
                             </div>
                             <h4 style={{ fontSize: '1.25rem', fontWeight: 900, marginBottom: '1rem' }}>
-                                Global Bank Achieves 99.99% Compliance
+                                {t('caseStudies.finance.title')}
                             </h4>
                             <p style={{ fontSize: '0.9rem', opacity: 0.7, marginBottom: '1.5rem', lineHeight: 1.5 }}>
-                                Tier-1 bank automated GDPR, PCI-DSS, and SOC2 compliance across 45 cloud accounts, reducing audit prep from 6 weeks to 48 hours.
+                                {t('caseStudies.finance.desc')}
                             </p>
                             <div style={{ display: 'flex', gap: '1.5rem', fontSize: '0.8rem' }}>
                                 <div>
-                                    <div style={{ fontWeight: 900, color: 'var(--primary)', fontSize: '1.25rem' }}>$2.4M</div>
-                                    <div style={{ opacity: 0.6 }}>Annual Savings</div>
+                                    <div style={{ fontWeight: 900, color: 'var(--primary)', fontSize: '1.25rem' }}>{t('caseStudies.finance.stat1.value')}</div>
+                                    <div style={{ opacity: 0.6 }}>{t('caseStudies.finance.stat1.label')}</div>
                                 </div>
                                 <div>
-                                    <div style={{ fontWeight: 900, color: 'var(--primary)', fontSize: '1.25rem' }}>14 days</div>
-                                    <div style={{ opacity: 0.6 }}>Implementation</div>
+                                    <div style={{ fontWeight: 900, color: 'var(--primary)', fontSize: '1.25rem' }}>{t('caseStudies.finance.stat2.value')}</div>
+                                    <div style={{ opacity: 0.6 }}>{t('caseStudies.finance.stat2.label')}</div>
                                 </div>
                             </div>
                         </div>
 
                         <div className="glass-panel" style={{ padding: '2rem', borderRadius: '1.5rem', borderLeft: '4px solid #3b82f6' }}>
                             <div style={{ fontSize: '0.7rem', fontWeight: 800, color: '#3b82f6', marginBottom: '0.75rem', letterSpacing: '0.05em' }}>
-                                HEALTHCARE
+                                {t('caseStudies.healthcare.badge')}
                             </div>
                             <h4 style={{ fontSize: '1.25rem', fontWeight: 900, marginBottom: '1rem' }}>
-                                Hospital Chain Secures Patient Data
+                                {t('caseStudies.healthcare.title')}
                             </h4>
                             <p style={{ fontSize: '0.9rem', opacity: 0.7, marginBottom: '1.5rem', lineHeight: 1.5 }}>
-                                Multi-national healthcare provider achieved HIPAA compliance across AWS, Azure, and on-premise systems with zero-trust architecture.
+                                {t('caseStudies.healthcare.desc')}
                             </p>
                             <div style={{ display: 'flex', gap: '1.5rem', fontSize: '0.8rem' }}>
                                 <div>
-                                    <div style={{ fontWeight: 900, color: 'var(--primary)', fontSize: '1.25rem' }}>100%</div>
-                                    <div style={{ opacity: 0.6 }}>HIPAA Compliant</div>
+                                    <div style={{ fontWeight: 900, color: 'var(--primary)', fontSize: '1.25rem' }}>{t('caseStudies.healthcare.stat1.value')}</div>
+                                    <div style={{ opacity: 0.6 }}>{t('caseStudies.healthcare.stat1.label')}</div>
                                 </div>
                                 <div>
-                                    <div style={{ fontWeight: 900, color: 'var(--primary)', fontSize: '1.25rem' }}>3M+</div>
-                                    <div style={{ opacity: 0.6 }}>Records Protected</div>
+                                    <div style={{ fontWeight: 900, color: 'var(--primary)', fontSize: '1.25rem' }}>{t('caseStudies.healthcare.stat2.value')}</div>
+                                    <div style={{ opacity: 0.6 }}>{t('caseStudies.healthcare.stat2.label')}</div>
                                 </div>
                             </div>
                         </div>

@@ -12,7 +12,10 @@ function ChartSkeleton() {
     return <div className="w-full h-full bg-slate-800/20 animate-pulse rounded-xl" />;
 }
 
+import { useTranslations } from 'next-intl';
+
 export default function SecurityPerformanceSection() {
+    const t = useTranslations('Security.performance');
     const [data, setData] = useState<any[]>([]);
 
     useEffect(() => {
@@ -49,9 +52,9 @@ export default function SecurityPerformanceSection() {
 
     return (
         <section className="glass-panel p-8 rounded-xl mb-8">
-            <h2 className="text-3xl font-bold mb-6">Real-Time Threat Latency</h2>
+            <h2 className="text-3xl font-bold mb-6">{t('title')}</h2>
             <p className="text-zinc-700 dark:text-zinc-300 mb-8">
-                Monitoring global ingress points for anomalous latency spikes indicating DDoS or probing attacks.
+                {t('description')}
             </p>
 
             <div className="grid md:grid-cols-2 gap-6 h-auto">
@@ -59,9 +62,9 @@ export default function SecurityPerformanceSection() {
                 <div className="bg-slate-900/40 border border-slate-800 rounded-xl p-6 flex flex-col min-h-[350px] min-w-0">
                     <div className="flex justify-between items-center mb-6">
                         <h3 className="font-bold text-slate-200 flex items-center gap-2">
-                            <Activity size={18} className="text-blue-400" /> Cleaning Latency
+                            <Activity size={18} className="text-blue-400" /> {t('charts.latency.title')}
                         </h3>
-                        <span className="text-xs font-mono text-slate-500">Live</span>
+                        <span className="text-xs font-mono text-slate-500">{t('charts.latency.badge')}</span>
                     </div>
                     <div className="h-[300px] w-full min-w-0">
                         <LatencyChart data={data} />
@@ -72,9 +75,9 @@ export default function SecurityPerformanceSection() {
                 <div className="bg-slate-900/40 border border-slate-800 rounded-xl p-6 flex flex-col min-h-[350px] min-w-0">
                     <div className="flex justify-between items-center mb-6">
                         <h3 className="font-bold text-slate-200 flex items-center gap-2">
-                            <ShieldAlert size={18} className="text-red-400" /> WAF Block Rate
+                            <ShieldAlert size={18} className="text-red-400" /> {t('charts.waf.title')}
                         </h3>
-                        <span className="text-xs font-mono text-slate-500">SLA Monitor</span>
+                        <span className="text-xs font-mono text-slate-500">{t('charts.waf.badge')}</span>
                     </div>
                     <div className="h-[300px] w-full min-w-0">
                         <ErrorRateChart data={data} />

@@ -32,7 +32,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
 
 export default async function DistributedSystemsResiliencePage({ params }: { params: Promise<{ locale: string }> }) {
     const { locale } = await params;
-    const t = await getTranslations({ locale });
+    const t = await getTranslations({ locale, namespace: 'ResearchPages.distributedSystems' });
 
     return (
         <article className="min-h-screen bg-background pt-24 pb-20">
@@ -42,66 +42,60 @@ export default async function DistributedSystemsResiliencePage({ params }: { par
                     <main className="flex-1 max-w-4xl">
                         <header className="mb-12">
                             <span className="text-primary font-mono text-sm tracking-wider uppercase mb-4 block">
-                                Research / Distributed Systems
+                                {t('header.category')}
                             </span>
                             <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight mb-6">
-                                Distributed Systems Resilience & Scalability Patterns
+                                {t('header.title')}
                             </h1>
                             <p className="text-xl text-muted-foreground leading-relaxed">
-                                Failure is inevitable. This research explores how to build systems that embrace failure as a core architectural constraint.
+                                {t('header.description')}
                             </p>
                             <div className="flex items-center gap-4 mt-6 text-sm text-muted-foreground font-mono">
-                                <span>Last updated: January 05, 2025</span>
+                                <span>{t('header.lastUpdated')}</span>
                                 <span>•</span>
-                                <span>22 min read</span>
+                                <span>{t('header.readTime')}</span>
                             </div>
                         </header>
 
                         <div className="prose prose-lg prose-invert max-w-none">
                             <p>
-                                In distributed systems, the network is unreliable, latency is non-zero, and bandwidth is finite. Accepting these fallacies is the first step toward resilience. This paper outlines patterns that enable systems to maintain availability and consistency in the face of partial failures.
+                                {t('intro')}
                             </p>
 
-                            <h2 id="cap-theorem" className="scroll-mt-24">1. Revisiting the CAP Theorem</h2>
+                            <h2 id="cap-theorem" className="scroll-mt-24">{t('section1.title')}</h2>
+                            <p dangerouslySetInnerHTML={{ __html: t.raw('section1.p1') }} />
                             <p>
-                                The CAP theorem dictates that a distributed data store can only provide two of the following three guarantees: <strong>Consistency</strong>, <strong>Availability</strong>, and <strong>Partition Tolerance</strong>.
-                            </p>
-                            <p>
-                                Since network partitions are unavoidable in cloud environments (P), we must choose between CP (Consistency) and AP (Availability).
+                                {t('section1.p2')}
                                 <br />
-                                <em>OmniGCloud Strategy:</em> We often favor AP for customer-facing read paths (eventual consistency) while enforcing CP for financial transactions and configuration states (strong consistency).
+                                <span dangerouslySetInnerHTML={{ __html: t.raw('section1.strategy') }} />
                             </p>
 
-                            <h2 id="circuit-breaker" className="scroll-mt-24">2. The Circuit Breaker Pattern</h2>
-                            <p>
-                                Cascading failures occur when a failing service consumes resources (threads, connections) from its callers, eventually bringing them down too. A <strong>Circuit Breaker</strong> wraps a protected function call and monitors for failures.
-                            </p>
+                            <h2 id="circuit-breaker" className="scroll-mt-24">{t('section2.title')}</h2>
+                            <p dangerouslySetInnerHTML={{ __html: t.raw('section2.description') }} />
                             <ul>
-                                <li><strong>Closed:</strong> Standard operation. Request flows through.</li>
-                                <li><strong>Open:</strong> Error threshold exceeded. Request fails fast without calling dependency.</li>
-                                <li><strong>Half-Open:</strong> Trial mode. A few requests are allowed to test if dependency has recovered.</li>
+                                <li dangerouslySetInnerHTML={{ __html: t.raw('section2.states.closed') }} />
+                                <li dangerouslySetInnerHTML={{ __html: t.raw('section2.states.open') }} />
+                                <li dangerouslySetInnerHTML={{ __html: t.raw('section2.states.halfOpen') }} />
                             </ul>
 
-                            <h2 id="bulkhead" className="scroll-mt-24">3. Bulkhead Pattern</h2>
+                            <h2 id="bulkhead" className="scroll-mt-24">{t('section3.title')}</h2>
                             <p>
-                                Just as a ship is divided into watertight compartments, a system should isolate critical resources. By creating separate thread pools or connection pools for distinct services, we ensure that a failure in the "Recommendation Service" does not starve the "Checkout Service."
+                                {t('section3.description')}
                             </p>
 
-                            <h2 id="chaos-engineering" className="scroll-mt-24">4. Chaos Engineering</h2>
+                            <h2 id="chaos-engineering" className="scroll-mt-24">{t('section4.title')}</h2>
                             <p>
-                                We cannot trust a recovery mechanism until not we have seen it work. Chaos Engineering involves intentionally injecting faults (latency, packet loss, pod kills) into the system to verify resilience.
+                                {t('section4.description')}
                             </p>
                             <div className="my-8 p-6 bg-card border border-primary/20 rounded-xl">
-                                <h3 className="text-lg font-bold text-primary mb-2">Hypothesis Evaluation</h3>
+                                <h3 className="text-lg font-bold text-primary mb-2">{t('section4.hypothesisTitle')}</h3>
                                 <p className="text-sm">
-                                    "If we terminate the primary database node, the system should failover to the replica within 5 seconds with less than 0.1% error rate."
+                                    {t('section4.hypothesis')}
                                 </p>
                             </div>
 
-                            <h2 id="idempotency" className="scroll-mt-24">5. Idempotency & Retry Strategies</h2>
-                            <p>
-                                Retrying failed requests is necessary but dangerous (retry storms). Smart clients use <strong>Exponential Backoff</strong> and <strong>Jitter</strong>. Crucially, the server must support <strong>Idempotency</strong>—handling the same request multiple times without changing the result beyond the initial application.
-                            </p>
+                            <h2 id="idempotency" className="scroll-mt-24">{t('section5.title')}</h2>
+                            <p dangerouslySetInnerHTML={{ __html: t.raw('section5.description') }} />
                         </div>
 
                         <AuthorBio />
@@ -110,22 +104,22 @@ export default async function DistributedSystemsResiliencePage({ params }: { par
                             locale={locale}
                             articles={[
                                 {
-                                    title: "Cloud-Native Reference Architecture",
-                                    excerpt: "Building sovereign, portable, and scalable cloud-native systems.",
+                                    title: t('relatedReading.0.title'),
+                                    excerpt: t('relatedReading.0.excerpt'),
                                     href: "/architecture/cloud-native-reference-architecture",
-                                    category: "Architecture"
+                                    category: t('relatedReading.0.category')
                                 },
                                 {
-                                    title: "AI-Driven Enterprise Architecture",
-                                    excerpt: "Predictive scaling and automated anomaly detection.",
+                                    title: t('relatedReading.1.title'),
+                                    excerpt: t('relatedReading.1.excerpt'),
                                     href: "/architecture/ai-driven-enterprise-observability",
-                                    category: "Architecture"
+                                    category: t('relatedReading.1.category')
                                 },
                                 {
-                                    title: "Secure Mesh Networking",
-                                    excerpt: "Implementing Zero Trust with Service Mesh.",
+                                    title: t('relatedReading.2.title'),
+                                    excerpt: t('relatedReading.2.excerpt'),
                                     href: "/security",
-                                    category: "Security"
+                                    category: t('relatedReading.2.category')
                                 }
                             ]}
                         />

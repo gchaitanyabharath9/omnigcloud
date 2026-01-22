@@ -1,6 +1,7 @@
 "use client";
 
 import React from 'react';
+import { useTranslations } from 'next-intl';
 
 // 9. Cloud Provider Cost Comparison
 export const CloudCostComparison = () => {
@@ -78,8 +79,8 @@ export const APIRequestHeatmap = () => {
     React.useEffect(() => {
         // Generate random intensities only after mount (client-side only)
         setIntensities(hours.map(hour => {
-            if (hour >= 9 && hour <= 17) return Math.random() * 0.5 + 0.5;
-            if (hour >= 6 && hour <= 20) return Math.random() * 0.3 + 0.3;
+            if (hour >= 9 && hour <= 17) return Math.random() * 0.5 + 0.5; // i18n-ignore: code comparison
+            if (hour >= 6 && hour <= 20) return Math.random() * 0.3 + 0.3; // i18n-ignore: code comparison
             return Math.random() * 0.2;
         }));
     }, []);
@@ -142,8 +143,8 @@ export const DataTransferVolume = () => {
     );
 };
 
-// 13. Incident Response Time
 export const IncidentResponseTime = () => {
+    const t = useTranslations('Components.Visuals.AdvancedMetrics');
     const weeks = ['W1', 'W2', 'W3', 'W4'];
     const avgTimes = [45, 38, 32, 28]; // minutes
     const maxTime = 60;
@@ -152,7 +153,7 @@ export const IncidentResponseTime = () => {
         <div style={{ width: '100%', height: '100%', display: 'flex', flexDirection: 'column', justifyContent: 'center', gap: '1rem' }}>
             <div style={{ textAlign: 'center' }}>
                 <div style={{ fontSize: '2.5rem', fontWeight: 950, color: 'var(--color-success)' }}>{avgTimes[avgTimes.length - 1]}<span style={{ fontSize: '1rem', opacity: 0.5 }}>min</span></div>
-                <div style={{ fontSize: '0.65rem', opacity: 0.5, fontWeight: 700 }}>AVG RESPONSE TIME</div>
+                <div style={{ fontSize: '0.65rem', opacity: 0.5, fontWeight: 700 }}>{t('avgResponseTime')}</div>
             </div>
             <div style={{ display: 'flex', alignItems: 'flex-end', gap: '0.5rem', height: '60px' }}>
                 {avgTimes.map((time, i) => (
@@ -172,8 +173,8 @@ export const IncidentResponseTime = () => {
     );
 };
 
-// 14. Storage Optimization Savings
 export const StorageOptimization = () => {
+    const t = useTranslations('Components.Visuals.AdvancedMetrics');
     const before = 2400; // GB
     const after = 1650; // GB
     const saved = before - after;
@@ -183,19 +184,19 @@ export const StorageOptimization = () => {
         <div style={{ width: '100%', height: '100%', display: 'flex', flexDirection: 'column', justifyContent: 'center', gap: '1.5rem' }}>
             <div style={{ textAlign: 'center' }}>
                 <div style={{ fontSize: '2.5rem', fontWeight: 950, color: 'var(--primary)' }}>{saved}<span style={{ fontSize: '1rem', opacity: 0.5 }}>GB</span></div>
-                <div style={{ fontSize: '0.65rem', opacity: 0.5, fontWeight: 700 }}>STORAGE SAVED</div>
+                <div style={{ fontSize: '0.65rem', opacity: 0.5, fontWeight: 700 }}>{t('storageSaved')}</div>
             </div>
             <div style={{ display: 'flex', gap: '0.5rem', alignItems: 'center' }}>
                 <div style={{ flex: 1, height: '40px', background: 'rgba(239, 68, 68, 0.2)', borderRadius: '0.5rem', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '0.7rem', fontWeight: 800 }}>
-                    Before<br />{before}GB
+                    {t('before')}<br />{before}GB
                 </div>
                 <div style={{ fontSize: '1.5rem', color: 'var(--primary)' }}>→</div>
                 <div style={{ flex: 1, height: '40px', background: 'rgba(16, 185, 129, 0.2)', borderRadius: '0.5rem', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '0.7rem', fontWeight: 800 }}>
-                    After<br />{after}GB
+                    {t('after')}<br />{after}GB
                 </div>
             </div>
             <div style={{ textAlign: 'center', fontSize: '0.8rem', color: 'var(--color-success)', fontWeight: 800 }}>
-                {percentage}% Reduction
+                {t('reduction', { percentage })}
             </div>
         </div>
     );
@@ -247,10 +248,11 @@ export const MultiCloudDistribution = () => {
 
 // 16. License Optimization
 export const LicenseOptimization = () => {
+    const t = useTranslations('Components.Visuals.AdvancedMetrics');
     const licenses = [
-        { type: 'Unused', count: 45, color: '#ef4444' },
-        { type: 'Underused', count: 32, color: '#f59e0b' },
-        { type: 'Optimized', count: 123, color: '#10b981' }
+        { type: t('licenseTypes.unused'), count: 45, color: '#ef4444' },
+        { type: t('licenseTypes.underused'), count: 32, color: '#f59e0b' },
+        { type: t('licenseTypes.optimized'), count: 123, color: '#10b981' }
     ];
     const total = licenses.reduce((sum, l) => sum + l.count, 0);
 
@@ -278,6 +280,7 @@ export const LicenseOptimization = () => {
 
 // 17. Backup Success Rate
 export const BackupSuccessRate = () => {
+    const t = useTranslations('Components.Visuals.AdvancedMetrics');
     const days = Array.from({ length: 30 }, (_, i) => i + 1);
     const [successRate, setSuccessRate] = React.useState(() => days.map(() => 1)); // Default to all success
 
@@ -292,7 +295,7 @@ export const BackupSuccessRate = () => {
                 <div style={{ fontSize: '2rem', fontWeight: 950, color: 'var(--color-success)' }}>
                     {((successRate.filter(s => s === 1).length / successRate.length) * 100).toFixed(1)}%
                 </div>
-                <div style={{ fontSize: '0.65rem', opacity: 0.5, fontWeight: 700 }}>SUCCESS RATE (30D)</div>
+                <div style={{ fontSize: '0.65rem', opacity: 0.5, fontWeight: 700 }}>{t('successRate30d')}</div>
             </div>
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(10, 1fr)', gap: '0.2rem' }}>
                 {successRate.map((success, i) => (

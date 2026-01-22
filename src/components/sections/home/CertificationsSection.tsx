@@ -1,18 +1,19 @@
-"use client";
-
 import React from 'react';
 import { Cloud, CheckCircle2, Shield, Zap, Lock, Cpu } from 'lucide-react';
-
-const certs = [
-    { name: "AWS Advanced Partner", provider: "Amazon Web Services" },
-    { name: "Azure Solutions Architect", provider: "Microsoft" },
-    { name: "Google Cloud Professional", provider: "Google Cloud" },
-    { name: "Kubernetes Certified", provider: "CNCF" },
-    { name: "OpenShift Specialist", provider: "RedHat" },
-    { name: "Oracle Cloud Expert", provider: "Oracle" }
-];
+import { useTranslations } from 'next-intl';
 
 export default function CertificationsSection() {
+    const t = useTranslations('Certifications');
+
+    const certs = [
+        { name: "AWS Advanced Partner", provider: t('items.aws') },
+        { name: "Azure Solutions Architect", provider: t('items.azure') },
+        { name: "Google Cloud Professional", provider: t('items.gcp') },
+        { name: "Kubernetes Certified", provider: t('items.k8s') },
+        { name: "OpenShift Specialist", provider: t('items.openshift') },
+        { name: "Oracle Cloud Expert", provider: t('items.oracle') }
+    ];
+
     return (
         <section className="py-20" style={{ background: 'var(--background)', position: 'relative', overflow: 'hidden' }}>
             <div style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', background: 'radial-gradient(circle at 50% 50%, rgba(59, 130, 246, 0.03) 0%, transparent 70%)' }}></div>
@@ -20,8 +21,8 @@ export default function CertificationsSection() {
             <div className="container" style={{ position: 'relative', zIndex: 1 }}>
                 <div style={{ display: 'flex', flexDirection: 'column', gap: '3rem' }}>
                     <div style={{ textAlign: 'center' }}>
-                        <h2 style={{ fontSize: '0.75rem', fontWeight: 900, color: 'var(--primary)', letterSpacing: '0.2em', textTransform: 'uppercase', marginBottom: '1rem' }}>Expertise & Validation</h2>
-                        <h3 style={{ fontSize: '2rem', fontWeight: 800 }}>Certified Across the Global Cloud Ecosystem</h3>
+                        <h2 style={{ fontSize: '0.75rem', fontWeight: 900, color: 'var(--primary)', letterSpacing: '0.2em', textTransform: 'uppercase', marginBottom: '1rem' }}>{t('tag')}</h2>
+                        <h3 style={{ fontSize: '2rem', fontWeight: 800 }}>{t('title')}</h3>
                     </div>
 
                     <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '1.5rem' }}>
@@ -37,7 +38,7 @@ export default function CertificationsSection() {
                     </div>
 
                     <p style={{ textAlign: 'center', fontSize: '0.9rem', color: 'var(--muted)', maxWidth: '600px', margin: '0 auto', lineHeight: 1.6 }}>
-                        Our engineering team holds over 45+ professional certifications across every major cloud provider and orchestration framework, ensuring your modernization is governed by deep technical authority.
+                        {t('desc')}
                     </p>
                 </div>
             </div>
