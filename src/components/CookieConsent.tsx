@@ -84,7 +84,7 @@ export default function CookieConsent() {
                         <p id="cookie-consent-desc" style={{ margin: 0, fontSize: '0.8rem', opacity: 0.7, lineHeight: 1.5 }}>
                             {t('message')}
                             <Link href={`/${locale}/privacy`} style={{ color: 'var(--primary)', textDecoration: 'none', fontWeight: 700, marginLeft: '0.4rem' }}>
-                                {t('policyLink')}
+                                {t('policy_link')}
                             </Link>
                         </p>
                     </div>

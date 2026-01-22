@@ -89,7 +89,7 @@ export default async function PricingPage({ params }: { params: Promise<{ locale
 
     const jsonLd = generateProductSchema({
         name: "OmniGCloud Platform",
-        description: t('hero.subtitle', { defaultValue: 'The standard for autonomous cloud governance.' }),
+        description: tSafe(t, 'hero.subtitle', 'The standard for autonomous cloud governance.'),
         image: "https://www.omnigcloud.com/og-images/pricing.png",
         sku: "OMNIG-PLATFORM-V3",
         brand: "OmniGCloud",
@@ -110,12 +110,12 @@ export default async function PricingPage({ params }: { params: Promise<{ locale
             <section className="snap-section" style={{ minHeight: 'calc(100vh - var(--header-height) - var(--breadcrumb-height))', display: 'flex', flexDirection: 'column', justifyContent: 'center', paddingTop: '1rem', paddingBottom: '1rem' }}>
                 <PageShell>
                     <div style={{ textAlign: 'center', marginBottom: '1.5rem' }}>
-                        <div className="badge badge-primary-subtle mb-3">{t('hero.tag', { defaultValue: 'Featured' })}</div>
+                        <div className="badge badge-primary-subtle mb-3">{tSafe(t, 'hero.tag', 'Featured')}</div>
                         <h1 style={{ fontSize: 'clamp(2rem, 5vw, 2.5rem)', fontWeight: 950, marginBottom: '0.75rem', letterSpacing: '-1px' }}>
-                            {t('hero.title', { defaultValue: 'Transparent Pricing' })}
+                            {tSafe(t, 'hero.title', 'Transparent Pricing')}
                         </h1>
                         <p style={{ fontSize: '0.95rem', opacity: 0.7, maxWidth: '650px', margin: '0 auto 1rem', lineHeight: '1.4' }}>
-                            {t('hero.subtitle', { defaultValue: 'Choose the plan that fits your needs.' })}
+                            {tSafe(t, 'hero.subtitle', 'Choose the plan that fits your needs.')}
                         </p>
                         <div className="max-w-2xl mx-auto">
                             <AboveTheFoldDescription pageKey="Pricing" />
@@ -148,15 +148,15 @@ export default async function PricingPage({ params }: { params: Promise<{ locale
                                         fontWeight: 900,
                                         letterSpacing: '0.1em'
                                     }}>
-                                        {t('plans.popular', { defaultValue: 'MOST POPULAR' })}
+                                        {tSafe(t, 'plans.popular', 'MOST POPULAR')}
                                     </div>
                                 )}
-                                <h3 style={{ fontSize: '1rem', fontWeight: 900, marginBottom: '0.2rem' }}>{t(`plans.${plan.id}.name`, { defaultValue: plan.id.toUpperCase() })}</h3>
-                                <p style={{ fontSize: '0.7rem', opacity: 0.6, marginBottom: '0.75rem', height: '2.2rem', lineHeight: '1.2' }}>{t(`plans.${plan.id}.desc`, { defaultValue: 'Empowering your cloud journey.' })}</p>
+                                <h3 style={{ fontSize: '1rem', fontWeight: 900, marginBottom: '0.2rem' }}>{tSafe(t, `plans.${plan.id}.name`, plan.id.toUpperCase())}</h3>
+                                <p style={{ fontSize: '0.7rem', opacity: 0.6, marginBottom: '0.75rem', height: '2.2rem', lineHeight: '1.2' }}>{tSafe(t, `plans.${plan.id}.desc`, 'Empowering your cloud journey.')}</p>
 
                                 <div style={{ marginBottom: '0.75rem' }}>
                                     <span style={{ fontSize: '1.5rem', fontWeight: 950 }}>{plan.price !== "Custom" ? `$${plan.price}` : plan.price}</span>
-                                    {plan.price !== "Custom" && <span style={{ opacity: 0.5, fontSize: '0.7rem' }}> {t('plans.month', { defaultValue: '/ month' })}</span>}
+                                    {plan.price !== "Custom" && <span style={{ opacity: 0.5, fontSize: '0.7rem' }}> {tSafe(t, 'plans.month', '/ month')}</span>}
                                 </div>
 
                                 <div style={{ flexGrow: 1, marginBottom: '0.75rem' }}>
@@ -173,7 +173,7 @@ export default async function PricingPage({ params }: { params: Promise<{ locale
                                 </div>
 
                                 <Link href={`/${locale}/contact`} className={plan.highlight ? 'btn-primary' : 'btn-secondary'} style={{ width: '100%', textAlign: 'center', padding: '0.4rem', fontSize: '0.75rem' }}>
-                                    {t(`plans.${plan.id}.cta`, { defaultValue: 'Get Started' })}
+                                    {tSafe(t, `plans.${plan.id}.cta`, 'Get Started')}
                                 </Link>
                             </div>
                         ))}
@@ -185,9 +185,9 @@ export default async function PricingPage({ params }: { params: Promise<{ locale
             <section id="savings-analysis" className="snap-section" style={{ background: 'var(--background)' }}>
                 <div className="container">
                     <div style={{ textAlign: 'center', marginBottom: '2rem' }}>
-                        <div className="badge badge-primary-subtle mb-3">{t('savings.badge', { defaultValue: 'SAVINGS' })}</div>
-                        <h2 style={{ fontSize: '2.5rem', fontWeight: 950, marginBottom: '0.5rem' }}>{t('savings.title', { defaultValue: 'Analyze Your Savings Potential' })}</h2>
-                        <p style={{ opacity: 0.7, maxWidth: '700px', margin: '0 auto', fontSize: '0.95rem' }}>{t('savings.subtitle', { defaultValue: 'Our arbitrage engine identifies optimization opportunities in real-time.' })}</p>
+                        <div className="badge badge-primary-subtle mb-3">{tSafe(t, 'savings.badge', 'SAVINGS')}</div>
+                        <h2 style={{ fontSize: '2.5rem', fontWeight: 950, marginBottom: '0.5rem' }}>{tSafe(t, 'savings.title', 'Analyze Your Savings Potential')}</h2>
+                        <p style={{ opacity: 0.7, maxWidth: '700px', margin: '0 auto', fontSize: '0.95rem' }}>{tSafe(t, 'savings.subtitle', 'Our arbitrage engine identifies optimization opportunities in real-time.')}</p>
                     </div>
 
                     <div className="grid-2x2-strict" style={{ gap: '1.5rem', gridTemplateRows: 'auto' }}>
@@ -216,39 +216,39 @@ export default async function PricingPage({ params }: { params: Promise<{ locale
                 <div className="container">
                     <div style={{ textAlign: 'center', marginBottom: '3rem' }}>
                         <Zap size={40} color="var(--primary)" style={{ margin: '0 auto 1rem' }} />
-                        <h2 style={{ fontSize: '2.5rem', fontWeight: 950, marginBottom: '1rem' }}>{t('economy.title', { defaultValue: 'Value-Based Infrastructure Economy' })}</h2>
-                        <p style={{ opacity: 0.7, maxWidth: '800px', margin: '0 auto', fontSize: '1rem' }}>{t('economy.subtitle', { defaultValue: 'Our autonomous framework ensure absolute sovereignty and compliance.' })}</p>
+                        <h2 style={{ fontSize: '2.5rem', fontWeight: 950, marginBottom: '1rem' }}>{tSafe(t, 'economy.title', 'Value-Based Infrastructure Economy')}</h2>
+                        <p style={{ opacity: 0.7, maxWidth: '800px', margin: '0 auto', fontSize: '1rem' }}>{tSafe(t, 'economy.subtitle', 'Our autonomous framework ensure absolute sovereignty and compliance.')}</p>
                     </div>
 
                     <div style={{ display: 'grid', gridTemplateColumns: '1fr', gap: '1.5rem', maxWidth: '900px', margin: '0 auto' }}>
                         <div className="glass-panel" style={{ padding: '2rem', borderRadius: '1.5rem', borderLeft: '4px solid var(--primary)' }}>
                             <div style={{ fontSize: '0.75rem', opacity: 0.5, marginBottom: '0.5rem', fontWeight: 900 }}>01</div>
-                            <h3 style={{ fontSize: '1.5rem', fontWeight: 900, marginBottom: '1rem' }}>{t('economy.steps.1.title', { defaultValue: 'Transparent Units' })}</h3>
-                            <p style={{ opacity: 0.7, lineHeight: 1.6 }}>{t('economy.steps.1.desc', { defaultValue: 'Pricing based on managed sovereign nodes.' })}</p>
+                            <h3 style={{ fontSize: '1.5rem', fontWeight: 900, marginBottom: '1rem' }}>{tSafe(t, 'economy.steps.1.title', 'Transparent Units')}</h3>
+                            <p style={{ opacity: 0.7, lineHeight: 1.6 }}>{tSafe(t, 'economy.steps.1.desc', 'Pricing based on managed sovereign nodes.')}</p>
                         </div>
 
                         <div className="glass-panel" style={{ padding: '2rem', borderRadius: '1.5rem', borderLeft: '4px solid var(--primary)' }}>
                             <div style={{ fontSize: '0.75rem', opacity: 0.5, marginBottom: '0.5rem', fontWeight: 900 }}>02</div>
-                            <h3 style={{ fontSize: '1.5rem', fontWeight: 900, marginBottom: '1rem' }}>{t('economy.steps.2.title', { defaultValue: 'Egress Arbitrage' })}</h3>
-                            <p style={{ opacity: 0.7, lineHeight: 1.6 }}>{t('economy.steps.2.desc', { defaultValue: 'Automatically identify the most cost-effective compliant route.' })}</p>
+                            <h3 style={{ fontSize: '1.5rem', fontWeight: 900, marginBottom: '1rem' }}>{tSafe(t, 'economy.steps.2.title', 'Egress Arbitrage')}</h3>
+                            <p style={{ opacity: 0.7, lineHeight: 1.6 }}>{tSafe(t, 'economy.steps.2.desc', 'Automatically identify the most cost-effective compliant route.')}</p>
                         </div>
 
                         <div className="glass-panel" style={{ padding: '2rem', borderRadius: '1.5rem', borderLeft: '4px solid var(--primary)' }}>
                             <div style={{ fontSize: '0.75rem', opacity: 0.5, marginBottom: '0.5rem', fontWeight: 900 }}>03</div>
-                            <h3 style={{ fontSize: '1.5rem', fontWeight: 900, marginBottom: '1rem' }}>{t('economy.steps.3.title', { defaultValue: 'Predictive Burn Rate' })}</h3>
-                            <p style={{ opacity: 0.7, lineHeight: 1.6 }}>{t('economy.steps.3.desc', { defaultValue: 'Real-time cost forecasting with high precision.' })}</p>
+                            <h3 style={{ fontSize: '1.5rem', fontWeight: 900, marginBottom: '1rem' }}>{tSafe(t, 'economy.steps.3.title', 'Predictive Burn Rate')}</h3>
+                            <p style={{ opacity: 0.7, lineHeight: 1.6 }}>{tSafe(t, 'economy.steps.3.desc', 'Real-time cost forecasting with high precision.')}</p>
                         </div>
                     </div>
 
                     {/* Economic Sovereignty */}
                     <div style={{ marginTop: '3rem', padding: '2rem', background: 'rgba(59, 130, 246, 0.05)', borderRadius: '1.5rem', border: '1px solid rgba(59, 130, 246, 0.2)' }}>
-                        <h3 style={{ fontSize: '1.8rem', fontWeight: 900, marginBottom: '1rem' }}>{t('economy.sovereignty.title', { defaultValue: 'Economic Sovereignty' })}</h3>
-                        <p style={{ opacity: 0.8, lineHeight: 1.7, marginBottom: '1.5rem' }}>{t('economy.sovereignty.desc', { defaultValue: 'Digital sovereignty is impossible without economic sovereignty.' })}</p>
+                        <h3 style={{ fontSize: '1.8rem', fontWeight: 900, marginBottom: '1rem' }}>{tSafe(t, 'economy.sovereignty.title', 'Economic Sovereignty')}</h3>
+                        <p style={{ opacity: 0.8, lineHeight: 1.7, marginBottom: '1.5rem' }}>{tSafe(t, 'economy.sovereignty.desc', 'Digital sovereignty is impossible without economic sovereignty.')}</p>
 
                         <div className="glass-panel" style={{ padding: '1.5rem', borderRadius: '1rem', background: 'var(--card-bg)' }}>
                             <Zap size={32} color="var(--primary)" style={{ marginBottom: '1rem' }} />
-                            <h4 style={{ fontSize: '1.3rem', fontWeight: 900, marginBottom: '1rem' }}>{t('economy.sovereignty.arbitrage.title', { defaultValue: 'Automated Cost Arbitrage' })}</h4>
-                            <p style={{ opacity: 0.7, lineHeight: 1.6 }}>{t('economy.sovereignty.arbitrage.desc', { defaultValue: 'Arbitrage engine continuously scans across pricing APIs.' })}</p>
+                            <h4 style={{ fontSize: '1.3rem', fontWeight: 900, marginBottom: '1rem' }}>{tSafe(t, 'economy.sovereignty.arbitrage.title', 'Automated Cost Arbitrage')}</h4>
+                            <p style={{ opacity: 0.7, lineHeight: 1.6 }}>{tSafe(t, 'economy.sovereignty.arbitrage.desc', 'Arbitrage engine continuously scans across pricing APIs.')}</p>
                         </div>
                     </div>
                 </div>
@@ -258,8 +258,8 @@ export default async function PricingPage({ params }: { params: Promise<{ locale
             <section id="visual-architecture" className="snap-section" style={{ background: 'var(--background)' }}>
                 <div className="container">
                     <div style={{ marginBottom: '2rem' }}>
-                        <h2 style={{ fontSize: '2.5rem', fontWeight: 950, marginBottom: '1rem' }}>{t('visual.title', { defaultValue: 'Visual Architecture Breakdown' })}</h2>
-                        <p style={{ opacity: 0.7, maxWidth: '900px', fontSize: '1rem', lineHeight: 1.6 }}>{t('visual.subtitle', { defaultValue: 'Understanding the layers of sovereign cost management.' })}</p>
+                        <h2 style={{ fontSize: '2.5rem', fontWeight: 950, marginBottom: '1rem' }}>{tSafe(t, 'visual.title', 'Visual Architecture Breakdown')}</h2>
+                        <p style={{ opacity: 0.7, maxWidth: '900px', fontSize: '1rem', lineHeight: 1.6 }}>{tSafe(t, 'visual.subtitle', 'Understanding the layers of sovereign cost management.')}</p>
                     </div>
 
                     <div className="glass-panel" style={{ padding: '2rem', borderRadius: '1.5rem', marginBottom: '2rem', background: 'rgba(59, 130, 246, 0.03)' }}>
@@ -267,17 +267,17 @@ export default async function PricingPage({ params }: { params: Promise<{ locale
                             <div style={{ width: '40px', height: '40px', borderRadius: '50%', background: 'var(--primary)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                                 <span style={{ fontSize: '1.2rem' }}>ℹ️</span>
                             </div>
-                            <p style={{ fontSize: '0.9rem', opacity: 0.8, margin: 0 }}>{t('visual.diagram', { defaultValue: 'Interactive Architecture Schematic' })}</p>
+                            <p style={{ fontSize: '0.9rem', opacity: 0.8, margin: 0 }}>{tSafe(t, 'visual.diagram', 'Interactive Architecture Schematic')}</p>
                         </div>
                     </div>
 
                     <div className="glass-panel" style={{ padding: '2.5rem', borderRadius: '1.5rem', background: 'linear-gradient(135deg, rgba(59, 130, 246, 0.1) 0%, rgba(139, 92, 246, 0.1) 100%)' }}>
                         <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', marginBottom: '2rem' }}>
                             <Shield size={32} color="var(--primary)" />
-                            <h3 style={{ fontSize: '1.8rem', fontWeight: 900, margin: 0 }}>{t('visual.lockin.title', { defaultValue: 'Zero Lock-in Guarantee' })}</h3>
+                            <h3 style={{ fontSize: '1.8rem', fontWeight: 900, margin: 0 }}>{tSafe(t, 'visual.lockin.title', 'Zero Lock-in Guarantee')}</h3>
                         </div>
-                        <p style={{ opacity: 0.8, lineHeight: 1.7, fontSize: '1rem', marginBottom: '1.5rem' }}>{t('visual.lockin.desc1', { defaultValue: 'Our abstraction layer ensures logic portability.' })}</p>
-                        <p style={{ opacity: 0.8, lineHeight: 1.7, fontSize: '1rem' }}>{t('visual.lockin.desc2', { defaultValue: 'Maintain full control over your cloud spending.' })}</p>
+                        <p style={{ opacity: 0.8, lineHeight: 1.7, fontSize: '1rem', marginBottom: '1.5rem' }}>{tSafe(t, 'visual.lockin.desc1', 'Our abstraction layer ensures logic portability.')}</p>
+                        <p style={{ opacity: 0.8, lineHeight: 1.7, fontSize: '1rem' }}>{tSafe(t, 'visual.lockin.desc2', 'Maintain full control over your cloud spending.')}</p>
                     </div>
                 </div>
             </section>
@@ -287,18 +287,18 @@ export default async function PricingPage({ params }: { params: Promise<{ locale
                 <div className="container">
                     <div style={{ textAlign: 'center', marginBottom: '3rem' }}>
                         <Shield size={40} color="var(--primary)" style={{ margin: '0 auto 1rem' }} />
-                        <h2 style={{ fontSize: '2.5rem', fontWeight: 950, marginBottom: '1rem' }}>{t('compliance.title', { defaultValue: 'Enterprise-Grade Compliance' })}</h2>
-                        <p style={{ opacity: 0.7, maxWidth: '700px', margin: '0 auto', fontSize: '1rem' }}>{t('compliance.subtitle', { defaultValue: 'Built for regulated industries with strict data residency.' })}</p>
+                        <h2 style={{ fontSize: '2.5rem', fontWeight: 950, marginBottom: '1rem' }}>{tSafe(t, 'compliance.title', 'Enterprise-Grade Compliance')}</h2>
+                        <p style={{ opacity: 0.7, maxWidth: '700px', margin: '0 auto', fontSize: '1rem' }}>{tSafe(t, 'compliance.subtitle', 'Built for regulated industries with strict data residency.')}</p>
                     </div>
 
                     {/* FAQ Section */}
                     <div id="faq" style={{ maxWidth: '900px', margin: '0 auto' }}>
-                        <h3 style={{ fontSize: '1.8rem', fontWeight: 900, marginBottom: '2rem', textAlign: 'center' }}>{t('faq.title', { defaultValue: 'Pricing F.A.Q' })}</h3>
+                        <h3 style={{ fontSize: '1.8rem', fontWeight: 900, marginBottom: '2rem', textAlign: 'center' }}>{tSafe(t, 'FAQ.title', 'Pricing F.A.Q')}</h3>
                         <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
                             {[
-                                { q: t('faq.q1.q', { defaultValue: 'How is pricing calculated?' }), a: t('faq.q1.a', { defaultValue: 'Predictable sovereign node units.' }) },
-                                { q: t('faq.q2.q', { defaultValue: 'Can I switch plans?' }), a: t('faq.q2.a', { defaultValue: 'Yes, any time with prorated adjustments.' }) },
-                                { q: t('faq.q3.q', { defaultValue: 'Do you offer custom tiers?' }), a: t('faq.q3.a', { defaultValue: 'Yes, for large enterprise and government entities.' }) }
+                                { q: tSafe(t, 'FAQ.items.0.q', 'How is pricing calculated?'), a: tSafe(t, 'FAQ.items.0.a', 'Predictable sovereign node units.') },
+                                { q: tSafe(t, 'FAQ.items.1.q', 'Can I switch plans?'), a: tSafe(t, 'FAQ.items.1.a', 'Yes, any time with prorated adjustments.') },
+                                { q: tSafe(t, 'FAQ.items.2.q', 'Do you offer custom tiers?'), a: tSafe(t, 'FAQ.items.2.a', 'Yes, for large enterprise and government entities.') }
                             ].map((faq, idx) => (
                                 <div key={idx} className="glass-panel" style={{ padding: '1.5rem', borderRadius: '1rem' }}>
                                     <div style={{ display: 'flex', gap: '1rem', alignItems: 'flex-start', marginBottom: '0.75rem' }}>
@@ -317,19 +317,19 @@ export default async function PricingPage({ params }: { params: Promise<{ locale
             <section id="trust" className="snap-section" style={{ background: 'var(--background)' }}>
                 <div className="container">
                     <div style={{ textAlign: 'center', marginBottom: '3rem' }}>
-                        <h2 style={{ fontSize: '2.5rem', fontWeight: 950, marginBottom: '1rem' }}>{t('trust.title', { defaultValue: 'Trust & Neutrality' })}</h2>
-                        <p style={{ opacity: 0.7, maxWidth: '700px', margin: '0 auto', fontSize: '1rem' }}>{t('trust.subtitle', { defaultValue: 'Dedicated to ethical cloud stewardship.' })}</p>
+                        <h2 style={{ fontSize: '2.5rem', fontWeight: 950, marginBottom: '1rem' }}>{tSafe(t, 'trust.title', 'Trust & Neutrality')}</h2>
+                        <p style={{ opacity: 0.7, maxWidth: '700px', margin: '0 auto', fontSize: '1rem' }}>{tSafe(t, 'trust.subtitle', 'Dedicated to ethical cloud stewardship.')}</p>
                     </div>
                     <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '2rem', maxWidth: '800px', margin: '0 auto' }}>
                         <div className="glass-panel" style={{ padding: '2rem', borderRadius: '1.25rem' }}>
                             <Shield color="var(--primary)" size={32} className="mb-3" />
-                            <h4 style={{ fontSize: '1.2rem', fontWeight: 800, marginBottom: '1rem' }}>{t('trust.residency.title', { defaultValue: 'Strict Residency' })}</h4>
-                            <p style={{ fontSize: '0.95rem', opacity: 0.7, lineHeight: 1.6 }}>{t('trust.residency.desc', { defaultValue: 'Data never leaves your defined jurisdiction.' })}</p>
+                            <h4 style={{ fontSize: '1.2rem', fontWeight: 800, marginBottom: '1rem' }}>{tSafe(t, 'trust.residency.title', 'Strict Residency')}</h4>
+                            <p style={{ fontSize: '0.95rem', opacity: 0.7, lineHeight: 1.6 }}>{tSafe(t, 'trust.residency.desc', 'Data never leaves your defined jurisdiction.')}</p>
                         </div>
                         <div className="glass-panel" style={{ padding: '2rem', borderRadius: '1.25rem' }}>
                             <Globe color="var(--primary)" size={32} className="mb-3" />
-                            <h4 style={{ fontSize: '1.2rem', fontWeight: 800, marginBottom: '1rem' }}>{t('trust.neutrality.title', { defaultValue: 'Cloud Neutrality' })}</h4>
-                            <p style={{ fontSize: '0.95rem', opacity: 0.7, lineHeight: 1.6 }}>{t('trust.neutrality.desc', { defaultValue: 'Decoupled from any single hyperscale provider.' })}</p>
+                            <h4 style={{ fontSize: '1.2rem', fontWeight: 800, marginBottom: '1rem' }}>{tSafe(t, 'trust.neutrality.title', 'Cloud Neutrality')}</h4>
+                            <p style={{ fontSize: '0.95rem', opacity: 0.7, lineHeight: 1.6 }}>{tSafe(t, 'trust.neutrality.desc', 'Decoupled from any single hyperscale provider.')}</p>
                         </div>
                     </div>
                 </div>
@@ -348,10 +348,10 @@ export default async function PricingPage({ params }: { params: Promise<{ locale
                         textAlign: 'center'
                     }}>
                         <h2 style={{ fontSize: '2.5rem', fontWeight: 950, marginBottom: '1.5rem', color: 'white' }}>
-                            {t('cta.title', { defaultValue: 'Ready to optimize?' })}
+                            {tSafe(t, 'LeadCapture.title', 'Ready to optimize?')}
                         </h2>
                         <p style={{ opacity: 0.9, marginBottom: '2.5rem', fontSize: '1.1rem', maxWidth: '600px', margin: '0 auto 2.5rem' }}>
-                            {t('cta.subtitle', { defaultValue: 'Empowering the next generation of regulated enterprise.' })}
+                            {tSafe(t, 'LeadCapture.subtitle', 'Empowering the next generation of regulated enterprise.')}
                         </p>
                         <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '1.5rem' }}>
                             <Link href={`/${locale}/contact`} className="btn-primary" style={{
@@ -362,10 +362,10 @@ export default async function PricingPage({ params }: { params: Promise<{ locale
                                 fontSize: '1rem',
                                 fontWeight: 900
                             }}>
-                                {t('cta.button', { defaultValue: 'Get Started' })} <ArrowRight size={20} className="ml-2" />
+                                {tSafe(t, 'LeadCapture.cta', 'Get Started')} <ArrowRight size={20} className="ml-2" />
                             </Link>
                             <p style={{ fontSize: '0.7rem', opacity: 0.7, fontWeight: 700, letterSpacing: '0.1em' }}>
-                                {t('footer.legal', { defaultValue: 'NO CREDIT CARD REQUIRED • SOC-2 COMPLIANT ONBOARDING' })}
+                                {tSafe(t, 'footer.legal', 'NO CREDIT CARD REQUIRED • SOC-2 COMPLIANT ONBOARDING')}
                             </p>
                         </div>
                     </div>
@@ -377,9 +377,9 @@ export default async function PricingPage({ params }: { params: Promise<{ locale
             <DeepDive
                 pageKey="Pricing"
                 relatedLinks={[
-                    { label: t('deepDive.links.modernization', { defaultValue: 'Cloud Modernization' }), href: "/services/cloud-modernization" },
-                    { label: t('deepDive.links.finance', { defaultValue: 'Sovereign Finance' }), href: "/industries/finance" },
-                    { label: t('deepDive.links.blueprint', { defaultValue: 'Modernization Blueprint' }), href: "/resources/blog/cloud-modernization-guide" }
+                    { label: tSafe(t, 'DeepDive.links.modernization', 'Cloud Modernization'), href: "/services/cloud-modernization" },
+                    { label: tSafe(t, 'DeepDive.links.finance', 'Sovereign Finance'), href: "/industries/finance" },
+                    { label: tSafe(t, 'DeepDive.links.blueprint', 'Modernization Blueprint'), href: "/resources/blog/cloud-modernization-guide" }
                 ]}
             />
 
@@ -396,3 +396,4 @@ export default async function PricingPage({ params }: { params: Promise<{ locale
 }
 
 import { AboveTheFoldDescription, HowItWorks, VisualSection, DeepDive, TopicalAuthority, TechnicalInsights, FAQSection } from '@/components/seo/Enrichment';
+import { tSafe } from '@/lib/i18n/tSafe';

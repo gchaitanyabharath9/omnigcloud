@@ -49,17 +49,17 @@ export default function WhitePaperSection() {
                     {/* Right side: Download & Info */}
                     <div>
                         <div className="badge badge-primary-subtle mb-4">{t('badge')}</div>
-                        <h3 style={{ fontSize: '1.75rem', fontWeight: 800, marginBottom: '1.5rem' }}>{t('downloadTitle')}</h3>
+                        <h3 style={{ fontSize: '1.75rem', fontWeight: 800, marginBottom: '1.5rem' }}>{t('download_title')}</h3>
                         <p style={{ opacity: 0.7, marginBottom: '2rem', lineHeight: 1.6 }}>
-                            {t('downloadSubtitle')}
+                            {t('download_subtitle')}
                         </p>
 
                         <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
                             <Link href="/docs/whitepaper" className="btn-primary" style={{ display: 'inline-flex', alignItems: 'center', justifyContent: 'center', gap: '0.75rem' }}>
-                                <Download size={20} /> {t('readOnline')}
+                                <Download size={20} /> {t('read_online')}
                             </Link>
                             <Link href="/docs/architecture" className="btn-secondary" style={{ display: 'inline-flex', alignItems: 'center', justifyContent: 'center', gap: '0.75rem' }}>
-                                <FileText size={20} /> {t('designPatterns')}
+                                <FileText size={20} /> {t('design_patterns')}
                             </Link>
                             <p style={{ fontSize: '0.7rem', textAlign: 'center', opacity: 0.5 }}>
                                 {t('footer.copyright')}

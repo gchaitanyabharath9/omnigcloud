@@ -2381,9 +2381,9 @@
     "close": "Close Details (ES)",
     "decline": "Decline Optional (ES)",
     "message": "We use strictly necessary cookies to ensure platform security and data sovereignty compliance. Usage analytics are optional. (ES)",
-    "policyLink": "Sovereignty Policy (ES)",
     "sovereignNotice": "Data resides in your jurisdiction (ES)",
-    "title": "Privacy & Sovereignty (ES)"
+    "title": "Privacy & Sovereignty (ES)",
+    "policy_link": "Sovereignty Policy (ES)"
   },
   "Dashboard": {
     "Charts": {
@@ -4770,6 +4770,37 @@
       },
       "subtitle": "Our pricing is aligned with the sovereign nodes you manage, ensuring that your costs scale linearly with your infrastructure value, not your provider's proprietary egress fees. (ES)",
       "title": "Visual Architecture Breakdown (ES)"
+    },
+    "LeadCapture": {
+      "cta": "Get Started (ES)",
+      "subtitle": "Join the enterprises achieving economic sovereignty in the multi-cloud era. (ES)",
+      "title": "Ready to optimize? (ES)"
+    },
+    "DeepDive": {
+      "links": {
+        "blueprint": "Modernization Blueprint (ES)",
+        "finance": "Sovereign Finance (ES)",
+        "modernization": "Cloud Modernization (ES)"
+      },
+      "title": "Architectural Deep Dive (ES)",
+      "content": "Explore the formal methodologies and technical specifications that underpin our sovereign orchestration engine. (ES)"
+    },
+    "FAQ": {
+      "items": {
+        "0": {
+          "a": "Unlike traditional providers that charge for opaque abstractions, OmniGCloud uses predictable sovereign nodes as the base unit of cost. (ES)",
+          "q": "How is OmniGCloud pricing calculated? (ES)"
+        },
+        "1": {
+          "a": "Yes, our savings analysis engine provides real-time arbitrage across all supported regions and providers. (ES)",
+          "q": "Can I see my potential savings before migrating? (ES)"
+        },
+        "2": {
+          "a": "Our standard enterprise SLA guarantees 99.99% availability for the control plane and managed workloads. (ES)",
+          "q": "What is the uptime guarantee? (ES)"
+        }
+      },
+      "title": "Pricing F.A.Q (ES)"
     }
   },
   "Privacy": {
@@ -6557,7 +6588,6 @@
     },
     "contribution": "Contribution Details",
     "description": "A comprehensive framework for achieving mathematical certainty in data sovereignty across multi-cloud environments.",
-    "designPatterns": "Design Patterns",
     "detailedDiagrams": {
       "context": {
         "clouds": {
@@ -6647,8 +6677,6 @@
         }
       }
     },
-    "downloadSubtitle": "Get the full technical specification, including architecture diagrams, decision frameworks, and implementation guides.",
-    "downloadTitle": "Download the Whitepaper",
     "footer": {
       "_value": "Available in PDF / ePub formats.",
       "copyright": "© 2026 OmniGCloud. All rights reserved."
@@ -6673,129 +6701,132 @@
     },
     "pageCount": "42 Pages",
     "peerReview": "Peer Reviewed",
-    "readOnline": "Read Online",
-    "title": "The Autonomous Sovereign Cloud Protocol"
+    "title": "The Autonomous Sovereign Cloud Protocol",
+    "design_patterns": "Design Patterns",
+    "download_subtitle": "Get the full technical specification, including architecture diagrams, decision frameworks, and implementation guides.",
+    "download_title": "Download the Whitepaper",
+    "read_online": "Read Online"
   },
   "Whitepaper": {
     "abstract": {
-      "content": "content",
-      "title": "title"
+      "content": "content (ES)",
+      "title": "title (ES)"
     },
     "architecture": {
       "control_plane": {
-        "content": "content",
-        "title": "title"
+        "content": "content (ES)",
+        "title": "title (ES)"
       },
       "decision_engine": {
-        "content": "content",
-        "title": "title"
+        "content": "content (ES)",
+        "title": "title (ES)"
       },
-      "p1": "p1",
+      "p1": "p1 (ES)",
       "state_sync": {
-        "content": "content",
-        "title": "title"
+        "content": "content (ES)",
+        "title": "title (ES)"
       },
-      "title": "title"
+      "title": "title (ES)"
     },
     "aso": {
-      "p1": "p1",
+      "p1": "p1 (ES)",
       "principles": {
         "automation": {
-          "content": "content",
-          "title": "title"
+          "content": "content (ES)",
+          "title": "title (ES)"
         },
         "neutrality": {
-          "content": "content",
-          "title": "title"
+          "content": "content (ES)",
+          "title": "title (ES)"
         },
         "observability": {
-          "content": "content",
-          "title": "title"
+          "content": "content (ES)",
+          "title": "title (ES)"
         },
         "sovereignty": {
-          "content": "content",
-          "title": "title"
+          "content": "content (ES)",
+          "title": "title (ES)"
         },
-        "title": "title"
+        "title": "title (ES)"
       },
-      "title": "title"
+      "title": "title (ES)"
     },
-    "author": "author",
-    "author_label": "author_label",
-    "classification": "classification",
+    "author": "author (ES)",
+    "author_label": "author_label (ES)",
+    "classification": "classification (ES)",
     "conclusion": {
-      "p1": "p1",
-      "p2": "p2",
-      "title": "title"
+      "p1": "p1 (ES)",
+      "p2": "p2 (ES)",
+      "title": "title (ES)"
     },
-    "date": "date",
-    "date_label": "date_label",
+    "date": "date (ES)",
+    "date_label": "date_label (ES)",
     "decision_framework": {
       "components": {
         "adaptation": {
-          "content": "content",
-          "title": "title"
+          "content": "content (ES)",
+          "title": "title (ES)"
         },
         "guardrails": {
-          "content": "content",
-          "title": "title"
+          "content": "content (ES)",
+          "title": "title (ES)"
         },
         "intent_mapping": {
-          "content": "content",
-          "title": "title"
+          "content": "content (ES)",
+          "title": "title (ES)"
         }
       },
-      "p1": "p1",
-      "title": "title"
+      "p1": "p1 (ES)",
+      "title": "title (ES)"
     },
     "differentiation": {
-      "comparison": "comparison",
-      "non_replicability": "non_replicability",
-      "p1": "p1",
-      "title": "title"
+      "comparison": "comparison (ES)",
+      "non_replicability": "non_replicability (ES)",
+      "p1": "p1 (ES)",
+      "title": "title (ES)"
     },
     "eb1a": {
-      "executive_summary_title": "executive_summary_title",
-      "importance": "importance",
-      "importance_label": "importance_label",
-      "originality": "originality",
-      "originality_label": "originality_label",
-      "p1": "p1",
-      "summary_content": "summary_content",
-      "title": "title"
+      "executive_summary_title": "executive_summary_title (ES)",
+      "importance": "importance (ES)",
+      "importance_label": "importance_label (ES)",
+      "originality": "originality (ES)",
+      "originality_label": "originality_label (ES)",
+      "p1": "p1 (ES)",
+      "summary_content": "summary_content (ES)",
+      "title": "title (ES)"
     },
     "execution_flow": {
-      "p1": "p1",
+      "p1": "p1 (ES)",
       "steps": {
-        "s1": "s1",
-        "s2": "s2",
-        "s3": "s3",
-        "s4": "s4",
-        "s5": "s5"
+        "s1": "s1 (ES)",
+        "s2": "s2 (ES)",
+        "s3": "s3 (ES)",
+        "s4": "s4 (ES)",
+        "s5": "s5 (ES)"
       },
-      "title": "title"
+      "title": "title (ES)"
     },
     "feasibility": {
-      "p1": "p1",
+      "p1": "p1 (ES)",
       "sectors": {
         "finance": {
-          "impact": "impact",
-          "title": "title"
+          "impact": "impact (ES)",
+          "title": "title (ES)"
         },
         "government": {
-          "impact": "impact",
-          "title": "title"
+          "impact": "impact (ES)",
+          "title": "title (ES)"
         },
         "healthcare": {
-          "impact": "impact",
-          "title": "title"
+          "impact": "impact (ES)",
+          "title": "title (ES)"
         },
         "telecom": {
-          "impact": "impact",
-          "title": "title"
+          "impact": "impact (ES)",
+          "title": "title (ES)"
         }
       },
-      "title": "title"
+      "title": "title (ES)"
     },
     "footer": {
       "copyright": "© 2026 OmniGCloud. All rights reserved.",
@@ -6806,68 +6837,68 @@
       "lab": "OmniGCloud Research Lab"
     },
     "impact": {
-      "business_value": "business_value",
+      "business_value": "business_value (ES)",
       "metrics": {
-        "cost": "cost",
-        "cost_label": "cost_label",
-        "efficiency": "efficiency",
-        "efficiency_label": "efficiency_label",
-        "security": "security",
-        "security_label": "security_label"
+        "cost": "cost (ES)",
+        "cost_label": "cost_label (ES)",
+        "efficiency": "efficiency (ES)",
+        "efficiency_label": "efficiency_label (ES)",
+        "security": "security (ES)",
+        "security_label": "security_label (ES)"
       },
-      "p1": "p1",
-      "title": "title"
+      "p1": "p1 (ES)",
+      "title": "title (ES)"
     },
     "introduction": {
-      "p1": "p1",
-      "p2": "p2",
-      "p3": "p3",
-      "title": "title"
+      "p1": "p1 (ES)",
+      "p2": "p2 (ES)",
+      "p3": "p3 (ES)",
+      "title": "title (ES)"
     },
     "lifecycle": {
-      "resilience": "resilience",
-      "title": "title"
+      "resilience": "resilience (ES)",
+      "title": "title (ES)"
     },
     "limitations": {
-      "p1": "p1",
-      "p2": "p2",
-      "title": "title"
+      "p1": "p1 (ES)",
+      "p2": "p2 (ES)",
+      "title": "title (ES)"
     },
     "meta": {
-      "description": "description",
-      "title": "title"
+      "description": "description (ES)",
+      "title": "title (ES)"
     },
     "problem": {
       "compliance": {
-        "content": "content",
-        "scenario": "scenario",
-        "title": "title"
+        "content": "content (ES)",
+        "scenario": "scenario (ES)",
+        "title": "title (ES)"
       },
       "metrics": {
-        "compliance_aso": "compliance_aso",
-        "compliance_label": "compliance_label",
-        "mttr_aso": "mttr_aso",
-        "mttr_aso_label": "mttr_aso_label",
-        "mttr_manual": "mttr_manual",
-        "mttr_manual_label": "mttr_manual_label",
-        "opex_label": "opex_label",
-        "opex_savings": "opex_savings"
+        "compliance_aso": "compliance_aso (ES)",
+        "compliance_label": "compliance_label (ES)",
+        "mttr_aso": "mttr_aso (ES)",
+        "mttr_aso_label": "mttr_aso_label (ES)",
+        "mttr_manual": "mttr_manual (ES)",
+        "mttr_manual_label": "mttr_manual_label (ES)",
+        "opex_label": "opex_label (ES)",
+        "opex_savings": "opex_savings (ES)"
       },
       "operational": {
-        "content": "content",
-        "scenario": "scenario",
-        "title": "title"
+        "content": "content (ES)",
+        "scenario": "scenario (ES)",
+        "title": "title (ES)"
       },
-      "p1": "p1",
-      "title": "title",
+      "p1": "p1 (ES)",
+      "title": "title (ES)",
       "vendor_lock": {
-        "content": "content",
-        "scenario": "scenario",
-        "title": "title"
+        "content": "content (ES)",
+        "scenario": "scenario (ES)",
+        "title": "title (ES)"
       }
     },
     "references": {
-      "title": "title"
+      "title": "title (ES)"
     },
     "section1": {
       "box": {
@@ -7113,7 +7144,7 @@
         "caption": "<strong>Figure 6: Necessity of Deterministic Logic:</strong> The design enforces a strict constraint solver path, rejecting all probabilistic inputs for actuation. <strong>Failure Mode:</strong> Allowing probabilistic (LLM) decision-making in the control loop introduces \"Black Box\" non-determinism, rendering the entire system legally indefensible during a forensic audit.",
         "labels": {
           "alert": "Constraint: Confidence < 99.9% mandates Human Operator review.",
-          "command": "COMMAND",
+          "command": "COMMAND (ES)",
           "commandSub": "Signed Action",
           "input": "INPUT VECTOR",
           "inputSub": "Telemetry Signal",
@@ -7149,15 +7180,14 @@
       "p1": "<strong>Risk Evaluation Strategy:</strong> In autonomous control, the cost of a \"Hallucinated Remediation\" (taking the wrong action) is existential. Therefore, AECP dictates a <strong>\"Safe-Fail\" protocol</strong>: in the event of any state ambiguity, the system chooses <strong>Isolation over Action</strong>, accepting reduced availability to preserve fatal integrity.",
       "title": "9. Safe-Fail Autonomy Protocols"
     },
-    "title": "title",
-    "version": "version",
-    "version_label": "version_label",
+    "title": "ASO Whitepaper (ES)",
+    "version": "8.4 (ES)",
+    "version_label": "Version (ES)",
     "watermark": "OMNIGCLOUD RESEARCH  •  COPYRIGHT 2026  •  DO NOT DISTRIBUTE"
   },
   "content": "Decouple your business logic from vendor-specific APIs and regain full control of your digital estate. (ES)",
   "cta": "Get Started (ES)",
   "desc": "Enterprise Grade Sovereignty (ES)",
-  "designPatterns": "Design Patterns (ES)",
   "docs": {
     "whitepaper": {
       "diagrams": {
@@ -7200,10 +7230,11 @@
       }
     }
   },
-  "downloadTitle": "Download Whitepaper (ES)",
   "items": "Items Details (ES)",
-  "readOnline": "Read Online (ES)",
   "steps": "Steps Details (ES)",
   "subtitle": "The Sovereign Cloud Control Plane (ES)",
-  "title": "OmniGCloud Platform (ES)"
+  "title": "OmniGCloud Platform (ES)",
+  "design_patterns": "Design Patterns (ES)",
+  "download_title": "Download Whitepaper (ES)",
+  "read_online": "Read Online (ES)"
 }
