@@ -1031,7 +1031,6 @@
         "title": "Title (ZH)"
       },
       "steps": {
-        "0": {},
         "1": {
           "desc": "Desc description (ZH)",
           "title": "Title (ZH)"
@@ -2381,9 +2380,9 @@
     "close": "Close Details (ZH)",
     "decline": "Decline Optional (ZH)",
     "message": "We use strictly necessary cookies to ensure platform security and data sovereignty compliance. Usage analytics are optional. (ZH)",
+    "policy_link": "Sovereignty Policy (ZH)",
     "sovereignNotice": "Data resides in your jurisdiction (ZH)",
-    "title": "Privacy & Sovereignty (ZH)",
-    "policy_link": "Sovereignty Policy (ZH)"
+    "title": "Privacy & Sovereignty (ZH)"
   },
   "Dashboard": {
     "Charts": {
@@ -2792,7 +2791,8 @@
       "code": "Code Details (ZH)",
       "desc": "OmniGCloud provides a unified control plane to enforce data sovereignty across all your cloud providers. (ZH)",
       "title": "Sync (ZH)"
-    }
+    },
+    "title": "The OmniGCloud Experience (ZH)"
   },
   "Docs": {
     "abstract": {
@@ -3900,10 +3900,6 @@
       "description": "Enterprise Cloud Solutions",
       "title": "OmnigCloud"
     },
-    "Platform": {
-      "title": "The AECP Platform | OmniGCloud",
-      "description": "Deep dive into the Autonomous Enterprise Control Plane, the kernel of sovereign multi-cloud orchestration."
-    },
     "Industries": {
       "finance": {
         "description": "Secure, high-frequency cloud infrastructure for the financial sector. We ensure PCI-DSS compliance, data residency, and micro-latency performance.",
@@ -3913,6 +3909,10 @@
         "description": "HIPAA-compliant cloud infrastructure for healthcare providers. Secure patient data storage, interoperable FHIR APIs, and medical imaging storage.",
         "title": "Healthcare Cloud Solutions | HIPAA & GDPR Compliant"
       }
+    },
+    "Platform": {
+      "description": "Deep dive into the Autonomous Enterprise Control Plane, the kernel of sovereign multi-cloud orchestration.",
+      "title": "The AECP Platform | OmniGCloud"
     },
     "Pricing": {
       "description": "Transparent, value-based pricing for your sovereign cloud modernization journey. Compare plans and calculate ROI.",
@@ -3930,8 +3930,6 @@
       "title": "Products"
     },
     "Services": {
-      "title": "Sovereign Services | OmniGCloud",
-      "description": "Comprehensive modernization services including cloud migration, DevOps, and OpenShift transformation governed by autonomous policy mesh.",
       "ai-cloud-platform": {
         "description": "Scale your AI workloads with secure, sovereign GPU orchestration. OmniGCloud provides the control plane for enterprise LLMs and generative AI.",
         "title": "AI Cloud Infrastructure & Managed GPUs | OmniGCloud"
@@ -3952,6 +3950,7 @@
         "description": "Transform legacy monoliths into scalable microservices using our automated 6R methodology (Rehost, Replatform, Refactor).",
         "title": "Application Modernization Services | Cloud Native Transformation"
       },
+      "description": "Comprehensive modernization services including cloud migration, DevOps, and OpenShift transformation governed by autonomous policy mesh.",
       "devops": {
         "description": "Accelerate your delivery cycle with our sovereign DevOps practices. We implement secure CI/CD, GitOps workflows, and automated infrastructure as code.",
         "title": "Enterprise DevOps & GitOps Services | Automated Pipelines"
@@ -3963,7 +3962,8 @@
       "openshift-modernization": {
         "description": "Scale your hybrid cloud with confidence. OmniGCloud provides expert OpenShift modernization services, ensuring your OCP clusters are secure and compliant.",
         "title": "RedHat OpenShift Modernization | Enterprise Cluster Management"
-      }
+      },
+      "title": "Sovereign Services | OmniGCloud"
     },
     "Solutions": {
       "description": "Automate compliance with real-time drift detection and auto-remediation policies.",
@@ -4561,6 +4561,37 @@
     "title": "OmniGCloud Platform (ZH)"
   },
   "Pricing": {
+    "DeepDive": {
+      "content": "Explore the formal methodologies and technical specifications that underpin our sovereign orchestration engine. (ZH)",
+      "links": {
+        "blueprint": "Modernization Blueprint (ZH)",
+        "finance": "Sovereign Finance (ZH)",
+        "modernization": "Cloud Modernization (ZH)"
+      },
+      "title": "Architectural Deep Dive (ZH)"
+    },
+    "FAQ": {
+      "items": {
+        "0": {
+          "a": "Unlike traditional providers that charge for opaque abstractions, OmniGCloud uses predictable sovereign nodes as the base unit of cost. (ZH)",
+          "q": "How is OmniGCloud pricing calculated? (ZH)"
+        },
+        "1": {
+          "a": "Yes, our savings analysis engine provides real-time arbitrage across all supported regions and providers. (ZH)",
+          "q": "Can I see my potential savings before migrating? (ZH)"
+        },
+        "2": {
+          "a": "Our standard enterprise SLA guarantees 99.99% availability for the control plane and managed workloads. (ZH)",
+          "q": "What is the uptime guarantee? (ZH)"
+        }
+      },
+      "title": "Pricing F.A.Q (ZH)"
+    },
+    "LeadCapture": {
+      "cta": "Get Started (ZH)",
+      "subtitle": "Join the enterprises achieving economic sovereignty in the multi-cloud era. (ZH)",
+      "title": "Ready to optimize? (ZH)"
+    },
     "compliance": {
       "badge": "COMPLIANCE (ZH)",
       "subtitle": "Built for regulated industries with strict data residency and sovereignty requirements. (ZH)",
@@ -4770,37 +4801,6 @@
       },
       "subtitle": "Our pricing is aligned with the sovereign nodes you manage, ensuring that your costs scale linearly with your infrastructure value, not your provider's proprietary egress fees. (ZH)",
       "title": "Visual Architecture Breakdown (ZH)"
-    },
-    "LeadCapture": {
-      "cta": "Get Started (ZH)",
-      "subtitle": "Join the enterprises achieving economic sovereignty in the multi-cloud era. (ZH)",
-      "title": "Ready to optimize? (ZH)"
-    },
-    "DeepDive": {
-      "links": {
-        "blueprint": "Modernization Blueprint (ZH)",
-        "finance": "Sovereign Finance (ZH)",
-        "modernization": "Cloud Modernization (ZH)"
-      },
-      "title": "Architectural Deep Dive (ZH)",
-      "content": "Explore the formal methodologies and technical specifications that underpin our sovereign orchestration engine. (ZH)"
-    },
-    "FAQ": {
-      "items": {
-        "0": {
-          "a": "Unlike traditional providers that charge for opaque abstractions, OmniGCloud uses predictable sovereign nodes as the base unit of cost. (ZH)",
-          "q": "How is OmniGCloud pricing calculated? (ZH)"
-        },
-        "1": {
-          "a": "Yes, our savings analysis engine provides real-time arbitrage across all supported regions and providers. (ZH)",
-          "q": "Can I see my potential savings before migrating? (ZH)"
-        },
-        "2": {
-          "a": "Our standard enterprise SLA guarantees 99.99% availability for the control plane and managed workloads. (ZH)",
-          "q": "What is the uptime guarantee? (ZH)"
-        }
-      },
-      "title": "Pricing F.A.Q (ZH)"
     }
   },
   "Privacy": {
@@ -5493,18 +5493,6 @@
         "description": "Visual representation of the AECP core components and data flow. (ZH)"
       }
     },
-    "Services": {
-      "DeepDive": {
-        "links": {
-          "devops": "Sovereign DevOps (ZH)",
-          "finops": "Cloud FinOps (ZH)",
-          "modernization": "Cloud Modernization (ZH)"
-        }
-      },
-      "VisualSection": {
-        "description": "Overview of our modernization and optimization service layers. (ZH)"
-      }
-    },
     "Pricing": {
       "AboveTheFold": "Achieve total cloud sovereignty with transparent, value-based units. Decouple your infrastructure costs from vendor lock-in and optimize for regulatory compliance and performance.",
       "DeepDive": {
@@ -5561,6 +5549,18 @@
       "WhyItMatters": {
         "content": "Without economic predictability, cloud sovereignty is an illusion. We provide the tools to ensure your infrastructure remains financially sustainable and strategically independent.",
         "title": "Economic Autonomy"
+      }
+    },
+    "Services": {
+      "DeepDive": {
+        "links": {
+          "devops": "Sovereign DevOps (ZH)",
+          "finops": "Cloud FinOps (ZH)",
+          "modernization": "Cloud Modernization (ZH)"
+        }
+      },
+      "VisualSection": {
+        "description": "Overview of our modernization and optimization service layers. (ZH)"
       }
     }
   },
@@ -6588,6 +6588,7 @@
     },
     "contribution": "Contribution Details",
     "description": "A comprehensive framework for achieving mathematical certainty in data sovereignty across multi-cloud environments.",
+    "design_patterns": "Design Patterns",
     "detailedDiagrams": {
       "context": {
         "clouds": {
@@ -6677,6 +6678,8 @@
         }
       }
     },
+    "download_subtitle": "Get the full technical specification, including architecture diagrams, decision frameworks, and implementation guides.",
+    "download_title": "Download the Whitepaper",
     "footer": {
       "_value": "Available in PDF / ePub formats.",
       "copyright": "© 2026 OmniGCloud. All rights reserved."
@@ -6701,11 +6704,8 @@
     },
     "pageCount": "42 Pages",
     "peerReview": "Peer Reviewed",
-    "title": "The Autonomous Sovereign Cloud Protocol",
-    "design_patterns": "Design Patterns",
-    "download_subtitle": "Get the full technical specification, including architecture diagrams, decision frameworks, and implementation guides.",
-    "download_title": "Download the Whitepaper",
-    "read_online": "Read Online"
+    "read_online": "Read Online",
+    "title": "The Autonomous Sovereign Cloud Protocol"
   },
   "Whitepaper": {
     "abstract": {
@@ -6796,6 +6796,16 @@
       },
       "non_replicability": "non_replicability (ZH)",
       "p1": "p1 (ZH)",
+      "title": "title (ZH)"
+    },
+    "ebu1a": {
+      "executive_summary_title": "executive_summary_title (ZH)",
+      "importance": "importance (ZH)",
+      "importance_label": "importance_label (ZH)",
+      "originality": "originality (ZH)",
+      "originality_label": "originality_label (ZH)",
+      "p1": "p1 (ZH)",
+      "summary_content": "summary_content (ZH)",
       "title": "title (ZH)"
     },
     "execution_flow": {
@@ -6901,9 +6911,9 @@
       }
     },
     "references": {
-      "title": "title (ZH)",
       "ref1": "AECP Core Specifications (2024)",
-      "ref2": "Sovereignty Lattice Theory"
+      "ref2": "Sovereignty Lattice Theory",
+      "title": "title (ZH)"
     },
     "section1": {
       "box": {
@@ -7188,21 +7198,12 @@
     "title": "ASO Whitepaper (ZH)",
     "version": "8.4 (ZH)",
     "version_label": "Version (ZH)",
-    "watermark": "OMNIGCLOUD RESEARCH  •  COPYRIGHT 2026  •  DO NOT DISTRIBUTE",
-    "ebu1a": {
-      "executive_summary_title": "executive_summary_title (ZH)",
-      "importance": "importance (ZH)",
-      "importance_label": "importance_label (ZH)",
-      "originality": "originality (ZH)",
-      "originality_label": "originality_label (ZH)",
-      "p1": "p1 (ZH)",
-      "summary_content": "summary_content (ZH)",
-      "title": "title (ZH)"
-    }
+    "watermark": "OMNIGCLOUD RESEARCH  •  COPYRIGHT 2026  •  DO NOT DISTRIBUTE"
   },
   "content": "Decouple your business logic from vendor-specific APIs and regain full control of your digital estate. (ZH)",
   "cta": "Get Started (ZH)",
   "desc": "Enterprise Grade Sovereignty (ZH)",
+  "design_patterns": "Design Patterns (ZH)",
   "docs": {
     "whitepaper": {
       "diagrams": {
@@ -7245,11 +7246,10 @@
       }
     }
   },
+  "download_title": "Download Whitepaper (ZH)",
   "items": "Items Details (ZH)",
+  "read_online": "Read Online (ZH)",
   "steps": "Steps Details (ZH)",
   "subtitle": "The Sovereign Cloud Control Plane (ZH)",
-  "title": "OmniGCloud Platform (ZH)",
-  "design_patterns": "Design Patterns (ZH)",
-  "download_title": "Download Whitepaper (ZH)",
-  "read_online": "Read Online (ZH)"
+  "title": "OmniGCloud Platform (ZH)"
 }

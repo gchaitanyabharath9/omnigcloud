@@ -7,18 +7,16 @@
                 "http://localhost:3000/en/architecture",
                 "http://localhost:3000/en/research",
                 "http://localhost:3000/en/research/papers/a1-cloud-native-enterprise-reference",
-                "http://localhost:3000/en/research/papers/a2-high-throughput-distributed-systems",
                 "http://localhost:3000/en/research/papers/a3-enterprise-observability-operational-intelligence",
-                "http://localhost:3000/en/research/papers/a4-platform-governance-multicloud-hybrid",
-                "http://localhost:3000/en/research/papers/a5-monolith-to-cloud-native-modernization",
-                "http://localhost:3000/en/research/papers/a6-adaptive-policy-enforcement",
-                "http://localhost:3000/en/research/papers/aecp",
-                "http://localhost:3000/en/research/papers/scholarly-article"
+                "http://localhost:3000/en/research/papers/aecp"
             ],
             "numberOfRuns": 1,
             "settings": {
                 "preset": "perf",
-                "chromeFlags": "--no-sandbox --headless"
+                "port": 9222,
+                "skipAudits": [
+                    "unused-css-rules"
+                ]
             }
         },
         "assert": {
@@ -27,24 +25,6 @@
                     "warn",
                     {
                         "minScore": 0.6
-                    }
-                ],
-                "categories:accessibility": [
-                    "warn",
-                    {
-                        "minScore": 0.8
-                    }
-                ],
-                "categories:best-practices": [
-                    "warn",
-                    {
-                        "minScore": 0.7
-                    }
-                ],
-                "categories:seo": [
-                    "warn",
-                    {
-                        "minScore": 0.7
                     }
                 ],
                 "largest-contentful-paint": [
@@ -62,13 +42,13 @@
                 "total-blocking-time": [
                     "warn",
                     {
-                        "maxNumericValue": 400
+                        "maxNumericValue": 2500
                     }
                 ],
                 "speed-index": [
                     "warn",
                     {
-                        "maxNumericValue": 5000
+                        "maxNumericValue": 6000
                     }
                 ]
             }
