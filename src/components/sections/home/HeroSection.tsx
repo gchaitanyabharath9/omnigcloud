@@ -89,7 +89,7 @@ export default function HeroSection() {
                                 <div>
                                     <h3 style={{ fontSize: '0.85rem', fontWeight: 800, textTransform: 'uppercase', color: 'var(--primary)', marginBottom: '0.5rem', letterSpacing: '0.1em' }}>{t('monitor.title')}</h3>
                                     <div style={{ display: 'flex', alignItems: 'baseline', gap: '0.75rem' }}>
-                                        <span style={{ fontSize: '2.5rem', fontWeight: 900, color: 'white' }}>{t('monitor.latency')}</span>
+                                        <span style={{ fontSize: '2.5rem', fontWeight: 900, color: 'var(--foreground)' }}>{t('monitor.latency')}</span>
                                         <span style={{ fontSize: '1rem', color: '#10b981', fontWeight: 700 }}>● {t('monitor.status')}</span>
                                     </div>
                                 </div>
@@ -130,7 +130,7 @@ export default function HeroSection() {
                                     {[{ l: t('stats.assets'), v: '$2.4B' }, { l: t('stats.drift'), v: '0%', c: '#10b981' }, { l: t('stats.nodes'), v: '4k+', c: 'var(--primary)' }].map((s, i) => (
                                         <div key={i} style={{ padding: '1rem', background: 'rgba(255,255,255,0.02)', borderRadius: '0.75rem', border: '1px solid var(--card-border)' }}>
                                             <div style={{ fontSize: '0.7rem', color: 'var(--muted)', textTransform: 'uppercase' }}>{s.l}</div>
-                                            <div style={{ fontSize: '1.25rem', fontWeight: 900, color: s.c || 'white' }}>{s.v}</div>
+                                            <div style={{ fontSize: '1.25rem', fontWeight: 900, color: s.c || 'var(--foreground)' }}>{s.v}</div>
                                         </div>
                                     ))}
                                 </div>

@@ -172,7 +172,7 @@ export default async function PricingPage({ params }: { params: Promise<{ locale
                                     </ul>
                                 </div>
 
-                                <Link href={`/${locale}/contact`} className={plan.highlight ? 'btn-primary' : 'btn-secondary'} style={{ width: '100%', textAlign: 'center', padding: '0.4rem', fontSize: '0.75rem' }}>
+                                <Link href="/contact" className={plan.highlight ? 'btn-primary' : 'btn-secondary'} style={{ width: '100%', textAlign: 'center', padding: '0.4rem', fontSize: '0.75rem' }}>
                                     {tSafe(t, `plans.${plan.id}.cta`, 'Get Started')}
                                 </Link>
                             </div>
@@ -354,7 +354,7 @@ export default async function PricingPage({ params }: { params: Promise<{ locale
                             {tSafe(t, 'LeadCapture.subtitle', 'Empowering the next generation of regulated enterprise.')}
                         </p>
                         <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '1.5rem' }}>
-                            <Link href={`/${locale}/contact`} className="btn-primary" style={{
+                            <Link href="/contact" className="btn-primary" style={{
                                 background: 'white',
                                 color: '#1e40af',
                                 border: 'none',
@@ -395,5 +395,5 @@ export default async function PricingPage({ params }: { params: Promise<{ locale
     );
 }
 
-import { AboveTheFoldDescription, HowItWorks, VisualSection, DeepDive, TopicalAuthority, TechnicalInsights, FAQSection } from '@/components/seo/Enrichment';
+import { AboveTheFoldDescription, HowItWorks, DeepDive, TopicalAuthority, TechnicalInsights, FAQSection } from '@/components/seo/Enrichment';
 import { tSafe } from '@/lib/i18n/tSafe';

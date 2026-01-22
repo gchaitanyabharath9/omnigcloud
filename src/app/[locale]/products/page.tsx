@@ -3,14 +3,13 @@ import { Section } from '@/components/layout/Section';
 import { getTranslations, getLocale } from 'next-intl/server';
 import { generateSEOMetadata, SEO_KEYWORDS } from '@/utils/seo';
 import { Cpu, ArrowRight } from 'lucide-react';
-import Link from 'next/link';
+import { Link } from '@/navigation';
 import { PRODUCTS } from '@/data/products';
 import Footer from '@/components/Footer';
 import Image from 'next/image';
 import ProductScroller from '@/features/products/ProductScroller';
 import { HowItWorks, VisualSection, DeepDive } from '@/components/seo/Enrichment';
 
-const PRODUCT_SECTION_IDS = ['playground', 'workflows', 'guard', 'knowledge', 'deploy', 'nexus'];
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
     const { locale } = await params;
@@ -62,7 +61,7 @@ export default async function ProductsPage() {
                                 marginBottom: '1.5rem',
                                 letterSpacing: '-2px',
                                 lineHeight: 1.1,
-                                color: 'white',
+                                color: 'var(--foreground)',
                                 textShadow: '0 0 40px rgba(255,255,255,0.1)',
                                 animationDelay: '0.2s'
                             }}>
