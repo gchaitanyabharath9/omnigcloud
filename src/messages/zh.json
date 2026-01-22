@@ -6780,19 +6780,22 @@
       "title": "title (ZH)"
     },
     "differentiation": {
-      "comparison": "comparison (ZH)",
+      "comparison": {
+        "headers": {
+          "0": "Category",
+          "1": "Legacy",
+          "2": "Hybrid",
+          "3": "AECP"
+        },
+        "row1": {
+          "0": "Control Layer",
+          "1": "Manual/Scripted",
+          "2": "Policy-Based",
+          "3": "Autonomous"
+        }
+      },
       "non_replicability": "non_replicability (ZH)",
       "p1": "p1 (ZH)",
-      "title": "title (ZH)"
-    },
-    "eb1a": {
-      "executive_summary_title": "executive_summary_title (ZH)",
-      "importance": "importance (ZH)",
-      "importance_label": "importance_label (ZH)",
-      "originality": "originality (ZH)",
-      "originality_label": "originality_label (ZH)",
-      "p1": "p1 (ZH)",
-      "summary_content": "summary_content (ZH)",
       "title": "title (ZH)"
     },
     "execution_flow": {
@@ -6898,7 +6901,9 @@
       }
     },
     "references": {
-      "title": "title (ZH)"
+      "title": "title (ZH)",
+      "ref1": "AECP Core Specifications (2024)",
+      "ref2": "Sovereignty Lattice Theory"
     },
     "section1": {
       "box": {
@@ -7183,7 +7188,17 @@
     "title": "ASO Whitepaper (ZH)",
     "version": "8.4 (ZH)",
     "version_label": "Version (ZH)",
-    "watermark": "OMNIGCLOUD RESEARCH  •  COPYRIGHT 2026  •  DO NOT DISTRIBUTE"
+    "watermark": "OMNIGCLOUD RESEARCH  •  COPYRIGHT 2026  •  DO NOT DISTRIBUTE",
+    "ebu1a": {
+      "executive_summary_title": "executive_summary_title (ZH)",
+      "importance": "importance (ZH)",
+      "importance_label": "importance_label (ZH)",
+      "originality": "originality (ZH)",
+      "originality_label": "originality_label (ZH)",
+      "p1": "p1 (ZH)",
+      "summary_content": "summary_content (ZH)",
+      "title": "title (ZH)"
+    }
   },
   "content": "Decouple your business logic from vendor-specific APIs and regain full control of your digital estate. (ZH)",
   "cta": "Get Started (ZH)",

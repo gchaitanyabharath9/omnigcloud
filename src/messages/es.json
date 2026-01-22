@@ -6780,19 +6780,22 @@
       "title": "title (ES)"
     },
     "differentiation": {
-      "comparison": "comparison (ES)",
+      "comparison": {
+        "headers": {
+          "0": "Category",
+          "1": "Legacy",
+          "2": "Hybrid",
+          "3": "AECP"
+        },
+        "row1": {
+          "0": "Control Layer",
+          "1": "Manual/Scripted",
+          "2": "Policy-Based",
+          "3": "Autonomous"
+        }
+      },
       "non_replicability": "non_replicability (ES)",
       "p1": "p1 (ES)",
-      "title": "title (ES)"
-    },
-    "eb1a": {
-      "executive_summary_title": "executive_summary_title (ES)",
-      "importance": "importance (ES)",
-      "importance_label": "importance_label (ES)",
-      "originality": "originality (ES)",
-      "originality_label": "originality_label (ES)",
-      "p1": "p1 (ES)",
-      "summary_content": "summary_content (ES)",
       "title": "title (ES)"
     },
     "execution_flow": {
@@ -6898,7 +6901,9 @@
       }
     },
     "references": {
-      "title": "title (ES)"
+      "title": "title (ES)",
+      "ref1": "AECP Core Specifications (2024)",
+      "ref2": "Sovereignty Lattice Theory"
     },
     "section1": {
       "box": {
@@ -7183,7 +7188,17 @@
     "title": "ASO Whitepaper (ES)",
     "version": "8.4 (ES)",
     "version_label": "Version (ES)",
-    "watermark": "OMNIGCLOUD RESEARCH  •  COPYRIGHT 2026  •  DO NOT DISTRIBUTE"
+    "watermark": "OMNIGCLOUD RESEARCH  •  COPYRIGHT 2026  •  DO NOT DISTRIBUTE",
+    "ebu1a": {
+      "executive_summary_title": "executive_summary_title (ES)",
+      "importance": "importance (ES)",
+      "importance_label": "importance_label (ES)",
+      "originality": "originality (ES)",
+      "originality_label": "originality_label (ES)",
+      "p1": "p1 (ES)",
+      "summary_content": "summary_content (ES)",
+      "title": "title (ES)"
+    }
   },
   "content": "Decouple your business logic from vendor-specific APIs and regain full control of your digital estate. (ES)",
   "cta": "Get Started (ES)",

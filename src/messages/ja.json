@@ -6780,19 +6780,22 @@
       "title": "title (JA)"
     },
     "differentiation": {
-      "comparison": "comparison (JA)",
+      "comparison": {
+        "headers": {
+          "0": "Category",
+          "1": "Legacy",
+          "2": "Hybrid",
+          "3": "AECP"
+        },
+        "row1": {
+          "0": "Control Layer",
+          "1": "Manual/Scripted",
+          "2": "Policy-Based",
+          "3": "Autonomous"
+        }
+      },
       "non_replicability": "non_replicability (JA)",
       "p1": "p1 (JA)",
-      "title": "title (JA)"
-    },
-    "eb1a": {
-      "executive_summary_title": "executive_summary_title (JA)",
-      "importance": "importance (JA)",
-      "importance_label": "importance_label (JA)",
-      "originality": "originality (JA)",
-      "originality_label": "originality_label (JA)",
-      "p1": "p1 (JA)",
-      "summary_content": "summary_content (JA)",
       "title": "title (JA)"
     },
     "execution_flow": {
@@ -6898,7 +6901,9 @@
       }
     },
     "references": {
-      "title": "title (JA)"
+      "title": "title (JA)",
+      "ref1": "AECP Core Specifications (2024)",
+      "ref2": "Sovereignty Lattice Theory"
     },
     "section1": {
       "box": {
@@ -7183,7 +7188,17 @@
     "title": "ASO Whitepaper (JA)",
     "version": "8.4 (JA)",
     "version_label": "Version (JA)",
-    "watermark": "OMNIGCLOUD RESEARCH  •  COPYRIGHT 2026  •  DO NOT DISTRIBUTE"
+    "watermark": "OMNIGCLOUD RESEARCH  •  COPYRIGHT 2026  •  DO NOT DISTRIBUTE",
+    "ebu1a": {
+      "executive_summary_title": "executive_summary_title (JA)",
+      "importance": "importance (JA)",
+      "importance_label": "importance_label (JA)",
+      "originality": "originality (JA)",
+      "originality_label": "originality_label (JA)",
+      "p1": "p1 (JA)",
+      "summary_content": "summary_content (JA)",
+      "title": "title (JA)"
+    }
   },
   "content": "Decouple your business logic from vendor-specific APIs and regain full control of your digital estate. (JA)",
   "cta": "Get Started (JA)",

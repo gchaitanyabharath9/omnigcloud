@@ -6780,19 +6780,22 @@
       "title": "title (FR)"
     },
     "differentiation": {
-      "comparison": "comparison (FR)",
+      "comparison": {
+        "headers": {
+          "0": "Category",
+          "1": "Legacy",
+          "2": "Hybrid",
+          "3": "AECP"
+        },
+        "row1": {
+          "0": "Control Layer",
+          "1": "Manual/Scripted",
+          "2": "Policy-Based",
+          "3": "Autonomous"
+        }
+      },
       "non_replicability": "non_replicability (FR)",
       "p1": "p1 (FR)",
-      "title": "title (FR)"
-    },
-    "eb1a": {
-      "executive_summary_title": "executive_summary_title (FR)",
-      "importance": "importance (FR)",
-      "importance_label": "importance_label (FR)",
-      "originality": "originality (FR)",
-      "originality_label": "originality_label (FR)",
-      "p1": "p1 (FR)",
-      "summary_content": "summary_content (FR)",
       "title": "title (FR)"
     },
     "execution_flow": {
@@ -6898,7 +6901,9 @@
       }
     },
     "references": {
-      "title": "title (FR)"
+      "title": "title (FR)",
+      "ref1": "AECP Core Specifications (2024)",
+      "ref2": "Sovereignty Lattice Theory"
     },
     "section1": {
       "box": {
@@ -7183,7 +7188,17 @@
     "title": "ASO Whitepaper (FR)",
     "version": "8.4 (FR)",
     "version_label": "Version (FR)",
-    "watermark": "OMNIGCLOUD RESEARCH  •  COPYRIGHT 2026  •  DO NOT DISTRIBUTE"
+    "watermark": "OMNIGCLOUD RESEARCH  •  COPYRIGHT 2026  •  DO NOT DISTRIBUTE",
+    "ebu1a": {
+      "executive_summary_title": "executive_summary_title (FR)",
+      "importance": "importance (FR)",
+      "importance_label": "importance_label (FR)",
+      "originality": "originality (FR)",
+      "originality_label": "originality_label (FR)",
+      "p1": "p1 (FR)",
+      "summary_content": "summary_content (FR)",
+      "title": "title (FR)"
+    }
   },
   "content": "Decouple your business logic from vendor-specific APIs and regain full control of your digital estate. (FR)",
   "cta": "Get Started (FR)",
