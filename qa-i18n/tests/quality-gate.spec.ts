@@ -96,7 +96,7 @@ test.describe('Quality Gate - Core Navigation & UI', () => {
                 const url = `${HOST}/${locale}/products#playground`;
                 await page.goto(url, { waitUntil: 'domcontentloaded', timeout: 30000 });
                 await waitForStableHydration(page);
-                await page.waitForLoadState('networkidle', { timeout: 5000 }).catch(() => { });
+                // await page.waitForLoadState('networkidle', { timeout: 5000 }).catch(() => { }); // Removed to prevent timeout
 
                 // Wait for any scroll to settle (Check top position stability)
                 await page.waitForFunction(() => {
@@ -128,8 +128,8 @@ test.describe('Quality Gate - Core Navigation & UI', () => {
 
                 await page.goto(`${HOST}/en/products#playground`, { waitUntil: 'domcontentloaded', timeout: 30000 });
                 await waitForStableHydration(page);
-                await page.waitForLoadState('networkidle', { timeout: 5000 }).catch(() => { });
-                await page.waitForTimeout(2000);
+                // await page.waitForLoadState('networkidle', { timeout: 5000 }).catch(() => { }); // Removed to prevent timeout
+                await page.waitForTimeout(2000); // Short stabilization wait
                 console.log(`[DEBUG] ${locale} current URL before switch: ${page.url()}`);
 
                 // Open language switcher
