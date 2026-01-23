@@ -3001,26 +3001,26 @@
       "validationProtocols": "Validation Protocols (DE)"
     },
     "sidebar": {
-      "blueprint_links": {
-        "aws": "AWS Blueprint (DE)",
-        "azure": "Azure Blueprint (DE)",
-        "hybrid": "Hybrid Cloud Blueprint (DE)",
-        "openshift": "OpenShift Blueprint (DE)"
-      },
-      "blueprints": "Blueprints (DE)",
-      "contactArchitectureOffice": "Contact Architecture Office (DE)",
-      "customBriefingText": "Request a dedicated technical walkthrough of our sovereign architecture patterns. (DE)",
-      "customBriefingTitle": "Custom Briefing (DE)",
-      "documentation": "Documentation (DE)",
+      "contactArchitectureOffice": "Contact Architecture Office",
+      "customBriefingTitle": "Need a customized briefing?",
+      "quickLinksHeading": "Quick Links",
       "links": {
-        "architecture": "Architecture (DE)",
-        "introduction": "Introduction (DE)",
-        "security": "Security & Governance (DE)",
-        "whitepaper": "Whitepaper (DE)",
-        "api": "API Reference (DE)",
-        "guide": "Architectural Guide (DE)"
+        "introduction": "Introduction",
+        "architecture": "Architecture",
+        "whitepaper": "Technical Whitepaper",
+        "security": "Security & Governance",
+        "guide": "Architectural Guide",
+        "api": "API Reference"
       },
-      "quickLinksHeading": "Quick Links (DE)"
+      "documentation": "DOCUMENTATION",
+      "blueprints": "GOVERNANCE BLUEPRINTS",
+      "blueprint_links": {
+        "aws": "AWS Landing Zone",
+        "azure": "Azure Enterprise",
+        "openshift": "OpenShift Cluster",
+        "hybrid": "Hybrid Fabric"
+      },
+      "customBriefingText": "Generate a custom briefing document based on your selected stack."
     },
     "technicalLibrary": "Technical Library (DE)",
     "transparency": {
@@ -3115,22 +3115,17 @@
     "title": "Ready for Sovereign AI? (DE)"
   },
   "Enrichment": {
-    "AboveTheFold": "Above The Fold (DE)",
-    "content": "Content (DE)",
-    "cta": "Cta (DE)",
-    "howItWorks": "Our autonomous framework follows a rigorous 3-step synchronization process to ensure absolute sovereignty and compliance across your multi-cloud estate. (DE)",
+    "howItWorks": "Our autonomous framework follows a rigorous 3-step synchronization process to ensure absolute sovereignty and compliance across your multi-cloud estate.",
     "leadCapture": {
-      "fallback": "Direct Email Fallback (DE)"
+      "fallback": "Contact Us Directly"
+    },
+    "visualSection": {
+      "tag": "Architecture Overview",
+      "title": "System Visualizer",
+      "note": "This diagram represents the actual orchestration fabric across multiple cloud regions."
     },
     "relatedLinks": {
-      "title": "Related Strategy & Insights (DE)"
-    },
-    "subtitle": "Subtitle description (DE)",
-    "title": "Title (DE)",
-    "visualSection": {
-      "note": "This diagram is updated in real-time as your multi-cloud orchestration logic evolves within the AECP kernel. (DE)",
-      "tag": "ARCHITECTURE_VISUAL_01 // SECURE_MESH (DE)",
-      "title": "Visual Architecture Breakdown (DE)"
+      "title": "Related Strategy & Insights"
     }
   },
   "Enterprise": {
@@ -5574,15 +5569,18 @@
         "steps": {
           "0": {
             "desc": "Provision your sovereignty perimeter across multi-cloud regions using our autonomous fabric kernel.",
-            "title": "Fabric Provisioning"
+            "title": "Fabric Provisioning",
+            "heading": "Phase 1"
           },
           "1": {
             "desc": "Enforce governance logic at the infrastructure level with real-time drift detection and auto-remediation.",
-            "title": "Governance Sync"
+            "title": "Governance Sync",
+            "heading": "Phase 2"
           },
           "2": {
             "desc": "Achieve absolute sovereignty and compliance with a single, vendor-agnostic control plane.",
-            "title": "Unified Control"
+            "title": "Unified Control",
+            "heading": "Phase 3"
           }
         },
         "title": "How It Works"

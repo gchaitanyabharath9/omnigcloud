@@ -2999,28 +2999,6 @@
       "empiricalDataSetDesc": "Verified multi-cloud telemetry",
       "validationProtocols": "Validation Protocols"
     },
-    "sidebar": {
-      "blueprint_links": {
-        "aws": "AWS Blueprint",
-        "azure": "Azure Blueprint",
-        "hybrid": "Hybrid Cloud Blueprint",
-        "openshift": "OpenShift Blueprint"
-      },
-      "blueprints": "Docs Sidebar Blueprints",
-      "contactArchitectureOffice": "Contact Architecture Office",
-      "customBriefingText": "Request a dedicated technical walkthrough of our sovereign architecture patterns.",
-      "customBriefingTitle": "Custom Briefing",
-      "documentation": "Docs Sidebar Documentation",
-      "links": {
-        "api": "API Reference",
-        "architecture": "Architecture",
-        "guide": "Architectural Guide",
-        "introduction": "Introduction",
-        "security": "Security & Governance",
-        "whitepaper": "Whitepaper"
-      },
-      "quickLinksHeading": "Quick Links"
-    },
     "technicalLibrary": "Technical Library",
     "transparency": {
       "desc": "Clear, auditable practices across security, reliability, and operations.",
@@ -3048,6 +3026,42 @@
           "yAxis": "Y Axis"
         }
       }
+    },
+    "sidebar": {
+      "contactArchitectureOffice": "Contact Architecture Office",
+      "customBriefingTitle": "Need a customized briefing?",
+      "quickLinksHeading": "Quick Links",
+      "links": {
+        "introduction": "Introduction",
+        "architecture": "Architecture",
+        "whitepaper": "Technical Whitepaper",
+        "security": "Security & Governance",
+        "guide": "Architectural Guide",
+        "api": "API Reference"
+      },
+      "documentation": "DOCUMENTATION",
+      "blueprints": "GOVERNANCE BLUEPRINTS",
+      "blueprint_links": {
+        "aws": "AWS Landing Zone",
+        "azure": "Azure Enterprise",
+        "openshift": "OpenShift Cluster",
+        "hybrid": "Hybrid Fabric"
+      },
+      "customBriefingText": "Generate a custom briefing document based on your selected stack."
+    }
+  },
+  "Enrichment": {
+    "howItWorks": "Our autonomous framework follows a rigorous 3-step synchronization process to ensure absolute sovereignty and compliance across your multi-cloud estate.",
+    "leadCapture": {
+      "fallback": "Contact Us Directly"
+    },
+    "visualSection": {
+      "tag": "Architecture Overview",
+      "title": "System Visualizer",
+      "note": "This diagram represents the actual orchestration fabric across multiple cloud regions."
+    },
+    "relatedLinks": {
+      "title": "Related Strategy & Insights"
     }
   },
   "Ecosystem": {
@@ -3112,25 +3126,6 @@
       "title": "Ready for Sovereign AI?"
     },
     "title": "Ready for Sovereign AI?"
-  },
-  "Enrichment": {
-    "AboveTheFold": "Above The Fold",
-    "content": "Enrichment Content",
-    "cta": "Enrichment Cta",
-    "howItWorks": "Our autonomous framework follows a rigorous 3-step synchronization process to ensure absolute sovereignty and compliance across your multi-cloud estate.",
-    "leadCapture": {
-      "fallback": "Direct Email Fallback"
-    },
-    "relatedLinks": {
-      "title": "Related Strategy & Insights"
-    },
-    "subtitle": "Subtitle description",
-    "title": "Enrichment Title",
-    "visualSection": {
-      "note": "This diagram is updated in real-time as your multi-cloud orchestration logic evolves within the AECP kernel.",
-      "tag": "ARCHITECTURE_VISUAL_01 // SECURE_MESH",
-      "title": "Visual Architecture Breakdown"
-    }
   },
   "Enterprise": {
     "approach": {
@@ -5503,15 +5498,18 @@
         "steps": {
           "0": {
             "desc": "Provision your sovereignty perimeter across multi-cloud regions using our autonomous fabric kernel.",
-            "title": "Fabric Provisioning"
+            "title": "Fabric Provisioning",
+            "heading": "Phase 1"
           },
           "1": {
             "desc": "Enforce governance logic at the infrastructure level with real-time drift detection and auto-remediation.",
-            "title": "Governance Sync"
+            "title": "Governance Sync",
+            "heading": "Phase 2"
           },
           "2": {
             "desc": "Achieve absolute sovereignty and compliance with a single, vendor-agnostic control plane.",
-            "title": "Unified Control"
+            "title": "Unified Control",
+            "heading": "Phase 3"
           }
         },
         "title": "How It Works"
