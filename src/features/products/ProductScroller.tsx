@@ -17,6 +17,7 @@ export default function ProductScroller({ activeProduct, products }: ProductScro
                     <section
                         key={product.id}
                         id={product.id}
+                        data-testid={`product-section-${product.id}`}
                         className="w-full flex flex-col justify-start relative border-b border-white/5 last:border-0"
                         // Force each section to be at least a full viewport height for "page" feel
                         // scrollMarginTop accounts for the fixed header so content starts cleanly below it

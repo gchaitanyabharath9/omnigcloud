@@ -79,7 +79,7 @@ export const HowItWorks = ({ pageKey }: { pageKey: string }) => {
 
                 <div className={`grid gap-8 ${isHome ? 'grid-cols-1' : 'md:grid-cols-3'}`}>
                     {steps.map((i) => (
-                        <div key={i} className="glass-panel p-8 md:p-10 rounded-3xl relative overflow-hidden group hover:border-primary/50 transition-all duration-300">
+                        <div key={i} className="glass-panel p-8 md:p-10 rounded-3xl relative overflow-hidden group hover:border-primary/50 transition-all duration-300 h-full">
                             <div className="flex flex-col md:flex-row gap-8 items-start relative z-10">
                                 {/* Left Column: The Number (Fixed width on desktop) */}
                                 <div className="shrink-0 w-16 h-16 md:w-20 md:h-20 flex items-center justify-center rounded-2xl bg-primary/5 border border-primary/20 group-hover:bg-primary/10 group-hover:border-primary/40 transition-colors">
