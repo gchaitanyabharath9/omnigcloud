@@ -11,7 +11,7 @@ export const ProductHowItWorks = () => {
     const steps = [0, 1, 2];
 
     return (
-        <Section id="playground" className="snap-section py-16 bg-[var(--bg-surface-2)]">
+        <Section className="snap-section py-16 bg-[var(--bg-surface-2)]">
             <PageShell>
                 <div className="mb-10">
                     <h2 className="text-2xl md:text-3xl font-black mb-3 flex items-center gap-3">
