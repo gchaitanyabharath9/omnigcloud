@@ -3,12 +3,13 @@ import { Section } from '@/components/layout/Section';
 import { getTranslations, getLocale } from 'next-intl/server';
 import { generateSEOMetadata, SEO_KEYWORDS } from '@/utils/seo';
 import { Cpu, ArrowRight } from 'lucide-react';
-import { Link } from '@/navigation';
+import { Link, locales } from '@/navigation';
 import { PRODUCTS } from '@/data/products';
 import Footer from '@/components/Footer';
 import Image from 'next/image';
 import ProductScroller from '@/features/products/ProductScroller';
-import { HowItWorks, VisualSection, DeepDive } from '@/components/seo/Enrichment';
+import { VisualSection, DeepDive } from '@/components/seo/Enrichment';
+import { ProductHowItWorks } from '@/features/products/ProductHowItWorks';
 
 
 const PRODUCT_SECTION_IDS = ['playground', 'workflows', 'guard', 'knowledge', 'deploy', 'nexus'];
@@ -30,11 +31,12 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
         ],
         ogImage: `/og-images/products.png`,
         ogType: 'website',
+        canonical: `/${locale}/products`
     }, locale);
 }
 
 export function generateStaticParams() {
-    return ['en', 'es', 'fr', 'de', 'zh', 'hi', 'ja', 'ko'].map((locale) => ({ locale }));
+    return locales.map((locale) => ({ locale }));
 }
 
 export const revalidate = 3600;
@@ -117,7 +119,7 @@ export default async function ProductsPage() {
             {/* PRODUCT STREAM */}
             <ProductScroller activeProduct="" products={PRODUCTS} />
 
-            <HowItWorks pageKey="Products" />
+            <ProductHowItWorks />
 
             <VisualSection
                 pageKey="Products"

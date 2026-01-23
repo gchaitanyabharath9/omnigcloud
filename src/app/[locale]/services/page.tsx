@@ -27,6 +27,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
             'sovereign cloud delivery',
         ],
         ogImage: `/og-images/services.png`,
+        canonical: `/${locale}/services`
     }, locale);
 }
 

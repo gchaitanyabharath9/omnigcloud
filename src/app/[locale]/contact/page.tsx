@@ -19,6 +19,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
             'partnership',
         ],
         ogImage: `/og-images/contact.png`,
+        canonical: `/${locale}/contact`
     }, locale);
 }
 

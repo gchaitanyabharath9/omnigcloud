@@ -42,6 +42,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
         ],
         ogImage: `/og-images/solutions.png`,
         ogType: 'website',
+        canonical: `/${locale}/solutions`
     }, locale);
 }
 
