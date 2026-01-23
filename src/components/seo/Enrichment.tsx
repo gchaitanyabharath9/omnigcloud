@@ -80,7 +80,7 @@ export const HowItWorks = ({ pageKey }: { pageKey: string }) => {
                 <div className={`grid gap-8 ${isHome ? 'grid-cols-1' : 'md:grid-cols-3'}`}>
                     {steps.map((i) => (
                         <div key={i} className="glass-panel p-8 md:p-10 rounded-3xl relative overflow-hidden group hover:border-primary/50 transition-all duration-300 h-full">
-                            <div className="flex flex-col md:flex-row gap-8 items-start relative z-10">
+                            <div className="flex flex-col md:flex-row gap-8 items-start relative z-10 pb-4">
                                 {/* Left Column: The Number (Fixed width on desktop) */}
                                 <div className="shrink-0 w-16 h-16 md:w-20 md:h-20 flex items-center justify-center rounded-2xl bg-primary/5 border border-primary/20 group-hover:bg-primary/10 group-hover:border-primary/40 transition-colors">
                                     <span className="text-3xl md:text-4xl font-black text-primary/30 group-hover:text-primary transition-colors">
@@ -101,7 +101,7 @@ export const HowItWorks = ({ pageKey }: { pageKey: string }) => {
                             </div>
 
                             {/* Watermark: Rendered as a background element to avoid overlap, low opacity */}
-                            <div className="absolute -bottom-6 -right-6 text-8xl font-black text-white/[0.1] group-hover:text-primary/[0.15] transition-colors pointer-events-none select-none z-0">
+                            <div className="absolute -bottom-8 -right-8 text-9xl font-black text-white/[0.05] group-hover:text-primary/[0.1] transition-colors pointer-events-none select-none z-0">
                                 0{i + 1}
                             </div>
                         </div>
