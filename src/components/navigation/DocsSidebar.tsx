@@ -24,8 +24,8 @@ export const DocsSidebar = () => {
         { key: 'arch', label: t('links.architecture'), href: '/docs/architecture', match: '/docs/architecture' },
         { key: 'whitepaper', label: t('links.whitepaper'), href: '/docs/whitepaper', match: '/docs/whitepaper' },
         { key: 'security', label: t('links.security'), href: '/docs/governance', match: '/docs/governance' },
-        { key: 'guide', label: t('links.guide') || 'Architectural Guide', href: '/docs/guide', match: '/docs/guide' },
-        { key: 'api', label: t('links.api') || 'API Reference', href: '/docs/api', match: '/docs/api' }
+        { key: 'guide', label: t('links.guide'), href: '/docs/guide', match: '/docs/guide' },
+        { key: 'api', label: t('links.api'), href: '/docs/api', match: '/docs/api' }
     ];
 
     const blueprintLinks = [
