@@ -12,7 +12,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
         title: t('title'),
         description: t('description'),
         keywords: [...SEO_KEYWORDS.modernization, ...(Array.isArray(t.raw('keywords')) ? t.raw('keywords') : [])],
-        canonical: `https://www.omnigcloud.com/${locale}/docs/api`,
+        canonical: `/${locale}/docs/api`,
     }, locale);
 }
 

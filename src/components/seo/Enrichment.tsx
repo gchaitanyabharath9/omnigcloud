@@ -100,8 +100,8 @@ export const HowItWorks = ({ pageKey }: { pageKey: string }) => {
                                 </div>
                             </div>
 
-                            {/* Watermark: Rendered as a background element to avoid overlap, low opacity */}
-                            <div className="absolute -bottom-8 -right-8 text-9xl font-black text-white/[0.05] group-hover:text-primary/[0.1] transition-colors pointer-events-none select-none z-0">
+                            {/* Watermark Fix: Positioned to avoid overlap with text content */}
+                            <div className="absolute top-4 right-4 text-7xl font-black text-white/[0.03] group-hover:text-primary/[0.08] transition-colors pointer-events-none select-none z-0">
                                 0{i + 1}
                             </div>
                         </div>

@@ -25,22 +25,21 @@ export const ProductHowItWorks = () => {
                 <div className="grid grid-cols-1 gap-4 max-w-4xl">
                     {steps.map((i) => (
                         <div key={i} className="glass-panel p-6 rounded-2xl relative overflow-hidden group hover:border-primary/30 transition-all duration-300">
-                            {/* Option B Layout: Watermark Number behind content */}
+                            {/* Layout Fix: Number at top-right or top-left, content padded */}
+                            <div className="absolute top-4 right-4 text-7xl font-black text-primary/5 group-hover:text-primary/10 transition-colors z-0 pointer-events-none select-none">
+                                0{i + 1}
+                            </div>
+
                             <div className="relative z-10 flex flex-col gap-4 pb-4">
                                 <div className="text-[10px] uppercase tracking-[0.2em] text-primary font-black mb-1.5 opacity-80">
                                     {tSafe(t, `steps.${i}.title`, `Step ${i + 1}`)}
                                 </div>
-                                <h3 className="text-xl font-bold mb-2 group-hover:text-primary transition-colors">
+                                <h3 className="text-xl font-bold mb-2 group-hover:text-primary transition-colors pr-12">
                                     {tSafe(t, `steps.${i}.heading`, `Phase ${i + 1}`)}
                                 </h3>
                                 <p className="text-sm text-foreground/90 leading-relaxed font-medium max-w-[90%]">
                                     {tSafe(t, `steps.${i}.desc`, 'Optimizing your infrastructure for global compliance and resilience.')}
                                 </p>
-                            </div>
-
-                            {/* Watermark Number: Behind content, z-0 */}
-                            <div className="absolute -bottom-6 -right-4 text-8xl font-black text-primary/5 group-hover:text-primary/10 transition-colors z-0 pointer-events-none select-none">
-                                0{i + 1}
                             </div>
                         </div>
                     ))}

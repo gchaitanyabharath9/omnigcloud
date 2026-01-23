@@ -3129,50 +3129,56 @@
   },
   "Enterprise": {
     "approach": {
-      "p1": "P1 Details",
-      "p2": "P2 Details",
+      "p1": "Our framework enables enterprises to decouple logic from infrastructure, ensuring that policy remains constant regardless of the underlying cloud provider.",
+      "p2": "By implementing the G-Framework, organizations regain 100% control of their digital estate while achieving sub-millisecond governance enforcement.",
       "pillars": {
         "0": {
-          "desc": "Enterprise-grade security",
-          "title": "Security"
+          "desc": "Enforce data residency and sovereignty at the substrate layer, making non-compliance architecturally impossible.",
+          "title": "Sovereign Integrity"
         },
         "1": {
-          "desc": "Scale to millions",
-          "title": "Scale"
+          "desc": "Orchestrate workloads across AWS, Azure, and OCP with a unified interface that abstracts vendor complexity.",
+          "title": "Absolute Abstraction"
         },
         "2": {
-          "desc": "99.999% uptime",
-          "title": "Stability"
+          "desc": "Automate the entire modernization lifecycle, from legacy discovery to atomic production deployment.",
+          "title": "Autonomous Operations"
         }
       },
-      "subtitle": "How we help you scale",
-      "title": "Enterprise approach"
+      "subtitle": "A standard-driven methodology for the most demanding global infrastructure environments.",
+      "title": "Architectural Excellence"
     },
     "partnership": {
-      "p1": "Enforce auto-remediation policies.",
-      "p2": "Monitor real-time infrastructure drift.",
-      "pillars": "Pillars Details",
+      "p1": "Strategic alignment with your modernization goals.",
+      "p2": "Deep technical engagement with our founding architecture team.",
+      "pillars": "Strategic Pillars",
       "steps": {
         "0": {
-          "desc": "We understand your needs",
-          "title": "Consultation"
+          "desc": "Full-spectrum audit of existing infrastructure and compliance debt.",
+          "title": "State Analysis"
         },
         "1": {
-          "desc": "We build your solution",
-          "title": "Implementation"
+          "desc": "Execution of the ASO-Protocol to re-platform mission-critical workloads.",
+          "title": "Logic Inversion"
         },
         "2": {
-          "desc": "We grow with you",
-          "title": "Support"
+          "desc": "Continuous optimization and sovereign state reconciliation.",
+          "title": "Steady State"
         }
       },
-      "subtitle": "Empowering the next generation of regulated enterprise.",
-      "title": "Partnership"
+      "subtitle": "Partnering with Global 2000 leaders to define the future of sovereign computing.",
+      "title": "Strategic Partnership"
     },
     "trust": {
-      "p1": "We provide the most secure platform.",
-      "p2": "Used by Fortune 500 companies.",
-      "title": "Trusted by Enterprises"
+      "p1": "OmniGCloud is the only control plane designed from the ground up for high-assurance, regulated environments.",
+      "p2": "We provide the mathematical certainty that enterprise policy is enforced at every point of execution.",
+      "stats": {
+        "uptime": "Uptime SLA",
+        "regions": "Global Regions",
+        "gates": "Compliance Gates",
+        "actions": "Autonomous Actions"
+      },
+      "title": "The Global Standard of Trust"
     }
   },
   "FloatingActions": {
@@ -3388,6 +3394,7 @@
         "knowledge": "Sovereign Knowledge",
         "nexus": "Cross-Cloud Nexus",
         "playground": "Sovereign Playground",
+        "sangam": "Sangam Confluence",
         "workflows": "G-Workflows"
       },
       "rateLimitMessage": "Rate Limit Message",
@@ -4926,19 +4933,19 @@
       "title": "Cross-Cloud Nexus"
     },
     "playground": {
-      "description": "Achieve FIPS 140-2 Level 3 compliance with our shielded execution environments.",
-      "shortDesc": "IDE for prototyping cross-cloud infra.",
-      "title": "Sovereign Playground"
+      "description": "The world's first IDE designed specifically for cross-cloud sovereign orchestration. Prototype complex infrastructure intents across OCI, AWS, and Azure.",
+      "shortDesc": "Next-Gen Infrastructure Design Environment",
+      "title": "The AECP Cloud Playground"
     },
-    "subtitle": "Empowering the next generation of regulated enterprise.",
-    "tag": "PRODUCTS",
-    "talkToExpert": "Talk To Expert",
-    "title": "Infrastructure Sovereignty",
-    "visualSectionDesc": "Our product suite operates as a unified kernel, ensuring that every modernization action—from refactor to deploy—is governed by the same sovereign intent mesh.",
+    "subtitle": "The definitive suite for autonomous cloud governance and enterprise-grade sovereignty.",
+    "tag": "SUITE",
+    "talkToExpert": "Consult with Architect",
+    "title": "Sovereign Infrastructure",
+    "visualSectionDesc": "The OmniGCloud kernel synchronizes policy across your entire estate, ensuring that every modernization action inherits absolute governance.",
     "workflows": {
-      "description": "Seamlessly orchestrate workloads across AWS, Azure, and Google Cloud with strict governance boundaries.",
-      "shortDesc": "Visual multi-step orchestration engine.",
-      "title": "G-Workflows"
+      "description": "Visual orchestration engine for defining secure, multi-step automation. Handles state synchronization and failing over regions without human intervention.",
+      "shortDesc": "Visual Policy-as-Logic Engine",
+      "title": "Autonomous Workflows"
     }
   },
   "Research": {
@@ -7273,5 +7280,17 @@
   "read_online": "Read Online",
   "steps": "Steps Details",
   "subtitle": "The Sovereign Cloud Control Plane",
-  "title": "OmniGCloud Platform"
+  "title": "OmniGCloud Platform",
+  "Sangam": {
+    "title": "Sangam: The Sovereign Confluence",
+    "subtitle": "Unified Intelligence across the Digital Estate",
+    "description": "Sangam is the ultimate synthesis of the OmniGCloud kernel. It is the confluence where disparate cloud fabrics, autonomous agents, and sovereign policies merge into a single, high-throughput operating environment.",
+    "cta": "Enter the Confluence",
+    "tag": "UNIFIED CONTROL",
+    "features": {
+      "unification": "Substrate Unification",
+      "purity": "Policy Purity",
+      "resonance": "Execution Resonance"
+    }
+  }
 }

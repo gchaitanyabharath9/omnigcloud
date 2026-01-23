@@ -9,14 +9,14 @@ export default function EnterprisePillars() {
     const icons = [<Shield key="0" />, <Layout key="1" />, <Settings key="2" />];
 
     return (
-        <section className="py-24 bg-surface-2 border-y border-white/5">
+        <section className="py-16 bg-surface-2 border-y border-white/5">
             <div className="container">
-                <div className="max-w-3xl mb-16">
-                    <h2 className="text-3xl md:text-4xl font-black mb-4">{t("title")}</h2>
-                    <p className="text-xl text-muted-foreground">{t("subtitle")}</p>
+                <div className="max-w-3xl mb-10">
+                    <h2 className="text-3xl md:text-2xl font-black mb-4">{t("title")}</h2>
+                    <p className="text-lg text-muted-foreground">{t("subtitle")}</p>
                 </div>
 
-                <div className="grid md:grid-cols-3 gap-8">
+                <div className="grid md:grid-cols-3 gap-6">
                     {[0, 1, 2].map((i) => (
                         <div key={i} className="glass-panel p-8 relative group overflow-hidden">
                             <div className="absolute top-0 right-0 p-6 opacity-5 group-hover:opacity-10 transition-opacity">
