@@ -1,7 +1,21 @@
-import { test, expect } from '@playwright/test';
+import { test, expect, type Page } from '@playwright/test';
 
 const LOCALES = ['en', 'es', 'fr', 'de', 'zh', 'hi', 'ja', 'ko'];
 const HOST = process.env.TEST_URL || 'http://localhost:3000';
+
+// Helper for stable hydration and hash navigation
+async function waitForStableHydration(page: Page) {
+    await Promise.race([
+        page.waitForSelector('#playground', { state: 'attached', timeout: 15000 }),
+        page.waitForSelector('text=How It Works', { state: 'attached', timeout: 15000 })
+    ]).catch(() => { }); // Ignore race timeout if one fails but other succeeds
+
+    const target = page.locator('#playground');
+    if (await target.count() > 0) {
+        await target.scrollIntoViewIfNeeded();
+        await page.waitForTimeout(250);
+    }
+}
 
 test.describe('Quality Gate - Core Navigation & UI', () => {
 
@@ -80,10 +94,10 @@ test.describe('Quality Gate - Core Navigation & UI', () => {
                 const HOST = baseURL || 'http://localhost:3000';
                 // Test a known section like products#playground
                 const url = `${HOST}/${locale}/products#playground`;
-                await page.goto(url, { waitUntil: 'networkidle' });
+                await page.goto(url, { waitUntil: 'domcontentloaded', timeout: 30000 });
+                await waitForStableHydration(page);
+                await page.waitForLoadState('networkidle', { timeout: 5000 }).catch(() => { });
 
-                // Wait for the section to be present in DOM (lazy-loaded components may take time)
-                await page.waitForSelector('#playground', { timeout: 15000 });
                 // Wait for any scroll to settle (Check top position stability)
                 await page.waitForFunction(() => {
                     const el = document.getElementById('playground');
@@ -112,8 +126,9 @@ test.describe('Quality Gate - Core Navigation & UI', () => {
                 if (locale === 'en') return; // Skip en-to-en switch test as it's redundant
                 const HOST = baseURL || 'http://localhost:3000';
 
-                await page.goto(`${HOST}/en/products#playground`, { waitUntil: 'networkidle' });
-                await page.waitForSelector('#playground', { timeout: 15000 });
+                await page.goto(`${HOST}/en/products#playground`, { waitUntil: 'domcontentloaded', timeout: 30000 });
+                await waitForStableHydration(page);
+                await page.waitForLoadState('networkidle', { timeout: 5000 }).catch(() => { });
                 await page.waitForTimeout(2000);
                 console.log(`[DEBUG] ${locale} current URL before switch: ${page.url()}`);
 
@@ -136,7 +151,7 @@ test.describe('Quality Gate - Core Navigation & UI', () => {
                 console.log(`[DEBUG] ${locale} switch successful. New URL: ${page.url()}`);
 
                 // Wait for the section to be present after language switch
-                await page.waitForSelector('#playground', { timeout: 15000 });
+                await waitForStableHydration(page);
 
                 // Wait for scroll to settle
                 await page.waitForFunction(() => {

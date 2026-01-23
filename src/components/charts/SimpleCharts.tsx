@@ -10,18 +10,17 @@ import NoSSR from '../visuals/NoSSR';
 const COLORS = ['#3b82f6', '#8b5cf6', '#10b981', '#f59e0b', '#ef4444'];
 
 // Container wrapper
-// Container wrapper
 const ChartCard = ({ title, children, height = 220, standalone = false }: { title?: string; children: React.ReactNode; height?: number; standalone?: boolean }) => {
     const t = useTranslations('Dashboard.Charts');
 
     if (!children) {
         return (
-            <div className={`flex flex-col items-center justify-center ${standalone ? '' : 'glass-panel'} p-4 text-center`} style={{ height }}>
+            <div className={`flex flex-col items-center justify-center ${standalone ? '' : 'glass-panel border-white/5'} p-4 text-center bg-white/[0.02]`} style={{ height }}>
                 <div className="text-[9px] font-mono text-primary/40 uppercase tracking-widest mb-1">{tSafe(t, 'syncing', 'Data Synchronizing')}</div>
-                <div className="flex gap-1">
-                    <div className="w-1 h-1 rounded-full bg-primary/20 animate-bounce" style={{ animationDelay: '0ms' }} />
-                    <div className="w-1 h-1 rounded-full bg-primary/20 animate-bounce" style={{ animationDelay: '150ms' }} />
-                    <div className="w-1 h-1 rounded-full bg-primary/20 animate-bounce" style={{ animationDelay: '300ms' }} />
+                <div className="flex gap-1.5">
+                    <div className="w-1.5 h-1.5 rounded-full bg-primary/30 animate-bounce" style={{ animationDelay: '0ms' }} />
+                    <div className="w-1.5 h-1.5 rounded-full bg-primary/30 animate-bounce" style={{ animationDelay: '150ms' }} />
+                    <div className="w-1.5 h-1.5 rounded-full bg-primary/30 animate-bounce" style={{ animationDelay: '300ms' }} />
                 </div>
             </div>
         );
@@ -29,8 +28,8 @@ const ChartCard = ({ title, children, height = 220, standalone = false }: { titl
 
     if (standalone) {
         return (
-            <div className="w-full relative overflow-hidden flex flex-col items-center justify-center" style={{ height }}>
-                <div className="w-full h-full relative">
+            <div className="w-full relative overflow-hidden flex flex-col items-center justify-center group" style={{ height }}>
+                <div className="w-full h-full relative transition-transform duration-500 group-hover:scale-[1.01]">
                     {children}
                 </div>
             </div>
@@ -38,8 +37,13 @@ const ChartCard = ({ title, children, height = 220, standalone = false }: { titl
     }
 
     return (
-        <div className="glass-panel p-3 rounded-xl flex flex-col">
-            {title && <h3 className="text-[10px] font-black mb-2 uppercase opacity-40 tracking-widest font-mono">{title}</h3>}
+        <div className="glass-panel p-4 rounded-xl flex flex-col border-white/10 hover:border-primary/30 transition-all duration-300 group">
+            {title && (
+                <div className="flex items-center justify-between mb-3">
+                    <h3 className="text-[10px] font-black uppercase opacity-50 tracking-[0.2em] font-mono text-primary">{title}</h3>
+                    <div className="w-2 h-2 rounded-full bg-primary/20 animate-pulse hidden group-hover:block" />
+                </div>
+            )}
             <div className="relative overflow-hidden flex-1" style={{ width: '100%', minHeight: height, minWidth: '1px' }}>
                 {children}
             </div>
@@ -62,15 +66,30 @@ export const LatencyLineChart = ({ height = 220, standalone = false }: { height?
         <ChartCard title={tSafe(t, 'apiLatency', 'API Latency (ms)')} height={height} standalone={standalone}>
             <NoSSR>
                 <ResponsiveContainer width="99%" height="100%" minWidth={0} minHeight={0}>
-                    <LineChart data={data}>
-                        <CartesianGrid strokeDasharray="3 3" stroke="rgba(255,255,255,0.1)" />
-                        <XAxis dataKey="hour" stroke="#888" style={{ fontSize: '10px' }} />
-                        <YAxis stroke="#888" style={{ fontSize: '10px' }} />
-                        <Tooltip contentStyle={{ background: '#1e293b', border: '1px solid #334155' }} />
-                        <Legend wrapperStyle={{ whiteSpace: 'nowrap' }} />
-                        <Line type="monotone" dataKey="p50" stroke="#10b981" strokeWidth={2} />
-                        <Line type="monotone" dataKey="p95" stroke="#f59e0b" strokeWidth={2} />
-                        <Line type="monotone" dataKey="p99" stroke="#ef4444" strokeWidth={2} />
+                    <LineChart data={data} margin={{ top: 10, right: 10, left: 0, bottom: 0 }}>
+                        <defs>
+                            <linearGradient id="lineGrad" x1="0" y1="0" x2="1" y2="0">
+                                <stop offset="0%" stopColor="var(--primary)" />
+                                <stop offset="100%" stopColor="#c084fc" />
+                            </linearGradient>
+                        </defs>
+                        <CartesianGrid strokeDasharray="3 3" vertical={false} stroke="rgba(255,255,255,0.05)" />
+                        <XAxis dataKey="hour" axisLine={false} tickLine={false} stroke="#64748b" style={{ fontSize: '9px', fontWeight: 600 }} />
+                        <YAxis axisLine={false} tickLine={false} stroke="#64748b" style={{ fontSize: '9px', fontWeight: 600 }} />
+                        <Tooltip
+                            contentStyle={{
+                                background: 'rgba(15, 23, 42, 0.9)',
+                                border: '1px solid rgba(255,255,255,0.1)',
+                                borderRadius: '12px',
+                                backdropFilter: 'blur(16px)',
+                                boxShadow: '0 10px 15px -3px rgba(0, 0, 0, 0.5)'
+                            }}
+                            itemStyle={{ fontSize: '11px', fontWeight: 700 }}
+                        />
+                        <Legend iconType="circle" wrapperStyle={{ paddingTop: '15px', fontSize: '10px', fontWeight: 700 }} />
+                        <Line type="monotone" dataKey="p50" stroke="#10b981" strokeWidth={3} dot={false} activeDot={{ r: 6, strokeWidth: 0 }} />
+                        <Line type="monotone" dataKey="p95" stroke="#f59e0b" strokeWidth={3} dot={false} activeDot={{ r: 6, strokeWidth: 0 }} />
+                        <Line type="monotone" dataKey="p99" stroke="#ef4444" strokeWidth={3} dot={false} activeDot={{ r: 6, strokeWidth: 0 }} />
                     </LineChart>
                 </ResponsiveContainer>
             </NoSSR>
@@ -91,14 +110,31 @@ export const CostSavingsArea = ({ height = 220, standalone = false }: { height?:
         <ChartCard title={tSafe(t, 'monthlyCost', "Monthly Cost Comparison ($)")} height={height} standalone={standalone}>
             <NoSSR>
                 <ResponsiveContainer width="99%" height="100%" minWidth={0} minHeight={0}>
-                    <AreaChart data={data}>
-                        <CartesianGrid strokeDasharray="3 3" stroke="rgba(255,255,255,0.1)" />
-                        <XAxis dataKey="month" stroke="#888" style={{ fontSize: '10px' }} />
-                        <YAxis stroke="#888" style={{ fontSize: '10px' }} />
-                        <Tooltip contentStyle={{ background: '#1e293b', border: '1px solid #334155' }} />
-                        <Legend wrapperStyle={{ whiteSpace: 'nowrap' }} />
-                        <Area type="monotone" dataKey="traditional" stackId="1" stroke="#ef4444" fill="#ef4444" fillOpacity={0.6} />
-                        <Area type="monotone" dataKey="optimized" stackId="2" stroke="#10b981" fill="#10b981" fillOpacity={0.6} />
+                    <AreaChart data={data} margin={{ top: 10, right: 10, left: 0, bottom: 0 }}>
+                        <defs>
+                            <linearGradient id="colorTrad" x1="0" y1="0" x2="0" y2="1">
+                                <stop offset="5%" stopColor="#ef4444" stopOpacity={0.3} />
+                                <stop offset="95%" stopColor="#ef4444" stopOpacity={0} />
+                            </linearGradient>
+                            <linearGradient id="colorOpt" x1="0" y1="0" x2="0" y2="1">
+                                <stop offset="5%" stopColor="#3b82f6" stopOpacity={0.4} />
+                                <stop offset="95%" stopColor="#3b82f6" stopOpacity={0} />
+                            </linearGradient>
+                        </defs>
+                        <CartesianGrid strokeDasharray="3 3" vertical={false} stroke="rgba(255,255,255,0.05)" />
+                        <XAxis dataKey="month" axisLine={false} tickLine={false} stroke="#64748b" style={{ fontSize: '9px', fontWeight: 600 }} />
+                        <YAxis axisLine={false} tickLine={false} stroke="#64748b" style={{ fontSize: '9px', fontWeight: 600 }} />
+                        <Tooltip
+                            contentStyle={{
+                                background: 'rgba(15, 23, 42, 0.9)',
+                                border: '1px solid rgba(255,255,255,0.1)',
+                                borderRadius: '12px',
+                                backdropFilter: 'blur(16px)'
+                            }}
+                        />
+                        <Legend iconType="circle" wrapperStyle={{ paddingTop: '15px', fontSize: '10px', fontWeight: 700 }} />
+                        <Area type="monotone" dataKey="traditional" stackId="1" stroke="#ef4444" strokeWidth={2} fill="url(#colorTrad)" fillOpacity={1} />
+                        <Area type="monotone" dataKey="optimized" stackId="2" stroke="#3b82f6" strokeWidth={2} fill="url(#colorOpt)" fillOpacity={1} />
                     </AreaChart>
                 </ResponsiveContainer>
             </NoSSR>
@@ -118,12 +154,26 @@ export const RequestVolumeBar = ({ height = 220, standalone = false }: { height?
         <ChartCard title={tSafe(t, 'hourlyRequestVolume', "Hourly Request Volume")} height={height} standalone={standalone}>
             <NoSSR>
                 <ResponsiveContainer width="99%" height="100%" minWidth={0} minHeight={0}>
-                    <BarChart data={data}>
-                        <CartesianGrid strokeDasharray="3 3" stroke="rgba(255,255,255,0.1)" />
-                        <XAxis dataKey="hour" stroke="#888" style={{ fontSize: '10px' }} />
-                        <YAxis stroke="#888" style={{ fontSize: '10px' }} />
-                        <Tooltip contentStyle={{ background: '#1e293b', border: '1px solid #334155' }} />
-                        <Bar dataKey="requests" fill="#3b82f6" radius={[8, 8, 0, 0]} />
+                    <BarChart data={data} margin={{ top: 10, right: 10, left: 0, bottom: 0 }}>
+                        <defs>
+                            <linearGradient id="barGrad" x1="0" y1="0" x2="0" y2="1">
+                                <stop offset="0%" stopColor="var(--primary)" stopOpacity={1} />
+                                <stop offset="100%" stopColor="var(--primary)" stopOpacity={0.5} />
+                            </linearGradient>
+                        </defs>
+                        <CartesianGrid strokeDasharray="3 3" vertical={false} stroke="rgba(255,255,255,0.05)" />
+                        <XAxis dataKey="hour" axisLine={false} tickLine={false} stroke="#64748b" style={{ fontSize: '9px', fontWeight: 600 }} />
+                        <YAxis axisLine={false} tickLine={false} stroke="#64748b" style={{ fontSize: '9px', fontWeight: 600 }} />
+                        <Tooltip
+                            cursor={{ fill: 'rgba(255,255,255,0.05)' }}
+                            contentStyle={{
+                                background: 'rgba(15, 23, 42, 0.9)',
+                                border: '1px solid rgba(255,255,255,0.1)',
+                                borderRadius: '12px',
+                                backdropFilter: 'blur(16px)'
+                            }}
+                        />
+                        <Bar dataKey="requests" fill="url(#barGrad)" radius={[4, 4, 0, 0]} />
                     </BarChart>
                 </ResponsiveContainer>
             </NoSSR>
@@ -150,17 +200,28 @@ export const CloudDistributionPie = ({ height = 220, standalone = false }: { hei
                             data={data}
                             cx="50%"
                             cy="50%"
-                            labelLine={false}
-                            label={(entry) => `${entry.name}: ${entry.value}%`}
+                            innerRadius={height < 150 ? 25 : 45}
                             outerRadius={height < 150 ? 45 : 70}
-                            fill="#8884d8"
+                            paddingAngle={5}
                             dataKey="value"
+                            stroke="none"
                         >
                             {data.map((entry, index) => (
-                                <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
+                                <Cell
+                                    key={`cell-${index}`}
+                                    fill={COLORS[index % COLORS.length]}
+                                    style={{ filter: `drop-shadow(0 0 5px ${COLORS[index % COLORS.length]}40)` }}
+                                />
                             ))}
                         </Pie>
-                        <Tooltip contentStyle={{ background: '#1e293b', border: '1px solid #334155' }} />
+                        <Tooltip
+                            contentStyle={{
+                                background: 'rgba(15, 23, 42, 0.9)',
+                                border: '1px solid rgba(255,255,255,0.1)',
+                                borderRadius: '12px',
+                                backdropFilter: 'blur(16px)'
+                            }}
+                        />
                     </PieChart>
                 </ResponsiveContainer>
             </NoSSR>
@@ -180,12 +241,19 @@ export const UptimeTrend = ({ height = 220, standalone = false }: { height?: num
         <ChartCard title={tSafe(t, 'uptime30Day', "30-Day Uptime (%)")} height={height} standalone={standalone}>
             <NoSSR>
                 <ResponsiveContainer width="99%" height="100%" minWidth={0} minHeight={0}>
-                    <LineChart data={data}>
-                        <CartesianGrid strokeDasharray="3 3" stroke="rgba(255,255,255,0.1)" />
-                        <XAxis dataKey="day" stroke="#888" style={{ fontSize: '10px' }} />
-                        <YAxis domain={[99.5, 100]} stroke="#888" style={{ fontSize: '10px' }} />
-                        <Tooltip contentStyle={{ background: '#1e293b', border: '1px solid #334155' }} />
-                        <Line type="monotone" dataKey="uptime" stroke="#10b981" strokeWidth={2} dot={false} />
+                    <LineChart data={data} margin={{ top: 10, right: 10, left: 0, bottom: 0 }}>
+                        <CartesianGrid strokeDasharray="3 3" vertical={false} stroke="rgba(255,255,255,0.05)" />
+                        <XAxis dataKey="day" axisLine={false} tickLine={false} stroke="#64748b" style={{ fontSize: '9px', fontWeight: 600 }} />
+                        <YAxis domain={[99.5, 100]} axisLine={false} tickLine={false} stroke="#64748b" style={{ fontSize: '9px', fontWeight: 600 }} />
+                        <Tooltip
+                            contentStyle={{
+                                background: 'rgba(15, 23, 42, 0.9)',
+                                border: '1px solid rgba(255,255,255,0.1)',
+                                borderRadius: '12px',
+                                backdropFilter: 'blur(16px)'
+                            }}
+                        />
+                        <Line type="stepAfter" dataKey="uptime" stroke="#10b981" strokeWidth={3} dot={false} />
                     </LineChart>
                 </ResponsiveContainer>
             </NoSSR>
@@ -207,14 +275,21 @@ export const ComplianceScoresBar = ({ height = 220, standalone = false }: { heig
         <ChartCard title={tSafe(t, 'complianceScores', "Compliance Framework Scores")} height={height} standalone={standalone}>
             <NoSSR>
                 <ResponsiveContainer width="99%" height="100%" minWidth={0} minHeight={0}>
-                    <BarChart data={data} layout="vertical">
-                        <CartesianGrid strokeDasharray="3 3" stroke="rgba(255,255,255,0.1)" />
-                        <XAxis type="number" domain={[0, 100]} stroke="#888" hide={height < 150} style={{ fontSize: '10px' }} />
-                        <YAxis dataKey="name" type="category" stroke="#888" width={100} style={{ fontSize: '10px' }} />
-                        <Tooltip contentStyle={{ background: '#1e293b', border: '1px solid #334155' }} />
-                        <Bar dataKey="score" radius={[0, 8, 8, 0]}>
+                    <BarChart data={data} layout="vertical" margin={{ top: 10, right: 30, left: 0, bottom: 0 }}>
+                        <CartesianGrid strokeDasharray="3 3" horizontal={false} stroke="rgba(255,255,255,0.05)" />
+                        <XAxis type="number" domain={[0, 100]} axisLine={false} tickLine={false} stroke="#64748b" style={{ fontSize: '9px', fontWeight: 600 }} />
+                        <YAxis dataKey="name" type="category" axisLine={false} tickLine={false} stroke="#64748b" width={80} style={{ fontSize: '9px', fontWeight: 600 }} />
+                        <Tooltip
+                            contentStyle={{
+                                background: 'rgba(15, 23, 42, 0.9)',
+                                border: '1px solid rgba(255,255,255,0.1)',
+                                borderRadius: '12px',
+                                backdropFilter: 'blur(16px)'
+                            }}
+                        />
+                        <Bar dataKey="score" radius={[0, 4, 4, 0]} barSize={height < 150 ? 8 : 12}>
                             {data.map((entry, index) => (
-                                <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
+                                <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} fillOpacity={0.8} />
                             ))}
                         </Bar>
                     </BarChart>
@@ -236,18 +311,25 @@ export const ErrorRateArea = ({ height = 220, standalone = false }: { height?: n
         <ChartCard title={tSafe(t, 'errorRateTrend', "Error Rate Trend (%)")} height={height} standalone={standalone}>
             <NoSSR>
                 <ResponsiveContainer width="99%" height="100%" minWidth={0} minHeight={0}>
-                    <AreaChart data={data}>
+                    <AreaChart data={data} margin={{ top: 10, right: 10, left: 0, bottom: 0 }}>
                         <defs>
                             <linearGradient id="errorGrad" x1="0" y1="0" x2="0" y2="1">
-                                <stop offset="5%" stopColor="#ef4444" stopOpacity={0.8} />
+                                <stop offset="5%" stopColor="#ef4444" stopOpacity={0.4} />
                                 <stop offset="95%" stopColor="#ef4444" stopOpacity={0} />
                             </linearGradient>
                         </defs>
-                        <CartesianGrid strokeDasharray="3 3" stroke="rgba(255,255,255,0.1)" />
-                        <XAxis dataKey="day" stroke="#888" style={{ fontSize: '10px' }} />
-                        <YAxis stroke="#888" style={{ fontSize: '10px' }} />
-                        <Tooltip contentStyle={{ background: '#1e293b', border: '1px solid #334155' }} />
-                        <Area type="monotone" dataKey="errors" stroke="#ef4444" fill="url(#errorGrad)" />
+                        <CartesianGrid strokeDasharray="3 3" vertical={false} stroke="rgba(255,255,255,0.05)" />
+                        <XAxis dataKey="day" axisLine={false} tickLine={false} stroke="#64748b" style={{ fontSize: '9px', fontWeight: 600 }} />
+                        <YAxis axisLine={false} tickLine={false} stroke="#64748b" style={{ fontSize: '9px', fontWeight: 600 }} />
+                        <Tooltip
+                            contentStyle={{
+                                background: 'rgba(15, 23, 42, 0.9)',
+                                border: '1px solid rgba(255,255,255,0.1)',
+                                borderRadius: '12px',
+                                backdropFilter: 'blur(16px)'
+                            }}
+                        />
+                        <Area type="monotone" dataKey="errors" stroke="#ef4444" strokeWidth={3} fill="url(#errorGrad)" fillOpacity={1} />
                     </AreaChart>
                 </ResponsiveContainer>
             </NoSSR>
@@ -269,16 +351,25 @@ export const FeatureUsageBar = ({ height = 220, standalone = false }: { height?:
         <ChartCard title={tSafe(t, 'featureAdoption', "Feature Adoption Rate (%)")} height={height} standalone={standalone}>
             <NoSSR>
                 <ResponsiveContainer width="99%" height="100%" minWidth={0} minHeight={0}>
-                    <BarChart data={data}>
-                        <CartesianGrid strokeDasharray="3 3" stroke="rgba(255,255,255,0.1)" />
-                        <XAxis dataKey="feature" stroke="#888" style={{ fontSize: '10px' }} />
-                        <YAxis domain={[0, 100]} stroke="#888" style={{ fontSize: '10px' }} />
-                        <Tooltip contentStyle={{ background: '#1e293b', border: '1px solid #334155' }} />
-                        <Bar dataKey="usage" radius={[8, 8, 0, 0]}>
-                            {data.map((entry, index) => (
-                                <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
-                            ))}
-                        </Bar>
+                    <BarChart data={data} margin={{ top: 10, right: 10, left: 0, bottom: 0 }}>
+                        <defs>
+                            <linearGradient id="usageGrad" x1="0" y1="0" x2="0" y2="1">
+                                <stop offset="0%" stopColor="#8b5cf6" stopOpacity={1} />
+                                <stop offset="100%" stopColor="#8b5cf6" stopOpacity={0.6} />
+                            </linearGradient>
+                        </defs>
+                        <CartesianGrid strokeDasharray="3 3" vertical={false} stroke="rgba(255,255,255,0.05)" />
+                        <XAxis dataKey="feature" axisLine={false} tickLine={false} stroke="#64748b" style={{ fontSize: '9px', fontWeight: 600 }} />
+                        <YAxis domain={[0, 100]} axisLine={false} tickLine={false} stroke="#64748b" style={{ fontSize: '9px', fontWeight: 600 }} />
+                        <Tooltip
+                            contentStyle={{
+                                background: 'rgba(15, 23, 42, 0.9)',
+                                border: '1px solid rgba(255,255,255,0.1)',
+                                borderRadius: '12px',
+                                backdropFilter: 'blur(16px)'
+                            }}
+                        />
+                        <Bar dataKey="usage" fill="url(#usageGrad)" radius={[4, 4, 0, 0]} barSize={24} />
                     </BarChart>
                 </ResponsiveContainer>
             </NoSSR>
