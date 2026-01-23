@@ -24,6 +24,10 @@ export const PUBLIC_ROUTES_MANIFEST: RouteEntry[] = [
     // Documentation & Resources
     { path: '/docs', priority: 0.9, changeFreq: 'weekly' },
     { path: '/docs/whitepaper', priority: 0.9, changeFreq: 'weekly' },
+    { path: '/docs/architecture', priority: 0.8, changeFreq: 'monthly' },
+    { path: '/docs/governance', priority: 0.8, changeFreq: 'monthly' },
+    { path: '/docs/guide', priority: 0.8, changeFreq: 'monthly' },
+    { path: '/docs/api', priority: 0.8, changeFreq: 'monthly' },
     { path: '/research', priority: 0.9, changeFreq: 'weekly' },
     { path: '/research/papers', priority: 0.9, changeFreq: 'weekly' },
     { path: '/visual-library', priority: 0.7, changeFreq: 'monthly' },
