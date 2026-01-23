@@ -10,17 +10,45 @@ import NoSSR from '../visuals/NoSSR';
 const COLORS = ['#3b82f6', '#8b5cf6', '#10b981', '#f59e0b', '#ef4444'];
 
 // Container wrapper
-const ChartCard = ({ title, children, height = 180 }: { title: string; children: React.ReactNode; height?: number }) => (
-    <div className="glass-panel p-3 rounded-xl">
-        <h3 className="text-xs font-black mb-2 uppercase opacity-60 letter-spacing-wider">{title}</h3>
-        <div style={{ width: '100%', height, minWidth: '1px', position: 'relative', overflow: 'hidden' }}>
-            {children}
+// Container wrapper
+const ChartCard = ({ title, children, height = 220, standalone = false }: { title?: string; children: React.ReactNode; height?: number; standalone?: boolean }) => {
+    const t = useTranslations('Dashboard.Charts');
+
+    if (!children) {
+        return (
+            <div className={`flex flex-col items-center justify-center ${standalone ? '' : 'glass-panel'} p-4 text-center`} style={{ height }}>
+                <div className="text-[9px] font-mono text-primary/40 uppercase tracking-widest mb-1">{tSafe(t, 'syncing', 'Data Synchronizing')}</div>
+                <div className="flex gap-1">
+                    <div className="w-1 h-1 rounded-full bg-primary/20 animate-bounce" style={{ animationDelay: '0ms' }} />
+                    <div className="w-1 h-1 rounded-full bg-primary/20 animate-bounce" style={{ animationDelay: '150ms' }} />
+                    <div className="w-1 h-1 rounded-full bg-primary/20 animate-bounce" style={{ animationDelay: '300ms' }} />
+                </div>
+            </div>
+        );
+    }
+
+    if (standalone) {
+        return (
+            <div className="w-full relative overflow-hidden flex flex-col items-center justify-center" style={{ height }}>
+                <div className="w-full h-full relative">
+                    {children}
+                </div>
+            </div>
+        );
+    }
+
+    return (
+        <div className="glass-panel p-3 rounded-xl flex flex-col">
+            {title && <h3 className="text-[10px] font-black mb-2 uppercase opacity-40 tracking-widest font-mono">{title}</h3>}
+            <div className="relative overflow-hidden flex-1" style={{ width: '100%', minHeight: height, minWidth: '1px' }}>
+                {children}
+            </div>
         </div>
-    </div>
-);
+    );
+};
 
 // 1. Simple Line Chart - Latency
-export const LatencyLineChart = ({ height = 180 }: { height?: number }) => {
+export const LatencyLineChart = ({ height = 220, standalone = false }: { height?: number; standalone?: boolean }) => {
     const data = Array.from({ length: 24 }, (_, i) => ({
         hour: `${i}:00`,
         p50: Math.random() * 20 + 10,
@@ -31,7 +59,7 @@ export const LatencyLineChart = ({ height = 180 }: { height?: number }) => {
     const t = useTranslations('Dashboard.Charts');
 
     return (
-        <ChartCard title={tSafe(t, 'apiLatency', 'API Latency (ms)')} height={height}>
+        <ChartCard title={tSafe(t, 'apiLatency', 'API Latency (ms)')} height={height} standalone={standalone}>
             <NoSSR>
                 <ResponsiveContainer width="99%" height="100%" minWidth={0} minHeight={0}>
                     <LineChart data={data}>
@@ -51,7 +79,7 @@ export const LatencyLineChart = ({ height = 180 }: { height?: number }) => {
 };
 
 // 2. Area Chart - Cost Savings
-export const CostSavingsArea = ({ height = 180 }: { height?: number }) => {
+export const CostSavingsArea = ({ height = 220, standalone = false }: { height?: number; standalone?: boolean }) => {
     const t = useTranslations('Dashboard.Charts');
     const data = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun'].map((month, i) => ({
         month,
@@ -60,7 +88,7 @@ export const CostSavingsArea = ({ height = 180 }: { height?: number }) => {
     }));
 
     return (
-        <ChartCard title={tSafe(t, 'monthlyCost', "Monthly Cost Comparison ($)")} height={height}>
+        <ChartCard title={tSafe(t, 'monthlyCost', "Monthly Cost Comparison ($)")} height={height} standalone={standalone}>
             <NoSSR>
                 <ResponsiveContainer width="99%" height="100%" minWidth={0} minHeight={0}>
                     <AreaChart data={data}>
@@ -79,7 +107,7 @@ export const CostSavingsArea = ({ height = 180 }: { height?: number }) => {
 };
 
 // 3. Bar Chart - Request Volume
-export const RequestVolumeBar = ({ height = 180 }: { height?: number }) => {
+export const RequestVolumeBar = ({ height = 220, standalone = false }: { height?: number; standalone?: boolean }) => {
     const t = useTranslations('Dashboard.Charts');
     const data = Array.from({ length: 24 }, (_, i) => ({
         hour: `${i}:00`,
@@ -87,7 +115,7 @@ export const RequestVolumeBar = ({ height = 180 }: { height?: number }) => {
     }));
 
     return (
-        <ChartCard title={tSafe(t, 'hourlyRequestVolume', "Hourly Request Volume")} height={height}>
+        <ChartCard title={tSafe(t, 'hourlyRequestVolume', "Hourly Request Volume")} height={height} standalone={standalone}>
             <NoSSR>
                 <ResponsiveContainer width="99%" height="100%" minWidth={0} minHeight={0}>
                     <BarChart data={data}>
@@ -104,7 +132,7 @@ export const RequestVolumeBar = ({ height = 180 }: { height?: number }) => {
 };
 
 // 4. Pie Chart - Cloud Distribution
-export const CloudDistributionPie = ({ height = 180 }: { height?: number }) => {
+export const CloudDistributionPie = ({ height = 220, standalone = false }: { height?: number; standalone?: boolean }) => {
     const t = useTranslations('Dashboard.Charts');
     const data = [
         { name: 'AWS', value: 42 },
@@ -114,7 +142,7 @@ export const CloudDistributionPie = ({ height = 180 }: { height?: number }) => {
     ];
 
     return (
-        <ChartCard title={tSafe(t, 'multiCloudDistribution', "Multi-Cloud Distribution (%)")} height={height}>
+        <ChartCard title={tSafe(t, 'multiCloudDistribution', "Multi-Cloud Distribution (%)")} height={height} standalone={standalone}>
             <NoSSR>
                 <ResponsiveContainer width="99%" height="100%" minWidth={0} minHeight={0}>
                     <PieChart>
@@ -141,7 +169,7 @@ export const CloudDistributionPie = ({ height = 180 }: { height?: number }) => {
 };
 
 // 5. Line Chart - Uptime
-export const UptimeTrend = ({ height = 180 }: { height?: number }) => {
+export const UptimeTrend = ({ height = 220, standalone = false }: { height?: number; standalone?: boolean }) => {
     const t = useTranslations('Dashboard.Charts');
     const data = Array.from({ length: 30 }, (_, i) => ({
         day: i + 1,
@@ -149,7 +177,7 @@ export const UptimeTrend = ({ height = 180 }: { height?: number }) => {
     }));
 
     return (
-        <ChartCard title={tSafe(t, 'uptime30Day', "30-Day Uptime (%)")} height={height}>
+        <ChartCard title={tSafe(t, 'uptime30Day', "30-Day Uptime (%)")} height={height} standalone={standalone}>
             <NoSSR>
                 <ResponsiveContainer width="99%" height="100%" minWidth={0} minHeight={0}>
                     <LineChart data={data}>
@@ -166,7 +194,7 @@ export const UptimeTrend = ({ height = 180 }: { height?: number }) => {
 };
 
 // 6. Bar Chart - Compliance Scores
-export const ComplianceScoresBar = ({ height = 180 }: { height?: number }) => {
+export const ComplianceScoresBar = ({ height = 220, standalone = false }: { height?: number; standalone?: boolean }) => {
     const t = useTranslations('Dashboard.Charts');
     const data = [
         { name: 'SOC 2', score: 98 },
@@ -176,7 +204,7 @@ export const ComplianceScoresBar = ({ height = 180 }: { height?: number }) => {
     ];
 
     return (
-        <ChartCard title={tSafe(t, 'complianceScores', "Compliance Framework Scores")} height={height}>
+        <ChartCard title={tSafe(t, 'complianceScores', "Compliance Framework Scores")} height={height} standalone={standalone}>
             <NoSSR>
                 <ResponsiveContainer width="99%" height="100%" minWidth={0} minHeight={0}>
                     <BarChart data={data} layout="vertical">
@@ -197,7 +225,7 @@ export const ComplianceScoresBar = ({ height = 180 }: { height?: number }) => {
 };
 
 // 7. Area Chart - Error Rate
-export const ErrorRateArea = ({ height = 180 }: { height?: number }) => {
+export const ErrorRateArea = ({ height = 220, standalone = false }: { height?: number; standalone?: boolean }) => {
     const t = useTranslations('Dashboard.Charts');
     const data = Array.from({ length: 30 }, (_, i) => ({
         day: i + 1,
@@ -205,7 +233,7 @@ export const ErrorRateArea = ({ height = 180 }: { height?: number }) => {
     }));
 
     return (
-        <ChartCard title={tSafe(t, 'errorRateTrend', "Error Rate Trend (%)")} height={height}>
+        <ChartCard title={tSafe(t, 'errorRateTrend', "Error Rate Trend (%)")} height={height} standalone={standalone}>
             <NoSSR>
                 <ResponsiveContainer width="99%" height="100%" minWidth={0} minHeight={0}>
                     <AreaChart data={data}>
@@ -228,7 +256,7 @@ export const ErrorRateArea = ({ height = 180 }: { height?: number }) => {
 };
 
 // 8. Bar Chart - Feature Usage
-export const FeatureUsageBar = ({ height = 180 }: { height?: number }) => {
+export const FeatureUsageBar = ({ height = 220, standalone = false }: { height?: number; standalone?: boolean }) => {
     const t = useTranslations('Dashboard.Charts');
     const data = [
         { feature: 'Multi-Cloud', usage: 85 },
@@ -238,7 +266,7 @@ export const FeatureUsageBar = ({ height = 180 }: { height?: number }) => {
     ];
 
     return (
-        <ChartCard title={tSafe(t, 'featureAdoption', "Feature Adoption Rate (%)")} height={height}>
+        <ChartCard title={tSafe(t, 'featureAdoption', "Feature Adoption Rate (%)")} height={height} standalone={standalone}>
             <NoSSR>
                 <ResponsiveContainer width="99%" height="100%" minWidth={0} minHeight={0}>
                     <BarChart data={data}>

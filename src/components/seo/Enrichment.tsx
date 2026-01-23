@@ -62,25 +62,48 @@ export const HowItWorks = ({ pageKey }: { pageKey: string }) => {
     const tEnrichment = useTranslations('Enrichment');
     const steps = [0, 1, 2];
 
+    // Determine if we should use the improved stacked layout (requested for "Autonomous Synchronization" / Home)
+    const isHome = pageKey === 'Home';
+
     return (
         <Section className="snap-section py-20 bg-[var(--bg-surface-2)]">
             <PageShell>
-                <div className="mb-12">
-                    <h2 className="text-3xl font-black mb-4 flex items-center gap-3">
-                        <Zap className="text-primary" /> {tSafe(t, 'title', 'How It Works')}
+                <div className="mb-16">
+                    <h2 className="text-3xl md:text-4xl font-black mb-4 flex items-center gap-4">
+                        <Zap className="text-primary" size={32} /> {tSafe(t, 'title', 'How It Works')}
                     </h2>
-                    <p className="text-muted-foreground max-w-2xl">
+                    <p className="text-lg text-muted-foreground max-w-2xl">
                         {tSafe(tEnrichment, 'howItWorks', 'Our streamlined onboarding process ensures rapid deployment of sovereign infrastructure.')}
                     </p>
                 </div>
-                <div className="grid md:grid-cols-3 gap-8">
+
+                <div className={`grid gap-8 ${isHome ? 'grid-cols-1' : 'md:grid-cols-3'}`}>
                     {steps.map((i) => (
-                        <div key={i} className="glass-panel p-8 rounded-3xl relative overflow-hidden group hover:border-primary/50 transition-all">
-                            <div className="absolute -top-4 -right-4 text-6xl font-black text-white/5 group-hover:text-primary/10 transition-colors">0{i + 1}</div>
-                            <h3 className="text-xl font-bold mb-4">{tSafe(t, `steps.${i}.title`, `Step ${i + 1}`)}</h3>
-                            <p className="text-sm text-muted-foreground leading-relaxed italic border-t border-white/5 pt-4">
-                                {tSafe(t, `steps.${i}.desc`, 'Optimizing your infrastructure for global compliance and resilience.')}
-                            </p>
+                        <div key={i} className="glass-panel p-8 md:p-10 rounded-3xl relative overflow-hidden group hover:border-primary/50 transition-all duration-300">
+                            <div className="flex flex-col md:flex-row gap-8 items-start relative z-10">
+                                {/* Left Column: The Number (Fixed width on desktop) */}
+                                <div className="shrink-0 w-16 h-16 md:w-20 md:h-20 flex items-center justify-center rounded-2xl bg-primary/5 border border-primary/20 group-hover:bg-primary/10 group-hover:border-primary/40 transition-colors">
+                                    <span className="text-3xl md:text-4xl font-black text-primary/30 group-hover:text-primary transition-colors">
+                                        0{i + 1}
+                                    </span>
+                                </div>
+
+                                {/* Right Column: Content */}
+                                <div className="flex-1">
+                                    <h3 className="text-xl md:text-2xl font-bold mb-4 tracking-tight group-hover:text-primary transition-colors">
+                                        {tSafe(t, `steps.${i}.title`, `Step ${i + 1}`)}
+                                    </h3>
+                                    <div className="h-0.5 w-12 bg-primary/20 mb-6 group-hover:w-20 transition-all duration-300" />
+                                    <p className="text-base text-muted-foreground leading-relaxed italic">
+                                        {tSafe(t, `steps.${i}.desc`, 'Optimizing your infrastructure for global compliance and resilience.')}
+                                    </p>
+                                </div>
+                            </div>
+
+                            {/* Watermark: Rendered as a background element to avoid overlap, low opacity */}
+                            <div className="absolute -bottom-6 -right-6 text-8xl font-black text-white/[0.1] group-hover:text-primary/[0.15] transition-colors pointer-events-none select-none z-0">
+                                0{i + 1}
+                            </div>
                         </div>
                     ))}
                 </div>

@@ -33,14 +33,14 @@ export default function DashboardShell({ title, subtitle, children }: DashboardS
                 zIndex: 100,
                 background: 'var(--bg-surface-2)',
                 borderBottom: '1px solid var(--card-border)',
-                padding: '1.5rem 0',
+                padding: '1rem 0',
                 backdropFilter: 'blur(20px)',
                 marginTop: '0'
             }}>
                 <div className="container">
                     <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
                         <div>
-                            <h1 style={{ fontSize: '2.5rem', fontWeight: 950, margin: 0, color: 'var(--primary)', letterSpacing: '-0.02em' }}>
+                            <h1 style={{ fontSize: '2rem', fontWeight: 950, margin: 0, color: 'var(--primary)', letterSpacing: '-0.02em' }}>
                                 {title}
                             </h1>
                             <div style={{ fontSize: '0.85rem', opacity: 0.6, marginTop: '0.5rem', fontFamily: 'var(--font-mono)' }}>
@@ -87,12 +87,12 @@ export default function DashboardShell({ title, subtitle, children }: DashboardS
             </div>
 
             {/* MAIN CONTENT */}
-            <div className="container min-w-0" style={{ padding: '2rem', flex: 1 }}>
+            <div className="container min-w-0" style={{ padding: '1rem 2rem 10rem', flex: 1 }}>
 
                 {/* CRITICAL METRICS ROW - Always Visible for Context */}
-                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '1rem', marginBottom: '2rem' }}>
+                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '0.75rem', marginBottom: '1rem' }}>
                     <div className="glass-panel" style={{
-                        padding: '1.5rem',
+                        padding: '1.25rem',
                         borderRadius: '1rem',
                         background: 'linear-gradient(135deg, rgba(96, 239, 255, 0.05) 0%, rgba(59, 130, 246, 0.05) 100%)',
                         border: '1px solid rgba(96, 239, 255, 0.2)'
@@ -101,11 +101,11 @@ export default function DashboardShell({ title, subtitle, children }: DashboardS
                             <div style={{ fontSize: '0.65rem', opacity: 0.5, fontWeight: 700, textTransform: 'uppercase' }}>{t('activeAssets')}</div>
                             <Server size={20} color="#60efff" />
                         </div>
-                        <div style={{ fontSize: '2.5rem', fontWeight: 950, color: '#60efff' }}>142</div>
+                        <div style={{ fontSize: '2rem', fontWeight: 950, color: '#60efff' }}>142</div>
                     </div>
 
                     <div className="glass-panel" style={{
-                        padding: '1.5rem',
+                        padding: '1.25rem',
                         borderRadius: '1rem',
                         background: 'linear-gradient(135deg, rgba(16, 185, 129, 0.05) 0%, rgba(5, 150, 105, 0.05) 100%)',
                         border: '1px solid rgba(16, 185, 129, 0.2)'
@@ -114,11 +114,11 @@ export default function DashboardShell({ title, subtitle, children }: DashboardS
                             <div style={{ fontSize: '0.65rem', opacity: 0.5, fontWeight: 700, textTransform: 'uppercase' }}>{t('revenueImpact')}</div>
                             <Activity size={20} color="#10b981" />
                         </div>
-                        <div style={{ fontSize: '2.5rem', fontWeight: 950, color: '#10b981' }}>+18%</div>
+                        <div style={{ fontSize: '2rem', fontWeight: 950, color: '#10b981' }}>+18%</div>
                     </div>
 
                     <div className="glass-panel" style={{
-                        padding: '1.5rem',
+                        padding: '1.25rem',
                         borderRadius: '1rem',
                         background: 'linear-gradient(135deg, rgba(139, 92, 246, 0.05) 0%, rgba(124, 58, 237, 0.05) 100%)',
                         border: '1px solid rgba(139, 92, 246, 0.2)'
@@ -127,11 +127,11 @@ export default function DashboardShell({ title, subtitle, children }: DashboardS
                             <div style={{ fontSize: '0.65rem', opacity: 0.5, fontWeight: 700, textTransform: 'uppercase' }}>{t('cloudSpend')}</div>
                             <Database size={20} color="#8b5cf6" />
                         </div>
-                        <div style={{ fontSize: '2.5rem', fontWeight: 950, color: '#8b5cf6' }}>-40%</div>
+                        <div style={{ fontSize: '2rem', fontWeight: 950, color: '#8b5cf6' }}>-40%</div>
                     </div>
 
                     <div className="glass-panel" style={{
-                        padding: '1.5rem',
+                        padding: '1.25rem',
                         borderRadius: '1rem',
                         background: activeAlerts > 0
                             ? 'linear-gradient(135deg, rgba(245, 158, 11, 0.05) 0%, rgba(217, 119, 6, 0.05) 100%)'
@@ -142,7 +142,7 @@ export default function DashboardShell({ title, subtitle, children }: DashboardS
                             <div style={{ fontSize: '0.65rem', opacity: 0.5, fontWeight: 700, textTransform: 'uppercase' }}>{t('activeAlerts')}</div>
                             {activeAlerts > 0 ? <AlertTriangle size={20} color="#f59e0b" /> : <CheckCircle size={20} color="#10b981" />}
                         </div>
-                        <div style={{ fontSize: '2.5rem', fontWeight: 950, color: activeAlerts > 0 ? '#f59e0b' : '#10b981' }}>{activeAlerts}</div>
+                        <div style={{ fontSize: '2rem', fontWeight: 950, color: activeAlerts > 0 ? '#f59e0b' : '#10b981' }}>{activeAlerts}</div>
                         <div style={{ fontSize: '0.7rem', opacity: 0.5, marginTop: '0.5rem' }}>
                             {activeAlerts > 0 ? t('requiresAttention') : t('nominal')}
                         </div>

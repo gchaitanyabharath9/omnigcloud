@@ -27,17 +27,17 @@ export default function MetricDashboardLayout({
     const t = useTranslations('Dashboard.Charts');
 
     return (
-        <div className="w-full grid grid-cols-1 lg:grid-cols-2 gap-6 auto-rows-auto">
+        <div className="w-full grid grid-cols-1 lg:grid-cols-2 gap-3 auto-rows-auto">
             {/* QUADRANT 1: Main Visual (Top-Left) */}
-            <div className="glass-panel p-6 rounded-2xl flex flex-col relative overflow-hidden group">
-                <div className="absolute top-0 right-0 p-4 opacity-75">
+            <div className="glass-panel p-4 rounded-xl flex flex-col relative overflow-hidden group">
+                <div className="absolute top-0 right-0 p-2 opacity-75">
                     <DemoBadge label={tSafe(t, 'liveView', 'Live View')} />
                 </div>
-                <div className="mb-4">
-                    <h2 className="text-2xl font-black tracking-tight text-foreground">{title}</h2>
-                    <p className="text-sm text-muted-foreground">{subtitle}</p>
+                <div className="mb-2">
+                    <h2 className="text-lg font-black tracking-tight text-foreground">{title}</h2>
+                    <p className="text-[10px] text-muted-foreground uppercase tracking-tight opacity-70">{subtitle}</p>
                 </div>
-                <div className="flex-1 flex items-center justify-center min-h-[250px]">
+                <div className="flex-1 relative w-full min-h-[200px] flex items-center justify-center">
                     {mainVisual}
                 </div>
             </div>
@@ -45,15 +45,15 @@ export default function MetricDashboardLayout({
             {/* QUADRANT 2: Key Stats (Top-Right) */}
             <div className="grid grid-rows-2 gap-4">
                 {/* Top Half of Right Col: Big Stats */}
-                <div className="glass-panel p-6 rounded-2xl flex flex-col justify-center">
-                    <div className="grid grid-cols-2 gap-4 h-full">
+                <div className="glass-panel p-4 rounded-xl flex flex-col justify-center">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-2 h-full">
                         {stats.map((stat, idx) => (
-                            <div key={idx} className="bg-white/5 rounded-xl p-4 flex flex-col justify-center border border-white/5 hover:bg-white/10 transition-colors">
-                                <span className="text-xs text-muted-foreground uppercase tracking-widest font-bold mb-1">{stat.label}</span>
-                                <div className="flex items-end gap-2">
-                                    <span className="text-3xl font-mono font-bold text-foreground leading-none">{stat.value}</span>
+                            <div key={idx} className="bg-white/5 rounded-lg p-2.5 flex flex-col justify-center border border-white/5 hover:bg-white/10 transition-colors">
+                                <span className="text-[9px] text-muted-foreground uppercase tracking-widest font-bold mb-0.5">{stat.label}</span>
+                                <div className="flex items-end gap-1">
+                                    <span className="text-xl font-mono font-bold text-foreground leading-none">{stat.value}</span>
                                     {stat.trend && (
-                                        <span className={`text-xs font-bold mb-1 ${stat.trendUp ? 'text-emerald-400' : 'text-rose-400'} flex items-center`}>
+                                        <span className={`text-[9px] font-bold mb-0.5 ${stat.trendUp ? 'text-emerald-400' : 'text-rose-400'} flex items-center`}>
                                             {stat.trendUp ? '↑' : '↓'} {stat.trend}
                                         </span>
                                     )}
@@ -64,37 +64,39 @@ export default function MetricDashboardLayout({
                 </div>
 
                 {/* Bottom Half of Right Col: Analysis Text */}
-                <div className="glass-panel p-6 rounded-2xl border border-white/5 bg-gradient-to-br from-primary/5 to-transparent flex flex-col justify-center relative overflow-hidden text-balance">
-                    <div className="absolute top-4 left-4">
-                        <ArrowUpRight className="text-primary/50" />
+                <div className="glass-panel p-4 rounded-xl border border-white/5 bg-gradient-to-br from-primary/5 to-transparent flex flex-col justify-center relative overflow-hidden text-balance">
+                    <div className="absolute top-2 left-2">
+                        <ArrowUpRight className="text-primary/50" size={16} />
                     </div>
-                    <h3 className="text-lg font-bold text-primary mb-2 pl-8">{tSafe(t, 'aiAnalysis', 'AI Analysis')}</h3>
-                    <p className="text-base text-muted-foreground leading-relaxed pl-8 border-l-2 border-primary/20">
+                    <h3 className="text-sm font-bold text-primary mb-1 pl-6">{tSafe(t, 'aiAnalysis', 'AI Analysis')}</h3>
+                    <p className="text-xs text-muted-foreground leading-snug pl-6 border-l-2 border-primary/20">
                         {analysis}
                     </p>
                 </div>
             </div>
 
             {/* QUADRANT 3: Secondary Visual (Bottom-Left) */}
-            <div className="glass-panel p-6 rounded-2xl flex flex-col min-h-[300px]">
+            <div className="glass-panel p-4 rounded-xl flex flex-col min-h-[220px]">
                 <div className="mb-2 flex items-center justify-between">
-                    <span className="text-xs font-bold uppercase text-muted-foreground">{tSafe(t, 'historicalTrend', 'Historical Trend')}</span>
+                    <span className="text-[9px] font-bold uppercase text-muted-foreground tracking-widest">{tSafe(t, 'historicalTrend', 'Historical Trend')}</span>
                     <div className="flex gap-1">
-                        <div className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
+                        <div className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
                     </div>
                 </div>
-                <div className="flex-1 flex items-center justify-center relative overflow-hidden rounded-xl bg-white/5">
+                <div className="flex-1 relative w-full overflow-hidden rounded-lg bg-white/5 border border-white/5">
                     {/* Overlay for "Deep Dive" feel */}
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent pointer-events-none" />
-                    {secondaryVisual}
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent pointer-events-none z-10" />
+                    <div className="absolute inset-0 flex items-center justify-center">
+                        {secondaryVisual}
+                    </div>
                 </div>
             </div>
 
             {/* QUADRANT 4: Logs / Details (Bottom-Right) */}
-            <div className="glass-panel p-0 rounded-2xl flex flex-col overflow-hidden min-h-[300px]">
-                <div className="p-4 border-b border-white/5 bg-white/5 flex items-center justify-between">
-                    <span className="text-xs font-mono text-muted-foreground">{tSafe(t, 'systemLogs', 'System Logs')}</span>
-                    <div className="flex gap-1.5">
+            <div className="glass-panel p-0 rounded-xl flex flex-col overflow-hidden min-h-[220px]">
+                <div className="p-2.5 border-b border-white/5 bg-white/5 flex items-center justify-between">
+                    <span className="text-[9px] font-mono text-muted-foreground">{tSafe(t, 'systemLogs', 'System Logs')}</span>
+                    <div className="flex gap-1">
                         <div className="w-2 h-2 rounded-full bg-red-500/20" />
                         <div className="w-2 h-2 rounded-full bg-yellow-500/20" />
                         <div className="w-2 h-2 rounded-full bg-green-500/20" />

@@ -39,7 +39,7 @@ export const getDashboardMetrics = (t: any) => ({
                 { label: tSafe(t, 'executive.stats.nps', "NPS"), value: "72", trend: "4", trendUp: true }
             ]}
             analysis={tSafe(t, 'executive.analysis', "Overall system health is excellent. Strategic KPIs are trending positively with a significant reduction in operational overhead due to autonomous scaling.")}
-            secondaryVisual={<div style={{ transform: 'scale(0.8)' }}><ComplianceScoresBar /></div>}
+            secondaryVisual={<ComplianceScoresBar standalone={true} />}
         />
     },
     'technical': {
@@ -48,7 +48,7 @@ export const getDashboardMetrics = (t: any) => ({
         component: <MetricDashboardLayout
             title={tSafe(t, 'technical.title', "Ops Control Plane")}
             subtitle={tSafe(t, 'technical.subtitle', "Engineering velocity & stability")}
-            mainVisual={<div className="scale-125"><UptimeTrend /></div>}
+            mainVisual={<UptimeTrend standalone={true} />}
             stats={[
                 { label: tSafe(t, 'technical.stats.prs', "Pull Requests"), value: "142", trend: "24", trendUp: true },
                 { label: tSafe(t, 'technical.stats.buildTime', "Avg Build"), value: "2m", trend: "10s", trendUp: true },
@@ -56,7 +56,7 @@ export const getDashboardMetrics = (t: any) => ({
                 { label: tSafe(t, 'technical.stats.issues', "Issues"), value: "3", trend: "Low", trendUp: true }
             ]}
             analysis={tSafe(t, 'technical.analysis', "Technical debt reduction sprint is showing results with improved build times and higher test coverage across core microservices.")}
-            secondaryVisual={<div style={{ transform: 'scale(0.8)' }}><FeatureUsageBar /></div>}
+            secondaryVisual={<FeatureUsageBar standalone={true} />}
         />
     },
     'roi': {
@@ -73,7 +73,7 @@ export const getDashboardMetrics = (t: any) => ({
                 { label: tSafe(t, 'roi.stats.projection', "Projection"), value: "+400%", trend: "Q4", trendUp: true }
             ]}
             analysis={tSafe(t, 'roi.analysis', "AI-driven arbitrage has optimised spot instance usage, resulting in a significantly lower TCO compared to on-demand provisioning this quarter.")}
-            secondaryVisual={<div style={{ transform: 'scale(0.8)' }}><FeatureUsageBar /></div>}
+            secondaryVisual={<FeatureUsageBar standalone={true} />}
         />
     },
     'cost': {
@@ -90,7 +90,7 @@ export const getDashboardMetrics = (t: any) => ({
                 { label: tSafe(t, 'cost.stats.waste', "Waste Reduc."), value: "-18%", trend: "3%", trendUp: true }
             ]}
             analysis={tSafe(t, 'cost.analysis', "Multi-cloud routing is actively preventing vendor lock-in premiums by shifting non-critical workloads to OCI and Azure spot instances.")}
-            secondaryVisual={<div style={{ transform: 'scale(0.8)' }}><CloudDistributionPie /></div>}
+            secondaryVisual={<CloudDistributionPie standalone={true} />}
         />
     },
     'uptime': {
@@ -99,7 +99,7 @@ export const getDashboardMetrics = (t: any) => ({
         component: <MetricDashboardLayout
             title={tSafe(t, 'uptime.title', "System Uptime")}
             subtitle={tSafe(t, 'uptime.subtitle', "30-day global availability")}
-            mainVisual={<div className="scale-125"><UptimeRing uptime={99.99} /></div>}
+            mainVisual={<UptimeTrend standalone={true} height={200} />}
             stats={[
                 { label: tSafe(t, 'uptime.stats.availability', "Availability"), value: "99.99%", trend: "Stable", trendUp: true },
                 { label: tSafe(t, 'uptime.stats.downtime', "Downtime"), value: "0s", trend: "0%", trendUp: true },
@@ -107,7 +107,7 @@ export const getDashboardMetrics = (t: any) => ({
                 { label: tSafe(t, 'uptime.stats.incidents', "Incidents"), value: "0", trend: "Clear", trendUp: true }
             ]}
             analysis={tSafe(t, 'uptime.analysis', "Global mesh routing automatically bypassed 3 regional carrier outages in the last 24 hours, preserving 100% application uptime.")}
-            secondaryVisual={<div style={{ transform: 'scale(0.8)' }}><UptimeTrend /></div>}
+            secondaryVisual={<UptimeTrend standalone={true} />}
         />
     },
     'security': {
@@ -116,7 +116,7 @@ export const getDashboardMetrics = (t: any) => ({
         component: <MetricDashboardLayout
             title={tSafe(t, 'security.title', "Security Posture")}
             subtitle={tSafe(t, 'security.subtitle', "Real-time compliance monitoring")}
-            mainVisual={<div className="scale-125"><PulsingSecurityScore score={94} /></div>}
+            mainVisual={<PulsingSecurityScore score={94} />}
             stats={[
                 { label: tSafe(t, 'security.stats.score', "Security Score"), value: "94/100", trend: "2pts", trendUp: true },
                 { label: tSafe(t, 'security.stats.threats', "Threats Blocked"), value: "1.4k", trend: "Low", trendUp: true },
@@ -124,7 +124,7 @@ export const getDashboardMetrics = (t: any) => ({
                 { label: tSafe(t, 'security.stats.issues', "Open Issues"), value: "0", trend: "Clear", trendUp: true }
             ]}
             analysis={tSafe(t, 'security.analysis', "Automated compliance guardrails are active. No critical vulnerabilities detected in the latest continuous audit cycle.")}
-            secondaryVisual={<div style={{ transform: 'scale(0.8)' }}><ComplianceScoresBar /></div>}
+            secondaryVisual={<ComplianceScoresBar standalone={true} />}
         />
     },
     'resources': {
@@ -141,7 +141,7 @@ export const getDashboardMetrics = (t: any) => ({
                 { label: tSafe(t, 'resources.stats.nodes', "Node Count"), value: "14", trend: "Fixed", trendUp: true }
             ]}
             analysis={tSafe(t, 'resources.analysis', "Cluster auto-scaling is maintaining optimal bin packing, ensuring resources are utilized efficiently without over-provisioning.")}
-            secondaryVisual={<div style={{ transform: 'scale(0.8)' }}><FeatureUsageBar /></div>}
+            secondaryVisual={<FeatureUsageBar standalone={true} />}
         />
     },
     'deployment': {
@@ -158,7 +158,7 @@ export const getDashboardMetrics = (t: any) => ({
                 { label: tSafe(t, 'deployment.stats.rollbacks', "Rollbacks"), value: "0", trend: "Clear", trendUp: true }
             ]}
             analysis={tSafe(t, 'deployment.analysis', "CI/CD pipelines are operating at peak velocity with zero regressions detected in staging or production environments today.")}
-            secondaryVisual={<div style={{ transform: 'scale(0.8)' }}><UptimeTrend /></div>}
+            secondaryVisual={<UptimeTrend standalone={true} />}
         />
     },
     'scaling': {
@@ -175,7 +175,7 @@ export const getDashboardMetrics = (t: any) => ({
                 { label: tSafe(t, 'scaling.stats.nodes', "Max Nodes"), value: "22", trend: "Cap", trendUp: true }
             ]}
             analysis={tSafe(t, 'scaling.analysis', "Predictive scaling preempted traffic spikes in EU-West-1, keeping latency below 50ms during global user wakeup.")}
-            secondaryVisual={<div style={{ transform: 'scale(0.8)' }}><LatencyLineChart /></div>}
+            secondaryVisual={<LatencyLineChart standalone={true} />}
         />
     },
     'error': {
@@ -192,7 +192,7 @@ export const getDashboardMetrics = (t: any) => ({
                 { label: tSafe(t, 'error.stats.healed', "Self-Healed"), value: "2", trend: "Auto", trendUp: true }
             ]}
             analysis={tSafe(t, 'error.analysis', "Self-healing subsystems recovered 2 pods automatically after detecting memory leaks, preventing user-facing errors.")}
-            secondaryVisual={<div style={{ transform: 'scale(0.8)' }}><ErrorRateArea /></div>}
+            secondaryVisual={<ErrorRateArea standalone={true} />}
         />
     }
 });
