@@ -2414,7 +2414,9 @@
       "multiCloudDistribution": "Multi-Cloud Distribution (%) (HI)",
       "realtimePerf": "Real-time system performance metrics (HI)",
       "systemLogs": "System Logs (HI)",
-      "uptime30Day": "30-Day Uptime (%) (HI)"
+      "uptime30Day": "30-Day Uptime (%) (HI)",
+      "syncing": "Data Synchronizing (HI)",
+      "liveDataFeed": "LIVE DATA FEED"
     },
     "CommandCenter": {
       "costDesc": "Monthly infrastructure optimization (HI)",
@@ -2729,11 +2731,13 @@
     "liveSubtitle": "Real-time system performance metrics. (HI)",
     "liveTitle": "System Operational Status (HI)",
     "logicMeshStatus": "Logic Mesh Status (HI)",
+    "optimizationSubtitle": "Global Resource Allocator (HI)",
     "optimizationTitle": "Resource Optimization (HI)",
     "roiSubtitle": "Projected savings and efficiency gains. (HI)",
     "roiTitle": "Cost & ROI Analysis (HI)",
     "role": "Role Details (HI)",
     "title": "Dashboard (HI)",
+    "trustSubtitle": "Sovereign Compliance Monitor (HI)",
     "trustTitle": "Trust Compliance Score (HI)",
     "welcome": "Welcome Details (HI)"
   },
@@ -3012,7 +3016,9 @@
         "architecture": "Architecture (HI)",
         "introduction": "Introduction (HI)",
         "security": "Security & Governance (HI)",
-        "whitepaper": "Whitepaper (HI)"
+        "whitepaper": "Whitepaper (HI)",
+        "api": "API Reference (HI)",
+        "guide": "Architectural Guide (HI)"
       },
       "quickLinksHeading": "Quick Links (HI)"
     },
@@ -5561,6 +5567,25 @@
       },
       "VisualSection": {
         "description": "Overview of our modernization and optimization service layers. (HI)"
+      }
+    },
+    "Products": {
+      "HowItWorks": {
+        "steps": {
+          "0": {
+            "desc": "Provision your sovereignty perimeter across multi-cloud regions using our autonomous fabric kernel.",
+            "title": "Fabric Provisioning"
+          },
+          "1": {
+            "desc": "Enforce governance logic at the infrastructure level with real-time drift detection and auto-remediation.",
+            "title": "Governance Sync"
+          },
+          "2": {
+            "desc": "Achieve absolute sovereignty and compliance with a single, vendor-agnostic control plane.",
+            "title": "Unified Control"
+          }
+        },
+        "title": "How It Works"
       }
     }
   },

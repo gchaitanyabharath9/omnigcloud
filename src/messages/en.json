@@ -2414,7 +2414,8 @@
       "multiCloudDistribution": "Multi-Cloud Distribution (%)",
       "realtimePerf": "Real-time system performance metrics",
       "systemLogs": "System Logs",
-      "uptime30Day": "30-Day Uptime (%)"
+      "uptime30Day": "30-Day Uptime (%)",
+      "liveDataFeed": "LIVE DATA FEED"
     },
     "CommandCenter": {
       "costDesc": "Monthly infrastructure optimization",
@@ -2729,11 +2730,13 @@
     "liveSubtitle": "Real-time system performance metrics.",
     "liveTitle": "System Operational Status",
     "logicMeshStatus": "Logic Mesh Status",
+    "optimizationSubtitle": "Global Resource Allocator",
     "optimizationTitle": "Resource Optimization",
     "roiSubtitle": "Projected savings and efficiency gains.",
     "roiTitle": "Cost & ROI Analysis",
     "role": "Role Details",
     "title": "Dashboard",
+    "trustSubtitle": "Sovereign Compliance Monitor",
     "trustTitle": "Trust Compliance Score",
     "welcome": "Welcome Details"
   },
@@ -3009,7 +3012,9 @@
       "customBriefingTitle": "Custom Briefing",
       "documentation": "Docs Sidebar Documentation",
       "links": {
+        "api": "API Reference",
         "architecture": "Architecture",
+        "guide": "Architectural Guide",
         "introduction": "Introduction",
         "security": "Security & Governance",
         "whitepaper": "Whitepaper"
@@ -5491,6 +5496,25 @@
       },
       "VisualSection": {
         "description": "Visual representation of the AECP core components and data flow."
+      }
+    },
+    "Products": {
+      "HowItWorks": {
+        "steps": {
+          "0": {
+            "desc": "Provision your sovereignty perimeter across multi-cloud regions using our autonomous fabric kernel.",
+            "title": "Fabric Provisioning"
+          },
+          "1": {
+            "desc": "Enforce governance logic at the infrastructure level with real-time drift detection and auto-remediation.",
+            "title": "Governance Sync"
+          },
+          "2": {
+            "desc": "Achieve absolute sovereignty and compliance with a single, vendor-agnostic control plane.",
+            "title": "Unified Control"
+          }
+        },
+        "title": "How It Works"
       }
     },
     "Pricing": {
