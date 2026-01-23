@@ -8,6 +8,7 @@ const enContent = JSON.parse(fs.readFileSync(enPath, 'utf8'));
 // Keys to sync
 const keysToSync = [
     ['Docs', 'sidebar'],
+    ['Docs', 'api'],
     ['Enrichment'],
     ['SEO_Content', 'Products', 'HowItWorks']
 ];

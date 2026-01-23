@@ -2805,26 +2805,26 @@
       "title": "Abstract (ZH)"
     },
     "api": {
-      "description": "The OmniGCloud API allows you to programmatically manage your cloud infrastructure, enforce governance policies, and monitor real-time drift across all supported providers. (ZH)",
+      "title": "API Reference",
+      "description": "Programmatic control for your sovereign cloud.",
+      "keywords": [
+        "api",
+        "rest",
+        "swagger",
+        "endpoints"
+      ],
+      "versionLabel": "API Version 1.0",
       "endpoints": {
         "discovery": {
-          "desc": "Retrieve a list of all discovered assets across all registered cloud providers. (ZH)"
-        },
-        "governance": {
-          "desc": "Check for active governance drift and retrieve remediation logs. (ZH)"
+          "desc": "Scan assets"
         },
         "modernization": {
-          "desc": "Initiate a modernization workflow for a specific application or cluster. (ZH)"
+          "desc": "Deploy stack"
+        },
+        "governance": {
+          "desc": "Check drift"
         }
-      },
-      "keywords": {
-        "0": "OmniGCloud API (ZH)",
-        "1": "REST API v1 (ZH)",
-        "2": "Cloud Governance API (ZH)",
-        "3": "Infrastructure as Code API (ZH)"
-      },
-      "title": "OmniGCloud REST API (ZH)",
-      "versionLabel": "API Version: v1.0.4 (LTS) (ZH)"
+      }
     },
     "architecture": {
       "compendium": {
