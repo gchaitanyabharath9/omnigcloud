@@ -2409,14 +2409,13 @@
       "historicalTrend": "Historical Trend (KO)",
       "hourlyRequestVolume": "Hourly Request Volume (KO)",
       "latencyTrend": "API latency trend (KO)",
+      "liveDataFeed": "LIVE DATA FEED",
       "liveView": "Live View (KO)",
       "monthlyCost": "Monthly Cost Comparison ($) (KO)",
       "multiCloudDistribution": "Multi-Cloud Distribution (%) (KO)",
       "realtimePerf": "Real-time system performance metrics (KO)",
       "systemLogs": "System Logs (KO)",
-      "uptime30Day": "30-Day Uptime (%) (KO)",
-      "syncing": "Data Synchronizing (KO)",
-      "liveDataFeed": "LIVE DATA FEED"
+      "uptime30Day": "30-Day Uptime (%) (KO)"
     },
     "CommandCenter": {
       "costDesc": "Monthly infrastructure optimization (KO)",
@@ -3001,26 +3000,26 @@
       "validationProtocols": "Validation Protocols (KO)"
     },
     "sidebar": {
-      "contactArchitectureOffice": "Contact Architecture Office",
-      "customBriefingTitle": "Need a customized briefing?",
-      "quickLinksHeading": "Quick Links",
-      "links": {
-        "introduction": "Introduction",
-        "architecture": "Architecture",
-        "whitepaper": "Technical Whitepaper",
-        "security": "Security & Governance",
-        "guide": "Architectural Guide",
-        "api": "API Reference"
-      },
-      "documentation": "DOCUMENTATION",
-      "blueprints": "GOVERNANCE BLUEPRINTS",
       "blueprint_links": {
         "aws": "AWS Landing Zone",
         "azure": "Azure Enterprise",
-        "openshift": "OpenShift Cluster",
-        "hybrid": "Hybrid Fabric"
+        "hybrid": "Hybrid Fabric",
+        "openshift": "OpenShift Cluster"
       },
-      "customBriefingText": "Generate a custom briefing document based on your selected stack."
+      "blueprints": "GOVERNANCE BLUEPRINTS",
+      "contactArchitectureOffice": "Contact Architecture Office",
+      "customBriefingText": "Generate a custom briefing document based on your selected stack.",
+      "customBriefingTitle": "Need a customized briefing?",
+      "documentation": "DOCUMENTATION",
+      "links": {
+        "api": "API Reference",
+        "architecture": "Architecture",
+        "guide": "Architectural Guide",
+        "introduction": "Introduction",
+        "security": "Security & Governance",
+        "whitepaper": "Technical Whitepaper"
+      },
+      "quickLinksHeading": "Quick Links"
     },
     "technicalLibrary": "Technical Library (KO)",
     "transparency": {
@@ -3119,13 +3118,13 @@
     "leadCapture": {
       "fallback": "Contact Us Directly"
     },
-    "visualSection": {
-      "tag": "Architecture Overview",
-      "title": "System Visualizer",
-      "note": "This diagram represents the actual orchestration fabric across multiple cloud regions."
-    },
     "relatedLinks": {
       "title": "Related Strategy & Insights"
+    },
+    "visualSection": {
+      "note": "This diagram represents the actual orchestration fabric across multiple cloud regions.",
+      "tag": "Architecture Overview",
+      "title": "System Visualizer"
     }
   },
   "Enterprise": {
@@ -3171,9 +3170,20 @@
       "title": "Partnership (KO)"
     },
     "trust": {
-      "p1": "We provide the most secure platform. (KO)",
-      "p2": "Used by Fortune 500 companies. (KO)",
-      "title": "Trusted by Enterprises (KO)"
+      "p1": "OmniGCloud는 고신뢰 규제 환경을 위해 처음부터 설계된 유일한 컨트롤 플레인입니다.",
+      "p2": "기업 정책이 모든 실행 지점에서 시행된다는 수학적 확실성을 제공합니다.",
+      "stats": {
+        "actions": "자율 작업",
+        "gates": "규정 준수 게이트",
+        "regions": "글로벌 리전",
+        "uptime": "가동 시간 SLA",
+        "uptime_val": "99.999%",
+        "regions_val": "100+",
+        "gates_val": "400+",
+        "actions_val": "1B+"
+      },
+      "title": "주권적 무결성",
+      "cta": "전략적 파트너십 문서 읽기"
     }
   },
   "FloatingActions": {
@@ -3389,6 +3399,7 @@
         "knowledge": "Sovereign Knowledge (KO)",
         "nexus": "Cross-Cloud Nexus (KO)",
         "playground": "Sovereign Playground (KO)",
+        "sangam": "Sangam 합류",
         "workflows": "G-Workflows (KO)"
       },
       "rateLimitMessage": "Rate Limit Message (KO)",
@@ -3877,8 +3888,6 @@
       "title": "Command Center & Real-Time Monitoring"
     },
     "Docs": {
-      "description": "Comprehensive technical documentation for the OmniGCloud platform. Architecture plans, API references, and governance guides.",
-      "title": "Documentation & Technical Compendium",
       "api": {
         "description": "Comprehensive API documentation for the OmniGCloud platform. Control your entire multi-cloud estate through our secure, RESTful endpoints.",
         "title": "API Reference"
@@ -3887,6 +3896,7 @@
         "description": "Original contributions formalizing the methodology for Autonomous Sovereign Orchestration (ASO), addressing the conflict between global scale and national law.",
         "title": "Architectural Design Patterns"
       },
+      "description": "Comprehensive technical documentation for the OmniGCloud platform. Architecture plans, API references, and governance guides.",
       "governance": {
         "description": "Pre-validated blueprints to ensure your multi-cloud deployments meet the most rigorous global compliance standards.",
         "title": "Governance Blueprints"
@@ -3894,7 +3904,8 @@
       "guide": {
         "description": "Learn how to initialize your environment and connect your first cloud provider with the OmniGCloud platform.",
         "title": "Getting Started Guide"
-      }
+      },
+      "title": "Documentation & Technical Compendium"
     },
     "Home": {
       "description": "Modernize your enterprise infrastructure with OmniGCloud. Cloud-agnostic platforms, autonomous governance, and AI-native architecture for the sovereign era.",
@@ -3921,6 +3932,10 @@
     "Products": {
       "description": "Automate compliance with real-time drift detection and auto-remediation policies. Explore our suite of sovereign cloud products.",
       "title": "Sovereign Product Suite"
+    },
+    "Research": {
+      "description": "Explore OmniGCloud Systems research on cloud-native architecture, distributed systems, and sovereign governance.",
+      "title": "Research & Technical Specifications"
     },
     "Services": {
       "ai-cloud-platform": {
@@ -3957,10 +3972,6 @@
         "title": "RedHat OpenShift Modernization"
       },
       "title": "Sovereign Services | OmniGCloud"
-    },
-    "Research": {
-      "description": "Explore OmniGCloud Systems research on cloud-native architecture, distributed systems, and sovereign governance.",
-      "title": "Research & Technical Specifications"
     },
     "Solutions": {
       "description": "Tailored cloud modernization solutions for finance, healthcare, and regulated industries. Achieve digital sovereignty with confidence.",
@@ -5552,6 +5563,28 @@
         "title": "Economic Autonomy"
       }
     },
+    "Products": {
+      "HowItWorks": {
+        "steps": {
+          "0": {
+            "desc": "Provision your sovereignty perimeter across multi-cloud regions using our autonomous fabric kernel.",
+            "heading": "Phase 1",
+            "title": "Fabric Provisioning"
+          },
+          "1": {
+            "desc": "Enforce governance logic at the infrastructure level with real-time drift detection and auto-remediation.",
+            "heading": "Phase 2",
+            "title": "Governance Sync"
+          },
+          "2": {
+            "desc": "Achieve absolute sovereignty and compliance with a single, vendor-agnostic control plane.",
+            "heading": "Phase 3",
+            "title": "Unified Control"
+          }
+        },
+        "title": "How It Works"
+      }
+    },
     "Services": {
       "DeepDive": {
         "links": {
@@ -5563,29 +5596,19 @@
       "VisualSection": {
         "description": "Overview of our modernization and optimization service layers. (KO)"
       }
-    },
-    "Products": {
-      "HowItWorks": {
-        "steps": {
-          "0": {
-            "desc": "Provision your sovereignty perimeter across multi-cloud regions using our autonomous fabric kernel.",
-            "title": "Fabric Provisioning",
-            "heading": "Phase 1"
-          },
-          "1": {
-            "desc": "Enforce governance logic at the infrastructure level with real-time drift detection and auto-remediation.",
-            "title": "Governance Sync",
-            "heading": "Phase 2"
-          },
-          "2": {
-            "desc": "Achieve absolute sovereignty and compliance with a single, vendor-agnostic control plane.",
-            "title": "Unified Control",
-            "heading": "Phase 3"
-          }
-        },
-        "title": "How It Works"
-      }
     }
+  },
+  "Sangam": {
+    "cta": "합류 체험하기",
+    "description": "Sangam은 OmniGCloud 커널의 궁극적인 종합체입니다. 서로 다른 클라우드 패브릭, 자율 에이전트 및 주권 정책이 단일 고성능 운영 환경으로 병합되는 합류점입니다.",
+    "features": {
+      "purity": "규제 대상 자산을 위한 드리프트 없는 주권적 무결성.",
+      "resonance": "글로벌 규모의 고주파 상태 동기화.",
+      "unification": "모든 주요 클라우드에 걸친 완전한 패브릭 통합."
+    },
+    "subtitle": "멀티 클라우드 오케스트레이션과 자율 거버넌스의 궁극적 결합.",
+    "tag": "V-PREMIUM",
+    "title": "Sangam: 주권적 합류"
   },
   "Sections": {
     "AutomationStack": {

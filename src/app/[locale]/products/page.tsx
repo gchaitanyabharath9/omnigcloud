@@ -12,7 +12,7 @@ import { VisualSection, DeepDive } from '@/components/seo/Enrichment';
 import { ProductHowItWorks } from '@/features/products/ProductHowItWorks';
 
 
-const PRODUCT_SECTION_IDS = ['playground', 'workflows', 'guard', 'knowledge', 'deploy', 'nexus'];
+const PRODUCT_SECTION_IDS = ['playground', 'workflows', 'guard', 'knowledge', 'deploy', 'nexus', 'sangam'];
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
     const { locale } = await params;
