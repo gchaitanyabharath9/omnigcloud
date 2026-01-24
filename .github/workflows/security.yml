@@ -9,8 +9,7 @@ on:
   schedule:
     - cron: "21 10 * * 5" # Run weekly on Friday
 
-permissions:
-  contents: read
+permissions: read-all
 
 jobs:
   analyze:
