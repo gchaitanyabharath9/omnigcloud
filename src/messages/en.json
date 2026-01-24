@@ -437,21 +437,21 @@
     "company": "Company Details",
     "compliance_maps": "Compliance Maps",
     "contact": "Contact Details",
-    "dashboard": "Dashboard Details",
+    "dashboard": "Dashboard",
     "distributed-systems-resilience": "Distributed Systems Resilience",
     "docs": "Documentation",
     "frameworks": "Frameworks Details",
-    "home": "Home Details",
+    "home": "Home",
     "industries": "Industries Details",
     "onboarding": "Onboarding Details",
     "papers": "Papers Details",
     "platform": "Platform Details",
-    "pricing": "Pricing Details",
-    "products": "Products Details",
+    "pricing": "Pricing",
+    "products": "Products",
     "research": "Research Details",
-    "resources": "Resources Details",
+    "resources": "Resources",
     "services": "Services Details",
-    "solutions": "Solutions Details",
+    "solutions": "Solutions",
     "whitepaper": "Whitepaper Details"
   },
   "BusinessIdeas": {
@@ -2414,7 +2414,8 @@
       "multiCloudDistribution": "Multi-Cloud Distribution (%)",
       "realtimePerf": "Real-time system performance metrics",
       "systemLogs": "System Logs",
-      "uptime30Day": "30-Day Uptime (%)"
+      "uptime30Day": "30-Day Uptime (%)",
+      "liveDataFeed": "LIVE DATA FEED"
     },
     "CommandCenter": {
       "costDesc": "Monthly infrastructure optimization",
@@ -2729,11 +2730,13 @@
     "liveSubtitle": "Real-time system performance metrics.",
     "liveTitle": "System Operational Status",
     "logicMeshStatus": "Logic Mesh Status",
+    "optimizationSubtitle": "Global Resource Allocator",
     "optimizationTitle": "Resource Optimization",
     "roiSubtitle": "Projected savings and efficiency gains.",
     "roiTitle": "Cost & ROI Analysis",
     "role": "Role Details",
     "title": "Dashboard",
+    "trustSubtitle": "Sovereign Compliance Monitor",
     "trustTitle": "Trust Compliance Score",
     "welcome": "Welcome Details"
   },
@@ -2996,26 +2999,6 @@
       "empiricalDataSetDesc": "Verified multi-cloud telemetry",
       "validationProtocols": "Validation Protocols"
     },
-    "sidebar": {
-      "blueprint_links": {
-        "aws": "AWS Blueprint",
-        "azure": "Azure Blueprint",
-        "hybrid": "Hybrid Cloud Blueprint",
-        "openshift": "OpenShift Blueprint"
-      },
-      "blueprints": "Docs Sidebar Blueprints",
-      "contactArchitectureOffice": "Contact Architecture Office",
-      "customBriefingText": "Request a dedicated technical walkthrough of our sovereign architecture patterns.",
-      "customBriefingTitle": "Custom Briefing",
-      "documentation": "Docs Sidebar Documentation",
-      "links": {
-        "architecture": "Sidebar Links Architecture",
-        "introduction": "Sidebar Links Introduction",
-        "security": "Security & Governance",
-        "whitepaper": "Sidebar Links Whitepaper"
-      },
-      "quickLinksHeading": "Quick Links"
-    },
     "technicalLibrary": "Technical Library",
     "transparency": {
       "desc": "Clear, auditable practices across security, reliability, and operations.",
@@ -3043,6 +3026,42 @@
           "yAxis": "Y Axis"
         }
       }
+    },
+    "sidebar": {
+      "contactArchitectureOffice": "Contact Architecture Office",
+      "customBriefingTitle": "Need a customized briefing?",
+      "quickLinksHeading": "Quick Links",
+      "links": {
+        "introduction": "Introduction",
+        "architecture": "Architecture",
+        "whitepaper": "Technical Whitepaper",
+        "security": "Security & Governance",
+        "guide": "Architectural Guide",
+        "api": "API Reference"
+      },
+      "documentation": "DOCUMENTATION",
+      "blueprints": "GOVERNANCE BLUEPRINTS",
+      "blueprint_links": {
+        "aws": "AWS Landing Zone",
+        "azure": "Azure Enterprise",
+        "openshift": "OpenShift Cluster",
+        "hybrid": "Hybrid Fabric"
+      },
+      "customBriefingText": "Generate a custom briefing document based on your selected stack."
+    }
+  },
+  "Enrichment": {
+    "howItWorks": "Our autonomous framework follows a rigorous 3-step synchronization process to ensure absolute sovereignty and compliance across your multi-cloud estate.",
+    "leadCapture": {
+      "fallback": "Contact Us Directly"
+    },
+    "visualSection": {
+      "tag": "Architecture Overview",
+      "title": "System Visualizer",
+      "note": "This diagram represents the actual orchestration fabric across multiple cloud regions."
+    },
+    "relatedLinks": {
+      "title": "Related Strategy & Insights"
     }
   },
   "Ecosystem": {
@@ -3108,71 +3127,63 @@
     },
     "title": "Ready for Sovereign AI?"
   },
-  "Enrichment": {
-    "AboveTheFold": "Above The Fold",
-    "content": "Enrichment Content",
-    "cta": "Enrichment Cta",
-    "howItWorks": "Our autonomous framework follows a rigorous 3-step synchronization process to ensure absolute sovereignty and compliance across your multi-cloud estate.",
-    "leadCapture": {
-      "fallback": "Direct Email Fallback"
-    },
-    "relatedLinks": {
-      "title": "Related Strategy & Insights"
-    },
-    "subtitle": "Subtitle description",
-    "title": "Enrichment Title",
-    "visualSection": {
-      "note": "This diagram is updated in real-time as your multi-cloud orchestration logic evolves within the AECP kernel.",
-      "tag": "ARCHITECTURE_VISUAL_01 // SECURE_MESH",
-      "title": "Visual Architecture Breakdown"
-    }
-  },
   "Enterprise": {
     "approach": {
-      "p1": "P1 Details",
-      "p2": "P2 Details",
+      "p1": "Our framework enables enterprises to decouple logic from infrastructure, ensuring that policy remains constant regardless of the underlying cloud provider.",
+      "p2": "By implementing the G-Framework, organizations regain 100% control of their digital estate while achieving sub-millisecond governance enforcement.",
       "pillars": {
         "0": {
-          "desc": "Enterprise-grade security",
-          "title": "Security"
+          "desc": "Enforce data residency and sovereignty at the substrate layer, making non-compliance architecturally impossible.",
+          "title": "Sovereign Integrity"
         },
         "1": {
-          "desc": "Scale to millions",
-          "title": "Scale"
+          "desc": "Orchestrate workloads across AWS, Azure, and OCP with a unified interface that abstracts vendor complexity.",
+          "title": "Absolute Abstraction"
         },
         "2": {
-          "desc": "99.999% uptime",
-          "title": "Stability"
+          "desc": "Automate the entire modernization lifecycle, from legacy discovery to atomic production deployment.",
+          "title": "Autonomous Operations"
         }
       },
-      "subtitle": "How we help you scale",
-      "title": "Enterprise approach"
+      "subtitle": "A standard-driven methodology for the most demanding global infrastructure environments.",
+      "title": "Architectural Excellence"
     },
     "partnership": {
-      "p1": "Enforce auto-remediation policies.",
-      "p2": "Monitor real-time infrastructure drift.",
-      "pillars": "Pillars Details",
+      "p1": "Strategic alignment with your modernization goals.",
+      "p2": "Deep technical engagement with our founding architecture team.",
+      "pillars": "Strategic Pillars",
       "steps": {
         "0": {
-          "desc": "We understand your needs",
-          "title": "Consultation"
+          "desc": "Full-spectrum audit of existing infrastructure and compliance debt.",
+          "title": "State Analysis"
         },
         "1": {
-          "desc": "We build your solution",
-          "title": "Implementation"
+          "desc": "Execution of the ASO-Protocol to re-platform mission-critical workloads.",
+          "title": "Logic Inversion"
         },
         "2": {
-          "desc": "We grow with you",
-          "title": "Support"
+          "desc": "Continuous optimization and sovereign state reconciliation.",
+          "title": "Steady State"
         }
       },
-      "subtitle": "Empowering the next generation of regulated enterprise.",
-      "title": "Partnership"
+      "subtitle": "Partnering with Global 2000 leaders to define the future of sovereign computing.",
+      "title": "Strategic Partnership"
     },
     "trust": {
-      "p1": "We provide the most secure platform.",
-      "p2": "Used by Fortune 500 companies.",
-      "title": "Trusted by Enterprises"
+      "p1": "OmniGCloud is the only control plane designed from the ground up for high-assurance, regulated environments.",
+      "p2": "We provide the mathematical certainty that enterprise policy is enforced at every point of execution.",
+      "stats": {
+        "uptime": "Uptime SLA",
+        "uptime_val": "99.999%",
+        "regions": "Global Regions",
+        "regions_val": "100+",
+        "gates": "Compliance Gates",
+        "gates_val": "400+",
+        "actions": "Autonomous Actions",
+        "actions_val": "1B+"
+      },
+      "cta": "Read the Strategic Partnership Document",
+      "title": "Sovereign Integrity"
     }
   },
   "FloatingActions": {
@@ -3388,6 +3399,7 @@
         "knowledge": "Sovereign Knowledge",
         "nexus": "Cross-Cloud Nexus",
         "playground": "Sovereign Playground",
+        "sangam": "Sangam Confluence",
         "workflows": "G-Workflows"
       },
       "rateLimitMessage": "Rate Limit Message",
@@ -3851,88 +3863,80 @@
     "successMessage": "Briefing received and encrypted in sovereign storage."
   },
   "Metadata": {
+    "Architecture": {
+      "description": "Technical blueprints and architectural primitives of the OmniGCloud G-Framework. Learn about cellular architecture and plane separation.",
+      "title": "System Architecture & Deep Engineering"
+    },
+    "CaseStudies": {
+      "description": "Real-world implementations of the sovereign cloud protocol across finance, healthcare, and government sectors.",
+      "title": "Impact & Case Studies"
+    },
+    "Community": {
+      "description": "Join the global ecosystem of engineers and architects building the future of sovereign multi-cloud infrastructure.",
+      "title": "Community & Ecosystem"
+    },
     "Company": {
-      "description": "Achieve FIPS 140-2 Level 3 compliance with our shielded execution environments.",
-      "title": "Company"
+      "description": "Global operations and sovereign infrastructure management. Learn about OmniGCloud Systems' commitment to data residency and cloud neutrality.",
+      "title": "Global Operations & Company"
+    },
+    "Contact": {
+      "description": "Connect with OmniGCloud Systems executive office for partnership inquiries, pilot programs, and strategic cloud consulting.",
+      "title": "Executive Office & Global Contact"
     },
     "Dashboard": {
       "description": "Monitor your multi-cloud infrastructure in real-time with comprehensive analytics, cost optimization, and security insights.",
-      "title": "Dashboard - Real-Time Infrastructure Monitoring"
+      "title": "Command Center & Real-Time Monitoring"
     },
     "Docs": {
+      "description": "Comprehensive technical documentation for the OmniGCloud platform. Architecture plans, API references, and governance guides.",
+      "title": "Documentation & Technical Compendium",
       "api": {
         "description": "Comprehensive API documentation for the OmniGCloud platform. Control your entire multi-cloud estate through our secure, RESTful endpoints.",
-        "endpoints": {
-          "discovery": {
-            "desc": "Discover and inventory all cloud resources across providers"
-          },
-          "governance": {
-            "desc": "Monitor compliance drift and policy violations in real-time"
-          },
-          "modernization": {
-            "desc": "Deploy modernized workloads with automated orchestration"
-          }
-        },
-        "keywords": {
-          "0": "REST API",
-          "1": "cloud API",
-          "2": "multi-cloud control",
-          "3": "sovereign API",
-          "4": "infrastructure API"
-        },
-        "title": "API Reference",
-        "versionLabel": "REST API v1"
+        "title": "API Reference"
       },
       "architecture": {
         "description": "Original contributions formalizing the methodology for Autonomous Sovereign Orchestration (ASO), addressing the conflict between global scale and national law.",
-        "title": "Architectural Design Patterns | Autonomous Sovereign Orchestration"
+        "title": "Architectural Design Patterns"
       },
       "governance": {
         "description": "Pre-validated blueprints to ensure your multi-cloud deployments meet the most rigorous global compliance standards.",
-        "title": "Governance Blueprints | Sovereign Compliance Standards"
+        "title": "Governance Blueprints"
       },
       "guide": {
         "description": "Learn how to initialize your environment and connect your first cloud provider with the OmniGCloud platform.",
-        "title": "Getting Started Guide | OmniGCloud Platform Onboarding"
+        "title": "Getting Started Guide"
       }
     },
     "Home": {
-      "description": "Enterprise Cloud Solutions",
-      "title": "OmnigCloud"
+      "description": "Modernize your enterprise infrastructure with OmniGCloud. Cloud-agnostic platforms, autonomous governance, and AI-native architecture for the sovereign era.",
+      "title": "Sovereign Multi-Cloud & AI Infrastructure"
     },
     "Industries": {
       "finance": {
         "description": "Secure, high-frequency cloud infrastructure for the financial sector. We ensure PCI-DSS compliance, data residency, and micro-latency performance.",
-        "title": "Financial Services Cloud Infrastructure | PCI-DSS Compliant"
+        "title": "Financial Services Cloud Infrastructure"
       },
       "healthcare": {
         "description": "HIPAA-compliant cloud infrastructure for healthcare providers. Secure patient data storage, interoperable FHIR APIs, and medical imaging storage.",
-        "title": "Healthcare Cloud Solutions | HIPAA & GDPR Compliant"
+        "title": "Healthcare Cloud Solutions"
       }
     },
     "Platform": {
       "description": "Deep dive into the Autonomous Enterprise Control Plane, the kernel of sovereign multi-cloud orchestration.",
-      "title": "The AECP Platform | OmniGCloud"
+      "title": "The AECP Platform"
     },
     "Pricing": {
       "description": "Transparent, value-based pricing for your sovereign cloud modernization journey. Compare plans and calculate ROI.",
-      "keywords": {
-        "0": "cloud pricing",
-        "1": "enterprise pricing",
-        "2": "sovereign cloud cost",
-        "3": "multi-cloud pricing",
-        "4": "infrastructure cost"
-      },
-      "title": "Pricing & Value Economy | OmniGCloud Platform"
+      "title": "Pricing & Value Economy"
     },
     "Products": {
-      "description": "Automate compliance with real-time drift detection and auto-remediation policies.",
-      "title": "Products"
+      "description": "Automate compliance with real-time drift detection and auto-remediation policies. Explore our suite of sovereign cloud products.",
+      "title": "Sovereign Product Suite"
     },
     "Services": {
       "ai-cloud-platform": {
         "description": "Scale your AI workloads with secure, sovereign GPU orchestration. OmniGCloud provides the control plane for enterprise LLMs and generative AI.",
-        "title": "AI Cloud Infrastructure & Managed GPUs | OmniGCloud"
+        "title": "AI Cloud Infrastructure & Managed GPUs"
       },
       "application-modernization": {
         "description": "Transform legacy codebases into cloud-native microservices with AI precision. OmniGCloud provides autonomous refactoring for Java, .NET, and more.",
@@ -3948,7 +3952,7 @@
       },
       "cloud-modernization": {
         "description": "Transform legacy monoliths into scalable microservices using our automated 6R methodology (Rehost, Replatform, Refactor).",
-        "title": "Application Modernization Services | Cloud Native Transformation"
+        "title": "Application Modernization Services"
       },
       "description": "Comprehensive modernization services including cloud migration, DevOps, and OpenShift transformation governed by autonomous policy mesh.",
       "devops": {
@@ -3957,21 +3961,29 @@
       },
       "microservices": {
         "description": "Design and deploy resilient microservices architectures. We help you decompose monoliths, implement service meshes, and establish event-driven patterns.",
-        "title": "Microservices Architecture & Consulting | Decoupled Systems"
+        "title": "Microservices Architecture & Consulting"
       },
       "openshift-modernization": {
         "description": "Scale your hybrid cloud with confidence. OmniGCloud provides expert OpenShift modernization services, ensuring your OCP clusters are secure and compliant.",
-        "title": "RedHat OpenShift Modernization | Enterprise Cluster Management"
+        "title": "RedHat OpenShift Modernization"
       },
       "title": "Sovereign Services | OmniGCloud"
     },
+    "Research": {
+      "description": "Explore OmniGCloud Systems research on cloud-native architecture, distributed systems, and sovereign governance.",
+      "title": "Research & Technical Specifications"
+    },
     "Solutions": {
-      "description": "Automate compliance with real-time drift detection and auto-remediation policies.",
-      "title": "Solutions"
+      "description": "Tailored cloud modernization solutions for finance, healthcare, and regulated industries. Achieve digital sovereignty with confidence.",
+      "title": "Enterprise Solutions"
+    },
+    "VisualLibrary": {
+      "description": "Technical diagrams, architectural schemas, and visual evidence of the OmniGCloud G-Framework implementation.",
+      "title": "Visual Evidence & Architecture Library"
     },
     "default": {
-      "description": "Ensure your data never leaves the jurisdiction you define, regardless of the underlying infrastructure.",
-      "title": "Default"
+      "description": "OmniGCloud Systems (OmniGCloud) provides high-performance, cloud-agnostic infrastructure modernization with built-in data sovereignty and autonomous governance.",
+      "title": "OmniGCloud Systems | Sovereign Multi-Cloud Platform"
     }
   },
   "Newsroom": {
@@ -4926,19 +4938,19 @@
       "title": "Cross-Cloud Nexus"
     },
     "playground": {
-      "description": "Achieve FIPS 140-2 Level 3 compliance with our shielded execution environments.",
-      "shortDesc": "IDE for prototyping cross-cloud infra.",
-      "title": "Sovereign Playground"
+      "description": "The world's first IDE designed specifically for cross-cloud sovereign orchestration. Prototype complex infrastructure intents across OCI, AWS, and Azure.",
+      "shortDesc": "Next-Gen Infrastructure Design Environment",
+      "title": "The AECP Cloud Playground"
     },
-    "subtitle": "Empowering the next generation of regulated enterprise.",
-    "tag": "PRODUCTS",
-    "talkToExpert": "Talk To Expert",
-    "title": "Infrastructure Sovereignty",
-    "visualSectionDesc": "Our product suite operates as a unified kernel, ensuring that every modernization action—from refactor to deploy—is governed by the same sovereign intent mesh.",
+    "subtitle": "The definitive suite for autonomous cloud governance and enterprise-grade sovereignty.",
+    "tag": "SUITE",
+    "talkToExpert": "Consult with Architect",
+    "title": "Sovereign Infrastructure",
+    "visualSectionDesc": "The OmniGCloud kernel synchronizes policy across your entire estate, ensuring that every modernization action inherits absolute governance.",
     "workflows": {
-      "description": "Seamlessly orchestrate workloads across AWS, Azure, and Google Cloud with strict governance boundaries.",
-      "shortDesc": "Visual multi-step orchestration engine.",
-      "title": "G-Workflows"
+      "description": "Visual orchestration engine for defining secure, multi-step automation. Handles state synchronization and failing over regions without human intervention.",
+      "shortDesc": "Visual Policy-as-Logic Engine",
+      "title": "Autonomous Workflows"
     }
   },
   "Research": {
@@ -5422,6 +5434,12 @@
       }
     }
   },
+  "ResourcesBlog": {
+    "title": "Blog Resources",
+    "subtitle": "Engineering insights, architecture patterns, and governance frameworks.",
+    "comingSoon": "Coming soon",
+    "viewPost": "View Post"
+  },
   "SEO_Content": {
     "Home": {
       "AboveTheFold": "OmniGCloud is the first autonomous multi-cloud fabric that enforces data sovereignty at the infrastructure level, allowing enterprises to decouple logic from vendor-specific APIs.",
@@ -5491,6 +5509,28 @@
       },
       "VisualSection": {
         "description": "Visual representation of the AECP core components and data flow."
+      }
+    },
+    "Products": {
+      "HowItWorks": {
+        "steps": {
+          "0": {
+            "desc": "Provision your sovereignty perimeter across multi-cloud regions using our autonomous fabric kernel.",
+            "title": "Fabric Provisioning",
+            "heading": "Phase 1"
+          },
+          "1": {
+            "desc": "Enforce governance logic at the infrastructure level with real-time drift detection and auto-remediation.",
+            "title": "Governance Sync",
+            "heading": "Phase 2"
+          },
+          "2": {
+            "desc": "Achieve absolute sovereignty and compliance with a single, vendor-agnostic control plane.",
+            "title": "Unified Control",
+            "heading": "Phase 3"
+          }
+        },
+        "title": "How It Works"
       }
     },
     "Pricing": {
@@ -7251,5 +7291,17 @@
   "read_online": "Read Online",
   "steps": "Steps Details",
   "subtitle": "The Sovereign Cloud Control Plane",
-  "title": "OmniGCloud Platform"
+  "title": "OmniGCloud Platform",
+  "Sangam": {
+    "title": "Sangam: The Sovereign Confluence",
+    "subtitle": "Unified Intelligence across the Digital Estate",
+    "description": "Sangam is the ultimate synthesis of the OmniGCloud kernel. It is the confluence where disparate cloud fabrics, autonomous agents, and sovereign policies merge into a single, high-throughput operating environment.",
+    "cta": "Enter the Confluence",
+    "tag": "UNIFIED CONTROL",
+    "features": {
+      "unification": "Substrate Unification",
+      "purity": "Policy Purity",
+      "resonance": "Execution Resonance"
+    }
+  }
 }

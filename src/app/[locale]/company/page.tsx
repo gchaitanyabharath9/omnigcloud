@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import Footer from "@/components/Footer";
 import { getTranslations } from "next-intl/server";
-import { generateSEOMetadata, generateOrganizationSchema, SEO_KEYWORDS } from '@/utils/seo';
+import { generateSEOMetadata, SEO_KEYWORDS } from '@/utils/seo';
 import { Users, Globe, Target, Award, Briefcase, MapPin, Newspaper, Mail, Phone, ExternalLink, TrendingUp, BarChart3, Layers } from "lucide-react";
 
 // const COMPANY_SECTION_IDS removed in previous step
@@ -20,15 +20,16 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
         title: tm('title'),
         description: tm('description'),
         keywords: [
+            ...SEO_KEYWORDS.platform,
             'OmniGCloud company',
             'cloud infrastructure company',
             'enterprise cloud provider',
             'sovereign cloud platform',
             'about OmniGCloud',
         ],
-        canonical: `https://www.omnigcloud.com/${locale}/company`,
-        ogImage: `https://www.omnigcloud.com/og-images/company.png`,
+        ogImage: `/og-images/company.png`,
         ogType: 'website',
+        canonical: `/${locale}/company`
     }, locale);
 }
 
@@ -39,10 +40,6 @@ export default async function CompanyPage() {
 
     return (
         <div className="snap-container">
-            <script
-                type="application/ld+json"
-                dangerouslySetInnerHTML={{ __html: JSON.stringify(generateOrganizationSchema()) }}
-            />
             {/* ABOUT HERO - Snap 1 */}
             <section id="about" className="snap-section container" style={{ paddingTop: 'var(--section-pt)' }}>
 

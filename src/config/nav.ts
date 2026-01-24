@@ -71,6 +71,7 @@ export const NAV_CONFIG: NavGroup[] = [
             { id: 'products-knowledge', labelKey: 'Header.nav.products_links.knowledge', type: 'section', route: '/products', hash: 'knowledge', icon: Database, section: 'Header.nav.advanced' },
             { id: 'products-deploy', labelKey: 'Header.nav.products_links.deploy', type: 'section', route: '/products', hash: 'deploy', icon: Activity, section: 'Header.nav.advanced' },
             { id: 'products-nexus', labelKey: 'Header.nav.products_links.nexus', type: 'section', route: '/products', hash: 'nexus', icon: Layers, section: 'Header.nav.advanced' },
+            { id: 'products-sangam', labelKey: 'Header.nav.products_links.sangam', type: 'section', route: '/products', hash: 'sangam', icon: Zap, section: 'Header.nav.advanced' },
         ]
     },
     {

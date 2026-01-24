@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState, useEffect } from 'react';
-import { Activity, Server, Database, AlertTriangle, CheckCircle, TrendingUp } from 'lucide-react';
+import { Activity, Server, Database, AlertTriangle, CheckCircle } from 'lucide-react';
 import { useTranslations, useLocale } from 'next-intl';
 
 interface DashboardShellProps {
@@ -14,8 +14,8 @@ export default function DashboardShell({ title, subtitle, children }: DashboardS
     const t = useTranslations('Dashboard.Shell');
     const locale = useLocale();
     const [currentTime, setCurrentTime] = useState(new Date());
-    const [activeAlerts, setActiveAlerts] = useState(2);
-    const [systemStatus, setSystemStatus] = useState<'operational' | 'degraded' | 'critical'>('operational');
+    const activeAlerts = 2;
+    const systemStatus = 'operational';
 
     useEffect(() => {
         const timer = setInterval(() => setCurrentTime(new Date()), 1000);
@@ -25,58 +25,95 @@ export default function DashboardShell({ title, subtitle, children }: DashboardS
     const tExec = useTranslations('Dashboard.Executive');
 
     return (
-        <div style={{ background: 'var(--background)', minHeight: '100vh', color: 'var(--foreground)' }}>
+        <div style={{
+            background: 'var(--background)',
+            minHeight: '100vh',
+            color: 'var(--foreground)',
+            position: 'relative',
+            overflow: 'hidden'
+        }}>
+            {/* PREMIUM BACKGROUND EFFECTS */}
+            <div style={{
+                position: 'absolute',
+                top: 0,
+                left: 0,
+                right: 0,
+                height: '500px',
+                background: 'radial-gradient(circle at 50% 0%, rgba(59, 130, 246, 0.15) 0%, transparent 70%)',
+                pointerEvents: 'none',
+                zIndex: 0
+            }}></div>
+            <div className="absolute inset-0" style={{
+                backgroundImage: `radial-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px)`,
+                backgroundSize: '40px 40px',
+                pointerEvents: 'none',
+                zIndex: 0,
+                maskImage: 'linear-gradient(to bottom, black, transparent)'
+            }}></div>
+
             {/* COMMAND HEADER */}
             <div style={{
                 position: 'sticky',
                 top: 'var(--header-height)',
                 zIndex: 100,
-                background: 'var(--bg-surface-2)',
+                background: 'var(--header-bg)',
                 borderBottom: '1px solid var(--card-border)',
-                padding: '1.5rem 0',
-                backdropFilter: 'blur(20px)',
+                padding: '1.25rem 0',
+                backdropFilter: 'blur(32px)',
                 marginTop: '0'
             }}>
                 <div className="container">
                     <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
                         <div>
-                            <h1 style={{ fontSize: '2.5rem', fontWeight: 950, margin: 0, color: 'var(--primary)', letterSpacing: '-0.02em' }}>
+                            <div style={{
+                                fontSize: '0.65rem',
+                                fontWeight: 900,
+                                color: 'var(--primary)',
+                                textTransform: 'uppercase',
+                                letterSpacing: '0.2em',
+                                marginBottom: '0.25rem'
+                            }}>
+                                COMMAND_CENTER_STATUS_v4.2
+                            </div>
+                            <h1 style={{ fontSize: '2.25rem', fontWeight: 950, margin: 0, color: 'var(--foreground)', letterSpacing: '-0.03em' }}>
                                 {title}
                             </h1>
-                            <div style={{ fontSize: '0.85rem', opacity: 0.6, marginTop: '0.5rem', fontFamily: 'var(--font-mono)' }}>
+                            <div style={{ fontSize: '0.85rem', opacity: 0.6, marginTop: '0.25rem', fontFamily: 'var(--font-mono)' }}>
                                 {subtitle}
                             </div>
                         </div>
-                        <div style={{ display: 'flex', gap: '2rem', alignItems: 'center' }}>
+                        <div style={{ display: 'flex', gap: '2.5rem', alignItems: 'center' }}>
                             <div style={{ textAlign: 'right' }}>
-                                <div style={{ fontSize: '1.5rem', fontWeight: 900, fontFamily: 'var(--font-mono)' }}>
+                                <div style={{ fontSize: '1.75rem', fontWeight: 950, fontFamily: 'var(--font-mono)', letterSpacing: '-0.05em' }}>
                                     {currentTime.toLocaleTimeString(locale, { hour12: false })}
                                 </div>
-                                <div style={{ fontSize: '0.65rem', opacity: 0.5 }}>
+                                <div style={{ fontSize: '0.65rem', opacity: 0.5, fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.05em' }}>
                                     {currentTime.toLocaleDateString(locale, { weekday: 'short', month: 'short', day: 'numeric' })}
                                 </div>
                             </div>
                             <div style={{
                                 display: 'flex',
                                 alignItems: 'center',
-                                gap: '0.5rem',
-                                background: systemStatus === 'operational' ? 'rgba(16, 185, 129, 0.1)' : 'rgba(239, 68, 68, 0.1)',
-                                padding: '0.5rem 1rem',
-                                borderRadius: '0.5rem',
-                                border: `1px solid ${systemStatus === 'operational' ? '#10b981' : '#ef4444'}`
+                                gap: '0.75rem',
+                                background: systemStatus === 'operational' ? 'rgba(16, 185, 129, 0.08)' : 'rgba(239, 68, 68, 0.08)',
+                                padding: '0.6rem 1.25rem',
+                                borderRadius: '1rem',
+                                border: `1px solid ${systemStatus === 'operational' ? 'rgba(16, 185, 129, 0.3)' : 'rgba(239, 68, 68, 0.3)'}`,
+                                backdropFilter: 'blur(10px)'
                             }}>
                                 <div className="animate-pulse" style={{
-                                    width: 8,
-                                    height: 8,
+                                    width: 10,
+                                    height: 10,
                                     background: systemStatus === 'operational' ? '#10b981' : '#ef4444',
                                     borderRadius: '50%',
-                                    boxShadow: `0 0 10px ${systemStatus === 'operational' ? '#10b981' : '#ef4444'}`
+                                    boxShadow: `0 0 15px ${systemStatus === 'operational' ? '#10b981' : '#ef4444'}`
                                 }}></div>
                                 <span style={{
-                                    fontSize: '0.7rem',
+                                    fontSize: '0.75rem',
                                     fontWeight: 900,
                                     color: systemStatus === 'operational' ? '#10b981' : '#ef4444',
-                                    textTransform: 'uppercase'
+                                    textTransform: 'uppercase',
+                                    letterSpacing: '0.1em'
                                 }}>
                                     {tExec(`status.${systemStatus}`)}
                                 </span>
@@ -87,69 +124,59 @@ export default function DashboardShell({ title, subtitle, children }: DashboardS
             </div>
 
             {/* MAIN CONTENT */}
-            <div className="container min-w-0" style={{ padding: '2rem', flex: 1 }}>
+            <div className="container min-w-0" style={{ padding: '2rem 2rem 10rem', flex: 1, position: 'relative', zIndex: 1 }}>
 
                 {/* CRITICAL METRICS ROW - Always Visible for Context */}
-                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '1rem', marginBottom: '2rem' }}>
-                    <div className="glass-panel" style={{
-                        padding: '1.5rem',
-                        borderRadius: '1rem',
-                        background: 'linear-gradient(135deg, rgba(96, 239, 255, 0.05) 0%, rgba(59, 130, 246, 0.05) 100%)',
-                        border: '1px solid rgba(96, 239, 255, 0.2)'
-                    }}>
-                        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'start', marginBottom: '1rem' }}>
-                            <div style={{ fontSize: '0.65rem', opacity: 0.5, fontWeight: 700, textTransform: 'uppercase' }}>{t('activeAssets')}</div>
-                            <Server size={20} color="#60efff" />
+                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '1.25rem', marginBottom: '2.5rem' }}>
+                    {[
+                        { label: t('activeAssets'), value: '142', icon: Server, color: '#60efff', bg: 'rgba(96, 239, 255, 0.03)', border: 'rgba(96, 239, 255, 0.2)' },
+                        { label: t('revenueImpact'), value: '+18%', icon: Activity, color: '#10b981', bg: 'rgba(16, 185, 129, 0.03)', border: 'rgba(16, 185, 129, 0.2)' },
+                        { label: t('cloudSpend'), value: '-40%', icon: Database, color: '#8b5cf6', bg: 'rgba(139, 92, 246, 0.03)', border: 'rgba(139, 92, 246, 0.2)' },
+                        {
+                            label: t('activeAlerts'),
+                            value: activeAlerts.toString(),
+                            icon: activeAlerts > 0 ? AlertTriangle : CheckCircle,
+                            color: activeAlerts > 0 ? '#f59e0b' : '#10b981',
+                            bg: activeAlerts > 0 ? 'rgba(245, 158, 11, 0.03)' : 'rgba(16, 185, 129, 0.03)',
+                            border: activeAlerts > 0 ? 'rgba(245, 158, 11, 0.2)' : 'rgba(16, 185, 129, 0.2)',
+                            subtext: activeAlerts > 0 ? t('requiresAttention') : t('nominal')
+                        }
+                    ].map((item, idx) => (
+                        <div key={idx} className="glass-panel group cursor-help transition-all duration-500 hover:scale-[1.02]" style={{
+                            padding: '1.5rem',
+                            borderRadius: '1.5rem',
+                            background: item.bg,
+                            border: `1px solid ${item.border}`,
+                            boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.1)',
+                            position: 'relative',
+                            overflow: 'hidden'
+                        }}>
+                            <div style={{
+                                position: 'absolute',
+                                top: 0,
+                                left: 0,
+                                width: '100%',
+                                height: '100%',
+                                background: `radial-gradient(circle at 100% 0%, ${item.color}15 0%, transparent 50%)`,
+                                pointerEvents: 'none'
+                            }}></div>
+                            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'start', marginBottom: '1.25rem', position: 'relative' }}>
+                                <div style={{ fontSize: '0.7rem', opacity: 0.5, fontWeight: 800, textTransform: 'uppercase', letterSpacing: '0.1em' }}>{item.label}</div>
+                                <item.icon size={22} color={item.color} style={{ filter: `drop-shadow(0 0 8px ${item.color}40)` }} />
+                            </div>
+                            <div style={{ fontSize: '2.5rem', fontWeight: 950, color: item.color, letterSpacing: '-0.05em', lineHeight: 1, position: 'relative' }}>{item.value}</div>
+                            {item.subtext && (
+                                <div style={{ fontSize: '0.75rem', opacity: 0.5, marginTop: '0.75rem', fontWeight: 700, position: 'relative' }}>
+                                    {item.subtext}
+                                </div>
+                            )}
                         </div>
-                        <div style={{ fontSize: '2.5rem', fontWeight: 950, color: '#60efff' }}>142</div>
-                    </div>
-
-                    <div className="glass-panel" style={{
-                        padding: '1.5rem',
-                        borderRadius: '1rem',
-                        background: 'linear-gradient(135deg, rgba(16, 185, 129, 0.05) 0%, rgba(5, 150, 105, 0.05) 100%)',
-                        border: '1px solid rgba(16, 185, 129, 0.2)'
-                    }}>
-                        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'start', marginBottom: '1rem' }}>
-                            <div style={{ fontSize: '0.65rem', opacity: 0.5, fontWeight: 700, textTransform: 'uppercase' }}>{t('revenueImpact')}</div>
-                            <Activity size={20} color="#10b981" />
-                        </div>
-                        <div style={{ fontSize: '2.5rem', fontWeight: 950, color: '#10b981' }}>+18%</div>
-                    </div>
-
-                    <div className="glass-panel" style={{
-                        padding: '1.5rem',
-                        borderRadius: '1rem',
-                        background: 'linear-gradient(135deg, rgba(139, 92, 246, 0.05) 0%, rgba(124, 58, 237, 0.05) 100%)',
-                        border: '1px solid rgba(139, 92, 246, 0.2)'
-                    }}>
-                        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'start', marginBottom: '1rem' }}>
-                            <div style={{ fontSize: '0.65rem', opacity: 0.5, fontWeight: 700, textTransform: 'uppercase' }}>{t('cloudSpend')}</div>
-                            <Database size={20} color="#8b5cf6" />
-                        </div>
-                        <div style={{ fontSize: '2.5rem', fontWeight: 950, color: '#8b5cf6' }}>-40%</div>
-                    </div>
-
-                    <div className="glass-panel" style={{
-                        padding: '1.5rem',
-                        borderRadius: '1rem',
-                        background: activeAlerts > 0
-                            ? 'linear-gradient(135deg, rgba(245, 158, 11, 0.05) 0%, rgba(217, 119, 6, 0.05) 100%)'
-                            : 'linear-gradient(135deg, rgba(16, 185, 129, 0.05) 0%, rgba(5, 150, 105, 0.05) 100%)',
-                        border: `1px solid ${activeAlerts > 0 ? 'rgba(245, 158, 11, 0.2)' : 'rgba(16, 185, 129, 0.2)'}`
-                    }}>
-                        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'start', marginBottom: '1rem' }}>
-                            <div style={{ fontSize: '0.65rem', opacity: 0.5, fontWeight: 700, textTransform: 'uppercase' }}>{t('activeAlerts')}</div>
-                            {activeAlerts > 0 ? <AlertTriangle size={20} color="#f59e0b" /> : <CheckCircle size={20} color="#10b981" />}
-                        </div>
-                        <div style={{ fontSize: '2.5rem', fontWeight: 950, color: activeAlerts > 0 ? '#f59e0b' : '#10b981' }}>{activeAlerts}</div>
-                        <div style={{ fontSize: '0.7rem', opacity: 0.5, marginTop: '0.5rem' }}>
-                            {activeAlerts > 0 ? t('requiresAttention') : t('nominal')}
-                        </div>
-                    </div>
+                    ))}
                 </div>
 
-                {children}
+                <div className="animate-fade-in" style={{ animationDelay: '200ms' }}>
+                    {children}
+                </div>
             </div>
         </div>
     );

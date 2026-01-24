@@ -1,20 +1,30 @@
 import { BookOpen, Code, Cpu, ShieldCheck, Zap, Search, ChevronRight, Layers, Settings, Globe, FileText, Award } from "lucide-react";
 import { Link } from "@/navigation";
+import { DocsSidebar } from "@/components/navigation/DocsSidebar";
 
 import Footer from "@/components/Footer";
 import type { Metadata } from "next";
-import { useTranslations } from "next-intl";
 import { getTranslations } from "next-intl/server";
+import { generateSEOMetadata, SEO_KEYWORDS } from '@/utils/seo';
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
     const { locale } = await params;
-    const t = await getTranslations({ locale, namespace: 'Docs' });
+    const tm = await getTranslations({ locale, namespace: 'Metadata.Docs' });
 
-    return {
-        title: t('meta.title'),
-        description: t('meta.description'),
-        keywords: t.raw('meta.keywords'),
-    };
+    return generateSEOMetadata({
+        title: tm('title'),
+        description: tm('description'),
+        keywords: [
+            ...SEO_KEYWORDS.platform,
+            ...SEO_KEYWORDS.modernization,
+            'technical documentation',
+            'architecture guide',
+            'api reference',
+            'governance blueprints',
+        ],
+        ogImage: `/og-images/docs.png`,
+        ogType: 'website',
+    }, locale);
 }
 
 export function generateStaticParams() {
@@ -30,43 +40,7 @@ export default async function DocsPage() {
             <section className="snap-section" style={{ minHeight: '80vh', display: 'flex', alignItems: 'center', paddingTop: '1rem' }}>
                 <div className="container">
                     <div style={{ display: 'grid', gridTemplateColumns: '220px 1fr', gap: '3rem', paddingTop: '20px' }}>
-                        {/* Sidebar */}
-                        <aside style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
-                            <div>
-                                <h4 style={{ fontSize: '0.65rem', fontWeight: 900, color: 'var(--primary)', textTransform: 'uppercase', letterSpacing: '0.1em', marginBottom: '0.75rem' }}>{t('sidebar.documentation')}</h4>
-                                <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
-                                    {[
-                                        { key: 'intro', label: t('sidebar.links.introduction'), href: '#intro' },
-                                        { key: 'arch', label: t('sidebar.links.architecture'), href: '#architecture' },
-                                        { key: 'whitepaper', label: t('sidebar.links.whitepaper'), href: '#whitepaper' },
-                                        { key: 'security', label: t('sidebar.links.security'), href: '#governance' }
-                                    ].map(item => (
-                                        <Link key={item.key} href={item.href} style={{
-                                            fontSize: '0.8rem',
-                                            fontWeight: 700,
-                                            opacity: item.key === 'intro' ? 1 : 0.5,
-                                            cursor: 'pointer',
-                                            display: 'flex',
-                                            alignItems: 'center',
-                                            gap: '0.4rem',
-                                            textDecoration: 'none',
-                                            color: 'inherit'
-                                        }}>
-                                            {item.key === 'intro' && <div style={{ width: '4px', height: '4px', background: 'var(--primary)', borderRadius: '50%' }}></div>}
-                                            {item.label}
-                                        </Link>
-                                    ))}
-                                </div>
-                            </div>
-                            <div>
-                                <h4 style={{ fontSize: '0.65rem', fontWeight: 900, color: 'var(--primary)', textTransform: 'uppercase', letterSpacing: '0.1em', marginBottom: '0.75rem' }}>{t('sidebar.blueprints')}</h4>
-                                <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
-                                    {['aws', 'azure', 'openshift', 'hybrid'].map(key => (
-                                        <div key={key} style={{ fontSize: '0.8rem', fontWeight: 700, opacity: 0.5, cursor: 'pointer' }}>{t(`sidebar.blueprint_links.${key}`)}</div>
-                                    ))}
-                                </div>
-                            </div>
-                        </aside>
+                        <DocsSidebar />
 
                         {/* Content */}
                         <main id="intro" style={{ scrollMarginTop: '120px' }}>

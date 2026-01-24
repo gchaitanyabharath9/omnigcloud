@@ -24,6 +24,10 @@ export const PUBLIC_ROUTES_MANIFEST: RouteEntry[] = [
     // Documentation & Resources
     { path: '/docs', priority: 0.9, changeFreq: 'weekly' },
     { path: '/docs/whitepaper', priority: 0.9, changeFreq: 'weekly' },
+    { path: '/docs/architecture', priority: 0.8, changeFreq: 'monthly' },
+    { path: '/docs/governance', priority: 0.8, changeFreq: 'monthly' },
+    { path: '/docs/guide', priority: 0.8, changeFreq: 'monthly' },
+    { path: '/docs/api', priority: 0.8, changeFreq: 'monthly' },
     { path: '/research', priority: 0.9, changeFreq: 'weekly' },
     { path: '/research/papers', priority: 0.9, changeFreq: 'weekly' },
     { path: '/visual-library', priority: 0.7, changeFreq: 'monthly' },
@@ -67,6 +71,7 @@ export const PUBLIC_ROUTES_MANIFEST: RouteEntry[] = [
     { path: '/compliance', priority: 0.5, changeFreq: 'yearly' },
 
     // Others
+    { path: '/resources/blog', priority: 0.6, changeFreq: 'weekly' },
     { path: '/blog', priority: 0.6, changeFreq: 'weekly' },
     { path: '/case-studies', priority: 0.6, changeFreq: 'weekly' },
     { path: '/onboarding', priority: 0.6, changeFreq: 'monthly' },
@@ -74,6 +79,12 @@ export const PUBLIC_ROUTES_MANIFEST: RouteEntry[] = [
     { path: '/founder', priority: 0.5, changeFreq: 'monthly' },
     { path: '/partners', priority: 0.5, changeFreq: 'monthly' },
     { path: '/publications', priority: 0.5, changeFreq: 'monthly' },
+
+    // News & Updates
+    { path: '/news/bank', priority: 0.6, changeFreq: 'monthly' },
+    { path: '/news/egress', priority: 0.6, changeFreq: 'monthly' },
+    { path: '/news/integration', priority: 0.6, changeFreq: 'monthly' },
+    { path: '/news/security', priority: 0.6, changeFreq: 'monthly' },
 ];
 
 // Routes that should be excluded from robots.txt crawling
@@ -84,8 +95,6 @@ export const PRIVATE_ROUTES = [
     '/ai-data',
     '/architecture',
     '/business-ideas',
-    '/news',
-    '/newsroom',
     '/staffing',
     '/use-cases',
     '/admin',

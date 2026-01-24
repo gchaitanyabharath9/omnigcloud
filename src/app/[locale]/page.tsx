@@ -16,7 +16,7 @@ const EcosystemSection = dynamic(() => import('@/components/sections/home/Ecosys
 const DemoSection = dynamic(() => import('@/components/sections/home/DemoSection'));
 
 import { getTranslations } from 'next-intl/server';
-import { generateSEOMetadata, generateOrganizationSchema, SEO_KEYWORDS } from '@/utils/seo';
+import { generateSEOMetadata, SEO_KEYWORDS } from '@/utils/seo';
 
 export const revalidate = 3600;
 
@@ -37,8 +37,8 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
       'RedHat OCP modernization',
       'autonomous infrastructure',
     ],
-    canonical: `https://www.omnigcloud.com/${locale}`,
-    ogImage: `https://www.omnigcloud.com/og-images/home.png`,
+    // Let generateSEOMetadata handle canonical automatically based on SITE_URL
+    ogImage: `/og-images/home.png`, // Relative paths will be resolved via metadataBase
     ogType: 'website',
   }, locale);
 }
@@ -53,10 +53,6 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
 
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(generateOrganizationSchema()) }}
-      />
       <HeroSection />
       <ProblemSection />
       <InteractiveDashboardSection />

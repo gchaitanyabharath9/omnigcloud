@@ -35,6 +35,7 @@ const jakarta = Plus_Jakarta_Sans({
 const siteUrl = config.site.url;
 
 import { locales } from '@/navigation';
+import { generateSEOMetadata, SEO_KEYWORDS } from '@/utils/seo';
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params;
@@ -46,93 +47,25 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
     return obj || key;
   };
 
-  const localeMap: Record<string, string> = {
-    en: 'en_US',
-    es: 'es_ES',
-    fr: 'fr_FR',
-    de: 'de_DE',
-    zh: 'zh_CN',
-    hi: 'hi_IN',
-    ja: 'ja_JP',
-    ko: 'ko_KR',
-  };
-
   const headersList = await import("next/headers").then(mod => mod.headers());
   const pathname = headersList.get("x-current-path") || `/${locale}`;
-  const canonicalUrl = `${siteUrl}${pathname}`;
 
-  const languages: Record<string, string> = {};
-  locales.forEach(lang => {
-    // Replace current locale segment with target lang
-    // pathname starts with /en, /es etc.
-    // If pathname is /en/pricing, we want /es/pricing
-    // If pathname is /en, we want /es
-    const pathWithoutLocale = pathname.replace(new RegExp(`^/${locale}`), '') || '';
-    languages[lang] = `${siteUrl}/${lang}${pathWithoutLocale}`;
-  });
-  languages['x-default'] = `${siteUrl}/en${pathname.replace(new RegExp(`^/${locale}`), '') || ''}`;
-
-  return {
-    metadataBase: new URL(siteUrl),
-    title: {
-      default: t('Metadata.default.title'),
-      template: `%s | ${t('Header.title')}`
-    },
+  return generateSEOMetadata({
+    title: t('Metadata.default.title'),
     description: t('Metadata.default.description'),
-    keywords: ["Cloud Modernization", "Enterprise AI Architecture", "RedHat OpenShift Modernization", "Cloud Agnostic Discovery", "Azure Cloud Migration", "Cloud Cost Optimization", "AECP Engine", "Sovereign Cloud Governance"],
-    authors: [{ name: "OmniGCloud Executive Office" }],
-    alternates: {
-      canonical: canonicalUrl,
-      languages,
-    },
-    robots: {
-      index: true,
-      follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
-    },
-
-    openGraph: {
-      type: 'website',
-      locale: localeMap[locale] || 'en_US',
-      url: `${siteUrl}/${locale}`,
-      title: 'OmniGCloud | Global Cloud-Agnostic Modernization',
-      description: 'Autonomous, AI-governed cloud modernization for sovereign organizations.',
-      siteName: 'OmniGCloud',
-      images: [
-        {
-          url: '/og-image.png',
-          width: 1200,
-          height: 630,
-          alt: 'OmniGCloud Enterprise Security',
-        },
-      ],
-    },
-    twitter: {
-      card: 'summary_large_image',
-      title: 'OmniGCloud | AI-Native Cloud Control Plane',
-      description: 'Eliminate cloud lock-in with AI-powered platform engineering.',
-      creator: '@omnigcloud',
-      images: ['/og-image.png'],
-    },
-    appleWebApp: {
-      capable: true,
-      statusBarStyle: 'black-translucent',
-      title: 'OmniGCloud',
-    },
-    formatDetection: {
-      telephone: false, // Prevent auto-detection of phone numbers
-    },
-    verification: {
-      google: "google-site-verification=YOUR_VERIFICATION_CODE",
-      yandex: "yandex-verification=YOUR_VERIFICATION_CODE",
-      yahoo: "yahoo-site-verification=YOUR_VERIFICATION_CODE",
-      other: {
-        me: ["my-email", "my-link"],
-      },
-    },
-  };
+    keywords: [
+      "Cloud Modernization",
+      "Enterprise AI Architecture",
+      "RedHat OpenShift Modernization",
+      "Cloud Agnostic Discovery",
+      "Azure Cloud Migration",
+      "Cloud Cost Optimization",
+      "AECP Engine",
+      "Sovereign Cloud Governance"
+    ],
+    canonical: `${config.site.url}${pathname}`,
+    ogType: 'website',
+  }, locale);
 }
 
 export function generateViewport(): Viewport {

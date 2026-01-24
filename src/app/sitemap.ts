@@ -1,7 +1,7 @@
 import { MetadataRoute } from 'next'
 import { config } from '@/config'
 import { locales } from '@/navigation'
-import { PUBLIC_ROUTES_MANIFEST } from '@/config/routes'
+import { PUBLIC_ROUTES_MANIFEST, PRIVATE_ROUTES } from '@/config/routes'
 
 /**
  * Sitemap Generator
@@ -19,8 +19,15 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
     const sitemapEntries: MetadataRoute.Sitemap = []
 
+    // Filter manifest to exclude private routes (safety check)
+    const filteredRoutes = PUBLIC_ROUTES_MANIFEST.filter(route =>
+        !PRIVATE_ROUTES.some(privatePath =>
+            route.path === privatePath || route.path.startsWith(`${privatePath}/`)
+        )
+    );
+
     // Generate entries for all routes in all locales
-    for (const route of PUBLIC_ROUTES_MANIFEST) {
+    for (const route of filteredRoutes) {
         for (const locale of locales) {
             // Handle root path vs subpaths
             const path = route.path === '' ? '' : route.path

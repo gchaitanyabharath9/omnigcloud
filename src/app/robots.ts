@@ -17,7 +17,7 @@ export default function robots(): MetadataRoute.Robots {
         rules: [
             {
                 userAgent: '*',
-                allow: ['/', '/docs/whitepaper'],
+                allow: '/',
                 disallow: [
                     '/content/',
                     '/private/',

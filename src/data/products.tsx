@@ -76,5 +76,17 @@ export const PRODUCTS = [
         explanation: "Image A tracks cost arbitrage opportunities globally. Image B shows the cross-cloud unified telemetry dashboard.",
         images: [ASSETS.images.financeBoard, ASSETS.images.globalNetwork],
         visual: <div className="glass-panel" style={{ padding: '2rem', borderRadius: '2rem', height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center' }}><Layers size={80} color="var(--primary)" /></div>
+    },
+    {
+        id: "sangam",
+        icon: <Zap size={40} />,
+        miniIcon: <Zap size={24} />,
+        title: "Sangam Confluence",
+        tag: "UNIFICATION",
+        shortDesc: "The ultimate synthesis of cloud substrates.",
+        description: "Sangam (Confluence) is the unified control layer that merges disparate cloud fabrics into a single sovereign estate. It resolves identity, policy, and routing conflicts in real-time.",
+        explanation: "The Sangam topology (Image A) visualizes the convergence of AWS, Azure, and OCP. Image B shows the unified identity resolution table across all nodes.",
+        images: [ASSETS.images.globalNetwork, ASSETS.images.setupWorkstation],
+        visual: <div className="glass-panel" style={{ padding: '2rem', borderRadius: '2rem', height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center' }}><Zap size={80} color="var(--primary)" /></div>
     }
 ];

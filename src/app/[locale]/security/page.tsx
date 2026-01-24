@@ -182,11 +182,6 @@ export default async function SecurityPage() {
                 </div>
             </section>
 
-            {/* SITEMAP / FOOTER SNAP SECTION */}
-            <section id="sitemap" className="snap-section" style={{ background: 'var(--background)', borderTop: '1px solid var(--card-border)' }}>
-                <Footer />
-            </section>
-
             <HowItWorks pageKey="Security" />
 
             <VisualSection
@@ -204,6 +199,11 @@ export default async function SecurityPage() {
                     { label: "Modernization Blueprint", href: "/resources/blog/cloud-modernization-guide" }
                 ]}
             />
+
+            {/* SITEMAP / FOOTER SNAP SECTION */}
+            <section id="sitemap" className="snap-section" style={{ background: 'var(--background)', borderTop: '1px solid var(--card-border)' }}>
+                <Footer />
+            </section>
         </>
     );
 }

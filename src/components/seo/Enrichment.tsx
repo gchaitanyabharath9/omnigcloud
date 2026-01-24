@@ -62,25 +62,48 @@ export const HowItWorks = ({ pageKey }: { pageKey: string }) => {
     const tEnrichment = useTranslations('Enrichment');
     const steps = [0, 1, 2];
 
+    // Determine if we should use the improved stacked layout (requested for "Autonomous Synchronization" / Home)
+    const isHome = pageKey === 'Home';
+
     return (
-        <Section className="py-20 bg-[var(--bg-surface-2)]">
+        <Section className="snap-section py-20 bg-[var(--bg-surface-2)]">
             <PageShell>
-                <div className="mb-12">
-                    <h2 className="text-3xl font-black mb-4 flex items-center gap-3">
-                        <Zap className="text-primary" /> {tSafe(t, 'title', 'How It Works')}
+                <div className="mb-16">
+                    <h2 className="text-3xl md:text-4xl font-black mb-4 flex items-center gap-4">
+                        <Zap className="text-primary" size={32} /> {tSafe(t, 'title', 'How It Works')}
                     </h2>
-                    <p className="text-muted-foreground max-w-2xl">
+                    <p className="text-lg text-muted-foreground max-w-2xl">
                         {tSafe(tEnrichment, 'howItWorks', 'Our streamlined onboarding process ensures rapid deployment of sovereign infrastructure.')}
                     </p>
                 </div>
-                <div className="grid md:grid-cols-3 gap-8">
+
+                <div className={`grid gap-8 ${isHome ? 'grid-cols-1' : 'md:grid-cols-3'}`}>
                     {steps.map((i) => (
-                        <div key={i} className="glass-panel p-8 rounded-3xl relative overflow-hidden group hover:border-primary/50 transition-all">
-                            <div className="absolute -top-4 -right-4 text-6xl font-black text-white/5 group-hover:text-primary/10 transition-colors">0{i + 1}</div>
-                            <h3 className="text-xl font-bold mb-4">{tSafe(t, `steps.${i}.title`, `Step ${i + 1}`)}</h3>
-                            <p className="text-sm text-muted-foreground leading-relaxed italic border-t border-white/5 pt-4">
-                                {tSafe(t, `steps.${i}.desc`, 'Optimizing your infrastructure for global compliance and resilience.')}
-                            </p>
+                        <div key={i} className="glass-panel p-8 md:p-10 rounded-3xl relative overflow-hidden group hover:border-primary/50 transition-all duration-300 h-full">
+                            <div className="flex flex-col md:flex-row gap-8 items-start relative z-10 pb-4">
+                                {/* Left Column: The Number (Fixed width on desktop) */}
+                                <div className="shrink-0 w-16 h-16 md:w-20 md:h-20 flex items-center justify-center rounded-2xl bg-primary/5 border border-primary/20 group-hover:bg-primary/10 group-hover:border-primary/40 transition-colors">
+                                    <span className="text-3xl md:text-4xl font-black text-primary/30 group-hover:text-primary transition-colors">
+                                        0{i + 1}
+                                    </span>
+                                </div>
+
+                                {/* Right Column: Content */}
+                                <div className="flex-1 md:pr-16">
+                                    <h3 className="text-xl md:text-2xl font-bold mb-4 tracking-tight group-hover:text-primary transition-colors">
+                                        {tSafe(t, `steps.${i}.title`, `Step ${i + 1}`)}
+                                    </h3>
+                                    <div className="h-0.5 w-12 bg-primary/20 mb-6 group-hover:w-20 transition-all duration-300" />
+                                    <p className="text-base text-muted-foreground leading-relaxed italic">
+                                        {tSafe(t, `steps.${i}.desc`, 'Optimizing your infrastructure for global compliance and resilience.')}
+                                    </p>
+                                </div>
+                            </div>
+
+                            {/* Watermark Fix: Positioned to avoid overlap with text content */}
+                            <div className="absolute top-4 right-4 text-7xl font-black text-white/[0.03] group-hover:text-primary/[0.08] transition-colors pointer-events-none select-none z-0">
+                                0{i + 1}
+                            </div>
                         </div>
                     ))}
                 </div>
@@ -92,7 +115,7 @@ export const HowItWorks = ({ pageKey }: { pageKey: string }) => {
 export const VisualSection = ({ pageKey, imageUrl, alt, description }: { pageKey: string; imageUrl: string; alt: string; description: string }) => {
     const tEnrichment = useTranslations('Enrichment');
     return (
-        <Section className="py-20">
+        <Section className="snap-section py-20">
             <PageShell>
                 <div className="grid lg:grid-cols-2 gap-16 items-center">
                     <div className="relative aspect-video rounded-[2rem] overflow-hidden border border-white/10 shadow-2xl">
@@ -134,7 +157,7 @@ export const DeepDive = ({ pageKey, relatedLinks }: EnrichmentProps) => {
     const locale = useLocale();
 
     return (
-        <Section className="py-20 border-t border-white/5">
+        <Section className="snap-section py-20 border-t border-white/5">
             <PageShell>
                 <div className="max-w-4xl">
                     <h2 className="text-3xl font-black mb-8 flex items-center gap-3">
@@ -170,7 +193,7 @@ export const DeepDive = ({ pageKey, relatedLinks }: EnrichmentProps) => {
 export const TopicalAuthority = ({ pageKey }: { pageKey: string }) => {
     const t = useTranslations(`SEO_Content.${pageKey}.WhyItMatters`);
     return (
-        <Section className="py-16 bg-gradient-to-b from-transparent to-primary/5">
+        <Section className="snap-section py-16 bg-gradient-to-b from-transparent to-primary/5">
             <PageShell>
                 <div className="max-w-3xl">
                     <h2 className="text-2xl font-black mb-6 uppercase tracking-tight text-primary">{tSafe(t, 'title', 'Why Sovereignty Matters')}</h2>
@@ -186,7 +209,7 @@ export const TopicalAuthority = ({ pageKey }: { pageKey: string }) => {
 export const TechnicalInsights = ({ pageKey }: { pageKey: string }) => {
     const t = useTranslations(`SEO_Content.${pageKey}.TechnicalApproach`);
     return (
-        <Section className="py-20">
+        <Section className="snap-section py-20">
             <PageShell>
                 <div className="glass-panel p-10 md:p-16 rounded-[3rem] border-primary/20 bg-primary/5">
                     <div className="flex flex-col md:flex-row gap-12 items-start">
@@ -211,7 +234,7 @@ export const FAQSection = ({ pageKey }: { pageKey: string }) => {
     const count = [0, 1]; // Support at least 2 for now based on en.json updates
 
     return (
-        <Section className="py-20 bg-[var(--bg-surface-2)]">
+        <Section className="snap-section py-20 bg-[var(--bg-surface-2)]">
             <PageShell>
                 <div className="max-w-4xl">
                     <h2 className="text-3xl font-black mb-12 flex items-center gap-3">

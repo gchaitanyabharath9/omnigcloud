@@ -27,6 +27,7 @@ export interface SEOConfig {
 }
 
 const SITE_NAME = 'OmniGCloud';
+const SITE_FULL_NAME = 'OmniGCloud Systems';
 const SITE_URL = 'https://www.omnigcloud.com';
 const DEFAULT_OG_IMAGE = `${SITE_URL}/og-image.png`;
 const TWITTER_HANDLE = '@omnigcloud';
@@ -50,8 +51,26 @@ export function generateSEOMetadata(config: SEOConfig, locale: string = 'en'): M
         tags = []
     } = config;
 
-    const fullTitle = `${title} | ${SITE_NAME}`;
-    const canonicalUrl = canonical || `${SITE_URL}/${locale}`;
+    const fullTitle = `${SITE_NAME} – ${title}`;
+
+    // Improved canonical handling: if it starts with /, prepend SITE_URL
+    let finalCanonical = canonical || `/${locale}`;
+    if (finalCanonical.startsWith('/')) {
+        finalCanonical = `${SITE_URL}${finalCanonical}`;
+    }
+
+    // Supported locales for hreflang
+    const locales = ['en', 'es', 'fr', 'de', 'zh', 'hi', 'ja', 'ko'];
+    const languages: Record<string, string> = {};
+
+    // Extract the path after locale from canonical to generate alternates
+    const pathAfterLocaleMatch = finalCanonical.match(new RegExp(`${SITE_URL}/[a-z]{2}(/.*)?`));
+    const pathAfterLocale = pathAfterLocaleMatch ? (pathAfterLocaleMatch[1] || '') : '';
+
+    locales.forEach(l => {
+        languages[l] = `${SITE_URL}/${l}${pathAfterLocale}`;
+    });
+    languages['x-default'] = `${SITE_URL}/en${pathAfterLocale}`;
 
     // Ensure keywords is an array even if it's an object from next-intl
     const keywordsArray = Array.isArray(keywords)
@@ -61,31 +80,26 @@ export function generateSEOMetadata(config: SEOConfig, locale: string = 'en'): M
             : [];
 
     return {
-        title: fullTitle,
+        metadataBase: new URL(SITE_URL),
+        title: {
+            default: fullTitle,
+            template: `${SITE_NAME} – %s`
+        },
         description,
         keywords: keywordsArray.join(', '),
-        authors: author ? [{ name: author }] : undefined,
+        authors: author ? [{ name: author }] : [{ name: "OmniGCloud Executive Office" }],
 
         // Canonical URL
         alternates: {
-            canonical: canonicalUrl,
-            languages: {
-                'en': `${SITE_URL}/en`,
-                'es': `${SITE_URL}/es`,
-                'fr': `${SITE_URL}/fr`,
-                'de': `${SITE_URL}/de`,
-                'zh': `${SITE_URL}/zh`,
-                'hi': `${SITE_URL}/hi`,
-                'ja': `${SITE_URL}/ja`,
-                'ko': `${SITE_URL}/ko`,
-            }
+            canonical: finalCanonical,
+            languages,
         },
 
         // Open Graph
         openGraph: {
             title: fullTitle,
             description,
-            url: canonicalUrl,
+            url: finalCanonical,
             siteName: SITE_NAME,
             images: [
                 {
@@ -95,12 +109,12 @@ export function generateSEOMetadata(config: SEOConfig, locale: string = 'en'): M
                     alt: title,
                 }
             ],
-            locale,
+            locale: locale === 'en' ? 'en_US' : `${locale}_${locale.toUpperCase()}`,
             type: ogType,
-            ...(publishedTime && { publishedTime }),
-            ...(modifiedTime && { modifiedTime }),
-            ...(section && { section }),
-            ...(tags.length > 0 && { tags }),
+            ...(publishedTime && { publishedTime: publishedTime }),
+            ...(modifiedTime && { modifiedTime: modifiedTime }),
+            ...(section && { section: section }),
+            ...(tags.length > 0 && { tags: tags }),
         },
 
         // Twitter Card
@@ -128,9 +142,7 @@ export function generateSEOMetadata(config: SEOConfig, locale: string = 'en'): M
 
         // Verification
         verification: {
-            google: 'your-google-verification-code',
-            // yandex: 'your-yandex-verification-code',
-            // bing: 'your-bing-verification-code',
+            google: 'google-site-verification-id',
         },
     };
 }
@@ -142,30 +154,108 @@ export function generateOrganizationSchema() {
     return {
         '@context': 'https://schema.org',
         '@type': 'Organization',
-        name: SITE_NAME,
-        url: SITE_URL,
-        logo: `${SITE_URL}/logo.png`,
-        description: 'Sovereign Multi-Cloud Platform for Enterprise-Grade Infrastructure',
-        sameAs: [
+        'name': SITE_FULL_NAME,
+        'alternateName': SITE_NAME,
+        'url': SITE_URL,
+        'logo': `${SITE_URL}/logo.png`,
+        'description': 'Global Cloud-Agnostic Modernization & AI Engineering platform for enterprise sovereignty.',
+        'sameAs': [
             'https://twitter.com/omnigcloud',
             'https://linkedin.com/company/omnigcloud',
             'https://github.com/omnigcloud',
         ],
-        contactPoint: {
+        'contactPoint': {
             '@type': 'ContactPoint',
-            telephone: '+1-850-443-1481',
-            contactType: 'customer service',
-            email: 'omnigcloud@gmail.com',
-            areaServed: 'Worldwide',
-            availableLanguage: ['en', 'es', 'fr', 'de', 'zh', 'hi', 'ja', 'ko']
+            'telephone': '+1-888-OMNI-GCL',
+            'contactType': 'customer service',
+            'email': 'office@omnigcloud.com',
+            'areaServed': 'Worldwide',
+            'availableLanguage': ['en', 'es', 'fr', 'de', 'zh', 'hi', 'ja', 'ko']
         },
-        address: {
+        'address': {
             '@type': 'PostalAddress',
-            streetAddress: '3354 Jasmine Hill Rd',
-            addressLocality: 'Tallahassee',
-            addressRegion: 'FL',
-            postalCode: '32311',
-            addressCountry: 'US'
+            'addressLocality': 'San Francisco',
+            'addressRegion': 'CA',
+            'addressCountry': 'US'
+        }
+    };
+}
+
+/**
+ * Generate JSON-LD structured data for WebSite
+ */
+export function generateWebSiteSchema() {
+    return {
+        '@context': 'https://schema.org',
+        '@type': 'WebSite',
+        'name': SITE_NAME,
+        'alternateName': SITE_FULL_NAME,
+        'url': SITE_URL,
+        'potentialAction': {
+            '@type': 'SearchAction',
+            'target': `${SITE_URL}/search?q={search_term_string}`,
+            'query-input': 'required name=search_term_string',
+        },
+    };
+}
+
+/**
+ * Generate JSON-LD structured data for SoftwareApplication
+ */
+export function generateSoftwareAppSchema() {
+    return {
+        '@context': 'https://schema.org',
+        '@type': 'SoftwareApplication',
+        'name': `${SITE_NAME} Platform`,
+        'operatingSystem': 'Cloud-Native',
+        'applicationCategory': 'EnterpriseSoftware',
+        'offers': {
+            '@type': 'Offer',
+            'price': '0',
+            'priceCurrency': 'USD'
+        }
+    };
+}
+
+/**
+ * Generate JSON-LD structured data for Service
+ */
+export function generateServiceSchema() {
+    return {
+        '@context': 'https://schema.org',
+        '@type': 'Service',
+        'serviceType': 'Cloud Modernization & AI Engineering',
+        'provider': {
+            '@type': 'Organization',
+            'name': SITE_NAME
+        },
+        'areaServed': 'Global',
+        'hasOfferCatalog': {
+            '@type': 'OfferCatalog',
+            'name': 'Cloud Services',
+            'itemListElement': [
+                {
+                    '@type': 'Offer',
+                    'itemOffered': {
+                        '@type': 'Service',
+                        'name': 'Azure Modernization'
+                    }
+                },
+                {
+                    '@type': 'Offer',
+                    'itemOffered': {
+                        '@type': 'Service',
+                        'name': 'RedHat OpenShift Modernization'
+                    }
+                },
+                {
+                    '@type': 'Offer',
+                    'itemOffered': {
+                        '@type': 'Service',
+                        'name': 'Cloud Cost Optimization'
+                    }
+                }
+            ]
         }
     };
 }

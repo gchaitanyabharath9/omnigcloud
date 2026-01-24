@@ -1,6 +1,27 @@
 import { Mail, Phone, MapPin, Globe } from "lucide-react";
 import { getTranslations, getLocale } from 'next-intl/server';
 import ContactForm from "@/components/forms/ContactForm";
+import Footer from "@/components/Footer";
+import { generateSEOMetadata, SEO_KEYWORDS } from '@/utils/seo';
+
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
+    const { locale } = await params;
+    const tm = await getTranslations({ locale, namespace: 'Metadata.Contact' });
+
+    return generateSEOMetadata({
+        title: tm('title'),
+        description: tm('description'),
+        keywords: [
+            ...SEO_KEYWORDS.platform,
+            'contact OmniGCloud',
+            'support',
+            'enterprise consulting',
+            'partnership',
+        ],
+        ogImage: `/og-images/contact.png`,
+        canonical: `/${locale}/contact`
+    }, locale);
+}
 
 export function generateStaticParams() {
     return ['en', 'es', 'fr', 'de', 'zh', 'hi', 'ja', 'ko'].map((locale) => ({ locale }));
@@ -48,17 +69,13 @@ export default async function ContactPage() {
                     </div>
 
                     <div className="glass-panel" style={{ padding: 'clamp(1.5rem, 5vw, 3rem)', borderRadius: '2rem', border: '1px solid rgba(255, 255, 255, 0.1)', boxShadow: '0 40px 80px rgba(0,0,0,0.6)', width: '100%' }}>
-                        <ContactForm translations={{}} />
+                        <ContactForm />
                     </div>
                 </div>
             </section>
 
-            {/* SITEMAP SNAP */}
-            <section id="sitemap-contact" className="snap-section" style={{ minHeight: 'auto', height: 'auto', padding: '0' }}>
-                <div style={{ borderTop: '1px solid rgba(255,255,255,0.1)', padding: '5rem 0', textAlign: 'center' }}>
-                    <h3 style={{ color: 'white', fontSize: '1.8rem', fontWeight: 800, marginBottom: '1rem' }}>{tContact('sitemapTitle')}</h3>
-                    <p style={{ color: 'rgba(255,255,255,0.4)', fontSize: '1rem' }}>{tContact('sitemapSubtitle')}</p>
-                </div>
+            <section id="sitemap" className="snap-section" style={{ background: 'var(--background)', borderTop: '1px solid var(--card-border)' }}>
+                <Footer />
             </section>
         </div>
     );

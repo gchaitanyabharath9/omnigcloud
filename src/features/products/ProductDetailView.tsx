@@ -42,7 +42,14 @@ const ProductDetailView: React.FC<ProductDetailProps> = ({
                             </div>
                         </div>
 
-                        <h1 className="mb-6" style={{ lineHeight: 1.2, fontSize: 'clamp(1.5rem, 3.5vw, 2.2rem)', letterSpacing: '-0.02em', fontWeight: 800 }}>
+                        <h1 className="mb-6 text-center" style={{
+                            lineHeight: 1.1,
+                            fontSize: 'clamp(2rem, 6vw, 3.5rem)',
+                            letterSpacing: '-0.04em',
+                            fontWeight: 950,
+                            maxWidth: '100%',
+                            margin: '0 auto 1.5rem auto'
+                        }}>
                             {title}
                         </h1>
 

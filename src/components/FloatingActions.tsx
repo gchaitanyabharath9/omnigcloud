@@ -3,7 +3,7 @@
 import { MessageCircle, Mail, X, Phone } from "lucide-react";
 import { useState } from "react";
 import { twMerge } from "tailwind-merge";
-import Link from 'next/link';
+import { Link } from '@/navigation';
 import { useTranslations } from 'next-intl';
 import { ARCHITECTS_EMAIL } from "@/config/emails";
 import styles from "./FloatingActions.module.css";
@@ -225,12 +225,12 @@ export default function FloatingActions() {
                                 </div>
                             </a>
 
-                            <a href="/contact" className="btn-primary" style={{
+                            <Link href="/contact" className="btn-primary" style={{
                                 justifyContent: 'center',
                                 padding: '0.875rem'
                             }}>
                                 {t('contact.viewFullPage')}
-                            </a>
+                            </Link>
                         </div>
                     </div>
                 </div>

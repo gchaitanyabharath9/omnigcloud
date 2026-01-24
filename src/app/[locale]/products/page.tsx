@@ -3,14 +3,16 @@ import { Section } from '@/components/layout/Section';
 import { getTranslations, getLocale } from 'next-intl/server';
 import { generateSEOMetadata, SEO_KEYWORDS } from '@/utils/seo';
 import { Cpu, ArrowRight } from 'lucide-react';
-import Link from 'next/link';
+import { Link, locales } from '@/navigation';
 import { PRODUCTS } from '@/data/products';
 import Footer from '@/components/Footer';
 import Image from 'next/image';
 import ProductScroller from '@/features/products/ProductScroller';
-import { HowItWorks, VisualSection, DeepDive } from '@/components/seo/Enrichment';
+import { VisualSection, DeepDive } from '@/components/seo/Enrichment';
+import { ProductHowItWorks } from '@/features/products/ProductHowItWorks';
 
-const PRODUCT_SECTION_IDS = ['playground', 'workflows', 'guard', 'knowledge', 'deploy', 'nexus'];
+
+const PRODUCT_SECTION_IDS = ['playground', 'workflows', 'guard', 'knowledge', 'deploy', 'nexus', 'sangam'];
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
     const { locale } = await params;
@@ -27,14 +29,14 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
             'infrastructure automation',
             'sovereign products',
         ],
-        canonical: `https://www.omnigcloud.com/${locale}/products`,
-        ogImage: `https://www.omnigcloud.com/og-images/products.png`,
+        ogImage: `/og-images/products.png`,
         ogType: 'website',
+        canonical: `/${locale}/products`
     }, locale);
 }
 
 export function generateStaticParams() {
-    return ['en', 'es', 'fr', 'de', 'zh', 'hi', 'ja', 'ko'].map((locale) => ({ locale }));
+    return locales.map((locale) => ({ locale }));
 }
 
 export const revalidate = 3600;
@@ -62,7 +64,7 @@ export default async function ProductsPage() {
                                 marginBottom: '1.5rem',
                                 letterSpacing: '-2px',
                                 lineHeight: 1.1,
-                                color: 'white',
+                                color: 'var(--foreground)',
                                 textShadow: '0 0 40px rgba(255,255,255,0.1)',
                                 animationDelay: '0.2s'
                             }}>
@@ -117,7 +119,7 @@ export default async function ProductsPage() {
             {/* PRODUCT STREAM */}
             <ProductScroller activeProduct="" products={PRODUCTS} />
 
-            <HowItWorks pageKey="Products" />
+            <ProductHowItWorks />
 
             <VisualSection
                 pageKey="Products"
