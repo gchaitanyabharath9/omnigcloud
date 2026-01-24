@@ -57,29 +57,29 @@ export default function InteractiveDashboardSection() {
                 {/* 2x2 Grid with mix of Content, Charts, and Images */}
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
                     {/* TOP LEFT: ROI & PERFORMANCE (Chart mix) */}
-                    <div className="glass-panel p-6 rounded-2xl flex flex-col min-h-[300px] border-white/5 bg-white/[0.02] hover:border-primary/30 hover:bg-white/[0.04] transition-all duration-500 group">
-                        <div className="flex justify-between items-start mb-4">
+                    <div className="glass-panel p-5 rounded-2xl flex flex-col min-h-[240px] border-white/5 bg-white/[0.02] hover:border-primary/30 hover:bg-white/[0.04] transition-all duration-500 group">
+                        <div className="flex justify-between items-start mb-2">
                             <div>
-                                <h4 className="text-lg font-black text-foreground group-hover:text-primary transition-colors">{t('roiTitle')}</h4>
-                                <p className="text-[10px] uppercase font-bold text-muted-foreground tracking-widest">{t('roiSubtitle')}</p>
+                                <h4 className="text-base font-black text-foreground group-hover:text-primary transition-colors">{t('roiTitle')}</h4>
+                                <p className="text-[9px] uppercase font-bold text-muted-foreground tracking-widest">{t('roiSubtitle')}</p>
                             </div>
-                            <div className="p-2 bg-primary/10 rounded-lg text-primary">
-                                <TrendingUp size={18} />
+                            <div className="p-1.5 bg-primary/10 rounded-lg text-primary">
+                                <TrendingUp size={16} />
                             </div>
                         </div>
                         <div className="flex-1 grid grid-cols-1 md:grid-cols-2 gap-4 items-center">
-                            <div className="h-[200px] flex items-center justify-center relative">
+                            <div className="h-[160px] flex items-center justify-center relative">
                                 <div className="absolute inset-0 bg-primary/5 blur-3xl rounded-full" />
                                 {isMounted && <LiveROIGauge value={342} />}
                             </div>
-                            <div className="h-[200px]">
-                                {isMounted && <LatencyLineChart height={200} standalone />}
+                            <div className="h-[160px]">
+                                {isMounted && <LatencyLineChart height={160} standalone />}
                             </div>
                         </div>
                     </div>
 
                     {/* TOP RIGHT: SYSTEM ARCHITECTURE (Image mix) */}
-                    <div className="glass-panel p-6 rounded-2xl overflow-hidden relative min-h-[300px] border-white/5 flex flex-col justify-end group">
+                    <div className="glass-panel p-5 rounded-2xl overflow-hidden relative min-h-[240px] border-white/5 flex flex-col justify-end group">
                         <Image
                             src="/images/home/data-center.png"
                             alt="Data Center"
@@ -90,14 +90,14 @@ export default function InteractiveDashboardSection() {
                         <div className="absolute inset-0 bg-gradient-to-t from-background via-background/60 to-transparent z-10" />
 
                         <div className="relative z-20">
-                            <h4 className="text-lg font-black text-foreground mb-1">{t('infraTitle')}</h4>
-                            <p className="text-xs font-medium text-muted-foreground mb-6">{t('infraSubtitle')}</p>
-                            <div className="bg-black/40 backdrop-blur-xl p-5 rounded-xl border border-white/10 shadow-2xl">
-                                <div className="flex justify-between mb-2 items-center">
-                                    <span className="text-[10px] text-primary font-black tracking-widest uppercase">{t('globalHealth')}</span>
-                                    <span className="text-sm text-emerald-400 font-mono font-black animate-pulse">99.999%</span>
+                            <h4 className="text-base font-black text-foreground mb-1">{t('infraTitle')}</h4>
+                            <p className="text-[10px] font-medium text-muted-foreground mb-4">{t('infraSubtitle')}</p>
+                            <div className="bg-black/40 backdrop-blur-xl p-4 rounded-xl border border-white/10 shadow-2xl">
+                                <div className="flex justify-between mb-1 items-center">
+                                    <span className="text-[9px] text-primary font-black tracking-widest uppercase">{t('globalHealth')}</span>
+                                    <span className="text-xs text-emerald-400 font-mono font-black animate-pulse">99.999%</span>
                                 </div>
-                                <div className="h-1.5 bg-white/5 rounded-full overflow-hidden">
+                                <div className="h-1 bg-white/5 rounded-full overflow-hidden">
                                     <div className="shimmer-effect w-[99.999%] h-full bg-emerald-500 rounded-full shadow-[0_0_10px_rgba(16,185,129,0.5)]" />
                                 </div>
                             </div>
@@ -105,44 +105,44 @@ export default function InteractiveDashboardSection() {
                     </div>
 
                     {/* BOTTOM LEFT: COST & DISTRIBUTION (Mixed charts) */}
-                    <div className="glass-panel p-6 rounded-2xl flex flex-col min-h-[300px] border-white/5 bg-white/[0.02] hover:border-primary/30 hover:bg-white/[0.04] transition-all duration-500 group">
-                        <div className="flex justify-between items-start mb-4">
+                    <div className="glass-panel p-5 rounded-2xl flex flex-col min-h-[240px] border-white/5 bg-white/[0.02] hover:border-primary/30 hover:bg-white/[0.04] transition-all duration-500 group">
+                        <div className="flex justify-between items-start mb-2">
                             <div>
-                                <h4 className="text-lg font-black text-foreground group-hover:text-primary transition-colors">{t('optimizationTitle')}</h4>
-                                <p className="text-[10px] uppercase font-bold text-muted-foreground tracking-widest">{t('optimizationSubtitle')}</p>
+                                <h4 className="text-base font-black text-foreground group-hover:text-primary transition-colors">{t('optimizationTitle')}</h4>
+                                <p className="text-[9px] uppercase font-bold text-muted-foreground tracking-widest">{t('optimizationSubtitle')}</p>
                             </div>
-                            <div className="p-2 bg-amber-500/10 rounded-lg text-amber-500">
-                                <Zap size={18} />
+                            <div className="p-1.5 bg-amber-500/10 rounded-lg text-amber-500">
+                                <Zap size={16} />
                             </div>
                         </div>
                         <div className="flex-1 grid grid-cols-1 md:grid-cols-2 gap-4 items-center">
-                            <div className="h-[200px]">
-                                {isMounted && <CloudDistributionPie height={200} standalone />}
+                            <div className="h-[160px]">
+                                {isMounted && <CloudDistributionPie height={160} standalone />}
                             </div>
-                            <div className="h-[200px]">
-                                {isMounted && <EnhancedCostSavingsChart height={200} />}
+                            <div className="h-[160px]">
+                                {isMounted && <EnhancedCostSavingsChart height={160} />}
                             </div>
                         </div>
                     </div>
 
                     {/* BOTTOM RIGHT: SECURITY & COMPLIANCE (Metrics mix) */}
-                    <div className="glass-panel p-6 rounded-2xl flex flex-col min-h-[300px] border-white/5 bg-white/[0.02] hover:border-primary/30 hover:bg-white/[0.04] transition-all duration-500 group">
-                        <div className="flex justify-between items-start mb-4">
+                    <div className="glass-panel p-5 rounded-2xl flex flex-col min-h-[240px] border-white/5 bg-white/[0.02] hover:border-primary/30 hover:bg-white/[0.04] transition-all duration-500 group">
+                        <div className="flex justify-between items-start mb-2">
                             <div>
-                                <h4 className="text-lg font-black text-foreground group-hover:text-primary transition-colors">{t('trustTitle')}</h4>
-                                <p className="text-[10px] uppercase font-bold text-muted-foreground tracking-widest">{t('trustSubtitle')}</p>
+                                <h4 className="text-base font-black text-foreground group-hover:text-primary transition-colors">{t('trustTitle')}</h4>
+                                <p className="text-[9px] uppercase font-bold text-muted-foreground tracking-widest">{t('trustSubtitle')}</p>
                             </div>
-                            <div className="p-2 bg-emerald-500/10 rounded-lg text-emerald-500">
-                                <ShieldCheck size={18} />
+                            <div className="p-1.5 bg-emerald-500/10 rounded-lg text-emerald-500">
+                                <ShieldCheck size={16} />
                             </div>
                         </div>
                         <div className="flex-1 grid grid-cols-1 md:grid-cols-2 gap-4 items-start">
-                            <div className="h-[200px] flex items-center justify-center relative">
+                            <div className="h-[160px] flex items-center justify-center relative">
                                 <div className="absolute inset-0 bg-emerald-500/5 blur-3xl rounded-full" />
                                 {isMounted && <PulsingSecurityScore score={94} />}
                             </div>
-                            <div className="h-[200px]">
-                                {isMounted && <ComplianceScoresBar height={200} standalone />}
+                            <div className="h-[160px]">
+                                {isMounted && <ComplianceScoresBar height={160} standalone />}
                             </div>
                         </div>
                     </div>

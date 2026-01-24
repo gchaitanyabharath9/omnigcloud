@@ -77,30 +77,28 @@ export const HowItWorks = ({ pageKey }: { pageKey: string }) => {
                     </p>
                 </div>
 
-                <div className={`grid gap-6 ${isHome ? 'grid-cols-1' : 'md:grid-cols-3'}`}>
+                <div className={`grid gap-6 grid-cols-1 md:grid-cols-3`}>
                     {steps.map((i) => (
                         <div key={i} className="glass-panel p-6 md:p-8 rounded-[2rem] relative overflow-hidden group hover:border-primary/50 transition-all duration-300 h-full">
-                            <div className="flex flex-col md:flex-row gap-6 items-start relative z-10 pb-2">
+                            <div className="flex flex-col gap-4 items-start relative z-10 pb-2">
                                 {/* Left Column: The Number (Fixed width on desktop) */}
-                                <div className="shrink-0 w-16 h-16 md:w-20 md:h-20 flex items-center justify-center rounded-2xl bg-primary/5 border border-primary/20 group-hover:bg-primary/10 group-hover:border-primary/40 transition-colors">
-                                    <span className="text-3xl md:text-4xl font-black text-primary/30 group-hover:text-primary transition-colors">
+                                <div className="shrink-0 w-12 h-12 flex items-center justify-center rounded-xl bg-primary/5 border border-primary/20 group-hover:bg-primary/10 group-hover:border-primary/40 transition-colors">
+                                    <span className="text-xl font-black text-primary/30 group-hover:text-primary transition-colors">
                                         0{i + 1}
                                     </span>
                                 </div>
 
                                 {/* Right Column: Content */}
-                                <div className="flex-1">
-                                    <h3 className="text-xl md:text-2xl font-bold mb-4 tracking-tight group-hover:text-primary transition-colors">
+                                <div className="flex-1 w-full">
+                                    <h3 className="text-lg font-bold mb-3 tracking-tight group-hover:text-primary transition-colors">
                                         {tSafe(t, `steps.${i}.title`, `Step ${i + 1}`)}
                                     </h3>
-                                    <div className="h-0.5 w-12 bg-primary/20 mb-6 group-hover:w-20 transition-all duration-300" />
-                                    <p className="text-base text-muted-foreground leading-relaxed italic">
+                                    <div className="h-0.5 w-8 bg-primary/20 mb-4 group-hover:w-16 transition-all duration-300" />
+                                    <p className="text-sm text-muted-foreground leading-relaxed italic">
                                         {tSafe(t, `steps.${i}.desc`, 'Optimizing your infrastructure for global compliance and resilience.')}
                                     </p>
                                 </div>
                             </div>
-
-
                         </div>
                     ))}
                 </div>
