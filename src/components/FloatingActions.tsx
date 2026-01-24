@@ -23,15 +23,15 @@ export default function FloatingActions() {
                     className="btn-primary"
                     style={{
                         borderRadius: '2rem',
-                        padding: '0.75rem 1.5rem',
-                        fontSize: '0.85rem',
+                        padding: '0.6rem 1.25rem',
+                        fontSize: '0.8rem',
                         fontWeight: 900,
-                        boxShadow: '0 10px 30px rgba(59, 130, 246, 0.4)',
+                        boxShadow: '0 8px 25px rgba(59, 130, 246, 0.3)',
                         display: 'flex',
                         alignItems: 'center',
-                        gap: '0.6rem',
+                        gap: '0.5rem',
                         whiteSpace: 'nowrap',
-                        marginRight: '0.5rem',
+                        marginRight: '0.25rem',
                         textDecoration: 'none'
                     }}
                 >
@@ -42,9 +42,9 @@ export default function FloatingActions() {
                 <button
                     onClick={() => { setShowContact(!showContact); setShowChat(false); }}
                     style={{
-                        width: '50px',
-                        height: '50px',
-                        borderRadius: '1rem',
+                        width: '44px',
+                        height: '44px',
+                        borderRadius: '0.75rem',
                         background: '#1e293b',
                         border: '1px solid rgba(255,255,255,0.1)',
                         color: '#ffffff',
@@ -66,13 +66,13 @@ export default function FloatingActions() {
                 <button
                     onClick={() => { setShowChat(!showChat); setShowContact(false); }}
                     style={{
-                        width: '60px',
-                        height: '60px',
-                        borderRadius: '1.5rem',
+                        width: '54px',
+                        height: '54px',
+                        borderRadius: '1.25rem',
                         background: 'var(--primary)',
                         color: 'white',
                         border: 'none',
-                        boxShadow: '0 10px 30px -5px rgba(59, 130, 246, 0.5)',
+                        boxShadow: '0 8px 25px -5px rgba(59, 130, 246, 0.5)',
                         cursor: 'pointer',
                         display: 'flex',
                         alignItems: 'center',

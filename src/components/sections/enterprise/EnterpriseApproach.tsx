@@ -9,26 +9,33 @@ export default function EnterprisePillars() {
     const icons = [<Shield key="0" />, <Layout key="1" />, <Settings key="2" />];
 
     return (
-        <section className="py-16 bg-surface-2 border-y border-white/5">
+        <section className="py-12 bg-surface-2 border-y border-white/5">
             <div className="container">
-                <div className="max-w-3xl mb-10">
-                    <h2 className="text-3xl md:text-2xl font-black mb-4">{tApproach("title")}</h2>
-                    <p className="text-lg text-muted-foreground">{tApproach("subtitle")}</p>
+                <div className="max-w-3xl mb-8">
+                    <h2 className="text-2xl md:text-xl font-black mb-2">{tApproach("title")}</h2>
+                    <p className="text-base text-muted-foreground opacity-80">{tApproach("subtitle")}</p>
                 </div>
 
-                <div className="grid md:grid-cols-3 gap-6">
+                <div className="grid md:grid-cols-3 gap-4">
                     {[0, 1, 2].map((i) => (
-                        <div key={i} className="glass-panel p-8 relative group overflow-hidden">
-                            <div className="absolute top-0 right-0 p-6 opacity-5 group-hover:opacity-10 transition-opacity">
+                        <div key={i} className="glass-panel p-6 relative group overflow-hidden border-white/5 hover:border-primary/30">
+                            <div className="absolute top-0 right-0 p-4 opacity-5 group-hover:opacity-10 transition-opacity">
                                 {icons[i]}
                             </div>
-                            <div className="text-primary mb-6">
+                            <div className="text-primary mb-4 scale-90 origin-left">
                                 {icons[i]}
                             </div>
-                            <h3 className="text-xl font-bold mb-4">{tApproach(`pillars.${i}.title`)}</h3>
-                            <p className="text-muted-foreground text-sm leading-relaxed">
+                            <h3 className="text-lg font-black mb-1.5 tracking-tight">{tApproach(`pillars.${i}.title`)}</h3>
+                            <p className="text-muted-foreground text-[11px] leading-relaxed font-medium mb-3">
                                 {tApproach(`pillars.${i}.desc`)}
                             </p>
+                            <div className="flex flex-wrap gap-1.5 pt-3 border-t border-white/5">
+                                {[0, 1, 2].map(fIdx => (
+                                    <span key={fIdx} className="text-[10px] font-bold px-2 py-0.5 rounded bg-white/5 border border-white/5 opacity-70">
+                                        {tApproach(`pillars.${i}.features.${fIdx}`)}
+                                    </span>
+                                ))}
+                            </div>
                         </div>
                     ))}
                 </div>
