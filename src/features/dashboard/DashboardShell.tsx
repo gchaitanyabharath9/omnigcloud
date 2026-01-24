@@ -124,10 +124,10 @@ export default function DashboardShell({ title, subtitle, children }: DashboardS
             </div>
 
             {/* MAIN CONTENT */}
-            <div className="container min-w-0" style={{ padding: '2rem 2rem 10rem', flex: 1, position: 'relative', zIndex: 1 }}>
+            <div className="container max-w-6xl mx-auto min-w-0" style={{ padding: '2rem', paddingBottom: '10rem', flex: 1, position: 'relative', zIndex: 1 }}>
 
                 {/* CRITICAL METRICS ROW - Always Visible for Context */}
-                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '1.25rem', marginBottom: '2.5rem' }}>
+                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '1rem', marginBottom: '2rem' }}>
                     {[
                         { label: t('activeAssets'), value: '142', icon: Server, color: '#60efff', bg: 'rgba(96, 239, 255, 0.03)', border: 'rgba(96, 239, 255, 0.2)' },
                         { label: t('revenueImpact'), value: '+18%', icon: Activity, color: '#10b981', bg: 'rgba(16, 185, 129, 0.03)', border: 'rgba(16, 185, 129, 0.2)' },
@@ -143,8 +143,8 @@ export default function DashboardShell({ title, subtitle, children }: DashboardS
                         }
                     ].map((item, idx) => (
                         <div key={idx} className="glass-panel group cursor-help transition-all duration-500 hover:scale-[1.02]" style={{
-                            padding: '1.5rem',
-                            borderRadius: '1.5rem',
+                            padding: '1.25rem',
+                            borderRadius: '1rem',
                             background: item.bg,
                             border: `1px solid ${item.border}`,
                             boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.1)',
@@ -160,13 +160,13 @@ export default function DashboardShell({ title, subtitle, children }: DashboardS
                                 background: `radial-gradient(circle at 100% 0%, ${item.color}15 0%, transparent 50%)`,
                                 pointerEvents: 'none'
                             }}></div>
-                            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'start', marginBottom: '1.25rem', position: 'relative' }}>
-                                <div style={{ fontSize: '0.7rem', opacity: 0.5, fontWeight: 800, textTransform: 'uppercase', letterSpacing: '0.1em' }}>{item.label}</div>
-                                <item.icon size={22} color={item.color} style={{ filter: `drop-shadow(0 0 8px ${item.color}40)` }} />
+                            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'start', marginBottom: '0.75rem', position: 'relative' }}>
+                                <div style={{ fontSize: '0.65rem', opacity: 0.5, fontWeight: 800, textTransform: 'uppercase', letterSpacing: '0.1em' }}>{item.label}</div>
+                                <item.icon size={18} color={item.color} style={{ filter: `drop-shadow(0 0 8px ${item.color}40)` }} />
                             </div>
-                            <div style={{ fontSize: '2.5rem', fontWeight: 950, color: item.color, letterSpacing: '-0.05em', lineHeight: 1, position: 'relative' }}>{item.value}</div>
+                            <div style={{ fontSize: '2rem', fontWeight: 950, color: item.color, letterSpacing: '-0.05em', lineHeight: 1, position: 'relative' }}>{item.value}</div>
                             {item.subtext && (
-                                <div style={{ fontSize: '0.75rem', opacity: 0.5, marginTop: '0.75rem', fontWeight: 700, position: 'relative' }}>
+                                <div style={{ fontSize: '0.7rem', opacity: 0.5, marginTop: '0.5rem', fontWeight: 700, position: 'relative' }}>
                                     {item.subtext}
                                 </div>
                             )}

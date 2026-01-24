@@ -3,7 +3,7 @@ import { Award, Globe, Shield, Zap, TrendingUp, RefreshCw } from 'lucide-react';
 import Link from 'next/link';
 import { getTranslations } from 'next-intl/server';
 import { Metadata } from 'next';
-import { DocsSidebar } from "@/components/navigation/DocsSidebar";
+
 import Footer from "@/components/Footer";
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
@@ -79,65 +79,55 @@ export default async function PatternsPage({ params }: { params: Promise<{ local
     ];
 
     return (
-        <>
-            <section className="snap-section" style={{ minHeight: '80vh', display: 'flex', alignItems: 'center', paddingTop: '1rem' }}>
-                <div className="container">
-                    <div style={{ display: 'grid', gridTemplateColumns: '220px 1fr', gap: '3rem', paddingTop: '20px' }}>
-                        <DocsSidebar />
+        <div className="pb-12">
+            {/* HERO */}
+            <div className="pb-16 mb-12 border-b border-card-border">
+                <div className="badge badge-primary-subtle mb-4">
+                    <Award size={14} className="mr-2" /> {t('hero.badge')}
+                </div>
+                <h1 className="text-5xl font-black mb-8 leading-tight">
+                    {t('hero.titlePart1')} <span className="text-gradient">{t('hero.titleHighlight')}</span>
+                </h1>
+                <p className="text-lg opacity-80 max-w-3xl leading-relaxed">
+                    {t('hero.description')}
+                </p>
+            </div>
 
-                        <main>
-                            {/* HERO */}
-                            <div style={{ paddingBottom: '4rem', borderBottom: '1px solid var(--card-border)' }}>
-                                <div className="badge badge-primary-subtle mb-4">
-                                    <Award size={14} className="mr-2" /> {t('hero.badge')}
-                                </div>
-                                <h1 style={{ fontSize: '3rem', fontWeight: 950, marginBottom: '2rem' }}>
-                                    {t('hero.titlePart1')} <span className="text-gradient">{t('hero.titleHighlight')}</span>
-                                </h1>
-                                <p style={{ fontSize: '1rem', opacity: 0.8, maxWidth: '800px', lineHeight: 1.6 }}>
-                                    {t('hero.description')}
-                                </p>
+            {/* EXPANDED PATTERNS */}
+            {patterns.map((p, idx) => (
+                <div key={idx} className="py-16 border-b border-card-border last:border-0">
+                    <div className="grid grid-cols-1 gap-8">
+                        <div className="glass-panel p-8 rounded-[2rem]">
+                            <div className="text-primary mb-6">{p.icon}</div>
+                            <h2 className="text-3xl font-black mb-6">{p.title}</h2>
+                            <p className="text-lg opacity-80 leading-relaxed mb-8">{p.description}</p>
+                            <div className="bg-primary/5 p-6 rounded-2xl border-l-4 border-primary">
+                                <p className="text-base opacity-70 italic m-0">{p.explanation}</p>
                             </div>
-
-                            {/* EXPANDED PATTERNS */}
-                            {patterns.map((p, idx) => (
-                                <div key={idx} style={{ padding: '4rem 0', borderBottom: '1px solid var(--card-border)' }}>
-                                    <div style={{ display: 'grid', gridTemplateColumns: '1fr', gap: '2rem' }}>
-                                        <div className="glass-panel" style={{ padding: '2rem', borderRadius: '2rem' }}>
-                                            <div style={{ color: 'var(--primary)', marginBottom: '1.5rem' }}>{p.icon}</div>
-                                            <h2 style={{ fontSize: '2rem', fontWeight: 950, marginBottom: '1.5rem' }}>{p.title}</h2>
-                                            <p style={{ fontSize: '1.1rem', opacity: 0.8, lineHeight: 1.6, marginBottom: '2rem' }}>{p.description}</p>
-                                            <div style={{ background: 'rgba(59, 130, 246, 0.05)', padding: '1.5rem', borderRadius: '1rem', borderLeft: '4px solid var(--primary)' }}>
-                                                <p style={{ fontSize: '0.95rem', opacity: 0.7, fontStyle: 'italic', margin: 0 }}>{p.explanation}</p>
-                                            </div>
-                                            <div style={{ marginTop: '2rem', fontWeight: 900, fontSize: '0.75rem', color: 'var(--primary)', textTransform: 'uppercase', letterSpacing: '0.1em' }}>
-                                                {p.impact}
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            ))}
-
-                            <div style={{ padding: '4rem 0', textAlign: 'center' }}>
-                                <h2 style={{ fontSize: '2rem', fontWeight: 950, marginBottom: '2rem' }}>{t('compendium.title')}</h2>
-                                <p style={{ opacity: 0.7, maxWidth: '700px', margin: '0 auto 3rem', fontSize: '1rem', lineHeight: 1.6 }}>
-                                    {t('compendium.description')}
-                                </p>
-                                <div style={{ display: 'flex', gap: '1.5rem', justifyContent: 'center' }}>
-                                    <Link href={`/${locale}/docs/whitepaper`} className="btn-primary py-3 px-8">
-                                        {t('cta.whitepaper')}
-                                    </Link>
-                                </div>
+                            <div className="mt-8 font-black text-xs text-primary uppercase tracking-widest">
+                                {p.impact}
                             </div>
-                        </main>
+                        </div>
                     </div>
                 </div>
-            </section>
+            ))}
 
-            <section id="sitemap" className="snap-section" style={{ background: 'var(--background)', borderTop: '1px solid var(--card-border)', paddingTop: '2.5rem' }}>
+            <div className="py-16 text-center">
+                <h2 className="text-3xl font-black mb-8">{t('compendium.title')}</h2>
+                <p className="opacity-70 max-w-2xl mx-auto mb-12 text-lg leading-relaxed">
+                    {t('compendium.description')}
+                </p>
+                <div className="flex gap-6 justify-center">
+                    <Link href={`/${locale}/docs/whitepaper`} className="btn-primary py-3 px-8">
+                        {t('cta.whitepaper')}
+                    </Link>
+                </div>
+            </div>
+
+            <div className="mt-12 pt-8 border-t border-card-border">
                 <Footer />
-            </section>
-        </>
+            </div>
+        </div>
     );
 }
 

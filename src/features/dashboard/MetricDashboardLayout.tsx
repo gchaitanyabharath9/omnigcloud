@@ -34,39 +34,41 @@ export default function MetricDashboardLayout({
     };
 
     return (
-        <div className="w-full grid grid-cols-1 lg:grid-cols-2 gap-4 auto-rows-auto">
+        <div className="w-full grid grid-cols-1 lg:grid-cols-2 gap-3 auto-rows-auto">
             {/* QUADRANT 1: Main Visual (Top-Left) */}
-            <div className="glass-panel p-5 rounded-2xl flex flex-col relative overflow-hidden group transition-all duration-500 hover:border-primary/20 hover:shadow-[0_0_30px_rgba(59,130,246,0.1)]">
-                <div className="absolute top-0 right-0 p-3 z-10">
+            <div className="glass-panel p-4 rounded-xl flex flex-col relative overflow-hidden group transition-all duration-500 hover:border-primary/20 hover:shadow-[0_0_30px_rgba(59,130,246,0.1)]">
+                <div className="absolute top-0 right-0 p-2 z-10">
                     <DemoBadge label={tSafe(t, 'liveView', 'Live View')} />
                 </div>
 
                 {/* Subtle corner accent */}
-                <div className="absolute top-0 left-0 w-16 h-16 bg-gradient-to-br from-primary/10 to-transparent pointer-events-none" />
+                <div className="absolute top-0 left-0 w-12 h-12 bg-gradient-to-br from-primary/10 to-transparent pointer-events-none" />
 
-                <div className="mb-4 relative z-10">
-                    <h2 className="text-xl font-black tracking-tighter text-foreground mb-1">{title}</h2>
-                    <p className="text-[10px] text-primary/50 font-mono font-bold uppercase tracking-[0.2em]">{subtitle}</p>
+                <div className="mb-3 relative z-10">
+                    <h2 className="text-lg font-black tracking-tighter text-foreground mb-0.5">{title}</h2>
+                    <p className="text-[9px] text-primary/50 font-mono font-bold uppercase tracking-[0.2em]">{subtitle}</p>
                 </div>
 
-                <div className="flex-1 relative w-full min-h-[250px] flex items-center justify-center bg-black/10 rounded-xl border border-white/5">
+                <div className="flex-1 relative w-full min-h-[180px] flex items-center justify-center bg-black/10 rounded-lg border border-white/5">
                     <div className="absolute inset-0 opacity-[0.03] pointer-events-none" style={{ backgroundImage: 'radial-gradient(circle, white 1px, transparent 1px)', backgroundSize: '20px 20px' }} />
-                    {mainVisual}
+                    <div className="w-full h-full flex items-center justify-center p-2">
+                        {mainVisual}
+                    </div>
                 </div>
             </div>
 
             {/* QUADRANT 2: Key Stats (Top-Right) */}
-            <div className="grid grid-rows-2 gap-4">
+            <div className="grid grid-rows-2 gap-3">
                 {/* Top Half of Right Col: Big Stats */}
-                <div className="glass-panel p-5 rounded-2xl flex flex-col justify-center border-white/10">
-                    <div className="grid grid-cols-2 gap-3 h-full">
+                <div className="glass-panel p-4 rounded-xl flex flex-col justify-center border-white/10">
+                    <div className="grid grid-cols-2 gap-2 h-full">
                         {stats.map((stat, idx) => (
-                            <div key={idx} className="bg-white/[0.03] rounded-xl p-3 flex flex-col justify-center border border-white/5 hover:bg-white/[0.07] hover:border-primary/20 transition-all duration-300 group/stat">
-                                <span className="text-[10px] text-muted-foreground uppercase tracking-widest font-black mb-1.5 group-hover/stat:text-primary transition-colors">{stat.label}</span>
-                                <div className="flex items-end gap-2">
-                                    <span className="text-2xl font-mono font-black text-foreground leading-none tracking-tighter">{stat.value}</span>
+                            <div key={idx} className="bg-white/[0.03] rounded-lg p-2.5 flex flex-col justify-center border border-white/5 hover:bg-white/[0.07] hover:border-primary/20 transition-all duration-300 group/stat">
+                                <span className="text-[9px] text-muted-foreground uppercase tracking-widest font-black mb-1 group-hover/stat:text-primary transition-colors">{stat.label}</span>
+                                <div className="flex items-end gap-1.5">
+                                    <span className="text-xl font-mono font-black text-foreground leading-none tracking-tighter">{stat.value}</span>
                                     {stat.trend && (
-                                        <div className={`px-1.5 py-0.5 rounded text-[10px] font-black ${stat.trendUp ? 'bg-emerald-500/10 text-emerald-400' : 'bg-rose-500/10 text-rose-400'} flex items-center gap-0.5 mb-0.5`}>
+                                        <div className={`px-1 py-0.5 rounded text-[9px] font-black ${stat.trendUp ? 'bg-emerald-500/10 text-emerald-400' : 'bg-rose-500/10 text-rose-400'} flex items-center gap-0.5 mb-0.5`}>
                                             {stat.trendUp ? '↑' : '↓'} {stat.trend}
                                         </div>
                                     )}
@@ -77,52 +79,52 @@ export default function MetricDashboardLayout({
                 </div>
 
                 {/* Bottom Half of Right Col: Analysis Text */}
-                <div className="glass-panel p-6 rounded-2xl border border-primary/10 bg-gradient-to-br from-primary/5 to-transparent flex flex-col justify-center relative overflow-hidden group">
-                    <div className="absolute -right-4 -top-4 w-24 h-24 bg-primary/10 blur-3xl rounded-full" />
-                    <div className="absolute top-4 right-4">
-                        <ArrowUpRight className="text-primary/30 group-hover:text-primary group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all" size={20} />
+                <div className="glass-panel p-5 rounded-xl border border-primary/10 bg-gradient-to-br from-primary/5 to-transparent flex flex-col justify-center relative overflow-hidden group">
+                    <div className="absolute -right-4 -top-4 w-20 h-20 bg-primary/10 blur-3xl rounded-full" />
+                    <div className="absolute top-3 right-3">
+                        <ArrowUpRight className="text-primary/30 group-hover:text-primary group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all" size={16} />
                     </div>
-                    <div className="flex items-center gap-3 mb-2">
-                        <div className="w-1 h-8 bg-primary rounded-full shadow-[0_0_10px_rgba(59,130,246,0.5)]" />
-                        <h3 className="text-sm font-black text-primary uppercase tracking-widest">{tSafe(t, 'aiAnalysis', 'AI Analysis')}</h3>
+                    <div className="flex items-center gap-2 mb-1.5">
+                        <div className="w-1 h-6 bg-primary rounded-full shadow-[0_0_10px_rgba(59,130,246,0.5)]" />
+                        <h3 className="text-xs font-black text-primary uppercase tracking-widest">{tSafe(t, 'aiAnalysis', 'AI Analysis')}</h3>
                     </div>
-                    <p className="text-xs text-muted-foreground leading-relaxed font-medium italic opacity-90 pl-4">
+                    <p className="text-[11px] text-muted-foreground leading-relaxed font-medium italic opacity-90 pl-3">
                         " {analysis} "
                     </p>
                 </div>
             </div>
 
             {/* QUADRANT 3: Secondary Visual (Bottom-Left) */}
-            <div className="glass-panel p-5 rounded-2xl flex flex-col min-h-[260px] relative overflow-hidden">
-                <div className="mb-4 flex items-center justify-between relative z-10">
-                    <span className="text-[10px] font-black uppercase text-primary/60 tracking-[0.2em] font-mono">{tSafe(t, 'historicalTrend', 'Historical Trend')}</span>
-                    <div className="flex items-center gap-2 bg-emerald-500/10 px-2 py-1 rounded-full border border-emerald-500/20">
+            <div className="glass-panel p-4 rounded-xl flex flex-col min-h-[180px] relative overflow-hidden">
+                <div className="mb-3 flex items-center justify-between relative z-10">
+                    <span className="text-[9px] font-black uppercase text-primary/60 tracking-[0.2em] font-mono">{tSafe(t, 'historicalTrend', 'Historical Trend')}</span>
+                    <div className="flex items-center gap-1.5 bg-emerald-500/10 px-1.5 py-0.5 rounded-full border border-emerald-500/20">
                         <div className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
-                        <span className="text-[10px] font-black text-emerald-400 font-mono tracking-tighter">{tSafe(t, 'liveDataFeed', 'LIVE DATA FEED')}</span>
+                        <span className="text-[9px] font-black text-emerald-400 font-mono tracking-tighter">{tSafe(t, 'liveDataFeed', 'LIVE DATA FEED')}</span>
                     </div>
                 </div>
-                <div className="flex-1 relative w-full overflow-hidden rounded-xl bg-black/20 border border-white/5 backdrop-blur-sm self-center justify-center flex items-center">
+                <div className="flex-1 relative w-full overflow-hidden rounded-lg bg-black/20 border border-white/5 backdrop-blur-sm self-center justify-center flex items-center">
                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent pointer-events-none z-10" />
-                    <div className="w-full h-full flex items-center justify-center">
+                    <div className="w-full h-full flex items-center justify-center p-2">
                         {secondaryVisual}
                     </div>
                 </div>
             </div>
 
             {/* QUADRANT 4: Logs / Details (Bottom-Right) */}
-            <div className="glass-panel p-0 rounded-2xl flex flex-col overflow-hidden min-h-[260px] border-white/10">
-                <div className="px-4 py-3 border-b border-white/5 bg-white/[0.02] flex items-center justify-between">
+            <div className="glass-panel p-0 rounded-xl flex flex-col overflow-hidden min-h-[180px] border-white/10">
+                <div className="px-4 py-2.5 border-b border-white/5 bg-white/[0.02] flex items-center justify-between">
                     <div className="flex items-center gap-2">
-                        <div className="w-2 h-2 rounded-full bg-primary animate-pulse" />
-                        <span className="text-[10px] font-black font-mono text-primary/70 uppercase tracking-widest">{tSafe(t, 'systemLogs', 'System Logs')}</span>
+                        <div className="w-1.5 h-1.5 rounded-full bg-primary animate-pulse" />
+                        <span className="text-[9px] font-black font-mono text-primary/70 uppercase tracking-widest">{tSafe(t, 'systemLogs', 'System Logs')}</span>
                     </div>
-                    <div className="flex gap-1.5">
-                        <div className="w-2.5 h-2.5 rounded-full bg-white/5" />
-                        <div className="w-2.5 h-2.5 rounded-full bg-white/5" />
-                        <div className="w-2.5 h-2.5 rounded-full bg-white/5" />
+                    <div className="flex gap-1">
+                        <div className="w-2 h-2 rounded-full bg-white/5" />
+                        <div className="w-2 h-2 rounded-full bg-white/5" />
+                        <div className="w-2 h-2 rounded-full bg-white/5" />
                     </div>
                 </div>
-                <div className="flex-1 p-5 font-mono text-[10px] text-muted-foreground/80 overflow-hidden relative bg-black/20">
+                <div className="flex-1 p-4 font-mono text-[9px] text-muted-foreground/80 overflow-hidden relative bg-black/20">
                     <div className="absolute inset-0 p-5 space-y-2.5">
                         {[
                             { level: 'info', msg: 'optimizing', delay: 120 },
