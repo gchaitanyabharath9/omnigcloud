@@ -1,0 +1,21 @@
+.main-content {
+    position: relative;
+    width: 100%;
+    padding-top: var(--header-height);
+    overflow: visible !important;
+}
+
+.skip-to-content {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background: var(--primary);
+    color: white;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    z-index: 100;
+}
+
+.skip-to-content:focus {
+    top: 0;
+}
