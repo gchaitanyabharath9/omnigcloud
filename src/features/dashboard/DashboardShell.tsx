@@ -8,9 +8,10 @@ interface DashboardShellProps {
     title: string;
     subtitle: string;
     children: React.ReactNode;
+    hideNav?: boolean;
 }
 
-export default function DashboardShell({ title, subtitle, children }: DashboardShellProps) {
+export default function DashboardShell({ title, subtitle, children, hideNav = false }: DashboardShellProps) {
     const t = useTranslations('Dashboard.Shell');
     const locale = useLocale();
     const [currentTime, setCurrentTime] = useState(new Date());

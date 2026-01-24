@@ -23,7 +23,8 @@ import ContactSalesModal from '../ContactSalesModal';
 import { useContactSales } from '@/hooks/useContactSales';
 import styles from './Header.module.css';
 
-const Header = () => {
+const Header = ({ hideNav }: { hideNav?: boolean }) => {
+    if (hideNav) return null;
     const t = useTranslations();
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [activeDropdown, setActiveDropdown] = useState<string | null>(null);

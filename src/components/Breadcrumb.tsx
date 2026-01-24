@@ -13,7 +13,9 @@ export default function Breadcrumb() {
     const segments = pathname.split('/').filter(Boolean);
     const isHome = segments.length <= 1;
 
-    if (isHome) return null;
+    // Disable breadcrumbs in dashboard to save space
+    if (isHome || pathname.includes('/dashboard')) return null;
+
 
     const locale = segments[0];
     const breadcrumbSegments = segments.slice(1);
