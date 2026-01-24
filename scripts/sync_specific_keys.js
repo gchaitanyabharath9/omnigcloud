@@ -12,7 +12,9 @@ const keysToSync = [
     ['Enrichment'],
     ['SEO_Content', 'Products', 'HowItWorks'],
     ['Metadata'],
-    ['Whitepaper']
+    ['Whitepaper'],
+    ['Enterprise', 'approach'],
+    ['FloatingActions']
 ];
 
 function getNested(obj, pathArr) {

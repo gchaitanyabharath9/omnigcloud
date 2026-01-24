@@ -3000,26 +3000,26 @@
       "validationProtocols": "Validation Protocols (ES)"
     },
     "sidebar": {
+      "contactArchitectureOffice": "Contact Architecture Office",
+      "customBriefingTitle": "Need a customized briefing?",
+      "quickLinksHeading": "Quick Links",
+      "links": {
+        "introduction": "Introduction",
+        "architecture": "Architecture",
+        "whitepaper": "Technical Whitepaper",
+        "security": "Security & Governance",
+        "guide": "Architectural Guide",
+        "api": "API Reference"
+      },
+      "documentation": "DOCUMENTATION",
+      "blueprints": "GOVERNANCE BLUEPRINTS",
       "blueprint_links": {
         "aws": "AWS Landing Zone",
         "azure": "Azure Enterprise",
-        "hybrid": "Hybrid Fabric",
-        "openshift": "OpenShift Cluster"
+        "openshift": "OpenShift Cluster",
+        "hybrid": "Hybrid Fabric"
       },
-      "blueprints": "GOVERNANCE BLUEPRINTS",
-      "contactArchitectureOffice": "Contact Architecture Office",
-      "customBriefingText": "Generate a custom briefing document based on your selected stack.",
-      "customBriefingTitle": "Need a customized briefing?",
-      "documentation": "DOCUMENTATION",
-      "links": {
-        "api": "API Reference",
-        "architecture": "Architecture",
-        "guide": "Architectural Guide",
-        "introduction": "Introduction",
-        "security": "Security & Governance",
-        "whitepaper": "Technical Whitepaper"
-      },
-      "quickLinksHeading": "Quick Links"
+      "customBriefingText": "Generate a custom briefing document based on your selected stack."
     },
     "technicalLibrary": "Technical Library (ES)",
     "transparency": {
@@ -3118,35 +3118,48 @@
     "leadCapture": {
       "fallback": "Contact Us Directly"
     },
+    "visualSection": {
+      "tag": "Architecture Overview",
+      "title": "System Visualizer",
+      "note": "This diagram represents the actual orchestration fabric across multiple cloud regions."
+    },
     "relatedLinks": {
       "title": "Related Strategy & Insights"
-    },
-    "visualSection": {
-      "note": "This diagram represents the actual orchestration fabric across multiple cloud regions.",
-      "tag": "Architecture Overview",
-      "title": "System Visualizer"
     }
   },
   "Enterprise": {
     "approach": {
-      "p1": "P1 Details (ES)",
-      "p2": "P2 Details (ES)",
       "pillars": {
         "0": {
-          "desc": "Enterprise-grade security (ES)",
-          "title": "Security (ES)"
+          "desc": "Soberanía de nivel empresarial y auditoría de seguridad de alta garantía. (ES)",
+          "title": "Seguridad",
+          "features": [
+            "FIPS 140-2",
+            "Zero-Trust",
+            "mTLS"
+          ]
         },
         "1": {
-          "desc": "Scale to millions (ES)",
-          "title": "Scale (ES)"
+          "desc": "Escale cargas de trabajo de forma autónoma en infraestructura multi-nube global. (ES)",
+          "title": "Escala",
+          "features": [
+            "Auto-Scaling",
+            "Multi-Región",
+            "DR"
+          ]
         },
         "2": {
-          "desc": "99.999% uptime (ES)",
-          "title": "Stability (ES)"
+          "desc": "Garantice un tiempo de actividad del 99,999% con remediación autónoma de desviaciones. (ES)",
+          "title": "Estabilidad",
+          "features": [
+            "Self-Healing",
+            "Live Sync",
+            "Protección"
+          ]
         }
       },
-      "subtitle": "How we help you scale (ES)",
-      "title": "Enterprise approach (ES)"
+      "subtitle": "How we help you scale",
+      "title": "Enterprise approach"
     },
     "partnership": {
       "p1": "Enforce auto-remediation policies. (ES)",
@@ -3189,22 +3202,22 @@
   "FloatingActions": {
     "chatSupport": {
       "actions": {
-        "bookDemo": "📅 Book a Platform Demo (ES)",
-        "connectSales": "💬 Connect with Sales (ES)",
-        "viewDocs": "📚 View Documentation (ES)"
+        "bookDemo": "📅 Book a Platform Demo",
+        "connectSales": "💬 Connect with Sales",
+        "viewDocs": "📚 View Documentation"
       },
-      "greeting": "👋 Hi there! I'm your OmniGCloud assistant. How can I help you modernize your infrastructure today? (ES)",
-      "placeholder": "Type a message... (ES)",
-      "replyTime": "Typically replies in 2m (ES)",
-      "title": "Chat Support (ES)"
+      "greeting": "👋 Hi there! I'm your OmniGCloud assistant. How can I help you modernize your infrastructure today?",
+      "placeholder": "Type a message...",
+      "replyTime": "Typically replies in 2m",
+      "title": "Chat Support"
     },
     "contact": {
-      "description": "Our sovereign cloud architects are ready to audit your infrastructure. (ES)",
-      "emailArchitects": "Email Architects (ES)",
-      "title": "Get in Touch (ES)",
-      "viewFullPage": "View Full Contact Page (ES)"
+      "description": "Our sovereign cloud architects are ready to audit your infrastructure.",
+      "emailArchitects": "Email Architects",
+      "title": "Get in Touch",
+      "viewFullPage": "View Full Contact Page"
     },
-    "talkToExpert": "Talk to an Expert (ES)"
+    "talkToExpert": "Talk to an Expert"
   },
   "Footer": {
     "authority": {
@@ -3888,6 +3901,8 @@
       "title": "Command Center & Real-Time Monitoring"
     },
     "Docs": {
+      "description": "Comprehensive technical documentation for the OmniGCloud platform. Architecture plans, API references, and governance guides.",
+      "title": "Documentation & Technical Compendium",
       "api": {
         "description": "Comprehensive API documentation for the OmniGCloud platform. Control your entire multi-cloud estate through our secure, RESTful endpoints.",
         "title": "API Reference"
@@ -3896,7 +3911,6 @@
         "description": "Original contributions formalizing the methodology for Autonomous Sovereign Orchestration (ASO), addressing the conflict between global scale and national law.",
         "title": "Architectural Design Patterns"
       },
-      "description": "Comprehensive technical documentation for the OmniGCloud platform. Architecture plans, API references, and governance guides.",
       "governance": {
         "description": "Pre-validated blueprints to ensure your multi-cloud deployments meet the most rigorous global compliance standards.",
         "title": "Governance Blueprints"
@@ -3904,8 +3918,7 @@
       "guide": {
         "description": "Learn how to initialize your environment and connect your first cloud provider with the OmniGCloud platform.",
         "title": "Getting Started Guide"
-      },
-      "title": "Documentation & Technical Compendium"
+      }
     },
     "Home": {
       "description": "Modernize your enterprise infrastructure with OmniGCloud. Cloud-agnostic platforms, autonomous governance, and AI-native architecture for the sovereign era.",
@@ -3932,10 +3945,6 @@
     "Products": {
       "description": "Automate compliance with real-time drift detection and auto-remediation policies. Explore our suite of sovereign cloud products.",
       "title": "Sovereign Product Suite"
-    },
-    "Research": {
-      "description": "Explore OmniGCloud Systems research on cloud-native architecture, distributed systems, and sovereign governance.",
-      "title": "Research & Technical Specifications"
     },
     "Services": {
       "ai-cloud-platform": {
@@ -3972,6 +3981,10 @@
         "title": "RedHat OpenShift Modernization"
       },
       "title": "Sovereign Services | OmniGCloud"
+    },
+    "Research": {
+      "description": "Explore OmniGCloud Systems research on cloud-native architecture, distributed systems, and sovereign governance.",
+      "title": "Research & Technical Specifications"
     },
     "Solutions": {
       "description": "Tailored cloud modernization solutions for finance, healthcare, and regulated industries. Achieve digital sovereignty with confidence.",
@@ -5574,18 +5587,18 @@
         "steps": {
           "0": {
             "desc": "Provision your sovereignty perimeter across multi-cloud regions using our autonomous fabric kernel.",
-            "heading": "Phase 1",
-            "title": "Fabric Provisioning"
+            "title": "Fabric Provisioning",
+            "heading": "Phase 1"
           },
           "1": {
             "desc": "Enforce governance logic at the infrastructure level with real-time drift detection and auto-remediation.",
-            "heading": "Phase 2",
-            "title": "Governance Sync"
+            "title": "Governance Sync",
+            "heading": "Phase 2"
           },
           "2": {
             "desc": "Achieve absolute sovereignty and compliance with a single, vendor-agnostic control plane.",
-            "heading": "Phase 3",
-            "title": "Unified Control"
+            "title": "Unified Control",
+            "heading": "Phase 3"
           }
         },
         "title": "How It Works"

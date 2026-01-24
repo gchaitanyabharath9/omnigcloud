@@ -3129,24 +3129,37 @@
   },
   "Enterprise": {
     "approach": {
-      "p1": "Our framework enables enterprises to decouple logic from infrastructure, ensuring that policy remains constant regardless of the underlying cloud provider.",
-      "p2": "By implementing the G-Framework, organizations regain 100% control of their digital estate while achieving sub-millisecond governance enforcement.",
       "pillars": {
         "0": {
-          "desc": "Enforce data residency and sovereignty at the substrate layer, making non-compliance architecturally impossible.",
-          "title": "Sovereign Integrity"
+          "desc": "Enterprise-grade sovereignty and high-assurance security auditing.",
+          "title": "Security",
+          "features": [
+            "FIPS 140-2",
+            "Zero-Trust",
+            "mTLS"
+          ]
         },
         "1": {
-          "desc": "Orchestrate workloads across AWS, Azure, and OCP with a unified interface that abstracts vendor complexity.",
-          "title": "Absolute Abstraction"
+          "desc": "Scale workloads autonomously across global multi-cloud infrastructure.",
+          "title": "Scale",
+          "features": [
+            "Auto-Scaling",
+            "Multi-Region",
+            "DR"
+          ]
         },
         "2": {
-          "desc": "Automate the entire modernization lifecycle, from legacy discovery to atomic production deployment.",
-          "title": "Autonomous Operations"
+          "desc": "Guarantee 99.999% uptime with autonomous drift remediation.",
+          "title": "Stability",
+          "features": [
+            "Self-Healing",
+            "Live Sync",
+            "Drift Protection"
+          ]
         }
       },
-      "subtitle": "A standard-driven methodology for the most demanding global infrastructure environments.",
-      "title": "Architectural Excellence"
+      "subtitle": "How we help you scale",
+      "title": "Enterprise approach"
     },
     "partnership": {
       "p1": "Strategic alignment with your modernization goals.",

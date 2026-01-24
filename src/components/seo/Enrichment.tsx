@@ -66,21 +66,21 @@ export const HowItWorks = ({ pageKey }: { pageKey: string }) => {
     const isHome = pageKey === 'Home';
 
     return (
-        <Section className="snap-section py-20 bg-[var(--bg-surface-2)]">
+        <Section className="snap-section py-12 bg-[var(--bg-surface-2)]">
             <PageShell>
-                <div className="mb-16">
-                    <h2 className="text-3xl md:text-4xl font-black mb-4 flex items-center gap-4">
-                        <Zap className="text-primary" size={32} /> {tSafe(t, 'title', 'How It Works')}
+                <div className="mb-8">
+                    <h2 className="text-2xl md:text-3xl font-black mb-2 flex items-center gap-3">
+                        <Zap className="text-primary" size={24} /> {tSafe(t, 'title', 'How It Works')}
                     </h2>
-                    <p className="text-lg text-muted-foreground max-w-2xl">
+                    <p className="text-base text-muted-foreground max-w-2xl opacity-80">
                         {tSafe(tEnrichment, 'howItWorks', 'Our streamlined onboarding process ensures rapid deployment of sovereign infrastructure.')}
                     </p>
                 </div>
 
-                <div className={`grid gap-8 ${isHome ? 'grid-cols-1' : 'md:grid-cols-3'}`}>
+                <div className={`grid gap-6 ${isHome ? 'grid-cols-1' : 'md:grid-cols-3'}`}>
                     {steps.map((i) => (
-                        <div key={i} className="glass-panel p-8 md:p-10 rounded-3xl relative overflow-hidden group hover:border-primary/50 transition-all duration-300 h-full">
-                            <div className="flex flex-col md:flex-row gap-8 items-start relative z-10 pb-4">
+                        <div key={i} className="glass-panel p-6 md:p-8 rounded-[2rem] relative overflow-hidden group hover:border-primary/50 transition-all duration-300 h-full">
+                            <div className="flex flex-col md:flex-row gap-6 items-start relative z-10 pb-2">
                                 {/* Left Column: The Number (Fixed width on desktop) */}
                                 <div className="shrink-0 w-16 h-16 md:w-20 md:h-20 flex items-center justify-center rounded-2xl bg-primary/5 border border-primary/20 group-hover:bg-primary/10 group-hover:border-primary/40 transition-colors">
                                     <span className="text-3xl md:text-4xl font-black text-primary/30 group-hover:text-primary transition-colors">
@@ -100,8 +100,8 @@ export const HowItWorks = ({ pageKey }: { pageKey: string }) => {
                                 </div>
                             </div>
 
-                            {/* Watermark Fix: Positioned to avoid overlap with text content */}
-                            <div className="absolute top-4 right-4 text-7xl font-black text-white/[0.03] group-hover:text-primary/[0.08] transition-colors pointer-events-none select-none z-0">
+                            {/* Watermark Fix: Positioned at bottom-right to avoid overlap with text content */}
+                            <div className="absolute bottom-4 right-4 text-7xl font-black text-white/[0.03] group-hover:text-primary/[0.08] transition-colors pointer-events-none select-none z-0">
                                 0{i + 1}
                             </div>
                         </div>
@@ -134,13 +134,13 @@ export const VisualSection = ({ pageKey, imageUrl, alt, description }: { pageKey
                         </div>
                     </div>
                     <div>
-                        <h2 className="text-3xl font-black mb-6">{tSafe(tEnrichment, 'visualSection.title', 'System Visualizer')}</h2>
-                        <p className="text-lg text-muted-foreground leading-relaxed mb-8">
+                        <h2 className="text-2xl font-black mb-4">{tSafe(tEnrichment, 'visualSection.title', 'System Visualizer')}</h2>
+                        <p className="text-base text-muted-foreground leading-relaxed mb-6">
                             {description}
                         </p>
-                        <div className="flex items-center gap-4 p-4 rounded-2xl bg-primary/5 border border-primary/20">
-                            <Info className="text-primary shrink-0" />
-                            <p className="text-sm italic">
+                        <div className="flex items-center gap-3 p-4 rounded-xl bg-primary/5 border border-primary/20">
+                            <Info className="text-primary shrink-0" size={18} />
+                            <p className="text-xs italic opacity-80">
                                 {tSafe(tEnrichment, 'visualSection.note', 'This diagram represents the actual orchestration fabric across multiple cloud regions.')}
                             </p>
                         </div>
@@ -157,11 +157,11 @@ export const DeepDive = ({ pageKey, relatedLinks }: EnrichmentProps) => {
     const locale = useLocale();
 
     return (
-        <Section className="snap-section py-20 border-t border-white/5">
+        <Section className="snap-section py-12 border-t border-white/5">
             <PageShell>
                 <div className="max-w-4xl">
-                    <h2 className="text-3xl font-black mb-8 flex items-center gap-3">
-                        <ShieldCheck className="text-primary" /> {tSafe(t, 'title', 'Architectural Deep Dive')}
+                    <h2 className="text-2xl font-black mb-6 flex items-center gap-3">
+                        <ShieldCheck className="text-primary" size={24} /> {tSafe(t, 'title', 'Architectural Deep Dive')}
                     </h2>
                     <div className="prose prose-invert prose-lg max-w-none mb-12">
                         <p className="text-muted-foreground leading-relaxed whitespace-pre-wrap">
@@ -209,11 +209,11 @@ export const TopicalAuthority = ({ pageKey }: { pageKey: string }) => {
 export const TechnicalInsights = ({ pageKey }: { pageKey: string }) => {
     const t = useTranslations(`SEO_Content.${pageKey}.TechnicalApproach`);
     return (
-        <Section className="snap-section py-20">
+        <Section className="snap-section py-12">
             <PageShell>
-                <div className="glass-panel p-10 md:p-16 rounded-[3rem] border-primary/20 bg-primary/5">
-                    <div className="flex flex-col md:flex-row gap-12 items-start">
-                        <div className="shrink-0 p-4 rounded-2xl bg-primary/10 border border-primary/20">
+                <div className="glass-panel p-8 md:p-12 rounded-[2.5rem] border-primary/20 bg-primary/5">
+                    <div className="flex flex-col md:flex-row gap-8 items-start">
+                        <div className="shrink-0 p-3 rounded-xl bg-primary/10 border border-primary/20">
                             <Terminal className="text-primary" size={32} />
                         </div>
                         <div>
@@ -234,11 +234,11 @@ export const FAQSection = ({ pageKey }: { pageKey: string }) => {
     const count = [0, 1]; // Support at least 2 for now based on en.json updates
 
     return (
-        <Section className="snap-section py-20 bg-[var(--bg-surface-2)]">
+        <Section className="snap-section py-12 bg-[var(--bg-surface-2)]">
             <PageShell>
                 <div className="max-w-4xl">
-                    <h2 className="text-3xl font-black mb-12 flex items-center gap-3">
-                        <HelpCircle className="text-primary" /> {tSafe(t, 'title', 'F.A.Q')}
+                    <h2 className="text-2xl font-black mb-8 flex items-center gap-3">
+                        <HelpCircle className="text-primary" size={24} /> {tSafe(t, 'title', 'F.A.Q')}
                     </h2>
                     <div className="space-y-8">
                         {count.map((i) => (

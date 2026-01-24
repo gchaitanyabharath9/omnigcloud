@@ -64,7 +64,12 @@ export function generateSEOMetadata(config: SEOConfig, locale: string = 'en'): M
     const languages: Record<string, string> = {};
 
     // Extract the path after locale from canonical to generate alternates
-    const pathAfterLocaleMatch = finalCanonical.match(new RegExp(`${SITE_URL}/[a-z]{2}(/.*)?`));
+    // Fix(seo): Escape hostname regex for omnigcloud.com to prevent over-matching (CodeQL alert)
+    // Matches ONLY the official site domain with a 2-letter locale and optional sub-path.
+    // Should match: "https://www.omnigcloud.com/en", "https://omnigcloud.com/en/products"
+    // Should NOT match: "https://evil-omnigcloud.com", "https://omnigcloud.com.evil.com"
+    const escapedSiteUrl = SITE_URL.replace(/\./g, '\\.').replace('www\\.', '(www\\.)?');
+    const pathAfterLocaleMatch = finalCanonical.match(new RegExp(`^${escapedSiteUrl}/[a-z]{2}(/.*)?$`));
     const pathAfterLocale = pathAfterLocaleMatch ? (pathAfterLocaleMatch[1] || '') : '';
 
     locales.forEach(l => {
