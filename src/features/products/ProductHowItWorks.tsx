@@ -25,12 +25,9 @@ export const ProductHowItWorks = () => {
                 <div className="grid grid-cols-1 gap-4 max-w-4xl">
                     {steps.map((i) => (
                         <div key={i} className="glass-panel p-6 rounded-2xl relative overflow-hidden group hover:border-primary/30 transition-all duration-300">
-                            {/* Layout Fix: Number at bottom-right, content padded */}
-                            <div className="absolute bottom-4 right-4 text-7xl font-black text-primary/5 group-hover:text-primary/10 transition-colors z-0 pointer-events-none select-none">
-                                0{i + 1}
-                            </div>
 
-                            <div className="relative z-10 flex flex-col gap-4 pb-4 pr-16 text-left">
+
+                            <div className="relative z-10 flex flex-col gap-4 pb-2 text-left">
                                 <div className="text-[10px] uppercase tracking-[0.2em] text-primary font-black mb-1.5 opacity-80">
                                     {tSafe(t, `steps.${i}.title`, `Step ${i + 1}`)}
                                 </div>

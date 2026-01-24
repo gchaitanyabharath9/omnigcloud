@@ -89,7 +89,7 @@ export const HowItWorks = ({ pageKey }: { pageKey: string }) => {
                                 </div>
 
                                 {/* Right Column: Content */}
-                                <div className="flex-1 md:pr-16">
+                                <div className="flex-1">
                                     <h3 className="text-xl md:text-2xl font-bold mb-4 tracking-tight group-hover:text-primary transition-colors">
                                         {tSafe(t, `steps.${i}.title`, `Step ${i + 1}`)}
                                     </h3>
@@ -100,10 +100,7 @@ export const HowItWorks = ({ pageKey }: { pageKey: string }) => {
                                 </div>
                             </div>
 
-                            {/* Watermark Fix: Positioned at bottom-right to avoid overlap with text content */}
-                            <div className="absolute bottom-4 right-4 text-7xl font-black text-white/[0.03] group-hover:text-primary/[0.08] transition-colors pointer-events-none select-none z-0">
-                                0{i + 1}
-                            </div>
+
                         </div>
                     ))}
                 </div>
