@@ -81,7 +81,7 @@ export default function InteractiveDashboardSection() {
                     {/* TOP RIGHT: SYSTEM ARCHITECTURE (Image mix) */}
                     <div className="glass-panel p-6 rounded-2xl overflow-hidden relative min-h-[300px] border-white/5 flex flex-col justify-end group">
                         <Image
-                            src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=800"
+                            src="/images/home/data-center.png"
                             alt="Data Center"
                             fill
                             className="object-cover opacity-20 grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700"
