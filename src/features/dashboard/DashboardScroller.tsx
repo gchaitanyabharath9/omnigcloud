@@ -23,8 +23,8 @@ export default function DashboardScroller({ activeMetric, configs, order }: Dash
                         // Force each section to be at least a full viewport height for "page" feel
                         // scrollMarginTop accounts for the fixed header so content starts cleanly below it
                         style={{
-                            paddingTop: '2.5rem',
-                            paddingBottom: '2.5rem',
+                            paddingTop: '1.5rem',
+                            paddingBottom: '1.5rem',
                             scrollMarginTop: 'calc(var(--header-height) + var(--breadcrumb-height) + 1rem)'
                         }}
                     >

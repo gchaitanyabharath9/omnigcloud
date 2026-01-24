@@ -3,9 +3,6 @@ import Link from "next/link";
 import { getTranslations, getLocale } from "next-intl/server";
 import { notFound } from "next/navigation";
 import Footer from "@/components/Footer";
-import { Section } from "@/components/layout/Section";
-import { PageShell } from "@/components/layout/PageShell";
-
 import { Metadata } from 'next';
 import { generateSEOMetadata, SEO_KEYWORDS } from '@/utils/seo';
 
@@ -49,102 +46,72 @@ export default async function DocDetailPage({ params }: { params: Promise<{ loca
 
     const doc = docs.find(d => d.id === slug);
 
-    // If it's 'whitepaper', it already exists at /docs/whitepaper (hopefully)
-    // Actually /docs/whitepaper is a separate file usually. 
-    // Let's check if whitepaper is a folder or file.
     if (!doc) {
         notFound();
     }
 
     return (
-        <div className="animate-fade-in">
-            <Section className="py-20 border-b border-white/10" style={{ background: 'var(--bg-surface-2)', minHeight: '80vh' }}>
-                <PageShell>
-                    <Link href={`/${locale}/docs`} className="inline-flex items-center gap-2 text-primary font-bold mb-8 hover:opacity-70 transition-opacity">
-                        <ArrowLeft size={16} /> {t('technicalLibrary')}
-                    </Link>
+        <div className="animate-fade-in flex flex-col gap-12 pb-12">
+            <div>
+                <Link href={`/${locale}/docs`} className="inline-flex items-center gap-2 text-primary font-bold mb-8 hover:opacity-70 transition-opacity">
+                    <ArrowLeft size={16} /> {t('technicalLibrary')}
+                </Link>
 
-                    <div className="grid md:grid-cols-[1fr_300px] gap-12">
-                        <main>
-                            <div className="flex items-center gap-4 mb-6">
-                                <div className="p-3 bg-primary/10 rounded-2xl text-primary border border-primary/20">
-                                    {doc.icon}
-                                </div>
-                                <div>
-                                    <div className="text-[0.65rem] font-black text-primary uppercase tracking-widest mb-1">
-                                        {t('documentation_label')} // {t(`cards.${doc.key}.exhibit`)}
-                                    </div>
-                                    <h1 className="text-4xl font-black tracking-tight">{t(`cards.${doc.key}.title`)}</h1>
-                                </div>
-                            </div>
-
-                            <p className="text-xl opacity-80 leading-relaxed mb-10 max-w-2xl">
-                                {t(`cards.${doc.key}.description`)}
-                            </p>
-
-                            <div className="glass-panel p-10 rounded-[2.5rem] border border-white/10 bg-white/[0.02]">
-                                <h3 className="text-xl font-bold mb-6">{t('abstract.title')}</h3>
-                                <div className="space-y-4 opacity-70 leading-relaxed text-sm">
-                                    <p>
-                                        {t('abstract.paragraph1', { title: t(`cards.${doc.key}.title`) })}
-                                    </p>
-                                    <p>
-                                        {t('abstract.paragraph2')}
-                                    </p>
-                                </div>
-
-                                <div className="mt-10 pt-10 border-t border-white/5 flex flex-col gap-4">
-                                    <div className="p-6 rounded-2xl bg-primary/5 border border-primary/10 flex items-center justify-between group cursor-pointer hover:bg-primary/10 transition-colors">
-                                        <div className="flex items-center gap-4">
-                                            <div className="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center font-bold text-primary">01</div>
-                                            <div>
-                                                <h4 className="font-bold text-sm">{t('sections.empiricalDataSet')}</h4>
-                                                <p className="text-xs opacity-50">{t('sections.empiricalDataSetDesc')}</p>
-                                            </div>
-                                        </div>
-                                        <ChevronRight size={18} className="opacity-0 group-hover:opacity-100 transform translate-x-[-10px] group-hover:translate-x-0 transition-all" />
-                                    </div>
-                                    <div className="p-6 rounded-2xl bg-white/[0.02] border border-white/5 flex items-center justify-between group cursor-pointer hover:bg-white/[0.04] transition-colors">
-                                        <div className="flex items-center gap-4">
-                                            <div className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center font-bold">02</div>
-                                            <div>
-                                                <h4 className="font-bold text-sm">{t('sections.validationProtocols')}</h4>
-                                                <p className="text-xs opacity-50">{t('sections.autonomousGatingLogs')}</p>
-                                            </div>
-                                        </div>
-                                        <ChevronRight size={18} className="opacity-0 group-hover:opacity-100 transform translate-x-[-10px] group-hover:translate-x-0 transition-all" />
-                                    </div>
-                                </div>
-                            </div>
-                        </main>
-
-                        <aside className="space-y-6">
-                            <div className="glass-panel p-6 rounded-3xl border border-white/10">
-                                <h4 className="text-[0.65rem] font-black text-primary uppercase tracking-widest mb-4">{t('sidebar.quickLinksHeading')}</h4>
-                                <div className="flex flex-col gap-3">
-                                    {docs.filter(d => d.id !== slug).map(other => (
-                                        <Link key={other.id} href={`/${locale}/docs/${other.id}`} className="flex items-center gap-3 p-3 rounded-xl hover:bg-white/5 transition-colors text-sm font-semibold opacity-60 hover:opacity-100">
-                                            {other.icon && <div className="text-primary scale-75">{other.icon}</div>}
-                                            {t(`cards.${other.key}.title`)}
-                                        </Link>
-                                    ))}
-                                </div>
-                            </div>
-
-                            <div className="glass-panel p-6 rounded-3xl border border-primary/20 bg-primary/5">
-                                <h4 className="font-bold text-sm mb-2">{t('sidebar.customBriefingTitle')}</h4>
-                                <p className="text-xs opacity-60 mb-4">{t('sidebar.customBriefingText')}</p>
-                                <Link href={`/${locale}/contact`} className="btn-primary w-full py-2 rounded-xl text-xs text-center">{t('sidebar.contactArchitectureOffice')}</Link>
-                            </div>
-                        </aside>
+                <div className="flex items-center gap-4 mb-6">
+                    <div className="p-3 bg-primary/10 rounded-2xl text-primary border border-primary/20">
+                        {doc.icon}
                     </div>
-                </PageShell>
-            </Section>
+                    <div>
+                        <div className="text-[0.65rem] font-black text-primary uppercase tracking-widest mb-1">
+                            {t('documentation_label')}
+                        </div>
+                        <h1 className="text-4xl font-black tracking-tight">{t(`cards.${doc.key}.title`)}</h1>
+                    </div>
+                </div>
 
-            {/* Footer */}
-            <Section id="footer" className="snap-section" style={{ background: 'var(--background)', borderTop: '1px solid var(--card-border)' }}>
+                <p className="text-xl opacity-80 leading-relaxed mb-10 max-w-2xl">
+                    {t(`cards.${doc.key}.description`)}
+                </p>
+
+                <div className="glass-panel p-10 rounded-[2.5rem] border border-white/10 bg-white/[0.02]">
+                    <h3 className="text-xl font-bold mb-6">{t('abstract.title')}</h3>
+                    <div className="space-y-4 opacity-70 leading-relaxed text-sm">
+                        <p>
+                            {t('abstract.paragraph1', { title: t(`cards.${doc.key}.title`) })}
+                        </p>
+                        <p>
+                            {t('abstract.paragraph2')}
+                        </p>
+                    </div>
+
+                    <div className="mt-10 pt-10 border-t border-white/5 flex flex-col gap-4">
+                        <div className="p-6 rounded-2xl bg-primary/5 border border-primary/10 flex items-center justify-between group cursor-pointer hover:bg-primary/10 transition-colors">
+                            <div className="flex items-center gap-4">
+                                <div className="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center font-bold text-primary">01</div>
+                                <div>
+                                    <h4 className="font-bold text-sm">{t('sections.empiricalDataSet')}</h4>
+                                    <p className="text-xs opacity-50">{t('sections.empiricalDataSetDesc')}</p>
+                                </div>
+                            </div>
+                            <ChevronRight size={18} className="opacity-0 group-hover:opacity-100 transform translate-x-[-10px] group-hover:translate-x-0 transition-all" />
+                        </div>
+                        <div className="p-6 rounded-2xl bg-white/[0.02] border border-white/5 flex items-center justify-between group cursor-pointer hover:bg-white/[0.04] transition-colors">
+                            <div className="flex items-center gap-4">
+                                <div className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center font-bold">02</div>
+                                <div>
+                                    <h4 className="font-bold text-sm">{t('sections.validationProtocols')}</h4>
+                                    <p className="text-xs opacity-50">{t('sections.autonomousGatingLogs')}</p>
+                                </div>
+                            </div>
+                            <ChevronRight size={18} className="opacity-0 group-hover:opacity-100 transform translate-x-[-10px] group-hover:translate-x-0 transition-all" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div className="pt-8 border-t border-card-border">
                 <Footer />
-            </Section>
+            </div>
         </div>
     );
 }
