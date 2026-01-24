@@ -106,7 +106,7 @@ export default function HeroSection() {
                                 </div>
                                 <div className="h-[280px] rounded-2xl border border-card-border relative overflow-hidden bg-slate-950">
                                     <Image
-                                        src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1200&q=90"
+                                        src="/images/hero/dashboard-v2.png"
                                         alt="Global Sovereign Dashboard"
                                         fill
                                         style={{ objectFit: 'cover', opacity: 0.3 }}
