@@ -32,8 +32,12 @@ if (!fs.existsSync(sitemapPath) && !fs.existsSync(nextSitemapPath)) {
             errors++;
         }
 
-        if (sitemapContent.includes('www.omnigcloud.com') && !BASE_URL.includes('www')) {
-            console.error('❌ Sitemap contains www URLs but config uses non-www');
+        const baseHost = new URL(BASE_URL).hostname;
+        const hasWwwInSitemap = sitemapContent.includes('www.omnigcloud.com');
+        const hasWwwInBase = baseHost.startsWith('www.');
+
+        if (hasWwwInSitemap !== hasWwwInBase) {
+            console.error(`❌ Sitemap/BaseURL mismatch: Sitemap has www: ${hasWwwInSitemap}, BaseURL has www: ${hasWwwInBase}`);
             errors++;
         }
 

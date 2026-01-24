@@ -1,3 +1,4 @@
+import React from 'react';
 import Link from 'next/link';
 import Footer from "@/components/Footer";
 import { getTranslations } from "next-intl/server";
@@ -61,8 +62,16 @@ export default async function CompanyPage() {
                         }}>
                             {t('hero.badge')}
                         </div>
-                        <h1 style={{ fontSize: '4rem', fontWeight: 900, marginBottom: '1.5rem', lineHeight: 1.1, background: 'linear-gradient(135deg, var(--foreground) 0%, var(--primary) 100%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }} dangerouslySetInnerHTML={{ __html: t.raw('hero.title').replace('\n', '<br />') }}></h1>
-                        <p style={{ fontSize: '1.3rem', color: 'var(--foreground)', opacity: 0.8, maxWidth: '900px', lineHeight: 1.6 }} dangerouslySetInnerHTML={{ __html: t.raw('hero.subtitle') }}>
+                        <h1 style={{ fontSize: '4rem', fontWeight: 900, marginBottom: '1.5rem', lineHeight: 1.1, background: 'linear-gradient(135deg, var(--foreground) 0%, var(--primary) 100%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>
+                            {t('hero.title').split('\n').map((line, i) => (
+                                <React.Fragment key={i}>
+                                    {line}
+                                    {i < t('hero.title').split('\n').length - 1 && <br />}
+                                </React.Fragment>
+                            ))}
+                        </h1>
+                        <p style={{ fontSize: '1.3rem', color: 'var(--foreground)', opacity: 0.8, maxWidth: '900px', lineHeight: 1.6 }}>
+                            {t('hero.subtitle')}
                         </p>
                     </div>
                 </div>

@@ -21,6 +21,15 @@
     --selection: rgba(59, 130, 246, 0.25);
 
     /* Semantic Colors */
+    --primary-main: var(--primary);
+    --primary-contrast: #ffffff;
+
+    --text-primary: var(--foreground);
+    --text-secondary: var(--muted);
+
+    --surface-1: var(--card-bg);
+    --surface-2: var(--bg-surface-2);
+
     --color-success: #10b981;
     --color-warning: #f59e0b;
     --color-danger: #ef4444;
@@ -100,6 +109,13 @@
 
     --muted: #64748b;
     /* Slate 500 */
+
+    --text-primary: var(--foreground);
+    --text-secondary: var(--muted);
+
+    --surface-1: var(--card-bg);
+    --surface-2: var(--bg-surface-2);
+
     --selection: rgba(2, 132, 199, 0.1);
 
     /* Header */

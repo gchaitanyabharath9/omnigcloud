@@ -3,77 +3,78 @@ import Footer from '@/components/Footer';
 import { useLocale, useTranslations } from 'next-intl';
 import { ErrorRateArea, UptimeTrend, FeatureUsageBar, CostSavingsArea } from '@/components/charts/SimpleCharts';
 import { TrendingDown, TrendingUp, Shield, DollarSign } from 'lucide-react';
+import { Container } from '@/components/ui/Container';
 
 export default function CtaSection() {
     const locale = useLocale();
     const t = useTranslations('HomeSections.Cta');
     return (
         <>
-            <section className="snap-section" style={{ paddingTop: '3rem', paddingBottom: '3rem' }}>
-                <div className="container">
+            <section className="snap-section py-12">
+                <Container>
                     {/* Key Metrics Grid */}
-                    <div style={{ marginBottom: '3rem' }}>
-                        <div style={{ textAlign: 'center', marginBottom: '2rem' }}>
-                            <div className="badge badge-primary-subtle mb-3" style={{ fontSize: '0.6rem', letterSpacing: '0.1em' }}>
+                    <div className="mb-12">
+                        <div className="text-center mb-8">
+                            <div className="badge badge-primary-subtle mb-3 text-[0.6rem] tracking-widest">
                                 {t('platformMetrics')}
                             </div>
-                            <h2 style={{ fontSize: 'var(--h2-size)', fontWeight: 900, marginBottom: '0.5rem' }}>
+                            <h2 className="text-[length:var(--h2-size)] font-black mb-2">
                                 {t('realResults')}
                             </h2>
-                            <p style={{ opacity: 0.7, maxWidth: '700px', margin: '0 auto', fontSize: '0.95rem' }}>
+                            <p className="opacity-70 max-w-[700px] mx-auto text-[0.95rem]">
                                 {t('metricsDesc')}
                             </p>
                         </div>
 
                         {/* 2x2 Chart Grid - Horizontal Internal Layout */}
-                        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '1rem', marginBottom: '2rem' }}>
-                            <div style={{ display: 'grid', gridTemplateColumns: '1.2fr 0.8fr', gap: '1rem', alignItems: 'center' }}>
+                        <div className="grid grid-cols-[repeat(auto-fit,minmax(300px,1fr))] gap-4 mb-8">
+                            <div className="grid grid-cols-[1.2fr_0.8fr] gap-4 items-center">
                                 <ErrorRateArea height={180} />
-                                <div style={{ padding: '0.75rem', background: 'rgba(16, 185, 129, 0.05)', borderRadius: '0.75rem', border: '1px solid rgba(16, 185, 129, 0.2)' }}>
-                                    <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.25rem' }}>
-                                        <TrendingDown size={18} color="#10b981" />
-                                        <span style={{ fontSize: '1.25rem', fontWeight: 900, color: '#10b981' }}>-73%</span>
+                                <div className="p-3 bg-emerald-500/5 rounded-xl border border-emerald-500/20">
+                                    <div className="flex items-center gap-2 mb-1">
+                                        <TrendingDown size={18} className="text-emerald-500" />
+                                        <span className="text-xl font-black text-emerald-500">-73%</span>
                                     </div>
-                                    <p style={{ fontSize: '0.75rem', opacity: 0.7, margin: 0, lineHeight: 1.3 }}>
+                                    <p className="text-xs opacity-70 m-0 leading-tight">
                                         {t('metrics.errorReduction')}
                                     </p>
                                 </div>
                             </div>
 
-                            <div style={{ display: 'grid', gridTemplateColumns: '1.2fr 0.8fr', gap: '1rem', alignItems: 'center' }}>
+                            <div className="grid grid-cols-[1.2fr_0.8fr] gap-4 items-center">
                                 <UptimeTrend height={180} />
-                                <div style={{ padding: '0.75rem', background: 'rgba(59, 130, 246, 0.05)', borderRadius: '0.75rem', border: '1px solid rgba(59, 130, 246, 0.2)' }}>
-                                    <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.25rem' }}>
-                                        <Shield size={18} color="#3b82f6" />
-                                        <span style={{ fontSize: '1.25rem', fontWeight: 900, color: '#3b82f6' }}>99.99%</span>
+                                <div className="p-3 bg-blue-500/5 rounded-xl border border-blue-500/20">
+                                    <div className="flex items-center gap-2 mb-1">
+                                        <Shield size={18} className="text-blue-500" />
+                                        <span className="text-xl font-black text-blue-500">99.99%</span>
                                     </div>
-                                    <p style={{ fontSize: '0.75rem', opacity: 0.7, margin: 0, lineHeight: 1.3 }}>
+                                    <p className="text-xs opacity-70 m-0 leading-tight">
                                         {t('metrics.averageUptime')}
                                     </p>
                                 </div>
                             </div>
 
-                            <div style={{ display: 'grid', gridTemplateColumns: '1.2fr 0.8fr', gap: '1rem', alignItems: 'center' }}>
+                            <div className="grid grid-cols-[1.2fr_0.8fr] gap-4 items-center">
                                 <CostSavingsArea height={180} />
-                                <div style={{ padding: '0.75rem', background: 'rgba(245, 158, 11, 0.05)', borderRadius: '0.75rem', border: '1px solid rgba(245, 158, 11, 0.2)' }}>
-                                    <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.25rem' }}>
-                                        <DollarSign size={18} color="#f59e0b" />
-                                        <span style={{ fontSize: '1.25rem', fontWeight: 900, color: '#f59e0b' }}>$2.8M</span>
+                                <div className="p-3 bg-amber-500/5 rounded-xl border border-amber-500/20">
+                                    <div className="flex items-center gap-2 mb-1">
+                                        <DollarSign size={18} className="text-amber-500" />
+                                        <span className="text-xl font-black text-amber-500">$2.8M</span>
                                     </div>
-                                    <p style={{ fontSize: '0.75rem', opacity: 0.7, margin: 0, lineHeight: 1.3 }}>
+                                    <p className="text-xs opacity-70 m-0 leading-tight">
                                         {t('metrics.annualSavings')}
                                     </p>
                                 </div>
                             </div>
 
-                            <div style={{ display: 'grid', gridTemplateColumns: '1.2fr 0.8fr', gap: '1rem', alignItems: 'center' }}>
+                            <div className="grid grid-cols-[1.2fr_0.8fr] gap-4 items-center">
                                 <FeatureUsageBar height={180} />
-                                <div style={{ padding: '0.75rem', background: 'rgba(139, 92, 246, 0.05)', borderRadius: '0.75rem', border: '1px solid rgba(139, 92, 246, 0.2)' }}>
-                                    <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.25rem' }}>
-                                        <TrendingUp size={18} color="#8b5cf6" />
-                                        <span style={{ fontSize: '1.25rem', fontWeight: 900, color: '#8b5cf6' }}>87%</span>
+                                <div className="p-3 bg-violet-500/5 rounded-xl border border-violet-500/20">
+                                    <div className="flex items-center gap-2 mb-1">
+                                        <TrendingUp size={18} className="text-violet-500" />
+                                        <span className="text-xl font-black text-violet-500">87%</span>
                                     </div>
-                                    <p style={{ fontSize: '0.75rem', opacity: 0.7, margin: 0, lineHeight: 1.3 }}>
+                                    <p className="text-xs opacity-70 m-0 leading-tight">
                                         {t('metrics.adoptionRate')}
                                     </p>
                                 </div>
@@ -82,16 +83,16 @@ export default function CtaSection() {
                     </div>
 
                     {/* CTA Card */}
-                    <div className="card-cta" style={{ marginTop: '6rem' }}>
+                    <div className="card-cta mt-24">
                         <h2 className="mb-3">{t('title')}</h2>
                         <p className="text-section-lead mb-6">
                             {t('subtitle')}
                         </p>
                         <div className="flex justify-center gap-4 flex-wrap">
-                            <Link href="/onboarding" className="btn-primary" style={{ padding: '0.75rem 2.5rem', fontSize: '0.95rem', borderRadius: '0.75rem' }}>
+                            <Link href="/onboarding" className="btn-primary px-10 py-3 text-[0.95rem] rounded-xl">
                                 {t('primary')}
                             </Link>
-                            <Link href="/contact" className="btn-secondary" style={{ padding: '0.75rem 2.5rem', fontSize: '0.95rem', borderRadius: '0.75rem' }}>
+                            <Link href="/contact" className="btn-secondary px-10 py-3 text-[0.95rem] rounded-xl">
                                 {t('secondary')}
                             </Link>
                         </div>
@@ -99,11 +100,11 @@ export default function CtaSection() {
                             {t('disclaimer')}
                         </div>
                     </div>
-                </div>
+                </Container>
             </section>
 
             {/* STANDALONE SITEMAP / FOOTER SNAP SECTION */}
-            <section id="sitemap" className="snap-section" style={{ background: 'var(--background)', borderTop: '1px solid var(--card-border)', paddingTop: '2rem' }}>
+            <section id="sitemap" className="snap-section bg-background border-t border-card-border pt-8">
                 <Footer />
             </section>
         </>

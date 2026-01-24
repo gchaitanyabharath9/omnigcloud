@@ -68,9 +68,7 @@ export default async function PapersIndexPage({ params }: { params: Promise<{ lo
                                     href={`/research/papers/${paper.slug}`}
                                     className="group block p-8 rounded-2xl bg-card border border-border/50 hover:border-primary/50 transition-all hover:shadow-lg relative overflow-hidden"
                                 >
-                                    <div className="absolute top-0 right-0 p-4 opacity-10 font-black text-6xl text-primary select-none group-hover:scale-110 transition-transform duration-500">
-                                        {paper.id.toUpperCase()}
-                                    </div>
+
 
                                     <div className="relative z-10">
                                         <div className="flex flex-wrap items-center gap-4 mb-4 text-xs font-mono uppercase tracking-wider text-muted-foreground">
