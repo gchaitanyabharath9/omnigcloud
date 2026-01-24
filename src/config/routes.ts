@@ -71,6 +71,7 @@ export const PUBLIC_ROUTES_MANIFEST: RouteEntry[] = [
     { path: '/compliance', priority: 0.5, changeFreq: 'yearly' },
 
     // Others
+    { path: '/resources/blog', priority: 0.6, changeFreq: 'weekly' },
     { path: '/blog', priority: 0.6, changeFreq: 'weekly' },
     { path: '/case-studies', priority: 0.6, changeFreq: 'weekly' },
     { path: '/onboarding', priority: 0.6, changeFreq: 'monthly' },
