@@ -191,8 +191,9 @@ const nextConfig: any = {
         destination: '/:locale/blog',
         permanent: true,
       },
+      // Only redirect /news (without locale) if it's not matched by other rules
       {
-        source: '/news/:path*',
+        source: '/news',
         destination: '/en/blog',
         permanent: true,
       },
@@ -204,8 +205,8 @@ const nextConfig: any = {
         permanent: true,
       },
       {
-        source: '/:locale/resources/:path*',
-        destination: '/:locale/research',
+        source: '/resources',
+        destination: '/en/research',
         permanent: true,
       },
 
@@ -223,9 +224,9 @@ const nextConfig: any = {
         permanent: true,
       },
 
-      // FIX: Non-existent /platform/ai → /platform
+      // FIX: Base platform redirects correctly without blocking subpaths
       {
-        source: '/platform/:path*',
+        source: '/platform',
         destination: '/en/platform',
         permanent: true,
       },

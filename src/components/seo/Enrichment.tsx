@@ -89,7 +89,7 @@ export const HowItWorks = ({ pageKey }: { pageKey: string }) => {
                                 </div>
 
                                 {/* Right Column: Content */}
-                                <div className="flex-1">
+                                <div className="flex-1 md:pr-16">
                                     <h3 className="text-xl md:text-2xl font-bold mb-4 tracking-tight group-hover:text-primary transition-colors">
                                         {tSafe(t, `steps.${i}.title`, `Step ${i + 1}`)}
                                     </h3>

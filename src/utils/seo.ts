@@ -28,7 +28,7 @@ export interface SEOConfig {
 
 const SITE_NAME = 'OmniGCloud';
 const SITE_FULL_NAME = 'OmniGCloud Systems';
-const SITE_URL = 'https://omnigcloud.com';
+const SITE_URL = 'https://www.omnigcloud.com';
 const DEFAULT_OG_IMAGE = `${SITE_URL}/og-image.png`;
 const TWITTER_HANDLE = '@omnigcloud';
 

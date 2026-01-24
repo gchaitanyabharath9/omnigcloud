@@ -34,10 +34,29 @@ async function validateRoutes() {
     for (const route of PUBLIC_ROUTES_MANIFEST) {
         validPaths.push(route.path);
 
+        // Check for physical page.tsx or dynamic handle [slug]/page.tsx
         const relativePath = route.path === '' ? 'page.tsx' : path.join(route.path, 'page.tsx');
         const absolutePath = path.join(APP_DIR, relativePath);
 
-        if (!fs.existsSync(absolutePath)) {
+        let exists = fs.existsSync(absolutePath);
+
+        // Fallback: check if it's a dynamic news route
+        if (!exists && route.path.startsWith('/news/')) {
+            const dynamicPath = path.join(APP_DIR, 'news', '[slug]', 'page.tsx');
+            if (fs.existsSync(dynamicPath)) {
+                exists = true;
+            }
+        }
+
+        // Fallback: check if it's a dynamic research/papers route
+        if (!exists && route.path.startsWith('/research/papers/')) {
+            const dynamicPath = path.join(APP_DIR, 'research', 'papers', '[slug]', 'page.tsx');
+            if (fs.existsSync(dynamicPath)) {
+                exists = true;
+            }
+        }
+
+        if (!exists) {
             console.error(`❌ Missing page.tsx for route: "${route.path}"`);
             console.error(`   Expected: ${absolutePath}`);
             missingRoutes.push(route.path);

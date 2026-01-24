@@ -78,6 +78,12 @@ export const PUBLIC_ROUTES_MANIFEST: RouteEntry[] = [
     { path: '/founder', priority: 0.5, changeFreq: 'monthly' },
     { path: '/partners', priority: 0.5, changeFreq: 'monthly' },
     { path: '/publications', priority: 0.5, changeFreq: 'monthly' },
+
+    // News & Updates
+    { path: '/news/bank', priority: 0.6, changeFreq: 'monthly' },
+    { path: '/news/egress', priority: 0.6, changeFreq: 'monthly' },
+    { path: '/news/integration', priority: 0.6, changeFreq: 'monthly' },
+    { path: '/news/security', priority: 0.6, changeFreq: 'monthly' },
 ];
 
 // Routes that should be excluded from robots.txt crawling
@@ -88,8 +94,6 @@ export const PRIVATE_ROUTES = [
     '/ai-data',
     '/architecture',
     '/business-ideas',
-    '/news',
-    '/newsroom',
     '/staffing',
     '/use-cases',
     '/admin',

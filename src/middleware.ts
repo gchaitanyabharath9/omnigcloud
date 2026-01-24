@@ -16,25 +16,27 @@ export async function middleware(request: NextRequest) {
     if (isProduction && !isLocalhost && (protocol === 'http' || (host && host === 'omnigcloud.com'))) {
         const protocolPrefix = 'https://'
         const hostName = 'www.omnigcloud.com'
-        return NextResponse.redirect(`${protocolPrefix}${hostName}${url.pathname}${url.search}`, 301)
+        // If it's a root request on apex, go straight to /en on www
+        const targetPath = url.pathname === '/' ? '/en' : url.pathname
+        return NextResponse.redirect(`${protocolPrefix}${hostName}${targetPath}${url.search}`, 308)
     }
 
     // 2. Direct base domain / to /en (handled by next-intl usually, but being explicit)
     if (url.pathname === '/') {
         url.pathname = '/en'
-        return NextResponse.redirect(url, 301)
+        return NextResponse.redirect(url, 308)
     }
 
     // 3. Force canonical URLs (no trailing slashes except root)
     if (url.pathname.endsWith('/') && url.pathname !== '/') {
         url.pathname = url.pathname.slice(0, -1)
-        return NextResponse.redirect(url, 301)
+        return NextResponse.redirect(url, 308)
     }
 
     // 4. Force lowercase URLs for consistency
     if (url.pathname !== url.pathname.toLowerCase()) {
         url.pathname = url.pathname.toLowerCase()
-        return NextResponse.redirect(url, 301)
+        return NextResponse.redirect(url, 308)
     }
 
     // Add security headers

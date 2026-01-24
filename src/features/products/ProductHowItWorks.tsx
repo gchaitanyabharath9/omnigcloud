@@ -30,14 +30,14 @@ export const ProductHowItWorks = () => {
                                 0{i + 1}
                             </div>
 
-                            <div className="relative z-10 flex flex-col gap-4 pb-4">
+                            <div className="relative z-10 flex flex-col gap-4 pb-4 pr-12">
                                 <div className="text-[10px] uppercase tracking-[0.2em] text-primary font-black mb-1.5 opacity-80">
                                     {tSafe(t, `steps.${i}.title`, `Step ${i + 1}`)}
                                 </div>
-                                <h3 className="text-xl font-bold mb-2 group-hover:text-primary transition-colors pr-12">
+                                <h3 className="text-xl font-bold mb-2 group-hover:text-primary transition-colors">
                                     {tSafe(t, `steps.${i}.heading`, `Phase ${i + 1}`)}
                                 </h3>
-                                <p className="text-sm text-foreground/90 leading-relaxed font-medium max-w-[90%]">
+                                <p className="text-sm text-foreground/90 leading-relaxed font-medium">
                                     {tSafe(t, `steps.${i}.desc`, 'Optimizing your infrastructure for global compliance and resilience.')}
                                 </p>
                             </div>
