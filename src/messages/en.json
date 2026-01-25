@@ -608,7 +608,11 @@
       "nav": {
         "onboarding": "Onboarding"
       },
-      "title": "Data Residency Control"
+      "title": "title",
+      "category": "category",
+      "description": "description",
+      "lastUpdated": "lastUpdated",
+      "readTime": "readTime"
     },
     "Metadata": {
       "default": {
@@ -1247,13 +1251,6 @@
     "governingLaw": "Governing Law",
     "governingLawText": "Governing Law Text",
     "h1": "Common H1",
-    "header": {
-      "category": "category",
-      "description": "description",
-      "lastUpdated": "lastUpdated",
-      "readTime": "readTime",
-      "title": "title"
-    },
     "hero": {
       "author": "author",
       "badge": "Badge",
@@ -3014,21 +3011,43 @@
       "title": "Transparency"
     },
     "whitepaper": {
-      "charts": {
-        "compliance": {
-          "aso": "Aso",
-          "autonomous": "ASO (Autonomous)",
-          "figure": "Figure 6a: Longitudinal analysis of Compliance Drift over 12 months.",
-          "legacy": "Legacy (Manual Ops)",
-          "yAxis": "Compliance Score (%)"
+      "diagrams": {
+        "actionDesc": "Targeted API Call",
+        "actionTitle": "3. ACTION",
+        "automatedAudit": "Automated Audit Pass",
+        "cloudOpEx": "Cloud OpEx",
+        "clouds": {
+          "aws": "AWS",
+          "azure": "Azure",
+          "gcp": "GCP (Asia)"
         },
-        "cost": {
-          "aso": "ASO OpEx ($)",
-          "autonomous": "Charts Cost Autonomous",
-          "figure": "Figure 6b: Cost Scaling Curve - Legacy vs ASO (Logarithmic Efficiency Gain)",
-          "legacy": "Legacy OpEx ($)",
-          "yAxis": "Y Axis"
-        }
+        "complianceDesc": "Audit Logs",
+        "complianceRate": "Compliance Rate",
+        "complianceTitle": "Compliance",
+        "controlPlane": "AECP CONTROL PLANE",
+        "cycleTime": "Autonomous Control Loop Cycle Time: < 200ms",
+        "decisionDesc": "AECP Graph Engine",
+        "decisionEngine": "Decision Engine",
+        "decisionTitle": "2. DECISION",
+        "devOpsDesc": "Define Policy",
+        "devOpsTitle": "DevOps Team",
+        "federationApPolicy": "Policy: PERMISSIVE",
+        "federationApTitle": "AP-SOUTH-SHARED",
+        "federationEuPolicy": "Policy: GDPR-STRICT",
+        "federationEuTitle": "EU-CENTRAL-PRIVACY",
+        "federationProtocol": "Federated Trust Protocol (FTP) Active",
+        "federationUsPolicy": "Policy: FIPS-140-2",
+        "federationUsTitle": "US-EAST-SOVEREIGN",
+        "intentInterpreter": "Intent Interpreter",
+        "mttrDesc": "From 14 days to 4 minutes",
+        "mttrReduction": "MTTR Reduction",
+        "opexDesc": "Verified Arbitrage Savings",
+        "signalDesc": "Multi-cloud Telemetry",
+        "signalTitle": "1. SIGNAL",
+        "stateReconciliation": "State Reconciliation Loop",
+        "stateReconciliationDesc": "(Current State → Target State)",
+        "validation": "Validation Diagram",
+        "validationDesc": "Validation process diagram"
       }
     },
     "sidebar": {
@@ -4614,7 +4633,19 @@
           "q": "What is the uptime guarantee?"
         }
       },
-      "title": "Pricing F.A.Q"
+      "title": "Faq",
+      "q1": {
+        "a": "A",
+        "q": "Q"
+      },
+      "q2": {
+        "a": "A",
+        "q": "Q"
+      },
+      "q3": {
+        "a": "A",
+        "q": "Q"
+      }
     },
     "LeadCapture": {
       "cta": "Get Started",
@@ -4630,13 +4661,6 @@
       "button": "Explore Cta",
       "subtitle": "Empowering the next generation of regulated enterprise.",
       "title": "Cta"
-    },
-    "deepDive": {
-      "links": {
-        "blueprint": "Modernization Blueprint",
-        "finance": "Sovereign Finance",
-        "modernization": "Cloud Modernization"
-      }
     },
     "economy": {
       "sovereignty": {
@@ -4663,21 +4687,6 @@
       },
       "subtitle": "Our autonomous framework follows a rigorous 3-step synchronization process to ensure absolute sovereignty and compliance across your multi-cloud estate.",
       "title": "Value-Based Infrastructure Economy"
-    },
-    "faq": {
-      "q1": {
-        "a": "A",
-        "q": "Q"
-      },
-      "q2": {
-        "a": "A",
-        "q": "Q"
-      },
-      "q3": {
-        "a": "A",
-        "q": "Q"
-      },
-      "title": "Faq"
     },
     "footer": {
       "legal": "NO CREDIT CARD REQUIRED • SOC-2 COMPLIANT ONBOARDING"
@@ -6612,158 +6621,6 @@
       "title": "Telemetry"
     }
   },
-  "WhitePaper": {
-    "badge": "LATEST RESEARCH",
-    "caseStudies": {
-      "finance": {
-        "badge": "FINANCIAL SERVICES",
-        "desc": "Tier-1 bank automated GDPR, PCI-DSS, and SOC2 compliance across 45 cloud accounts, reducing audit prep from 6 weeks to 48 hours.",
-        "stat1": {
-          "label": "Annual Savings",
-          "value": "$2.4M"
-        },
-        "stat2": {
-          "label": "Implementation",
-          "value": "14 days"
-        },
-        "title": "Global Bank Achieves 99.99% Compliance"
-      },
-      "healthcare": {
-        "badge": "HEALTHCARE",
-        "desc": "Multi-national healthcare provider achieved HIPAA compliance across AWS, Azure, and on-premise systems with zero-trust architecture.",
-        "stat1": {
-          "label": "HIPAA Compliant",
-          "value": "100%"
-        },
-        "stat2": {
-          "label": "Records Protected",
-          "value": "3M+"
-        },
-        "title": "Hospital Chain Secures Patient Data"
-      },
-      "title": "Featured Implementation Case Studies"
-    },
-    "contribution": "Contribution",
-    "description": "A comprehensive framework for achieving mathematical certainty in data sovereignty across multi-cloud environments.",
-    "design_patterns": "Design Patterns",
-    "detailedDiagrams": {
-      "context": {
-        "clouds": {
-          "aws": "AWS",
-          "azure": "Azure",
-          "gcp": "GCP (Asia)"
-        },
-        "compliance": {
-          "desc": "Audit Logs",
-          "title": "Compliance"
-        },
-        "controlPlane": "AECP CONTROL PLANE",
-        "decisionEngine": "Decision Engine",
-        "devOps": {
-          "desc": "Define Policy",
-          "title": "DevOps Team"
-        },
-        "interpreter": "Intent Interpreter",
-        "reconciliation": {
-          "desc": "(Current State → Target State)",
-          "title": "State Reconciliation Loop"
-        }
-      },
-      "federation": {
-        "ap": {
-          "policy": "Policy: PERMISSIVE",
-          "title": "AP-SOUTH-SHARED"
-        },
-        "eu": {
-          "policy": "Policy: GDPR-STRICT",
-          "title": "EU-CENTRAL-PRIVACY"
-        },
-        "protocol": "Federated Trust Protocol (FTP) Active",
-        "us": {
-          "policy": "Policy: FIPS-140-2",
-          "title": "US-EAST-SOVEREIGN"
-        }
-      },
-      "governance": {
-        "action": {
-          "desc": "Targeted API Call",
-          "title": "3. ACTION"
-        },
-        "cycleTime": "Autonomous Control Loop Cycle Time: < 200ms",
-        "decision": {
-          "desc": "AECP Graph Engine",
-          "title": "2. DECISION"
-        },
-        "signal": {
-          "desc": "Multi-cloud Telemetry",
-          "title": "1. SIGNAL"
-        },
-        "validation": {
-          "desc": "State Confirmed",
-          "title": "4. VALIDATION"
-        }
-      },
-      "impact": {
-        "compliance": {
-          "desc": "Automated Audit Pass",
-          "title": "Compliance Rate",
-          "value": "99.7%"
-        },
-        "mttr": {
-          "desc": "From 14 days to 4 minutes",
-          "title": "MTTR Reduction",
-          "value": "-94%"
-        },
-        "opex": {
-          "desc": "Verified Arbitrage Savings",
-          "title": "Cloud OpEx",
-          "value": "-31%"
-        }
-      },
-      "security": {
-        "audit": {
-          "desc": "Every state change is cryptographically signed and stored in ledger.",
-          "title": "Immutable Audit"
-        },
-        "fence": {
-          "desc": "Geospatial policy enforcement prevents egress to non-compliant zones.",
-          "title": "Data Residency Fence"
-        },
-        "zeroTrust": {
-          "desc": "Identity is injected at runtime via SPIFFE/SPIRE. No static keys.",
-          "title": "Zero Trust Injection"
-        }
-      }
-    },
-    "download_subtitle": "Get the full technical specification, including architecture diagrams, decision frameworks, and implementation guides.",
-    "download_title": "Download the Whitepaper",
-    "footer": {
-      "_value": "Available in PDF / ePub formats.",
-      "copyright": "© 2026 OmniGCloud. All rights reserved."
-    },
-    "impact": {
-      "citations": {
-        "desc": "Referenced in cloud governance research",
-        "label": "Academic Citations",
-        "value": "847"
-      },
-      "downloads": {
-        "desc": "By CTOs, architects, and compliance officers",
-        "label": "Downloads",
-        "value": "12K+"
-      },
-      "implementations": {
-        "desc": "Framework adopted in production environments",
-        "label": "Enterprise Implementations",
-        "value": "340+"
-      },
-      "title": "Research Impact & Citations"
-    },
-    "pageCount": "42 Pages",
-    "peerReview": "Peer Reviewed",
-    "read_online": "Read Online",
-    "title": "The Autonomous Sovereign Cloud Protocol"
-  },
   "Whitepaper": {
     "abstract": {
       "content": "The mathematical foundation of autonomous cloud sovereignty.",
@@ -6899,25 +6756,30 @@
       "title": "Industry Feasibility"
     },
     "footer": {
-      "copyright": "© 2026 OmniGCloud. All rights reserved.",
-      "lab": "OmniGCloud Research Lab"
+      "_value": "Available in PDF / ePub formats.",
+      "copyright": "© 2026 OmniGCloud. All rights reserved."
     },
     "footerDetails": {
       "copyright": "© 2026 OmniGCloud. All rights reserved.",
       "lab": "OmniGCloud Research Lab"
     },
     "impact": {
-      "business_value": "OmniGCloud is the engine of the sovereign enterprise.",
-      "metrics": {
-        "cost": "$2M+",
-        "cost_label": "Cost Savings",
-        "efficiency": "95%",
-        "efficiency_label": "Efficiency",
-        "security": "Gold Standard",
-        "security_label": "Security Compliance"
+      "citations": {
+        "desc": "Referenced in cloud governance research",
+        "label": "Academic Citations",
+        "value": "847"
       },
-      "p1": "Quantifiable gains in security and efficiency.",
-      "title": "Strategic Impact"
+      "downloads": {
+        "desc": "By CTOs, architects, and compliance officers",
+        "label": "Downloads",
+        "value": "12K+"
+      },
+      "implementations": {
+        "desc": "Framework adopted in production environments",
+        "label": "Enterprise Implementations",
+        "value": "340+"
+      },
+      "title": "Research Impact & Citations"
     },
     "introduction": {
       "p1": "The standard for autonomous cloud governance.",
@@ -7255,54 +7117,139 @@
     "title": "The Autonomous Sovereign Cloud Protocol",
     "version": "8.4 (Stable)",
     "version_label": "Whitepaper Version_label",
-    "watermark": "OMNIGCLOUD RESEARCH  •  COPYRIGHT 2026"
-  },
-  "content": "Decouple your business logic from vendor-specific APIs and regain full control of your digital estate.",
-  "cta": "Get Started",
-  "desc": "Enterprise Grade Sovereignty",
-  "design_patterns": "Design Patterns",
-  "docs": {
-    "whitepaper": {
-      "diagrams": {
-        "actionDesc": "Targeted API Call",
-        "actionTitle": "3. ACTION",
-        "automatedAudit": "Automated Audit Pass",
-        "cloudOpEx": "Cloud OpEx",
+    "watermark": "OMNIGCLOUD RESEARCH  •  COPYRIGHT 2026",
+    "badge": "LATEST RESEARCH",
+    "caseStudies": {
+      "finance": {
+        "badge": "FINANCIAL SERVICES",
+        "desc": "Tier-1 bank automated GDPR, PCI-DSS, and SOC2 compliance across 45 cloud accounts, reducing audit prep from 6 weeks to 48 hours.",
+        "stat1": {
+          "label": "Annual Savings",
+          "value": "$2.4M"
+        },
+        "stat2": {
+          "label": "Implementation",
+          "value": "14 days"
+        },
+        "title": "Global Bank Achieves 99.99% Compliance"
+      },
+      "healthcare": {
+        "badge": "HEALTHCARE",
+        "desc": "Multi-national healthcare provider achieved HIPAA compliance across AWS, Azure, and on-premise systems with zero-trust architecture.",
+        "stat1": {
+          "label": "HIPAA Compliant",
+          "value": "100%"
+        },
+        "stat2": {
+          "label": "Records Protected",
+          "value": "3M+"
+        },
+        "title": "Hospital Chain Secures Patient Data"
+      },
+      "title": "Featured Implementation Case Studies"
+    },
+    "contribution": "Contribution",
+    "description": "A comprehensive framework for achieving mathematical certainty in data sovereignty across multi-cloud environments.",
+    "design_patterns": "Design Patterns",
+    "detailedDiagrams": {
+      "context": {
         "clouds": {
           "aws": "AWS",
           "azure": "Azure",
           "gcp": "GCP (Asia)"
         },
-        "complianceDesc": "Audit Logs",
-        "complianceRate": "Compliance Rate",
-        "complianceTitle": "Compliance",
+        "compliance": {
+          "desc": "Audit Logs",
+          "title": "Compliance"
+        },
         "controlPlane": "AECP CONTROL PLANE",
-        "cycleTime": "Autonomous Control Loop Cycle Time: < 200ms",
-        "decisionDesc": "AECP Graph Engine",
         "decisionEngine": "Decision Engine",
-        "decisionTitle": "2. DECISION",
-        "devOpsDesc": "Define Policy",
-        "devOpsTitle": "DevOps Team",
-        "federationApPolicy": "Policy: PERMISSIVE",
-        "federationApTitle": "AP-SOUTH-SHARED",
-        "federationEuPolicy": "Policy: GDPR-STRICT",
-        "federationEuTitle": "EU-CENTRAL-PRIVACY",
-        "federationProtocol": "Federated Trust Protocol (FTP) Active",
-        "federationUsPolicy": "Policy: FIPS-140-2",
-        "federationUsTitle": "US-EAST-SOVEREIGN",
-        "intentInterpreter": "Intent Interpreter",
-        "mttrDesc": "From 14 days to 4 minutes",
-        "mttrReduction": "MTTR Reduction",
-        "opexDesc": "Verified Arbitrage Savings",
-        "signalDesc": "Multi-cloud Telemetry",
-        "signalTitle": "1. SIGNAL",
-        "stateReconciliation": "State Reconciliation Loop",
-        "stateReconciliationDesc": "(Current State → Target State)",
-        "validation": "Validation Diagram",
-        "validationDesc": "Validation process diagram"
+        "devOps": {
+          "desc": "Define Policy",
+          "title": "DevOps Team"
+        },
+        "interpreter": "Intent Interpreter",
+        "reconciliation": {
+          "desc": "(Current State → Target State)",
+          "title": "State Reconciliation Loop"
+        }
+      },
+      "federation": {
+        "ap": {
+          "policy": "Policy: PERMISSIVE",
+          "title": "AP-SOUTH-SHARED"
+        },
+        "eu": {
+          "policy": "Policy: GDPR-STRICT",
+          "title": "EU-CENTRAL-PRIVACY"
+        },
+        "protocol": "Federated Trust Protocol (FTP) Active",
+        "us": {
+          "policy": "Policy: FIPS-140-2",
+          "title": "US-EAST-SOVEREIGN"
+        }
+      },
+      "governance": {
+        "action": {
+          "desc": "Targeted API Call",
+          "title": "3. ACTION"
+        },
+        "cycleTime": "Autonomous Control Loop Cycle Time: < 200ms",
+        "decision": {
+          "desc": "AECP Graph Engine",
+          "title": "2. DECISION"
+        },
+        "signal": {
+          "desc": "Multi-cloud Telemetry",
+          "title": "1. SIGNAL"
+        },
+        "validation": {
+          "desc": "State Confirmed",
+          "title": "4. VALIDATION"
+        }
+      },
+      "impact": {
+        "compliance": {
+          "desc": "Automated Audit Pass",
+          "title": "Compliance Rate",
+          "value": "99.7%"
+        },
+        "mttr": {
+          "desc": "From 14 days to 4 minutes",
+          "title": "MTTR Reduction",
+          "value": "-94%"
+        },
+        "opex": {
+          "desc": "Verified Arbitrage Savings",
+          "title": "Cloud OpEx",
+          "value": "-31%"
+        }
+      },
+      "security": {
+        "audit": {
+          "desc": "Every state change is cryptographically signed and stored in ledger.",
+          "title": "Immutable Audit"
+        },
+        "fence": {
+          "desc": "Geospatial policy enforcement prevents egress to non-compliant zones.",
+          "title": "Data Residency Fence"
+        },
+        "zeroTrust": {
+          "desc": "Identity is injected at runtime via SPIFFE/SPIRE. No static keys.",
+          "title": "Zero Trust Injection"
+        }
       }
-    }
+    },
+    "download_subtitle": "Get the full technical specification, including architecture diagrams, decision frameworks, and implementation guides.",
+    "download_title": "Download the Whitepaper",
+    "pageCount": "42 Pages",
+    "peerReview": "Peer Reviewed",
+    "read_online": "Read Online"
   },
+  "content": "Decouple your business logic from vendor-specific APIs and regain full control of your digital estate.",
+  "cta": "Get Started",
+  "desc": "Enterprise Grade Sovereignty",
+  "design_patterns": "Design Patterns",
   "download_title": "Download Whitepaper",
   "items": "Items",
   "read_online": "Read Online",
