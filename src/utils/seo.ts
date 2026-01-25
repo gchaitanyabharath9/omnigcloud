@@ -11,6 +11,8 @@
 
 import { Metadata } from "next";
 
+import { APP_CONFIG } from "@/config/app-config";
+
 export interface SEOConfig {
   title: string;
   description: string;
@@ -28,7 +30,8 @@ export interface SEOConfig {
 
 const SITE_NAME = "OmniGCloud";
 const SITE_FULL_NAME = "OmniGCloud Systems";
-const SITE_URL = "https://www.omnigcloud.com";
+// Use centralized config for site URL
+const SITE_URL = APP_CONFIG.siteUrl;
 const DEFAULT_OG_IMAGE = `${SITE_URL}/og-image.png`;
 const TWITTER_HANDLE = "@omnigcloud";
 
@@ -53,31 +56,27 @@ export function generateSEOMetadata(config: SEOConfig, locale: string = "en"): M
 
   const fullTitle = `${SITE_NAME} – ${title}`;
 
-  // Improved canonical handling: if it starts with /, prepend SITE_URL
-  let finalCanonical = canonical || `/${locale}`;
-  if (finalCanonical.startsWith("/")) {
-    finalCanonical = `${SITE_URL}${finalCanonical}`;
-  }
+  // Improved canonical handling: use absoluteUrl helper
+  const finalCanonical = APP_CONFIG.absoluteUrl(canonical || `/${locale}`);
 
   // Supported locales for hreflang
-  const locales = ["en", "es", "fr", "de", "zh", "hi", "ja", "ko"];
   const languages: Record<string, string> = {};
 
   // Extract the path after locale from canonical to generate alternates
-  // Fix(seo): Escape hostname regex for omnigcloud.com to prevent over-matching (CodeQL alert #46, #47)
-  // Matches ONLY the official site domain with a 2-letter locale and optional sub-path.
-  // Robust escaping: any character that could be interpreted as a regex special character is escaped.
+  // Robust escaping logic centralized via config base URL
   const escapeRegex = (str: string) => str.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
-  const escapedSiteUrl = escapeRegex(SITE_URL).replace("www\\.", "(www\\.)?");
+  const escapedSiteUrl = escapeRegex(SITE_URL);
+
+  // Match path after locale
   const pathAfterLocaleMatch = finalCanonical.match(
     new RegExp(`^${escapedSiteUrl}/[a-z]{2}(/.*)?$`)
   );
   const pathAfterLocale = pathAfterLocaleMatch ? pathAfterLocaleMatch[1] || "" : "";
 
-  locales.forEach((l) => {
+  APP_CONFIG.locales.forEach((l) => {
     languages[l] = `${SITE_URL}/${l}${pathAfterLocale}`;
   });
-  languages["x-default"] = `${SITE_URL}/en${pathAfterLocale}`;
+  languages["x-default"] = `${SITE_URL}/${APP_CONFIG.defaultLocale}${pathAfterLocale}`;
 
   // Ensure keywords is an array even if it's an object from next-intl
   const keywordsArray = Array.isArray(keywords)

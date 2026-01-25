@@ -2,16 +2,15 @@ import { NextResponse } from "next/server";
 import type { NextRequest } from "next/server";
 import createMiddleware from "next-intl/middleware";
 
-import { getRateLimiter } from "./lib/rate-limit";
+import { APP_CONFIG } from "@/config/app-config";
 
-const locales = ["en", "es", "fr", "de", "zh", "hi", "ja", "ko"];
-const defaultLocale = "en";
+import { getRateLimiter } from "./lib/rate-limit";
 
 const limiter = getRateLimiter();
 
 const intlMiddleware = createMiddleware({
-  locales,
-  defaultLocale,
+  locales: APP_CONFIG.locales,
+  defaultLocale: APP_CONFIG.defaultLocale,
 });
 
 export async function coreMiddleware(request: NextRequest) {

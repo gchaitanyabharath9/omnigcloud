@@ -64,8 +64,15 @@ export default function Breadcrumb() {
 
           // Try to translate the segment, fallback to formatted segment name
           let name = t(segment);
-          if (name === `Breadcrumb.${segment}`) {
-            name = segment.charAt(0).toUpperCase() + segment.slice(1).replace(/-/g, " ");
+          if (name === `Breadcrumb.${segment}` || !name) {
+            const acronyms = ["CIO", "AI", "ML", "AWS", "GCP", "API", "IT", "ROI", "SLA"];
+            name = segment
+              .split("-")
+              .map((word) => {
+                const upper = word.toUpperCase();
+                return acronyms.includes(upper) ? upper : word.charAt(0).toUpperCase() + word.slice(1);
+              })
+              .join(" ");
           }
 
           return (

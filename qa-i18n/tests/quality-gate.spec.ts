@@ -8,7 +8,7 @@ async function waitForStableHydration(page: Page) {
   await Promise.race([
     page.waitForSelector("#playground", { state: "attached", timeout: 15000 }),
     page.waitForSelector("text=How It Works", { state: "attached", timeout: 15000 }),
-  ]).catch(() => {}); // Ignore race timeout if one fails but other succeeds
+  ]).catch(() => { }); // Ignore race timeout if one fails but other succeeds
 
   const target = page.locator("#playground");
   if ((await target.count()) > 0) {
@@ -145,7 +145,7 @@ test.describe("Quality Gate - Core Navigation & UI", () => {
         // Open language switcher
         const switcher = page.locator("#language-switcher-btn");
         await switcher.waitFor({ state: "visible", timeout: 10000 });
-        await switcher.click({ force: true });
+        await switcher.dispatchEvent("click");
         await page.waitForTimeout(500); // Wait for dropdown animation
 
         // Select target locale by ID which is unique

@@ -2,7 +2,7 @@
 
 import { Link, usePathname } from "@/navigation";
 import { useSearchParams } from "next/navigation";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { ChevronDown } from "lucide-react";
 import { useLocale } from "next-intl";
 
@@ -22,9 +22,14 @@ export default function LanguageSwitcher() {
   const pathname = usePathname();
   const searchParams = useSearchParams();
   const [isOpen, setIsOpen] = useState(false);
+  const [hash, setHash] = useState("");
 
   const query = Object.fromEntries(searchParams.entries());
   const currentLang = languages.find((l) => l.code === locale) || languages[0];
+
+  useEffect(() => {
+    setHash(window.location.hash);
+  }, []);
 
   return (
     <div style={{ position: "relative" }}>
@@ -75,23 +80,22 @@ export default function LanguageSwitcher() {
           }}
         >
           {languages.map((lang) => {
-            // In next-intl, Link handles the hash separately or as part of href object if supported
-            // We use a safe check for window
-            const currentHash =
-              typeof window !== "undefined" ? window.location.hash.replace("#", "") : "";
-
             return (
-              <Link
+              <a
                 key={lang.code}
                 id={`lang-switch-${lang.code}`}
-                href={{
-                  pathname: pathname,
-                  query: query,
-                  hash: currentHash,
+                href={`/${lang.code}${pathname}${new URLSearchParams(query as any).toString()
+                    ? `?${new URLSearchParams(query as any).toString()}`
+                    : ""
+                  }${hash}`}
+                onClick={(e) => {
+                  e.preventDefault();
+                  // Force hard navigation to ensure hash is respected by browser native behavior
+                  const queryString = new URLSearchParams(query as any).toString();
+                  window.location.href = `/${lang.code}${pathname}${queryString ? `?${queryString}` : ""
+                    }${window.location.hash}`;
+                  setIsOpen(false);
                 }}
-                locale={lang.code as any}
-                onClick={() => setIsOpen(false)}
-                scroll={false}
                 style={{
                   display: "flex",
                   alignItems: "center",
@@ -124,7 +128,7 @@ export default function LanguageSwitcher() {
                     }}
                   />
                 )}
-              </Link>
+              </a>
             );
           })}
         </div>
