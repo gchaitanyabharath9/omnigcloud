@@ -351,37 +351,6 @@ NEXT_PUBLIC_GIT_COMMIT=abc123def
 
 ---
 
-## 🎓 EB-1A Projectable Features
-
-### Original Contributions
-
-1. **Autonomous Sovereign Orchestration Framework**: Novel architecture for multi-cloud governance
-2. **PII-Safe Observability**: Automatic email masking and sensitive field removal
-3. **Pluggable Rate Limiting**: Redis-backed with graceful fallback
-4. **Multilingual Enterprise SaaS**: 7 locales with 100% Western European coverage
-
-### Technical Excellence
-
-- **Zero TypeScript Errors**: Strict type safety throughout
-- **100% API Validation Coverage**: Zod schemas on all endpoints
-- **Sub-50ms Observability Overhead**: Production-ready performance
-- **Prometheus-Compatible Metrics**: Industry-standard export format
-
-### Reproducibility
-
-- **734 LOC Core Components**: Fully documented and tested
-- **Comprehensive Documentation**: 4 major docs (OBSERVABILITY.md, TRUST_PAGES.md, SECURITY.md, whitepaper)
-- **Open Source**: MIT licensed, community-driven
-
-### Industry Impact
-
-- **Enterprise-Grade Security**: CSP, security headers, PII protection
-- **Compliance-Ready**: GDPR active, SOC 2 in progress
-- **Monetization-Capable**: Stripe integration, entitlement gating
-- **SEO-Optimized**: Multilingual sitemaps, hreflang, canonical URLs
-
----
-
 ## 📚 Documentation & Reports
 
 Detailed documentation, verification reports, and project status tracking are located in the [Documentation Index](./docs/00-index.md).
@@ -391,7 +360,6 @@ Detailed documentation, verification reports, and project status tracking are lo
 - **Research & Observability**: [docs/research/OBSERVABILITY.md](./docs/research/OBSERVABILITY.md)
 - **Trust & Compliance**: [docs/TRUST_PAGES.md](./docs/TRUST_PAGES.md)
 - **Security**: [SECURITY.md](./SECURITY.md)
-- **Whitepaper**: [docs/whitepaper/G-Framework-ASO.md](./docs/whitepaper/G-Framework-ASO.md)
 
 ---
 

@@ -94,7 +94,7 @@ docs/
 │   ├── TECHNICAL-PAPER-Security-Framework.md
 │   └── [10 other research docs]
 ├── legal/                         # Legal exhibits (EXISTING)
-│   ├── EB1A-Evidence-Documentation.md
+│   ├── Technical-Evidence-Documentation.md
 │   └── CREDIBILITY-AUDIT.md
 ├── guides/                        # How-to guides (EXISTING)
 │   └── [15 guide files]
