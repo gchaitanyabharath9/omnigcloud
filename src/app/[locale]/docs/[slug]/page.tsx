@@ -12,6 +12,12 @@ interface DocMetadata {
   icon: React.ReactNode;
 }
 
+import { APP_CONFIG } from "@/config/app-config";
+
+// ... [imports]
+
+// ... [interface]
+
 export async function generateMetadata({
   params,
 }: {
@@ -29,7 +35,7 @@ export async function generateMetadata({
       title,
       description,
       keywords: [...SEO_KEYWORDS.modernization, "Sovereign Documentation", slug],
-      canonical: `https://www.omnigcloud.com/${locale}/docs/${slug}`,
+      canonical: APP_CONFIG.absoluteUrl(`/${locale}/docs/${slug}`),
     },
     locale
   );
@@ -133,8 +139,7 @@ export default async function DocDetailPage({
 }
 
 export async function generateStaticParams() {
-  const locales = ["en", "es", "fr", "de", "zh", "hi", "ja", "ko"];
   const slugs = ["architecture", "guide", "api", "governance"];
 
-  return locales.flatMap((locale) => slugs.map((slug) => ({ locale, slug })));
+  return APP_CONFIG.locales.flatMap((locale) => slugs.map((slug) => ({ locale, slug })));
 }

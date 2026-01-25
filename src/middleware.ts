@@ -2,28 +2,34 @@ import { NextResponse } from "next/server";
 import { NextRequest } from "next/server";
 import { coreMiddleware } from "./core-middleware";
 
+import { APP_CONFIG } from "@/config/app-config";
+
 export async function middleware(request: NextRequest) {
   const url = request.nextUrl.clone();
   const host = request.headers.get("host");
   const protocol = request.headers.get("x-forwarded-proto") || "https";
 
-  // 1. Enforce HTTPS and WWW
-  // Redirect http -> https OR omnigcloud.com -> www.omnigcloud.com
+  // 1. Enforce HTTPS and Canonical Host
+  // Redirect http -> https OR alternate host -> canonical host
   // Only apply in production environments and NOT to localhost
   const isProduction = process.env.NODE_ENV === "production";
   const isLocalhost =
     host && (host.includes("localhost") || host.includes("127.0.0.1") || host.includes("::1"));
 
-  if (
-    isProduction &&
-    !isLocalhost &&
-    (protocol === "http" || (host && host === "omnigcloud.com"))
-  ) {
-    const protocolPrefix = "https://";
-    const hostName = "www.omnigcloud.com";
-    // If it's a root request on apex, go straight to /en on www
-    const targetPath = url.pathname === "/" ? "/en" : url.pathname;
-    return NextResponse.redirect(`${protocolPrefix}${hostName}${targetPath}${url.search}`, 308);
+  if (isProduction && !isLocalhost && host) {
+    const currentOrigin = `${protocol}://${host}`;
+    const canonicalOrigin = APP_CONFIG.siteUrl;
+
+    // Check if we need to redirect due to protocol (http) or host (non-canonical)
+    const isHttp = protocol === "http";
+    const isNonCanonicalHost = host !== new URL(canonicalOrigin).host;
+
+    if (isHttp || isNonCanonicalHost) {
+      // If it's a root request on apex, go straight to default locale if needed 
+      // (logic preserved from original, but simplified to just path preservation usually)
+      const targetPath = url.pathname === "/" ? "/en" : url.pathname;
+      return NextResponse.redirect(`${canonicalOrigin}${targetPath}${url.search}`, 308);
+    }
   }
 
   // 2. Direct base domain / to /en (handled by next-intl usually, but being explicit)
@@ -63,8 +69,8 @@ export async function middleware(request: NextRequest) {
   response.headers.set("Referrer-Policy", "strict-origin-when-cross-origin");
 
   // Add canonical header for SEO
-  // We utilize the original request URL for the canonical tag - ALWAYS point to www version
-  response.headers.set("Link", `<https://www.omnigcloud.com${url.pathname}>; rel="canonical"`);
+  // We utilize the original request URL for the canonical tag - ALWAYS point to canonical version
+  response.headers.set("Link", `<${APP_CONFIG.siteUrl}${url.pathname}>; rel="canonical"`);
 
   return response;
 }

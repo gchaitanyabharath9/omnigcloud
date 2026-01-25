@@ -92,7 +92,7 @@ export default function LanguageSwitcher() {
                   // Force hard navigation to ensure hash is respected by browser native behavior
                   window.location.href = `/${lang.code}${pathname}?${new URLSearchParams(
                     query as any
-                  ).toString()}${hash}`;
+                  ).toString()}${window.location.hash}`;
                   setIsOpen(false);
                 }}
                 style={{
