@@ -255,8 +255,8 @@
         "cloudProvider": {
           "label": "Primary Cloud Provider (JA)",
           "options": {
-            "aws": "AWS (JA)",
-            "azure": "Azure (JA)",
+            "aws": "OmniGCloud Aws",
+            "azure": "OmniGCloud Azure",
             "gcp": "Google Cloud (JA)",
             "hybrid": "Hybrid / Multi-Cloud (JA)"
           }
@@ -325,7 +325,7 @@
       "footer": {
         "agreement": "By registering, you agree to our (JA)",
         "already": "Already have an account? (JA)",
-        "and": "and (JA)",
+        "and": "OmniGCloud And",
         "privacy": "Privacy Policy (JA)",
         "signin": "Sign in (JA)",
         "terms": "Terms of Service (JA)"
@@ -428,34 +428,34 @@
       }
     },
     "ui": {
-      "filter": "Filter (JA)",
+      "filter": "Resource Filtering",
       "readMore": "Read More (JA)"
     }
   },
   "Breadcrumb": {
-    "blog": "Blog Details (JA)",
-    "company": "Company Details (JA)",
-    "compliance_maps": "Compliance Maps (JA)",
-    "contact": "Contact Details (JA)",
-    "dashboard": "Dashboard Details (JA)",
-    "distributed-systems-resilience": "Distributed Systems Resilience",
-    "docs": "Documentation (JA)",
-    "frameworks": "Frameworks Details (JA)",
-    "home": "Home Details (JA)",
-    "industries": "Industries Details (JA)",
-    "onboarding": "Onboarding Details (JA)",
-    "papers": "Papers Details (JA)",
-    "platform": "Platform Details (JA)",
-    "pricing": "Pricing Details (JA)",
-    "products": "Products Details (JA)",
-    "research": "Research Details (JA)",
-    "resources": "Resources Details (JA)",
-    "services": "Services Details (JA)",
-    "solutions": "Solutions Details (JA)",
-    "whitepaper": "Whitepaper Details (JA)",
     "a1-cloud-native-enterprise-reference": "Cloud-Native Enterprise Reference (JA)",
     "a4-platform-governance-multicloud-hybrid": "Platform Governance & Hybrid Cloud (JA)",
-    "founder": "Founder's Vision (JA)"
+    "blog": "OmniGCloud Blog",
+    "company": "OmniGCloud Company",
+    "compliance_maps": "Compliance Maps (JA)",
+    "contact": "OmniGCloud Contact",
+    "dashboard": "OmniGCloud Dashboard",
+    "distributed-systems-resilience": "Distributed Systems Resilience",
+    "docs": "Documentation (JA)",
+    "founder": "Founder's Vision (JA)",
+    "frameworks": "OmniGCloud Frameworks",
+    "home": "OmniGCloud Home",
+    "industries": "OmniGCloud Industries",
+    "onboarding": "OmniGCloud Onboarding",
+    "papers": "OmniGCloud Papers",
+    "platform": "OmniGCloud Platform",
+    "pricing": "OmniGCloud Pricing",
+    "products": "OmniGCloud Products",
+    "research": "OmniGCloud Research",
+    "resources": "OmniGCloud Resources",
+    "services": "OmniGCloud Services",
+    "solutions": "OmniGCloud Solutions",
+    "whitepaper": "OmniGCloud Whitepaper"
   },
   "BusinessIdeas": {
     "cards": {
@@ -486,7 +486,7 @@
   "Capabilities": {
     "assessment": "Need a custom assessment? (JA)",
     "cta": "View All Products (JA)",
-    "explore": "Explore Details (JA)",
+    "explore": "OmniGCloud Explore",
     "subtitle": "Explore the building blocks of our sovereign cloud platform. (JA)",
     "tag": "Capabilities (JA)",
     "talkToExpert": "Talk to a Cloud Expert (JA)",
@@ -574,12 +574,12 @@
       "title": "Global Impact Studies (JA)"
     },
     "labels": {
-      "challenge": "CHALLENGE (JA)",
+      "challenge": "OmniGCloud Challenge",
       "impact": "Impact Analysis (JA)",
       "request": "Request Documentation (JA)",
       "sitemapDir": "Success Directory (JA)",
       "sitemapTitle": "Global Impact Sitemap (JA)",
-      "solution": "SOLUTION (JA)",
+      "solution": "OmniGCloud Solution",
       "validated": "Validated Performance Data (JA)",
       "whitepaper": "Sovereignty Whitepaper (JA)",
       "whitepaperDesc": "Detailed technical breakdown of the architectural migration and compliance framework. (JA)"
@@ -593,7 +593,7 @@
       "gcp": "Google Cloud (JA)",
       "k8s": "CNCF (JA)",
       "openshift": "RedHat (JA)",
-      "oracle": "Oracle (JA)"
+      "oracle": "OmniGCloud Oracle"
     },
     "tag": "Expertise & Validation (JA)",
     "title": "Certified Across the Global Cloud Ecosystem (JA)"
@@ -604,11 +604,11 @@
   "Common": {
     "AboveTheFold": "Above The Fold (JA)",
     "Header": {
-      "menu_accessibility_label": "Menu_accessibility_label Details (JA)",
+      "menu_accessibility_label": "OmniGCloud Menu_accessibility_label",
       "nav": {
-        "onboarding": "Onboarding Details (JA)"
+        "onboarding": "OmniGCloud Onboarding"
       },
-      "title": "Data Residency Control (JA)"
+      "title": "Sovereign Framework Control"
     },
     "Metadata": {
       "default": {
@@ -622,18 +622,18 @@
       "paragraph2": "Second paragraph of abstract (JA)",
       "title": "Abstract (JA)"
     },
-    "acceptance": "Acceptance Details (JA)",
+    "acceptance": "OmniGCloud Acceptance",
     "acceptanceText": "Acceptance Text (JA)",
     "accessControls": "Access Controls (JA)",
     "accountData": "Account Data (JA)",
     "accountDataText": "Account Data Text (JA)",
-    "active": "Active Details (JA)",
+    "active": "OmniGCloud Active",
     "advancedDescription": "Advanced Description (JA)",
     "advancedSecurity": "Advanced Security (JA)",
     "allIndustries": "All Industries (JA)",
     "allUseCases": "All Use Cases (JA)",
     "appliedPapers": {
-      "title": "title Details (JA)"
+      "title": "Sovereign Framework Control"
     },
     "architecture": {
       "control_plane": {
@@ -659,17 +659,17 @@
         "2": "Item 2 (JA)"
       },
       "challengeTitle": "Challenge Title (JA)",
-      "cta": "Cta (JA)",
+      "cta": "Get Started",
       "docsLinkPrefix": "Docs Link Prefix (JA)",
       "docsLinkSuffix": "Docs Link Suffix (JA)",
       "docsLinkText": "Docs Link Text (JA)",
       "impactDesc": "Impact Desc (JA)",
       "impactTitle": "Impact Title (JA)",
-      "intro": "Intro (JA)",
+      "intro": "OmniGCloud Intro",
       "minRead": "Min Read (JA)",
-      "quote": "Quote (JA)",
+      "quote": "OmniGCloud Quote",
       "quoteAuthor": "Quote Author (JA)",
-      "share": "Share (JA)",
+      "share": "OmniGCloud Share",
       "solutionDesc": "Solution Desc (JA)",
       "solutionTitle": "Solution Title (JA)"
     },
@@ -696,30 +696,30 @@
       },
       "title": "Aso Title (JA)"
     },
-    "audit": "Audit Details (JA)",
+    "audit": "OmniGCloud Audit",
     "auditText": "Audit Text (JA)",
-    "auth1": "Auth1 Details (JA)",
-    "auth2": "Auth2 Details (JA)",
-    "auth3": "Auth3 Details (JA)",
-    "authentication": "Authentication Details (JA)",
+    "auth1": "OmniGCloud Auth1",
+    "auth2": "OmniGCloud Auth2",
+    "auth3": "OmniGCloud Auth3",
+    "authentication": "OmniGCloud Authentication",
     "authenticationText": "Authentication Text (JA)",
     "author": {
       "bio": "Specializing in distributed systems, sovereign cloud governance, and AI-driven enterprise modernization. (JA)",
       "name": "CHAITANYA BHARATH GOPU (JA)",
       "role": "Principal Cloud Architect (JA)"
     },
-    "author_label": "Author_label Details (JA)",
-    "authorization": "Authorization Details (JA)",
-    "authz1": "Authz1 Details (JA)",
-    "authz2": "Authz2 Details (JA)",
-    "authz3": "Authz3 Details (JA)",
+    "author_label": "OmniGCloud Author_label",
+    "authorization": "OmniGCloud Authorization",
+    "authz1": "OmniGCloud Authz1",
+    "authz2": "OmniGCloud Authz2",
+    "authz3": "OmniGCloud Authz3",
     "backToRepository": "Back To Repository (JA)",
-    "backups": "Backups Details (JA)",
+    "backups": "OmniGCloud Backups",
     "backupsText": "Backups Text (JA)",
     "badge": {
       "_value": "Badge Details (JA)",
-      "standard": "Standard (JA)",
-      "version": "Version (JA)"
+      "standard": "OmniGCloud Standard",
+      "version": "OmniGCloud Version"
     },
     "banner": {
       "cta": "Learn More (JA)",
@@ -728,64 +728,64 @@
     },
     "body": {
       "dist1": {
-        "title": "title Details (JA)"
+        "title": "Sovereign Framework Control"
       },
       "dist2": {
-        "title": "title Details (JA)"
+        "title": "Sovereign Framework Control"
       },
       "dist3": {
-        "title": "title Details (JA)"
+        "title": "Sovereign Framework Control"
       },
       "dist4": {
-        "title": "title Details (JA)"
+        "title": "Sovereign Framework Control"
       },
-      "exitGateText": "exitGateText Details (JA)",
-      "exitGateTitle": "exitGateTitle Details (JA)",
-      "frameworkStepsTitle": "frameworkStepsTitle Details (JA)",
+      "exitGateText": "OmniGCloud Exitgatetext",
+      "exitGateTitle": "OmniGCloud Exitgatetitle",
+      "frameworkStepsTitle": "OmniGCloud Frameworkstepstitle",
       "grid": {
         "invariance": {
-          "text": "text Details (JA)",
-          "title": "title Details (JA)"
+          "text": "OmniGCloud Text",
+          "title": "Sovereign Framework Control"
         },
         "portability": {
-          "text": "text Details (JA)",
-          "title": "title Details (JA)"
+          "text": "OmniGCloud Text",
+          "title": "Sovereign Framework Control"
         }
       },
-      "introTitle": "introTitle Details (JA)",
-      "mathTitle": "mathTitle Details (JA)",
-      "nodesText": "nodesText Details (JA)",
-      "nodesTitle": "nodesTitle Details (JA)",
-      "p1": "p1 Details (JA)",
+      "introTitle": "OmniGCloud Introtitle",
+      "mathTitle": "OmniGCloud Mathtitle",
+      "nodesText": "OmniGCloud Nodestext",
+      "nodesTitle": "OmniGCloud Nodestitle",
+      "p1": "OmniGCloud P1",
       "pillar1": {
-        "text": "text Details (JA)",
-        "title": "title Details (JA)"
+        "text": "OmniGCloud Text",
+        "title": "Sovereign Framework Control"
       },
       "pillar2": {
-        "text": "text Details (JA)",
-        "title": "title Details (JA)"
+        "text": "OmniGCloud Text",
+        "title": "Sovereign Framework Control"
       },
       "pillar3": {
-        "text": "text Details (JA)",
-        "title": "title Details (JA)"
+        "text": "OmniGCloud Text",
+        "title": "Sovereign Framework Control"
       },
       "pillar4": {
-        "title": "title Details (JA)"
+        "title": "Sovereign Framework Control"
       },
       "pillar5": {
-        "text": "text Details (JA)",
-        "title": "title Details (JA)"
+        "text": "OmniGCloud Text",
+        "title": "Sovereign Framework Control"
       },
-      "pillarsTitle": "pillarsTitle Details (JA)",
-      "quote2": "quote2 Details (JA)",
+      "pillarsTitle": "OmniGCloud Pillarstitle",
+      "quote2": "OmniGCloud Quote2",
       "takeaway": {
-        "text": "text Details (JA)",
-        "title": "title Details (JA)"
+        "text": "OmniGCloud Text",
+        "title": "Sovereign Framework Control"
       }
     },
-    "breadcrumb": "Breadcrumb (JA)",
+    "breadcrumb": "OmniGCloud Breadcrumb",
     "callbackUrl": "Callback Url (JA)",
-    "canonical": "Canonical (JA)",
+    "canonical": "OmniGCloud Canonical",
     "cards": {
       "0": {
         "badge": "Featured (JA)",
@@ -808,77 +808,77 @@
     },
     "catalog": {
       "aecp": {
-        "desc": "Desc description (JA)",
-        "title": "Title (JA)"
+        "desc": "Ensuring deterministic state reconciliation and data residency across distributed infrastructure.",
+        "title": "Sovereign Framework Control"
       },
       "deepDive": "Deep Dive (JA)",
       "devops": {
-        "desc": "Desc description (JA)",
-        "title": "Title (JA)"
+        "desc": "Ensuring deterministic state reconciliation and data residency across distributed infrastructure.",
+        "title": "Sovereign Framework Control"
       },
       "finops": {
-        "desc": "Desc description (JA)",
-        "title": "Title (JA)"
+        "desc": "Ensuring deterministic state reconciliation and data residency across distributed infrastructure.",
+        "title": "Sovereign Framework Control"
       },
       "microservices": {
-        "desc": "Desc description (JA)",
-        "title": "Title (JA)"
+        "desc": "Ensuring deterministic state reconciliation and data residency across distributed infrastructure.",
+        "title": "Sovereign Framework Control"
       },
       "migration": {
-        "desc": "Desc description (JA)",
-        "title": "Title (JA)"
+        "desc": "Ensuring deterministic state reconciliation and data residency across distributed infrastructure.",
+        "title": "Sovereign Framework Control"
       },
       "modernization": {
-        "desc": "Desc description (JA)",
-        "title": "Title (JA)"
+        "desc": "Ensuring deterministic state reconciliation and data residency across distributed infrastructure.",
+        "title": "Sovereign Framework Control"
       },
       "observability": {
-        "desc": "Desc description (JA)",
-        "title": "Title (JA)"
+        "desc": "Ensuring deterministic state reconciliation and data residency across distributed infrastructure.",
+        "title": "Sovereign Framework Control"
       },
       "openshift": {
-        "desc": "Desc description (JA)",
-        "title": "Title (JA)"
+        "desc": "Ensuring deterministic state reconciliation and data residency across distributed infrastructure.",
+        "title": "Sovereign Framework Control"
       }
     },
     "certifications": {
-      "gdpr": "GDPR (JA)",
+      "gdpr": "OmniGCloud Gdpr",
       "iso": "ISO 27001 (JA)",
       "soc": "SOC 2 (JA)",
       "title": "Certifications (JA)"
     },
     "challenge": {
-      "badge": "Badge (JA)",
-      "debt": "Debt (JA)",
+      "badge": "LATEST",
+      "debt": "OmniGCloud Debt",
       "errorCode": "Error Code (JA)",
       "lostRoi": "Lost Roi (JA)",
-      "mesh": "Mesh (JA)",
-      "p1": "P1 (JA)",
-      "quote": "Quote (JA)",
-      "title": "Title (JA)"
+      "mesh": "OmniGCloud Mesh",
+      "p1": "OmniGCloud P1",
+      "quote": "OmniGCloud Quote",
+      "title": "Sovereign Framework Control"
     },
-    "challenges": "Challenges Details (JA)",
-    "changes": "Changes Details (JA)",
+    "challenges": "OmniGCloud Challenges",
+    "changes": "OmniGCloud Changes",
     "changesText": "Changes Text (JA)",
-    "classification": "Classification Details (JA)",
+    "classification": "OmniGCloud Classification",
     "cli": {
-      "badge": "Badge (JA)",
+      "badge": "LATEST",
       "commands": {
         "audit": {
-          "prefix": "Prefix (JA)",
-          "suffix": "Suffix (JA)"
+          "prefix": "OmniGCloud Prefix",
+          "suffix": "OmniGCloud Suffix"
         },
         "init": {
-          "prefix": "Prefix (JA)",
-          "suffix": "Suffix (JA)"
+          "prefix": "OmniGCloud Prefix",
+          "suffix": "OmniGCloud Suffix"
         },
         "install": {
-          "prefix": "Prefix (JA)",
-          "suffix": "Suffix (JA)"
+          "prefix": "OmniGCloud Prefix",
+          "suffix": "OmniGCloud Suffix"
         },
-        "latency": "Latency (JA)"
+        "latency": "OmniGCloud Latency"
       },
-      "description": "Description description (JA)",
+      "description": "A deep dive into the mathematical foundations and performance breakthroughs of the AECP engine.",
       "points": {
         "0": "Item 0 (JA)",
         "1": "Item 1 (JA)",
@@ -890,19 +890,19 @@
         "2": "Item 2 (JA)",
         "3": "Item 3 (JA)"
       },
-      "title": "Title (JA)"
+      "title": "Sovereign Framework Control"
     },
     "clientId": "Client Id (JA)",
-    "commitment": "Commitment Details (JA)",
+    "commitment": "OmniGCloud Commitment",
     "commitmentText": "Commitment Text (JA)",
     "compendium": {
-      "description": "Description description (JA)",
+      "description": "A deep dive into the mathematical foundations and performance breakthroughs of the AECP engine.",
       "impactBadge": "Impact Badge (JA)",
-      "title": "Title (JA)"
+      "title": "Sovereign Framework Control"
     },
     "compliance": {
-      "subtitle": "Subtitle description (JA)",
-      "title": "Title (JA)"
+      "subtitle": "Autonomous Multi-Cloud Fabric",
+      "title": "Sovereign Framework Control"
     },
     "conclusion": {
       "p1": "Monitor real-time infrastructure drift. (JA)",
@@ -912,7 +912,7 @@
     "contact": {
       "addressLine1": "Address Line 1 (JA)",
       "addressLine2": "Address Line 2 (JA)",
-      "country": "Country (JA)",
+      "country": "OmniGCloud Country",
       "description": "Contact Description (JA)",
       "phone": "Phone Number (JA)",
       "title": "Contact Us (JA)"
@@ -921,22 +921,22 @@
     "contactText": "Contact Text (JA)",
     "content": "Automate compliance with real-time drift detection and auto-remediation policies. (JA)",
     "control": {
-      "badge": "Badge (JA)"
+      "badge": "LATEST"
     },
-    "cookies": "Cookies Details (JA)",
+    "cookies": "OmniGCloud Cookies",
     "cookiesText": "Cookies Text (JA)",
     "core": {
-      "badge": "Badge (JA)",
-      "p1": "P1 (JA)",
-      "title": "Title (JA)"
+      "badge": "LATEST",
+      "p1": "OmniGCloud P1",
+      "title": "Sovereign Framework Control"
     },
     "cta": {
-      "button": "Button Details (JA)",
-      "request": "Request (JA)",
-      "scale": "Scale (JA)",
+      "button": "OmniGCloud Button",
+      "request": "OmniGCloud Request",
+      "scale": "OmniGCloud Scale",
       "subtitle": "Empowering the next generation of regulated enterprise. (JA)",
       "title": "Cta Title (JA)",
-      "whitepaper": "Whitepaper (JA)"
+      "whitepaper": "OmniGCloud Whitepaper"
     },
     "dataCollection": "Data Collection (JA)",
     "dataCollectionText": "Data Collection Text (JA)",
@@ -949,8 +949,8 @@
     "dataResidencyText": "Data Residency Text (JA)",
     "dataRetention": "Data Retention (JA)",
     "dataRetentionText": "Data Retention Text (JA)",
-    "date": "Date Details (JA)",
-    "date_label": "Date_label Details (JA)",
+    "date": "OmniGCloud Date",
+    "date_label": "OmniGCloud Date_label",
     "decision_framework": {
       "components": {
         "adaptation": {
@@ -971,12 +971,12 @@
     },
     "deepDive": {
       "links": {
-        "blueprint": "Blueprint (JA)",
-        "dashboard": "Dashboard (JA)",
-        "finance": "Finance (JA)",
-        "modernization": "Modernization (JA)",
-        "platform": "Platform (JA)",
-        "solutions": "Solutions (JA)"
+        "blueprint": "OmniGCloud Blueprint",
+        "dashboard": "OmniGCloud Dashboard",
+        "finance": "OmniGCloud Finance",
+        "modernization": "OmniGCloud Modernization",
+        "platform": "OmniGCloud Platform",
+        "solutions": "OmniGCloud Solutions"
       }
     },
     "deep_dive": "Deep Dive (JA)",
@@ -984,24 +984,24 @@
     "details": {
       "classification": {
         "label": "Classification (JA)",
-        "value": "Value (JA)"
+        "value": "Verified Optimal"
       },
       "security": {
         "label": "Security (JA)",
-        "value": "Value (JA)"
+        "value": "Verified Optimal"
       },
       "status": {
         "label": "Status (JA)",
-        "value": "Value (JA)"
+        "value": "Verified Optimal"
       }
     },
     "differentiation": {
-      "non_replicability": "Non_replicability Details (JA)",
+      "non_replicability": "OmniGCloud Non_replicability",
       "p1": "Define your governance intent. (JA)",
       "title": "Differentiation Title (JA)"
     },
-    "disabled": "Disabled Details (JA)",
-    "disclaimer": "Disclaimer Details (JA)",
+    "disabled": "OmniGCloud Disabled",
+    "disclaimer": "OmniGCloud Disclaimer",
     "disclaimerText": "Disclaimer Text (JA)",
     "disclosureIntro": "Disclosure Intro (JA)",
     "discovery": {
@@ -1010,79 +1010,79 @@
       "title": "Discovery Title (JA)"
     },
     "documentation_label": "Documentation (JA)",
-    "download": "Download (JA)",
+    "download": "OmniGCloud Download",
     "eb1a": {
-      "executive_summary_title": "Executive_summary_title Details (JA)",
-      "importance": "Importance Details (JA)",
-      "importance_label": "Importance_label Details (JA)",
-      "originality": "Originality Details (JA)",
-      "originality_label": "Originality_label Details (JA)",
+      "executive_summary_title": "OmniGCloud Executive_summary_title",
+      "importance": "OmniGCloud Importance",
+      "importance_label": "OmniGCloud Importance_label",
+      "originality": "OmniGCloud Originality",
+      "originality_label": "OmniGCloud Originality_label",
       "p1": "Define your governance intent. (JA)",
-      "summary_content": "Summary_content Details (JA)",
+      "summary_content": "OmniGCloud Summary_content",
       "title": "Eb1a Title (JA)"
     },
     "economicTrap": {
-      "title": "title Details (JA)"
+      "title": "Sovereign Framework Control"
     },
     "economy": {
       "sovereignty": {
         "arbitrage": {
-          "desc": "Desc description (JA)",
-          "title": "Title (JA)"
+          "desc": "Ensuring deterministic state reconciliation and data residency across distributed infrastructure.",
+          "title": "Sovereign Framework Control"
         },
-        "desc": "Desc description (JA)",
-        "title": "Title (JA)"
+        "desc": "Ensuring deterministic state reconciliation and data residency across distributed infrastructure.",
+        "title": "Sovereign Framework Control"
       },
       "steps": {
         "1": {
-          "desc": "Desc description (JA)",
-          "title": "Title (JA)"
+          "desc": "Ensuring deterministic state reconciliation and data residency across distributed infrastructure.",
+          "title": "Sovereign Framework Control"
         },
         "2": {
-          "desc": "Desc description (JA)",
-          "title": "Title (JA)"
+          "desc": "Ensuring deterministic state reconciliation and data residency across distributed infrastructure.",
+          "title": "Sovereign Framework Control"
         },
         "3": {
-          "desc": "Desc description (JA)",
-          "title": "Title (JA)"
+          "desc": "Ensuring deterministic state reconciliation and data residency across distributed infrastructure.",
+          "title": "Sovereign Framework Control"
         }
       },
-      "subtitle": "Subtitle description (JA)",
-      "title": "Title (JA)"
+      "subtitle": "Autonomous Multi-Cloud Fabric",
+      "title": "Sovereign Framework Control"
     },
     "email": {
       "emailLabel": "Email Label (JA)",
       "idLabel": "Id Label (JA)",
       "messageLabel": "Message Label (JA)",
       "nameLabel": "Name Label (JA)",
-      "subject": "Subject (JA)",
+      "subject": "OmniGCloud Subject",
       "submittedLabel": "Submitted Label (JA)",
-      "support": "Support Details (JA)",
-      "title": "Title (JA)"
+      "support": "OmniGCloud Support",
+      "title": "Sovereign Framework Control"
     },
-    "enabled": "Enabled Details (JA)",
-    "encryption": "Encryption Details (JA)",
-    "encryption1": "Encryption1 Details (JA)",
-    "encryption2": "Encryption2 Details (JA)",
-    "encryption3": "Encryption3 Details (JA)",
+    "enabled": "OmniGCloud Enabled",
+    "encryption": "OmniGCloud Encryption",
+    "encryption1": "OmniGCloud Encryption1",
+    "encryption2": "OmniGCloud Encryption2",
+    "encryption3": "OmniGCloud Encryption3",
     "encryptionText": "Encryption Text (JA)",
     "endpoints": {
       "discovery": {
-        "desc": "Desc description (JA)"
+        "desc": "Ensuring deterministic state reconciliation and data residency across distributed infrastructure."
       },
       "governance": {
-        "desc": "Desc description (JA)"
+        "desc": "Ensuring deterministic state reconciliation and data residency across distributed infrastructure."
       },
       "modernization": {
-        "desc": "Desc description (JA)"
+        "desc": "Ensuring deterministic state reconciliation and data residency across distributed infrastructure."
       }
     },
     "error": "An error occurred (JA)",
     "evolution": {
-      "badge": "badge Details (JA)",
-      "description2": "description2 Details (JA)",
-      "quote": "quote Details (JA)",
-      "title": "title Details (JA)"
+      "badge": "LATEST",
+      "description2": "OmniGCloud Description2",
+      "quote": "OmniGCloud Quote",
+      "title": "Sovereign Framework Control"
     },
     "execution_flow": {
       "p1": "Define your governance intent. (JA)",
@@ -1096,22 +1096,22 @@
       "title": "Execution_flow Title (JA)"
     },
     "exitMatrix": {
-      "p1": "p1 Details (JA)",
+      "p1": "OmniGCloud P1",
       "tiers": {
         "t1": {
-          "text": "text Details (JA)",
-          "title": "title Details (JA)"
+          "text": "OmniGCloud Text",
+          "title": "Sovereign Framework Control"
         },
         "t2": {
-          "text": "text Details (JA)",
-          "title": "title Details (JA)"
+          "text": "OmniGCloud Text",
+          "title": "Sovereign Framework Control"
         },
         "t3": {
-          "text": "text Details (JA)",
-          "title": "title Details (JA)"
+          "text": "OmniGCloud Text",
+          "title": "Sovereign Framework Control"
         }
       },
-      "title": "title Details (JA)"
+      "title": "Sovereign Framework Control"
     },
     "explore_service": "Explore Service (JA)",
     "factory": {
@@ -1127,43 +1127,43 @@
       "step2Title": "Step2 Title (JA)",
       "step3Desc": "Step3 Desc (JA)",
       "step3Title": "Step3 Title (JA)",
-      "title": "Title (JA)"
+      "title": "Sovereign Framework Control"
     },
     "failover": {
-      "badge": "Badge (JA)"
+      "badge": "LATEST"
     },
     "faq": {
       "q1": {
-        "a": "A (JA)",
-        "q": "Q (JA)"
+        "a": "OmniGCloud A",
+        "q": "OmniGCloud Q"
       },
       "q2": {
-        "a": "A (JA)",
-        "q": "Q (JA)"
+        "a": "OmniGCloud A",
+        "q": "OmniGCloud Q"
       },
       "q3": {
-        "a": "A (JA)",
-        "q": "Q (JA)"
+        "a": "OmniGCloud A",
+        "q": "OmniGCloud Q"
       },
-      "title": "title Details (JA)"
+      "title": "Sovereign Framework Control"
     },
     "feasibility": {
       "p1": "Generate audit-ready compliance reports. (JA)",
       "sectors": {
         "finance": {
-          "impact": "Impact Details (JA)",
+          "impact": "OmniGCloud Impact",
           "title": "Finance Title (JA)"
         },
         "government": {
-          "impact": "Impact Details (JA)",
+          "impact": "OmniGCloud Impact",
           "title": "Government Title (JA)"
         },
         "healthcare": {
-          "impact": "Impact Details (JA)",
+          "impact": "OmniGCloud Impact",
           "title": "Healthcare Title (JA)"
         },
         "telecom": {
-          "impact": "Impact Details (JA)",
+          "impact": "OmniGCloud Impact",
           "title": "Telecom Title (JA)"
         }
       },
@@ -1171,24 +1171,24 @@
     },
     "featured": {
       "abstract": "Featured abstract (JA)",
-      "badge": "badge Details (JA)",
-      "date": "date Details (JA)",
-      "diagramCount": "diagramCount Details (JA)",
-      "readArticle": "readArticle Details (JA)",
-      "sectionTitle": "sectionTitle Details (JA)",
-      "title": "title Details (JA)",
-      "wordCount": "wordCount Details (JA)"
+      "badge": "LATEST",
+      "date": "OmniGCloud Date",
+      "diagramCount": "OmniGCloud Diagramcount",
+      "readArticle": "OmniGCloud Readarticle",
+      "sectionTitle": "OmniGCloud Sectiontitle",
+      "title": "Sovereign Framework Control",
+      "wordCount": "OmniGCloud Wordcount"
     },
     "footer": {
       "_value": "Footer Details (JA)",
       "aiDesc": "Ai Desc (JA)",
       "aiLink": "Ai Link (JA)",
       "aiTitle": "Ai Title (JA)",
-      "authorshipDisclaimer": "authorshipDisclaimer Details (JA)",
-      "authorshipRequest": "authorshipRequest Details (JA)",
+      "authorshipDisclaimer": "OmniGCloud Authorshipdisclaimer",
+      "authorshipRequest": "OmniGCloud Authorshiprequest",
       "automationDesc": "Automation Desc (JA)",
       "automationTitle": "Automation Title (JA)",
-      "copyright": "copyright Details (JA)",
+      "copyright": "OmniGCloud Copyright",
       "costDesc": "Cost Desc (JA)",
       "costTitle": "Cost Title (JA)",
       "devopsDesc": "Devops Desc (JA)",
@@ -1197,11 +1197,11 @@
       "factoryTitle": "Factory Title (JA)",
       "guideDesc": "Guide Desc (JA)",
       "guideTitle": "Guide Title (JA)",
-      "lab": "lab Details (JA)",
-      "legal": "Legal (JA)",
+      "lab": "OmniGCloud Lab",
+      "legal": "OmniGCloud Legal",
       "links": {
-        "finops": "finops Details (JA)",
-        "modernization": "modernization Details (JA)"
+        "finops": "OmniGCloud Finops",
+        "modernization": "OmniGCloud Modernization"
       },
       "microservicesDesc": "Microservices Desc (JA)",
       "microservicesLink": "Microservices Link (JA)",
@@ -1212,9 +1212,9 @@
       "modernizationDesc": "Modernization Desc (JA)",
       "modernizationTitle": "Modernization Title (JA)",
       "readGuide": "Read Guide (JA)",
-      "ready": "ready Details (JA)",
-      "subtitle": "subtitle Details (JA)",
-      "title": "title Details (JA)"
+      "ready": "OmniGCloud Ready",
+      "subtitle": "Autonomous Multi-Cloud Fabric",
+      "title": "Sovereign Framework Control"
     },
     "framework": {
       "item1Desc": "Item1 Desc (JA)",
@@ -1223,81 +1223,74 @@
       "item2Title": "Item2 Title (JA)",
       "item3Desc": "Item3 Desc (JA)",
       "item3Title": "Item3 Title (JA)",
-      "title": "Title (JA)"
+      "title": "Sovereign Framework Control"
     },
     "frameworks": {
       "aecp": {
-        "badge": "badge Details (JA)",
+        "badge": "LATEST",
         "features": {
-          "healing": "healing Details (JA)",
-          "security": "security Details (JA)",
-          "topology": "topology Details (JA)"
+          "healing": "OmniGCloud Healing",
+          "security": "OmniGCloud Security",
+          "topology": "OmniGCloud Topology"
         },
-        "title": "title Details (JA)",
-        "version": "version Details (JA)"
+        "title": "Sovereign Framework Control",
+        "version": "OmniGCloud Version"
       },
-      "title": "title Details (JA)"
+      "title": "Sovereign Framework Control"
     },
-    "gdpr": "Gdpr Details (JA)",
+    "gdpr": "OmniGCloud Gdpr",
     "gdprText": "Gdpr Text (JA)",
     "geopolitics": {
-      "p1": "p1 Details (JA)",
-      "title": "title Details (JA)"
+      "p1": "OmniGCloud P1",
+      "title": "Sovereign Framework Control"
     },
     "governingLaw": "Governing Law (JA)",
     "governingLawText": "Governing Law Text (JA)",
-    "h1": "H1 (JA)",
-    "header": {
-      "category": "category Details (JA)",
-      "description": "description Details (JA)",
-      "lastUpdated": "lastUpdated Details (JA)",
-      "readTime": "readTime Details (JA)",
-      "title": "title Details (JA)"
-    },
+    "h1": "OmniGCloud H1",
     "hero": {
-      "author": "author Details (JA)",
-      "badge": "Badge Details (JA)",
-      "cta": "Cta (JA)",
-      "ctaPrimary": "ctaPrimary Details (JA)",
-      "ctaSecondary": "ctaSecondary Details (JA)",
-      "date": "date Details (JA)",
+      "author": "OmniGCloud Author",
+      "badge": "LATEST",
+      "cta": "Get Started",
+      "ctaPrimary": "OmniGCloud Ctaprimary",
+      "ctaSecondary": "OmniGCloud Ctasecondary",
+      "date": "OmniGCloud Date",
       "description": "Automate compliance with real-time drift detection and auto-remediation policies. (JA)",
-      "github": "Github (JA)",
-      "plugin": "Plugin (JA)",
-      "readTime": "readTime Details (JA)",
-      "search": "Search Details (JA)",
+      "github": "OmniGCloud Github",
+      "plugin": "OmniGCloud Plugin",
+      "readTime": "Estimated Reading Duration: 24 Minutes",
+      "search": "OmniGCloud Search",
       "step1": {
         "code": {
-          "install": "Install (JA)",
-          "login": "Login (JA)"
+          "install": "OmniGCloud Install",
+          "login": "OmniGCloud Login"
         },
-        "description": "Description description (JA)",
-        "title": "Title (JA)"
+        "description": "A deep dive into the mathematical foundations and performance breakthroughs of the AECP engine.",
+        "title": "Sovereign Framework Control"
       },
       "step2": {
-        "description": "Description description (JA)",
-        "title": "Title (JA)"
+        "description": "A deep dive into the mathematical foundations and performance breakthroughs of the AECP engine.",
+        "title": "Sovereign Framework Control"
       },
       "subtitle": "The standard for autonomous cloud governance. (JA)",
       "tag": "HERO (JA)",
       "title": "Hero Title (JA)",
-      "titleHighlight": "titleHighlight Details (JA)",
+      "titleHighlight": "OmniGCloud Titlehighlight",
       "titlePart1": "Title Part1 (JA)",
-      "titlePrefix": "titlePrefix Details (JA)",
-      "titleSuffix": "titleSuffix Details (JA)"
+      "titlePrefix": "OmniGCloud Titleprefix",
+      "titleSuffix": "OmniGCloud Titlesuffix"
     },
     "home": "Return to Operations (JA)",
     "imageA": "Image A (JA)",
     "imageB": "Image B (JA)",
     "impact": {
-      "business_value": "Business_value Details (JA)",
+      "business_value": "OmniGCloud Business_value",
       "metrics": {
-        "cost": "Cost Details (JA)",
-        "cost_label": "Cost_label Details (JA)",
-        "efficiency": "Efficiency Details (JA)",
-        "efficiency_label": "Efficiency_label Details (JA)",
-        "security": "Security Details (JA)",
-        "security_label": "Security_label Details (JA)"
+        "cost": "OmniGCloud Cost",
+        "cost_label": "OmniGCloud Cost_label",
+        "efficiency": "OmniGCloud Efficiency",
+        "efficiency_label": "OmniGCloud Efficiency_label",
+        "security": "OmniGCloud Security",
+        "security_label": "OmniGCloud Security_label"
       },
       "p1": "Deploy the control plane agent. (JA)",
       "title": "Impact Title (JA)"
@@ -1307,22 +1300,22 @@
     "incidentResponseText": "Incident Response Text (JA)",
     "infra1": "Define your governance intent. (JA)",
     "infra2": "Define your governance intent. (JA)",
-    "infrastructure": "Infrastructure Details (JA)",
+    "infrastructure": "OmniGCloud Infrastructure",
     "infrastructureData": "Infrastructure Data (JA)",
     "infrastructureDataText": "Infrastructure Data Text (JA)",
     "innovation": {
-      "badge": "Badge (JA)",
-      "title": "Title (JA)"
+      "badge": "LATEST",
+      "title": "Sovereign Framework Control"
     },
     "intelligence": {
-      "badge": "Badge (JA)",
-      "p1": "P1 (JA)",
-      "p2": "P2 (JA)",
-      "title": "Title (JA)"
+      "badge": "LATEST",
+      "p1": "OmniGCloud P1",
+      "p2": "OmniGCloud P2",
+      "title": "Sovereign Framework Control"
     },
     "intro": {
       "_value": "intro Details (JA)",
-      "quote": "quote Details (JA)"
+      "quote": "OmniGCloud Quote"
     },
     "introduction": {
       "p1": "Deploy the control plane agent. (JA)",
@@ -1330,51 +1323,51 @@
       "p3": "Define your governance intent. (JA)",
       "title": "Introduction Title (JA)"
     },
-    "iso27001": "Iso27001 Details (JA)",
+    "iso27001": "OmniGCloud Iso27001",
     "iso27001Text": "Iso27001 Text (JA)",
     "itemStatus": "Item Status (JA)",
     "items": {
       "0": {
-        "date": "Date (JA)",
-        "title": "Title (JA)",
-        "type": "Type (JA)"
+        "date": "OmniGCloud Date",
+        "title": "Sovereign Framework Control",
+        "type": "OmniGCloud Type"
       },
       "1": {
-        "date": "Date (JA)",
-        "title": "Title (JA)",
-        "type": "Type (JA)"
+        "date": "OmniGCloud Date",
+        "title": "Sovereign Framework Control",
+        "type": "OmniGCloud Type"
       },
       "2": {
-        "date": "Date (JA)",
-        "title": "Title (JA)",
-        "type": "Type (JA)"
+        "date": "OmniGCloud Date",
+        "title": "Sovereign Framework Control",
+        "type": "OmniGCloud Type"
       }
     },
     "journey": {
-      "badge": "Badge (JA)",
-      "p1": "P1 (JA)",
-      "title": "Title (JA)"
+      "badge": "LATEST",
+      "p1": "OmniGCloud P1",
+      "title": "Sovereign Framework Control"
     },
     "lastUpdated": "Last Updated (JA)",
     "lastUpdatedDate": "Last Updated Date (JA)",
     "leadership": {
       "chaitanya": {
-        "bio": "Bio (JA)",
-        "name": "Name (JA)",
-        "placeholder": "Placeholder (JA)",
-        "role": "Role (JA)"
+        "bio": "OmniGCloud Bio",
+        "name": "OmniGCloud Name",
+        "placeholder": "Enter system instruction...",
+        "role": "OmniGCloud Role"
       },
       "jyothsna": {
-        "bio": "Bio (JA)",
-        "name": "Name (JA)",
-        "placeholder": "Placeholder (JA)",
-        "role": "Role (JA)"
+        "bio": "OmniGCloud Bio",
+        "name": "OmniGCloud Name",
+        "placeholder": "Enter system instruction...",
+        "role": "OmniGCloud Role"
       },
-      "subtitle": "Subtitle description (JA)",
-      "title": "Title (JA)"
+      "subtitle": "Autonomous Multi-Cloud Fabric",
+      "title": "Sovereign Framework Control"
     },
     "lifecycle": {
-      "resilience": "Resilience Details (JA)",
+      "resilience": "OmniGCloud Resilience",
       "title": "Lifecycle Title (JA)"
     },
     "limitations": {
@@ -1383,7 +1376,7 @@
       "title": "Limitations Title (JA)"
     },
     "loading": "Loading... (JA)",
-    "location": "Location Details (JA)",
+    "location": "OmniGCloud Location",
     "logicMeshStatus": "Logic Mesh Status (JA)",
     "logs": {
       "correcting": "INITIATING_SELF_CORRECTION... (JA)",
@@ -1391,70 +1384,70 @@
       "scanning": "SCANNING_NETWORK_NODES... [FAILED] (JA)"
     },
     "meta": {
-      "category": "Category (JA)",
-      "date": "Date (JA)",
+      "category": "Architectural Research",
+      "date": "OmniGCloud Date",
       "description": "Decouple your business logic from vendor-specific APIs and regain full control of your digital estate. (JA)",
-      "pages": "Pages (JA)",
+      "pages": "OmniGCloud Pages",
       "title": "Meta Title (JA)"
     },
-    "monitor1": "Monitor1 Details (JA)",
-    "monitor2": "Monitor2 Details (JA)",
-    "monitoring": "Monitoring Details (JA)",
+    "monitor1": "OmniGCloud Monitor1",
+    "monitor2": "OmniGCloud Monitor2",
+    "monitoring": "OmniGCloud Monitoring",
     "nav": {
-      "back": "back Details (JA)",
-      "prev": "prev Details (JA)"
+      "back": "OmniGCloud Back",
+      "prev": "OmniGCloud Prev"
     },
     "network": {
       "advisory": {
-        "name": "Name (JA)",
-        "text": "Text (JA)"
+        "name": "OmniGCloud Name",
+        "text": "OmniGCloud Text"
       },
       "discord": {
-        "name": "Name (JA)",
-        "text": "Text (JA)"
+        "name": "OmniGCloud Name",
+        "text": "OmniGCloud Text"
       },
       "github": {
-        "name": "Name (JA)",
-        "text": "Text (JA)"
+        "name": "OmniGCloud Name",
+        "text": "OmniGCloud Text"
       },
       "registry": {
-        "name": "Name (JA)",
-        "text": "Text (JA)"
+        "name": "OmniGCloud Name",
+        "text": "OmniGCloud Text"
       },
-      "title": "Title (JA)"
+      "title": "Sovereign Framework Control"
     },
-    "newPublication": "newPublication Details (JA)",
+    "newPublication": "OmniGCloud Newpublication",
     "newsletter": {
-      "button": "Button Details (JA)",
-      "footer": "Footer Details (JA)",
-      "placeholder": "Placeholder Details (JA)",
+      "button": "OmniGCloud Button",
+      "footer": "OmniGCloud Footer",
+      "placeholder": "Enter system instruction...",
       "subtitle": "Control your data. Control your future. (JA)",
       "title": "Newsletter Title (JA)"
     },
     "newsroom": {
       "items": {
         "0": {
-          "desc": "Desc description (JA)",
-          "title": "Title (JA)"
+          "desc": "Ensuring deterministic state reconciliation and data residency across distributed infrastructure.",
+          "title": "Sovereign Framework Control"
         },
         "1": {
-          "desc": "Desc description (JA)",
-          "title": "Title (JA)"
+          "desc": "Ensuring deterministic state reconciliation and data residency across distributed infrastructure.",
+          "title": "Sovereign Framework Control"
         },
         "2": {
-          "desc": "Desc description (JA)",
-          "title": "Title (JA)"
+          "desc": "Ensuring deterministic state reconciliation and data residency across distributed infrastructure.",
+          "title": "Sovereign Framework Control"
         }
       },
       "readArticle": "Read Article (JA)",
-      "title": "Title (JA)"
+      "title": "Sovereign Framework Control"
     },
-    "operational": "Operational Details (JA)",
+    "operational": "OmniGCloud Operational",
     "operationalText": "Operational Text (JA)",
     "operations": {
-      "description": "Description description (JA)",
-      "headquarters": "Headquarters (JA)",
-      "title": "Title (JA)"
+      "description": "A deep dive into the mathematical foundations and performance breakthroughs of the AECP engine.",
+      "headquarters": "OmniGCloud Headquarters",
+      "title": "Sovereign Framework Control"
     },
     "opportunity": {
       "content": "OmniGCloud provides a unified control plane to enforce data sovereignty across all your cloud providers. (JA)",
@@ -1462,38 +1455,38 @@
     },
     "outboundEmail": "Outbound Email (JA)",
     "paradox": {
-      "badge": "Badge (JA)",
-      "title": "Title (JA)"
+      "badge": "LATEST",
+      "title": "Sovereign Framework Control"
     },
     "patterns": {
       "0": {
         "description": "0 description (JA)",
-        "explanation": "Explanation Details (JA)",
-        "impact": "Impact Details (JA)",
+        "explanation": "OmniGCloud Explanation",
+        "impact": "OmniGCloud Impact",
         "title": "0 Title (JA)"
       },
       "1": {
         "description": "1 description (JA)",
-        "explanation": "Explanation Details (JA)",
-        "impact": "Impact Details (JA)",
+        "explanation": "OmniGCloud Explanation",
+        "impact": "OmniGCloud Impact",
         "title": "1 Title (JA)"
       },
       "2": {
         "description": "2 description (JA)",
-        "explanation": "Explanation Details (JA)",
-        "impact": "Impact Details (JA)",
+        "explanation": "OmniGCloud Explanation",
+        "impact": "OmniGCloud Impact",
         "title": "2 Title (JA)"
       },
       "3": {
         "description": "3 description (JA)",
-        "explanation": "Explanation Details (JA)",
-        "impact": "Impact Details (JA)",
+        "explanation": "OmniGCloud Explanation",
+        "impact": "OmniGCloud Impact",
         "title": "3 Title (JA)"
       },
       "4": {
         "description": "4 description (JA)",
-        "explanation": "Explanation Details (JA)",
-        "impact": "Impact Details (JA)",
+        "explanation": "OmniGCloud Explanation",
+        "impact": "OmniGCloud Impact",
         "title": "4 Title (JA)"
       }
     },
@@ -1505,59 +1498,59 @@
       "item2Title": "Item2 Title (JA)",
       "item3Desc": "Item3 Desc (JA)",
       "item3Title": "Item3 Title (JA)",
-      "title": "Title (JA)"
+      "title": "Sovereign Framework Control"
     },
     "pipeline": {
-      "subtitle": "Subtitle description (JA)",
-      "title": "Title (JA)"
+      "subtitle": "Autonomous Multi-Cloud Fabric",
+      "title": "Sovereign Framework Control"
     },
-    "planned": "Planned Details (JA)",
+    "planned": "OmniGCloud Planned",
     "plans": {
-      "month": "Month Details (JA)",
-      "popular": "Popular Details (JA)"
+      "month": "OmniGCloud Month",
+      "popular": "OmniGCloud Popular"
     },
     "problem": {
       "compliance": {
         "content": "Automate compliance with real-time drift detection and auto-remediation policies. (JA)",
-        "scenario": "Scenario Details (JA)",
+        "scenario": "OmniGCloud Scenario",
         "title": "Compliance Title (JA)"
       },
       "metrics": {
-        "compliance_aso": "Compliance_aso Details (JA)",
-        "compliance_label": "Compliance_label Details (JA)",
-        "mttr_aso": "Mttr_aso Details (JA)",
-        "mttr_aso_label": "Mttr_aso_label Details (JA)",
-        "mttr_manual": "Mttr_manual Details (JA)",
-        "mttr_manual_label": "Mttr_manual_label Details (JA)",
-        "opex_label": "Opex_label Details (JA)",
-        "opex_savings": "Opex_savings Details (JA)"
+        "compliance_aso": "OmniGCloud Compliance_aso",
+        "compliance_label": "OmniGCloud Compliance_label",
+        "mttr_aso": "OmniGCloud Mttr_aso",
+        "mttr_aso_label": "OmniGCloud Mttr_aso_label",
+        "mttr_manual": "OmniGCloud Mttr_manual",
+        "mttr_manual_label": "OmniGCloud Mttr_manual_label",
+        "opex_label": "OmniGCloud Opex_label",
+        "opex_savings": "OmniGCloud Opex_savings"
       },
       "operational": {
         "content": "Decouple your business logic from vendor-specific APIs and regain full control of your digital estate. (JA)",
-        "scenario": "Scenario Details (JA)",
+        "scenario": "OmniGCloud Scenario",
         "title": "Operational Title (JA)"
       },
       "p1": "Define your governance intent. (JA)",
       "title": "Problem Title (JA)",
       "vendor_lock": {
         "content": "Achieve FIPS 140-2 Level 3 compliance with our shielded execution environments. (JA)",
-        "scenario": "Scenario Details (JA)",
+        "scenario": "OmniGCloud Scenario",
         "title": "Vendor_lock Title (JA)"
       }
     },
     "process": {
-      "title": "Title (JA)"
+      "title": "Sovereign Framework Control"
     },
-    "protection1": "Protection1 Details (JA)",
-    "protection2": "Protection2 Details (JA)",
-    "protection3": "Protection3 Details (JA)",
-    "protection4": "Protection4 Details (JA)",
+    "protection1": "OmniGCloud Protection1",
+    "protection2": "OmniGCloud Protection2",
+    "protection3": "OmniGCloud Protection3",
+    "protection4": "OmniGCloud Protection4",
     "quantifyingROI": {
       "box": {
-        "content": "content Details (JA)",
-        "title": "title Details (JA)"
+        "content": "Comprehensive technical compendium covering the ASO framework and its associated architectural patterns.",
+        "title": "Sovereign Framework Control"
       },
-      "title": "title Details (JA)"
+      "title": "Sovereign Framework Control"
     },
     "readAbstract": "Read Abstract (JA)",
     "readFull": "Read Full (JA)",
@@ -1567,50 +1560,50 @@
     },
     "related": {
       "card1": {
-        "desc": "desc Details (JA)",
-        "title": "title Details (JA)"
+        "desc": "Ensuring deterministic state reconciliation and data residency across distributed infrastructure.",
+        "title": "Sovereign Framework Control"
       },
       "card2": {
-        "desc": "desc Details (JA)",
-        "title": "title Details (JA)"
+        "desc": "Ensuring deterministic state reconciliation and data residency across distributed infrastructure.",
+        "title": "Sovereign Framework Control"
       },
-      "readPost": "readPost Details (JA)",
-      "readWhitepaper": "readWhitepaper Details (JA)",
-      "title": "title Details (JA)"
+      "readPost": "OmniGCloud Readpost",
+      "readWhitepaper": "OmniGCloud Readwhitepaper",
+      "title": "Sovereign Framework Control"
     },
     "relatedReading": {
       "0": {
-        "category": "category Details (JA)",
-        "excerpt": "excerpt Details (JA)",
-        "title": "title Details (JA)"
+        "category": "Architectural Research",
+        "excerpt": "OmniGCloud Excerpt",
+        "title": "Sovereign Framework Control"
       },
       "1": {
-        "category": "category Details (JA)",
-        "excerpt": "excerpt Details (JA)",
-        "title": "title Details (JA)"
+        "category": "Architectural Research",
+        "excerpt": "OmniGCloud Excerpt",
+        "title": "Sovereign Framework Control"
       },
       "2": {
-        "category": "category Details (JA)",
-        "excerpt": "excerpt Details (JA)",
-        "title": "title Details (JA)"
+        "category": "Architectural Research",
+        "excerpt": "OmniGCloud Excerpt",
+        "title": "Sovereign Framework Control"
       }
     },
     "reportingProcess": "Reporting Process (JA)",
     "requestSaml": "Request Saml (JA)",
-    "response1": "Response1 Details (JA)",
-    "response2": "Response2 Details (JA)",
-    "response3": "Response3 Details (JA)",
-    "response4": "Response4 Details (JA)",
+    "response1": "OmniGCloud Response1",
+    "response2": "OmniGCloud Response2",
+    "response3": "OmniGCloud Response3",
+    "response4": "OmniGCloud Response4",
     "responseProcess": "Response Process (JA)",
-    "responsibility1": "Responsibility1 Details (JA)",
-    "responsibility2": "Responsibility2 Details (JA)",
-    "responsibility3": "Responsibility3 Details (JA)",
+    "responsibility1": "OmniGCloud Responsibility1",
+    "responsibility2": "OmniGCloud Responsibility2",
+    "responsibility3": "OmniGCloud Responsibility3",
     "responsibleDisclosure": "Responsible Disclosure (JA)",
-    "retention": "Retention Details (JA)",
-    "right1": "Right1 Details (JA)",
-    "right2": "Right2 Details (JA)",
-    "right3": "Right3 Details (JA)",
-    "right4": "Right4 Details (JA)",
+    "retention": "OmniGCloud Retention",
+    "right1": "OmniGCloud Right1",
+    "right2": "OmniGCloud Right2",
+    "right3": "OmniGCloud Right3",
+    "right4": "OmniGCloud Right4",
     "roadmap": {
       "item1Desc": "Item1 Desc (JA)",
       "item1Title": "Item1 Title (JA)",
@@ -1618,258 +1611,258 @@
       "item2Title": "Item2 Title (JA)",
       "item3Desc": "Item3 Desc (JA)",
       "item3Title": "Item3 Title (JA)",
-      "title": "Title (JA)"
+      "title": "Sovereign Framework Control"
     },
-    "role": "Role Details (JA)",
+    "role": "OmniGCloud Role",
     "savings": {
-      "badge": "Badge (JA)",
-      "subtitle": "Subtitle description (JA)",
-      "title": "Title (JA)"
+      "badge": "LATEST",
+      "subtitle": "Autonomous Multi-Cloud Fabric",
+      "title": "Sovereign Framework Control"
     },
-    "scope": "Scope Details (JA)",
-    "scope1": "Scope1 Details (JA)",
-    "scope2": "Scope2 Details (JA)",
-    "scope3": "Scope3 Details (JA)",
-    "scope4": "Scope4 Details (JA)",
+    "scope": "OmniGCloud Scope",
+    "scope1": "OmniGCloud Scope1",
+    "scope2": "OmniGCloud Scope2",
+    "scope3": "OmniGCloud Scope3",
+    "scope4": "OmniGCloud Scope4",
     "section1": {
       "box": {
-        "content": "content Details (JA)",
-        "title": "title Details (JA)"
+        "content": "Comprehensive technical compendium covering the ASO framework and its associated architectural patterns.",
+        "title": "Sovereign Framework Control"
       },
-      "p2": "p2 Details (JA)",
-      "title": "title Details (JA)"
+      "p2": "OmniGCloud P2",
+      "title": "Sovereign Framework Control"
     },
     "section10": {
       "box": {
-        "content": "content Details (JA)",
-        "title": "title Details (JA)"
+        "content": "Comprehensive technical compendium covering the ASO framework and its associated architectural patterns.",
+        "title": "Sovereign Framework Control"
       },
       "diagram9": {
         "adapters": {
-          "aws": "aws Details (JA)",
-          "azure": "azure Details (JA)",
-          "gcp": "gcp Details (JA)"
+          "aws": "OmniGCloud Aws",
+          "azure": "OmniGCloud Azure",
+          "gcp": "OmniGCloud Gcp"
         },
-        "title": "title Details (JA)"
+        "title": "Sovereign Framework Control"
       },
-      "p1": "p1 Details (JA)",
-      "p2": "p2 Details (JA)",
-      "title": "title Details (JA)"
+      "p1": "OmniGCloud P1",
+      "p2": "OmniGCloud P2",
+      "title": "Sovereign Framework Control"
     },
     "section11": {
-      "p1": "p1 Details (JA)",
+      "p1": "OmniGCloud P1",
       "proof": {
         "box": {
-          "content": "content Details (JA)",
-          "title": "title Details (JA)"
+          "content": "Comprehensive technical compendium covering the ASO framework and its associated architectural patterns.",
+          "title": "Sovereign Framework Control"
         },
         "diagram10": {
           "aecp": {
-            "plane1": "plane1 Details (JA)",
-            "plane2": "plane2 Details (JA)",
-            "policy": "policy Details (JA)",
-            "title": "title Details (JA)"
+            "plane1": "OmniGCloud Plane1",
+            "plane2": "OmniGCloud Plane2",
+            "policy": "OmniGCloud Policy",
+            "title": "Sovereign Framework Control"
           },
           "legacy": {
-            "fail": "fail Details (JA)",
-            "plane": "plane Details (JA)",
-            "policy": "policy Details (JA)",
-            "title": "title Details (JA)"
+            "fail": "OmniGCloud Fail",
+            "plane": "OmniGCloud Plane",
+            "policy": "OmniGCloud Policy",
+            "title": "Sovereign Framework Control"
           },
-          "title": "title Details (JA)"
+          "title": "Sovereign Framework Control"
         },
         "table3": {
           "rows": {
             "0": {
-              "aso": "aso Details (JA)",
-              "label": "label Details (JA)",
-              "legacy": "legacy Details (JA)"
+              "aso": "OmniGCloud Aso",
+              "label": "Technical Metric",
+              "legacy": "OmniGCloud Legacy"
             },
             "1": {
-              "aso": "aso Details (JA)",
-              "label": "label Details (JA)",
-              "legacy": "legacy Details (JA)"
+              "aso": "OmniGCloud Aso",
+              "label": "Technical Metric",
+              "legacy": "OmniGCloud Legacy"
             },
             "2": {
-              "aso": "aso Details (JA)",
-              "label": "label Details (JA)",
-              "legacy": "legacy Details (JA)"
+              "aso": "OmniGCloud Aso",
+              "label": "Technical Metric",
+              "legacy": "OmniGCloud Legacy"
             },
             "3": {
-              "aso": "aso Details (JA)",
-              "label": "label Details (JA)",
-              "legacy": "legacy Details (JA)"
+              "aso": "OmniGCloud Aso",
+              "label": "Technical Metric",
+              "legacy": "OmniGCloud Legacy"
             }
           },
-          "title": "title Details (JA)"
+          "title": "Sovereign Framework Control"
         },
-        "title": "title Details (JA)"
+        "title": "Sovereign Framework Control"
       },
       "table2": {
         "rows": {
           "0": {
-            "aso": "aso Details (JA)",
-            "label": "label Details (JA)",
-            "legacy": "legacy Details (JA)"
+            "aso": "OmniGCloud Aso",
+            "label": "Technical Metric",
+            "legacy": "OmniGCloud Legacy"
           },
           "1": {
-            "aso": "aso Details (JA)",
-            "label": "label Details (JA)",
-            "legacy": "legacy Details (JA)"
+            "aso": "OmniGCloud Aso",
+            "label": "Technical Metric",
+            "legacy": "OmniGCloud Legacy"
           },
           "2": {
-            "aso": "aso Details (JA)",
-            "label": "label Details (JA)",
-            "legacy": "legacy Details (JA)"
+            "aso": "OmniGCloud Aso",
+            "label": "Technical Metric",
+            "legacy": "OmniGCloud Legacy"
           },
           "3": {
-            "aso": "aso Details (JA)",
-            "label": "label Details (JA)",
-            "legacy": "legacy Details (JA)"
+            "aso": "OmniGCloud Aso",
+            "label": "Technical Metric",
+            "legacy": "OmniGCloud Legacy"
           }
         },
-        "title": "title Details (JA)"
+        "title": "Sovereign Framework Control"
       },
-      "title": "title Details (JA)"
+      "title": "Sovereign Framework Control"
     },
     "section12": {
       "diagram11": {
-        "title": "title Details (JA)"
+        "title": "Sovereign Framework Control"
       },
       "sectors": {
         "finance": {
-          "desc": "desc Details (JA)",
-          "title": "title Details (JA)"
+          "desc": "Ensuring deterministic state reconciliation and data residency across distributed infrastructure.",
+          "title": "Sovereign Framework Control"
         },
         "health": {
-          "desc": "desc Details (JA)",
-          "title": "title Details (JA)"
+          "desc": "Ensuring deterministic state reconciliation and data residency across distributed infrastructure.",
+          "title": "Sovereign Framework Control"
         }
       },
-      "title": "title Details (JA)"
+      "title": "Sovereign Framework Control"
     },
     "section13": {
       "box": {
-        "content": "content Details (JA)",
-        "title": "title Details (JA)"
+        "content": "Comprehensive technical compendium covering the ASO framework and its associated architectural patterns.",
+        "title": "Sovereign Framework Control"
       },
       "subsection": {
-        "p1": "p1 Details (JA)",
-        "p2": "p2 Details (JA)",
-        "p3": "p3 Details (JA)",
-        "title": "title Details (JA)"
+        "p1": "OmniGCloud P1",
+        "p2": "OmniGCloud P2",
+        "p3": "OmniGCloud P3",
+        "title": "Sovereign Framework Control"
       },
-      "title": "title Details (JA)"
+      "title": "Sovereign Framework Control"
     },
     "section14": {
       "diagram12": {
-        "title": "title Details (JA)"
+        "title": "Sovereign Framework Control"
       },
-      "p1": "p1 Details (JA)",
-      "title": "title Details (JA)"
+      "p1": "OmniGCloud P1",
+      "title": "Sovereign Framework Control"
     },
     "section2": {
       "diagram1": {
-        "title": "title Details (JA)"
+        "title": "Sovereign Framework Control"
       },
-      "title": "title Details (JA)"
+      "title": "Sovereign Framework Control"
     },
     "section3": {
-      "description": "description Details (JA)",
-      "p1": "p1 Details (JA)",
+      "description": "A deep dive into the mathematical foundations and performance breakthroughs of the AECP engine.",
+      "p1": "OmniGCloud P1",
       "table1": {
         "rows": {
           "0": {
-            "aso": "aso Details (JA)",
-            "label": "label Details (JA)",
-            "legacy": "legacy Details (JA)"
+            "aso": "OmniGCloud Aso",
+            "label": "Technical Metric",
+            "legacy": "OmniGCloud Legacy"
           },
           "1": {
-            "aso": "aso Details (JA)",
-            "label": "label Details (JA)",
-            "legacy": "legacy Details (JA)"
+            "aso": "OmniGCloud Aso",
+            "label": "Technical Metric",
+            "legacy": "OmniGCloud Legacy"
           },
           "2": {
-            "aso": "aso Details (JA)",
-            "label": "label Details (JA)",
-            "legacy": "legacy Details (JA)"
+            "aso": "OmniGCloud Aso",
+            "label": "Technical Metric",
+            "legacy": "OmniGCloud Legacy"
           },
           "3": {
-            "aso": "aso Details (JA)",
-            "label": "label Details (JA)",
-            "legacy": "legacy Details (JA)"
+            "aso": "OmniGCloud Aso",
+            "label": "Technical Metric",
+            "legacy": "OmniGCloud Legacy"
           }
         },
-        "title": "title Details (JA)"
+        "title": "Sovereign Framework Control"
       },
-      "title": "title Details (JA)"
+      "title": "Sovereign Framework Control"
     },
     "section4": {
-      "description": "description Details (JA)",
+      "description": "A deep dive into the mathematical foundations and performance breakthroughs of the AECP engine.",
       "diagram2": {
-        "title": "title Details (JA)"
+        "title": "Sovereign Framework Control"
       },
-      "hypothesis": "hypothesis Details (JA)",
-      "hypothesisTitle": "hypothesisTitle Details (JA)",
-      "p1": "p1 Details (JA)",
-      "title": "title Details (JA)"
+      "hypothesis": "OmniGCloud Hypothesis",
+      "hypothesisTitle": "OmniGCloud Hypothesistitle",
+      "p1": "OmniGCloud P1",
+      "title": "Sovereign Framework Control"
     },
     "section5": {
       "box": {
-        "content": "content Details (JA)",
-        "title": "title Details (JA)"
+        "content": "Comprehensive technical compendium covering the ASO framework and its associated architectural patterns.",
+        "title": "Sovereign Framework Control"
       },
       "diagram3": {
-        "title": "title Details (JA)"
+        "title": "Sovereign Framework Control"
       },
-      "p1": "p1 Details (JA)",
-      "title": "title Details (JA)"
+      "p1": "OmniGCloud P1",
+      "title": "Sovereign Framework Control"
     },
     "section6": {
       "diagram4": {
-        "title": "title Details (JA)"
+        "title": "Sovereign Framework Control"
       },
-      "p1": "p1 Details (JA)",
-      "title": "title Details (JA)"
+      "p1": "OmniGCloud P1",
+      "title": "Sovereign Framework Control"
     },
     "section7": {
       "box": {
-        "title": "title Details (JA)"
+        "title": "Sovereign Framework Control"
       },
       "diagram6": {
         "labels": {
-          "alert": "alert Details (JA)",
-          "command": "command Details (JA)",
-          "commandSub": "commandSub Details (JA)",
-          "input": "input Details (JA)",
-          "inputSub": "inputSub Details (JA)",
-          "solver": "solver Details (JA)",
-          "solverSub": "solverSub Details (JA)"
+          "alert": "OmniGCloud Alert",
+          "command": "OmniGCloud Command",
+          "commandSub": "OmniGCloud Commandsub",
+          "input": "OmniGCloud Input",
+          "inputSub": "OmniGCloud Inputsub",
+          "solver": "OmniGCloud Solver",
+          "solverSub": "OmniGCloud Solversub"
         },
-        "title": "title Details (JA)"
+        "title": "Sovereign Framework Control"
       },
-      "title": "title Details (JA)"
+      "title": "Sovereign Framework Control"
     },
     "section8": {
       "diagram7": {
-        "title": "title Details (JA)"
+        "title": "Sovereign Framework Control"
       },
-      "p1": "p1 Details (JA)",
-      "title": "title Details (JA)"
+      "p1": "OmniGCloud P1",
+      "title": "Sovereign Framework Control"
     },
     "section9": {
       "diagram8": {
         "protocolA": {
-          "text": "text Details (JA)",
-          "title": "title Details (JA)"
+          "text": "OmniGCloud Text",
+          "title": "Sovereign Framework Control"
         },
         "protocolB": {
-          "text": "text Details (JA)",
-          "title": "title Details (JA)"
+          "text": "OmniGCloud Text",
+          "title": "Sovereign Framework Control"
         },
-        "title": "title Details (JA)"
+        "title": "Sovereign Framework Control"
       },
-      "title": "title Details (JA)"
+      "title": "Sovereign Framework Control"
     },
     "sections": {
       "autonomousGatingLogs": "Autonomous Gating Logs (JA)",
@@ -1879,33 +1872,33 @@
     },
     "securityEmail": "Security Email (JA)",
     "securityPractices": "Security Practices (JA)",
-    "service1": "Service1 Details (JA)",
-    "service2": "Service2 Details (JA)",
-    "service3": "Service3 Details (JA)",
-    "service4": "Service4 Details (JA)",
-    "services": "Services Details (JA)",
+    "service1": "OmniGCloud Service1",
+    "service2": "OmniGCloud Service2",
+    "service3": "OmniGCloud Service3",
+    "service4": "OmniGCloud Service4",
+    "services": "OmniGCloud Services",
     "servicesText": "Services Text (JA)",
     "sidebar": {
-      "blueprints": "Blueprints Details (JA)",
+      "blueprints": "OmniGCloud Blueprints",
       "contactArchitectureOffice": "Contact Architecture Office (JA)",
       "customBriefingText": "Speak with our founding engineering team about specific ASO implementations. (JA)",
       "customBriefingTitle": "Need a customized briefing? (JA)",
-      "documentation": "Documentation Details (JA)",
+      "documentation": "OmniGCloud Documentation",
       "links": {
-        "architecture": "Architecture Details (JA)",
-        "introduction": "Introduction Details (JA)",
-        "security": "Security Details (JA)",
-        "whitepaper": "Whitepaper Details (JA)"
+        "architecture": "OmniGCloud Architecture",
+        "introduction": "OmniGCloud Introduction",
+        "security": "OmniGCloud Security",
+        "whitepaper": "OmniGCloud Whitepaper"
       },
       "quickLinksHeading": "Quick Links (JA)"
     },
     "sitemap": {
-      "directory": "Directory (JA)",
-      "title": "Title (JA)"
+      "directory": "OmniGCloud Directory",
+      "title": "Sovereign Framework Control"
     },
-    "soc2": "Soc2 Details (JA)",
+    "soc2": "OmniGCloud Soc2",
     "soc2Text": "Soc2 Text (JA)",
-    "solution": "Solution Details (JA)",
+    "solution": "OmniGCloud Solution",
     "solutionLabel": "Solution Label (JA)",
     "ssoConfiguration": "Sso Configuration (JA)",
     "step1": "Enforce auto-remediation policies. (JA)",
@@ -1916,14 +1909,14 @@
     "subtitle": "Security, compliance, and velocity in one platform. (JA)",
     "successMessage": "Success Message (JA)",
     "tech": {
-      "intentTitle": "intentTitle Details (JA)",
-      "securityDesc": "securityDesc Details (JA)",
-      "securityTitle": "securityTitle Details (JA)",
-      "title": "title Details (JA)"
+      "intentTitle": "OmniGCloud Intenttitle",
+      "securityDesc": "OmniGCloud Securitydesc",
+      "securityTitle": "OmniGCloud Securitytitle",
+      "title": "Sovereign Framework Control"
     },
     "technicalLibrary": "Technical Library (JA)",
     "tenantId": "Tenant Id (JA)",
-    "termination": "Termination Details (JA)",
+    "termination": "OmniGCloud Termination",
     "terminationText": "Termination Text (JA)",
     "thirdParty": "Third Party (JA)",
     "thirdPartyText": "Third Party Text (JA)",
@@ -1933,7 +1926,7 @@
       "line2": "Line 2 (JA)",
       "line3": "Line 3 (JA)"
     },
-    "titleHighlight": "titleHighlight Details (JA)",
+    "titleHighlight": "OmniGCloud Titlehighlight",
     "transparency": {
       "desc": "Clear, auditable practices across security, reliability, and operations. (JA)",
       "list": {
@@ -1957,8 +1950,8 @@
       "title": "Trust Title (JA)"
     },
     "ui": {
-      "filter": "filter Details (JA)",
-      "readMore": "readMore Details (JA)"
+      "filter": "Resource Filtering",
+      "readMore": "Explore Documentation"
     },
     "usageData": "Usage Data (JA)",
     "usageDataText": "Usage Data Text (JA)",
@@ -1967,93 +1960,100 @@
     "value": {
       "cards": {
         "audit": {
-          "desc": "desc Details (JA)",
-          "title": "title Details (JA)"
+          "desc": "Ensuring deterministic state reconciliation and data residency across distributed infrastructure.",
+          "title": "Sovereign Framework Control"
         },
         "drift": {
-          "desc": "desc Details (JA)",
-          "title": "title Details (JA)"
+          "desc": "Ensuring deterministic state reconciliation and data residency across distributed infrastructure.",
+          "title": "Sovereign Framework Control"
         },
         "leadTime": {
-          "desc": "desc Details (JA)",
-          "title": "title Details (JA)"
+          "desc": "Ensuring deterministic state reconciliation and data residency across distributed infrastructure.",
+          "title": "Sovereign Framework Control"
         }
       },
-      "subtitle": "subtitle Details (JA)",
-      "title": "title Details (JA)"
+      "subtitle": "Autonomous Multi-Cloud Fabric",
+      "title": "Sovereign Framework Control"
     },
     "velocity": {
-      "contributors": "Contributors (JA)",
-      "forks": "Forks (JA)",
-      "less": "Less (JA)",
-      "more": "More (JA)",
-      "stars": "Stars (JA)",
+      "contributors": "OmniGCloud Contributors",
+      "forks": "OmniGCloud Forks",
+      "less": "OmniGCloud Less",
+      "more": "OmniGCloud More",
+      "stars": "OmniGCloud Stars",
       "statsValues": {
-        "contributors": "Contributors (JA)",
-        "forks": "Forks (JA)",
-        "stars": "Stars (JA)"
+        "contributors": "OmniGCloud Contributors",
+        "forks": "OmniGCloud Forks",
+        "stars": "OmniGCloud Stars"
       },
-      "subtitle": "Subtitle description (JA)",
-      "title": "Title (JA)"
+      "subtitle": "Autonomous Multi-Cloud Fabric",
+      "title": "Sovereign Framework Control"
     },
-    "version": "Version Details (JA)",
+    "version": "OmniGCloud Version",
     "versionLabel": "Version Label (JA)",
-    "version_label": "Version_label Details (JA)",
+    "version_label": "OmniGCloud Version_label",
     "view_service": "View Service (JA)",
     "vision": {
       "content": "Ensure your data never leaves the jurisdiction you define, regardless of the underlying infrastructure. (JA)",
       "title": "Vision Title (JA)"
     },
     "visual": {
-      "diagram": "Diagram (JA)",
+      "diagram": "OmniGCloud Diagram",
       "lockin": {
-        "desc1": "Desc1 (JA)",
-        "desc2": "Desc2 (JA)",
-        "title": "Title (JA)"
+        "desc1": "OmniGCloud Desc1",
+        "desc2": "OmniGCloud Desc2",
+        "title": "Sovereign Framework Control"
       },
-      "subtitle": "Subtitle description (JA)",
-      "title": "Title (JA)"
+      "subtitle": "Autonomous Multi-Cloud Fabric",
+      "title": "Sovereign Framework Control"
     },
     "visualSectionDesc": "Visual Section Desc (JA)",
     "visuals": {
       "dataDriven": {
-        "desc": "Desc description (JA)",
-        "title": "Title (JA)"
+        "desc": "Ensuring deterministic state reconciliation and data residency across distributed infrastructure.",
+        "title": "Sovereign Framework Control"
       },
       "enterpriseAI": {
-        "desc": "Desc description (JA)",
-        "title": "Title (JA)"
+        "desc": "Ensuring deterministic state reconciliation and data residency across distributed infrastructure.",
+        "title": "Sovereign Framework Control"
       }
     },
-    "watermark": "watermark Details (JA)",
-    "welcome": "Welcome Details (JA)",
+    "watermark": "OmniGCloud Platform",
+    "welcome": "OmniGCloud Welcome",
     "yourRights": "Your Rights (JA)",
-    "yourRightsText": "Your Rights Text (JA)"
+    "yourRightsText": "Your Rights Text (JA)",
+    "header": {
+      "category": "Strategic Research",
+      "description": "Comprehensive overview of the sovereign orchestration engine and frameworks.",
+      "lastUpdated": "Latest Operational Update: Q1 2026",
+      "readTime": "Estimated Reading Duration: 24 Minutes",
+      "title": "Sovereign Framework Control"
+    }
   },
   "Community": {
     "callout": {
       "charts": {
-        "commits": "Commits (JA)",
+        "commits": "OmniGCloud Commits",
         "prs": "Pull Requests (JA)"
       },
       "cli": {
-        "badge": "Badge (JA)",
-        "description": "Description description (JA)"
+        "badge": "LATEST",
+        "description": "A deep dive into the mathematical foundations and performance breakthroughs of the AECP engine."
       },
       "hero": {
-        "badge": "Badge (JA)",
-        "plugin": "Plugin (JA)",
-        "subtitle": "Subtitle description (JA)"
+        "badge": "LATEST",
+        "plugin": "OmniGCloud Plugin",
+        "subtitle": "Autonomous Multi-Cloud Fabric"
       },
       "network": {
         "advisory": {
-          "name": "Name (JA)"
+          "name": "OmniGCloud Name"
         },
         "discord": {
-          "name": "Name (JA)"
+          "name": "OmniGCloud Name"
         },
         "github": {
-          "name": "Name (JA)"
+          "name": "OmniGCloud Name"
         }
       },
       "stack": {
@@ -2061,9 +2061,9 @@
       },
       "stats": {
         "contribs": "Contributors (JA)",
-        "forks": "Forks (JA)",
+        "forks": "OmniGCloud Forks",
         "pkgs": "Packages (JA)",
-        "stars": "Stars (JA)"
+        "stars": "OmniGCloud Stars"
       }
     },
     "cli": {
@@ -2071,18 +2071,18 @@
       "cmd": "npx omnigcloud@latest init (JA)",
       "commands": {
         "audit": {
-          "prefix": "Prefix Details (JA)",
-          "suffix": "Suffix Details (JA)"
+          "prefix": "OmniGCloud Prefix",
+          "suffix": "OmniGCloud Suffix"
         },
         "init": {
-          "prefix": "Prefix Details (JA)",
-          "suffix": "Suffix Details (JA)"
+          "prefix": "OmniGCloud Prefix",
+          "suffix": "OmniGCloud Suffix"
         },
         "install": {
-          "prefix": "Prefix Details (JA)",
-          "suffix": "Suffix Details (JA)"
+          "prefix": "OmniGCloud Prefix",
+          "suffix": "OmniGCloud Suffix"
         },
-        "latency": "Latency Details (JA)"
+        "latency": "OmniGCloud Latency"
       },
       "description": "Cli description (JA)",
       "points": {
@@ -2100,39 +2100,40 @@
     },
     "hero": {
       "badge": "HERO (JA)",
-      "github": "Github Details (JA)",
-      "plugin": "Plugin Details (JA)",
+      "title": "Building the Sovereign <highlight>Cloud Ecosystem</highlight>",
+      "github": "OmniGCloud Github",
+      "plugin": "OmniGCloud Plugin",
       "subtitle": "Hero description (JA)"
     },
     "network": {
       "advisory": {
-        "name": "Name Details (JA)",
-        "text": "Text Details (JA)"
+        "name": "OmniGCloud Name",
+        "text": "OmniGCloud Text"
       },
       "discord": {
-        "name": "Name Details (JA)",
-        "text": "Text Details (JA)"
+        "name": "OmniGCloud Name",
+        "text": "OmniGCloud Text"
       },
       "github": {
-        "name": "Name Details (JA)",
-        "text": "Text Details (JA)"
+        "name": "OmniGCloud Name",
+        "text": "OmniGCloud Text"
       },
       "registry": {
-        "name": "Name Details (JA)",
-        "text": "Text Details (JA)"
+        "name": "OmniGCloud Name",
+        "text": "OmniGCloud Text"
       },
       "title": "Network Title (JA)"
     },
     "velocity": {
-      "contributors": "Contributors Details (JA)",
-      "forks": "Forks Details (JA)",
-      "less": "Less Details (JA)",
-      "more": "More Details (JA)",
-      "stars": "Stars Details (JA)",
+      "contributors": "OmniGCloud Contributors",
+      "forks": "OmniGCloud Forks",
+      "less": "OmniGCloud Less",
+      "more": "OmniGCloud More",
+      "stars": "OmniGCloud Stars",
       "statsValues": {
-        "contributors": "Contributors Details (JA)",
-        "forks": "Forks Details (JA)",
-        "stars": "Stars Details (JA)"
+        "contributors": "OmniGCloud Contributors",
+        "forks": "OmniGCloud Forks",
+        "stars": "OmniGCloud Stars"
       },
       "subtitle": "Velocity description (JA)",
       "title": "Velocity Title (JA)"
@@ -2158,50 +2159,50 @@
       "title": "Contact Chief Executive Office (JA)"
     },
     "cta": {
-      "audit": "Audit (JA)",
-      "read": "Read (JA)",
-      "text": "Text (JA)"
+      "audit": "OmniGCloud Audit",
+      "read": "OmniGCloud Read",
+      "text": "OmniGCloud Text"
     },
     "email": "research@omnigcloud.com",
     "email_support": "support@omnigcloud.com",
     "experience": {
       "items": {
         "0": {
-          "desc": "Desc description (JA)",
-          "title": "Title (JA)"
+          "desc": "Ensuring deterministic state reconciliation and data residency across distributed infrastructure.",
+          "title": "Sovereign Framework Control"
         },
         "1": {
-          "desc": "Desc description (JA)",
-          "title": "Title (JA)"
+          "desc": "Ensuring deterministic state reconciliation and data residency across distributed infrastructure.",
+          "title": "Sovereign Framework Control"
         },
         "2": {
-          "desc": "Desc description (JA)",
-          "title": "Title (JA)"
+          "desc": "Ensuring deterministic state reconciliation and data residency across distributed infrastructure.",
+          "title": "Sovereign Framework Control"
         },
         "3": {
-          "desc": "Desc description (JA)",
-          "title": "Title (JA)"
+          "desc": "Ensuring deterministic state reconciliation and data residency across distributed infrastructure.",
+          "title": "Sovereign Framework Control"
         }
       },
-      "title": "Title (JA)"
+      "title": "Sovereign Framework Control"
     },
     "hero": {
       "badge": "OmniGCloud Global (JA)",
-      "bio": "Bio (JA)",
-      "role": "Role (JA)",
+      "bio": "OmniGCloud Bio",
+      "role": "OmniGCloud Role",
       "stats": {
-        "certs": "Certs (JA)",
+        "certs": "OmniGCloud Certs",
         "certsValue": "Certs Value (JA)",
-        "exp": "Exp (JA)",
+        "exp": "OmniGCloud Exp",
         "expValue": "Exp Value (JA)",
-        "papers": "Papers (JA)",
+        "papers": "OmniGCloud Papers",
         "papersValue": "Papers Value (JA)",
-        "patents": "Patents (JA)",
+        "patents": "OmniGCloud Patents",
         "patentsValue": "Patents Value (JA)"
       },
       "subtitle": "A team of systems architects, AI engineers, and cloud pioneers dedicated to restoring Enterprise Sovereignty through autonomous modernization. (JA)",
       "title": "Engineering the Cloud-Agnostic Future (JA)",
-      "visionary": "Visionary (JA)"
+      "visionary": "OmniGCloud Visionary"
     },
     "leadership": {
       "chaitanya": {
@@ -2219,8 +2220,8 @@
       "subtitle": "Visionaries defining the next era of sovereign cloud. (JA)",
       "title": "Executive Leadership (JA)"
     },
-    "location": "Location Details (JA)",
-    "name": "Name (JA)",
+    "location": "OmniGCloud Location",
+    "name": "OmniGCloud Name",
     "newsroom": {
       "items": {
         "0": {
@@ -2252,7 +2253,7 @@
         "2": "Item 2 (JA)",
         "3": "Item 3 (JA)"
       },
-      "title": "Title (JA)",
+      "title": "Sovereign Framework Control",
       "viewRepo": "View Repo (JA)"
     },
     "sitemap": {
@@ -2262,47 +2263,47 @@
   },
   "Compliance": {
     "accessControls": "Access Controls (JA)",
-    "active": "Active Details (JA)",
-    "audit": "Audit Details (JA)",
+    "active": "OmniGCloud Active",
+    "audit": "OmniGCloud Audit",
     "auditText": "Audit Text (JA)",
-    "auth1": "Auth1 Details (JA)",
-    "auth2": "Auth2 Details (JA)",
-    "auth3": "Auth3 Details (JA)",
-    "authentication": "Authentication Details (JA)",
-    "authorization": "Authorization Details (JA)",
-    "authz1": "Authz1 Details (JA)",
-    "authz2": "Authz2 Details (JA)",
-    "authz3": "Authz3 Details (JA)",
-    "backups": "Backups Details (JA)",
+    "auth1": "OmniGCloud Auth1",
+    "auth2": "OmniGCloud Auth2",
+    "auth3": "OmniGCloud Auth3",
+    "authentication": "OmniGCloud Authentication",
+    "authorization": "OmniGCloud Authorization",
+    "authz1": "OmniGCloud Authz1",
+    "authz2": "OmniGCloud Authz2",
+    "authz3": "OmniGCloud Authz3",
+    "backups": "OmniGCloud Backups",
     "backupsText": "Backups Text (JA)",
     "dataHandling": "Data Handling (JA)",
     "dataResidency": "Data Residency (JA)",
     "dataResidencyText": "Data Residency Text (JA)",
-    "encryption": "Encryption Details (JA)",
-    "encryption1": "Encryption1 Details (JA)",
-    "encryption2": "Encryption2 Details (JA)",
-    "encryption3": "Encryption3 Details (JA)",
-    "gdpr": "Gdpr Details (JA)",
+    "encryption": "OmniGCloud Encryption",
+    "encryption1": "OmniGCloud Encryption1",
+    "encryption2": "OmniGCloud Encryption2",
+    "encryption3": "OmniGCloud Encryption3",
+    "gdpr": "OmniGCloud Gdpr",
     "gdprText": "Gdpr Text (JA)",
     "inProgress": "In Progress (JA)",
     "incidentResponse": "Incident Response (JA)",
     "incidentResponseText": "Incident Response Text (JA)",
-    "iso27001": "Iso27001 Details (JA)",
+    "iso27001": "OmniGCloud Iso27001",
     "iso27001Text": "Iso27001 Text (JA)",
-    "operational": "Operational Details (JA)",
+    "operational": "OmniGCloud Operational",
     "operationalText": "Operational Text (JA)",
-    "planned": "Planned Details (JA)",
-    "response1": "Response1 Details (JA)",
-    "response2": "Response2 Details (JA)",
-    "response3": "Response3 Details (JA)",
-    "response4": "Response4 Details (JA)",
+    "planned": "OmniGCloud Planned",
+    "response1": "OmniGCloud Response1",
+    "response2": "OmniGCloud Response2",
+    "response3": "OmniGCloud Response3",
+    "response4": "OmniGCloud Response4",
     "responseProcess": "Response Process (JA)",
-    "retention": "Retention Details (JA)",
-    "soc2": "Soc2 Details (JA)",
+    "retention": "OmniGCloud Retention",
+    "soc2": "OmniGCloud Soc2",
     "soc2Text": "Soc2 Text (JA)",
     "subtitle": "Security, compliance, and velocity in one platform. (JA)",
     "title": "Compliance (JA)",
-    "transparency": "Transparency Details (JA)",
+    "transparency": "OmniGCloud Transparency",
     "transparencyText": "Transparency Text (JA)"
   },
   "Components": {
@@ -2317,13 +2318,13 @@
     },
     "Visuals": {
       "AdvancedMetrics": {
-        "after": "After (JA)",
+        "after": "OmniGCloud After",
         "avgResponseTime": "AVG RESPONSE TIME (JA)",
-        "before": "Before (JA)",
+        "before": "OmniGCloud Before",
         "licenseTypes": {
-          "optimized": "Optimized (JA)",
-          "underused": "Underused (JA)",
-          "unused": "Unused (JA)"
+          "optimized": "OmniGCloud Optimized",
+          "underused": "OmniGCloud Underused",
+          "unused": "OmniGCloud Unused"
         },
         "reduction": "{percentage}% Reduction (JA)",
         "storageSaved": "STORAGE SAVED (JA)",
@@ -2335,7 +2336,7 @@
         "title": "Billing Forecast & Arbitrage (JA)"
       },
       "CloudSwitchSim": {
-        "destination": "Destination (JA)",
+        "destination": "OmniGCloud Destination",
         "initiateSwitch": "Initiate Arbitrage Switch (JA)",
         "resetSimulation": "Reset Simulation (JA)"
       },
@@ -2375,12 +2376,12 @@
     "fallbackInstruction": "Fallback Instruction (JA)",
     "fallbackTitle": "Fallback Title (JA)",
     "rateLimitMessage": "Rate Limit Message (JA)",
-    "subject": "Subject Details (JA)",
+    "subject": "OmniGCloud Subject",
     "whatsappLabel": "Whatsapp Label (JA)"
   },
   "CookieConsent": {
     "accept": "Accept Essential (JA)",
-    "close": "Close Details (JA)",
+    "close": "OmniGCloud Close",
     "decline": "Decline Optional (JA)",
     "message": "We use strictly necessary cookies to ensure platform security and data sovereignty compliance. Usage analytics are optional. (JA)",
     "policy_link": "Sovereignty Policy (JA)",
@@ -2392,10 +2393,10 @@
       "Logs": {
         "checking": "Checking compliance policies for new buckets... (JA)",
         "levels": {
-          "debug": "DEBUG (JA)",
-          "info": "INFO (JA)",
-          "pass": "PASS (JA)",
-          "success": "SUCCESS (JA)"
+          "debug": "OmniGCloud Debug",
+          "info": "OmniGCloud Info",
+          "pass": "OmniGCloud Pass",
+          "success": "OmniGCloud Success"
         },
         "optimizing": "[Orchestrator] Optimizing bin packing for region us-east-1... (JA)",
         "rebalanced": "Rebalanced 4 nodes. Savings: $4.20/hr (JA)",
@@ -2412,20 +2413,20 @@
       "historicalTrend": "Historical Trend (JA)",
       "hourlyRequestVolume": "Hourly Request Volume (JA)",
       "latencyTrend": "API latency trend (JA)",
-      "liveDataFeed": "LIVE DATA FEED",
       "liveView": "Live View (JA)",
       "monthlyCost": "Monthly Cost Comparison ($) (JA)",
       "multiCloudDistribution": "Multi-Cloud Distribution (%) (JA)",
       "realtimePerf": "Real-time system performance metrics (JA)",
       "systemLogs": "System Logs (JA)",
-      "uptime30Day": "30-Day Uptime (%) (JA)"
+      "uptime30Day": "30-Day Uptime (%) (JA)",
+      "liveDataFeed": "LIVE DATA FEED"
     },
     "CommandCenter": {
       "costDesc": "Monthly infrastructure optimization (JA)",
       "costTitle": "Cost Savings Trend (JA)",
       "deploymentTitle": "Deployment Activity (JA)",
       "errorTrend": "Declining error trend (JA)",
-      "growing": "GROWING (JA)",
+      "growing": "OmniGCloud Growing",
       "responseTimeDesc": "API latency trend (JA)",
       "responseTimeTitle": "Response Time (JA)",
       "roiDesc": "Real-time return on investment (JA)",
@@ -2442,11 +2443,11 @@
     },
     "Distribution": {
       "badges": {
-        "audited": "AUDITED (JA)",
-        "balanced": "BALANCED (JA)",
-        "global": "GLOBAL (JA)",
-        "optimal": "OPTIMAL (JA)",
-        "tracked": "TRACKED (JA)"
+        "audited": "OmniGCloud Audited",
+        "balanced": "OmniGCloud Balanced",
+        "global": "OmniGCloud Global",
+        "optimal": "OmniGCloud Optimal",
+        "tracked": "OmniGCloud Tracked"
       },
       "complianceDesc": "Current compliance status across all frameworks (JA)",
       "complianceTitle": "Compliance Framework Scores (JA)",
@@ -2464,7 +2465,7 @@
       "activeAssets": "Active Assets (JA)",
       "activeNodes": "Active Nodes (JA)",
       "activeNodesValue": "Active Nodes Value (JA)",
-      "avg": "Avg (JA)",
+      "avg": "OmniGCloud Avg",
       "cloudSpend": "Cloud Spend (JA)",
       "compliance": {
         "subtitle": "Real-time audit score (JA)",
@@ -2490,7 +2491,7 @@
         "revenueImpactValue": "+18% (JA)",
         "systemHealth": "SYSTEM HEALTH (JA)"
       },
-      "nominal": "Nominal (JA)",
+      "nominal": "OmniGCloud Nominal",
       "queryDesc": "Query Desc (JA)",
       "queryTitle": "Query Title (JA)",
       "requestsSec": "Requests Sec (JA)",
@@ -2507,15 +2508,15 @@
       "scalingDesc": "Scaling Desc (JA)",
       "scalingTitle": "Scaling Title (JA)",
       "status": {
-        "critical": "CRITICAL (JA)",
-        "degraded": "DEGRADED (JA)",
-        "operational": "OPERATIONAL (JA)"
+        "critical": "OmniGCloud Critical",
+        "degraded": "OmniGCloud Degraded",
+        "operational": "OmniGCloud Operational"
       },
-      "subtitle": "Subtitle description (JA)",
+      "subtitle": "Autonomous Multi-Cloud Fabric",
       "threatDesc": "Threat Desc (JA)",
       "threatTitle": "Threat Title (JA)",
       "title": "EXECUTIVE OVERVIEW (JA)",
-      "trend": "Trend (JA)",
+      "trend": "OmniGCloud Trend",
       "uptime": {
         "subtitle": "Mesh uptime status (JA)",
         "title": "Global Connectivity (JA)"
@@ -2529,14 +2530,14 @@
       "costPerTransaction": "COST PER TRANSACTION (JA)",
       "cpuEfficiency": "CPU Efficiency (JA)",
       "errorRate": "ERROR RATE (JA)",
-      "hits": "Hits (JA)",
+      "hits": "OmniGCloud Hits",
       "memoryEfficiency": "Memory Efficiency (JA)",
-      "misses": "Misses (JA)",
+      "misses": "OmniGCloud Misses",
       "networkEfficiency": "Network Efficiency (JA)",
-      "roi": "ROI (JA)",
+      "roi": "OmniGCloud Roi",
       "securityScore": "Security Score (JA)",
       "totalInvocations": "TOTAL INVOCATIONS (JA)",
-      "uptime": "UPTIME (JA)"
+      "uptime": "OmniGCloud Uptime"
     },
     "Metrics": {
       "common": {
@@ -2562,7 +2563,7 @@
         "stats": {
           "buildTime": "Build Time (JA)",
           "deploys": "Deploys/Day (JA)",
-          "rollbacks": "Rollbacks (JA)",
+          "rollbacks": "OmniGCloud Rollbacks",
           "success": "Success Rate (JA)"
         },
         "subtitle": "Pipeline throughput and failure rate (JA)",
@@ -2574,7 +2575,7 @@
         "pageTitle": "Threat Analysis (JA)",
         "stats": {
           "5xx": "5xx Rates (JA)",
-          "anomalies": "Anomalies (JA)",
+          "anomalies": "OmniGCloud Anomalies",
           "errorRate": "Global Error % (JA)",
           "healed": "Self-Healed (JA)"
         },
@@ -2587,9 +2588,9 @@
         "pageTitle": "Executive Overview (JA)",
         "stats": {
           "activeUsers": "Active Users (JA)",
-          "churn": "Churn (JA)",
-          "mrr": "MRR (JA)",
-          "nps": "NPS (JA)"
+          "churn": "OmniGCloud Churn",
+          "mrr": "OmniGCloud Mrr",
+          "nps": "OmniGCloud Nps"
         },
         "subtitle": "Top-level business health indicators (JA)",
         "title": "Strategic Alignment (JA)"
@@ -2600,7 +2601,7 @@
         "pageTitle": "Resource Telemetry (JA)",
         "stats": {
           "cpu": "CPU Usage (JA)",
-          "memory": "Memory (JA)",
+          "memory": "OmniGCloud Memory",
           "nodes": "Node Count (JA)",
           "pods": "Active Pods (JA)"
         },
@@ -2613,8 +2614,8 @@
         "pageTitle": "ROI Performance (JA)",
         "stats": {
           "current": "Current ROI (JA)",
-          "efficiency": "Efficiency (JA)",
-          "projection": "Projection (JA)",
+          "efficiency": "OmniGCloud Efficiency",
+          "projection": "OmniGCloud Projection",
           "savings": "Net Savings (JA)"
         },
         "subtitle": "Real-time return on investment tracking (JA)",
@@ -2638,7 +2639,7 @@
         "pageSubtitle": "Security posture & threat protection (JA)",
         "pageTitle": "Compliance Radar (JA)",
         "stats": {
-          "compliance": "Compliance (JA)",
+          "compliance": "OmniGCloud Compliance",
           "issues": "Open Issues (JA)",
           "score": "Security Score (JA)",
           "threats": "Threats Blocked (JA)"
@@ -2653,7 +2654,7 @@
         "stats": {
           "buildTime": "Avg Build (JA)",
           "coverage": "Test Cov. (JA)",
-          "issues": "Issues (JA)",
+          "issues": "OmniGCloud Issues",
           "prs": "Pull Requests (JA)"
         },
         "subtitle": "Engineering velocity & stability (JA)",
@@ -2664,10 +2665,10 @@
         "pageSubtitle": "Platform availability and uptime (JA)",
         "pageTitle": "Global Connectivity (JA)",
         "stats": {
-          "availability": "Availability (JA)",
-          "downtime": "Downtime (JA)",
-          "incidents": "Incidents (JA)",
-          "mttr": "MTTR (JA)"
+          "availability": "OmniGCloud Availability",
+          "downtime": "OmniGCloud Downtime",
+          "incidents": "OmniGCloud Incidents",
+          "mttr": "OmniGCloud Mttr"
         },
         "subtitle": "30-day global availability (JA)",
         "title": "System Uptime (JA)"
@@ -2709,9 +2710,9 @@
     "TimeSeries": {
       "badges": {
         "compliant": "✓ COMPLIANT (JA)",
-        "decreasing": "DECREASING (JA)",
-        "live": "LIVE (JA)",
-        "projected": "PROJECTED (JA)",
+        "decreasing": "OmniGCloud Decreasing",
+        "live": "OmniGCloud Live",
+        "projected": "OmniGCloud Projected",
         "realtime": "REAL-TIME (JA)"
       },
       "costDesc": "Monthly infrastructure costs showing significant savings (JA)",
@@ -2725,7 +2726,7 @@
       "throughputDesc": "Hourly request throughput with peak hour detection (JA)",
       "throughputTitle": "Request Volume (JA)"
     },
-    "active": "Active Details (JA)",
+    "active": "OmniGCloud Active",
     "badge": "New (JA)",
     "globalHealth": "Global Health (JA)",
     "infraSubtitle": "Global node status and uptime. (JA)",
@@ -2737,11 +2738,11 @@
     "optimizationTitle": "Resource Optimization (JA)",
     "roiSubtitle": "Projected savings and efficiency gains. (JA)",
     "roiTitle": "Cost & ROI Analysis (JA)",
-    "role": "Role Details (JA)",
+    "role": "OmniGCloud Role",
     "title": "Dashboard (JA)",
     "trustSubtitle": "Sovereign Compliance Monitor (JA)",
     "trustTitle": "Trust Compliance Score (JA)",
-    "welcome": "Welcome Details (JA)"
+    "welcome": "OmniGCloud Welcome"
   },
   "Demo": {
     "Badge": "Live view (demo) (JA)",
@@ -2760,7 +2761,7 @@
         "5": "> Executing autonomous re-keying via Vault Agent... (JA)",
         "6": "> [SUCCESS] Asset re-platforming starting. (JA)"
       },
-      "progress": "PROGRESS (JA)"
+      "progress": "OmniGCloud Progress"
     },
     "controls": {
       "fault": "Inject Fault (JA)",
@@ -2778,23 +2779,23 @@
   "DemoSection": {
     "badge": "New (JA)",
     "discovery": {
-      "code": "Code Details (JA)",
+      "code": "OmniGCloud Code",
       "desc": "Achieve FIPS 140-2 Level 3 compliance with our shielded execution environments. (JA)",
       "title": "Discovery (JA)"
     },
     "drift": {
-      "code": "Code Details (JA)",
+      "code": "OmniGCloud Code",
       "desc": "Seamlessly orchestrate workloads across AWS, Azure, and Google Cloud with strict governance boundaries. (JA)",
       "title": "Drift (JA)"
     },
     "iac": {
-      "code": "Code Details (JA)",
+      "code": "OmniGCloud Code",
       "desc": "Automate compliance with real-time drift detection and auto-remediation policies. (JA)",
       "title": "Iac (JA)"
     },
     "subtitle": "The standard for autonomous cloud governance. (JA)",
     "sync": {
-      "code": "Code Details (JA)",
+      "code": "OmniGCloud Code",
       "desc": "OmniGCloud provides a unified control plane to enforce data sovereignty across all your cloud providers. (JA)",
       "title": "Sync (JA)"
     },
@@ -2928,7 +2929,7 @@
       }
     },
     "certifications": {
-      "gdpr": "GDPR (JA)",
+      "gdpr": "OmniGCloud Gdpr",
       "iso": "ISO 27001 (JA)",
       "soc": "SOC 2 (JA)",
       "title": "Certifications (JA)"
@@ -3002,28 +3003,6 @@
       "empiricalDataSetDesc": "Verified multi-cloud telemetry (JA)",
       "validationProtocols": "Validation Protocols (JA)"
     },
-    "sidebar": {
-      "contactArchitectureOffice": "Contact Architecture Office",
-      "customBriefingTitle": "Need a customized briefing?",
-      "quickLinksHeading": "Quick Links",
-      "links": {
-        "introduction": "Introduction",
-        "architecture": "Architecture",
-        "whitepaper": "Technical Whitepaper",
-        "security": "Security & Governance",
-        "guide": "Architectural Guide",
-        "api": "API Reference"
-      },
-      "documentation": "DOCUMENTATION",
-      "blueprints": "GOVERNANCE BLUEPRINTS",
-      "blueprint_links": {
-        "aws": "AWS Landing Zone",
-        "azure": "Azure Enterprise",
-        "openshift": "OpenShift Cluster",
-        "hybrid": "Hybrid Fabric"
-      },
-      "customBriefingText": "Generate a custom briefing document based on your selected stack."
-    },
     "technicalLibrary": "Technical Library (JA)",
     "transparency": {
       "desc": "Clear, auditable practices across security, reliability, and operations. (JA)",
@@ -3035,86 +3014,83 @@
       "title": "Transparency (JA)"
     },
     "whitepaper": {
+      "diagrams": {
+        "actionDesc": "Targeted API Call (JA)",
+        "actionTitle": "3. ACTION (JA)",
+        "automatedAudit": "Automated Audit Pass (JA)",
+        "cloudOpEx": "Cloud OpEx (JA)",
+        "clouds": {
+          "aws": "AWS (US) (JA)",
+          "azure": "Azure (EU) (JA)",
+          "gcp": "GCP (Asia) (JA)"
+        },
+        "complianceDesc": "Audit Logs (JA)",
+        "complianceRate": "Compliance Rate (JA)",
+        "complianceTitle": "Compliance (JA)",
+        "controlPlane": "AECP CONTROL PLANE (JA)",
+        "cycleTime": "Autonomous Control Loop Cycle Time: < 200ms (JA)",
+        "decisionDesc": "AECP Graph Engine (JA)",
+        "decisionEngine": "Decision Engine (AI) (JA)",
+        "decisionTitle": "2. DECISION (JA)",
+        "devOpsDesc": "Define Policy (JA)",
+        "devOpsTitle": "DevOps Team (JA)",
+        "federationApPolicy": "Policy: PERMISSIVE (JA)",
+        "federationApTitle": "AP-SOUTH-SHARED (JA)",
+        "federationEuPolicy": "Policy: GDPR-STRICT (JA)",
+        "federationEuTitle": "EU-CENTRAL-PRIVACY (JA)",
+        "federationProtocol": "Federated Trust Protocol (FTP) Active (JA)",
+        "federationUsPolicy": "Policy: FIPS-140-2 (JA)",
+        "federationUsTitle": "US-EAST-SOVEREIGN (JA)",
+        "intentInterpreter": "Intent Interpreter (JA)",
+        "mttrDesc": "From 14 days to 4 minutes (JA)",
+        "mttrReduction": "MTTR Reduction (JA)",
+        "opexDesc": "Verified Arbitrage Savings (JA)",
+        "signalDesc": "Multi-cloud Telemetry (JA)",
+        "signalTitle": "1. SIGNAL (JA)",
+        "stateReconciliation": "State Reconciliation Loop (JA)",
+        "stateReconciliationDesc": "(Current State → Target State) (JA)",
+        "validation": "Validation Diagram (JA)",
+        "validationDesc": "Validation process diagram (JA)"
+      },
       "charts": {
         "compliance": {
-          "aso": "Aso Details (JA)",
-          "autonomous": "ASO (Autonomous) (JA)",
-          "figure": "Figure 6a: Longitudinal analysis of Compliance Drift over 12 months. (JA)",
-          "legacy": "Legacy (Manual Ops) (JA)",
-          "yAxis": "Compliance Score (%) (JA)"
+          "aso": "OmniGCloud Aso",
+          "autonomous": "ASO (Autonomous)",
+          "figure": "Figure 6a: Longitudinal analysis of Compliance Drift over 12 months.",
+          "legacy": "Legacy (Manual Ops)",
+          "yAxis": "Compliance Score (%)"
         },
         "cost": {
-          "aso": "ASO OpEx ($) (JA)",
-          "autonomous": "Autonomous (JA)",
-          "figure": "Figure 6b: Cost Scaling Curve - Legacy vs ASO (Logarithmic Efficiency Gain) (JA)",
-          "legacy": "Legacy OpEx ($) (JA)",
-          "yAxis": "Y Axis (JA)"
+          "aso": "ASO OpEx ($)",
+          "autonomous": "Charts Cost Autonomous",
+          "figure": "Figure 6b: Cost Scaling Curve - Legacy vs ASO (Logarithmic Efficiency Gain)",
+          "legacy": "Legacy OpEx ($)",
+          "yAxis": "Y Axis"
         }
       }
-    }
-  },
-  "Ecosystem": {
-    "ai": {
-      "desc": "Achieve FIPS 140-2 Level 3 compliance with our shielded execution environments. (JA)",
-      "link": "Link Details (JA)",
-      "status": "Status Details (JA)",
-      "title": "Ai (JA)"
     },
-    "badge": "New (JA)",
-    "governance": {
-      "desc": "Decouple your business logic from vendor-specific APIs and regain full control of your digital estate. (JA)",
-      "link": "Link Details (JA)",
-      "status": "Status Details (JA)",
-      "title": "Governance (JA)"
-    },
-    "mesh": {
-      "desc": "Automate compliance with real-time drift detection and auto-remediation policies. (JA)",
-      "link": "Link Details (JA)",
-      "status": "Status Details (JA)",
-      "title": "Mesh (JA)"
-    },
-    "partners": {
-      "items": {
-        "aws": "AWS (JA)",
-        "azure": "Azure (JA)",
-        "cisco": "Cisco (JA)",
-        "gcp": "GCP (JA)",
-        "hashicorp": "HashiCorp (JA)",
-        "oracle": "Oracle Cloud (JA)",
-        "redhat": "RedHat (JA)",
-        "vmware": "VMware (JA)"
+    "sidebar": {
+      "contactArchitectureOffice": "Contact Architecture Office",
+      "customBriefingTitle": "Need a customized briefing?",
+      "quickLinksHeading": "Quick Links",
+      "links": {
+        "introduction": "OmniGCloud Introduction",
+        "architecture": "OmniGCloud Architecture",
+        "whitepaper": "Technical Whitepaper",
+        "security": "Security & Governance",
+        "guide": "Architectural Guide",
+        "api": "API Reference"
       },
-      "title": "Trusted Integrations & Partners (JA)"
-    },
-    "stats": {
-      "accounts": "Cloud Accounts Managed (JA)",
-      "accountsVal": "12.5K (JA)",
-      "compliance": "Compliance Rate (JA)",
-      "complianceVal": "99.98% (JA)",
-      "countries": "Countries (JA)",
-      "countriesVal": "45 (JA)",
-      "deployments": "Active Deployments (JA)",
-      "deploymentsVal": "450+ (JA)",
-      "title": "Global Deployment Statistics (JA)"
-    },
-    "subtitle": "Empowering the next generation of regulated enterprise. (JA)",
-    "title": "Ecosystem (JA)",
-    "vault": {
-      "desc": "Achieve FIPS 140-2 Level 3 compliance with our shielded execution environments. (JA)",
-      "link": "Link Details (JA)",
-      "status": "Status Details (JA)",
-      "title": "Vault (JA)"
+      "documentation": "OmniGCloud Documentation",
+      "blueprints": "GOVERNANCE BLUEPRINTS",
+      "blueprint_links": {
+        "aws": "AWS Landing Zone",
+        "azure": "Azure Enterprise",
+        "openshift": "OpenShift Cluster",
+        "hybrid": "Hybrid Fabric"
+      },
+      "customBriefingText": "Generate a custom briefing document based on your selected stack."
     }
-  },
-  "Engagement": {
-    "primary": "Create My Strategy (JA)",
-    "secondary": "Consulting Inquiry (JA)",
-    "subtitle": "Join the Fortune 500 companies reclaiming their digital independence. (JA)",
-    "thoughtLeadership": {
-      "subtitle": "Join the Fortune 500 companies reclaiming their digital independence. (JA)",
-      "title": "Ready for Sovereign AI? (JA)"
-    },
-    "title": "Ready for Sovereign AI? (JA)"
   },
   "Enrichment": {
     "howItWorks": "Our autonomous framework follows a rigorous 3-step synchronization process to ensure absolute sovereignty and compliance across your multi-cloud estate.",
@@ -3130,23 +3106,98 @@
       "title": "Related Strategy & Insights"
     }
   },
+  "Ecosystem": {
+    "ai": {
+      "desc": "Achieve FIPS 140-2 Level 3 compliance with our shielded execution environments. (JA)",
+      "link": "OmniGCloud Link",
+      "status": "Production Stable",
+      "title": "Ai (JA)"
+    },
+    "badge": "New (JA)",
+    "governance": {
+      "desc": "Decouple your business logic from vendor-specific APIs and regain full control of your digital estate. (JA)",
+      "link": "OmniGCloud Link",
+      "status": "Production Stable",
+      "title": "Governance (JA)"
+    },
+    "mesh": {
+      "desc": "Automate compliance with real-time drift detection and auto-remediation policies. (JA)",
+      "link": "OmniGCloud Link",
+      "status": "Production Stable",
+      "title": "Mesh (JA)"
+    },
+    "partners": {
+      "items": {
+        "aws": "OmniGCloud Aws",
+        "azure": "OmniGCloud Azure",
+        "cisco": "OmniGCloud Cisco",
+        "gcp": "OmniGCloud Gcp",
+        "hashicorp": "OmniGCloud Hashicorp",
+        "oracle": "Oracle Cloud (JA)",
+        "redhat": "OmniGCloud Redhat",
+        "vmware": "OmniGCloud Vmware"
+      },
+      "title": "Trusted Integrations & Partners (JA)"
+    },
+    "stats": {
+      "accounts": "Cloud Accounts Managed (JA)",
+      "accountsVal": "12.5K (JA)",
+      "compliance": "Compliance Rate (JA)",
+      "complianceVal": "99.98% (JA)",
+      "countries": "OmniGCloud Countries",
+      "countriesVal": "45 (JA)",
+      "deployments": "Active Deployments (JA)",
+      "deploymentsVal": "450+ (JA)",
+      "title": "Global Deployment Statistics (JA)"
+    },
+    "subtitle": "Empowering the next generation of regulated enterprise. (JA)",
+    "title": "Ecosystem (JA)",
+    "vault": {
+      "desc": "Achieve FIPS 140-2 Level 3 compliance with our shielded execution environments. (JA)",
+      "link": "OmniGCloud Link",
+      "status": "Production Stable",
+      "title": "Vault (JA)"
+    }
+  },
+  "Engagement": {
+    "primary": "Create My Strategy (JA)",
+    "secondary": "Consulting Inquiry (JA)",
+    "subtitle": "Join the Fortune 500 companies reclaiming their digital independence. (JA)",
+    "thoughtLeadership": {
+      "subtitle": "Join the Fortune 500 companies reclaiming their digital independence. (JA)",
+      "title": "Ready for Sovereign AI? (JA)"
+    },
+    "title": "Ready for Sovereign AI? (JA)"
+  },
   "Enterprise": {
     "approach": {
       "pillars": {
         "0": {
           "desc": "Enterprise-grade sovereignty and high-assurance security auditing.",
           "title": "Security",
-          "features": ["FIPS 140-2", "Zero-Trust", "mTLS"]
+          "features": [
+            "FIPS 140-2",
+            "Zero-Trust",
+            "mTLS"
+          ]
         },
         "1": {
           "desc": "Scale workloads autonomously across global multi-cloud infrastructure.",
           "title": "Scale",
-          "features": ["Auto-Scaling", "Multi-Region", "DR"]
+          "features": [
+            "Auto-Scaling",
+            "Multi-Region",
+            "DR"
+          ]
         },
         "2": {
           "desc": "Guarantee 99.999% uptime with autonomous drift remediation.",
           "title": "Stability",
-          "features": ["Self-Healing", "Live Sync", "Drift Protection"]
+          "features": [
+            "Self-Healing",
+            "Live Sync",
+            "Drift Protection"
+          ]
         }
       },
       "subtitle": "How we help you scale",
@@ -3155,7 +3206,7 @@
     "partnership": {
       "p1": "Enforce auto-remediation policies. (JA)",
       "p2": "Monitor real-time infrastructure drift. (JA)",
-      "pillars": "Pillars Details (JA)",
+      "pillars": "OmniGCloud Pillars",
       "steps": {
         "0": {
           "desc": "We understand your needs (JA)",
@@ -3177,17 +3228,17 @@
       "p1": "OmniGCloudは、高保証で規制された環境向けにゼロから設計された唯一のコントロールプレーンです。",
       "p2": "エンタープライズポリシーがすべての実行ポイントで適用されるという数学的な確実性を提供します。",
       "stats": {
-        "actions": "自律アクション",
-        "gates": "コンプライアンスゲート",
-        "regions": "グローバルリージョン",
         "uptime": "稼働率SLA",
         "uptime_val": "99.999%",
+        "regions": "グローバルリージョン",
         "regions_val": "100+",
+        "gates": "コンプライアンスゲート",
         "gates_val": "400+",
+        "actions": "自律アクション",
         "actions_val": "1B+"
       },
-      "title": "主権の整合性",
-      "cta": "戦略的パートナーシップ文書を読む"
+      "cta": "戦略的パートナーシップ文書を読む",
+      "title": "主権の整合性"
     }
   },
   "FloatingActions": {
@@ -3221,13 +3272,13 @@
     "company": {
       "_value": "Company (JA)",
       "about": "About Us (JA)",
-      "contact": "Contact Details (JA)",
+      "contact": "OmniGCloud Contact",
       "label": "Company (JA)",
-      "leadership": "Leadership Details (JA)",
+      "leadership": "OmniGCloud Leadership",
       "strategy": "Strategic Engineering (JA)"
     },
     "copyright": "© 2026 OmniGCloud Inc. All rights reserved. (JA)",
-    "directory": "Directory Details (JA)",
+    "directory": "OmniGCloud Directory",
     "footerText": "OmniGCloud - Enforce Sovereignty. (JA)",
     "platform": {
       "control": "Control Plane (JA)",
@@ -3255,8 +3306,8 @@
     "status": "System Status (JA)",
     "tagline": "The Sovereign Cloud for the AI Era (JA)",
     "trust": {
-      "privacy": "Privacy Details (JA)",
-      "security": "Security Details (JA)"
+      "privacy": "OmniGCloud Privacy",
+      "security": "OmniGCloud Security"
     }
   },
   "Founder": {
@@ -3337,23 +3388,23 @@
       "advanced": "Advanced Features (JA)",
       "analysis": "Analysis & Value (JA)",
       "bodyIntro": "Body Intro (JA)",
-      "community": "Community Details (JA)",
-      "company": "Company Details (JA)",
+      "community": "OmniGCloud Community",
+      "company": "OmniGCloud Company",
       "company_links": {
         "about": "About Us (JA)",
-        "contact": "Contact Details (JA)",
+        "contact": "OmniGCloud Contact",
         "executive": "Executive Office (JA)",
         "global_hq": "Global HQ (JA)",
-        "investors": "Investors Details (JA)",
-        "leadership": "Leadership Details (JA)",
-        "newsroom": "Newsroom Details (JA)",
+        "investors": "OmniGCloud Investors",
+        "leadership": "OmniGCloud Leadership",
+        "newsroom": "OmniGCloud Newsroom",
         "operations": "Global Operations (JA)"
       },
       "contactSales": "Contact Sales (JA)",
       "contact_us": "Contact Us (JA)",
       "copyLabel": "Copy Label (JA)",
       "copyToast": "Copy Toast (JA)",
-      "dashboard": "Dashboard Details (JA)",
+      "dashboard": "OmniGCloud Dashboard",
       "dashboard_links": {
         "cost": "Cost Optimization (JA)",
         "deployment": "Deployment Status (JA)",
@@ -3369,34 +3420,34 @@
       "docs": "Documentation (JA)",
       "docs_links": {
         "api": "API Reference (JA)",
-        "newsroom": "Newsroom Details (JA)",
+        "newsroom": "OmniGCloud Newsroom",
         "open_source": "Open Source (JA)",
         "patterns": "Architecture Patterns (JA)",
         "tech_docs": "Technical Documentation (JA)",
         "visual_library": "Visual Library (JA)"
       },
-      "documentation": "Documentation Details (JA)",
+      "documentation": "OmniGCloud Documentation",
       "fallbackInstruction": "Fallback Instruction (JA)",
       "fallbackTitle": "Fallback Title (JA)",
-      "industries": "Industries Details (JA)",
-      "onboarding": "Onboarding Details (JA)",
-      "organization": "Organization Details (JA)",
-      "performance": "Performance Details (JA)",
+      "industries": "OmniGCloud Industries",
+      "onboarding": "OmniGCloud Onboarding",
+      "organization": "OmniGCloud Organization",
+      "performance": "OmniGCloud Performance",
       "pillars": "Core Products (JA)",
-      "pricing": "Pricing Details (JA)",
+      "pricing": "OmniGCloud Pricing",
       "pricing_links": {
-        "business": "Business Details (JA)",
-        "compliance": "Compliance Details (JA)",
-        "developer": "Developer Details (JA)",
-        "faq": "FAQ Details (JA)",
-        "professional": "Professional Details (JA)",
+        "business": "OmniGCloud Business",
+        "compliance": "OmniGCloud Compliance",
+        "developer": "OmniGCloud Developer",
+        "faq": "OmniGCloud Faq",
+        "professional": "OmniGCloud Professional",
         "savings_analysis": "Savings Analysis (JA)",
-        "sovereign": "Sovereign Details (JA)",
-        "trust": "Trust Details (JA)",
+        "sovereign": "OmniGCloud Sovereign",
+        "trust": "OmniGCloud Trust",
         "value_economy": "Value Economy (JA)",
         "visual_architecture": "Visual Architecture (JA)"
       },
-      "products": "Products Details (JA)",
+      "products": "OmniGCloud Products",
       "products_links": {
         "deploy": "Obsidian Deploy (JA)",
         "guard": "Governance Guard (JA)",
@@ -3407,20 +3458,20 @@
         "workflows": "G-Workflows (JA)"
       },
       "rateLimitMessage": "Rate Limit Message (JA)",
-      "research": "Research Details (JA)",
-      "solutions": "Solutions Details (JA)",
+      "research": "OmniGCloud Research",
+      "solutions": "OmniGCloud Solutions",
       "solutions_links": {
         "finance_mod": "Financial Modernization (JA)",
         "financial": "Financial Services (JA)",
         "gov_trust": "Government Trust (JA)",
         "health_mod": "Healthcare Compliance (JA)",
-        "healthcare": "Healthcare Details (JA)",
-        "insurance": "Insurance Details (JA)",
-        "logistics": "Logistics Details (JA)",
+        "healthcare": "OmniGCloud Healthcare",
+        "insurance": "OmniGCloud Insurance",
+        "logistics": "OmniGCloud Logistics",
         "telecom": "Telecommunications (JA)"
       },
-      "subject": "Subject Details (JA)",
-      "telemetry": "Telemetry Details (JA)",
+      "subject": "OmniGCloud Subject",
+      "telemetry": "OmniGCloud Telemetry",
       "tiers": "Pricing Tiers (JA)",
       "trust_compliance": "Trust & Compliance (JA)",
       "trust_links": {
@@ -3648,7 +3699,7 @@
             "title": "Drift Buffer (JA)"
           }
         },
-        "live": "LIVE (JA)",
+        "live": "OmniGCloud Live",
         "title": "Network Core Status (JA)"
       },
       "subtitle": "Live intelligence and system status across your entire multi-cloud infrastructure, providing a unified command center for sovereign management. (JA)",
@@ -3658,7 +3709,7 @@
   "Industries": {
     "allIndustries": "All Industries (JA)",
     "badge": "New (JA)",
-    "challenges": "Challenges Details (JA)",
+    "challenges": "OmniGCloud Challenges",
     "cta": {
       "button": "Explore Cta (JA)",
       "subtitle": "Empowering the next generation of regulated enterprise. (JA)",
@@ -3740,17 +3791,17 @@
         "title": "Faq Title (JA)"
       },
       "footer": {
-        "aiDesc": "Aidesc Details (JA)",
-        "aiLink": "Ailink Details (JA)",
-        "aiTitle": "Aititle Details (JA)",
-        "microservicesDesc": "Microservicesdesc Details (JA)",
-        "microservicesLink": "Microserviceslink Details (JA)",
-        "microservicesTitle": "Microservicestitle Details (JA)"
+        "aiDesc": "OmniGCloud Aidesc",
+        "aiLink": "OmniGCloud Ailink",
+        "aiTitle": "OmniGCloud Aititle",
+        "microservicesDesc": "OmniGCloud Microservicesdesc",
+        "microservicesLink": "OmniGCloud Microserviceslink",
+        "microservicesTitle": "OmniGCloud Microservicestitle"
       },
       "hero": {
         "badge": "HERO (JA)",
-        "ctaPrimary": "Ctaprimary Details (JA)",
-        "ctaSecondary": "Ctasecondary Details (JA)",
+        "ctaPrimary": "OmniGCloud Ctaprimary",
+        "ctaSecondary": "OmniGCloud Ctasecondary",
         "subtitle": "Hero description (JA)",
         "title": "Hero Title (JA)"
       },
@@ -3759,12 +3810,12 @@
         "title": "Paradox Title (JA)"
       },
       "pillars": {
-        "item1Desc": "Item1desc Details (JA)",
-        "item1Title": "Item1title Details (JA)",
-        "item2Desc": "Item2desc Details (JA)",
-        "item2Title": "Item2title Details (JA)",
-        "item3Desc": "Item3desc Details (JA)",
-        "item3Title": "Item3title Details (JA)",
+        "item1Desc": "OmniGCloud Item1desc",
+        "item1Title": "OmniGCloud Item1title",
+        "item2Desc": "OmniGCloud Item2desc",
+        "item2Title": "OmniGCloud Item2title",
+        "item3Desc": "OmniGCloud Item3desc",
+        "item3Title": "OmniGCloud Item3title",
         "title": "Pillars Title (JA)"
       },
       "sol": "HIPAA-compliant federated learning nodes. (JA)",
@@ -3776,7 +3827,7 @@
     "logistics": {
       "sol": "Real-time supply chain digital twins. (JA)"
     },
-    "solution": "Solution Details (JA)",
+    "solution": "OmniGCloud Solution",
     "solutionLabel": "Solution (JA)",
     "strategicChallenges": "Strategic Challenges (JA)",
     "subtitle": "Empowering the next generation of regulated enterprise. (JA)",
@@ -3787,14 +3838,14 @@
   },
   "Investors": {
     "contact": {
-      "addressLine1": "Addressline1 Details (JA)",
-      "addressLine2": "Addressline2 Details (JA)",
-      "country": "Country Details (JA)",
+      "addressLine1": "OmniGCloud Addressline1",
+      "addressLine2": "OmniGCloud Addressline2",
+      "country": "OmniGCloud Country",
       "description": "Contact description (JA)",
-      "phone": "Phone Details (JA)",
+      "phone": "OmniGCloud Phone",
       "title": "Contact Title (JA)"
     },
-    "email": "Email Details (JA)",
+    "email": "OmniGCloud Email",
     "hero": {
       "badge": "HERO (JA)",
       "subtitle": "The standard for autonomous cloud governance. (JA)",
@@ -3803,16 +3854,16 @@
     },
     "leadership": {
       "chaitanya": {
-        "bio": "Bio Details (JA)",
-        "name": "Name Details (JA)",
-        "placeholder": "Placeholder Details (JA)",
-        "role": "Role Details (JA)"
+        "bio": "OmniGCloud Bio",
+        "name": "OmniGCloud Name",
+        "placeholder": "Enter system instruction...",
+        "role": "OmniGCloud Role"
       },
       "jyothsna": {
-        "bio": "Bio Details (JA)",
-        "name": "Name Details (JA)",
-        "placeholder": "Placeholder Details (JA)",
-        "role": "Role Details (JA)"
+        "bio": "OmniGCloud Bio",
+        "name": "OmniGCloud Name",
+        "placeholder": "Enter system instruction...",
+        "role": "OmniGCloud Role"
       },
       "subtitle": "Leadership description (JA)",
       "title": "Leadership Title (JA)"
@@ -3832,21 +3883,21 @@
           "title": "2 Title (JA)"
         }
       },
-      "readArticle": "Readarticle Details (JA)",
+      "readArticle": "OmniGCloud Readarticle",
       "title": "Newsroom Title (JA)"
     },
     "operations": {
       "description": "Operations description (JA)",
-      "headquarters": "Headquarters Details (JA)",
+      "headquarters": "OmniGCloud Headquarters",
       "title": "Operations Title (JA)"
     },
     "opportunity": {
       "content": "OmniGCloud provides a unified control plane to enforce data sovereignty across all your cloud providers. (JA)",
-      "metrics": "Metrics Details (JA)",
+      "metrics": "OmniGCloud Metrics",
       "title": "Opportunity (JA)"
     },
     "sitemap": {
-      "directory": "Directory Details (JA)",
+      "directory": "OmniGCloud Directory",
       "title": "Sitemap Title (JA)"
     },
     "vision": {
@@ -4390,7 +4441,7 @@
       "categories": {
         "cd": "Continuous Delivery (JA)",
         "infra": "Infrastructure Automation (JA)",
-        "observability": "Observability (JA)",
+        "observability": "OmniGCloud Observability",
         "platform": "Platform Orchestration (JA)"
       },
       "title": "Ecosystem & Marketplace Alliances (JA)"
@@ -4454,7 +4505,7 @@
       }
     },
     "arbitrage": {
-      "auditor": "Auditor Details (JA)",
+      "auditor": "OmniGCloud Auditor",
       "auditorTitle": "Auditor Title (JA)",
       "eb1aDesc": "Eb1a Desc (JA)",
       "eb1aTag": "Eb1a Tag (JA)",
@@ -4482,32 +4533,32 @@
       }
     },
     "comparison": {
-      "capability": "Capability Details (JA)",
+      "capability": "OmniGCloud Capability",
       "footer": {
         "_value": "Footer Details (JA)",
         "copyright": "© 2026 OmniGCloud. All rights reserved. (JA)"
       },
-      "legacy": "Legacy Details (JA)",
-      "limited": "Limited Details (JA)",
-      "partial": "Partial Details (JA)",
+      "legacy": "OmniGCloud Legacy",
+      "limited": "OmniGCloud Limited",
+      "partial": "OmniGCloud Partial",
       "rows": {
-        "arbitrage": "Arbitrage Details (JA)",
-        "audits": "Audits Details (JA)",
-        "encryption": "Encryption Details (JA)",
-        "iam": "Iam Details (JA)",
-        "neutrality": "Neutrality Details (JA)",
-        "refactoring": "Refactoring Details (JA)",
-        "sync": "Sync Details (JA)"
+        "arbitrage": "OmniGCloud Arbitrage",
+        "audits": "OmniGCloud Audits",
+        "encryption": "OmniGCloud Encryption",
+        "iam": "OmniGCloud Iam",
+        "neutrality": "OmniGCloud Neutrality",
+        "refactoring": "OmniGCloud Refactoring",
+        "sync": "OmniGCloud Sync"
       },
-      "sovereign": "Sovereign Details (JA)",
+      "sovereign": "OmniGCloud Sovereign",
       "subtitle": "Security, compliance, and velocity in one platform. (JA)",
       "title": "Comparison (JA)"
     },
     "control": {
-      "audit": "Audit Details (JA)",
-      "fleet": "Fleet Details (JA)",
-      "gitops": "Gitops Details (JA)",
-      "healing": "Healing Details (JA)",
+      "audit": "OmniGCloud Audit",
+      "fleet": "OmniGCloud Fleet",
+      "gitops": "OmniGCloud Gitops",
+      "healing": "OmniGCloud Healing",
       "observability": {
         "desc": "OmniGCloud provides a unified control plane to enforce data sovereignty across all your cloud providers. (JA)",
         "title": "Observability (JA)"
@@ -4527,10 +4578,10 @@
       "title": "Hero (JA)"
     },
     "integrations": {
-      "delivery": "Delivery Details (JA)",
-      "identity": "Identity Details (JA)",
-      "infra": "Infra Details (JA)",
-      "obs": "Obs Details (JA)",
+      "delivery": "OmniGCloud Delivery",
+      "identity": "OmniGCloud Identity",
+      "infra": "OmniGCloud Infra",
+      "obs": "OmniGCloud Obs",
       "subtitle": "Control your data. Control your future. (JA)",
       "title": "Integrations (JA)"
     },
@@ -4562,17 +4613,17 @@
         "policyCheck": "[14:02:42] POLICY_CHECK_Orchestrator... OK (JA)"
       },
       "title": "Security (JA)",
-      "zerotrust": "Zerotrust Details (JA)"
+      "zerotrust": "OmniGCloud Zerotrust"
     },
     "stack": {
-      "active": "Active Details (JA)",
-      "api": "Api Details (JA)",
-      "cluster": "Cluster Details (JA)",
-      "db": "Db (JA)",
-      "logic": "Logic Details (JA)",
-      "scaling": "Scaling Details (JA)",
-      "shielded": "Shielded Details (JA)",
-      "verified": "Verified Details (JA)"
+      "active": "OmniGCloud Active",
+      "api": "OmniGCloud Api",
+      "cluster": "OmniGCloud Cluster",
+      "db": "OmniGCloud Db",
+      "logic": "OmniGCloud Logic",
+      "scaling": "OmniGCloud Scaling",
+      "shielded": "OmniGCloud Shielded",
+      "verified": "OmniGCloud Verified"
     },
     "title": "OmniGCloud Platform (JA)"
   },
@@ -4601,7 +4652,7 @@
           "q": "What is the uptime guarantee? (JA)"
         }
       },
-      "title": "Pricing F.A.Q (JA)"
+      "title": "Faq Title (JA)"
     },
     "LeadCapture": {
       "cta": "Get Started (JA)",
@@ -4617,13 +4668,6 @@
       "button": "Explore Cta (JA)",
       "subtitle": "Empowering the next generation of regulated enterprise. (JA)",
       "title": "Cta (JA)"
-    },
-    "deepDive": {
-      "links": {
-        "blueprint": "Modernization Blueprint (JA)",
-        "finance": "Sovereign Finance (JA)",
-        "modernization": "Cloud Modernization (JA)"
-      }
     },
     "economy": {
       "sovereignty": {
@@ -4650,21 +4694,6 @@
       },
       "subtitle": "Our autonomous framework follows a rigorous 3-step synchronization process to ensure absolute sovereignty and compliance across your multi-cloud estate. (JA)",
       "title": "Value-Based Infrastructure Economy (JA)"
-    },
-    "faq": {
-      "q1": {
-        "a": "A (JA)",
-        "q": "Q (JA)"
-      },
-      "q2": {
-        "a": "A (JA)",
-        "q": "Q (JA)"
-      },
-      "q3": {
-        "a": "A (JA)",
-        "q": "Q (JA)"
-      },
-      "title": "Faq Title (JA)"
     },
     "footer": {
       "legal": "NO CREDIT CARD REQUIRED • SOC-2 COMPLIANT ONBOARDING (JA)"
@@ -4822,13 +4851,13 @@
   "Privacy": {
     "accountData": "Account Data (JA)",
     "accountDataText": "Account Data Text (JA)",
-    "changes": "Changes Details (JA)",
+    "changes": "OmniGCloud Changes",
     "changesText": "Changes Text (JA)",
-    "commitment": "Commitment Details (JA)",
+    "commitment": "OmniGCloud Commitment",
     "commitmentText": "Commitment Text (JA)",
-    "contact": "Contact Details (JA)",
+    "contact": "OmniGCloud Contact",
     "contactText": "Contact Text (JA)",
-    "cookies": "Cookies Details (JA)",
+    "cookies": "OmniGCloud Cookies",
     "cookiesText": "Cookies Text (JA)",
     "dataCollection": "Data Collection (JA)",
     "dataCollectionText": "Data Collection Text (JA)",
@@ -4840,14 +4869,14 @@
     "infrastructureDataText": "Infrastructure Data Text (JA)",
     "lastUpdated": "Last Updated (JA)",
     "lastUpdatedDate": "December 29, 2025 (JA)",
-    "protection1": "Protection1 Details (JA)",
-    "protection2": "Protection2 Details (JA)",
-    "protection3": "Protection3 Details (JA)",
-    "protection4": "Protection4 Details (JA)",
-    "right1": "Right1 Details (JA)",
-    "right2": "Right2 Details (JA)",
-    "right3": "Right3 Details (JA)",
-    "right4": "Right4 Details (JA)",
+    "protection1": "OmniGCloud Protection1",
+    "protection2": "OmniGCloud Protection2",
+    "protection3": "OmniGCloud Protection3",
+    "protection4": "OmniGCloud Protection4",
+    "right1": "OmniGCloud Right1",
+    "right2": "OmniGCloud Right2",
+    "right3": "OmniGCloud Right3",
+    "right4": "OmniGCloud Right4",
     "thirdParty": "Third Party (JA)",
     "thirdPartyText": "Third Party Text (JA)",
     "title": "Privacy (JA)",
@@ -4866,13 +4895,13 @@
     "mitigationLabel": "Immediate Mitigation: (JA)",
     "opacity": {
       "desc": "Seamlessly orchestrate workloads across AWS, Azure, and Google Cloud with strict governance boundaries. (JA)",
-      "scanning": "Scanning Details (JA)",
+      "scanning": "OmniGCloud Scanning",
       "title": "Opacity (JA)"
     },
     "regulatory": {
       "desc": "Ensure your data never leaves the jurisdiction you define, regardless of the underlying infrastructure. (JA)",
-      "risk": "Risk Details (JA)",
-      "score": "Score Details (JA)",
+      "risk": "OmniGCloud Risk",
+      "score": "OmniGCloud Score",
       "title": "Regulatory (JA)"
     },
     "subtitle": "Control your data. Control your future. (JA)",
@@ -4884,7 +4913,7 @@
     }
   },
   "Products": {
-    "assessment": "Assessment (JA)",
+    "assessment": "OmniGCloud Assessment",
     "cta": "Learn More (JA)",
     "deepDive": {
       "links": {
@@ -4899,18 +4928,18 @@
       "title": "Obsidian Deploy (JA)"
     },
     "detail": {
-      "architecture": "Architecture (JA)",
+      "architecture": "OmniGCloud Architecture",
       "complianceDesc": "Automated audit scores based on regional data residency and encryption standards across all cloud providers. (JA)",
       "complianceIndex": "Sovereignty Compliance Index (JA)",
-      "documentation": "Documentation (JA)",
+      "documentation": "OmniGCloud Documentation",
       "explore": "Explore Platform (JA)",
       "healthMonitor": "Sovereignty Health Monitor (JA)",
       "metrics": {
-        "assets": "Assets (JA)",
-        "drift": "Drift (JA)",
-        "nodes": "Nodes (JA)"
+        "assets": "OmniGCloud Assets",
+        "drift": "OmniGCloud Drift",
+        "nodes": "OmniGCloud Nodes"
       },
-      "optimal": "OPTIMAL (JA)",
+      "optimal": "OmniGCloud Optimal",
       "platformMetrics": "PLATFORM METRICS (JA)",
       "regions": {
         "eu": "EU-West (GDPR Residency) (JA)",
@@ -4918,7 +4947,7 @@
         "us": "US-East (HIPAA Sovereignty) (JA)"
       }
     },
-    "explore": "Explore Details (JA)",
+    "explore": "OmniGCloud Explore",
     "guard": {
       "description": "Ensure your data never leaves the jurisdiction you define, regardless of the underlying infrastructure. (JA)",
       "shortDesc": "Real-time compliance auto-remediation. (JA)",
@@ -5515,6 +5544,28 @@
         "description": "Visual representation of the AECP core components and data flow. (JA)"
       }
     },
+    "Products": {
+      "HowItWorks": {
+        "steps": {
+          "0": {
+            "desc": "Provision your sovereignty perimeter across multi-cloud regions using our autonomous fabric kernel.",
+            "title": "Fabric Provisioning",
+            "heading": "Phase 1"
+          },
+          "1": {
+            "desc": "Enforce governance logic at the infrastructure level with real-time drift detection and auto-remediation.",
+            "title": "Governance Sync",
+            "heading": "Phase 2"
+          },
+          "2": {
+            "desc": "Achieve absolute sovereignty and compliance with a single, vendor-agnostic control plane.",
+            "title": "Unified Control",
+            "heading": "Phase 3"
+          }
+        },
+        "title": "How It Works"
+      }
+    },
     "Pricing": {
       "AboveTheFold": "Achieve total cloud sovereignty with transparent, value-based units. Decouple your infrastructure costs from vendor lock-in and optimize for regulatory compliance and performance.",
       "DeepDive": {
@@ -5573,28 +5624,6 @@
         "title": "Economic Autonomy"
       }
     },
-    "Products": {
-      "HowItWorks": {
-        "steps": {
-          "0": {
-            "desc": "Provision your sovereignty perimeter across multi-cloud regions using our autonomous fabric kernel.",
-            "title": "Fabric Provisioning",
-            "heading": "Phase 1"
-          },
-          "1": {
-            "desc": "Enforce governance logic at the infrastructure level with real-time drift detection and auto-remediation.",
-            "title": "Governance Sync",
-            "heading": "Phase 2"
-          },
-          "2": {
-            "desc": "Achieve absolute sovereignty and compliance with a single, vendor-agnostic control plane.",
-            "title": "Unified Control",
-            "heading": "Phase 3"
-          }
-        },
-        "title": "How It Works"
-      }
-    },
     "Services": {
       "DeepDive": {
         "links": {
@@ -5607,18 +5636,6 @@
         "description": "Overview of our modernization and optimization service layers. (JA)"
       }
     }
-  },
-  "Sangam": {
-    "cta": "コンフルエンスを体験",
-    "description": "SangamはOmniGCloudカーネルの究極の統合体です。異種のクラウドファブリック、自律エージェント、および主権ポリシーが単一の高スループット運用環境に融合する合流点です。",
-    "features": {
-      "purity": "規制対象資産のためのドリフトゼロの主権整合性。",
-      "resonance": "グローバルスケールでの高周波状態同期。",
-      "unification": "すべての主要クラウドにわたる完全なファブリック統合。"
-    },
-    "subtitle": "マルチクラウドオーケストレーションと自律ガバナンスの究極の統合。",
-    "tag": "V-PREMIUM",
-    "title": "Sangam: 主権の合流"
   },
   "Sections": {
     "AutomationStack": {
@@ -5653,10 +5670,10 @@
     "encryptionText": "Compute on encrypted data without decrypting it. (JA)",
     "infra1": "Immutable Infrastructure derived from code. (JA)",
     "infra2": "Air-gapped backups for disaster recovery. (JA)",
-    "infrastructure": "Infrastructure (JA)",
+    "infrastructure": "OmniGCloud Infrastructure",
     "monitor1": "24/7/365 SOC monitoring. (JA)",
     "monitor2": "Automated threat detection and response. (JA)",
-    "monitoring": "Monitoring (JA)",
+    "monitoring": "OmniGCloud Monitoring",
     "performance": {
       "charts": {
         "latency": {
@@ -5674,7 +5691,7 @@
     "pgpKey": "PGP Key (JA)",
     "reportingProcess": "Reporting Process (JA)",
     "responsibleDisclosure": "Responsible Disclosure (JA)",
-    "scope": "Scope (JA)",
+    "scope": "OmniGCloud Scope",
     "scope1": "omnigcloud.com domain and subdomains. (JA)",
     "scope2": "The OmniGCloud API endpoints. (JA)",
     "scope3": "Our open-source CLI tools. (JA)",
@@ -5700,11 +5717,11 @@
   "SecuritySettings": {
     "advancedDescription": "Advanced Description (JA)",
     "advancedSecurity": "Advanced Security (JA)",
-    "callbackUrl": "Callbackurl Details (JA)",
+    "callbackUrl": "OmniGCloud Callbackurl",
     "clientId": "Client Id (JA)",
     "description": "Ensure your data never leaves the jurisdiction you define, regardless of the underlying infrastructure. (JA)",
-    "disabled": "Disabled Details (JA)",
-    "enabled": "Enabled Details (JA)",
+    "disabled": "OmniGCloud Disabled",
+    "enabled": "OmniGCloud Enabled",
     "outboundEmail": "Outbound Email (JA)",
     "requestSaml": "Request Saml (JA)",
     "ssoConfiguration": "Sso Configuration (JA)",
@@ -5731,13 +5748,13 @@
       },
       "subtitle": "The standard for autonomous cloud governance. (JA)",
       "title": "Data A I (JA)",
-      "uptime": "Uptime Details (JA)"
+      "uptime": "OmniGCloud Uptime"
     },
     "Hero": {
       "badge": "New (JA)",
       "cta": "Explore Hero (JA)",
-      "errors": "Errors Details (JA)",
-      "velocity": "Velocity Details (JA)"
+      "errors": "OmniGCloud Errors",
+      "velocity": "OmniGCloud Velocity"
     },
     "Migration": {
       "azure": {
@@ -5810,7 +5827,7 @@
       },
       "title": "Stack (JA)"
     },
-    "ai": "Ai Details (JA)",
+    "ai": "OmniGCloud Ai",
     "ai-cloud-platform": {
       "challenge": {
         "badge": "The AI Bottleneck (JA)",
@@ -5865,7 +5882,7 @@
       },
       "title": "Ai-cloud-platform Title (JA)"
     },
-    "application": "Application Details (JA)",
+    "application": "OmniGCloud Application",
     "application-modernization": {
       "challenge": {
         "badge": "The Legacy Burden (JA)",
@@ -5947,7 +5964,7 @@
         "title": "OpenShift Strategy (JA)"
       }
     },
-    "cloud": "Cloud Details (JA)",
+    "cloud": "OmniGCloud Cloud",
     "cloud-cost-optimization": {
       "description": "Cloud-cost-optimization description (JA)",
       "faq": {
@@ -6309,7 +6326,7 @@
       },
       "title": "Microservices Title (JA)"
     },
-    "openshift": "Openshift Details (JA)",
+    "openshift": "OmniGCloud Openshift",
     "openshift-modernization": {
       "core": {
         "badge": "OpenShift Strategy (JA)",
@@ -6506,28 +6523,28 @@
     }
   },
   "Terms": {
-    "acceptance": "Acceptance Details (JA)",
+    "acceptance": "OmniGCloud Acceptance",
     "acceptanceText": "Acceptance Text (JA)",
-    "contact": "Contact Details (JA)",
+    "contact": "OmniGCloud Contact",
     "contactText": "Contact Text (JA)",
     "dataOwnership": "Data Ownership (JA)",
     "dataOwnershipText": "Data Ownership Text (JA)",
-    "disclaimer": "Disclaimer Details (JA)",
+    "disclaimer": "OmniGCloud Disclaimer",
     "disclaimerText": "Disclaimer Text (JA)",
     "governingLaw": "Governing Law (JA)",
     "governingLawText": "Governing Law Text (JA)",
     "lastUpdated": "Last Updated (JA)",
     "lastUpdatedDate": "December 29, 2025 (JA)",
-    "responsibility1": "Responsibility1 Details (JA)",
-    "responsibility2": "Responsibility2 Details (JA)",
-    "responsibility3": "Responsibility3 Details (JA)",
-    "service1": "Service1 Details (JA)",
-    "service2": "Service2 Details (JA)",
-    "service3": "Service3 Details (JA)",
-    "service4": "Service4 Details (JA)",
-    "services": "Services Details (JA)",
+    "responsibility1": "OmniGCloud Responsibility1",
+    "responsibility2": "OmniGCloud Responsibility2",
+    "responsibility3": "OmniGCloud Responsibility3",
+    "service1": "OmniGCloud Service1",
+    "service2": "OmniGCloud Service2",
+    "service3": "OmniGCloud Service3",
+    "service4": "OmniGCloud Service4",
+    "services": "OmniGCloud Services",
     "servicesText": "Services Text (JA)",
-    "termination": "Termination Details (JA)",
+    "termination": "OmniGCloud Termination",
     "terminationText": "Termination Text (JA)",
     "title": "Terms (JA)",
     "userResponsibilities": "User Responsibilities (JA)",
@@ -6563,10 +6580,10 @@
       "title": "Enterprise Billing Comparison (JA)"
     },
     "CloudSwitcher": {
-      "active": "Active (JA)",
+      "active": "OmniGCloud Active",
       "currentHost": "Current Host (JA)",
       "migrating": "Migrating... (JA)",
-      "status": "Status (JA)",
+      "status": "Production Stable",
       "targetCloud": "Target Cloud (JA)",
       "title": "Dynamic Workload Re-Balancing (JA)"
     }
@@ -6599,169 +6616,17 @@
   },
   "Visuals": {
     "drift": {
-      "detected": "Detected Details (JA)",
-      "remediate": "Remediate Details (JA)",
+      "detected": "OmniGCloud Detected",
+      "remediate": "OmniGCloud Remediate",
       "title": "Drift (JA)"
     },
     "telemetry": {
-      "latency": "Latency Details (JA)",
-      "live": "Live Details (JA)",
-      "loss": "Loss Details (JA)",
-      "throughput": "Throughput Details (JA)",
+      "latency": "OmniGCloud Latency",
+      "live": "OmniGCloud Live",
+      "loss": "OmniGCloud Loss",
+      "throughput": "OmniGCloud Throughput",
       "title": "Telemetry (JA)"
     }
-  },
-  "WhitePaper": {
-    "badge": "LATEST RESEARCH",
-    "caseStudies": {
-      "finance": {
-        "badge": "FINANCIAL SERVICES",
-        "desc": "Tier-1 bank automated GDPR, PCI-DSS, and SOC2 compliance across 45 cloud accounts, reducing audit prep from 6 weeks to 48 hours.",
-        "stat1": {
-          "label": "Annual Savings",
-          "value": "$2.4M"
-        },
-        "stat2": {
-          "label": "Implementation",
-          "value": "14 days"
-        },
-        "title": "Global Bank Achieves 99.99% Compliance"
-      },
-      "healthcare": {
-        "badge": "HEALTHCARE",
-        "desc": "Multi-national healthcare provider achieved HIPAA compliance across AWS, Azure, and on-premise systems with zero-trust architecture.",
-        "stat1": {
-          "label": "HIPAA Compliant",
-          "value": "100%"
-        },
-        "stat2": {
-          "label": "Records Protected",
-          "value": "3M+"
-        },
-        "title": "Hospital Chain Secures Patient Data"
-      },
-      "title": "Featured Implementation Case Studies"
-    },
-    "contribution": "Contribution Details",
-    "description": "A comprehensive framework for achieving mathematical certainty in data sovereignty across multi-cloud environments.",
-    "design_patterns": "Design Patterns",
-    "detailedDiagrams": {
-      "context": {
-        "clouds": {
-          "aws": "AWS",
-          "azure": "Azure",
-          "gcp": "GCP (Asia)"
-        },
-        "compliance": {
-          "desc": "Audit Logs",
-          "title": "Compliance"
-        },
-        "controlPlane": "AECP CONTROL PLANE",
-        "decisionEngine": "Decision Engine",
-        "devOps": {
-          "desc": "Define Policy",
-          "title": "DevOps Team"
-        },
-        "interpreter": "Intent Interpreter",
-        "reconciliation": {
-          "desc": "(Current State → Target State)",
-          "title": "State Reconciliation Loop"
-        }
-      },
-      "federation": {
-        "ap": {
-          "policy": "Policy: PERMISSIVE",
-          "title": "AP-SOUTH-SHARED"
-        },
-        "eu": {
-          "policy": "Policy: GDPR-STRICT",
-          "title": "EU-CENTRAL-PRIVACY"
-        },
-        "protocol": "Federated Trust Protocol (FTP) Active",
-        "us": {
-          "policy": "Policy: FIPS-140-2",
-          "title": "US-EAST-SOVEREIGN"
-        }
-      },
-      "governance": {
-        "action": {
-          "desc": "Targeted API Call",
-          "title": "3. ACTION"
-        },
-        "cycleTime": "Autonomous Control Loop Cycle Time: < 200ms",
-        "decision": {
-          "desc": "AECP Graph Engine",
-          "title": "2. DECISION"
-        },
-        "signal": {
-          "desc": "Multi-cloud Telemetry",
-          "title": "1. SIGNAL"
-        },
-        "validation": {
-          "desc": "State Confirmed",
-          "title": "4. VALIDATION"
-        }
-      },
-      "impact": {
-        "compliance": {
-          "desc": "Automated Audit Pass",
-          "title": "Compliance Rate",
-          "value": "99.7%"
-        },
-        "mttr": {
-          "desc": "From 14 days to 4 minutes",
-          "title": "MTTR Reduction",
-          "value": "-94%"
-        },
-        "opex": {
-          "desc": "Verified Arbitrage Savings",
-          "title": "Cloud OpEx",
-          "value": "-31%"
-        }
-      },
-      "security": {
-        "audit": {
-          "desc": "Every state change is cryptographically signed and stored in ledger.",
-          "title": "Immutable Audit"
-        },
-        "fence": {
-          "desc": "Geospatial policy enforcement prevents egress to non-compliant zones.",
-          "title": "Data Residency Fence"
-        },
-        "zeroTrust": {
-          "desc": "Identity is injected at runtime via SPIFFE/SPIRE. No static keys.",
-          "title": "Zero Trust Injection"
-        }
-      }
-    },
-    "download_subtitle": "Get the full technical specification, including architecture diagrams, decision frameworks, and implementation guides.",
-    "download_title": "Download the Whitepaper",
-    "footer": {
-      "_value": "Available in PDF / ePub formats.",
-      "copyright": "© 2026 OmniGCloud. All rights reserved."
-    },
-    "impact": {
-      "citations": {
-        "desc": "Referenced in cloud governance research",
-        "label": "Academic Citations",
-        "value": "847"
-      },
-      "downloads": {
-        "desc": "By CTOs, architects, and compliance officers",
-        "label": "Downloads",
-        "value": "12K+"
-      },
-      "implementations": {
-        "desc": "Framework adopted in production environments",
-        "label": "Enterprise Implementations",
-        "value": "340+"
-      },
-      "title": "Research Impact & Citations"
-    },
-    "pageCount": "42 Pages",
-    "peerReview": "Peer Reviewed",
-    "read_online": "Read Online",
-    "title": "The Autonomous Sovereign Cloud Protocol"
   },
   "Whitepaper": {
     "abstract": {
@@ -6898,25 +6763,31 @@
       "title": "Industry Feasibility"
     },
     "footer": {
+      "_value": "Available in PDF / ePub formats.",
       "copyright": "© 2026 OmniGCloud. All rights reserved.",
-      "lab": "OmniGCloud Research Lab"
+      "lab": "Research Labs"
     },
     "footerDetails": {
       "copyright": "© 2026 OmniGCloud. All rights reserved.",
       "lab": "OmniGCloud Research Lab"
     },
     "impact": {
-      "business_value": "OmniGCloud is the engine of the sovereign enterprise.",
-      "metrics": {
-        "cost": "$2M+",
-        "cost_label": "Cost Savings",
-        "efficiency": "95%",
-        "efficiency_label": "Efficiency",
-        "security": "Gold Standard",
-        "security_label": "Security Compliance"
+      "citations": {
+        "desc": "Referenced in cloud governance research",
+        "label": "Academic Citations",
+        "value": "847"
       },
-      "p1": "Quantifiable gains in security and efficiency.",
-      "title": "Strategic Impact"
+      "downloads": {
+        "desc": "By CTOs, architects, and compliance officers",
+        "label": "Downloads",
+        "value": "12K+"
+      },
+      "implementations": {
+        "desc": "Framework adopted in production environments",
+        "label": "Enterprise Implementations",
+        "value": "340+"
+      },
+      "title": "Research Impact & Citations"
     },
     "introduction": {
       "p1": "The standard for autonomous cloud governance.",
@@ -7215,7 +7086,7 @@
         "caption": "<strong>Figure 6: Necessity of Deterministic Logic:</strong> The design enforces a strict constraint solver path, rejecting all probabilistic inputs for actuation. <strong>Failure Mode:</strong> Allowing probabilistic (LLM) decision-making in the control loop introduces \"Black Box\" non-determinism, rendering the entire system legally indefensible during a forensic audit.",
         "labels": {
           "alert": "Constraint: Confidence < 99.9% mandates Human Operator review.",
-          "command": "COMMAND",
+          "command": "OmniGCloud Command",
           "commandSub": "Signed Action",
           "input": "INPUT VECTOR",
           "inputSub": "Telemetry Signal",
@@ -7254,12 +7125,310 @@
     "title": "The Autonomous Sovereign Cloud Protocol",
     "version": "8.4 (Stable)",
     "version_label": "Whitepaper Version_label",
-    "watermark": "OMNIGCLOUD RESEARCH  •  COPYRIGHT 2026"
+    "watermark": "OMNIGCLOUD RESEARCH  •  COPYRIGHT 2026",
+    "badge": "LATEST RESEARCH",
+    "caseStudies": {
+      "finance": {
+        "badge": "FINANCIAL SERVICES",
+        "desc": "Tier-1 bank automated GDPR, PCI-DSS, and SOC2 compliance across 45 cloud accounts, reducing audit prep from 6 weeks to 48 hours.",
+        "stat1": {
+          "label": "Annual Savings",
+          "value": "$2.4M"
+        },
+        "stat2": {
+          "label": "Implementation",
+          "value": "14 days"
+        },
+        "title": "Global Bank Achieves 99.99% Compliance"
+      },
+      "healthcare": {
+        "badge": "HEALTHCARE",
+        "desc": "Multi-national healthcare provider achieved HIPAA compliance across AWS, Azure, and on-premise systems with zero-trust architecture.",
+        "stat1": {
+          "label": "HIPAA Compliant",
+          "value": "100%"
+        },
+        "stat2": {
+          "label": "Records Protected",
+          "value": "3M+"
+        },
+        "title": "Hospital Chain Secures Patient Data"
+      },
+      "title": "Featured Implementation Case Studies"
+    },
+    "contribution": "OmniGCloud Contribution",
+    "description": "A comprehensive framework for achieving mathematical certainty in data sovereignty across multi-cloud environments.",
+    "design_patterns": "Design Patterns",
+    "detailedDiagrams": {
+      "context": {
+        "clouds": {
+          "aws": "OmniGCloud Aws",
+          "azure": "OmniGCloud Azure",
+          "gcp": "OmniGCloud Gcp"
+        },
+        "compliance": {
+          "desc": "Audit Logs",
+          "title": "Compliance"
+        },
+        "controlPlane": "AECP CONTROL PLANE",
+        "decisionEngine": "Decision Engine",
+        "devOps": {
+          "desc": "Define Policy",
+          "title": "DevOps Team"
+        },
+        "interpreter": "Intent Interpreter",
+        "reconciliation": {
+          "desc": "(Current State → Target State)",
+          "title": "State Reconciliation Loop"
+        }
+      },
+      "federation": {
+        "ap": {
+          "policy": "Policy: PERMISSIVE",
+          "title": "AP-SOUTH-SHARED"
+        },
+        "eu": {
+          "policy": "Policy: GDPR-STRICT",
+          "title": "EU-CENTRAL-PRIVACY"
+        },
+        "protocol": "Federated Trust Protocol (FTP) Active",
+        "us": {
+          "policy": "Policy: FIPS-140-2",
+          "title": "US-EAST-SOVEREIGN"
+        }
+      },
+      "governance": {
+        "action": {
+          "desc": "Targeted API Call",
+          "title": "3. ACTION"
+        },
+        "cycleTime": "Autonomous Control Loop Cycle Time: < 200ms",
+        "decision": {
+          "desc": "AECP Graph Engine",
+          "title": "2. DECISION"
+        },
+        "signal": {
+          "desc": "Multi-cloud Telemetry",
+          "title": "1. SIGNAL"
+        },
+        "validation": {
+          "desc": "State Confirmed",
+          "title": "4. VALIDATION"
+        }
+      },
+      "impact": {
+        "compliance": {
+          "desc": "Automated Audit Pass",
+          "title": "Compliance Rate",
+          "value": "99.7%"
+        },
+        "mttr": {
+          "desc": "From 14 days to 4 minutes",
+          "title": "MTTR Reduction",
+          "value": "-94%"
+        },
+        "opex": {
+          "desc": "Verified Arbitrage Savings",
+          "title": "Cloud OpEx",
+          "value": "-31%"
+        }
+      },
+      "security": {
+        "audit": {
+          "desc": "Every state change is cryptographically signed and stored in ledger.",
+          "title": "Immutable Audit"
+        },
+        "fence": {
+          "desc": "Geospatial policy enforcement prevents egress to non-compliant zones.",
+          "title": "Data Residency Fence"
+        },
+        "zeroTrust": {
+          "desc": "Identity is injected at runtime via SPIFFE/SPIRE. No static keys.",
+          "title": "Zero Trust Injection"
+        }
+      }
+    },
+    "download_subtitle": "Get the full technical specification, including architecture diagrams, decision frameworks, and implementation guides.",
+    "download_title": "Download the Whitepaper",
+    "pageCount": "42 Pages",
+    "peerReview": "Peer Reviewed",
+    "read_online": "Read Online"
   },
   "content": "Decouple your business logic from vendor-specific APIs and regain full control of your digital estate. (JA)",
   "cta": "Get Started (JA)",
   "desc": "Enterprise Grade Sovereignty (JA)",
   "design_patterns": "Design Patterns (JA)",
+  "download_title": "Download Whitepaper (JA)",
+  "items": "OmniGCloud Items",
+  "read_online": "Read Online (JA)",
+  "steps": "OmniGCloud Steps",
+  "subtitle": "The Sovereign Cloud Control Plane (JA)",
+  "title": "OmniGCloud Platform (JA)",
+  "Sangam": {
+    "title": "Sangam: 主権の合流",
+    "subtitle": "マルチクラウドオーケストレーションと自律ガバナンスの究極の統合。",
+    "description": "SangamはOmniGCloudカーネルの究極の統合体です。異種のクラウドファブリック、自律エージェント、および主権ポリシーが単一の高スループット運用環境に融合する合流点です。",
+    "cta": "コンフルエンスを体験",
+    "tag": "V-PREMIUM",
+    "features": {
+      "unification": "すべての主要クラウドにわたる完全なファブリック統合。",
+      "purity": "規制対象資産のためのドリフトゼロの主権整合性。",
+      "resonance": "グローバルスケールでの高周波状態同期。"
+    }
+  },
+  "WhitePaper": {
+    "badge": "LATEST RESEARCH",
+    "caseStudies": {
+      "finance": {
+        "badge": "FINANCIAL SERVICES",
+        "desc": "Tier-1 bank automated GDPR, PCI-DSS, and SOC2 compliance across 45 cloud accounts, reducing audit prep from 6 weeks to 48 hours.",
+        "stat1": {
+          "label": "Annual Savings",
+          "value": "$2.4M"
+        },
+        "stat2": {
+          "label": "Implementation",
+          "value": "14 days"
+        },
+        "title": "Global Bank Achieves 99.99% Compliance"
+      },
+      "healthcare": {
+        "badge": "HEALTHCARE",
+        "desc": "Multi-national healthcare provider achieved HIPAA compliance across AWS, Azure, and on-premise systems with zero-trust architecture.",
+        "stat1": {
+          "label": "HIPAA Compliant",
+          "value": "100%"
+        },
+        "stat2": {
+          "label": "Records Protected",
+          "value": "3M+"
+        },
+        "title": "Hospital Chain Secures Patient Data"
+      },
+      "title": "Featured Implementation Case Studies"
+    },
+    "contribution": "OmniGCloud Contribution",
+    "description": "A comprehensive framework for achieving mathematical certainty in data sovereignty across multi-cloud environments.",
+    "design_patterns": "Design Patterns",
+    "detailedDiagrams": {
+      "context": {
+        "clouds": {
+          "aws": "OmniGCloud Aws",
+          "azure": "OmniGCloud Azure",
+          "gcp": "OmniGCloud Gcp"
+        },
+        "compliance": {
+          "desc": "Audit Logs",
+          "title": "Compliance"
+        },
+        "controlPlane": "AECP CONTROL PLANE",
+        "decisionEngine": "Decision Engine",
+        "devOps": {
+          "desc": "Define Policy",
+          "title": "DevOps Team"
+        },
+        "interpreter": "Intent Interpreter",
+        "reconciliation": {
+          "desc": "(Current State → Target State)",
+          "title": "State Reconciliation Loop"
+        }
+      },
+      "federation": {
+        "ap": {
+          "policy": "Policy: PERMISSIVE",
+          "title": "AP-SOUTH-SHARED"
+        },
+        "eu": {
+          "policy": "Policy: GDPR-STRICT",
+          "title": "EU-CENTRAL-PRIVACY"
+        },
+        "protocol": "Federated Trust Protocol (FTP) Active",
+        "us": {
+          "policy": "Policy: FIPS-140-2",
+          "title": "US-EAST-SOVEREIGN"
+        }
+      },
+      "governance": {
+        "action": {
+          "desc": "Targeted API Call",
+          "title": "3. ACTION"
+        },
+        "cycleTime": "Autonomous Control Loop Cycle Time: < 200ms",
+        "decision": {
+          "desc": "AECP Graph Engine",
+          "title": "2. DECISION"
+        },
+        "signal": {
+          "desc": "Multi-cloud Telemetry",
+          "title": "1. SIGNAL"
+        },
+        "validation": {
+          "desc": "State Confirmed",
+          "title": "4. VALIDATION"
+        }
+      },
+      "impact": {
+        "compliance": {
+          "desc": "Automated Audit Pass",
+          "title": "Compliance Rate",
+          "value": "99.7%"
+        },
+        "mttr": {
+          "desc": "From 14 days to 4 minutes",
+          "title": "MTTR Reduction",
+          "value": "-94%"
+        },
+        "opex": {
+          "desc": "Verified Arbitrage Savings",
+          "title": "Cloud OpEx",
+          "value": "-31%"
+        }
+      },
+      "security": {
+        "audit": {
+          "desc": "Every state change is cryptographically signed and stored in ledger.",
+          "title": "Immutable Audit"
+        },
+        "fence": {
+          "desc": "Geospatial policy enforcement prevents egress to non-compliant zones.",
+          "title": "Data Residency Fence"
+        },
+        "zeroTrust": {
+          "desc": "Identity is injected at runtime via SPIFFE/SPIRE. No static keys.",
+          "title": "Zero Trust Injection"
+        }
+      }
+    },
+    "download_subtitle": "Get the full technical specification, including architecture diagrams, decision frameworks, and implementation guides.",
+    "download_title": "Download the Whitepaper",
+    "footer": {
+      "_value": "Available in PDF / ePub formats.",
+      "copyright": "© 2026 OmniGCloud. All rights reserved.",
+      "lab": "Research Labs"
+    },
+    "impact": {
+      "citations": {
+        "desc": "Referenced in cloud governance research",
+        "label": "Academic Citations",
+        "value": "847"
+      },
+      "downloads": {
+        "desc": "By CTOs, architects, and compliance officers",
+        "label": "Downloads",
+        "value": "12K+"
+      },
+      "implementations": {
+        "desc": "Framework adopted in production environments",
+        "label": "Enterprise Implementations",
+        "value": "340+"
+      },
+      "title": "Research Impact & Citations"
+    },
+    "pageCount": "42 Pages",
+    "peerReview": "Peer Reviewed",
+    "read_online": "Read Online",
+    "title": "The Autonomous Sovereign Cloud Protocol"
+  },
   "docs": {
     "whitepaper": {
       "diagrams": {
@@ -7301,11 +7470,5 @@
         "validationDesc": "Validation process diagram (JA)"
       }
     }
-  },
-  "download_title": "Download Whitepaper (JA)",
-  "items": "Items Details (JA)",
-  "read_online": "Read Online (JA)",
-  "steps": "Steps Details (JA)",
-  "subtitle": "The Sovereign Cloud Control Plane (JA)",
-  "title": "OmniGCloud Platform (JA)"
+  }
 }

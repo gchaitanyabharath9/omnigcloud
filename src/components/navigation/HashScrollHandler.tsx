@@ -36,7 +36,7 @@ export function HashScrollHandler() {
           // Use 'auto' (instant) scroll for deterministic positioning
           window.scrollTo({
             top: window.scrollY + rect.top - scrollMargin,
-            behavior: "auto",
+            behavior: "smooth",
           });
 
           lastPath.current = pathname + window.location.hash;

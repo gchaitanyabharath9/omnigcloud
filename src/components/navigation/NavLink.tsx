@@ -24,7 +24,7 @@ export function NavLink({ item, locale, className, onClick, children }: NavLinkP
     // Call the regular onClick (which might close menus/modals)
     onClick?.();
 
-    if (item.type === "section" && item.hash) {
+    if (item.hash) {
       const targetPath = item.route || "/";
       const currentPath = pathname;
 
@@ -34,15 +34,30 @@ export function NavLink({ item, locale, className, onClick, children }: NavLinkP
 
       if (currNorm === targetNorm) {
         e.preventDefault();
-        window.location.hash = item.hash;
+        const element = document.getElementById(item.hash);
+        if (element) {
+          const computedStyle = getComputedStyle(document.documentElement);
+          const headerHeight = parseInt(computedStyle.getPropertyValue("--header-height")) || 70;
+          const breadcrumbHeight =
+            parseInt(computedStyle.getPropertyValue("--breadcrumb-height")) || 48;
+          const scrollMargin = headerHeight + breadcrumbHeight + 16;
+
+          window.scrollTo({
+            top: window.scrollY + element.getBoundingClientRect().top - scrollMargin,
+            behavior: "smooth",
+          });
+
+          window.history.pushState(null, "", `#${item.hash}`);
+        } else {
+          window.location.hash = item.hash;
+        }
       }
     }
   };
 
-  const href = {
-    pathname: item.route || "/",
-    hash: item.hash,
-  };
+  const href = item.hash
+    ? { pathname: item.route || "/", hash: item.hash }
+    : (item.route || "/");
 
   return (
     <Link

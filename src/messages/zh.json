@@ -255,8 +255,8 @@
         "cloudProvider": {
           "label": "Primary Cloud Provider (ZH)",
           "options": {
-            "aws": "AWS (ZH)",
-            "azure": "Azure (ZH)",
+            "aws": "OmniGCloud Aws",
+            "azure": "OmniGCloud Azure",
             "gcp": "Google Cloud (ZH)",
             "hybrid": "Hybrid / Multi-Cloud (ZH)"
           }
@@ -325,7 +325,7 @@
       "footer": {
         "agreement": "By registering, you agree to our (ZH)",
         "already": "Already have an account? (ZH)",
-        "and": "and (ZH)",
+        "and": "OmniGCloud And",
         "privacy": "Privacy Policy (ZH)",
         "signin": "Sign in (ZH)",
         "terms": "Terms of Service (ZH)"
@@ -428,34 +428,34 @@
       }
     },
     "ui": {
-      "filter": "Filter (ZH)",
+      "filter": "Resource Filtering",
       "readMore": "Read More (ZH)"
     }
   },
   "Breadcrumb": {
-    "blog": "Blog Details (ZH)",
-    "company": "Company Details (ZH)",
-    "compliance_maps": "Compliance Maps (ZH)",
-    "contact": "Contact Details (ZH)",
-    "dashboard": "Dashboard Details (ZH)",
-    "distributed-systems-resilience": "Distributed Systems Resilience",
-    "docs": "Documentation (ZH)",
-    "frameworks": "Frameworks Details (ZH)",
-    "home": "Home Details (ZH)",
-    "industries": "Industries Details (ZH)",
-    "onboarding": "Onboarding Details (ZH)",
-    "papers": "Papers Details (ZH)",
-    "platform": "Platform Details (ZH)",
-    "pricing": "Pricing Details (ZH)",
-    "products": "Products Details (ZH)",
-    "research": "Research Details (ZH)",
-    "resources": "Resources Details (ZH)",
-    "services": "Services Details (ZH)",
-    "solutions": "Solutions Details (ZH)",
-    "whitepaper": "Whitepaper Details (ZH)",
     "a1-cloud-native-enterprise-reference": "Cloud-Native Enterprise Reference (ZH)",
     "a4-platform-governance-multicloud-hybrid": "Platform Governance & Hybrid Cloud (ZH)",
-    "founder": "Founder's Vision (ZH)"
+    "blog": "OmniGCloud Blog",
+    "company": "OmniGCloud Company",
+    "compliance_maps": "Compliance Maps (ZH)",
+    "contact": "OmniGCloud Contact",
+    "dashboard": "OmniGCloud Dashboard",
+    "distributed-systems-resilience": "Distributed Systems Resilience",
+    "docs": "Documentation (ZH)",
+    "founder": "Founder's Vision (ZH)",
+    "frameworks": "OmniGCloud Frameworks",
+    "home": "OmniGCloud Home",
+    "industries": "OmniGCloud Industries",
+    "onboarding": "OmniGCloud Onboarding",
+    "papers": "OmniGCloud Papers",
+    "platform": "OmniGCloud Platform",
+    "pricing": "OmniGCloud Pricing",
+    "products": "OmniGCloud Products",
+    "research": "OmniGCloud Research",
+    "resources": "OmniGCloud Resources",
+    "services": "OmniGCloud Services",
+    "solutions": "OmniGCloud Solutions",
+    "whitepaper": "OmniGCloud Whitepaper"
   },
   "BusinessIdeas": {
     "cards": {
@@ -486,7 +486,7 @@
   "Capabilities": {
     "assessment": "Need a custom assessment? (ZH)",
     "cta": "View All Products (ZH)",
-    "explore": "Explore Details (ZH)",
+    "explore": "OmniGCloud Explore",
     "subtitle": "Explore the building blocks of our sovereign cloud platform. (ZH)",
     "tag": "Capabilities (ZH)",
     "talkToExpert": "Talk to a Cloud Expert (ZH)",
@@ -574,12 +574,12 @@
       "title": "Global Impact Studies (ZH)"
     },
     "labels": {
-      "challenge": "CHALLENGE (ZH)",
+      "challenge": "OmniGCloud Challenge",
       "impact": "Impact Analysis (ZH)",
       "request": "Request Documentation (ZH)",
       "sitemapDir": "Success Directory (ZH)",
       "sitemapTitle": "Global Impact Sitemap (ZH)",
-      "solution": "SOLUTION (ZH)",
+      "solution": "OmniGCloud Solution",
       "validated": "Validated Performance Data (ZH)",
       "whitepaper": "Sovereignty Whitepaper (ZH)",
       "whitepaperDesc": "Detailed technical breakdown of the architectural migration and compliance framework. (ZH)"
@@ -593,7 +593,7 @@
       "gcp": "Google Cloud (ZH)",
       "k8s": "CNCF (ZH)",
       "openshift": "RedHat (ZH)",
-      "oracle": "Oracle (ZH)"
+      "oracle": "OmniGCloud Oracle"
     },
     "tag": "Expertise & Validation (ZH)",
     "title": "Certified Across the Global Cloud Ecosystem (ZH)"
@@ -604,11 +604,11 @@
   "Common": {
     "AboveTheFold": "Above The Fold (ZH)",
     "Header": {
-      "menu_accessibility_label": "Menu_accessibility_label Details (ZH)",
+      "menu_accessibility_label": "OmniGCloud Menu_accessibility_label",
       "nav": {
-        "onboarding": "Onboarding Details (ZH)"
+        "onboarding": "OmniGCloud Onboarding"
       },
-      "title": "Data Residency Control (ZH)"
+      "title": "Sovereign Framework Control"
     },
     "Metadata": {
       "default": {
@@ -622,18 +622,18 @@
       "paragraph2": "Second paragraph of abstract (ZH)",
       "title": "Abstract (ZH)"
     },
-    "acceptance": "Acceptance Details (ZH)",
+    "acceptance": "OmniGCloud Acceptance",
     "acceptanceText": "Acceptance Text (ZH)",
     "accessControls": "Access Controls (ZH)",
     "accountData": "Account Data (ZH)",
     "accountDataText": "Account Data Text (ZH)",
-    "active": "Active Details (ZH)",
+    "active": "OmniGCloud Active",
     "advancedDescription": "Advanced Description (ZH)",
     "advancedSecurity": "Advanced Security (ZH)",
     "allIndustries": "All Industries (ZH)",
     "allUseCases": "All Use Cases (ZH)",
     "appliedPapers": {
-      "title": "title Details (ZH)"
+      "title": "Sovereign Framework Control"
     },
     "architecture": {
       "control_plane": {
@@ -659,17 +659,17 @@
         "2": "Item 2 (ZH)"
       },
       "challengeTitle": "Challenge Title (ZH)",
-      "cta": "Cta (ZH)",
+      "cta": "Get Started",
       "docsLinkPrefix": "Docs Link Prefix (ZH)",
       "docsLinkSuffix": "Docs Link Suffix (ZH)",
       "docsLinkText": "Docs Link Text (ZH)",
       "impactDesc": "Impact Desc (ZH)",
       "impactTitle": "Impact Title (ZH)",
-      "intro": "Intro (ZH)",
+      "intro": "OmniGCloud Intro",
       "minRead": "Min Read (ZH)",
-      "quote": "Quote (ZH)",
+      "quote": "OmniGCloud Quote",
       "quoteAuthor": "Quote Author (ZH)",
-      "share": "Share (ZH)",
+      "share": "OmniGCloud Share",
       "solutionDesc": "Solution Desc (ZH)",
       "solutionTitle": "Solution Title (ZH)"
     },
@@ -696,30 +696,30 @@
       },
       "title": "Aso Title (ZH)"
     },
-    "audit": "Audit Details (ZH)",
+    "audit": "OmniGCloud Audit",
     "auditText": "Audit Text (ZH)",
-    "auth1": "Auth1 Details (ZH)",
-    "auth2": "Auth2 Details (ZH)",
-    "auth3": "Auth3 Details (ZH)",
-    "authentication": "Authentication Details (ZH)",
+    "auth1": "OmniGCloud Auth1",
+    "auth2": "OmniGCloud Auth2",
+    "auth3": "OmniGCloud Auth3",
+    "authentication": "OmniGCloud Authentication",
     "authenticationText": "Authentication Text (ZH)",
     "author": {
       "bio": "Specializing in distributed systems, sovereign cloud governance, and AI-driven enterprise modernization. (ZH)",
       "name": "CHAITANYA BHARATH GOPU (ZH)",
       "role": "Principal Cloud Architect (ZH)"
     },
-    "author_label": "Author_label Details (ZH)",
-    "authorization": "Authorization Details (ZH)",
-    "authz1": "Authz1 Details (ZH)",
-    "authz2": "Authz2 Details (ZH)",
-    "authz3": "Authz3 Details (ZH)",
+    "author_label": "OmniGCloud Author_label",
+    "authorization": "OmniGCloud Authorization",
+    "authz1": "OmniGCloud Authz1",
+    "authz2": "OmniGCloud Authz2",
+    "authz3": "OmniGCloud Authz3",
     "backToRepository": "Back To Repository (ZH)",
-    "backups": "Backups Details (ZH)",
+    "backups": "OmniGCloud Backups",
     "backupsText": "Backups Text (ZH)",
     "badge": {
       "_value": "Badge Details (ZH)",
-      "standard": "Standard (ZH)",
-      "version": "Version (ZH)"
+      "standard": "OmniGCloud Standard",
+      "version": "OmniGCloud Version"
     },
     "banner": {
       "cta": "Learn More (ZH)",
@@ -728,64 +728,64 @@
     },
     "body": {
       "dist1": {
-        "title": "title Details (ZH)"
+        "title": "Sovereign Framework Control"
       },
       "dist2": {
-        "title": "title Details (ZH)"
+        "title": "Sovereign Framework Control"
       },
       "dist3": {
-        "title": "title Details (ZH)"
+        "title": "Sovereign Framework Control"
       },
       "dist4": {
-        "title": "title Details (ZH)"
+        "title": "Sovereign Framework Control"
       },
-      "exitGateText": "exitGateText Details (ZH)",
-      "exitGateTitle": "exitGateTitle Details (ZH)",
-      "frameworkStepsTitle": "frameworkStepsTitle Details (ZH)",
+      "exitGateText": "OmniGCloud Exitgatetext",
+      "exitGateTitle": "OmniGCloud Exitgatetitle",
+      "frameworkStepsTitle": "OmniGCloud Frameworkstepstitle",
       "grid": {
         "invariance": {
-          "text": "text Details (ZH)",
-          "title": "title Details (ZH)"
+          "text": "OmniGCloud Text",
+          "title": "Sovereign Framework Control"
         },
         "portability": {
-          "text": "text Details (ZH)",
-          "title": "title Details (ZH)"
+          "text": "OmniGCloud Text",
+          "title": "Sovereign Framework Control"
         }
       },
-      "introTitle": "introTitle Details (ZH)",
-      "mathTitle": "mathTitle Details (ZH)",
-      "nodesText": "nodesText Details (ZH)",
-      "nodesTitle": "nodesTitle Details (ZH)",
-      "p1": "p1 Details (ZH)",
+      "introTitle": "OmniGCloud Introtitle",
+      "mathTitle": "OmniGCloud Mathtitle",
+      "nodesText": "OmniGCloud Nodestext",
+      "nodesTitle": "OmniGCloud Nodestitle",
+      "p1": "OmniGCloud P1",
       "pillar1": {
-        "text": "text Details (ZH)",
-        "title": "title Details (ZH)"
+        "text": "OmniGCloud Text",
+        "title": "Sovereign Framework Control"
       },
       "pillar2": {
-        "text": "text Details (ZH)",
-        "title": "title Details (ZH)"
+        "text": "OmniGCloud Text",
+        "title": "Sovereign Framework Control"
       },
       "pillar3": {
-        "text": "text Details (ZH)",
-        "title": "title Details (ZH)"
+        "text": "OmniGCloud Text",
+        "title": "Sovereign Framework Control"
       },
       "pillar4": {
-        "title": "title Details (ZH)"
+        "title": "Sovereign Framework Control"
       },
       "pillar5": {
-        "text": "text Details (ZH)",
-        "title": "title Details (ZH)"
+        "text": "OmniGCloud Text",
+        "title": "Sovereign Framework Control"
       },
-      "pillarsTitle": "pillarsTitle Details (ZH)",
-      "quote2": "quote2 Details (ZH)",
+      "pillarsTitle": "OmniGCloud Pillarstitle",
+      "quote2": "OmniGCloud Quote2",
       "takeaway": {
-        "text": "text Details (ZH)",
-        "title": "title Details (ZH)"
+        "text": "OmniGCloud Text",
+        "title": "Sovereign Framework Control"
       }
     },
-    "breadcrumb": "Breadcrumb (ZH)",
+    "breadcrumb": "OmniGCloud Breadcrumb",
     "callbackUrl": "Callback Url (ZH)",
-    "canonical": "Canonical (ZH)",
+    "canonical": "OmniGCloud Canonical",
     "cards": {
       "0": {
         "badge": "Featured (ZH)",
@@ -808,77 +808,77 @@
     },
     "catalog": {
       "aecp": {
-        "desc": "Desc description (ZH)",
-        "title": "Title (ZH)"
+        "desc": "Ensuring deterministic state reconciliation and data residency across distributed infrastructure.",
+        "title": "Sovereign Framework Control"
       },
       "deepDive": "Deep Dive (ZH)",
       "devops": {
-        "desc": "Desc description (ZH)",
-        "title": "Title (ZH)"
+        "desc": "Ensuring deterministic state reconciliation and data residency across distributed infrastructure.",
+        "title": "Sovereign Framework Control"
       },
       "finops": {
-        "desc": "Desc description (ZH)",
-        "title": "Title (ZH)"
+        "desc": "Ensuring deterministic state reconciliation and data residency across distributed infrastructure.",
+        "title": "Sovereign Framework Control"
       },
       "microservices": {
-        "desc": "Desc description (ZH)",
-        "title": "Title (ZH)"
+        "desc": "Ensuring deterministic state reconciliation and data residency across distributed infrastructure.",
+        "title": "Sovereign Framework Control"
       },
       "migration": {
-        "desc": "Desc description (ZH)",
-        "title": "Title (ZH)"
+        "desc": "Ensuring deterministic state reconciliation and data residency across distributed infrastructure.",
+        "title": "Sovereign Framework Control"
       },
       "modernization": {
-        "desc": "Desc description (ZH)",
-        "title": "Title (ZH)"
+        "desc": "Ensuring deterministic state reconciliation and data residency across distributed infrastructure.",
+        "title": "Sovereign Framework Control"
       },
       "observability": {
-        "desc": "Desc description (ZH)",
-        "title": "Title (ZH)"
+        "desc": "Ensuring deterministic state reconciliation and data residency across distributed infrastructure.",
+        "title": "Sovereign Framework Control"
       },
       "openshift": {
-        "desc": "Desc description (ZH)",
-        "title": "Title (ZH)"
+        "desc": "Ensuring deterministic state reconciliation and data residency across distributed infrastructure.",
+        "title": "Sovereign Framework Control"
       }
     },
     "certifications": {
-      "gdpr": "GDPR (ZH)",
+      "gdpr": "OmniGCloud Gdpr",
       "iso": "ISO 27001 (ZH)",
       "soc": "SOC 2 (ZH)",
       "title": "Certifications (ZH)"
     },
     "challenge": {
-      "badge": "Badge (ZH)",
-      "debt": "Debt (ZH)",
+      "badge": "LATEST",
+      "debt": "OmniGCloud Debt",
       "errorCode": "Error Code (ZH)",
       "lostRoi": "Lost Roi (ZH)",
-      "mesh": "Mesh (ZH)",
-      "p1": "P1 (ZH)",
-      "quote": "Quote (ZH)",
-      "title": "Title (ZH)"
+      "mesh": "OmniGCloud Mesh",
+      "p1": "OmniGCloud P1",
+      "quote": "OmniGCloud Quote",
+      "title": "Sovereign Framework Control"
     },
-    "challenges": "Challenges Details (ZH)",
-    "changes": "Changes Details (ZH)",
+    "challenges": "OmniGCloud Challenges",
+    "changes": "OmniGCloud Changes",
     "changesText": "Changes Text (ZH)",
-    "classification": "Classification Details (ZH)",
+    "classification": "OmniGCloud Classification",
     "cli": {
-      "badge": "Badge (ZH)",
+      "badge": "LATEST",
       "commands": {
         "audit": {
-          "prefix": "Prefix (ZH)",
-          "suffix": "Suffix (ZH)"
+          "prefix": "OmniGCloud Prefix",
+          "suffix": "OmniGCloud Suffix"
         },
         "init": {
-          "prefix": "Prefix (ZH)",
-          "suffix": "Suffix (ZH)"
+          "prefix": "OmniGCloud Prefix",
+          "suffix": "OmniGCloud Suffix"
         },
         "install": {
-          "prefix": "Prefix (ZH)",
-          "suffix": "Suffix (ZH)"
+          "prefix": "OmniGCloud Prefix",
+          "suffix": "OmniGCloud Suffix"
         },
-        "latency": "Latency (ZH)"
+        "latency": "OmniGCloud Latency"
       },
-      "description": "Description description (ZH)",
+      "description": "A deep dive into the mathematical foundations and performance breakthroughs of the AECP engine.",
       "points": {
         "0": "Item 0 (ZH)",
         "1": "Item 1 (ZH)",
@@ -890,19 +890,19 @@
         "2": "Item 2 (ZH)",
         "3": "Item 3 (ZH)"
       },
-      "title": "Title (ZH)"
+      "title": "Sovereign Framework Control"
     },
     "clientId": "Client Id (ZH)",
-    "commitment": "Commitment Details (ZH)",
+    "commitment": "OmniGCloud Commitment",
     "commitmentText": "Commitment Text (ZH)",
     "compendium": {
-      "description": "Description description (ZH)",
+      "description": "A deep dive into the mathematical foundations and performance breakthroughs of the AECP engine.",
       "impactBadge": "Impact Badge (ZH)",
-      "title": "Title (ZH)"
+      "title": "Sovereign Framework Control"
     },
     "compliance": {
-      "subtitle": "Subtitle description (ZH)",
-      "title": "Title (ZH)"
+      "subtitle": "Autonomous Multi-Cloud Fabric",
+      "title": "Sovereign Framework Control"
     },
     "conclusion": {
       "p1": "Monitor real-time infrastructure drift. (ZH)",
@@ -912,7 +912,7 @@
     "contact": {
       "addressLine1": "Address Line 1 (ZH)",
       "addressLine2": "Address Line 2 (ZH)",
-      "country": "Country (ZH)",
+      "country": "OmniGCloud Country",
       "description": "Contact Description (ZH)",
       "phone": "Phone Number (ZH)",
       "title": "Contact Us (ZH)"
@@ -921,22 +921,22 @@
     "contactText": "Contact Text (ZH)",
     "content": "Automate compliance with real-time drift detection and auto-remediation policies. (ZH)",
     "control": {
-      "badge": "Badge (ZH)"
+      "badge": "LATEST"
     },
-    "cookies": "Cookies Details (ZH)",
+    "cookies": "OmniGCloud Cookies",
     "cookiesText": "Cookies Text (ZH)",
     "core": {
-      "badge": "Badge (ZH)",
-      "p1": "P1 (ZH)",
-      "title": "Title (ZH)"
+      "badge": "LATEST",
+      "p1": "OmniGCloud P1",
+      "title": "Sovereign Framework Control"
     },
     "cta": {
-      "button": "Button Details (ZH)",
-      "request": "Request (ZH)",
-      "scale": "Scale (ZH)",
+      "button": "OmniGCloud Button",
+      "request": "OmniGCloud Request",
+      "scale": "OmniGCloud Scale",
       "subtitle": "Empowering the next generation of regulated enterprise. (ZH)",
       "title": "Cta Title (ZH)",
-      "whitepaper": "Whitepaper (ZH)"
+      "whitepaper": "OmniGCloud Whitepaper"
     },
     "dataCollection": "Data Collection (ZH)",
     "dataCollectionText": "Data Collection Text (ZH)",
@@ -949,8 +949,8 @@
     "dataResidencyText": "Data Residency Text (ZH)",
     "dataRetention": "Data Retention (ZH)",
     "dataRetentionText": "Data Retention Text (ZH)",
-    "date": "Date Details (ZH)",
-    "date_label": "Date_label Details (ZH)",
+    "date": "OmniGCloud Date",
+    "date_label": "OmniGCloud Date_label",
     "decision_framework": {
       "components": {
         "adaptation": {
@@ -971,12 +971,12 @@
     },
     "deepDive": {
       "links": {
-        "blueprint": "Blueprint (ZH)",
-        "dashboard": "Dashboard (ZH)",
-        "finance": "Finance (ZH)",
-        "modernization": "Modernization (ZH)",
-        "platform": "Platform (ZH)",
-        "solutions": "Solutions (ZH)"
+        "blueprint": "OmniGCloud Blueprint",
+        "dashboard": "OmniGCloud Dashboard",
+        "finance": "OmniGCloud Finance",
+        "modernization": "OmniGCloud Modernization",
+        "platform": "OmniGCloud Platform",
+        "solutions": "OmniGCloud Solutions"
       }
     },
     "deep_dive": "Deep Dive (ZH)",
@@ -984,24 +984,24 @@
     "details": {
       "classification": {
         "label": "Classification (ZH)",
-        "value": "Value (ZH)"
+        "value": "Verified Optimal"
       },
       "security": {
         "label": "Security (ZH)",
-        "value": "Value (ZH)"
+        "value": "Verified Optimal"
       },
       "status": {
         "label": "Status (ZH)",
-        "value": "Value (ZH)"
+        "value": "Verified Optimal"
       }
     },
     "differentiation": {
-      "non_replicability": "Non_replicability Details (ZH)",
+      "non_replicability": "OmniGCloud Non_replicability",
       "p1": "Define your governance intent. (ZH)",
       "title": "Differentiation Title (ZH)"
     },
-    "disabled": "Disabled Details (ZH)",
-    "disclaimer": "Disclaimer Details (ZH)",
+    "disabled": "OmniGCloud Disabled",
+    "disclaimer": "OmniGCloud Disclaimer",
     "disclaimerText": "Disclaimer Text (ZH)",
     "disclosureIntro": "Disclosure Intro (ZH)",
     "discovery": {
@@ -1010,79 +1010,79 @@
       "title": "Discovery Title (ZH)"
     },
     "documentation_label": "Documentation (ZH)",
-    "download": "Download (ZH)",
+    "download": "OmniGCloud Download",
     "eb1a": {
-      "executive_summary_title": "Executive_summary_title Details (ZH)",
-      "importance": "Importance Details (ZH)",
-      "importance_label": "Importance_label Details (ZH)",
-      "originality": "Originality Details (ZH)",
-      "originality_label": "Originality_label Details (ZH)",
+      "executive_summary_title": "OmniGCloud Executive_summary_title",
+      "importance": "OmniGCloud Importance",
+      "importance_label": "OmniGCloud Importance_label",
+      "originality": "OmniGCloud Originality",
+      "originality_label": "OmniGCloud Originality_label",
       "p1": "Define your governance intent. (ZH)",
-      "summary_content": "Summary_content Details (ZH)",
+      "summary_content": "OmniGCloud Summary_content",
       "title": "Eb1a Title (ZH)"
     },
     "economicTrap": {
-      "title": "title Details (ZH)"
+      "title": "Sovereign Framework Control"
     },
     "economy": {
       "sovereignty": {
         "arbitrage": {
-          "desc": "Desc description (ZH)",
-          "title": "Title (ZH)"
+          "desc": "Ensuring deterministic state reconciliation and data residency across distributed infrastructure.",
+          "title": "Sovereign Framework Control"
         },
-        "desc": "Desc description (ZH)",
-        "title": "Title (ZH)"
+        "desc": "Ensuring deterministic state reconciliation and data residency across distributed infrastructure.",
+        "title": "Sovereign Framework Control"
       },
       "steps": {
         "1": {
-          "desc": "Desc description (ZH)",
-          "title": "Title (ZH)"
+          "desc": "Ensuring deterministic state reconciliation and data residency across distributed infrastructure.",
+          "title": "Sovereign Framework Control"
         },
         "2": {
-          "desc": "Desc description (ZH)",
-          "title": "Title (ZH)"
+          "desc": "Ensuring deterministic state reconciliation and data residency across distributed infrastructure.",
+          "title": "Sovereign Framework Control"
         },
         "3": {
-          "desc": "Desc description (ZH)",
-          "title": "Title (ZH)"
+          "desc": "Ensuring deterministic state reconciliation and data residency across distributed infrastructure.",
+          "title": "Sovereign Framework Control"
         }
       },
-      "subtitle": "Subtitle description (ZH)",
-      "title": "Title (ZH)"
+      "subtitle": "Autonomous Multi-Cloud Fabric",
+      "title": "Sovereign Framework Control"
     },
     "email": {
       "emailLabel": "Email Label (ZH)",
       "idLabel": "Id Label (ZH)",
       "messageLabel": "Message Label (ZH)",
       "nameLabel": "Name Label (ZH)",
-      "subject": "Subject (ZH)",
+      "subject": "OmniGCloud Subject",
       "submittedLabel": "Submitted Label (ZH)",
-      "support": "Support Details (ZH)",
-      "title": "Title (ZH)"
+      "support": "OmniGCloud Support",
+      "title": "Sovereign Framework Control"
     },
-    "enabled": "Enabled Details (ZH)",
-    "encryption": "Encryption Details (ZH)",
-    "encryption1": "Encryption1 Details (ZH)",
-    "encryption2": "Encryption2 Details (ZH)",
-    "encryption3": "Encryption3 Details (ZH)",
+    "enabled": "OmniGCloud Enabled",
+    "encryption": "OmniGCloud Encryption",
+    "encryption1": "OmniGCloud Encryption1",
+    "encryption2": "OmniGCloud Encryption2",
+    "encryption3": "OmniGCloud Encryption3",
     "encryptionText": "Encryption Text (ZH)",
     "endpoints": {
       "discovery": {
-        "desc": "Desc description (ZH)"
+        "desc": "Ensuring deterministic state reconciliation and data residency across distributed infrastructure."
       },
       "governance": {
-        "desc": "Desc description (ZH)"
+        "desc": "Ensuring deterministic state reconciliation and data residency across distributed infrastructure."
       },
       "modernization": {
-        "desc": "Desc description (ZH)"
+        "desc": "Ensuring deterministic state reconciliation and data residency across distributed infrastructure."
       }
     },
     "error": "An error occurred (ZH)",
     "evolution": {
-      "badge": "badge Details (ZH)",
-      "description2": "description2 Details (ZH)",
-      "quote": "quote Details (ZH)",
-      "title": "title Details (ZH)"
+      "badge": "LATEST",
+      "description2": "OmniGCloud Description2",
+      "quote": "OmniGCloud Quote",
+      "title": "Sovereign Framework Control"
     },
     "execution_flow": {
       "p1": "Define your governance intent. (ZH)",
@@ -1096,22 +1096,22 @@
       "title": "Execution_flow Title (ZH)"
     },
     "exitMatrix": {
-      "p1": "p1 Details (ZH)",
+      "p1": "OmniGCloud P1",
       "tiers": {
         "t1": {
-          "text": "text Details (ZH)",
-          "title": "title Details (ZH)"
+          "text": "OmniGCloud Text",
+          "title": "Sovereign Framework Control"
         },
         "t2": {
-          "text": "text Details (ZH)",
-          "title": "title Details (ZH)"
+          "text": "OmniGCloud Text",
+          "title": "Sovereign Framework Control"
         },
         "t3": {
-          "text": "text Details (ZH)",
-          "title": "title Details (ZH)"
+          "text": "OmniGCloud Text",
+          "title": "Sovereign Framework Control"
         }
       },
-      "title": "title Details (ZH)"
+      "title": "Sovereign Framework Control"
     },
     "explore_service": "Explore Service (ZH)",
     "factory": {
@@ -1127,43 +1127,43 @@
       "step2Title": "Step2 Title (ZH)",
       "step3Desc": "Step3 Desc (ZH)",
       "step3Title": "Step3 Title (ZH)",
-      "title": "Title (ZH)"
+      "title": "Sovereign Framework Control"
     },
     "failover": {
-      "badge": "Badge (ZH)"
+      "badge": "LATEST"
     },
     "faq": {
       "q1": {
-        "a": "A (ZH)",
-        "q": "Q (ZH)"
+        "a": "OmniGCloud A",
+        "q": "OmniGCloud Q"
       },
       "q2": {
-        "a": "A (ZH)",
-        "q": "Q (ZH)"
+        "a": "OmniGCloud A",
+        "q": "OmniGCloud Q"
       },
       "q3": {
-        "a": "A (ZH)",
-        "q": "Q (ZH)"
+        "a": "OmniGCloud A",
+        "q": "OmniGCloud Q"
       },
-      "title": "title Details (ZH)"
+      "title": "Sovereign Framework Control"
     },
     "feasibility": {
       "p1": "Generate audit-ready compliance reports. (ZH)",
       "sectors": {
         "finance": {
-          "impact": "Impact Details (ZH)",
+          "impact": "OmniGCloud Impact",
           "title": "Finance Title (ZH)"
         },
         "government": {
-          "impact": "Impact Details (ZH)",
+          "impact": "OmniGCloud Impact",
           "title": "Government Title (ZH)"
         },
         "healthcare": {
-          "impact": "Impact Details (ZH)",
+          "impact": "OmniGCloud Impact",
           "title": "Healthcare Title (ZH)"
         },
         "telecom": {
-          "impact": "Impact Details (ZH)",
+          "impact": "OmniGCloud Impact",
           "title": "Telecom Title (ZH)"
         }
       },
@@ -1171,24 +1171,24 @@
     },
     "featured": {
       "abstract": "Featured abstract (ZH)",
-      "badge": "badge Details (ZH)",
-      "date": "date Details (ZH)",
-      "diagramCount": "diagramCount Details (ZH)",
-      "readArticle": "readArticle Details (ZH)",
-      "sectionTitle": "sectionTitle Details (ZH)",
-      "title": "title Details (ZH)",
-      "wordCount": "wordCount Details (ZH)"
+      "badge": "LATEST",
+      "date": "OmniGCloud Date",
+      "diagramCount": "OmniGCloud Diagramcount",
+      "readArticle": "OmniGCloud Readarticle",
+      "sectionTitle": "OmniGCloud Sectiontitle",
+      "title": "Sovereign Framework Control",
+      "wordCount": "OmniGCloud Wordcount"
     },
     "footer": {
       "_value": "Footer Details (ZH)",
       "aiDesc": "Ai Desc (ZH)",
       "aiLink": "Ai Link (ZH)",
       "aiTitle": "Ai Title (ZH)",
-      "authorshipDisclaimer": "authorshipDisclaimer Details (ZH)",
-      "authorshipRequest": "authorshipRequest Details (ZH)",
+      "authorshipDisclaimer": "OmniGCloud Authorshipdisclaimer",
+      "authorshipRequest": "OmniGCloud Authorshiprequest",
       "automationDesc": "Automation Desc (ZH)",
       "automationTitle": "Automation Title (ZH)",
-      "copyright": "copyright Details (ZH)",
+      "copyright": "OmniGCloud Copyright",
       "costDesc": "Cost Desc (ZH)",
       "costTitle": "Cost Title (ZH)",
       "devopsDesc": "Devops Desc (ZH)",
@@ -1197,11 +1197,11 @@
       "factoryTitle": "Factory Title (ZH)",
       "guideDesc": "Guide Desc (ZH)",
       "guideTitle": "Guide Title (ZH)",
-      "lab": "lab Details (ZH)",
-      "legal": "Legal (ZH)",
+      "lab": "OmniGCloud Lab",
+      "legal": "OmniGCloud Legal",
       "links": {
-        "finops": "finops Details (ZH)",
-        "modernization": "modernization Details (ZH)"
+        "finops": "OmniGCloud Finops",
+        "modernization": "OmniGCloud Modernization"
       },
       "microservicesDesc": "Microservices Desc (ZH)",
       "microservicesLink": "Microservices Link (ZH)",
@@ -1212,9 +1212,9 @@
       "modernizationDesc": "Modernization Desc (ZH)",
       "modernizationTitle": "Modernization Title (ZH)",
       "readGuide": "Read Guide (ZH)",
-      "ready": "ready Details (ZH)",
-      "subtitle": "subtitle Details (ZH)",
-      "title": "title Details (ZH)"
+      "ready": "OmniGCloud Ready",
+      "subtitle": "Autonomous Multi-Cloud Fabric",
+      "title": "Sovereign Framework Control"
     },
     "framework": {
       "item1Desc": "Item1 Desc (ZH)",
@@ -1223,81 +1223,74 @@
       "item2Title": "Item2 Title (ZH)",
       "item3Desc": "Item3 Desc (ZH)",
       "item3Title": "Item3 Title (ZH)",
-      "title": "Title (ZH)"
+      "title": "Sovereign Framework Control"
     },
     "frameworks": {
       "aecp": {
-        "badge": "badge Details (ZH)",
+        "badge": "LATEST",
         "features": {
-          "healing": "healing Details (ZH)",
-          "security": "security Details (ZH)",
-          "topology": "topology Details (ZH)"
+          "healing": "OmniGCloud Healing",
+          "security": "OmniGCloud Security",
+          "topology": "OmniGCloud Topology"
         },
-        "title": "title Details (ZH)",
-        "version": "version Details (ZH)"
+        "title": "Sovereign Framework Control",
+        "version": "OmniGCloud Version"
       },
-      "title": "title Details (ZH)"
+      "title": "Sovereign Framework Control"
     },
-    "gdpr": "Gdpr Details (ZH)",
+    "gdpr": "OmniGCloud Gdpr",
     "gdprText": "Gdpr Text (ZH)",
     "geopolitics": {
-      "p1": "p1 Details (ZH)",
-      "title": "title Details (ZH)"
+      "p1": "OmniGCloud P1",
+      "title": "Sovereign Framework Control"
     },
     "governingLaw": "Governing Law (ZH)",
     "governingLawText": "Governing Law Text (ZH)",
-    "h1": "H1 (ZH)",
-    "header": {
-      "category": "category Details (ZH)",
-      "description": "description Details (ZH)",
-      "lastUpdated": "lastUpdated Details (ZH)",
-      "readTime": "readTime Details (ZH)",
-      "title": "title Details (ZH)"
-    },
+    "h1": "OmniGCloud H1",
     "hero": {
-      "author": "author Details (ZH)",
-      "badge": "Badge Details (ZH)",
-      "cta": "Cta (ZH)",
-      "ctaPrimary": "ctaPrimary Details (ZH)",
-      "ctaSecondary": "ctaSecondary Details (ZH)",
-      "date": "date Details (ZH)",
+      "author": "OmniGCloud Author",
+      "badge": "LATEST",
+      "cta": "Get Started",
+      "ctaPrimary": "OmniGCloud Ctaprimary",
+      "ctaSecondary": "OmniGCloud Ctasecondary",
+      "date": "OmniGCloud Date",
       "description": "Automate compliance with real-time drift detection and auto-remediation policies. (ZH)",
-      "github": "Github (ZH)",
-      "plugin": "Plugin (ZH)",
-      "readTime": "readTime Details (ZH)",
-      "search": "Search Details (ZH)",
+      "github": "OmniGCloud Github",
+      "plugin": "OmniGCloud Plugin",
+      "readTime": "Estimated Reading Duration: 24 Minutes",
+      "search": "OmniGCloud Search",
       "step1": {
         "code": {
-          "install": "Install (ZH)",
-          "login": "Login (ZH)"
+          "install": "OmniGCloud Install",
+          "login": "OmniGCloud Login"
         },
-        "description": "Description description (ZH)",
-        "title": "Title (ZH)"
+        "description": "A deep dive into the mathematical foundations and performance breakthroughs of the AECP engine.",
+        "title": "Sovereign Framework Control"
       },
       "step2": {
-        "description": "Description description (ZH)",
-        "title": "Title (ZH)"
+        "description": "A deep dive into the mathematical foundations and performance breakthroughs of the AECP engine.",
+        "title": "Sovereign Framework Control"
       },
       "subtitle": "The standard for autonomous cloud governance. (ZH)",
       "tag": "HERO (ZH)",
       "title": "Hero Title (ZH)",
-      "titleHighlight": "titleHighlight Details (ZH)",
+      "titleHighlight": "OmniGCloud Titlehighlight",
       "titlePart1": "Title Part1 (ZH)",
-      "titlePrefix": "titlePrefix Details (ZH)",
-      "titleSuffix": "titleSuffix Details (ZH)"
+      "titlePrefix": "OmniGCloud Titleprefix",
+      "titleSuffix": "OmniGCloud Titlesuffix"
     },
     "home": "Return to Operations (ZH)",
     "imageA": "Image A (ZH)",
     "imageB": "Image B (ZH)",
     "impact": {
-      "business_value": "Business_value Details (ZH)",
+      "business_value": "OmniGCloud Business_value",
       "metrics": {
-        "cost": "Cost Details (ZH)",
-        "cost_label": "Cost_label Details (ZH)",
-        "efficiency": "Efficiency Details (ZH)",
-        "efficiency_label": "Efficiency_label Details (ZH)",
-        "security": "Security Details (ZH)",
-        "security_label": "Security_label Details (ZH)"
+        "cost": "OmniGCloud Cost",
+        "cost_label": "OmniGCloud Cost_label",
+        "efficiency": "OmniGCloud Efficiency",
+        "efficiency_label": "OmniGCloud Efficiency_label",
+        "security": "OmniGCloud Security",
+        "security_label": "OmniGCloud Security_label"
       },
       "p1": "Deploy the control plane agent. (ZH)",
       "title": "Impact Title (ZH)"
@@ -1307,22 +1300,22 @@
     "incidentResponseText": "Incident Response Text (ZH)",
     "infra1": "Define your governance intent. (ZH)",
     "infra2": "Define your governance intent. (ZH)",
-    "infrastructure": "Infrastructure Details (ZH)",
+    "infrastructure": "OmniGCloud Infrastructure",
     "infrastructureData": "Infrastructure Data (ZH)",
     "infrastructureDataText": "Infrastructure Data Text (ZH)",
     "innovation": {
-      "badge": "Badge (ZH)",
-      "title": "Title (ZH)"
+      "badge": "LATEST",
+      "title": "Sovereign Framework Control"
     },
     "intelligence": {
-      "badge": "Badge (ZH)",
-      "p1": "P1 (ZH)",
-      "p2": "P2 (ZH)",
-      "title": "Title (ZH)"
+      "badge": "LATEST",
+      "p1": "OmniGCloud P1",
+      "p2": "OmniGCloud P2",
+      "title": "Sovereign Framework Control"
     },
     "intro": {
       "_value": "intro Details (ZH)",
-      "quote": "quote Details (ZH)"
+      "quote": "OmniGCloud Quote"
     },
     "introduction": {
       "p1": "Deploy the control plane agent. (ZH)",
@@ -1330,51 +1323,51 @@
       "p3": "Define your governance intent. (ZH)",
       "title": "Introduction Title (ZH)"
     },
-    "iso27001": "Iso27001 Details (ZH)",
+    "iso27001": "OmniGCloud Iso27001",
     "iso27001Text": "Iso27001 Text (ZH)",
     "itemStatus": "Item Status (ZH)",
     "items": {
       "0": {
-        "date": "Date (ZH)",
-        "title": "Title (ZH)",
-        "type": "Type (ZH)"
+        "date": "OmniGCloud Date",
+        "title": "Sovereign Framework Control",
+        "type": "OmniGCloud Type"
       },
       "1": {
-        "date": "Date (ZH)",
-        "title": "Title (ZH)",
-        "type": "Type (ZH)"
+        "date": "OmniGCloud Date",
+        "title": "Sovereign Framework Control",
+        "type": "OmniGCloud Type"
       },
       "2": {
-        "date": "Date (ZH)",
-        "title": "Title (ZH)",
-        "type": "Type (ZH)"
+        "date": "OmniGCloud Date",
+        "title": "Sovereign Framework Control",
+        "type": "OmniGCloud Type"
       }
     },
     "journey": {
-      "badge": "Badge (ZH)",
-      "p1": "P1 (ZH)",
-      "title": "Title (ZH)"
+      "badge": "LATEST",
+      "p1": "OmniGCloud P1",
+      "title": "Sovereign Framework Control"
     },
     "lastUpdated": "Last Updated (ZH)",
     "lastUpdatedDate": "Last Updated Date (ZH)",
     "leadership": {
       "chaitanya": {
-        "bio": "Bio (ZH)",
-        "name": "Name (ZH)",
-        "placeholder": "Placeholder (ZH)",
-        "role": "Role (ZH)"
+        "bio": "OmniGCloud Bio",
+        "name": "OmniGCloud Name",
+        "placeholder": "Enter system instruction...",
+        "role": "OmniGCloud Role"
       },
       "jyothsna": {
-        "bio": "Bio (ZH)",
-        "name": "Name (ZH)",
-        "placeholder": "Placeholder (ZH)",
-        "role": "Role (ZH)"
+        "bio": "OmniGCloud Bio",
+        "name": "OmniGCloud Name",
+        "placeholder": "Enter system instruction...",
+        "role": "OmniGCloud Role"
       },
-      "subtitle": "Subtitle description (ZH)",
-      "title": "Title (ZH)"
+      "subtitle": "Autonomous Multi-Cloud Fabric",
+      "title": "Sovereign Framework Control"
     },
     "lifecycle": {
-      "resilience": "Resilience Details (ZH)",
+      "resilience": "OmniGCloud Resilience",
       "title": "Lifecycle Title (ZH)"
     },
     "limitations": {
@@ -1383,7 +1376,7 @@
       "title": "Limitations Title (ZH)"
     },
     "loading": "Loading... (ZH)",
-    "location": "Location Details (ZH)",
+    "location": "OmniGCloud Location",
     "logicMeshStatus": "Logic Mesh Status (ZH)",
     "logs": {
       "correcting": "INITIATING_SELF_CORRECTION... (ZH)",
@@ -1391,70 +1384,70 @@
       "scanning": "SCANNING_NETWORK_NODES... [FAILED] (ZH)"
     },
     "meta": {
-      "category": "Category (ZH)",
-      "date": "Date (ZH)",
+      "category": "Architectural Research",
+      "date": "OmniGCloud Date",
       "description": "Decouple your business logic from vendor-specific APIs and regain full control of your digital estate. (ZH)",
-      "pages": "Pages (ZH)",
+      "pages": "OmniGCloud Pages",
       "title": "Meta Title (ZH)"
     },
-    "monitor1": "Monitor1 Details (ZH)",
-    "monitor2": "Monitor2 Details (ZH)",
-    "monitoring": "Monitoring Details (ZH)",
+    "monitor1": "OmniGCloud Monitor1",
+    "monitor2": "OmniGCloud Monitor2",
+    "monitoring": "OmniGCloud Monitoring",
     "nav": {
-      "back": "back Details (ZH)",
-      "prev": "prev Details (ZH)"
+      "back": "OmniGCloud Back",
+      "prev": "OmniGCloud Prev"
     },
     "network": {
       "advisory": {
-        "name": "Name (ZH)",
-        "text": "Text (ZH)"
+        "name": "OmniGCloud Name",
+        "text": "OmniGCloud Text"
       },
       "discord": {
-        "name": "Name (ZH)",
-        "text": "Text (ZH)"
+        "name": "OmniGCloud Name",
+        "text": "OmniGCloud Text"
       },
       "github": {
-        "name": "Name (ZH)",
-        "text": "Text (ZH)"
+        "name": "OmniGCloud Name",
+        "text": "OmniGCloud Text"
       },
       "registry": {
-        "name": "Name (ZH)",
-        "text": "Text (ZH)"
+        "name": "OmniGCloud Name",
+        "text": "OmniGCloud Text"
       },
-      "title": "Title (ZH)"
+      "title": "Sovereign Framework Control"
     },
-    "newPublication": "newPublication Details (ZH)",
+    "newPublication": "OmniGCloud Newpublication",
     "newsletter": {
-      "button": "Button Details (ZH)",
-      "footer": "Footer Details (ZH)",
-      "placeholder": "Placeholder Details (ZH)",
+      "button": "OmniGCloud Button",
+      "footer": "OmniGCloud Footer",
+      "placeholder": "Enter system instruction...",
       "subtitle": "Control your data. Control your future. (ZH)",
       "title": "Newsletter Title (ZH)"
     },
     "newsroom": {
       "items": {
         "0": {
-          "desc": "Desc description (ZH)",
-          "title": "Title (ZH)"
+          "desc": "Ensuring deterministic state reconciliation and data residency across distributed infrastructure.",
+          "title": "Sovereign Framework Control"
         },
         "1": {
-          "desc": "Desc description (ZH)",
-          "title": "Title (ZH)"
+          "desc": "Ensuring deterministic state reconciliation and data residency across distributed infrastructure.",
+          "title": "Sovereign Framework Control"
         },
         "2": {
-          "desc": "Desc description (ZH)",
-          "title": "Title (ZH)"
+          "desc": "Ensuring deterministic state reconciliation and data residency across distributed infrastructure.",
+          "title": "Sovereign Framework Control"
         }
       },
       "readArticle": "Read Article (ZH)",
-      "title": "Title (ZH)"
+      "title": "Sovereign Framework Control"
     },
-    "operational": "Operational Details (ZH)",
+    "operational": "OmniGCloud Operational",
     "operationalText": "Operational Text (ZH)",
     "operations": {
-      "description": "Description description (ZH)",
-      "headquarters": "Headquarters (ZH)",
-      "title": "Title (ZH)"
+      "description": "A deep dive into the mathematical foundations and performance breakthroughs of the AECP engine.",
+      "headquarters": "OmniGCloud Headquarters",
+      "title": "Sovereign Framework Control"
     },
     "opportunity": {
       "content": "OmniGCloud provides a unified control plane to enforce data sovereignty across all your cloud providers. (ZH)",
@@ -1462,38 +1455,38 @@
     },
     "outboundEmail": "Outbound Email (ZH)",
     "paradox": {
-      "badge": "Badge (ZH)",
-      "title": "Title (ZH)"
+      "badge": "LATEST",
+      "title": "Sovereign Framework Control"
     },
     "patterns": {
       "0": {
         "description": "0 description (ZH)",
-        "explanation": "Explanation Details (ZH)",
-        "impact": "Impact Details (ZH)",
+        "explanation": "OmniGCloud Explanation",
+        "impact": "OmniGCloud Impact",
         "title": "0 Title (ZH)"
       },
       "1": {
         "description": "1 description (ZH)",
-        "explanation": "Explanation Details (ZH)",
-        "impact": "Impact Details (ZH)",
+        "explanation": "OmniGCloud Explanation",
+        "impact": "OmniGCloud Impact",
         "title": "1 Title (ZH)"
       },
       "2": {
         "description": "2 description (ZH)",
-        "explanation": "Explanation Details (ZH)",
-        "impact": "Impact Details (ZH)",
+        "explanation": "OmniGCloud Explanation",
+        "impact": "OmniGCloud Impact",
         "title": "2 Title (ZH)"
       },
       "3": {
         "description": "3 description (ZH)",
-        "explanation": "Explanation Details (ZH)",
-        "impact": "Impact Details (ZH)",
+        "explanation": "OmniGCloud Explanation",
+        "impact": "OmniGCloud Impact",
         "title": "3 Title (ZH)"
       },
       "4": {
         "description": "4 description (ZH)",
-        "explanation": "Explanation Details (ZH)",
-        "impact": "Impact Details (ZH)",
+        "explanation": "OmniGCloud Explanation",
+        "impact": "OmniGCloud Impact",
         "title": "4 Title (ZH)"
       }
     },
@@ -1505,59 +1498,59 @@
       "item2Title": "Item2 Title (ZH)",
       "item3Desc": "Item3 Desc (ZH)",
       "item3Title": "Item3 Title (ZH)",
-      "title": "Title (ZH)"
+      "title": "Sovereign Framework Control"
     },
     "pipeline": {
-      "subtitle": "Subtitle description (ZH)",
-      "title": "Title (ZH)"
+      "subtitle": "Autonomous Multi-Cloud Fabric",
+      "title": "Sovereign Framework Control"
     },
-    "planned": "Planned Details (ZH)",
+    "planned": "OmniGCloud Planned",
     "plans": {
-      "month": "Month Details (ZH)",
-      "popular": "Popular Details (ZH)"
+      "month": "OmniGCloud Month",
+      "popular": "OmniGCloud Popular"
     },
     "problem": {
       "compliance": {
         "content": "Automate compliance with real-time drift detection and auto-remediation policies. (ZH)",
-        "scenario": "Scenario Details (ZH)",
+        "scenario": "OmniGCloud Scenario",
         "title": "Compliance Title (ZH)"
       },
       "metrics": {
-        "compliance_aso": "Compliance_aso Details (ZH)",
-        "compliance_label": "Compliance_label Details (ZH)",
-        "mttr_aso": "Mttr_aso Details (ZH)",
-        "mttr_aso_label": "Mttr_aso_label Details (ZH)",
-        "mttr_manual": "Mttr_manual Details (ZH)",
-        "mttr_manual_label": "Mttr_manual_label Details (ZH)",
-        "opex_label": "Opex_label Details (ZH)",
-        "opex_savings": "Opex_savings Details (ZH)"
+        "compliance_aso": "OmniGCloud Compliance_aso",
+        "compliance_label": "OmniGCloud Compliance_label",
+        "mttr_aso": "OmniGCloud Mttr_aso",
+        "mttr_aso_label": "OmniGCloud Mttr_aso_label",
+        "mttr_manual": "OmniGCloud Mttr_manual",
+        "mttr_manual_label": "OmniGCloud Mttr_manual_label",
+        "opex_label": "OmniGCloud Opex_label",
+        "opex_savings": "OmniGCloud Opex_savings"
       },
       "operational": {
         "content": "Decouple your business logic from vendor-specific APIs and regain full control of your digital estate. (ZH)",
-        "scenario": "Scenario Details (ZH)",
+        "scenario": "OmniGCloud Scenario",
         "title": "Operational Title (ZH)"
       },
       "p1": "Define your governance intent. (ZH)",
       "title": "Problem Title (ZH)",
       "vendor_lock": {
         "content": "Achieve FIPS 140-2 Level 3 compliance with our shielded execution environments. (ZH)",
-        "scenario": "Scenario Details (ZH)",
+        "scenario": "OmniGCloud Scenario",
         "title": "Vendor_lock Title (ZH)"
       }
     },
     "process": {
-      "title": "Title (ZH)"
+      "title": "Sovereign Framework Control"
     },
-    "protection1": "Protection1 Details (ZH)",
-    "protection2": "Protection2 Details (ZH)",
-    "protection3": "Protection3 Details (ZH)",
-    "protection4": "Protection4 Details (ZH)",
+    "protection1": "OmniGCloud Protection1",
+    "protection2": "OmniGCloud Protection2",
+    "protection3": "OmniGCloud Protection3",
+    "protection4": "OmniGCloud Protection4",
     "quantifyingROI": {
       "box": {
-        "content": "content Details (ZH)",
-        "title": "title Details (ZH)"
+        "content": "Comprehensive technical compendium covering the ASO framework and its associated architectural patterns.",
+        "title": "Sovereign Framework Control"
       },
-      "title": "title Details (ZH)"
+      "title": "Sovereign Framework Control"
     },
     "readAbstract": "Read Abstract (ZH)",
     "readFull": "Read Full (ZH)",
@@ -1567,50 +1560,50 @@
     },
     "related": {
       "card1": {
-        "desc": "desc Details (ZH)",
-        "title": "title Details (ZH)"
+        "desc": "Ensuring deterministic state reconciliation and data residency across distributed infrastructure.",
+        "title": "Sovereign Framework Control"
       },
       "card2": {
-        "desc": "desc Details (ZH)",
-        "title": "title Details (ZH)"
+        "desc": "Ensuring deterministic state reconciliation and data residency across distributed infrastructure.",
+        "title": "Sovereign Framework Control"
       },
-      "readPost": "readPost Details (ZH)",
-      "readWhitepaper": "readWhitepaper Details (ZH)",
-      "title": "title Details (ZH)"
+      "readPost": "OmniGCloud Readpost",
+      "readWhitepaper": "OmniGCloud Readwhitepaper",
+      "title": "Sovereign Framework Control"
     },
     "relatedReading": {
       "0": {
-        "category": "category Details (ZH)",
-        "excerpt": "excerpt Details (ZH)",
-        "title": "title Details (ZH)"
+        "category": "Architectural Research",
+        "excerpt": "OmniGCloud Excerpt",
+        "title": "Sovereign Framework Control"
       },
       "1": {
-        "category": "category Details (ZH)",
-        "excerpt": "excerpt Details (ZH)",
-        "title": "title Details (ZH)"
+        "category": "Architectural Research",
+        "excerpt": "OmniGCloud Excerpt",
+        "title": "Sovereign Framework Control"
       },
       "2": {
-        "category": "category Details (ZH)",
-        "excerpt": "excerpt Details (ZH)",
-        "title": "title Details (ZH)"
+        "category": "Architectural Research",
+        "excerpt": "OmniGCloud Excerpt",
+        "title": "Sovereign Framework Control"
       }
     },
     "reportingProcess": "Reporting Process (ZH)",
     "requestSaml": "Request Saml (ZH)",
-    "response1": "Response1 Details (ZH)",
-    "response2": "Response2 Details (ZH)",
-    "response3": "Response3 Details (ZH)",
-    "response4": "Response4 Details (ZH)",
+    "response1": "OmniGCloud Response1",
+    "response2": "OmniGCloud Response2",
+    "response3": "OmniGCloud Response3",
+    "response4": "OmniGCloud Response4",
     "responseProcess": "Response Process (ZH)",
-    "responsibility1": "Responsibility1 Details (ZH)",
-    "responsibility2": "Responsibility2 Details (ZH)",
-    "responsibility3": "Responsibility3 Details (ZH)",
+    "responsibility1": "OmniGCloud Responsibility1",
+    "responsibility2": "OmniGCloud Responsibility2",
+    "responsibility3": "OmniGCloud Responsibility3",
     "responsibleDisclosure": "Responsible Disclosure (ZH)",
-    "retention": "Retention Details (ZH)",
-    "right1": "Right1 Details (ZH)",
-    "right2": "Right2 Details (ZH)",
-    "right3": "Right3 Details (ZH)",
-    "right4": "Right4 Details (ZH)",
+    "retention": "OmniGCloud Retention",
+    "right1": "OmniGCloud Right1",
+    "right2": "OmniGCloud Right2",
+    "right3": "OmniGCloud Right3",
+    "right4": "OmniGCloud Right4",
     "roadmap": {
       "item1Desc": "Item1 Desc (ZH)",
       "item1Title": "Item1 Title (ZH)",
@@ -1618,258 +1611,258 @@
       "item2Title": "Item2 Title (ZH)",
       "item3Desc": "Item3 Desc (ZH)",
       "item3Title": "Item3 Title (ZH)",
-      "title": "Title (ZH)"
+      "title": "Sovereign Framework Control"
     },
-    "role": "Role Details (ZH)",
+    "role": "OmniGCloud Role",
     "savings": {
-      "badge": "Badge (ZH)",
-      "subtitle": "Subtitle description (ZH)",
-      "title": "Title (ZH)"
+      "badge": "LATEST",
+      "subtitle": "Autonomous Multi-Cloud Fabric",
+      "title": "Sovereign Framework Control"
     },
-    "scope": "Scope Details (ZH)",
-    "scope1": "Scope1 Details (ZH)",
-    "scope2": "Scope2 Details (ZH)",
-    "scope3": "Scope3 Details (ZH)",
-    "scope4": "Scope4 Details (ZH)",
+    "scope": "OmniGCloud Scope",
+    "scope1": "OmniGCloud Scope1",
+    "scope2": "OmniGCloud Scope2",
+    "scope3": "OmniGCloud Scope3",
+    "scope4": "OmniGCloud Scope4",
     "section1": {
       "box": {
-        "content": "content Details (ZH)",
-        "title": "title Details (ZH)"
+        "content": "Comprehensive technical compendium covering the ASO framework and its associated architectural patterns.",
+        "title": "Sovereign Framework Control"
       },
-      "p2": "p2 Details (ZH)",
-      "title": "title Details (ZH)"
+      "p2": "OmniGCloud P2",
+      "title": "Sovereign Framework Control"
     },
     "section10": {
       "box": {
-        "content": "content Details (ZH)",
-        "title": "title Details (ZH)"
+        "content": "Comprehensive technical compendium covering the ASO framework and its associated architectural patterns.",
+        "title": "Sovereign Framework Control"
       },
       "diagram9": {
         "adapters": {
-          "aws": "aws Details (ZH)",
-          "azure": "azure Details (ZH)",
-          "gcp": "gcp Details (ZH)"
+          "aws": "OmniGCloud Aws",
+          "azure": "OmniGCloud Azure",
+          "gcp": "OmniGCloud Gcp"
         },
-        "title": "title Details (ZH)"
+        "title": "Sovereign Framework Control"
       },
-      "p1": "p1 Details (ZH)",
-      "p2": "p2 Details (ZH)",
-      "title": "title Details (ZH)"
+      "p1": "OmniGCloud P1",
+      "p2": "OmniGCloud P2",
+      "title": "Sovereign Framework Control"
     },
     "section11": {
-      "p1": "p1 Details (ZH)",
+      "p1": "OmniGCloud P1",
       "proof": {
         "box": {
-          "content": "content Details (ZH)",
-          "title": "title Details (ZH)"
+          "content": "Comprehensive technical compendium covering the ASO framework and its associated architectural patterns.",
+          "title": "Sovereign Framework Control"
         },
         "diagram10": {
           "aecp": {
-            "plane1": "plane1 Details (ZH)",
-            "plane2": "plane2 Details (ZH)",
-            "policy": "policy Details (ZH)",
-            "title": "title Details (ZH)"
+            "plane1": "OmniGCloud Plane1",
+            "plane2": "OmniGCloud Plane2",
+            "policy": "OmniGCloud Policy",
+            "title": "Sovereign Framework Control"
           },
           "legacy": {
-            "fail": "fail Details (ZH)",
-            "plane": "plane Details (ZH)",
-            "policy": "policy Details (ZH)",
-            "title": "title Details (ZH)"
+            "fail": "OmniGCloud Fail",
+            "plane": "OmniGCloud Plane",
+            "policy": "OmniGCloud Policy",
+            "title": "Sovereign Framework Control"
           },
-          "title": "title Details (ZH)"
+          "title": "Sovereign Framework Control"
         },
         "table3": {
           "rows": {
             "0": {
-              "aso": "aso Details (ZH)",
-              "label": "label Details (ZH)",
-              "legacy": "legacy Details (ZH)"
+              "aso": "OmniGCloud Aso",
+              "label": "Technical Metric",
+              "legacy": "OmniGCloud Legacy"
             },
             "1": {
-              "aso": "aso Details (ZH)",
-              "label": "label Details (ZH)",
-              "legacy": "legacy Details (ZH)"
+              "aso": "OmniGCloud Aso",
+              "label": "Technical Metric",
+              "legacy": "OmniGCloud Legacy"
             },
             "2": {
-              "aso": "aso Details (ZH)",
-              "label": "label Details (ZH)",
-              "legacy": "legacy Details (ZH)"
+              "aso": "OmniGCloud Aso",
+              "label": "Technical Metric",
+              "legacy": "OmniGCloud Legacy"
             },
             "3": {
-              "aso": "aso Details (ZH)",
-              "label": "label Details (ZH)",
-              "legacy": "legacy Details (ZH)"
+              "aso": "OmniGCloud Aso",
+              "label": "Technical Metric",
+              "legacy": "OmniGCloud Legacy"
             }
           },
-          "title": "title Details (ZH)"
+          "title": "Sovereign Framework Control"
         },
-        "title": "title Details (ZH)"
+        "title": "Sovereign Framework Control"
       },
       "table2": {
         "rows": {
           "0": {
-            "aso": "aso Details (ZH)",
-            "label": "label Details (ZH)",
-            "legacy": "legacy Details (ZH)"
+            "aso": "OmniGCloud Aso",
+            "label": "Technical Metric",
+            "legacy": "OmniGCloud Legacy"
           },
           "1": {
-            "aso": "aso Details (ZH)",
-            "label": "label Details (ZH)",
-            "legacy": "legacy Details (ZH)"
+            "aso": "OmniGCloud Aso",
+            "label": "Technical Metric",
+            "legacy": "OmniGCloud Legacy"
           },
           "2": {
-            "aso": "aso Details (ZH)",
-            "label": "label Details (ZH)",
-            "legacy": "legacy Details (ZH)"
+            "aso": "OmniGCloud Aso",
+            "label": "Technical Metric",
+            "legacy": "OmniGCloud Legacy"
           },
           "3": {
-            "aso": "aso Details (ZH)",
-            "label": "label Details (ZH)",
-            "legacy": "legacy Details (ZH)"
+            "aso": "OmniGCloud Aso",
+            "label": "Technical Metric",
+            "legacy": "OmniGCloud Legacy"
           }
         },
-        "title": "title Details (ZH)"
+        "title": "Sovereign Framework Control"
       },
-      "title": "title Details (ZH)"
+      "title": "Sovereign Framework Control"
     },
     "section12": {
       "diagram11": {
-        "title": "title Details (ZH)"
+        "title": "Sovereign Framework Control"
       },
       "sectors": {
         "finance": {
-          "desc": "desc Details (ZH)",
-          "title": "title Details (ZH)"
+          "desc": "Ensuring deterministic state reconciliation and data residency across distributed infrastructure.",
+          "title": "Sovereign Framework Control"
         },
         "health": {
-          "desc": "desc Details (ZH)",
-          "title": "title Details (ZH)"
+          "desc": "Ensuring deterministic state reconciliation and data residency across distributed infrastructure.",
+          "title": "Sovereign Framework Control"
         }
       },
-      "title": "title Details (ZH)"
+      "title": "Sovereign Framework Control"
     },
     "section13": {
       "box": {
-        "content": "content Details (ZH)",
-        "title": "title Details (ZH)"
+        "content": "Comprehensive technical compendium covering the ASO framework and its associated architectural patterns.",
+        "title": "Sovereign Framework Control"
       },
       "subsection": {
-        "p1": "p1 Details (ZH)",
-        "p2": "p2 Details (ZH)",
-        "p3": "p3 Details (ZH)",
-        "title": "title Details (ZH)"
+        "p1": "OmniGCloud P1",
+        "p2": "OmniGCloud P2",
+        "p3": "OmniGCloud P3",
+        "title": "Sovereign Framework Control"
       },
-      "title": "title Details (ZH)"
+      "title": "Sovereign Framework Control"
     },
     "section14": {
       "diagram12": {
-        "title": "title Details (ZH)"
+        "title": "Sovereign Framework Control"
       },
-      "p1": "p1 Details (ZH)",
-      "title": "title Details (ZH)"
+      "p1": "OmniGCloud P1",
+      "title": "Sovereign Framework Control"
     },
     "section2": {
       "diagram1": {
-        "title": "title Details (ZH)"
+        "title": "Sovereign Framework Control"
       },
-      "title": "title Details (ZH)"
+      "title": "Sovereign Framework Control"
     },
     "section3": {
-      "description": "description Details (ZH)",
-      "p1": "p1 Details (ZH)",
+      "description": "A deep dive into the mathematical foundations and performance breakthroughs of the AECP engine.",
+      "p1": "OmniGCloud P1",
       "table1": {
         "rows": {
           "0": {
-            "aso": "aso Details (ZH)",
-            "label": "label Details (ZH)",
-            "legacy": "legacy Details (ZH)"
+            "aso": "OmniGCloud Aso",
+            "label": "Technical Metric",
+            "legacy": "OmniGCloud Legacy"
           },
           "1": {
-            "aso": "aso Details (ZH)",
-            "label": "label Details (ZH)",
-            "legacy": "legacy Details (ZH)"
+            "aso": "OmniGCloud Aso",
+            "label": "Technical Metric",
+            "legacy": "OmniGCloud Legacy"
           },
           "2": {
-            "aso": "aso Details (ZH)",
-            "label": "label Details (ZH)",
-            "legacy": "legacy Details (ZH)"
+            "aso": "OmniGCloud Aso",
+            "label": "Technical Metric",
+            "legacy": "OmniGCloud Legacy"
           },
           "3": {
-            "aso": "aso Details (ZH)",
-            "label": "label Details (ZH)",
-            "legacy": "legacy Details (ZH)"
+            "aso": "OmniGCloud Aso",
+            "label": "Technical Metric",
+            "legacy": "OmniGCloud Legacy"
           }
         },
-        "title": "title Details (ZH)"
+        "title": "Sovereign Framework Control"
       },
-      "title": "title Details (ZH)"
+      "title": "Sovereign Framework Control"
     },
     "section4": {
-      "description": "description Details (ZH)",
+      "description": "A deep dive into the mathematical foundations and performance breakthroughs of the AECP engine.",
       "diagram2": {
-        "title": "title Details (ZH)"
+        "title": "Sovereign Framework Control"
       },
-      "hypothesis": "hypothesis Details (ZH)",
-      "hypothesisTitle": "hypothesisTitle Details (ZH)",
-      "p1": "p1 Details (ZH)",
-      "title": "title Details (ZH)"
+      "hypothesis": "OmniGCloud Hypothesis",
+      "hypothesisTitle": "OmniGCloud Hypothesistitle",
+      "p1": "OmniGCloud P1",
+      "title": "Sovereign Framework Control"
     },
     "section5": {
       "box": {
-        "content": "content Details (ZH)",
-        "title": "title Details (ZH)"
+        "content": "Comprehensive technical compendium covering the ASO framework and its associated architectural patterns.",
+        "title": "Sovereign Framework Control"
       },
       "diagram3": {
-        "title": "title Details (ZH)"
+        "title": "Sovereign Framework Control"
       },
-      "p1": "p1 Details (ZH)",
-      "title": "title Details (ZH)"
+      "p1": "OmniGCloud P1",
+      "title": "Sovereign Framework Control"
     },
     "section6": {
       "diagram4": {
-        "title": "title Details (ZH)"
+        "title": "Sovereign Framework Control"
       },
-      "p1": "p1 Details (ZH)",
-      "title": "title Details (ZH)"
+      "p1": "OmniGCloud P1",
+      "title": "Sovereign Framework Control"
     },
     "section7": {
       "box": {
-        "title": "title Details (ZH)"
+        "title": "Sovereign Framework Control"
       },
       "diagram6": {
         "labels": {
-          "alert": "alert Details (ZH)",
-          "command": "command Details (ZH)",
-          "commandSub": "commandSub Details (ZH)",
-          "input": "input Details (ZH)",
-          "inputSub": "inputSub Details (ZH)",
-          "solver": "solver Details (ZH)",
-          "solverSub": "solverSub Details (ZH)"
+          "alert": "OmniGCloud Alert",
+          "command": "OmniGCloud Command",
+          "commandSub": "OmniGCloud Commandsub",
+          "input": "OmniGCloud Input",
+          "inputSub": "OmniGCloud Inputsub",
+          "solver": "OmniGCloud Solver",
+          "solverSub": "OmniGCloud Solversub"
         },
-        "title": "title Details (ZH)"
+        "title": "Sovereign Framework Control"
       },
-      "title": "title Details (ZH)"
+      "title": "Sovereign Framework Control"
     },
     "section8": {
       "diagram7": {
-        "title": "title Details (ZH)"
+        "title": "Sovereign Framework Control"
       },
-      "p1": "p1 Details (ZH)",
-      "title": "title Details (ZH)"
+      "p1": "OmniGCloud P1",
+      "title": "Sovereign Framework Control"
     },
     "section9": {
       "diagram8": {
         "protocolA": {
-          "text": "text Details (ZH)",
-          "title": "title Details (ZH)"
+          "text": "OmniGCloud Text",
+          "title": "Sovereign Framework Control"
         },
         "protocolB": {
-          "text": "text Details (ZH)",
-          "title": "title Details (ZH)"
+          "text": "OmniGCloud Text",
+          "title": "Sovereign Framework Control"
         },
-        "title": "title Details (ZH)"
+        "title": "Sovereign Framework Control"
       },
-      "title": "title Details (ZH)"
+      "title": "Sovereign Framework Control"
     },
     "sections": {
       "autonomousGatingLogs": "Autonomous Gating Logs (ZH)",
@@ -1879,33 +1872,33 @@
     },
     "securityEmail": "Security Email (ZH)",
     "securityPractices": "Security Practices (ZH)",
-    "service1": "Service1 Details (ZH)",
-    "service2": "Service2 Details (ZH)",
-    "service3": "Service3 Details (ZH)",
-    "service4": "Service4 Details (ZH)",
-    "services": "Services Details (ZH)",
+    "service1": "OmniGCloud Service1",
+    "service2": "OmniGCloud Service2",
+    "service3": "OmniGCloud Service3",
+    "service4": "OmniGCloud Service4",
+    "services": "OmniGCloud Services",
     "servicesText": "Services Text (ZH)",
     "sidebar": {
-      "blueprints": "Blueprints Details (ZH)",
+      "blueprints": "OmniGCloud Blueprints",
       "contactArchitectureOffice": "Contact Architecture Office (ZH)",
       "customBriefingText": "Speak with our founding engineering team about specific ASO implementations. (ZH)",
       "customBriefingTitle": "Need a customized briefing? (ZH)",
-      "documentation": "Documentation Details (ZH)",
+      "documentation": "OmniGCloud Documentation",
       "links": {
-        "architecture": "Architecture Details (ZH)",
-        "introduction": "Introduction Details (ZH)",
-        "security": "Security Details (ZH)",
-        "whitepaper": "Whitepaper Details (ZH)"
+        "architecture": "OmniGCloud Architecture",
+        "introduction": "OmniGCloud Introduction",
+        "security": "OmniGCloud Security",
+        "whitepaper": "OmniGCloud Whitepaper"
       },
       "quickLinksHeading": "Quick Links (ZH)"
     },
     "sitemap": {
-      "directory": "Directory (ZH)",
-      "title": "Title (ZH)"
+      "directory": "OmniGCloud Directory",
+      "title": "Sovereign Framework Control"
     },
-    "soc2": "Soc2 Details (ZH)",
+    "soc2": "OmniGCloud Soc2",
     "soc2Text": "Soc2 Text (ZH)",
-    "solution": "Solution Details (ZH)",
+    "solution": "OmniGCloud Solution",
     "solutionLabel": "Solution Label (ZH)",
     "ssoConfiguration": "Sso Configuration (ZH)",
     "step1": "Enforce auto-remediation policies. (ZH)",
@@ -1916,14 +1909,14 @@
     "subtitle": "Security, compliance, and velocity in one platform. (ZH)",
     "successMessage": "Success Message (ZH)",
     "tech": {
-      "intentTitle": "intentTitle Details (ZH)",
-      "securityDesc": "securityDesc Details (ZH)",
-      "securityTitle": "securityTitle Details (ZH)",
-      "title": "title Details (ZH)"
+      "intentTitle": "OmniGCloud Intenttitle",
+      "securityDesc": "OmniGCloud Securitydesc",
+      "securityTitle": "OmniGCloud Securitytitle",
+      "title": "Sovereign Framework Control"
     },
     "technicalLibrary": "Technical Library (ZH)",
     "tenantId": "Tenant Id (ZH)",
-    "termination": "Termination Details (ZH)",
+    "termination": "OmniGCloud Termination",
     "terminationText": "Termination Text (ZH)",
     "thirdParty": "Third Party (ZH)",
     "thirdPartyText": "Third Party Text (ZH)",
@@ -1933,7 +1926,7 @@
       "line2": "Line 2 (ZH)",
       "line3": "Line 3 (ZH)"
     },
-    "titleHighlight": "titleHighlight Details (ZH)",
+    "titleHighlight": "OmniGCloud Titlehighlight",
     "transparency": {
       "desc": "Clear, auditable practices across security, reliability, and operations. (ZH)",
       "list": {
@@ -1957,8 +1950,8 @@
       "title": "Trust Title (ZH)"
     },
     "ui": {
-      "filter": "filter Details (ZH)",
-      "readMore": "readMore Details (ZH)"
+      "filter": "Resource Filtering",
+      "readMore": "Explore Documentation"
     },
     "usageData": "Usage Data (ZH)",
     "usageDataText": "Usage Data Text (ZH)",
@@ -1967,93 +1960,100 @@
     "value": {
       "cards": {
         "audit": {
-          "desc": "desc Details (ZH)",
-          "title": "title Details (ZH)"
+          "desc": "Ensuring deterministic state reconciliation and data residency across distributed infrastructure.",
+          "title": "Sovereign Framework Control"
         },
         "drift": {
-          "desc": "desc Details (ZH)",
-          "title": "title Details (ZH)"
+          "desc": "Ensuring deterministic state reconciliation and data residency across distributed infrastructure.",
+          "title": "Sovereign Framework Control"
         },
         "leadTime": {
-          "desc": "desc Details (ZH)",
-          "title": "title Details (ZH)"
+          "desc": "Ensuring deterministic state reconciliation and data residency across distributed infrastructure.",
+          "title": "Sovereign Framework Control"
         }
       },
-      "subtitle": "subtitle Details (ZH)",
-      "title": "title Details (ZH)"
+      "subtitle": "Autonomous Multi-Cloud Fabric",
+      "title": "Sovereign Framework Control"
     },
     "velocity": {
-      "contributors": "Contributors (ZH)",
-      "forks": "Forks (ZH)",
-      "less": "Less (ZH)",
-      "more": "More (ZH)",
-      "stars": "Stars (ZH)",
+      "contributors": "OmniGCloud Contributors",
+      "forks": "OmniGCloud Forks",
+      "less": "OmniGCloud Less",
+      "more": "OmniGCloud More",
+      "stars": "OmniGCloud Stars",
       "statsValues": {
-        "contributors": "Contributors (ZH)",
-        "forks": "Forks (ZH)",
-        "stars": "Stars (ZH)"
+        "contributors": "OmniGCloud Contributors",
+        "forks": "OmniGCloud Forks",
+        "stars": "OmniGCloud Stars"
       },
-      "subtitle": "Subtitle description (ZH)",
-      "title": "Title (ZH)"
+      "subtitle": "Autonomous Multi-Cloud Fabric",
+      "title": "Sovereign Framework Control"
     },
-    "version": "Version Details (ZH)",
+    "version": "OmniGCloud Version",
     "versionLabel": "Version Label (ZH)",
-    "version_label": "Version_label Details (ZH)",
+    "version_label": "OmniGCloud Version_label",
     "view_service": "View Service (ZH)",
     "vision": {
       "content": "Ensure your data never leaves the jurisdiction you define, regardless of the underlying infrastructure. (ZH)",
       "title": "Vision Title (ZH)"
     },
     "visual": {
-      "diagram": "Diagram (ZH)",
+      "diagram": "OmniGCloud Diagram",
       "lockin": {
-        "desc1": "Desc1 (ZH)",
-        "desc2": "Desc2 (ZH)",
-        "title": "Title (ZH)"
+        "desc1": "OmniGCloud Desc1",
+        "desc2": "OmniGCloud Desc2",
+        "title": "Sovereign Framework Control"
       },
-      "subtitle": "Subtitle description (ZH)",
-      "title": "Title (ZH)"
+      "subtitle": "Autonomous Multi-Cloud Fabric",
+      "title": "Sovereign Framework Control"
     },
     "visualSectionDesc": "Visual Section Desc (ZH)",
     "visuals": {
       "dataDriven": {
-        "desc": "Desc description (ZH)",
-        "title": "Title (ZH)"
+        "desc": "Ensuring deterministic state reconciliation and data residency across distributed infrastructure.",
+        "title": "Sovereign Framework Control"
       },
       "enterpriseAI": {
-        "desc": "Desc description (ZH)",
-        "title": "Title (ZH)"
+        "desc": "Ensuring deterministic state reconciliation and data residency across distributed infrastructure.",
+        "title": "Sovereign Framework Control"
       }
     },
-    "watermark": "watermark Details (ZH)",
-    "welcome": "Welcome Details (ZH)",
+    "watermark": "OmniGCloud Platform",
+    "welcome": "OmniGCloud Welcome",
     "yourRights": "Your Rights (ZH)",
-    "yourRightsText": "Your Rights Text (ZH)"
+    "yourRightsText": "Your Rights Text (ZH)",
+    "header": {
+      "category": "Strategic Research",
+      "description": "Comprehensive overview of the sovereign orchestration engine and frameworks.",
+      "lastUpdated": "Latest Operational Update: Q1 2026",
+      "readTime": "Estimated Reading Duration: 24 Minutes",
+      "title": "Sovereign Framework Control"
+    }
   },
   "Community": {
     "callout": {
       "charts": {
-        "commits": "Commits (ZH)",
+        "commits": "OmniGCloud Commits",
         "prs": "Pull Requests (ZH)"
       },
       "cli": {
-        "badge": "Badge (ZH)",
-        "description": "Description description (ZH)"
+        "badge": "LATEST",
+        "description": "A deep dive into the mathematical foundations and performance breakthroughs of the AECP engine."
       },
       "hero": {
-        "badge": "Badge (ZH)",
-        "plugin": "Plugin (ZH)",
-        "subtitle": "Subtitle description (ZH)"
+        "badge": "LATEST",
+        "plugin": "OmniGCloud Plugin",
+        "subtitle": "Autonomous Multi-Cloud Fabric"
       },
       "network": {
         "advisory": {
-          "name": "Name (ZH)"
+          "name": "OmniGCloud Name"
         },
         "discord": {
-          "name": "Name (ZH)"
+          "name": "OmniGCloud Name"
         },
         "github": {
-          "name": "Name (ZH)"
+          "name": "OmniGCloud Name"
         }
       },
       "stack": {
@@ -2061,9 +2061,9 @@
       },
       "stats": {
         "contribs": "Contributors (ZH)",
-        "forks": "Forks (ZH)",
+        "forks": "OmniGCloud Forks",
         "pkgs": "Packages (ZH)",
-        "stars": "Stars (ZH)"
+        "stars": "OmniGCloud Stars"
       }
     },
     "cli": {
@@ -2071,18 +2071,18 @@
       "cmd": "npx omnigcloud@latest init (ZH)",
       "commands": {
         "audit": {
-          "prefix": "Prefix Details (ZH)",
-          "suffix": "Suffix Details (ZH)"
+          "prefix": "OmniGCloud Prefix",
+          "suffix": "OmniGCloud Suffix"
         },
         "init": {
-          "prefix": "Prefix Details (ZH)",
-          "suffix": "Suffix Details (ZH)"
+          "prefix": "OmniGCloud Prefix",
+          "suffix": "OmniGCloud Suffix"
         },
         "install": {
-          "prefix": "Prefix Details (ZH)",
-          "suffix": "Suffix Details (ZH)"
+          "prefix": "OmniGCloud Prefix",
+          "suffix": "OmniGCloud Suffix"
         },
-        "latency": "Latency Details (ZH)"
+        "latency": "OmniGCloud Latency"
       },
       "description": "Cli description (ZH)",
       "points": {
@@ -2100,39 +2100,40 @@
     },
     "hero": {
       "badge": "HERO (ZH)",
-      "github": "Github Details (ZH)",
-      "plugin": "Plugin Details (ZH)",
+      "title": "Building the Sovereign <highlight>Cloud Ecosystem</highlight>",
+      "github": "OmniGCloud Github",
+      "plugin": "OmniGCloud Plugin",
       "subtitle": "Hero description (ZH)"
     },
     "network": {
       "advisory": {
-        "name": "Name Details (ZH)",
-        "text": "Text Details (ZH)"
+        "name": "OmniGCloud Name",
+        "text": "OmniGCloud Text"
       },
       "discord": {
-        "name": "Name Details (ZH)",
-        "text": "Text Details (ZH)"
+        "name": "OmniGCloud Name",
+        "text": "OmniGCloud Text"
       },
       "github": {
-        "name": "Name Details (ZH)",
-        "text": "Text Details (ZH)"
+        "name": "OmniGCloud Name",
+        "text": "OmniGCloud Text"
       },
       "registry": {
-        "name": "Name Details (ZH)",
-        "text": "Text Details (ZH)"
+        "name": "OmniGCloud Name",
+        "text": "OmniGCloud Text"
       },
       "title": "Network Title (ZH)"
     },
     "velocity": {
-      "contributors": "Contributors Details (ZH)",
-      "forks": "Forks Details (ZH)",
-      "less": "Less Details (ZH)",
-      "more": "More Details (ZH)",
-      "stars": "Stars Details (ZH)",
+      "contributors": "OmniGCloud Contributors",
+      "forks": "OmniGCloud Forks",
+      "less": "OmniGCloud Less",
+      "more": "OmniGCloud More",
+      "stars": "OmniGCloud Stars",
       "statsValues": {
-        "contributors": "Contributors Details (ZH)",
-        "forks": "Forks Details (ZH)",
-        "stars": "Stars Details (ZH)"
+        "contributors": "OmniGCloud Contributors",
+        "forks": "OmniGCloud Forks",
+        "stars": "OmniGCloud Stars"
       },
       "subtitle": "Velocity description (ZH)",
       "title": "Velocity Title (ZH)"
@@ -2158,50 +2159,50 @@
       "title": "Contact Chief Executive Office (ZH)"
     },
     "cta": {
-      "audit": "Audit (ZH)",
-      "read": "Read (ZH)",
-      "text": "Text (ZH)"
+      "audit": "OmniGCloud Audit",
+      "read": "OmniGCloud Read",
+      "text": "OmniGCloud Text"
     },
     "email": "research@omnigcloud.com",
     "email_support": "support@omnigcloud.com",
     "experience": {
       "items": {
         "0": {
-          "desc": "Desc description (ZH)",
-          "title": "Title (ZH)"
+          "desc": "Ensuring deterministic state reconciliation and data residency across distributed infrastructure.",
+          "title": "Sovereign Framework Control"
         },
         "1": {
-          "desc": "Desc description (ZH)",
-          "title": "Title (ZH)"
+          "desc": "Ensuring deterministic state reconciliation and data residency across distributed infrastructure.",
+          "title": "Sovereign Framework Control"
         },
         "2": {
-          "desc": "Desc description (ZH)",
-          "title": "Title (ZH)"
+          "desc": "Ensuring deterministic state reconciliation and data residency across distributed infrastructure.",
+          "title": "Sovereign Framework Control"
         },
         "3": {
-          "desc": "Desc description (ZH)",
-          "title": "Title (ZH)"
+          "desc": "Ensuring deterministic state reconciliation and data residency across distributed infrastructure.",
+          "title": "Sovereign Framework Control"
         }
       },
-      "title": "Title (ZH)"
+      "title": "Sovereign Framework Control"
     },
     "hero": {
       "badge": "OmniGCloud Global (ZH)",
-      "bio": "Bio (ZH)",
-      "role": "Role (ZH)",
+      "bio": "OmniGCloud Bio",
+      "role": "OmniGCloud Role",
       "stats": {
-        "certs": "Certs (ZH)",
+        "certs": "OmniGCloud Certs",
         "certsValue": "Certs Value (ZH)",
-        "exp": "Exp (ZH)",
+        "exp": "OmniGCloud Exp",
         "expValue": "Exp Value (ZH)",
-        "papers": "Papers (ZH)",
+        "papers": "OmniGCloud Papers",
         "papersValue": "Papers Value (ZH)",
-        "patents": "Patents (ZH)",
+        "patents": "OmniGCloud Patents",
         "patentsValue": "Patents Value (ZH)"
       },
       "subtitle": "A team of systems architects, AI engineers, and cloud pioneers dedicated to restoring Enterprise Sovereignty through autonomous modernization. (ZH)",
       "title": "Engineering the Cloud-Agnostic Future (ZH)",
-      "visionary": "Visionary (ZH)"
+      "visionary": "OmniGCloud Visionary"
     },
     "leadership": {
       "chaitanya": {
@@ -2219,8 +2220,8 @@
       "subtitle": "Visionaries defining the next era of sovereign cloud. (ZH)",
       "title": "Executive Leadership (ZH)"
     },
-    "location": "Location Details (ZH)",
-    "name": "Name (ZH)",
+    "location": "OmniGCloud Location",
+    "name": "OmniGCloud Name",
     "newsroom": {
       "items": {
         "0": {
@@ -2252,7 +2253,7 @@
         "2": "Item 2 (ZH)",
         "3": "Item 3 (ZH)"
       },
-      "title": "Title (ZH)",
+      "title": "Sovereign Framework Control",
       "viewRepo": "View Repo (ZH)"
     },
     "sitemap": {
@@ -2262,47 +2263,47 @@
   },
   "Compliance": {
     "accessControls": "Access Controls (ZH)",
-    "active": "Active Details (ZH)",
-    "audit": "Audit Details (ZH)",
+    "active": "OmniGCloud Active",
+    "audit": "OmniGCloud Audit",
     "auditText": "Audit Text (ZH)",
-    "auth1": "Auth1 Details (ZH)",
-    "auth2": "Auth2 Details (ZH)",
-    "auth3": "Auth3 Details (ZH)",
-    "authentication": "Authentication Details (ZH)",
-    "authorization": "Authorization Details (ZH)",
-    "authz1": "Authz1 Details (ZH)",
-    "authz2": "Authz2 Details (ZH)",
-    "authz3": "Authz3 Details (ZH)",
-    "backups": "Backups Details (ZH)",
+    "auth1": "OmniGCloud Auth1",
+    "auth2": "OmniGCloud Auth2",
+    "auth3": "OmniGCloud Auth3",
+    "authentication": "OmniGCloud Authentication",
+    "authorization": "OmniGCloud Authorization",
+    "authz1": "OmniGCloud Authz1",
+    "authz2": "OmniGCloud Authz2",
+    "authz3": "OmniGCloud Authz3",
+    "backups": "OmniGCloud Backups",
     "backupsText": "Backups Text (ZH)",
     "dataHandling": "Data Handling (ZH)",
     "dataResidency": "Data Residency (ZH)",
     "dataResidencyText": "Data Residency Text (ZH)",
-    "encryption": "Encryption Details (ZH)",
-    "encryption1": "Encryption1 Details (ZH)",
-    "encryption2": "Encryption2 Details (ZH)",
-    "encryption3": "Encryption3 Details (ZH)",
-    "gdpr": "Gdpr Details (ZH)",
+    "encryption": "OmniGCloud Encryption",
+    "encryption1": "OmniGCloud Encryption1",
+    "encryption2": "OmniGCloud Encryption2",
+    "encryption3": "OmniGCloud Encryption3",
+    "gdpr": "OmniGCloud Gdpr",
     "gdprText": "Gdpr Text (ZH)",
     "inProgress": "In Progress (ZH)",
     "incidentResponse": "Incident Response (ZH)",
     "incidentResponseText": "Incident Response Text (ZH)",
-    "iso27001": "Iso27001 Details (ZH)",
+    "iso27001": "OmniGCloud Iso27001",
     "iso27001Text": "Iso27001 Text (ZH)",
-    "operational": "Operational Details (ZH)",
+    "operational": "OmniGCloud Operational",
     "operationalText": "Operational Text (ZH)",
-    "planned": "Planned Details (ZH)",
-    "response1": "Response1 Details (ZH)",
-    "response2": "Response2 Details (ZH)",
-    "response3": "Response3 Details (ZH)",
-    "response4": "Response4 Details (ZH)",
+    "planned": "OmniGCloud Planned",
+    "response1": "OmniGCloud Response1",
+    "response2": "OmniGCloud Response2",
+    "response3": "OmniGCloud Response3",
+    "response4": "OmniGCloud Response4",
     "responseProcess": "Response Process (ZH)",
-    "retention": "Retention Details (ZH)",
-    "soc2": "Soc2 Details (ZH)",
+    "retention": "OmniGCloud Retention",
+    "soc2": "OmniGCloud Soc2",
     "soc2Text": "Soc2 Text (ZH)",
     "subtitle": "Security, compliance, and velocity in one platform. (ZH)",
     "title": "Compliance (ZH)",
-    "transparency": "Transparency Details (ZH)",
+    "transparency": "OmniGCloud Transparency",
     "transparencyText": "Transparency Text (ZH)"
   },
   "Components": {
@@ -2317,13 +2318,13 @@
     },
     "Visuals": {
       "AdvancedMetrics": {
-        "after": "After (ZH)",
+        "after": "OmniGCloud After",
         "avgResponseTime": "AVG RESPONSE TIME (ZH)",
-        "before": "Before (ZH)",
+        "before": "OmniGCloud Before",
         "licenseTypes": {
-          "optimized": "Optimized (ZH)",
-          "underused": "Underused (ZH)",
-          "unused": "Unused (ZH)"
+          "optimized": "OmniGCloud Optimized",
+          "underused": "OmniGCloud Underused",
+          "unused": "OmniGCloud Unused"
         },
         "reduction": "{percentage}% Reduction (ZH)",
         "storageSaved": "STORAGE SAVED (ZH)",
@@ -2335,7 +2336,7 @@
         "title": "Billing Forecast & Arbitrage (ZH)"
       },
       "CloudSwitchSim": {
-        "destination": "Destination (ZH)",
+        "destination": "OmniGCloud Destination",
         "initiateSwitch": "Initiate Arbitrage Switch (ZH)",
         "resetSimulation": "Reset Simulation (ZH)"
       },
@@ -2375,12 +2376,12 @@
     "fallbackInstruction": "Fallback Instruction (ZH)",
     "fallbackTitle": "Fallback Title (ZH)",
     "rateLimitMessage": "Rate Limit Message (ZH)",
-    "subject": "Subject Details (ZH)",
+    "subject": "OmniGCloud Subject",
     "whatsappLabel": "Whatsapp Label (ZH)"
   },
   "CookieConsent": {
     "accept": "Accept Essential (ZH)",
-    "close": "Close Details (ZH)",
+    "close": "OmniGCloud Close",
     "decline": "Decline Optional (ZH)",
     "message": "We use strictly necessary cookies to ensure platform security and data sovereignty compliance. Usage analytics are optional. (ZH)",
     "policy_link": "Sovereignty Policy (ZH)",
@@ -2392,10 +2393,10 @@
       "Logs": {
         "checking": "Checking compliance policies for new buckets... (ZH)",
         "levels": {
-          "debug": "DEBUG (ZH)",
-          "info": "INFO (ZH)",
-          "pass": "PASS (ZH)",
-          "success": "SUCCESS (ZH)"
+          "debug": "OmniGCloud Debug",
+          "info": "OmniGCloud Info",
+          "pass": "OmniGCloud Pass",
+          "success": "OmniGCloud Success"
         },
         "optimizing": "[Orchestrator] Optimizing bin packing for region us-east-1... (ZH)",
         "rebalanced": "Rebalanced 4 nodes. Savings: $4.20/hr (ZH)",
@@ -2412,20 +2413,20 @@
       "historicalTrend": "Historical Trend (ZH)",
       "hourlyRequestVolume": "Hourly Request Volume (ZH)",
       "latencyTrend": "API latency trend (ZH)",
-      "liveDataFeed": "LIVE DATA FEED",
       "liveView": "Live View (ZH)",
       "monthlyCost": "Monthly Cost Comparison ($) (ZH)",
       "multiCloudDistribution": "Multi-Cloud Distribution (%) (ZH)",
       "realtimePerf": "Real-time system performance metrics (ZH)",
       "systemLogs": "System Logs (ZH)",
-      "uptime30Day": "30-Day Uptime (%) (ZH)"
+      "uptime30Day": "30-Day Uptime (%) (ZH)",
+      "liveDataFeed": "LIVE DATA FEED"
     },
     "CommandCenter": {
       "costDesc": "Monthly infrastructure optimization (ZH)",
       "costTitle": "Cost Savings Trend (ZH)",
       "deploymentTitle": "Deployment Activity (ZH)",
       "errorTrend": "Declining error trend (ZH)",
-      "growing": "GROWING (ZH)",
+      "growing": "OmniGCloud Growing",
       "responseTimeDesc": "API latency trend (ZH)",
       "responseTimeTitle": "Response Time (ZH)",
       "roiDesc": "Real-time return on investment (ZH)",
@@ -2442,11 +2443,11 @@
     },
     "Distribution": {
       "badges": {
-        "audited": "AUDITED (ZH)",
-        "balanced": "BALANCED (ZH)",
-        "global": "GLOBAL (ZH)",
-        "optimal": "OPTIMAL (ZH)",
-        "tracked": "TRACKED (ZH)"
+        "audited": "OmniGCloud Audited",
+        "balanced": "OmniGCloud Balanced",
+        "global": "OmniGCloud Global",
+        "optimal": "OmniGCloud Optimal",
+        "tracked": "OmniGCloud Tracked"
       },
       "complianceDesc": "Current compliance status across all frameworks (ZH)",
       "complianceTitle": "Compliance Framework Scores (ZH)",
@@ -2464,7 +2465,7 @@
       "activeAssets": "Active Assets (ZH)",
       "activeNodes": "Active Nodes (ZH)",
       "activeNodesValue": "Active Nodes Value (ZH)",
-      "avg": "Avg (ZH)",
+      "avg": "OmniGCloud Avg",
       "cloudSpend": "Cloud Spend (ZH)",
       "compliance": {
         "subtitle": "Real-time audit score (ZH)",
@@ -2490,7 +2491,7 @@
         "revenueImpactValue": "+18% (ZH)",
         "systemHealth": "SYSTEM HEALTH (ZH)"
       },
-      "nominal": "Nominal (ZH)",
+      "nominal": "OmniGCloud Nominal",
       "queryDesc": "Query Desc (ZH)",
       "queryTitle": "Query Title (ZH)",
       "requestsSec": "Requests Sec (ZH)",
@@ -2507,15 +2508,15 @@
       "scalingDesc": "Scaling Desc (ZH)",
       "scalingTitle": "Scaling Title (ZH)",
       "status": {
-        "critical": "CRITICAL (ZH)",
-        "degraded": "DEGRADED (ZH)",
-        "operational": "OPERATIONAL (ZH)"
+        "critical": "OmniGCloud Critical",
+        "degraded": "OmniGCloud Degraded",
+        "operational": "OmniGCloud Operational"
       },
-      "subtitle": "Subtitle description (ZH)",
+      "subtitle": "Autonomous Multi-Cloud Fabric",
       "threatDesc": "Threat Desc (ZH)",
       "threatTitle": "Threat Title (ZH)",
       "title": "EXECUTIVE OVERVIEW (ZH)",
-      "trend": "Trend (ZH)",
+      "trend": "OmniGCloud Trend",
       "uptime": {
         "subtitle": "Mesh uptime status (ZH)",
         "title": "Global Connectivity (ZH)"
@@ -2529,14 +2530,14 @@
       "costPerTransaction": "COST PER TRANSACTION (ZH)",
       "cpuEfficiency": "CPU Efficiency (ZH)",
       "errorRate": "ERROR RATE (ZH)",
-      "hits": "Hits (ZH)",
+      "hits": "OmniGCloud Hits",
       "memoryEfficiency": "Memory Efficiency (ZH)",
-      "misses": "Misses (ZH)",
+      "misses": "OmniGCloud Misses",
       "networkEfficiency": "Network Efficiency (ZH)",
-      "roi": "ROI (ZH)",
+      "roi": "OmniGCloud Roi",
       "securityScore": "Security Score (ZH)",
       "totalInvocations": "TOTAL INVOCATIONS (ZH)",
-      "uptime": "UPTIME (ZH)"
+      "uptime": "OmniGCloud Uptime"
     },
     "Metrics": {
       "common": {
@@ -2562,7 +2563,7 @@
         "stats": {
           "buildTime": "Build Time (ZH)",
           "deploys": "Deploys/Day (ZH)",
-          "rollbacks": "Rollbacks (ZH)",
+          "rollbacks": "OmniGCloud Rollbacks",
           "success": "Success Rate (ZH)"
         },
         "subtitle": "Pipeline throughput and failure rate (ZH)",
@@ -2574,7 +2575,7 @@
         "pageTitle": "Threat Analysis (ZH)",
         "stats": {
           "5xx": "5xx Rates (ZH)",
-          "anomalies": "Anomalies (ZH)",
+          "anomalies": "OmniGCloud Anomalies",
           "errorRate": "Global Error % (ZH)",
           "healed": "Self-Healed (ZH)"
         },
@@ -2587,9 +2588,9 @@
         "pageTitle": "Executive Overview (ZH)",
         "stats": {
           "activeUsers": "Active Users (ZH)",
-          "churn": "Churn (ZH)",
-          "mrr": "MRR (ZH)",
-          "nps": "NPS (ZH)"
+          "churn": "OmniGCloud Churn",
+          "mrr": "OmniGCloud Mrr",
+          "nps": "OmniGCloud Nps"
         },
         "subtitle": "Top-level business health indicators (ZH)",
         "title": "Strategic Alignment (ZH)"
@@ -2600,7 +2601,7 @@
         "pageTitle": "Resource Telemetry (ZH)",
         "stats": {
           "cpu": "CPU Usage (ZH)",
-          "memory": "Memory (ZH)",
+          "memory": "OmniGCloud Memory",
           "nodes": "Node Count (ZH)",
           "pods": "Active Pods (ZH)"
         },
@@ -2613,8 +2614,8 @@
         "pageTitle": "ROI Performance (ZH)",
         "stats": {
           "current": "Current ROI (ZH)",
-          "efficiency": "Efficiency (ZH)",
-          "projection": "Projection (ZH)",
+          "efficiency": "OmniGCloud Efficiency",
+          "projection": "OmniGCloud Projection",
           "savings": "Net Savings (ZH)"
         },
         "subtitle": "Real-time return on investment tracking (ZH)",
@@ -2638,7 +2639,7 @@
         "pageSubtitle": "Security posture & threat protection (ZH)",
         "pageTitle": "Compliance Radar (ZH)",
         "stats": {
-          "compliance": "Compliance (ZH)",
+          "compliance": "OmniGCloud Compliance",
           "issues": "Open Issues (ZH)",
           "score": "Security Score (ZH)",
           "threats": "Threats Blocked (ZH)"
@@ -2653,7 +2654,7 @@
         "stats": {
           "buildTime": "Avg Build (ZH)",
           "coverage": "Test Cov. (ZH)",
-          "issues": "Issues (ZH)",
+          "issues": "OmniGCloud Issues",
           "prs": "Pull Requests (ZH)"
         },
         "subtitle": "Engineering velocity & stability (ZH)",
@@ -2664,10 +2665,10 @@
         "pageSubtitle": "Platform availability and uptime (ZH)",
         "pageTitle": "Global Connectivity (ZH)",
         "stats": {
-          "availability": "Availability (ZH)",
-          "downtime": "Downtime (ZH)",
-          "incidents": "Incidents (ZH)",
-          "mttr": "MTTR (ZH)"
+          "availability": "OmniGCloud Availability",
+          "downtime": "OmniGCloud Downtime",
+          "incidents": "OmniGCloud Incidents",
+          "mttr": "OmniGCloud Mttr"
         },
         "subtitle": "30-day global availability (ZH)",
         "title": "System Uptime (ZH)"
@@ -2709,9 +2710,9 @@
     "TimeSeries": {
       "badges": {
         "compliant": "✓ COMPLIANT (ZH)",
-        "decreasing": "DECREASING (ZH)",
-        "live": "LIVE (ZH)",
-        "projected": "PROJECTED (ZH)",
+        "decreasing": "OmniGCloud Decreasing",
+        "live": "OmniGCloud Live",
+        "projected": "OmniGCloud Projected",
         "realtime": "REAL-TIME (ZH)"
       },
       "costDesc": "Monthly infrastructure costs showing significant savings (ZH)",
@@ -2725,7 +2726,7 @@
       "throughputDesc": "Hourly request throughput with peak hour detection (ZH)",
       "throughputTitle": "Request Volume (ZH)"
     },
-    "active": "Active Details (ZH)",
+    "active": "OmniGCloud Active",
     "badge": "New (ZH)",
     "globalHealth": "Global Health (ZH)",
     "infraSubtitle": "Global node status and uptime. (ZH)",
@@ -2737,11 +2738,11 @@
     "optimizationTitle": "Resource Optimization (ZH)",
     "roiSubtitle": "Projected savings and efficiency gains. (ZH)",
     "roiTitle": "Cost & ROI Analysis (ZH)",
-    "role": "Role Details (ZH)",
+    "role": "OmniGCloud Role",
     "title": "Dashboard (ZH)",
     "trustSubtitle": "Sovereign Compliance Monitor (ZH)",
     "trustTitle": "Trust Compliance Score (ZH)",
-    "welcome": "Welcome Details (ZH)"
+    "welcome": "OmniGCloud Welcome"
   },
   "Demo": {
     "Badge": "Live view (demo) (ZH)",
@@ -2760,7 +2761,7 @@
         "5": "> Executing autonomous re-keying via Vault Agent... (ZH)",
         "6": "> [SUCCESS] Asset re-platforming starting. (ZH)"
       },
-      "progress": "PROGRESS (ZH)"
+      "progress": "OmniGCloud Progress"
     },
     "controls": {
       "fault": "Inject Fault (ZH)",
@@ -2778,23 +2779,23 @@
   "DemoSection": {
     "badge": "New (ZH)",
     "discovery": {
-      "code": "Code Details (ZH)",
+      "code": "OmniGCloud Code",
       "desc": "Achieve FIPS 140-2 Level 3 compliance with our shielded execution environments. (ZH)",
       "title": "Discovery (ZH)"
     },
     "drift": {
-      "code": "Code Details (ZH)",
+      "code": "OmniGCloud Code",
       "desc": "Seamlessly orchestrate workloads across AWS, Azure, and Google Cloud with strict governance boundaries. (ZH)",
       "title": "Drift (ZH)"
     },
     "iac": {
-      "code": "Code Details (ZH)",
+      "code": "OmniGCloud Code",
       "desc": "Automate compliance with real-time drift detection and auto-remediation policies. (ZH)",
       "title": "Iac (ZH)"
     },
     "subtitle": "The standard for autonomous cloud governance. (ZH)",
     "sync": {
-      "code": "Code Details (ZH)",
+      "code": "OmniGCloud Code",
       "desc": "OmniGCloud provides a unified control plane to enforce data sovereignty across all your cloud providers. (ZH)",
       "title": "Sync (ZH)"
     },
@@ -2928,7 +2929,7 @@
       }
     },
     "certifications": {
-      "gdpr": "GDPR (ZH)",
+      "gdpr": "OmniGCloud Gdpr",
       "iso": "ISO 27001 (ZH)",
       "soc": "SOC 2 (ZH)",
       "title": "Certifications (ZH)"
@@ -3002,28 +3003,6 @@
       "empiricalDataSetDesc": "Verified multi-cloud telemetry (ZH)",
       "validationProtocols": "Validation Protocols (ZH)"
     },
-    "sidebar": {
-      "contactArchitectureOffice": "Contact Architecture Office",
-      "customBriefingTitle": "Need a customized briefing?",
-      "quickLinksHeading": "Quick Links",
-      "links": {
-        "introduction": "Introduction",
-        "architecture": "Architecture",
-        "whitepaper": "Technical Whitepaper",
-        "security": "Security & Governance",
-        "guide": "Architectural Guide",
-        "api": "API Reference"
-      },
-      "documentation": "DOCUMENTATION",
-      "blueprints": "GOVERNANCE BLUEPRINTS",
-      "blueprint_links": {
-        "aws": "AWS Landing Zone",
-        "azure": "Azure Enterprise",
-        "openshift": "OpenShift Cluster",
-        "hybrid": "Hybrid Fabric"
-      },
-      "customBriefingText": "Generate a custom briefing document based on your selected stack."
-    },
     "technicalLibrary": "Technical Library (ZH)",
     "transparency": {
       "desc": "Clear, auditable practices across security, reliability, and operations. (ZH)",
@@ -3035,86 +3014,83 @@
       "title": "Transparency (ZH)"
     },
     "whitepaper": {
+      "diagrams": {
+        "actionDesc": "Targeted API Call (ZH)",
+        "actionTitle": "3. ACTION (ZH)",
+        "automatedAudit": "Automated Audit Pass (ZH)",
+        "cloudOpEx": "Cloud OpEx (ZH)",
+        "clouds": {
+          "aws": "AWS (US) (ZH)",
+          "azure": "Azure (EU) (ZH)",
+          "gcp": "GCP (Asia) (ZH)"
+        },
+        "complianceDesc": "Audit Logs (ZH)",
+        "complianceRate": "Compliance Rate (ZH)",
+        "complianceTitle": "Compliance (ZH)",
+        "controlPlane": "AECP CONTROL PLANE (ZH)",
+        "cycleTime": "Autonomous Control Loop Cycle Time: < 200ms (ZH)",
+        "decisionDesc": "AECP Graph Engine (ZH)",
+        "decisionEngine": "Decision Engine (AI) (ZH)",
+        "decisionTitle": "2. DECISION (ZH)",
+        "devOpsDesc": "Define Policy (ZH)",
+        "devOpsTitle": "DevOps Team (ZH)",
+        "federationApPolicy": "Policy: PERMISSIVE (ZH)",
+        "federationApTitle": "AP-SOUTH-SHARED (ZH)",
+        "federationEuPolicy": "Policy: GDPR-STRICT (ZH)",
+        "federationEuTitle": "EU-CENTRAL-PRIVACY (ZH)",
+        "federationProtocol": "Federated Trust Protocol (FTP) Active (ZH)",
+        "federationUsPolicy": "Policy: FIPS-140-2 (ZH)",
+        "federationUsTitle": "US-EAST-SOVEREIGN (ZH)",
+        "intentInterpreter": "Intent Interpreter (ZH)",
+        "mttrDesc": "From 14 days to 4 minutes (ZH)",
+        "mttrReduction": "MTTR Reduction (ZH)",
+        "opexDesc": "Verified Arbitrage Savings (ZH)",
+        "signalDesc": "Multi-cloud Telemetry (ZH)",
+        "signalTitle": "1. SIGNAL (ZH)",
+        "stateReconciliation": "State Reconciliation Loop (ZH)",
+        "stateReconciliationDesc": "(Current State → Target State) (ZH)",
+        "validation": "Validation Diagram (ZH)",
+        "validationDesc": "Validation process diagram (ZH)"
+      },
       "charts": {
         "compliance": {
-          "aso": "Aso Details (ZH)",
-          "autonomous": "ASO (Autonomous) (ZH)",
-          "figure": "Figure 6a: Longitudinal analysis of Compliance Drift over 12 months. (ZH)",
-          "legacy": "Legacy (Manual Ops) (ZH)",
-          "yAxis": "Compliance Score (%) (ZH)"
+          "aso": "OmniGCloud Aso",
+          "autonomous": "ASO (Autonomous)",
+          "figure": "Figure 6a: Longitudinal analysis of Compliance Drift over 12 months.",
+          "legacy": "Legacy (Manual Ops)",
+          "yAxis": "Compliance Score (%)"
         },
         "cost": {
-          "aso": "ASO OpEx ($) (ZH)",
-          "autonomous": "Autonomous (ZH)",
-          "figure": "Figure 6b: Cost Scaling Curve - Legacy vs ASO (Logarithmic Efficiency Gain) (ZH)",
-          "legacy": "Legacy OpEx ($) (ZH)",
-          "yAxis": "Y Axis (ZH)"
+          "aso": "ASO OpEx ($)",
+          "autonomous": "Charts Cost Autonomous",
+          "figure": "Figure 6b: Cost Scaling Curve - Legacy vs ASO (Logarithmic Efficiency Gain)",
+          "legacy": "Legacy OpEx ($)",
+          "yAxis": "Y Axis"
         }
       }
-    }
-  },
-  "Ecosystem": {
-    "ai": {
-      "desc": "Achieve FIPS 140-2 Level 3 compliance with our shielded execution environments. (ZH)",
-      "link": "Link Details (ZH)",
-      "status": "Status Details (ZH)",
-      "title": "Ai (ZH)"
     },
-    "badge": "New (ZH)",
-    "governance": {
-      "desc": "Decouple your business logic from vendor-specific APIs and regain full control of your digital estate. (ZH)",
-      "link": "Link Details (ZH)",
-      "status": "Status Details (ZH)",
-      "title": "Governance (ZH)"
-    },
-    "mesh": {
-      "desc": "Automate compliance with real-time drift detection and auto-remediation policies. (ZH)",
-      "link": "Link Details (ZH)",
-      "status": "Status Details (ZH)",
-      "title": "Mesh (ZH)"
-    },
-    "partners": {
-      "items": {
-        "aws": "AWS (ZH)",
-        "azure": "Azure (ZH)",
-        "cisco": "Cisco (ZH)",
-        "gcp": "GCP (ZH)",
-        "hashicorp": "HashiCorp (ZH)",
-        "oracle": "Oracle Cloud (ZH)",
-        "redhat": "RedHat (ZH)",
-        "vmware": "VMware (ZH)"
+    "sidebar": {
+      "contactArchitectureOffice": "Contact Architecture Office",
+      "customBriefingTitle": "Need a customized briefing?",
+      "quickLinksHeading": "Quick Links",
+      "links": {
+        "introduction": "OmniGCloud Introduction",
+        "architecture": "OmniGCloud Architecture",
+        "whitepaper": "Technical Whitepaper",
+        "security": "Security & Governance",
+        "guide": "Architectural Guide",
+        "api": "API Reference"
       },
-      "title": "Trusted Integrations & Partners (ZH)"
-    },
-    "stats": {
-      "accounts": "Cloud Accounts Managed (ZH)",
-      "accountsVal": "12.5K (ZH)",
-      "compliance": "Compliance Rate (ZH)",
-      "complianceVal": "99.98% (ZH)",
-      "countries": "Countries (ZH)",
-      "countriesVal": "45 (ZH)",
-      "deployments": "Active Deployments (ZH)",
-      "deploymentsVal": "450+ (ZH)",
-      "title": "Global Deployment Statistics (ZH)"
-    },
-    "subtitle": "Empowering the next generation of regulated enterprise. (ZH)",
-    "title": "Ecosystem (ZH)",
-    "vault": {
-      "desc": "Achieve FIPS 140-2 Level 3 compliance with our shielded execution environments. (ZH)",
-      "link": "Link Details (ZH)",
-      "status": "Status Details (ZH)",
-      "title": "Vault (ZH)"
+      "documentation": "OmniGCloud Documentation",
+      "blueprints": "GOVERNANCE BLUEPRINTS",
+      "blueprint_links": {
+        "aws": "AWS Landing Zone",
+        "azure": "Azure Enterprise",
+        "openshift": "OpenShift Cluster",
+        "hybrid": "Hybrid Fabric"
+      },
+      "customBriefingText": "Generate a custom briefing document based on your selected stack."
     }
-  },
-  "Engagement": {
-    "primary": "Create My Strategy (ZH)",
-    "secondary": "Consulting Inquiry (ZH)",
-    "subtitle": "Join the Fortune 500 companies reclaiming their digital independence. (ZH)",
-    "thoughtLeadership": {
-      "subtitle": "Join the Fortune 500 companies reclaiming their digital independence. (ZH)",
-      "title": "Ready for Sovereign AI? (ZH)"
-    },
-    "title": "Ready for Sovereign AI? (ZH)"
   },
   "Enrichment": {
     "howItWorks": "Our autonomous framework follows a rigorous 3-step synchronization process to ensure absolute sovereignty and compliance across your multi-cloud estate.",
@@ -3130,23 +3106,98 @@
       "title": "Related Strategy & Insights"
     }
   },
+  "Ecosystem": {
+    "ai": {
+      "desc": "Achieve FIPS 140-2 Level 3 compliance with our shielded execution environments. (ZH)",
+      "link": "OmniGCloud Link",
+      "status": "Production Stable",
+      "title": "Ai (ZH)"
+    },
+    "badge": "New (ZH)",
+    "governance": {
+      "desc": "Decouple your business logic from vendor-specific APIs and regain full control of your digital estate. (ZH)",
+      "link": "OmniGCloud Link",
+      "status": "Production Stable",
+      "title": "Governance (ZH)"
+    },
+    "mesh": {
+      "desc": "Automate compliance with real-time drift detection and auto-remediation policies. (ZH)",
+      "link": "OmniGCloud Link",
+      "status": "Production Stable",
+      "title": "Mesh (ZH)"
+    },
+    "partners": {
+      "items": {
+        "aws": "OmniGCloud Aws",
+        "azure": "OmniGCloud Azure",
+        "cisco": "OmniGCloud Cisco",
+        "gcp": "OmniGCloud Gcp",
+        "hashicorp": "OmniGCloud Hashicorp",
+        "oracle": "Oracle Cloud (ZH)",
+        "redhat": "OmniGCloud Redhat",
+        "vmware": "OmniGCloud Vmware"
+      },
+      "title": "Trusted Integrations & Partners (ZH)"
+    },
+    "stats": {
+      "accounts": "Cloud Accounts Managed (ZH)",
+      "accountsVal": "12.5K (ZH)",
+      "compliance": "Compliance Rate (ZH)",
+      "complianceVal": "99.98% (ZH)",
+      "countries": "OmniGCloud Countries",
+      "countriesVal": "45 (ZH)",
+      "deployments": "Active Deployments (ZH)",
+      "deploymentsVal": "450+ (ZH)",
+      "title": "Global Deployment Statistics (ZH)"
+    },
+    "subtitle": "Empowering the next generation of regulated enterprise. (ZH)",
+    "title": "Ecosystem (ZH)",
+    "vault": {
+      "desc": "Achieve FIPS 140-2 Level 3 compliance with our shielded execution environments. (ZH)",
+      "link": "OmniGCloud Link",
+      "status": "Production Stable",
+      "title": "Vault (ZH)"
+    }
+  },
+  "Engagement": {
+    "primary": "Create My Strategy (ZH)",
+    "secondary": "Consulting Inquiry (ZH)",
+    "subtitle": "Join the Fortune 500 companies reclaiming their digital independence. (ZH)",
+    "thoughtLeadership": {
+      "subtitle": "Join the Fortune 500 companies reclaiming their digital independence. (ZH)",
+      "title": "Ready for Sovereign AI? (ZH)"
+    },
+    "title": "Ready for Sovereign AI? (ZH)"
+  },
   "Enterprise": {
     "approach": {
       "pillars": {
         "0": {
           "desc": "企业级主权和高可靠安全审计。 (ZH)",
           "title": "安全",
-          "features": ["FIPS 140-2", "零信任", "mTLS"]
+          "features": [
+            "FIPS 140-2",
+            "零信任",
+            "mTLS"
+          ]
         },
         "1": {
           "desc": "在全多云基础架构中自主扩展工作负载。 (ZH)",
           "title": "规模化",
-          "features": ["自动扩展", "多区域", "容灾"]
+          "features": [
+            "自动扩展",
+            "多区域",
+            "容灾"
+          ]
         },
         "2": {
           "desc": "通过自主漂移修复保证 99.999% 的可用性。 (ZH)",
           "title": "稳定性",
-          "features": ["自愈", "实时同步", "漂移保护"]
+          "features": [
+            "自愈",
+            "实时同步",
+            "漂移保护"
+          ]
         }
       },
       "subtitle": "How we help you scale",
@@ -3155,7 +3206,7 @@
     "partnership": {
       "p1": "Enforce auto-remediation policies. (ZH)",
       "p2": "Monitor real-time infrastructure drift. (ZH)",
-      "pillars": "Pillars Details (ZH)",
+      "pillars": "OmniGCloud Pillars",
       "steps": {
         "0": {
           "desc": "We understand your needs (ZH)",
@@ -3177,17 +3228,17 @@
       "p1": "OmniGCloud 是唯一一个从头开始为高合规、受监管环境设计的主权云控制平面。",
       "p2": "我们提供数学上的确定性，确保企业策略在每个执行点都得到严格执行。",
       "stats": {
-        "actions": "自主行动",
-        "gates": "合规门控",
-        "regions": "全球区域",
         "uptime": "运行时间服务级别协议",
         "uptime_val": "99.999%",
+        "regions": "全球区域",
         "regions_val": "100+",
+        "gates": "合规门控",
         "gates_val": "400+",
+        "actions": "自主行动",
         "actions_val": "1B+"
       },
-      "title": "主权完整性",
-      "cta": "阅读战略合作伙伴文档"
+      "cta": "阅读战略合作伙伴文档",
+      "title": "主权完整性"
     }
   },
   "FloatingActions": {
@@ -3221,13 +3272,13 @@
     "company": {
       "_value": "Company (ZH)",
       "about": "About Us (ZH)",
-      "contact": "Contact Details (ZH)",
+      "contact": "OmniGCloud Contact",
       "label": "Company (ZH)",
-      "leadership": "Leadership Details (ZH)",
+      "leadership": "OmniGCloud Leadership",
       "strategy": "Strategic Engineering (ZH)"
     },
     "copyright": "© 2026 OmniGCloud Inc. All rights reserved. (ZH)",
-    "directory": "Directory Details (ZH)",
+    "directory": "OmniGCloud Directory",
     "footerText": "OmniGCloud - Enforce Sovereignty. (ZH)",
     "platform": {
       "control": "Control Plane (ZH)",
@@ -3255,8 +3306,8 @@
     "status": "System Status (ZH)",
     "tagline": "The Sovereign Cloud for the AI Era (ZH)",
     "trust": {
-      "privacy": "Privacy Details (ZH)",
-      "security": "Security Details (ZH)"
+      "privacy": "OmniGCloud Privacy",
+      "security": "OmniGCloud Security"
     }
   },
   "Founder": {
@@ -3337,23 +3388,23 @@
       "advanced": "Advanced Features (ZH)",
       "analysis": "Analysis & Value (ZH)",
       "bodyIntro": "Body Intro (ZH)",
-      "community": "Community Details (ZH)",
-      "company": "Company Details (ZH)",
+      "community": "OmniGCloud Community",
+      "company": "OmniGCloud Company",
       "company_links": {
         "about": "About Us (ZH)",
-        "contact": "Contact Details (ZH)",
+        "contact": "OmniGCloud Contact",
         "executive": "Executive Office (ZH)",
         "global_hq": "Global HQ (ZH)",
-        "investors": "Investors Details (ZH)",
-        "leadership": "Leadership Details (ZH)",
-        "newsroom": "Newsroom Details (ZH)",
+        "investors": "OmniGCloud Investors",
+        "leadership": "OmniGCloud Leadership",
+        "newsroom": "OmniGCloud Newsroom",
         "operations": "Global Operations (ZH)"
       },
       "contactSales": "Contact Sales (ZH)",
       "contact_us": "Contact Us (ZH)",
       "copyLabel": "Copy Label (ZH)",
       "copyToast": "Copy Toast (ZH)",
-      "dashboard": "Dashboard Details (ZH)",
+      "dashboard": "OmniGCloud Dashboard",
       "dashboard_links": {
         "cost": "Cost Optimization (ZH)",
         "deployment": "Deployment Status (ZH)",
@@ -3369,34 +3420,34 @@
       "docs": "Documentation (ZH)",
       "docs_links": {
         "api": "API Reference (ZH)",
-        "newsroom": "Newsroom Details (ZH)",
+        "newsroom": "OmniGCloud Newsroom",
         "open_source": "Open Source (ZH)",
         "patterns": "Architecture Patterns (ZH)",
         "tech_docs": "Technical Documentation (ZH)",
         "visual_library": "Visual Library (ZH)"
       },
-      "documentation": "Documentation Details (ZH)",
+      "documentation": "OmniGCloud Documentation",
       "fallbackInstruction": "Fallback Instruction (ZH)",
       "fallbackTitle": "Fallback Title (ZH)",
-      "industries": "Industries Details (ZH)",
-      "onboarding": "Onboarding Details (ZH)",
-      "organization": "Organization Details (ZH)",
-      "performance": "Performance Details (ZH)",
+      "industries": "OmniGCloud Industries",
+      "onboarding": "OmniGCloud Onboarding",
+      "organization": "OmniGCloud Organization",
+      "performance": "OmniGCloud Performance",
       "pillars": "Core Products (ZH)",
-      "pricing": "Pricing Details (ZH)",
+      "pricing": "OmniGCloud Pricing",
       "pricing_links": {
-        "business": "Business Details (ZH)",
-        "compliance": "Compliance Details (ZH)",
-        "developer": "Developer Details (ZH)",
-        "faq": "FAQ Details (ZH)",
-        "professional": "Professional Details (ZH)",
+        "business": "OmniGCloud Business",
+        "compliance": "OmniGCloud Compliance",
+        "developer": "OmniGCloud Developer",
+        "faq": "OmniGCloud Faq",
+        "professional": "OmniGCloud Professional",
         "savings_analysis": "Savings Analysis (ZH)",
-        "sovereign": "Sovereign Details (ZH)",
-        "trust": "Trust Details (ZH)",
+        "sovereign": "OmniGCloud Sovereign",
+        "trust": "OmniGCloud Trust",
         "value_economy": "Value Economy (ZH)",
         "visual_architecture": "Visual Architecture (ZH)"
       },
-      "products": "Products Details (ZH)",
+      "products": "OmniGCloud Products",
       "products_links": {
         "deploy": "Obsidian Deploy (ZH)",
         "guard": "Governance Guard (ZH)",
@@ -3407,20 +3458,20 @@
         "workflows": "G-Workflows (ZH)"
       },
       "rateLimitMessage": "Rate Limit Message (ZH)",
-      "research": "Research Details (ZH)",
-      "solutions": "Solutions Details (ZH)",
+      "research": "OmniGCloud Research",
+      "solutions": "OmniGCloud Solutions",
       "solutions_links": {
         "finance_mod": "Financial Modernization (ZH)",
         "financial": "Financial Services (ZH)",
         "gov_trust": "Government Trust (ZH)",
         "health_mod": "Healthcare Compliance (ZH)",
-        "healthcare": "Healthcare Details (ZH)",
-        "insurance": "Insurance Details (ZH)",
-        "logistics": "Logistics Details (ZH)",
+        "healthcare": "OmniGCloud Healthcare",
+        "insurance": "OmniGCloud Insurance",
+        "logistics": "OmniGCloud Logistics",
         "telecom": "Telecommunications (ZH)"
       },
-      "subject": "Subject Details (ZH)",
-      "telemetry": "Telemetry Details (ZH)",
+      "subject": "OmniGCloud Subject",
+      "telemetry": "OmniGCloud Telemetry",
       "tiers": "Pricing Tiers (ZH)",
       "trust_compliance": "Trust & Compliance (ZH)",
       "trust_links": {
@@ -3648,7 +3699,7 @@
             "title": "Drift Buffer (ZH)"
           }
         },
-        "live": "LIVE (ZH)",
+        "live": "OmniGCloud Live",
         "title": "Network Core Status (ZH)"
       },
       "subtitle": "Live intelligence and system status across your entire multi-cloud infrastructure, providing a unified command center for sovereign management. (ZH)",
@@ -3658,7 +3709,7 @@
   "Industries": {
     "allIndustries": "All Industries (ZH)",
     "badge": "New (ZH)",
-    "challenges": "Challenges Details (ZH)",
+    "challenges": "OmniGCloud Challenges",
     "cta": {
       "button": "Explore Cta (ZH)",
       "subtitle": "Empowering the next generation of regulated enterprise. (ZH)",
@@ -3740,17 +3791,17 @@
         "title": "Faq Title (ZH)"
       },
       "footer": {
-        "aiDesc": "Aidesc Details (ZH)",
-        "aiLink": "Ailink Details (ZH)",
-        "aiTitle": "Aititle Details (ZH)",
-        "microservicesDesc": "Microservicesdesc Details (ZH)",
-        "microservicesLink": "Microserviceslink Details (ZH)",
-        "microservicesTitle": "Microservicestitle Details (ZH)"
+        "aiDesc": "OmniGCloud Aidesc",
+        "aiLink": "OmniGCloud Ailink",
+        "aiTitle": "OmniGCloud Aititle",
+        "microservicesDesc": "OmniGCloud Microservicesdesc",
+        "microservicesLink": "OmniGCloud Microserviceslink",
+        "microservicesTitle": "OmniGCloud Microservicestitle"
       },
       "hero": {
         "badge": "HERO (ZH)",
-        "ctaPrimary": "Ctaprimary Details (ZH)",
-        "ctaSecondary": "Ctasecondary Details (ZH)",
+        "ctaPrimary": "OmniGCloud Ctaprimary",
+        "ctaSecondary": "OmniGCloud Ctasecondary",
         "subtitle": "Hero description (ZH)",
         "title": "Hero Title (ZH)"
       },
@@ -3759,12 +3810,12 @@
         "title": "Paradox Title (ZH)"
       },
       "pillars": {
-        "item1Desc": "Item1desc Details (ZH)",
-        "item1Title": "Item1title Details (ZH)",
-        "item2Desc": "Item2desc Details (ZH)",
-        "item2Title": "Item2title Details (ZH)",
-        "item3Desc": "Item3desc Details (ZH)",
-        "item3Title": "Item3title Details (ZH)",
+        "item1Desc": "OmniGCloud Item1desc",
+        "item1Title": "OmniGCloud Item1title",
+        "item2Desc": "OmniGCloud Item2desc",
+        "item2Title": "OmniGCloud Item2title",
+        "item3Desc": "OmniGCloud Item3desc",
+        "item3Title": "OmniGCloud Item3title",
         "title": "Pillars Title (ZH)"
       },
       "sol": "HIPAA-compliant federated learning nodes. (ZH)",
@@ -3776,7 +3827,7 @@
     "logistics": {
       "sol": "Real-time supply chain digital twins. (ZH)"
     },
-    "solution": "Solution Details (ZH)",
+    "solution": "OmniGCloud Solution",
     "solutionLabel": "Solution (ZH)",
     "strategicChallenges": "Strategic Challenges (ZH)",
     "subtitle": "Empowering the next generation of regulated enterprise. (ZH)",
@@ -3787,14 +3838,14 @@
   },
   "Investors": {
     "contact": {
-      "addressLine1": "Addressline1 Details (ZH)",
-      "addressLine2": "Addressline2 Details (ZH)",
-      "country": "Country Details (ZH)",
+      "addressLine1": "OmniGCloud Addressline1",
+      "addressLine2": "OmniGCloud Addressline2",
+      "country": "OmniGCloud Country",
       "description": "Contact description (ZH)",
-      "phone": "Phone Details (ZH)",
+      "phone": "OmniGCloud Phone",
       "title": "Contact Title (ZH)"
     },
-    "email": "Email Details (ZH)",
+    "email": "OmniGCloud Email",
     "hero": {
       "badge": "HERO (ZH)",
       "subtitle": "The standard for autonomous cloud governance. (ZH)",
@@ -3803,16 +3854,16 @@
     },
     "leadership": {
       "chaitanya": {
-        "bio": "Bio Details (ZH)",
-        "name": "Name Details (ZH)",
-        "placeholder": "Placeholder Details (ZH)",
-        "role": "Role Details (ZH)"
+        "bio": "OmniGCloud Bio",
+        "name": "OmniGCloud Name",
+        "placeholder": "Enter system instruction...",
+        "role": "OmniGCloud Role"
       },
       "jyothsna": {
-        "bio": "Bio Details (ZH)",
-        "name": "Name Details (ZH)",
-        "placeholder": "Placeholder Details (ZH)",
-        "role": "Role Details (ZH)"
+        "bio": "OmniGCloud Bio",
+        "name": "OmniGCloud Name",
+        "placeholder": "Enter system instruction...",
+        "role": "OmniGCloud Role"
       },
       "subtitle": "Leadership description (ZH)",
       "title": "Leadership Title (ZH)"
@@ -3832,21 +3883,21 @@
           "title": "2 Title (ZH)"
         }
       },
-      "readArticle": "Readarticle Details (ZH)",
+      "readArticle": "OmniGCloud Readarticle",
       "title": "Newsroom Title (ZH)"
     },
     "operations": {
       "description": "Operations description (ZH)",
-      "headquarters": "Headquarters Details (ZH)",
+      "headquarters": "OmniGCloud Headquarters",
       "title": "Operations Title (ZH)"
     },
     "opportunity": {
       "content": "OmniGCloud provides a unified control plane to enforce data sovereignty across all your cloud providers. (ZH)",
-      "metrics": "Metrics Details (ZH)",
+      "metrics": "OmniGCloud Metrics",
       "title": "Opportunity (ZH)"
     },
     "sitemap": {
-      "directory": "Directory Details (ZH)",
+      "directory": "OmniGCloud Directory",
       "title": "Sitemap Title (ZH)"
     },
     "vision": {
@@ -4390,7 +4441,7 @@
       "categories": {
         "cd": "Continuous Delivery (ZH)",
         "infra": "Infrastructure Automation (ZH)",
-        "observability": "Observability (ZH)",
+        "observability": "OmniGCloud Observability",
         "platform": "Platform Orchestration (ZH)"
       },
       "title": "Ecosystem & Marketplace Alliances (ZH)"
@@ -4454,7 +4505,7 @@
       }
     },
     "arbitrage": {
-      "auditor": "Auditor Details (ZH)",
+      "auditor": "OmniGCloud Auditor",
       "auditorTitle": "Auditor Title (ZH)",
       "eb1aDesc": "Eb1a Desc (ZH)",
       "eb1aTag": "Eb1a Tag (ZH)",
@@ -4482,32 +4533,32 @@
       }
     },
     "comparison": {
-      "capability": "Capability Details (ZH)",
+      "capability": "OmniGCloud Capability",
       "footer": {
         "_value": "Footer Details (ZH)",
         "copyright": "© 2026 OmniGCloud. All rights reserved. (ZH)"
       },
-      "legacy": "Legacy Details (ZH)",
-      "limited": "Limited Details (ZH)",
-      "partial": "Partial Details (ZH)",
+      "legacy": "OmniGCloud Legacy",
+      "limited": "OmniGCloud Limited",
+      "partial": "OmniGCloud Partial",
       "rows": {
-        "arbitrage": "Arbitrage Details (ZH)",
-        "audits": "Audits Details (ZH)",
-        "encryption": "Encryption Details (ZH)",
-        "iam": "Iam Details (ZH)",
-        "neutrality": "Neutrality Details (ZH)",
-        "refactoring": "Refactoring Details (ZH)",
-        "sync": "Sync Details (ZH)"
+        "arbitrage": "OmniGCloud Arbitrage",
+        "audits": "OmniGCloud Audits",
+        "encryption": "OmniGCloud Encryption",
+        "iam": "OmniGCloud Iam",
+        "neutrality": "OmniGCloud Neutrality",
+        "refactoring": "OmniGCloud Refactoring",
+        "sync": "OmniGCloud Sync"
       },
-      "sovereign": "Sovereign Details (ZH)",
+      "sovereign": "OmniGCloud Sovereign",
       "subtitle": "Security, compliance, and velocity in one platform. (ZH)",
       "title": "Comparison (ZH)"
     },
     "control": {
-      "audit": "Audit Details (ZH)",
-      "fleet": "Fleet Details (ZH)",
-      "gitops": "Gitops Details (ZH)",
-      "healing": "Healing Details (ZH)",
+      "audit": "OmniGCloud Audit",
+      "fleet": "OmniGCloud Fleet",
+      "gitops": "OmniGCloud Gitops",
+      "healing": "OmniGCloud Healing",
       "observability": {
         "desc": "OmniGCloud provides a unified control plane to enforce data sovereignty across all your cloud providers. (ZH)",
         "title": "Observability (ZH)"
@@ -4527,10 +4578,10 @@
       "title": "Hero (ZH)"
     },
     "integrations": {
-      "delivery": "Delivery Details (ZH)",
-      "identity": "Identity Details (ZH)",
-      "infra": "Infra Details (ZH)",
-      "obs": "Obs Details (ZH)",
+      "delivery": "OmniGCloud Delivery",
+      "identity": "OmniGCloud Identity",
+      "infra": "OmniGCloud Infra",
+      "obs": "OmniGCloud Obs",
       "subtitle": "Control your data. Control your future. (ZH)",
       "title": "Integrations (ZH)"
     },
@@ -4562,17 +4613,17 @@
         "policyCheck": "[14:02:42] POLICY_CHECK_Orchestrator... OK (ZH)"
       },
       "title": "Security (ZH)",
-      "zerotrust": "Zerotrust Details (ZH)"
+      "zerotrust": "OmniGCloud Zerotrust"
     },
     "stack": {
-      "active": "Active Details (ZH)",
-      "api": "Api Details (ZH)",
-      "cluster": "Cluster Details (ZH)",
-      "db": "Db (ZH)",
-      "logic": "Logic Details (ZH)",
-      "scaling": "Scaling Details (ZH)",
-      "shielded": "Shielded Details (ZH)",
-      "verified": "Verified Details (ZH)"
+      "active": "OmniGCloud Active",
+      "api": "OmniGCloud Api",
+      "cluster": "OmniGCloud Cluster",
+      "db": "OmniGCloud Db",
+      "logic": "OmniGCloud Logic",
+      "scaling": "OmniGCloud Scaling",
+      "shielded": "OmniGCloud Shielded",
+      "verified": "OmniGCloud Verified"
     },
     "title": "OmniGCloud Platform (ZH)"
   },
@@ -4601,7 +4652,7 @@
           "q": "What is the uptime guarantee? (ZH)"
         }
       },
-      "title": "Pricing F.A.Q (ZH)"
+      "title": "Faq Title (ZH)"
     },
     "LeadCapture": {
       "cta": "Get Started (ZH)",
@@ -4617,13 +4668,6 @@
       "button": "Explore Cta (ZH)",
       "subtitle": "Empowering the next generation of regulated enterprise. (ZH)",
       "title": "Cta (ZH)"
-    },
-    "deepDive": {
-      "links": {
-        "blueprint": "Modernization Blueprint (ZH)",
-        "finance": "Sovereign Finance (ZH)",
-        "modernization": "Cloud Modernization (ZH)"
-      }
     },
     "economy": {
       "sovereignty": {
@@ -4650,21 +4694,6 @@
       },
       "subtitle": "Our autonomous framework follows a rigorous 3-step synchronization process to ensure absolute sovereignty and compliance across your multi-cloud estate. (ZH)",
       "title": "Value-Based Infrastructure Economy (ZH)"
-    },
-    "faq": {
-      "q1": {
-        "a": "A (ZH)",
-        "q": "Q (ZH)"
-      },
-      "q2": {
-        "a": "A (ZH)",
-        "q": "Q (ZH)"
-      },
-      "q3": {
-        "a": "A (ZH)",
-        "q": "Q (ZH)"
-      },
-      "title": "Faq Title (ZH)"
     },
     "footer": {
       "legal": "NO CREDIT CARD REQUIRED • SOC-2 COMPLIANT ONBOARDING (ZH)"
@@ -4822,13 +4851,13 @@
   "Privacy": {
     "accountData": "Account Data (ZH)",
     "accountDataText": "Account Data Text (ZH)",
-    "changes": "Changes Details (ZH)",
+    "changes": "OmniGCloud Changes",
     "changesText": "Changes Text (ZH)",
-    "commitment": "Commitment Details (ZH)",
+    "commitment": "OmniGCloud Commitment",
     "commitmentText": "Commitment Text (ZH)",
-    "contact": "Contact Details (ZH)",
+    "contact": "OmniGCloud Contact",
     "contactText": "Contact Text (ZH)",
-    "cookies": "Cookies Details (ZH)",
+    "cookies": "OmniGCloud Cookies",
     "cookiesText": "Cookies Text (ZH)",
     "dataCollection": "Data Collection (ZH)",
     "dataCollectionText": "Data Collection Text (ZH)",
@@ -4840,14 +4869,14 @@
     "infrastructureDataText": "Infrastructure Data Text (ZH)",
     "lastUpdated": "Last Updated (ZH)",
     "lastUpdatedDate": "December 29, 2025 (ZH)",
-    "protection1": "Protection1 Details (ZH)",
-    "protection2": "Protection2 Details (ZH)",
-    "protection3": "Protection3 Details (ZH)",
-    "protection4": "Protection4 Details (ZH)",
-    "right1": "Right1 Details (ZH)",
-    "right2": "Right2 Details (ZH)",
-    "right3": "Right3 Details (ZH)",
-    "right4": "Right4 Details (ZH)",
+    "protection1": "OmniGCloud Protection1",
+    "protection2": "OmniGCloud Protection2",
+    "protection3": "OmniGCloud Protection3",
+    "protection4": "OmniGCloud Protection4",
+    "right1": "OmniGCloud Right1",
+    "right2": "OmniGCloud Right2",
+    "right3": "OmniGCloud Right3",
+    "right4": "OmniGCloud Right4",
     "thirdParty": "Third Party (ZH)",
     "thirdPartyText": "Third Party Text (ZH)",
     "title": "Privacy (ZH)",
@@ -4866,13 +4895,13 @@
     "mitigationLabel": "Immediate Mitigation: (ZH)",
     "opacity": {
       "desc": "Seamlessly orchestrate workloads across AWS, Azure, and Google Cloud with strict governance boundaries. (ZH)",
-      "scanning": "Scanning Details (ZH)",
+      "scanning": "OmniGCloud Scanning",
       "title": "Opacity (ZH)"
     },
     "regulatory": {
       "desc": "Ensure your data never leaves the jurisdiction you define, regardless of the underlying infrastructure. (ZH)",
-      "risk": "Risk Details (ZH)",
-      "score": "Score Details (ZH)",
+      "risk": "OmniGCloud Risk",
+      "score": "OmniGCloud Score",
       "title": "Regulatory (ZH)"
     },
     "subtitle": "Control your data. Control your future. (ZH)",
@@ -4884,7 +4913,7 @@
     }
   },
   "Products": {
-    "assessment": "Assessment (ZH)",
+    "assessment": "OmniGCloud Assessment",
     "cta": "Learn More (ZH)",
     "deepDive": {
       "links": {
@@ -4899,18 +4928,18 @@
       "title": "Obsidian Deploy (ZH)"
     },
     "detail": {
-      "architecture": "Architecture (ZH)",
+      "architecture": "OmniGCloud Architecture",
       "complianceDesc": "Automated audit scores based on regional data residency and encryption standards across all cloud providers. (ZH)",
       "complianceIndex": "Sovereignty Compliance Index (ZH)",
-      "documentation": "Documentation (ZH)",
+      "documentation": "OmniGCloud Documentation",
       "explore": "Explore Platform (ZH)",
       "healthMonitor": "Sovereignty Health Monitor (ZH)",
       "metrics": {
-        "assets": "Assets (ZH)",
-        "drift": "Drift (ZH)",
-        "nodes": "Nodes (ZH)"
+        "assets": "OmniGCloud Assets",
+        "drift": "OmniGCloud Drift",
+        "nodes": "OmniGCloud Nodes"
       },
-      "optimal": "OPTIMAL (ZH)",
+      "optimal": "OmniGCloud Optimal",
       "platformMetrics": "PLATFORM METRICS (ZH)",
       "regions": {
         "eu": "EU-West (GDPR Residency) (ZH)",
@@ -4918,7 +4947,7 @@
         "us": "US-East (HIPAA Sovereignty) (ZH)"
       }
     },
-    "explore": "Explore Details (ZH)",
+    "explore": "OmniGCloud Explore",
     "guard": {
       "description": "Ensure your data never leaves the jurisdiction you define, regardless of the underlying infrastructure. (ZH)",
       "shortDesc": "Real-time compliance auto-remediation. (ZH)",
@@ -5515,6 +5544,28 @@
         "description": "Visual representation of the AECP core components and data flow. (ZH)"
       }
     },
+    "Products": {
+      "HowItWorks": {
+        "steps": {
+          "0": {
+            "desc": "Provision your sovereignty perimeter across multi-cloud regions using our autonomous fabric kernel.",
+            "title": "Fabric Provisioning",
+            "heading": "Phase 1"
+          },
+          "1": {
+            "desc": "Enforce governance logic at the infrastructure level with real-time drift detection and auto-remediation.",
+            "title": "Governance Sync",
+            "heading": "Phase 2"
+          },
+          "2": {
+            "desc": "Achieve absolute sovereignty and compliance with a single, vendor-agnostic control plane.",
+            "title": "Unified Control",
+            "heading": "Phase 3"
+          }
+        },
+        "title": "How It Works"
+      }
+    },
     "Pricing": {
       "AboveTheFold": "Achieve total cloud sovereignty with transparent, value-based units. Decouple your infrastructure costs from vendor lock-in and optimize for regulatory compliance and performance.",
       "DeepDive": {
@@ -5573,28 +5624,6 @@
         "title": "Economic Autonomy"
       }
     },
-    "Products": {
-      "HowItWorks": {
-        "steps": {
-          "0": {
-            "desc": "Provision your sovereignty perimeter across multi-cloud regions using our autonomous fabric kernel.",
-            "title": "Fabric Provisioning",
-            "heading": "Phase 1"
-          },
-          "1": {
-            "desc": "Enforce governance logic at the infrastructure level with real-time drift detection and auto-remediation.",
-            "title": "Governance Sync",
-            "heading": "Phase 2"
-          },
-          "2": {
-            "desc": "Achieve absolute sovereignty and compliance with a single, vendor-agnostic control plane.",
-            "title": "Unified Control",
-            "heading": "Phase 3"
-          }
-        },
-        "title": "How It Works"
-      }
-    },
     "Services": {
       "DeepDive": {
         "links": {
@@ -5607,18 +5636,6 @@
         "description": "Overview of our modernization and optimization service layers. (ZH)"
       }
     }
-  },
-  "Sangam": {
-    "cta": "体验汇流",
-    "description": "Sangam 是 OmniGCloud 内核的终极综合体。它是分散的云架构、自主代理和主权策略融合为单一、高吞吐量运行环境的汇合点。",
-    "features": {
-      "purity": "受监管资产的零漂移主权完整性。",
-      "resonance": "全球规模的高频状态同步。",
-      "unification": "跨所有主要云的完整架构统一。"
-    },
-    "subtitle": "多云编排与自主治理的终极融合。",
-    "tag": "V-PREMIUM",
-    "title": "Sangam：主权汇流"
   },
   "Sections": {
     "AutomationStack": {
@@ -5653,10 +5670,10 @@
     "encryptionText": "Compute on encrypted data without decrypting it. (ZH)",
     "infra1": "Immutable Infrastructure derived from code. (ZH)",
     "infra2": "Air-gapped backups for disaster recovery. (ZH)",
-    "infrastructure": "Infrastructure (ZH)",
+    "infrastructure": "OmniGCloud Infrastructure",
     "monitor1": "24/7/365 SOC monitoring. (ZH)",
     "monitor2": "Automated threat detection and response. (ZH)",
-    "monitoring": "Monitoring (ZH)",
+    "monitoring": "OmniGCloud Monitoring",
     "performance": {
       "charts": {
         "latency": {
@@ -5674,7 +5691,7 @@
     "pgpKey": "PGP Key (ZH)",
     "reportingProcess": "Reporting Process (ZH)",
     "responsibleDisclosure": "Responsible Disclosure (ZH)",
-    "scope": "Scope (ZH)",
+    "scope": "OmniGCloud Scope",
     "scope1": "omnigcloud.com domain and subdomains. (ZH)",
     "scope2": "The OmniGCloud API endpoints. (ZH)",
     "scope3": "Our open-source CLI tools. (ZH)",
@@ -5700,11 +5717,11 @@
   "SecuritySettings": {
     "advancedDescription": "Advanced Description (ZH)",
     "advancedSecurity": "Advanced Security (ZH)",
-    "callbackUrl": "Callbackurl Details (ZH)",
+    "callbackUrl": "OmniGCloud Callbackurl",
     "clientId": "Client Id (ZH)",
     "description": "Ensure your data never leaves the jurisdiction you define, regardless of the underlying infrastructure. (ZH)",
-    "disabled": "Disabled Details (ZH)",
-    "enabled": "Enabled Details (ZH)",
+    "disabled": "OmniGCloud Disabled",
+    "enabled": "OmniGCloud Enabled",
     "outboundEmail": "Outbound Email (ZH)",
     "requestSaml": "Request Saml (ZH)",
     "ssoConfiguration": "Sso Configuration (ZH)",
@@ -5731,13 +5748,13 @@
       },
       "subtitle": "The standard for autonomous cloud governance. (ZH)",
       "title": "Data A I (ZH)",
-      "uptime": "Uptime Details (ZH)"
+      "uptime": "OmniGCloud Uptime"
     },
     "Hero": {
       "badge": "New (ZH)",
       "cta": "Explore Hero (ZH)",
-      "errors": "Errors Details (ZH)",
-      "velocity": "Velocity Details (ZH)"
+      "errors": "OmniGCloud Errors",
+      "velocity": "OmniGCloud Velocity"
     },
     "Migration": {
       "azure": {
@@ -5810,7 +5827,7 @@
       },
       "title": "Stack (ZH)"
     },
-    "ai": "Ai Details (ZH)",
+    "ai": "OmniGCloud Ai",
     "ai-cloud-platform": {
       "challenge": {
         "badge": "The AI Bottleneck (ZH)",
@@ -5865,7 +5882,7 @@
       },
       "title": "Ai-cloud-platform Title (ZH)"
     },
-    "application": "Application Details (ZH)",
+    "application": "OmniGCloud Application",
     "application-modernization": {
       "challenge": {
         "badge": "The Legacy Burden (ZH)",
@@ -5947,7 +5964,7 @@
         "title": "OpenShift Strategy (ZH)"
       }
     },
-    "cloud": "Cloud Details (ZH)",
+    "cloud": "OmniGCloud Cloud",
     "cloud-cost-optimization": {
       "description": "Cloud-cost-optimization description (ZH)",
       "faq": {
@@ -6309,7 +6326,7 @@
       },
       "title": "Microservices Title (ZH)"
     },
-    "openshift": "Openshift Details (ZH)",
+    "openshift": "OmniGCloud Openshift",
     "openshift-modernization": {
       "core": {
         "badge": "OpenShift Strategy (ZH)",
@@ -6506,28 +6523,28 @@
     }
   },
   "Terms": {
-    "acceptance": "Acceptance Details (ZH)",
+    "acceptance": "OmniGCloud Acceptance",
     "acceptanceText": "Acceptance Text (ZH)",
-    "contact": "Contact Details (ZH)",
+    "contact": "OmniGCloud Contact",
     "contactText": "Contact Text (ZH)",
     "dataOwnership": "Data Ownership (ZH)",
     "dataOwnershipText": "Data Ownership Text (ZH)",
-    "disclaimer": "Disclaimer Details (ZH)",
+    "disclaimer": "OmniGCloud Disclaimer",
     "disclaimerText": "Disclaimer Text (ZH)",
     "governingLaw": "Governing Law (ZH)",
     "governingLawText": "Governing Law Text (ZH)",
     "lastUpdated": "Last Updated (ZH)",
     "lastUpdatedDate": "December 29, 2025 (ZH)",
-    "responsibility1": "Responsibility1 Details (ZH)",
-    "responsibility2": "Responsibility2 Details (ZH)",
-    "responsibility3": "Responsibility3 Details (ZH)",
-    "service1": "Service1 Details (ZH)",
-    "service2": "Service2 Details (ZH)",
-    "service3": "Service3 Details (ZH)",
-    "service4": "Service4 Details (ZH)",
-    "services": "Services Details (ZH)",
+    "responsibility1": "OmniGCloud Responsibility1",
+    "responsibility2": "OmniGCloud Responsibility2",
+    "responsibility3": "OmniGCloud Responsibility3",
+    "service1": "OmniGCloud Service1",
+    "service2": "OmniGCloud Service2",
+    "service3": "OmniGCloud Service3",
+    "service4": "OmniGCloud Service4",
+    "services": "OmniGCloud Services",
     "servicesText": "Services Text (ZH)",
-    "termination": "Termination Details (ZH)",
+    "termination": "OmniGCloud Termination",
     "terminationText": "Termination Text (ZH)",
     "title": "Terms (ZH)",
     "userResponsibilities": "User Responsibilities (ZH)",
@@ -6563,10 +6580,10 @@
       "title": "Enterprise Billing Comparison (ZH)"
     },
     "CloudSwitcher": {
-      "active": "Active (ZH)",
+      "active": "OmniGCloud Active",
       "currentHost": "Current Host (ZH)",
       "migrating": "Migrating... (ZH)",
-      "status": "Status (ZH)",
+      "status": "Production Stable",
       "targetCloud": "Target Cloud (ZH)",
       "title": "Dynamic Workload Re-Balancing (ZH)"
     }
@@ -6599,169 +6616,17 @@
   },
   "Visuals": {
     "drift": {
-      "detected": "Detected Details (ZH)",
-      "remediate": "Remediate Details (ZH)",
+      "detected": "OmniGCloud Detected",
+      "remediate": "OmniGCloud Remediate",
       "title": "Drift (ZH)"
     },
     "telemetry": {
-      "latency": "Latency Details (ZH)",
-      "live": "Live Details (ZH)",
-      "loss": "Loss Details (ZH)",
-      "throughput": "Throughput Details (ZH)",
+      "latency": "OmniGCloud Latency",
+      "live": "OmniGCloud Live",
+      "loss": "OmniGCloud Loss",
+      "throughput": "OmniGCloud Throughput",
       "title": "Telemetry (ZH)"
     }
-  },
-  "WhitePaper": {
-    "badge": "LATEST RESEARCH",
-    "caseStudies": {
-      "finance": {
-        "badge": "FINANCIAL SERVICES",
-        "desc": "Tier-1 bank automated GDPR, PCI-DSS, and SOC2 compliance across 45 cloud accounts, reducing audit prep from 6 weeks to 48 hours.",
-        "stat1": {
-          "label": "Annual Savings",
-          "value": "$2.4M"
-        },
-        "stat2": {
-          "label": "Implementation",
-          "value": "14 days"
-        },
-        "title": "Global Bank Achieves 99.99% Compliance"
-      },
-      "healthcare": {
-        "badge": "HEALTHCARE",
-        "desc": "Multi-national healthcare provider achieved HIPAA compliance across AWS, Azure, and on-premise systems with zero-trust architecture.",
-        "stat1": {
-          "label": "HIPAA Compliant",
-          "value": "100%"
-        },
-        "stat2": {
-          "label": "Records Protected",
-          "value": "3M+"
-        },
-        "title": "Hospital Chain Secures Patient Data"
-      },
-      "title": "Featured Implementation Case Studies"
-    },
-    "contribution": "Contribution Details",
-    "description": "A comprehensive framework for achieving mathematical certainty in data sovereignty across multi-cloud environments.",
-    "design_patterns": "Design Patterns",
-    "detailedDiagrams": {
-      "context": {
-        "clouds": {
-          "aws": "AWS",
-          "azure": "Azure",
-          "gcp": "GCP (Asia)"
-        },
-        "compliance": {
-          "desc": "Audit Logs",
-          "title": "Compliance"
-        },
-        "controlPlane": "AECP CONTROL PLANE",
-        "decisionEngine": "Decision Engine",
-        "devOps": {
-          "desc": "Define Policy",
-          "title": "DevOps Team"
-        },
-        "interpreter": "Intent Interpreter",
-        "reconciliation": {
-          "desc": "(Current State → Target State)",
-          "title": "State Reconciliation Loop"
-        }
-      },
-      "federation": {
-        "ap": {
-          "policy": "Policy: PERMISSIVE",
-          "title": "AP-SOUTH-SHARED"
-        },
-        "eu": {
-          "policy": "Policy: GDPR-STRICT",
-          "title": "EU-CENTRAL-PRIVACY"
-        },
-        "protocol": "Federated Trust Protocol (FTP) Active",
-        "us": {
-          "policy": "Policy: FIPS-140-2",
-          "title": "US-EAST-SOVEREIGN"
-        }
-      },
-      "governance": {
-        "action": {
-          "desc": "Targeted API Call",
-          "title": "3. ACTION"
-        },
-        "cycleTime": "Autonomous Control Loop Cycle Time: < 200ms",
-        "decision": {
-          "desc": "AECP Graph Engine",
-          "title": "2. DECISION"
-        },
-        "signal": {
-          "desc": "Multi-cloud Telemetry",
-          "title": "1. SIGNAL"
-        },
-        "validation": {
-          "desc": "State Confirmed",
-          "title": "4. VALIDATION"
-        }
-      },
-      "impact": {
-        "compliance": {
-          "desc": "Automated Audit Pass",
-          "title": "Compliance Rate",
-          "value": "99.7%"
-        },
-        "mttr": {
-          "desc": "From 14 days to 4 minutes",
-          "title": "MTTR Reduction",
-          "value": "-94%"
-        },
-        "opex": {
-          "desc": "Verified Arbitrage Savings",
-          "title": "Cloud OpEx",
-          "value": "-31%"
-        }
-      },
-      "security": {
-        "audit": {
-          "desc": "Every state change is cryptographically signed and stored in ledger.",
-          "title": "Immutable Audit"
-        },
-        "fence": {
-          "desc": "Geospatial policy enforcement prevents egress to non-compliant zones.",
-          "title": "Data Residency Fence"
-        },
-        "zeroTrust": {
-          "desc": "Identity is injected at runtime via SPIFFE/SPIRE. No static keys.",
-          "title": "Zero Trust Injection"
-        }
-      }
-    },
-    "download_subtitle": "Get the full technical specification, including architecture diagrams, decision frameworks, and implementation guides.",
-    "download_title": "Download the Whitepaper",
-    "footer": {
-      "_value": "Available in PDF / ePub formats.",
-      "copyright": "© 2026 OmniGCloud. All rights reserved."
-    },
-    "impact": {
-      "citations": {
-        "desc": "Referenced in cloud governance research",
-        "label": "Academic Citations",
-        "value": "847"
-      },
-      "downloads": {
-        "desc": "By CTOs, architects, and compliance officers",
-        "label": "Downloads",
-        "value": "12K+"
-      },
-      "implementations": {
-        "desc": "Framework adopted in production environments",
-        "label": "Enterprise Implementations",
-        "value": "340+"
-      },
-      "title": "Research Impact & Citations"
-    },
-    "pageCount": "42 Pages",
-    "peerReview": "Peer Reviewed",
-    "read_online": "Read Online",
-    "title": "The Autonomous Sovereign Cloud Protocol"
   },
   "Whitepaper": {
     "abstract": {
@@ -6898,25 +6763,31 @@
       "title": "Industry Feasibility"
     },
     "footer": {
+      "_value": "Available in PDF / ePub formats.",
       "copyright": "© 2026 OmniGCloud. All rights reserved.",
-      "lab": "OmniGCloud Research Lab"
+      "lab": "Research Labs"
     },
     "footerDetails": {
       "copyright": "© 2026 OmniGCloud. All rights reserved.",
       "lab": "OmniGCloud Research Lab"
     },
     "impact": {
-      "business_value": "OmniGCloud is the engine of the sovereign enterprise.",
-      "metrics": {
-        "cost": "$2M+",
-        "cost_label": "Cost Savings",
-        "efficiency": "95%",
-        "efficiency_label": "Efficiency",
-        "security": "Gold Standard",
-        "security_label": "Security Compliance"
+      "citations": {
+        "desc": "Referenced in cloud governance research",
+        "label": "Academic Citations",
+        "value": "847"
       },
-      "p1": "Quantifiable gains in security and efficiency.",
-      "title": "Strategic Impact"
+      "downloads": {
+        "desc": "By CTOs, architects, and compliance officers",
+        "label": "Downloads",
+        "value": "12K+"
+      },
+      "implementations": {
+        "desc": "Framework adopted in production environments",
+        "label": "Enterprise Implementations",
+        "value": "340+"
+      },
+      "title": "Research Impact & Citations"
     },
     "introduction": {
       "p1": "The standard for autonomous cloud governance.",
@@ -7215,7 +7086,7 @@
         "caption": "<strong>Figure 6: Necessity of Deterministic Logic:</strong> The design enforces a strict constraint solver path, rejecting all probabilistic inputs for actuation. <strong>Failure Mode:</strong> Allowing probabilistic (LLM) decision-making in the control loop introduces \"Black Box\" non-determinism, rendering the entire system legally indefensible during a forensic audit.",
         "labels": {
           "alert": "Constraint: Confidence < 99.9% mandates Human Operator review.",
-          "command": "COMMAND",
+          "command": "OmniGCloud Command",
           "commandSub": "Signed Action",
           "input": "INPUT VECTOR",
           "inputSub": "Telemetry Signal",
@@ -7254,12 +7125,310 @@
     "title": "The Autonomous Sovereign Cloud Protocol",
     "version": "8.4 (Stable)",
     "version_label": "Whitepaper Version_label",
-    "watermark": "OMNIGCLOUD RESEARCH  •  COPYRIGHT 2026"
+    "watermark": "OMNIGCLOUD RESEARCH  •  COPYRIGHT 2026",
+    "badge": "LATEST RESEARCH",
+    "caseStudies": {
+      "finance": {
+        "badge": "FINANCIAL SERVICES",
+        "desc": "Tier-1 bank automated GDPR, PCI-DSS, and SOC2 compliance across 45 cloud accounts, reducing audit prep from 6 weeks to 48 hours.",
+        "stat1": {
+          "label": "Annual Savings",
+          "value": "$2.4M"
+        },
+        "stat2": {
+          "label": "Implementation",
+          "value": "14 days"
+        },
+        "title": "Global Bank Achieves 99.99% Compliance"
+      },
+      "healthcare": {
+        "badge": "HEALTHCARE",
+        "desc": "Multi-national healthcare provider achieved HIPAA compliance across AWS, Azure, and on-premise systems with zero-trust architecture.",
+        "stat1": {
+          "label": "HIPAA Compliant",
+          "value": "100%"
+        },
+        "stat2": {
+          "label": "Records Protected",
+          "value": "3M+"
+        },
+        "title": "Hospital Chain Secures Patient Data"
+      },
+      "title": "Featured Implementation Case Studies"
+    },
+    "contribution": "OmniGCloud Contribution",
+    "description": "A comprehensive framework for achieving mathematical certainty in data sovereignty across multi-cloud environments.",
+    "design_patterns": "Design Patterns",
+    "detailedDiagrams": {
+      "context": {
+        "clouds": {
+          "aws": "OmniGCloud Aws",
+          "azure": "OmniGCloud Azure",
+          "gcp": "OmniGCloud Gcp"
+        },
+        "compliance": {
+          "desc": "Audit Logs",
+          "title": "Compliance"
+        },
+        "controlPlane": "AECP CONTROL PLANE",
+        "decisionEngine": "Decision Engine",
+        "devOps": {
+          "desc": "Define Policy",
+          "title": "DevOps Team"
+        },
+        "interpreter": "Intent Interpreter",
+        "reconciliation": {
+          "desc": "(Current State → Target State)",
+          "title": "State Reconciliation Loop"
+        }
+      },
+      "federation": {
+        "ap": {
+          "policy": "Policy: PERMISSIVE",
+          "title": "AP-SOUTH-SHARED"
+        },
+        "eu": {
+          "policy": "Policy: GDPR-STRICT",
+          "title": "EU-CENTRAL-PRIVACY"
+        },
+        "protocol": "Federated Trust Protocol (FTP) Active",
+        "us": {
+          "policy": "Policy: FIPS-140-2",
+          "title": "US-EAST-SOVEREIGN"
+        }
+      },
+      "governance": {
+        "action": {
+          "desc": "Targeted API Call",
+          "title": "3. ACTION"
+        },
+        "cycleTime": "Autonomous Control Loop Cycle Time: < 200ms",
+        "decision": {
+          "desc": "AECP Graph Engine",
+          "title": "2. DECISION"
+        },
+        "signal": {
+          "desc": "Multi-cloud Telemetry",
+          "title": "1. SIGNAL"
+        },
+        "validation": {
+          "desc": "State Confirmed",
+          "title": "4. VALIDATION"
+        }
+      },
+      "impact": {
+        "compliance": {
+          "desc": "Automated Audit Pass",
+          "title": "Compliance Rate",
+          "value": "99.7%"
+        },
+        "mttr": {
+          "desc": "From 14 days to 4 minutes",
+          "title": "MTTR Reduction",
+          "value": "-94%"
+        },
+        "opex": {
+          "desc": "Verified Arbitrage Savings",
+          "title": "Cloud OpEx",
+          "value": "-31%"
+        }
+      },
+      "security": {
+        "audit": {
+          "desc": "Every state change is cryptographically signed and stored in ledger.",
+          "title": "Immutable Audit"
+        },
+        "fence": {
+          "desc": "Geospatial policy enforcement prevents egress to non-compliant zones.",
+          "title": "Data Residency Fence"
+        },
+        "zeroTrust": {
+          "desc": "Identity is injected at runtime via SPIFFE/SPIRE. No static keys.",
+          "title": "Zero Trust Injection"
+        }
+      }
+    },
+    "download_subtitle": "Get the full technical specification, including architecture diagrams, decision frameworks, and implementation guides.",
+    "download_title": "Download the Whitepaper",
+    "pageCount": "42 Pages",
+    "peerReview": "Peer Reviewed",
+    "read_online": "Read Online"
   },
   "content": "Decouple your business logic from vendor-specific APIs and regain full control of your digital estate. (ZH)",
   "cta": "Get Started (ZH)",
   "desc": "Enterprise Grade Sovereignty (ZH)",
   "design_patterns": "Design Patterns (ZH)",
+  "download_title": "Download Whitepaper (ZH)",
+  "items": "OmniGCloud Items",
+  "read_online": "Read Online (ZH)",
+  "steps": "OmniGCloud Steps",
+  "subtitle": "The Sovereign Cloud Control Plane (ZH)",
+  "title": "OmniGCloud Platform (ZH)",
+  "Sangam": {
+    "title": "Sangam：主权汇流",
+    "subtitle": "多云编排与自主治理的终极融合。",
+    "description": "Sangam 是 OmniGCloud 内核的终极综合体。它是分散的云架构、自主代理和主权策略融合为单一、高吞吐量运行环境的汇合点。",
+    "cta": "体验汇流",
+    "tag": "V-PREMIUM",
+    "features": {
+      "unification": "跨所有主要云的完整架构统一。",
+      "purity": "受监管资产的零漂移主权完整性。",
+      "resonance": "全球规模的高频状态同步。"
+    }
+  },
+  "WhitePaper": {
+    "badge": "LATEST RESEARCH",
+    "caseStudies": {
+      "finance": {
+        "badge": "FINANCIAL SERVICES",
+        "desc": "Tier-1 bank automated GDPR, PCI-DSS, and SOC2 compliance across 45 cloud accounts, reducing audit prep from 6 weeks to 48 hours.",
+        "stat1": {
+          "label": "Annual Savings",
+          "value": "$2.4M"
+        },
+        "stat2": {
+          "label": "Implementation",
+          "value": "14 days"
+        },
+        "title": "Global Bank Achieves 99.99% Compliance"
+      },
+      "healthcare": {
+        "badge": "HEALTHCARE",
+        "desc": "Multi-national healthcare provider achieved HIPAA compliance across AWS, Azure, and on-premise systems with zero-trust architecture.",
+        "stat1": {
+          "label": "HIPAA Compliant",
+          "value": "100%"
+        },
+        "stat2": {
+          "label": "Records Protected",
+          "value": "3M+"
+        },
+        "title": "Hospital Chain Secures Patient Data"
+      },
+      "title": "Featured Implementation Case Studies"
+    },
+    "contribution": "OmniGCloud Contribution",
+    "description": "A comprehensive framework for achieving mathematical certainty in data sovereignty across multi-cloud environments.",
+    "design_patterns": "Design Patterns",
+    "detailedDiagrams": {
+      "context": {
+        "clouds": {
+          "aws": "OmniGCloud Aws",
+          "azure": "OmniGCloud Azure",
+          "gcp": "OmniGCloud Gcp"
+        },
+        "compliance": {
+          "desc": "Audit Logs",
+          "title": "Compliance"
+        },
+        "controlPlane": "AECP CONTROL PLANE",
+        "decisionEngine": "Decision Engine",
+        "devOps": {
+          "desc": "Define Policy",
+          "title": "DevOps Team"
+        },
+        "interpreter": "Intent Interpreter",
+        "reconciliation": {
+          "desc": "(Current State → Target State)",
+          "title": "State Reconciliation Loop"
+        }
+      },
+      "federation": {
+        "ap": {
+          "policy": "Policy: PERMISSIVE",
+          "title": "AP-SOUTH-SHARED"
+        },
+        "eu": {
+          "policy": "Policy: GDPR-STRICT",
+          "title": "EU-CENTRAL-PRIVACY"
+        },
+        "protocol": "Federated Trust Protocol (FTP) Active",
+        "us": {
+          "policy": "Policy: FIPS-140-2",
+          "title": "US-EAST-SOVEREIGN"
+        }
+      },
+      "governance": {
+        "action": {
+          "desc": "Targeted API Call",
+          "title": "3. ACTION"
+        },
+        "cycleTime": "Autonomous Control Loop Cycle Time: < 200ms",
+        "decision": {
+          "desc": "AECP Graph Engine",
+          "title": "2. DECISION"
+        },
+        "signal": {
+          "desc": "Multi-cloud Telemetry",
+          "title": "1. SIGNAL"
+        },
+        "validation": {
+          "desc": "State Confirmed",
+          "title": "4. VALIDATION"
+        }
+      },
+      "impact": {
+        "compliance": {
+          "desc": "Automated Audit Pass",
+          "title": "Compliance Rate",
+          "value": "99.7%"
+        },
+        "mttr": {
+          "desc": "From 14 days to 4 minutes",
+          "title": "MTTR Reduction",
+          "value": "-94%"
+        },
+        "opex": {
+          "desc": "Verified Arbitrage Savings",
+          "title": "Cloud OpEx",
+          "value": "-31%"
+        }
+      },
+      "security": {
+        "audit": {
+          "desc": "Every state change is cryptographically signed and stored in ledger.",
+          "title": "Immutable Audit"
+        },
+        "fence": {
+          "desc": "Geospatial policy enforcement prevents egress to non-compliant zones.",
+          "title": "Data Residency Fence"
+        },
+        "zeroTrust": {
+          "desc": "Identity is injected at runtime via SPIFFE/SPIRE. No static keys.",
+          "title": "Zero Trust Injection"
+        }
+      }
+    },
+    "download_subtitle": "Get the full technical specification, including architecture diagrams, decision frameworks, and implementation guides.",
+    "download_title": "Download the Whitepaper",
+    "footer": {
+      "_value": "Available in PDF / ePub formats.",
+      "copyright": "© 2026 OmniGCloud. All rights reserved.",
+      "lab": "Research Labs"
+    },
+    "impact": {
+      "citations": {
+        "desc": "Referenced in cloud governance research",
+        "label": "Academic Citations",
+        "value": "847"
+      },
+      "downloads": {
+        "desc": "By CTOs, architects, and compliance officers",
+        "label": "Downloads",
+        "value": "12K+"
+      },
+      "implementations": {
+        "desc": "Framework adopted in production environments",
+        "label": "Enterprise Implementations",
+        "value": "340+"
+      },
+      "title": "Research Impact & Citations"
+    },
+    "pageCount": "42 Pages",
+    "peerReview": "Peer Reviewed",
+    "read_online": "Read Online",
+    "title": "The Autonomous Sovereign Cloud Protocol"
+  },
   "docs": {
     "whitepaper": {
       "diagrams": {
@@ -7301,11 +7470,5 @@
         "validationDesc": "Validation process diagram (ZH)"
       }
     }
-  },
-  "download_title": "Download Whitepaper (ZH)",
-  "items": "Items Details (ZH)",
-  "read_online": "Read Online (ZH)",
-  "steps": "Steps Details (ZH)",
-  "subtitle": "The Sovereign Cloud Control Plane (ZH)",
-  "title": "OmniGCloud Platform (ZH)"
+  }
 }

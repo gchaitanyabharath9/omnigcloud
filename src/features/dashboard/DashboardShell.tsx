@@ -3,6 +3,8 @@
 import React, { useState, useEffect } from "react";
 import { Activity, Server, Database, AlertTriangle, CheckCircle } from "lucide-react";
 import { useTranslations, useLocale } from "next-intl";
+import Footer from "@/components/Footer";
+
 
 interface DashboardShellProps {
   title: string;
@@ -38,6 +40,7 @@ export default function DashboardShell({
         color: "var(--foreground)",
         position: "relative",
         overflow: "hidden",
+        paddingTop: "var(--header-height)",
       }}
     >
       {/* PREMIUM BACKGROUND EFFECTS */}
@@ -189,7 +192,7 @@ export default function DashboardShell({
       <div
         className="container max-w-6xl mx-auto min-w-0"
         style={{
-          padding: "2rem",
+          padding: "3rem 2rem",
           paddingBottom: "10rem",
           flex: 1,
           position: "relative",
@@ -201,8 +204,8 @@ export default function DashboardShell({
           style={{
             display: "grid",
             gridTemplateColumns: "repeat(4, 1fr)",
-            gap: "1rem",
-            marginBottom: "2rem",
+            gap: "1.5rem",
+            marginBottom: "3rem",
           }}
         >
           {[
@@ -323,6 +326,7 @@ export default function DashboardShell({
           {children}
         </div>
       </div>
+      <Footer />
     </div>
   );
 }

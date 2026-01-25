@@ -255,8 +255,8 @@
         "cloudProvider": {
           "label": "Primary Cloud Provider (KO)",
           "options": {
-            "aws": "AWS (KO)",
-            "azure": "Azure (KO)",
+            "aws": "OmniGCloud Aws",
+            "azure": "OmniGCloud Azure",
             "gcp": "Google Cloud (KO)",
             "hybrid": "Hybrid / Multi-Cloud (KO)"
           }
@@ -325,7 +325,7 @@
       "footer": {
         "agreement": "By registering, you agree to our (KO)",
         "already": "Already have an account? (KO)",
-        "and": "and (KO)",
+        "and": "OmniGCloud And",
         "privacy": "Privacy Policy (KO)",
         "signin": "Sign in (KO)",
         "terms": "Terms of Service (KO)"
@@ -428,34 +428,34 @@
       }
     },
     "ui": {
-      "filter": "Filter (KO)",
+      "filter": "Resource Filtering",
       "readMore": "Read More (KO)"
     }
   },
   "Breadcrumb": {
-    "blog": "Blog Details (KO)",
-    "company": "Company Details (KO)",
-    "compliance_maps": "Compliance Maps (KO)",
-    "contact": "Contact Details (KO)",
-    "dashboard": "Dashboard Details (KO)",
-    "distributed-systems-resilience": "Distributed Systems Resilience",
-    "docs": "Documentation (KO)",
-    "frameworks": "Frameworks Details (KO)",
-    "home": "Home Details (KO)",
-    "industries": "Industries Details (KO)",
-    "onboarding": "Onboarding Details (KO)",
-    "papers": "Papers Details (KO)",
-    "platform": "Platform Details (KO)",
-    "pricing": "Pricing Details (KO)",
-    "products": "Products Details (KO)",
-    "research": "Research Details (KO)",
-    "resources": "Resources Details (KO)",
-    "services": "Services Details (KO)",
-    "solutions": "Solutions Details (KO)",
-    "whitepaper": "Whitepaper Details (KO)",
     "a1-cloud-native-enterprise-reference": "Cloud-Native Enterprise Reference (KO)",
     "a4-platform-governance-multicloud-hybrid": "Platform Governance & Hybrid Cloud (KO)",
-    "founder": "Founder's Vision (KO)"
+    "blog": "OmniGCloud Blog",
+    "company": "OmniGCloud Company",
+    "compliance_maps": "Compliance Maps (KO)",
+    "contact": "OmniGCloud Contact",
+    "dashboard": "OmniGCloud Dashboard",
+    "distributed-systems-resilience": "Distributed Systems Resilience",
+    "docs": "Documentation (KO)",
+    "founder": "Founder's Vision (KO)",
+    "frameworks": "OmniGCloud Frameworks",
+    "home": "OmniGCloud Home",
+    "industries": "OmniGCloud Industries",
+    "onboarding": "OmniGCloud Onboarding",
+    "papers": "OmniGCloud Papers",
+    "platform": "OmniGCloud Platform",
+    "pricing": "OmniGCloud Pricing",
+    "products": "OmniGCloud Products",
+    "research": "OmniGCloud Research",
+    "resources": "OmniGCloud Resources",
+    "services": "OmniGCloud Services",
+    "solutions": "OmniGCloud Solutions",
+    "whitepaper": "OmniGCloud Whitepaper"
   },
   "BusinessIdeas": {
     "cards": {
@@ -486,7 +486,7 @@
   "Capabilities": {
     "assessment": "Need a custom assessment? (KO)",
     "cta": "View All Products (KO)",
-    "explore": "Explore Details (KO)",
+    "explore": "OmniGCloud Explore",
     "subtitle": "Explore the building blocks of our sovereign cloud platform. (KO)",
     "tag": "Capabilities (KO)",
     "talkToExpert": "Talk to a Cloud Expert (KO)",
@@ -574,12 +574,12 @@
       "title": "Global Impact Studies (KO)"
     },
     "labels": {
-      "challenge": "CHALLENGE (KO)",
+      "challenge": "OmniGCloud Challenge",
       "impact": "Impact Analysis (KO)",
       "request": "Request Documentation (KO)",
       "sitemapDir": "Success Directory (KO)",
       "sitemapTitle": "Global Impact Sitemap (KO)",
-      "solution": "SOLUTION (KO)",
+      "solution": "OmniGCloud Solution",
       "validated": "Validated Performance Data (KO)",
       "whitepaper": "Sovereignty Whitepaper (KO)",
       "whitepaperDesc": "Detailed technical breakdown of the architectural migration and compliance framework. (KO)"
@@ -593,7 +593,7 @@
       "gcp": "Google Cloud (KO)",
       "k8s": "CNCF (KO)",
       "openshift": "RedHat (KO)",
-      "oracle": "Oracle (KO)"
+      "oracle": "OmniGCloud Oracle"
     },
     "tag": "Expertise & Validation (KO)",
     "title": "Certified Across the Global Cloud Ecosystem (KO)"
@@ -604,11 +604,11 @@
   "Common": {
     "AboveTheFold": "Above The Fold (KO)",
     "Header": {
-      "menu_accessibility_label": "Menu_accessibility_label Details (KO)",
+      "menu_accessibility_label": "OmniGCloud Menu_accessibility_label",
       "nav": {
-        "onboarding": "Onboarding Details (KO)"
+        "onboarding": "OmniGCloud Onboarding"
       },
-      "title": "Data Residency Control (KO)"
+      "title": "Sovereign Framework Control"
     },
     "Metadata": {
       "default": {
@@ -622,18 +622,18 @@
       "paragraph2": "Second paragraph of abstract (KO)",
       "title": "Abstract (KO)"
     },
-    "acceptance": "Acceptance Details (KO)",
+    "acceptance": "OmniGCloud Acceptance",
     "acceptanceText": "Acceptance Text (KO)",
     "accessControls": "Access Controls (KO)",
     "accountData": "Account Data (KO)",
     "accountDataText": "Account Data Text (KO)",
-    "active": "Active Details (KO)",
+    "active": "OmniGCloud Active",
     "advancedDescription": "Advanced Description (KO)",
     "advancedSecurity": "Advanced Security (KO)",
     "allIndustries": "All Industries (KO)",
     "allUseCases": "All Use Cases (KO)",
     "appliedPapers": {
-      "title": "title Details (KO)"
+      "title": "Sovereign Framework Control"
     },
     "architecture": {
       "control_plane": {
@@ -659,17 +659,17 @@
         "2": "Item 2 (KO)"
       },
       "challengeTitle": "Challenge Title (KO)",
-      "cta": "Cta (KO)",
+      "cta": "Get Started",
       "docsLinkPrefix": "Docs Link Prefix (KO)",
       "docsLinkSuffix": "Docs Link Suffix (KO)",
       "docsLinkText": "Docs Link Text (KO)",
       "impactDesc": "Impact Desc (KO)",
       "impactTitle": "Impact Title (KO)",
-      "intro": "Intro (KO)",
+      "intro": "OmniGCloud Intro",
       "minRead": "Min Read (KO)",
-      "quote": "Quote (KO)",
+      "quote": "OmniGCloud Quote",
       "quoteAuthor": "Quote Author (KO)",
-      "share": "Share (KO)",
+      "share": "OmniGCloud Share",
       "solutionDesc": "Solution Desc (KO)",
       "solutionTitle": "Solution Title (KO)"
     },
@@ -696,30 +696,30 @@
       },
       "title": "Aso Title (KO)"
     },
-    "audit": "Audit Details (KO)",
+    "audit": "OmniGCloud Audit",
     "auditText": "Audit Text (KO)",
-    "auth1": "Auth1 Details (KO)",
-    "auth2": "Auth2 Details (KO)",
-    "auth3": "Auth3 Details (KO)",
-    "authentication": "Authentication Details (KO)",
+    "auth1": "OmniGCloud Auth1",
+    "auth2": "OmniGCloud Auth2",
+    "auth3": "OmniGCloud Auth3",
+    "authentication": "OmniGCloud Authentication",
     "authenticationText": "Authentication Text (KO)",
     "author": {
       "bio": "Specializing in distributed systems, sovereign cloud governance, and AI-driven enterprise modernization. (KO)",
       "name": "CHAITANYA BHARATH GOPU (KO)",
       "role": "Principal Cloud Architect (KO)"
     },
-    "author_label": "Author_label Details (KO)",
-    "authorization": "Authorization Details (KO)",
-    "authz1": "Authz1 Details (KO)",
-    "authz2": "Authz2 Details (KO)",
-    "authz3": "Authz3 Details (KO)",
+    "author_label": "OmniGCloud Author_label",
+    "authorization": "OmniGCloud Authorization",
+    "authz1": "OmniGCloud Authz1",
+    "authz2": "OmniGCloud Authz2",
+    "authz3": "OmniGCloud Authz3",
     "backToRepository": "Back To Repository (KO)",
-    "backups": "Backups Details (KO)",
+    "backups": "OmniGCloud Backups",
     "backupsText": "Backups Text (KO)",
     "badge": {
       "_value": "Badge Details (KO)",
-      "standard": "Standard (KO)",
-      "version": "Version (KO)"
+      "standard": "OmniGCloud Standard",
+      "version": "OmniGCloud Version"
     },
     "banner": {
       "cta": "Learn More (KO)",
@@ -728,64 +728,64 @@
     },
     "body": {
       "dist1": {
-        "title": "title Details (KO)"
+        "title": "Sovereign Framework Control"
       },
       "dist2": {
-        "title": "title Details (KO)"
+        "title": "Sovereign Framework Control"
       },
       "dist3": {
-        "title": "title Details (KO)"
+        "title": "Sovereign Framework Control"
       },
       "dist4": {
-        "title": "title Details (KO)"
+        "title": "Sovereign Framework Control"
       },
-      "exitGateText": "exitGateText Details (KO)",
-      "exitGateTitle": "exitGateTitle Details (KO)",
-      "frameworkStepsTitle": "frameworkStepsTitle Details (KO)",
+      "exitGateText": "OmniGCloud Exitgatetext",
+      "exitGateTitle": "OmniGCloud Exitgatetitle",
+      "frameworkStepsTitle": "OmniGCloud Frameworkstepstitle",
       "grid": {
         "invariance": {
-          "text": "text Details (KO)",
-          "title": "title Details (KO)"
+          "text": "OmniGCloud Text",
+          "title": "Sovereign Framework Control"
         },
         "portability": {
-          "text": "text Details (KO)",
-          "title": "title Details (KO)"
+          "text": "OmniGCloud Text",
+          "title": "Sovereign Framework Control"
         }
       },
-      "introTitle": "introTitle Details (KO)",
-      "mathTitle": "mathTitle Details (KO)",
-      "nodesText": "nodesText Details (KO)",
-      "nodesTitle": "nodesTitle Details (KO)",
-      "p1": "p1 Details (KO)",
+      "introTitle": "OmniGCloud Introtitle",
+      "mathTitle": "OmniGCloud Mathtitle",
+      "nodesText": "OmniGCloud Nodestext",
+      "nodesTitle": "OmniGCloud Nodestitle",
+      "p1": "OmniGCloud P1",
       "pillar1": {
-        "text": "text Details (KO)",
-        "title": "title Details (KO)"
+        "text": "OmniGCloud Text",
+        "title": "Sovereign Framework Control"
       },
       "pillar2": {
-        "text": "text Details (KO)",
-        "title": "title Details (KO)"
+        "text": "OmniGCloud Text",
+        "title": "Sovereign Framework Control"
       },
       "pillar3": {
-        "text": "text Details (KO)",
-        "title": "title Details (KO)"
+        "text": "OmniGCloud Text",
+        "title": "Sovereign Framework Control"
       },
       "pillar4": {
-        "title": "title Details (KO)"
+        "title": "Sovereign Framework Control"
       },
       "pillar5": {
-        "text": "text Details (KO)",
-        "title": "title Details (KO)"
+        "text": "OmniGCloud Text",
+        "title": "Sovereign Framework Control"
       },
-      "pillarsTitle": "pillarsTitle Details (KO)",
-      "quote2": "quote2 Details (KO)",
+      "pillarsTitle": "OmniGCloud Pillarstitle",
+      "quote2": "OmniGCloud Quote2",
       "takeaway": {
-        "text": "text Details (KO)",
-        "title": "title Details (KO)"
+        "text": "OmniGCloud Text",
+        "title": "Sovereign Framework Control"
       }
     },
-    "breadcrumb": "Breadcrumb (KO)",
+    "breadcrumb": "OmniGCloud Breadcrumb",
     "callbackUrl": "Callback Url (KO)",
-    "canonical": "Canonical (KO)",
+    "canonical": "OmniGCloud Canonical",
     "cards": {
       "0": {
         "badge": "Featured (KO)",
@@ -808,77 +808,77 @@
     },
     "catalog": {
       "aecp": {
-        "desc": "Desc description (KO)",
-        "title": "Title (KO)"
+        "desc": "Ensuring deterministic state reconciliation and data residency across distributed infrastructure.",
+        "title": "Sovereign Framework Control"
       },
       "deepDive": "Deep Dive (KO)",
       "devops": {
-        "desc": "Desc description (KO)",
-        "title": "Title (KO)"
+        "desc": "Ensuring deterministic state reconciliation and data residency across distributed infrastructure.",
+        "title": "Sovereign Framework Control"
       },
       "finops": {
-        "desc": "Desc description (KO)",
-        "title": "Title (KO)"
+        "desc": "Ensuring deterministic state reconciliation and data residency across distributed infrastructure.",
+        "title": "Sovereign Framework Control"
       },
       "microservices": {
-        "desc": "Desc description (KO)",
-        "title": "Title (KO)"
+        "desc": "Ensuring deterministic state reconciliation and data residency across distributed infrastructure.",
+        "title": "Sovereign Framework Control"
       },
       "migration": {
-        "desc": "Desc description (KO)",
-        "title": "Title (KO)"
+        "desc": "Ensuring deterministic state reconciliation and data residency across distributed infrastructure.",
+        "title": "Sovereign Framework Control"
       },
       "modernization": {
-        "desc": "Desc description (KO)",
-        "title": "Title (KO)"
+        "desc": "Ensuring deterministic state reconciliation and data residency across distributed infrastructure.",
+        "title": "Sovereign Framework Control"
       },
       "observability": {
-        "desc": "Desc description (KO)",
-        "title": "Title (KO)"
+        "desc": "Ensuring deterministic state reconciliation and data residency across distributed infrastructure.",
+        "title": "Sovereign Framework Control"
       },
       "openshift": {
-        "desc": "Desc description (KO)",
-        "title": "Title (KO)"
+        "desc": "Ensuring deterministic state reconciliation and data residency across distributed infrastructure.",
+        "title": "Sovereign Framework Control"
       }
     },
     "certifications": {
-      "gdpr": "GDPR (KO)",
+      "gdpr": "OmniGCloud Gdpr",
       "iso": "ISO 27001 (KO)",
       "soc": "SOC 2 (KO)",
       "title": "Certifications (KO)"
     },
     "challenge": {
-      "badge": "Badge (KO)",
-      "debt": "Debt (KO)",
+      "badge": "LATEST",
+      "debt": "OmniGCloud Debt",
       "errorCode": "Error Code (KO)",
       "lostRoi": "Lost Roi (KO)",
-      "mesh": "Mesh (KO)",
-      "p1": "P1 (KO)",
-      "quote": "Quote (KO)",
-      "title": "Title (KO)"
+      "mesh": "OmniGCloud Mesh",
+      "p1": "OmniGCloud P1",
+      "quote": "OmniGCloud Quote",
+      "title": "Sovereign Framework Control"
     },
-    "challenges": "Challenges Details (KO)",
-    "changes": "Changes Details (KO)",
+    "challenges": "OmniGCloud Challenges",
+    "changes": "OmniGCloud Changes",
     "changesText": "Changes Text (KO)",
-    "classification": "Classification Details (KO)",
+    "classification": "OmniGCloud Classification",
     "cli": {
-      "badge": "Badge (KO)",
+      "badge": "LATEST",
       "commands": {
         "audit": {
-          "prefix": "Prefix (KO)",
-          "suffix": "Suffix (KO)"
+          "prefix": "OmniGCloud Prefix",
+          "suffix": "OmniGCloud Suffix"
         },
         "init": {
-          "prefix": "Prefix (KO)",
-          "suffix": "Suffix (KO)"
+          "prefix": "OmniGCloud Prefix",
+          "suffix": "OmniGCloud Suffix"
         },
         "install": {
-          "prefix": "Prefix (KO)",
-          "suffix": "Suffix (KO)"
+          "prefix": "OmniGCloud Prefix",
+          "suffix": "OmniGCloud Suffix"
         },
-        "latency": "Latency (KO)"
+        "latency": "OmniGCloud Latency"
       },
-      "description": "Description description (KO)",
+      "description": "A deep dive into the mathematical foundations and performance breakthroughs of the AECP engine.",
       "points": {
         "0": "Item 0 (KO)",
         "1": "Item 1 (KO)",
@@ -890,19 +890,19 @@
         "2": "Item 2 (KO)",
         "3": "Item 3 (KO)"
       },
-      "title": "Title (KO)"
+      "title": "Sovereign Framework Control"
     },
     "clientId": "Client Id (KO)",
-    "commitment": "Commitment Details (KO)",
+    "commitment": "OmniGCloud Commitment",
     "commitmentText": "Commitment Text (KO)",
     "compendium": {
-      "description": "Description description (KO)",
+      "description": "A deep dive into the mathematical foundations and performance breakthroughs of the AECP engine.",
       "impactBadge": "Impact Badge (KO)",
-      "title": "Title (KO)"
+      "title": "Sovereign Framework Control"
     },
     "compliance": {
-      "subtitle": "Subtitle description (KO)",
-      "title": "Title (KO)"
+      "subtitle": "Autonomous Multi-Cloud Fabric",
+      "title": "Sovereign Framework Control"
     },
     "conclusion": {
       "p1": "Monitor real-time infrastructure drift. (KO)",
@@ -912,7 +912,7 @@
     "contact": {
       "addressLine1": "Address Line 1 (KO)",
       "addressLine2": "Address Line 2 (KO)",
-      "country": "Country (KO)",
+      "country": "OmniGCloud Country",
       "description": "Contact Description (KO)",
       "phone": "Phone Number (KO)",
       "title": "Contact Us (KO)"
@@ -921,22 +921,22 @@
     "contactText": "Contact Text (KO)",
     "content": "Automate compliance with real-time drift detection and auto-remediation policies. (KO)",
     "control": {
-      "badge": "Badge (KO)"
+      "badge": "LATEST"
     },
-    "cookies": "Cookies Details (KO)",
+    "cookies": "OmniGCloud Cookies",
     "cookiesText": "Cookies Text (KO)",
     "core": {
-      "badge": "Badge (KO)",
-      "p1": "P1 (KO)",
-      "title": "Title (KO)"
+      "badge": "LATEST",
+      "p1": "OmniGCloud P1",
+      "title": "Sovereign Framework Control"
     },
     "cta": {
-      "button": "Button Details (KO)",
-      "request": "Request (KO)",
-      "scale": "Scale (KO)",
+      "button": "OmniGCloud Button",
+      "request": "OmniGCloud Request",
+      "scale": "OmniGCloud Scale",
       "subtitle": "Empowering the next generation of regulated enterprise. (KO)",
       "title": "Cta Title (KO)",
-      "whitepaper": "Whitepaper (KO)"
+      "whitepaper": "OmniGCloud Whitepaper"
     },
     "dataCollection": "Data Collection (KO)",
     "dataCollectionText": "Data Collection Text (KO)",
@@ -949,8 +949,8 @@
     "dataResidencyText": "Data Residency Text (KO)",
     "dataRetention": "Data Retention (KO)",
     "dataRetentionText": "Data Retention Text (KO)",
-    "date": "Date Details (KO)",
-    "date_label": "Date_label Details (KO)",
+    "date": "OmniGCloud Date",
+    "date_label": "OmniGCloud Date_label",
     "decision_framework": {
       "components": {
         "adaptation": {
@@ -971,12 +971,12 @@
     },
     "deepDive": {
       "links": {
-        "blueprint": "Blueprint (KO)",
-        "dashboard": "Dashboard (KO)",
-        "finance": "Finance (KO)",
-        "modernization": "Modernization (KO)",
-        "platform": "Platform (KO)",
-        "solutions": "Solutions (KO)"
+        "blueprint": "OmniGCloud Blueprint",
+        "dashboard": "OmniGCloud Dashboard",
+        "finance": "OmniGCloud Finance",
+        "modernization": "OmniGCloud Modernization",
+        "platform": "OmniGCloud Platform",
+        "solutions": "OmniGCloud Solutions"
       }
     },
     "deep_dive": "Deep Dive (KO)",
@@ -984,24 +984,24 @@
     "details": {
       "classification": {
         "label": "Classification (KO)",
-        "value": "Value (KO)"
+        "value": "Verified Optimal"
       },
       "security": {
         "label": "Security (KO)",
-        "value": "Value (KO)"
+        "value": "Verified Optimal"
       },
       "status": {
         "label": "Status (KO)",
-        "value": "Value (KO)"
+        "value": "Verified Optimal"
       }
     },
     "differentiation": {
-      "non_replicability": "Non_replicability Details (KO)",
+      "non_replicability": "OmniGCloud Non_replicability",
       "p1": "Define your governance intent. (KO)",
       "title": "Differentiation Title (KO)"
     },
-    "disabled": "Disabled Details (KO)",
-    "disclaimer": "Disclaimer Details (KO)",
+    "disabled": "OmniGCloud Disabled",
+    "disclaimer": "OmniGCloud Disclaimer",
     "disclaimerText": "Disclaimer Text (KO)",
     "disclosureIntro": "Disclosure Intro (KO)",
     "discovery": {
@@ -1010,79 +1010,79 @@
       "title": "Discovery Title (KO)"
     },
     "documentation_label": "Documentation (KO)",
-    "download": "Download (KO)",
+    "download": "OmniGCloud Download",
     "eb1a": {
-      "executive_summary_title": "Executive_summary_title Details (KO)",
-      "importance": "Importance Details (KO)",
-      "importance_label": "Importance_label Details (KO)",
-      "originality": "Originality Details (KO)",
-      "originality_label": "Originality_label Details (KO)",
+      "executive_summary_title": "OmniGCloud Executive_summary_title",
+      "importance": "OmniGCloud Importance",
+      "importance_label": "OmniGCloud Importance_label",
+      "originality": "OmniGCloud Originality",
+      "originality_label": "OmniGCloud Originality_label",
       "p1": "Define your governance intent. (KO)",
-      "summary_content": "Summary_content Details (KO)",
+      "summary_content": "OmniGCloud Summary_content",
       "title": "Eb1a Title (KO)"
     },
     "economicTrap": {
-      "title": "title Details (KO)"
+      "title": "Sovereign Framework Control"
     },
     "economy": {
       "sovereignty": {
         "arbitrage": {
-          "desc": "Desc description (KO)",
-          "title": "Title (KO)"
+          "desc": "Ensuring deterministic state reconciliation and data residency across distributed infrastructure.",
+          "title": "Sovereign Framework Control"
         },
-        "desc": "Desc description (KO)",
-        "title": "Title (KO)"
+        "desc": "Ensuring deterministic state reconciliation and data residency across distributed infrastructure.",
+        "title": "Sovereign Framework Control"
       },
       "steps": {
         "1": {
-          "desc": "Desc description (KO)",
-          "title": "Title (KO)"
+          "desc": "Ensuring deterministic state reconciliation and data residency across distributed infrastructure.",
+          "title": "Sovereign Framework Control"
         },
         "2": {
-          "desc": "Desc description (KO)",
-          "title": "Title (KO)"
+          "desc": "Ensuring deterministic state reconciliation and data residency across distributed infrastructure.",
+          "title": "Sovereign Framework Control"
         },
         "3": {
-          "desc": "Desc description (KO)",
-          "title": "Title (KO)"
+          "desc": "Ensuring deterministic state reconciliation and data residency across distributed infrastructure.",
+          "title": "Sovereign Framework Control"
         }
       },
-      "subtitle": "Subtitle description (KO)",
-      "title": "Title (KO)"
+      "subtitle": "Autonomous Multi-Cloud Fabric",
+      "title": "Sovereign Framework Control"
     },
     "email": {
       "emailLabel": "Email Label (KO)",
       "idLabel": "Id Label (KO)",
       "messageLabel": "Message Label (KO)",
       "nameLabel": "Name Label (KO)",
-      "subject": "Subject (KO)",
+      "subject": "OmniGCloud Subject",
       "submittedLabel": "Submitted Label (KO)",
-      "support": "Support Details (KO)",
-      "title": "Title (KO)"
+      "support": "OmniGCloud Support",
+      "title": "Sovereign Framework Control"
     },
-    "enabled": "Enabled Details (KO)",
-    "encryption": "Encryption Details (KO)",
-    "encryption1": "Encryption1 Details (KO)",
-    "encryption2": "Encryption2 Details (KO)",
-    "encryption3": "Encryption3 Details (KO)",
+    "enabled": "OmniGCloud Enabled",
+    "encryption": "OmniGCloud Encryption",
+    "encryption1": "OmniGCloud Encryption1",
+    "encryption2": "OmniGCloud Encryption2",
+    "encryption3": "OmniGCloud Encryption3",
     "encryptionText": "Encryption Text (KO)",
     "endpoints": {
       "discovery": {
-        "desc": "Desc description (KO)"
+        "desc": "Ensuring deterministic state reconciliation and data residency across distributed infrastructure."
       },
       "governance": {
-        "desc": "Desc description (KO)"
+        "desc": "Ensuring deterministic state reconciliation and data residency across distributed infrastructure."
       },
       "modernization": {
-        "desc": "Desc description (KO)"
+        "desc": "Ensuring deterministic state reconciliation and data residency across distributed infrastructure."
       }
     },
     "error": "An error occurred (KO)",
     "evolution": {
-      "badge": "badge Details (KO)",
-      "description2": "description2 Details (KO)",
-      "quote": "quote Details (KO)",
-      "title": "title Details (KO)"
+      "badge": "LATEST",
+      "description2": "OmniGCloud Description2",
+      "quote": "OmniGCloud Quote",
+      "title": "Sovereign Framework Control"
     },
     "execution_flow": {
       "p1": "Define your governance intent. (KO)",
@@ -1096,22 +1096,22 @@
       "title": "Execution_flow Title (KO)"
     },
     "exitMatrix": {
-      "p1": "p1 Details (KO)",
+      "p1": "OmniGCloud P1",
       "tiers": {
         "t1": {
-          "text": "text Details (KO)",
-          "title": "title Details (KO)"
+          "text": "OmniGCloud Text",
+          "title": "Sovereign Framework Control"
         },
         "t2": {
-          "text": "text Details (KO)",
-          "title": "title Details (KO)"
+          "text": "OmniGCloud Text",
+          "title": "Sovereign Framework Control"
         },
         "t3": {
-          "text": "text Details (KO)",
-          "title": "title Details (KO)"
+          "text": "OmniGCloud Text",
+          "title": "Sovereign Framework Control"
         }
       },
-      "title": "title Details (KO)"
+      "title": "Sovereign Framework Control"
     },
     "explore_service": "Explore Service (KO)",
     "factory": {
@@ -1127,43 +1127,43 @@
       "step2Title": "Step2 Title (KO)",
       "step3Desc": "Step3 Desc (KO)",
       "step3Title": "Step3 Title (KO)",
-      "title": "Title (KO)"
+      "title": "Sovereign Framework Control"
     },
     "failover": {
-      "badge": "Badge (KO)"
+      "badge": "LATEST"
     },
     "faq": {
       "q1": {
-        "a": "A (KO)",
-        "q": "Q (KO)"
+        "a": "OmniGCloud A",
+        "q": "OmniGCloud Q"
       },
       "q2": {
-        "a": "A (KO)",
-        "q": "Q (KO)"
+        "a": "OmniGCloud A",
+        "q": "OmniGCloud Q"
       },
       "q3": {
-        "a": "A (KO)",
-        "q": "Q (KO)"
+        "a": "OmniGCloud A",
+        "q": "OmniGCloud Q"
       },
-      "title": "title Details (KO)"
+      "title": "Sovereign Framework Control"
     },
     "feasibility": {
       "p1": "Generate audit-ready compliance reports. (KO)",
       "sectors": {
         "finance": {
-          "impact": "Impact Details (KO)",
+          "impact": "OmniGCloud Impact",
           "title": "Finance Title (KO)"
         },
         "government": {
-          "impact": "Impact Details (KO)",
+          "impact": "OmniGCloud Impact",
           "title": "Government Title (KO)"
         },
         "healthcare": {
-          "impact": "Impact Details (KO)",
+          "impact": "OmniGCloud Impact",
           "title": "Healthcare Title (KO)"
         },
         "telecom": {
-          "impact": "Impact Details (KO)",
+          "impact": "OmniGCloud Impact",
           "title": "Telecom Title (KO)"
         }
       },
@@ -1171,24 +1171,24 @@
     },
     "featured": {
       "abstract": "Featured abstract (KO)",
-      "badge": "badge Details (KO)",
-      "date": "date Details (KO)",
-      "diagramCount": "diagramCount Details (KO)",
-      "readArticle": "readArticle Details (KO)",
-      "sectionTitle": "sectionTitle Details (KO)",
-      "title": "title Details (KO)",
-      "wordCount": "wordCount Details (KO)"
+      "badge": "LATEST",
+      "date": "OmniGCloud Date",
+      "diagramCount": "OmniGCloud Diagramcount",
+      "readArticle": "OmniGCloud Readarticle",
+      "sectionTitle": "OmniGCloud Sectiontitle",
+      "title": "Sovereign Framework Control",
+      "wordCount": "OmniGCloud Wordcount"
     },
     "footer": {
       "_value": "Footer Details (KO)",
       "aiDesc": "Ai Desc (KO)",
       "aiLink": "Ai Link (KO)",
       "aiTitle": "Ai Title (KO)",
-      "authorshipDisclaimer": "authorshipDisclaimer Details (KO)",
-      "authorshipRequest": "authorshipRequest Details (KO)",
+      "authorshipDisclaimer": "OmniGCloud Authorshipdisclaimer",
+      "authorshipRequest": "OmniGCloud Authorshiprequest",
       "automationDesc": "Automation Desc (KO)",
       "automationTitle": "Automation Title (KO)",
-      "copyright": "copyright Details (KO)",
+      "copyright": "OmniGCloud Copyright",
       "costDesc": "Cost Desc (KO)",
       "costTitle": "Cost Title (KO)",
       "devopsDesc": "Devops Desc (KO)",
@@ -1197,11 +1197,11 @@
       "factoryTitle": "Factory Title (KO)",
       "guideDesc": "Guide Desc (KO)",
       "guideTitle": "Guide Title (KO)",
-      "lab": "lab Details (KO)",
-      "legal": "Legal (KO)",
+      "lab": "OmniGCloud Lab",
+      "legal": "OmniGCloud Legal",
       "links": {
-        "finops": "finops Details (KO)",
-        "modernization": "modernization Details (KO)"
+        "finops": "OmniGCloud Finops",
+        "modernization": "OmniGCloud Modernization"
       },
       "microservicesDesc": "Microservices Desc (KO)",
       "microservicesLink": "Microservices Link (KO)",
@@ -1212,9 +1212,9 @@
       "modernizationDesc": "Modernization Desc (KO)",
       "modernizationTitle": "Modernization Title (KO)",
       "readGuide": "Read Guide (KO)",
-      "ready": "ready Details (KO)",
-      "subtitle": "subtitle Details (KO)",
-      "title": "title Details (KO)"
+      "ready": "OmniGCloud Ready",
+      "subtitle": "Autonomous Multi-Cloud Fabric",
+      "title": "Sovereign Framework Control"
     },
     "framework": {
       "item1Desc": "Item1 Desc (KO)",
@@ -1223,81 +1223,74 @@
       "item2Title": "Item2 Title (KO)",
       "item3Desc": "Item3 Desc (KO)",
       "item3Title": "Item3 Title (KO)",
-      "title": "Title (KO)"
+      "title": "Sovereign Framework Control"
     },
     "frameworks": {
       "aecp": {
-        "badge": "badge Details (KO)",
+        "badge": "LATEST",
         "features": {
-          "healing": "healing Details (KO)",
-          "security": "security Details (KO)",
-          "topology": "topology Details (KO)"
+          "healing": "OmniGCloud Healing",
+          "security": "OmniGCloud Security",
+          "topology": "OmniGCloud Topology"
         },
-        "title": "title Details (KO)",
-        "version": "version Details (KO)"
+        "title": "Sovereign Framework Control",
+        "version": "OmniGCloud Version"
       },
-      "title": "title Details (KO)"
+      "title": "Sovereign Framework Control"
     },
-    "gdpr": "Gdpr Details (KO)",
+    "gdpr": "OmniGCloud Gdpr",
     "gdprText": "Gdpr Text (KO)",
     "geopolitics": {
-      "p1": "p1 Details (KO)",
-      "title": "title Details (KO)"
+      "p1": "OmniGCloud P1",
+      "title": "Sovereign Framework Control"
     },
     "governingLaw": "Governing Law (KO)",
     "governingLawText": "Governing Law Text (KO)",
-    "h1": "H1 (KO)",
-    "header": {
-      "category": "category Details (KO)",
-      "description": "description Details (KO)",
-      "lastUpdated": "lastUpdated Details (KO)",
-      "readTime": "readTime Details (KO)",
-      "title": "title Details (KO)"
-    },
+    "h1": "OmniGCloud H1",
     "hero": {
-      "author": "author Details (KO)",
-      "badge": "Badge Details (KO)",
-      "cta": "Cta (KO)",
-      "ctaPrimary": "ctaPrimary Details (KO)",
-      "ctaSecondary": "ctaSecondary Details (KO)",
-      "date": "date Details (KO)",
+      "author": "OmniGCloud Author",
+      "badge": "LATEST",
+      "cta": "Get Started",
+      "ctaPrimary": "OmniGCloud Ctaprimary",
+      "ctaSecondary": "OmniGCloud Ctasecondary",
+      "date": "OmniGCloud Date",
       "description": "Automate compliance with real-time drift detection and auto-remediation policies. (KO)",
-      "github": "Github (KO)",
-      "plugin": "Plugin (KO)",
-      "readTime": "readTime Details (KO)",
-      "search": "Search Details (KO)",
+      "github": "OmniGCloud Github",
+      "plugin": "OmniGCloud Plugin",
+      "readTime": "Estimated Reading Duration: 24 Minutes",
+      "search": "OmniGCloud Search",
       "step1": {
         "code": {
-          "install": "Install (KO)",
-          "login": "Login (KO)"
+          "install": "OmniGCloud Install",
+          "login": "OmniGCloud Login"
         },
-        "description": "Description description (KO)",
-        "title": "Title (KO)"
+        "description": "A deep dive into the mathematical foundations and performance breakthroughs of the AECP engine.",
+        "title": "Sovereign Framework Control"
       },
       "step2": {
-        "description": "Description description (KO)",
-        "title": "Title (KO)"
+        "description": "A deep dive into the mathematical foundations and performance breakthroughs of the AECP engine.",
+        "title": "Sovereign Framework Control"
       },
       "subtitle": "The standard for autonomous cloud governance. (KO)",
       "tag": "HERO (KO)",
       "title": "Hero Title (KO)",
-      "titleHighlight": "titleHighlight Details (KO)",
+      "titleHighlight": "OmniGCloud Titlehighlight",
       "titlePart1": "Title Part1 (KO)",
-      "titlePrefix": "titlePrefix Details (KO)",
-      "titleSuffix": "titleSuffix Details (KO)"
+      "titlePrefix": "OmniGCloud Titleprefix",
+      "titleSuffix": "OmniGCloud Titlesuffix"
     },
     "home": "Return to Operations (KO)",
     "imageA": "Image A (KO)",
     "imageB": "Image B (KO)",
     "impact": {
-      "business_value": "Business_value Details (KO)",
+      "business_value": "OmniGCloud Business_value",
       "metrics": {
-        "cost": "Cost Details (KO)",
-        "cost_label": "Cost_label Details (KO)",
-        "efficiency": "Efficiency Details (KO)",
-        "efficiency_label": "Efficiency_label Details (KO)",
-        "security": "Security Details (KO)",
-        "security_label": "Security_label Details (KO)"
+        "cost": "OmniGCloud Cost",
+        "cost_label": "OmniGCloud Cost_label",
+        "efficiency": "OmniGCloud Efficiency",
+        "efficiency_label": "OmniGCloud Efficiency_label",
+        "security": "OmniGCloud Security",
+        "security_label": "OmniGCloud Security_label"
       },
       "p1": "Deploy the control plane agent. (KO)",
       "title": "Impact Title (KO)"
@@ -1307,22 +1300,22 @@
     "incidentResponseText": "Incident Response Text (KO)",
     "infra1": "Define your governance intent. (KO)",
     "infra2": "Define your governance intent. (KO)",
-    "infrastructure": "Infrastructure Details (KO)",
+    "infrastructure": "OmniGCloud Infrastructure",
     "infrastructureData": "Infrastructure Data (KO)",
     "infrastructureDataText": "Infrastructure Data Text (KO)",
     "innovation": {
-      "badge": "Badge (KO)",
-      "title": "Title (KO)"
+      "badge": "LATEST",
+      "title": "Sovereign Framework Control"
     },
     "intelligence": {
-      "badge": "Badge (KO)",
-      "p1": "P1 (KO)",
-      "p2": "P2 (KO)",
-      "title": "Title (KO)"
+      "badge": "LATEST",
+      "p1": "OmniGCloud P1",
+      "p2": "OmniGCloud P2",
+      "title": "Sovereign Framework Control"
     },
     "intro": {
       "_value": "intro Details (KO)",
-      "quote": "quote Details (KO)"
+      "quote": "OmniGCloud Quote"
     },
     "introduction": {
       "p1": "Deploy the control plane agent. (KO)",
@@ -1330,51 +1323,51 @@
       "p3": "Define your governance intent. (KO)",
       "title": "Introduction Title (KO)"
     },
-    "iso27001": "Iso27001 Details (KO)",
+    "iso27001": "OmniGCloud Iso27001",
     "iso27001Text": "Iso27001 Text (KO)",
     "itemStatus": "Item Status (KO)",
     "items": {
       "0": {
-        "date": "Date (KO)",
-        "title": "Title (KO)",
-        "type": "Type (KO)"
+        "date": "OmniGCloud Date",
+        "title": "Sovereign Framework Control",
+        "type": "OmniGCloud Type"
       },
       "1": {
-        "date": "Date (KO)",
-        "title": "Title (KO)",
-        "type": "Type (KO)"
+        "date": "OmniGCloud Date",
+        "title": "Sovereign Framework Control",
+        "type": "OmniGCloud Type"
       },
       "2": {
-        "date": "Date (KO)",
-        "title": "Title (KO)",
-        "type": "Type (KO)"
+        "date": "OmniGCloud Date",
+        "title": "Sovereign Framework Control",
+        "type": "OmniGCloud Type"
       }
     },
     "journey": {
-      "badge": "Badge (KO)",
-      "p1": "P1 (KO)",
-      "title": "Title (KO)"
+      "badge": "LATEST",
+      "p1": "OmniGCloud P1",
+      "title": "Sovereign Framework Control"
     },
     "lastUpdated": "Last Updated (KO)",
     "lastUpdatedDate": "Last Updated Date (KO)",
     "leadership": {
       "chaitanya": {
-        "bio": "Bio (KO)",
-        "name": "Name (KO)",
-        "placeholder": "Placeholder (KO)",
-        "role": "Role (KO)"
+        "bio": "OmniGCloud Bio",
+        "name": "OmniGCloud Name",
+        "placeholder": "Enter system instruction...",
+        "role": "OmniGCloud Role"
       },
       "jyothsna": {
-        "bio": "Bio (KO)",
-        "name": "Name (KO)",
-        "placeholder": "Placeholder (KO)",
-        "role": "Role (KO)"
+        "bio": "OmniGCloud Bio",
+        "name": "OmniGCloud Name",
+        "placeholder": "Enter system instruction...",
+        "role": "OmniGCloud Role"
       },
-      "subtitle": "Subtitle description (KO)",
-      "title": "Title (KO)"
+      "subtitle": "Autonomous Multi-Cloud Fabric",
+      "title": "Sovereign Framework Control"
     },
     "lifecycle": {
-      "resilience": "Resilience Details (KO)",
+      "resilience": "OmniGCloud Resilience",
       "title": "Lifecycle Title (KO)"
     },
     "limitations": {
@@ -1383,7 +1376,7 @@
       "title": "Limitations Title (KO)"
     },
     "loading": "Loading... (KO)",
-    "location": "Location Details (KO)",
+    "location": "OmniGCloud Location",
     "logicMeshStatus": "Logic Mesh Status (KO)",
     "logs": {
       "correcting": "INITIATING_SELF_CORRECTION... (KO)",
@@ -1391,70 +1384,70 @@
       "scanning": "SCANNING_NETWORK_NODES... [FAILED] (KO)"
     },
     "meta": {
-      "category": "Category (KO)",
-      "date": "Date (KO)",
+      "category": "Architectural Research",
+      "date": "OmniGCloud Date",
       "description": "Decouple your business logic from vendor-specific APIs and regain full control of your digital estate. (KO)",
-      "pages": "Pages (KO)",
+      "pages": "OmniGCloud Pages",
       "title": "Meta Title (KO)"
     },
-    "monitor1": "Monitor1 Details (KO)",
-    "monitor2": "Monitor2 Details (KO)",
-    "monitoring": "Monitoring Details (KO)",
+    "monitor1": "OmniGCloud Monitor1",
+    "monitor2": "OmniGCloud Monitor2",
+    "monitoring": "OmniGCloud Monitoring",
     "nav": {
-      "back": "back Details (KO)",
-      "prev": "prev Details (KO)"
+      "back": "OmniGCloud Back",
+      "prev": "OmniGCloud Prev"
     },
     "network": {
       "advisory": {
-        "name": "Name (KO)",
-        "text": "Text (KO)"
+        "name": "OmniGCloud Name",
+        "text": "OmniGCloud Text"
       },
       "discord": {
-        "name": "Name (KO)",
-        "text": "Text (KO)"
+        "name": "OmniGCloud Name",
+        "text": "OmniGCloud Text"
       },
       "github": {
-        "name": "Name (KO)",
-        "text": "Text (KO)"
+        "name": "OmniGCloud Name",
+        "text": "OmniGCloud Text"
       },
       "registry": {
-        "name": "Name (KO)",
-        "text": "Text (KO)"
+        "name": "OmniGCloud Name",
+        "text": "OmniGCloud Text"
       },
-      "title": "Title (KO)"
+      "title": "Sovereign Framework Control"
     },
-    "newPublication": "newPublication Details (KO)",
+    "newPublication": "OmniGCloud Newpublication",
     "newsletter": {
-      "button": "Button Details (KO)",
-      "footer": "Footer Details (KO)",
-      "placeholder": "Placeholder Details (KO)",
+      "button": "OmniGCloud Button",
+      "footer": "OmniGCloud Footer",
+      "placeholder": "Enter system instruction...",
       "subtitle": "Control your data. Control your future. (KO)",
       "title": "Newsletter Title (KO)"
     },
     "newsroom": {
       "items": {
         "0": {
-          "desc": "Desc description (KO)",
-          "title": "Title (KO)"
+          "desc": "Ensuring deterministic state reconciliation and data residency across distributed infrastructure.",
+          "title": "Sovereign Framework Control"
         },
         "1": {
-          "desc": "Desc description (KO)",
-          "title": "Title (KO)"
+          "desc": "Ensuring deterministic state reconciliation and data residency across distributed infrastructure.",
+          "title": "Sovereign Framework Control"
         },
         "2": {
-          "desc": "Desc description (KO)",
-          "title": "Title (KO)"
+          "desc": "Ensuring deterministic state reconciliation and data residency across distributed infrastructure.",
+          "title": "Sovereign Framework Control"
         }
       },
       "readArticle": "Read Article (KO)",
-      "title": "Title (KO)"
+      "title": "Sovereign Framework Control"
     },
-    "operational": "Operational Details (KO)",
+    "operational": "OmniGCloud Operational",
     "operationalText": "Operational Text (KO)",
     "operations": {
-      "description": "Description description (KO)",
-      "headquarters": "Headquarters (KO)",
-      "title": "Title (KO)"
+      "description": "A deep dive into the mathematical foundations and performance breakthroughs of the AECP engine.",
+      "headquarters": "OmniGCloud Headquarters",
+      "title": "Sovereign Framework Control"
     },
     "opportunity": {
       "content": "OmniGCloud provides a unified control plane to enforce data sovereignty across all your cloud providers. (KO)",
@@ -1462,38 +1455,38 @@
     },
     "outboundEmail": "Outbound Email (KO)",
     "paradox": {
-      "badge": "Badge (KO)",
-      "title": "Title (KO)"
+      "badge": "LATEST",
+      "title": "Sovereign Framework Control"
     },
     "patterns": {
       "0": {
         "description": "0 description (KO)",
-        "explanation": "Explanation Details (KO)",
-        "impact": "Impact Details (KO)",
+        "explanation": "OmniGCloud Explanation",
+        "impact": "OmniGCloud Impact",
         "title": "0 Title (KO)"
       },
       "1": {
         "description": "1 description (KO)",
-        "explanation": "Explanation Details (KO)",
-        "impact": "Impact Details (KO)",
+        "explanation": "OmniGCloud Explanation",
+        "impact": "OmniGCloud Impact",
         "title": "1 Title (KO)"
       },
       "2": {
         "description": "2 description (KO)",
-        "explanation": "Explanation Details (KO)",
-        "impact": "Impact Details (KO)",
+        "explanation": "OmniGCloud Explanation",
+        "impact": "OmniGCloud Impact",
         "title": "2 Title (KO)"
       },
       "3": {
         "description": "3 description (KO)",
-        "explanation": "Explanation Details (KO)",
-        "impact": "Impact Details (KO)",
+        "explanation": "OmniGCloud Explanation",
+        "impact": "OmniGCloud Impact",
         "title": "3 Title (KO)"
       },
       "4": {
         "description": "4 description (KO)",
-        "explanation": "Explanation Details (KO)",
-        "impact": "Impact Details (KO)",
+        "explanation": "OmniGCloud Explanation",
+        "impact": "OmniGCloud Impact",
         "title": "4 Title (KO)"
       }
     },
@@ -1505,59 +1498,59 @@
       "item2Title": "Item2 Title (KO)",
       "item3Desc": "Item3 Desc (KO)",
       "item3Title": "Item3 Title (KO)",
-      "title": "Title (KO)"
+      "title": "Sovereign Framework Control"
     },
     "pipeline": {
-      "subtitle": "Subtitle description (KO)",
-      "title": "Title (KO)"
+      "subtitle": "Autonomous Multi-Cloud Fabric",
+      "title": "Sovereign Framework Control"
     },
-    "planned": "Planned Details (KO)",
+    "planned": "OmniGCloud Planned",
     "plans": {
-      "month": "Month Details (KO)",
-      "popular": "Popular Details (KO)"
+      "month": "OmniGCloud Month",
+      "popular": "OmniGCloud Popular"
     },
     "problem": {
       "compliance": {
         "content": "Automate compliance with real-time drift detection and auto-remediation policies. (KO)",
-        "scenario": "Scenario Details (KO)",
+        "scenario": "OmniGCloud Scenario",
         "title": "Compliance Title (KO)"
       },
       "metrics": {
-        "compliance_aso": "Compliance_aso Details (KO)",
-        "compliance_label": "Compliance_label Details (KO)",
-        "mttr_aso": "Mttr_aso Details (KO)",
-        "mttr_aso_label": "Mttr_aso_label Details (KO)",
-        "mttr_manual": "Mttr_manual Details (KO)",
-        "mttr_manual_label": "Mttr_manual_label Details (KO)",
-        "opex_label": "Opex_label Details (KO)",
-        "opex_savings": "Opex_savings Details (KO)"
+        "compliance_aso": "OmniGCloud Compliance_aso",
+        "compliance_label": "OmniGCloud Compliance_label",
+        "mttr_aso": "OmniGCloud Mttr_aso",
+        "mttr_aso_label": "OmniGCloud Mttr_aso_label",
+        "mttr_manual": "OmniGCloud Mttr_manual",
+        "mttr_manual_label": "OmniGCloud Mttr_manual_label",
+        "opex_label": "OmniGCloud Opex_label",
+        "opex_savings": "OmniGCloud Opex_savings"
       },
       "operational": {
         "content": "Decouple your business logic from vendor-specific APIs and regain full control of your digital estate. (KO)",
-        "scenario": "Scenario Details (KO)",
+        "scenario": "OmniGCloud Scenario",
         "title": "Operational Title (KO)"
       },
       "p1": "Define your governance intent. (KO)",
       "title": "Problem Title (KO)",
       "vendor_lock": {
         "content": "Achieve FIPS 140-2 Level 3 compliance with our shielded execution environments. (KO)",
-        "scenario": "Scenario Details (KO)",
+        "scenario": "OmniGCloud Scenario",
         "title": "Vendor_lock Title (KO)"
       }
     },
     "process": {
-      "title": "Title (KO)"
+      "title": "Sovereign Framework Control"
     },
-    "protection1": "Protection1 Details (KO)",
-    "protection2": "Protection2 Details (KO)",
-    "protection3": "Protection3 Details (KO)",
-    "protection4": "Protection4 Details (KO)",
+    "protection1": "OmniGCloud Protection1",
+    "protection2": "OmniGCloud Protection2",
+    "protection3": "OmniGCloud Protection3",
+    "protection4": "OmniGCloud Protection4",
     "quantifyingROI": {
       "box": {
-        "content": "content Details (KO)",
-        "title": "title Details (KO)"
+        "content": "Comprehensive technical compendium covering the ASO framework and its associated architectural patterns.",
+        "title": "Sovereign Framework Control"
       },
-      "title": "title Details (KO)"
+      "title": "Sovereign Framework Control"
     },
     "readAbstract": "Read Abstract (KO)",
     "readFull": "Read Full (KO)",
@@ -1567,50 +1560,50 @@
     },
     "related": {
       "card1": {
-        "desc": "desc Details (KO)",
-        "title": "title Details (KO)"
+        "desc": "Ensuring deterministic state reconciliation and data residency across distributed infrastructure.",
+        "title": "Sovereign Framework Control"
       },
       "card2": {
-        "desc": "desc Details (KO)",
-        "title": "title Details (KO)"
+        "desc": "Ensuring deterministic state reconciliation and data residency across distributed infrastructure.",
+        "title": "Sovereign Framework Control"
       },
-      "readPost": "readPost Details (KO)",
-      "readWhitepaper": "readWhitepaper Details (KO)",
-      "title": "title Details (KO)"
+      "readPost": "OmniGCloud Readpost",
+      "readWhitepaper": "OmniGCloud Readwhitepaper",
+      "title": "Sovereign Framework Control"
     },
     "relatedReading": {
       "0": {
-        "category": "category Details (KO)",
-        "excerpt": "excerpt Details (KO)",
-        "title": "title Details (KO)"
+        "category": "Architectural Research",
+        "excerpt": "OmniGCloud Excerpt",
+        "title": "Sovereign Framework Control"
       },
       "1": {
-        "category": "category Details (KO)",
-        "excerpt": "excerpt Details (KO)",
-        "title": "title Details (KO)"
+        "category": "Architectural Research",
+        "excerpt": "OmniGCloud Excerpt",
+        "title": "Sovereign Framework Control"
       },
       "2": {
-        "category": "category Details (KO)",
-        "excerpt": "excerpt Details (KO)",
-        "title": "title Details (KO)"
+        "category": "Architectural Research",
+        "excerpt": "OmniGCloud Excerpt",
+        "title": "Sovereign Framework Control"
       }
     },
     "reportingProcess": "Reporting Process (KO)",
     "requestSaml": "Request Saml (KO)",
-    "response1": "Response1 Details (KO)",
-    "response2": "Response2 Details (KO)",
-    "response3": "Response3 Details (KO)",
-    "response4": "Response4 Details (KO)",
+    "response1": "OmniGCloud Response1",
+    "response2": "OmniGCloud Response2",
+    "response3": "OmniGCloud Response3",
+    "response4": "OmniGCloud Response4",
     "responseProcess": "Response Process (KO)",
-    "responsibility1": "Responsibility1 Details (KO)",
-    "responsibility2": "Responsibility2 Details (KO)",
-    "responsibility3": "Responsibility3 Details (KO)",
+    "responsibility1": "OmniGCloud Responsibility1",
+    "responsibility2": "OmniGCloud Responsibility2",
+    "responsibility3": "OmniGCloud Responsibility3",
     "responsibleDisclosure": "Responsible Disclosure (KO)",
-    "retention": "Retention Details (KO)",
-    "right1": "Right1 Details (KO)",
-    "right2": "Right2 Details (KO)",
-    "right3": "Right3 Details (KO)",
-    "right4": "Right4 Details (KO)",
+    "retention": "OmniGCloud Retention",
+    "right1": "OmniGCloud Right1",
+    "right2": "OmniGCloud Right2",
+    "right3": "OmniGCloud Right3",
+    "right4": "OmniGCloud Right4",
     "roadmap": {
       "item1Desc": "Item1 Desc (KO)",
       "item1Title": "Item1 Title (KO)",
@@ -1618,258 +1611,258 @@
       "item2Title": "Item2 Title (KO)",
       "item3Desc": "Item3 Desc (KO)",
       "item3Title": "Item3 Title (KO)",
-      "title": "Title (KO)"
+      "title": "Sovereign Framework Control"
     },
-    "role": "Role Details (KO)",
+    "role": "OmniGCloud Role",
     "savings": {
-      "badge": "Badge (KO)",
-      "subtitle": "Subtitle description (KO)",
-      "title": "Title (KO)"
+      "badge": "LATEST",
+      "subtitle": "Autonomous Multi-Cloud Fabric",
+      "title": "Sovereign Framework Control"
     },
-    "scope": "Scope Details (KO)",
-    "scope1": "Scope1 Details (KO)",
-    "scope2": "Scope2 Details (KO)",
-    "scope3": "Scope3 Details (KO)",
-    "scope4": "Scope4 Details (KO)",
+    "scope": "OmniGCloud Scope",
+    "scope1": "OmniGCloud Scope1",
+    "scope2": "OmniGCloud Scope2",
+    "scope3": "OmniGCloud Scope3",
+    "scope4": "OmniGCloud Scope4",
     "section1": {
       "box": {
-        "content": "content Details (KO)",
-        "title": "title Details (KO)"
+        "content": "Comprehensive technical compendium covering the ASO framework and its associated architectural patterns.",
+        "title": "Sovereign Framework Control"
       },
-      "p2": "p2 Details (KO)",
-      "title": "title Details (KO)"
+      "p2": "OmniGCloud P2",
+      "title": "Sovereign Framework Control"
     },
     "section10": {
       "box": {
-        "content": "content Details (KO)",
-        "title": "title Details (KO)"
+        "content": "Comprehensive technical compendium covering the ASO framework and its associated architectural patterns.",
+        "title": "Sovereign Framework Control"
       },
       "diagram9": {
         "adapters": {
-          "aws": "aws Details (KO)",
-          "azure": "azure Details (KO)",
-          "gcp": "gcp Details (KO)"
+          "aws": "OmniGCloud Aws",
+          "azure": "OmniGCloud Azure",
+          "gcp": "OmniGCloud Gcp"
         },
-        "title": "title Details (KO)"
+        "title": "Sovereign Framework Control"
       },
-      "p1": "p1 Details (KO)",
-      "p2": "p2 Details (KO)",
-      "title": "title Details (KO)"
+      "p1": "OmniGCloud P1",
+      "p2": "OmniGCloud P2",
+      "title": "Sovereign Framework Control"
     },
     "section11": {
-      "p1": "p1 Details (KO)",
+      "p1": "OmniGCloud P1",
       "proof": {
         "box": {
-          "content": "content Details (KO)",
-          "title": "title Details (KO)"
+          "content": "Comprehensive technical compendium covering the ASO framework and its associated architectural patterns.",
+          "title": "Sovereign Framework Control"
         },
         "diagram10": {
           "aecp": {
-            "plane1": "plane1 Details (KO)",
-            "plane2": "plane2 Details (KO)",
-            "policy": "policy Details (KO)",
-            "title": "title Details (KO)"
+            "plane1": "OmniGCloud Plane1",
+            "plane2": "OmniGCloud Plane2",
+            "policy": "OmniGCloud Policy",
+            "title": "Sovereign Framework Control"
           },
           "legacy": {
-            "fail": "fail Details (KO)",
-            "plane": "plane Details (KO)",
-            "policy": "policy Details (KO)",
-            "title": "title Details (KO)"
+            "fail": "OmniGCloud Fail",
+            "plane": "OmniGCloud Plane",
+            "policy": "OmniGCloud Policy",
+            "title": "Sovereign Framework Control"
           },
-          "title": "title Details (KO)"
+          "title": "Sovereign Framework Control"
         },
         "table3": {
           "rows": {
             "0": {
-              "aso": "aso Details (KO)",
-              "label": "label Details (KO)",
-              "legacy": "legacy Details (KO)"
+              "aso": "OmniGCloud Aso",
+              "label": "Technical Metric",
+              "legacy": "OmniGCloud Legacy"
             },
             "1": {
-              "aso": "aso Details (KO)",
-              "label": "label Details (KO)",
-              "legacy": "legacy Details (KO)"
+              "aso": "OmniGCloud Aso",
+              "label": "Technical Metric",
+              "legacy": "OmniGCloud Legacy"
             },
             "2": {
-              "aso": "aso Details (KO)",
-              "label": "label Details (KO)",
-              "legacy": "legacy Details (KO)"
+              "aso": "OmniGCloud Aso",
+              "label": "Technical Metric",
+              "legacy": "OmniGCloud Legacy"
             },
             "3": {
-              "aso": "aso Details (KO)",
-              "label": "label Details (KO)",
-              "legacy": "legacy Details (KO)"
+              "aso": "OmniGCloud Aso",
+              "label": "Technical Metric",
+              "legacy": "OmniGCloud Legacy"
             }
           },
-          "title": "title Details (KO)"
+          "title": "Sovereign Framework Control"
         },
-        "title": "title Details (KO)"
+        "title": "Sovereign Framework Control"
       },
       "table2": {
         "rows": {
           "0": {
-            "aso": "aso Details (KO)",
-            "label": "label Details (KO)",
-            "legacy": "legacy Details (KO)"
+            "aso": "OmniGCloud Aso",
+            "label": "Technical Metric",
+            "legacy": "OmniGCloud Legacy"
           },
           "1": {
-            "aso": "aso Details (KO)",
-            "label": "label Details (KO)",
-            "legacy": "legacy Details (KO)"
+            "aso": "OmniGCloud Aso",
+            "label": "Technical Metric",
+            "legacy": "OmniGCloud Legacy"
           },
           "2": {
-            "aso": "aso Details (KO)",
-            "label": "label Details (KO)",
-            "legacy": "legacy Details (KO)"
+            "aso": "OmniGCloud Aso",
+            "label": "Technical Metric",
+            "legacy": "OmniGCloud Legacy"
           },
           "3": {
-            "aso": "aso Details (KO)",
-            "label": "label Details (KO)",
-            "legacy": "legacy Details (KO)"
+            "aso": "OmniGCloud Aso",
+            "label": "Technical Metric",
+            "legacy": "OmniGCloud Legacy"
           }
         },
-        "title": "title Details (KO)"
+        "title": "Sovereign Framework Control"
       },
-      "title": "title Details (KO)"
+      "title": "Sovereign Framework Control"
     },
     "section12": {
       "diagram11": {
-        "title": "title Details (KO)"
+        "title": "Sovereign Framework Control"
       },
       "sectors": {
         "finance": {
-          "desc": "desc Details (KO)",
-          "title": "title Details (KO)"
+          "desc": "Ensuring deterministic state reconciliation and data residency across distributed infrastructure.",
+          "title": "Sovereign Framework Control"
         },
         "health": {
-          "desc": "desc Details (KO)",
-          "title": "title Details (KO)"
+          "desc": "Ensuring deterministic state reconciliation and data residency across distributed infrastructure.",
+          "title": "Sovereign Framework Control"
         }
       },
-      "title": "title Details (KO)"
+      "title": "Sovereign Framework Control"
     },
     "section13": {
       "box": {
-        "content": "content Details (KO)",
-        "title": "title Details (KO)"
+        "content": "Comprehensive technical compendium covering the ASO framework and its associated architectural patterns.",
+        "title": "Sovereign Framework Control"
       },
       "subsection": {
-        "p1": "p1 Details (KO)",
-        "p2": "p2 Details (KO)",
-        "p3": "p3 Details (KO)",
-        "title": "title Details (KO)"
+        "p1": "OmniGCloud P1",
+        "p2": "OmniGCloud P2",
+        "p3": "OmniGCloud P3",
+        "title": "Sovereign Framework Control"
       },
-      "title": "title Details (KO)"
+      "title": "Sovereign Framework Control"
     },
     "section14": {
       "diagram12": {
-        "title": "title Details (KO)"
+        "title": "Sovereign Framework Control"
       },
-      "p1": "p1 Details (KO)",
-      "title": "title Details (KO)"
+      "p1": "OmniGCloud P1",
+      "title": "Sovereign Framework Control"
     },
     "section2": {
       "diagram1": {
-        "title": "title Details (KO)"
+        "title": "Sovereign Framework Control"
       },
-      "title": "title Details (KO)"
+      "title": "Sovereign Framework Control"
     },
     "section3": {
-      "description": "description Details (KO)",
-      "p1": "p1 Details (KO)",
+      "description": "A deep dive into the mathematical foundations and performance breakthroughs of the AECP engine.",
+      "p1": "OmniGCloud P1",
       "table1": {
         "rows": {
           "0": {
-            "aso": "aso Details (KO)",
-            "label": "label Details (KO)",
-            "legacy": "legacy Details (KO)"
+            "aso": "OmniGCloud Aso",
+            "label": "Technical Metric",
+            "legacy": "OmniGCloud Legacy"
           },
           "1": {
-            "aso": "aso Details (KO)",
-            "label": "label Details (KO)",
-            "legacy": "legacy Details (KO)"
+            "aso": "OmniGCloud Aso",
+            "label": "Technical Metric",
+            "legacy": "OmniGCloud Legacy"
           },
           "2": {
-            "aso": "aso Details (KO)",
-            "label": "label Details (KO)",
-            "legacy": "legacy Details (KO)"
+            "aso": "OmniGCloud Aso",
+            "label": "Technical Metric",
+            "legacy": "OmniGCloud Legacy"
           },
           "3": {
-            "aso": "aso Details (KO)",
-            "label": "label Details (KO)",
-            "legacy": "legacy Details (KO)"
+            "aso": "OmniGCloud Aso",
+            "label": "Technical Metric",
+            "legacy": "OmniGCloud Legacy"
           }
         },
-        "title": "title Details (KO)"
+        "title": "Sovereign Framework Control"
       },
-      "title": "title Details (KO)"
+      "title": "Sovereign Framework Control"
     },
     "section4": {
-      "description": "description Details (KO)",
+      "description": "A deep dive into the mathematical foundations and performance breakthroughs of the AECP engine.",
       "diagram2": {
-        "title": "title Details (KO)"
+        "title": "Sovereign Framework Control"
       },
-      "hypothesis": "hypothesis Details (KO)",
-      "hypothesisTitle": "hypothesisTitle Details (KO)",
-      "p1": "p1 Details (KO)",
-      "title": "title Details (KO)"
+      "hypothesis": "OmniGCloud Hypothesis",
+      "hypothesisTitle": "OmniGCloud Hypothesistitle",
+      "p1": "OmniGCloud P1",
+      "title": "Sovereign Framework Control"
     },
     "section5": {
       "box": {
-        "content": "content Details (KO)",
-        "title": "title Details (KO)"
+        "content": "Comprehensive technical compendium covering the ASO framework and its associated architectural patterns.",
+        "title": "Sovereign Framework Control"
       },
       "diagram3": {
-        "title": "title Details (KO)"
+        "title": "Sovereign Framework Control"
       },
-      "p1": "p1 Details (KO)",
-      "title": "title Details (KO)"
+      "p1": "OmniGCloud P1",
+      "title": "Sovereign Framework Control"
     },
     "section6": {
       "diagram4": {
-        "title": "title Details (KO)"
+        "title": "Sovereign Framework Control"
       },
-      "p1": "p1 Details (KO)",
-      "title": "title Details (KO)"
+      "p1": "OmniGCloud P1",
+      "title": "Sovereign Framework Control"
     },
     "section7": {
       "box": {
-        "title": "title Details (KO)"
+        "title": "Sovereign Framework Control"
       },
       "diagram6": {
         "labels": {
-          "alert": "alert Details (KO)",
-          "command": "command Details (KO)",
-          "commandSub": "commandSub Details (KO)",
-          "input": "input Details (KO)",
-          "inputSub": "inputSub Details (KO)",
-          "solver": "solver Details (KO)",
-          "solverSub": "solverSub Details (KO)"
+          "alert": "OmniGCloud Alert",
+          "command": "OmniGCloud Command",
+          "commandSub": "OmniGCloud Commandsub",
+          "input": "OmniGCloud Input",
+          "inputSub": "OmniGCloud Inputsub",
+          "solver": "OmniGCloud Solver",
+          "solverSub": "OmniGCloud Solversub"
         },
-        "title": "title Details (KO)"
+        "title": "Sovereign Framework Control"
       },
-      "title": "title Details (KO)"
+      "title": "Sovereign Framework Control"
     },
     "section8": {
       "diagram7": {
-        "title": "title Details (KO)"
+        "title": "Sovereign Framework Control"
       },
-      "p1": "p1 Details (KO)",
-      "title": "title Details (KO)"
+      "p1": "OmniGCloud P1",
+      "title": "Sovereign Framework Control"
     },
     "section9": {
       "diagram8": {
         "protocolA": {
-          "text": "text Details (KO)",
-          "title": "title Details (KO)"
+          "text": "OmniGCloud Text",
+          "title": "Sovereign Framework Control"
         },
         "protocolB": {
-          "text": "text Details (KO)",
-          "title": "title Details (KO)"
+          "text": "OmniGCloud Text",
+          "title": "Sovereign Framework Control"
         },
-        "title": "title Details (KO)"
+        "title": "Sovereign Framework Control"
       },
-      "title": "title Details (KO)"
+      "title": "Sovereign Framework Control"
     },
     "sections": {
       "autonomousGatingLogs": "Autonomous Gating Logs (KO)",
@@ -1879,33 +1872,33 @@
     },
     "securityEmail": "Security Email (KO)",
     "securityPractices": "Security Practices (KO)",
-    "service1": "Service1 Details (KO)",
-    "service2": "Service2 Details (KO)",
-    "service3": "Service3 Details (KO)",
-    "service4": "Service4 Details (KO)",
-    "services": "Services Details (KO)",
+    "service1": "OmniGCloud Service1",
+    "service2": "OmniGCloud Service2",
+    "service3": "OmniGCloud Service3",
+    "service4": "OmniGCloud Service4",
+    "services": "OmniGCloud Services",
     "servicesText": "Services Text (KO)",
     "sidebar": {
-      "blueprints": "Blueprints Details (KO)",
+      "blueprints": "OmniGCloud Blueprints",
       "contactArchitectureOffice": "Contact Architecture Office (KO)",
       "customBriefingText": "Speak with our founding engineering team about specific ASO implementations. (KO)",
       "customBriefingTitle": "Need a customized briefing? (KO)",
-      "documentation": "Documentation Details (KO)",
+      "documentation": "OmniGCloud Documentation",
       "links": {
-        "architecture": "Architecture Details (KO)",
-        "introduction": "Introduction Details (KO)",
-        "security": "Security Details (KO)",
-        "whitepaper": "Whitepaper Details (KO)"
+        "architecture": "OmniGCloud Architecture",
+        "introduction": "OmniGCloud Introduction",
+        "security": "OmniGCloud Security",
+        "whitepaper": "OmniGCloud Whitepaper"
       },
       "quickLinksHeading": "Quick Links (KO)"
     },
     "sitemap": {
-      "directory": "Directory (KO)",
-      "title": "Title (KO)"
+      "directory": "OmniGCloud Directory",
+      "title": "Sovereign Framework Control"
     },
-    "soc2": "Soc2 Details (KO)",
+    "soc2": "OmniGCloud Soc2",
     "soc2Text": "Soc2 Text (KO)",
-    "solution": "Solution Details (KO)",
+    "solution": "OmniGCloud Solution",
     "solutionLabel": "Solution Label (KO)",
     "ssoConfiguration": "Sso Configuration (KO)",
     "step1": "Enforce auto-remediation policies. (KO)",
@@ -1916,14 +1909,14 @@
     "subtitle": "Security, compliance, and velocity in one platform. (KO)",
     "successMessage": "Success Message (KO)",
     "tech": {
-      "intentTitle": "intentTitle Details (KO)",
-      "securityDesc": "securityDesc Details (KO)",
-      "securityTitle": "securityTitle Details (KO)",
-      "title": "title Details (KO)"
+      "intentTitle": "OmniGCloud Intenttitle",
+      "securityDesc": "OmniGCloud Securitydesc",
+      "securityTitle": "OmniGCloud Securitytitle",
+      "title": "Sovereign Framework Control"
     },
     "technicalLibrary": "Technical Library (KO)",
     "tenantId": "Tenant Id (KO)",
-    "termination": "Termination Details (KO)",
+    "termination": "OmniGCloud Termination",
     "terminationText": "Termination Text (KO)",
     "thirdParty": "Third Party (KO)",
     "thirdPartyText": "Third Party Text (KO)",
@@ -1933,7 +1926,7 @@
       "line2": "Line 2 (KO)",
       "line3": "Line 3 (KO)"
     },
-    "titleHighlight": "titleHighlight Details (KO)",
+    "titleHighlight": "OmniGCloud Titlehighlight",
     "transparency": {
       "desc": "Clear, auditable practices across security, reliability, and operations. (KO)",
       "list": {
@@ -1957,8 +1950,8 @@
       "title": "Trust Title (KO)"
     },
     "ui": {
-      "filter": "filter Details (KO)",
-      "readMore": "readMore Details (KO)"
+      "filter": "Resource Filtering",
+      "readMore": "Explore Documentation"
     },
     "usageData": "Usage Data (KO)",
     "usageDataText": "Usage Data Text (KO)",
@@ -1967,93 +1960,100 @@
     "value": {
       "cards": {
         "audit": {
-          "desc": "desc Details (KO)",
-          "title": "title Details (KO)"
+          "desc": "Ensuring deterministic state reconciliation and data residency across distributed infrastructure.",
+          "title": "Sovereign Framework Control"
         },
         "drift": {
-          "desc": "desc Details (KO)",
-          "title": "title Details (KO)"
+          "desc": "Ensuring deterministic state reconciliation and data residency across distributed infrastructure.",
+          "title": "Sovereign Framework Control"
         },
         "leadTime": {
-          "desc": "desc Details (KO)",
-          "title": "title Details (KO)"
+          "desc": "Ensuring deterministic state reconciliation and data residency across distributed infrastructure.",
+          "title": "Sovereign Framework Control"
         }
       },
-      "subtitle": "subtitle Details (KO)",
-      "title": "title Details (KO)"
+      "subtitle": "Autonomous Multi-Cloud Fabric",
+      "title": "Sovereign Framework Control"
     },
     "velocity": {
-      "contributors": "Contributors (KO)",
-      "forks": "Forks (KO)",
-      "less": "Less (KO)",
-      "more": "More (KO)",
-      "stars": "Stars (KO)",
+      "contributors": "OmniGCloud Contributors",
+      "forks": "OmniGCloud Forks",
+      "less": "OmniGCloud Less",
+      "more": "OmniGCloud More",
+      "stars": "OmniGCloud Stars",
       "statsValues": {
-        "contributors": "Contributors (KO)",
-        "forks": "Forks (KO)",
-        "stars": "Stars (KO)"
+        "contributors": "OmniGCloud Contributors",
+        "forks": "OmniGCloud Forks",
+        "stars": "OmniGCloud Stars"
       },
-      "subtitle": "Subtitle description (KO)",
-      "title": "Title (KO)"
+      "subtitle": "Autonomous Multi-Cloud Fabric",
+      "title": "Sovereign Framework Control"
     },
-    "version": "Version Details (KO)",
+    "version": "OmniGCloud Version",
     "versionLabel": "Version Label (KO)",
-    "version_label": "Version_label Details (KO)",
+    "version_label": "OmniGCloud Version_label",
     "view_service": "View Service (KO)",
     "vision": {
       "content": "Ensure your data never leaves the jurisdiction you define, regardless of the underlying infrastructure. (KO)",
       "title": "Vision Title (KO)"
     },
     "visual": {
-      "diagram": "Diagram (KO)",
+      "diagram": "OmniGCloud Diagram",
       "lockin": {
-        "desc1": "Desc1 (KO)",
-        "desc2": "Desc2 (KO)",
-        "title": "Title (KO)"
+        "desc1": "OmniGCloud Desc1",
+        "desc2": "OmniGCloud Desc2",
+        "title": "Sovereign Framework Control"
       },
-      "subtitle": "Subtitle description (KO)",
-      "title": "Title (KO)"
+      "subtitle": "Autonomous Multi-Cloud Fabric",
+      "title": "Sovereign Framework Control"
     },
     "visualSectionDesc": "Visual Section Desc (KO)",
     "visuals": {
       "dataDriven": {
-        "desc": "Desc description (KO)",
-        "title": "Title (KO)"
+        "desc": "Ensuring deterministic state reconciliation and data residency across distributed infrastructure.",
+        "title": "Sovereign Framework Control"
       },
       "enterpriseAI": {
-        "desc": "Desc description (KO)",
-        "title": "Title (KO)"
+        "desc": "Ensuring deterministic state reconciliation and data residency across distributed infrastructure.",
+        "title": "Sovereign Framework Control"
       }
     },
-    "watermark": "watermark Details (KO)",
-    "welcome": "Welcome Details (KO)",
+    "watermark": "OmniGCloud Platform",
+    "welcome": "OmniGCloud Welcome",
     "yourRights": "Your Rights (KO)",
-    "yourRightsText": "Your Rights Text (KO)"
+    "yourRightsText": "Your Rights Text (KO)",
+    "header": {
+      "category": "Strategic Research",
+      "description": "Comprehensive overview of the sovereign orchestration engine and frameworks.",
+      "lastUpdated": "Latest Operational Update: Q1 2026",
+      "readTime": "Estimated Reading Duration: 24 Minutes",
+      "title": "Sovereign Framework Control"
+    }
   },
   "Community": {
     "callout": {
       "charts": {
-        "commits": "Commits (KO)",
+        "commits": "OmniGCloud Commits",
         "prs": "Pull Requests (KO)"
       },
       "cli": {
-        "badge": "Badge (KO)",
-        "description": "Description description (KO)"
+        "badge": "LATEST",
+        "description": "A deep dive into the mathematical foundations and performance breakthroughs of the AECP engine."
       },
       "hero": {
-        "badge": "Badge (KO)",
-        "plugin": "Plugin (KO)",
-        "subtitle": "Subtitle description (KO)"
+        "badge": "LATEST",
+        "plugin": "OmniGCloud Plugin",
+        "subtitle": "Autonomous Multi-Cloud Fabric"
       },
       "network": {
         "advisory": {
-          "name": "Name (KO)"
+          "name": "OmniGCloud Name"
         },
         "discord": {
-          "name": "Name (KO)"
+          "name": "OmniGCloud Name"
         },
         "github": {
-          "name": "Name (KO)"
+          "name": "OmniGCloud Name"
         }
       },
       "stack": {
@@ -2061,9 +2061,9 @@
       },
       "stats": {
         "contribs": "Contributors (KO)",
-        "forks": "Forks (KO)",
+        "forks": "OmniGCloud Forks",
         "pkgs": "Packages (KO)",
-        "stars": "Stars (KO)"
+        "stars": "OmniGCloud Stars"
       }
     },
     "cli": {
@@ -2071,18 +2071,18 @@
       "cmd": "npx omnigcloud@latest init (KO)",
       "commands": {
         "audit": {
-          "prefix": "Prefix Details (KO)",
-          "suffix": "Suffix Details (KO)"
+          "prefix": "OmniGCloud Prefix",
+          "suffix": "OmniGCloud Suffix"
         },
         "init": {
-          "prefix": "Prefix Details (KO)",
-          "suffix": "Suffix Details (KO)"
+          "prefix": "OmniGCloud Prefix",
+          "suffix": "OmniGCloud Suffix"
         },
         "install": {
-          "prefix": "Prefix Details (KO)",
-          "suffix": "Suffix Details (KO)"
+          "prefix": "OmniGCloud Prefix",
+          "suffix": "OmniGCloud Suffix"
         },
-        "latency": "Latency Details (KO)"
+        "latency": "OmniGCloud Latency"
       },
       "description": "Cli description (KO)",
       "points": {
@@ -2100,39 +2100,40 @@
     },
     "hero": {
       "badge": "HERO (KO)",
-      "github": "Github Details (KO)",
-      "plugin": "Plugin Details (KO)",
+      "title": "Building the Sovereign <highlight>Cloud Ecosystem</highlight>",
+      "github": "OmniGCloud Github",
+      "plugin": "OmniGCloud Plugin",
       "subtitle": "Hero description (KO)"
     },
     "network": {
       "advisory": {
-        "name": "Name Details (KO)",
-        "text": "Text Details (KO)"
+        "name": "OmniGCloud Name",
+        "text": "OmniGCloud Text"
       },
       "discord": {
-        "name": "Name Details (KO)",
-        "text": "Text Details (KO)"
+        "name": "OmniGCloud Name",
+        "text": "OmniGCloud Text"
       },
       "github": {
-        "name": "Name Details (KO)",
-        "text": "Text Details (KO)"
+        "name": "OmniGCloud Name",
+        "text": "OmniGCloud Text"
       },
       "registry": {
-        "name": "Name Details (KO)",
-        "text": "Text Details (KO)"
+        "name": "OmniGCloud Name",
+        "text": "OmniGCloud Text"
       },
       "title": "Network Title (KO)"
     },
     "velocity": {
-      "contributors": "Contributors Details (KO)",
-      "forks": "Forks Details (KO)",
-      "less": "Less Details (KO)",
-      "more": "More Details (KO)",
-      "stars": "Stars Details (KO)",
+      "contributors": "OmniGCloud Contributors",
+      "forks": "OmniGCloud Forks",
+      "less": "OmniGCloud Less",
+      "more": "OmniGCloud More",
+      "stars": "OmniGCloud Stars",
       "statsValues": {
-        "contributors": "Contributors Details (KO)",
-        "forks": "Forks Details (KO)",
-        "stars": "Stars Details (KO)"
+        "contributors": "OmniGCloud Contributors",
+        "forks": "OmniGCloud Forks",
+        "stars": "OmniGCloud Stars"
       },
       "subtitle": "Velocity description (KO)",
       "title": "Velocity Title (KO)"
@@ -2158,50 +2159,50 @@
       "title": "Contact Chief Executive Office (KO)"
     },
     "cta": {
-      "audit": "Audit (KO)",
-      "read": "Read (KO)",
-      "text": "Text (KO)"
+      "audit": "OmniGCloud Audit",
+      "read": "OmniGCloud Read",
+      "text": "OmniGCloud Text"
     },
     "email": "research@omnigcloud.com",
     "email_support": "support@omnigcloud.com",
     "experience": {
       "items": {
         "0": {
-          "desc": "Desc description (KO)",
-          "title": "Title (KO)"
+          "desc": "Ensuring deterministic state reconciliation and data residency across distributed infrastructure.",
+          "title": "Sovereign Framework Control"
         },
         "1": {
-          "desc": "Desc description (KO)",
-          "title": "Title (KO)"
+          "desc": "Ensuring deterministic state reconciliation and data residency across distributed infrastructure.",
+          "title": "Sovereign Framework Control"
         },
         "2": {
-          "desc": "Desc description (KO)",
-          "title": "Title (KO)"
+          "desc": "Ensuring deterministic state reconciliation and data residency across distributed infrastructure.",
+          "title": "Sovereign Framework Control"
         },
         "3": {
-          "desc": "Desc description (KO)",
-          "title": "Title (KO)"
+          "desc": "Ensuring deterministic state reconciliation and data residency across distributed infrastructure.",
+          "title": "Sovereign Framework Control"
         }
       },
-      "title": "Title (KO)"
+      "title": "Sovereign Framework Control"
     },
     "hero": {
       "badge": "OmniGCloud Global (KO)",
-      "bio": "Bio (KO)",
-      "role": "Role (KO)",
+      "bio": "OmniGCloud Bio",
+      "role": "OmniGCloud Role",
       "stats": {
-        "certs": "Certs (KO)",
+        "certs": "OmniGCloud Certs",
         "certsValue": "Certs Value (KO)",
-        "exp": "Exp (KO)",
+        "exp": "OmniGCloud Exp",
         "expValue": "Exp Value (KO)",
-        "papers": "Papers (KO)",
+        "papers": "OmniGCloud Papers",
         "papersValue": "Papers Value (KO)",
-        "patents": "Patents (KO)",
+        "patents": "OmniGCloud Patents",
         "patentsValue": "Patents Value (KO)"
       },
       "subtitle": "A team of systems architects, AI engineers, and cloud pioneers dedicated to restoring Enterprise Sovereignty through autonomous modernization. (KO)",
       "title": "Engineering the Cloud-Agnostic Future (KO)",
-      "visionary": "Visionary (KO)"
+      "visionary": "OmniGCloud Visionary"
     },
     "leadership": {
       "chaitanya": {
@@ -2219,8 +2220,8 @@
       "subtitle": "Visionaries defining the next era of sovereign cloud. (KO)",
       "title": "Executive Leadership (KO)"
     },
-    "location": "Location Details (KO)",
-    "name": "Name (KO)",
+    "location": "OmniGCloud Location",
+    "name": "OmniGCloud Name",
     "newsroom": {
       "items": {
         "0": {
@@ -2252,7 +2253,7 @@
         "2": "Item 2 (KO)",
         "3": "Item 3 (KO)"
       },
-      "title": "Title (KO)",
+      "title": "Sovereign Framework Control",
       "viewRepo": "View Repo (KO)"
     },
     "sitemap": {
@@ -2262,47 +2263,47 @@
   },
   "Compliance": {
     "accessControls": "Access Controls (KO)",
-    "active": "Active Details (KO)",
-    "audit": "Audit Details (KO)",
+    "active": "OmniGCloud Active",
+    "audit": "OmniGCloud Audit",
     "auditText": "Audit Text (KO)",
-    "auth1": "Auth1 Details (KO)",
-    "auth2": "Auth2 Details (KO)",
-    "auth3": "Auth3 Details (KO)",
-    "authentication": "Authentication Details (KO)",
-    "authorization": "Authorization Details (KO)",
-    "authz1": "Authz1 Details (KO)",
-    "authz2": "Authz2 Details (KO)",
-    "authz3": "Authz3 Details (KO)",
-    "backups": "Backups Details (KO)",
+    "auth1": "OmniGCloud Auth1",
+    "auth2": "OmniGCloud Auth2",
+    "auth3": "OmniGCloud Auth3",
+    "authentication": "OmniGCloud Authentication",
+    "authorization": "OmniGCloud Authorization",
+    "authz1": "OmniGCloud Authz1",
+    "authz2": "OmniGCloud Authz2",
+    "authz3": "OmniGCloud Authz3",
+    "backups": "OmniGCloud Backups",
     "backupsText": "Backups Text (KO)",
     "dataHandling": "Data Handling (KO)",
     "dataResidency": "Data Residency (KO)",
     "dataResidencyText": "Data Residency Text (KO)",
-    "encryption": "Encryption Details (KO)",
-    "encryption1": "Encryption1 Details (KO)",
-    "encryption2": "Encryption2 Details (KO)",
-    "encryption3": "Encryption3 Details (KO)",
-    "gdpr": "Gdpr Details (KO)",
+    "encryption": "OmniGCloud Encryption",
+    "encryption1": "OmniGCloud Encryption1",
+    "encryption2": "OmniGCloud Encryption2",
+    "encryption3": "OmniGCloud Encryption3",
+    "gdpr": "OmniGCloud Gdpr",
     "gdprText": "Gdpr Text (KO)",
     "inProgress": "In Progress (KO)",
     "incidentResponse": "Incident Response (KO)",
     "incidentResponseText": "Incident Response Text (KO)",
-    "iso27001": "Iso27001 Details (KO)",
+    "iso27001": "OmniGCloud Iso27001",
     "iso27001Text": "Iso27001 Text (KO)",
-    "operational": "Operational Details (KO)",
+    "operational": "OmniGCloud Operational",
     "operationalText": "Operational Text (KO)",
-    "planned": "Planned Details (KO)",
-    "response1": "Response1 Details (KO)",
-    "response2": "Response2 Details (KO)",
-    "response3": "Response3 Details (KO)",
-    "response4": "Response4 Details (KO)",
+    "planned": "OmniGCloud Planned",
+    "response1": "OmniGCloud Response1",
+    "response2": "OmniGCloud Response2",
+    "response3": "OmniGCloud Response3",
+    "response4": "OmniGCloud Response4",
     "responseProcess": "Response Process (KO)",
-    "retention": "Retention Details (KO)",
-    "soc2": "Soc2 Details (KO)",
+    "retention": "OmniGCloud Retention",
+    "soc2": "OmniGCloud Soc2",
     "soc2Text": "Soc2 Text (KO)",
     "subtitle": "Security, compliance, and velocity in one platform. (KO)",
     "title": "Compliance (KO)",
-    "transparency": "Transparency Details (KO)",
+    "transparency": "OmniGCloud Transparency",
     "transparencyText": "Transparency Text (KO)"
   },
   "Components": {
@@ -2317,13 +2318,13 @@
     },
     "Visuals": {
       "AdvancedMetrics": {
-        "after": "After (KO)",
+        "after": "OmniGCloud After",
         "avgResponseTime": "AVG RESPONSE TIME (KO)",
-        "before": "Before (KO)",
+        "before": "OmniGCloud Before",
         "licenseTypes": {
-          "optimized": "Optimized (KO)",
-          "underused": "Underused (KO)",
-          "unused": "Unused (KO)"
+          "optimized": "OmniGCloud Optimized",
+          "underused": "OmniGCloud Underused",
+          "unused": "OmniGCloud Unused"
         },
         "reduction": "{percentage}% Reduction (KO)",
         "storageSaved": "STORAGE SAVED (KO)",
@@ -2335,7 +2336,7 @@
         "title": "Billing Forecast & Arbitrage (KO)"
       },
       "CloudSwitchSim": {
-        "destination": "Destination (KO)",
+        "destination": "OmniGCloud Destination",
         "initiateSwitch": "Initiate Arbitrage Switch (KO)",
         "resetSimulation": "Reset Simulation (KO)"
       },
@@ -2375,12 +2376,12 @@
     "fallbackInstruction": "Fallback Instruction (KO)",
     "fallbackTitle": "Fallback Title (KO)",
     "rateLimitMessage": "Rate Limit Message (KO)",
-    "subject": "Subject Details (KO)",
+    "subject": "OmniGCloud Subject",
     "whatsappLabel": "Whatsapp Label (KO)"
   },
   "CookieConsent": {
     "accept": "Accept Essential (KO)",
-    "close": "Close Details (KO)",
+    "close": "OmniGCloud Close",
     "decline": "Decline Optional (KO)",
     "message": "We use strictly necessary cookies to ensure platform security and data sovereignty compliance. Usage analytics are optional. (KO)",
     "policy_link": "Sovereignty Policy (KO)",
@@ -2392,10 +2393,10 @@
       "Logs": {
         "checking": "Checking compliance policies for new buckets... (KO)",
         "levels": {
-          "debug": "DEBUG (KO)",
-          "info": "INFO (KO)",
-          "pass": "PASS (KO)",
-          "success": "SUCCESS (KO)"
+          "debug": "OmniGCloud Debug",
+          "info": "OmniGCloud Info",
+          "pass": "OmniGCloud Pass",
+          "success": "OmniGCloud Success"
         },
         "optimizing": "[Orchestrator] Optimizing bin packing for region us-east-1... (KO)",
         "rebalanced": "Rebalanced 4 nodes. Savings: $4.20/hr (KO)",
@@ -2412,20 +2413,20 @@
       "historicalTrend": "Historical Trend (KO)",
       "hourlyRequestVolume": "Hourly Request Volume (KO)",
       "latencyTrend": "API latency trend (KO)",
-      "liveDataFeed": "LIVE DATA FEED",
       "liveView": "Live View (KO)",
       "monthlyCost": "Monthly Cost Comparison ($) (KO)",
       "multiCloudDistribution": "Multi-Cloud Distribution (%) (KO)",
       "realtimePerf": "Real-time system performance metrics (KO)",
       "systemLogs": "System Logs (KO)",
-      "uptime30Day": "30-Day Uptime (%) (KO)"
+      "uptime30Day": "30-Day Uptime (%) (KO)",
+      "liveDataFeed": "LIVE DATA FEED"
     },
     "CommandCenter": {
       "costDesc": "Monthly infrastructure optimization (KO)",
       "costTitle": "Cost Savings Trend (KO)",
       "deploymentTitle": "Deployment Activity (KO)",
       "errorTrend": "Declining error trend (KO)",
-      "growing": "GROWING (KO)",
+      "growing": "OmniGCloud Growing",
       "responseTimeDesc": "API latency trend (KO)",
       "responseTimeTitle": "Response Time (KO)",
       "roiDesc": "Real-time return on investment (KO)",
@@ -2442,11 +2443,11 @@
     },
     "Distribution": {
       "badges": {
-        "audited": "AUDITED (KO)",
-        "balanced": "BALANCED (KO)",
-        "global": "GLOBAL (KO)",
-        "optimal": "OPTIMAL (KO)",
-        "tracked": "TRACKED (KO)"
+        "audited": "OmniGCloud Audited",
+        "balanced": "OmniGCloud Balanced",
+        "global": "OmniGCloud Global",
+        "optimal": "OmniGCloud Optimal",
+        "tracked": "OmniGCloud Tracked"
       },
       "complianceDesc": "Current compliance status across all frameworks (KO)",
       "complianceTitle": "Compliance Framework Scores (KO)",
@@ -2464,7 +2465,7 @@
       "activeAssets": "Active Assets (KO)",
       "activeNodes": "Active Nodes (KO)",
       "activeNodesValue": "Active Nodes Value (KO)",
-      "avg": "Avg (KO)",
+      "avg": "OmniGCloud Avg",
       "cloudSpend": "Cloud Spend (KO)",
       "compliance": {
         "subtitle": "Real-time audit score (KO)",
@@ -2490,7 +2491,7 @@
         "revenueImpactValue": "+18% (KO)",
         "systemHealth": "SYSTEM HEALTH (KO)"
       },
-      "nominal": "Nominal (KO)",
+      "nominal": "OmniGCloud Nominal",
       "queryDesc": "Query Desc (KO)",
       "queryTitle": "Query Title (KO)",
       "requestsSec": "Requests Sec (KO)",
@@ -2507,15 +2508,15 @@
       "scalingDesc": "Scaling Desc (KO)",
       "scalingTitle": "Scaling Title (KO)",
       "status": {
-        "critical": "CRITICAL (KO)",
-        "degraded": "DEGRADED (KO)",
-        "operational": "OPERATIONAL (KO)"
+        "critical": "OmniGCloud Critical",
+        "degraded": "OmniGCloud Degraded",
+        "operational": "OmniGCloud Operational"
       },
-      "subtitle": "Subtitle description (KO)",
+      "subtitle": "Autonomous Multi-Cloud Fabric",
       "threatDesc": "Threat Desc (KO)",
       "threatTitle": "Threat Title (KO)",
       "title": "EXECUTIVE OVERVIEW (KO)",
-      "trend": "Trend (KO)",
+      "trend": "OmniGCloud Trend",
       "uptime": {
         "subtitle": "Mesh uptime status (KO)",
         "title": "Global Connectivity (KO)"
@@ -2529,14 +2530,14 @@
       "costPerTransaction": "COST PER TRANSACTION (KO)",
       "cpuEfficiency": "CPU Efficiency (KO)",
       "errorRate": "ERROR RATE (KO)",
-      "hits": "Hits (KO)",
+      "hits": "OmniGCloud Hits",
       "memoryEfficiency": "Memory Efficiency (KO)",
-      "misses": "Misses (KO)",
+      "misses": "OmniGCloud Misses",
       "networkEfficiency": "Network Efficiency (KO)",
-      "roi": "ROI (KO)",
+      "roi": "OmniGCloud Roi",
       "securityScore": "Security Score (KO)",
       "totalInvocations": "TOTAL INVOCATIONS (KO)",
-      "uptime": "UPTIME (KO)"
+      "uptime": "OmniGCloud Uptime"
     },
     "Metrics": {
       "common": {
@@ -2562,7 +2563,7 @@
         "stats": {
           "buildTime": "Build Time (KO)",
           "deploys": "Deploys/Day (KO)",
-          "rollbacks": "Rollbacks (KO)",
+          "rollbacks": "OmniGCloud Rollbacks",
           "success": "Success Rate (KO)"
         },
         "subtitle": "Pipeline throughput and failure rate (KO)",
@@ -2574,7 +2575,7 @@
         "pageTitle": "Threat Analysis (KO)",
         "stats": {
           "5xx": "5xx Rates (KO)",
-          "anomalies": "Anomalies (KO)",
+          "anomalies": "OmniGCloud Anomalies",
           "errorRate": "Global Error % (KO)",
           "healed": "Self-Healed (KO)"
         },
@@ -2587,9 +2588,9 @@
         "pageTitle": "Executive Overview (KO)",
         "stats": {
           "activeUsers": "Active Users (KO)",
-          "churn": "Churn (KO)",
-          "mrr": "MRR (KO)",
-          "nps": "NPS (KO)"
+          "churn": "OmniGCloud Churn",
+          "mrr": "OmniGCloud Mrr",
+          "nps": "OmniGCloud Nps"
         },
         "subtitle": "Top-level business health indicators (KO)",
         "title": "Strategic Alignment (KO)"
@@ -2600,7 +2601,7 @@
         "pageTitle": "Resource Telemetry (KO)",
         "stats": {
           "cpu": "CPU Usage (KO)",
-          "memory": "Memory (KO)",
+          "memory": "OmniGCloud Memory",
           "nodes": "Node Count (KO)",
           "pods": "Active Pods (KO)"
         },
@@ -2613,8 +2614,8 @@
         "pageTitle": "ROI Performance (KO)",
         "stats": {
           "current": "Current ROI (KO)",
-          "efficiency": "Efficiency (KO)",
-          "projection": "Projection (KO)",
+          "efficiency": "OmniGCloud Efficiency",
+          "projection": "OmniGCloud Projection",
           "savings": "Net Savings (KO)"
         },
         "subtitle": "Real-time return on investment tracking (KO)",
@@ -2638,7 +2639,7 @@
         "pageSubtitle": "Security posture & threat protection (KO)",
         "pageTitle": "Compliance Radar (KO)",
         "stats": {
-          "compliance": "Compliance (KO)",
+          "compliance": "OmniGCloud Compliance",
           "issues": "Open Issues (KO)",
           "score": "Security Score (KO)",
           "threats": "Threats Blocked (KO)"
@@ -2653,7 +2654,7 @@
         "stats": {
           "buildTime": "Avg Build (KO)",
           "coverage": "Test Cov. (KO)",
-          "issues": "Issues (KO)",
+          "issues": "OmniGCloud Issues",
           "prs": "Pull Requests (KO)"
         },
         "subtitle": "Engineering velocity & stability (KO)",
@@ -2664,10 +2665,10 @@
         "pageSubtitle": "Platform availability and uptime (KO)",
         "pageTitle": "Global Connectivity (KO)",
         "stats": {
-          "availability": "Availability (KO)",
-          "downtime": "Downtime (KO)",
-          "incidents": "Incidents (KO)",
-          "mttr": "MTTR (KO)"
+          "availability": "OmniGCloud Availability",
+          "downtime": "OmniGCloud Downtime",
+          "incidents": "OmniGCloud Incidents",
+          "mttr": "OmniGCloud Mttr"
         },
         "subtitle": "30-day global availability (KO)",
         "title": "System Uptime (KO)"
@@ -2709,9 +2710,9 @@
     "TimeSeries": {
       "badges": {
         "compliant": "✓ COMPLIANT (KO)",
-        "decreasing": "DECREASING (KO)",
-        "live": "LIVE (KO)",
-        "projected": "PROJECTED (KO)",
+        "decreasing": "OmniGCloud Decreasing",
+        "live": "OmniGCloud Live",
+        "projected": "OmniGCloud Projected",
         "realtime": "REAL-TIME (KO)"
       },
       "costDesc": "Monthly infrastructure costs showing significant savings (KO)",
@@ -2725,7 +2726,7 @@
       "throughputDesc": "Hourly request throughput with peak hour detection (KO)",
       "throughputTitle": "Request Volume (KO)"
     },
-    "active": "Active Details (KO)",
+    "active": "OmniGCloud Active",
     "badge": "New (KO)",
     "globalHealth": "Global Health (KO)",
     "infraSubtitle": "Global node status and uptime. (KO)",
@@ -2737,11 +2738,11 @@
     "optimizationTitle": "Resource Optimization (KO)",
     "roiSubtitle": "Projected savings and efficiency gains. (KO)",
     "roiTitle": "Cost & ROI Analysis (KO)",
-    "role": "Role Details (KO)",
+    "role": "OmniGCloud Role",
     "title": "Dashboard (KO)",
     "trustSubtitle": "Sovereign Compliance Monitor (KO)",
     "trustTitle": "Trust Compliance Score (KO)",
-    "welcome": "Welcome Details (KO)"
+    "welcome": "OmniGCloud Welcome"
   },
   "Demo": {
     "Badge": "Live view (demo) (KO)",
@@ -2760,7 +2761,7 @@
         "5": "> Executing autonomous re-keying via Vault Agent... (KO)",
         "6": "> [SUCCESS] Asset re-platforming starting. (KO)"
       },
-      "progress": "PROGRESS (KO)"
+      "progress": "OmniGCloud Progress"
     },
     "controls": {
       "fault": "Inject Fault (KO)",
@@ -2778,23 +2779,23 @@
   "DemoSection": {
     "badge": "New (KO)",
     "discovery": {
-      "code": "Code Details (KO)",
+      "code": "OmniGCloud Code",
       "desc": "Achieve FIPS 140-2 Level 3 compliance with our shielded execution environments. (KO)",
       "title": "Discovery (KO)"
     },
     "drift": {
-      "code": "Code Details (KO)",
+      "code": "OmniGCloud Code",
       "desc": "Seamlessly orchestrate workloads across AWS, Azure, and Google Cloud with strict governance boundaries. (KO)",
       "title": "Drift (KO)"
     },
     "iac": {
-      "code": "Code Details (KO)",
+      "code": "OmniGCloud Code",
       "desc": "Automate compliance with real-time drift detection and auto-remediation policies. (KO)",
       "title": "Iac (KO)"
     },
     "subtitle": "The standard for autonomous cloud governance. (KO)",
     "sync": {
-      "code": "Code Details (KO)",
+      "code": "OmniGCloud Code",
       "desc": "OmniGCloud provides a unified control plane to enforce data sovereignty across all your cloud providers. (KO)",
       "title": "Sync (KO)"
     },
@@ -2928,7 +2929,7 @@
       }
     },
     "certifications": {
-      "gdpr": "GDPR (KO)",
+      "gdpr": "OmniGCloud Gdpr",
       "iso": "ISO 27001 (KO)",
       "soc": "SOC 2 (KO)",
       "title": "Certifications (KO)"
@@ -3002,28 +3003,6 @@
       "empiricalDataSetDesc": "Verified multi-cloud telemetry (KO)",
       "validationProtocols": "Validation Protocols (KO)"
     },
-    "sidebar": {
-      "contactArchitectureOffice": "Contact Architecture Office",
-      "customBriefingTitle": "Need a customized briefing?",
-      "quickLinksHeading": "Quick Links",
-      "links": {
-        "introduction": "Introduction",
-        "architecture": "Architecture",
-        "whitepaper": "Technical Whitepaper",
-        "security": "Security & Governance",
-        "guide": "Architectural Guide",
-        "api": "API Reference"
-      },
-      "documentation": "DOCUMENTATION",
-      "blueprints": "GOVERNANCE BLUEPRINTS",
-      "blueprint_links": {
-        "aws": "AWS Landing Zone",
-        "azure": "Azure Enterprise",
-        "openshift": "OpenShift Cluster",
-        "hybrid": "Hybrid Fabric"
-      },
-      "customBriefingText": "Generate a custom briefing document based on your selected stack."
-    },
     "technicalLibrary": "Technical Library (KO)",
     "transparency": {
       "desc": "Clear, auditable practices across security, reliability, and operations. (KO)",
@@ -3035,86 +3014,83 @@
       "title": "Transparency (KO)"
     },
     "whitepaper": {
+      "diagrams": {
+        "actionDesc": "Targeted API Call (KO)",
+        "actionTitle": "3. ACTION (KO)",
+        "automatedAudit": "Automated Audit Pass (KO)",
+        "cloudOpEx": "Cloud OpEx (KO)",
+        "clouds": {
+          "aws": "AWS (US) (KO)",
+          "azure": "Azure (EU) (KO)",
+          "gcp": "GCP (Asia) (KO)"
+        },
+        "complianceDesc": "Audit Logs (KO)",
+        "complianceRate": "Compliance Rate (KO)",
+        "complianceTitle": "Compliance (KO)",
+        "controlPlane": "AECP CONTROL PLANE (KO)",
+        "cycleTime": "Autonomous Control Loop Cycle Time: < 200ms (KO)",
+        "decisionDesc": "AECP Graph Engine (KO)",
+        "decisionEngine": "Decision Engine (AI) (KO)",
+        "decisionTitle": "2. DECISION (KO)",
+        "devOpsDesc": "Define Policy (KO)",
+        "devOpsTitle": "DevOps Team (KO)",
+        "federationApPolicy": "Policy: PERMISSIVE (KO)",
+        "federationApTitle": "AP-SOUTH-SHARED (KO)",
+        "federationEuPolicy": "Policy: GDPR-STRICT (KO)",
+        "federationEuTitle": "EU-CENTRAL-PRIVACY (KO)",
+        "federationProtocol": "Federated Trust Protocol (FTP) Active (KO)",
+        "federationUsPolicy": "Policy: FIPS-140-2 (KO)",
+        "federationUsTitle": "US-EAST-SOVEREIGN (KO)",
+        "intentInterpreter": "Intent Interpreter (KO)",
+        "mttrDesc": "From 14 days to 4 minutes (KO)",
+        "mttrReduction": "MTTR Reduction (KO)",
+        "opexDesc": "Verified Arbitrage Savings (KO)",
+        "signalDesc": "Multi-cloud Telemetry (KO)",
+        "signalTitle": "1. SIGNAL (KO)",
+        "stateReconciliation": "State Reconciliation Loop (KO)",
+        "stateReconciliationDesc": "(Current State → Target State) (KO)",
+        "validation": "Validation Diagram (KO)",
+        "validationDesc": "Validation process diagram (KO)"
+      },
       "charts": {
         "compliance": {
-          "aso": "Aso Details (KO)",
-          "autonomous": "ASO (Autonomous) (KO)",
-          "figure": "Figure 6a: Longitudinal analysis of Compliance Drift over 12 months. (KO)",
-          "legacy": "Legacy (Manual Ops) (KO)",
-          "yAxis": "Compliance Score (%) (KO)"
+          "aso": "OmniGCloud Aso",
+          "autonomous": "ASO (Autonomous)",
+          "figure": "Figure 6a: Longitudinal analysis of Compliance Drift over 12 months.",
+          "legacy": "Legacy (Manual Ops)",
+          "yAxis": "Compliance Score (%)"
         },
         "cost": {
-          "aso": "ASO OpEx ($) (KO)",
-          "autonomous": "Autonomous (KO)",
-          "figure": "Figure 6b: Cost Scaling Curve - Legacy vs ASO (Logarithmic Efficiency Gain) (KO)",
-          "legacy": "Legacy OpEx ($) (KO)",
-          "yAxis": "Y Axis (KO)"
+          "aso": "ASO OpEx ($)",
+          "autonomous": "Charts Cost Autonomous",
+          "figure": "Figure 6b: Cost Scaling Curve - Legacy vs ASO (Logarithmic Efficiency Gain)",
+          "legacy": "Legacy OpEx ($)",
+          "yAxis": "Y Axis"
         }
       }
-    }
-  },
-  "Ecosystem": {
-    "ai": {
-      "desc": "Achieve FIPS 140-2 Level 3 compliance with our shielded execution environments. (KO)",
-      "link": "Link Details (KO)",
-      "status": "Status Details (KO)",
-      "title": "Ai (KO)"
     },
-    "badge": "New (KO)",
-    "governance": {
-      "desc": "Decouple your business logic from vendor-specific APIs and regain full control of your digital estate. (KO)",
-      "link": "Link Details (KO)",
-      "status": "Status Details (KO)",
-      "title": "Governance (KO)"
-    },
-    "mesh": {
-      "desc": "Automate compliance with real-time drift detection and auto-remediation policies. (KO)",
-      "link": "Link Details (KO)",
-      "status": "Status Details (KO)",
-      "title": "Mesh (KO)"
-    },
-    "partners": {
-      "items": {
-        "aws": "AWS (KO)",
-        "azure": "Azure (KO)",
-        "cisco": "Cisco (KO)",
-        "gcp": "GCP (KO)",
-        "hashicorp": "HashiCorp (KO)",
-        "oracle": "Oracle Cloud (KO)",
-        "redhat": "RedHat (KO)",
-        "vmware": "VMware (KO)"
+    "sidebar": {
+      "contactArchitectureOffice": "Contact Architecture Office",
+      "customBriefingTitle": "Need a customized briefing?",
+      "quickLinksHeading": "Quick Links",
+      "links": {
+        "introduction": "OmniGCloud Introduction",
+        "architecture": "OmniGCloud Architecture",
+        "whitepaper": "Technical Whitepaper",
+        "security": "Security & Governance",
+        "guide": "Architectural Guide",
+        "api": "API Reference"
       },
-      "title": "Trusted Integrations & Partners (KO)"
-    },
-    "stats": {
-      "accounts": "Cloud Accounts Managed (KO)",
-      "accountsVal": "12.5K (KO)",
-      "compliance": "Compliance Rate (KO)",
-      "complianceVal": "99.98% (KO)",
-      "countries": "Countries (KO)",
-      "countriesVal": "45 (KO)",
-      "deployments": "Active Deployments (KO)",
-      "deploymentsVal": "450+ (KO)",
-      "title": "Global Deployment Statistics (KO)"
-    },
-    "subtitle": "Empowering the next generation of regulated enterprise. (KO)",
-    "title": "Ecosystem (KO)",
-    "vault": {
-      "desc": "Achieve FIPS 140-2 Level 3 compliance with our shielded execution environments. (KO)",
-      "link": "Link Details (KO)",
-      "status": "Status Details (KO)",
-      "title": "Vault (KO)"
+      "documentation": "OmniGCloud Documentation",
+      "blueprints": "GOVERNANCE BLUEPRINTS",
+      "blueprint_links": {
+        "aws": "AWS Landing Zone",
+        "azure": "Azure Enterprise",
+        "openshift": "OpenShift Cluster",
+        "hybrid": "Hybrid Fabric"
+      },
+      "customBriefingText": "Generate a custom briefing document based on your selected stack."
     }
-  },
-  "Engagement": {
-    "primary": "Create My Strategy (KO)",
-    "secondary": "Consulting Inquiry (KO)",
-    "subtitle": "Join the Fortune 500 companies reclaiming their digital independence. (KO)",
-    "thoughtLeadership": {
-      "subtitle": "Join the Fortune 500 companies reclaiming their digital independence. (KO)",
-      "title": "Ready for Sovereign AI? (KO)"
-    },
-    "title": "Ready for Sovereign AI? (KO)"
   },
   "Enrichment": {
     "howItWorks": "Our autonomous framework follows a rigorous 3-step synchronization process to ensure absolute sovereignty and compliance across your multi-cloud estate.",
@@ -3130,23 +3106,98 @@
       "title": "Related Strategy & Insights"
     }
   },
+  "Ecosystem": {
+    "ai": {
+      "desc": "Achieve FIPS 140-2 Level 3 compliance with our shielded execution environments. (KO)",
+      "link": "OmniGCloud Link",
+      "status": "Production Stable",
+      "title": "Ai (KO)"
+    },
+    "badge": "New (KO)",
+    "governance": {
+      "desc": "Decouple your business logic from vendor-specific APIs and regain full control of your digital estate. (KO)",
+      "link": "OmniGCloud Link",
+      "status": "Production Stable",
+      "title": "Governance (KO)"
+    },
+    "mesh": {
+      "desc": "Automate compliance with real-time drift detection and auto-remediation policies. (KO)",
+      "link": "OmniGCloud Link",
+      "status": "Production Stable",
+      "title": "Mesh (KO)"
+    },
+    "partners": {
+      "items": {
+        "aws": "OmniGCloud Aws",
+        "azure": "OmniGCloud Azure",
+        "cisco": "OmniGCloud Cisco",
+        "gcp": "OmniGCloud Gcp",
+        "hashicorp": "OmniGCloud Hashicorp",
+        "oracle": "Oracle Cloud (KO)",
+        "redhat": "OmniGCloud Redhat",
+        "vmware": "OmniGCloud Vmware"
+      },
+      "title": "Trusted Integrations & Partners (KO)"
+    },
+    "stats": {
+      "accounts": "Cloud Accounts Managed (KO)",
+      "accountsVal": "12.5K (KO)",
+      "compliance": "Compliance Rate (KO)",
+      "complianceVal": "99.98% (KO)",
+      "countries": "OmniGCloud Countries",
+      "countriesVal": "45 (KO)",
+      "deployments": "Active Deployments (KO)",
+      "deploymentsVal": "450+ (KO)",
+      "title": "Global Deployment Statistics (KO)"
+    },
+    "subtitle": "Empowering the next generation of regulated enterprise. (KO)",
+    "title": "Ecosystem (KO)",
+    "vault": {
+      "desc": "Achieve FIPS 140-2 Level 3 compliance with our shielded execution environments. (KO)",
+      "link": "OmniGCloud Link",
+      "status": "Production Stable",
+      "title": "Vault (KO)"
+    }
+  },
+  "Engagement": {
+    "primary": "Create My Strategy (KO)",
+    "secondary": "Consulting Inquiry (KO)",
+    "subtitle": "Join the Fortune 500 companies reclaiming their digital independence. (KO)",
+    "thoughtLeadership": {
+      "subtitle": "Join the Fortune 500 companies reclaiming their digital independence. (KO)",
+      "title": "Ready for Sovereign AI? (KO)"
+    },
+    "title": "Ready for Sovereign AI? (KO)"
+  },
   "Enterprise": {
     "approach": {
       "pillars": {
         "0": {
           "desc": "Enterprise-grade sovereignty and high-assurance security auditing.",
           "title": "Security",
-          "features": ["FIPS 140-2", "Zero-Trust", "mTLS"]
+          "features": [
+            "FIPS 140-2",
+            "Zero-Trust",
+            "mTLS"
+          ]
         },
         "1": {
           "desc": "Scale workloads autonomously across global multi-cloud infrastructure.",
           "title": "Scale",
-          "features": ["Auto-Scaling", "Multi-Region", "DR"]
+          "features": [
+            "Auto-Scaling",
+            "Multi-Region",
+            "DR"
+          ]
         },
         "2": {
           "desc": "Guarantee 99.999% uptime with autonomous drift remediation.",
           "title": "Stability",
-          "features": ["Self-Healing", "Live Sync", "Drift Protection"]
+          "features": [
+            "Self-Healing",
+            "Live Sync",
+            "Drift Protection"
+          ]
         }
       },
       "subtitle": "How we help you scale",
@@ -3155,7 +3206,7 @@
     "partnership": {
       "p1": "Enforce auto-remediation policies. (KO)",
       "p2": "Monitor real-time infrastructure drift. (KO)",
-      "pillars": "Pillars Details (KO)",
+      "pillars": "OmniGCloud Pillars",
       "steps": {
         "0": {
           "desc": "We understand your needs (KO)",
@@ -3177,17 +3228,17 @@
       "p1": "OmniGCloud는 고신뢰 규제 환경을 위해 처음부터 설계된 유일한 컨트롤 플레인입니다.",
       "p2": "기업 정책이 모든 실행 지점에서 시행된다는 수학적 확실성을 제공합니다.",
       "stats": {
-        "actions": "자율 작업",
-        "gates": "규정 준수 게이트",
-        "regions": "글로벌 리전",
         "uptime": "가동 시간 SLA",
         "uptime_val": "99.999%",
+        "regions": "글로벌 리전",
         "regions_val": "100+",
+        "gates": "규정 준수 게이트",
         "gates_val": "400+",
+        "actions": "자율 작업",
         "actions_val": "1B+"
       },
-      "title": "주권적 무결성",
-      "cta": "전략적 파트너십 문서 읽기"
+      "cta": "전략적 파트너십 문서 읽기",
+      "title": "주권적 무결성"
     }
   },
   "FloatingActions": {
@@ -3221,13 +3272,13 @@
     "company": {
       "_value": "Company (KO)",
       "about": "About Us (KO)",
-      "contact": "Contact Details (KO)",
+      "contact": "OmniGCloud Contact",
       "label": "Company (KO)",
-      "leadership": "Leadership Details (KO)",
+      "leadership": "OmniGCloud Leadership",
       "strategy": "Strategic Engineering (KO)"
     },
     "copyright": "© 2026 OmniGCloud Inc. All rights reserved. (KO)",
-    "directory": "Directory Details (KO)",
+    "directory": "OmniGCloud Directory",
     "footerText": "OmniGCloud - Enforce Sovereignty. (KO)",
     "platform": {
       "control": "Control Plane (KO)",
@@ -3255,8 +3306,8 @@
     "status": "System Status (KO)",
     "tagline": "The Sovereign Cloud for the AI Era (KO)",
     "trust": {
-      "privacy": "Privacy Details (KO)",
-      "security": "Security Details (KO)"
+      "privacy": "OmniGCloud Privacy",
+      "security": "OmniGCloud Security"
     }
   },
   "Founder": {
@@ -3337,23 +3388,23 @@
       "advanced": "Advanced Features (KO)",
       "analysis": "Analysis & Value (KO)",
       "bodyIntro": "Body Intro (KO)",
-      "community": "Community Details (KO)",
-      "company": "Company Details (KO)",
+      "community": "OmniGCloud Community",
+      "company": "OmniGCloud Company",
       "company_links": {
         "about": "About Us (KO)",
-        "contact": "Contact Details (KO)",
+        "contact": "OmniGCloud Contact",
         "executive": "Executive Office (KO)",
         "global_hq": "Global HQ (KO)",
-        "investors": "Investors Details (KO)",
-        "leadership": "Leadership Details (KO)",
-        "newsroom": "Newsroom Details (KO)",
+        "investors": "OmniGCloud Investors",
+        "leadership": "OmniGCloud Leadership",
+        "newsroom": "OmniGCloud Newsroom",
         "operations": "Global Operations (KO)"
       },
       "contactSales": "Contact Sales (KO)",
       "contact_us": "Contact Us (KO)",
       "copyLabel": "Copy Label (KO)",
       "copyToast": "Copy Toast (KO)",
-      "dashboard": "Dashboard Details (KO)",
+      "dashboard": "OmniGCloud Dashboard",
       "dashboard_links": {
         "cost": "Cost Optimization (KO)",
         "deployment": "Deployment Status (KO)",
@@ -3369,34 +3420,34 @@
       "docs": "Documentation (KO)",
       "docs_links": {
         "api": "API Reference (KO)",
-        "newsroom": "Newsroom Details (KO)",
+        "newsroom": "OmniGCloud Newsroom",
         "open_source": "Open Source (KO)",
         "patterns": "Architecture Patterns (KO)",
         "tech_docs": "Technical Documentation (KO)",
         "visual_library": "Visual Library (KO)"
       },
-      "documentation": "Documentation Details (KO)",
+      "documentation": "OmniGCloud Documentation",
       "fallbackInstruction": "Fallback Instruction (KO)",
       "fallbackTitle": "Fallback Title (KO)",
-      "industries": "Industries Details (KO)",
-      "onboarding": "Onboarding Details (KO)",
-      "organization": "Organization Details (KO)",
-      "performance": "Performance Details (KO)",
+      "industries": "OmniGCloud Industries",
+      "onboarding": "OmniGCloud Onboarding",
+      "organization": "OmniGCloud Organization",
+      "performance": "OmniGCloud Performance",
       "pillars": "Core Products (KO)",
-      "pricing": "Pricing Details (KO)",
+      "pricing": "OmniGCloud Pricing",
       "pricing_links": {
-        "business": "Business Details (KO)",
-        "compliance": "Compliance Details (KO)",
-        "developer": "Developer Details (KO)",
-        "faq": "FAQ Details (KO)",
-        "professional": "Professional Details (KO)",
+        "business": "OmniGCloud Business",
+        "compliance": "OmniGCloud Compliance",
+        "developer": "OmniGCloud Developer",
+        "faq": "OmniGCloud Faq",
+        "professional": "OmniGCloud Professional",
         "savings_analysis": "Savings Analysis (KO)",
-        "sovereign": "Sovereign Details (KO)",
-        "trust": "Trust Details (KO)",
+        "sovereign": "OmniGCloud Sovereign",
+        "trust": "OmniGCloud Trust",
         "value_economy": "Value Economy (KO)",
         "visual_architecture": "Visual Architecture (KO)"
       },
-      "products": "Products Details (KO)",
+      "products": "OmniGCloud Products",
       "products_links": {
         "deploy": "Obsidian Deploy (KO)",
         "guard": "Governance Guard (KO)",
@@ -3407,20 +3458,20 @@
         "workflows": "G-Workflows (KO)"
       },
       "rateLimitMessage": "Rate Limit Message (KO)",
-      "research": "Research Details (KO)",
-      "solutions": "Solutions Details (KO)",
+      "research": "OmniGCloud Research",
+      "solutions": "OmniGCloud Solutions",
       "solutions_links": {
         "finance_mod": "Financial Modernization (KO)",
         "financial": "Financial Services (KO)",
         "gov_trust": "Government Trust (KO)",
         "health_mod": "Healthcare Compliance (KO)",
-        "healthcare": "Healthcare Details (KO)",
-        "insurance": "Insurance Details (KO)",
-        "logistics": "Logistics Details (KO)",
+        "healthcare": "OmniGCloud Healthcare",
+        "insurance": "OmniGCloud Insurance",
+        "logistics": "OmniGCloud Logistics",
         "telecom": "Telecommunications (KO)"
       },
-      "subject": "Subject Details (KO)",
-      "telemetry": "Telemetry Details (KO)",
+      "subject": "OmniGCloud Subject",
+      "telemetry": "OmniGCloud Telemetry",
       "tiers": "Pricing Tiers (KO)",
       "trust_compliance": "Trust & Compliance (KO)",
       "trust_links": {
@@ -3648,7 +3699,7 @@
             "title": "Drift Buffer (KO)"
           }
         },
-        "live": "LIVE (KO)",
+        "live": "OmniGCloud Live",
         "title": "Network Core Status (KO)"
       },
       "subtitle": "Live intelligence and system status across your entire multi-cloud infrastructure, providing a unified command center for sovereign management. (KO)",
@@ -3658,7 +3709,7 @@
   "Industries": {
     "allIndustries": "All Industries (KO)",
     "badge": "New (KO)",
-    "challenges": "Challenges Details (KO)",
+    "challenges": "OmniGCloud Challenges",
     "cta": {
       "button": "Explore Cta (KO)",
       "subtitle": "Empowering the next generation of regulated enterprise. (KO)",
@@ -3740,17 +3791,17 @@
         "title": "Faq Title (KO)"
       },
       "footer": {
-        "aiDesc": "Aidesc Details (KO)",
-        "aiLink": "Ailink Details (KO)",
-        "aiTitle": "Aititle Details (KO)",
-        "microservicesDesc": "Microservicesdesc Details (KO)",
-        "microservicesLink": "Microserviceslink Details (KO)",
-        "microservicesTitle": "Microservicestitle Details (KO)"
+        "aiDesc": "OmniGCloud Aidesc",
+        "aiLink": "OmniGCloud Ailink",
+        "aiTitle": "OmniGCloud Aititle",
+        "microservicesDesc": "OmniGCloud Microservicesdesc",
+        "microservicesLink": "OmniGCloud Microserviceslink",
+        "microservicesTitle": "OmniGCloud Microservicestitle"
       },
       "hero": {
         "badge": "HERO (KO)",
-        "ctaPrimary": "Ctaprimary Details (KO)",
-        "ctaSecondary": "Ctasecondary Details (KO)",
+        "ctaPrimary": "OmniGCloud Ctaprimary",
+        "ctaSecondary": "OmniGCloud Ctasecondary",
         "subtitle": "Hero description (KO)",
         "title": "Hero Title (KO)"
       },
@@ -3759,12 +3810,12 @@
         "title": "Paradox Title (KO)"
       },
       "pillars": {
-        "item1Desc": "Item1desc Details (KO)",
-        "item1Title": "Item1title Details (KO)",
-        "item2Desc": "Item2desc Details (KO)",
-        "item2Title": "Item2title Details (KO)",
-        "item3Desc": "Item3desc Details (KO)",
-        "item3Title": "Item3title Details (KO)",
+        "item1Desc": "OmniGCloud Item1desc",
+        "item1Title": "OmniGCloud Item1title",
+        "item2Desc": "OmniGCloud Item2desc",
+        "item2Title": "OmniGCloud Item2title",
+        "item3Desc": "OmniGCloud Item3desc",
+        "item3Title": "OmniGCloud Item3title",
         "title": "Pillars Title (KO)"
       },
       "sol": "HIPAA-compliant federated learning nodes. (KO)",
@@ -3776,7 +3827,7 @@
     "logistics": {
       "sol": "Real-time supply chain digital twins. (KO)"
     },
-    "solution": "Solution Details (KO)",
+    "solution": "OmniGCloud Solution",
     "solutionLabel": "Solution (KO)",
     "strategicChallenges": "Strategic Challenges (KO)",
     "subtitle": "Empowering the next generation of regulated enterprise. (KO)",
@@ -3787,14 +3838,14 @@
   },
   "Investors": {
     "contact": {
-      "addressLine1": "Addressline1 Details (KO)",
-      "addressLine2": "Addressline2 Details (KO)",
-      "country": "Country Details (KO)",
+      "addressLine1": "OmniGCloud Addressline1",
+      "addressLine2": "OmniGCloud Addressline2",
+      "country": "OmniGCloud Country",
       "description": "Contact description (KO)",
-      "phone": "Phone Details (KO)",
+      "phone": "OmniGCloud Phone",
       "title": "Contact Title (KO)"
     },
-    "email": "Email Details (KO)",
+    "email": "OmniGCloud Email",
     "hero": {
       "badge": "HERO (KO)",
       "subtitle": "The standard for autonomous cloud governance. (KO)",
@@ -3803,16 +3854,16 @@
     },
     "leadership": {
       "chaitanya": {
-        "bio": "Bio Details (KO)",
-        "name": "Name Details (KO)",
-        "placeholder": "Placeholder Details (KO)",
-        "role": "Role Details (KO)"
+        "bio": "OmniGCloud Bio",
+        "name": "OmniGCloud Name",
+        "placeholder": "Enter system instruction...",
+        "role": "OmniGCloud Role"
       },
       "jyothsna": {
-        "bio": "Bio Details (KO)",
-        "name": "Name Details (KO)",
-        "placeholder": "Placeholder Details (KO)",
-        "role": "Role Details (KO)"
+        "bio": "OmniGCloud Bio",
+        "name": "OmniGCloud Name",
+        "placeholder": "Enter system instruction...",
+        "role": "OmniGCloud Role"
       },
       "subtitle": "Leadership description (KO)",
       "title": "Leadership Title (KO)"
@@ -3832,21 +3883,21 @@
           "title": "2 Title (KO)"
         }
       },
-      "readArticle": "Readarticle Details (KO)",
+      "readArticle": "OmniGCloud Readarticle",
       "title": "Newsroom Title (KO)"
     },
     "operations": {
       "description": "Operations description (KO)",
-      "headquarters": "Headquarters Details (KO)",
+      "headquarters": "OmniGCloud Headquarters",
       "title": "Operations Title (KO)"
     },
     "opportunity": {
       "content": "OmniGCloud provides a unified control plane to enforce data sovereignty across all your cloud providers. (KO)",
-      "metrics": "Metrics Details (KO)",
+      "metrics": "OmniGCloud Metrics",
       "title": "Opportunity (KO)"
     },
     "sitemap": {
-      "directory": "Directory Details (KO)",
+      "directory": "OmniGCloud Directory",
       "title": "Sitemap Title (KO)"
     },
     "vision": {
@@ -4390,7 +4441,7 @@
       "categories": {
         "cd": "Continuous Delivery (KO)",
         "infra": "Infrastructure Automation (KO)",
-        "observability": "Observability (KO)",
+        "observability": "OmniGCloud Observability",
         "platform": "Platform Orchestration (KO)"
       },
       "title": "Ecosystem & Marketplace Alliances (KO)"
@@ -4454,7 +4505,7 @@
       }
     },
     "arbitrage": {
-      "auditor": "Auditor Details (KO)",
+      "auditor": "OmniGCloud Auditor",
       "auditorTitle": "Auditor Title (KO)",
       "eb1aDesc": "Eb1a Desc (KO)",
       "eb1aTag": "Eb1a Tag (KO)",
@@ -4482,32 +4533,32 @@
       }
     },
     "comparison": {
-      "capability": "Capability Details (KO)",
+      "capability": "OmniGCloud Capability",
       "footer": {
         "_value": "Footer Details (KO)",
         "copyright": "© 2026 OmniGCloud. All rights reserved. (KO)"
       },
-      "legacy": "Legacy Details (KO)",
-      "limited": "Limited Details (KO)",
-      "partial": "Partial Details (KO)",
+      "legacy": "OmniGCloud Legacy",
+      "limited": "OmniGCloud Limited",
+      "partial": "OmniGCloud Partial",
       "rows": {
-        "arbitrage": "Arbitrage Details (KO)",
-        "audits": "Audits Details (KO)",
-        "encryption": "Encryption Details (KO)",
-        "iam": "Iam Details (KO)",
-        "neutrality": "Neutrality Details (KO)",
-        "refactoring": "Refactoring Details (KO)",
-        "sync": "Sync Details (KO)"
+        "arbitrage": "OmniGCloud Arbitrage",
+        "audits": "OmniGCloud Audits",
+        "encryption": "OmniGCloud Encryption",
+        "iam": "OmniGCloud Iam",
+        "neutrality": "OmniGCloud Neutrality",
+        "refactoring": "OmniGCloud Refactoring",
+        "sync": "OmniGCloud Sync"
       },
-      "sovereign": "Sovereign Details (KO)",
+      "sovereign": "OmniGCloud Sovereign",
       "subtitle": "Security, compliance, and velocity in one platform. (KO)",
       "title": "Comparison (KO)"
     },
     "control": {
-      "audit": "Audit Details (KO)",
-      "fleet": "Fleet Details (KO)",
-      "gitops": "Gitops Details (KO)",
-      "healing": "Healing Details (KO)",
+      "audit": "OmniGCloud Audit",
+      "fleet": "OmniGCloud Fleet",
+      "gitops": "OmniGCloud Gitops",
+      "healing": "OmniGCloud Healing",
       "observability": {
         "desc": "OmniGCloud provides a unified control plane to enforce data sovereignty across all your cloud providers. (KO)",
         "title": "Observability (KO)"
@@ -4527,10 +4578,10 @@
       "title": "Hero (KO)"
     },
     "integrations": {
-      "delivery": "Delivery Details (KO)",
-      "identity": "Identity Details (KO)",
-      "infra": "Infra Details (KO)",
-      "obs": "Obs Details (KO)",
+      "delivery": "OmniGCloud Delivery",
+      "identity": "OmniGCloud Identity",
+      "infra": "OmniGCloud Infra",
+      "obs": "OmniGCloud Obs",
       "subtitle": "Control your data. Control your future. (KO)",
       "title": "Integrations (KO)"
     },
@@ -4562,17 +4613,17 @@
         "policyCheck": "[14:02:42] POLICY_CHECK_Orchestrator... OK (KO)"
       },
       "title": "Security (KO)",
-      "zerotrust": "Zerotrust Details (KO)"
+      "zerotrust": "OmniGCloud Zerotrust"
     },
     "stack": {
-      "active": "Active Details (KO)",
-      "api": "Api Details (KO)",
-      "cluster": "Cluster Details (KO)",
-      "db": "Db (KO)",
-      "logic": "Logic Details (KO)",
-      "scaling": "Scaling Details (KO)",
-      "shielded": "Shielded Details (KO)",
-      "verified": "Verified Details (KO)"
+      "active": "OmniGCloud Active",
+      "api": "OmniGCloud Api",
+      "cluster": "OmniGCloud Cluster",
+      "db": "OmniGCloud Db",
+      "logic": "OmniGCloud Logic",
+      "scaling": "OmniGCloud Scaling",
+      "shielded": "OmniGCloud Shielded",
+      "verified": "OmniGCloud Verified"
     },
     "title": "OmniGCloud Platform (KO)"
   },
@@ -4601,7 +4652,7 @@
           "q": "What is the uptime guarantee? (KO)"
         }
       },
-      "title": "Pricing F.A.Q (KO)"
+      "title": "Faq Title (KO)"
     },
     "LeadCapture": {
       "cta": "Get Started (KO)",
@@ -4617,13 +4668,6 @@
       "button": "Explore Cta (KO)",
       "subtitle": "Empowering the next generation of regulated enterprise. (KO)",
       "title": "Cta (KO)"
-    },
-    "deepDive": {
-      "links": {
-        "blueprint": "Modernization Blueprint (KO)",
-        "finance": "Sovereign Finance (KO)",
-        "modernization": "Cloud Modernization (KO)"
-      }
     },
     "economy": {
       "sovereignty": {
@@ -4650,21 +4694,6 @@
       },
       "subtitle": "Our autonomous framework follows a rigorous 3-step synchronization process to ensure absolute sovereignty and compliance across your multi-cloud estate. (KO)",
       "title": "Value-Based Infrastructure Economy (KO)"
-    },
-    "faq": {
-      "q1": {
-        "a": "A (KO)",
-        "q": "Q (KO)"
-      },
-      "q2": {
-        "a": "A (KO)",
-        "q": "Q (KO)"
-      },
-      "q3": {
-        "a": "A (KO)",
-        "q": "Q (KO)"
-      },
-      "title": "Faq Title (KO)"
     },
     "footer": {
       "legal": "NO CREDIT CARD REQUIRED • SOC-2 COMPLIANT ONBOARDING (KO)"
@@ -4822,13 +4851,13 @@
   "Privacy": {
     "accountData": "Account Data (KO)",
     "accountDataText": "Account Data Text (KO)",
-    "changes": "Changes Details (KO)",
+    "changes": "OmniGCloud Changes",
     "changesText": "Changes Text (KO)",
-    "commitment": "Commitment Details (KO)",
+    "commitment": "OmniGCloud Commitment",
     "commitmentText": "Commitment Text (KO)",
-    "contact": "Contact Details (KO)",
+    "contact": "OmniGCloud Contact",
     "contactText": "Contact Text (KO)",
-    "cookies": "Cookies Details (KO)",
+    "cookies": "OmniGCloud Cookies",
     "cookiesText": "Cookies Text (KO)",
     "dataCollection": "Data Collection (KO)",
     "dataCollectionText": "Data Collection Text (KO)",
@@ -4840,14 +4869,14 @@
     "infrastructureDataText": "Infrastructure Data Text (KO)",
     "lastUpdated": "Last Updated (KO)",
     "lastUpdatedDate": "December 29, 2025 (KO)",
-    "protection1": "Protection1 Details (KO)",
-    "protection2": "Protection2 Details (KO)",
-    "protection3": "Protection3 Details (KO)",
-    "protection4": "Protection4 Details (KO)",
-    "right1": "Right1 Details (KO)",
-    "right2": "Right2 Details (KO)",
-    "right3": "Right3 Details (KO)",
-    "right4": "Right4 Details (KO)",
+    "protection1": "OmniGCloud Protection1",
+    "protection2": "OmniGCloud Protection2",
+    "protection3": "OmniGCloud Protection3",
+    "protection4": "OmniGCloud Protection4",
+    "right1": "OmniGCloud Right1",
+    "right2": "OmniGCloud Right2",
+    "right3": "OmniGCloud Right3",
+    "right4": "OmniGCloud Right4",
     "thirdParty": "Third Party (KO)",
     "thirdPartyText": "Third Party Text (KO)",
     "title": "Privacy (KO)",
@@ -4866,13 +4895,13 @@
     "mitigationLabel": "Immediate Mitigation: (KO)",
     "opacity": {
       "desc": "Seamlessly orchestrate workloads across AWS, Azure, and Google Cloud with strict governance boundaries. (KO)",
-      "scanning": "Scanning Details (KO)",
+      "scanning": "OmniGCloud Scanning",
       "title": "Opacity (KO)"
     },
     "regulatory": {
       "desc": "Ensure your data never leaves the jurisdiction you define, regardless of the underlying infrastructure. (KO)",
-      "risk": "Risk Details (KO)",
-      "score": "Score Details (KO)",
+      "risk": "OmniGCloud Risk",
+      "score": "OmniGCloud Score",
       "title": "Regulatory (KO)"
     },
     "subtitle": "Control your data. Control your future. (KO)",
@@ -4884,7 +4913,7 @@
     }
   },
   "Products": {
-    "assessment": "Assessment (KO)",
+    "assessment": "OmniGCloud Assessment",
     "cta": "Learn More (KO)",
     "deepDive": {
       "links": {
@@ -4899,18 +4928,18 @@
       "title": "Obsidian Deploy (KO)"
     },
     "detail": {
-      "architecture": "Architecture (KO)",
+      "architecture": "OmniGCloud Architecture",
       "complianceDesc": "Automated audit scores based on regional data residency and encryption standards across all cloud providers. (KO)",
       "complianceIndex": "Sovereignty Compliance Index (KO)",
-      "documentation": "Documentation (KO)",
+      "documentation": "OmniGCloud Documentation",
       "explore": "Explore Platform (KO)",
       "healthMonitor": "Sovereignty Health Monitor (KO)",
       "metrics": {
-        "assets": "Assets (KO)",
-        "drift": "Drift (KO)",
-        "nodes": "Nodes (KO)"
+        "assets": "OmniGCloud Assets",
+        "drift": "OmniGCloud Drift",
+        "nodes": "OmniGCloud Nodes"
       },
-      "optimal": "OPTIMAL (KO)",
+      "optimal": "OmniGCloud Optimal",
       "platformMetrics": "PLATFORM METRICS (KO)",
       "regions": {
         "eu": "EU-West (GDPR Residency) (KO)",
@@ -4918,7 +4947,7 @@
         "us": "US-East (HIPAA Sovereignty) (KO)"
       }
     },
-    "explore": "Explore Details (KO)",
+    "explore": "OmniGCloud Explore",
     "guard": {
       "description": "Ensure your data never leaves the jurisdiction you define, regardless of the underlying infrastructure. (KO)",
       "shortDesc": "Real-time compliance auto-remediation. (KO)",
@@ -5515,6 +5544,28 @@
         "description": "Visual representation of the AECP core components and data flow. (KO)"
       }
     },
+    "Products": {
+      "HowItWorks": {
+        "steps": {
+          "0": {
+            "desc": "Provision your sovereignty perimeter across multi-cloud regions using our autonomous fabric kernel.",
+            "title": "Fabric Provisioning",
+            "heading": "Phase 1"
+          },
+          "1": {
+            "desc": "Enforce governance logic at the infrastructure level with real-time drift detection and auto-remediation.",
+            "title": "Governance Sync",
+            "heading": "Phase 2"
+          },
+          "2": {
+            "desc": "Achieve absolute sovereignty and compliance with a single, vendor-agnostic control plane.",
+            "title": "Unified Control",
+            "heading": "Phase 3"
+          }
+        },
+        "title": "How It Works"
+      }
+    },
     "Pricing": {
       "AboveTheFold": "Achieve total cloud sovereignty with transparent, value-based units. Decouple your infrastructure costs from vendor lock-in and optimize for regulatory compliance and performance.",
       "DeepDive": {
@@ -5573,28 +5624,6 @@
         "title": "Economic Autonomy"
       }
     },
-    "Products": {
-      "HowItWorks": {
-        "steps": {
-          "0": {
-            "desc": "Provision your sovereignty perimeter across multi-cloud regions using our autonomous fabric kernel.",
-            "title": "Fabric Provisioning",
-            "heading": "Phase 1"
-          },
-          "1": {
-            "desc": "Enforce governance logic at the infrastructure level with real-time drift detection and auto-remediation.",
-            "title": "Governance Sync",
-            "heading": "Phase 2"
-          },
-          "2": {
-            "desc": "Achieve absolute sovereignty and compliance with a single, vendor-agnostic control plane.",
-            "title": "Unified Control",
-            "heading": "Phase 3"
-          }
-        },
-        "title": "How It Works"
-      }
-    },
     "Services": {
       "DeepDive": {
         "links": {
@@ -5607,18 +5636,6 @@
         "description": "Overview of our modernization and optimization service layers. (KO)"
       }
     }
-  },
-  "Sangam": {
-    "cta": "합류 체험하기",
-    "description": "Sangam은 OmniGCloud 커널의 궁극적인 종합체입니다. 서로 다른 클라우드 패브릭, 자율 에이전트 및 주권 정책이 단일 고성능 운영 환경으로 병합되는 합류점입니다.",
-    "features": {
-      "purity": "규제 대상 자산을 위한 드리프트 없는 주권적 무결성.",
-      "resonance": "글로벌 규모의 고주파 상태 동기화.",
-      "unification": "모든 주요 클라우드에 걸친 완전한 패브릭 통합."
-    },
-    "subtitle": "멀티 클라우드 오케스트레이션과 자율 거버넌스의 궁극적 결합.",
-    "tag": "V-PREMIUM",
-    "title": "Sangam: 주권적 합류"
   },
   "Sections": {
     "AutomationStack": {
@@ -5653,10 +5670,10 @@
     "encryptionText": "Compute on encrypted data without decrypting it. (KO)",
     "infra1": "Immutable Infrastructure derived from code. (KO)",
     "infra2": "Air-gapped backups for disaster recovery. (KO)",
-    "infrastructure": "Infrastructure (KO)",
+    "infrastructure": "OmniGCloud Infrastructure",
     "monitor1": "24/7/365 SOC monitoring. (KO)",
     "monitor2": "Automated threat detection and response. (KO)",
-    "monitoring": "Monitoring (KO)",
+    "monitoring": "OmniGCloud Monitoring",
     "performance": {
       "charts": {
         "latency": {
@@ -5674,7 +5691,7 @@
     "pgpKey": "PGP Key (KO)",
     "reportingProcess": "Reporting Process (KO)",
     "responsibleDisclosure": "Responsible Disclosure (KO)",
-    "scope": "Scope (KO)",
+    "scope": "OmniGCloud Scope",
     "scope1": "omnigcloud.com domain and subdomains. (KO)",
     "scope2": "The OmniGCloud API endpoints. (KO)",
     "scope3": "Our open-source CLI tools. (KO)",
@@ -5700,11 +5717,11 @@
   "SecuritySettings": {
     "advancedDescription": "Advanced Description (KO)",
     "advancedSecurity": "Advanced Security (KO)",
-    "callbackUrl": "Callbackurl Details (KO)",
+    "callbackUrl": "OmniGCloud Callbackurl",
     "clientId": "Client Id (KO)",
     "description": "Ensure your data never leaves the jurisdiction you define, regardless of the underlying infrastructure. (KO)",
-    "disabled": "Disabled Details (KO)",
-    "enabled": "Enabled Details (KO)",
+    "disabled": "OmniGCloud Disabled",
+    "enabled": "OmniGCloud Enabled",
     "outboundEmail": "Outbound Email (KO)",
     "requestSaml": "Request Saml (KO)",
     "ssoConfiguration": "Sso Configuration (KO)",
@@ -5731,13 +5748,13 @@
       },
       "subtitle": "The standard for autonomous cloud governance. (KO)",
       "title": "Data A I (KO)",
-      "uptime": "Uptime Details (KO)"
+      "uptime": "OmniGCloud Uptime"
     },
     "Hero": {
       "badge": "New (KO)",
       "cta": "Explore Hero (KO)",
-      "errors": "Errors Details (KO)",
-      "velocity": "Velocity Details (KO)"
+      "errors": "OmniGCloud Errors",
+      "velocity": "OmniGCloud Velocity"
     },
     "Migration": {
       "azure": {
@@ -5810,7 +5827,7 @@
       },
       "title": "Stack (KO)"
     },
-    "ai": "Ai Details (KO)",
+    "ai": "OmniGCloud Ai",
     "ai-cloud-platform": {
       "challenge": {
         "badge": "The AI Bottleneck (KO)",
@@ -5865,7 +5882,7 @@
       },
       "title": "Ai-cloud-platform Title (KO)"
     },
-    "application": "Application Details (KO)",
+    "application": "OmniGCloud Application",
     "application-modernization": {
       "challenge": {
         "badge": "The Legacy Burden (KO)",
@@ -5947,7 +5964,7 @@
         "title": "OpenShift Strategy (KO)"
       }
     },
-    "cloud": "Cloud Details (KO)",
+    "cloud": "OmniGCloud Cloud",
     "cloud-cost-optimization": {
       "description": "Cloud-cost-optimization description (KO)",
       "faq": {
@@ -6309,7 +6326,7 @@
       },
       "title": "Microservices Title (KO)"
     },
-    "openshift": "Openshift Details (KO)",
+    "openshift": "OmniGCloud Openshift",
     "openshift-modernization": {
       "core": {
         "badge": "OpenShift Strategy (KO)",
@@ -6506,28 +6523,28 @@
     }
   },
   "Terms": {
-    "acceptance": "Acceptance Details (KO)",
+    "acceptance": "OmniGCloud Acceptance",
     "acceptanceText": "Acceptance Text (KO)",
-    "contact": "Contact Details (KO)",
+    "contact": "OmniGCloud Contact",
     "contactText": "Contact Text (KO)",
     "dataOwnership": "Data Ownership (KO)",
     "dataOwnershipText": "Data Ownership Text (KO)",
-    "disclaimer": "Disclaimer Details (KO)",
+    "disclaimer": "OmniGCloud Disclaimer",
     "disclaimerText": "Disclaimer Text (KO)",
     "governingLaw": "Governing Law (KO)",
     "governingLawText": "Governing Law Text (KO)",
     "lastUpdated": "Last Updated (KO)",
     "lastUpdatedDate": "December 29, 2025 (KO)",
-    "responsibility1": "Responsibility1 Details (KO)",
-    "responsibility2": "Responsibility2 Details (KO)",
-    "responsibility3": "Responsibility3 Details (KO)",
-    "service1": "Service1 Details (KO)",
-    "service2": "Service2 Details (KO)",
-    "service3": "Service3 Details (KO)",
-    "service4": "Service4 Details (KO)",
-    "services": "Services Details (KO)",
+    "responsibility1": "OmniGCloud Responsibility1",
+    "responsibility2": "OmniGCloud Responsibility2",
+    "responsibility3": "OmniGCloud Responsibility3",
+    "service1": "OmniGCloud Service1",
+    "service2": "OmniGCloud Service2",
+    "service3": "OmniGCloud Service3",
+    "service4": "OmniGCloud Service4",
+    "services": "OmniGCloud Services",
     "servicesText": "Services Text (KO)",
-    "termination": "Termination Details (KO)",
+    "termination": "OmniGCloud Termination",
     "terminationText": "Termination Text (KO)",
     "title": "Terms (KO)",
     "userResponsibilities": "User Responsibilities (KO)",
@@ -6563,10 +6580,10 @@
       "title": "Enterprise Billing Comparison (KO)"
     },
     "CloudSwitcher": {
-      "active": "Active (KO)",
+      "active": "OmniGCloud Active",
       "currentHost": "Current Host (KO)",
       "migrating": "Migrating... (KO)",
-      "status": "Status (KO)",
+      "status": "Production Stable",
       "targetCloud": "Target Cloud (KO)",
       "title": "Dynamic Workload Re-Balancing (KO)"
     }
@@ -6599,169 +6616,17 @@
   },
   "Visuals": {
     "drift": {
-      "detected": "Detected Details (KO)",
-      "remediate": "Remediate Details (KO)",
+      "detected": "OmniGCloud Detected",
+      "remediate": "OmniGCloud Remediate",
       "title": "Drift (KO)"
     },
     "telemetry": {
-      "latency": "Latency Details (KO)",
-      "live": "Live Details (KO)",
-      "loss": "Loss Details (KO)",
-      "throughput": "Throughput Details (KO)",
+      "latency": "OmniGCloud Latency",
+      "live": "OmniGCloud Live",
+      "loss": "OmniGCloud Loss",
+      "throughput": "OmniGCloud Throughput",
       "title": "Telemetry (KO)"
     }
-  },
-  "WhitePaper": {
-    "badge": "LATEST RESEARCH",
-    "caseStudies": {
-      "finance": {
-        "badge": "FINANCIAL SERVICES",
-        "desc": "Tier-1 bank automated GDPR, PCI-DSS, and SOC2 compliance across 45 cloud accounts, reducing audit prep from 6 weeks to 48 hours.",
-        "stat1": {
-          "label": "Annual Savings",
-          "value": "$2.4M"
-        },
-        "stat2": {
-          "label": "Implementation",
-          "value": "14 days"
-        },
-        "title": "Global Bank Achieves 99.99% Compliance"
-      },
-      "healthcare": {
-        "badge": "HEALTHCARE",
-        "desc": "Multi-national healthcare provider achieved HIPAA compliance across AWS, Azure, and on-premise systems with zero-trust architecture.",
-        "stat1": {
-          "label": "HIPAA Compliant",
-          "value": "100%"
-        },
-        "stat2": {
-          "label": "Records Protected",
-          "value": "3M+"
-        },
-        "title": "Hospital Chain Secures Patient Data"
-      },
-      "title": "Featured Implementation Case Studies"
-    },
-    "contribution": "Contribution Details",
-    "description": "A comprehensive framework for achieving mathematical certainty in data sovereignty across multi-cloud environments.",
-    "design_patterns": "Design Patterns",
-    "detailedDiagrams": {
-      "context": {
-        "clouds": {
-          "aws": "AWS",
-          "azure": "Azure",
-          "gcp": "GCP (Asia)"
-        },
-        "compliance": {
-          "desc": "Audit Logs",
-          "title": "Compliance"
-        },
-        "controlPlane": "AECP CONTROL PLANE",
-        "decisionEngine": "Decision Engine",
-        "devOps": {
-          "desc": "Define Policy",
-          "title": "DevOps Team"
-        },
-        "interpreter": "Intent Interpreter",
-        "reconciliation": {
-          "desc": "(Current State → Target State)",
-          "title": "State Reconciliation Loop"
-        }
-      },
-      "federation": {
-        "ap": {
-          "policy": "Policy: PERMISSIVE",
-          "title": "AP-SOUTH-SHARED"
-        },
-        "eu": {
-          "policy": "Policy: GDPR-STRICT",
-          "title": "EU-CENTRAL-PRIVACY"
-        },
-        "protocol": "Federated Trust Protocol (FTP) Active",
-        "us": {
-          "policy": "Policy: FIPS-140-2",
-          "title": "US-EAST-SOVEREIGN"
-        }
-      },
-      "governance": {
-        "action": {
-          "desc": "Targeted API Call",
-          "title": "3. ACTION"
-        },
-        "cycleTime": "Autonomous Control Loop Cycle Time: < 200ms",
-        "decision": {
-          "desc": "AECP Graph Engine",
-          "title": "2. DECISION"
-        },
-        "signal": {
-          "desc": "Multi-cloud Telemetry",
-          "title": "1. SIGNAL"
-        },
-        "validation": {
-          "desc": "State Confirmed",
-          "title": "4. VALIDATION"
-        }
-      },
-      "impact": {
-        "compliance": {
-          "desc": "Automated Audit Pass",
-          "title": "Compliance Rate",
-          "value": "99.7%"
-        },
-        "mttr": {
-          "desc": "From 14 days to 4 minutes",
-          "title": "MTTR Reduction",
-          "value": "-94%"
-        },
-        "opex": {
-          "desc": "Verified Arbitrage Savings",
-          "title": "Cloud OpEx",
-          "value": "-31%"
-        }
-      },
-      "security": {
-        "audit": {
-          "desc": "Every state change is cryptographically signed and stored in ledger.",
-          "title": "Immutable Audit"
-        },
-        "fence": {
-          "desc": "Geospatial policy enforcement prevents egress to non-compliant zones.",
-          "title": "Data Residency Fence"
-        },
-        "zeroTrust": {
-          "desc": "Identity is injected at runtime via SPIFFE/SPIRE. No static keys.",
-          "title": "Zero Trust Injection"
-        }
-      }
-    },
-    "download_subtitle": "Get the full technical specification, including architecture diagrams, decision frameworks, and implementation guides.",
-    "download_title": "Download the Whitepaper",
-    "footer": {
-      "_value": "Available in PDF / ePub formats.",
-      "copyright": "© 2026 OmniGCloud. All rights reserved."
-    },
-    "impact": {
-      "citations": {
-        "desc": "Referenced in cloud governance research",
-        "label": "Academic Citations",
-        "value": "847"
-      },
-      "downloads": {
-        "desc": "By CTOs, architects, and compliance officers",
-        "label": "Downloads",
-        "value": "12K+"
-      },
-      "implementations": {
-        "desc": "Framework adopted in production environments",
-        "label": "Enterprise Implementations",
-        "value": "340+"
-      },
-      "title": "Research Impact & Citations"
-    },
-    "pageCount": "42 Pages",
-    "peerReview": "Peer Reviewed",
-    "read_online": "Read Online",
-    "title": "The Autonomous Sovereign Cloud Protocol"
   },
   "Whitepaper": {
     "abstract": {
@@ -6898,25 +6763,31 @@
       "title": "Industry Feasibility"
     },
     "footer": {
+      "_value": "Available in PDF / ePub formats.",
       "copyright": "© 2026 OmniGCloud. All rights reserved.",
-      "lab": "OmniGCloud Research Lab"
+      "lab": "Research Labs"
     },
     "footerDetails": {
       "copyright": "© 2026 OmniGCloud. All rights reserved.",
       "lab": "OmniGCloud Research Lab"
     },
     "impact": {
-      "business_value": "OmniGCloud is the engine of the sovereign enterprise.",
-      "metrics": {
-        "cost": "$2M+",
-        "cost_label": "Cost Savings",
-        "efficiency": "95%",
-        "efficiency_label": "Efficiency",
-        "security": "Gold Standard",
-        "security_label": "Security Compliance"
+      "citations": {
+        "desc": "Referenced in cloud governance research",
+        "label": "Academic Citations",
+        "value": "847"
       },
-      "p1": "Quantifiable gains in security and efficiency.",
-      "title": "Strategic Impact"
+      "downloads": {
+        "desc": "By CTOs, architects, and compliance officers",
+        "label": "Downloads",
+        "value": "12K+"
+      },
+      "implementations": {
+        "desc": "Framework adopted in production environments",
+        "label": "Enterprise Implementations",
+        "value": "340+"
+      },
+      "title": "Research Impact & Citations"
     },
     "introduction": {
       "p1": "The standard for autonomous cloud governance.",
@@ -7215,7 +7086,7 @@
         "caption": "<strong>Figure 6: Necessity of Deterministic Logic:</strong> The design enforces a strict constraint solver path, rejecting all probabilistic inputs for actuation. <strong>Failure Mode:</strong> Allowing probabilistic (LLM) decision-making in the control loop introduces \"Black Box\" non-determinism, rendering the entire system legally indefensible during a forensic audit.",
         "labels": {
           "alert": "Constraint: Confidence < 99.9% mandates Human Operator review.",
-          "command": "COMMAND",
+          "command": "OmniGCloud Command",
           "commandSub": "Signed Action",
           "input": "INPUT VECTOR",
           "inputSub": "Telemetry Signal",
@@ -7254,12 +7125,310 @@
     "title": "The Autonomous Sovereign Cloud Protocol",
     "version": "8.4 (Stable)",
     "version_label": "Whitepaper Version_label",
-    "watermark": "OMNIGCLOUD RESEARCH  •  COPYRIGHT 2026"
+    "watermark": "OMNIGCLOUD RESEARCH  •  COPYRIGHT 2026",
+    "badge": "LATEST RESEARCH",
+    "caseStudies": {
+      "finance": {
+        "badge": "FINANCIAL SERVICES",
+        "desc": "Tier-1 bank automated GDPR, PCI-DSS, and SOC2 compliance across 45 cloud accounts, reducing audit prep from 6 weeks to 48 hours.",
+        "stat1": {
+          "label": "Annual Savings",
+          "value": "$2.4M"
+        },
+        "stat2": {
+          "label": "Implementation",
+          "value": "14 days"
+        },
+        "title": "Global Bank Achieves 99.99% Compliance"
+      },
+      "healthcare": {
+        "badge": "HEALTHCARE",
+        "desc": "Multi-national healthcare provider achieved HIPAA compliance across AWS, Azure, and on-premise systems with zero-trust architecture.",
+        "stat1": {
+          "label": "HIPAA Compliant",
+          "value": "100%"
+        },
+        "stat2": {
+          "label": "Records Protected",
+          "value": "3M+"
+        },
+        "title": "Hospital Chain Secures Patient Data"
+      },
+      "title": "Featured Implementation Case Studies"
+    },
+    "contribution": "OmniGCloud Contribution",
+    "description": "A comprehensive framework for achieving mathematical certainty in data sovereignty across multi-cloud environments.",
+    "design_patterns": "Design Patterns",
+    "detailedDiagrams": {
+      "context": {
+        "clouds": {
+          "aws": "OmniGCloud Aws",
+          "azure": "OmniGCloud Azure",
+          "gcp": "OmniGCloud Gcp"
+        },
+        "compliance": {
+          "desc": "Audit Logs",
+          "title": "Compliance"
+        },
+        "controlPlane": "AECP CONTROL PLANE",
+        "decisionEngine": "Decision Engine",
+        "devOps": {
+          "desc": "Define Policy",
+          "title": "DevOps Team"
+        },
+        "interpreter": "Intent Interpreter",
+        "reconciliation": {
+          "desc": "(Current State → Target State)",
+          "title": "State Reconciliation Loop"
+        }
+      },
+      "federation": {
+        "ap": {
+          "policy": "Policy: PERMISSIVE",
+          "title": "AP-SOUTH-SHARED"
+        },
+        "eu": {
+          "policy": "Policy: GDPR-STRICT",
+          "title": "EU-CENTRAL-PRIVACY"
+        },
+        "protocol": "Federated Trust Protocol (FTP) Active",
+        "us": {
+          "policy": "Policy: FIPS-140-2",
+          "title": "US-EAST-SOVEREIGN"
+        }
+      },
+      "governance": {
+        "action": {
+          "desc": "Targeted API Call",
+          "title": "3. ACTION"
+        },
+        "cycleTime": "Autonomous Control Loop Cycle Time: < 200ms",
+        "decision": {
+          "desc": "AECP Graph Engine",
+          "title": "2. DECISION"
+        },
+        "signal": {
+          "desc": "Multi-cloud Telemetry",
+          "title": "1. SIGNAL"
+        },
+        "validation": {
+          "desc": "State Confirmed",
+          "title": "4. VALIDATION"
+        }
+      },
+      "impact": {
+        "compliance": {
+          "desc": "Automated Audit Pass",
+          "title": "Compliance Rate",
+          "value": "99.7%"
+        },
+        "mttr": {
+          "desc": "From 14 days to 4 minutes",
+          "title": "MTTR Reduction",
+          "value": "-94%"
+        },
+        "opex": {
+          "desc": "Verified Arbitrage Savings",
+          "title": "Cloud OpEx",
+          "value": "-31%"
+        }
+      },
+      "security": {
+        "audit": {
+          "desc": "Every state change is cryptographically signed and stored in ledger.",
+          "title": "Immutable Audit"
+        },
+        "fence": {
+          "desc": "Geospatial policy enforcement prevents egress to non-compliant zones.",
+          "title": "Data Residency Fence"
+        },
+        "zeroTrust": {
+          "desc": "Identity is injected at runtime via SPIFFE/SPIRE. No static keys.",
+          "title": "Zero Trust Injection"
+        }
+      }
+    },
+    "download_subtitle": "Get the full technical specification, including architecture diagrams, decision frameworks, and implementation guides.",
+    "download_title": "Download the Whitepaper",
+    "pageCount": "42 Pages",
+    "peerReview": "Peer Reviewed",
+    "read_online": "Read Online"
   },
   "content": "Decouple your business logic from vendor-specific APIs and regain full control of your digital estate. (KO)",
   "cta": "Get Started (KO)",
   "desc": "Enterprise Grade Sovereignty (KO)",
   "design_patterns": "Design Patterns (KO)",
+  "download_title": "Download Whitepaper (KO)",
+  "items": "OmniGCloud Items",
+  "read_online": "Read Online (KO)",
+  "steps": "OmniGCloud Steps",
+  "subtitle": "The Sovereign Cloud Control Plane (KO)",
+  "title": "OmniGCloud Platform (KO)",
+  "Sangam": {
+    "title": "Sangam: 주권적 합류",
+    "subtitle": "멀티 클라우드 오케스트레이션과 자율 거버넌스의 궁극적 결합.",
+    "description": "Sangam은 OmniGCloud 커널의 궁극적인 종합체입니다. 서로 다른 클라우드 패브릭, 자율 에이전트 및 주권 정책이 단일 고성능 운영 환경으로 병합되는 합류점입니다.",
+    "cta": "합류 체험하기",
+    "tag": "V-PREMIUM",
+    "features": {
+      "unification": "모든 주요 클라우드에 걸친 완전한 패브릭 통합.",
+      "purity": "규제 대상 자산을 위한 드리프트 없는 주권적 무결성.",
+      "resonance": "글로벌 규모의 고주파 상태 동기화."
+    }
+  },
+  "WhitePaper": {
+    "badge": "LATEST RESEARCH",
+    "caseStudies": {
+      "finance": {
+        "badge": "FINANCIAL SERVICES",
+        "desc": "Tier-1 bank automated GDPR, PCI-DSS, and SOC2 compliance across 45 cloud accounts, reducing audit prep from 6 weeks to 48 hours.",
+        "stat1": {
+          "label": "Annual Savings",
+          "value": "$2.4M"
+        },
+        "stat2": {
+          "label": "Implementation",
+          "value": "14 days"
+        },
+        "title": "Global Bank Achieves 99.99% Compliance"
+      },
+      "healthcare": {
+        "badge": "HEALTHCARE",
+        "desc": "Multi-national healthcare provider achieved HIPAA compliance across AWS, Azure, and on-premise systems with zero-trust architecture.",
+        "stat1": {
+          "label": "HIPAA Compliant",
+          "value": "100%"
+        },
+        "stat2": {
+          "label": "Records Protected",
+          "value": "3M+"
+        },
+        "title": "Hospital Chain Secures Patient Data"
+      },
+      "title": "Featured Implementation Case Studies"
+    },
+    "contribution": "OmniGCloud Contribution",
+    "description": "A comprehensive framework for achieving mathematical certainty in data sovereignty across multi-cloud environments.",
+    "design_patterns": "Design Patterns",
+    "detailedDiagrams": {
+      "context": {
+        "clouds": {
+          "aws": "OmniGCloud Aws",
+          "azure": "OmniGCloud Azure",
+          "gcp": "OmniGCloud Gcp"
+        },
+        "compliance": {
+          "desc": "Audit Logs",
+          "title": "Compliance"
+        },
+        "controlPlane": "AECP CONTROL PLANE",
+        "decisionEngine": "Decision Engine",
+        "devOps": {
+          "desc": "Define Policy",
+          "title": "DevOps Team"
+        },
+        "interpreter": "Intent Interpreter",
+        "reconciliation": {
+          "desc": "(Current State → Target State)",
+          "title": "State Reconciliation Loop"
+        }
+      },
+      "federation": {
+        "ap": {
+          "policy": "Policy: PERMISSIVE",
+          "title": "AP-SOUTH-SHARED"
+        },
+        "eu": {
+          "policy": "Policy: GDPR-STRICT",
+          "title": "EU-CENTRAL-PRIVACY"
+        },
+        "protocol": "Federated Trust Protocol (FTP) Active",
+        "us": {
+          "policy": "Policy: FIPS-140-2",
+          "title": "US-EAST-SOVEREIGN"
+        }
+      },
+      "governance": {
+        "action": {
+          "desc": "Targeted API Call",
+          "title": "3. ACTION"
+        },
+        "cycleTime": "Autonomous Control Loop Cycle Time: < 200ms",
+        "decision": {
+          "desc": "AECP Graph Engine",
+          "title": "2. DECISION"
+        },
+        "signal": {
+          "desc": "Multi-cloud Telemetry",
+          "title": "1. SIGNAL"
+        },
+        "validation": {
+          "desc": "State Confirmed",
+          "title": "4. VALIDATION"
+        }
+      },
+      "impact": {
+        "compliance": {
+          "desc": "Automated Audit Pass",
+          "title": "Compliance Rate",
+          "value": "99.7%"
+        },
+        "mttr": {
+          "desc": "From 14 days to 4 minutes",
+          "title": "MTTR Reduction",
+          "value": "-94%"
+        },
+        "opex": {
+          "desc": "Verified Arbitrage Savings",
+          "title": "Cloud OpEx",
+          "value": "-31%"
+        }
+      },
+      "security": {
+        "audit": {
+          "desc": "Every state change is cryptographically signed and stored in ledger.",
+          "title": "Immutable Audit"
+        },
+        "fence": {
+          "desc": "Geospatial policy enforcement prevents egress to non-compliant zones.",
+          "title": "Data Residency Fence"
+        },
+        "zeroTrust": {
+          "desc": "Identity is injected at runtime via SPIFFE/SPIRE. No static keys.",
+          "title": "Zero Trust Injection"
+        }
+      }
+    },
+    "download_subtitle": "Get the full technical specification, including architecture diagrams, decision frameworks, and implementation guides.",
+    "download_title": "Download the Whitepaper",
+    "footer": {
+      "_value": "Available in PDF / ePub formats.",
+      "copyright": "© 2026 OmniGCloud. All rights reserved.",
+      "lab": "Research Labs"
+    },
+    "impact": {
+      "citations": {
+        "desc": "Referenced in cloud governance research",
+        "label": "Academic Citations",
+        "value": "847"
+      },
+      "downloads": {
+        "desc": "By CTOs, architects, and compliance officers",
+        "label": "Downloads",
+        "value": "12K+"
+      },
+      "implementations": {
+        "desc": "Framework adopted in production environments",
+        "label": "Enterprise Implementations",
+        "value": "340+"
+      },
+      "title": "Research Impact & Citations"
+    },
+    "pageCount": "42 Pages",
+    "peerReview": "Peer Reviewed",
+    "read_online": "Read Online",
+    "title": "The Autonomous Sovereign Cloud Protocol"
+  },
   "docs": {
     "whitepaper": {
       "diagrams": {
@@ -7301,11 +7470,5 @@
         "validationDesc": "Validation process diagram (KO)"
       }
     }
-  },
-  "download_title": "Download Whitepaper (KO)",
-  "items": "Items Details (KO)",
-  "read_online": "Read Online (KO)",
-  "steps": "Steps Details (KO)",
-  "subtitle": "The Sovereign Cloud Control Plane (KO)",
-  "title": "OmniGCloud Platform (KO)"
+  }
 }
