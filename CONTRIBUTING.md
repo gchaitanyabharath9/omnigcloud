@@ -67,11 +67,11 @@ npm run qa:test       # Run Playwright suite
 
 ## 🛡️ Brand & Research Assets
 
-**EB-1A Evidence Protection:**
+**Research Asset Protection:**
 
 - High-value research assets (PDFs, Diagrams) reside in `/public/research-assets` (or protected internal path).
 - Do NOT commit source files (PPT, AI/EPS) to this public repo.
-- Watermark all new exhibit diagrams with `© OmniGCloud [Year] - Exhibit [ID]`.
+- Ensure all technical diagrams are properly watermarked with `© OmniGCloud [Year]`.
 
 ---
 
