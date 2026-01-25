@@ -25,19 +25,23 @@ The architecture addresses three challenges that cause Big Bang failures: (1) ro
 ---
 
 ## Original Contribution (Verified)
-This paper formalizes the "Dual-Write/Shadow-Read" pattern as the only mathematically safe method for migrating stateful monolithic systems. Unlike previous work which focuses on code refactoring, we prioritize *data gravity* and *traffic validation*, demonstrating that code migration is secondary to data consistency. We introduce the "Migration Risk Integral," quantifying the cost of concurrent operation vs. the risk of "Big Bang" cutover.
+
+This paper formalizes the "Dual-Write/Shadow-Read" pattern as the only mathematically safe method for migrating stateful monolithic systems. Unlike previous work which focuses on code refactoring, we prioritize _data gravity_ and _traffic validation_, demonstrating that code migration is secondary to data consistency. We introduce the "Migration Risk Integral," quantifying the cost of concurrent operation vs. the risk of "Big Bang" cutover.
 
 ### Contribution Summary for Non-Specialists
+
 Modernizing a legacy system is often compared to "changing the engine of an airplane while flying." Most companies try to build a new plane on the ground and then swap passengers mid-air (Big Bang), which usually results in a crash. Our approach builds the new engine alongside the old one, feeds it fuel (data) to see if it works, and slowly moves power (traffic) to it. If the new engine stutters, we switch back instantly. This guarantees the plane never falls.
 
 ### Why This Framework Was Needed Now
+
 The "Lift and Shift" era of cloud adoption is over. Enterprises moved their monoliths to AWS/Azure but saw no cost savings or speed improvements. They are now facing the "Modernization Cliff": their legacy systems are too expensive to run but too risky to rewrite. A5 provides the bridge—a standardized, reproducible pattern for unwinding complexity without bankruptcy.
 
 ### Relationship to A1-A6 Series
-*   **Legacy State:** The Monolith.
-*   **Target State:** A1 (Reference Architecture).
-*   **Transition Mechanism:** A5 (Modernization Pattern).
-A5 provides the *process* for transforming a Legacy system into an A1-compliant system governed by AECP.
+
+- **Legacy State:** The Monolith.
+- **Target State:** A1 (Reference Architecture).
+- **Transition Mechanism:** A5 (Modernization Pattern).
+  A5 provides the _process_ for transforming a Legacy system into an A1-compliant system governed by AECP.
 
 ---
 
@@ -52,16 +56,19 @@ Legacy monolithic applications represent both an asset and a liability. They emb
 Organizations face pressure to modernize from multiple directions:
 
 **Business Pressure:**
+
 - Competitors deploy features daily; monoliths deploy monthly
 - Cloud-native competitors operate at 1/10th the infrastructure cost
 - Customer expectations for real-time features (notifications, personalization)
 
 **Technical Pressure:**
+
 - Frameworks reaching end-of-life (Java 8, .NET Framework 4.x)
 - Security vulnerabilities in unmaintained dependencies
 - Inability to hire developers for legacy stacks (COBOL, VB6)
 
 **Operational Pressure:**
+
 - Monoliths cannot scale horizontally (vertical scaling limits)
 - Deployment risk increases with codebase size (fear of change)
 - Mean time to recovery (MTTR) measured in hours, not minutes
@@ -71,6 +78,7 @@ Organizations face pressure to modernize from multiple directions:
 The intuitive approach is the "Big Bang" rewrite: build a new system from scratch, then switch over. This fails catastrophically:
 
 **Failure Statistics:**
+
 - 70% of Big Bang rewrites are abandoned
 - Average cost before abandonment: $5M-$15M
 - Average timeline before abandonment: 18-24 months
@@ -146,16 +154,17 @@ Rather than rewriting the monolith, we strangle it. A facade (API Gateway) sits 
 
 **Table 1: Routing Strategies**
 
-| Strategy | Mechanism | Granularity | Rollback | Use Case |
-|:---|:---|:---|:---|:---|
-| **Path-Based** | `/v2/users` → New | Endpoint | Instant | API versioning |
-| **Header-Based** | `X-Version: 2` → New | Request | Instant | A/B testing |
-| **Percentage** | 10% → New, 90% → Old | Traffic | Gradual | Canary deployment |
-| **User-Based** | `user_id % 10 == 0` → New | User cohort | Instant | Beta testing |
+| Strategy         | Mechanism                 | Granularity | Rollback | Use Case          |
+| :--------------- | :------------------------ | :---------- | :------- | :---------------- |
+| **Path-Based**   | `/v2/users` → New         | Endpoint    | Instant  | API versioning    |
+| **Header-Based** | `X-Version: 2` → New      | Request     | Instant  | A/B testing       |
+| **Percentage**   | 10% → New, 90% → Old      | Traffic     | Gradual  | Canary deployment |
+| **User-Based**   | `user_id % 10 == 0` → New | User cohort | Instant  | Beta testing      |
 
 ### 2.3 Implementation Example
 
 **NGINX Configuration:**
+
 ```nginx
 upstream monolith {
     server monolith:8080;
@@ -167,12 +176,12 @@ upstream user_service {
 
 server {
     listen 80;
-    
+
     # Route /users to new service
     location /users {
         proxy_pass http://user_service;
     }
-    
+
     # Route everything else to monolith
     location / {
         proxy_pass http://monolith;
@@ -181,6 +190,7 @@ server {
 ```
 
 **Percentage-Based Routing (Envoy):**
+
 ```yaml
 route_config:
   virtual_hosts:
@@ -192,24 +202,24 @@ route_config:
             weighted_clusters:
               clusters:
                 - name: user_service
-                  weight: 10  # 10% to new service
+                  weight: 10 # 10% to new service
                 - name: monolith
-                  weight: 90  # 90% to monolith
+                  weight: 90 # 90% to monolith
 ```
 
 ### 2.4 Migration Timeline
 
 **Table 2: Typical Migration Timeline**
 
-| Month | Capability | Traffic % to New | Risk Level |
-|:---|:---|:---|:---|
-| **1-2** | User Authentication | 0% (shadow only) | Low |
-| **3-4** | User Authentication | 10% → 50% | Low |
-| **5-6** | User Authentication | 100% | Low |
-| **7-8** | Billing | 0% (shadow only) | Medium |
-| **9-10** | Billing | 10% → 50% | Medium |
-| **11-12** | Billing | 100% | Medium |
-| **13-18** | Remaining capabilities | Gradual | Varies |
+| Month     | Capability             | Traffic % to New | Risk Level |
+| :-------- | :--------------------- | :--------------- | :--------- |
+| **1-2**   | User Authentication    | 0% (shadow only) | Low        |
+| **3-4**   | User Authentication    | 10% → 50%        | Low        |
+| **5-6**   | User Authentication    | 100%             | Low        |
+| **7-8**   | Billing                | 0% (shadow only) | Medium     |
+| **9-10**  | Billing                | 10% → 50%        | Medium     |
+| **11-12** | Billing                | 100%             | Medium     |
+| **13-18** | Remaining capabilities | Gradual          | Varies     |
 
 ---
 
@@ -218,6 +228,7 @@ route_config:
 ### 3.1 The Data Migration Challenge
 
 Code migration is easy; data migration is hard. The monolith's database contains:
+
 - 10-20 years of historical data
 - Complex relationships (foreign keys, triggers)
 - Business-critical data (cannot lose a single record)
@@ -242,22 +253,23 @@ class UserRepository:
     def __init__(self, old_db, new_db):
         self.old_db = old_db
         self.new_db = new_db
-    
+
     def create_user(self, user):
         # Write to old DB (synchronous, blocking)
         user_id = self.old_db.insert(user)
-        
+
         # Write to new DB (asynchronous, non-blocking)
         try:
             self.new_db.insert_async(user)
         except Exception as e:
             # Log error but don't fail request
             logger.error(f"Dual write failed: {e}")
-        
+
         return user_id
 ```
 
 **Characteristics:**
+
 - Old DB is source of truth
 - New DB writes are best-effort (failures logged but not blocking)
 - Duration: 1-2 weeks (until new DB has all new writes)
@@ -271,7 +283,7 @@ class BackfillJob:
     def run(self):
         # Get max ID in new DB
         last_id = self.new_db.get_max_id()
-        
+
         # Copy in batches
         batch_size = 10000
         while True:
@@ -279,18 +291,19 @@ class BackfillJob:
                 start_id=last_id,
                 limit=batch_size
             )
-            
+
             if not users:
                 break
-            
+
             self.new_db.bulk_insert(users)
             last_id = users[-1].id
-            
+
             # Rate limit to avoid overwhelming DB
             time.sleep(1)
 ```
 
 **Characteristics:**
+
 - Runs continuously until old and new DBs are in sync
 - Rate-limited to avoid impacting production
 - Duration: 1-4 weeks (depends on data volume)
@@ -304,20 +317,21 @@ class UserRepository:
     def get_user(self, user_id):
         # Read from old DB (primary)
         old_user = self.old_db.get(user_id)
-        
+
         # Read from new DB (shadow)
         new_user = self.new_db.get(user_id)
-        
+
         # Compare
         if old_user != new_user:
             logger.error(f"Inconsistency detected: {user_id}")
             metrics.increment("data_inconsistency")
-        
+
         # Return old DB result (source of truth)
         return old_user
 ```
 
 **Characteristics:**
+
 - Old DB remains source of truth
 - Inconsistencies logged and alerted
 - Duration: 1-2 weeks (until inconsistency rate < 0.1%)
@@ -334,6 +348,7 @@ class UserRepository:
 ```
 
 **Characteristics:**
+
 - New DB becomes source of truth
 - Old DB kept for 30-90 days as backup
 - Instant rollback possible (switch reads back to old DB)
@@ -342,12 +357,12 @@ class UserRepository:
 
 **Table 3: Consistency Metrics**
 
-| Metric | Target | Measurement | Action if Failed |
-|:---|:---|:---|:---|
+| Metric                 | Target | Measurement                        | Action if Failed        |
+| :--------------------- | :----- | :--------------------------------- | :---------------------- |
 | **Write Success Rate** | >99.9% | Dual-write failures / total writes | Investigate async queue |
-| **Read Consistency** | >99.9% | Matching reads / total reads | Backfill missing data |
-| **Latency Overhead** | <10ms | New DB write latency | Optimize async queue |
-| **Data Completeness** | 100% | Record count old vs new | Re-run backfill |
+| **Read Consistency**   | >99.9% | Matching reads / total reads       | Backfill missing data   |
+| **Latency Overhead**   | <10ms  | New DB write latency               | Optimize async queue    |
+| **Data Completeness**  | 100%   | Record count old vs new            | Re-run backfill         |
 
 ---
 
@@ -356,6 +371,7 @@ class UserRepository:
 ### 4.1 The Domain Pollution Problem
 
 The monolith's domain model is often messy:
+
 - `User` table has 200 columns (mixing authentication, profile, preferences, billing)
 - God objects with 50+ methods
 - Tight coupling between unrelated concerns
@@ -370,15 +386,16 @@ To prevent this mess from infecting the clean microservice, we insert an Anti-Co
 
 **Table 4: ACL Patterns**
 
-| Pattern | Implementation | Pros | Cons | Use Case |
-|:---|:---|:---|:---|:---|
-| **Gateway ACL** | Logic inside API Gateway | Centralized, easy to manage | Gateway becomes bloated | Simple transformations |
-| **Service ACL** | Logic inside Microservice | Clean, encapsulated | Duplication across services | Complex domain logic |
-| **Sidecar ACL** | Logic in Service Mesh Proxy | Language agnostic | High operational complexity | Polyglot environments |
+| Pattern         | Implementation              | Pros                        | Cons                        | Use Case               |
+| :-------------- | :-------------------------- | :-------------------------- | :-------------------------- | :--------------------- |
+| **Gateway ACL** | Logic inside API Gateway    | Centralized, easy to manage | Gateway becomes bloated     | Simple transformations |
+| **Service ACL** | Logic inside Microservice   | Clean, encapsulated         | Duplication across services | Complex domain logic   |
+| **Sidecar ACL** | Logic in Service Mesh Proxy | Language agnostic           | High operational complexity | Polyglot environments  |
 
 ### 4.3 Example: User Domain Translation
 
 **Monolith Model (Messy):**
+
 ```java
 class User {
     Long id;
@@ -396,6 +413,7 @@ class User {
 ```
 
 **Microservice Model (Clean):**
+
 ```java
 class UserProfile {
     Long id;
@@ -417,6 +435,7 @@ class UserBilling {
 ```
 
 **ACL Translator:**
+
 ```java
 class UserACL {
     public UserProfile toProfile(MonolithUser user) {
@@ -427,7 +446,7 @@ class UserACL {
             user.email_verified
         );
     }
-    
+
     public UserAuth toAuth(MonolithUser user) {
         return new UserAuth(
             user.id,
@@ -452,6 +471,7 @@ Before we let users touch the new service, we test it with "Shadow Traffic." The
 ### 5.2 Shadowing Implementation
 
 **Envoy Configuration:**
+
 ```yaml
 route_config:
   virtual_hosts:
@@ -464,18 +484,19 @@ route_config:
               - cluster: checkout_service
                 runtime_fraction:
                   default_value:
-                    numerator: 100  # 100% of traffic
+                    numerator: 100 # 100% of traffic
                     denominator: HUNDRED
 ```
 
 **Diff Engine:**
+
 ```python
 class DiffEngine:
     def compare(self, legacy_response, new_response):
         # Normalize responses
         legacy_norm = self.normalize(legacy_response)
         new_norm = self.normalize(new_response)
-        
+
         # Compare
         if legacy_norm != new_norm:
             self.log_diff(legacy_norm, new_norm)
@@ -488,12 +509,12 @@ class DiffEngine:
 
 **Table 5: Shadow Traffic Metrics**
 
-| Metric | Target | Action if Failed |
-|:---|:---|:---|
-| **Response Match Rate** | >99.9% | Investigate differences |
-| **Latency Comparison** | New < Old + 50ms | Optimize new service |
-| **Error Rate** | New < Old | Fix bugs before cutover |
-| **Throughput** | New >= Old | Scale new service |
+| Metric                  | Target           | Action if Failed        |
+| :---------------------- | :--------------- | :---------------------- |
+| **Response Match Rate** | >99.9%           | Investigate differences |
+| **Latency Comparison**  | New < Old + 50ms | Optimize new service    |
+| **Error Rate**          | New < Old        | Fix bugs before cutover |
+| **Throughput**          | New >= Old       | Scale new service       |
 
 ---
 
@@ -505,22 +526,22 @@ Migration is not just technical; it's cultural.
 
 **Table 6: Organizational Maturity**
 
-| Level | Characteristics | Risk Profile | Success Rate |
-|:---|:---|:---|:---|
-| **Level 1 (Ad-Hoc)** | Rewriting code blindly, no tests | Extreme (RGE) | 10% |
-| **Level 2 (Strangler)** | Using gateway to split traffic | Moderate | 60% |
-| **Level 3 (Shadow)** | Verifying with shadow traffic | Low | 85% |
-| **Level 4 (GitOps)** | Automated rollback on error rate | Minimal | 96% |
+| Level                   | Characteristics                  | Risk Profile  | Success Rate |
+| :---------------------- | :------------------------------- | :------------ | :----------- |
+| **Level 1 (Ad-Hoc)**    | Rewriting code blindly, no tests | Extreme (RGE) | 10%          |
+| **Level 2 (Strangler)** | Using gateway to split traffic   | Moderate      | 60%          |
+| **Level 3 (Shadow)**    | Verifying with shadow traffic    | Low           | 85%          |
+| **Level 4 (GitOps)**    | Automated rollback on error rate | Minimal       | 96%          |
 
 ### 6.2 Migration Strategy Comparison
 
 **Table 7: Migration Strategy Risk Matrix**
 
-| Strategy | Speed | Risk | Rollback Difficulty | Cost | Success Rate |
-|:---|:---|:---|:---|:---|:---|
-| **Big Bang Rewrite** | Fast (theory) | Critical | Impossible | High | 30% |
-| **Parallel Run** | Slow | Low | Instant | Very High (2x infra) | 90% |
-| **Strangler Fig** | Moderate | Low | Easy (route switch) | Moderate | 96% |
+| Strategy             | Speed         | Risk     | Rollback Difficulty | Cost                 | Success Rate |
+| :------------------- | :------------ | :------- | :------------------ | :------------------- | :----------- |
+| **Big Bang Rewrite** | Fast (theory) | Critical | Impossible          | High                 | 30%          |
+| **Parallel Run**     | Slow          | Low      | Instant             | Very High (2x infra) | 90%          |
+| **Strangler Fig**    | Moderate      | Low      | Easy (route switch) | Moderate             | 96%          |
 
 ### 6.3 Decommissioning Strategy
 
@@ -531,6 +552,7 @@ The hardest part is turning the old system off:
 **Figure 6:** The Decommissioning Lifecycle. Never delete data immediately; always archive to cold storage first.
 
 **Decommissioning Checklist:**
+
 - [ ] All traffic routed to new services (0% to monolith)
 - [ ] No writes to old database for 30 days
 - [ ] Data archived to cold storage (S3 Glacier)
@@ -546,6 +568,7 @@ The hardest part is turning the old system off:
 We model the Strangler Fig pattern as a probabilistic routing function that seeks to minimize the risk integral over time.
 
 ### 7.1 The Routing Function
+
 Let $R$ be the router (Facade) handling request $r$.
 Let $M$ be the Monolith and $\mu$ be the Microservice.
 The routing decision $D(r)$ is:
@@ -555,13 +578,14 @@ $$ D(r) = \begin{cases} \mu & \text{if } r \in \text{Cohort}_{canary} \lor \text
 Where $P_{shift}(t)$ is the percentage of traffic shifted at time $t$.
 
 ### 7.2 Risk Minimization
+
 The expected cost of failure $E(C)$ at any point $t$ is:
 
-$$ E(C, t) = P_{shift}(t) \times P_{fail}(\mu) \times Impact $$
+$$ E(C, t) = P*{shift}(t) \times P*{fail}(\mu) \times Impact $$
 
 In a "Big Bang" migration, $P_{shift}$ jumps from 0 to 1 instantaneously, maximizing $E(C)$. In the Strangler pattern, $P_{shift}$ increases as a logistic function:
 
-$$ P_{shift}(t) = \frac{1}{1 + e^{-k(t-t_0)}} $$
+$$ P\_{shift}(t) = \frac{1}{1 + e^{-k(t-t_0)}} $$
 
 This ensures that traffic volume only increases as confidence ($1 - P_{fail}$) increases.
 
@@ -573,6 +597,7 @@ This ensures that traffic volume only increases as confidence ($1 - P_{fail}$) i
 **Challenge:** Zero downtime allowed. The system processed 2,000 shipments per second.
 
 **Strategy (The Dual-Write Pattern):**
+
 1.  **Phase 1 (Shadow Write):** The application wrote to DB2 (Primary) and asynchronously pushed events to a queue. A consumer wrote to Aurora. Errors in Aurora were logged but ignored.
 2.  **Phase 2 (Compare):** A "Verificator" process compared random samples from DB2 and Aurora. Initially, 15% mismatched due to localized formatting logic.
 3.  **Phase 3 (Active-Passive):** Once verification hit 100% for 14 days, the application read from Aurora for 1% of users (Canary).
@@ -586,6 +611,7 @@ The cutover took 200 milliseconds (config propagation time). Users noticed nothi
 ## 9. Implementation Reference
 
 ### 9.1 Strangler Facade Configuration (NGINX)
+
 This configuration demonstrates how to route traffic between legacy and modern systems based on headers and paths.
 
 ```nginx
@@ -611,7 +637,7 @@ server {
         if ($http_x_canary_user = "true") {
             proxy_pass http://new_microservice;
         }
-        
+
         # Percentage-based Shift (Split Clients)
         split_clients "${remote_addr}AAA" $variant {
             5%      new_microservice;
@@ -624,9 +650,11 @@ server {
 ```
 
 ### 9.2 Protocol Translation (SOAP to gRPC)
+
 Legacy systems often expose SOAP/XML interfaces, while modern microservices expect gRPC/Protobuf. The Strangler Facade must perform on-the-fly transcoding.
 
 **The wrapping pattern:**
+
 1.  **Ingress:** Facade receives JSON/gRPC.
 2.  **Transcode:** Facade maps JSON fields to XML SOAP Envelope.
 3.  **Forward:** Facade calls Monolith (SOAP).
@@ -660,17 +688,20 @@ service AccountService {
 ### 10.2 Migration Roadmap
 
 **Month 1-2: Planning**
+
 - Identify capabilities to migrate (start with least risky)
 - Define success criteria (latency, error rate, cost)
 - Set up strangler facade
 
 **Month 3-6: First Capability**
+
 - Build new microservice
 - Implement dual-write
 - Shadow traffic validation
 - Gradual cutover (0% → 10% → 50% → 100%)
 
 **Month 7-18: Remaining Capabilities**
+
 - Repeat process for each capability
 - Increase velocity as team gains experience
 - Decommission monolith components incrementally
@@ -682,6 +713,7 @@ service AccountService {
 ### 11.1 Production Case Studies
 
 **Case Study 1: E-Commerce Platform**
+
 - Monolith: 15-year-old Java monolith, 2M LOC
 - Timeline: 18 months (vs 36 months estimated for Big Bang)
 - Cost: $2.2M (vs $8M+ for failed Big Bang attempts)
@@ -689,11 +721,13 @@ service AccountService {
 - Outcome: 10x deployment frequency, 60% cost reduction
 
 **Case Study 2: Insurance Claims System**
+
 - Monolith: .NET 4.5 WinForms + SOAP Backend
 - Modernization: React Frontend + .NET Core API
 - Benefit: Claims processing time reduced from 5 days to 4 hours due to automated underwriting in new microservices.
 
 **Case Study 3: Mainframe Offload**
+
 - System: IBM Mainframe validating shipping addresses.
 - Approach: Replicated address data to Redis (Cloud).
 - Result: Saved $1.5M/year in MIPS (Mainframe CPU) costs by serving reads from Cloud.
@@ -703,39 +737,47 @@ service AccountService {
 ## 12. Related Work
 
 ### 12.1 Modernization Patterns
+
 Martin Fowler's definition of the **Strangler Fig Application** is the foundational text. We extend his architectural pattern with concrete "Traffic Mirroring" and "Dual-Write" implementation details.
 
 ### 12.2 Database Refactoring
+
 Ambler and Sadalage's "Refactoring Databases" provides the theoretical basis for our schema migration strategies. A5 operationalizes these for distributed systems.
 
 ### 12.3 Microservices Architecture
-Sam Newman's "Building Microservices" outlines the decomposition strategies we employ. We specifically focus on the *transitional* architecture, a phase often under-documented in standard texts.
+
+Sam Newman's "Building Microservices" outlines the decomposition strategies we employ. We specifically focus on the _transitional_ architecture, a phase often under-documented in standard texts.
 
 ---
 
 ## 13. Generalizability Beyond Observed Deployments
 
 The Strangler Fig pattern applies to any system where replacement must occur without service interruption. This includes:
-*   **Infrastructure Migration:** Moving from On-Prem Datacenter to Cloud.
-*   **Language Porting:** Migrating a Python 2 codebase to Go.
-*   **Desktop to Web:** Transitioning thick-client apps to browser-based apps by first moving logic to APIs.
+
+- **Infrastructure Migration:** Moving from On-Prem Datacenter to Cloud.
+- **Language Porting:** Migrating a Python 2 codebase to Go.
+- **Desktop to Web:** Transitioning thick-client apps to browser-based apps by first moving logic to APIs.
 
 ### 13.1 Applicability Criteria
-*   **High Value / High Risk:** usage of A5 is justified when the system handles critical revenue or safety functions.
-*   **Long Lifecycle:** Systems expected to live another 5-10 years.
+
+- **High Value / High Risk:** usage of A5 is justified when the system handles critical revenue or safety functions.
+- **Long Lifecycle:** Systems expected to live another 5-10 years.
 
 ### 13.2 When A5 Is Not Appropriate
-*   **End-of-Life Systems:** It is cheaper to keep the monolith running if it will be retired in 2 years.
-*   **Trivial Complexity:** If the entire system can be rewritten in 2 weeks, Strangler Fig is overkill.
+
+- **End-of-Life Systems:** It is cheaper to keep the monolith running if it will be retired in 2 years.
+- **Trivial Complexity:** If the entire system can be rewritten in 2 weeks, Strangler Fig is overkill.
 
 ---
 
 ## 14. Practical and Scholarly Impact
 
 ### 14.1 The Psychology of Migration
+
 A5 addresses the human factor. By delivering value early (Month 3) rather than late (Year 2), it maintains organizational momentum and prevents the "Fatigue of the Long March" that kills Big Bang projects.
 
 ### 14.2 Economics of Technical Debt
+
 We provide a framework for capitalizing the cost of modernization. Instead of "maintenance," migration becomes "feature delivery," unlocking budget that CFOs usually deny for pure refactoring.
 
 ---
@@ -743,12 +785,15 @@ We provide a framework for capitalizing the cost of modernization. Instead of "m
 ## 15. Limitations
 
 ### 15.1 Latency Overhead
+
 The Strangler Facade and network hops between Monolith and Microservices introduce latency (typically 5-20ms). This may be unacceptable for high-frequency trading applications.
 
 ### 15.2 Data Gravity
+
 Data synchronization is hard. The "Dual Write" pattern is complex to implement correctly and requires eventual consistency handling.
 
 ### 15.3 Organizational Discipline
+
 Supporting two stacks (Monolith + Microservices) requires a team that is disciplined enough not to hack fixes into the monolith during migration.
 
 ---
@@ -756,9 +801,11 @@ Supporting two stacks (Monolith + Microservices) requires a team that is discipl
 ## 16. Future Research Directions
 
 ### 16.1 AI-Driven Refactoring
+
 Using LLMs to automatically identify "Seams" in the monolith code and generate the initial microservice scaffolding and Anti-Corruption Layer translation logic.
 
 ### 16.2 Automated Verification
+
 Developing tools that mathematically guarantee functional equivalence between the legacy function $f_{old}(x)$ and the new function $f_{new}(x)$ across the entire input space.
 
 ---
@@ -768,6 +815,7 @@ Developing tools that mathematically guarantee functional equivalence between th
 ### 8.1 Production Case Studies
 
 **Case Study 1: E-Commerce Platform**
+
 - Monolith: 15-year-old Java monolith, 2M LOC
 - Timeline: 18 months (vs 36 months estimated for Big Bang)
 - Cost: $2.2M (vs $8M+ for failed Big Bang attempts)
@@ -775,6 +823,7 @@ Developing tools that mathematically guarantee functional equivalence between th
 - Outcome: 10x deployment frequency, 60% cost reduction
 
 **Case Study 2: Financial Services**
+
 - Monolith: 20-year-old .NET monolith, 3M LOC
 - Timeline: 24 months
 - Cost: $4.5M
@@ -782,6 +831,7 @@ Developing tools that mathematically guarantee functional equivalence between th
 - Outcome: 99.99% uptime maintained, regulatory compliance achieved
 
 **Case Study 3: Healthcare SaaS**
+
 - Monolith: 12-year-old Rails monolith, 800k LOC
 - Timeline: 12 months
 - Cost: $1.8M
@@ -790,11 +840,11 @@ Developing tools that mathematically guarantee functional equivalence between th
 
 **Table 8: Case Study Summary**
 
-| Organization | Timeline | Cost | Incidents | Deployment Frequency | Cost Savings |
-|:---|:---|:---|:---|:---|:---|
-| E-Commerce | 18 months | $2.2M | 0 | 1/month → 10/day | 60% |
-| Financial | 24 months | $4.5M | 2 (minor) | 1/quarter → 5/week | 45% |
-| Healthcare | 12 months | $1.8M | 0 | 1/month → 20/day | 55% |
+| Organization | Timeline  | Cost  | Incidents | Deployment Frequency | Cost Savings |
+| :----------- | :-------- | :---- | :-------- | :------------------- | :----------- |
+| E-Commerce   | 18 months | $2.2M | 0         | 1/month → 10/day     | 60%          |
+| Financial    | 24 months | $4.5M | 2 (minor) | 1/quarter → 5/week   | 45%          |
+| Healthcare   | 12 months | $1.8M | 0         | 1/month → 20/day     | 55%          |
 
 ---
 

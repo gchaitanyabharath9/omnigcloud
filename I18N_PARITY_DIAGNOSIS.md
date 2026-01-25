@@ -9,6 +9,7 @@
 ## ROOT CAUSE ANALYSIS
 
 ### ✅ VERIFIED WORKING
+
 1. **Messages Completeness**: All 8 locales (en, es, fr, de, zh, hi, ja, ko) have 676 keys each - PASS
 2. **Route Parity**: All critical routes have `generateStaticParams()` implemented:
    - `src/app/[locale]/page.tsx` ✅
@@ -22,13 +23,16 @@
 ### 🔍 POTENTIAL ISSUES (TO BE VERIFIED)
 
 #### 1. **Locale Root Validity** (`/hi`, `/de`, etc.)
+
 **Status:** Likely working but needs runtime verification  
 **Evidence:**
+
 - `src/app/[locale]/page.tsx` exists and has `generateStaticParams()`
 - Uses `getTranslations()` correctly
 - No hardcoded locale dependencies
 
 **Verification needed:**
+
 ```bash
 npm run build
 npm run start
@@ -36,31 +40,36 @@ npm run start
 ```
 
 #### 2. **Hash Navigation** (`#playground`, `#pricing`, etc.)
+
 **Status:** Implementation correct, but may need scroll behavior tuning  
 **Evidence:**
+
 - `NavLink.tsx` handles same-page hash navigation correctly
 - `LanguageSwitcher.tsx` preserves hash on locale switch
 - Test targets: `/en/products#playground`, `/de/pricing#plans`
 
 **Potential fix if tests still fail:**
+
 - Add `scroll={false}` to hash-only navigation
 - Ensure `scrollMarginTop` CSS is applied to all hash targets
 
 #### 3. **Language Switch Invariants**
+
 **Current implementation:**
+
 ```tsx
 // LanguageSwitcher.tsx lines 73-88
-const currentHash = typeof window !== 'undefined' ? window.location.hash.replace('#', '') : '';
+const currentHash = typeof window !== "undefined" ? window.location.hash.replace("#", "") : "";
 
 <Link
   href={{
     pathname: pathname,
     query: query,
-    hash: currentHash
+    hash: currentHash,
   }}
   locale={lang.code as any}
   scroll={true}
-/>
+/>;
 ```
 
 **Potential issue:** `scroll={true}` may interfere with hash preservation  
@@ -71,6 +80,7 @@ const currentHash = typeof window !== 'undefined' ? window.location.hash.replace
 ## FILE CHANGES MADE (Previous Session)
 
 ### Modified Files:
+
 1. `src/components/navigation/NavLink.tsx` - Hash navigation logic
 2. `src/app/[locale]/docs/page.tsx` - Added `generateStaticParams()`
 3. `src/app/[locale]/pricing/page.tsx` - Added `generateStaticParams()`
@@ -81,6 +91,7 @@ const currentHash = typeof window !== 'undefined' ? window.location.hash.replace
 8. `src/components/header/index.tsx` - Locale-aware navigation
 
 ### No New Files Created
+
 All fixes were surgical edits to existing files.
 
 ---
@@ -88,46 +99,55 @@ All fixes were surgical edits to existing files.
 ## VERIFICATION STEPS (Windows PowerShell)
 
 ### 1. Install Dependencies (if needed)
+
 ```powershell
 npm ci
 ```
 
 ### 2. Build Production Bundle
+
 ```powershell
 npm run build
 ```
 
 ### 3. Start Production Server
+
 ```powershell
 npm run start
 ```
 
 ### 4. Manual Verification
+
 Open browser and test these critical URLs:
 
 **Locale Roots:**
+
 - http://localhost:3000/en ✅ Expected: Home page in English
 - http://localhost:3000/hi ✅ Expected: Home page in Hindi
 - http://localhost:3000/de ✅ Expected: Home page in German
 - http://localhost:3000/es ✅ Expected: Home page in Spanish
 
 **Critical Routes:**
+
 - http://localhost:3000/de/pricing ✅ Expected: Pricing page in German
 - http://localhost:3000/hi/docs ✅ Expected: Docs page in Hindi
 - http://localhost:3000/en/company ✅ Expected: Company page in English
 - http://localhost:3000/fr/contact ✅ Expected: Contact page in French
 
 **Hash Navigation:**
+
 - http://localhost:3000/en/products#playground ✅ Expected: Scrolls to #playground section
 - http://localhost:3000/de/pricing#plans ✅ Expected: Scrolls to #plans section
 
 **Language Switch with Hash:**
+
 1. Navigate to http://localhost:3000/en/products#playground
 2. Open language switcher
 3. Click "Deutsch" (German)
 4. ✅ Expected: URL becomes `/de/products#playground` and scrolls to #playground
 
 ### 5. Run Playwright i18n QA Gate Locally
+
 ```powershell
 # Build first (required for Playwright tests)
 npm run build
@@ -151,6 +171,7 @@ npx playwright test qa-i18n/tests/i18n.spec.ts
 ## EXPECTED TEST RESULTS
 
 ### ✅ PASSING Tests (Expected)
+
 - `Sentinel: Root Path "/" Redirects to Primary Locale`
 - `Sentinel: Non-localized path "/pricing" auto-fixes`
 - `Audit CRITICAL URL: /en`, `/es`, `/fr`, `/de`, `/zh`, `/hi`, `/ja`, `/ko`
@@ -159,6 +180,7 @@ npx playwright test qa-i18n/tests/i18n.spec.ts
 - `initial block load & layout integrity` (all locales)
 
 ### ⚠️ POTENTIALLY FAILING Tests (To Fix)
+
 - `section navigation via hash` - May need scroll behavior tuning
 - `language switch should preserve route and hash` - May need `scroll={false}` fix
 
@@ -167,9 +189,11 @@ npx playwright test qa-i18n/tests/i18n.spec.ts
 ## SURGICAL FIXES (If Tests Still Fail)
 
 ### Fix 1: Language Switcher Scroll Behavior
+
 **File:** `src/components/LanguageSwitcher.tsx`  
 **Line:** 88  
 **Change:**
+
 ```tsx
 // FROM:
 scroll={true}
@@ -181,8 +205,10 @@ scroll={false}
 **Rationale:** When switching locales with a hash, we want the browser to handle the scroll to the hash target, not Next.js's default scroll-to-top behavior.
 
 ### Fix 2: Hash Navigation Scroll Margin
+
 **File:** `src/app/globals.css` (or relevant CSS file)  
 **Add:**
+
 ```css
 [id] {
   scroll-margin-top: 120px; /* Adjust based on header height */
@@ -192,9 +218,11 @@ scroll={false}
 **Rationale:** Ensures hash targets scroll into view with proper offset for fixed headers.
 
 ### Fix 3: NavLink Hash Handling
+
 **File:** `src/components/navigation/NavLink.tsx`  
 **Line:** 50-51  
 **Verify:**
+
 ```tsx
 <Link
   href={href}
@@ -211,11 +239,13 @@ scroll={false}
 ## COMMIT & PUSH INSTRUCTIONS
 
 ### 1. Stage Changes
+
 ```powershell
 git add .
 ```
 
 ### 2. Commit
+
 ```powershell
 git commit -m "fix(i18n): enforce route parity and preserve route+hash on locale switch
 
@@ -230,11 +260,13 @@ Tests: Playwright i18n.spec.ts, quality-gate.spec.ts"
 ```
 
 ### 3. Push Branch
+
 ```powershell
 git push origin fix/i18n-parity
 ```
 
 ### 4. Open PR
+
 ```powershell
 # GitHub CLI (if installed)
 gh pr create --title "fix(i18n): Enforce route parity and preserve route+hash on locale switch" --body "Fixes i18n QA Release Gate failures. See I18N_PARITY_DIAGNOSIS.md for details."

@@ -15,6 +15,7 @@ This repository uses a **Single Source of Truth** for technical papers. All tech
 ## Prerequisites
 
 To build the PDFs locally, you need a LaTeX distribution installed on your Windows machine:
+
 - **MiKTeX** (recommended for Windows): [miktex.org](https://miktex.org/)
 - **TeX Live**: [tug.org/texlive](https://tug.org/texlive/)
 - Ensure `pdflatex` and `bibtex` are in your system's `PATH`.
@@ -28,6 +29,7 @@ Run the included PowerShell script from the root of the repository:
 ```
 
 The script will:
+
 1. Initialize the build and output directories.
 2. For each paper and venue combination:
    - Generate a temporary driver file.

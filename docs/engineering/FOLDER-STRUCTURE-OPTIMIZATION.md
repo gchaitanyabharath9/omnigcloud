@@ -1,4 +1,5 @@
 # Folder Structure Optimization Plan
+
 ## OmniGCloud Codebase Organization
 
 **Date**: December 30, 2025  
@@ -46,6 +47,7 @@ nascent-zodiac/
 ### 2.1 Root Directory Cleanup
 
 **Move to docs/**:
+
 ```
 CHART_INTEGRATION_SUMMARY.md      → docs/development/chart-integration.md
 TYPOGRAPHY_STANDARDIZATION.md     → docs/development/typography.md
@@ -54,6 +56,7 @@ DEPLOY_MULTI_CLOUD.md             → docs/deployment/multi-cloud.md
 ```
 
 **Keep in root**:
+
 ```
 README.md                          ✅ (primary documentation)
 SECURITY.md                        ✅ (GitHub security policy)
@@ -66,6 +69,7 @@ LICENSE                            ✅ (legal requirement)
 **Current**: 22 files + 5 subdirectories (flat structure)
 
 **Proposed**:
+
 ```
 docs/
 ├── README.md                      # Documentation index
@@ -115,6 +119,7 @@ docs/
 **Current**: 14 files in flat structure
 
 **Proposed**:
+
 ```
 src/lib/
 ├── security/                      # Security utilities (NEW)
@@ -150,6 +155,7 @@ src/lib/
 **Current**: 75+ components in flat structure
 
 **Proposed**:
+
 ```
 src/components/
 ├── layout/                        # Layout components
@@ -200,6 +206,7 @@ src/components/
 **Current**: 8 files (mixed purposes)
 
 **Proposed**:
+
 ```
 scripts/
 ├── build/                         # Build scripts (NEW)
@@ -227,6 +234,7 @@ scripts/
 **Risk**: LOW (no code changes)
 
 **Steps**:
+
 1. Create new docs subdirectories
 2. Move files to appropriate locations
 3. Update internal documentation links
@@ -241,6 +249,7 @@ scripts/
 **Risk**: MEDIUM (requires import updates)
 
 **Steps**:
+
 1. Create lib subdirectories
 2. Move files to new locations
 3. Create index.ts re-export files
@@ -257,6 +266,7 @@ scripts/
 **Risk**: HIGH (many import updates)
 
 **Steps**:
+
 1. Create component subdirectories
 2. Move components to new locations
 3. Create index.ts re-export files
@@ -273,6 +283,7 @@ scripts/
 **Risk**: LOW (minimal dependencies)
 
 **Steps**:
+
 1. Create scripts subdirectories
 2. Move scripts to new locations
 3. Update package.json script references
@@ -289,6 +300,7 @@ scripts/
 **Principle**: Incremental changes with validation at each step
 
 **Process**:
+
 1. Create new directory structure
 2. Copy (don't move) files to new locations
 3. Update imports in new locations
@@ -299,6 +311,7 @@ scripts/
 ### 4.2 Import Update Strategy
 
 **Use automated tools**:
+
 ```bash
 # Find all imports of a moved file
 grep -r "from '@/lib/csrf'" src/
@@ -308,6 +321,7 @@ find src/ -type f -name "*.ts*" -exec sed -i.bak 's|@/lib/csrf|@/lib/security/cs
 ```
 
 **Manual verification**:
+
 - TypeScript compiler will catch broken imports
 - Run `npm run build` after each phase
 - Test critical paths in development
@@ -315,6 +329,7 @@ find src/ -type f -name "*.ts*" -exec sed -i.bak 's|@/lib/csrf|@/lib/security/cs
 ### 4.3 Rollback Plan
 
 **Git-based rollback**:
+
 ```bash
 # Create feature branch
 git checkout -b refactor/folder-structure
@@ -334,11 +349,13 @@ git revert <commit-hash>
 ### 5.1 Developer Experience
 
 **Before**:
+
 - Hard to find specific utilities (14 files in flat lib/)
 - Unclear component organization (75+ components in one directory)
 - Documentation scattered across root and docs/
 
 **After**:
+
 - Clear domain separation (security/, api/, observability/)
 - Logical component grouping (dashboard/, forms/, ui/)
 - Well-organized documentation (security/, architecture/, guides/)
@@ -346,12 +363,14 @@ git revert <commit-hash>
 ### 5.2 Maintainability
 
 **Improved**:
+
 - Easier to locate related code
 - Clear ownership boundaries
 - Better code discoverability
 - Reduced cognitive load
 
 **Metrics**:
+
 - Average time to find a file: -50%
 - New developer onboarding: -30%
 - Code review efficiency: +40%
@@ -359,6 +378,7 @@ git revert <commit-hash>
 ### 5.3 Scalability
 
 **Supports**:
+
 - Adding new security utilities (clear location: lib/security/)
 - Adding new components (clear categories)
 - Adding new documentation (clear structure)
@@ -370,52 +390,52 @@ git revert <commit-hash>
 
 ### 6.1 Root → Docs Migration
 
-| Current | New Location | Reason |
-|---------|--------------|--------|
-| `CHART_INTEGRATION_SUMMARY.md` | `docs/development/chart-integration.md` | Development doc |
-| `TYPOGRAPHY_STANDARDIZATION.md` | `docs/development/typography.md` | Development doc |
-| `PENDING_TASKS.md` | `docs/development/pending-tasks.md` | Development doc |
-| `DEPLOY_MULTI_CLOUD.md` | `docs/deployment/multi-cloud.md` | Deployment doc |
+| Current                         | New Location                            | Reason          |
+| ------------------------------- | --------------------------------------- | --------------- |
+| `CHART_INTEGRATION_SUMMARY.md`  | `docs/development/chart-integration.md` | Development doc |
+| `TYPOGRAPHY_STANDARDIZATION.md` | `docs/development/typography.md`        | Development doc |
+| `PENDING_TASKS.md`              | `docs/development/pending-tasks.md`     | Development doc |
+| `DEPLOY_MULTI_CLOUD.md`         | `docs/deployment/multi-cloud.md`        | Deployment doc  |
 
 ### 6.2 Docs Reorganization
 
-| Current | New Location | Reason |
-|---------|--------------|--------|
-| `CSRF-PROTECTION-QUICK-REF.md` | `docs/quick-reference/csrf-protection.md` | Quick ref |
-| `FORMS-SECURITY-QUICK-REF.md` | `docs/quick-reference/forms-security.md` | Quick ref |
-| `RATE-LIMITING-QUICK-REF.md` | `docs/quick-reference/rate-limiting.md` | Quick ref |
-| `SECURITY-HEADERS-QUICK-REF.md` | `docs/quick-reference/security-headers.md` | Quick ref |
-| `api-security.md` | `docs/security/api-security.md` | Security doc |
-| `csrf-protection.md` | `docs/security/csrf-protection.md` | Security doc |
-| `forms-security.md` | `docs/security/forms-security.md` | Security doc |
-| `rate-limiting.md` | `docs/security/rate-limiting.md` | Security doc |
-| `secrets-hygiene.md` | `docs/security/secrets-hygiene.md` | Security doc |
-| `security-headers.md` | `docs/security/security-headers.md` | Security doc |
-| `SECURITY-QA-REPORT.md` | `docs/security/security-qa-report.md` | Security doc |
-| `IMPLEMENTATION-PLAN.md` | `docs/development/implementation-plan.md` | Development doc |
-| `vault.md` | `docs/deployment/vault.md` | Deployment doc |
-| `OBSERVABILITY.md` | `docs/deployment/observability.md` | Deployment doc |
-| `resiliency.md` | `docs/operations/resiliency.md` | Operations doc |
-| `envs.md` | `docs/operations/envs.md` | Operations doc |
+| Current                         | New Location                               | Reason          |
+| ------------------------------- | ------------------------------------------ | --------------- |
+| `CSRF-PROTECTION-QUICK-REF.md`  | `docs/quick-reference/csrf-protection.md`  | Quick ref       |
+| `FORMS-SECURITY-QUICK-REF.md`   | `docs/quick-reference/forms-security.md`   | Quick ref       |
+| `RATE-LIMITING-QUICK-REF.md`    | `docs/quick-reference/rate-limiting.md`    | Quick ref       |
+| `SECURITY-HEADERS-QUICK-REF.md` | `docs/quick-reference/security-headers.md` | Quick ref       |
+| `api-security.md`               | `docs/security/api-security.md`            | Security doc    |
+| `csrf-protection.md`            | `docs/security/csrf-protection.md`         | Security doc    |
+| `forms-security.md`             | `docs/security/forms-security.md`          | Security doc    |
+| `rate-limiting.md`              | `docs/security/rate-limiting.md`           | Security doc    |
+| `secrets-hygiene.md`            | `docs/security/secrets-hygiene.md`         | Security doc    |
+| `security-headers.md`           | `docs/security/security-headers.md`        | Security doc    |
+| `SECURITY-QA-REPORT.md`         | `docs/security/security-qa-report.md`      | Security doc    |
+| `IMPLEMENTATION-PLAN.md`        | `docs/development/implementation-plan.md`  | Development doc |
+| `vault.md`                      | `docs/deployment/vault.md`                 | Deployment doc  |
+| `OBSERVABILITY.md`              | `docs/deployment/observability.md`         | Deployment doc  |
+| `resiliency.md`                 | `docs/operations/resiliency.md`            | Operations doc  |
+| `envs.md`                       | `docs/operations/envs.md`                  | Operations doc  |
 
 ### 6.3 Lib Modularization
 
-| Current | New Location | Domain |
-|---------|--------------|--------|
-| `csrf.ts` | `lib/security/csrf.ts` | Security |
-| `rate-limit.ts` | `lib/security/rate-limit.ts` | Security |
-| `form-security.ts` | `lib/security/form-security.ts` | Security |
-| `api-utils.ts` | `lib/api/api-utils.ts` | API |
-| `errors.ts` | `lib/api/errors.ts` | API |
-| `retry.ts` | `lib/api/retry.ts` | API |
-| `safe-fetch.ts` | `lib/api/safe-fetch.ts` | API |
-| `logger.ts` | `lib/observability/logger.ts` | Observability |
-| `metrics.ts` | `lib/observability/metrics.ts` | Observability |
-| `audit.ts` | `lib/observability/audit.ts` | Observability |
-| `redis.ts` | `lib/integrations/redis.ts` | Integrations |
-| `stripe.ts` | `lib/integrations/stripe.ts` | Integrations |
-| `content.ts` | `lib/utils/content.ts` | Utils |
-| `seo.ts` | `lib/utils/seo.ts` | Utils |
+| Current            | New Location                    | Domain        |
+| ------------------ | ------------------------------- | ------------- |
+| `csrf.ts`          | `lib/security/csrf.ts`          | Security      |
+| `rate-limit.ts`    | `lib/security/rate-limit.ts`    | Security      |
+| `form-security.ts` | `lib/security/form-security.ts` | Security      |
+| `api-utils.ts`     | `lib/api/api-utils.ts`          | API           |
+| `errors.ts`        | `lib/api/errors.ts`             | API           |
+| `retry.ts`         | `lib/api/retry.ts`              | API           |
+| `safe-fetch.ts`    | `lib/api/safe-fetch.ts`         | API           |
+| `logger.ts`        | `lib/observability/logger.ts`   | Observability |
+| `metrics.ts`       | `lib/observability/metrics.ts`  | Observability |
+| `audit.ts`         | `lib/observability/audit.ts`    | Observability |
+| `redis.ts`         | `lib/integrations/redis.ts`     | Integrations  |
+| `stripe.ts`        | `lib/integrations/stripe.ts`    | Integrations  |
+| `content.ts`       | `lib/utils/content.ts`          | Utils         |
+| `seo.ts`           | `lib/utils/seo.ts`              | Utils         |
 
 ---
 
@@ -424,55 +444,62 @@ git revert <commit-hash>
 ### 7.1 Lib Index Files
 
 **lib/security/index.ts**:
+
 ```typescript
-export * from './csrf';
-export * from './rate-limit';
-export * from './form-security';
+export * from "./csrf";
+export * from "./rate-limit";
+export * from "./form-security";
 ```
 
 **lib/api/index.ts**:
+
 ```typescript
-export * from './api-utils';
-export * from './errors';
-export * from './retry';
-export * from './safe-fetch';
+export * from "./api-utils";
+export * from "./errors";
+export * from "./retry";
+export * from "./safe-fetch";
 ```
 
 **lib/index.ts** (main):
+
 ```typescript
 // Re-export all modules
-export * from './security';
-export * from './api';
-export * from './observability';
-export * from './integrations';
-export * from './utils';
+export * from "./security";
+export * from "./api";
+export * from "./observability";
+export * from "./integrations";
+export * from "./utils";
 ```
 
 ### 7.2 Import Patterns
 
 **Before**:
+
 ```typescript
-import { validateCsrfToken } from '@/lib/csrf';
-import { getRateLimiter } from '@/lib/rate-limit';
-import { logger } from '@/lib/logger';
+import { validateCsrfToken } from "@/lib/csrf";
+import { getRateLimiter } from "@/lib/rate-limit";
+import { logger } from "@/lib/logger";
 ```
 
 **After (Option 1 - Specific)**:
+
 ```typescript
-import { validateCsrfToken } from '@/lib/security/csrf';
-import { getRateLimiter } from '@/lib/security/rate-limit';
-import { logger } from '@/lib/observability/logger';
+import { validateCsrfToken } from "@/lib/security/csrf";
+import { getRateLimiter } from "@/lib/security/rate-limit";
+import { logger } from "@/lib/observability/logger";
 ```
 
 **After (Option 2 - Grouped)**:
+
 ```typescript
-import { validateCsrfToken, getRateLimiter } from '@/lib/security';
-import { logger } from '@/lib/observability';
+import { validateCsrfToken, getRateLimiter } from "@/lib/security";
+import { logger } from "@/lib/observability";
 ```
 
 **After (Option 3 - Main index)**:
+
 ```typescript
-import { validateCsrfToken, getRateLimiter, logger } from '@/lib';
+import { validateCsrfToken, getRateLimiter, logger } from "@/lib";
 ```
 
 **Recommendation**: Use Option 1 (specific imports) for clarity and tree-shaking.
@@ -524,12 +551,14 @@ grep -r "from '@/lib/rate-limit'" src/
 # Documentation Index
 
 ## Quick Reference
+
 - [CSRF Protection](./quick-reference/csrf-protection.md)
 - [Forms Security](./quick-reference/forms-security.md)
 - [Rate Limiting](./quick-reference/rate-limiting.md)
 - [Security Headers](./quick-reference/security-headers.md)
 
 ## Security
+
 - [API Security](./security/api-security.md)
 - [CSRF Protection](./security/csrf-protection.md)
 - [Forms Security](./security/forms-security.md)
@@ -539,23 +568,28 @@ grep -r "from '@/lib/rate-limit'" src/
 - [Security QA Report](./security/security-qa-report.md)
 
 ## Architecture
+
 - [High-Level Design](./architecture/HLD-Security-Framework.md)
 - [Architecture Decision Records](./architecture/ADRs-Security-Framework.md)
 
 ## Research
+
 - [Technical Paper](./research/TECHNICAL-PAPER-Security-Framework.md)
 
 ## Development
+
 - [Chart Integration](./development/chart-integration.md)
 - [Typography Standards](./development/typography.md)
 - [Pending Tasks](./development/pending-tasks.md)
 
 ## Deployment
+
 - [Multi-Cloud Deployment](./deployment/multi-cloud.md)
 - [Vault Setup](./deployment/vault.md)
 - [Observability](./deployment/observability.md)
 
 ## Operations
+
 - [Resiliency](./operations/resiliency.md)
 - [Environment Configuration](./operations/envs.md)
 ```
@@ -563,12 +597,14 @@ grep -r "from '@/lib/rate-limit'" src/
 ### 9.2 Update Main README.md
 
 Add section:
+
 ```markdown
 ## Documentation
 
 See [docs/README.md](./docs/README.md) for complete documentation index.
 
 Quick links:
+
 - [Security Documentation](./docs/security/)
 - [Architecture Documentation](./docs/architecture/)
 - [Development Guides](./docs/guides/)
@@ -625,7 +661,6 @@ Quick links:
 
 1. **Lib imports**: Used in ~100+ files
    - **Mitigation**: Use automated find/replace, verify with TypeScript
-   
 2. **Component imports**: Used in ~200+ files
    - **Mitigation**: Move incrementally, test each component
 
@@ -647,6 +682,7 @@ Quick links:
 **Immediate Action**: Execute **Phase 1 (Documentation)** only
 
 **Rationale**:
+
 - ✅ Zero risk (no code changes)
 - ✅ Immediate benefit (better organization)
 - ✅ Quick to implement (1-2 hours)

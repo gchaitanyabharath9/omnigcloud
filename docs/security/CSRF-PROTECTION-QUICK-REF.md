@@ -18,43 +18,43 @@
 ### 1. Fetch Token
 
 ```typescript
-const response = await fetch('/api/csrf');
+const response = await fetch("/api/csrf");
 const { token } = await response.json();
 ```
 
 ### 2. Include in Request
 
 ```typescript
-await fetch('/api/contact', {
-    method: 'POST',
-    headers: {
-        'Content-Type': 'application/json',
-        'X-CSRF-Token': token  // ← Include token
-    },
-    body: JSON.stringify(data),
-    credentials: 'same-origin'  // ← Include cookies
+await fetch("/api/contact", {
+  method: "POST",
+  headers: {
+    "Content-Type": "application/json",
+    "X-CSRF-Token": token, // ← Include token
+  },
+  body: JSON.stringify(data),
+  credentials: "same-origin", // ← Include cookies
 });
 ```
 
 ## Server Implementation
 
 ```typescript
-import { validateCsrfToken } from '@/lib/csrf';
+import { validateCsrfToken } from "@/lib/csrf";
 
 // Validate CSRF
 const csrfValidation = validateCsrfToken(request);
 if (!csrfValidation.valid) {
-    return error(403, csrfValidation.error);
+  return error(403, csrfValidation.error);
 }
 ```
 
 ## Error Codes
 
-| Code | Status | Retryable | Action |
-|------|--------|-----------|--------|
-| `CSRF_TOKEN_MISSING` | 403 | ✅ Yes | Fetch token |
-| `CSRF_TOKEN_MISMATCH` | 403 | ❌ No | Investigate |
-| `CSRF_TOKEN_INVALID` | 403 | ✅ Yes | Fetch new token |
+| Code                  | Status | Retryable | Action          |
+| --------------------- | ------ | --------- | --------------- |
+| `CSRF_TOKEN_MISSING`  | 403    | ✅ Yes    | Fetch token     |
+| `CSRF_TOKEN_MISMATCH` | 403    | ❌ No     | Investigate     |
+| `CSRF_TOKEN_INVALID`  | 403    | ✅ Yes    | Fetch new token |
 
 ## Quick Test
 

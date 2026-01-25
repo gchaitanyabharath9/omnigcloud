@@ -7,28 +7,33 @@ All email addresses across the application have been centralized into a single c
 ## Changes Made
 
 ### 1. Created Central Email Configuration
+
 **File**: `src/config/emails.ts`
 
 All email addresses are now defined in one place:
+
 - `omnigcloud@gmail.com` - Used for all departments temporarily
 - Easy to update in the future by modifying only this file
 
 ### 2. Updated TypeScript Files
 
 **Files Updated**:
+
 - ✅ `src/components/FloatingActions.tsx` - Uses `ARCHITECTS_EMAIL`
 - ✅ `src/lib/seo.ts` - Uses `SALES_EMAIL`
 
 **Files Remaining** (to be updated):
+
 - `src/app/[locale]/security/page.tsx` - Uses `security@omnigcloud.com`
 - `src/app/[locale]/terms/page.tsx` - Uses `legal@omnigcloud.com`
 - `src/app/[locale]/privacy/page.tsx` - Uses `legal@omnigcloud.com`
 - `src/app/[locale]/founder/page.tsx` - Uses `architects@omnigcloud.com`
 - `src/app/[locale]/company/page.tsx` - Uses `office-of-ceo@omnigcloud.com`
 
-### 3. Translation Files (messages/*.json)
+### 3. Translation Files (messages/\*.json)
 
 All 8 language files need to be updated:
+
 - `messages/en.json`
 - `messages/de.json`
 - `messages/es.json`
@@ -39,6 +44,7 @@ All 8 language files need to be updated:
 - `messages/zh.json`
 
 Each file has a `Company.email` section with these keys:
+
 ```json
 {
   "Company": {
@@ -57,6 +63,7 @@ Each file has a `Company.email` section with these keys:
 ### 4. Documentation Files
 
 **Files to Update**:
+
 - `README.md` - Contains example email addresses
 - `SECURITY.md` - Contains security@omnigcloud.com
 - `PENDING_TASKS.md` - References email aliases

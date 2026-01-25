@@ -1,15 +1,15 @@
-import { AppConfig } from '../schema';
+import { AppConfig } from "../schema";
 
 type DeepPartial<T> = {
-    [P in keyof T]?: T[P] extends object ? DeepPartial<T[P]> : T[P];
+  [P in keyof T]?: T[P] extends object ? DeepPartial<T[P]> : T[P];
 };
 
 export const devConfig: DeepPartial<AppConfig> = {
-    site: {
-        name: 'OmniGCloud (Dev)',
-    },
-    features: {
-        enableMetrics: true,
-        enableRateLimit: true,
-    }
+  site: {
+    name: "OmniGCloud (Dev)",
+  },
+  features: {
+    enableMetrics: true,
+    enableRateLimit: true,
+  },
 };

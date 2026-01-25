@@ -7,6 +7,7 @@
 ## 🔗 **VALIDATION TOOLS (7 Total)**
 
 ### 1. Paperpal - Grammar & Academic Tone
+
 **URL:** https://edit.paperpal.com/  
 **Purpose:** Grammar checking, clarity improvement, academic tone  
 **Free Tier:** Yes (limited checks)  
@@ -15,6 +16,7 @@
 ---
 
 ### 2. SciSpace - Literature Discovery
+
 **URL:** https://scispace.com/  
 **Purpose:** Find related papers, Q&A on papers, citation discovery  
 **Free Tier:** Yes (limited AI queries)  
@@ -23,6 +25,7 @@
 ---
 
 ### 3. Connected Papers - Citation Network
+
 **URL:** https://www.connectedpapers.com/  
 **Purpose:** Visualize citation networks, find related work  
 **Free Tier:** Yes (5 graphs/month)  
@@ -31,6 +34,7 @@
 ---
 
 ### 4. ResearchRabbit - Literature Management
+
 **URL:** https://app.researchrabbit.ai/  
 **Purpose:** Build citation collections, discover similar work  
 **Free Tier:** Yes (unlimited)  
@@ -39,6 +43,7 @@
 ---
 
 ### 5. Jenni AI - Writing Assistant
+
 **URL:** https://app.jenni.ai/  
 **Purpose:** Writing quality, structure, flow improvement  
 **Free Tier:** Yes (200 AI words/day)  
@@ -47,6 +52,7 @@
 ---
 
 ### 6. Litmaps - Citation Mapping
+
 **URL:** https://app.litmaps.com/import  
 **Purpose:** Citation mapping, identify research gaps  
 **Free Tier:** Yes (limited maps)  
@@ -55,6 +61,7 @@
 ---
 
 ### 7. Editage - Professional Editing
+
 **URL:** https://my.editage.us/  
 **Purpose:** Professional editing, publication readiness  
 **Free Tier:** Free assessment (500 words)  
@@ -77,11 +84,13 @@
 ## 📂 **YOUR FILES**
 
 **PDFs Location:**
+
 ```
 .\review-pdfs\
 ```
 
 **Open folder:**
+
 ```powershell
 explorer .\review-pdfs
 ```
@@ -102,15 +111,15 @@ explorer .\review-pdfs
 
 ## 📋 **TOOL COMPARISON**
 
-| Tool | Best For | Free Tier | Time Required |
-|------|----------|-----------|---------------|
-| **Paperpal** | Grammar, clarity | Limited | 30 min/paper |
-| **SciSpace** | Recent citations | Limited queries | 20 min/paper |
-| **ResearchRabbit** | Citation network | Unlimited | 30 min/paper |
-| **Jenni AI** | Writing polish | 200 words/day | 15 min/paper |
-| **Litmaps** | Gap analysis | Limited maps | 20 min/paper |
-| **Connected Papers** | Visual mapping | 5 graphs/month | 15 min/paper |
-| **Editage** | Professional edit | 500-word sample | 30 min assessment |
+| Tool                 | Best For          | Free Tier       | Time Required     |
+| -------------------- | ----------------- | --------------- | ----------------- |
+| **Paperpal**         | Grammar, clarity  | Limited         | 30 min/paper      |
+| **SciSpace**         | Recent citations  | Limited queries | 20 min/paper      |
+| **ResearchRabbit**   | Citation network  | Unlimited       | 30 min/paper      |
+| **Jenni AI**         | Writing polish    | 200 words/day   | 15 min/paper      |
+| **Litmaps**          | Gap analysis      | Limited maps    | 20 min/paper      |
+| **Connected Papers** | Visual mapping    | 5 graphs/month  | 15 min/paper      |
+| **Editage**          | Professional edit | 500-word sample | 30 min assessment |
 
 ---
 
@@ -119,12 +128,14 @@ explorer .\review-pdfs
 If you want professional editing:
 
 **Editage Standard Editing:**
+
 - Cost: ~$0.04/word
 - For 10,000-word paper: ~$400
 - Turnaround: 5-7 days
 - Recommendation: Use for A1, AECP (flagship papers)
 
 **Paperpal Premium:**
+
 - Cost: $12/month
 - Unlimited checks
 - Advanced suggestions
@@ -135,12 +146,14 @@ If you want professional editing:
 ## 🎯 **TODAY'S ACTION ITEMS**
 
 **Right Now (Next 15 Minutes):**
+
 1. Open all 7 tools in browser tabs
 2. Create accounts (all free tiers)
 3. Bookmark all URLs
 4. Open review-pdfs folder
 
 **Next 4 Hours:**
+
 1. Paperpal: A1.pdf (1 hour)
 2. SciSpace: A1.pdf (1 hour)
 3. ResearchRabbit: Build collection (1 hour)
@@ -151,6 +164,7 @@ If you want professional editing:
 ## 📞 **SUPPORT**
 
 **Need help?**
+
 - See: `PAPER-VALIDATION-WORKFLOW.md` (detailed guide)
 - See: `QUICK-START-VALIDATION.md` (quick start)
 - See: `VALIDATION-TRACKING.md` (track progress)

@@ -22,11 +22,11 @@ We use the KV v2 secrets engine mounted at `secret/`.
 
 ### Paths per Environment
 
-| Environment | Vault Path |
-|-------------|------------|
-| **dev**     | `secret/data/nascent-zodiac/dev` |
-| **sit**     | `secret/data/nascent-zodiac/sit` |
-| **uat**     | `secret/data/nascent-zodiac/uat` |
+| Environment | Vault Path                        |
+| ----------- | --------------------------------- |
+| **dev**     | `secret/data/nascent-zodiac/dev`  |
+| **sit**     | `secret/data/nascent-zodiac/sit`  |
+| **uat**     | `secret/data/nascent-zodiac/uat`  |
 | **prod**    | `secret/data/nascent-zodiac/prod` |
 
 ### Key Names
@@ -34,6 +34,7 @@ We use the KV v2 secrets engine mounted at `secret/`.
 Keys inside Vault should match the environment variable names they replace.
 
 Example:
+
 ```json
 {
   "AUTH_SECRET": "prod-secret-value-xyz",
@@ -44,6 +45,7 @@ Example:
 ## Migration
 
 To migrate a new secret:
+
 1. Add it to `.env` for local dev.
 2. Add it to the Vault path for `dev/prod` etc.
 3. Update `src/config/index.ts` or consuming code to use `await getSecret('KEY')`.
@@ -59,6 +61,7 @@ For actual deployment to OpenShift, Kubernetes, or OCI VMs, we recommend the fol
 We recommend using [External Secrets Operator (ESO)](https://external-secrets.io/) to sync Vault secrets into Kubernetes `Secret` resources, which are then injected as environment variables.
 
 **Why?**
+
 - Native K8s integration.
 - Automatic rotation.
 - Keeps the application code simple (it just reads ENV vars or uses the `src/secrets` fetcher if preferred).
@@ -77,7 +80,7 @@ spec:
     name: vault-backend
     kind: ClusterSecretStore
   target:
-    name: app-env-secret  # The K8s secret to be created
+    name: app-env-secret # The K8s secret to be created
     creationPolicy: Owner
   data:
     # Maps Vault Key -> K8s Secret Key
@@ -139,6 +142,7 @@ template {
 The application can then rely on the `src/secrets` module's Vault fetching logic (if `VAULT_TOKEN` is present) OR simply load the rendered `.env` file using dotenv if preferred.
 
 For the **Hybrid approach** used in `src/secrets`:
+
 1. Vault Agent performs Auto-Auth (AppRole/AWS/K8s).
 2. Vault Agent writes the sink token to `~/.vault-token`.
 3. Application starts, reads `VAULT_TOKEN` from file or env, and fetches secrets dynamically.

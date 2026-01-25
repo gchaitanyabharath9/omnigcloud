@@ -9,12 +9,14 @@ Copy and paste these into your browser to test your deployed site.
 ## **PRIMARY URLS**
 
 ### Custom Domain (After DNS Propagates)
+
 ```
 https://omnigcloud.com
 https://www.omnigcloud.com
 ```
 
 ### Vercel URL (Works Now)
+
 ```
 https://omnigcloud.vercel.app
 ```
@@ -24,6 +26,7 @@ https://omnigcloud.vercel.app
 ## **CORE MARKETING PAGES**
 
 ### Main Pages
+
 ```
 https://omnigcloud.com/
 https://omnigcloud.com/platform
@@ -37,6 +40,7 @@ https://omnigcloud.com/solutions
 ```
 
 ### Thought Leadership ⭐ NEW
+
 ```
 https://omnigcloud.com/research
 https://omnigcloud.com/docs
@@ -48,6 +52,7 @@ https://omnigcloud.com/docs/guide
 ```
 
 ### Trust & Legal Pages
+
 ```
 https://omnigcloud.com/security
 https://omnigcloud.com/privacy
@@ -56,6 +61,7 @@ https://omnigcloud.com/terms
 ```
 
 ### Additional Pages
+
 ```
 https://omnigcloud.com/case-studies
 https://omnigcloud.com/company
@@ -74,6 +80,7 @@ https://omnigcloud.com/onboarding
 ## **MULTILINGUAL PAGES (7 Locales)**
 
 ### English
+
 ```
 https://omnigcloud.com/en
 https://omnigcloud.com/en/research
@@ -82,6 +89,7 @@ https://omnigcloud.com/en/contact
 ```
 
 ### Spanish
+
 ```
 https://omnigcloud.com/es
 https://omnigcloud.com/es/research
@@ -90,6 +98,7 @@ https://omnigcloud.com/es/contact
 ```
 
 ### French
+
 ```
 https://omnigcloud.com/fr
 https://omnigcloud.com/fr/research
@@ -98,6 +107,7 @@ https://omnigcloud.com/fr/contact
 ```
 
 ### German
+
 ```
 https://omnigcloud.com/de
 https://omnigcloud.com/de/research
@@ -106,6 +116,7 @@ https://omnigcloud.com/de/contact
 ```
 
 ### Chinese
+
 ```
 https://omnigcloud.com/zh
 https://omnigcloud.com/zh/research
@@ -114,6 +125,7 @@ https://omnigcloud.com/zh/contact
 ```
 
 ### Hindi
+
 ```
 https://omnigcloud.com/hi
 https://omnigcloud.com/hi/research
@@ -122,6 +134,7 @@ https://omnigcloud.com/hi/contact
 ```
 
 ### Japanese
+
 ```
 https://omnigcloud.com/ja
 https://omnigcloud.com/ja/research
@@ -134,12 +147,14 @@ https://omnigcloud.com/ja/contact
 ## **SEO & TECHNICAL**
 
 ### SEO Files
+
 ```
 https://omnigcloud.com/sitemap.xml
 https://omnigcloud.com/robots.txt
 ```
 
 ### API Endpoints
+
 ```
 https://omnigcloud.com/api/health
 https://omnigcloud.com/api/metrics
@@ -154,6 +169,7 @@ https://omnigcloud.com/api/billing
 Replace `omnigcloud.com` with `omnigcloud.vercel.app` for immediate testing:
 
 ### Priority Test URLs (Vercel)
+
 ```
 https://omnigcloud.vercel.app
 https://omnigcloud.vercel.app/research
@@ -173,6 +189,7 @@ https://omnigcloud.vercel.app/robots.txt
 ## **QUICK TEST CHECKLIST**
 
 ### Priority 1 (Test First)
+
 - [ ] https://omnigcloud.com/
 - [ ] https://omnigcloud.com/research
 - [ ] https://omnigcloud.com/pricing
@@ -180,22 +197,26 @@ https://omnigcloud.vercel.app/robots.txt
 - [ ] https://omnigcloud.com/docs/whitepaper
 
 ### Priority 2 (Trust Pages)
+
 - [ ] https://omnigcloud.com/security
 - [ ] https://omnigcloud.com/privacy
 - [ ] https://omnigcloud.com/compliance
 - [ ] https://omnigcloud.com/terms
 
 ### Priority 3 (SEO)
+
 - [ ] https://omnigcloud.com/sitemap.xml
 - [ ] https://omnigcloud.com/robots.txt
 
 ### Priority 4 (Multilingual)
+
 - [ ] https://omnigcloud.com/en
 - [ ] https://omnigcloud.com/es
 - [ ] https://omnigcloud.com/fr
 - [ ] https://omnigcloud.com/de
 
 ### Priority 5 (Other Pages)
+
 - [ ] https://omnigcloud.com/platform
 - [ ] https://omnigcloud.com/services
 - [ ] https://omnigcloud.com/industries
@@ -220,6 +241,7 @@ https://omnigcloud.vercel.app/robots.txt
 ## **MOBILE TESTING**
 
 Test at these viewport widths:
+
 - 375px (Mobile S - iPhone SE)
 - 768px (Tablet - iPad)
 - 1024px (Desktop)
@@ -230,6 +252,7 @@ Test at these viewport widths:
 ## **BROWSER TESTING**
 
 Test in:
+
 - ✅ Chrome
 - ✅ Firefox
 - ✅ Safari (if on Mac)
@@ -240,12 +263,14 @@ Test in:
 ## **PERFORMANCE TESTING**
 
 ### Lighthouse Audit
+
 1. Open Chrome DevTools (F12)
 2. Go to "Lighthouse" tab
 3. Select "Performance, Accessibility, Best Practices, SEO"
 4. Click "Analyze page load"
 
 **Target Scores:**
+
 - Performance: >90
 - Accessibility: >95
 - Best Practices: >90
@@ -256,6 +281,7 @@ Test in:
 ## **DNS PROPAGATION CHECK**
 
 Check if DNS has propagated:
+
 ```
 https://dnschecker.org/#A/omnigcloud.com
 ```
@@ -280,11 +306,13 @@ Should show: `76.76.21.21`
 ## **RECOMMENDED TEST ORDER**
 
 ### Now (Vercel URL)
+
 1. Test top 10 priority URLs on Vercel
 2. Verify everything works
 3. Check mobile responsiveness
 
 ### After 15 Minutes (Custom Domain)
+
 1. Test same URLs on omnigcloud.com
 2. Verify DNS propagation
 3. Check all locales work

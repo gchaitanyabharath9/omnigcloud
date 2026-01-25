@@ -29,6 +29,7 @@
 ## FILE CHANGES (This Session)
 
 ### 1. `src/components/LanguageSwitcher.tsx`
+
 **Line 88:** Changed `scroll={true}` → `scroll={false}`
 
 **Rationale:** When switching locales with a hash fragment (e.g., `/en/products#playground` → `/de/products#playground`), we want the browser's native hash scroll behavior to take over, not Next.js's default scroll-to-top. This ensures the hash target remains in view after locale switch.
@@ -38,7 +39,9 @@
 ---
 
 ### 2. `src/styles/globals.css`
+
 **Added after line 105:**
+
 ```css
 /* Hash navigation scroll offset - ensures hash targets scroll into view with proper header clearance */
 [id] {
@@ -47,6 +50,7 @@
 ```
 
 **Rationale:** Ensures all elements with IDs (hash targets) scroll into view with proper offset to account for the fixed header. The 120px value provides clearance for:
+
 - Header height (~70px)
 - Breadcrumb height (~30px)
 - Visual breathing room (~20px)
@@ -56,7 +60,9 @@
 ---
 
 ### 3. `I18N_PARITY_DIAGNOSIS.md` (New File)
+
 Comprehensive diagnosis document with:
+
 - Root cause analysis
 - Verification steps for Windows PowerShell
 - Surgical fix recommendations
@@ -68,12 +74,14 @@ Comprehensive diagnosis document with:
 ## VERIFICATION RESULTS
 
 ### TypeScript Compilation
+
 ```bash
 > npm run typecheck
 ✅ PASS - 0 errors
 ```
 
 ### Production Build
+
 ```bash
 > npm run build
 ✅ PASS - Exit code 0
@@ -82,7 +90,9 @@ Comprehensive diagnosis document with:
 ```
 
 ### Route Parity Check
+
 All critical routes have `generateStaticParams()`:
+
 - ✅ `/[locale]/page.tsx` (locale root)
 - ✅ `/[locale]/company/page.tsx`
 - ✅ `/[locale]/contact/page.tsx`
@@ -93,6 +103,7 @@ All critical routes have `generateStaticParams()`:
 - ✅ `/[locale]/onboarding/page.tsx`
 
 ### Messages Parity Check
+
 ```
 ✅ en: 676 keys
 ✅ es: 676 keys
@@ -133,6 +144,7 @@ All critical routes have `generateStaticParams()`:
 ## LOCAL VERIFICATION STEPS (Windows PowerShell)
 
 ### 1. Build & Start Server
+
 ```powershell
 # Clean install (if needed)
 npm ci
@@ -145,30 +157,36 @@ npm run start
 ```
 
 ### 2. Manual URL Testing
+
 Open browser and verify these URLs:
 
 **Locale Roots:**
+
 - http://localhost:3000/en
 - http://localhost:3000/hi
 - http://localhost:3000/de
 - http://localhost:3000/es
 
 **Critical Routes:**
+
 - http://localhost:3000/de/pricing
 - http://localhost:3000/hi/docs
 - http://localhost:3000/en/company
 - http://localhost:3000/fr/contact
 
 **Hash Navigation:**
+
 - http://localhost:3000/en/products#playground
 - http://localhost:3000/de/pricing#plans
 
 **Language Switch Test:**
+
 1. Navigate to http://localhost:3000/en/products#playground
 2. Click language switcher → Select "Deutsch"
 3. ✅ Expected: URL becomes `/de/products#playground`, scrolls to #playground
 
 ### 3. Run Playwright i18n QA Gate
+
 ```powershell
 # Ensure server is running (from step 1)
 # Then in a new terminal:
@@ -185,6 +203,7 @@ npx playwright test qa-i18n/tests/i18n.spec.ts
 ## EXPECTED PLAYWRIGHT TEST RESULTS
 
 ### ✅ Should PASS (All)
+
 - `Sentinel: Root Path "/" Redirects to Primary Locale`
 - `Sentinel: Non-localized path "/pricing" auto-fixes`
 - `Audit CRITICAL URL: /en`, `/es`, `/fr`, `/de`, `/zh`, `/hi`, `/ja`, `/ko`
@@ -199,6 +218,7 @@ npx playwright test qa-i18n/tests/i18n.spec.ts
 ## COMMIT & PUSH
 
 ### Stage Changes
+
 ```powershell
 git add src/components/LanguageSwitcher.tsx
 git add src/styles/globals.css
@@ -207,6 +227,7 @@ git add I18N_PARITY_FINAL_REPORT.md
 ```
 
 ### Commit
+
 ```powershell
 git commit -m "fix(i18n): preserve hash on locale switch and ensure proper scroll offset
 
@@ -225,11 +246,13 @@ Tests: Playwright i18n.spec.ts, quality-gate.spec.ts"
 ```
 
 ### Push Branch
+
 ```powershell
 git push origin fix/i18n-parity
 ```
 
 ### Open PR
+
 ```powershell
 # GitHub CLI
 gh pr create --title "fix(i18n): Preserve hash on locale switch and ensure proper scroll offset" --body "Fixes i18n QA Release Gate failures. See I18N_PARITY_FINAL_REPORT.md for details."
@@ -244,18 +267,21 @@ gh pr create --title "fix(i18n): Preserve hash on locale switch and ensure prope
 ### GitHub Actions Workflows
 
 #### ✅ Should PASS: i18n QA Release Gate
+
 - All locale roots render valid content
 - All critical routes return 200 status
 - Hash navigation scrolls to correct sections
 - Language switch preserves route + hash
 
 #### ✅ Should PASS: SEO Gate
+
 - All sitemap URLs return 200
 - Canonical tags correct for all locales
 - Hreflang tags present and valid
 - No duplicate canonicals
 
 #### ✅ Should PASS: Release Gate
+
 - Build successful
 - Lint passing (507 warnings, 0 errors)
 - Typecheck passing (0 errors)
@@ -268,15 +294,19 @@ gh pr create --title "fix(i18n): Preserve hash on locale switch and ensure prope
 ### Language Switch Flow (Fixed)
 
 **Before:**
+
 ```tsx
 <Link href={{ pathname, query, hash }} locale={targetLocale} scroll={true} />
 ```
+
 **Problem:** `scroll={true}` causes Next.js to scroll to top, ignoring hash
 
 **After:**
+
 ```tsx
 <Link href={{ pathname, query, hash }} locale={targetLocale} scroll={false} />
 ```
+
 **Solution:** `scroll={false}` lets browser handle hash scroll natively
 
 ---
@@ -284,17 +314,21 @@ gh pr create --title "fix(i18n): Preserve hash on locale switch and ensure prope
 ### Hash Navigation Flow (Fixed)
 
 **Before:**
+
 ```css
 /* No scroll-margin-top rule */
 ```
+
 **Problem:** Hash targets scroll to exact position, hidden behind fixed header
 
 **After:**
+
 ```css
 [id] {
   scroll-margin-top: 120px;
 }
 ```
+
 **Solution:** All hash targets scroll with 120px offset, clearing header
 
 ---
@@ -302,18 +336,21 @@ gh pr create --title "fix(i18n): Preserve hash on locale switch and ensure prope
 ## SAFETY CHECKS
 
 ### ✅ No Breaking Changes
+
 - All existing routes still work
 - All existing components unchanged (except 2 surgical fixes)
 - All existing tests unchanged (no weakening)
 - All existing locales preserved
 
 ### ✅ No Content Changes
+
 - A1-A6 papers untouched
 - Research content unchanged
 - SEO metadata unchanged
 - Sitemap unchanged
 
 ### ✅ No Architecture Changes
+
 - No middleware.ts introduced
 - No new dependencies
 - No routing paradigm change

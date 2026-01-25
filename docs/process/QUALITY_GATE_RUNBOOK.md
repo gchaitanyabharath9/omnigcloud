@@ -19,11 +19,13 @@ Ensure you are using **Windows PowerShell** for the best experience.
 ## ⚡ The Single Command
 
 Run the entire quality gate suite:
+
 ```powershell
 npm run quality
 ```
 
 **This command performs:**
+
 1. **Environment Audit**: Checks Node version and `.env` presence.
 2. **Static Gate**: Secret scanning, ESLint, TypeScript compilation, and Cost Guardrails.
 3. **i18n Gate**: Strictly enforces full key coverage for **8 locales** (en, es, fr, de, zh, hi, ja, ko).
@@ -35,19 +37,24 @@ npm run quality
 ## 🛡 Quality Guardrails
 
 ### 🌍 i18n (8 Locales)
+
 All translated strings must exist in `messages/*.json`. The build **will fail** if any locale is missing keys present in `en.json`.
 
 ### 📱 Responsive & Overflow
-The gate validates that no horizontal overflow occurs on any tested device. 
+
+The gate validates that no horizontal overflow occurs on any tested device.
+
 - Use the `PageShell` component for standard layout containers.
 - Avoid `w-screen` or `100vw` on nested elements.
 
 ### 🔗 Navigation & Anchors
+
 - **Same-page**: Smooth scrolls to `#id` using `NavLink`.
 - **Cross-page**: Navigates then scrolls after render.
 - **Header Offset**: Sticky header height is automatically accounted for via `scroll-margin-top`.
 
 ### 🕵️ Observability
+
 Client-side errors and performance metrics are logged as structured JSON to the console. The E2E tests are configured to fail if any `console.error` (except resource loads) is detected during navigation.
 
 ## 🚦 CI/CD Integration
@@ -57,6 +64,7 @@ The quality gate is wired into the `prebuild` hook. This means `npm run build` w
 ## 🐛 Troubleshooting
 
 If a check fails:
+
 - **i18n**: Check the generated report at `qa-i18n/i18n-report.md`.
 - **E2E/Visual**: View the Playwright report:
   ```powershell

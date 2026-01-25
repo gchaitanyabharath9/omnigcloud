@@ -1,4 +1,5 @@
 # Architecture Decision Records (ADRs)
+
 ## OmniGCloud Security Framework
 
 This document contains the key architecture decisions made during the design and implementation of the security framework.
@@ -27,13 +28,13 @@ The system automatically selects the appropriate implementation based on environ
 
 ```typescript
 export function getRateLimiter(): RateLimiter {
-    if (config.env === 'local' || process.env.NODE_ENV === 'development') {
-        return new InMemoryRateLimiter();
-    }
-    if (config.features.enableRateLimit && process.env.REDIS_URL) {
-        return new RedisRateLimiter();
-    }
-    return new NoopRateLimiter();
+  if (config.env === "local" || process.env.NODE_ENV === "development") {
+    return new InMemoryRateLimiter();
+  }
+  if (config.features.enableRateLimit && process.env.REDIS_URL) {
+    return new RedisRateLimiter();
+  }
+  return new NoopRateLimiter();
 }
 ```
 
@@ -41,7 +42,6 @@ export function getRateLimiter(): RateLimiter {
 
 1. **Redis Only**: Require Redis in all environments
    - **Rejected**: Creates unnecessary complexity for local development
-   
 2. **No Rate Limiting in Development**: Skip rate limiting locally
    - **Rejected**: Breaks environment parity, bugs may not surface until production
 
@@ -51,16 +51,19 @@ export function getRateLimiter(): RateLimiter {
 ### Consequences
 
 **Positive**:
+
 - Zero-configuration local development
 - Perfect environment parity (same code paths)
 - Easy to test rate limiting behavior locally
 - Graceful degradation in production if Redis fails
 
 **Negative**:
+
 - In-memory rate limiter doesn't work across multiple instances (acceptable for local dev)
 - Slightly more complex implementation (three classes vs one)
 
 **Neutral**:
+
 - Requires environment detection logic
 - Interface must be generic enough for all implementations
 
@@ -83,6 +86,7 @@ export function getRateLimiter(): RateLimiter {
 Next.js exposes environment variables prefixed with `NEXT_PUBLIC_` to the client bundle. Accidentally using this prefix for secrets (API keys, tokens, passwords) is a common vulnerability that often goes undetected until production, leading to security incidents.
 
 Traditional approaches rely on:
+
 - Manual code review (error-prone, doesn't scale)
 - Runtime detection (too late, secret already exposed)
 - Developer discipline (unreliable)
@@ -90,6 +94,7 @@ Traditional approaches rely on:
 ### Decision
 
 Implement a pre-build validation script that:
+
 1. Scans all environment variables and `.env` files
 2. Detects forbidden patterns in `NEXT_PUBLIC_*` variable names
 3. Fails the build if violations are found
@@ -98,6 +103,7 @@ Implement a pre-build validation script that:
 Forbidden patterns include: `secret`, `key`, `token`, `password`, `private`, `credential`
 
 Integrated into npm build lifecycle via `prebuild` script:
+
 ```json
 {
   "scripts": {
@@ -124,6 +130,7 @@ Integrated into npm build lifecycle via `prebuild` script:
 ### Consequences
 
 **Positive**:
+
 - Prevents entire class of vulnerabilities at build time
 - Zero runtime overhead
 - Clear error messages guide developers to fix
@@ -131,11 +138,13 @@ Integrated into npm build lifecycle via `prebuild` script:
 - Enforces security best practices automatically
 
 **Negative**:
+
 - Adds ~1-2 seconds to build time
 - May require exceptions for legitimate public keys (e.g., `NEXT_PUBLIC_RECAPTCHA_SITE_KEY`)
-- Developers must understand NEXT_PUBLIC_ semantics
+- Developers must understand NEXT*PUBLIC* semantics
 
 **Neutral**:
+
 - Requires maintaining list of forbidden patterns
 - May need updates as new secret types emerge
 
@@ -157,11 +166,13 @@ Integrated into npm build lifecycle via `prebuild` script:
 ### Context
 
 CSRF protection requires generating, storing, and validating tokens. Traditional approaches use:
+
 1. **Server-side session storage**: Requires database or Redis
 2. **Stateless tokens without expiration**: Security risk (tokens never expire)
 3. **Separate expiration tracking**: Requires additional storage
 
 For a stateless, scalable architecture, we need CSRF tokens that:
+
 - Don't require database lookups
 - Have built-in expiration
 - Are cryptographically secure
@@ -170,16 +181,19 @@ For a stateless, scalable architecture, we need CSRF tokens that:
 ### Decision
 
 Implement self-contained CSRF tokens with structure:
+
 ```
 {randomBytes}.{timestamp}.{signature}
 ```
 
 Where:
+
 - `randomBytes`: 32 bytes of cryptographically secure random data
 - `timestamp`: Unix timestamp (milliseconds) when token was created
 - `signature`: HMAC-SHA256(randomBytes + timestamp, secret)
 
 Validation process:
+
 1. Split token into components
 2. Verify HMAC signature
 3. Check timestamp (reject if > 24 hours old)
@@ -202,6 +216,7 @@ Validation process:
 ### Consequences
 
 **Positive**:
+
 - Zero database queries for CSRF validation
 - Built-in expiration (no separate tracking needed)
 - Cryptographic integrity (HMAC signature)
@@ -209,11 +224,13 @@ Validation process:
 - Fast validation (<1ms)
 
 **Negative**:
+
 - Tokens cannot be revoked before expiration
 - Slightly larger token size (~100 bytes vs ~32 bytes)
 - Requires secure secret management
 
 **Neutral**:
+
 - 24-hour expiration is fixed (could be configurable)
 - Timestamp precision is milliseconds (could be seconds)
 
@@ -235,6 +252,7 @@ Validation process:
 ### Context
 
 Bot and spam detection for web forms typically requires multiple techniques:
+
 - Honeypot fields
 - Rate limiting
 - CAPTCHA
@@ -242,12 +260,14 @@ Bot and spam detection for web forms typically requires multiple techniques:
 - Payload size limits
 
 Traditional implementations:
+
 - Scatter these checks across multiple files
 - Inconsistent error handling
 - Difficult to test
 - Hard to configure per-endpoint
 
 Additionally, when bots are detected, typical responses:
+
 - Return error (bot knows it was detected, adapts)
 - Block IP (bots rotate IPs)
 - Show CAPTCHA (degrades UX for legitimate users)
@@ -257,11 +277,13 @@ Additionally, when bots are detected, typical responses:
 Implement a composable form security framework with:
 
 1. **Unified Validation Function**:
+
 ```typescript
-validateFormSecurity(request, body, config)
+validateFormSecurity(request, body, config);
 ```
 
 2. **Configurable Security Policies**:
+
 ```typescript
 {
     maxPayloadSize: 10 * 1024,
@@ -272,6 +294,7 @@ validateFormSecurity(request, body, config)
 ```
 
 3. **Silent Rejection Pattern**:
+
 - When bot detected (honeypot filled or too-fast submission)
 - Return 200 OK with success message
 - Discard submission silently
@@ -294,6 +317,7 @@ validateFormSecurity(request, body, config)
 ### Consequences
 
 **Positive**:
+
 - Single function coordinates all security checks
 - Configurable per-endpoint
 - Silent rejection prevents bot adaptation
@@ -302,11 +326,13 @@ validateFormSecurity(request, body, config)
 - Comprehensive logging without PII
 
 **Negative**:
+
 - Silent rejection means no feedback to legitimate users who accidentally trigger detection
 - Sophisticated bots may eventually detect silent rejection
 - Requires careful tuning of time-to-submit thresholds
 
 **Neutral**:
+
 - Honeypot field names must be chosen carefully
 - Time thresholds may need adjustment based on form complexity
 
@@ -328,12 +354,14 @@ validateFormSecurity(request, body, config)
 ### Context
 
 Inconsistent error responses across API endpoints lead to:
+
 - Complex client-side error handling
 - Inability to implement intelligent retry logic
 - Difficult debugging (no request correlation)
 - Inconsistent user experience
 
 Traditional approaches:
+
 - Each endpoint returns different error format
 - No guidance on whether errors are retryable
 - No request tracing across services
@@ -360,6 +388,7 @@ Implement standardized API response envelope for all endpoints:
 Error codes follow pattern: `VALIDATION_ERROR`, `CSRF_TOKEN_INVALID`, `TOO_MANY_REQUESTS`, etc.
 
 Retryable flag indicates:
+
 - `true`: Transient failure (network error, 429, 503, timeout)
 - `false`: Permanent failure (validation error, auth error, 404)
 
@@ -380,6 +409,7 @@ Retryable flag indicates:
 ### Consequences
 
 **Positive**:
+
 - Consistent error handling across all endpoints
 - Enables intelligent client-side retry logic
 - Request ID enables distributed tracing
@@ -388,11 +418,13 @@ Retryable flag indicates:
 - No stack traces in production
 
 **Negative**:
+
 - Slightly larger response size (~50 bytes overhead)
 - Requires discipline to use consistently
 - Retryable flag requires careful consideration per error type
 
 **Neutral**:
+
 - Error codes must be documented
 - Timestamp format is ISO 8601 (could be Unix timestamp)
 
@@ -414,11 +446,13 @@ Retryable flag indicates:
 ### Context
 
 Content Security Policy (CSP) is a powerful security mechanism that prevents XSS and data injection attacks. However, implementing CSP can break existing functionality:
+
 - Third-party scripts may be blocked
 - Inline styles may be blocked
 - Eval-based code may be blocked
 
 Traditional approaches:
+
 - Deploy CSP in enforcing mode immediately (high risk of breaking changes)
 - Never deploy CSP (miss security benefits)
 - Extensive pre-deployment testing (time-consuming, may miss edge cases)
@@ -432,12 +466,14 @@ Deploy CSP in **report-only mode** initially:
 ```
 
 Process:
+
 1. Deploy in report-only mode
 2. Monitor violation reports (30-60 days)
 3. Adjust whitelist based on violations
 4. Switch to enforcing mode when violations are minimal
 
 CSP directives include:
+
 - `default-src 'self'`
 - `script-src 'self' 'unsafe-inline' 'unsafe-eval'` (to be tightened)
 - `style-src 'self' 'unsafe-inline' https://fonts.googleapis.com`
@@ -460,6 +496,7 @@ CSP directives include:
 ### Consequences
 
 **Positive**:
+
 - Zero risk of breaking production
 - Visibility into all CSP violations
 - Data-driven decision making for whitelist
@@ -467,11 +504,13 @@ CSP directives include:
 - Can identify and fix violations before enforcement
 
 **Negative**:
+
 - CSP benefits not realized until enforcing mode
 - Requires monitoring violation reports
 - Transition period (30-60 days) before full protection
 
 **Neutral**:
+
 - Report endpoint needed for violation reports
 - Violation reports may contain sensitive URLs
 
@@ -493,15 +532,18 @@ CSP directives include:
 ### Context
 
 Different API endpoints have different usage patterns and abuse risks:
+
 - Contact forms: Low volume, high abuse risk
 - Metrics endpoints: High volume, low abuse risk
 - Health checks: Very high volume, no abuse risk
 
 One-size-fits-all rate limiting either:
+
 - Over-restricts legitimate users (if limit is too low)
 - Under-protects sensitive endpoints (if limit is too high)
 
 Traditional approaches:
+
 - Single global rate limit (inflexible)
 - Per-endpoint rate limiting code (duplication)
 - No rate limiting (vulnerable to abuse)
@@ -512,11 +554,11 @@ Implement declarative, endpoint-specific rate limiting configuration:
 
 ```typescript
 export const RATE_LIMITS: Record<string, RateLimitConfig> = {
-    '/api/contact': { limit: 5, windowMs: 60000 },      // Strict
-    '/api/leads': { limit: 20, windowMs: 60000 },       // Moderate
-    '/api/metrics': { limit: 100, windowMs: 60000 },    // Light
-    '/api/health': { limit: 200, windowMs: 60000 },     // Very Light
-    'default': { limit: 50, windowMs: 60000 }           // Standard
+  "/api/contact": { limit: 5, windowMs: 60000 }, // Strict
+  "/api/leads": { limit: 20, windowMs: 60000 }, // Moderate
+  "/api/metrics": { limit: 100, windowMs: 60000 }, // Light
+  "/api/health": { limit: 200, windowMs: 60000 }, // Very Light
+  default: { limit: 50, windowMs: 60000 }, // Standard
 };
 ```
 
@@ -539,6 +581,7 @@ Rate limiter automatically selects appropriate limit based on request path.
 ### Consequences
 
 **Positive**:
+
 - Fine-grained control per endpoint
 - Centralized configuration (easy to audit)
 - Type-safe with TypeScript
@@ -546,11 +589,13 @@ Rate limiter automatically selects appropriate limit based on request path.
 - Clear documentation of limits
 
 **Negative**:
+
 - Requires maintaining configuration
 - Limits are static (not adaptive)
 - May need tuning based on production traffic
 
 **Neutral**:
+
 - Window size is fixed at 60 seconds (could be configurable)
 - Limits are per-IP (could be per-user with authentication)
 
@@ -568,6 +613,7 @@ Rate limiter automatically selects appropriate limit based on request path.
 These ADRs document the key architectural decisions that shaped the security framework. Each decision was made with careful consideration of alternatives and trade-offs, balancing security, performance, developer experience, and maintainability.
 
 **Key Themes**:
+
 1. **Environment Parity**: Consistent behavior from local to production
 2. **Defense-in-Depth**: Multiple independent security layers
 3. **Developer Experience**: Security that doesn't impede development
@@ -577,6 +623,7 @@ These ADRs document the key architectural decisions that shaped the security fra
 ---
 
 **Document Control**:
+
 - Version: 1.0
 - Last Updated: December 30, 2025
 - Next Review: March 30, 2026

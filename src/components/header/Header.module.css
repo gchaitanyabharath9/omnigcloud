@@ -1,307 +1,307 @@
 .header {
-    height: var(--header-height);
-    border-bottom: 1px solid var(--card-border);
-    background: var(--header-bg);
-    backdrop-filter: blur(16px);
-    -webkit-backdrop-filter: blur(16px);
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 1500;
-    display: flex;
-    align-items: center;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  height: var(--header-height);
+  border-bottom: 1px solid var(--card-border);
+  background: var(--header-bg);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1500;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
 }
 
 .headerContainer {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
-    max-width: 1400px;
-    margin: 0 auto;
-    padding: 0 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 2rem;
 }
 
 .logo {
-    display: flex;
-    align-items: center;
-    gap: 0.75rem;
-    font-size: 1.5rem;
-    font-weight: 800;
-    color: var(--foreground);
-    text-decoration: none;
-    letter-spacing: -0.5px;
-    font-family: var(--font-heading);
-    white-space: nowrap;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--foreground);
+  text-decoration: none;
+  letter-spacing: -0.5px;
+  font-family: var(--font-heading);
+  white-space: nowrap;
 }
 
 .desktopNav {
-    display: flex;
-    align-items: center;
-    margin-left: 2rem;
+  display: flex;
+  align-items: center;
+  margin-left: 2rem;
 }
 
 .navList {
-    display: flex;
-    align-items: center;
-    gap: 1.5rem;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    height: 100%;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  height: 100%;
 }
 
 .navItem {
-    position: relative;
-    display: flex;
-    align-items: center;
-    height: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 100%;
 }
 
 .navLink {
-    font-size: 0.85rem;
-    font-weight: 600;
-    color: var(--muted-foreground);
-    text-decoration: none;
-    transition: all 0.2s ease;
-    display: flex;
-    align-items: center;
-    gap: 0.3rem;
-    padding: 0.5rem;
-    border-radius: 0.5rem;
-    white-space: nowrap;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--muted-foreground);
+  text-decoration: none;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  white-space: nowrap;
 }
 
 .navLink:hover {
-    color: var(--primary);
-    background: rgba(59, 130, 246, 0.05);
+  color: var(--primary);
+  background: rgba(59, 130, 246, 0.05);
 }
 
 /* Actions (Right Side) */
 .actions {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
 }
 
 .themeToggle {
-    background: none;
-    border: none;
-    cursor: pointer;
-    color: var(--muted-foreground);
-    padding: 0.5rem;
-    border-radius: 50%;
-    border: 1px solid var(--card-border);
-    background: var(--bg-surface-2);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: all 0.2s;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--muted-foreground);
+  padding: 0.5rem;
+  border-radius: 50%;
+  border: 1px solid var(--card-border);
+  background: var(--bg-surface-2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s;
 }
 
 .themeToggle:hover {
-    color: var(--foreground);
-    background: var(--card-bg);
+  color: var(--foreground);
+  background: var(--card-bg);
 }
 
 .mobileMenuBtn {
-    display: none;
-    /* Hidden on desktop by default */
-    background: none;
-    border: none;
-    cursor: pointer;
-    color: var(--foreground);
+  display: none;
+  /* Hidden on desktop by default */
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--foreground);
 }
 
 /* Dropdown Styling */
 .dropdownContainer {
-    position: absolute;
-    top: 100%;
-    left: 50%;
-    transform: translateX(-50%);
-    padding-top: 1rem;
-    /* Gap buffer */
-    z-index: 1000;
-    max-width: none;
-    width: max-content;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  padding-top: 1rem;
+  /* Gap buffer */
+  z-index: 1000;
+  max-width: none;
+  width: max-content;
 }
 
 .dropdownLabel {
-    font-size: 0.75rem;
-    font-weight: 900;
-    color: var(--primary);
-    margin-bottom: 0.75rem;
-    letter-spacing: 0.1em;
-    padding-left: 0.75rem;
-    text-transform: uppercase;
+  font-size: 0.75rem;
+  font-weight: 900;
+  color: var(--primary);
+  margin-bottom: 0.75rem;
+  letter-spacing: 0.1em;
+  padding-left: 0.75rem;
+  text-transform: uppercase;
 }
 
 .dropdownLink {
-    padding: 0.75rem 0.75rem;
-    color: var(--foreground);
-    text-decoration: none;
-    font-size: 0.9rem;
-    font-weight: 600;
-    border-radius: 0.5rem;
-    transition: all 0.2s;
-    display: flex;
-    align-items: center;
-    gap: 0.75rem;
+  padding: 0.75rem 0.75rem;
+  color: var(--foreground);
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 600;
+  border-radius: 0.5rem;
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
 }
 
 .dropdownLink:hover {
-    background: var(--primary-glow);
-    color: var(--primary);
-    transform: translateX(2px);
+  background: var(--primary-glow);
+  color: var(--primary);
+  transform: translateX(2px);
 }
 
 /* Mobile Navigation Overlay - Slide-in Drawer */
 .mobileOverlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(0, 0, 0, 0.4);
-    backdrop-filter: blur(4px);
-    z-index: 9998;
-    opacity: 0;
-    visibility: hidden;
-    transition: all 0.3s ease;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(4px);
+  z-index: 9998;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
 }
 
 .mobileOverlayShow {
-    opacity: 1;
-    visibility: visible;
+  opacity: 1;
+  visibility: visible;
 }
 
 .mobileNav {
-    position: fixed;
-    top: 0;
-    right: -100%;
-    width: 320px;
-    height: 100vh;
-    background-color: var(--background);
-    background-image: radial-gradient(circle at top right, var(--primary-glow), transparent);
-    color: var(--foreground);
-    z-index: 9999;
-    padding: 5rem 2rem 2rem;
-    border-left: 1px solid var(--card-border);
-    box-shadow: -10px 0 30px rgba(0, 0, 0, 0.5);
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-    transition: right 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-    overflow-y: auto;
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 320px;
+  height: 100vh;
+  background-color: var(--background);
+  background-image: radial-gradient(circle at top right, var(--primary-glow), transparent);
+  color: var(--foreground);
+  z-index: 9999;
+  padding: 5rem 2rem 2rem;
+  border-left: 1px solid var(--card-border);
+  box-shadow: -10px 0 30px rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  transition: right 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  overflow-y: auto;
 }
 
 .mobileNavOpen {
-    right: 0;
+  right: 0;
 }
 
 .mobileNavLink {
-    font-size: 1.1rem;
-    font-weight: 700;
-    color: var(--foreground);
-    text-decoration: none;
-    padding: 0.75rem 1rem;
-    border-radius: 0.75rem;
-    transition: all 0.2s;
-    border: 1px solid transparent;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--foreground);
+  text-decoration: none;
+  padding: 0.75rem 1rem;
+  border-radius: 0.75rem;
+  transition: all 0.2s;
+  border: 1px solid transparent;
 }
 
 .mobileNavLink:hover {
-    background: var(--primary-glow);
-    border-color: var(--card-border);
-    padding-left: 1.5rem;
+  background: var(--primary-glow);
+  border-color: var(--card-border);
+  padding-left: 1.5rem;
 }
 
 /* Adjust top position for small screens */
 @media (max-width: 480px) {
-    .mobileNav {
-        width: 100%;
-    }
+  .mobileNav {
+    width: 100%;
+  }
 }
 
 /* Responsive Breakpoints */
 @media (max-width: 1200px) {
-    .desktopNav {
-        display: none !important;
-    }
+  .desktopNav {
+    display: none !important;
+  }
 
-    .mobileMenuBtn {
-        display: flex !important;
-        align-items: center;
-        justify-content: center;
-        position: relative;
-        z-index: 10000;
-        /* Above drawer */
-    }
+  .mobileMenuBtn {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 10000;
+    /* Above drawer */
+  }
 
-    .headerContainer {
-        padding: 0 1rem;
-    }
+  .headerContainer {
+    padding: 0 1rem;
+  }
 
-    .logo {
-        font-size: 1.25rem;
-    }
+  .logo {
+    font-size: 1.25rem;
+  }
 
-    .actions {
-        gap: 0.75rem;
-    }
+  .actions {
+    gap: 0.75rem;
+  }
 }
 
 /* Extra mobile fixes for very small screens */
 @media (max-width: 480px) {
-    .header {
-        height: 60px;
-    }
+  .header {
+    height: 60px;
+  }
 
-    .headerContainer {
-        padding: 0 0.75rem;
-    }
+  .headerContainer {
+    padding: 0 0.75rem;
+  }
 
-    .logo {
-        font-size: 1.1rem;
-        gap: 0.5rem;
-    }
+  .logo {
+    font-size: 1.1rem;
+    gap: 0.5rem;
+  }
 
-    .logo svg {
-        width: 24px;
-        height: 24px;
-    }
+  .logo svg {
+    width: 24px;
+    height: 24px;
+  }
 
-    .actions {
-        gap: 0.5rem;
-    }
+  .actions {
+    gap: 0.5rem;
+  }
 
-    .themeToggle {
-        padding: 0.4rem;
-    }
+  .themeToggle {
+    padding: 0.4rem;
+  }
 
-    .onboardingBtn {
-        display: none !important;
-    }
+  .onboardingBtn {
+    display: none !important;
+  }
 }
 
 @media print {
-    .header {
-        position: absolute !important;
-        background: transparent !important;
-        border: none !important;
-        box-shadow: none !important;
-        backdrop-filter: none !important;
-    }
+  .header {
+    position: absolute !important;
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    backdrop-filter: none !important;
+  }
 
-    .desktopNav,
-    .actions,
-    .mobileMenuBtn {
-        display: none !important;
-    }
+  .desktopNav,
+  .actions,
+  .mobileMenuBtn {
+    display: none !important;
+  }
 
-    .headerContainer {
-        justify-content: center !important;
-    }
+  .headerContainer {
+    justify-content: center !important;
+  }
 }

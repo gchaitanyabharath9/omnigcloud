@@ -1,9 +1,9 @@
-import React from 'react';
+import React from "react";
 
 interface PageShellProps extends React.HTMLAttributes<HTMLDivElement> {
-    children: React.ReactNode;
-    as?: React.ElementType;
-    fluid?: boolean; // If true, max-width is removed
+  children: React.ReactNode;
+  as?: React.ElementType;
+  fluid?: boolean; // If true, max-width is removed
 }
 
 /**
@@ -12,23 +12,18 @@ interface PageShellProps extends React.HTMLAttributes<HTMLDivElement> {
  * Includes min-w-0 to prevent flex child overflow issues.
  */
 export const PageShell = ({
-    children,
-    className = '',
-    as: Component = 'div',
-    fluid = false,
-    ...props
+  children,
+  className = "",
+  as: Component = "div",
+  fluid = false,
+  ...props
 }: PageShellProps) => {
-    // Standardize constraint logic to match Dashboard/Landing pages
-    const containerClasses = fluid
-        ? 'w-full px-4 sm:px-6 lg:px-8'
-        : 'container';
+  // Standardize constraint logic to match Dashboard/Landing pages
+  const containerClasses = fluid ? "w-full px-4 sm:px-6 lg:px-8" : "container";
 
-    return (
-        <Component
-            className={`${containerClasses} min-w-0 ${className}`}
-            {...props}
-        >
-            {children}
-        </Component>
-    );
+  return (
+    <Component className={`${containerClasses} min-w-0 ${className}`} {...props}>
+      {children}
+    </Component>
+  );
 };

@@ -9,11 +9,13 @@ Your Next.js application has been successfully transformed into an **enterprise-
 ## ✅ All 10 Requirements Implemented
 
 ### 1. ✅ Configurable Domain
+
 - `NEXT_PUBLIC_SITE_URL` environment variable
 - Used across: metadataBase, robots.ts, sitemap.ts, SchemaOrg
 - No hardcoded domains remain
 
 ### 2. ✅ Multilingual SEO (7 Locales)
+
 - Locales aligned: `en, es, fr, de, zh, hi, ja`
 - Hreflang alternates for all locales
 - Canonical URLs per locale
@@ -21,6 +23,7 @@ Your Next.js application has been successfully transformed into an **enterprise-
 - Generated sitemap with all locale routes
 
 ### 3. ✅ Security Headers + CSP
+
 - X-Frame-Options: DENY
 - X-Content-Type-Options: nosniff
 - Referrer-Policy: strict-origin-when-cross-origin
@@ -28,6 +31,7 @@ Your Next.js application has been successfully transformed into an **enterprise-
 - Content Security Policy with frame-ancestors 'none'
 
 ### 4. ✅ Hardened API Routes
+
 - Zod validation on all POST/PUT endpoints
 - Standardized response envelope (requestId, status, timestamp, data/error)
 - Request ID tracking (UUID v4)
@@ -35,12 +39,14 @@ Your Next.js application has been successfully transformed into an **enterprise-
 - 100% API validation coverage
 
 ### 5. ✅ Redis-Based Rate Limiting
+
 - RedisRateLimiter (Upstash Redis for production)
 - NoopRateLimiter (in-memory fallback for development)
 - Graceful degradation when Redis unavailable
 - Default: 100 requests/60s per IP
 
 ### 6. ✅ Authentication + RBAC
+
 - Auth.js (NextAuth v5) integration
 - Providers: Google OAuth, Microsoft Entra ID, Email Magic Link
 - RBAC: admin, billing, user roles
@@ -49,6 +55,7 @@ Your Next.js application has been successfully transformed into an **enterprise-
 - Security settings dashboard
 
 ### 7. ✅ Billing Abstraction + Stripe
+
 - Billing API with Zod validation
 - Stripe SDK initialized (`src/lib/stripe.ts`)
 - Cost estimation endpoint
@@ -56,6 +63,7 @@ Your Next.js application has been successfully transformed into an **enterprise-
 - Webhook verification placeholder
 
 ### 8. ✅ Observability Primitives
+
 - **Structured Logger**: JSON output, PII masking, <1ms overhead
 - **Metrics Collector**: Prometheus-compatible, in-memory, <0.1ms overhead
 - **Audit Logger**: 16 event types, queryable, <5ms overhead
@@ -63,6 +71,7 @@ Your Next.js application has been successfully transformed into an **enterprise-
 - 734 LOC of core observability code
 
 ### 9. ✅ Legal/Trust Pages
+
 - Terms of Service (enterprise-appropriate)
 - Privacy Policy (GDPR-aligned)
 - Security Page (responsible disclosure program)
@@ -71,6 +80,7 @@ Your Next.js application has been successfully transformed into an **enterprise-
 - Footer integration complete
 
 ### 10. ✅ Reproducible Whitepaper
+
 - Technical Report / Preprint v0.1
 - Removed unverifiable claims
 - Added Reproducibility section with code artifacts
@@ -154,6 +164,7 @@ AUTH_GOOGLE_SECRET=your_google_client_secret
 ## 📁 Key Files Created/Modified
 
 ### Core Infrastructure
+
 - `src/lib/api-utils.ts` - API hardening wrapper
 - `src/lib/rate-limit.ts` - Redis rate limiter
 - `src/lib/logger.ts` - Structured logging
@@ -162,23 +173,27 @@ AUTH_GOOGLE_SECRET=your_google_client_secret
 - `src/lib/stripe.ts` - Stripe SDK
 
 ### Authentication
+
 - `src/auth.ts` - Auth.js configuration
 - `src/app/api/auth/[...nextauth]/route.ts` - Auth API
 - `src/app/[locale]/app/settings/security/page.tsx` - Security dashboard
 
 ### API Routes
+
 - `src/app/api/billing/route.ts` - Billing API
 - `src/app/api/contact/route.ts` - Contact API
 - `src/app/api/health/route.ts` - Health check
 - `src/app/api/metrics/route.ts` - Metrics endpoint
 
 ### Trust Pages
+
 - `src/app/[locale]/terms/page.tsx` - Terms of Service
 - `src/app/[locale]/privacy/page.tsx` - Privacy Policy
 - `src/app/[locale]/security/page.tsx` - Security page
 - `src/app/[locale]/compliance/page.tsx` - Compliance page
 
 ### SEO
+
 - `src/app/sitemap.ts` - Dynamic sitemap (7 locales)
 - `src/app/robots.ts` - Robots.txt
 - `src/app/[locale]/layout.tsx` - Metadata with hreflang
@@ -186,11 +201,13 @@ AUTH_GOOGLE_SECRET=your_google_client_secret
 - `public/og-image.png` - OpenGraph image
 
 ### Configuration
+
 - `next.config.ts` - Security headers + CSP
 - `example.env` - Complete environment template
 - `verify-features.js` - Feature verification script
 
 ### Documentation
+
 - `README.md` - Complete setup guide
 - `docs/OBSERVABILITY.md` - Observability guide
 - `docs/TRUST_PAGES.md` - Trust pages documentation
@@ -202,24 +219,28 @@ AUTH_GOOGLE_SECRET=your_google_client_secret
 ## 🎯 EB-1A Projectable Achievements
 
 ### Original Contributions
+
 1. **Autonomous Sovereign Orchestration Framework**
 2. **PII-Safe Observability System**
 3. **Pluggable Rate Limiting Architecture**
 4. **Multilingual Enterprise SaaS Pattern**
 
 ### Technical Excellence
+
 - **Zero Build Errors**: Strict TypeScript, comprehensive linting
 - **100% API Validation**: Zod schemas on all endpoints
 - **Sub-50ms Overhead**: Production-ready observability
 - **Prometheus-Compatible**: Industry-standard metrics
 
 ### Reproducibility
+
 - **734 LOC Core Components**: Fully documented
 - **Comprehensive Tests**: Build verification
 - **Open Source**: MIT licensed
 - **Community-Driven**: Contribution-ready
 
 ### Industry Impact
+
 - **Enterprise Security**: CSP, headers, PII protection
 - **Compliance-Ready**: GDPR active, SOC 2 in progress
 - **Monetization-Capable**: Stripe integration
@@ -229,26 +250,26 @@ AUTH_GOOGLE_SECRET=your_google_client_secret
 
 ## 📈 Performance Metrics
 
-| Component | Latency (p50) | Latency (p95) | Memory |
-|-----------|---------------|---------------|--------|
-| Logger | 0.8ms | 1.2ms | Negligible |
-| Metrics | 0.05ms | 0.1ms | ~1KB/metric |
-| Audit | 3.2ms | 5.1ms | ~1KB/event |
-| API Validation | <10ms | <20ms | Minimal |
+| Component      | Latency (p50) | Latency (p95) | Memory      |
+| -------------- | ------------- | ------------- | ----------- |
+| Logger         | 0.8ms         | 1.2ms         | Negligible  |
+| Metrics        | 0.05ms        | 0.1ms         | ~1KB/metric |
+| Audit          | 3.2ms         | 5.1ms         | ~1KB/event  |
+| API Validation | <10ms         | <20ms         | Minimal     |
 
 ---
 
 ## 🌍 Internationalization Coverage
 
-| Locale | Language | Coverage | Status |
-|--------|----------|----------|--------|
-| en | English | 100% | ✅ Complete |
-| es | Spanish | 100% | ✅ Complete |
-| fr | French | 100% | ✅ Complete |
-| de | German | 100% | ✅ Complete |
-| zh | Chinese | 35.7% | 🔄 In Progress |
-| hi | Hindi | 35.7% | 🔄 In Progress |
-| ja | Japanese | 35.7% | 🔄 In Progress |
+| Locale | Language | Coverage | Status         |
+| ------ | -------- | -------- | -------------- |
+| en     | English  | 100%     | ✅ Complete    |
+| es     | Spanish  | 100%     | ✅ Complete    |
+| fr     | French   | 100%     | ✅ Complete    |
+| de     | German   | 100%     | ✅ Complete    |
+| zh     | Chinese  | 35.7%    | 🔄 In Progress |
+| hi     | Hindi    | 35.7%    | 🔄 In Progress |
+| ja     | Japanese | 35.7%    | 🔄 In Progress |
 
 ---
 
@@ -305,6 +326,7 @@ AUTH_GOOGLE_SECRET=your_google_client_secret
 ## 🎓 Educational Value
 
 This codebase demonstrates:
+
 - Enterprise-grade Next.js architecture
 - Production-ready security practices
 - Scalable observability patterns

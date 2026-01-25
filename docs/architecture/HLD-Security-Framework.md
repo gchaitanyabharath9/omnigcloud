@@ -1,4 +1,5 @@
 # High-Level Architecture Document (HLD)
+
 ## OmniGCloud Security Framework
 
 **Version**: 1.0  
@@ -21,6 +22,7 @@ This document describes the high-level architecture of the OmniGCloud security f
 **Purpose**: Protect public-facing marketing website and API endpoints from common web vulnerabilities while maintaining high performance and developer productivity.
 
 **Stakeholders**:
+
 - End Users: Visitors to marketing site, form submitters
 - Developers: Engineering team building and maintaining the application
 - Security Team: Monitoring and responding to security incidents
@@ -31,6 +33,7 @@ This document describes the high-level architecture of the OmniGCloud security f
 **Platform**: Next.js 16+ (App Router), TypeScript, Node.js 20+  
 **Deployment**: Vercel Edge Network  
 **External Dependencies**:
+
 - Upstash Redis (production rate limiting)
 - HashiCorp Vault (secrets management - production)
 - Vercel Analytics (observability)
@@ -122,10 +125,12 @@ This document describes the high-level architecture of the OmniGCloud security f
 **Responsibility**: Configure security headers for all HTTP responses  
 **Dependencies**: None  
 **Interfaces**:
+
 - Input: Next.js configuration
 - Output: HTTP headers on all responses
 
 **Key Headers**:
+
 - Strict-Transport-Security (HSTS)
 - Content-Security-Policy (CSP)
 - X-Content-Type-Options
@@ -138,13 +143,15 @@ This document describes the high-level architecture of the OmniGCloud security f
 **Responsibility**: Prevent abuse through request rate limiting  
 **Dependencies**: Redis (production), In-memory Map (local)  
 **Interfaces**:
+
 ```typescript
 interface RateLimiter {
-    check(ip: string, endpoint?: string): Promise<RateLimitResult>;
+  check(ip: string, endpoint?: string): Promise<RateLimitResult>;
 }
 ```
 
 **Implementations**:
+
 - InMemoryRateLimiter: Local development
 - RedisRateLimiter: Production (distributed)
 - NoopRateLimiter: Graceful fallback
@@ -155,6 +162,7 @@ interface RateLimiter {
 **Responsibility**: Prevent cross-site request forgery  
 **Dependencies**: crypto (Node.js built-in)  
 **Interfaces**:
+
 ```typescript
 function generateCsrfToken(): string;
 function validateCsrfToken(request: NextRequest): CsrfValidationResult;
@@ -168,15 +176,17 @@ function validateCsrfToken(request: NextRequest): CsrfValidationResult;
 **Responsibility**: Multi-layered bot and spam detection  
 **Dependencies**: None  
 **Interfaces**:
+
 ```typescript
 function validateFormSecurity(
-    request: NextRequest,
-    body: any,
-    config: FormSecurityConfig
+  request: NextRequest,
+  body: any,
+  config: FormSecurityConfig
 ): Promise<ValidationResult>;
 ```
 
 **Detection Techniques**:
+
 - Honeypot fields
 - Payload size limits
 - Time-to-submit heuristics
@@ -188,6 +198,7 @@ function validateFormSecurity(
 **Responsibility**: Type-safe input validation  
 **Dependencies**: Zod  
 **Interfaces**:
+
 ```typescript
 const Schema = z.object({...});
 const validation = Schema.safeParse(input);
@@ -206,10 +217,11 @@ const validation = Schema.safeParse(input);
 **Responsibility**: Request tracing and safe logging  
 **Dependencies**: uuid  
 **Interfaces**:
+
 ```typescript
 function withApiHarden(
-    request: NextRequest,
-    handler: (req, context) => Promise<NextResponse>
+  request: NextRequest,
+  handler: (req, context) => Promise<NextResponse>
 ): Promise<NextResponse>;
 ```
 
@@ -260,6 +272,7 @@ function withApiHarden(
 ### 6.1 Environment Separation
 
 #### Local Development
+
 ```
 ┌─────────────────────────────────────┐
 │  Developer Machine                  │
@@ -273,6 +286,7 @@ function withApiHarden(
 ```
 
 #### Production
+
 ```
 ┌─────────────────────────────────────────────────────────┐
 │  Vercel Edge Network                                    │
@@ -313,12 +327,14 @@ function withApiHarden(
 ### 7.1 Threat Model
 
 **Assets**:
+
 - User data (contact forms, leads)
 - API endpoints
 - Application secrets
 - Session tokens
 
 **Threats**:
+
 - OWASP Top 10 vulnerabilities
 - Bot attacks and spam
 - DDoS attacks
@@ -326,6 +342,7 @@ function withApiHarden(
 - Data exfiltration
 
 **Mitigations**:
+
 - Defense-in-depth architecture
 - Multiple independent security layers
 - Build-time validation
@@ -333,15 +350,15 @@ function withApiHarden(
 
 ### 7.2 Security Controls
 
-| Control | Layer | Threat Mitigated |
-|---------|-------|------------------|
-| HSTS | HTTP | Man-in-the-middle |
-| CSP | HTTP | XSS, data injection |
-| Rate Limiting | Application | DDoS, brute force |
-| CSRF Protection | Application | Cross-site request forgery |
-| Input Validation | Application | Injection attacks |
-| Honeypot | Application | Bot submissions |
-| Secrets Hygiene | Build-time | Secret exposure |
+| Control          | Layer       | Threat Mitigated           |
+| ---------------- | ----------- | -------------------------- |
+| HSTS             | HTTP        | Man-in-the-middle          |
+| CSP              | HTTP        | XSS, data injection        |
+| Rate Limiting    | Application | DDoS, brute force          |
+| CSRF Protection  | Application | Cross-site request forgery |
+| Input Validation | Application | Injection attacks          |
+| Honeypot         | Application | Bot submissions            |
+| Secrets Hygiene  | Build-time  | Secret exposure            |
 
 ---
 
@@ -350,6 +367,7 @@ function withApiHarden(
 ### 8.1 Logging Strategy
 
 **Structured Logging**:
+
 ```json
 {
   "level": "info",
@@ -364,6 +382,7 @@ function withApiHarden(
 ```
 
 **Redacted Fields**:
+
 - User messages
 - Passwords
 - Tokens
@@ -372,6 +391,7 @@ function withApiHarden(
 ### 8.2 Monitoring Endpoints
 
 **Health Check**: `/api/health`
+
 ```json
 {
   "status": "ok",
@@ -391,6 +411,7 @@ function withApiHarden(
 ### 8.3 Metrics
 
 **Key Metrics**:
+
 - Request rate (requests/second)
 - Error rate (errors/total requests)
 - Latency (p50, p95, p99)
@@ -404,13 +425,13 @@ function withApiHarden(
 
 ### 9.1 Failure Modes
 
-| Component | Failure Mode | Handling Strategy |
-|-----------|--------------|-------------------|
-| Redis | Connection failure | Fail open (allow requests) |
-| Vault | Connection failure | Fallback to env vars |
-| CSRF | Invalid token | Fail closed (reject request) |
-| Validation | Invalid input | Fail closed (reject request) |
-| Rate Limiter | Internal error | Fail open (allow requests) |
+| Component    | Failure Mode       | Handling Strategy            |
+| ------------ | ------------------ | ---------------------------- |
+| Redis        | Connection failure | Fail open (allow requests)   |
+| Vault        | Connection failure | Fallback to env vars         |
+| CSRF         | Invalid token      | Fail closed (reject request) |
+| Validation   | Invalid input      | Fail closed (reject request) |
+| Rate Limiter | Internal error     | Fail open (allow requests)   |
 
 ### 9.2 Circuit Breaker Pattern
 
@@ -517,6 +538,7 @@ function withApiHarden(
 ---
 
 **Document Control**:
+
 - Version: 1.0
 - Last Updated: December 30, 2025
 - Next Review: March 30, 2026

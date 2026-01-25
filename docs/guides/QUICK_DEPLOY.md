@@ -138,12 +138,12 @@ Wait 5-10 minutes for DNS propagation, then visit:
 
 ## Quick Reference
 
-| What | URL |
-|------|-----|
-| GitHub Repo | https://github.com/gchaitanyabharath9/omnigcloud |
-| Vercel Dashboard | https://vercel.com/dashboard |
-| Cloudflare DNS | https://dash.cloudflare.com |
-| Your Site | https://omnigcloud.com |
+| What             | URL                                              |
+| ---------------- | ------------------------------------------------ |
+| GitHub Repo      | https://github.com/gchaitanyabharath9/omnigcloud |
+| Vercel Dashboard | https://vercel.com/dashboard                     |
+| Cloudflare DNS   | https://dash.cloudflare.com                      |
+| Your Site        | https://omnigcloud.com                           |
 
 ---
 

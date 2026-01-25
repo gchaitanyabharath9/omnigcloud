@@ -13,6 +13,7 @@ This document describes the HTTP security headers implemented for the OmniGCloud
 **Purpose**: Forces browsers to use HTTPS connections only, preventing protocol downgrade attacks and cookie hijacking.
 
 **Details**:
+
 - `max-age=63072000`: Enforces HTTPS for 2 years (730 days)
 - `includeSubDomains`: Applies to all subdomains
 - `preload`: Eligible for browser HSTS preload lists
@@ -38,6 +39,7 @@ This document describes the HTTP security headers implemented for the OmniGCloud
 **Purpose**: Controls how much referrer information is sent with requests.
 
 **Details**:
+
 - Same-origin requests: Send full URL
 - Cross-origin requests: Send only origin (no path/query)
 - Downgrade (HTTPS → HTTP): Send nothing
@@ -53,6 +55,7 @@ This document describes the HTTP security headers implemented for the OmniGCloud
 **Purpose**: Controls which browser features and APIs can be used.
 
 **Details**:
+
 - `camera=()`: Disables camera access
 - `microphone=()`: Disables microphone access
 - `geolocation=()`: Disables geolocation
@@ -69,6 +72,7 @@ This document describes the HTTP security headers implemented for the OmniGCloud
 **Current Mode**: `Content-Security-Policy-Report-Only`
 
 **Full Policy**:
+
 ```
 default-src 'self';
 script-src 'self' 'unsafe-inline' 'unsafe-eval';
@@ -87,25 +91,26 @@ block-all-mixed-content
 
 **Directive Breakdown**:
 
-| Directive | Value | Purpose |
-|-----------|-------|---------|
-| `default-src` | `'self'` | Default policy: only load resources from same origin |
-| `script-src` | `'self' 'unsafe-inline' 'unsafe-eval'` | Allow scripts from same origin, inline scripts (Next.js hydration), and eval (dev mode) |
-| `style-src` | `'self' 'unsafe-inline' https://fonts.googleapis.com` | Allow styles from same origin, inline styles (CSS-in-JS), and Google Fonts |
-| `font-src` | `'self' https://fonts.gstatic.com data:` | Allow fonts from same origin, Google Fonts CDN, and data URIs |
-| `img-src` | `'self' data: blob: https://images.unsplash.com https://*.unsplash.com` | Allow images from same origin, data URIs, blobs, and Unsplash |
-| `connect-src` | `'self' https://api.unsplash.com` | Allow XHR/fetch to same origin and Unsplash API |
-| `media-src` | `'self'` | Restrict audio/video to same origin |
-| `object-src` | `'none'` | Disallow plugins (Flash, Java, etc.) |
-| `base-uri` | `'self'` | Restrict `<base>` tag to same origin |
-| `form-action` | `'self'` | Restrict form submissions to same origin |
-| `frame-ancestors` | `'self'` | Prevent clickjacking (only allow framing by same origin) |
-| `upgrade-insecure-requests` | - | Automatically upgrade HTTP requests to HTTPS |
-| `block-all-mixed-content` | - | Block mixed content (HTTP resources on HTTPS pages) |
+| Directive                   | Value                                                                   | Purpose                                                                                 |
+| --------------------------- | ----------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
+| `default-src`               | `'self'`                                                                | Default policy: only load resources from same origin                                    |
+| `script-src`                | `'self' 'unsafe-inline' 'unsafe-eval'`                                  | Allow scripts from same origin, inline scripts (Next.js hydration), and eval (dev mode) |
+| `style-src`                 | `'self' 'unsafe-inline' https://fonts.googleapis.com`                   | Allow styles from same origin, inline styles (CSS-in-JS), and Google Fonts              |
+| `font-src`                  | `'self' https://fonts.gstatic.com data:`                                | Allow fonts from same origin, Google Fonts CDN, and data URIs                           |
+| `img-src`                   | `'self' data: blob: https://images.unsplash.com https://*.unsplash.com` | Allow images from same origin, data URIs, blobs, and Unsplash                           |
+| `connect-src`               | `'self' https://api.unsplash.com`                                       | Allow XHR/fetch to same origin and Unsplash API                                         |
+| `media-src`                 | `'self'`                                                                | Restrict audio/video to same origin                                                     |
+| `object-src`                | `'none'`                                                                | Disallow plugins (Flash, Java, etc.)                                                    |
+| `base-uri`                  | `'self'`                                                                | Restrict `<base>` tag to same origin                                                    |
+| `form-action`               | `'self'`                                                                | Restrict form submissions to same origin                                                |
+| `frame-ancestors`           | `'self'`                                                                | Prevent clickjacking (only allow framing by same origin)                                |
+| `upgrade-insecure-requests` | -                                                                       | Automatically upgrade HTTP requests to HTTPS                                            |
+| `block-all-mixed-content`   | -                                                                       | Block mixed content (HTTP resources on HTTPS pages)                                     |
 
 **Why Report-Only Mode?**
 
 The CSP is initially deployed in `Report-Only` mode to:
+
 1. Monitor for violations without breaking functionality
 2. Identify any legitimate resources that need to be whitelisted
 3. Ensure Next.js features (image optimization, font loading) work correctly
@@ -119,17 +124,18 @@ To enforce the CSP (after monitoring period):
 2. Update whitelist if needed for legitimate resources
 3. In `next.config.ts`, change:
    ```typescript
-   key: 'Content-Security-Policy-Report-Only'
+   key: "Content-Security-Policy-Report-Only";
    ```
    to:
    ```typescript
-   key: 'Content-Security-Policy'
+   key: "Content-Security-Policy";
    ```
 4. Deploy and monitor for issues
 
 **Production Hardening**:
 
 For production, consider:
+
 - Removing `'unsafe-eval'` from `script-src` if not needed
 - Using nonces or hashes instead of `'unsafe-inline'` for scripts
 - Adding a `report-uri` or `report-to` directive for violation reporting
@@ -143,6 +149,7 @@ For production, consider:
 **Purpose**: Prevents clickjacking attacks by controlling whether the site can be framed.
 
 **Details**:
+
 - `SAMEORIGIN`: Only allow framing by pages from the same origin
 
 **Note**: This is a legacy header. Modern browsers prefer CSP's `frame-ancestors` directive, but we include both for maximum compatibility.
@@ -158,6 +165,7 @@ For production, consider:
 **Purpose**: Enables browser's built-in XSS filter (legacy browsers).
 
 **Details**:
+
 - `1`: Enable XSS filter
 - `mode=block`: Block page rendering if XSS detected
 
@@ -170,6 +178,7 @@ For production, consider:
 ## Scope
 
 These headers apply to:
+
 - ✅ All marketing routes (`/[locale]/*`)
 - ✅ All supported locales (en, de, es, fr, hi, ja, ko, zh)
 - ✅ Static and dynamic pages
@@ -195,6 +204,7 @@ curl -I https://omnigcloud.com/fr/pricing
 ### Security Scanners
 
 Test with online security scanners:
+
 - [Mozilla Observatory](https://observatory.mozilla.org/)
 - [Security Headers](https://securityheaders.com/)
 - [SSL Labs](https://www.ssllabs.com/ssltest/)
@@ -202,27 +212,29 @@ Test with online security scanners:
 ### Expected Scores
 
 With these headers, you should achieve:
+
 - **Mozilla Observatory**: A+ rating
 - **Security Headers**: A rating
 - **SSL Labs**: A+ rating (with proper TLS configuration)
 
 ## Browser Compatibility
 
-| Header | Chrome | Firefox | Safari | Edge |
-|--------|--------|---------|--------|------|
-| HSTS | ✅ | ✅ | ✅ | ✅ |
-| X-Content-Type-Options | ✅ | ✅ | ✅ | ✅ |
-| Referrer-Policy | ✅ | ✅ | ✅ | ✅ |
-| Permissions-Policy | ✅ | ✅ | ⚠️ Partial | ✅ |
-| CSP | ✅ | ✅ | ✅ | ✅ |
-| X-Frame-Options | ✅ | ✅ | ✅ | ✅ |
-| X-XSS-Protection | ⚠️ Deprecated | ⚠️ Deprecated | ⚠️ Deprecated | ⚠️ Deprecated |
+| Header                 | Chrome        | Firefox       | Safari        | Edge          |
+| ---------------------- | ------------- | ------------- | ------------- | ------------- |
+| HSTS                   | ✅            | ✅            | ✅            | ✅            |
+| X-Content-Type-Options | ✅            | ✅            | ✅            | ✅            |
+| Referrer-Policy        | ✅            | ✅            | ✅            | ✅            |
+| Permissions-Policy     | ✅            | ✅            | ⚠️ Partial    | ✅            |
+| CSP                    | ✅            | ✅            | ✅            | ✅            |
+| X-Frame-Options        | ✅            | ✅            | ✅            | ✅            |
+| X-XSS-Protection       | ⚠️ Deprecated | ⚠️ Deprecated | ⚠️ Deprecated | ⚠️ Deprecated |
 
 ## Maintenance
 
 ### Regular Reviews
 
 Review security headers:
+
 - **Quarterly**: Check for new security best practices
 - **After major updates**: Verify headers still work with new Next.js features
 - **When adding external resources**: Update CSP whitelist
@@ -230,8 +242,9 @@ Review security headers:
 ### Monitoring CSP Violations
 
 While in Report-Only mode, monitor browser console for messages like:
+
 ```
-[Report Only] Refused to load the script 'https://example.com/script.js' 
+[Report Only] Refused to load the script 'https://example.com/script.js'
 because it violates the following Content Security Policy directive: "script-src 'self'"
 ```
 
@@ -247,6 +260,7 @@ These indicate resources that may need to be whitelisted or removed.
 ## Changelog
 
 ### 2025-12-30
+
 - ✅ Implemented comprehensive security headers
 - ✅ Added CSP in Report-Only mode
 - ✅ Enhanced Permissions-Policy

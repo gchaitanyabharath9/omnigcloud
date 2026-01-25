@@ -3136,29 +3136,17 @@
         "0": {
           "desc": "Souveränität auf Unternehmensebene und Sicherheitsauditierung mit hoher Sicherheit. (DE)",
           "title": "Sicherheit",
-          "features": [
-            "FIPS 140-2",
-            "Zero-Trust",
-            "mTLS"
-          ]
+          "features": ["FIPS 140-2", "Zero-Trust", "mTLS"]
         },
         "1": {
           "desc": "Skalieren Sie Workloads autonom über eine globale Multi-Cloud-Infrastruktur. (DE)",
           "title": "Skalierung",
-          "features": [
-            "Auto-Scaling",
-            "Multi-Region",
-            "DR"
-          ]
+          "features": ["Auto-Scaling", "Multi-Region", "DR"]
         },
         "2": {
           "desc": "Garantieren Sie 99,999 % Betriebszeit mit autonomer Drift-Remediation. (DE)",
           "title": "Stabilität",
-          "features": [
-            "Self-Healing",
-            "Live Sync",
-            "Drift Protection"
-          ]
+          "features": ["Self-Healing", "Live Sync", "Drift Protection"]
         }
       },
       "subtitle": "How we help you scale",

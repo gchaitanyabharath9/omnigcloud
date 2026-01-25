@@ -13,6 +13,7 @@ All marketing forms (contact, demo, newsletter) are protected by comprehensive b
 **Implementation**: Hidden fields that humans won't fill but bots will
 
 **Common Honeypot Fields**:
+
 - `website` - Most effective
 - `url`
 - `homepage`
@@ -21,6 +22,7 @@ All marketing forms (contact, demo, newsletter) are protected by comprehensive b
 - `fax`
 
 **How It Works**:
+
 1. Add hidden field to form (CSS: `display: none`)
 2. Bots auto-fill all fields, including hidden ones
 3. Server detects filled honeypot field
@@ -28,13 +30,14 @@ All marketing forms (contact, demo, newsletter) are protected by comprehensive b
 5. Submission is silently discarded
 
 **Example**:
+
 ```html
-<input 
-    type="text" 
-    name="website" 
-    tabindex="-1" 
-    autocomplete="off"
-    style="position: absolute; left: -9999px;"
+<input
+  type="text"
+  name="website"
+  tabindex="-1"
+  autocomplete="off"
+  style="position: absolute; left: -9999px;"
 />
 ```
 
@@ -45,25 +48,28 @@ All marketing forms (contact, demo, newsletter) are protected by comprehensive b
 **Purpose**: Prevent DoS attacks and oversized payloads
 
 **Limits**:
+
 - **Contact Form**: 10KB max
 - **Demo Request**: 10KB max
 - **Newsletter**: 5KB max
 
 **Validation**:
+
 - Checks `Content-Length` header
 - Rejects requests exceeding limit
 - Returns safe error message
 
 **Error Response**:
+
 ```json
 {
-    "requestId": "...",
-    "status": "error",
-    "error": {
-        "code": "PAYLOAD_TOO_LARGE",
-        "message": "Request payload exceeds maximum size of 10240 bytes",
-        "retryable": false
-    }
+  "requestId": "...",
+  "status": "error",
+  "error": {
+    "code": "PAYLOAD_TOO_LARGE",
+    "message": "Request payload exceeds maximum size of 10240 bytes",
+    "retryable": false
+  }
 }
 ```
 
@@ -76,20 +82,22 @@ All marketing forms (contact, demo, newsletter) are protected by comprehensive b
 **Required**: `Content-Type: application/json`
 
 **Validation**:
+
 - Checks request headers
 - Rejects non-JSON requests
 - Prevents malformed submissions
 
 **Error Response**:
+
 ```json
 {
-    "requestId": "...",
-    "status": "error",
-    "error": {
-        "code": "INVALID_CONTENT_TYPE",
-        "message": "Invalid content-type. Expected application/json",
-        "retryable": false
-    }
+  "requestId": "...",
+  "status": "error",
+  "error": {
+    "code": "INVALID_CONTENT_TYPE",
+    "message": "Invalid content-type. Expected application/json",
+    "retryable": false
+  }
 }
 ```
 
@@ -100,36 +108,40 @@ All marketing forms (contact, demo, newsletter) are protected by comprehensive b
 **Purpose**: Detect automated form submissions
 
 **Thresholds**:
+
 - **Minimum**: 2 seconds (too fast = likely bot)
 - **Maximum**: 5 minutes (too slow = stale form)
 
 **Implementation**:
+
 1. Client sends `_formStartTime` timestamp
 2. Server calculates duration
 3. Too fast → Silent rejection (looks like success to bot)
 4. Too slow → Form expired error
 
 **Client-Side**:
+
 ```typescript
 const formStartTime = Date.now();
 
 // On submit
 const payload = {
-    ...formData,
-    _formStartTime: formStartTime
+  ...formData,
+  _formStartTime: formStartTime,
 };
 ```
 
 **Error Response** (form expired):
+
 ```json
 {
-    "requestId": "...",
-    "status": "error",
-    "error": {
-        "code": "FORM_EXPIRED",
-        "message": "Form submission expired. Please refresh and try again.",
-        "retryable": true
-    }
+  "requestId": "...",
+  "status": "error",
+  "error": {
+    "code": "FORM_EXPIRED",
+    "message": "Form submission expired. Please refresh and try again.",
+    "retryable": true
+  }
 }
 ```
 
@@ -140,6 +152,7 @@ const payload = {
 **Purpose**: Prevent sensitive user data from appearing in logs
 
 **Redacted Fields**:
+
 - `message`
 - `comment`
 - `description`
@@ -154,17 +167,18 @@ const payload = {
 - `ssn`
 
 **Example Log**:
+
 ```json
 {
-    "level": "info",
-    "message": "Contact form submission",
-    "requestId": "550e8400-e29b-41d4-a716-446655440000",
-    "data": {
-        "firstName": "John",
-        "lastName": "Doe",
-        "email": "john@example.com",
-        "message": "[REDACTED]"
-    }
+  "level": "info",
+  "message": "Contact form submission",
+  "requestId": "550e8400-e29b-41d4-a716-446655440000",
+  "data": {
+    "firstName": "John",
+    "lastName": "Doe",
+    "email": "john@example.com",
+    "message": "[REDACTED]"
+  }
 }
 ```
 
@@ -175,6 +189,7 @@ const payload = {
 ### Contact Form (`/api/contact`)
 
 **Protections**:
+
 - ✅ Honeypot field (`website`)
 - ✅ 10KB payload limit
 - ✅ Content-type validation
@@ -183,6 +198,7 @@ const payload = {
 - ✅ Rate limiting (5 requests/min)
 
 **Schema**:
+
 ```typescript
 {
     firstName: string (1-100 chars),
@@ -199,6 +215,7 @@ const payload = {
 ### Demo Request Form (`/api/demo`)
 
 **Protections**:
+
 - ✅ Honeypot field (`url`)
 - ✅ 10KB payload limit
 - ✅ Content-type validation
@@ -207,6 +224,7 @@ const payload = {
 - ✅ Rate limiting (10 requests/min)
 
 **Schema**:
+
 ```typescript
 {
     name: string,
@@ -223,6 +241,7 @@ const payload = {
 ### Newsletter Signup (`/api/newsletter`)
 
 **Protections**:
+
 - ✅ Honeypot field (`phone_number`)
 - ✅ 5KB payload limit
 - ✅ Content-type validation
@@ -230,6 +249,7 @@ const payload = {
 - ✅ Rate limiting (20 requests/min)
 
 **Schema**:
+
 ```typescript
 {
     email: string,
@@ -244,81 +264,76 @@ const payload = {
 ### Server-Side (API Route)
 
 ```typescript
-import { z } from 'zod';
-import { NextRequest } from 'next/server';
-import { 
-    withApiHarden, 
-    createSuccessResponse, 
-    handleZodError, 
-    handleSafeError 
-} from '@/lib/api-utils';
-import { 
-    validateFormSecurity, 
-    checkHoneypot, 
-    sanitizeForLogging 
-} from '@/lib/form-security';
-import { logger } from '@/lib/logger';
+import { z } from "zod";
+import { NextRequest } from "next/server";
+import {
+  withApiHarden,
+  createSuccessResponse,
+  handleZodError,
+  handleSafeError,
+} from "@/lib/api-utils";
+import { validateFormSecurity, checkHoneypot, sanitizeForLogging } from "@/lib/form-security";
+import { logger } from "@/lib/logger";
 
 const FormSchema = z.object({
-    name: z.string().min(1).max(100),
-    email: z.string().email().max(255),
-    message: z.string().min(10).max(5000),
-    website: z.string().optional(), // Honeypot
-    _formStartTime: z.number().optional()
+  name: z.string().min(1).max(100),
+  email: z.string().email().max(255),
+  message: z.string().min(10).max(5000),
+  website: z.string().optional(), // Honeypot
+  _formStartTime: z.number().optional(),
 });
 
 export async function POST(request: NextRequest) {
-    return withApiHarden(request, async (req, { requestId }) => {
-        try {
-            const body = await req.json();
+  return withApiHarden(request, async (req, { requestId }) => {
+    try {
+      const body = await req.json();
 
-            // 1. Form Security Validation
-            const securityCheck = await validateFormSecurity(req, body, {
-                maxPayloadSize: 10 * 1024,
-                minSubmitTime: 2000,
-                honeypotFields: ['website']
-            });
+      // 1. Form Security Validation
+      const securityCheck = await validateFormSecurity(req, body, {
+        maxPayloadSize: 10 * 1024,
+        minSubmitTime: 2000,
+        honeypotFields: ["website"],
+      });
 
-            if (!securityCheck.valid && securityCheck.error) {
-                return handleSafeError(new Error(securityCheck.error.message), requestId);
-            }
+      if (!securityCheck.valid && securityCheck.error) {
+        return handleSafeError(new Error(securityCheck.error.message), requestId);
+      }
 
-            // 2. Honeypot Check
-            const honeypotCheck = checkHoneypot(body, ['website']);
-            if (honeypotCheck.isBot) {
-                logger.warn('Bot detected', {
-                    requestId,
-                    field: honeypotCheck.field,
-                    data: sanitizeForLogging(body)
-                });
-                
-                // Silent success (bot thinks it worked)
-                return createSuccessResponse(requestId, { 
-                    message: 'Form submitted successfully.' 
-                });
-            }
+      // 2. Honeypot Check
+      const honeypotCheck = checkHoneypot(body, ["website"]);
+      if (honeypotCheck.isBot) {
+        logger.warn("Bot detected", {
+          requestId,
+          field: honeypotCheck.field,
+          data: sanitizeForLogging(body),
+        });
 
-            // 3. Input Validation
-            const validation = FormSchema.safeParse(body);
-            if (!validation.success) {
-                return handleZodError(validation.error, requestId);
-            }
+        // Silent success (bot thinks it worked)
+        return createSuccessResponse(requestId, {
+          message: "Form submitted successfully.",
+        });
+      }
 
-            // 4. Secure Logging
-            logger.info('Form submission', {
-                requestId,
-                data: sanitizeForLogging(validation.data)
-            });
+      // 3. Input Validation
+      const validation = FormSchema.safeParse(body);
+      if (!validation.success) {
+        return handleZodError(validation.error, requestId);
+      }
 
-            // 5. Process Form
-            const result = await processForm(validation.data);
+      // 4. Secure Logging
+      logger.info("Form submission", {
+        requestId,
+        data: sanitizeForLogging(validation.data),
+      });
 
-            return createSuccessResponse(requestId, result);
+      // 5. Process Form
+      const result = await processForm(validation.data);
 
-        } catch (error) {
-            return handleSafeError(error, requestId);
-        }
-    });
+      return createSuccessResponse(requestId, result);
+    } catch (error) {
+      return handleSafeError(error, requestId);
+    }
+  });
 }
 ```
 
@@ -381,7 +396,7 @@ export default function ContactForm() {
                 onChange={(e) => setFormData({...formData, firstName: e.target.value})}
                 required
             />
-            
+
             <input
                 type="text"
                 name="lastName"
@@ -390,7 +405,7 @@ export default function ContactForm() {
                 onChange={(e) => setFormData({...formData, lastName: e.target.value})}
                 required
             />
-            
+
             <input
                 type="email"
                 name="email"
@@ -399,7 +414,7 @@ export default function ContactForm() {
                 onChange={(e) => setFormData({...formData, email: e.target.value})}
                 required
             />
-            
+
             <textarea
                 name="message"
                 placeholder="Message"
@@ -438,12 +453,14 @@ export default function ContactForm() {
 ### Silent Rejection
 
 When a bot is detected:
+
 1. ✅ Return 200 OK status
 2. ✅ Return success message
 3. ✅ Don't process submission
 4. ✅ Log attempt (without user data)
 
 **Why?**
+
 - Bots think submission succeeded
 - They move on to next target
 - Prevents retry attempts
@@ -453,16 +470,16 @@ When a bot is detected:
 
 ```json
 {
-    "level": "warn",
-    "message": "Bot detected via honeypot",
-    "requestId": "550e8400-e29b-41d4-a716-446655440000",
-    "field": "website",
-    "data": {
-        "firstName": "Bot",
-        "lastName": "Spammer",
-        "email": "bot@spam.com",
-        "message": "[REDACTED]"
-    }
+  "level": "warn",
+  "message": "Bot detected via honeypot",
+  "requestId": "550e8400-e29b-41d4-a716-446655440000",
+  "field": "website",
+  "data": {
+    "firstName": "Bot",
+    "lastName": "Spammer",
+    "email": "bot@spam.com",
+    "message": "[REDACTED]"
+  }
 }
 ```
 
@@ -546,6 +563,7 @@ curl -X POST http://localhost:3000/api/contact \
 ### Alerts
 
 Set up alerts for:
+
 - **High Bot Rate**: >20% honeypot hits
 - **Payload Attacks**: Multiple oversized requests from same IP
 - **Form Abuse**: High submission rate from single IP
@@ -554,7 +572,7 @@ Set up alerts for:
 
 ```sql
 -- Bot detection rate (last 24 hours)
-SELECT 
+SELECT
     COUNT(CASE WHEN message LIKE '%Bot detected%' THEN 1 END) as bot_attempts,
     COUNT(*) as total_submissions,
     (COUNT(CASE WHEN message LIKE '%Bot detected%' THEN 1 END) * 100.0 / COUNT(*)) as bot_rate
@@ -604,6 +622,7 @@ This implementation helps meet:
 ## Changelog
 
 ### 2025-12-30
+
 - ✅ Implemented honeypot validation
 - ✅ Added payload size limits
 - ✅ Added content-type validation

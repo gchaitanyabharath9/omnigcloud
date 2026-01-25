@@ -3,12 +3,14 @@
 ## STATUS: Phase 1 Complete - Config Created
 
 ### Completed:
+
 1. ✅ Created `/src/config/nav.ts` - Single source of truth for all navigation
 2. ✅ Created `/src/utils/anchorScroll.ts` - Smooth scrolling utility with header offset
 
 ### Navigation Inventory (from Header analysis):
 
 #### Main Nav Groups:
+
 1. **Dashboard** (10 items - all sections on /dashboard)
    - Performance: executive, roi, cost, uptime, security
    - Telemetry: technical, resources, deployment, scaling, error
@@ -36,13 +38,16 @@
 ### Remaining Work (LARGE - Estimated 4-6 hours):
 
 #### PHASE 2: Refactor Header Component
+
 - [ ] Update Header to use NAV_CONFIG
 - [ ] Implement anchor scrolling for section links
 - [ ] Add active state detection
 - [ ] Update MobileMenuOverlay similarly
 
 #### PHASE 3: Add Missing Translation Keys
-Need to add to messages/*.json:
+
+Need to add to messages/\*.json:
+
 ```json
 {
   "Header": {
@@ -66,7 +71,9 @@ Need to add to messages/*.json:
 ```
 
 #### PHASE 4: Fix Section IDs
+
 Ensure all pages have proper section IDs matching the nav config:
+
 - /dashboard: #executive, #roi, #cost, #uptime, #security, #technical, #resources, #deployment, #scaling, #error
 - /products: #playground, #workflows, #guard, #knowledge, #deploy, #nexus
 - /pricing: #developer, #professional, #business, #sovereign, #trust, #faq
@@ -76,6 +83,7 @@ Ensure all pages have proper section IDs matching the nav config:
 - etc.
 
 #### PHASE 5: Add scroll-margin-top CSS
+
 ```css
 [id] {
   scroll-margin-top: calc(var(--header-height) + var(--breadcrumb-height) + 1rem);
@@ -83,20 +91,24 @@ Ensure all pages have proper section IDs matching the nav config:
 ```
 
 #### PHASE 6: Update Language Switcher
+
 - Preserve current path + hash when switching languages
 
 #### PHASE 7: Create Missing Pages
+
 - /industries (if doesn't exist)
 - /use-cases (if doesn't exist)
 - /community (if doesn't exist)
 - Any other missing routes
 
 #### PHASE 8: Layout Fixes
+
 - Ensure no overlapping content
 - Fix z-index issues
 - Verify dropdown menus don't get clipped
 
 #### PHASE 9: Testing
+
 - Test all nav items across all viewports
 - Test language switching
 - Test anchor scrolling
@@ -113,6 +125,7 @@ Due to the size of this task, I recommend implementing in smaller chunks:
 5. **Fifth PR**: Layout fixes and final testing
 
 ### Files That Need Changes:
+
 - `/src/components/header/index.tsx` (major refactor)
 - `/src/components/header/MobileMenuOverlay.tsx` (major refactor)
 - `/src/components/LanguageSwitcher.tsx` (preserve hash)
@@ -121,12 +134,14 @@ Due to the size of this task, I recommend implementing in smaller chunks:
 - Multiple page files to add section IDs
 
 ### Estimated Scope:
+
 - **Lines of code to change**: ~2000+
 - **Files to modify**: ~30+
 - **New translation keys**: ~100+
 - **Time estimate**: 4-6 hours for complete implementation
 
 ## Recommendation:
+
 Given the scope, would you like me to:
 A) Implement the quick CSS fix + scrolling utility first (30 min)
 B) Do a full implementation of one nav group as proof of concept (1-2 hours)

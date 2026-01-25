@@ -3,6 +3,7 @@
 To achieve a 10/10 Scorecard rating, the following settings MUST be manually configured in the GitHub repository settings (API access is restricted for security).
 
 ## 🛡️ Branch Protection (Finding: `Branch-Protection`)
+
 **Navigate to:** Settings > Branches > Add rule > `main`
 
 - [ ] **Require a pull request before merging**
@@ -17,12 +18,14 @@ To achieve a 10/10 Scorecard rating, the following settings MUST be manually con
 - [ ] **Do not allow bypassing the above settings**
 
 ## 🤝 Code Review (Finding: `Code-Review`)
+
 **Navigate to:** Settings > Branches > `main` > Edit
 
 - [ ] Ensure **Require a pull request before merging** is checked.
 - [ ] Ensure **Require review from Code Owners** is checked (CODEOWNERS file is already created).
 
 ## 🚀 Vulnerability Scanning (Finding: `Vulnerabilities`)
+
 **Navigate to:** Settings > Code security and analysis
 
 - [ ] **Dependabot alerts**: Enable

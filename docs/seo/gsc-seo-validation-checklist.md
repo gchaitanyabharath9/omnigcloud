@@ -1,4 +1,5 @@
 # GSC SEO Fix - Validation Checklist
+
 **Date**: January 14, 2026  
 **Status**: Ready for Testing  
 **Mode**: SAFE MODE (No commits, local testing only)
@@ -10,6 +11,7 @@
 ### **Test 1: 301 Redirects**
 
 #### **Locale-less Main Pages**
+
 ```bash
 # Test these URLs in browser (should redirect to /en/)
 http://localhost:3000/pricing
@@ -24,6 +26,7 @@ http://localhost:3000/platform
 **Expected**: All should redirect to `/en/[page]` with 301 status
 
 #### **Locale-less Research Papers**
+
 ```bash
 # Test these URLs
 http://localhost:3000/research/papers/a1-cloud-native-enterprise-reference
@@ -43,6 +46,7 @@ http://localhost:3000/research/frameworks/aecp
 ### **Test 2: Canonical Tags**
 
 #### **Check Homepage Canonical**
+
 ```bash
 # Visit
 http://localhost:3000/en
@@ -54,6 +58,7 @@ http://localhost:3000/en
 **Expected**: Self-canonical for each locale
 
 #### **Check Research Paper Canonical**
+
 ```bash
 # Visit
 http://localhost:3000/en/research/papers/a1-cloud-native-enterprise-reference
@@ -69,6 +74,7 @@ http://localhost:3000/en/research/papers/a1-cloud-native-enterprise-reference
 ### **Test 3: Hreflang Tags**
 
 #### **Check Hreflang on Any Page**
+
 ```bash
 # Visit
 http://localhost:3000/en/pricing
@@ -92,6 +98,7 @@ http://localhost:3000/en/pricing
 ### **Test 4: Robots Meta Tags**
 
 #### **Public Pages (Should be indexable)**
+
 ```bash
 # Visit
 http://localhost:3000/en/pricing
@@ -103,6 +110,7 @@ http://localhost:3000/en/pricing
 **Expected**: `index, follow` for all public pages
 
 #### **Dashboard (Should be noindex)**
+
 ```bash
 # Visit
 http://localhost:3000/en/dashboard
@@ -118,6 +126,7 @@ http://localhost:3000/en/dashboard
 ### **Test 5: Sitemap**
 
 #### **Check Sitemap XML**
+
 ```bash
 # Visit
 http://localhost:3000/sitemap.xml
@@ -136,6 +145,7 @@ http://localhost:3000/sitemap.xml
 ### **Test 6: Robots.txt**
 
 #### **Check Robots.txt**
+
 ```bash
 # Visit
 http://localhost:3000/robots.txt
@@ -163,6 +173,7 @@ Sitemap: https://omnigcloud.com/sitemap.xml
 ## ✅ **VALIDATION CHECKLIST**
 
 ### **Redirects**
+
 - [ ] `/pricing` → `/en/pricing` (301)
 - [ ] `/about` → `/en/about` (301)
 - [ ] `/contact` → `/en/contact` (301)
@@ -170,28 +181,33 @@ Sitemap: https://omnigcloud.com/sitemap.xml
 - [ ] All 17 redirects working
 
 ### **Canonicals**
+
 - [ ] `/en/pricing` has self-canonical
 - [ ] `/es/pricing` has self-canonical (not pointing to /en/)
 - [ ] Research papers have self-canonical
 - [ ] No canonical points to redirect
 
 ### **Hreflang**
+
 - [ ] All pages have 8 locale alternates
 - [ ] x-default points to /en/
 - [ ] Hreflang URLs match canonical strategy
 
 ### **Robots Meta**
+
 - [ ] Public pages: `index, follow`
 - [ ] Dashboard: `noindex, nofollow`
 - [ ] Research papers: `index, follow`
 
 ### **Sitemap**
+
 - [ ] Only localized URLs
 - [ ] No redirects in sitemap
 - [ ] No noindex pages in sitemap
 - [ ] 144 URLs total
 
 ### **Robots.txt**
+
 - [ ] Dashboard blocked
 - [ ] Sitemap linked
 - [ ] Private paths blocked
@@ -201,18 +217,21 @@ Sitemap: https://omnigcloud.com/sitemap.xml
 ## 🚀 **DEPLOYMENT CHECKLIST**
 
 ### **Pre-Deployment**
+
 - [ ] All local tests passed
 - [ ] No TypeScript errors
 - [ ] No ESLint errors
 - [ ] Build succeeds locally
 
 ### **Deployment**
+
 - [ ] Commit changes to Git
 - [ ] Push to main branch
 - [ ] Vercel auto-deploys
 - [ ] Wait for deployment to complete
 
 ### **Post-Deployment**
+
 - [ ] Test redirects in production
 - [ ] Verify canonical tags in production
 - [ ] Check sitemap.xml in production
@@ -223,16 +242,19 @@ Sitemap: https://omnigcloud.com/sitemap.xml
 ## 📊 **GSC VALIDATION (After Deployment)**
 
 ### **Week 1**
+
 - [ ] Request re-indexing for fixed URLs in GSC
 - [ ] Monitor "Pages" report for 404 reduction
 - [ ] Check for new crawl errors
 
 ### **Week 2-4**
+
 - [ ] Export GSC data to compare before/after
 - [ ] Check if "Discovered but not indexed" improved
 - [ ] Monitor canonical issues
 
 ### **Week 5-8**
+
 - [ ] Full GSC validation complete
 - [ ] Document results
 - [ ] Plan next optimization phase
@@ -242,16 +264,19 @@ Sitemap: https://omnigcloud.com/sitemap.xml
 ## 🎯 **SUCCESS CRITERIA**
 
 ### **Immediate (After Deployment)**
+
 - ✅ All 17 redirects working (301 status)
 - ✅ No new crawl errors in GSC
 - ✅ Sitemap validated in GSC
 
 ### **Short-term (1-2 weeks)**
+
 - ✅ 404 pages reduced by 40-50%
 - ✅ Noindex issues resolved (12 → 0)
 - ✅ Canonical issues resolved (20 → 0)
 
 ### **Medium-term (2-4 weeks)**
+
 - ✅ "Discovered but not indexed" improved by 30%
 - ✅ Overall indexed pages increased by 10-15%
 - ✅ No new duplicate content issues
@@ -261,12 +286,14 @@ Sitemap: https://omnigcloud.com/sitemap.xml
 ## 📝 **NOTES**
 
 ### **What We Fixed**
+
 1. ✅ Added 17 new 301 redirects
 2. ✅ Verified noindex only on dashboard
 3. ✅ Verified canonical strategy is correct
 4. ✅ Verified sitemap is clean
 
 ### **What We Didn't Change**
+
 - ❌ No UI redesign
 - ❌ No page removal
 - ❌ No routing changes
@@ -274,6 +301,7 @@ Sitemap: https://omnigcloud.com/sitemap.xml
 - ❌ No commits/pushes (SAFE MODE)
 
 ### **What's Next**
+
 1. Test locally using this checklist
 2. Deploy to production
 3. Monitor GSC for 2-4 weeks

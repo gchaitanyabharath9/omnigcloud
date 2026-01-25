@@ -37,8 +37,10 @@
 ### HIGH PRIORITY
 
 #### 1. Positioning & Messaging Refinement
+
 **Status**: Needs Review  
-**Files**: 
+**Files**:
+
 - `src/components/sections/home/HeroSection.tsx`
 - `messages/en.json` (Hero section)
 
@@ -46,12 +48,14 @@
 **Issue**: Too technical, not outcome-driven
 
 **Recommended Changes**:
+
 - **Problem**: "Multi-cloud complexity creates vendor lock-in and compliance risk"
 - **Solution**: "Unified control plane for sovereign cloud operations"
 - **Audience**: "For regulated enterprises and government agencies"
 - **Differentiation**: "AI-powered policy enforcement across any cloud provider"
 
 **Action Items**:
+
 - [ ] Rewrite hero headline to be outcome-focused
 - [ ] Add clear problem statement
 - [ ] Emphasize enterprise audience
@@ -60,14 +64,17 @@
 ---
 
 #### 2. Navigation & Layout Polish
+
 **Status**: Needs Work  
 **Issues Identified**:
+
 - Header dropdown may have flicker (need to test)
 - Inconsistent max-width containers
 - Excessive whitespace on large screens
 - Mobile responsiveness needs verification
 
 **Action Items**:
+
 - [ ] Test header dropdowns for stability
 - [ ] Apply consistent `max-width: 1400px` container
 - [ ] Reduce left/right padding on >1920px screens
@@ -77,11 +84,13 @@
 ---
 
 #### 3. SEO Metadata Per Page
+
 **Status**: Partially Complete  
 **Current**: Generic metadata in layout.tsx  
 **Needed**: Unique title + description per marketing page
 
 **Pages Requiring Unique Metadata**:
+
 - [ ] Home (`/`)
 - [ ] Platform (`/platform`)
 - [ ] Services (`/services`)
@@ -95,6 +104,7 @@
 - [ ] Docs (`/docs`)
 
 **Action Items**:
+
 - [ ] Add `generateMetadata()` to each page
 - [ ] Write unique, keyword-rich descriptions
 - [ ] Ensure OpenGraph + Twitter cards per page
@@ -102,10 +112,12 @@
 ---
 
 #### 4. Thought Leadership Page
+
 **Status**: Not Started  
 **Requirement**: Public page showcasing research/innovation
 
 **Proposed Structure**:
+
 ```
 /research or /innovation
 - Overview of G-Framework
@@ -117,6 +129,7 @@
 ```
 
 **Action Items**:
+
 - [ ] Create `/research` page
 - [ ] Add whitepaper download CTA
 - [ ] Link architecture documentation
@@ -127,9 +140,11 @@
 ### MEDIUM PRIORITY
 
 #### 5. Performance & Accessibility
+
 **Status**: Needs Audit
 
 **Action Items**:
+
 - [ ] Verify all images use `next/image`
 - [ ] Check font loading (already using next/font)
 - [ ] Run Lighthouse audit
@@ -140,10 +155,12 @@
 ---
 
 #### 6. Conversion CTAs
+
 **Status**: Partially Complete  
 **Current**: Some CTAs exist but inconsistent
 
 **Action Items**:
+
 - [ ] Standardize CTA buttons (Request Demo, Contact Sales, Download Whitepaper)
 - [ ] Ensure all CTAs route to `/contact` or email
 - [ ] Add form validation to contact form
@@ -155,10 +172,12 @@
 ### LOW PRIORITY
 
 #### 7. Schema.org Enhancement
+
 **Status**: Basic implementation exists  
 **Current**: Organization + SoftwareApplication
 
 **Potential Additions**:
+
 - [ ] WebSite schema with siteNavigationElement
 - [ ] BreadcrumbList for navigation
 - [ ] FAQPage for common questions
@@ -166,6 +185,7 @@
 ---
 
 #### 8. Sitemap Cleanup
+
 **Status**: Needs Verification  
 **Action**: Ensure sitemap includes ONLY marketing pages (no /app routes)
 
@@ -245,12 +265,14 @@ Before marking as complete, verify:
 ## 🎯 Next Steps
 
 **Immediate Actions**:
+
 1. Review and approve this plan
 2. Prioritize which items to tackle first
 3. Execute incrementally with build checks
 4. Document any blockers or questions
 
 **Questions for Clarification**:
+
 - Which messaging changes are most critical?
 - Is the `/research` page name acceptable or prefer `/innovation`?
 - Any specific SEO keywords to target?

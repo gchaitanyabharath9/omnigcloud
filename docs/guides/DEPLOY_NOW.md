@@ -24,6 +24,7 @@ git push -u origin main
 ```
 
 **Before running the above**, create the GitHub repository:
+
 1. Go to: https://github.com/new
 2. Repository name: `omnigcloud`
 3. Description: `Enterprise-grade multi-cloud governance platform`
@@ -140,6 +141,7 @@ Once DNS propagates, visit:
 - ✅ https://omnigcloud.vercel.app (Vercel preview URL)
 
 Test these pages:
+
 - [ ] Home page loads
 - [ ] `/research` page works
 - [ ] `/pricing` page works
@@ -152,12 +154,12 @@ Test these pages:
 
 ## Your Deployment URLs
 
-| Type | URL |
-|------|-----|
-| **Production** | https://omnigcloud.com |
-| **WWW** | https://www.omnigcloud.com |
-| **Vercel Preview** | https://omnigcloud.vercel.app |
-| **GitHub Repo** | https://github.com/gchaitanyabharath9/omnigcloud |
+| Type               | URL                                              |
+| ------------------ | ------------------------------------------------ |
+| **Production**     | https://omnigcloud.com                           |
+| **WWW**            | https://www.omnigcloud.com                       |
+| **Vercel Preview** | https://omnigcloud.vercel.app                    |
+| **GitHub Repo**    | https://github.com/gchaitanyabharath9/omnigcloud |
 
 ---
 
@@ -172,6 +174,7 @@ git push
 ```
 
 Vercel will automatically:
+
 1. Detect the push
 2. Build your site
 3. Deploy to production
@@ -236,17 +239,20 @@ Vercel will automatically:
 ## Troubleshooting
 
 ### Build Fails
+
 - Check Vercel build logs
 - Verify environment variables are set
 - Ensure Node.js version is 18+
 
 ### Domain Not Working
+
 - Wait 10-15 minutes for DNS propagation
 - Verify CNAME records in Cloudflare
 - Ensure proxy is OFF (gray cloud)
 - Check Vercel domain settings
 
 ### 500 Errors
+
 - Check environment variables are correct
 - Review Vercel function logs
 - Verify API routes work locally
@@ -272,18 +278,20 @@ Vercel will automatically:
 
 **GitHub**: https://github.com/gchaitanyabharath9/omnigcloud  
 **Vercel**: https://vercel.com/dashboard  
-**Production**: https://omnigcloud.com  
+**Production**: https://omnigcloud.com
 
 ---
 
 ## Support
 
 **Documentation**:
+
 - `README.md` - Project overview
 - `DEPLOYMENT.md` - Full deployment guide
 - `NEXT_STEPS.md` - What to do next
 
 **Issues**:
+
 - GitHub Issues: https://github.com/gchaitanyabharath9/omnigcloud/issues
 - Vercel Support: https://vercel.com/support
 - Next.js Docs: https://nextjs.org/docs
@@ -292,15 +300,15 @@ Vercel will automatically:
 
 ## Estimated Timeline
 
-| Task | Time |
-|------|------|
-| Create GitHub repo | 2 min |
-| Push code | 3 min |
-| Deploy to Vercel | 3 min |
-| Add env variables | 2 min |
-| Connect domain | 2 min |
-| DNS propagation | 5-10 min |
-| **Total** | **~15-20 min** |
+| Task               | Time           |
+| ------------------ | -------------- |
+| Create GitHub repo | 2 min          |
+| Push code          | 3 min          |
+| Deploy to Vercel   | 3 min          |
+| Add env variables  | 2 min          |
+| Connect domain     | 2 min          |
+| DNS propagation    | 5-10 min       |
+| **Total**          | **~15-20 min** |
 
 ---
 

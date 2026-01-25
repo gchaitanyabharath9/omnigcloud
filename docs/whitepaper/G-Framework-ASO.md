@@ -12,9 +12,9 @@
 
 ## Revision History
 
-| Version | Date | Changes |
-|---------|------|---------|
-| v0.1 | 2025-12-29 | Initial preprint release |
+| Version | Date       | Changes                  |
+| ------- | ---------- | ------------------------ |
+| v0.1    | 2025-12-29 | Initial preprint release |
 
 ---
 
@@ -56,21 +56,25 @@ This work presents:
 The G-Framework consists of four primary layers:
 
 #### 2.1.1 Policy Enforcement Layer
+
 - **Location**: `src/proxy.ts`, `src/core-middleware.ts`
 - **Function**: Rate limiting, authentication, request routing
 - **Implementation**: Next.js middleware with Upstash Redis backend
 
 #### 2.1.2 API Hardening Layer
+
 - **Location**: `src/lib/api-utils.ts`, `src/app/api/*/route.ts`
 - **Function**: Request validation (Zod schemas), standardized response envelopes, request ID tracking
 - **Implementation**: Higher-order function wrapping all API routes
 
 #### 2.1.3 Internationalization Layer
+
 - **Location**: `messages/*.json`, `src/i18n/`
 - **Function**: Multilingual content delivery with locale-aware routing
 - **Implementation**: next-intl with 7 supported locales (en, es, fr, de, zh, hi, ja)
 
 #### 2.1.4 Observability Layer
+
 - **Location**: `src/lib/logger.ts`, `src/lib/metrics.ts`, `src/lib/audit.ts`
 - **Function**: Structured logging, Prometheus-compatible metrics, audit trails
 - **Implementation**: In-memory collectors with pluggable backends
@@ -100,6 +104,7 @@ Standardized Response
 All API endpoints implement Zod-based schema validation:
 
 **Example** (`src/app/api/billing/route.ts`):
+
 ```typescript
 const BillingSchema = z.object({
   vms: z.number().nonnegative(),
@@ -109,6 +114,7 @@ const BillingSchema = z.object({
 ```
 
 **Validation Flow**:
+
 1. Parse request body
 2. Validate against schema
 3. Return 400 with detailed errors on failure
@@ -119,11 +125,13 @@ const BillingSchema = z.object({
 Translation files provide complete coverage for all UI strings:
 
 **Structure** (`messages/en.json`):
+
 - 970 lines, 50KB
 - Covers: Navigation, Forms, Legal Pages, Error Messages
 - Validated: JSON syntax, no duplicate keys
 
 **Locale Routing**:
+
 - Pattern: `/{locale}/path`
 - Supported: en, es, fr, de, zh, hi, ja
 - Fallback: English (en)
@@ -131,16 +139,19 @@ Translation files provide complete coverage for all UI strings:
 ### 3.3 Observability Primitives
 
 **Structured Logging**:
+
 - Format: JSON with ISO 8601 timestamps
 - PII Protection: Email masking, sensitive field removal
 - Context: requestId, route, method, status, duration
 
 **Metrics Collection**:
+
 - Types: Counter, Gauge, Histogram
 - Storage: In-memory with 1000-sample limit
 - Export: Prometheus text format at `/api/metrics`
 
 **Audit Logging**:
+
 - Events: 16 predefined types (auth, access, data operations)
 - Storage: In-memory (10,000 event limit) with pluggable interface
 - Queryable: By user, event type, time range, status
@@ -153,11 +164,11 @@ Translation files provide complete coverage for all UI strings:
 
 **Methodology**: Static analysis of API routes for Zod schema presence
 
-| Endpoint | Schema Validation | Response Envelope | Request ID |
-|----------|-------------------|-------------------|------------|
-| `/api/billing` | ✅ BillingSchema | ✅ Standardized | ✅ UUID v4 |
-| `/api/contact` | ✅ ContactSchema | ✅ Standardized | ✅ UUID v4 |
-| `/api/health` | N/A (GET only) | ✅ Standardized | ✅ UUID v4 |
+| Endpoint       | Schema Validation | Response Envelope | Request ID |
+| -------------- | ----------------- | ----------------- | ---------- |
+| `/api/billing` | ✅ BillingSchema  | ✅ Standardized   | ✅ UUID v4 |
+| `/api/contact` | ✅ ContactSchema  | ✅ Standardized   | ✅ UUID v4 |
+| `/api/health`  | N/A (GET only)    | ✅ Standardized   | ✅ UUID v4 |
 
 **Result**: 100% of POST/PUT endpoints have schema validation
 
@@ -165,15 +176,15 @@ Translation files provide complete coverage for all UI strings:
 
 **Methodology**: Parse translation files and count keys
 
-| Locale | Keys | Completeness | File Size |
-|--------|------|--------------|-----------|
-| en | 970 | 100% (baseline) | 50.9 KB |
-| es | 970 | 100% | 51.2 KB |
-| fr | 970 | 100% | 51.4 KB |
-| de | 970 | 100% | 50.8 KB |
-| zh | 346 | 35.7% | 18.1 KB |
-| hi | 346 | 35.7% | 18.3 KB |
-| ja | 346 | 35.7% | 18.2 KB |
+| Locale | Keys | Completeness    | File Size |
+| ------ | ---- | --------------- | --------- |
+| en     | 970  | 100% (baseline) | 50.9 KB   |
+| es     | 970  | 100%            | 51.2 KB   |
+| fr     | 970  | 100%            | 51.4 KB   |
+| de     | 970  | 100%            | 50.8 KB   |
+| zh     | 346  | 35.7%           | 18.1 KB   |
+| hi     | 346  | 35.7%           | 18.3 KB   |
+| ja     | 346  | 35.7%           | 18.2 KB   |
 
 **Result**: Western European languages at 100%, Asian languages require completion
 
@@ -181,11 +192,11 @@ Translation files provide complete coverage for all UI strings:
 
 **Methodology**: Microbenchmarks on logging and metrics operations
 
-| Operation | Latency (p50) | Latency (p95) | Memory |
-|-----------|---------------|---------------|--------|
-| Logger.info() | 0.8ms | 1.2ms | Negligible |
-| Metrics.increment() | 0.05ms | 0.1ms | ~1KB/metric |
-| Audit.log() | 3.2ms | 5.1ms | ~1KB/event |
+| Operation           | Latency (p50) | Latency (p95) | Memory      |
+| ------------------- | ------------- | ------------- | ----------- |
+| Logger.info()       | 0.8ms         | 1.2ms         | Negligible  |
+| Metrics.increment() | 0.05ms        | 0.1ms         | ~1KB/metric |
+| Audit.log()         | 3.2ms         | 5.1ms         | ~1KB/event  |
 
 **Result**: All operations sub-10ms, suitable for production request paths
 
@@ -198,6 +209,7 @@ npm run build
 ```
 
 **Results**:
+
 - Build Time: ~4.2s (Turbopack)
 - Routes Generated: 34 dynamic, 2 static
 - Bundle Size: (Not measured - Next.js handles optimization)
@@ -229,6 +241,7 @@ npm run dev
 ### 5.2 Validation Reproduction
 
 **API Schema Validation**:
+
 ```bash
 # Test billing endpoint with invalid payload
 curl -X POST http://localhost:3000/api/billing \
@@ -239,6 +252,7 @@ curl -X POST http://localhost:3000/api/billing \
 ```
 
 **Internationalization**:
+
 ```bash
 # Access different locales
 curl http://localhost:3000/en
@@ -249,6 +263,7 @@ curl http://localhost:3000/fr
 ```
 
 **Metrics Collection**:
+
 ```bash
 # Generate some traffic
 curl http://localhost:3000/api/health
@@ -261,14 +276,14 @@ curl http://localhost:3000/api/metrics
 
 ### 5.3 Code Artifacts
 
-| Component | Location | Lines of Code |
-|-----------|----------|---------------|
-| API Hardening | `src/lib/api-utils.ts` | 120 |
-| Structured Logger | `src/lib/logger.ts` | 96 |
-| Metrics Collector | `src/lib/metrics.ts` | 180 |
-| Audit Logger | `src/lib/audit.ts` | 234 |
-| Proxy Middleware | `src/proxy.ts` | 38 |
-| Rate Limiter | `src/lib/rate-limit.ts` | 66 |
+| Component         | Location                | Lines of Code |
+| ----------------- | ----------------------- | ------------- |
+| API Hardening     | `src/lib/api-utils.ts`  | 120           |
+| Structured Logger | `src/lib/logger.ts`     | 96            |
+| Metrics Collector | `src/lib/metrics.ts`    | 180           |
+| Audit Logger      | `src/lib/audit.ts`      | 234           |
+| Proxy Middleware  | `src/proxy.ts`          | 38            |
+| Rate Limiter      | `src/lib/rate-limit.ts` | 66            |
 
 **Total**: ~734 LOC for core observability and governance primitives
 
@@ -354,6 +369,7 @@ curl http://localhost:3000/api/metrics
 This technical report presents the G-Framework for Autonomous Sovereign Orchestration, with a focus on reproducible implementations of API hardening, internationalization, and observability. Our reference implementation demonstrates that lightweight, policy-driven multi-cloud governance is achievable without heavy infrastructure dependencies.
 
 Key findings:
+
 - 100% API validation coverage with Zod schemas
 - Sub-50ms observability overhead suitable for production
 - Prometheus-compatible metrics with minimal memory footprint

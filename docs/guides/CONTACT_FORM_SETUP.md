@@ -3,6 +3,7 @@
 ## 🎯 Current Status
 
 **Your contact form currently:**
+
 - ✅ Validates input
 - ✅ Logs to console
 - ❌ **Does NOT save data**
@@ -31,25 +32,29 @@
 ### Step 3: Verify Domain (5 min)
 
 **Option A: Use Resend's Domain (Easiest)**
+
 - Resend provides: `onboarding@resend.dev`
 - Works immediately
 - Good for testing
 
 **Option B: Use Your Domain (Recommended for production)**
+
 1. In Resend Dashboard, go to "Domains"
 2. Click "Add Domain"
 3. Enter: `omnigcloud.com`
 4. Add DNS records to Cloudflare:
+
    ```
    Type: TXT
    Name: @
    Value: [Resend provides this]
-   
+
    Type: MX
    Name: @
    Value: [Resend provides this]
    Priority: 10
    ```
+
 5. Wait for verification (5-10 min)
 6. You can now send from: `contact@omnigcloud.com`
 
@@ -102,6 +107,7 @@ Vercel will auto-deploy (2-3 minutes).
 ## 📊 What You Get
 
 ### Email Notification Includes:
+
 - ✅ Submission ID (e.g., SOV-ABC1234)
 - ✅ Name
 - ✅ Email
@@ -109,6 +115,7 @@ Vercel will auto-deploy (2-3 minutes).
 - ✅ Timestamp
 
 ### Example Email:
+
 ```
 Subject: New Contact Form Submission - SOV-ABC1234
 
@@ -127,10 +134,10 @@ Submitted at: 2025-12-29T19:30:00.000Z
 
 ## 💰 Resend Pricing
 
-| Plan | Cost | Emails/Month | Best For |
-|------|------|--------------|----------|
-| **Free** | $0 | 3,000 | Your current needs ✅ |
-| **Pro** | $20 | 50,000 | High volume |
+| Plan     | Cost | Emails/Month | Best For              |
+| -------- | ---- | ------------ | --------------------- |
+| **Free** | $0   | 3,000        | Your current needs ✅ |
+| **Pro**  | $20  | 50,000       | High volume           |
 
 **You'll stay on free tier for a long time!**
 
@@ -143,6 +150,7 @@ Submitted at: 2025-12-29T19:30:00.000Z
 #### Option 1: Upstash Redis (Recommended)
 
 **Setup:**
+
 1. Go to: https://upstash.com
 2. Create Redis database (free tier)
 3. Add to Vercel:
@@ -152,8 +160,9 @@ Submitted at: 2025-12-29T19:30:00.000Z
    ```
 
 **Code to add** (in `src/app/api/contact/route.ts`):
+
 ```typescript
-import { Redis } from '@upstash/redis';
+import { Redis } from "@upstash/redis";
 
 const redis = new Redis({
   url: process.env.REDIS_URL!,
@@ -161,13 +170,16 @@ const redis = new Redis({
 });
 
 // After validation, save to Redis:
-await redis.set(`contact:${submissionId}`, JSON.stringify({
-  firstName,
-  lastName,
-  email,
-  message,
-  timestamp: new Date().toISOString(),
-}));
+await redis.set(
+  `contact:${submissionId}`,
+  JSON.stringify({
+    firstName,
+    lastName,
+    email,
+    message,
+    timestamp: new Date().toISOString(),
+  })
+);
 
 // Retrieve later:
 const submission = await redis.get(`contact:${submissionId}`);
@@ -176,6 +188,7 @@ const submission = await redis.get(`contact:${submissionId}`);
 #### Option 2: Vercel Postgres
 
 **Setup:**
+
 1. Vercel Dashboard → Storage → Create Database
 2. Select PostgreSQL
 3. Create table:
@@ -195,22 +208,24 @@ const submission = await redis.get(`contact:${submissionId}`);
 
 ## 📈 Comparison
 
-| Method | Setup Time | Cost | Pros | Cons |
-|--------|------------|------|------|------|
-| **Email Only** | 15 min | $0 | Instant notifications | No permanent storage |
-| **Database Only** | 30 min | $0 | Permanent storage | No instant notifications |
-| **Both** | 45 min | $0 | Best of both | More setup |
+| Method            | Setup Time | Cost | Pros                  | Cons                     |
+| ----------------- | ---------- | ---- | --------------------- | ------------------------ |
+| **Email Only**    | 15 min     | $0   | Instant notifications | No permanent storage     |
+| **Database Only** | 30 min     | $0   | Permanent storage     | No instant notifications |
+| **Both**          | 45 min     | $0   | Best of both          | More setup               |
 
 ---
 
 ## ✅ Recommended Setup
 
 ### **Phase 1 (Now): Email Notifications**
+
 - ⏱️ 15 minutes
 - 💰 $0
 - ✅ Immediate value
 
 ### **Phase 2 (Later): Add Database**
+
 - ⏱️ 30 minutes
 - 💰 $0
 - ✅ When you need to review/export submissions
@@ -222,6 +237,7 @@ const submission = await redis.get(`contact:${submissionId}`);
 ### Email Not Received
 
 **Check:**
+
 1. Spam folder
 2. Resend API key is correct
 3. Environment variables are set in Vercel
@@ -231,6 +247,7 @@ const submission = await redis.get(`contact:${submissionId}`);
 ### Domain Verification Failed
 
 **Solution:**
+
 1. Use `onboarding@resend.dev` for now
 2. Verify domain later when you have time
 
@@ -239,6 +256,7 @@ const submission = await redis.get(`contact:${submissionId}`);
 **Error**: `Cannot find module 'resend'`
 
 **Solution:**
+
 ```bash
 npm install resend
 git add package.json package-lock.json

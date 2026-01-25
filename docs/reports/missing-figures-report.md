@@ -9,6 +9,7 @@
 The following figures are referenced in LaTeX but **do not exist** in `papers-canonical/figures/`:
 
 ### **A2: Partition Affinity Diagram**
+
 - **File:** `A2_Partition_Affinity.pdf`
 - **Referenced in:** `papers-canonical/A2.tex` (line 108)
 - **Section:** "Partitioning Strategy"
@@ -16,6 +17,7 @@ The following figures are referenced in LaTeX but **do not exist** in `papers-ca
 - **Impact:** Shows placeholder text in PDF instead of diagram
 
 ### **A6: OODA Loop Diagram** (Previously identified)
+
 - **File:** `A6_OODA_Loop.png`
 - **Referenced in:** `papers-canonical/A6.tex`
 - **Section:** "Theoretical Model"
@@ -41,6 +43,7 @@ These figures **do exist** and render correctly:
 ### **Option 1: Create Missing Figures (RECOMMENDED)**
 
 **For A2_Partition_Affinity:**
+
 1. Create a diagram showing:
    - Hash function: `Hash(TenantID) % N`
    - Partition assignment
@@ -49,6 +52,7 @@ These figures **do exist** and render correctly:
 3. Rebuild LaTeX
 
 **For A6_OODA_Loop:**
+
 1. Create OODA loop diagram:
    - Observe → Orient → Decide → Act (circular)
    - Feedback loops
@@ -68,6 +72,7 @@ These figures **do exist** and render correctly:
 Edit the LaTeX files to comment out missing figure references:
 
 **In A2.tex (line 106-111):**
+
 ```latex
 % \begin{figure}[h]
 %     \centering
@@ -84,6 +89,7 @@ Then rebuild.
 ## 📋 **CURRENT STATUS**
 
 ### **Papers with All Figures:**
+
 - ✅ A1 (1 figure - Four Plane Model)
 - ✅ A3 (1 figure - Observability Triangle)
 - ✅ A4 (1 figure - Four Gates)
@@ -91,6 +97,7 @@ Then rebuild.
 - ✅ Scholarly Article (1 figure - Iron Triangle)
 
 ### **Papers with Missing Figures:**
+
 - ⚠️ A2 (1 of 2 figures missing - Partition Affinity)
 - ⚠️ A6 (1 figure missing - OODA Loop)
 - ⚠️ AECP (No figures, but none referenced)
@@ -116,14 +123,17 @@ Then rebuild.
 ## 📊 **IMPACT ASSESSMENT**
 
 ### **Low Impact (Can Submit Now):**
+
 - A1, A3, A4, A5, Scholarly Article, AECP
 - All figures present and rendering
 
 ### **Medium Impact (Fix Before Submission):**
+
 - A2: Missing 1 of 2 figures (50% complete)
 - A6: Missing 1 figure
 
-**Recommendation:** 
+**Recommendation:**
+
 - Submit A1, A3, A4, A5, Scholarly Article, AECP to arXiv **now**
 - Fix A2 and A6 figures **this week**
 - Submit A2 and A6 **next week**
@@ -159,17 +169,20 @@ Then rebuild.
 ## ✅ **NEXT STEPS**
 
 **Today:**
+
 1. Continue validation with current PDFs
 2. Note missing figures in reports
 3. Use AI tools on complete papers (A1, A3, A4, A5)
 
 **This Week:**
+
 1. Create A2_Partition_Affinity diagram
 2. Create A6_OODA_Loop diagram
 3. Rebuild LaTeX
 4. Update all PDFs
 
 **Next Week:**
+
 1. Submit all 8 papers to arXiv with complete figures
 
 ---

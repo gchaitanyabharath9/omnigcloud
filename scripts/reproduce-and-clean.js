@@ -1,39 +1,67 @@
-const fs = require('fs');
-const path = require('path');
-const { mdToPdf } = require('md-to-pdf');
+const fs = require("fs");
+const path = require("path");
+const { mdToPdf } = require("md-to-pdf");
 
 const WORKSPACE = process.cwd();
-const RESEARCH_DIR = path.join(WORKSPACE, 'src/app/[locale]/research/papers');
-const OUTPUT_DIR = path.join(WORKSPACE, 'publication-pdfs');
+const RESEARCH_DIR = path.join(WORKSPACE, "src/app/[locale]/research/papers");
+const OUTPUT_DIR = path.join(WORKSPACE, "publication-pdfs");
 
 const papers = [
-    { dir: 'a1-cloud-native-enterprise-reference', file: 'A1-PAPER-FULL.md', output: 'A1-Cloud-Native-Enterprise-Reference-GOLD.pdf' },
-    { dir: 'a2-high-throughput-distributed-systems', file: 'A2-PAPER-FULL.md', output: 'A2-High-Throughput-Distributed-Systems-GOLD.pdf' },
-    { dir: 'a3-enterprise-observability-operational-intelligence', file: 'A3-PAPER-FULL.md', output: 'A3-Enterprise-Observability-Operational-Intelligence-GOLD.pdf' },
-    { dir: 'a4-platform-governance-multicloud-hybrid', file: 'A4-PAPER-FULL.md', output: 'A4-Platform-Governance-Multicloud-Hybrid-GOLD.pdf' },
-    { dir: 'a5-monolith-to-cloud-native-modernization', file: 'A5-PAPER-FULL.md', output: 'A5-Monolith-Modernization-GOLD.pdf' },
-    { dir: 'a6-adaptive-policy-enforcement', file: 'A6-PAPER-FULL.md', output: 'A6-Adaptive-Policy-Enforcement-GOLD.pdf' },
-    { dir: 'scholarly-article', file: 'SCHOLARLY-ARTICLE-ENTERPRISE-ARCHITECTURE.md', output: 'SCHOLARLY-ARTICLE-Enterprise-Architecture-GOLD.pdf' },
-    { dir: 'aecp', file: 'AECP-FULL.md', output: 'AECP-Framework-Full-GOLD.pdf' }
+  {
+    dir: "a1-cloud-native-enterprise-reference",
+    file: "A1-PAPER-FULL.md",
+    output: "A1-Cloud-Native-Enterprise-Reference-GOLD.pdf",
+  },
+  {
+    dir: "a2-high-throughput-distributed-systems",
+    file: "A2-PAPER-FULL.md",
+    output: "A2-High-Throughput-Distributed-Systems-GOLD.pdf",
+  },
+  {
+    dir: "a3-enterprise-observability-operational-intelligence",
+    file: "A3-PAPER-FULL.md",
+    output: "A3-Enterprise-Observability-Operational-Intelligence-GOLD.pdf",
+  },
+  {
+    dir: "a4-platform-governance-multicloud-hybrid",
+    file: "A4-PAPER-FULL.md",
+    output: "A4-Platform-Governance-Multicloud-Hybrid-GOLD.pdf",
+  },
+  {
+    dir: "a5-monolith-to-cloud-native-modernization",
+    file: "A5-PAPER-FULL.md",
+    output: "A5-Monolith-Modernization-GOLD.pdf",
+  },
+  {
+    dir: "a6-adaptive-policy-enforcement",
+    file: "A6-PAPER-FULL.md",
+    output: "A6-Adaptive-Policy-Enforcement-GOLD.pdf",
+  },
+  {
+    dir: "scholarly-article",
+    file: "SCHOLARLY-ARTICLE-ENTERPRISE-ARCHITECTURE.md",
+    output: "SCHOLARLY-ARTICLE-Enterprise-Architecture-GOLD.pdf",
+  },
+  { dir: "aecp", file: "AECP-FULL.md", output: "AECP-Framework-Full-GOLD.pdf" },
 ];
 
 (async () => {
-    console.log('--- Starting Fresh PDF Generation ---');
+  console.log("--- Starting Fresh PDF Generation ---");
 
-    for (const paper of papers) {
-        const inputPath = path.join(RESEARCH_DIR, paper.dir, paper.file);
-        const outputPath = path.join(OUTPUT_DIR, paper.output);
+  for (const paper of papers) {
+    const inputPath = path.join(RESEARCH_DIR, paper.dir, paper.file);
+    const outputPath = path.join(OUTPUT_DIR, paper.output);
 
-        if (!fs.existsSync(inputPath)) continue;
+    if (!fs.existsSync(inputPath)) continue;
 
-        process.stdout.write(`Processing ${paper.file}... `);
+    process.stdout.write(`Processing ${paper.file}... `);
 
-        try {
-            const markdown = fs.readFileSync(inputPath, 'utf-8');
+    try {
+      const markdown = fs.readFileSync(inputPath, "utf-8");
 
-            // We inject the Mermaid script and Styling directly into the Markdown string.
-            // This is the most reliable way for md-to-pdf to handle both the MD and the Diagram rendering.
-            const injectedMarkdown = `
+      // We inject the Mermaid script and Styling directly into the Markdown string.
+      // This is the most reliable way for md-to-pdf to handle both the MD and the Diagram rendering.
+      const injectedMarkdown = `
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@400;600;700&display=swap" rel="stylesheet">
@@ -171,27 +199,32 @@ const papers = [
 ${markdown}
 `;
 
-            await mdToPdf({ content: injectedMarkdown }, {
-                dest: outputPath,
-                pdf_options: {
-                    format: 'A4',
-                    margin: { top: '25mm', right: '20mm', bottom: '25mm', left: '20mm' },
-                    printBackground: true,
-                    displayHeaderFooter: true,
-                    headerTemplate: '<div style="font-size: 8px; margin-left: 20px; color: #718096;">RESEARCH PAPER - Publication Copy</div>',
-                    footerTemplate: '<div style="font-size: 8px; text-align: center; width: 100%; color: #718096;">Page <span class="pageNumber"></span> of <span class="totalPages"></span></div>'
-                },
-                launch_options: {
-                    args: ['--no-sandbox', '--disable-setuid-sandbox'],
-                    waitUntil: 'networkidle0'
-                }
-            });
-
-            console.log('✓');
-        } catch (err) {
-            console.log('✗');
-            console.error(`  Error: ${err.message}`);
+      await mdToPdf(
+        { content: injectedMarkdown },
+        {
+          dest: outputPath,
+          pdf_options: {
+            format: "A4",
+            margin: { top: "25mm", right: "20mm", bottom: "25mm", left: "20mm" },
+            printBackground: true,
+            displayHeaderFooter: true,
+            headerTemplate:
+              '<div style="font-size: 8px; margin-left: 20px; color: #718096;">RESEARCH PAPER - Publication Copy</div>',
+            footerTemplate:
+              '<div style="font-size: 8px; text-align: center; width: 100%; color: #718096;">Page <span class="pageNumber"></span> of <span class="totalPages"></span></div>',
+          },
+          launch_options: {
+            args: ["--no-sandbox", "--disable-setuid-sandbox"],
+            waitUntil: "networkidle0",
+          },
         }
+      );
+
+      console.log("✓");
+    } catch (err) {
+      console.log("✗");
+      console.error(`  Error: ${err.message}`);
     }
-    console.log('\nGeneration Complete.');
+  }
+  console.log("\nGeneration Complete.");
 })();

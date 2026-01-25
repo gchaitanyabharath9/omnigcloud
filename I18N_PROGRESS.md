@@ -1,13 +1,16 @@
 # i18n Hardcoded String Elimination - Progress Report
 
 ## Objective
+
 Eliminate ALL hardcoded UI strings from the Next.js application to pass the i18n-qa gate.
 
 ## Completed Files ✅
 
 ### 1. FloatingActions.tsx
+
 **Location:** `src/components/FloatingActions.tsx`
 **Changes:**
+
 - Added `useTranslations('FloatingActions')` hook
 - Replaced hardcoded strings:
   - "Talk to an Expert" → `t('talkToExpert')`
@@ -22,14 +25,18 @@ Eliminate ALL hardcoded UI strings from the Next.js application to pass the i18n
   - "View Full Contact Page" → `t('contact.viewFullPage')`
 
 ### 2. ChatWidget.tsx
+
 **Location:** `src/components/ChatWidget.tsx`
 **Changes:**
+
 - Added `useTranslations('ChatWidget')` hook
 - Replaced "SOVEREIGN AI" → `t('brand')`
 
 ### 3. global-error.tsx
+
 **Location:** `src/app/global-error.tsx`
 **Changes:**
+
 - Created ERROR_STRINGS constant object (can't use hooks in global-error)
 - Replaced hardcoded strings:
   - "SYSTEM_WIDE_FAILURE" → `ERROR_STRINGS.title`
@@ -37,8 +44,10 @@ Eliminate ALL hardcoded UI strings from the Next.js application to pass the i18n
   - "Force Reboot" → `ERROR_STRINGS.cta`
 
 ### 4. CtaSection.tsx
+
 **Location:** `src/components/sections/home/CtaSection.tsx`
 **Changes:**
+
 - Uses existing `useTranslations('HomeSections.Cta')` hook
 - Replaced hardcoded strings:
   - "PLATFORM METRICS" → `t('platformMetrics')`
@@ -49,7 +58,9 @@ Eliminate ALL hardcoded UI strings from the Next.js application to pass the i18n
 ## Translation Files Updated ✅
 
 ### en.json
+
 Added comprehensive keys for:
+
 - `FloatingActions` namespace (complete)
 - `ChatWidget` namespace
 - `GlobalError` namespace
@@ -62,6 +73,7 @@ Added comprehensive keys for:
 - `Whitepaper.intro` namespace (prepared for future use)
 
 ### All Other Locales (es, fr, de, zh, hi, ja, ko)
+
 - Synced all new keys from en.json
 - All keys have English fallback values (temporary)
 
@@ -70,6 +82,7 @@ Added comprehensive keys for:
 Based on the original requirements, these files still need i18n conversion:
 
 ### High Priority (Mentioned in Requirements)
+
 1. **src/app/[locale]/solutions/page.tsx**
    - "The Challenge", "Localized Data Drift", "The Solution", etc.
    - All page copy needs i18n

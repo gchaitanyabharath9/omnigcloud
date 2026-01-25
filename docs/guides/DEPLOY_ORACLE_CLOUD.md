@@ -3,6 +3,7 @@
 ## 🎯 Why Oracle Cloud Free Tier?
 
 **Advantages:**
+
 - ✅ **Always Free**: 4 OCPUs, 24GB RAM (ARM-based)
 - ✅ **Full Control**: Your own server
 - ✅ **No Bandwidth Limits**: Unlike Vercel's 100GB/month
@@ -10,6 +11,7 @@
 - ✅ **Learning**: Great DevOps experience
 
 **vs Vercel:**
+
 - ⏱️ More setup time (1-2 hours vs 15 minutes)
 - 🔧 Manual deployments (unless you set up CI/CD)
 - 🛠️ You manage updates and security
@@ -29,10 +31,12 @@
 ### Part 1: Create Oracle Cloud Compute Instance (15 min)
 
 #### 1. Sign in to Oracle Cloud
+
 - Go to: https://cloud.oracle.com
 - Sign in with your Oracle account
 
 #### 2. Create Compute Instance
+
 1. Click **"Create a VM instance"** (or go to Compute → Instances → Create Instance)
 2. **Name**: `omnigcloud-server`
 3. **Placement**: Leave default
@@ -61,6 +65,7 @@
 Wait 2-3 minutes for instance to provision.
 
 #### 3. Note Your Public IP
+
 - Once instance is **Running**, note the **Public IP address**
 - Example: `123.456.789.012`
 
@@ -71,11 +76,13 @@ Wait 2-3 minutes for instance to provision.
 #### 1. Open Ports in Oracle Cloud
 
 **In Oracle Cloud Console:**
+
 1. Go to your instance → **Subnet** → **Default Security List**
 2. Click **"Add Ingress Rules"**
 3. Add these rules:
 
 **Rule 1: HTTP**
+
 ```
 Source CIDR: 0.0.0.0/0
 IP Protocol: TCP
@@ -84,6 +91,7 @@ Description: HTTP
 ```
 
 **Rule 2: HTTPS**
+
 ```
 Source CIDR: 0.0.0.0/0
 IP Protocol: TCP
@@ -92,6 +100,7 @@ Description: HTTPS
 ```
 
 **Rule 3: Next.js Dev (optional)**
+
 ```
 Source CIDR: 0.0.0.0/0
 IP Protocol: TCP
@@ -110,6 +119,7 @@ We'll do this after SSH'ing in (next step).
 #### 1. SSH into Your Server
 
 **On Windows (PowerShell):**
+
 ```powershell
 # Navigate to where you saved the private key
 cd ~\Downloads
@@ -123,6 +133,7 @@ ssh -i ssh-key-*.key ubuntu@YOUR_PUBLIC_IP
 ```
 
 **On Mac/Linux:**
+
 ```bash
 chmod 400 ~/Downloads/ssh-key-*.key
 ssh -i ~/Downloads/ssh-key-*.key ubuntu@YOUR_PUBLIC_IP
@@ -209,6 +220,7 @@ nano .env.local
 ```
 
 **Paste this (update values):**
+
 ```env
 NEXT_PUBLIC_SITE_URL=https://omnigcloud.com
 NEXT_PUBLIC_API_URL=https://omnigcloud.com/api
@@ -275,6 +287,7 @@ sudo nano /etc/nginx/sites-available/omnigcloud
 ```
 
 **Paste this:**
+
 ```nginx
 server {
     listen 80;
@@ -359,6 +372,7 @@ sudo certbot --nginx -d omnigcloud.com -d www.omnigcloud.com
 ```
 
 Certbot will automatically:
+
 - Get SSL certificate
 - Configure Nginx for HTTPS
 - Set up auto-renewal
@@ -389,6 +403,7 @@ sudo certbot certificates
 #### 2. Test Your Site
 
 Visit:
+
 - http://omnigcloud.com (should redirect to HTTPS)
 - https://omnigcloud.com (should work!)
 - https://www.omnigcloud.com (should work!)
@@ -476,18 +491,21 @@ sudo reboot
 ### Site Not Loading
 
 **Check Nginx:**
+
 ```bash
 sudo systemctl status nginx
 sudo nginx -t
 ```
 
 **Check PM2:**
+
 ```bash
 pm2 status
 pm2 logs omnigcloud --lines 100
 ```
 
 **Check Firewall:**
+
 ```bash
 sudo ufw status
 ```
@@ -495,6 +513,7 @@ sudo ufw status
 ### SSL Certificate Issues
 
 **Renew manually:**
+
 ```bash
 sudo certbot renew
 sudo systemctl restart nginx
@@ -503,11 +522,13 @@ sudo systemctl restart nginx
 ### Application Crashes
 
 **Check logs:**
+
 ```bash
 pm2 logs omnigcloud --lines 200
 ```
 
 **Restart:**
+
 ```bash
 pm2 restart omnigcloud
 ```
@@ -516,10 +537,10 @@ pm2 restart omnigcloud
 
 ## 💰 Cost Comparison
 
-| Platform | Setup Time | Monthly Cost | Control |
-|----------|------------|--------------|---------|
-| **Vercel** | 15 min | $0 (100GB limit) | Low |
-| **Oracle Cloud** | 1-2 hours | $0 (unlimited) | Full |
+| Platform         | Setup Time | Monthly Cost     | Control |
+| ---------------- | ---------- | ---------------- | ------- |
+| **Vercel**       | 15 min     | $0 (100GB limit) | Low     |
+| **Oracle Cloud** | 1-2 hours  | $0 (unlimited)   | Full    |
 
 ---
 
@@ -540,6 +561,7 @@ pm2 restart omnigcloud
 ## 🎉 You're Live!
 
 Your site is now running on Oracle Cloud Free Tier with:
+
 - ✅ 4 OCPUs, 24GB RAM
 - ✅ Unlimited bandwidth
 - ✅ HTTPS/SSL

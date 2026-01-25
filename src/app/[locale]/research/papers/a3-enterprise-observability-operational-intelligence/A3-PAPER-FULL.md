@@ -36,10 +36,11 @@ The transition to microservices broke traditional monitoring. In the past, "CPU 
 ### Relationship to A1-A6 Series
 
 This paper serves as the **Sensory Nervous System** for the A1-A6 architecture.
-*   **A1** provides the Body (Structure).
-*   **AECP** provides the Brain (Control).
-*   **A3** provides the Eyes and Ears (Sensors).
-Without A3's high-cardinality observability, the invariants defined in A1 cannot be verified, and the policies in A6 cannot be enforced. A3 is the feedback loop that closes the control system.
+
+- **A1** provides the Body (Structure).
+- **AECP** provides the Brain (Control).
+- **A3** provides the Eyes and Ears (Sensors).
+  Without A3's high-cardinality observability, the invariants defined in A1 cannot be verified, and the policies in A6 cannot be enforced. A3 is the feedback loop that closes the control system.
 
 ---
 
@@ -72,12 +73,15 @@ However, these pillars are often implemented as isolated systems (Prometheus for
 The fundamental challenge in observability is cardinality—the number of unique combinations of dimensional attributes. Consider a simple HTTP request metric:
 
 **Low Cardinality (Traditional):**
+
 ```
 http_requests_total{method="GET", status="200"} = 1000
 ```
+
 Cardinality: 10 methods × 10 status codes = 100 time series
 
 **High Cardinality (Modern):**
+
 ```
 http_requests_total{
   method="GET",
@@ -88,6 +92,7 @@ http_requests_total{
   region="eu-west-1"
 } = 1
 ```
+
 Cardinality: 10 methods × 10 statuses × 10M tenants × 100M users × 10 devices × 20 regions = 2×10^17 time series
 
 This explosion makes traditional time-series databases (Prometheus, InfluxDB) unusable. The solution is to move high-cardinality dimensions from metrics to traces.
@@ -119,13 +124,14 @@ Section 2 analyzes the cardinality explosion. Section 3 presents the three-pilla
 
 Cardinality is the number of unique time series in a metric system. It grows multiplicatively with each dimension:
 
-$$ Cardinality = \prod_{i=1}^{n} |Dimension_i| $$
+$$ Cardinality = \prod\_{i=1}^{n} |Dimension_i| $$
 
 **Example Calculation:**
 
 **Metric:** `http_request_duration_seconds`
 
 **Dimensions:**
+
 - method: 10 values (GET, POST, PUT, DELETE, etc.)
 - status: 50 values (200, 201, 400, 404, 500, etc.)
 - endpoint: 500 values (API endpoints)
@@ -136,6 +142,7 @@ $$ Cardinality = \prod_{i=1}^{n} |Dimension_i| $$
 **Cardinality:** 10 × 50 × 500 × 1000 × 5 × 10,000 = 1.25 × 10^12 time series
 
 **Storage Cost:**
+
 - Samples per series per day: 86,400 (1 sample/second)
 - Bytes per sample: 16 bytes (timestamp + value)
 - Daily storage: 1.25×10^12 × 86,400 × 16 = 1.7 PB/day
@@ -149,12 +156,12 @@ Time-series databases have hard limits on cardinality:
 
 **Table 1: TSDB Cardinality Limits**
 
-| Database | Max Cardinality | Performance Cliff | Recommendation |
-|:---|:---|:---|:---|
-| **Prometheus** | 10M series | >1M series | <100k series |
-| **InfluxDB** | 100M series | >10M series | <1M series |
-| **TimescaleDB** | 1B series | >100M series | <10M series |
-| **Cortex/Thanos** | 1B+ series | >100M series | <50M series |
+| Database          | Max Cardinality | Performance Cliff | Recommendation |
+| :---------------- | :-------------- | :---------------- | :------------- |
+| **Prometheus**    | 10M series      | >1M series        | <100k series   |
+| **InfluxDB**      | 100M series     | >10M series       | <1M series     |
+| **TimescaleDB**   | 1B series       | >100M series      | <10M series    |
+| **Cortex/Thanos** | 1B+ series      | >100M series      | <50M series    |
 
 Beyond the performance cliff, query latency degrades exponentially:
 
@@ -167,25 +174,27 @@ Beyond the performance cliff, query latency degrades exponentially:
 The solution is to stratify dimensions by cardinality:
 
 **Low Cardinality (Metrics):**
+
 - method, status, endpoint, service, region
 - Cardinality: 10 × 50 × 500 × 1000 × 5 = 125M series (manageable)
 
 **High Cardinality (Traces):**
+
 - tenant_id, user_id, device_type, session_id
 - Stored as trace attributes, queryable via trace backend (Jaeger, Tempo)
 
 **Table 2: Dimension Stratification**
 
-| Dimension | Cardinality | Storage | Queryable Via |
-|:---|:---|:---|:---|
-| **method** | 10 | Metrics | Prometheus |
-| **status** | 50 | Metrics | Prometheus |
-| **endpoint** | 500 | Metrics | Prometheus |
-| **service** | 1000 | Metrics | Prometheus |
-| **region** | 5 | Metrics | Prometheus |
-| **tenant_id** | 10k-10M | Traces | Jaeger/Tempo |
-| **user_id** | 100M+ | Traces | Jaeger/Tempo |
-| **device_type** | 10-100 | Traces | Jaeger/Tempo |
+| Dimension       | Cardinality | Storage | Queryable Via |
+| :-------------- | :---------- | :------ | :------------ |
+| **method**      | 10          | Metrics | Prometheus    |
+| **status**      | 50          | Metrics | Prometheus    |
+| **endpoint**    | 500         | Metrics | Prometheus    |
+| **service**     | 1000        | Metrics | Prometheus    |
+| **region**      | 5           | Metrics | Prometheus    |
+| **tenant_id**   | 10k-10M     | Traces  | Jaeger/Tempo  |
+| **user_id**     | 100M+       | Traces  | Jaeger/Tempo  |
+| **device_type** | 10-100      | Traces  | Jaeger/Tempo  |
 
 ---
 
@@ -201,16 +210,19 @@ Metrics are numerical measurements aggregated over time. They answer "what is ha
 **Types of Metrics:**
 
 **Counter:** Monotonically increasing value (total requests)
+
 ```
 http_requests_total{method="GET", status="200"} = 1,234,567
 ```
 
 **Gauge:** Point-in-time value (current queue depth)
+
 ```
 queue_depth{service="order-processor"} = 42
 ```
 
 **Histogram:** Distribution of values (latency percentiles)
+
 ```
 http_request_duration_seconds_bucket{le="0.1"} = 950
 http_request_duration_seconds_bucket{le="0.5"} = 990
@@ -218,6 +230,7 @@ http_request_duration_seconds_bucket{le="1.0"} = 998
 ```
 
 **Summary:** Pre-calculated percentiles (client-side)
+
 ```
 http_request_duration_seconds{quantile="0.5"} = 0.12
 http_request_duration_seconds{quantile="0.9"} = 0.45
@@ -231,6 +244,7 @@ http_request_duration_seconds{quantile="0.99"} = 0.98
 Logs are discrete event records with timestamps and structured or unstructured data. They answer "why is it happening?"
 
 **Structured Logging (JSON):**
+
 ```json
 {
   "timestamp": "2026-01-10T06:02:00Z",
@@ -247,6 +261,7 @@ Logs are discrete event records with timestamps and structured or unstructured d
 ```
 
 **Key Characteristics:**
+
 - **Structured:** Queryable fields (tenant_id, amount, gateway)
 - **Correlated:** trace_id links to distributed trace
 - **Contextual:** Includes business-relevant data
@@ -256,11 +271,13 @@ Logs are discrete event records with timestamps and structured or unstructured d
 Traces represent the flow of a single request through distributed services. They answer "where is it happening?"
 
 **Trace Structure:**
+
 - **Trace:** End-to-end request (trace_id)
 - **Span:** Single operation within a trace (span_id)
 - **Parent-Child:** Spans form a tree structure
 
 **Example Trace:**
+
 ```
 Trace ID: abc-123-def-456
 ├─ Span: API Gateway (100ms)
@@ -280,6 +297,7 @@ Trace ID: abc-123-def-456
 ### 4.1 The Sampling Imperative
 
 Recording 100% of traces at 100,000 RPS generates:
+
 - Traces per day: 100,000 × 86,400 = 8.64 billion
 - Bytes per trace: ~10 KB (average)
 - Daily storage: 8.64B × 10 KB = 86.4 TB
@@ -291,12 +309,12 @@ This is expensive but manageable. However, 99% of these traces are "successful f
 
 **Table 3: Sampling Strategies Comparison**
 
-| Strategy | Decision Point | Pros | Cons | Use Case |
-|:---|:---|:---|:---|:---|
-| **Head-Based** | At ingress (random %) | Simple, low overhead | Misses rare errors | Baseline sampling |
-| **Tail-Based** | After completion | Captures every error | High memory/CPU | Production debugging |
-| **Adaptive** | Dynamic rate | Constant storage cost | Complex implementation | Cost optimization |
-| **Rule-Based** | Policy-driven | Flexible | Requires tuning | Custom requirements |
+| Strategy       | Decision Point        | Pros                  | Cons                   | Use Case             |
+| :------------- | :-------------------- | :-------------------- | :--------------------- | :------------------- |
+| **Head-Based** | At ingress (random %) | Simple, low overhead  | Misses rare errors     | Baseline sampling    |
+| **Tail-Based** | After completion      | Captures every error  | High memory/CPU        | Production debugging |
+| **Adaptive**   | Dynamic rate          | Constant storage cost | Complex implementation | Cost optimization    |
+| **Rule-Based** | Policy-driven         | Flexible              | Requires tuning        | Custom requirements  |
 
 ### 4.3 Tail-Based Sampling Implementation
 
@@ -307,27 +325,29 @@ Tail-based sampling makes the keep/discard decision after the request completes,
 **Figure 4:** The Tail-Based Sampling Pipeline. Unlike head-based sampling (which decides randomly at the start), tail-based sampling waits for request completion to ensure metadata (errors, latency) can drive the retention policy.
 
 **Sampling Rules:**
+
 ```yaml
 sampling_policies:
   - name: errors
     type: always_sample
     condition: status_code >= 500
-    
+
   - name: slow_requests
     type: always_sample
     condition: duration > 2000ms
-    
+
   - name: specific_endpoints
     type: always_sample
     condition: endpoint == "/api/payment"
-    
+
   - name: baseline
     type: probabilistic
     condition: status_code < 400 AND duration < 1000ms
-    sample_rate: 0.01  # 1%
+    sample_rate: 0.01 # 1%
 ```
 
 **Storage Reduction:**
+
 - Errors: 1% of traffic → 100% sampled = 0.86 TB/day
 - Slow requests: 5% of traffic → 100% sampled = 4.3 TB/day
 - Fast success: 94% of traffic → 1% sampled = 0.81 TB/day
@@ -337,6 +357,7 @@ sampling_policies:
 ### 4.4 Implementation Details
 
 **Collector Configuration (OpenTelemetry):**
+
 ```yaml
 processors:
   tail_sampling:
@@ -346,18 +367,19 @@ processors:
     policies:
       - name: error-policy
         type: status_code
-        status_code: {status_codes: [ERROR]}
-      
+        status_code: { status_codes: [ERROR] }
+
       - name: latency-policy
         type: latency
-        latency: {threshold_ms: 2000}
-      
+        latency: { threshold_ms: 2000 }
+
       - name: probabilistic-policy
         type: probabilistic
-        probabilistic: {sampling_percentage: 1}
+        probabilistic: { sampling_percentage: 1 }
 ```
 
 **Memory Requirements:**
+
 - Buffer window: 30 seconds
 - Expected traces: 10,000 traces/sec × 30s = 300,000 traces
 - Bytes per trace: 10 KB
@@ -372,6 +394,7 @@ processors:
 A3 mandates W3C Trace Context propagation across all service boundaries:
 
 **HTTP Header Format:**
+
 ```
 traceparent: 00-4bf92f3577b34da6a3ce929d0e0e4736-00f067aa0ba902b7-01
              │  │                                │                │
@@ -397,11 +420,11 @@ Extract dimensions from logs (e.g., error_type) and create metrics for trending.
 
 **Table 4: Correlation Use Cases**
 
-| Scenario | Start Point | Correlation Path | Outcome |
-|:---|:---|:---|:---|
-| **Latency spike** | Metric alert | Metric → Trace → Log | Identify slow database query |
-| **Error investigation** | Log error | Log → Trace → Metric | Determine error rate trend |
-| **Capacity planning** | Metric trend | Metric → Trace → Log | Identify resource bottleneck |
+| Scenario                | Start Point  | Correlation Path     | Outcome                      |
+| :---------------------- | :----------- | :------------------- | :--------------------------- |
+| **Latency spike**       | Metric alert | Metric → Trace → Log | Identify slow database query |
+| **Error investigation** | Log error    | Log → Trace → Metric | Determine error rate trend   |
+| **Capacity planning**   | Metric trend | Metric → Trace → Log | Identify resource bottleneck |
 
 ---
 
@@ -418,11 +441,11 @@ $$ Availability = \frac{Valid\ Requests}{Total\ Requests} $$
 
 **Table 5: SLO Targets**
 
-| SLO Type | Target | Window | Burn Rate Alert |
-|:---|:---|:---|:---|
-| **Availability** | 99.95% | 28 days | >2% budget consumed in 1 hour |
-| **Latency** | 99% <200ms | 28 days | >5% budget consumed in 1 hour |
-| **Throughput** | >100k RPS | 1 hour | <80k RPS for 5 minutes |
+| SLO Type         | Target     | Window  | Burn Rate Alert               |
+| :--------------- | :--------- | :------ | :---------------------------- |
+| **Availability** | 99.95%     | 28 days | >2% budget consumed in 1 hour |
+| **Latency**      | 99% <200ms | 28 days | >5% budget consumed in 1 hour |
+| **Throughput**   | >100k RPS  | 1 hour  | <80k RPS for 5 minutes        |
 
 ### 6.2 Error Budget
 
@@ -431,6 +454,7 @@ Error budget is the allowed downtime:
 $$ Error\ Budget = (1 - SLO) \times Time\ Window $$
 
 **Example:**
+
 - SLO: 99.95% availability over 28 days
 - Error Budget: (1 - 0.9995) × 28 days = 0.0005 × 28 days = 20 minutes
 
@@ -460,12 +484,12 @@ Observability drives the OODA Loop (Observe, Orient, Decide, Act):
 
 **Table 7: Remediation Automation**
 
-| Trigger | Detection | Automated Action | Manual Fallback |
-|:---|:---|:---|:---|
-| **High Error Rate** | >5% errors for 2 min | Rollback deployment | Page on-call |
-| **High Latency** | p99 >500ms for 5 min | Scale up instances | Investigate |
-| **Database Saturation** | Connection pool >90% | Add read replicas | Restart service |
-| **Memory Leak** | Memory >90% for 10 min | Restart pod | Debug heap dump |
+| Trigger                 | Detection              | Automated Action    | Manual Fallback |
+| :---------------------- | :--------------------- | :------------------ | :-------------- |
+| **High Error Rate**     | >5% errors for 2 min   | Rollback deployment | Page on-call    |
+| **High Latency**        | p99 >500ms for 5 min   | Scale up instances  | Investigate     |
+| **Database Saturation** | Connection pool >90%   | Add read replicas   | Restart service |
+| **Memory Leak**         | Memory >90% for 10 min | Restart pod         | Debug heap dump |
 
 ---
 
@@ -475,20 +499,22 @@ Reliability at scale is a probability function. We formalize the sampling decisi
 
 ### 8.1 The Signal Preservation Function
 
-$$ P_{sample}(t) = \begin{cases} 1 & \text{if } t \in \text{Errors} \\ 1 & \text{if } latency(t) > T_{p99} \\ 1 & \text{if } t \in \text{GoldenSignals} \\ R_{base} & \text{otherwise} \end{cases} $$
+$$ P*{sample}(t) = \begin{cases} 1 & \text{if } t \in \text{Errors} \\ 1 & \text{if } latency(t) > T*{p99} \\ 1 & \text{if } t \in \text{GoldenSignals} \\ R\_{base} & \text{otherwise} \end{cases} $$
 
 Where:
-*   $R_{base}$ is the baseline sampling rate (e.g., 1%).
-*   $\text{GoldenSignals}$ is a set of high-value tenants or critical paths.
+
+- $R_{base}$ is the baseline sampling rate (e.g., 1%).
+- $\text{GoldenSignals}$ is a set of high-value tenants or critical paths.
 
 ### 8.2 Cost Function Derivation
+
 The total cost of observability $C_{total}$ is defined as:
 
-$$ C_{total} = C_{ingest} + C_{storage} + C_{compute} $$
+$$ C*{total} = C*{ingest} + C*{storage} + C*{compute} $$
 
 Substituting the sampling probability:
 
-$$ C_{total} \approx V_{vol} \times [ R_{base} \times (1 - P_{anomaly}) + 1 \times P_{anomaly} ] \times S_{trace} $$
+$$ C*{total} \approx V*{vol} \times [ R_{base} \times (1 - P_{anomaly}) + 1 \times P_{anomaly} ] \times S\_{trace} $$
 
 This derivation proves that as system volume $V_{vol}$ increases linearly, the cost can be capped $O(1)$ by dynamically adjusting $R_{base}$ inverse to volume, provided that $P_{anomaly}$ remains low.
 
@@ -500,6 +526,7 @@ This derivation proves that as system volume $V_{vol}$ increases linearly, the c
 **Symptom:** Checkout latency spiked from 200ms to 5,000ms. CPU, Memory, and DB Latency metrics were all green (normal).
 
 **Investigation:**
+
 1.  **Metric Failure:** Aggregated metrics showed average latency was fine. The spike was hidden in the p99.9 tail.
 2.  **Trace Discovery:** Using A3's high-cardinality exploration, engineers grouped latency by `payment_method`.
 3.  **Root Cause:** The `GiftCard` provider API had degraded. Because Gift Cards were only 2% of traffic, the aggregate metrics drowned out the failure.
@@ -514,6 +541,7 @@ Revenue saved estimated at $450,000 per hour. Without high-cardinality tracing, 
 ## 10. Implementation Reference
 
 ### 10.1 OpenTelemetry Collector Configuration
+
 The following configuration implements the tail-based sampling logic defined in A3.
 
 ```yaml
@@ -526,17 +554,17 @@ processors:
       # 1. Always sample errors
       - name: errors
         type: status_code
-        status_code: {status_codes: [ERROR]}
-      
+        status_code: { status_codes: [ERROR] }
+
       # 2. Sample slow requests (>1s)
       - name: latency
         type: latency
-        latency: {threshold_ms: 1000}
-      
+        latency: { threshold_ms: 1000 }
+
       # 3. Probabilistic sample of the rest (1%)
       - name: probabilistic
         type: probabilistic
-        probabilistic: {sampling_percentage: 1}
+        probabilistic: { sampling_percentage: 1 }
 ```
 
 ---
@@ -554,6 +582,7 @@ processors:
 ### 11.2 Instrumentation Best Practices
 
 **DO:**
+
 - Use OpenTelemetry for vendor-neutral instrumentation
 - Propagate W3C Trace Context across all boundaries
 - Use structured logging (JSON) with trace_id
@@ -561,6 +590,7 @@ processors:
 - Define SLOs before building dashboards
 
 **DON'T:**
+
 - Add high-cardinality dimensions to metrics
 - Sample errors or slow requests
 - Use synchronous logging (blocks request path)

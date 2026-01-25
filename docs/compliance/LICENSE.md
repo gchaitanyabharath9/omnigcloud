@@ -5,6 +5,7 @@
 ## Copyright Notice
 
 All content published on this platform, including but not limited to:
+
 - Architectural specifications and reference frameworks
 - Research papers and technical articles
 - Diagrams, illustrations, and visual materials
@@ -42,15 +43,15 @@ Any permitted reference, citation, or discussion of this content must include:
 ### Example Citation (Academic)
 
 ```
-OmniGCloud Research Team. (2026). A Reference Architecture for Cloud-Native 
-Enterprise Platforms at Scale. Retrieved from 
+OmniGCloud Research Team. (2026). A Reference Architecture for Cloud-Native
+Enterprise Platforms at Scale. Retrieved from
 https://www.omnigcloud.com/en/architecture/a1-cloud-native-enterprise-reference
 ```
 
 ### Example Attribution (Blog/Article)
 
 ```
-This article references the "Sovereign Mesh Pattern" introduced by the 
+This article references the "Sovereign Mesh Pattern" introduced by the
 OmniGCloud Research Team in their architectural specification:
 https://www.omnigcloud.com/en/architecture/a1-cloud-native-enterprise-reference
 
@@ -70,6 +71,7 @@ If you wish to republish or cross-post any content to external platforms (Medium
 ## Anti-Plagiarism Measures
 
 All content on this platform includes:
+
 - Unique diagrams with embedded metadata
 - Consistent terminology and phrasing patterns
 - Timestamped publication records
@@ -85,6 +87,7 @@ For licensing, partnership, or permission requests, please contact:
 **Subject Line:** "Licensing Inquiry - [Content Title]"
 
 Please include:
+
 - The specific content you wish to license
 - The intended use case (commercial, educational, etc.)
 - The distribution scope (internal, public, etc.)

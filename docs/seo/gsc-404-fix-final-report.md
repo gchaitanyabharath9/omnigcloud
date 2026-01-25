@@ -8,9 +8,11 @@
 ## 📊 **404 URL PATTERNS IDENTIFIED**
 
 ### **Pattern 1: Wrong Path Structure** (12 URLs)
+
 ❌ `/architecture/a*` → ✅ `/research/papers/a*`
 
 **Examples**:
+
 - `/en/architecture/a1-cloud-native-enterprise-reference`
 - `/en/architecture/a2-high-throughput-distributed-systems`
 - `/ko/architecture/a5-monolith-to-cloud-native-modernization`
@@ -20,18 +22,23 @@
 ---
 
 ### **Pattern 2: Non-Existent Pages** (14 URLs)
+
 Pages that never existed or were removed:
 
 **`/news` → `/blog`** (6 URLs)
+
 - `/en/news`, `/zh/news`, `/hi/news`, `/ja/news`, `/de/news`, `/news/security`
 
 **`/resources` → `/research`** (5 URLs)
+
 - `/zh/resources`, `/ko/resources`, `/ko/resources/blog`, `/fr/resources`
 
 **`/research/architecture` → `/research/papers`** (2 URLs)
+
 - `/zh/research/architecture`, `/ko/research/architecture`
 
 **`/research/metrics` → `/research/papers`** (2 URLs)
+
 - `/ko/research/metrics`, `/ja/research/metrics`
 
 **`/platform/ai` → `/platform`** (1 URL)
@@ -43,6 +50,7 @@ Pages that never existed or were removed:
 ---
 
 ### **Pattern 3: Locale Words** (6 URLs)
+
 Non-English words for "month" being indexed:
 
 - `/월` (Korean) → `/ko`
@@ -57,6 +65,7 @@ Non-English words for "month" being indexed:
 ---
 
 ### **Pattern 4: Old URLs** (2 URLs)
+
 - `/en/research/scholarly-article-enterprise-architecture` → `/en/research/scholarly-article`
 
 **Fix**: Added 1 redirect
@@ -64,6 +73,7 @@ Non-English words for "month" being indexed:
 ---
 
 ### **Pattern 5: API Endpoints** (2 URLs)
+
 - `/api/payment` - Should return 410 Gone (already blocked in robots.txt)
 - `/checkout` - Already redirected to `/pricing`
 
@@ -72,6 +82,7 @@ Non-English words for "month" being indexed:
 ---
 
 ### **Pattern 6: Subdomain Mismatch** (1 URL)
+
 - `omnigcloud.com` (without www) - DNS/Vercel level fix
 
 **Fix**: Handled at DNS/Vercel level (not in code)
@@ -99,15 +110,15 @@ Non-English words for "month" being indexed:
 
 ## 📈 **EXPECTED IMPACT**
 
-| **404 Pattern** | **Count** | **Fix** | **Status** |
-|-----------------|-----------|---------|------------|
-| Wrong path (/architecture) | 12 | 301 redirect | ✅ Fixed |
-| Non-existent pages | 14 | 301 redirect | ✅ Fixed |
-| Locale words | 6 | 301 redirect | ✅ Fixed |
-| Old URLs | 2 | 301 redirect | ✅ Fixed |
-| API endpoints | 2 | 410 Gone (robots.txt) | ✅ Fixed |
-| Subdomain | 1 | DNS/Vercel | ⏳ External |
-| **TOTAL** | **38** | **All covered** | **✅ 97% Fixed** |
+| **404 Pattern**            | **Count** | **Fix**               | **Status**       |
+| -------------------------- | --------- | --------------------- | ---------------- |
+| Wrong path (/architecture) | 12        | 301 redirect          | ✅ Fixed         |
+| Non-existent pages         | 14        | 301 redirect          | ✅ Fixed         |
+| Locale words               | 6         | 301 redirect          | ✅ Fixed         |
+| Old URLs                   | 2         | 301 redirect          | ✅ Fixed         |
+| API endpoints              | 2         | 410 Gone (robots.txt) | ✅ Fixed         |
+| Subdomain                  | 1         | DNS/Vercel            | ⏳ External      |
+| **TOTAL**                  | **38**    | **All covered**       | **✅ 97% Fixed** |
 
 **Remaining**: 1 URL (subdomain mismatch) - handled at DNS level
 
@@ -116,6 +127,7 @@ Non-English words for "month" being indexed:
 ## 🧪 **TEST COMMANDS**
 
 ### **Test Wrong Path Redirects**
+
 ```bash
 curl -I http://localhost:3000/en/architecture/a1-cloud-native-enterprise-reference
 # Expected: 308 → /en/research/papers/a1-cloud-native-enterprise-reference
@@ -125,6 +137,7 @@ curl -I http://localhost:3000/ko/architecture/a2-high-throughput-distributed-sys
 ```
 
 ### **Test Non-Existent Pages**
+
 ```bash
 curl -I http://localhost:3000/en/news
 # Expected: 308 → /en/blog
@@ -137,6 +150,7 @@ curl -I http://localhost:3000/checkout
 ```
 
 ### **Test Locale Words**
+
 ```bash
 curl -I http://localhost:3000/월
 # Expected: 308 → /ko
@@ -153,6 +167,7 @@ curl -I http://localhost:3000/Monat
 ## 🚀 **DEPLOYMENT CHECKLIST**
 
 ### **Pre-Deployment**
+
 - [x] All 41 redirects added to `next.config.ts`
 - [x] Dev server restarted automatically
 - [x] Tested sample redirects locally
@@ -161,6 +176,7 @@ curl -I http://localhost:3000/Monat
 - [ ] Build check: `npm run build`
 
 ### **Deployment**
+
 ```bash
 # Commit changes
 git add next.config.ts GSC_*.md
@@ -177,6 +193,7 @@ git push origin main
 ```
 
 ### **Post-Deployment**
+
 - [ ] Verify redirects in production
 - [ ] Request re-indexing in GSC for all fixed URLs
 - [ ] Monitor GSC "Pages" report for 404 reduction
@@ -187,18 +204,21 @@ git push origin main
 ## 📊 **FINAL SUMMARY**
 
 ### **Before**
+
 - ❌ 38 404 pages
 - ❌ 12 noindex issues
 - ❌ 3 duplicate without canonical
 - ❌ 17 Google chose different canonical
 
 ### **After (Expected)**
+
 - ✅ 0-1 404 pages (only subdomain mismatch)
 - ✅ 0 noindex issues
 - ✅ 0 duplicate without canonical
 - ✅ 0 Google chose different canonical
 
 ### **Improvement**
+
 - **404 Pages**: 38 → 1 (97% reduction)
 - **Total Issues**: 70 → 1 (99% reduction)
 

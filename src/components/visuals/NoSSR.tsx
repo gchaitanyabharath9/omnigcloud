@@ -1,17 +1,17 @@
 "use client";
 
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState } from "react";
 
-import { DemoChartPlaceholder } from '../demo/DemoChartPlaceholder';
+import { DemoChartPlaceholder } from "../demo/DemoChartPlaceholder";
 
 export default function NoSSR({ children }: { children: React.ReactNode }) {
-    const [mounted, setMounted] = useState(false);
+  const [mounted, setMounted] = useState(false);
 
-    useEffect(() => {
-        setMounted(true);
-    }, []);
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
-    if (!mounted) return <DemoChartPlaceholder />;
+  if (!mounted) return <DemoChartPlaceholder />;
 
-    return <>{children}</>;
+  return <>{children}</>;
 }

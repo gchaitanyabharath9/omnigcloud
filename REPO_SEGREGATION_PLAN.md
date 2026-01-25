@@ -1,4 +1,5 @@
 # Repository Segregation & Hygiene Plan
+
 **Date:** 2026-01-19  
 **Status:** PLANNING PHASE  
 **Owner:** gchaitanyabharath9
@@ -7,11 +8,11 @@
 
 ## Repository Locations (Confirmed)
 
-| Repository | Local Path | Remote | Visibility |
-|------------|-----------|--------|------------|
-| **omnigcloud** | `C:\Users\SOHAN\.gemini\antigravity\playground\nascent-zodiac` | `https://github.com/gchaitanyabharath9/omnigcloud.git` | PUBLIC |
-| **cnmrf-papers-private** | `C:\Users\SOHAN\.gemini\antigravity\playground\cnmrf-papers-private` | `https://github.com/gchaitanyabharath9/cnmrf-papers-private` | PRIVATE |
-| **eb1a-evidence-vault** | `C:\Users\SOHAN\.gemini\antigravity\playground\eb1a-evidence-vault` | `https://github.com/gchaitanyabharath9/eb1a-evidence-vault.git` | PRIVATE |
+| Repository               | Local Path                                                           | Remote                                                          | Visibility |
+| ------------------------ | -------------------------------------------------------------------- | --------------------------------------------------------------- | ---------- |
+| **omnigcloud**           | `C:\Users\SOHAN\.gemini\antigravity\playground\nascent-zodiac`       | `https://github.com/gchaitanyabharath9/omnigcloud.git`          | PUBLIC     |
+| **cnmrf-papers-private** | `C:\Users\SOHAN\.gemini\antigravity\playground\cnmrf-papers-private` | `https://github.com/gchaitanyabharath9/cnmrf-papers-private`    | PRIVATE    |
+| **eb1a-evidence-vault**  | `C:\Users\SOHAN\.gemini\antigravity\playground\eb1a-evidence-vault`  | `https://github.com/gchaitanyabharath9/eb1a-evidence-vault.git` | PRIVATE    |
 
 ---
 
@@ -20,6 +21,7 @@
 ### omnigcloud (PUBLIC) - Current State Analysis
 
 #### ✅ SAFE - Keep in Public Repo
+
 - `/src` - Next.js application source
 - `/public` - Public assets (images, icons, fonts)
 - `/scripts` - Website build/deployment scripts (SEO, i18n, release gates)
@@ -31,6 +33,7 @@
 - `package.json`, `tsconfig.json`, `next.config.ts`
 
 #### ⚠️ REVIEW NEEDED - Check for Sensitive Content
+
 - `/docs` - **141 files** - Need to audit for:
   - `/docs/research` - Research paper documentation (may reference private papers)
   - `/docs/publication` - Publication workflows (may reference EB-1A)
@@ -40,9 +43,11 @@
   - `/docs/compliance`, `/docs/security` - Compliance docs (check for sensitive info)
 
 #### 🔴 SENSITIVE - Should NOT be in Public Repo
+
 - **None found** (no .tex files, no PDFs, no petition/uscis/eb1a references)
 
 #### 🗑️ GENERATED - Should be .gitignored
+
 - `.next/` - Already ignored ✅
 - `node_modules/` - Already ignored ✅
 - `tsconfig.tsbuildinfo` - **TRACKED** - Should be ignored
@@ -54,6 +59,7 @@
 ### cnmrf-papers-private (PRIVATE) - Current State
 
 #### Structure (13 subdirectories, 3 files)
+
 - `/papers` - LaTeX source papers
 - `/papers-canonical` - Canonical paper versions
 - `/templates` - ACM/IEEE/arXiv templates
@@ -65,6 +71,7 @@
 - `PAPERS_MANIFEST.md`, `README.md`, `.gitignore`
 
 #### Status: ✅ WELL-ORGANIZED
+
 - PDFs properly ignored
 - Clear separation of source vs. output
 - Manifest file present
@@ -74,6 +81,7 @@
 ### eb1a-evidence-vault (PRIVATE) - Current State
 
 #### Structure (12 subdirectories, 7 files)
+
 - `/00_cover_packet` - Petition cover materials
 - `/01_criteria` - EB-1A criteria documentation
 - `/05_impact_analysis` - Impact analysis
@@ -87,6 +95,7 @@
 - `WORKFLOW_CAPTURE_EVIDENCE.md`
 
 #### Status: ✅ WELL-ORGANIZED
+
 - PDFs properly ignored
 - Clear EB-1A petition structure
 - Manifest file present
@@ -98,7 +107,9 @@
 ### A) omnigcloud (PUBLIC) - Cleanup Actions
 
 #### 1. Update .gitignore
+
 Add the following entries:
+
 ```gitignore
 # TypeScript build info
 *.tsbuildinfo
@@ -124,24 +135,29 @@ dist/
 ```
 
 #### 2. Audit /docs Folder
+
 **Action:** Review all files in `/docs/research`, `/docs/publication`, `/docs/status` for:
+
 - References to private EB-1A petition details
 - Attorney communications
 - Personal identifying information
 - Sensitive metrics or data
 
 **Decision Rules:**
+
 - If doc is **purely technical** (build process, LaTeX compilation) → **KEEP in public**
 - If doc references **paper abstracts/titles only** → **KEEP in public**
 - If doc contains **submission strategies, attorney advice, petition details** → **MOVE to cnmrf-papers-private or eb1a-evidence-vault**
 
 #### 3. Remove Tracked Build Artifacts
+
 ```powershell
 git rm --cached tsconfig.tsbuildinfo
 git rm --cached -r artifacts/ (if tracked)
 ```
 
 #### 4. Verify No Secrets in History
+
 ```powershell
 # Check for accidentally committed secrets
 git log --all --full-history -- "*.env*"
@@ -154,6 +170,7 @@ git log --all --full-history -- "*secret*"
 ### B) cnmrf-papers-private (PRIVATE) - Enhancement Actions
 
 #### 1. Enhance .gitignore
+
 ```gitignore
 # Build outputs
 exports/
@@ -194,14 +211,18 @@ Thumbs.db
 ```
 
 #### 2. Add Build Scripts
+
 Create `/scripts/build-all.ps1`:
+
 ```powershell
 # Build all papers locally (PDFs stay local, never committed)
 # Usage: .\scripts\build-all.ps1
 ```
 
 #### 3. Update PAPERS_MANIFEST.md
+
 Document:
+
 - All paper IDs (A1-A6, AECP, ARCH)
 - Build status
 - Submission status
@@ -212,6 +233,7 @@ Document:
 ### C) eb1a-evidence-vault (PRIVATE) - Enhancement Actions
 
 #### 1. Enhance .gitignore
+
 ```gitignore
 # PDF Protection (already present)
 **/*.pdf
@@ -238,7 +260,9 @@ Thumbs.db
 ```
 
 #### 2. Add Redaction Checklist
+
 Create `/REDACTION_CHECKLIST.md`:
+
 - Personal IDs (passport, SSN, etc.)
 - Financial information
 - Attorney-client privileged communications
@@ -251,26 +275,33 @@ Create `/REDACTION_CHECKLIST.md`:
 ### Current Issues to Fix
 
 #### 1. robots.txt Location
+
 **Check:** Verify `public/robots.txt` exists (not `robot.txt`)
 
 #### 2. Sitemap Generation
+
 **Action:** Ensure sitemap is generated from actual routes, not hardcoded
 
 **Requirements:**
+
 - Use HTTPS + www canonical URLs only
 - Include all locale variants (en, es, fr, de, zh, hi, ja, ko)
 - Remove any 404/redirected URLs
 - Include proper `<lastmod>` dates
 
 #### 3. Menu Link Validation
+
 **Check:**
+
 - Solutions menu → Correct pages
 - Resources menu → Correct pages
 - Pricing menu → Correct pages
 - Research menu → Public-safe paper previews only
 
 #### 4. Metadata Validation
+
 Ensure all pages have:
+
 - `<link rel="canonical">` self-referential
 - `hreflang` alternates for all locales
 - OpenGraph tags (og:title, og:description, og:image, og:url)
@@ -284,6 +315,7 @@ Ensure all pages have:
 ### omnigcloud (PUBLIC)
 
 #### Pre-Commit Checks
+
 ```powershell
 npm ci
 npm run lint
@@ -294,6 +326,7 @@ npm run release:gate:local
 ```
 
 #### Expected Results
+
 - ✅ Lint: PASS
 - ✅ Typecheck: PASS
 - ✅ Build: PASS
@@ -304,6 +337,7 @@ npm run release:gate:local
 ### cnmrf-papers-private (PRIVATE)
 
 #### Build Verification
+
 ```powershell
 # Test LaTeX compilation for A1-A3 minimum
 cd papers/A1
@@ -317,6 +351,7 @@ pdflatex main.tex
 ### eb1a-evidence-vault (PRIVATE)
 
 #### Validation
+
 ```powershell
 # Check markdown renders
 # Verify no secrets committed
@@ -330,12 +365,15 @@ git log --all --full-history -- "*ssn*"
 ## STEP 5: Git Operations
 
 ### Branch Strategy
+
 Create branch in each repo:
+
 ```
 chore/repo-segregation-seo-freeze
 ```
 
 ### Commit Sequence (omnigcloud)
+
 1. `chore: enhance .gitignore for build artifacts`
 2. `chore: remove tracked build artifacts from git`
 3. `docs: audit and sanitize research documentation`
@@ -345,11 +383,13 @@ chore/repo-segregation-seo-freeze
 7. `ci: verify all gates pass after cleanup`
 
 ### Commit Sequence (cnmrf-papers-private)
+
 1. `chore: enhance .gitignore for LaTeX artifacts`
 2. `docs: update PAPERS_MANIFEST.md`
 3. `build: add build-all.ps1 script`
 
 ### Commit Sequence (eb1a-evidence-vault)
+
 1. `chore: enhance .gitignore for sensitive files`
 2. `docs: add REDACTION_CHECKLIST.md`
 3. `docs: update EVIDENCE_MANIFEST.md`
@@ -395,6 +435,7 @@ chore/repo-segregation-seo-freeze
 ### 1. Repository Trees (After Cleanup)
 
 #### omnigcloud (PUBLIC)
+
 ```
 omnigcloud/
 ├── .github/          # CI/CD workflows
@@ -415,6 +456,7 @@ omnigcloud/
 ```
 
 #### cnmrf-papers-private (PRIVATE)
+
 ```
 cnmrf-papers-private/
 ├── papers/           # LaTeX sources (A1-A6, AECP, ARCH)
@@ -429,6 +471,7 @@ cnmrf-papers-private/
 ```
 
 #### eb1a-evidence-vault (PRIVATE)
+
 ```
 eb1a-evidence-vault/
 ├── 00_cover_packet/  # Petition cover
@@ -445,17 +488,17 @@ eb1a-evidence-vault/
 
 ### 2. Build Results Summary
 
-| Repository | Lint | Typecheck | Build | Tests | Status |
-|------------|------|-----------|-------|-------|--------|
-| omnigcloud | TBD | TBD | TBD | TBD | PENDING |
-| cnmrf-papers-private | N/A | N/A | TBD (LaTeX) | N/A | PENDING |
-| eb1a-evidence-vault | N/A | N/A | N/A | N/A | PENDING |
+| Repository           | Lint | Typecheck | Build       | Tests | Status  |
+| -------------------- | ---- | --------- | ----------- | ----- | ------- |
+| omnigcloud           | TBD  | TBD       | TBD         | TBD   | PENDING |
+| cnmrf-papers-private | N/A  | N/A       | TBD (LaTeX) | N/A   | PENDING |
+| eb1a-evidence-vault  | N/A  | N/A       | N/A         | N/A   | PENDING |
 
 ### 3. Files Moved Between Repos
 
-| Source | Destination | Reason |
-|--------|-------------|--------|
-| TBD after /docs audit | TBD | TBD |
+| Source                | Destination | Reason |
+| --------------------- | ----------- | ------ |
+| TBD after /docs audit | TBD         | TBD    |
 
 ### 4. Confirmation Checklist
 

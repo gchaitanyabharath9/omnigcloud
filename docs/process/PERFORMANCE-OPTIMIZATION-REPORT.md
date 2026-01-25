@@ -9,6 +9,7 @@
 ### Phase 1: Bundle Size Reduction via Lazy Loading ✅
 
 #### Mermaid.js (~390KB)
+
 - **Before**: Static import in `MermaidDiagram.tsx` loaded on every page
 - **After**: Dynamic import only when component renders
 - **Impact**: Reduced main bundle by ~390KB
@@ -19,6 +20,7 @@
   ```
 
 #### Recharts (~345KB)
+
 - **Before**: Static imports in multiple dashboard and home page components
 - **After**: Lazy-loaded using `next/dynamic` with `ssr: false`
 - **Impact**: Reduced main bundle by ~345KB
@@ -32,23 +34,27 @@
 ### Phase 2: Font & Resource Loading Optimization ✅
 
 #### Font Display Optimization
+
 - Added `display: 'swap'` to Inter and Plus Jakarta Sans fonts
 - **Impact**: Prevents render-blocking, improves FCP
 - **Expected Improvement**: +2-3 points
 
 #### Resource Hints
+
 - Added `preconnect` for Google Fonts domains
 - Added `dns-prefetch` for Vercel analytics
 - **Impact**: Faster external resource loading
 - **Expected Improvement**: +1-2 points
 
 #### Analytics Deferral
+
 - Moved SpeedInsights and Analytics outside React tree
 - Loads after main content
 - **Impact**: Reduced main-thread blocking time
 - **Expected Improvement**: +1-2 points
 
 #### Image Optimization Enhancement
+
 - Added responsive `deviceSizes` and `imageSizes`
 - Better automatic image optimization
 - **Impact**: Smaller image payloads
@@ -57,6 +63,7 @@
 ### Phase 3: E2E Test Stability ✅
 
 Updated Playwright tests to handle lazy-loaded components:
+
 - Added `waitForSelector` with 15s timeout
 - Changed to `networkidle` wait strategy
 - Increased wait times for scroll animations
@@ -64,6 +71,7 @@ Updated Playwright tests to handle lazy-loaded components:
 ## Current Performance Metrics (Latest)
 
 Based on PageSpeed Insights (Mobile):
+
 - **Performance**: 88/100 ⚠️ (Target: 90+)
   - First Contentful Paint: **1.2s** ✅ (Green)
   - Largest Contentful Paint: **3.4s** ⚠️ (Orange) - Main bottleneck
@@ -73,7 +81,6 @@ Based on PageSpeed Insights (Mobile):
 
 - **Accessibility**: 90/100 ⚠️
   - Issues: Button names, color contrast, heading order
-  
 - **Best Practices**: 96/100 ✅
   - Minor: Console errors logged
 
@@ -143,6 +150,7 @@ Based on PageSpeed Insights (Mobile):
 ## Implementation Plan
 
 ### Phase 1: Image Optimization (Est. +5-7 points)
+
 ```bash
 # Install sharp for image optimization
 npm install sharp
@@ -155,16 +163,18 @@ images: {
 ```
 
 ### Phase 2: Font Optimization (Est. +2-3 points)
+
 ```typescript
 // Add font-display to font imports
 const inter = Inter({
   variable: "--font-inter",
   subsets: ["latin"],
-  display: 'swap', // Add this
+  display: "swap", // Add this
 });
 ```
 
 ### Phase 3: Third-Party Scripts (Est. +1-2 points)
+
 ```typescript
 // Defer analytics
 import Script from 'next/script';
@@ -194,6 +204,7 @@ import Script from 'next/script';
 ## Expected Impact
 
 With all Phase 1 & 2 optimizations deployed:
+
 - **Estimated New Score**: 92-95/100 ✅
 - **Key Improvements**:
   - Reduced render-blocking time by ~470ms

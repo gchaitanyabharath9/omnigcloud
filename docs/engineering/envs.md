@@ -16,7 +16,7 @@ The application behavior is determined by the `APP_ENV` variable.
 
 1. **Environment Variables (.env)**
    The primary source of truth is the `.env` file (not committed). Use `.env.example` as a template.
-   
+
    ```bash
    APP_ENV=local
    AUTH_SECRET=...
@@ -24,7 +24,6 @@ The application behavior is determined by the `APP_ENV` variable.
 
 2. **Static Overrides (`src/config/envs/*.ts`)**
    Non-sensitive defaults for each environment are stored in typed TypeScript files.
-   
    - `src/config/envs/local.ts`
    - `src/config/envs/dev.ts`
    - `src/config/envs/prod.ts`
@@ -43,10 +42,10 @@ The application behavior is determined by the `APP_ENV` variable.
 Do not use `process.env.MY_VAR` directly. Import the config object:
 
 ```typescript
-import { config } from '@/config';
+import { config } from "@/config";
 
 console.log(config.site.url);
 if (config.features.enableMetrics) {
-    // ...
+  // ...
 }
 ```

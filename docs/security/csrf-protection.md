@@ -20,11 +20,13 @@ All state-changing POST endpoints are protected by CSRF (Cross-Site Request Forg
 ```
 
 **Example**:
+
 ```
 abc123def456.1704038400000.xyz789uvw012
 ```
 
 **Components**:
+
 - `randomBytes`: 32 bytes of cryptographically secure random data
 - `timestamp`: Token creation time (for expiration)
 - `signature`: HMAC-SHA256 signature for integrity
@@ -46,49 +48,49 @@ abc123def456.1704038400000.xyz789uvw012
 
 ### Security Properties
 
-| Property | Value | Purpose |
-|----------|-------|---------|
-| `httpOnly` | `true` | Prevents JavaScript access (XSS protection) |
-| `secure` | `true` (prod) | HTTPS only in production |
-| `sameSite` | `lax` | Prevents cross-site requests |
-| `maxAge` | 24 hours | Token expiration |
-| `path` | `/` | Available for all routes |
+| Property   | Value         | Purpose                                     |
+| ---------- | ------------- | ------------------------------------------- |
+| `httpOnly` | `true`        | Prevents JavaScript access (XSS protection) |
+| `secure`   | `true` (prod) | HTTPS only in production                    |
+| `sameSite` | `lax`         | Prevents cross-site requests                |
+| `maxAge`   | 24 hours      | Token expiration                            |
+| `path`     | `/`           | Available for all routes                    |
 
 ## Protected Endpoints
 
-| Endpoint | Method | CSRF Required | Status |
-|----------|--------|---------------|--------|
-| `/api/contact` | POST | ✅ Yes | **PROTECTED** |
-| `/api/leads` | POST | ✅ Yes | Ready to add |
-| `/api/demo` | POST | ✅ Yes | Ready to add |
-| `/api/newsletter` | POST | ✅ Yes | Ready to add |
-| `/api/csrf` | GET | ❌ No | Token endpoint |
+| Endpoint          | Method | CSRF Required | Status         |
+| ----------------- | ------ | ------------- | -------------- |
+| `/api/contact`    | POST   | ✅ Yes        | **PROTECTED**  |
+| `/api/leads`      | POST   | ✅ Yes        | Ready to add   |
+| `/api/demo`       | POST   | ✅ Yes        | Ready to add   |
+| `/api/newsletter` | POST   | ✅ Yes        | Ready to add   |
+| `/api/csrf`       | GET    | ❌ No         | Token endpoint |
 
 ## Implementation
 
 ### Server-Side (API Route)
 
 ```typescript
-import { NextRequest } from 'next/server';
-import { validateCsrfToken } from '@/lib/csrf';
-import { createErrorResponse } from '@/lib/api-utils';
+import { NextRequest } from "next/server";
+import { validateCsrfToken } from "@/lib/csrf";
+import { createErrorResponse } from "@/lib/api-utils";
 
 export async function POST(request: NextRequest) {
-    // 1. Validate CSRF Token
-    const csrfValidation = validateCsrfToken(request);
-    if (!csrfValidation.valid && csrfValidation.error) {
-        return createErrorResponse(
-            requestId,
-            csrfValidation.error.code,
-            csrfValidation.error.message,
-            csrfValidation.error.retryable,
-            403
-        );
-    }
+  // 1. Validate CSRF Token
+  const csrfValidation = validateCsrfToken(request);
+  if (!csrfValidation.valid && csrfValidation.error) {
+    return createErrorResponse(
+      requestId,
+      csrfValidation.error.code,
+      csrfValidation.error.message,
+      csrfValidation.error.retryable,
+      403
+    );
+  }
 
-    // 2. Process request
-    const body = await request.json();
-    // ... rest of handler
+  // 2. Process request
+  const body = await request.json();
+  // ... rest of handler
 }
 ```
 
@@ -97,25 +99,25 @@ export async function POST(request: NextRequest) {
 #### Step 1: Obtain CSRF Token
 
 ```typescript
-'use client';
+"use client";
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect } from "react";
 
 export default function ContactForm() {
-    const [csrfToken, setCsrfToken] = useState<string>('');
+  const [csrfToken, setCsrfToken] = useState<string>("");
 
-    useEffect(() => {
-        // Fetch CSRF token on component mount
-        async function fetchCsrfToken() {
-            const response = await fetch('/api/csrf');
-            const data = await response.json();
-            setCsrfToken(data.token);
-        }
-        
-        fetchCsrfToken();
-    }, []);
+  useEffect(() => {
+    // Fetch CSRF token on component mount
+    async function fetchCsrfToken() {
+      const response = await fetch("/api/csrf");
+      const data = await response.json();
+      setCsrfToken(data.token);
+    }
 
-    // ... rest of component
+    fetchCsrfToken();
+  }, []);
+
+  // ... rest of component
 }
 ```
 
@@ -123,20 +125,20 @@ export default function ContactForm() {
 
 ```typescript
 const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
+  e.preventDefault();
 
-    const response = await fetch('/api/contact', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json',
-            'X-CSRF-Token': csrfToken  // Include token in header
-        },
-        body: JSON.stringify(formData),
-        credentials: 'same-origin'  // Include cookies
-    });
+  const response = await fetch("/api/contact", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      "X-CSRF-Token": csrfToken, // Include token in header
+    },
+    body: JSON.stringify(formData),
+    credentials: "same-origin", // Include cookies
+  });
 
-    const data = await response.json();
-    // Handle response
+  const data = await response.json();
+  // Handle response
 };
 ```
 
@@ -167,7 +169,7 @@ export default function ContactForm() {
                 console.error('Failed to fetch CSRF token:', error);
             }
         }
-        
+
         fetchCsrfToken();
     }, []);
 
@@ -235,14 +237,14 @@ export default function ContactForm() {
 
 ```json
 {
-    "requestId": "550e8400-e29b-41d4-a716-446655440000",
-    "timestamp": "2025-12-30T12:00:00.000Z",
-    "status": "error",
-    "error": {
-        "code": "CSRF_TOKEN_MISSING",
-        "message": "CSRF token is required for this request",
-        "retryable": true
-    }
+  "requestId": "550e8400-e29b-41d4-a716-446655440000",
+  "timestamp": "2025-12-30T12:00:00.000Z",
+  "status": "error",
+  "error": {
+    "code": "CSRF_TOKEN_MISSING",
+    "message": "CSRF token is required for this request",
+    "retryable": true
+  }
 }
 ```
 
@@ -254,14 +256,14 @@ export default function ContactForm() {
 
 ```json
 {
-    "requestId": "550e8400-e29b-41d4-a716-446655440001",
-    "timestamp": "2025-12-30T12:00:00.000Z",
-    "status": "error",
-    "error": {
-        "code": "CSRF_TOKEN_MISMATCH",
-        "message": "CSRF token validation failed",
-        "retryable": false
-    }
+  "requestId": "550e8400-e29b-41d4-a716-446655440001",
+  "timestamp": "2025-12-30T12:00:00.000Z",
+  "status": "error",
+  "error": {
+    "code": "CSRF_TOKEN_MISMATCH",
+    "message": "CSRF token validation failed",
+    "retryable": false
+  }
 }
 ```
 
@@ -273,14 +275,14 @@ export default function ContactForm() {
 
 ```json
 {
-    "requestId": "550e8400-e29b-41d4-a716-446655440002",
-    "timestamp": "2025-12-30T12:00:00.000Z",
-    "status": "error",
-    "error": {
-        "code": "CSRF_TOKEN_INVALID",
-        "message": "CSRF token is invalid or expired",
-        "retryable": true
-    }
+  "requestId": "550e8400-e29b-41d4-a716-446655440002",
+  "timestamp": "2025-12-30T12:00:00.000Z",
+  "status": "error",
+  "error": {
+    "code": "CSRF_TOKEN_INVALID",
+    "message": "CSRF token is invalid or expired",
+    "retryable": true
+  }
 }
 ```
 
@@ -300,11 +302,11 @@ const token = generateCsrfToken();
 
 ```typescript
 // Set cookie in response
-response.cookies.set('csrf_token', token, {
-    httpOnly: true,
-    secure: true,
-    sameSite: 'lax',
-    maxAge: 24 * 60 * 60
+response.cookies.set("csrf_token", token, {
+  httpOnly: true,
+  secure: true,
+  sameSite: "lax",
+  maxAge: 24 * 60 * 60,
 });
 ```
 
@@ -312,16 +314,16 @@ response.cookies.set('csrf_token', token, {
 
 ```typescript
 // Extract from cookie and header
-const cookieToken = request.cookies.get('csrf_token')?.value;
-const headerToken = request.headers.get('x-csrf-token');
+const cookieToken = request.cookies.get("csrf_token")?.value;
+const headerToken = request.headers.get("x-csrf-token");
 
 // Validate
 if (cookieToken !== headerToken) {
-    return error('CSRF_TOKEN_MISMATCH');
+  return error("CSRF_TOKEN_MISMATCH");
 }
 
 if (!verifyCsrfToken(cookieToken)) {
-    return error('CSRF_TOKEN_INVALID');
+  return error("CSRF_TOKEN_INVALID");
 }
 ```
 
@@ -336,27 +338,31 @@ if (!verifyCsrfToken(cookieToken)) {
 ### Why httpOnly?
 
 ```typescript
-httpOnly: true  // JavaScript cannot access cookie
+httpOnly: true; // JavaScript cannot access cookie
 ```
 
 **Prevents**:
+
 - XSS attacks from stealing CSRF token
 - Malicious scripts from reading cookie
 
 **Trade-off**:
+
 - Client must use header for token (not cookie directly)
 
 ### Why SameSite=Lax?
 
 ```typescript
-sameSite: 'lax'  // Cookie sent on same-site navigation
+sameSite: "lax"; // Cookie sent on same-site navigation
 ```
 
 **Prevents**:
+
 - Cross-site request forgery
 - Third-party sites from sending cookies
 
 **Allows**:
+
 - Top-level navigation (clicking links)
 - Same-site requests
 
@@ -365,10 +371,11 @@ sameSite: 'lax'  // Cookie sent on same-site navigation
 ### Why Secure in Production?
 
 ```typescript
-secure: process.env.NODE_ENV === 'production'
+secure: process.env.NODE_ENV === "production";
 ```
 
 **Prevents**:
+
 - Man-in-the-middle attacks
 - Cookie theft over HTTP
 
@@ -432,18 +439,19 @@ curl -X POST http://localhost:3000/api/contact \
 
 ```json
 {
-    "level": "warn",
-    "message": "CSRF validation failed",
-    "requestId": "550e8400-e29b-41d4-a716-446655440000",
-    "error": "CSRF_TOKEN_MISMATCH",
-    "ip": "192.168.1.1",
-    "route": "/api/contact"
+  "level": "warn",
+  "message": "CSRF validation failed",
+  "requestId": "550e8400-e29b-41d4-a716-446655440000",
+  "error": "CSRF_TOKEN_MISMATCH",
+  "ip": "192.168.1.1",
+  "route": "/api/contact"
 }
 ```
 
 ### Alerts
 
 Set up alerts for:
+
 - **High CSRF Failure Rate**: >5% of requests
 - **Repeated Failures**: Same IP failing multiple times
 - **Token Mismatch Spike**: Possible attack in progress
@@ -455,6 +463,7 @@ Set up alerts for:
 **Symptoms**: CSRF_TOKEN_MISSING error
 
 **Solutions**:
+
 1. Verify `/api/csrf` endpoint is accessible
 2. Check cookie is being set in response
 3. Ensure `credentials: 'same-origin'` in fetch
@@ -464,6 +473,7 @@ Set up alerts for:
 **Symptoms**: CSRF_TOKEN_MISMATCH error
 
 **Solutions**:
+
 1. Verify header name is `X-CSRF-Token`
 2. Check cookie and header values match
 3. Ensure no middleware is modifying cookies
@@ -473,6 +483,7 @@ Set up alerts for:
 **Symptoms**: CSRF_TOKEN_INVALID error
 
 **Solutions**:
+
 1. Implement token refresh on expiration
 2. Fetch new token before retry
 3. Consider longer token lifetime if needed
@@ -520,6 +531,7 @@ This implementation helps meet:
 ## Changelog
 
 ### 2025-12-30
+
 - ✅ Implemented CSRF token generation
 - ✅ Added double-submit cookie pattern
 - ✅ Created `/api/csrf` endpoint
