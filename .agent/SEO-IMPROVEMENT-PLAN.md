@@ -3,21 +3,25 @@
 ## Priority 1: Fix Indexing Issues (450 Unindexed Pages)
 
 ### Step 1: Check robots.txt
+
 - Ensure robots.txt isn't blocking important pages
 - Current location: /public/robots.txt
 - Should allow all crawlers for main content
 
 ### Step 2: Submit Sitemap to Google
+
 - Generate comprehensive sitemap.xml
 - Include all research papers, blog posts, and main pages
 - Submit via Google Search Console
 
 ### Step 3: Check for Indexing Blockers
+
 - Remove noindex tags from important pages
 - Check for canonical issues
 - Ensure pages have unique titles and descriptions
 
 ### Step 4: Request Indexing
+
 - Use Google Search Console "Request Indexing" for key pages:
   - All research papers (A1-A6)
   - Scholarly article
@@ -29,6 +33,7 @@
 ## Priority 2: Improve CTR (Currently 1.4%, Target: 3-5%)
 
 ### Action Items:
+
 1. **Optimize Title Tags:**
    - Include target keywords at the beginning
    - Keep under 60 characters
@@ -51,6 +56,7 @@
 ## Priority 3: Improve Search Rankings (Currently Position 28.4)
 
 ### Content Optimization:
+
 1. **Target Long-Tail Keywords:**
    - "cloud native architecture patterns"
    - "enterprise microservices governance"
@@ -78,9 +84,11 @@
 ## Priority 4: Expand Geographic Reach
 
 ### Current: 100% Netherlands
+
 ### Target: Global reach
 
 **Actions:**
+
 1. **International SEO:**
    - Implement hreflang tags for multi-language support
    - Create content for different regions
@@ -96,9 +104,11 @@
 ## Priority 5: Generate Core Web Vitals Data
 
 ### Current: No data
+
 ### Target: Good scores across all metrics
 
 **Actions:**
+
 1. **Increase Traffic:**
    - More traffic = more data
    - Focus on SEO improvements above

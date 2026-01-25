@@ -8,13 +8,13 @@ All public marketing API endpoints are protected by intelligent rate limiting th
 
 ### Endpoint-Specific Limits
 
-| Endpoint | Limit | Window | Strictness |
-|----------|-------|--------|------------|
-| `/api/contact` | 5 requests | 60 seconds | **STRICT** |
-| `/api/leads` | 20 requests | 60 seconds | Moderate |
-| `/api/metrics` | 100 requests | 60 seconds | **LIGHT** |
-| `/api/health` | 200 requests | 60 seconds | Very Light |
-| Default | 50 requests | 60 seconds | Standard |
+| Endpoint       | Limit        | Window     | Strictness |
+| -------------- | ------------ | ---------- | ---------- |
+| `/api/contact` | 5 requests   | 60 seconds | **STRICT** |
+| `/api/leads`   | 20 requests  | 60 seconds | Moderate   |
+| `/api/metrics` | 100 requests | 60 seconds | **LIGHT**  |
+| `/api/health`  | 200 requests | 60 seconds | Very Light |
+| Default        | 50 requests  | 60 seconds | Standard   |
 
 ### Rationale
 
@@ -33,6 +33,7 @@ All public marketing API endpoints are protected by intelligent rate limiting th
 **Implementation**: `InMemoryRateLimiter`
 
 **Features**:
+
 - ✅ No Redis required
 - ✅ No configuration needed
 - ✅ No warnings or errors
@@ -51,11 +52,13 @@ All public marketing API endpoints are protected by intelligent rate limiting th
 **Implementation**: `RedisRateLimiter`
 
 **Requirements**:
+
 - `REDIS_URL` environment variable
 - `REDIS_TOKEN` environment variable
 - `config.features.enableRateLimit=true`
 
 **Features**:
+
 - ✅ Distributed rate limiting across instances
 - ✅ Persistent across server restarts
 - ✅ Scalable to multiple servers
@@ -80,11 +83,13 @@ All public marketing API endpoints are protected by intelligent rate limiting th
 **Status**: 200 OK
 
 **Headers**:
+
 ```http
 X-RateLimit-Remaining: 4
 ```
 
 **Response**:
+
 ```json
 {
     "requestId": "550e8400-e29b-41d4-a716-446655440000",
@@ -99,22 +104,24 @@ X-RateLimit-Remaining: 4
 **Status**: 429 Too Many Requests
 
 **Headers**:
+
 ```http
 Retry-After: 45
 X-RateLimit-Remaining: 0
 ```
 
 **Response**:
+
 ```json
 {
-    "requestId": "550e8400-e29b-41d4-a716-446655440001",
-    "timestamp": "2025-12-30T12:00:00.000Z",
-    "status": "error",
-    "error": {
-        "code": "TOO_MANY_REQUESTS",
-        "message": "Rate limit exceeded. Please try again later.",
-        "retryable": true
-    }
+  "requestId": "550e8400-e29b-41d4-a716-446655440001",
+  "timestamp": "2025-12-30T12:00:00.000Z",
+  "status": "error",
+  "error": {
+    "code": "TOO_MANY_REQUESTS",
+    "message": "Rate limit exceeded. Please try again later.",
+    "retryable": true
+  }
 }
 ```
 
@@ -124,21 +131,22 @@ X-RateLimit-Remaining: 0
 
 ```typescript
 class InMemoryRateLimiter {
-    private store: Map<string, { count: number; resetAt: number }>;
-    
-    // Key format: "ip:endpoint"
-    // Example: "192.168.1.1:/api/contact"
-    
-    async check(ip: string, endpoint?: string): Promise<RateLimitResult> {
-        // 1. Get endpoint config
-        // 2. Check if window expired
-        // 3. Increment counter
-        // 4. Return result with remaining count
-    }
+  private store: Map<string, { count: number; resetAt: number }>;
+
+  // Key format: "ip:endpoint"
+  // Example: "192.168.1.1:/api/contact"
+
+  async check(ip: string, endpoint?: string): Promise<RateLimitResult> {
+    // 1. Get endpoint config
+    // 2. Check if window expired
+    // 3. Increment counter
+    // 4. Return result with remaining count
+  }
 }
 ```
 
 **Cleanup Strategy**:
+
 - Runs every 60 seconds
 - Removes expired entries
 - Prevents memory leaks
@@ -147,13 +155,13 @@ class InMemoryRateLimiter {
 
 ```typescript
 class RedisRateLimiter {
-    async check(ip: string, endpoint?: string): Promise<RateLimitResult> {
-        // 1. Get endpoint config
-        // 2. Create sliding window key
-        // 3. Increment counter in Redis
-        // 4. Set expiration on first request
-        // 5. Return result
-    }
+  async check(ip: string, endpoint?: string): Promise<RateLimitResult> {
+    // 1. Get endpoint config
+    // 2. Create sliding window key
+    // 3. Increment counter in Redis
+    // 4. Set expiration on first request
+    // 5. Return result
+  }
 }
 ```
 
@@ -169,30 +177,30 @@ class RedisRateLimiter {
 
 ```typescript
 async function callAPI(endpoint: string, data: any) {
-    try {
-        const response = await fetch(endpoint, {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify(data)
-        });
+  try {
+    const response = await fetch(endpoint, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(data),
+    });
 
-        if (response.status === 429) {
-            const retryAfter = response.headers.get('Retry-After');
-            const body = await response.json();
-            
-            console.log(`Rate limited. Retry after ${retryAfter} seconds`);
-            console.log(`Request ID: ${body.requestId}`);
-            
-            // Wait and retry
-            await new Promise(resolve => setTimeout(resolve, parseInt(retryAfter) * 1000));
-            return callAPI(endpoint, data);
-        }
+    if (response.status === 429) {
+      const retryAfter = response.headers.get("Retry-After");
+      const body = await response.json();
 
-        return await response.json();
-    } catch (error) {
-        console.error('API call failed:', error);
-        throw error;
+      console.log(`Rate limited. Retry after ${retryAfter} seconds`);
+      console.log(`Request ID: ${body.requestId}`);
+
+      // Wait and retry
+      await new Promise((resolve) => setTimeout(resolve, parseInt(retryAfter) * 1000));
+      return callAPI(endpoint, data);
     }
+
+    return await response.json();
+  } catch (error) {
+    console.error("API call failed:", error);
+    throw error;
+  }
 }
 ```
 
@@ -200,34 +208,34 @@ async function callAPI(endpoint: string, data: any) {
 
 ```typescript
 async function callAPIWithBackoff(endpoint: string, data: any, maxRetries = 3) {
-    let retries = 0;
-    let delay = 1000; // Start with 1 second
+  let retries = 0;
+  let delay = 1000; // Start with 1 second
 
-    while (retries < maxRetries) {
-        try {
-            const response = await fetch(endpoint, {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify(data)
-            });
+  while (retries < maxRetries) {
+    try {
+      const response = await fetch(endpoint, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data),
+      });
 
-            if (response.status === 429) {
-                retries++;
-                const retryAfter = parseInt(response.headers.get('Retry-After') || '60');
-                delay = Math.min(retryAfter * 1000, delay * 2); // Exponential backoff
-                
-                console.log(`Rate limited. Retry ${retries}/${maxRetries} after ${delay}ms`);
-                await new Promise(resolve => setTimeout(resolve, delay));
-                continue;
-            }
+      if (response.status === 429) {
+        retries++;
+        const retryAfter = parseInt(response.headers.get("Retry-After") || "60");
+        delay = Math.min(retryAfter * 1000, delay * 2); // Exponential backoff
 
-            return await response.json();
-        } catch (error) {
-            throw error;
-        }
+        console.log(`Rate limited. Retry ${retries}/${maxRetries} after ${delay}ms`);
+        await new Promise((resolve) => setTimeout(resolve, delay));
+        continue;
+      }
+
+      return await response.json();
+    } catch (error) {
+      throw error;
     }
+  }
 
-    throw new Error('Max retries exceeded');
+  throw new Error("Max retries exceeded");
 }
 ```
 
@@ -247,6 +255,7 @@ done
 ```
 
 **Expected**:
+
 - Requests 1-5: 200 OK
 - Requests 6-10: 429 Too Many Requests
 
@@ -262,6 +271,7 @@ curl -X POST https://api.example.com/api/contact \
 ```
 
 **Check Headers**:
+
 ```http
 HTTP/1.1 200 OK
 X-RateLimit-Remaining: 4
@@ -280,19 +290,20 @@ X-RateLimit-Remaining: 4
 
 ```json
 {
-    "level": "warn",
-    "message": "Rate limit exceeded",
-    "requestId": "550e8400-e29b-41d4-a716-446655440000",
-    "route": "/api/contact",
-    "method": "POST",
-    "ip": "192.168.1.1",
-    "timestamp": "2025-12-30T12:00:00.000Z"
+  "level": "warn",
+  "message": "Rate limit exceeded",
+  "requestId": "550e8400-e29b-41d4-a716-446655440000",
+  "route": "/api/contact",
+  "method": "POST",
+  "ip": "192.168.1.1",
+  "timestamp": "2025-12-30T12:00:00.000Z"
 }
 ```
 
 ### Alerts
 
 Set up alerts for:
+
 - **High 429 Rate**: >10% of requests to any endpoint
 - **Suspicious Activity**: Single IP hitting limits repeatedly
 - **Redis Errors**: Rate limiter failing to connect to Redis
@@ -316,9 +327,9 @@ Edit `src/lib/rate-limit.ts`:
 
 ```typescript
 export const RATE_LIMITS: Record<string, RateLimitConfig> = {
-    '/api/contact': { limit: 10, windowMs: 60000 },  // Increase to 10/min
-    '/api/custom': { limit: 25, windowMs: 30000 },   // Add new endpoint
-    // ...
+  "/api/contact": { limit: 10, windowMs: 60000 }, // Increase to 10/min
+  "/api/custom": { limit: 25, windowMs: 30000 }, // Add new endpoint
+  // ...
 };
 ```
 
@@ -329,10 +340,11 @@ export const RATE_LIMITS: Record<string, RateLimitConfig> = {
 The rate limiter uses `X-Forwarded-For` header for IP detection:
 
 ```typescript
-const ip = request.headers.get('x-forwarded-for')?.split(',')[0]?.trim() || 'unknown';
+const ip = request.headers.get("x-forwarded-for")?.split(",")[0]?.trim() || "unknown";
 ```
 
 **Protection**:
+
 - Vercel automatically sets correct `X-Forwarded-For`
 - First IP in chain is used (client IP)
 - Fallback to 'unknown' if header missing
@@ -340,11 +352,13 @@ const ip = request.headers.get('x-forwarded-for')?.split(',')[0]?.trim() || 'unk
 ### Distributed Denial of Service (DDoS)
 
 **Limitations**:
+
 - Rate limiting alone won't stop large-scale DDoS
 - Use Vercel's DDoS protection
 - Consider Cloudflare for additional protection
 
 **Best Practices**:
+
 - Keep limits reasonable
 - Monitor for abuse patterns
 - Use fail-open strategy (allow on Redis errors)
@@ -352,11 +366,13 @@ const ip = request.headers.get('x-forwarded-for')?.split(',')[0]?.trim() || 'unk
 ### Bypass Attempts
 
 **Potential Bypasses**:
+
 - IP rotation
 - Distributed attacks
 - Header manipulation
 
 **Mitigations**:
+
 - Strict limits on sensitive endpoints
 - Honeypot fields (contact form)
 - Input validation
@@ -367,6 +383,7 @@ const ip = request.headers.get('x-forwarded-for')?.split(',')[0]?.trim() || 'unk
 ### Local Development: Rate Limits Not Working
 
 **Check**:
+
 1. Verify `NODE_ENV=development`
 2. Check console for limiter initialization
 3. Verify endpoint matches configured routes
@@ -374,6 +391,7 @@ const ip = request.headers.get('x-forwarded-for')?.split(',')[0]?.trim() || 'unk
 ### Production: All Requests Allowed
 
 **Check**:
+
 1. Verify `REDIS_URL` and `REDIS_TOKEN` are set
 2. Check `config.features.enableRateLimit` is true
 3. Verify Redis connection in `/api/health`
@@ -381,6 +399,7 @@ const ip = request.headers.get('x-forwarded-for')?.split(',')[0]?.trim() || 'unk
 ### Production: All Requests Blocked
 
 **Check**:
+
 1. Verify Redis is accessible
 2. Check for Redis connection errors in logs
 3. Verify rate limit configuration is correct
@@ -390,6 +409,7 @@ const ip = request.headers.get('x-forwarded-for')?.split(',')[0]?.trim() || 'unk
 **Symptoms**: Rate limiter fails open (allows all requests)
 
 **Solution**:
+
 1. Check Redis credentials
 2. Verify network connectivity
 3. Check Upstash Redis dashboard
@@ -414,6 +434,7 @@ const ip = request.headers.get('x-forwarded-for')?.split(',')[0]?.trim() || 'unk
 ## Changelog
 
 ### 2025-12-30
+
 - ✅ Implemented endpoint-specific rate limits
 - ✅ Added InMemoryRateLimiter for local development
 - ✅ Enhanced RedisRateLimiter with endpoint support

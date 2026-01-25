@@ -24,18 +24,22 @@ The key contribution is the formalization of the OODA loop (Observe, Orient, Dec
 ---
 
 ## Original Contribution
+
 This paper formalizes the "Meta-Control Plane," a unified feedback loop that synthesizes the capabilities of A1-A5 into an autonomous system. We introduce the "Software OODA Loop" (Observe-Orient-Decide-Act) as a compiled runtime artifact, proving that incident response can be reduced from human-time (minutes) to machine-time (milliseconds).
 
 ### Contribution Summary for Non-Specialists
+
 If A1 is the skeleton and A3 is the nervous system, A6 is the brain. Traditional systems rely on humans to fix problems (the "pilot"). A6 builds a "self-driving" infrastructure that detects crashes, steers away from danger, and repairs itself without the pilot ever touching the controls.
 
 ### Why This Framework Was Needed Now
+
 Cloud complexity has crossed the "Cognitive Threshold." With microservices, the number of failure modes exceeds a human's ability to reason about them in real-time. A6 answers the question: "How do we operate systems that are too complex for humans to understand?"
 
 ### Relationship to A1-A6 Series
-*   **A1-A5:** The Body (Organs, Limbs, Senses).
-*   **A6:** The Brain (Central Nervous System).
-A6 binds the previous patterns into a coherent, living organism.
+
+- **A1-A5:** The Body (Organs, Limbs, Senses).
+- **A6:** The Brain (Central Nervous System).
+  A6 binds the previous patterns into a coherent, living organism.
 
 ---
 
@@ -118,12 +122,12 @@ The core of A6 is the OODA loop implemented as code:
 
 **Table 1: A-Series to OODA Mapping**
 
-| OODA Phase | A-Series Component | Responsibility | Latency |
-|:---|:---|:---|:---|
-| **Observe** | A3 (Observability) | Collect metrics, logs, traces | <1s |
-| **Orient** | A3 (Observability) | Analyze against baseline, detect anomalies | <5s |
-| **Decide** | A4 (Governance) + A6 | Evaluate policy, determine action | <1s |
-| **Act** | A2 (Throughput) | Execute remediation (shed load, scale, circuit break) | <10s |
+| OODA Phase  | A-Series Component   | Responsibility                                        | Latency |
+| :---------- | :------------------- | :---------------------------------------------------- | :------ |
+| **Observe** | A3 (Observability)   | Collect metrics, logs, traces                         | <1s     |
+| **Orient**  | A3 (Observability)   | Analyze against baseline, detect anomalies            | <5s     |
+| **Decide**  | A4 (Governance) + A6 | Evaluate policy, determine action                     | <1s     |
+| **Act**     | A2 (Throughput)      | Execute remediation (shed load, scale, circuit break) | <10s    |
 
 **Total Loop Time:** <17 seconds (vs 30-60 minutes for human response)
 
@@ -133,17 +137,18 @@ The critical innovation in A6 is removing the human from the decision loop for k
 
 **Table 2: Self-Healing Stimulus-Response**
 
-| Stimulus (Symptom) | Threshold | Response (Action) | Recovery | MTTR |
-|:---|:---|:---|:---|:---|
-| **Latency Spike** | p99 > 500ms | Enable aggressive caching | Auto-disable when <200ms | 30s |
-| **Dependency Down** | 100% failure rate | Open circuit breaker (return defaults) | Half-open probe every 30s | 60s |
-| **Traffic Surge** | RPS > 1.5x capacity | Shed Tier 3 traffic (batch jobs) | Restore when queue clear | 45s |
-| **Bad Deployment** | Error rate > 1% | Auto-rollback to last known good | Manual investigation | 90s |
-| **Database Saturation** | Connection pool > 90% | Add read replicas | Auto-scale down after 1h | 120s |
+| Stimulus (Symptom)      | Threshold             | Response (Action)                      | Recovery                  | MTTR |
+| :---------------------- | :-------------------- | :------------------------------------- | :------------------------ | :--- |
+| **Latency Spike**       | p99 > 500ms           | Enable aggressive caching              | Auto-disable when <200ms  | 30s  |
+| **Dependency Down**     | 100% failure rate     | Open circuit breaker (return defaults) | Half-open probe every 30s | 60s  |
+| **Traffic Surge**       | RPS > 1.5x capacity   | Shed Tier 3 traffic (batch jobs)       | Restore when queue clear  | 45s  |
+| **Bad Deployment**      | Error rate > 1%       | Auto-rollback to last known good       | Manual investigation      | 90s  |
+| **Database Saturation** | Connection pool > 90% | Add read replicas                      | Auto-scale down after 1h  | 120s |
 
 ### 2.4 Implementation Example
 
 **Prometheus Alert:**
+
 ```yaml
 groups:
   - name: adaptive_policy
@@ -156,6 +161,7 @@ groups:
 ```
 
 **Policy Engine (OPA):**
+
 ```rego
 package adaptive_policy
 
@@ -170,13 +176,14 @@ action := "cache_ttl_increase" {
 ```
 
 **Actuator (Kubernetes):**
+
 ```yaml
 apiVersion: v1
 kind: ConfigMap
 metadata:
   name: cache-config
 data:
-  ttl: "300"  # Increased from 60s to 300s
+  ttl: "300" # Increased from 60s to 300s
 ```
 
 ---
@@ -194,18 +201,21 @@ We model system security not as binary (secure/hacked) but as a dynamic state ma
 ### 3.2 DEFCON Levels
 
 **DEFCON 3: Suspicious Activity**
+
 - **Trigger:** WAF score > 50, 4xx rate > 5%
 - **Response:** Challenge suspicious IPs with CAPTCHA
 - **Impact:** <1% of legitimate users affected
 - **Duration:** Until WAF score < 30 for 5 minutes
 
 **DEFCON 2: Confirmed Attack**
+
 - **Trigger:** Latency > 500ms, error rate > 2%
 - **Response:** Geofencing (block non-domestic IPs)
 - **Impact:** 10-20% of legitimate users affected (international)
 - **Duration:** Until latency < 200ms for 10 minutes
 
 **DEFCON 1: Existential Threat**
+
 - **Trigger:** Database CPU > 90%, system near total failure
 - **Response:** "Lifeboat mode" - read-only, no authentication, no writes
 - **Impact:** 100% of write operations blocked
@@ -215,13 +225,13 @@ We model system security not as binary (secure/hacked) but as a dynamic state ma
 
 **Table 3: Defense Measure Catalog**
 
-| Measure | DEFCON Level | Implementation | Legitimate User Impact |
-|:---|:---|:---|:---|
-| **CAPTCHA Challenge** | 3 | Cloudflare Turnstile | <1% (suspicious IPs only) |
-| **Rate Limiting** | 3 | Token bucket (10 req/sec) | 5% (heavy users) |
-| **Geofencing** | 2 | Block non-US IPs | 15% (international users) |
-| **Read-Only Mode** | 1 | Reject all POST/PUT/DELETE | 100% (writes blocked) |
-| **Authentication Disabled** | 1 | Bypass auth, public read-only | 100% (no personalization) |
+| Measure                     | DEFCON Level | Implementation                | Legitimate User Impact    |
+| :-------------------------- | :----------- | :---------------------------- | :------------------------ |
+| **CAPTCHA Challenge**       | 3            | Cloudflare Turnstile          | <1% (suspicious IPs only) |
+| **Rate Limiting**           | 3            | Token bucket (10 req/sec)     | 5% (heavy users)          |
+| **Geofencing**              | 2            | Block non-US IPs              | 15% (international users) |
+| **Read-Only Mode**          | 1            | Reject all POST/PUT/DELETE    | 100% (writes blocked)     |
+| **Authentication Disabled** | 1            | Bypass auth, public read-only | 100% (no personalization) |
 
 ### 3.4 Threat Response Example
 
@@ -287,12 +297,12 @@ Policies conflict. We need a resolution order. A6 establishes that **Survival** 
 
 **Table 4: Policy Hierarchy**
 
-| Level | Priority | Example Policy | Violates | Action |
-|:---|:---|:---|:---|:---|
-| **L0: Survival** | 1 (Highest) | CPU > 95% → Shed load | Availability | 503 Service Unavailable |
-| **L1: Security** | 2 | Invalid token → Reject | Availability | 401 Unauthorized |
-| **L2: Correctness** | 3 | Insufficient balance → Reject | Availability | 400 Bad Request |
-| **L3: Availability** | 4 (Lowest) | Process all requests | None | 200 OK |
+| Level                | Priority    | Example Policy                | Violates     | Action                  |
+| :------------------- | :---------- | :---------------------------- | :----------- | :---------------------- |
+| **L0: Survival**     | 1 (Highest) | CPU > 95% → Shed load         | Availability | 503 Service Unavailable |
+| **L1: Security**     | 2           | Invalid token → Reject        | Availability | 401 Unauthorized        |
+| **L2: Correctness**  | 3           | Insufficient balance → Reject | Availability | 400 Bad Request         |
+| **L3: Availability** | 4 (Lowest)  | Process all requests          | None         | 200 OK                  |
 
 ---
 
@@ -310,14 +320,14 @@ A single request flows through all A-series components:
 
 **Table 5: Component Responsibilities in Request Flow**
 
-| Component | Responsibility | Latency Added | Failure Mode |
-|:---|:---|:---|:---|
-| **A1 (Architecture)** | Define plane separation | 0ms (design-time) | N/A |
-| **A2 (Throughput)** | Rate limiting, load shedding | <1ms | 429 Too Many Requests |
-| **A3 (Observability)** | Emit traces, metrics, logs | <0.5ms | Degraded visibility |
-| **A4 (Governance)** | Policy evaluation (AuthZ) | <1ms | 403 Forbidden |
-| **A5 (Modernization)** | Route to monolith/microservice | <2ms | Fallback to monolith |
-| **A6 (Adaptive)** | Autonomous remediation | 0ms (async) | Manual intervention |
+| Component              | Responsibility                 | Latency Added     | Failure Mode          |
+| :--------------------- | :----------------------------- | :---------------- | :-------------------- |
+| **A1 (Architecture)**  | Define plane separation        | 0ms (design-time) | N/A                   |
+| **A2 (Throughput)**    | Rate limiting, load shedding   | <1ms              | 429 Too Many Requests |
+| **A3 (Observability)** | Emit traces, metrics, logs     | <0.5ms            | Degraded visibility   |
+| **A4 (Governance)**    | Policy evaluation (AuthZ)      | <1ms              | 403 Forbidden         |
+| **A5 (Modernization)** | Route to monolith/microservice | <2ms              | Fallback to monolith  |
+| **A6 (Adaptive)**      | Autonomous remediation         | 0ms (async)       | Manual intervention   |
 
 **Total Latency Overhead:** <5ms (2.5% of 200ms budget)
 
@@ -340,12 +350,12 @@ Where does your organization sit?
 
 **Table 6: Organizational Maturity Levels**
 
-| Level | Characteristics | MTTR | Deployment Frequency | Availability |
-|:---|:---|:---|:---|:---|
-| **Level 1: Manual** | Humans respond to alerts | 45-60 min | 1/month | 99.5% |
-| **Level 2: Scripted** | Runbooks automated | 15-30 min | 1/week | 99.9% |
-| **Level 3: Autonomous** | Self-healing for known issues | 2-5 min | 10/day | 99.95% |
-| **Level 4: Adaptive** | Self-healing + learning | <2 min | 50/day | 99.99% |
+| Level                   | Characteristics               | MTTR      | Deployment Frequency | Availability |
+| :---------------------- | :---------------------------- | :-------- | :------------------- | :----------- |
+| **Level 1: Manual**     | Humans respond to alerts      | 45-60 min | 1/month              | 99.5%        |
+| **Level 2: Scripted**   | Runbooks automated            | 15-30 min | 1/week               | 99.9%        |
+| **Level 3: Autonomous** | Self-healing for known issues | 2-5 min   | 10/day               | 99.95%       |
+| **Level 4: Adaptive**   | Self-healing + learning       | <2 min    | 50/day               | 99.99%       |
 
 ---
 
@@ -354,21 +364,23 @@ Where does your organization sit?
 We formalize the Meta-Control Plane as a discrete-time control system.
 
 ### 7.1 The Feedback Loop
+
 Let $S_t$ be the state of the system at time $t$.
 Let $E_t$ be the environmental input (traffic, attacks).
 Let $A_t$ be the action taken by the control plane.
 The next state is:
 
-$$ S_{t+1} = f(S_t, E_t, A_t) $$
+$$ S\_{t+1} = f(S_t, E_t, A_t) $$
 
 Our goal is to choose $A_t$ such that $S_{t+1}$ remains within the "Survival Region" $\Omega_{save}$.
 
 ### 7.2 The Latency Constraint
+
 The system fails if the rate of environmental change $\frac{dE}{dt}$ exceeds the control loop frequency $f_{loop}$.
 A human loop ($f_{human} \approx 0.001$ Hz) fails against a DDoS attack ($\frac{dE}{dt} \to \infty$).
 A6 enables $f_{machine} \approx 100$ Hz, guaranteeing:
 
-$$ \frac{1}{f_{loop}} < \frac{R_{res}}{Rate_{attack}} $$
+$$ \frac{1}{f*{loop}} < \frac{R*{res}}{Rate\_{attack}} $$
 
 Where $R_{res}$ is the resource buffer.
 
@@ -379,16 +391,17 @@ Where $R_{res}$ is the resource buffer.
 **Context:** A Fintech platform handling $40B/year in transactions.
 **Incident:** A credential stuffing attack originating from 50,000 distinct IPs (IoT Botnet).
 **Timeline:**
-*   **T+0s:** Attack begins. Login endpoints hit 50x normal traffic.
-*   **T+200ms:** A3 sensors detect specific error patterns (401 Unauthorized spikes).
-*   **T+450ms:** A6 Orientation Phase correlates IP reputation scores and high velocity.
-*   **T+600ms:** A6 Decision Phase calculates that standard rate limits (Layer 7) are failing to block the volumetric load.
-*   **T+800ms:** A6 Act Phase escalates to **DEFCON 2**. It pushes a WAF policy update to the Edge (A2) to challenge all traffic with CAPTCHA.
-*   **T+30s:** Attack subsides as bots fail CAPTCHA.
-*   **T+5m:** A6 de-escalates to **DEFCON 3**.
+
+- **T+0s:** Attack begins. Login endpoints hit 50x normal traffic.
+- **T+200ms:** A3 sensors detect specific error patterns (401 Unauthorized spikes).
+- **T+450ms:** A6 Orientation Phase correlates IP reputation scores and high velocity.
+- **T+600ms:** A6 Decision Phase calculates that standard rate limits (Layer 7) are failing to block the volumetric load.
+- **T+800ms:** A6 Act Phase escalates to **DEFCON 2**. It pushes a WAF policy update to the Edge (A2) to challenge all traffic with CAPTCHA.
+- **T+30s:** Attack subsides as bots fail CAPTCHA.
+- **T+5m:** A6 de-escalates to **DEFCON 3**.
 
 **Human Involvement:**
-The on-call engineer received a notification at T+2 minutes: *"Incident #902 detected and resolved. Threat: Botnet. Action: DEFCON 2. Status: Healthy."*
+The on-call engineer received a notification at T+2 minutes: _"Incident #902 detected and resolved. Threat: Botnet. Action: DEFCON 2. Status: Healthy."_
 No human action was required.
 
 ---
@@ -396,6 +409,7 @@ No human action was required.
 ## 9. Implementation Reference
 
 ### 9.1 The Control Loop Logic (Golang)
+
 This snippet illustrates the core "Decide" phase of the OODA loop controller.
 
 ```go
@@ -430,28 +444,32 @@ func (c *Controller) EvaluateState(metrics Metrics) Action {
 We propose that the evolution of cloud-native architecture mirrors the evolution of biological nervous systems. A6 provides the final layer of this hierarchy.
 
 ### 10.1 Level 1: The Spinal Cord (Reflexes)
-*   **Latency:** 0-1ms
-*   **Component:** A2 (High Throughput Mesh)
-*   **Behavior:** Dumb, fast reactions. Retries, Timeouts, Connection Draining.
-*   **Analogy:** Pulling your hand away from a hot stove. The brain is not involved; the signal loops at the spine.
+
+- **Latency:** 0-1ms
+- **Component:** A2 (High Throughput Mesh)
+- **Behavior:** Dumb, fast reactions. Retries, Timeouts, Connection Draining.
+- **Analogy:** Pulling your hand away from a hot stove. The brain is not involved; the signal loops at the spine.
 
 ### 10.2 Level 2: The Brainstem (Autonomic)
-*   **Latency:** 10-100ms
-*   **Component:** A6 (Adaptive Control)
-*   **Behavior:** Homeostasis. Governing heartbeat (rate limits) and breathing (auto-scaling).
-*   **Analogy:** Managing blood pressure during exercise. Unconscious but vital for survival.
+
+- **Latency:** 10-100ms
+- **Component:** A6 (Adaptive Control)
+- **Behavior:** Homeostasis. Governing heartbeat (rate limits) and breathing (auto-scaling).
+- **Analogy:** Managing blood pressure during exercise. Unconscious but vital for survival.
 
 ### 10.3 Level 3: The Neocortex (Executive)
-*   **Latency:** 100-500ms
-*   **Component:** A4 (Governance)
-*   **Behavior:** Complex decision making based on law and rule. "Allow this deployment?" "Is this cost optimized?"
-*   **Analogy:** Deciding to buy a house. Requires checking rules, budget, and future state.
+
+- **Latency:** 100-500ms
+- **Component:** A4 (Governance)
+- **Behavior:** Complex decision making based on law and rule. "Allow this deployment?" "Is this cost optimized?"
+- **Analogy:** Deciding to buy a house. Requires checking rules, budget, and future state.
 
 ### 10.4 Level 4: The Collective Memory
-*   **Latency:** N/A (Async)
-*   **Component:** A3 (Observability)
-*   **Behavior:** Storing experience for future learning.
-*   **Analogy:** Remembering that the stove is hot.
+
+- **Latency:** N/A (Async)
+- **Component:** A3 (Observability)
+- **Behavior:** Storing experience for future learning.
+- **Analogy:** Remembering that the stove is hot.
 
 This hierarchy explains why "Smart" WAFs often fail—they try to implement Level 3 logic (complex rules) at Level 1 speeds (networkpath). A6 places logic in the correct biological layer.
 
@@ -469,21 +487,25 @@ This hierarchy explains why "Smart" WAFs often fail—they try to implement Leve
 ### 11.2 Implementation Roadmap
 
 **Month 1-2: Observability Foundation**
+
 - Deploy Prometheus, Grafana, Jaeger
 - Instrument applications with OpenTelemetry
 - Define SLOs and error budgets
 
 **Month 3-4: Policy-as-Code**
+
 - Deploy OPA Gatekeeper
 - Migrate manual policies to Rego
 - Implement policy testing in CI/CD
 
 **Month 5-6: Autonomous Remediation**
+
 - Implement self-healing for top 5 failure modes
 - Deploy circuit breakers
 - Enable auto-scaling
 
 **Month 7-12: Adaptive Control**
+
 - Implement DEFCON state machine
 - Enable automated degradation
 - Continuous improvement based on incidents
@@ -495,18 +517,21 @@ This hierarchy explains why "Smart" WAFs often fail—they try to implement Leve
 ### 12.1 Production Deployments
 
 **Deployment 1: E-Commerce Platform**
+
 - Scale: 500 services, 250k RPS
 - MTTR: 45 min → 90 sec (98% reduction)
 - Manual interventions: 120/month → 15/month (87% reduction)
 - Availability: 99.9% → 99.99%
 
 **Deployment 2: Financial Services**
+
 - Scale: 850 services, 450k RPS
 - MTTR: 30 min → 60 sec (97% reduction)
 - Incidents requiring escalation: 45/month → 3/month (93% reduction)
 - Availability: 99.95% → 99.995%
 
 **Deployment 3: SaaS Platform**
+
 - Scale: 320 services, 120k RPS
 - MTTR: 60 min → 120 sec (97% reduction)
 - On-call pages: 180/month → 12/month (93% reduction)
@@ -514,49 +539,57 @@ This hierarchy explains why "Smart" WAFs often fail—they try to implement Leve
 
 **Table 7: Production Results Summary**
 
-| Deployment | MTTR Before | MTTR After | Manual Interventions | Availability | On-Call Pages |
-|:---|:---|:---|:---|:---|:---|
-| E-Commerce | 45 min | 90 sec | 87% reduction | 99.9% → 99.99% | N/A |
-| Financial | 30 min | 60 sec | 93% reduction | 99.95% → 99.995% | N/A |
-| SaaS | 60 min | 120 sec | 93% reduction | 99.8% → 99.99% | 93% reduction |
+| Deployment | MTTR Before | MTTR After | Manual Interventions | Availability     | On-Call Pages |
+| :--------- | :---------- | :--------- | :------------------- | :--------------- | :------------ |
+| E-Commerce | 45 min      | 90 sec     | 87% reduction        | 99.9% → 99.99%   | N/A           |
+| Financial  | 30 min      | 60 sec     | 93% reduction        | 99.95% → 99.995% | N/A           |
+| SaaS       | 60 min      | 120 sec    | 93% reduction        | 99.8% → 99.99%   | 93% reduction |
 
 ---
 
 ## 13. Related Work
 
 ### 13.1 Autonomic Computing
+
 IBM's Autonomic Computing initiative (2001) proposed self-managing systems. A6 operationalizes these concepts with concrete implementation patterns.
 
 ### 13.2 Chaos Engineering
+
 Netflix's Chaos Monkey validates resilience through failure injection. A6 extends this with automated remediation, not just detection.
 
 ### 13.3 Site Reliability Engineering
+
 Google's SRE practices define error budgets and SLOs. A6 automates the remediation actions that SRE teams perform manually.
 
 ---
 
 ## 14. Generalizability Beyond Observed Deployments
 
-The concept of a localized OODA loop generalizes to any real-time control system. 
-*   **Satellite Constellations:** Avoiding collisions autonomously.
-*   **Power Grids:** Load shedding to prevent cascading blackouts.
-*   **High-Frequency Trading:** Risk controls executing in microseconds.
+The concept of a localized OODA loop generalizes to any real-time control system.
+
+- **Satellite Constellations:** Avoiding collisions autonomously.
+- **Power Grids:** Load shedding to prevent cascading blackouts.
+- **High-Frequency Trading:** Risk controls executing in microseconds.
 
 ### 14.1 Applicability Criteria
+
 A6 is required when $T_{incident} < T_{human}$. If failure propagates faster than a human can type, A6 is mandatory.
 
 ### 14.2 When A6 Is Not Appropriate
-*   **Human-in-the-Loop Requirements:** Legal frameworks (e.g., nuclear launch) requiring human authorization for state changes.
-*   **Stateless Systems:** Simple websites that can simply be restarted.
+
+- **Human-in-the-Loop Requirements:** Legal frameworks (e.g., nuclear launch) requiring human authorization for state changes.
+- **Stateless Systems:** Simple websites that can simply be restarted.
 
 ---
 
 ## 15. Practical and Scholarly Impact
 
 ### 15.1 The End of "Ops"
+
 A6 proposes that "Operations" is not a job description, but a software function. This shifts the industry from "DevOps" (Developers doing Ops) to "NoOps" (Software doing Ops).
 
 ### 15.2 Biological Mimicry in Systems Design
+
 We demonstrate that biological resilience strategies (homeostasis, autonomic nervous system) are the correct abstractions for large-scale distributed systems.
 
 ---
@@ -564,12 +597,15 @@ We demonstrate that biological resilience strategies (homeostasis, autonomic ner
 ## 16. Limitations
 
 ### 16.1 The "Halting Problem" of Policy
+
 It is theoretically impossible to prove that a complex set of adaptive policies will not enter an infinite oscillation loop (flapping).
 
 ### 16.2 Observability Lag
+
 The control loop is only as fast as the observability pipeline. If metric ingestion takes 10 seconds, the loop cannot react in 1 second.
 
 ### 16.3 Model Drift
+
 An adaptive model trained on last year's traffic patterns may make incorrect decisions on this year's novel patterns.
 
 ---
@@ -577,9 +613,11 @@ An adaptive model trained on last year's traffic patterns may make incorrect dec
 ## 17. Future Research Directions
 
 ### 17.1 AI-Driven Remediation (Zero-Shot)
+
 Allowing LLMs to generate remediation plans for novel incidents that have no pre-defined runbook, validated via simulation before execution.
 
 ### 17.2 Formal Verification of Adaptive Logic
+
 Using TLA+ or Coq to proving that the OODA loop state machine cannot enter invalid states (e.g., dropping 100% of traffic when healthy).
 
 ---
@@ -612,21 +650,25 @@ This paper represents independent research conducted by the author. No conflicts
 **Format:** Synthesis Paper / Framework Definition
 
 **Month 1-2: Observability Foundation**
+
 - Deploy Prometheus, Grafana, Jaeger
 - Instrument applications with OpenTelemetry
 - Define SLOs and error budgets
 
 **Month 3-4: Policy-as-Code**
+
 - Deploy OPA Gatekeeper
 - Migrate manual policies to Rego
 - Implement policy testing in CI/CD
 
 **Month 5-6: Autonomous Remediation**
+
 - Implement self-healing for top 5 failure modes
 - Deploy circuit breakers
 - Enable auto-scaling
 
 **Month 7-12: Adaptive Control**
+
 - Implement DEFCON state machine
 - Enable automated degradation
 - Continuous improvement based on incidents

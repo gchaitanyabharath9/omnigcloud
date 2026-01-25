@@ -2,33 +2,33 @@
 
 ## Protection Layers
 
-| Layer | Purpose | Status |
-|-------|---------|--------|
-| **Honeypot Fields** | Bot detection | ✅ Active |
-| **Payload Size Limits** | DoS prevention | ✅ Active |
+| Layer                       | Purpose            | Status    |
+| --------------------------- | ------------------ | --------- |
+| **Honeypot Fields**         | Bot detection      | ✅ Active |
+| **Payload Size Limits**     | DoS prevention     | ✅ Active |
 | **Content-Type Validation** | Format enforcement | ✅ Active |
-| **Time-to-Submit** | Bot detection | ✅ Active |
-| **Secure Logging** | Privacy protection | ✅ Active |
+| **Time-to-Submit**          | Bot detection      | ✅ Active |
+| **Secure Logging**          | Privacy protection | ✅ Active |
 
 ## Protected Forms
 
-| Form | Honeypot | Size Limit | Rate Limit | Status |
-|------|----------|------------|------------|--------|
-| `/api/contact` | `website` | 10KB | 5/min | ✅ |
-| `/api/demo` | `url` | 10KB | 10/min | ⏳ Pending |
-| `/api/newsletter` | `phone_number` | 5KB | 20/min | ⏳ Pending |
+| Form              | Honeypot       | Size Limit | Rate Limit | Status     |
+| ----------------- | -------------- | ---------- | ---------- | ---------- |
+| `/api/contact`    | `website`      | 10KB       | 5/min      | ✅         |
+| `/api/demo`       | `url`          | 10KB       | 10/min     | ⏳ Pending |
+| `/api/newsletter` | `phone_number` | 5KB        | 20/min     | ⏳ Pending |
 
 ## Honeypot Fields
 
 ```typescript
 // Most effective honeypot fields
 const HONEYPOT_FIELDS = {
-    website: 'website',           // ⭐ Most common
-    url: 'url',
-    homepage: 'homepage',
-    phone_number: 'phone_number',
-    company_url: 'company_url',
-    fax: 'fax'
+  website: "website", // ⭐ Most common
+  url: "url",
+  homepage: "homepage",
+  phone_number: "phone_number",
+  company_url: "company_url",
+  fax: "fax",
 };
 ```
 
@@ -37,38 +37,38 @@ const HONEYPOT_FIELDS = {
 ```html
 <!-- Hidden honeypot field -->
 <input
-    type="text"
-    name="website"
-    tabindex="-1"
-    autocomplete="off"
-    style="position: absolute; left: -9999px;"
-    aria-hidden="true"
+  type="text"
+  name="website"
+  tabindex="-1"
+  autocomplete="off"
+  style="position: absolute; left: -9999px;"
+  aria-hidden="true"
 />
 ```
 
 ## Server-Side Validation
 
 ```typescript
-import { validateFormSecurity, checkHoneypot, sanitizeForLogging } from '@/lib/form-security';
+import { validateFormSecurity, checkHoneypot, sanitizeForLogging } from "@/lib/form-security";
 
 // 1. Security validation
 const securityCheck = await validateFormSecurity(req, body, {
-    maxPayloadSize: 10 * 1024,
-    minSubmitTime: 2000,
-    honeypotFields: ['website']
+  maxPayloadSize: 10 * 1024,
+  minSubmitTime: 2000,
+  honeypotFields: ["website"],
 });
 
 // 2. Honeypot check
-const honeypotCheck = checkHoneypot(body, ['website']);
+const honeypotCheck = checkHoneypot(body, ["website"]);
 if (honeypotCheck.isBot) {
-    // Silent rejection
-    return createSuccessResponse(requestId, { message: 'Success' });
+  // Silent rejection
+  return createSuccessResponse(requestId, { message: "Success" });
 }
 
 // 3. Secure logging
-logger.info('Form submission', {
-    requestId,
-    data: sanitizeForLogging(body) // Redacts sensitive fields
+logger.info("Form submission", {
+  requestId,
+  data: sanitizeForLogging(body), // Redacts sensitive fields
 });
 ```
 
@@ -77,8 +77,14 @@ logger.info('Form submission', {
 ```typescript
 // These fields are NEVER logged
 const REDACTED = [
-    'message', 'comment', 'description', 'content',
-    'password', 'token', 'secret', 'apiKey'
+  "message",
+  "comment",
+  "description",
+  "content",
+  "password",
+  "token",
+  "secret",
+  "apiKey",
 ];
 ```
 

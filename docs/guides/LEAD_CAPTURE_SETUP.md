@@ -63,19 +63,23 @@
 4. Click **"Add New"**
 
 **Add Variable 1:**
+
 ```
 Name: REDIS_URL
 Value: [paste UPSTASH_REDIS_REST_URL here]
 Environments: ✅ Production ✅ Preview ✅ Development
 ```
+
 Click **"Save"**
 
 **Add Variable 2:**
+
 ```
 Name: REDIS_TOKEN
 Value: [paste UPSTASH_REDIS_REST_TOKEN here]
 Environments: ✅ Production ✅ Preview ✅ Development
 ```
+
 Click **"Save"**
 
 ---
@@ -131,6 +135,7 @@ Click **"Save"**
 6. **Add these 3 DNS records in Cloudflare**:
 
 **Record 1: SPF (TXT)**
+
 ```
 Type: TXT
 Name: @
@@ -140,6 +145,7 @@ Proxy: DNS only (gray cloud)
 ```
 
 **Record 2: DKIM (TXT)**
+
 ```
 Type: TXT
 Name: resend._domainkey
@@ -149,6 +155,7 @@ Proxy: DNS only (gray cloud)
 ```
 
 **Record 3: MX (for bounces)**
+
 ```
 Type: MX
 Name: @
@@ -172,28 +179,34 @@ Proxy: DNS only (gray cloud)
 4. Click **"Add New"**
 
 **Add Variable 1:**
+
 ```
 Name: RESEND_API_KEY
 Value: [paste your API key starting with re_]
 Environments: ✅ Production ✅ Preview ✅ Development
 ```
+
 Click **"Save"**
 
 **Add Variable 2:**
+
 ```
 Name: RESEND_FROM_EMAIL
 Value: onboarding@resend.dev
 (or contact@omnigcloud.com if you verified your domain)
 Environments: ✅ Production ✅ Preview ✅ Development
 ```
+
 Click **"Save"**
 
 **Add Variable 3:**
+
 ```
 Name: RESEND_TO_EMAIL
 Value: architects@omnigcloud.com
 Environments: ✅ Production ✅ Preview ✅ Development
 ```
+
 Click **"Save"**
 
 ---
@@ -216,6 +229,7 @@ npm list resend @upstash/redis
 ```
 
 You should see:
+
 ```
 ├── resend@X.X.X
 └── @upstash/redis@X.X.X
@@ -394,16 +408,19 @@ View all leads: omnigcloud.com/api/leads
 ### Option 1: API Endpoint
 
 **Get all leads:**
+
 ```
 GET https://omnigcloud.com/api/leads
 ```
 
 **With pagination:**
+
 ```
 GET https://omnigcloud.com/api/leads?limit=20&offset=0
 ```
 
 **Response format:**
+
 ```json
 {
   "leads": [...],
@@ -423,6 +440,7 @@ GET https://omnigcloud.com/api/leads?limit=20&offset=0
 ### Option 3: Export Leads (Future)
 
 You can build a simple admin page to:
+
 - View all leads in a table
 - Search and filter
 - Export to CSV
@@ -434,20 +452,22 @@ You can build a simple admin page to:
 
 ### Free Tier Limits:
 
-| Service | Free Tier | Your Usage | Cost |
-|---------|-----------|------------|------|
-| **Upstash Redis** | 10,000 commands/day | ~100/day | $0 |
-| **Resend** | 3,000 emails/month | ~50/month | $0 |
-| **Vercel** | 100 GB bandwidth | ~10 GB | $0 |
-| **Total** | - | - | **$0** |
+| Service           | Free Tier           | Your Usage | Cost   |
+| ----------------- | ------------------- | ---------- | ------ |
+| **Upstash Redis** | 10,000 commands/day | ~100/day   | $0     |
+| **Resend**        | 3,000 emails/month  | ~50/month  | $0     |
+| **Vercel**        | 100 GB bandwidth    | ~10 GB     | $0     |
+| **Total**         | -                   | -          | **$0** |
 
 ### When You'll Need to Upgrade:
 
 **Upstash Redis:**
+
 - Free tier good for: **10,000+ leads/month**
 - Upgrade at: $0.20 per 100K commands
 
 **Resend:**
+
 - Free tier good for: **3,000 leads/month**
 - Upgrade at: $20/month for 50K emails
 
@@ -460,17 +480,20 @@ You can build a simple admin page to:
 ### Email Not Received
 
 **Check:**
+
 1. ✅ Spam/Junk folder
 2. ✅ RESEND_API_KEY is correct in Vercel
 3. ✅ RESEND_TO_EMAIL is correct
 4. ✅ Deployment completed successfully
 
 **Debug:**
+
 1. Go to Resend Dashboard → **Logs**
 2. Check for recent email sends
 3. Look for errors or bounces
 
 **Common Issues:**
+
 - Wrong API key → Regenerate in Resend
 - Wrong TO email → Update in Vercel
 - Domain not verified → Use `onboarding@resend.dev`
@@ -480,17 +503,20 @@ You can build a simple admin page to:
 ### Lead Not Saved to Database
 
 **Check:**
+
 1. ✅ REDIS_URL is correct in Vercel
 2. ✅ REDIS_TOKEN is correct in Vercel
 3. ✅ Packages installed (`@upstash/redis`)
 4. ✅ Deployment completed
 
 **Debug:**
+
 1. Check Vercel deployment logs
 2. Look for Redis connection errors
 3. Verify credentials in Upstash dashboard
 
 **Common Issues:**
+
 - Wrong credentials → Copy again from Upstash
 - Packages not installed → Run `npm install`
 - Old deployment → Redeploy in Vercel
@@ -500,11 +526,13 @@ You can build a simple admin page to:
 ### API Returns Empty Array
 
 **Possible Causes:**
+
 - No leads submitted yet
 - Redis keys expired (check TTL)
 - Wrong database selected
 
 **Solution:**
+
 1. Submit a test lead
 2. Check Upstash Data Browser
 3. Verify REDIS_URL points to correct database
@@ -516,6 +544,7 @@ You can build a simple admin page to:
 **Cause:** Packages not installed
 
 **Solution:**
+
 ```bash
 npm install resend @upstash/redis
 git add package.json package-lock.json
@@ -556,11 +585,13 @@ Wait for Vercel to redeploy.
 ## 📞 Support Resources
 
 **Documentation:**
+
 - Upstash Docs: https://docs.upstash.com
 - Resend Docs: https://resend.com/docs
 - Vercel Docs: https://vercel.com/docs
 
 **Need Help?**
+
 - Check Vercel deployment logs
 - Check Resend email logs
 - Check Upstash Data Browser
@@ -570,11 +601,13 @@ Wait for Vercel to redeploy.
 ## ✅ Final Checklist
 
 **Before you start:**
+
 - [ ] Have credit card ready (for Upstash/Resend - won't be charged)
 - [ ] Have access to Cloudflare (for domain verification)
 - [ ] Have terminal/command line access
 
 **Setup:**
+
 - [ ] Upstash account created ✅
 - [ ] Redis database created ✅
 - [ ] Resend account created ✅
@@ -584,6 +617,7 @@ Wait for Vercel to redeploy.
 - [ ] Code deployed ✅
 
 **Testing:**
+
 - [ ] Contact form submitted ✅
 - [ ] Email received ✅
 - [ ] Lead in database ✅
@@ -594,6 +628,7 @@ Wait for Vercel to redeploy.
 ## 🎉 You're Done!
 
 **Your lead capture system is now:**
+
 - ✅ Capturing all contact form submissions
 - ✅ Sending instant email notifications
 - ✅ Storing leads permanently in database
@@ -603,6 +638,7 @@ Wait for Vercel to redeploy.
 **Start capturing leads!** 🚀
 
 Every contact form submission will now:
+
 1. Send you a beautiful email notification
 2. Save to database permanently
 3. Be accessible via API anytime

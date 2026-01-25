@@ -3,6 +3,7 @@
 ## ✅ COMPLETED (Phase 1-3)
 
 ### 1. Foundation & Infrastructure
+
 - ✅ Created `/src/config/nav.ts` - Centralized navigation configuration
   - 6 main nav groups (Dashboard, Products, Solutions, Docs, Pricing, Company)
   - 47 total nav items with proper typing (page vs section)
@@ -26,16 +27,19 @@
   - Integrated into root layout
 
 ### 2. CSS & Layout Fixes
+
 - ✅ Added global `scroll-margin-top` rule in `/src/styles/layout.css`
   - All elements with IDs now account for sticky header offset
   - Formula: `calc(var(--header-height) + var(--breadcrumb-height) + 1rem)`
 
 ### 3. Translation Keys
+
 - ✅ Updated `/messages/en.json` with missing dashboard keys
   - Added "executive" and "technical" keys
   - Standardized all dashboard link labels
 
 ### 4. Root Layout Integration
+
 - ✅ Added `HashScrollHandler` to root layout
   - Enables automatic hash scrolling on all pages
   - Works with Next.js navigation
@@ -43,20 +47,24 @@
 ## 🚧 REMAINING WORK (Estimated 3-4 hours)
 
 ### Phase 4: Refactor Header Component (HIGH PRIORITY)
+
 **File**: `/src/components/header/index.tsx` (363 lines)
 
 **Current State**: Hardcoded nav items with manual Link components
 **Target State**: Use NAV_CONFIG and NavLink component
 
 **Steps**:
+
 1. Import NAV_CONFIG and NavLink
 2. Replace hardcoded dashboard dropdown with:
    ```tsx
-   {NAV_CONFIG.find(g => g.id === 'dashboard')?.items.map(item => (
-     <NavLink key={item.id} item={item} locale={locale} className={styles.dropdownLink}>
-       {item.icon && <item.icon size={14} />} {t(item.labelKey)}
-     </NavLink>
-   ))}
+   {
+     NAV_CONFIG.find((g) => g.id === "dashboard")?.items.map((item) => (
+       <NavLink key={item.id} item={item} locale={locale} className={styles.dropdownLink}>
+         {item.icon && <item.icon size={14} />} {t(item.labelKey)}
+       </NavLink>
+     ));
+   }
    ```
 3. Repeat for all 6 nav groups
 4. Remove all hardcoded href strings
@@ -65,9 +73,11 @@
 **Estimated Time**: 1-1.5 hours
 
 ### Phase 5: Refactor Mobile Menu (MEDIUM PRIORITY)
+
 **File**: `/src/components/header/MobileMenuOverlay.tsx`
 
 **Steps**:
+
 1. Similar refactor as desktop header
 2. Use NAV_CONFIG for all menu items
 3. Ensure mobile menu closes on navigation
@@ -76,13 +86,16 @@
 **Estimated Time**: 45 minutes
 
 ### Phase 6: Add Missing Translation Keys (MEDIUM PRIORITY)
+
 **Files**: `/messages/*.json` (8 language files)
 
 **Missing Keys** (need to add to all languages):
+
 - None currently - all keys are present in en.json
 - Need to verify other language files have same keys
 
 **Steps**:
+
 1. Check de.json, fr.json, es.json, zh.json, hi.json, ja.json, ko.json
 2. Add any missing keys from en.json
 3. Translate or use English as fallback
@@ -90,42 +103,53 @@
 **Estimated Time**: 30 minutes
 
 ### Phase 7: Ensure Section IDs Exist (HIGH PRIORITY)
+
 **Files**: Multiple page files
 
 **Required Section IDs**:
 
 **Dashboard** (`/dashboard`):
+
 - #executive, #roi, #cost, #uptime, #security
 - #technical, #resources, #deployment, #scaling, #error
 
 **Products** (`/products`):
+
 - #playground ✅ (already exists)
 - #workflows, #guard, #knowledge, #deploy, #nexus
 
 **Pricing** (`/pricing`):
+
 - #developer, #professional, #business, #sovereign
 - #trust, #faq
 
 **Company** (`/company`):
+
 - #about, #leadership, #global-operations, #newsroom
 - #executive-office
 
 **Contact** (`/contact`):
+
 - #hq
 
 **Security** (`/security`):
+
 - #compliance-maps
 
 **Industries** (`/industries`):
+
 - #financial-services, #insurance, #telecom, #healthcare, #logistics
 
 **Use Cases** (`/use-cases`):
+
 - #financial, #healthcare, #government
 
 **Docs** (`/docs`):
+
 - #api, #architecture, #guide
 
 **Steps**:
+
 1. Open each page file
 2. Find or create sections
 3. Add `id` attribute to section elements
@@ -134,11 +158,13 @@
 **Estimated Time**: 1-1.5 hours
 
 ### Phase 8: Update Language Switcher (LOW PRIORITY)
+
 **File**: `/src/components/LanguageSwitcher.tsx`
 
 **Goal**: Preserve current path + hash when switching languages
 
 **Steps**:
+
 1. Get current pathname and hash
 2. When switching language, construct new URL with same path and hash
 3. Navigate to new URL
@@ -146,9 +172,11 @@
 **Estimated Time**: 15 minutes
 
 ### Phase 9: Testing & Validation (CRITICAL)
+
 **Viewports**: 390x844, 768x1024, 1366x768, 1920x1080
 
 **Test Matrix**:
+
 - [ ] All nav items work (section scroll vs page navigation)
 - [ ] Hash scrolling works on page load
 - [ ] Hash scrolling works on route change
@@ -162,7 +190,9 @@
 **Estimated Time**: 45 minutes
 
 ### Phase 10: Commit & Push
+
 **Commit Message**:
+
 ```
 feat(nav+i18n): implement unified navigation with anchor scrolling
 
@@ -195,22 +225,26 @@ Remaining: Header refactor, section IDs, full testing
 ## 🔧 QUICK REFERENCE
 
 ### How to Use NavLink Component
+
 ```tsx
-import { NavLink } from '@/components/navigation/NavLink';
-import { NAV_CONFIG } from '@/config/nav';
+import { NavLink } from "@/components/navigation/NavLink";
+import { NAV_CONFIG } from "@/config/nav";
 
 // In your component:
-const dashboardGroup = NAV_CONFIG.find(g => g.id === 'dashboard');
+const dashboardGroup = NAV_CONFIG.find((g) => g.id === "dashboard");
 
-{dashboardGroup?.items.map(item => (
-  <NavLink key={item.id} item={item} locale={locale} className="your-class">
-    {item.icon && <item.icon size={14} />}
-    {t(item.labelKey)}
-  </NavLink>
-))}
+{
+  dashboardGroup?.items.map((item) => (
+    <NavLink key={item.id} item={item} locale={locale} className="your-class">
+      {item.icon && <item.icon size={14} />}
+      {t(item.labelKey)}
+    </NavLink>
+  ));
+}
 ```
 
 ### How to Add Section IDs
+
 ```tsx
 // In your page component:
 <section id="executive" className="snap-section">
@@ -223,6 +257,7 @@ const dashboardGroup = NAV_CONFIG.find(g => g.id === 'dashboard');
 ```
 
 ### How to Test Anchor Scrolling
+
 1. Navigate to a page (e.g., `/en/dashboard`)
 2. Click a section link (e.g., "Executive Overview")
 3. Verify smooth scroll to section

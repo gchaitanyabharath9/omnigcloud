@@ -3,18 +3,18 @@
 @tailwind utilities;
 
 @layer base {
-  @import './variables.css';
-  @import './typography.css';
-  @import './base-overrides.css';
+  @import "./variables.css";
+  @import "./typography.css";
+  @import "./base-overrides.css";
 }
 
 @layer components {
-  @import './components.css';
-  @import './layout.css';
-  @import './component-overrides.css';
+  @import "./components.css";
+  @import "./layout.css";
+  @import "./component-overrides.css";
 }
 
 @layer utilities {
-  @import './utils.css';
-  @import './animations-utilities.css';
+  @import "./utils.css";
+  @import "./animations-utilities.css";
 }

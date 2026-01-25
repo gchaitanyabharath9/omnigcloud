@@ -11,6 +11,7 @@
 ## 🎯 Phase 1: Google OAuth SSO (Day 1 - 30 min) ⭐ START HERE
 
 ### Why First?
+
 - ✅ Easiest to set up
 - ✅ Most users have Google accounts
 - ✅ Foundation for other OAuth providers
@@ -21,6 +22,7 @@
 #### 1. Create Google Cloud Project (10 min)
 
 **Go to Google Cloud Console:**
+
 1. Visit: https://console.cloud.google.com
 2. Click "Select a project" → "New Project"
 3. Project name: `OmniGCloud`
@@ -122,6 +124,7 @@ Environments: ✅ Production ✅ Preview ✅ Development
 ## 🎯 Phase 2: Microsoft Entra ID SSO (Day 2 - 45 min)
 
 ### Why Second?
+
 - ✅ Enterprise users prefer Microsoft
 - ✅ Works with Office 365 accounts
 - ✅ Good for B2B customers
@@ -131,6 +134,7 @@ Environments: ✅ Production ✅ Preview ✅ Development
 #### 1. Create Azure AD App Registration (15 min)
 
 **Go to Azure Portal:**
+
 1. Visit: https://portal.azure.com
 2. Sign in with Microsoft account
 3. Search for "Azure Active Directory" (or "Microsoft Entra ID")
@@ -139,10 +143,11 @@ Environments: ✅ Production ✅ Preview ✅ Development
 6. Click **"New registration"**
 
 **Register Application:**
+
 - **Name**: `OmniGCloud`
-- **Supported account types**: 
+- **Supported account types**:
   - Select: **Accounts in any organizational directory (Any Azure AD directory - Multitenant) and personal Microsoft accounts**
-- **Redirect URI**: 
+- **Redirect URI**:
   - Platform: **Web**
   - URI: `https://omnigcloud.com/api/auth/callback/azure-ad`
 - Click **"Register"**
@@ -150,6 +155,7 @@ Environments: ✅ Production ✅ Preview ✅ Development
 #### 2. Note Application IDs (2 min)
 
 After registration, you'll see:
+
 - **Application (client) ID**: Copy this (e.g., `12345678-1234-1234-1234-123456789012`)
 - **Directory (tenant) ID**: Copy this (e.g., `87654321-4321-4321-4321-210987654321`)
 
@@ -251,17 +257,19 @@ git push
 #### 3. Add to Key Pages (15 min)
 
 Add social sharing to:
+
 - Research page (`/research`)
 - Blog posts (when you create them)
 - Case studies
 - Whitepaper page
 
 **Example for research page:**
+
 ```typescript
 import SocialShare from '@/components/SocialShare';
 
 // In your page component
-<SocialShare 
+<SocialShare
   url="https://omnigcloud.com/research"
   title="OmniGCloud Research & Innovation"
   description="Explore our technical research on cloud governance"
@@ -307,9 +315,9 @@ import SocialShare from '@/components/SocialShare';
 ```typescript
 // In src/components/Footer.tsx
 const socialLinks = [
-  { name: 'Twitter', href: 'https://twitter.com/omnigcloud', icon: Twitter },
-  { name: 'LinkedIn', href: 'https://linkedin.com/company/omnigcloud', icon: Linkedin },
-  { name: 'GitHub', href: 'https://github.com/gchaitanyabharath9/omnigcloud', icon: Github },
+  { name: "Twitter", href: "https://twitter.com/omnigcloud", icon: Twitter },
+  { name: "LinkedIn", href: "https://linkedin.com/company/omnigcloud", icon: Linkedin },
+  { name: "GitHub", href: "https://github.com/gchaitanyabharath9/omnigcloud", icon: Github },
 ];
 ```
 
@@ -318,7 +326,9 @@ const socialLinks = [
 ## 🎯 Phase 4: Database for User Data (Day 5 - 1 hour)
 
 ### Why Add Database?
+
 Once you have SSO working, you'll want to store:
+
 - User profiles
 - User preferences
 - Session data
@@ -359,26 +369,31 @@ REDIS_TOKEN=your_upstash_token
 ## 📅 **Implementation Timeline**
 
 ### **Day 1 (Today)**: Google OAuth
+
 - ⏱️ 30 minutes
 - ✅ Most important
 - ✅ Immediate value
 
 ### **Day 2 (Tomorrow)**: Microsoft Entra ID
+
 - ⏱️ 45 minutes
 - ✅ Enterprise users
 - ✅ B2B customers
 
 ### **Day 3**: Social Sharing
+
 - ⏱️ 30 minutes
 - ✅ Viral growth
 - ✅ Better engagement
 
 ### **Day 4**: Additional OAuth (GitHub, LinkedIn)
+
 - ⏱️ 1 hour
 - ✅ More options
 - ✅ Developer/professional audience
 
 ### **Day 5**: Database Setup
+
 - ⏱️ 1 hour
 - ✅ Persistent user data
 - ✅ Better UX
@@ -390,6 +405,7 @@ REDIS_TOKEN=your_upstash_token
 ## ✅ **Quick Start Checklist**
 
 ### **Today (30 min)**:
+
 - [ ] Create Google Cloud project
 - [ ] Enable Google+ API
 - [ ] Configure OAuth consent screen
@@ -399,6 +415,7 @@ REDIS_TOKEN=your_upstash_token
 - [ ] Test sign-in
 
 ### **Tomorrow (45 min)**:
+
 - [ ] Create Azure AD app registration
 - [ ] Configure permissions
 - [ ] Add to Vercel
@@ -406,6 +423,7 @@ REDIS_TOKEN=your_upstash_token
 - [ ] Test sign-in
 
 ### **This Week**:
+
 - [ ] Add social sharing buttons
 - [ ] Set up GitHub OAuth
 - [ ] Set up LinkedIn OAuth
@@ -417,10 +435,12 @@ REDIS_TOKEN=your_upstash_token
 ## 🆘 **Need Help?**
 
 **All detailed guides are in:**
+
 - `SSO_SOCIAL_SETUP.md` - Complete OAuth setup
 - `NEXT_STEPS.md` - Overall roadmap
 
 **Common Issues:**
+
 - OAuth redirect mismatch → Check URIs match exactly
 - Credentials not working → Regenerate and update Vercel
 - Build fails → Check environment variables

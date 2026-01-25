@@ -5,10 +5,12 @@ Based on your Google Search Console data, here are the critical issues and immed
 ## ❌ **CRITICAL ISSUES:**
 
 ### 1. **450 Pages Not Indexed (66% of your site!)**
+
 **Impact:** Most of your content is invisible to Google  
 **Priority:** 🔴 URGENT
 
 **Immediate Actions:**
+
 ```bash
 # 1. Build and deploy the new sitemap
 npm run build
@@ -21,6 +23,7 @@ npm run build
 ```
 
 **Manual Actions Required:**
+
 - [ ] Go to Google Search Console
 - [ ] Click "URL Inspection" in left sidebar
 - [ ] Enter each research paper URL
@@ -36,15 +39,18 @@ npm run build
 ---
 
 ### 2. **Low CTR (1.4% - Should be 3-5%)**
+
 **Impact:** People see your site but don't click  
 **Priority:** 🟡 HIGH
 
 **What I Created:**
+
 - ✅ `src/config/seo.ts` - Optimized titles & descriptions for all pages
 - ✅ Compelling, keyword-rich meta descriptions
 - ✅ Structured data templates for research papers
 
 **Next Steps:**
+
 - [ ] Import and use the SEO config in your page components
 - [ ] Add structured data (Schema.org) to research paper pages
 - [ ] Create compelling Open Graph images for social sharing
@@ -52,10 +58,12 @@ npm run build
 ---
 
 ### 3. **Poor Rankings (Position 28.4 - Page 3)**
+
 **Impact:** Nobody sees you on page 3  
 **Priority:** 🟡 HIGH
 
 **Immediate Wins:**
+
 1. **Internal Linking:**
    - Add "Related Research" sections to each paper
    - Link A1→A2→A3→A4→A5→A6 in a logical flow
@@ -77,10 +85,12 @@ npm run build
 ---
 
 ### 4. **Limited Geographic Reach (100% Netherlands)**
+
 **Impact:** Missing global audience  
 **Priority:** 🟢 MEDIUM
 
 **Actions:**
+
 - [ ] Share content on international platforms
 - [ ] Engage with global tech communities
 - [ ] Consider multi-language support (hreflang tags)
@@ -91,6 +101,7 @@ npm run build
 ## 📋 **THIS WEEK'S CHECKLIST:**
 
 ### Day 1 (Today):
+
 - [x] Create sitemap.ts (DONE)
 - [x] Create SEO config (DONE)
 - [ ] Deploy to production
@@ -98,21 +109,25 @@ npm run build
 - [ ] Request indexing for top 10 pages
 
 ### Day 2:
+
 - [ ] Add structured data to research papers
 - [ ] Optimize meta descriptions on all pages
 - [ ] Create Open Graph images
 
 ### Day 3:
+
 - [ ] Add internal linking between papers
 - [ ] Create "Related Research" sections
 - [ ] Add FAQ sections to papers
 
 ### Day 4:
+
 - [ ] Submit papers to ArXiv
 - [ ] Create ResearchGate profile
 - [ ] Share on LinkedIn
 
 ### Day 5:
+
 - [ ] Monitor Google Search Console
 - [ ] Check indexing progress
 - [ ] Analyze new search queries
@@ -121,13 +136,13 @@ npm run build
 
 ## 📊 **SUCCESS METRICS (Track Weekly):**
 
-| Metric | Current | Target (1 Month) | Target (3 Months) |
-|--------|---------|------------------|-------------------|
-| **Indexed Pages** | 228 | 500+ | 650+ |
-| **Total Clicks** | 1 | 50+ | 200+ |
-| **CTR** | 1.4% | 3% | 5% |
-| **Avg Position** | 28.4 | <15 | <10 |
-| **Countries** | 1 | 5+ | 10+ |
+| Metric            | Current | Target (1 Month) | Target (3 Months) |
+| ----------------- | ------- | ---------------- | ----------------- |
+| **Indexed Pages** | 228     | 500+             | 650+              |
+| **Total Clicks**  | 1       | 50+              | 200+              |
+| **CTR**           | 1.4%    | 3%               | 5%                |
+| **Avg Position**  | 28.4    | <15              | <10               |
+| **Countries**     | 1       | 5+               | 10+               |
 
 ---
 
@@ -164,6 +179,7 @@ const structuredData = seoConfig.structuredData.scholarlyArticle({
 ## 🎯 **QUICK WINS (Do Right Now):**
 
 1. **Deploy Sitemap:**
+
    ```bash
    npm run build
    vercel --prod
@@ -189,6 +205,7 @@ const structuredData = seoConfig.structuredData.scholarlyArticle({
 ## 📞 **NEED HELP?**
 
 If you encounter issues:
+
 1. Check Google Search Console for specific errors
 2. Use Google's Rich Results Test for structured data
 3. Monitor indexing progress daily
@@ -207,6 +224,7 @@ If you encounter issues:
 ---
 
 **Files Created:**
+
 - ✅ `src/app/sitemap.ts` - Dynamic sitemap generator
 - ✅ `src/config/seo.ts` - SEO metadata configuration
 - ✅ `.agent/SEO-IMPROVEMENT-PLAN.md` - Detailed action plan

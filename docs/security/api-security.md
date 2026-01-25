@@ -10,15 +10,16 @@ All API responses follow this structure:
 
 ```typescript
 interface ApiResponse<T = any> {
-    requestId: string;        // Unique request identifier for tracking
-    timestamp: string;        // ISO 8601 timestamp
-    status: 'ok' | 'error';  // Response status
-    data?: T;                // Success data (only present when status='ok')
-    error?: {                // Error details (only present when status='error')
-        code: string;        // Machine-readable error code
-        message: string;     // Human-readable error message
-        retryable: boolean;  // Whether the client should retry
-    };
+  requestId: string; // Unique request identifier for tracking
+  timestamp: string; // ISO 8601 timestamp
+  status: "ok" | "error"; // Response status
+  data?: T; // Success data (only present when status='ok')
+  error?: {
+    // Error details (only present when status='error')
+    code: string; // Machine-readable error code
+    message: string; // Human-readable error message
+    retryable: boolean; // Whether the client should retry
+  };
 }
 ```
 
@@ -26,43 +27,45 @@ interface ApiResponse<T = any> {
 
 ```json
 {
-    "requestId": "550e8400-e29b-41d4-a716-446655440000",
-    "timestamp": "2025-12-30T12:00:00.000Z",
-    "status": "ok",
-    "data": {
-        "message": "Contact form submitted successfully.",
-        "submissionId": "lead_abc123"
-    }
+  "requestId": "550e8400-e29b-41d4-a716-446655440000",
+  "timestamp": "2025-12-30T12:00:00.000Z",
+  "status": "ok",
+  "data": {
+    "message": "Contact form submitted successfully.",
+    "submissionId": "lead_abc123"
+  }
 }
 ```
 
 ### Error Response Examples
 
 **Validation Error (422)**:
+
 ```json
 {
-    "requestId": "550e8400-e29b-41d4-a716-446655440001",
-    "timestamp": "2025-12-30T12:00:00.000Z",
-    "status": "error",
-    "error": {
-        "code": "VALIDATION_ERROR",
-        "message": "Invalid email: Invalid email address",
-        "retryable": false
-    }
+  "requestId": "550e8400-e29b-41d4-a716-446655440001",
+  "timestamp": "2025-12-30T12:00:00.000Z",
+  "status": "error",
+  "error": {
+    "code": "VALIDATION_ERROR",
+    "message": "Invalid email: Invalid email address",
+    "retryable": false
+  }
 }
 ```
 
 **Internal Error (500)**:
+
 ```json
 {
-    "requestId": "550e8400-e29b-41d4-a716-446655440002",
-    "timestamp": "2025-12-30T12:00:00.000Z",
-    "status": "error",
-    "error": {
-        "code": "INTERNAL_ERROR",
-        "message": "An unexpected error occurred. Please try again later.",
-        "retryable": true
-    }
+  "requestId": "550e8400-e29b-41d4-a716-446655440002",
+  "timestamp": "2025-12-30T12:00:00.000Z",
+  "status": "error",
+  "error": {
+    "code": "INTERNAL_ERROR",
+    "message": "An unexpected error occurred. Please try again later.",
+    "retryable": true
+  }
 }
 ```
 
@@ -73,6 +76,7 @@ interface ApiResponse<T = any> {
 **Purpose**: Submit contact form
 
 **Validation Schema**:
+
 ```typescript
 {
     firstName: string (1-100 chars),
@@ -84,6 +88,7 @@ interface ApiResponse<T = any> {
 ```
 
 **Security Features**:
+
 - ✅ Zod input validation
 - ✅ Honeypot field for bot detection
 - ✅ Max length validation to prevent DoS
@@ -91,6 +96,7 @@ interface ApiResponse<T = any> {
 - ✅ Request ID tracking
 
 **Error Codes**:
+
 - `VALIDATION_ERROR` (422): Invalid input
 - `INTERNAL_ERROR` (500): Unexpected server error
 
@@ -101,6 +107,7 @@ interface ApiResponse<T = any> {
 **Purpose**: Retrieve submitted leads (admin only)
 
 **Query Parameters**:
+
 ```typescript
 {
     limit?: number (max 100, default 50),
@@ -109,6 +116,7 @@ interface ApiResponse<T = any> {
 ```
 
 **Security Features**:
+
 - ✅ Query parameter validation
 - ✅ Pagination limits to prevent resource exhaustion
 - ✅ Authentication placeholder (ready for auth)
@@ -116,6 +124,7 @@ interface ApiResponse<T = any> {
 - ✅ Request ID tracking
 
 **Error Codes**:
+
 - `VALIDATION_ERROR` (422): Invalid query parameters
 - `UNAUTHORIZED` (401): Not authenticated (when auth enabled)
 - `SERVICE_UNAVAILABLE` (503): Database not configured
@@ -128,6 +137,7 @@ interface ApiResponse<T = any> {
 **Purpose**: System health check
 
 **Response Data**:
+
 ```typescript
 {
     status: 'ok' | 'degraded',
@@ -150,6 +160,7 @@ interface ApiResponse<T = any> {
 ```
 
 **Security Features**:
+
 - ✅ No sensitive information exposed
 - ✅ Safe dependency checks
 - ✅ Request ID tracking
@@ -161,6 +172,7 @@ interface ApiResponse<T = any> {
 **Purpose**: Application metrics (monitoring)
 
 **Security Features**:
+
 - ✅ Standardized response envelope
 - ✅ Safe error handling
 - ✅ Request ID tracking
@@ -172,6 +184,7 @@ interface ApiResponse<T = any> {
 **Purpose**: Billing operations
 
 **Security Features**:
+
 - ✅ Standardized response envelope
 - ✅ Safe error handling
 - ✅ Request ID tracking
@@ -185,7 +198,9 @@ interface ApiResponse<T = any> {
 Located in `src/lib/api-utils.ts`:
 
 #### `withApiHarden(request, handler)`
+
 Wraps API handlers with:
+
 - Rate limiting
 - Request ID generation
 - Error handling
@@ -193,15 +208,19 @@ Wraps API handlers with:
 - Logging
 
 #### `createSuccessResponse(requestId, data, status?)`
+
 Creates standardized success response
 
 #### `createErrorResponse(requestId, code, message, retryable, status?)`
+
 Creates standardized error response
 
 #### `handleZodError(error, requestId)`
+
 Converts Zod validation errors to standardized format
 
 #### `handleSafeError(error, requestId)`
+
 Safely handles unknown errors without exposing internals
 
 ### Safe Logging
@@ -209,6 +228,7 @@ Safely handles unknown errors without exposing internals
 All logging follows these principles:
 
 **✅ DO Log**:
+
 - Request IDs
 - HTTP methods and routes
 - Status codes
@@ -217,6 +237,7 @@ All logging follows these principles:
 - Timestamps
 
 **❌ DON'T Log**:
+
 - Passwords
 - API keys
 - Tokens
@@ -228,57 +249,56 @@ All logging follows these principles:
 ### Example Usage
 
 ```typescript
-import { z } from 'zod';
-import { NextRequest } from 'next/server';
-import { 
-    withApiHarden, 
-    createSuccessResponse, 
-    handleZodError, 
-    handleSafeError 
-} from '@/lib/api-utils';
+import { z } from "zod";
+import { NextRequest } from "next/server";
+import {
+  withApiHarden,
+  createSuccessResponse,
+  handleZodError,
+  handleSafeError,
+} from "@/lib/api-utils";
 
 const InputSchema = z.object({
-    name: z.string().min(1).max(100),
-    email: z.string().email().max(255),
+  name: z.string().min(1).max(100),
+  email: z.string().email().max(255),
 });
 
 export async function POST(request: NextRequest) {
-    return withApiHarden(request, async (req, { requestId }) => {
-        try {
-            const body = await req.json();
+  return withApiHarden(request, async (req, { requestId }) => {
+    try {
+      const body = await req.json();
 
-            // Validate input
-            const validation = InputSchema.safeParse(body);
-            if (!validation.success) {
-                return handleZodError(validation.error, requestId);
-            }
+      // Validate input
+      const validation = InputSchema.safeParse(body);
+      if (!validation.success) {
+        return handleZodError(validation.error, requestId);
+      }
 
-            // Process request
-            const result = await processData(validation.data);
+      // Process request
+      const result = await processData(validation.data);
 
-            // Return success
-            return createSuccessResponse(requestId, result);
-
-        } catch (error) {
-            // Safe error handling
-            return handleSafeError(error, requestId);
-        }
-    });
+      // Return success
+      return createSuccessResponse(requestId, result);
+    } catch (error) {
+      // Safe error handling
+      return handleSafeError(error, requestId);
+    }
+  });
 }
 ```
 
 ## Error Code Reference
 
-| Code | HTTP Status | Description | Retryable |
-|------|-------------|-------------|-----------|
-| `VALIDATION_ERROR` | 422 | Invalid input data | No |
-| `UNAUTHORIZED` | 401 | Authentication required | No |
-| `FORBIDDEN` | 403 | Insufficient permissions | No |
-| `NOT_FOUND` | 404 | Resource not found | No |
-| `METHOD_NOT_ALLOWED` | 405 | HTTP method not allowed | No |
-| `TOO_MANY_REQUESTS` | 429 | Rate limit exceeded | Yes |
-| `SERVICE_UNAVAILABLE` | 503 | External service unavailable | Yes |
-| `INTERNAL_ERROR` | 500 | Unexpected server error | Yes |
+| Code                  | HTTP Status | Description                  | Retryable |
+| --------------------- | ----------- | ---------------------------- | --------- |
+| `VALIDATION_ERROR`    | 422         | Invalid input data           | No        |
+| `UNAUTHORIZED`        | 401         | Authentication required      | No        |
+| `FORBIDDEN`           | 403         | Insufficient permissions     | No        |
+| `NOT_FOUND`           | 404         | Resource not found           | No        |
+| `METHOD_NOT_ALLOWED`  | 405         | HTTP method not allowed      | No        |
+| `TOO_MANY_REQUESTS`   | 429         | Rate limit exceeded          | Yes       |
+| `SERVICE_UNAVAILABLE` | 503         | External service unavailable | Yes       |
+| `INTERNAL_ERROR`      | 500         | Unexpected server error      | Yes       |
 
 ## Rate Limiting
 
@@ -298,6 +318,7 @@ Every request receives a unique `requestId`:
 - Used for log correlation
 
 **Example**:
+
 ```bash
 curl -H "X-Request-Id: my-custom-id" https://api.example.com/contact
 ```
@@ -305,11 +326,13 @@ curl -H "X-Request-Id: my-custom-id" https://api.example.com/contact
 ## Production vs Development
 
 ### Development Mode
+
 - Full error details logged to console
 - Stack traces visible in logs
 - Detailed validation errors
 
 ### Production Mode
+
 - Generic error messages to clients
 - Safe logging (no PII, no stack traces)
 - Error details logged internally only
@@ -317,6 +340,7 @@ curl -H "X-Request-Id: my-custom-id" https://api.example.com/contact
 ## Testing
 
 ### Valid Request
+
 ```bash
 curl -X POST https://api.example.com/contact \
   -H "Content-Type: application/json" \
@@ -329,6 +353,7 @@ curl -X POST https://api.example.com/contact \
 ```
 
 ### Invalid Request (Validation Error)
+
 ```bash
 curl -X POST https://api.example.com/contact \
   -H "Content-Type: application/json" \
@@ -341,16 +366,17 @@ curl -X POST https://api.example.com/contact \
 ```
 
 Expected Response:
+
 ```json
 {
-    "requestId": "...",
-    "timestamp": "...",
-    "status": "error",
-    "error": {
-        "code": "VALIDATION_ERROR",
-        "message": "Invalid lastName: String must contain at least 1 character(s)",
-        "retryable": false
-    }
+  "requestId": "...",
+  "timestamp": "...",
+  "status": "error",
+  "error": {
+    "code": "VALIDATION_ERROR",
+    "message": "Invalid lastName: String must contain at least 1 character(s)",
+    "retryable": false
+  }
 }
 ```
 
@@ -398,6 +424,7 @@ This implementation helps meet:
 ## Changelog
 
 ### 2025-12-30
+
 - ✅ Implemented standardized API response envelope
 - ✅ Added Zod validation to all routes
 - ✅ Implemented safe error handling

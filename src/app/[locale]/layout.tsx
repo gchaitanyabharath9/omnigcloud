@@ -1,5 +1,5 @@
-import ClientIntlProvider from '@/components/i18n/ClientIntlProvider';
-import { getMessages } from 'next-intl/server';
+import ClientIntlProvider from "@/components/i18n/ClientIntlProvider";
+import { getMessages } from "next-intl/server";
 import type { Metadata, Viewport } from "next";
 import { Inter, Plus_Jakarta_Sans } from "next/font/google"; // Premium fonts
 import "../../styles/globals.css";
@@ -16,68 +16,74 @@ import { HashScrollHandler } from "@/components/navigation/HashScrollHandler";
 import { ObservabilityProvider } from "@/components/ObservabilityProvider";
 import UtmTracker from "@/components/analytics/UtmTracker";
 
-import { config } from '@/config';
-
+import { config } from "@/config";
 
 const inter = Inter({
   variable: "--font-inter",
   subsets: ["latin"],
-  display: 'swap',
+  display: "swap",
 });
 
 const jakarta = Plus_Jakarta_Sans({
   variable: "--font-jakarta",
   subsets: ["latin"],
   weight: ["400", "500", "600", "700", "800"],
-  display: 'swap',
+  display: "swap",
 });
 
 const siteUrl = config.site.url;
 
-import { locales } from '@/navigation';
-import { generateSEOMetadata, SEO_KEYWORDS } from '@/utils/seo';
+import { locales } from "@/navigation";
+import { generateSEOMetadata, SEO_KEYWORDS } from "@/utils/seo";
 
-export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
   const { locale } = await params;
   const messages = await getMessages({ locale });
   const t = (key: string) => {
-    const parts = key.split('.');
+    const parts = key.split(".");
     let obj: any = messages;
     for (const part of parts) obj = obj?.[part];
     return obj || key;
   };
 
-  const headersList = await import("next/headers").then(mod => mod.headers());
+  const headersList = await import("next/headers").then((mod) => mod.headers());
   const pathname = headersList.get("x-current-path") || `/${locale}`;
 
-  return generateSEOMetadata({
-    title: t('Metadata.default.title'),
-    description: t('Metadata.default.description'),
-    keywords: [
-      "Cloud Modernization",
-      "Enterprise AI Architecture",
-      "RedHat OpenShift Modernization",
-      "Cloud Agnostic Discovery",
-      "Azure Cloud Migration",
-      "Cloud Cost Optimization",
-      "AECP Engine",
-      "Sovereign Cloud Governance"
-    ],
-    canonical: `${config.site.url}${pathname}`,
-    ogType: 'website',
-  }, locale);
+  return generateSEOMetadata(
+    {
+      title: t("Metadata.default.title"),
+      description: t("Metadata.default.description"),
+      keywords: [
+        "Cloud Modernization",
+        "Enterprise AI Architecture",
+        "RedHat OpenShift Modernization",
+        "Cloud Agnostic Discovery",
+        "Azure Cloud Migration",
+        "Cloud Cost Optimization",
+        "AECP Engine",
+        "Sovereign Cloud Governance",
+      ],
+      canonical: `${config.site.url}${pathname}`,
+      ogType: "website",
+    },
+    locale
+  );
 }
 
 export function generateViewport(): Viewport {
   return {
-    width: 'device-width',
+    width: "device-width",
     initialScale: 1,
     maximumScale: 5,
     userScalable: true,
-    viewportFit: 'cover',
+    viewportFit: "cover",
     themeColor: [
-      { media: '(prefers-color-scheme: light)', color: 'white' },
-      { media: '(prefers-color-scheme: dark)', color: 'black' },
+      { media: "(prefers-color-scheme: light)", color: "white" },
+      { media: "(prefers-color-scheme: dark)", color: "black" },
     ],
   };
 }
@@ -90,7 +96,7 @@ export function generateStaticParams() {
 
 export default async function RootLayout({
   children,
-  params
+  params,
 }: {
   children: React.ReactNode;
   params: Promise<{ locale: string }>;
@@ -117,10 +123,7 @@ export default async function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <ClientIntlProvider
-            messages={messages}
-            locale={locale}
-          >
+          <ClientIntlProvider messages={messages} locale={locale}>
             <ObservabilityProvider locale={locale}>
               <UtmTracker />
               <HashScrollHandler />

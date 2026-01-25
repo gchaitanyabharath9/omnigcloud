@@ -1,4 +1,5 @@
 # i18n-Aware Responsive Design & Cross-Browser QA Matrix
+
 ## OmniGCloud Marketing Site - 7 Locales
 
 **Date**: December 30, 2025  
@@ -27,26 +28,29 @@ This document provides a comprehensive QA matrix for responsive design, cross-br
 
 ### 1.1 Locale Characteristics
 
-| Locale | Language | Script | Avg String Length | Layout Challenges |
-|--------|----------|--------|-------------------|-------------------|
-| **en** | English | Latin | Baseline (1.0x) | None |
-| **es** | Spanish | Latin | Longer (1.15x) | Longer strings |
-| **fr** | French | Latin | Longer (1.25x) | Longest strings, accents |
-| **nl** | Dutch | Latin | Longer (1.20x) | Compound words |
-| **hi** | Hindi | Devanagari | Similar (1.05x) | Different script, ligatures |
-| **zh** | Chinese | CJK | Shorter (0.8x) | No word breaks, vertical rhythm |
-| **ja** | Japanese | CJK + Kana | Shorter (0.85x) | Mixed scripts, no spaces |
+| Locale | Language | Script     | Avg String Length | Layout Challenges               |
+| ------ | -------- | ---------- | ----------------- | ------------------------------- |
+| **en** | English  | Latin      | Baseline (1.0x)   | None                            |
+| **es** | Spanish  | Latin      | Longer (1.15x)    | Longer strings                  |
+| **fr** | French   | Latin      | Longer (1.25x)    | Longest strings, accents        |
+| **nl** | Dutch    | Latin      | Longer (1.20x)    | Compound words                  |
+| **hi** | Hindi    | Devanagari | Similar (1.05x)   | Different script, ligatures     |
+| **zh** | Chinese  | CJK        | Shorter (0.8x)    | No word breaks, vertical rhythm |
+| **ja** | Japanese | CJK + Kana | Shorter (0.85x)   | Mixed scripts, no spaces        |
 
 ### 1.2 i18n Layout Considerations
 
 #### French (fr) - Longest Strings ⚠️ HIGH PRIORITY
+
 **Challenges**:
+
 - Strings typically 20-30% longer than English
 - Button text may overflow
 - Navigation items may wrap
 - Headings may break awkwardly
 
 **Mitigation**:
+
 ```tsx
 // Use flexible containers
 <button className="px-4 py-2 min-w-[120px] whitespace-normal">
@@ -58,12 +62,15 @@ This document provides a comprehensive QA matrix for responsive design, cross-br
 ```
 
 #### Dutch (nl) - Compound Words ⚠️ MEDIUM PRIORITY
+
 **Challenges**:
+
 - Long compound words (e.g., "gebruikersovereenkomst")
 - May not break naturally
 - Can cause horizontal overflow
 
 **Mitigation**:
+
 ```css
 /* Add to globals.css */
 [lang="nl"] {
@@ -73,12 +80,15 @@ This document provides a comprehensive QA matrix for responsive design, cross-br
 ```
 
 #### Hindi (hi) - Devanagari Script ⚠️ MEDIUM PRIORITY
+
 **Challenges**:
+
 - Different script requires proper font support
 - Ligatures and conjuncts
 - Vertical spacing may differ
 
 **Mitigation**:
+
 ```tsx
 // Ensure font stack supports Devanagari
 font-family: 'Inter', 'Noto Sans Devanagari', sans-serif;
@@ -90,13 +100,16 @@ font-family: 'Inter', 'Noto Sans Devanagari', sans-serif;
 ```
 
 #### Chinese (zh) - CJK Typography ⚠️ HIGH PRIORITY
+
 **Challenges**:
+
 - No word breaks (each character is a word)
 - Different vertical rhythm
 - May need different line-height
 - Punctuation spacing
 
 **Mitigation**:
+
 ```css
 /* Add to globals.css */
 [lang="zh"] {
@@ -107,12 +120,15 @@ font-family: 'Inter', 'Noto Sans Devanagari', sans-serif;
 ```
 
 #### Japanese (ja) - Mixed Scripts ⚠️ HIGH PRIORITY
+
 **Challenges**:
+
 - Mix of Kanji, Hiragana, Katakana
 - No spaces between words
 - Different punctuation
 
 **Mitigation**:
+
 ```css
 /* Add to globals.css */
 [lang="ja"] {
@@ -129,6 +145,7 @@ font-family: 'Inter', 'Noto Sans Devanagari', sans-serif;
 ### 2.1 Breakpoint System
 
 **Tailwind Breakpoints** (configured):
+
 ```typescript
 sm: 640px   // Small devices
 md: 768px   // Medium devices (tablets)
@@ -138,6 +155,7 @@ xl: 1280px  // Extra large devices
 ```
 
 **Layout Rules**:
+
 - **Mobile (< 640px)**: 1 column, full width
 - **Tablet (640px - 1024px)**: 2 columns where appropriate
 - **Desktop (> 1024px)**: Dense 2×2 grids
@@ -149,20 +167,19 @@ xl: 1280px  // Extra large devices
 **Component**: CTA Buttons
 
 **English (Baseline)**:
+
 ```tsx
-<button className="px-6 py-3">
-  Get Started
-</button>
+<button className="px-6 py-3">Get Started</button>
 ```
 
 **French (Longer)**:
+
 ```tsx
-<button className="px-6 py-3">
-  Commencer maintenant
-</button>
+<button className="px-6 py-3">Commencer maintenant</button>
 ```
 
 **Test Results**:
+
 - ✅ English: Fits comfortably
 - ✅ French: Fits with padding
 - ✅ Spanish: Fits with padding
@@ -172,10 +189,11 @@ xl: 1280px  // Extra large devices
 - ✅ Japanese: Shorter, fits easily
 
 **Fix Applied**:
+
 ```tsx
 // Use flexible width with minimum
 <button className="px-6 py-3 min-w-[140px] whitespace-normal text-center">
-  {t('cta.getStarted')}
+  {t("cta.getStarted")}
 </button>
 ```
 
@@ -184,6 +202,7 @@ xl: 1280px  // Extra large devices
 **Component**: Header Navigation
 
 **English (Baseline)**:
+
 ```tsx
 <nav>
   <a href="/products">Products</a>
@@ -193,6 +212,7 @@ xl: 1280px  // Extra large devices
 ```
 
 **French (Longer)**:
+
 ```tsx
 <nav>
   <a href="/products">Produits</a>
@@ -202,14 +222,16 @@ xl: 1280px  // Extra large devices
 ```
 
 **Test Results**:
+
 - ✅ All locales: Navigation items fit
 - ✅ Mobile: Items stack correctly
 - ✅ No overflow on any locale
 
 **Current Implementation** (already correct):
+
 ```tsx
 <nav className="flex flex-wrap gap-4 md:gap-6">
-  {menuItems.map(item => (
+  {menuItems.map((item) => (
     <a key={item.href} className="hover:text-primary">
       {t(item.label)}
     </a>
@@ -222,21 +244,25 @@ xl: 1280px  // Extra large devices
 **Component**: Page Headings
 
 **English**:
+
 ```
 "Transform Your Cloud Infrastructure"
 ```
 
 **French**:
+
 ```
 "Transformez votre infrastructure cloud"
 ```
 
 **Dutch**:
+
 ```
 "Transformeer uw cloudinfrastructuur"
 ```
 
 **Test Results**:
+
 - ✅ English: 1-2 lines on mobile
 - ✅ French: 2-3 lines on mobile (acceptable)
 - ✅ Dutch: 2 lines on mobile (acceptable)
@@ -245,10 +271,9 @@ xl: 1280px  // Extra large devices
 - ✅ Japanese: 1-2 lines on mobile
 
 **Current Implementation** (already correct):
+
 ```tsx
-<h1 className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight">
-  {t('hero.title')}
-</h1>
+<h1 className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight">{t("hero.title")}</h1>
 ```
 
 ---
@@ -266,16 +291,17 @@ xl: 1280px  // Extra large devices
 #### 3.2.1 Home Page (`/[locale]`)
 
 | Locale | 360px | 390px | 768px | 1024px | 1366px | 1440px | 1920px | Status |
-|--------|-------|-------|-------|--------|--------|--------|--------|--------|
-| **en** | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | PASS |
-| **es** | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | PASS |
-| **fr** | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | PASS |
-| **nl** | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | PASS |
-| **hi** | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | PASS |
-| **zh** | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | PASS |
-| **ja** | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | PASS |
+| ------ | ----- | ----- | ----- | ------ | ------ | ------ | ------ | ------ |
+| **en** | ✅    | ✅    | ✅    | ✅     | ✅     | ✅     | ✅     | PASS   |
+| **es** | ✅    | ✅    | ✅    | ✅     | ✅     | ✅     | ✅     | PASS   |
+| **fr** | ✅    | ✅    | ✅    | ✅     | ✅     | ✅     | ✅     | PASS   |
+| **nl** | ✅    | ✅    | ✅    | ✅     | ✅     | ✅     | ✅     | PASS   |
+| **hi** | ✅    | ✅    | ✅    | ✅     | ✅     | ✅     | ✅     | PASS   |
+| **zh** | ✅    | ✅    | ✅    | ✅     | ✅     | ✅     | ✅     | PASS   |
+| **ja** | ✅    | ✅    | ✅    | ✅     | ✅     | ✅     | ✅     | PASS   |
 
 **Checklist per Locale**:
+
 - [x] No horizontal scroll
 - [x] No content clipping
 - [x] Hero section renders correctly
@@ -290,16 +316,17 @@ xl: 1280px  // Extra large devices
 #### 3.2.2 Products Page (`/[locale]/products`)
 
 | Locale | 360px | 390px | 768px | 1024px | 1366px | 1440px | 1920px | Status |
-|--------|-------|-------|-------|--------|--------|--------|--------|--------|
-| **en** | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | PASS |
-| **es** | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | PASS |
-| **fr** | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | PASS |
-| **nl** | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | PASS |
-| **hi** | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | PASS |
-| **zh** | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | PASS |
-| **ja** | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | PASS |
+| ------ | ----- | ----- | ----- | ------ | ------ | ------ | ------ | ------ |
+| **en** | ✅    | ✅    | ✅    | ✅     | ✅     | ✅     | ✅     | PASS   |
+| **es** | ✅    | ✅    | ✅    | ✅     | ✅     | ✅     | ✅     | PASS   |
+| **fr** | ✅    | ✅    | ✅    | ✅     | ✅     | ✅     | ✅     | PASS   |
+| **nl** | ✅    | ✅    | ✅    | ✅     | ✅     | ✅     | ✅     | PASS   |
+| **hi** | ✅    | ✅    | ✅    | ✅     | ✅     | ✅     | ✅     | PASS   |
+| **zh** | ✅    | ✅    | ✅    | ✅     | ✅     | ✅     | ✅     | PASS   |
+| **ja** | ✅    | ✅    | ✅    | ✅     | ✅     | ✅     | ✅     | PASS   |
 
 **Checklist per Locale**:
+
 - [x] Product cards stack correctly (mobile)
 - [x] Product cards: 2 columns (tablet+)
 - [x] Product names don't overflow
@@ -312,16 +339,17 @@ xl: 1280px  // Extra large devices
 #### 3.2.3 Industries Page (`/[locale]/industries`)
 
 | Locale | 360px | 390px | 768px | 1024px | 1366px | 1440px | 1920px | Status |
-|--------|-------|-------|-------|--------|--------|--------|--------|--------|
-| **en** | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | PASS |
-| **es** | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | PASS |
-| **fr** | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | PASS |
-| **nl** | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | PASS |
-| **hi** | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | PASS |
-| **zh** | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | PASS |
-| **ja** | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | PASS |
+| ------ | ----- | ----- | ----- | ------ | ------ | ------ | ------ | ------ |
+| **en** | ✅    | ✅    | ✅    | ✅     | ✅     | ✅     | ✅     | PASS   |
+| **es** | ✅    | ✅    | ✅    | ✅     | ✅     | ✅     | ✅     | PASS   |
+| **fr** | ✅    | ✅    | ✅    | ✅     | ✅     | ✅     | ✅     | PASS   |
+| **nl** | ✅    | ✅    | ✅    | ✅     | ✅     | ✅     | ✅     | PASS   |
+| **hi** | ✅    | ✅    | ✅    | ✅     | ✅     | ✅     | ✅     | PASS   |
+| **zh** | ✅    | ✅    | ✅    | ✅     | ✅     | ✅     | ✅     | PASS   |
+| **ja** | ✅    | ✅    | ✅    | ✅     | ✅     | ✅     | ✅     | PASS   |
 
 **Checklist per Locale**:
+
 - [x] Industry sections render correctly
 - [x] 2×2 grid on desktop
 - [x] Content wraps appropriately
@@ -332,16 +360,17 @@ xl: 1280px  // Extra large devices
 #### 3.2.4 Use Cases Page (`/[locale]/use-cases`)
 
 | Locale | 360px | 390px | 768px | 1024px | 1366px | 1440px | 1920px | Status |
-|--------|-------|-------|-------|--------|--------|--------|--------|--------|
-| **en** | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | PASS |
-| **es** | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | PASS |
-| **fr** | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | PASS |
-| **nl** | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | PASS |
-| **hi** | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | PASS |
-| **zh** | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | PASS |
-| **ja** | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | PASS |
+| ------ | ----- | ----- | ----- | ------ | ------ | ------ | ------ | ------ |
+| **en** | ✅    | ✅    | ✅    | ✅     | ✅     | ✅     | ✅     | PASS   |
+| **es** | ✅    | ✅    | ✅    | ✅     | ✅     | ✅     | ✅     | PASS   |
+| **fr** | ✅    | ✅    | ✅    | ✅     | ✅     | ✅     | ✅     | PASS   |
+| **nl** | ✅    | ✅    | ✅    | ✅     | ✅     | ✅     | ✅     | PASS   |
+| **hi** | ✅    | ✅    | ✅    | ✅     | ✅     | ✅     | ✅     | PASS   |
+| **zh** | ✅    | ✅    | ✅    | ✅     | ✅     | ✅     | ✅     | PASS   |
+| **ja** | ✅    | ✅    | ✅    | ✅     | ✅     | ✅     | ✅     | PASS   |
 
 **Checklist per Locale**:
+
 - [x] Use case sections render
 - [x] Content layout correct
 - [x] No overflow
@@ -350,16 +379,17 @@ xl: 1280px  // Extra large devices
 #### 3.2.5 Pricing Page (`/[locale]/pricing`)
 
 | Locale | 360px | 390px | 768px | 1024px | 1366px | 1440px | 1920px | Status |
-|--------|-------|-------|-------|--------|--------|--------|--------|--------|
-| **en** | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | PASS |
-| **es** | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | PASS |
-| **fr** | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | PASS |
-| **nl** | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | PASS |
-| **hi** | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | PASS |
-| **zh** | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | PASS |
-| **ja** | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | PASS |
+| ------ | ----- | ----- | ----- | ------ | ------ | ------ | ------ | ------ |
+| **en** | ✅    | ✅    | ✅    | ✅     | ✅     | ✅     | ✅     | PASS   |
+| **es** | ✅    | ✅    | ✅    | ✅     | ✅     | ✅     | ✅     | PASS   |
+| **fr** | ✅    | ✅    | ✅    | ✅     | ✅     | ✅     | ✅     | PASS   |
+| **nl** | ✅    | ✅    | ✅    | ✅     | ✅     | ✅     | ✅     | PASS   |
+| **hi** | ✅    | ✅    | ✅    | ✅     | ✅     | ✅     | ✅     | PASS   |
+| **zh** | ✅    | ✅    | ✅    | ✅     | ✅     | ✅     | ✅     | PASS   |
+| **ja** | ✅    | ✅    | ✅    | ✅     | ✅     | ✅     | ✅     | PASS   |
 
 **Checklist per Locale**:
+
 - [x] Pricing tiers stack (mobile)
 - [x] Pricing tiers: 2-3 columns (desktop)
 - [x] Feature lists readable
@@ -370,16 +400,17 @@ xl: 1280px  // Extra large devices
 #### 3.2.6 Company Page (`/[locale]/company`)
 
 | Locale | 360px | 390px | 768px | 1024px | 1366px | 1440px | 1920px | Status |
-|--------|-------|-------|-------|--------|--------|--------|--------|--------|
-| **en** | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | PASS |
-| **es** | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | PASS |
-| **fr** | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | PASS |
-| **nl** | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | PASS |
-| **hi** | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | PASS |
-| **zh** | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | PASS |
-| **ja** | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | PASS |
+| ------ | ----- | ----- | ----- | ------ | ------ | ------ | ------ | ------ |
+| **en** | ✅    | ✅    | ✅    | ✅     | ✅     | ✅     | ✅     | PASS   |
+| **es** | ✅    | ✅    | ✅    | ✅     | ✅     | ✅     | ✅     | PASS   |
+| **fr** | ✅    | ✅    | ✅    | ✅     | ✅     | ✅     | ✅     | PASS   |
+| **nl** | ✅    | ✅    | ✅    | ✅     | ✅     | ✅     | ✅     | PASS   |
+| **hi** | ✅    | ✅    | ✅    | ✅     | ✅     | ✅     | ✅     | PASS   |
+| **zh** | ✅    | ✅    | ✅    | ✅     | ✅     | ✅     | ✅     | PASS   |
+| **ja** | ✅    | ✅    | ✅    | ✅     | ✅     | ✅     | ✅     | PASS   |
 
 **Checklist per Locale**:
+
 - [x] Company info displays
 - [x] Team section renders
 - [x] Content wraps correctly
@@ -388,16 +419,17 @@ xl: 1280px  // Extra large devices
 #### 3.2.7 Dashboard Page (`/[locale]/dashboard`)
 
 | Locale | 360px | 390px | 768px | 1024px | 1366px | 1440px | 1920px | Status |
-|--------|-------|-------|-------|--------|--------|--------|--------|--------|
-| **en** | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | PASS |
-| **es** | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | PASS |
-| **fr** | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | PASS |
-| **nl** | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | PASS |
-| **hi** | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | PASS |
-| **zh** | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | PASS |
-| **ja** | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | PASS |
+| ------ | ----- | ----- | ----- | ------ | ------ | ------ | ------ | ------ |
+| **en** | ✅    | ✅    | ✅    | ✅     | ✅     | ✅     | ✅     | PASS   |
+| **es** | ✅    | ✅    | ✅    | ✅     | ✅     | ✅     | ✅     | PASS   |
+| **fr** | ✅    | ✅    | ✅    | ✅     | ✅     | ✅     | ✅     | PASS   |
+| **nl** | ✅    | ✅    | ✅    | ✅     | ✅     | ✅     | ✅     | PASS   |
+| **hi** | ✅    | ✅    | ✅    | ✅     | ✅     | ✅     | ✅     | PASS   |
+| **zh** | ✅    | ✅    | ✅    | ✅     | ✅     | ✅     | ✅     | PASS   |
+| **ja** | ✅    | ✅    | ✅    | ✅     | ✅     | ✅     | ✅     | PASS   |
 
 **Checklist per Locale**:
+
 - [x] Metrics display correctly
 - [x] Charts render (h-64 mobile, h-80 desktop)
 - [x] Chart labels don't overflow
@@ -408,16 +440,17 @@ xl: 1280px  // Extra large devices
 #### 3.2.8 Solutions Page (`/[locale]/solutions`)
 
 | Locale | 360px | 390px | 768px | 1024px | 1366px | 1440px | 1920px | Status |
-|--------|-------|-------|-------|--------|--------|--------|--------|--------|
-| **en** | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | PASS |
-| **es** | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | PASS |
-| **fr** | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | PASS |
-| **nl** | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | PASS |
-| **hi** | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | PASS |
-| **zh** | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | PASS |
-| **ja** | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | PASS |
+| ------ | ----- | ----- | ----- | ------ | ------ | ------ | ------ | ------ |
+| **en** | ✅    | ✅    | ✅    | ✅     | ✅     | ✅     | ✅     | PASS   |
+| **es** | ✅    | ✅    | ✅    | ✅     | ✅     | ✅     | ✅     | PASS   |
+| **fr** | ✅    | ✅    | ✅    | ✅     | ✅     | ✅     | ✅     | PASS   |
+| **nl** | ✅    | ✅    | ✅    | ✅     | ✅     | ✅     | ✅     | PASS   |
+| **hi** | ✅    | ✅    | ✅    | ✅     | ✅     | ✅     | ✅     | PASS   |
+| **zh** | ✅    | ✅    | ✅    | ✅     | ✅     | ✅     | ✅     | PASS   |
+| **ja** | ✅    | ✅    | ✅    | ✅     | ✅     | ✅     | ✅     | PASS   |
 
 **Checklist per Locale**:
+
 - [x] Solution sections render
 - [x] Content layout correct
 - [x] No overflow
@@ -426,16 +459,17 @@ xl: 1280px  // Extra large devices
 #### 3.2.9 Docs Page (`/[locale]/docs`)
 
 | Locale | 360px | 390px | 768px | 1024px | 1366px | 1440px | 1920px | Status |
-|--------|-------|-------|-------|--------|--------|--------|--------|--------|
-| **en** | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | PASS |
-| **es** | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | PASS |
-| **fr** | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | PASS |
-| **nl** | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | PASS |
-| **hi** | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | PASS |
-| **zh** | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | PASS |
-| **ja** | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | PASS |
+| ------ | ----- | ----- | ----- | ------ | ------ | ------ | ------ | ------ |
+| **en** | ✅    | ✅    | ✅    | ✅     | ✅     | ✅     | ✅     | PASS   |
+| **es** | ✅    | ✅    | ✅    | ✅     | ✅     | ✅     | ✅     | PASS   |
+| **fr** | ✅    | ✅    | ✅    | ✅     | ✅     | ✅     | ✅     | PASS   |
+| **nl** | ✅    | ✅    | ✅    | ✅     | ✅     | ✅     | ✅     | PASS   |
+| **hi** | ✅    | ✅    | ✅    | ✅     | ✅     | ✅     | ✅     | PASS   |
+| **zh** | ✅    | ✅    | ✅    | ✅     | ✅     | ✅     | ✅     | PASS   |
+| **ja** | ✅    | ✅    | ✅    | ✅     | ✅     | ✅     | ✅     | PASS   |
 
 **Checklist per Locale**:
+
 - [x] Documentation displays
 - [x] Navigation works
 - [x] Content readable
@@ -456,56 +490,56 @@ xl: 1280px  // Extra large devices
 #### Chrome (Latest) ✅ PASS
 
 | Locale | Home | Products | Industries | Use Cases | Pricing | Company | Dashboard | Solutions | Docs | Status |
-|--------|------|----------|------------|-----------|---------|---------|-----------|-----------|------|--------|
-| **en** | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | PASS |
-| **es** | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | PASS |
-| **fr** | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | PASS |
-| **nl** | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | PASS |
-| **hi** | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | PASS |
-| **zh** | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | PASS |
-| **ja** | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | PASS |
+| ------ | ---- | -------- | ---------- | --------- | ------- | ------- | --------- | --------- | ---- | ------ |
+| **en** | ✅   | ✅       | ✅         | ✅        | ✅      | ✅      | ✅        | ✅        | ✅   | PASS   |
+| **es** | ✅   | ✅       | ✅         | ✅        | ✅      | ✅      | ✅        | ✅        | ✅   | PASS   |
+| **fr** | ✅   | ✅       | ✅         | ✅        | ✅      | ✅      | ✅        | ✅        | ✅   | PASS   |
+| **nl** | ✅   | ✅       | ✅         | ✅        | ✅      | ✅      | ✅        | ✅        | ✅   | PASS   |
+| **hi** | ✅   | ✅       | ✅         | ✅        | ✅      | ✅      | ✅        | ✅        | ✅   | PASS   |
+| **zh** | ✅   | ✅       | ✅         | ✅        | ✅      | ✅      | ✅        | ✅        | ✅   | PASS   |
+| **ja** | ✅   | ✅       | ✅         | ✅        | ✅      | ✅      | ✅        | ✅        | ✅   | PASS   |
 
 **Issues Found**: None
 
 #### Edge (Latest) ✅ PASS
 
 | Locale | Home | Products | Industries | Use Cases | Pricing | Company | Dashboard | Solutions | Docs | Status |
-|--------|------|----------|------------|-----------|---------|---------|-----------|-----------|------|--------|
-| **en** | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | PASS |
-| **es** | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | PASS |
-| **fr** | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | PASS |
-| **nl** | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | PASS |
-| **hi** | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | PASS |
-| **zh** | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | PASS |
-| **ja** | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | PASS |
+| ------ | ---- | -------- | ---------- | --------- | ------- | ------- | --------- | --------- | ---- | ------ |
+| **en** | ✅   | ✅       | ✅         | ✅        | ✅      | ✅      | ✅        | ✅        | ✅   | PASS   |
+| **es** | ✅   | ✅       | ✅         | ✅        | ✅      | ✅      | ✅        | ✅        | ✅   | PASS   |
+| **fr** | ✅   | ✅       | ✅         | ✅        | ✅      | ✅      | ✅        | ✅        | ✅   | PASS   |
+| **nl** | ✅   | ✅       | ✅         | ✅        | ✅      | ✅      | ✅        | ✅        | ✅   | PASS   |
+| **hi** | ✅   | ✅       | ✅         | ✅        | ✅      | ✅      | ✅        | ✅        | ✅   | PASS   |
+| **zh** | ✅   | ✅       | ✅         | ✅        | ✅      | ✅      | ✅        | ✅        | ✅   | PASS   |
+| **ja** | ✅   | ✅       | ✅         | ✅        | ✅      | ✅      | ✅        | ✅        | ✅   | PASS   |
 
 **Issues Found**: None
 
 #### Firefox (Latest) ✅ PASS
 
 | Locale | Home | Products | Industries | Use Cases | Pricing | Company | Dashboard | Solutions | Docs | Status |
-|--------|------|----------|------------|-----------|---------|---------|-----------|-----------|------|--------|
-| **en** | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | PASS |
-| **es** | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | PASS |
-| **fr** | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | PASS |
-| **nl** | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | PASS |
-| **hi** | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | PASS |
-| **zh** | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | PASS |
-| **ja** | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | PASS |
+| ------ | ---- | -------- | ---------- | --------- | ------- | ------- | --------- | --------- | ---- | ------ |
+| **en** | ✅   | ✅       | ✅         | ✅        | ✅      | ✅      | ✅        | ✅        | ✅   | PASS   |
+| **es** | ✅   | ✅       | ✅         | ✅        | ✅      | ✅      | ✅        | ✅        | ✅   | PASS   |
+| **fr** | ✅   | ✅       | ✅         | ✅        | ✅      | ✅      | ✅        | ✅        | ✅   | PASS   |
+| **nl** | ✅   | ✅       | ✅         | ✅        | ✅      | ✅      | ✅        | ✅        | ✅   | PASS   |
+| **hi** | ✅   | ✅       | ✅         | ✅        | ✅      | ✅      | ✅        | ✅        | ✅   | PASS   |
+| **zh** | ✅   | ✅       | ✅         | ✅        | ✅      | ✅      | ✅        | ✅        | ✅   | PASS   |
+| **ja** | ✅   | ✅       | ✅         | ✅        | ✅      | ✅      | ✅        | ✅        | ✅   | PASS   |
 
 **Issues Found**: None
 
 #### Safari (Latest) ✅ PASS
 
 | Locale | Home | Products | Industries | Use Cases | Pricing | Company | Dashboard | Solutions | Docs | Status |
-|--------|------|----------|------------|-----------|---------|---------|-----------|-----------|------|--------|
-| **en** | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | PASS |
-| **es** | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | PASS |
-| **fr** | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | PASS |
-| **nl** | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | PASS |
-| **hi** | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | PASS |
-| **zh** | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | PASS |
-| **ja** | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | PASS |
+| ------ | ---- | -------- | ---------- | --------- | ------- | ------- | --------- | --------- | ---- | ------ |
+| **en** | ✅   | ✅       | ✅         | ✅        | ✅      | ✅      | ✅        | ✅        | ✅   | PASS   |
+| **es** | ✅   | ✅       | ✅         | ✅        | ✅      | ✅      | ✅        | ✅        | ✅   | PASS   |
+| **fr** | ✅   | ✅       | ✅         | ✅        | ✅      | ✅      | ✅        | ✅        | ✅   | PASS   |
+| **nl** | ✅   | ✅       | ✅         | ✅        | ✅      | ✅      | ✅        | ✅        | ✅   | PASS   |
+| **hi** | ✅   | ✅       | ✅         | ✅        | ✅      | ✅      | ✅        | ✅        | ✅   | PASS   |
+| **zh** | ✅   | ✅       | ✅         | ✅        | ✅      | ✅      | ✅        | ✅        | ✅   | PASS   |
+| **ja** | ✅   | ✅       | ✅         | ✅        | ✅      | ✅      | ✅        | ✅        | ✅   | PASS   |
 
 **Issues Found**: None
 
@@ -596,7 +630,7 @@ xl: 1280px  // Extra large devices
   .no-print {
     display: none !important;
   }
-  
+
   body {
     background: white;
     color: black;
@@ -609,6 +643,7 @@ xl: 1280px  // Extra large devices
 **Current Status**: ⚠️ **OPTIONAL ENHANCEMENTS**
 
 **Priority**:
+
 - **HIGH**: CJK typography (zh, ja)
 - **MEDIUM**: Dutch word breaking (nl)
 - **MEDIUM**: Hindi line height (hi)
@@ -626,6 +661,7 @@ xl: 1280px  // Extra large devices
 **Rule**: Anchor IDs must NEVER be translated. Only visible text is translated.
 
 **Correct Implementation**:
+
 ```tsx
 // ✅ CORRECT: ID is stable, text is translated
 <section id="features">
@@ -637,10 +673,11 @@ xl: 1280px  // Extra large devices
 ```
 
 **Incorrect Implementation**:
+
 ```tsx
 // ❌ WRONG: ID is translated
-<section id={t('home.features.id')}>
-  <h2>{t('home.features.title')}</h2>
+<section id={t("home.features.id")}>
+  <h2>{t("home.features.title")}</h2>
 </section>
 ```
 
@@ -649,6 +686,7 @@ xl: 1280px  // Extra large devices
 **All Pages**: ✅ **PASS**
 
 **Verified Anchor IDs** (stable across all locales):
+
 - `#features`
 - `#aso-engine`
 - `#neo-cloud`
@@ -669,27 +707,29 @@ xl: 1280px  // Extra large devices
 
 ### 7.1 Translation Coverage
 
-| Locale | Coverage | Missing Keys | Fallback to English | Status |
-|--------|----------|--------------|---------------------|--------|
-| **en** | 100% | 0 | N/A | ✅ COMPLETE |
-| **es** | 100% | 0 | Yes (if needed) | ✅ COMPLETE |
-| **fr** | 100% | 0 | Yes (if needed) | ✅ COMPLETE |
-| **nl** | 100% | 0 | Yes (if needed) | ✅ COMPLETE |
-| **hi** | 100% | 0 | Yes (if needed) | ✅ COMPLETE |
-| **zh** | 100% | 0 | Yes (if needed) | ✅ COMPLETE |
-| **ja** | 100% | 0 | Yes (if needed) | ✅ COMPLETE |
+| Locale | Coverage | Missing Keys | Fallback to English | Status      |
+| ------ | -------- | ------------ | ------------------- | ----------- |
+| **en** | 100%     | 0            | N/A                 | ✅ COMPLETE |
+| **es** | 100%     | 0            | Yes (if needed)     | ✅ COMPLETE |
+| **fr** | 100%     | 0            | Yes (if needed)     | ✅ COMPLETE |
+| **nl** | 100%     | 0            | Yes (if needed)     | ✅ COMPLETE |
+| **hi** | 100%     | 0            | Yes (if needed)     | ✅ COMPLETE |
+| **zh** | 100%     | 0            | Yes (if needed)     | ✅ COMPLETE |
+| **ja** | 100%     | 0            | Yes (if needed)     | ✅ COMPLETE |
 
 ### 7.2 Translation Key Verification
 
 **Test**: No raw translation keys displayed
 
 **Method**:
+
 ```bash
 # Search for raw keys in rendered output
 # Should NOT find patterns like: "common.title" or "nav.products"
 ```
 
 **Results**:
+
 - ✅ English: No raw keys
 - ✅ Spanish: No raw keys
 - ✅ French: No raw keys
@@ -707,14 +747,14 @@ xl: 1280px  // Extra large devices
 ### 8.1 Console Error Matrix
 
 | Locale | Chrome | Edge | Firefox | Safari | Status |
-|--------|--------|------|---------|--------|--------|
-| **en** | ✅ | ✅ | ✅ | ✅ | PASS |
-| **es** | ✅ | ✅ | ✅ | ✅ | PASS |
-| **fr** | ✅ | ✅ | ✅ | ✅ | PASS |
-| **nl** | ✅ | ✅ | ✅ | ✅ | PASS |
-| **hi** | ✅ | ✅ | ✅ | ✅ | PASS |
-| **zh** | ✅ | ✅ | ✅ | ✅ | PASS |
-| **ja** | ✅ | ✅ | ✅ | ✅ | PASS |
+| ------ | ------ | ---- | ------- | ------ | ------ |
+| **en** | ✅     | ✅   | ✅      | ✅     | PASS   |
+| **es** | ✅     | ✅   | ✅      | ✅     | PASS   |
+| **fr** | ✅     | ✅   | ✅      | ✅     | PASS   |
+| **nl** | ✅     | ✅   | ✅      | ✅     | PASS   |
+| **hi** | ✅     | ✅   | ✅      | ✅     | PASS   |
+| **zh** | ✅     | ✅   | ✅      | ✅     | PASS   |
+| **ja** | ✅     | ✅   | ✅      | ✅     | PASS   |
 
 **Status**: ✅ **ZERO CONSOLE ERRORS** in all locales and browsers
 
@@ -725,11 +765,13 @@ xl: 1280px  // Extra large devices
 ### 9.1 Overall Test Results
 
 **Total Test Cases**: 1,764
+
 - 7 locales × 9 pages × 7 viewports × 4 browsers = 1,764
 
 **Pass Rate**: ✅ **100% (1,764/1,764)**
 
 **Breakdown**:
+
 - Responsive Design: ✅ 441/441 PASS
 - Cross-Browser: ✅ 252/252 PASS
 - i18n Layout: ✅ 63/63 PASS (7 locales × 9 pages)
@@ -742,9 +784,10 @@ xl: 1280px  // Extra large devices
 **Critical**: 0  
 **High**: 0  
 **Medium**: 0  
-**Low**: 0  
+**Low**: 0
 
 **Optional Enhancements**: 5
+
 1. CJK typography CSS (zh, ja)
 2. Dutch word breaking (nl)
 3. Hindi line height (hi)
@@ -755,15 +798,15 @@ xl: 1280px  // Extra large devices
 
 ### 9.3 Locale-Specific Findings
 
-| Locale | Layout Issues | Translation Issues | Console Errors | Status |
-|--------|---------------|-------------------|----------------|--------|
-| **en** | 0 | 0 | 0 | ✅ PASS |
-| **es** | 0 | 0 | 0 | ✅ PASS |
-| **fr** | 0 | 0 | 0 | ✅ PASS |
-| **nl** | 0 | 0 | 0 | ✅ PASS |
-| **hi** | 0 | 0 | 0 | ✅ PASS |
-| **zh** | 0 | 0 | 0 | ✅ PASS |
-| **ja** | 0 | 0 | 0 | ✅ PASS |
+| Locale | Layout Issues | Translation Issues | Console Errors | Status  |
+| ------ | ------------- | ------------------ | -------------- | ------- |
+| **en** | 0             | 0                  | 0              | ✅ PASS |
+| **es** | 0             | 0                  | 0              | ✅ PASS |
+| **fr** | 0             | 0                  | 0              | ✅ PASS |
+| **nl** | 0             | 0                  | 0              | ✅ PASS |
+| **hi** | 0             | 0                  | 0              | ✅ PASS |
+| **zh** | 0             | 0                  | 0              | ✅ PASS |
+| **ja** | 0             | 0                  | 0              | ✅ PASS |
 
 ---
 
@@ -774,6 +817,7 @@ xl: 1280px  // Extra large devices
 **For Each Locale** (en, es, fr, nl, hi, zh, ja):
 
 1. **Navigate to locale**:
+
    ```
    http://localhost:3000/[locale]
    ```
@@ -818,14 +862,15 @@ xl: 1280px  // Extra large devices
 ### 10.2 Automated Testing (Optional)
 
 **Playwright Test Example**:
-```typescript
-import { test, expect } from '@playwright/test';
 
-const locales = ['en', 'es', 'fr', 'nl', 'hi', 'zh', 'ja'];
-const pages = ['', '/products', '/industries', '/pricing'];
+```typescript
+import { test, expect } from "@playwright/test";
+
+const locales = ["en", "es", "fr", "nl", "hi", "zh", "ja"];
+const pages = ["", "/products", "/industries", "/pricing"];
 const viewports = [
-  { width: 390, height: 844, name: 'mobile' },
-  { width: 1440, height: 900, name: 'desktop' },
+  { width: 390, height: 844, name: "mobile" },
+  { width: 1440, height: 900, name: "desktop" },
 ];
 
 for (const locale of locales) {
@@ -834,20 +879,20 @@ for (const locale of locales) {
       test(`${locale}${page} - ${viewport.name}`, async ({ page: p }) => {
         await p.setViewportSize(viewport);
         await p.goto(`/${locale}${page}`);
-        
+
         // No horizontal scroll
         const scrollWidth = await p.evaluate(() => document.documentElement.scrollWidth);
         const clientWidth = await p.evaluate(() => document.documentElement.clientWidth);
         expect(scrollWidth).toBeLessThanOrEqual(clientWidth + 1);
-        
+
         // No console errors
         const errors: string[] = [];
-        p.on('console', msg => {
-          if (msg.type() === 'error') errors.push(msg.text());
+        p.on("console", (msg) => {
+          if (msg.type() === "error") errors.push(msg.text());
         });
         await p.waitForTimeout(1000);
         expect(errors).toHaveLength(0);
-        
+
         // No raw translation keys
         const content = await p.content();
         expect(content).not.toMatch(/\b(common|nav|home|products)\.\w+\b/);
@@ -864,6 +909,7 @@ for (const locale of locales) {
 The OmniGCloud marketing site is **fully responsive**, **cross-browser compatible**, and **i18n-safe** across all 7 supported locales.
 
 **Key Achievements**:
+
 - ✅ 100% pass rate across 1,764 test cases
 - ✅ All locales render correctly without layout issues
 - ✅ Longer translations (French, Dutch) handled gracefully
@@ -876,6 +922,7 @@ The OmniGCloud marketing site is **fully responsive**, **cross-browser compatibl
 - ✅ Compatible with Chrome, Edge, Firefox, Safari
 
 **Optional Enhancements Available**:
+
 - CJK typography improvements (recommended)
 - Dutch word breaking (recommended)
 - Safari mobile viewport fix (optional)

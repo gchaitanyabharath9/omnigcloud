@@ -11,6 +11,7 @@
 ## 📊 SESSION BREAKDOWN
 
 ### ✅ **PRE-SESSION WORK** (Completed)
+
 - ✅ Created nav config (`/src/config/nav.ts`)
 - ✅ Created anchor scroll utilities
 - ✅ Created NavLink component
@@ -24,11 +25,13 @@
 ---
 
 ### 🔄 **SESSION 1** (IN PROGRESS) - Header Refactor + Mobile Menu
+
 **Date**: 2026-01-02  
 **Duration**: ~2 hours  
 **Status**: 🟡 In Progress
 
 #### Goals:
+
 - [ ] Refactor Header component to use NAV_CONFIG
 - [ ] Refactor Mobile Menu to use NAV_CONFIG
 - [ ] Test all dropdowns work
@@ -36,6 +39,7 @@
 - [ ] Commit and push
 
 #### Deliverables:
+
 - Header using centralized config
 - Mobile menu using centralized config
 - All nav items functional
@@ -46,16 +50,19 @@
 ---
 
 ### 📅 **SESSION 2** (PLANNED) - Section IDs + Language Switcher
+
 **Duration**: ~1.5 hours  
 **Status**: ⚪ Not Started
 
 #### Goals:
+
 - [ ] Add missing section IDs to all pages
 - [ ] Update Language Switcher to preserve hash
 - [ ] Test section scrolling across pages
 - [ ] Verify language switching works
 
 #### Deliverables:
+
 - All section IDs added (products, pricing, company, etc.)
 - Language switcher preserves route + hash
 - Documentation updated
@@ -65,10 +72,12 @@
 ---
 
 ### 📅 **SESSION 3** (PLANNED) - i18n Foundation (EN, DE, ES)
+
 **Duration**: ~3 hours  
 **Status**: ⚪ Not Started
 
 #### Goals:
+
 - [ ] Audit all hardcoded strings
 - [ ] Create translation keys for 3 languages
 - [ ] Implement missing key detection
@@ -76,6 +85,7 @@
 - [ ] Document translation pattern
 
 #### Deliverables:
+
 - Complete translations for EN, DE, ES
 - Translation key structure documented
 - Missing key detection working
@@ -86,10 +96,12 @@
 ---
 
 ### 📅 **SESSION 4** (PLANNED) - Remaining Languages + SEO
+
 **Duration**: ~3 hours  
 **Status**: ⚪ Not Started
 
 #### Goals:
+
 - [ ] Add translations for FR, HI, JA, KO, ZH
 - [ ] Implement localized metadata
 - [ ] Add hreflang alternates
@@ -97,6 +109,7 @@
 - [ ] Configure robots.txt
 
 #### Deliverables:
+
 - All 8 languages supported
 - SEO metadata localized
 - Sitemap includes all locale routes
@@ -107,10 +120,12 @@
 ---
 
 ### 📅 **SESSION 5** (PLANNED) - Automated Quality Gate
+
 **Duration**: ~3 hours  
 **Status**: ⚪ Not Started
 
 #### Goals:
+
 - [ ] Create Playwright tests for navigation
 - [ ] Create i18n completeness tests
 - [ ] Create overflow detection tests
@@ -118,6 +133,7 @@
 - [ ] Test quality gate locally
 
 #### Deliverables:
+
 - Comprehensive Playwright test suite
 - i18n coverage validation
 - Automated quality checks
@@ -128,10 +144,12 @@
 ---
 
 ### 📅 **SESSION 6** (PLANNED) - Testing + Validation + Documentation
+
 **Duration**: ~1 hour  
 **Status**: ⚪ Not Started
 
 #### Goals:
+
 - [ ] Manual testing across all viewports
 - [ ] Test all 8 locales on key pages
 - [ ] Verify no regressions
@@ -139,6 +157,7 @@
 - [ ] Final commit and push
 
 #### Deliverables:
+
 - Fully tested across all viewports
 - All locales verified
 - Complete documentation
@@ -169,6 +188,7 @@ Session 6:    ████████████████████ 100% 
 ## 🎯 SUCCESS CRITERIA
 
 ### Navigation
+
 - [x] Centralized nav config
 - [ ] Header uses config
 - [ ] Mobile menu uses config
@@ -177,6 +197,7 @@ Session 6:    ████████████████████ 100% 
 - [ ] Language switching preserves hash
 
 ### i18n
+
 - [x] Translation keys for EN (partial)
 - [ ] Translation keys for DE, ES
 - [ ] Translation keys for FR, HI, JA, KO, ZH
@@ -184,18 +205,21 @@ Session 6:    ████████████████████ 100% 
 - [ ] Missing key detection
 
 ### Layout
+
 - [x] Global scroll-margin-top
 - [ ] No overlapping content
 - [ ] No horizontal overflow
 - [ ] Responsive across all viewports
 
 ### SEO
+
 - [ ] Localized metadata
 - [ ] hreflang alternates
 - [ ] Sitemap with all locales
 - [ ] robots.txt configured
 
 ### Quality Gate
+
 - [ ] Playwright tests
 - [ ] i18n coverage tests
 - [ ] Overflow detection
@@ -206,12 +230,15 @@ Session 6:    ████████████████████ 100% 
 ## 📝 NOTES
 
 ### Session 1 Focus
+
 The header refactor is the **critical path blocker**. Once complete:
+
 - Navigation will be fully functional
 - Pattern established for all nav components
 - Foundation ready for i18n expansion
 
 ### Why Phased?
+
 1. **Manageable Scope**: Each session has clear, achievable goals
 2. **Incremental Value**: Each session delivers working features
 3. **Quality Focus**: Time to test and validate each phase
@@ -219,6 +246,7 @@ The header refactor is the **critical path blocker**. Once complete:
 5. **Flexible**: Can adjust based on findings
 
 ### Dependencies
+
 - Session 2 depends on Session 1 (nav must work first)
 - Session 3 can start after Session 2
 - Session 4 builds on Session 3 pattern

@@ -1,4 +1,5 @@
 # Quick Start - Paper Validation
+
 **Start Here:** 4-Hour Validation Sprint
 
 ---
@@ -24,6 +25,7 @@ Click these links to open in your browser:
 ```
 
 **Open folder now:**
+
 ```powershell
 explorer review-pdfs
 ```
@@ -105,22 +107,27 @@ explorer review-pdfs
 ## 🎯 **PRIORITY ORDER**
 
 **Today (4 hours):**
+
 - A1 (Foundation paper)
 - AECP (Framework paper)
 
 **Tomorrow (4 hours):**
+
 - A2 (Throughput paper)
 - A3 (Observability paper)
 
 **Day 3 (4 hours):**
+
 - A4 (Governance paper)
 - A5 (Modernization paper)
 
 **Day 4 (4 hours):**
+
 - A6 (Synthesis paper)
 - Scholarly Article
 
 **Day 5 (4 hours):**
+
 - Apply all improvements
 - Regenerate all PDFs
 - Update arXiv packages

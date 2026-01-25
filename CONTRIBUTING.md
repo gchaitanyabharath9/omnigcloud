@@ -3,6 +3,7 @@
 ## 🚀 Quick Start (Local Development)
 
 1. **Install Dependencies:**
+
    ```bash
    npm ci
    ```
@@ -22,6 +23,7 @@
 ## 🏗️ Architecture & Conventions
 
 ### Directory Structure
+
 - `src/app`: Next.js App Router pages (routes).
 - `src/components`: React components (shared).
 - `src/config`: Environment configuration (Dev/SIT/Prod).
@@ -29,12 +31,14 @@
 - `qa-i18n`: QA automation suite (Playwright, scripts).
 
 ### i18n Strategy
+
 - **Framework:** `next-intl`
 - **Translations:** Located in `messages/*.json`.
 - **Validation:** Run `npm run qa:i18n` before committing.
 - **Rule:** Fallback to English is automatic, but missing keys in PRODUCTION locales (es, fr, de) are blocking errors.
 
 ### SEO Strategy
+
 - **Canonical:** Enforced at application layer (`proxy.ts`).
 - **Config:** `src/config/domains.ts` controls the definitive URL.
 - **Validation:** Run `npm run qa:seo`.
@@ -62,7 +66,9 @@ npm run qa:test       # Run Playwright suite
 ---
 
 ## 🛡️ Brand & Research Assets
+
 **EB-1A Evidence Protection:**
+
 - High-value research assets (PDFs, Diagrams) reside in `/public/research-assets` (or protected internal path).
 - Do NOT commit source files (PPT, AI/EPS) to this public repo.
 - Watermark all new exhibit diagrams with `© OmniGCloud [Year] - Exhibit [ID]`.
@@ -70,6 +76,7 @@ npm run qa:test       # Run Playwright suite
 ---
 
 ## 🚢 release Process
+
 - **Current:** Push to `main` deploys to PROD.
 - **Future:** PR -> `dev` -> `sit` -> `prod`.
 

@@ -5,9 +5,11 @@ This document outlines the engineering patterns used to ensure the application r
 ## 1. Error Handling Strategy
 
 ### Standardized Error Model
+
 All internal and external errors are normalized into a unified `AppError` class located in `src/lib/errors.ts`. This ensures consistent behavior across the stack.
 
 **Core Error Types:**
+
 - `ValidationError` (400): Invalid input payload. Non-retryable.
 - `AuthError` (401): Missing or invalid credentials. Non-retryable.
 - `RateLimitError` (429): Traffic threshold exceeded. Retryable with backoff.
@@ -15,7 +17,9 @@ All internal and external errors are normalized into a unified `AppError` class 
 - `TimeoutError` (504): Operation exceeded defined budget. Retryable.
 
 ### API Response Envelope
+
 All API routes (`/api/*`) return a predictable JSON envelope:
+
 ```json
 {
   "requestId": "uuid-v4",
@@ -35,12 +39,14 @@ All API routes (`/api/*`) return a predictable JSON envelope:
 We strictly retry **only** reliable transient failures. Non-idempotent or validation errors are never retried.
 
 **Retryable Conditions:**
+
 - Network socket hangups / resets
 - HTTP 500, 502, 503, 504 from upstream
 - Rate limits (429) if `Retry-After` is reasonable
 - Explicit `TimeoutError` in wrapping logic
 
 **Backoff Algorithm:**
+
 - **Strategy:** Exponential Backoff + Jitter
 - **Base Delay:** 200ms
 - **Max Delay:** 2s
@@ -48,6 +54,7 @@ We strictly retry **only** reliable transient failures. Non-idempotent or valida
 - **Utility:** `src/lib/retry.ts` -> `withRetry()`
 
 **Implementation Examples:**
+
 - **RedisOps:** Retries connection and atomic writes/reads.
 - **Transactional Email:** Retries sending logic on network failure.
 - **Vault/Secrets:** Retries connection on boot (if configured).
@@ -75,6 +82,7 @@ Every external dependency call is wrapped in a strict timeout to prevent thread 
 ## 6. Smoke Testing
 
 To verify resiliency:
+
 1. **Force Timeout:** Artificially delay an upstream service response > 5s. Verify 504 response.
 2. **Kill Redis:** Stop the local Redis container. Verify app still serves pages (graceful degradation).
 3. **Trigger Rate Limit:** Curl an endpoint 100 times in parallel. Verify 429 response.

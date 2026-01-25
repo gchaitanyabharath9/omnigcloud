@@ -23,12 +23,14 @@ git push -u origin main
 ```
 
 **Step 2: Deploy to Vercel**
+
 1. Go to https://vercel.com
 2. Sign in with GitHub
 3. Click "New Project" → Import `omnigcloud`
 4. Click "Deploy"
 
 **Step 3: Add Environment Variables** (in Vercel dashboard)
+
 ```env
 NEXT_PUBLIC_SITE_URL=https://omnigcloud.com
 NEXT_PUBLIC_API_URL=https://omnigcloud.com/api
@@ -38,12 +40,14 @@ AUTH_URL=https://omnigcloud.com
 ```
 
 Generate secrets:
+
 ```powershell
 # PowerShell
 -join ((48..57) + (65..90) + (97..122) | Get-Random -Count 32 | % {[char]$_})
 ```
 
 **Step 4: Connect Domain** (in Vercel → Settings → Domains)
+
 - Add `omnigcloud.com`
 - In Cloudflare DNS, add:
   ```
@@ -60,6 +64,7 @@ Generate secrets:
 ### Day 1-2: Authentication Setup
 
 **Google OAuth** (for SSO)
+
 1. Go to https://console.cloud.google.com
 2. Create new project: "OmniGCloud"
 3. Enable Google+ API
@@ -75,6 +80,7 @@ Generate secrets:
    ```
 
 **Microsoft Entra ID** (optional)
+
 1. Go to https://portal.azure.com
 2. Azure Active Directory → App registrations → New
 3. Redirect URI: `https://omnigcloud.com/api/auth/callback/microsoft-entra-id`
@@ -88,6 +94,7 @@ Generate secrets:
 ### Day 3: Rate Limiting (Optional but Recommended)
 
 **Upstash Redis** (free tier)
+
 1. Go to https://upstash.com
 2. Create account
 3. Create Redis database (free tier: 10K commands/day)
@@ -102,11 +109,13 @@ Generate secrets:
 ### Day 4-5: Content & SEO
 
 **Complete Translations** (if targeting non-English markets)
+
 - Update `messages/zh.json` (Chinese)
 - Update `messages/hi.json` (Hindi)
 - Update `messages/ja.json` (Japanese)
 
 **Submit to Search Engines**
+
 1. Google Search Console:
    - Add property: https://omnigcloud.com
    - Verify ownership (DNS or HTML tag)
@@ -117,6 +126,7 @@ Generate secrets:
    - Submit sitemap
 
 **Create OpenGraph Image**
+
 - Design 1200x630px image for social sharing
 - Save as `public/og-image.png`
 - Already referenced in metadata ✅
@@ -124,6 +134,7 @@ Generate secrets:
 ### Day 6-7: Testing & Monitoring
 
 **Test All Features**
+
 - [ ] All pages load correctly
 - [ ] Contact form works
 - [ ] Navigation works on mobile
@@ -133,6 +144,7 @@ Generate secrets:
 - [ ] Trust pages accurate
 
 **Set Up Monitoring**
+
 1. **Uptime Monitoring** (free):
    - UptimeRobot: https://uptimerobot.com
    - Monitor: https://omnigcloud.com
@@ -150,6 +162,7 @@ Generate secrets:
 ### Week 2: Content Marketing
 
 **Blog Posts** (if applicable)
+
 - Create `/blog` content
 - Topics:
   - "Breaking Free from Cloud Vendor Lock-In"
@@ -157,11 +170,13 @@ Generate secrets:
   - "GDPR Compliance in Multi-Cloud Environments"
 
 **Case Studies**
+
 - Document real implementations
 - Add to `/case-studies`
 - Include metrics (if available)
 
 **Whitepaper Promotion**
+
 - Share on LinkedIn
 - Submit to industry publications
 - Add to relevant forums/communities
@@ -169,21 +184,25 @@ Generate secrets:
 ### Week 3: Lead Generation
 
 **Email Capture**
+
 - Add newsletter signup (optional)
 - Integrate with email service (Mailchimp, ConvertKit)
 
 **Contact Form Enhancement**
+
 - Add form to database (optional)
 - Set up email notifications
 - Create auto-responder
 
 **Demo Requests**
+
 - Create demo request flow
 - Set up calendar integration (Calendly)
 
 ### Week 4: Performance Optimization
 
 **Run Lighthouse Audit**
+
 ```bash
 npm run build
 npm start
@@ -191,12 +210,14 @@ npm start
 ```
 
 **Target Scores**:
+
 - Performance: >90
 - Accessibility: >95
 - Best Practices: >90
 - SEO: >95
 
 **Optimizations** (if needed):
+
 - Compress images (WebP format)
 - Lazy load images
 - Minimize JavaScript
@@ -207,18 +228,21 @@ npm start
 ## 📅 Month 2-3: Advanced Features
 
 ### Authentication Enhancements
+
 - [ ] Add RBAC enforcement
 - [ ] Create admin dashboard
 - [ ] Add user management
 - [ ] Implement audit logging
 
 ### Product Development
+
 - [ ] Build `/app` features
 - [ ] Add billing integration (Stripe)
 - [ ] Create user onboarding flow
 - [ ] Develop core platform features
 
 ### Marketing Automation
+
 - [ ] Set up email sequences
 - [ ] Create lead scoring
 - [ ] Implement A/B testing
@@ -229,6 +253,7 @@ npm start
 ## 🎯 Priority Matrix
 
 ### High Priority (Do First)
+
 1. ✅ Deploy to production (Vercel)
 2. ✅ Connect custom domain
 3. ⏳ Set up Google OAuth
@@ -236,6 +261,7 @@ npm start
 5. ⏳ Set up uptime monitoring
 
 ### Medium Priority (Week 1-2)
+
 6. ⏳ Complete translations (if needed)
 7. ⏳ Set up Upstash Redis
 8. ⏳ Create OpenGraph image
@@ -243,6 +269,7 @@ npm start
 10. ⏳ Set up analytics
 
 ### Low Priority (Month 1+)
+
 11. ⏳ Blog content
 12. ⏳ Case studies
 13. ⏳ Email marketing
@@ -253,18 +280,21 @@ npm start
 ## 🔧 Technical Debt (Future)
 
 ### Code Quality
+
 - [ ] Add unit tests (Jest)
 - [ ] Add E2E tests (Playwright)
 - [ ] Set up CI/CD pipeline
 - [ ] Add code coverage reports
 
 ### Infrastructure
+
 - [ ] Set up staging environment
 - [ ] Add database (PostgreSQL)
 - [ ] Implement caching layer
 - [ ] Add CDN for assets
 
 ### Security
+
 - [ ] Security audit
 - [ ] Penetration testing
 - [ ] Add WAF (Web Application Firewall)
@@ -275,18 +305,21 @@ npm start
 ## 📊 Success Metrics
 
 ### Week 1 Goals
+
 - [ ] Site live and accessible
 - [ ] 0 critical errors
 - [ ] Lighthouse score >90
 - [ ] All pages load <2s
 
 ### Month 1 Goals
+
 - [ ] 100+ unique visitors
 - [ ] 10+ contact form submissions
 - [ ] 5+ whitepaper downloads
 - [ ] Google Search Console indexed
 
 ### Month 3 Goals
+
 - [ ] 1000+ unique visitors
 - [ ] 50+ contact form submissions
 - [ ] 25+ whitepaper downloads
@@ -297,6 +330,7 @@ npm start
 ## 🆘 Support & Resources
 
 ### Documentation
+
 - `README.md` - Setup guide
 - `DEPLOYMENT.md` - Deployment options
 - `MARKETING_SITE_COMPLETE.md` - Marketing site summary
@@ -304,11 +338,13 @@ npm start
 - `docs/TRUST_PAGES.md` - Trust pages documentation
 
 ### Community
+
 - Next.js Discord: https://nextjs.org/discord
 - Vercel Community: https://vercel.com/community
 - Stack Overflow: Tag `next.js`
 
 ### Paid Support (if needed)
+
 - Vercel Pro: $20/month (priority support)
 - Next.js consulting
 - DevOps consulting
@@ -318,28 +354,22 @@ npm start
 ## ✅ Today's Action Items
 
 **Right Now** (30 minutes):
+
 1. [ ] Push code to GitHub
 2. [ ] Deploy to Vercel
 3. [ ] Add environment variables
 4. [ ] Connect domain in Cloudflare
 
-**This Week** (2-3 hours):
-5. [ ] Set up Google OAuth
-6. [ ] Submit to Google Search Console
-7. [ ] Set up uptime monitoring
-8. [ ] Test all pages
+**This Week** (2-3 hours): 5. [ ] Set up Google OAuth 6. [ ] Submit to Google Search Console 7. [ ] Set up uptime monitoring 8. [ ] Test all pages
 
-**This Month** (5-10 hours):
-9. [ ] Complete translations (if needed)
-10. [ ] Create content (blog, case studies)
-11. [ ] Run performance audit
-12. [ ] Set up analytics
+**This Month** (5-10 hours): 9. [ ] Complete translations (if needed) 10. [ ] Create content (blog, case studies) 11. [ ] Run performance audit 12. [ ] Set up analytics
 
 ---
 
 ## 🎉 Launch Checklist
 
 **Pre-Launch**:
+
 - [x] Code complete
 - [x] Build successful
 - [x] SEO optimized
@@ -350,6 +380,7 @@ npm start
 - [ ] All pages tested
 
 **Post-Launch**:
+
 - [ ] Announce on LinkedIn
 - [ ] Share with network
 - [ ] Submit to search engines
@@ -388,16 +419,19 @@ npm start
 ## 📞 Need Help?
 
 **Stuck on deployment?**
+
 - Check `DEPLOYMENT.md` for detailed guide
 - Vercel docs: https://vercel.com/docs
 - Cloudflare docs: https://developers.cloudflare.com
 
 **Technical issues?**
+
 - Check build logs in Vercel
 - Review environment variables
 - Test locally first
 
 **Questions?**
+
 - Stack Overflow (tag: next.js, vercel)
 - Next.js Discord
 - GitHub Discussions

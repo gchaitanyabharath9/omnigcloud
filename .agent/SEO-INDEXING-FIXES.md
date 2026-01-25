@@ -5,9 +5,11 @@ Based on your Google Search Console "Why pages aren't indexed" report:
 ## 🚨 **CRITICAL FIXES NEEDED:**
 
 ### 1. **258 Pages: "Discovered - Currently Not Indexed"**
+
 **Problem:** Google found these pages but decided not to index them yet.
 
 **Why This Happens:**
+
 - Low-quality content signals
 - Duplicate or thin content
 - Poor internal linking
@@ -16,6 +18,7 @@ Based on your Google Search Console "Why pages aren't indexed" report:
 **IMMEDIATE FIXES:**
 
 #### A. Force Indexing via Sitemap (Priority 1)
+
 ```bash
 # Deploy the sitemap I created
 npm run build
@@ -29,6 +32,7 @@ vercel --prod
 ```
 
 #### B. Request Manual Indexing (Do Today!)
+
 For each research paper, manually request indexing:
 
 1. Go to: https://search.google.com/search-console
@@ -47,24 +51,30 @@ For each research paper, manually request indexing:
 4. Click "Request Indexing" for each
 
 #### C. Improve Content Quality
+
 Add these to EVERY research paper page:
 
 ```markdown
 ## Key Takeaways
+
 - [3-5 bullet points summarizing the paper]
 
 ## Frequently Asked Questions
 
 ### What problem does this solve?
+
 [Answer]
 
 ### Who should read this?
+
 [Answer]
 
 ### How can I implement this?
+
 [Answer]
 
 ## Related Research
+
 - [Link to A1]
 - [Link to A2]
 - [Link to A3]
@@ -73,6 +83,7 @@ Add these to EVERY research paper page:
 ---
 
 ### 2. **93 Pages: "Alternative Page with Proper Canonical Tag"**
+
 **Problem:** Duplicate content - Google chose a different version as canonical.
 
 **IMMEDIATE FIX:**
@@ -81,37 +92,36 @@ Check your canonical tags. Create this file:
 
 ```typescript
 // src/middleware.ts
-import { NextResponse } from 'next/server'
-import type { NextRequest } from 'next/server'
+import { NextResponse } from "next/server";
+import type { NextRequest } from "next/server";
 
 export function middleware(request: NextRequest) {
-  const url = request.nextUrl.clone()
-  
+  const url = request.nextUrl.clone();
+
   // Force canonical URLs (no trailing slashes)
-  if (url.pathname.endsWith('/') && url.pathname !== '/') {
-    url.pathname = url.pathname.slice(0, -1)
-    return NextResponse.redirect(url, 301)
+  if (url.pathname.endsWith("/") && url.pathname !== "/") {
+    url.pathname = url.pathname.slice(0, -1);
+    return NextResponse.redirect(url, 301);
   }
-  
+
   // Force lowercase URLs
   if (url.pathname !== url.pathname.toLowerCase()) {
-    url.pathname = url.pathname.toLowerCase()
-    return NextResponse.redirect(url, 301)
+    url.pathname = url.pathname.toLowerCase();
+    return NextResponse.redirect(url, 301);
   }
-  
-  return NextResponse.next()
+
+  return NextResponse.next();
 }
 
 export const config = {
-  matcher: [
-    '/((?!api|_next/static|_next/image|favicon.ico).*)',
-  ],
-}
+  matcher: ["/((?!api|_next/static|_next/image|favicon.ico).*)"],
+};
 ```
 
 ---
 
 ### 3. **44 Pages: "Page with Redirect"**
+
 **Problem:** Redirect chains slow down indexing.
 
 **FIX:** Audit your redirects in `next.config.js`:
@@ -136,12 +146,15 @@ async redirects() {
 ---
 
 ### 4. **26 Pages: "Crawled - Currently Not Indexed"**
+
 **Problem:** Google crawled but decided content isn't valuable enough.
 
 **FIXES:**
 
 #### A. Add More Content
+
 Minimum 500 words per page. Add:
+
 - Detailed explanations
 - Code examples
 - Diagrams
@@ -149,35 +162,40 @@ Minimum 500 words per page. Add:
 - FAQs
 
 #### B. Improve Internal Linking
+
 Create a "Research Hub" page:
 
 ```markdown
 # Cloud-Native Research Hub
 
 ## Core Architecture Papers
+
 - [A1: Cloud-Native Enterprise Reference](/research/papers/a1...)
   - Learn about plane separation and cellular architecture
-  
 - [A2: High-Throughput Distributed Systems](/research/papers/a2...)
   - Achieve 250,000+ RPS with linear scalability
 
 [Continue for all papers...]
 
 ## Implementation Guides
+
 [Link to practical guides]
 
 ## Case Studies
+
 [Link to real-world examples]
 ```
 
 ---
 
 ### 5. **19 Pages: "Not Found (404)"**
+
 **Problem:** Broken links pointing to non-existent pages.
 
 **IMMEDIATE FIX:**
 
 #### A. Find Broken Links
+
 ```bash
 # Install broken link checker
 npm install -g broken-link-checker
@@ -187,7 +205,9 @@ blc https://omnigcloud.com -ro
 ```
 
 #### B. Fix or Redirect
+
 For each 404:
+
 - If page should exist: Create it
 - If page moved: Add redirect in `next.config.js`
 - If page deleted: Remove all links to it
@@ -195,6 +215,7 @@ For each 404:
 ---
 
 ### 6. **9 Pages: "Excluded by 'noindex' Tag"**
+
 **Problem:** Pages intentionally blocked from indexing.
 
 **CHECK:** Are these pages supposed to be blocked?
@@ -205,6 +226,7 @@ grep -r "noindex" src/
 ```
 
 **Common culprits:**
+
 - `/private/` - OK to block
 - `/tmp/` - OK to block
 - `/admin/` - OK to block
@@ -215,21 +237,26 @@ grep -r "noindex" src/
 ## 📊 **BRAND SEARCH ISSUE:**
 
 ### "omnig" Query: 0 Clicks, 28 Impressions
+
 **Problem:** People search for your brand but don't click!
 
 **FIXES:**
 
 #### A. Optimize Homepage Title & Description
+
 ```typescript
 // src/app/page.tsx metadata
 export const metadata = {
-  title: 'OmniGCloud - Cloud-Native Enterprise Architecture & Research',
-  description: 'Leading research in cloud-native architecture, distributed systems, and enterprise governance. Explore peer-reviewed papers on microservices, scalability, and platform engineering.',
-}
+  title: "OmniGCloud - Cloud-Native Enterprise Architecture & Research",
+  description:
+    "Leading research in cloud-native architecture, distributed systems, and enterprise governance. Explore peer-reviewed papers on microservices, scalability, and platform engineering.",
+};
 ```
 
 #### B. Add Sitelinks
+
 Create these key pages (Google will auto-generate sitelinks):
+
 - `/about` - About Us
 - `/research` - Research Papers
 - `/contact` - Contact
@@ -240,6 +267,7 @@ Create these key pages (Google will auto-generate sitelinks):
 ## ✅ **PRIORITY ACTION CHECKLIST:**
 
 ### **TODAY (Next 2 Hours):**
+
 - [ ] Deploy sitemap.xml
 - [ ] Submit sitemap to Google Search Console
 - [ ] Request indexing for 8 research papers
@@ -247,6 +275,7 @@ Create these key pages (Google will auto-generate sitelinks):
 - [ ] Fix any noindex issues
 
 ### **THIS WEEK:**
+
 - [ ] Add FAQ sections to all research papers
 - [ ] Create "Related Research" sections
 - [ ] Add canonical tags middleware
@@ -255,6 +284,7 @@ Create these key pages (Google will auto-generate sitelinks):
 - [ ] Create Research Hub page
 
 ### **NEXT WEEK:**
+
 - [ ] Add 200+ words to thin content pages
 - [ ] Improve internal linking
 - [ ] Create sitelinks-worthy pages
@@ -264,19 +294,20 @@ Create these key pages (Google will auto-generate sitelinks):
 
 ## 📈 **EXPECTED TIMELINE:**
 
-| Week | Indexed Pages | Action |
-|------|---------------|--------|
-| **Week 0 (Now)** | 228 | Deploy sitemap, request indexing |
-| **Week 1** | 350+ | Google starts indexing from sitemap |
-| **Week 2** | 450+ | Manual requests processed |
-| **Week 3** | 550+ | Content improvements recognized |
-| **Week 4** | 650+ | Most pages indexed |
+| Week             | Indexed Pages | Action                              |
+| ---------------- | ------------- | ----------------------------------- |
+| **Week 0 (Now)** | 228           | Deploy sitemap, request indexing    |
+| **Week 1**       | 350+          | Google starts indexing from sitemap |
+| **Week 2**       | 450+          | Manual requests processed           |
+| **Week 3**       | 550+          | Content improvements recognized     |
+| **Week 4**       | 650+          | Most pages indexed                  |
 
 ---
 
 ## 🔍 **MONITORING:**
 
 Check Google Search Console daily:
+
 1. **Coverage Report** - Watch "Discovered - not indexed" decrease
 2. **Sitemaps** - Ensure sitemap is processed
 3. **URL Inspection** - Check individual page status

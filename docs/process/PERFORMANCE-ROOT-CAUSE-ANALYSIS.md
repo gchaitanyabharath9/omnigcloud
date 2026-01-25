@@ -12,14 +12,16 @@ The issue was **NOT** the lazy loading strategy - it was **unoptimized images**!
 ### Critical Discovery
 
 All hero and above-the-fold images were marked as `unoptimized`:
+
 ```typescript
-<Image 
-  src="https://images.unsplash.com/..." 
+<Image
+  src="https://images.unsplash.com/..."
   unoptimized  // ← This was the problem!
 />
 ```
 
 This meant:
+
 - ❌ No Next.js image optimization
 - ❌ No WebP/AVIF conversion
 - ❌ No responsive sizing
@@ -36,9 +38,10 @@ This meant:
 ## ✅ Fix Applied
 
 ### 1. Hero Image Optimization
+
 ```typescript
-<Image 
-  src="https://images.unsplash.com/..." 
+<Image
+  src="https://images.unsplash.com/..."
   priority  // ← Load immediately (LCP element)
   sizes="(max-width: 768px) 100vw, 50vw"  // ← Responsive
   // Removed: unoptimized
@@ -46,13 +49,16 @@ This meant:
 ```
 
 ### 2. Problem Section Images
+
 Removed `unoptimized` from all 4 card images to enable:
+
 - Automatic WebP/AVIF conversion
 - Responsive sizing
 - CDN caching
 - Lazy loading for below-fold images
 
 ### 3. Lazy Loading Strategy (Kept)
+
 - ✅ Dashboard page charts (not landing page)
 - ✅ Below-fold sections (Ecosystem, Demo)
 - ✅ Mermaid diagrams (research papers)
@@ -61,12 +67,14 @@ Removed `unoptimized` from all 4 card images to enable:
 ## 📊 Expected Results
 
 ### Before Fix
+
 - **LCP**: 4.6s 🔴
 - **Score**: 80/100 ⚠️
 - **Image Size**: ~3MB unoptimized
 - **Format**: JPEG from Unsplash
 
 ### After Fix
+
 - **LCP**: ~2.0-2.5s ✅ (60-70% improvement)
 - **Score**: 90-95/100 ✅
 - **Image Size**: ~300-500KB optimized
@@ -100,6 +108,7 @@ Removed `unoptimized` from all 4 card images to enable:
 ### Next.js Image Optimization Benefits
 
 When `unoptimized={false}` (default):
+
 - Automatic format detection (WebP, AVIF)
 - Responsive image generation
 - Lazy loading for below-fold images
@@ -117,6 +126,7 @@ When `unoptimized={false}` (default):
 ### Performance Impact
 
 **Unoptimized Image**:
+
 ```
 Size: 800KB JPEG
 Time: 4.6s @ 3G
@@ -125,6 +135,7 @@ Caching: Unsplash CDN
 ```
 
 **Optimized Image**:
+
 ```
 Size: 120KB WebP
 Time: 0.8s @ 3G
@@ -137,17 +148,20 @@ Caching: Vercel Edge + Browser
 ## 📈 Monitoring Plan
 
 ### Immediate (Next 24h)
+
 - [ ] Verify PageSpeed score reaches 90+
 - [ ] Check LCP drops below 2.5s
 - [ ] Confirm WebP/AVIF serving
 - [ ] Monitor Vercel image optimization usage
 
 ### Weekly
+
 - [ ] Track Core Web Vitals trends
 - [ ] Review image optimization costs
 - [ ] Check for any regressions
 
 ### Monthly
+
 - [ ] Audit all images across site
 - [ ] Review unoptimized flags
 - [ ] Optimize any new images

@@ -1,129 +1,135 @@
 :root {
-    /* Core Palette - Deep, Rich, Professional (Vellum/YourGPT Inspired) */
-    --primary: #3b82f6;
-    /* Royal Blue - Distinct Accent */
-    --primary-glow: rgba(59, 130, 246, 0.15);
-    --background: #020617;
-    /* Slate 950 - Deep/Cold Black */
-    --foreground: #ffffff;
-    /* Pure White for Headings */
+  /* Core Palette - Deep, Rich, Professional (Vellum/YourGPT Inspired) */
+  --primary: #3b82f6;
+  /* Royal Blue - Distinct Accent */
+  --primary-glow: rgba(59, 130, 246, 0.15);
+  --background: #020617;
+  /* Slate 950 - Deep/Cold Black */
+  --foreground: #ffffff;
+  /* Pure White for Headings */
 
-    /* Surface & Depth */
-    --card-bg: rgba(30, 41, 59, 0.4);
-    /* Slate 800 with transparency */
-    --card-border: rgba(255, 255, 255, 0.12);
-    /* Increased visibility */
-    --card-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3), 0 2px 4px -1px rgba(0, 0, 0, 0.15);
-    --card-shadow-hover: 0 20px 25px -5px rgba(0, 0, 0, 0.4), 0 10px 10px -5px rgba(0, 0, 0, 0.2);
+  /* Surface & Depth */
+  --card-bg: rgba(30, 41, 59, 0.4);
+  /* Slate 800 with transparency */
+  --card-border: rgba(255, 255, 255, 0.12);
+  /* Increased visibility */
+  --card-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3), 0 2px 4px -1px rgba(0, 0, 0, 0.15);
+  --card-shadow-hover: 0 20px 25px -5px rgba(0, 0, 0, 0.4), 0 10px 10px -5px rgba(0, 0, 0, 0.2);
 
-    --muted: #cbd5e1;
-    /* Slate 300 - High legibility body text */
-    --selection: rgba(59, 130, 246, 0.25);
+  --muted: #cbd5e1;
+  /* Slate 300 - High legibility body text */
+  --selection: rgba(59, 130, 246, 0.25);
 
-    /* Semantic Colors */
-    --primary-main: var(--primary);
-    --primary-contrast: #ffffff;
+  /* Semantic Colors */
+  --primary-main: var(--primary);
+  --primary-contrast: #ffffff;
 
-    --text-primary: var(--foreground);
-    --text-secondary: var(--muted);
+  --text-primary: var(--foreground);
+  --text-secondary: var(--muted);
 
-    --surface-1: var(--card-bg);
-    --surface-2: var(--bg-surface-2);
+  --surface-1: var(--card-bg);
+  --surface-2: var(--bg-surface-2);
 
-    --color-success: #10b981;
-    --color-warning: #f59e0b;
-    --color-danger: #ef4444;
-    --color-info: #3b82f6;
-    --color-accent-purple: #8b5cf6;
+  --color-success: #10b981;
+  --color-warning: #f59e0b;
+  --color-danger: #ef4444;
+  --color-info: #3b82f6;
+  --color-accent-purple: #8b5cf6;
 
-    /* Layout & Spacing */
-    --section-pt: 2.5rem;
-    --grid-gap: 1.25rem;
-    --container-max: 1536px;
-    /* screen-2xl for consistency across layout */
+  /* Layout & Spacing */
+  --section-pt: 2.5rem;
+  --grid-gap: 1.25rem;
+  --container-max: 1536px;
+  /* screen-2xl for consistency across layout */
 
-    /* Radius System */
-    --radius-sm: 0.25rem;
-    --radius-md: 0.5rem;
-    --radius-lg: 0.75rem;
-    --radius-xl: 1rem;
+  /* Radius System */
+  --radius-sm: 0.25rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 0.75rem;
+  --radius-xl: 1rem;
 
-    /* Header */
-    --header-bg: rgba(2, 6, 23, 0.95);
-    --muted-foreground: #94a3b8;
+  /* Header */
+  --header-bg: rgba(2, 6, 23, 0.95);
+  --muted-foreground: #94a3b8;
 
-    --bg-surface-2: rgba(30, 41, 59, 0.5);
+  --bg-surface-2: rgba(30, 41, 59, 0.5);
 
-    /* Typography Variables - AWS-inspired */
-    --font-body: -apple-system, BlinkMacSystemFont, "Segoe UI", "Amazon Ember", Roboto, "Helvetica Neue", Arial, sans-serif;
-    --font-heading: -apple-system, BlinkMacSystemFont, "Segoe UI", "Amazon Ember", Roboto, "Helvetica Neue", Arial, sans-serif;
-    --font-mono: ui-monospace, "SF Mono", "Cascadia Code", "Roboto Mono", Menlo, Consolas, "Courier New", monospace;
+  /* Typography Variables - AWS-inspired */
+  --font-body:
+    -apple-system, BlinkMacSystemFont, "Segoe UI", "Amazon Ember", Roboto, "Helvetica Neue", Arial,
+    sans-serif;
+  --font-heading:
+    -apple-system, BlinkMacSystemFont, "Segoe UI", "Amazon Ember", Roboto, "Helvetica Neue", Arial,
+    sans-serif;
+  --font-mono:
+    ui-monospace, "SF Mono", "Cascadia Code", "Roboto Mono", Menlo, Consolas, "Courier New",
+    monospace;
 
-    /* Font Sizes - Uniform Scale */
-    --h1-size: 3rem;
-    /* Reduced from 3.5rem */
-    --h2-size: 2.25rem;
-    /* Reduced from 2.75rem */
-    --h3-size: 1.75rem;
-    /* Reduced from 2rem */
-    --h4-size: 1.35rem;
-    /* Reduced from 1.5rem */
-    --h5-size: 1.15rem;
-    /* Reduced from 1.25rem */
-    --h6-size: 1rem;
-    --body-size: 1rem;
-    --small-size: 0.9rem;
-    /* Increased from 0.875rem */
-    --tiny-size: 0.8rem;
-    /* New - for footer/small elements */
+  /* Font Sizes - Uniform Scale */
+  --h1-size: 3rem;
+  /* Reduced from 3.5rem */
+  --h2-size: 2.25rem;
+  /* Reduced from 2.75rem */
+  --h3-size: 1.75rem;
+  /* Reduced from 2rem */
+  --h4-size: 1.35rem;
+  /* Reduced from 1.5rem */
+  --h5-size: 1.15rem;
+  /* Reduced from 1.25rem */
+  --h6-size: 1rem;
+  --body-size: 1rem;
+  --small-size: 0.9rem;
+  /* Increased from 0.875rem */
+  --tiny-size: 0.8rem;
+  /* New - for footer/small elements */
 
-    /* Line Heights - Optimized for readability */
-    --leading-tight: 1.2;
-    --leading-normal: 1.5;
-    --leading-relaxed: 1.75;
+  /* Line Heights - Optimized for readability */
+  --leading-tight: 1.2;
+  --leading-normal: 1.5;
+  --leading-relaxed: 1.75;
 
-    /* Letter Spacing - Subtle refinement */
-    --tracking-tight: -0.02em;
-    --tracking-normal: 0;
-    --tracking-wide: 0.025em;
-    --tracking-tighter: -0.04em;
-    /* For larger headings */
+  /* Letter Spacing - Subtle refinement */
+  --tracking-tight: -0.02em;
+  --tracking-normal: 0;
+  --tracking-wide: 0.025em;
+  --tracking-tighter: -0.04em;
+  /* For larger headings */
 
-    /* Height Constants */
-    --header-height: 70px;
-    --breadcrumb-height: 48px;
+  /* Height Constants */
+  --header-height: 70px;
+  --breadcrumb-height: 48px;
 }
 
-[data-theme='light'] {
-    --primary: #0284c7;
-    /* Sky 600 */
-    --primary-glow: rgba(2, 132, 199, 0.08);
-    --background: #ffffff;
-    --foreground: #0f172a;
-    /* Slate 900 */
+[data-theme="light"] {
+  --primary: #0284c7;
+  /* Sky 600 */
+  --primary-glow: rgba(2, 132, 199, 0.08);
+  --background: #ffffff;
+  --foreground: #0f172a;
+  /* Slate 900 */
 
-    --card-bg: rgba(255, 255, 255, 0.8);
-    --card-border: rgba(148, 163, 184, 0.2);
-    --card-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
-    --card-shadow-hover: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+  --card-bg: rgba(255, 255, 255, 0.8);
+  --card-border: rgba(148, 163, 184, 0.2);
+  --card-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+  --card-shadow-hover: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
 
-    --muted: #64748b;
-    /* Slate 500 */
+  --muted: #64748b;
+  /* Slate 500 */
 
-    --text-primary: var(--foreground);
-    --text-secondary: var(--muted);
+  --text-primary: var(--foreground);
+  --text-secondary: var(--muted);
 
-    --surface-1: var(--card-bg);
-    --surface-2: var(--bg-surface-2);
+  --surface-1: var(--card-bg);
+  --surface-2: var(--bg-surface-2);
 
-    --selection: rgba(2, 132, 199, 0.1);
+  --selection: rgba(2, 132, 199, 0.1);
 
-    /* Header */
-    --header-bg: rgba(255, 255, 255, 0.95);
-    --muted-foreground: #64748b;
+  /* Header */
+  --header-bg: rgba(255, 255, 255, 0.95);
+  --muted-foreground: #64748b;
 
-    --bg-surface-2: rgba(241, 245, 249, 0.8);
+  --bg-surface-2: rgba(241, 245, 249, 0.8);
 
-    --header-height: 70px;
-    --breadcrumb-height: 48px;
+  --header-height: 70px;
+  --breadcrumb-height: 48px;
 }

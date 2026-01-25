@@ -3136,29 +3136,17 @@
         "0": {
           "desc": "Enterprise-grade sovereignty and high-assurance security auditing.",
           "title": "Security",
-          "features": [
-            "FIPS 140-2",
-            "Zero-Trust",
-            "mTLS"
-          ]
+          "features": ["FIPS 140-2", "Zero-Trust", "mTLS"]
         },
         "1": {
           "desc": "Scale workloads autonomously across global multi-cloud infrastructure.",
           "title": "Scale",
-          "features": [
-            "Auto-Scaling",
-            "Multi-Region",
-            "DR"
-          ]
+          "features": ["Auto-Scaling", "Multi-Region", "DR"]
         },
         "2": {
           "desc": "Guarantee 99.999% uptime with autonomous drift remediation.",
           "title": "Stability",
-          "features": [
-            "Self-Healing",
-            "Live Sync",
-            "Drift Protection"
-          ]
+          "features": ["Self-Healing", "Live Sync", "Drift Protection"]
         }
       },
       "subtitle": "How we help you scale",

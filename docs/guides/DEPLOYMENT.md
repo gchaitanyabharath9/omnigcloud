@@ -2,17 +2,18 @@
 
 ## Quick Comparison
 
-| Platform | Effort | Cost | Best For |
-|----------|--------|------|----------|
-| **Vercel** ⭐ | 10 min | $0 | Next.js sites (RECOMMENDED) |
-| **Cloudflare Pages** | 15 min | $0 | Cloudflare users |
-| **Oracle Free Tier** | 1-2 hrs | $0 | Full control, learning |
+| Platform             | Effort  | Cost | Best For                    |
+| -------------------- | ------- | ---- | --------------------------- |
+| **Vercel** ⭐        | 10 min  | $0   | Next.js sites (RECOMMENDED) |
+| **Cloudflare Pages** | 15 min  | $0   | Cloudflare users            |
+| **Oracle Free Tier** | 1-2 hrs | $0   | Full control, learning      |
 
 ---
 
 ## 🏆 Recommended: Vercel Deployment
 
 ### Why Vercel?
+
 - ✅ Built specifically for Next.js
 - ✅ Zero configuration
 - ✅ Automatic SSL
@@ -61,6 +62,7 @@ git push -u origin main
 In Vercel Dashboard → Your Project → **Settings** → **Environment Variables**:
 
 **Required**:
+
 ```env
 NEXT_PUBLIC_SITE_URL=https://omnigcloud.com
 NEXT_PUBLIC_API_URL=https://omnigcloud.com/api
@@ -70,6 +72,7 @@ AUTH_URL=https://omnigcloud.com
 ```
 
 **Optional** (if using):
+
 ```env
 # Google OAuth
 AUTH_GOOGLE_ID=your_google_client_id
@@ -95,6 +98,7 @@ EMAIL_FROM=onboarding@omnigcloud.com
 ```
 
 **Generate Secrets**:
+
 ```bash
 # On Windows (PowerShell)
 -join ((48..57) + (65..90) + (97..122) | Get-Random -Count 32 | % {[char]$_})
@@ -108,11 +112,13 @@ After adding variables, click **"Redeploy"** in Deployments tab.
 #### 4. Connect Custom Domain (2 min)
 
 **In Vercel**:
+
 1. Go to **Settings** → **Domains**
 2. Add domain: `omnigcloud.com`
 3. Vercel provides DNS records
 
 **In Cloudflare**:
+
 1. Go to **DNS** → **Records**
 2. Add these records:
 
@@ -135,6 +141,7 @@ Proxy status: DNS only (gray cloud)
 #### 5. Verify Deployment ✅
 
 Visit:
+
 - https://omnigcloud.com
 - https://www.omnigcloud.com
 - https://omnigcloud.vercel.app (Vercel preview URL)
@@ -144,6 +151,7 @@ Visit:
 ## 🔄 Continuous Deployment
 
 Once set up, every time you push to GitHub:
+
 ```bash
 git add .
 git commit -m "Update hero messaging"
@@ -151,6 +159,7 @@ git push
 ```
 
 Vercel automatically:
+
 1. Detects the push
 2. Runs build
 3. Deploys to production
@@ -195,12 +204,14 @@ If you prefer to keep everything in Cloudflare:
 If you want full control and learning experience:
 
 ### Pros:
+
 - Full server control
 - Can run additional services
 - 4 OCPUs, 24GB RAM (ARM) - FREE!
 - Good for learning DevOps
 
 ### Cons:
+
 - More setup time (1-2 hours)
 - Manual SSL renewal
 - No automatic deployments
@@ -214,6 +225,7 @@ If you want full control and learning experience:
    - Assign public IP
 
 2. **Install Dependencies**:
+
 ```bash
 # SSH into instance
 ssh ubuntu@YOUR_ORACLE_IP
@@ -233,6 +245,7 @@ sudo apt install certbot python3-certbot-nginx
 ```
 
 3. **Deploy App**:
+
 ```bash
 # Clone repo
 git clone https://github.com/omnigcloud/nascent-zodiac.git
@@ -251,6 +264,7 @@ pm2 startup
 ```
 
 4. **Configure Nginx**:
+
 ```nginx
 server {
     listen 80;
@@ -268,11 +282,13 @@ server {
 ```
 
 5. **SSL with Certbot**:
+
 ```bash
 sudo certbot --nginx -d omnigcloud.com -d www.omnigcloud.com
 ```
 
 6. **Cloudflare DNS**:
+
 ```
 Type: A
 Name: @
@@ -284,11 +300,11 @@ Proxy: Enabled (orange cloud)
 
 ## 📊 Cost Comparison
 
-| Platform | Free Tier | Paid (if needed) |
-|----------|-----------|------------------|
-| **Vercel** | 100GB bandwidth/month | $20/month (Pro) |
-| **Cloudflare Pages** | Unlimited requests | $20/month (Pro) |
-| **Oracle Free Tier** | Always free | N/A |
+| Platform             | Free Tier             | Paid (if needed) |
+| -------------------- | --------------------- | ---------------- |
+| **Vercel**           | 100GB bandwidth/month | $20/month (Pro)  |
+| **Cloudflare Pages** | Unlimited requests    | $20/month (Pro)  |
+| **Oracle Free Tier** | Always free           | N/A              |
 
 **Recommendation**: Start with Vercel free tier. Upgrade only if you exceed 100GB/month.
 
@@ -313,12 +329,14 @@ Before going live:
 ## 📈 Post-Deployment
 
 ### Monitor:
+
 - Vercel Analytics (built-in)
 - Cloudflare Analytics (if using CF proxy)
 - Google Search Console
 - Uptime monitoring (UptimeRobot, free)
 
 ### Optimize:
+
 - Add Upstash Redis for rate limiting
 - Configure OAuth providers
 - Set up email for magic links
@@ -329,16 +347,19 @@ Before going live:
 ## 🆘 Troubleshooting
 
 ### Build Fails
+
 - Check environment variables are set
 - Verify Node.js version (18+)
 - Check build logs in Vercel/Cloudflare
 
 ### Domain Not Working
+
 - Wait 10-15 minutes for DNS propagation
 - Verify DNS records in Cloudflare
 - Check Vercel domain settings
 
 ### 500 Errors
+
 - Check environment variables
 - Check server logs
 - Verify API routes work
@@ -363,10 +384,12 @@ Before going live:
 ## 🎉 You're Live!
 
 Once deployed, your site will be available at:
+
 - **Production**: https://omnigcloud.com
 - **Preview**: https://omnigcloud.vercel.app
 
 **Next Steps**:
+
 1. Test all pages
 2. Submit to Google Search Console
 3. Share with stakeholders

@@ -14,18 +14,18 @@ This checklist verifies the configuration and secrets logic works as expected.
 
 ## 2. Mock Production (`APP_ENV=prod`)
 
-*Note: For local testing, you can simulate prod by changing `.env` to `APP_ENV=prod` temporarily.*
+_Note: For local testing, you can simulate prod by changing `.env` to `APP_ENV=prod` temporarily._
 
 1. **Set Environment**: Set `APP_ENV=prod` in `.env`.
-2. **Setup Secrets**: 
+2. **Setup Secrets**:
    - Since you likely don't have a local Vault running, the app might throw if you try to hit an endpoint needing secrets (like `/api/contact` which inits Redis).
-   - *However*, `/api/health` does NOT fetch secrets, it just reads static config.
+   - _However_, `/api/health` does NOT fetch secrets, it just reads static config.
 3. **Start Server**: `npm run build && npm run start`.
 4. **Check Health**: Visit `/api/health`.
    - [ ] `system.appEnv` should be `prod`.
    - [ ] `configuration.secretsProvider` should contain "HashiCorp Vault".
    - [ ] `configuration.configStrategy` should point to `prod.ts`.
-5. **Verify Fail Fast**: Visit `/api/contact`. 
+5. **Verify Fail Fast**: Visit `/api/contact`.
    - [ ] Server console should verify it attempted to reach Vault or threw an error about missing credentials (if logic triggers).
 
 ## 3. Real Deployment (K8s/Docker)

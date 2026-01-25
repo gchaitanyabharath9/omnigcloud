@@ -39,12 +39,14 @@ NEXT_PUBLIC_API_URL=https://api.omnigcloud.com
 **Exposed to**: Client browser (JavaScript bundle)
 
 **Use for**:
+
 - Public URLs
 - Public configuration
 - Non-sensitive feature flags
 - Public API keys (explicitly designed to be public)
 
 **Examples**:
+
 ```bash
 NEXT_PUBLIC_SITE_URL=https://omnigcloud.com
 NEXT_PUBLIC_API_URL=https://api.omnigcloud.com
@@ -58,6 +60,7 @@ NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY=pk_live_XXXXXXXXXXXXXXXXXXXXXXXX
 **Exposed to**: Server-side code only
 
 **Use for**:
+
 - API keys and secrets
 - Database credentials
 - Authentication secrets
@@ -66,6 +69,7 @@ NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY=pk_live_XXXXXXXXXXXXXXXXXXXXXXXX
 - Any sensitive configuration
 
 **Examples**:
+
 ```bash
 AUTH_SECRET=your_auth_secret_here
 STRIPE_SECRET_KEY=sk_dummy_XXXXXXXXXXXXXXXXXXXXXXXX
@@ -79,16 +83,16 @@ CSRF_SECRET=your_csrf_secret_here
 
 The build-time check will **FAIL** if any `NEXT_PUBLIC_*` variable contains these patterns:
 
-| Pattern | Example | Why Forbidden |
-|---------|---------|---------------|
-| `secret` | `NEXT_PUBLIC_API_SECRET` | Indicates sensitive value |
-| `key` | `NEXT_PUBLIC_SECRET_KEY` | Likely an API key |
-| `token` | `NEXT_PUBLIC_AUTH_TOKEN` | Authentication token |
-| `password` | `NEXT_PUBLIC_DB_PASSWORD` | Credential |
-| `private` | `NEXT_PUBLIC_PRIVATE_KEY` | Private key |
-| `credential` | `NEXT_PUBLIC_CREDENTIALS` | Sensitive data |
-| `jwt_secret` | `NEXT_PUBLIC_JWT_SECRET` | Signing key |
-| `csrf_secret` | `NEXT_PUBLIC_CSRF_SECRET` | Security token |
+| Pattern       | Example                   | Why Forbidden             |
+| ------------- | ------------------------- | ------------------------- |
+| `secret`      | `NEXT_PUBLIC_API_SECRET`  | Indicates sensitive value |
+| `key`         | `NEXT_PUBLIC_SECRET_KEY`  | Likely an API key         |
+| `token`       | `NEXT_PUBLIC_AUTH_TOKEN`  | Authentication token      |
+| `password`    | `NEXT_PUBLIC_DB_PASSWORD` | Credential                |
+| `private`     | `NEXT_PUBLIC_PRIVATE_KEY` | Private key               |
+| `credential`  | `NEXT_PUBLIC_CREDENTIALS` | Sensitive data            |
+| `jwt_secret`  | `NEXT_PUBLIC_JWT_SECRET`  | Signing key               |
+| `csrf_secret` | `NEXT_PUBLIC_CSRF_SECRET` | Security token            |
 
 ### Allowed Exceptions
 
@@ -121,6 +125,7 @@ npm run check:secrets
 ### Check Output
 
 **Success**:
+
 ```
 🔒 Checking secrets hygiene...
 
@@ -134,6 +139,7 @@ npm run check:secrets
 ```
 
 **Failure**:
+
 ```
 🔒 Checking secrets hygiene...
 
@@ -158,21 +164,21 @@ Guidelines:
 
 ```typescript
 // ✅ Available on server
-process.env.AUTH_SECRET
-process.env.DATABASE_URL
-process.env.STRIPE_SECRET_KEY
+process.env.AUTH_SECRET;
+process.env.DATABASE_URL;
+process.env.STRIPE_SECRET_KEY;
 ```
 
 ### Client-Side
 
 ```typescript
 // ✅ Available on client (embedded in bundle)
-process.env.NEXT_PUBLIC_SITE_URL
-process.env.NEXT_PUBLIC_API_URL
+process.env.NEXT_PUBLIC_SITE_URL;
+process.env.NEXT_PUBLIC_API_URL;
 
 // ❌ NOT available on client (undefined)
-process.env.AUTH_SECRET
-process.env.DATABASE_URL
+process.env.AUTH_SECRET;
+process.env.DATABASE_URL;
 ```
 
 ## Common Mistakes
@@ -286,28 +292,28 @@ Before deploying, verify:
 ### ❌ WRONG: Trying to Access Server Secrets
 
 ```typescript
-'use client';
+"use client";
 
 export default function MyComponent() {
-    // ❌ This will be undefined on client
-    const secret = process.env.AUTH_SECRET;
-    
-    // ❌ This will fail
-    const apiKey = process.env.STRIPE_SECRET_KEY;
+  // ❌ This will be undefined on client
+  const secret = process.env.AUTH_SECRET;
+
+  // ❌ This will fail
+  const apiKey = process.env.STRIPE_SECRET_KEY;
 }
 ```
 
 ### ✅ CORRECT: Using Public Variables
 
 ```typescript
-'use client';
+"use client";
 
 export default function MyComponent() {
-    // ✅ This works (public variable)
-    const siteUrl = process.env.NEXT_PUBLIC_SITE_URL;
-    
-    // ✅ This works (public variable)
-    const apiUrl = process.env.NEXT_PUBLIC_API_URL;
+  // ✅ This works (public variable)
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL;
+
+  // ✅ This works (public variable)
+  const apiUrl = process.env.NEXT_PUBLIC_API_URL;
 }
 ```
 
@@ -316,15 +322,15 @@ export default function MyComponent() {
 ```typescript
 // Server component or API route
 export async function POST(request: Request) {
-    // ✅ Server-only secret (safe)
-    const apiKey = process.env.STRIPE_SECRET_KEY;
-    
-    // Use secret to call external API
-    const response = await fetch('https://api.stripe.com/...', {
-        headers: {
-            'Authorization': `Bearer ${apiKey}`
-        }
-    });
+  // ✅ Server-only secret (safe)
+  const apiKey = process.env.STRIPE_SECRET_KEY;
+
+  // Use secret to call external API
+  const response = await fetch("https://api.stripe.com/...", {
+    headers: {
+      Authorization: `Bearer ${apiKey}`,
+    },
+  });
 }
 ```
 
@@ -381,11 +387,13 @@ npm run check:secrets
 ### Issue: Build Fails with Secrets Error
 
 **Error**:
+
 ```
 ❌ Environment variable name contains forbidden pattern: NEXT_PUBLIC_API_KEY
 ```
 
 **Solution**:
+
 1. Remove `NEXT_PUBLIC_` prefix from the variable
 2. Update code to use server-side access
 3. Re-run build
@@ -393,12 +401,14 @@ npm run check:secrets
 ### Issue: Variable Undefined on Client
 
 **Problem**:
+
 ```typescript
 // Returns undefined
 const value = process.env.MY_VARIABLE;
 ```
 
 **Solution**:
+
 ```typescript
 // Add NEXT_PUBLIC_ prefix (only if not a secret!)
 const value = process.env.NEXT_PUBLIC_MY_VARIABLE;
@@ -409,6 +419,7 @@ const value = process.env.NEXT_PUBLIC_MY_VARIABLE;
 **Problem**: Need to use API key on client-side
 
 **Solution**: **DON'T!** Instead:
+
 1. Create server-side API route
 2. Client calls your API route
 3. Server uses secret to call external API
@@ -417,13 +428,13 @@ const value = process.env.NEXT_PUBLIC_MY_VARIABLE;
 ```typescript
 // ✅ CORRECT Pattern
 // Client code
-const response = await fetch('/api/my-endpoint');
+const response = await fetch("/api/my-endpoint");
 
 // Server code (API route)
 export async function GET() {
-    const apiKey = process.env.MY_SECRET_KEY;
-    const data = await externalAPI(apiKey);
-    return Response.json(data);
+  const apiKey = process.env.MY_SECRET_KEY;
+  const data = await externalAPI(apiKey);
+  return Response.json(data);
 }
 ```
 
@@ -439,6 +450,7 @@ Following these guidelines helps meet:
 ## Changelog
 
 ### 2025-12-30
+
 - ✅ Created secrets hygiene documentation
 - ✅ Implemented build-time validation
 - ✅ Updated example.env with clear separation

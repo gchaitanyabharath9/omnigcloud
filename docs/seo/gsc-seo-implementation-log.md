@@ -1,4 +1,5 @@
 # GSC SEO Fix - Implementation Log
+
 **Date**: January 14, 2026  
 **Time**: 06:52 AM EST  
 **Project**: nascent-zodiac (OmniGCloud)  
@@ -11,9 +12,11 @@
 ### **🔴 STEP 1: 404 REDIRECTS (COMPLETE)**
 
 #### **Added 301 Redirects** (17 new redirects)
+
 All locale-less URLs now redirect to `/en/` equivalent:
 
 **Main Pages**:
+
 - ✅ `/about` → `/en/about`
 - ✅ `/pricing` → `/en/pricing`
 - ✅ `/contact` → `/en/contact`
@@ -25,6 +28,7 @@ All locale-less URLs now redirect to `/en/` equivalent:
 - ✅ `/platform` → `/en/platform`
 
 **Research Papers**:
+
 - ✅ `/research/papers/a1-cloud-native-enterprise-reference` → `/en/...`
 - ✅ `/research/papers/a2-high-throughput-distributed-systems` → `/en/...`
 - ✅ `/research/papers/a3-enterprise-observability-operational-intelligence` → `/en/...`
@@ -42,10 +46,12 @@ All locale-less URLs now redirect to `/en/` equivalent:
 ### **🟠 STEP 2: NOINDEX AUDIT (VERIFIED)**
 
 #### **Intentional Noindex** (CORRECT - Keep as-is)
+
 - ✅ `/dashboard/*` (all 8 locales) - **Properly noindexed**
 - ✅ `/api/*` - **Blocked in robots.txt**
 
 #### **Public Pages** (CORRECT - All indexable)
+
 - ✅ Root layout: `index: true, follow: true`
 - ✅ Research papers: `index: true, follow: true`
 - ✅ All A1-A6 papers: Explicit `robots: { index: true }`
@@ -57,12 +63,14 @@ All locale-less URLs now redirect to `/en/` equivalent:
 ### **🟡 STEP 3: CANONICAL STRATEGY (VERIFIED)**
 
 #### **Current Implementation** (CORRECT)
+
 - ✅ Root layout has proper canonical: `/${locale}`
 - ✅ Research papers have self-canonical: `/${locale}/research/papers/...`
 - ✅ All pages include hreflang alternates
 - ✅ x-default points to `/en/`
 
 **Example** (A1 Paper):
+
 ```typescript
 alternates: {
   canonical: `https://www.omnigcloud.com/${locale}/research/papers/a1-cloud-native-enterprise-reference`,
@@ -82,6 +90,7 @@ alternates: {
 ### **🔵 STEP 4: SITEMAP HYGIENE (VERIFIED)**
 
 #### **Current Sitemap** (`src/app/sitemap.ts`)
+
 - ✅ Only includes localized URLs (`/${locale}/...`)
 - ✅ Does NOT include root `/` (prevents redirect warning)
 - ✅ Includes all 8 locales
@@ -89,6 +98,7 @@ alternates: {
 - ✅ Proper changeFrequency (monthly for research, weekly for others)
 
 **Routes Included**:
+
 - Base routes: 10 routes × 8 locales = 80 URLs
 - Research papers: 6 papers × 8 locales = 48 URLs
 - Academic content: 2 routes × 8 locales = 16 URLs
@@ -101,6 +111,7 @@ alternates: {
 ### **🟣 STEP 5: ROBOTS.TXT (VERIFIED)**
 
 #### **Current Configuration** (`src/app/robots.ts`)
+
 - ✅ Allows all pages: `allow: ['/', '/docs/whitepaper']`
 - ✅ Disallows private paths: `/content/`, `/private/`, `/_next/`, `/dashboard/`
 - ✅ Blocks GPTBot from whitepaper (IP protection)
@@ -114,12 +125,12 @@ alternates: {
 
 ### **Before vs After**
 
-| **Issue** | **Before** | **After** | **Fix** |
-|-----------|------------|-----------|---------|
-| 404 Pages | 38 | ~20 | 301 redirects for locale-less URLs |
-| Noindex (Unintentional) | 12 | 0 | Verified all intentional |
-| Duplicate Without Canonical | 3 | 0 | All pages have explicit canonical |
-| Google Chose Different Canonical | 17 | 0 | Consistent canonical strategy |
+| **Issue**                        | **Before** | **After** | **Fix**                            |
+| -------------------------------- | ---------- | --------- | ---------------------------------- |
+| 404 Pages                        | 38         | ~20       | 301 redirects for locale-less URLs |
+| Noindex (Unintentional)          | 12         | 0         | Verified all intentional           |
+| Duplicate Without Canonical      | 3          | 0         | All pages have explicit canonical  |
+| Google Chose Different Canonical | 17         | 0         | Consistent canonical strategy      |
 
 **Note**: Some 404s may remain if they're from old URLs not in our redirect list. Need GSC export to identify exact URLs.
 
@@ -128,6 +139,7 @@ alternates: {
 ## 🚦 **QUALITY GATES - STATUS**
 
 ### **✅ PASSED**
+
 - ✅ All public pages have `index: true`
 - ✅ All canonicals return 200 (no redirect chains)
 - ✅ Dashboard properly has `noindex`
@@ -137,6 +149,7 @@ alternates: {
 - ✅ All redirects are 301 (permanent)
 
 ### **⏳ PENDING**
+
 - ⏳ Deploy to production
 - ⏳ Verify redirects work in production
 - ⏳ Request GSC re-indexing
@@ -147,18 +160,21 @@ alternates: {
 ## 🎯 **NEXT STEPS**
 
 ### **Immediate (Do Now)**
+
 1. ✅ **DONE**: Add 301 redirects for locale-less URLs
 2. ⏳ **TODO**: Test redirects locally
 3. ⏳ **TODO**: Deploy to production
 4. ⏳ **TODO**: Verify in production
 
 ### **Short-term (1-2 weeks)**
+
 1. ⏳ Export exact 404 URLs from GSC
 2. ⏳ Add any missing redirects
 3. ⏳ Request re-indexing in GSC for fixed URLs
 4. ⏳ Monitor GSC "Pages" report
 
 ### **Medium-term (2-4 weeks)**
+
 1. ⏳ Add internal links to "Discovered but not indexed" pages
 2. ⏳ Improve content on thin pages
 3. ⏳ Create category hub pages
@@ -169,6 +185,7 @@ alternates: {
 ## 📋 **LOCAL VALIDATION CHECKLIST**
 
 ### **Before Deployment**
+
 - [ ] Test `/pricing` → redirects to `/en/pricing`
 - [ ] Test `/research/papers/a1-...` → redirects to `/en/research/papers/a1-...`
 - [ ] Test `/en/pricing` → returns 200
@@ -179,6 +196,7 @@ alternates: {
 - [ ] Check robots.txt blocks `/dashboard/`
 
 ### **After Deployment**
+
 - [ ] Verify all redirects work in production
 - [ ] Check GSC for new crawl errors
 - [ ] Request re-indexing for fixed URLs
@@ -189,7 +207,9 @@ alternates: {
 ## 🔍 **REMAINING ISSUES (Need GSC Export)**
 
 ### **404 Pages** (~18 remaining)
+
 The 17 redirects we added should fix most locale-less URLs. However, there may be other 404s from:
+
 - Old blog URLs
 - Typos in external links
 - Query parameters
@@ -198,7 +218,9 @@ The 17 redirects we added should fix most locale-less URLs. However, there may b
 **Action**: Export GSC 404 report to identify exact URLs
 
 ### **Discovered But Not Indexed** (102 pages)
+
 These pages need:
+
 - More internal links
 - Better content
 - Time for Google to re-crawl
@@ -210,18 +232,21 @@ These pages need:
 ## 📈 **MONITORING PLAN**
 
 ### **Week 1-2**
+
 - Monitor GSC "Pages" report daily
 - Check for new crawl errors
 - Verify redirects are working
 - Request re-indexing for fixed URLs
 
 ### **Week 3-4**
+
 - Check if 404 count decreased
 - Check if "Discovered but not indexed" improved
 - Monitor canonical issues
 - Check indexing rate
 
 ### **Week 5-8**
+
 - Full GSC validation
 - Compare before/after metrics
 - Document lessons learned
@@ -232,6 +257,7 @@ These pages need:
 ## ✅ **SUMMARY**
 
 ### **What We Fixed**
+
 1. ✅ Added 17 new 301 redirects for locale-less URLs
 2. ✅ Verified noindex is only on dashboard (intentional)
 3. ✅ Verified all public pages have proper canonical
@@ -239,12 +265,14 @@ These pages need:
 5. ✅ Verified robots.txt blocks private paths
 
 ### **What's Left**
+
 1. ⏳ Deploy to production
 2. ⏳ Get GSC export for exact 404 URLs
 3. ⏳ Add internal links to orphan pages
 4. ⏳ Monitor GSC for 2-4 weeks
 
 ### **Expected Outcome**
+
 - **404 Pages**: 38 → ~20 (47% reduction)
 - **Noindex Issues**: 12 → 0 (100% fixed)
 - **Canonical Issues**: 20 → 0 (100% fixed)

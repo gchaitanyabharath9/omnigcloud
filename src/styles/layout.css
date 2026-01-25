@@ -1,200 +1,199 @@
 .container {
-    width: 100%;
-    max-width: var(--container-max);
-    margin: 0 auto;
-    padding: 0 2rem;
+  width: 100%;
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: 0 2rem;
 }
 
 html {
-    scroll-padding-top: calc(var(--header-height) + var(--breadcrumb-height));
+  scroll-padding-top: calc(var(--header-height) + var(--breadcrumb-height));
 }
 
 /* Ensure all anchor targets account for sticky header */
 [id] {
-    scroll-margin-top: calc(var(--header-height) + var(--breadcrumb-height) + 1rem);
+  scroll-margin-top: calc(var(--header-height) + var(--breadcrumb-height) + 1rem);
 }
 
 .snap-section {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    /* Ultra-dense mode */
-    padding: 1rem 0;
-    min-height: auto;
-    scroll-snap-align: start;
-    scroll-margin-top: calc(var(--header-height) + var(--breadcrumb-height));
-    border-bottom: 1px solid var(--card-border);
-    /* Prevent content overlap */
-    isolation: isolate;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  /* Ultra-dense mode */
+  padding: 1rem 0;
+  min-height: auto;
+  scroll-snap-align: start;
+  scroll-margin-top: calc(var(--header-height) + var(--breadcrumb-height));
+  border-bottom: 1px solid var(--card-border);
+  /* Prevent content overlap */
+  isolation: isolate;
 }
 
 @media (max-width: 1024px) {
-    .snap-section {
-        min-height: auto;
-        scroll-snap-align: none;
-        padding: 2.5rem 0;
-    }
+  .snap-section {
+    min-height: auto;
+    scroll-snap-align: none;
+    padding: 2.5rem 0;
+  }
 }
 
 .hero-grid-layout {
-    display: grid;
-    grid-template-columns: 1.2fr 1fr;
-    gap: 3rem;
-    align-items: center;
-    width: 100%;
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 3rem;
+  align-items: center;
+  width: 100%;
 }
 
 @media (max-width: 1200px) {
-    .hero-grid-layout {
-        grid-template-columns: 1fr;
-        grid-template-rows: auto;
-    }
+  .hero-grid-layout {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+  }
 }
 
 .grid-2 {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 2rem;
-    align-items: stretch;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  align-items: stretch;
 }
 
 .grid-3 {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
-    align-items: stretch;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  align-items: stretch;
 }
 
 .grid-4 {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 2rem;
-    align-items: stretch;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  align-items: stretch;
 }
 
 /* Strict 2x2 Grid for Feature Blocks */
 .grid-2x2-strict {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, minmax(180px, 1fr));
-    gap: 1.5rem;
-    width: 100%;
-    margin-top: 2rem;
-    /* Prevent overlap */
-    isolation: isolate;
-    clear: both;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, minmax(180px, 1fr));
+  gap: 1.5rem;
+  width: 100%;
+  margin-top: 2rem;
+  /* Prevent overlap */
+  isolation: isolate;
+  clear: both;
 }
 
 @media (max-width: 1200px) {
-    .grid-3 {
-        grid-template-columns: repeat(2, 1fr);
-    }
+  .grid-3 {
+    grid-template-columns: repeat(2, 1fr);
+  }
 
-    .grid-4 {
-        grid-template-columns: repeat(2, 1fr);
-    }
+  .grid-4 {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 @media (max-width: 768px) {
-
-    .grid-2,
-    .grid-2x2-strict,
-    .grid-3,
-    .grid-4 {
-        grid-template-columns: 1fr;
-        grid-template-rows: auto;
-        gap: 2rem;
-    }
+  .grid-2,
+  .grid-2x2-strict,
+  .grid-3,
+  .grid-4 {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    gap: 2rem;
+  }
 }
 
 /* Large screen optimization - reduce excessive whitespace */
 @media (min-width: 1920px) {
-    .container {
-        padding: 0 4rem;
-    }
+  .container {
+    padding: 0 4rem;
+  }
 }
 
 /* Mobile optimization */
 @media (max-width: 768px) {
-    .container {
-        padding: 0 1rem;
-        max-width: 100%;
-    }
+  .container {
+    padding: 0 1rem;
+    max-width: 100%;
+  }
 
-    .snap-section {
-        padding: 3rem 0 2rem 0;
-        min-height: auto;
-    }
+  .snap-section {
+    padding: 3rem 0 2rem 0;
+    min-height: auto;
+  }
 
-    /* Ensure all content stays within viewport */
-    * {
-        max-width: 100%;
-        word-wrap: break-word;
-        overflow-wrap: break-word;
-    }
+  /* Ensure all content stays within viewport */
+  * {
+    max-width: 100%;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+  }
 
-    /* Prevent images from causing overflow */
-    img,
-    video,
-    iframe {
-        max-width: 100%;
-        height: auto;
-    }
+  /* Prevent images from causing overflow */
+  img,
+  video,
+  iframe {
+    max-width: 100%;
+    height: auto;
+  }
 }
 
 /* Extra small mobile devices */
 @media (max-width: 480px) {
-    .container {
-        padding: 0 0.75rem;
-    }
+  .container {
+    padding: 0 0.75rem;
+  }
 
-    .snap-section {
-        padding: 2.5rem 0 1.5rem 0;
-    }
+  .snap-section {
+    padding: 2.5rem 0 1.5rem 0;
+  }
 }
 
 .flex-col {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 .gap-6 {
-    gap: 1.5rem;
+  gap: 1.5rem;
 }
 
 .mb-4 {
-    margin-bottom: 1rem;
+  margin-bottom: 1rem;
 }
 
 .items-center {
-    align-items: center;
+  align-items: center;
 }
 
 .w-full {
-    width: 100%;
+  width: 100%;
 }
 
 .h-full {
-    height: 100%;
+  height: 100%;
 }
 
 .text-center {
-    text-align: center;
+  text-align: center;
 }
 
 .justify-center {
-    justify-content: center;
+  justify-content: center;
 }
 
 .justify-end {
-    justify-content: flex-end;
+  justify-content: flex-end;
 }
 
 .justify-between {
-    justify-content: space-between;
+  justify-content: space-between;
 }
 
 .relative {
-    position: relative;
+  position: relative;
 }

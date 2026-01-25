@@ -2,23 +2,25 @@
 
 ## Current Configuration
 
-| Endpoint | Limit | Window | Strictness |
-|----------|-------|--------|------------|
-| `/api/contact` | **5** | 60s | STRICT |
-| `/api/leads` | 20 | 60s | Moderate |
-| `/api/metrics` | 100 | 60s | Light |
-| `/api/health` | 200 | 60s | Very Light |
-| Default | 50 | 60s | Standard |
+| Endpoint       | Limit | Window | Strictness |
+| -------------- | ----- | ------ | ---------- |
+| `/api/contact` | **5** | 60s    | STRICT     |
+| `/api/leads`   | 20    | 60s    | Moderate   |
+| `/api/metrics` | 100   | 60s    | Light      |
+| `/api/health`  | 200   | 60s    | Very Light |
+| Default        | 50    | 60s    | Standard   |
 
 ## Environment Modes
 
 ### Local Development
+
 - **Limiter**: InMemoryRateLimiter
 - **Storage**: In-memory Map
 - **Redis**: NOT required
 - **Warnings**: NONE
 
 ### Production
+
 - **Limiter**: RedisRateLimiter (if configured) or NoopRateLimiter
 - **Storage**: Upstash Redis
 - **Redis**: Required for rate limiting
@@ -27,11 +29,13 @@
 ## Response Headers
 
 ### Success
+
 ```http
 X-RateLimit-Remaining: 4
 ```
 
 ### Rate Limited (429)
+
 ```http
 Retry-After: 45
 X-RateLimit-Remaining: 0

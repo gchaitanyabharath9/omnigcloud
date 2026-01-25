@@ -9,8 +9,10 @@ All 10 enterprise requirements have been successfully implemented and verified w
 ## ✅ Implementation Summary
 
 ### 1. ✅ Configurable Domain (SEO Foundation)
+
 **Status**: Complete  
 **Changes**:
+
 - Added `NEXT_PUBLIC_SITE_URL` to `example.env`
 - Updated `metadataBase` in `src/app/[locale]/layout.tsx` to use env var
 - Updated `robots.ts` to use configurable URL
@@ -23,8 +25,10 @@ All 10 enterprise requirements have been successfully implemented and verified w
 ---
 
 ### 2. ✅ Multilingual SEO (7 Locales)
+
 **Status**: Complete  
 **Changes**:
+
 - Aligned locales between `proxy.ts` and `sitemap.ts`: `en, es, fr, de, zh, hi, ja`
 - Implemented `generateMetadata()` with locale-specific OpenGraph
 - Added `hreflang` alternates for all 7 locales
@@ -36,8 +40,10 @@ All 10 enterprise requirements have been successfully implemented and verified w
 ---
 
 ### 3. ✅ Security Headers + CSP
+
 **Status**: Complete  
 **Changes**:
+
 - Added comprehensive security headers in `next.config.ts`:
   - `X-Frame-Options: DENY`
   - `X-Content-Type-Options: nosniff`
@@ -55,8 +61,10 @@ All 10 enterprise requirements have been successfully implemented and verified w
 ---
 
 ### 4. ✅ Hardened API Routes
+
 **Status**: Complete  
 **Changes**:
+
 - Created `src/lib/api-utils.ts` with `withApiHarden()` wrapper
 - Implemented Zod validation for all POST/PUT endpoints:
   - `/api/billing`: BillingSchema (vms, storage, gpuUnits)
@@ -79,8 +87,10 @@ All 10 enterprise requirements have been successfully implemented and verified w
 ---
 
 ### 5. ✅ Redis-Based Rate Limiting
+
 **Status**: Complete  
 **Changes**:
+
 - Created `src/lib/rate-limit.ts` with dual implementation:
   - **RedisRateLimiter**: Upstash Redis-backed (production)
   - **NoopRateLimiter**: In-memory fallback (development)
@@ -93,8 +103,10 @@ All 10 enterprise requirements have been successfully implemented and verified w
 ---
 
 ### 6. ✅ Authentication + RBAC
+
 **Status**: Complete  
 **Changes**:
+
 - Integrated **Auth.js (NextAuth v5)** with:
   - Google OAuth provider
   - Microsoft Entra ID (Azure AD) provider
@@ -110,8 +122,10 @@ All 10 enterprise requirements have been successfully implemented and verified w
 ---
 
 ### 7. ✅ Billing + Stripe Integration
+
 **Status**: Complete (Test Mode)  
 **Changes**:
+
 - Created `src/lib/stripe.ts` with Stripe SDK initialization
 - Implemented `/api/billing` endpoint:
   - Zod validation for VM/storage/GPU inputs
@@ -126,8 +140,10 @@ All 10 enterprise requirements have been successfully implemented and verified w
 ---
 
 ### 8. ✅ Observability Primitives
+
 **Status**: Complete  
 **Changes**:
+
 - **Structured Logger** (`src/lib/logger.ts`):
   - JSON output with ISO 8601 timestamps
   - PII masking (emails, sensitive fields)
@@ -149,8 +165,10 @@ All 10 enterprise requirements have been successfully implemented and verified w
 ---
 
 ### 9. ✅ Legal/Trust Pages
+
 **Status**: Complete  
 **Changes**:
+
 - Created **Terms of Service** (`/terms`): Enterprise-appropriate legal language
 - Upgraded **Privacy Policy** (`/privacy`): GDPR-aligned, comprehensive data handling
 - Upgraded **Security Page** (`/security`): Responsible disclosure program, security practices
@@ -166,8 +184,10 @@ All 10 enterprise requirements have been successfully implemented and verified w
 ---
 
 ### 10. ✅ Reproducible Whitepaper
+
 **Status**: Complete  
 **Changes**:
+
 - Rewrote `docs/whitepaper/G-Framework-ASO.md` as **Technical Report v0.1**
 - Removed unverifiable claims ($50M savings, journal publication)
 - Added **Reproducibility** section with:
@@ -189,6 +209,7 @@ All 10 enterprise requirements have been successfully implemented and verified w
 ## 🚀 How to Run Locally
 
 ### Prerequisites
+
 - Node.js 18+ and npm
 - (Optional) Upstash Redis account for rate limiting
 - (Optional) Google/Microsoft OAuth apps for SSO
@@ -197,6 +218,7 @@ All 10 enterprise requirements have been successfully implemented and verified w
 ### Setup Steps
 
 1. **Clone and Install**
+
 ```bash
 git clone https://github.com/omnigcloud/nascent-zodiac
 cd nascent-zodiac
@@ -204,6 +226,7 @@ npm install
 ```
 
 2. **Configure Environment**
+
 ```bash
 cp example.env .env.local
 ```
@@ -211,11 +234,13 @@ cp example.env .env.local
 Edit `.env.local` with your values (see Required Environment Variables below).
 
 3. **Run Development Server**
+
 ```bash
 npm run dev
 ```
 
 4. **Access Application**
+
 - Main site: http://localhost:3000
 - English: http://localhost:3000/en
 - Spanish: http://localhost:3000/es
@@ -223,6 +248,7 @@ npm run dev
 - Metrics: http://localhost:3000/api/metrics
 
 5. **Build for Production**
+
 ```bash
 npm run build
 npm start
@@ -233,6 +259,7 @@ npm start
 ## 🔐 Required Environment Variables
 
 ### Core Application (Required)
+
 ```env
 NEXT_PUBLIC_SITE_URL=https://omnigcloud.com
 NEXT_PUBLIC_API_URL=http://localhost:3000/api
@@ -240,6 +267,7 @@ SOVEREIGN_CORE_SECRET=your_super_secret_logic_key
 ```
 
 ### Authentication (Required for SSO)
+
 ```env
 AUTH_SECRET=your_secret_key_min_32_chars
 AUTH_URL=http://localhost:3000
@@ -260,6 +288,7 @@ ADMIN_EMAILS=admin@omnigcloud.com,architects@omnigcloud.com
 ```
 
 ### Rate Limiting (Optional - Falls back to no-op)
+
 ```env
 ENABLE_REDIS_RATE_LIMIT=false
 REDIS_URL=https://your-redis-url.upstash.io
@@ -267,6 +296,7 @@ REDIS_TOKEN=your_redis_token
 ```
 
 ### Magic Link Login (Optional)
+
 ```env
 ENABLE_MAGIC_LINK=false
 EMAIL_SERVER_HOST=smtp.omnigcloud.com
@@ -280,6 +310,7 @@ MAGIC_LINK_DISPOSABLE_DOMAINS=mailinator.com,guerrillamail.com
 ```
 
 ### Billing (Optional - Required for Stripe)
+
 ```env
 STRIPE_SECRET_KEY=sk_test_your_stripe_secret_key
 STRIPE_WEBHOOK_SECRET=whsec_your_webhook_secret
@@ -287,12 +318,14 @@ NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY=pk_test_your_publishable_key
 ```
 
 ### Observability (Optional - Enabled by default)
+
 ```env
 ENABLE_METRICS=true
 ENABLE_AUDIT_LOG=true
 ```
 
 ### Git Metadata (Optional)
+
 ```env
 NEXT_PUBLIC_GIT_COMMIT=abc123def
 ```
@@ -310,6 +343,7 @@ NEXT_PUBLIC_GIT_COMMIT=abc123def
 ```
 
 **Generated Routes**:
+
 - 28 marketing pages (7 locales × 4 core pages)
 - 4 trust pages (terms, privacy, security, compliance)
 - 1 protected app area (`/app`)
@@ -320,23 +354,27 @@ NEXT_PUBLIC_GIT_COMMIT=abc123def
 ## 🎓 EB-1A Projectable Features
 
 ### Original Contributions
+
 1. **Autonomous Sovereign Orchestration Framework**: Novel architecture for multi-cloud governance
 2. **PII-Safe Observability**: Automatic email masking and sensitive field removal
 3. **Pluggable Rate Limiting**: Redis-backed with graceful fallback
 4. **Multilingual Enterprise SaaS**: 7 locales with 100% Western European coverage
 
 ### Technical Excellence
+
 - **Zero TypeScript Errors**: Strict type safety throughout
 - **100% API Validation Coverage**: Zod schemas on all endpoints
 - **Sub-50ms Observability Overhead**: Production-ready performance
 - **Prometheus-Compatible Metrics**: Industry-standard export format
 
 ### Reproducibility
+
 - **734 LOC Core Components**: Fully documented and tested
 - **Comprehensive Documentation**: 4 major docs (OBSERVABILITY.md, TRUST_PAGES.md, SECURITY.md, whitepaper)
 - **Open Source**: MIT licensed, community-driven
 
 ### Industry Impact
+
 - **Enterprise-Grade Security**: CSP, security headers, PII protection
 - **Compliance-Ready**: GDPR active, SOC 2 in progress
 - **Monetization-Capable**: Stripe integration, entitlement gating
@@ -401,32 +439,35 @@ npm run build
 
 ## 🌍 Internationalization
 
-| Locale | Language | Coverage | Status |
-|--------|----------|----------|--------|
-| en | English | 100% | ✅ Complete |
-| es | Spanish | 100% | ✅ Complete |
-| fr | French | 100% | ✅ Complete |
-| de | German | 100% | ✅ Complete |
-| zh | Chinese | 35.7% | 🔄 In Progress |
-| hi | Hindi | 35.7% | 🔄 In Progress |
-| ja | Japanese | 35.7% | 🔄 In Progress |
+| Locale | Language | Coverage | Status         |
+| ------ | -------- | -------- | -------------- |
+| en     | English  | 100%     | ✅ Complete    |
+| es     | Spanish  | 100%     | ✅ Complete    |
+| fr     | French   | 100%     | ✅ Complete    |
+| de     | German   | 100%     | ✅ Complete    |
+| zh     | Chinese  | 35.7%    | 🔄 In Progress |
+| hi     | Hindi    | 35.7%    | 🔄 In Progress |
+| ja     | Japanese | 35.7%    | 🔄 In Progress |
 
 ---
 
 ## 🚢 Deployment
 
 ### Vercel (Recommended)
+
 ```bash
 vercel --prod
 ```
 
 ### Docker
+
 ```bash
 docker build -t omnigcloud .
 docker run -p 3000:3000 omnigcloud
 ```
 
 ### Environment Variables
+
 Set all required environment variables in your deployment platform.
 
 ---
@@ -461,9 +502,9 @@ Contributions welcome! Please read CONTRIBUTING.md for guidelines.
 
 This project is **Actively Maintained**.
 
-*   **Update Frequency**: We target weekly updates for dependencies and security patches.
-*   **Vulnerability Response**: See `SECURITY.md` for our 24-hour response policy.
-*   **Support**: Create a GitHub Issue for bugs or feature requests.
+- **Update Frequency**: We target weekly updates for dependencies and security patches.
+- **Vulnerability Response**: See `SECURITY.md` for our 24-hour response policy.
+- **Support**: Create a GitHub Issue for bugs or feature requests.
 
 ---
 
@@ -479,6 +520,7 @@ npm run release:gate:local
 ```
 
 This is the **recommended** way to validate changes before pushing. Local mode:
+
 - Tests 6-8 critical URLs for performance (vs 12 in CI)
 - Crawls up to 50 URLs for SEO (vs 200 in CI)
 - Provides developer-friendly output
@@ -492,6 +534,7 @@ npm run release:gate:ci
 ```
 
 CI mode runs the **exact same checks** as local mode, but with:
+
 - Full URL coverage (all 8 papers + hubs)
 - Larger crawl depth for SEO validation
 - Artifact uploads to GitHub Actions
@@ -508,11 +551,11 @@ The release gate runs these sub-gates in sequence (fail-fast):
 
 ### Interpretation & Fixes
 
-*   **Artifacts**: Check `artifacts/release-gate/` for detailed reports.
-*   **SEO Failures**: usually 404 links or missing standard paper URLs.
-*   **Perf Failures**: usually LCP regression or CLS > 0.1.
-*   **Security Failures**: update dependencies with `npm audit fix`.
-
+- **Artifacts**: Check `artifacts/release-gate/` for detailed reports.
+- **SEO Failures**: usually 404 links or missing standard paper URLs.
+- **Perf Failures**: usually LCP regression or CLS > 0.1.
+- **Security Failures**: update dependencies with `npm audit fix`.
 
 ## 🛡️ Repository Protection
+
 PDFs must not be committed to this repository. A pre-commit hook is in place to block accidental PDF commits. Store large binaries/PDFs externally or in GitHub Releases.

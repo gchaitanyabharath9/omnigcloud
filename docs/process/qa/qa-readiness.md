@@ -1,4 +1,5 @@
 # QA Readiness Guide
+
 ## OmniGCloud Marketing Site
 
 **Version**: 1.0  
@@ -34,6 +35,7 @@ npm test
 ```
 
 **Expected Results**:
+
 - ✅ All commands exit with code 0
 - ✅ No TypeScript errors
 - ✅ No ESLint errors
@@ -69,6 +71,7 @@ The following checks run automatically on every PR:
 Test in at least 2 locales (en, es):
 
 **Home Page** (`/[locale]`)
+
 - [ ] Page loads without errors
 - [ ] All sections visible (hero, features, trust badges)
 - [ ] Images load correctly
@@ -77,6 +80,7 @@ Test in at least 2 locales (en, es):
 - [ ] No console errors
 
 **Products Page** (`/[locale]/products`)
+
 - [ ] Page loads without errors
 - [ ] All product cards visible
 - [ ] Product links work
@@ -85,6 +89,7 @@ Test in at least 2 locales (en, es):
 - [ ] No console errors
 
 **Industries Page** (`/[locale]/industries`)
+
 - [ ] Page loads without errors
 - [ ] All industry sections visible
 - [ ] Content displays correctly
@@ -92,24 +97,28 @@ Test in at least 2 locales (en, es):
 - [ ] No console errors
 
 **Use Cases Page** (`/[locale]/use-cases`)
+
 - [ ] Page loads without errors
 - [ ] All use case sections visible
 - [ ] Content displays correctly
 - [ ] No console errors
 
 **Pricing Page** (`/[locale]/pricing`)
+
 - [ ] Page loads without errors
 - [ ] Pricing tiers visible
 - [ ] CTA buttons work
 - [ ] No console errors
 
 **Company Page** (`/[locale]/company`)
+
 - [ ] Page loads without errors
 - [ ] Company info displays
 - [ ] Team section visible
 - [ ] No console errors
 
 **Dashboard Page** (`/[locale]/dashboard`)
+
 - [ ] Page loads without errors
 - [ ] All metrics visible
 - [ ] Charts render correctly
@@ -120,6 +129,7 @@ Test in at least 2 locales (en, es):
 ### 2.2 Header Navigation
 
 **Desktop**:
+
 - [ ] All menu items visible
 - [ ] Dropdowns work correctly
 - [ ] Links navigate to correct pages
@@ -128,6 +138,7 @@ Test in at least 2 locales (en, es):
 - [ ] Theme toggle works (dark/light)
 
 **Mobile**:
+
 - [ ] Hamburger menu opens/closes
 - [ ] All menu items accessible
 - [ ] Dropdowns work on mobile
@@ -137,6 +148,7 @@ Test in at least 2 locales (en, es):
 ### 2.3 Forms & Interactions
 
 **Contact Form** (`/[locale]/contact` or embedded)
+
 - [ ] Form renders correctly
 - [ ] All fields accept input
 - [ ] Validation works (required fields, email format)
@@ -148,6 +160,7 @@ Test in at least 2 locales (en, es):
 - [ ] Rate limiting works (try 6+ submissions)
 
 **Newsletter Form** (if present)
+
 - [ ] Form renders correctly
 - [ ] Email validation works
 - [ ] Submit works
@@ -156,6 +169,7 @@ Test in at least 2 locales (en, es):
 ### 2.4 Charts & Data Visualization
 
 **Dashboard Charts**:
+
 - [ ] Charts render without errors
 - [ ] Loading skeleton displays initially
 - [ ] Data loads and displays
@@ -165,6 +179,7 @@ Test in at least 2 locales (en, es):
 - [ ] "Unavailable" message shows gracefully
 
 **Performance Charts** (if present):
+
 - [ ] Line charts render
 - [ ] Bar charts render
 - [ ] Pie charts render
@@ -177,18 +192,21 @@ Test in at least 2 locales (en, es):
 Test in multiple locales:
 
 **English** (`/en`)
+
 - [ ] All text in English
 - [ ] No raw translation keys (e.g., `common.title`)
 - [ ] Dates formatted correctly
 - [ ] Numbers formatted correctly
 
 **Spanish** (`/es`)
+
 - [ ] All text in Spanish (or fallback to English)
 - [ ] No raw translation keys
 - [ ] Dates formatted correctly
 - [ ] Numbers formatted correctly
 
 **Other Locales** (fr, de, zh, hi, ja, pt)
+
 - [ ] Pages load without errors
 - [ ] Text displays (translated or fallback)
 - [ ] No raw translation keys
@@ -198,9 +216,11 @@ Test in multiple locales:
 Test critical API endpoints:
 
 **Health Check** (`/api/health`)
+
 ```bash
 curl https://omnigcloud.com/api/health
 ```
+
 - [ ] Returns 200 OK
 - [ ] Response includes `status: "ok"`
 - [ ] Response includes system info
@@ -208,14 +228,17 @@ curl https://omnigcloud.com/api/health
 - [ ] No secrets exposed
 
 **CSRF Token** (`/api/csrf`)
+
 ```bash
 curl https://omnigcloud.com/api/csrf
 ```
+
 - [ ] Returns 200 OK
 - [ ] Response includes CSRF token
 - [ ] Cookie is set (check response headers)
 
 **Contact Form** (`/api/contact`)
+
 ```bash
 # Valid request
 curl -X POST https://omnigcloud.com/api/contact \
@@ -223,6 +246,7 @@ curl -X POST https://omnigcloud.com/api/contact \
   -H "X-CSRF-Token: <token>" \
   -d '{"firstName":"Test","lastName":"User","email":"test@example.com","message":"Test message"}'
 ```
+
 - [ ] Returns 200 OK for valid request
 - [ ] Returns 403 for missing CSRF token
 - [ ] Returns 422 for invalid email
@@ -230,9 +254,11 @@ curl -X POST https://omnigcloud.com/api/contact \
 - [ ] Response follows standard envelope format
 
 **Metrics** (`/api/metrics`)
+
 ```bash
 curl https://omnigcloud.com/api/metrics
 ```
+
 - [ ] Returns 200 OK
 - [ ] Response includes metrics data
 - [ ] Response follows standard envelope format
@@ -240,6 +266,7 @@ curl https://omnigcloud.com/api/metrics
 ### 2.7 Error Handling
 
 **API Error Responses**:
+
 - [ ] All errors return standard envelope format
 - [ ] No stack traces in production responses
 - [ ] Error codes are machine-readable
@@ -247,6 +274,7 @@ curl https://omnigcloud.com/api/metrics
 - [ ] `retryable` flag is set correctly
 
 **UI Error States**:
+
 - [ ] API failures show graceful error messages
 - [ ] "Unavailable" state displays for failed data
 - [ ] "Try again" buttons work
@@ -256,18 +284,21 @@ curl https://omnigcloud.com/api/metrics
 ### 2.8 Performance
 
 **Page Load**:
+
 - [ ] First Contentful Paint (FCP) < 1.5s
 - [ ] Largest Contentful Paint (LCP) < 2.5s
 - [ ] Cumulative Layout Shift (CLS) < 0.1
 - [ ] Time to Interactive (TTI) < 3.5s
 
 **Network**:
+
 - [ ] Images are optimized (WebP/AVIF)
 - [ ] Images are lazy-loaded
 - [ ] No unnecessary API calls
 - [ ] API responses are cached (check headers)
 
 **Bundle Size**:
+
 - [ ] JavaScript bundle < 500KB (gzipped)
 - [ ] CSS bundle < 100KB (gzipped)
 - [ ] No duplicate dependencies
@@ -275,9 +306,11 @@ curl https://omnigcloud.com/api/metrics
 ### 2.9 Security
 
 **Headers**:
+
 ```bash
 curl -I https://omnigcloud.com
 ```
+
 - [ ] `Strict-Transport-Security` present
 - [ ] `Content-Security-Policy` or `Content-Security-Policy-Report-Only` present
 - [ ] `X-Content-Type-Options: nosniff` present
@@ -285,17 +318,20 @@ curl -I https://omnigcloud.com
 - [ ] `Permissions-Policy` present
 
 **CSRF Protection**:
+
 - [ ] POST requests require CSRF token
 - [ ] Missing token returns 403
 - [ ] Invalid token returns 403
 - [ ] Token expires after 24 hours
 
 **Rate Limiting**:
+
 - [ ] Contact form limited to 5 requests/minute
 - [ ] Rate limit returns 429 status
 - [ ] `Retry-After` header present
 
 **Input Validation**:
+
 - [ ] All inputs validated server-side
 - [ ] SQL injection attempts blocked
 - [ ] XSS attempts blocked
@@ -304,18 +340,21 @@ curl -I https://omnigcloud.com
 ### 2.10 Accessibility
 
 **Keyboard Navigation**:
+
 - [ ] All interactive elements focusable
 - [ ] Focus indicators visible
 - [ ] Tab order logical
 - [ ] No keyboard traps
 
 **Screen Reader**:
+
 - [ ] Images have alt text
 - [ ] Form labels present
 - [ ] ARIA labels on charts
 - [ ] Semantic HTML used
 
 **Color Contrast**:
+
 - [ ] Text meets WCAG AA standards
 - [ ] Interactive elements distinguishable
 - [ ] Dark mode has sufficient contrast
@@ -327,6 +366,7 @@ curl -I https://omnigcloud.com
 ### 3.1 Pre-Deployment
 
 Before merging PR:
+
 1. [ ] Check Vercel preview deployment URL
 2. [ ] Run smoke tests on preview deployment
 3. [ ] Verify environment variables are set
@@ -335,6 +375,7 @@ Before merging PR:
 ### 3.2 Post-Deployment
 
 After deployment to production:
+
 1. [ ] Verify production URL loads
 2. [ ] Run smoke tests on production
 3. [ ] Check error monitoring (Sentry/Vercel Analytics)
@@ -344,6 +385,7 @@ After deployment to production:
 ### 3.3 Rollback Plan
 
 If issues detected:
+
 1. Revert deployment in Vercel dashboard
 2. Investigate issue in preview deployment
 3. Fix and redeploy
@@ -421,34 +463,43 @@ npm audit --audit-level=critical
 ### 5.1 Build Failures
 
 **Issue**: TypeScript errors
+
 - **Solution**: Run `npm run typecheck` and fix type errors
 
 **Issue**: Missing environment variables
+
 - **Solution**: Check `.env.local` and `example.env`
 
 **Issue**: Secrets hygiene failure
+
 - **Solution**: Remove forbidden patterns from `NEXT_PUBLIC_*` variables
 
 ### 5.2 Runtime Errors
 
 **Issue**: API returns 500 errors
+
 - **Solution**: Check server logs, verify environment variables
 
 **Issue**: CSRF token errors
+
 - **Solution**: Ensure `/api/csrf` endpoint is accessible, check cookie settings
 
 **Issue**: Rate limiting too aggressive
+
 - **Solution**: Adjust limits in `src/lib/rate-limit.ts`
 
 ### 5.3 UI Issues
 
 **Issue**: Charts not rendering
+
 - **Solution**: Check browser console, verify API responses
 
 **Issue**: Layout overlap
+
 - **Solution**: Check `scroll-margin-top` CSS, verify sticky header height
 
 **Issue**: Translation keys showing
+
 - **Solution**: Check `messages/[locale].json`, add missing keys
 
 ---
@@ -487,18 +538,21 @@ npm audit --audit-level=critical
 ### 7.1 Metrics to Monitor
 
 **Application Metrics**:
+
 - Request rate (requests/second)
 - Error rate (errors/total requests)
 - Latency (p50, p95, p99)
 - Availability (uptime percentage)
 
 **Security Metrics**:
+
 - Rate limit hits (429 responses)
 - CSRF failures (403 responses)
 - Bot detections (honeypot hits)
 - Failed validations (422 responses)
 
 **Performance Metrics**:
+
 - Page load time
 - API response time
 - Bundle size
@@ -507,6 +561,7 @@ npm audit --audit-level=critical
 ### 7.2 Alerting
 
 Set up alerts for:
+
 - Error rate > 5%
 - Latency p95 > 1000ms
 - Availability < 99.9%
@@ -572,25 +627,27 @@ Set up alerts for:
 
 ### 10.2 Error Codes
 
-| Code | HTTP Status | Retryable | Description |
-|------|-------------|-----------|-------------|
-| `VALIDATION_ERROR` | 400/422 | No | Invalid input data |
-| `AUTH_ERROR` | 401 | No | Authentication failed |
-| `CSRF_TOKEN_INVALID` | 403 | Yes | CSRF token missing/invalid |
-| `NOT_FOUND` | 404 | No | Resource not found |
-| `RATE_LIMIT_EXCEEDED` | 429 | Yes | Too many requests |
-| `INTERNAL_SERVER_ERROR` | 500 | Yes | Unexpected server error |
-| `EXTERNAL_SERVICE_ERROR` | 502 | Yes | External service failed |
-| `TIMEOUT_ERROR` | 504 | Yes | Request timed out |
+| Code                     | HTTP Status | Retryable | Description                |
+| ------------------------ | ----------- | --------- | -------------------------- |
+| `VALIDATION_ERROR`       | 400/422     | No        | Invalid input data         |
+| `AUTH_ERROR`             | 401         | No        | Authentication failed      |
+| `CSRF_TOKEN_INVALID`     | 403         | Yes       | CSRF token missing/invalid |
+| `NOT_FOUND`              | 404         | No        | Resource not found         |
+| `RATE_LIMIT_EXCEEDED`    | 429         | Yes       | Too many requests          |
+| `INTERNAL_SERVER_ERROR`  | 500         | Yes       | Unexpected server error    |
+| `EXTERNAL_SERVICE_ERROR` | 502         | Yes       | External service failed    |
+| `TIMEOUT_ERROR`          | 504         | Yes       | Request timed out          |
 
 ### 10.3 Environment Variables
 
 **Required**:
+
 - `NEXT_PUBLIC_SITE_URL`: Site URL for metadata
 - `AUTH_SECRET`: NextAuth secret
 - `CSRF_SECRET`: CSRF token signing secret
 
 **Optional**:
+
 - `REDIS_URL`: Redis connection URL (production)
 - `REDIS_TOKEN`: Redis authentication token
 - `VAULT_ADDR`: HashiCorp Vault address
