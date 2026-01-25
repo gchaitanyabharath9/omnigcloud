@@ -32,19 +32,11 @@ const buttonVariants = cva(
 );
 
 export interface ButtonProps
-  extends React.ButtonHTMLAttributes<HTMLButtonElement>, VariantProps<typeof buttonVariants> {
-  asChild?: boolean;
-}
+  extends React.ButtonHTMLAttributes<HTMLButtonElement>,
+  VariantProps<typeof buttonVariants> { }
 
 const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
-  ({ className, variant, size, asChild = false, ...props }, ref) => {
-    // Check if @radix-ui/react-slot is actually installed, otherwise fallback to standard button
-    // Given the package.json didn't show radix-ui/react-slot, I will implement a safe fallback behavior
-    // actually I should check if I can use Slot.
-    // Re-reading package.json: IT IS NOT INSTALLED. only cva, clsx, tailwind-merge.
-    // So I will remove Slot and asChild support to avoid breaking build.
-
-    // I will write the SIMPLIFIED version without Slot for now.
+  ({ className, variant, size, ...props }, ref) => {
     const Comp = "button";
     return (
       <Comp className={cn(buttonVariants({ variant, size, className }))} ref={ref} {...props} />
