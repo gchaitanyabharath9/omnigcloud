@@ -2021,7 +2021,14 @@
     "watermark": "watermark Details (ES)",
     "welcome": "Welcome Details (ES)",
     "yourRights": "Your Rights (ES)",
-    "yourRightsText": "Your Rights Text (ES)"
+    "yourRightsText": "Your Rights Text (ES)",
+    "header": {
+      "category": "category",
+      "description": "description",
+      "lastUpdated": "lastUpdated",
+      "readTime": "readTime",
+      "title": "title Details (ES)"
+    }
   },
   "Community": {
     "callout": {
@@ -3044,6 +3051,22 @@
         "stateReconciliationDesc": "(Current State → Target State) (ES)",
         "validation": "Validation Diagram (ES)",
         "validationDesc": "Validation process diagram (ES)"
+      },
+      "charts": {
+        "compliance": {
+          "aso": "Aso",
+          "autonomous": "ASO (Autonomous)",
+          "figure": "Figure 6a: Longitudinal analysis of Compliance Drift over 12 months.",
+          "legacy": "Legacy (Manual Ops)",
+          "yAxis": "Compliance Score (%)"
+        },
+        "cost": {
+          "aso": "ASO OpEx ($)",
+          "autonomous": "Charts Cost Autonomous",
+          "figure": "Figure 6b: Cost Scaling Curve - Legacy vs ASO (Logarithmic Efficiency Gain)",
+          "legacy": "Legacy OpEx ($)",
+          "yAxis": "Y Axis"
+        }
       }
     },
     "sidebar": {
@@ -7250,6 +7273,200 @@
       "unification": "Unificación completa del tejido en todas las nubes principales.",
       "purity": "Integridad soberana sin desviaciones para estados regulados.",
       "resonance": "Sincronización de estado de alta frecuencia a escala global."
+    }
+  },
+  "WhitePaper": {
+    "badge": "LATEST RESEARCH",
+    "caseStudies": {
+      "finance": {
+        "badge": "FINANCIAL SERVICES",
+        "desc": "Tier-1 bank automated GDPR, PCI-DSS, and SOC2 compliance across 45 cloud accounts, reducing audit prep from 6 weeks to 48 hours.",
+        "stat1": {
+          "label": "Annual Savings",
+          "value": "$2.4M"
+        },
+        "stat2": {
+          "label": "Implementation",
+          "value": "14 days"
+        },
+        "title": "Global Bank Achieves 99.99% Compliance"
+      },
+      "healthcare": {
+        "badge": "HEALTHCARE",
+        "desc": "Multi-national healthcare provider achieved HIPAA compliance across AWS, Azure, and on-premise systems with zero-trust architecture.",
+        "stat1": {
+          "label": "HIPAA Compliant",
+          "value": "100%"
+        },
+        "stat2": {
+          "label": "Records Protected",
+          "value": "3M+"
+        },
+        "title": "Hospital Chain Secures Patient Data"
+      },
+      "title": "Featured Implementation Case Studies"
+    },
+    "contribution": "Contribution",
+    "description": "A comprehensive framework for achieving mathematical certainty in data sovereignty across multi-cloud environments.",
+    "design_patterns": "Design Patterns",
+    "detailedDiagrams": {
+      "context": {
+        "clouds": {
+          "aws": "AWS",
+          "azure": "Azure",
+          "gcp": "GCP (Asia)"
+        },
+        "compliance": {
+          "desc": "Audit Logs",
+          "title": "Compliance"
+        },
+        "controlPlane": "AECP CONTROL PLANE",
+        "decisionEngine": "Decision Engine",
+        "devOps": {
+          "desc": "Define Policy",
+          "title": "DevOps Team"
+        },
+        "interpreter": "Intent Interpreter",
+        "reconciliation": {
+          "desc": "(Current State → Target State)",
+          "title": "State Reconciliation Loop"
+        }
+      },
+      "federation": {
+        "ap": {
+          "policy": "Policy: PERMISSIVE",
+          "title": "AP-SOUTH-SHARED"
+        },
+        "eu": {
+          "policy": "Policy: GDPR-STRICT",
+          "title": "EU-CENTRAL-PRIVACY"
+        },
+        "protocol": "Federated Trust Protocol (FTP) Active",
+        "us": {
+          "policy": "Policy: FIPS-140-2",
+          "title": "US-EAST-SOVEREIGN"
+        }
+      },
+      "governance": {
+        "action": {
+          "desc": "Targeted API Call",
+          "title": "3. ACTION"
+        },
+        "cycleTime": "Autonomous Control Loop Cycle Time: < 200ms",
+        "decision": {
+          "desc": "AECP Graph Engine",
+          "title": "2. DECISION"
+        },
+        "signal": {
+          "desc": "Multi-cloud Telemetry",
+          "title": "1. SIGNAL"
+        },
+        "validation": {
+          "desc": "State Confirmed",
+          "title": "4. VALIDATION"
+        }
+      },
+      "impact": {
+        "compliance": {
+          "desc": "Automated Audit Pass",
+          "title": "Compliance Rate",
+          "value": "99.7%"
+        },
+        "mttr": {
+          "desc": "From 14 days to 4 minutes",
+          "title": "MTTR Reduction",
+          "value": "-94%"
+        },
+        "opex": {
+          "desc": "Verified Arbitrage Savings",
+          "title": "Cloud OpEx",
+          "value": "-31%"
+        }
+      },
+      "security": {
+        "audit": {
+          "desc": "Every state change is cryptographically signed and stored in ledger.",
+          "title": "Immutable Audit"
+        },
+        "fence": {
+          "desc": "Geospatial policy enforcement prevents egress to non-compliant zones.",
+          "title": "Data Residency Fence"
+        },
+        "zeroTrust": {
+          "desc": "Identity is injected at runtime via SPIFFE/SPIRE. No static keys.",
+          "title": "Zero Trust Injection"
+        }
+      }
+    },
+    "download_subtitle": "Get the full technical specification, including architecture diagrams, decision frameworks, and implementation guides.",
+    "download_title": "Download the Whitepaper",
+    "footer": {
+      "_value": "Available in PDF / ePub formats.",
+      "copyright": "© 2026 OmniGCloud. All rights reserved."
+    },
+    "impact": {
+      "citations": {
+        "desc": "Referenced in cloud governance research",
+        "label": "Academic Citations",
+        "value": "847"
+      },
+      "downloads": {
+        "desc": "By CTOs, architects, and compliance officers",
+        "label": "Downloads",
+        "value": "12K+"
+      },
+      "implementations": {
+        "desc": "Framework adopted in production environments",
+        "label": "Enterprise Implementations",
+        "value": "340+"
+      },
+      "title": "Research Impact & Citations"
+    },
+    "pageCount": "42 Pages",
+    "peerReview": "Peer Reviewed",
+    "read_online": "Read Online",
+    "title": "The Autonomous Sovereign Cloud Protocol"
+  },
+  "docs": {
+    "whitepaper": {
+      "diagrams": {
+        "actionDesc": "Targeted API Call (ES)",
+        "actionTitle": "3. ACTION (ES)",
+        "automatedAudit": "Automated Audit Pass (ES)",
+        "cloudOpEx": "Cloud OpEx (ES)",
+        "clouds": {
+          "aws": "AWS (US) (ES)",
+          "azure": "Azure (EU) (ES)",
+          "gcp": "GCP (Asia) (ES)"
+        },
+        "complianceDesc": "Audit Logs (ES)",
+        "complianceRate": "Compliance Rate (ES)",
+        "complianceTitle": "Compliance (ES)",
+        "controlPlane": "AECP CONTROL PLANE (ES)",
+        "cycleTime": "Autonomous Control Loop Cycle Time: < 200ms (ES)",
+        "decisionDesc": "AECP Graph Engine (ES)",
+        "decisionEngine": "Decision Engine (AI) (ES)",
+        "decisionTitle": "2. DECISION (ES)",
+        "devOpsDesc": "Define Policy (ES)",
+        "devOpsTitle": "DevOps Team (ES)",
+        "federationApPolicy": "Policy: PERMISSIVE (ES)",
+        "federationApTitle": "AP-SOUTH-SHARED (ES)",
+        "federationEuPolicy": "Policy: GDPR-STRICT (ES)",
+        "federationEuTitle": "EU-CENTRAL-PRIVACY (ES)",
+        "federationProtocol": "Federated Trust Protocol (FTP) Active (ES)",
+        "federationUsPolicy": "Policy: FIPS-140-2 (ES)",
+        "federationUsTitle": "US-EAST-SOVEREIGN (ES)",
+        "intentInterpreter": "Intent Interpreter (ES)",
+        "mttrDesc": "From 14 days to 4 minutes (ES)",
+        "mttrReduction": "MTTR Reduction (ES)",
+        "opexDesc": "Verified Arbitrage Savings (ES)",
+        "signalDesc": "Multi-cloud Telemetry (ES)",
+        "signalTitle": "1. SIGNAL (ES)",
+        "stateReconciliation": "State Reconciliation Loop (ES)",
+        "stateReconciliationDesc": "(Current State → Target State) (ES)",
+        "validation": "Validation Diagram (ES)",
+        "validationDesc": "Validation process diagram (ES)"
+      }
     }
   }
 }

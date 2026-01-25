@@ -3,22 +3,7 @@ import json
 import os
 import glob
 
-def get_mapping(obj, path=""):
-    mapping = {}
-    if isinstance(obj, dict):
-        for k, v in obj.items():
-            full_path = f"{path}.{k}" if path else k
-            mapping[full_path.lower()] = full_path
-            mapping.update(get_mapping(v, full_path))
-    elif isinstance(obj, list):
-        for i, v in enumerate(obj):
-            full_path = f"{path}[{i}]"
-            mapping.update(get_mapping(v, full_path))
-    return mapping
-
 def sync_keys(source, target):
-    """Recursively updates target to have the same keys as source, 
-    preserving values where keys match case-insensitively."""
     if not isinstance(source, dict):
         return target
     
@@ -26,17 +11,26 @@ def sync_keys(source, target):
     target_lower = {k.lower(): (k, v) for k, v in target.items()} if isinstance(target, dict) else {}
     
     for k, v in source.items():
-        kl = k.lower()
-        if kl in target_lower:
-            # Key exists in target (possibly different case)
-            orig_k, orig_v = target_lower[kl]
+        # Special case: if both "Docs" and "docs" exist in source, 
+        # we need to preserve them in target too.
+        # But our sync_keys logic usually picks based on case-insensitivity.
+        
+        # Actually, let's just use exact match first, then fallback to case-insensitive.
+        if isinstance(target, dict) and k in target:
             if isinstance(v, dict):
-                new_target[k] = sync_keys(v, orig_v)
+                new_target[k] = sync_keys(v, target[k])
             else:
-                new_target[k] = orig_v
+                new_target[k] = target[k]
         else:
-            # Key missing from target, use source value
-            new_target[k] = v
+            kl = k.lower()
+            if kl in target_lower:
+                orig_k, orig_v = target_lower[kl]
+                if isinstance(v, dict):
+                    new_target[k] = sync_keys(v, orig_v)
+                else:
+                    new_target[k] = orig_v
+            else:
+                new_target[k] = v
             
     return new_target
 
