@@ -40,9 +40,9 @@
       }
     },
     "hero": {
-      "title": "AI & Data Engineering (ES)",
       "badge": "AI ENGINEERING (ES)",
-      "subtitle": "Unlocking the value of your data with advanced pipelines, generative AI, and predictive analytics. (ES)"
+      "subtitle": "Unlocking the value of your data with advanced pipelines, generative AI, and predictive analytics. (ES)",
+      "title": "AI & Data Engineering (ES)"
     },
     "visual": {
       "subtitle": "Deploy Training & Inference Clusters in Minutes (ES)",
@@ -100,11 +100,11 @@
       "title": "Autonomous Code Synthesis (ES)"
     },
     "hero": {
-      "title": "The Neural (ES)",
       "badge": "THE AECP ENGINE (v8.4) (ES)",
       "cta1": "Request Engine Demo (ES)",
       "cta2": "View Logical Model (ES)",
       "subtitle": "AECP (Autonomous Enterprise Cloud Protocol) is the intelligence layer that powers OmniGCloud. It uses multi-agent LLM analysis to interpret legacy system intent and execute precise modernization actions. (ES)",
+      "title": "The Neural (ES)",
       "titleHighlight": "Orchestration Core (ES)"
     },
     "loop": {
@@ -143,9 +143,9 @@
       "title": "OmniGCloud Unified Control Plane (ES)"
     },
     "hero": {
-      "title": "The Sovereign G-Framework (ES)",
       "badge": "Architecture & System Design (ES)",
-      "subtitle": "OmniGCloud's architecture is built on the principle of Absolute Abstraction. Our framework disconnects policy from infrastructure, allowing enterprises to move workloads across any cloud provider while maintaining 100% governance continuity. (ES)"
+      "subtitle": "OmniGCloud's architecture is built on the principle of Absolute Abstraction. Our framework disconnects policy from infrastructure, allowing enterprises to move workloads across any cloud provider while maintaining 100% governance continuity. (ES)",
+      "title": "The Sovereign G-Framework (ES)"
     },
     "layers": {
       "0": {
@@ -270,9 +270,9 @@
         "tos": "By signing up, you agree to our Terms of Service. (ES)"
       },
       "hero": {
-        "title": "Get Started with OmniGCloud (ES)",
         "badge": "Start Your Journey (ES)",
-        "description": "Standardizing your cloud-native onboarding through the world's first AI-powered Internal Cloud Foundation. (ES)"
+        "description": "Standardizing your cloud-native onboarding through the world's first AI-powered Internal Cloud Foundation. (ES)",
+        "title": "Get Started with OmniGCloud (ES)"
       },
       "modernize": {
         "title": {
@@ -350,10 +350,10 @@
   },
   "Blog": {
     "hero": {
-      "title": "Strategic Impact (ES)",
       "search": "Search articles... (ES)",
       "subtitle": "Architecture, Governance, and Engineering Insights for the Sovereign Enterprise. (ES)",
-      "tag": "KNOWLEDGE HUB (ES)"
+      "tag": "KNOWLEDGE HUB (ES)",
+      "title": "Strategic Impact (ES)"
     },
     "newsletter": {
       "button": "Subscribe (ES)",
@@ -433,6 +433,8 @@
     }
   },
   "Breadcrumb": {
+    "a1-cloud-native-enterprise-reference": "Cloud-Native Enterprise Reference (ES)",
+    "a4-platform-governance-multicloud-hybrid": "Platform Governance & Hybrid Cloud (ES)",
     "blog": "Blog Details (ES)",
     "company": "Company Details (ES)",
     "compliance_maps": "Compliance Maps (ES)",
@@ -440,6 +442,7 @@
     "dashboard": "Dashboard Details (ES)",
     "distributed-systems-resilience": "Distributed Systems Resilience",
     "docs": "Documentation (ES)",
+    "founder": "Founder's Vision (ES)",
     "frameworks": "Frameworks Details (ES)",
     "home": "Home Details (ES)",
     "industries": "Industries Details (ES)",
@@ -452,10 +455,7 @@
     "resources": "Resources Details (ES)",
     "services": "Services Details (ES)",
     "solutions": "Solutions Details (ES)",
-    "whitepaper": "Whitepaper Details (ES)",
-    "a1-cloud-native-enterprise-reference": "Cloud-Native Enterprise Reference (ES)",
-    "a4-platform-governance-multicloud-hybrid": "Platform Governance & Hybrid Cloud (ES)",
-    "founder": "Founder's Vision (ES)"
+    "whitepaper": "Whitepaper Details (ES)"
   },
   "BusinessIdeas": {
     "cards": {
@@ -479,8 +479,8 @@
       }
     },
     "hero": {
-      "title": "Business Insights & Innovation (ES)",
-      "subtitle": "Thought leadership on the future of cloud, AI, and platform engineering. (ES)"
+      "subtitle": "Thought leadership on the future of cloud, AI, and platform engineering. (ES)",
+      "title": "Business Insights & Innovation (ES)"
     }
   },
   "Capabilities": {
@@ -551,7 +551,6 @@
       }
     },
     "hero": {
-      "title": "Global Impact Studies (ES)",
       "badge": "Enterprise Provenance (ES)",
       "stats": {
         "0": {
@@ -571,7 +570,8 @@
           "v": "100% Pass (ES)"
         }
       },
-      "subtitle": "Documented evidence of original contributions across multi-billion dollar enterprise environments. (ES)"
+      "subtitle": "Documented evidence of original contributions across multi-billion dollar enterprise environments. (ES)",
+      "title": "Global Impact Studies (ES)"
     },
     "labels": {
       "challenge": "CHALLENGE (ES)",
@@ -608,11 +608,7 @@
       "nav": {
         "onboarding": "Onboarding Details (ES)"
       },
-      "title": "title Details (ES)",
-      "category": "category Details (ES)",
-      "description": "description Details (ES)",
-      "lastUpdated": "lastUpdated Details (ES)",
-      "readTime": "readTime Details (ES)"
+      "title": "title Details (ES)"
     },
     "Metadata": {
       "default": {
@@ -1252,7 +1248,6 @@
     "governingLawText": "Governing Law Text (ES)",
     "h1": "H1 (ES)",
     "hero": {
-      "title": "Hero Title (ES)",
       "author": "author Details (ES)",
       "badge": "Badge Details (ES)",
       "cta": "Cta (ES)",
@@ -1278,6 +1273,7 @@
       },
       "subtitle": "The standard for autonomous cloud governance. (ES)",
       "tag": "HERO (ES)",
+      "title": "Hero Title (ES)",
       "titleHighlight": "titleHighlight Details (ES)",
       "titlePart1": "Title Part1 (ES)",
       "titlePrefix": "titlePrefix Details (ES)",
@@ -2038,7 +2034,6 @@
         "description": "Description description (ES)"
       },
       "hero": {
-        "title": "Building the Sovereign <highlight>Cloud Ecosystem</highlight>",
         "badge": "Badge (ES)",
         "plugin": "Plugin (ES)",
         "subtitle": "Subtitle description (ES)"
@@ -2097,8 +2092,8 @@
       "title": "Cli Title (ES)"
     },
     "hero": {
-      "title": "Building the Sovereign <highlight>Cloud Ecosystem</highlight>",
       "badge": "HERO (ES)",
+      "title": "Building the Sovereign <highlight>Cloud Ecosystem</highlight>",
       "github": "Github Details (ES)",
       "plugin": "Plugin Details (ES)",
       "subtitle": "Hero description (ES)"
@@ -2185,7 +2180,6 @@
       "title": "Title (ES)"
     },
     "hero": {
-      "title": "Engineering the Cloud-Agnostic Future (ES)",
       "badge": "OmniGCloud Global (ES)",
       "bio": "Bio (ES)",
       "role": "Role (ES)",
@@ -2200,6 +2194,7 @@
         "patentsValue": "Patents Value (ES)"
       },
       "subtitle": "A team of systems architects, AI engineers, and cloud pioneers dedicated to restoring Enterprise Sovereignty through autonomous modernization. (ES)",
+      "title": "Engineering the Cloud-Agnostic Future (ES)",
       "visionary": "Visionary (ES)"
     },
     "leadership": {
@@ -2411,13 +2406,13 @@
       "historicalTrend": "Historical Trend (ES)",
       "hourlyRequestVolume": "Hourly Request Volume (ES)",
       "latencyTrend": "API latency trend (ES)",
-      "liveDataFeed": "LIVE DATA FEED",
       "liveView": "Live View (ES)",
       "monthlyCost": "Monthly Cost Comparison ($) (ES)",
       "multiCloudDistribution": "Multi-Cloud Distribution (%) (ES)",
       "realtimePerf": "Real-time system performance metrics (ES)",
       "systemLogs": "System Logs (ES)",
-      "uptime30Day": "30-Day Uptime (%) (ES)"
+      "uptime30Day": "30-Day Uptime (%) (ES)",
+      "liveDataFeed": "LIVE DATA FEED"
     },
     "CommandCenter": {
       "costDesc": "Monthly infrastructure optimization (ES)",
@@ -2769,9 +2764,9 @@
       "title": "Live Simulation Controls (ES)"
     },
     "hero": {
-      "title": "The OmniGCloud Demo (ES)",
       "badge": "Interactive Experience (ES)",
-      "subtitle": "Experience the autonomous modernization of a global enterprise portfolio. Watch as our agents discover, map, and re-platform mission-critical workloads. (ES)"
+      "subtitle": "Experience the autonomous modernization of a global enterprise portfolio. Watch as our agents discover, map, and re-platform mission-critical workloads. (ES)",
+      "title": "The OmniGCloud Demo (ES)"
     }
   },
   "DemoSection": {
@@ -2856,7 +2851,6 @@
       },
       "description": "A formal framework for multi-cloud sovereign orchestration. (ES)",
       "hero": {
-        "title": "Building the Sovereign <highlight>Cloud Ecosystem</highlight>",
         "badge": "RESEARCH COMPENDIUM (ES)",
         "description": "These original contributions formalize the methodology for **Autonomous Sovereign Orchestration (ASO)**, addressing the critical conflict between global scale and national law. (ES)",
         "titleHighlight": "Design Patterns (ES)",
@@ -2956,15 +2950,14 @@
       "description": "Managing digital sovereignty through automated policy enforcement. (ES)",
       "download": "Download Blueprint (ES)",
       "hero": {
-        "title": "Governance Blueprints (ES)",
-        "description": "OmniGCloud provides pre-validated blueprints to ensure your multi-cloud deployments meet the most rigorous global compliance standards. (ES)"
+        "description": "OmniGCloud provides pre-validated blueprints to ensure your multi-cloud deployments meet the most rigorous global compliance standards. (ES)",
+        "title": "Governance Blueprints (ES)"
       },
       "title": "Governance Framework (ES)"
     },
     "guide": {
       "description": "Step-by-step implementation of sovereign cloud fabrics. (ES)",
       "hero": {
-        "title": "Getting Started with OmniGCloud (ES)",
         "cta": "Connect Your First Cloud (ES)",
         "step1": {
           "code": {
@@ -2977,14 +2970,15 @@
         "step2": {
           "description": "Register your AWS, Azure, or OCP credentials to start the discovery process. (ES)",
           "title": "2. Connect Providers (ES)"
-        }
+        },
+        "title": "Getting Started with OmniGCloud (ES)"
       },
       "title": "Architect's Guide (ES)"
     },
     "hero": {
-      "title": "Developer Documentation (ES)",
       "badge": "LATEST STACK (ES)",
-      "description": "Build, deploy, and govern with the world's first sovereign cloud fabric. Comprehensive guides and reference architectures for the AI era. (ES)"
+      "description": "Build, deploy, and govern with the world's first sovereign cloud fabric. Comprehensive guides and reference architectures for the AI era. (ES)",
+      "title": "Developer Documentation (ES)"
     },
     "meta": {
       "description": "Comprehensive technical documentation for the OmniGCloud platform. Access architecture patterns, APIs, and whitepapers. (ES)",
@@ -3001,28 +2995,6 @@
       "empiricalDataSet": "Empirical Data Set (ES)",
       "empiricalDataSetDesc": "Verified multi-cloud telemetry (ES)",
       "validationProtocols": "Validation Protocols (ES)"
-    },
-    "sidebar": {
-      "contactArchitectureOffice": "Contact Architecture Office",
-      "customBriefingTitle": "Need a customized briefing?",
-      "quickLinksHeading": "Quick Links",
-      "links": {
-        "introduction": "Introduction",
-        "architecture": "Architecture",
-        "whitepaper": "Technical Whitepaper",
-        "security": "Security & Governance",
-        "guide": "Architectural Guide",
-        "api": "API Reference"
-      },
-      "documentation": "DOCUMENTATION",
-      "blueprints": "GOVERNANCE BLUEPRINTS",
-      "blueprint_links": {
-        "aws": "AWS Landing Zone",
-        "azure": "Azure Enterprise",
-        "openshift": "OpenShift Cluster",
-        "hybrid": "Hybrid Fabric"
-      },
-      "customBriefingText": "Generate a custom briefing document based on your selected stack."
     },
     "technicalLibrary": "Technical Library (ES)",
     "transparency": {
@@ -3073,6 +3045,42 @@
         "validation": "Validation Diagram (ES)",
         "validationDesc": "Validation process diagram (ES)"
       }
+    },
+    "sidebar": {
+      "contactArchitectureOffice": "Contact Architecture Office",
+      "customBriefingTitle": "Need a customized briefing?",
+      "quickLinksHeading": "Quick Links",
+      "links": {
+        "introduction": "Introduction",
+        "architecture": "Architecture",
+        "whitepaper": "Technical Whitepaper",
+        "security": "Security & Governance",
+        "guide": "Architectural Guide",
+        "api": "API Reference"
+      },
+      "documentation": "DOCUMENTATION",
+      "blueprints": "GOVERNANCE BLUEPRINTS",
+      "blueprint_links": {
+        "aws": "AWS Landing Zone",
+        "azure": "Azure Enterprise",
+        "openshift": "OpenShift Cluster",
+        "hybrid": "Hybrid Fabric"
+      },
+      "customBriefingText": "Generate a custom briefing document based on your selected stack."
+    }
+  },
+  "Enrichment": {
+    "howItWorks": "Our autonomous framework follows a rigorous 3-step synchronization process to ensure absolute sovereignty and compliance across your multi-cloud estate.",
+    "leadCapture": {
+      "fallback": "Contact Us Directly"
+    },
+    "visualSection": {
+      "tag": "Architecture Overview",
+      "title": "System Visualizer",
+      "note": "This diagram represents the actual orchestration fabric across multiple cloud regions."
+    },
+    "relatedLinks": {
+      "title": "Related Strategy & Insights"
     }
   },
   "Ecosystem": {
@@ -3138,20 +3146,6 @@
     },
     "title": "Ready for Sovereign AI? (ES)"
   },
-  "Enrichment": {
-    "howItWorks": "Our autonomous framework follows a rigorous 3-step synchronization process to ensure absolute sovereignty and compliance across your multi-cloud estate.",
-    "leadCapture": {
-      "fallback": "Contact Us Directly"
-    },
-    "visualSection": {
-      "tag": "Architecture Overview",
-      "title": "System Visualizer",
-      "note": "This diagram represents the actual orchestration fabric across multiple cloud regions."
-    },
-    "relatedLinks": {
-      "title": "Related Strategy & Insights"
-    }
-  },
   "Enterprise": {
     "approach": {
       "pillars": {
@@ -3211,17 +3205,17 @@
       "p1": "OmniGCloud es el único plano de control diseñado desde cero para entornos regulados de alta seguridad.",
       "p2": "Proporcionamos la certeza matemática de que la política empresarial se aplica en cada punto de ejecución.",
       "stats": {
-        "actions": "Acciones Autónomas",
-        "gates": "Puertas de Cumplimiento",
-        "regions": "Regiones Globales",
         "uptime": "SLA de Disponibilidad",
         "uptime_val": "99.999%",
+        "regions": "Regiones Globales",
         "regions_val": "100+",
+        "gates": "Puertas de Cumplimiento",
         "gates_val": "400+",
+        "actions": "Acciones Autónomas",
         "actions_val": "1B+"
       },
-      "title": "Integridad Soberana",
-      "cta": "Leer el Documento de Asociación Estratégica"
+      "cta": "Leer el Documento de Asociación Estratégica",
+      "title": "Integridad Soberana"
     }
   },
   "FloatingActions": {
@@ -3322,7 +3316,6 @@
       "title": "Core Contributions (ES)"
     },
     "hero": {
-      "title": "Building the Sovereign <highlight>Cloud Ecosystem</highlight>",
       "bio": "With over 19+ years of distinguished experience in enterprise cloud architecture, Chaitanya is the lead visionary behind the OmniGCloud G-Framework. He specializes in large-scale modernization for regulated industries, focusing on autonomous multi-cloud orchestration and sovereign data residency. (ES)",
       "role": "Distinguished Platform Architect (ES)",
       "stats": {
@@ -3466,8 +3459,7 @@
     },
     "title": "OmniGCloud (ES)"
   },
-  "hero": {
-    "title": "The Autonomous Cloud (ES)",
+  "Hero": {
     "badge": "ENTERPRISE SOVEREIGNTY (ES)",
     "compliance": {
       "desc": "Automated audit scores based on regional data residency and encryption standards across all cloud providers. (ES)",
@@ -3499,6 +3491,7 @@
     "systemStatus": {
       "live": "System Operational (ES)"
     },
+    "title": "The Autonomous Cloud (ES)",
     "trust": "TRUSTED BY LEADING REGULATED INDUSTRIES (ES)",
     "trustEntities": {
       "0": "Global Bank (ES)",
@@ -3729,11 +3722,11 @@
         "migrationTitle": "Strategic Migration (ES)"
       },
       "hero": {
-        "title": "Modernizing the Digital Ledger (ES)",
         "badge": "FINANCIAL SECTOR SOVEREIGNTY (ES)",
         "ctaPrimary": "Industry Briefing (ES)",
         "ctaSecondary": "Banking Case Study (ES)",
-        "subtitle": "Eliminate the risk of legacy technical debt. OmniGCloud provides banks, fintechs, and insurance giants with the autonomous control plane needed to modernize core systems while maintaining absolute data residency. (ES)"
+        "subtitle": "Eliminate the risk of legacy technical debt. OmniGCloud provides banks, fintechs, and insurance giants with the autonomous control plane needed to modernize core systems while maintaining absolute data residency. (ES)",
+        "title": "Modernizing the Digital Ledger (ES)"
       },
       "innovation": {
         "badge": "Regulated Innovation (ES)",
@@ -3783,11 +3776,11 @@
         "microservicesTitle": "Microservicestitle Details (ES)"
       },
       "hero": {
-        "title": "Hero Title (ES)",
         "badge": "HERO (ES)",
         "ctaPrimary": "Ctaprimary Details (ES)",
         "ctaSecondary": "Ctasecondary Details (ES)",
-        "subtitle": "Hero description (ES)"
+        "subtitle": "Hero description (ES)",
+        "title": "Hero Title (ES)"
       },
       "paradox": {
         "badge": "PARADOX (ES)",
@@ -3831,10 +3824,10 @@
     },
     "email": "Email Details (ES)",
     "hero": {
-      "title": "Hero (ES)",
       "badge": "HERO (ES)",
       "subtitle": "The standard for autonomous cloud governance. (ES)",
-      "tag": "Featured (ES)"
+      "tag": "Featured (ES)",
+      "title": "Hero (ES)"
     },
     "leadership": {
       "chaitanya": {
@@ -4051,9 +4044,9 @@
     "badge": "LATEST NEWS",
     "cta": "Read Article",
     "hero": {
-      "title": "The Intelligence Stream",
       "badge": "2025 PRESS & MEDIA",
-      "subtitle": "News and updates from the world of <highlight>Autonomous Sovereignty</highlight> and sovereign cloud infrastructure."
+      "subtitle": "News and updates from the world of <highlight>Autonomous Sovereignty</highlight> and sovereign cloud infrastructure.",
+      "title": "The Intelligence Stream"
     },
     "items": {
       "0": {
@@ -4123,11 +4116,11 @@
       "security": "Security Audits (ES)"
     },
     "hero": {
-      "title": "See Everything, (ES)",
       "badge": "SOVEREIGN OBSERVABILITY (ES)",
       "cta1": "Request Metrics Access (ES)",
       "cta2": "Observability Spec (ES)",
       "subtitle": "Modernization requires radical visibility. OmniGCloud's observability stack provides a unified view of health, security, and cost across all your sovereign cloud clusters. (ES)",
+      "title": "See Everything, (ES)",
       "titleHighlight": "Audit Everywhere (ES)"
     },
     "mesh": {
@@ -4431,9 +4424,9 @@
       "title": "Ecosystem & Marketplace Alliances (ES)"
     },
     "hero": {
-      "title": "Global Strategic Alliances (ES)",
       "badge": "Partner Ecosystem (ES)",
-      "subtitle": "Collaborating with the world's leading technology providers to deliver a seamless, cloud-agnostic experience. (ES)"
+      "subtitle": "Collaborating with the world's leading technology providers to deliver a seamless, cloud-agnostic experience. (ES)",
+      "title": "Global Strategic Alliances (ES)"
     },
     "hyperscale": {
       "aws": {
@@ -4556,10 +4549,10 @@
     },
     "description": "The world's first autonomous, AI-governed cloud control plane. (ES)",
     "hero": {
-      "title": "Hero (ES)",
       "ctaPrimary": "Cta Primary (ES)",
       "ctaSecondary": "Cta Secondary (ES)",
-      "subtitle": "The standard for autonomous cloud governance. (ES)"
+      "subtitle": "The standard for autonomous cloud governance. (ES)",
+      "title": "Hero (ES)"
     },
     "integrations": {
       "delivery": "Delivery Details (ES)",
@@ -4636,19 +4629,7 @@
           "q": "What is the uptime guarantee? (ES)"
         }
       },
-      "title": "Faq Title (ES)",
-      "q1": {
-        "a": "A (ES)",
-        "q": "Q (ES)"
-      },
-      "q2": {
-        "a": "A (ES)",
-        "q": "Q (ES)"
-      },
-      "q3": {
-        "a": "A (ES)",
-        "q": "Q (ES)"
-      }
+      "title": "Faq Title (ES)"
     },
     "LeadCapture": {
       "cta": "Get Started (ES)",
@@ -4695,9 +4676,9 @@
       "legal": "NO CREDIT CARD REQUIRED • SOC-2 COMPLIANT ONBOARDING (ES)"
     },
     "hero": {
-      "title": "Hero (ES)",
       "subtitle": "The standard for autonomous cloud governance. (ES)",
-      "tag": "Featured (ES)"
+      "tag": "Featured (ES)",
+      "title": "Hero (ES)"
     },
     "plans": {
       "business": {
@@ -4950,11 +4931,11 @@
       "title": "Governance Guard (ES)"
     },
     "hero": {
-      "title": "A Sovereign Suite (ES)",
       "ctaPrimary": "Book Demo (ES)",
       "ctaSecondary": "View Suite (ES)",
       "subtitle": "Everything you need to build, secure, and scale compliant infrastructure. (ES)",
-      "tag": "Platform Products (ES)"
+      "tag": "Platform Products (ES)",
+      "title": "A Sovereign Suite (ES)"
     },
     "knowledge": {
       "description": "Automate compliance with real-time drift detection and auto-remediation policies. (ES)",
@@ -5084,8 +5065,8 @@
       "title": "Reconciling Sovereignty, Scale, and Complexity (ES)"
     },
     "hero": {
-      "title": "Research & Publications (ES)",
-      "subtitle": "Technical standards and scholarly articles (ES)"
+      "subtitle": "Technical standards and scholarly articles (ES)",
+      "title": "Research & Publications (ES)"
     },
     "newPublication": "New Publication (ES)",
     "page": {
@@ -5237,7 +5218,6 @@
           "title": "3. Navigating Geopolitical Sovereignty (ES)"
         },
         "hero": {
-          "title": "Building the Sovereign <highlight>Cloud Ecosystem</highlight>",
           "author": "Executive Strategy Team (ES)",
           "badge": "EXECUTIVE_STRATEGY // v1.2 (ES)",
           "date": "JANUARY 10, 2026 (ES)",
@@ -5319,7 +5299,6 @@
           "title": "Executive Decision FAQ (ES)"
         },
         "hero": {
-          "title": "Building the Sovereign <highlight>Cloud Ecosystem</highlight>",
           "author": "OmniG Research (ES)",
           "badge": "SCHOLARLY_GUIDE // v1.4 (ES)",
           "date": "JANUARY 2026 (ES)",
@@ -5385,7 +5364,6 @@
           "title": "DevOps Maturity FAQ (ES)"
         },
         "hero": {
-          "title": "Building the Sovereign <highlight>Cloud Ecosystem</highlight>",
           "author": "DevOps Team (ES)",
           "badge": "OPS_INTELLIGENCE // v2.1 (ES)",
           "date": "JANUARY 5, 2026 (ES)",
@@ -5441,7 +5419,6 @@
           }
         },
         "hero": {
-          "title": "Building the Sovereign <highlight>Cloud Ecosystem</highlight>",
           "author": "Architectural Board (ES)",
           "badge": "ARCHITECTURAL_FRAMEWORK // v4.0 (ES)",
           "date": "JANUARY 8, 2026 (ES)",
@@ -5544,6 +5521,28 @@
         "description": "Visual representation of the AECP core components and data flow. (ES)"
       }
     },
+    "Products": {
+      "HowItWorks": {
+        "steps": {
+          "0": {
+            "desc": "Provision your sovereignty perimeter across multi-cloud regions using our autonomous fabric kernel.",
+            "title": "Fabric Provisioning",
+            "heading": "Phase 1"
+          },
+          "1": {
+            "desc": "Enforce governance logic at the infrastructure level with real-time drift detection and auto-remediation.",
+            "title": "Governance Sync",
+            "heading": "Phase 2"
+          },
+          "2": {
+            "desc": "Achieve absolute sovereignty and compliance with a single, vendor-agnostic control plane.",
+            "title": "Unified Control",
+            "heading": "Phase 3"
+          }
+        },
+        "title": "How It Works"
+      }
+    },
     "Pricing": {
       "AboveTheFold": "Achieve total cloud sovereignty with transparent, value-based units. Decouple your infrastructure costs from vendor lock-in and optimize for regulatory compliance and performance.",
       "DeepDive": {
@@ -5602,28 +5601,6 @@
         "title": "Economic Autonomy"
       }
     },
-    "Products": {
-      "HowItWorks": {
-        "steps": {
-          "0": {
-            "desc": "Provision your sovereignty perimeter across multi-cloud regions using our autonomous fabric kernel.",
-            "title": "Fabric Provisioning",
-            "heading": "Phase 1"
-          },
-          "1": {
-            "desc": "Enforce governance logic at the infrastructure level with real-time drift detection and auto-remediation.",
-            "title": "Governance Sync",
-            "heading": "Phase 2"
-          },
-          "2": {
-            "desc": "Achieve absolute sovereignty and compliance with a single, vendor-agnostic control plane.",
-            "title": "Unified Control",
-            "heading": "Phase 3"
-          }
-        },
-        "title": "How It Works"
-      }
-    },
     "Services": {
       "DeepDive": {
         "links": {
@@ -5636,18 +5613,6 @@
         "description": "Overview of our modernization and optimization service layers. (ES)"
       }
     }
-  },
-  "Sangam": {
-    "cta": "Experimentar la Confluencia",
-    "description": "Sangam es la síntesis definitiva del núcleo de OmniGCloud. Es la confluencia donde los tejidos de nube disparatados, los agentes autónomos y las políticas soberanas se fusionan en un único entorno operativo de alto rendimiento.",
-    "features": {
-      "purity": "Integridad soberana sin desviaciones para estados regulados.",
-      "resonance": "Sincronización de estado de alta frecuencia a escala global.",
-      "unification": "Unificación completa del tejido en todas las nubes principales."
-    },
-    "subtitle": "La síntesis definitiva de la orquestación multi-nube y la gobernanza autónoma.",
-    "tag": "V-PREMIUM",
-    "title": "Sangam: La Confluencia Soberana"
   },
   "Sections": {
     "AutomationStack": {
@@ -5762,8 +5727,7 @@
       "title": "Data A I (ES)",
       "uptime": "Uptime Details (ES)"
     },
-    "hero": {
-      "title": "Building the Sovereign <highlight>Cloud Ecosystem</highlight>",
+    "Hero": {
       "badge": "New (ES)",
       "cta": "Explore Hero (ES)",
       "errors": "Errors Details (ES)",
@@ -5872,11 +5836,11 @@
         "title": "AI Infrastructure FAQ (ES)"
       },
       "hero": {
-        "title": "The Infrastructure for Agentic AI (ES)",
         "badge": "High-Density AI Infrastructure (ES)",
         "ctaPrimary": "Request GPU Benchmarks (ES)",
         "ctaSecondary": "AI Deployment Guide (ES)",
-        "subtitle": "Deploy, scale, and govern large-scale AI workloads across heterogeneous GPU clusters. OmniGCloud provides the sovereign control plane required for secure enterprise generative AI. (ES)"
+        "subtitle": "Deploy, scale, and govern large-scale AI workloads across heterogeneous GPU clusters. OmniGCloud provides the sovereign control plane required for secure enterprise generative AI. (ES)",
+        "title": "The Infrastructure for Agentic AI (ES)"
       },
       "process": {
         "step1": {
@@ -5927,11 +5891,11 @@
         "title": "Application FAQ (ES)"
       },
       "hero": {
-        "title": "Refactor Monoliths with AI Precision (ES)",
         "badge": "AI-Native Application Engineering (ES)",
         "ctaPrimary": "Start Code Audit (ES)",
         "ctaSecondary": "Application Patterns Guide (ES)",
-        "subtitle": "Transform legacy codebases into cloud-native microservices. OmniGCloud's code-analysis engines identify technical debt and automatically generate modernized service blueprints. (ES)"
+        "subtitle": "Transform legacy codebases into cloud-native microservices. OmniGCloud's code-analysis engines identify technical debt and automatically generate modernized service blueprints. (ES)",
+        "title": "Refactor Monoliths with AI Precision (ES)"
       },
       "process": {
         "step1": {
@@ -6006,11 +5970,11 @@
         "modernizationTitle": "Cloud Modernization (ES)"
       },
       "hero": {
-        "title": "Optimize Spend Without Sacrifice (ES)",
         "badge": "AUTONOMOUS FINOPS INTELLIGENCE (ES)",
         "ctaPrimary": "Reduce Waste (ES)",
         "ctaSecondary": "Savings Analysis (ES)",
-        "subtitle": "Cloud waste is the silent killer of enterprise agility. OmniGCloud's FinOps services utilize AI-driven rightsizing and automated arbitrage to reduce your monthly cloud bill by up to 40%. (ES)"
+        "subtitle": "Cloud waste is the silent killer of enterprise agility. OmniGCloud's FinOps services utilize AI-driven rightsizing and automated arbitrage to reduce your monthly cloud bill by up to 40%. (ES)",
+        "title": "Optimize Spend Without Sacrifice (ES)"
       },
       "intelligence": {
         "badge": "The FinOps Engine (ES)",
@@ -6100,11 +6064,11 @@
         "factoryTitle": "Modernization Factory (ES)"
       },
       "hero": {
-        "title": "Migrate with Total Sovereignty (ES)",
         "badge": "STRATEGIC CLOUD TRANSFORMATION (ES)",
         "ctaPrimary": "Plan Your Migration (ES)",
         "ctaSecondary": "Migration Playbooks (ES)",
-        "subtitle": "Don't just move your servers; transform your business. OmniGCloud's migration services combine high-velocity tooling with a 'modernization-first' mindset to ensure your cloud exit is just as secure as your entry. (ES)"
+        "subtitle": "Don't just move your servers; transform your business. OmniGCloud's migration services combine high-velocity tooling with a 'modernization-first' mindset to ensure your cloud exit is just as secure as your entry. (ES)",
+        "title": "Migrate with Total Sovereignty (ES)"
       },
       "title": "Cloud-migration Title (ES)"
     },
@@ -6151,7 +6115,6 @@
         "readGuide": "Read Guide (ES)"
       },
       "hero": {
-        "title": "Building the Sovereign <highlight>Cloud Ecosystem</highlight>",
         "badge": "Enterprise Cloud Modernization (ES)",
         "ctaPrimary": "Start Portfolio Audit (ES)",
         "ctaSecondary": "Modernization Framework (ES)",
@@ -6241,11 +6204,11 @@
         "title": "Ready for Sovereign Delivery? (ES)"
       },
       "hero": {
-        "title": "Engineered for (ES)",
         "badge": "CONTINUOUS DELIVERY & AUTOMATION (ES)",
         "ctaPrimary": "Accelerate Pipeline (ES)",
         "ctaSecondary": "Platform Overview (ES)",
         "subtitle": "Traditional DevOps is fragmented. OmniGCloud's platform-level DevOps services unify CI/CD across AWS, Azure, and OpenShift, providing a single control plane for compliance-first delivery. (ES)",
+        "title": "Engineered for (ES)",
         "titleHighlight": "Velocity & Governance (ES)"
       },
       "tech": {
@@ -6312,11 +6275,11 @@
         "title": "Microservices Implementation Framework (ES)"
       },
       "hero": {
-        "title": "Scalable Distributed Systems (ES)",
         "badge": "CLOUD-NATIVE ARCHITECTURE (ES)",
         "ctaPrimary": "Start Deconstruction (ES)",
         "ctaSecondary": "AECP Research (ES)",
-        "subtitle": "Move beyond the complexity of monolithic constraints. Our microservices engineering services help you build modular, independent, and resilient applications that leverage the full power of sovereign cloud orchestration. (ES)"
+        "subtitle": "Move beyond the complexity of monolithic constraints. Our microservices engineering services help you build modular, independent, and resilient applications that leverage the full power of sovereign cloud orchestration. (ES)",
+        "title": "Scalable Distributed Systems (ES)"
       },
       "journey": {
         "badge": "The Microservices Journey (ES)",
@@ -6398,11 +6361,11 @@
         "modernizationTitle": "Cloud Modernization (ES)"
       },
       "hero": {
-        "title": "RedHat OpenShift Fleet Mastery (ES)",
         "badge": "ENTERPRISE CONTAINER ORCHESTRATION (ES)",
         "ctaPrimary": "Optimize Fleet (ES)",
         "ctaSecondary": "Sovereign Blueprints (ES)",
-        "subtitle": "Scale your hybrid cloud with confidence. OmniGCloud provides expert OpenShift modernization services, ensuring your OCP clusters are secure, compliant, and optimized for high-density enterprise workloads. (ES)"
+        "subtitle": "Scale your hybrid cloud with confidence. OmniGCloud provides expert OpenShift modernization services, ensuring your OCP clusters are secure, compliant, and optimized for high-density enterprise workloads. (ES)",
+        "title": "RedHat OpenShift Fleet Mastery (ES)"
       },
       "title": "Openshift-modernization Title (ES)"
     },
@@ -6427,10 +6390,10 @@
       }
     },
     "hero": {
-      "title": "Sovereign Cloud for (ES)",
       "badge": "ENTERPRISE SOLUTIONS (ES)",
       "cta": "Talk to an Expert (ES)",
       "subtitle": "Purpose-built infrastructure for financial services, healthcare, and government sectors requiring 100% data residency and auditability. (ES)",
+      "title": "Sovereign Cloud for (ES)",
       "titleHighlight": "Regulated Industries (ES)"
     },
     "industries": {
@@ -6623,9 +6586,9 @@
       "title": "Federated AI for Drug Discovery (ES)"
     },
     "hero": {
-      "title": "Use Cases (ES)",
       "subtitle": "Discover how regulated industries use OmniGCloud to achieve sovereignty. (ES)",
-      "tag": "Proven Solutions (ES)"
+      "tag": "Proven Solutions (ES)",
+      "title": "Use Cases (ES)"
     }
   },
   "Visuals": {
@@ -7276,5 +7239,17 @@
   "read_online": "Read Online (ES)",
   "steps": "Steps Details (ES)",
   "subtitle": "The Sovereign Cloud Control Plane (ES)",
-  "title": "OmniGCloud Platform (ES)"
+  "title": "OmniGCloud Platform (ES)",
+  "Sangam": {
+    "title": "Sangam: La Confluencia Soberana",
+    "subtitle": "La síntesis definitiva de la orquestación multi-nube y la gobernanza autónoma.",
+    "description": "Sangam es la síntesis definitiva del núcleo de OmniGCloud. Es la confluencia donde los tejidos de nube disparatados, los agentes autónomos y las políticas soberanas se fusionan en un único entorno operativo de alto rendimiento.",
+    "cta": "Experimentar la Confluencia",
+    "tag": "V-PREMIUM",
+    "features": {
+      "unification": "Unificación completa del tejido en todas las nubes principales.",
+      "purity": "Integridad soberana sin desviaciones para estados regulados.",
+      "resonance": "Sincronización de estado de alta frecuencia a escala global."
+    }
+  }
 }
