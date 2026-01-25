@@ -84,15 +84,16 @@ export default function LanguageSwitcher() {
               <a
                 key={lang.code}
                 id={`lang-switch-${lang.code}`}
-                href={`/${lang.code}${pathname}?${new URLSearchParams(
-                  query as any
-                ).toString()}${hash}`}
+                href={`/${lang.code}${pathname}${new URLSearchParams(query as any).toString()
+                    ? `?${new URLSearchParams(query as any).toString()}`
+                    : ""
+                  }${hash}`}
                 onClick={(e) => {
                   e.preventDefault();
                   // Force hard navigation to ensure hash is respected by browser native behavior
-                  window.location.href = `/${lang.code}${pathname}?${new URLSearchParams(
-                    query as any
-                  ).toString()}${window.location.hash}`;
+                  const queryString = new URLSearchParams(query as any).toString();
+                  window.location.href = `/${lang.code}${pathname}${queryString ? `?${queryString}` : ""
+                    }${window.location.hash}`;
                   setIsOpen(false);
                 }}
                 style={{
