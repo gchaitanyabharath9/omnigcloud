@@ -19,6 +19,8 @@ import {
 import { UptimeRing } from "@/components/visuals/MetricsGraphs";
 import { useTranslations } from "next-intl";
 import { useParams } from "next/navigation";
+import Footer from "@/components/Footer";
+
 
 export default function ExecutiveDashboardPage() {
   const t = useTranslations("Dashboard.Executive");
@@ -36,12 +38,19 @@ export default function ExecutiveDashboardPage() {
   }, []);
 
   return (
-    <div style={{ background: "#000000", minHeight: "100vh", color: "white" }}>
+    <div
+      style={{
+        background: "#000000",
+        minHeight: "100vh",
+        color: "white",
+        paddingTop: "var(--header-height)",
+      }}
+    >
       {/* COMMAND HEADER */}
       <div
         style={{
           position: "sticky",
-          top: "0",
+          top: "var(--header-height)",
           zIndex: 100,
           background: "linear-gradient(180deg, #0a0a0a 0%, #000000 100%)",
           borderBottom: "1px solid rgba(96, 239, 255, 0.2)",
@@ -130,14 +139,14 @@ export default function ExecutiveDashboardPage() {
       </div>
 
       {/* MAIN GRID */}
-      <div className="container" style={{ padding: "2rem" }}>
+      <div className="container" style={{ padding: "3rem 2rem" }}>
         {/* TOP ROW - Critical Metrics Summary */}
         <div
           style={{
             display: "grid",
             gridTemplateColumns: "repeat(4, 1fr)",
-            gap: "1rem",
-            marginBottom: "2rem",
+            gap: "1.5rem",
+            marginBottom: "3rem",
           }}
         >
           <div
@@ -450,6 +459,7 @@ export default function ExecutiveDashboardPage() {
           </div>
         </div>
       </div>
+      <Footer />
     </div>
   );
 }

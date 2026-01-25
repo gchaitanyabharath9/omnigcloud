@@ -25,7 +25,6 @@ import styles from "./Header.module.css";
 
 const Header = ({ hideNav }: { hideNav?: boolean }) => {
   const pathname = usePathname();
-  const isDashboard = pathname?.includes("/dashboard");
 
   const t = useTranslations();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -41,7 +40,7 @@ const Header = ({ hideNav }: { hideNav?: boolean }) => {
   const handleMouseEnter = (name: string) => setActiveDropdown(name);
   const handleMouseLeave = () => setActiveDropdown(null);
 
-  if (hideNav || isDashboard) return null;
+  if (hideNav) return null;
 
   return (
     <header className={styles.header}>

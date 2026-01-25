@@ -78,7 +78,7 @@ export default function DashboardPage() {
   }, [METRIC_CONFIG]); // Added dependency
 
   return (
-    <DashboardShell title={title} subtitle={subtitle} hideNav={true}>
+    <DashboardShell title={title} subtitle={subtitle}>
       <DashboardScroller activeMetric={activeMetric} configs={METRIC_CONFIG} order={VALID_ORDER} />
     </DashboardShell>
   );
