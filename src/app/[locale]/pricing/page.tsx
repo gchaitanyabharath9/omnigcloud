@@ -717,34 +717,24 @@ export default async function PricingPage({ params }: { params: Promise<{ locale
         </div>
       </section>
 
-      {/* FINAL CTA - Snap 3 */}
       <section className="snap-section">
         <div className="container">
-          <div
-            className="glass-panel"
-            style={{
-              padding: "4rem 2rem",
-              borderRadius: "3rem",
-              background: "linear-gradient(135deg, var(--primary) 0%, #1e40af 100%)",
-              color: "white",
-              border: "none",
-              boxShadow: "0 20px 50px rgba(59, 130, 246, 0.3)",
-              textAlign: "center",
-            }}
-          >
+          <div className="card-cta">
+            <div className="absolute top-0 right-0 p-8 opacity-10">
+              <Zap size={120} color="var(--primary)" />
+            </div>
             <h2
               style={{
                 fontSize: "2.5rem",
                 fontWeight: 950,
                 marginBottom: "1.5rem",
-                color: "white",
               }}
             >
               {tSafe(t, "LeadCapture.title", "Ready to optimize?")}
             </h2>
             <p
               style={{
-                opacity: 0.9,
+                opacity: 0.8,
                 marginBottom: "2.5rem",
                 fontSize: "1.1rem",
                 maxWidth: "600px",
@@ -763,18 +753,18 @@ export default async function PricingPage({ params }: { params: Promise<{ locale
                 flexDirection: "column",
                 alignItems: "center",
                 gap: "1.5rem",
+                position: "relative",
+                zIndex: 10,
               }}
             >
               <Link
                 href="/contact"
                 className="btn-primary"
                 style={{
-                  background: "white",
-                  color: "#1e40af",
-                  border: "none",
                   padding: "1rem 3.5rem",
                   fontSize: "1rem",
                   fontWeight: 900,
+                  borderRadius: "1rem",
                 }}
               >
                 {tSafe(t, "LeadCapture.cta", "Get Started")}{" "}
@@ -783,7 +773,7 @@ export default async function PricingPage({ params }: { params: Promise<{ locale
               <p
                 style={{
                   fontSize: "0.7rem",
-                  opacity: 0.7,
+                  opacity: 0.6,
                   fontWeight: 700,
                   letterSpacing: "0.1em",
                 }}
