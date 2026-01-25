@@ -75,23 +75,20 @@ export default function LanguageSwitcher() {
           }}
         >
           {languages.map((lang) => {
-            // In next-intl, Link handles the hash separately or as part of href object if supported
-            // We use a safe check for window
-            const currentHash =
-              typeof window !== "undefined" ? window.location.hash.replace("#", "") : "";
-
             return (
-              <Link
+              <a
                 key={lang.code}
                 id={`lang-switch-${lang.code}`}
-                href={{
-                  pathname: pathname,
-                  query: query,
-                  hash: currentHash,
+                href={`/${lang.code}${pathname}?${new URLSearchParams(query as any).toString()}${window.location.hash
+                  }`}
+                onClick={(e) => {
+                  e.preventDefault();
+                  // Force hard navigation to ensure hash is respected by browser native behavior
+                  window.location.href = `/${lang.code}${pathname}?${new URLSearchParams(
+                    query as any
+                  ).toString()}${window.location.hash}`;
+                  setIsOpen(false);
                 }}
-                locale={lang.code as any}
-                onClick={() => setIsOpen(false)}
-                scroll={false}
                 style={{
                   display: "flex",
                   alignItems: "center",
@@ -124,7 +121,7 @@ export default function LanguageSwitcher() {
                     }}
                   />
                 )}
-              </Link>
+              </a>
             );
           })}
         </div>
