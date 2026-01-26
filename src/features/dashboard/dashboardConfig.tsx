@@ -86,7 +86,7 @@ export const getDashboardMetrics = (t: any) => ({
           "executive.analysis",
           "Overall system health is excellent. Strategic KPIs are trending positively with a significant reduction in operational overhead due to autonomous scaling."
         )}
-        secondaryVisual={<ComplianceScoresBar standalone={true} />}
+        secondaryVisual={<LatencyLineChart standalone={true} />}
       />
     ),
   },
@@ -135,7 +135,7 @@ export const getDashboardMetrics = (t: any) => ({
           "technical.analysis",
           "Technical debt reduction sprint is showing results with improved build times and higher test coverage across core microservices."
         )}
-        secondaryVisual={<RequestVolumeBar standalone={true} />}
+        secondaryVisual={<UptimeTrend standalone={true} />}
       />
     ),
   },
@@ -380,7 +380,7 @@ export const getDashboardMetrics = (t: any) => ({
           "resources.analysis",
           "Cluster auto-scaling is maintaining optimal bin packing, ensuring resources are utilized efficiently without over-provisioning."
         )}
-        secondaryVisual={<CloudDistributionPie standalone={true} />}
+        secondaryVisual={<FeatureUsageBar standalone={true} />}
       />
     ),
   },
@@ -476,7 +476,7 @@ export const getDashboardMetrics = (t: any) => ({
           "scaling.analysis",
           "Predictive scaling preempted traffic spikes in EU-West-1, keeping latency below 50ms during global user wakeup."
         )}
-        secondaryVisual={<RequestVolumeBar standalone={true} />}
+        secondaryVisual={<CloudDistributionPie standalone={true} />}
       />
     ),
   },
