@@ -7546,4 +7546,108 @@
       }
     }
   }
-}
+,    "Dashboard": {
+      "Charts": {
+        "aiAnalysis": "AI Analysis",
+        "historicalTrend": "Historical Trend",
+        "liveDataFeed": "Live Data Feed",
+        "systemLogs": "System Logs",
+        "liveView": "Live View",
+        "Logs": {
+          "levels": {
+            "info": "INFO",
+            "success": "SUCCESS",
+            "debug": "DEBUG",
+            "warn": "WARN",
+            "error": "ERROR"
+          },
+          "optimizing": "Optimizing bin packing for region us-east-1...",
+          "rebalanced": "Rebalanced 4 nodes. Savings: $4.20/hr",
+          "checking": "Checking compliance policies for new buckets...",
+          "synced": "Telemetry stream synced. Latency: 12ms",
+          "verified": "SOC2 Control 4.1 verified.",
+          "scaling": "Scaling event triggered by load predictor."
+        },
+        "common": {
+          "healthScore": "HEALTH SCORE"
+        },
+        "executive": {
+          "pageTitle": "Executive Overview",
+          "pageSubtitle": "Strategic alignment & KPI summary",
+          "title": "Strategic Alignment",
+          "subtitle": "Top-level business health indicators",
+          "analysis": "Overall system health is excellent. Strategic KPIs are trending positively with a significant reduction in operational overhead due to autonomous scaling.",
+          "stats": {
+            "activeUsers": "Active Users",
+            "mrr": "MRR",
+            "churn": "Churn",
+            "nps": "NPS"
+          }
+        },
+        "technical": {
+          "pageTitle": "Technical Operations",
+          "pageSubtitle": "System health & engineering metrics",
+          "title": "Ops Control Plane",
+          "subtitle": "Engineering velocity & stability",
+          "analysis": "Technical debt reduction sprint is showing results with improved build times and higher test coverage across core microservices.",
+          "stats": {
+            "prs": "Pull Requests",
+            "buildTime": "Avg Build",
+            "coverage": "Test Cov.",
+            "issues": "Issues"
+          }
+        },
+        "roi": {
+          "pageTitle": "ROI Performance",
+          "pageSubtitle": "Real-time return on investment",
+          "title": "ROI Performance",
+          "subtitle": "Real-time return on investment tracking",
+          "analysis": "AI-driven arbitrage has optimised spot instance usage, resulting in a significantly lower TCO compared to on-demand provisioning this quarter.",
+          "stats": {
+            "current": "Current ROI",
+            "savings": "Net Savings",
+            "efficiency": "Efficiency",
+            "projection": "Projection"
+          }
+        },
+        "cost": {
+          "pageTitle": "Cost Arbitrage",
+          "pageSubtitle": "Multi-cloud cost optimization",
+          "title": "Cost Savings",
+          "subtitle": "Multi-cloud cost optimization engine",
+          "analysis": "Multi-cloud routing is actively preventing vendor lock-in premiums by shifting non-critical workloads to OCI and Azure spot instances.",
+          "stats": {
+            "monthly": "Monthly Saved",
+            "avgNode": "Avg Cost/Node",
+            "spot": "Spot Usage",
+            "waste": "Waste Reduc."
+          }
+        },
+        "uptime": {
+          "pageTitle": "Global Connectivity",
+          "pageSubtitle": "Platform availability and uptime",
+          "title": "System Uptime",
+          "subtitle": "30-day global availability",
+          "analysis": "Global mesh routing automatically bypassed 3 regional carrier outages in the last 24 hours, preserving 100% application uptime.",
+          "stats": {
+            "availability": "Availability",
+            "downtime": "Downtime",
+            "mttr": "MTTR",
+            "incidents": "Incidents"
+          }
+        },
+        "security": {
+          "pageTitle": "Compliance Radar",
+          "pageSubtitle": "Security posture & threat protection",
+          "title": "Security Posture",
+          "subtitle": "Real-time compliance monitoring",
+          "analysis": "Automated compliance guardrails are active. No critical vulnerabilities detected in the latest continuous audit cycle.",
+          "stats": {
+            "score": "Security Score",
+            "threats": "Threats Blocked",
+            "compliance": "Compliance",
+            "issues": "Open Issues"
+          }
+        }
+      }
+    }}

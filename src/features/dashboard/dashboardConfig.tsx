@@ -9,10 +9,9 @@ import {
 } from "@/components/visuals/EnhancedGraphs";
 import { UptimeRing } from "@/components/visuals/MetricsGraphs";
 import { ErrorRateTrend, AutoScalingEvents } from "@/components/visuals/PerformanceMetrics";
+import { FullVisual } from "@/components/visuals/FullVisual";
 import { tSafe } from "@/lib/i18n/tSafe";
 
-// Dynamic imports need to be handled carefuly if used in a function that returns JSX
-// But here they are just components used in JSX
 import dynamic from "next/dynamic";
 
 const LatencyLineChart = dynamic(() =>
@@ -43,15 +42,17 @@ export const getDashboardMetrics = (t: any) => ({
         title={tSafe(t, "executive.title", "Strategic Alignment")}
         subtitle={tSafe(t, "executive.subtitle", "Top-level business health indicators")}
         mainVisual={
-          <div className="flex flex-col items-center justify-center h-full gap-4">
-            <div className="text-6xl font-black text-white">98.4%</div>
-            <div className="text-sm font-mono text-emerald-400">
-              {tSafe(t, "common.healthScore", "HEALTH SCORE")}
+          <FullVisual imageSrc="/images/dashboard/executive.png">
+            <div className="flex flex-col items-center justify-center gap-6 p-8 glass-panel rounded-[2rem] border-white/20 shadow-2xl scale-125">
+              <div className="text-7xl font-black text-white drop-shadow-[0_0_30px_rgba(255,255,255,0.4)]">98.4%</div>
+              <div className="text-xs font-black font-mono text-emerald-400 tracking-[0.3em]">
+                {tSafe(t, "common.healthScore", "HEALTH_SCORE_v8")}
+              </div>
+              <div className="w-64 h-2.5 bg-white/10 rounded-full overflow-hidden border border-white/5 shadow-inner">
+                <div className="h-full bg-gradient-to-r from-emerald-500 to-cyan-500 w-[98.4%] animate-shimmer" />
+              </div>
             </div>
-            <div className="w-full max-w-md h-2 bg-white/10 rounded-full overflow-hidden">
-              <div className="h-full bg-gradient-to-r from-emerald-500 to-cyan-500 w-[98.4%]" />
-            </div>
-          </div>
+          </FullVisual>
         }
         stats={[
           {
@@ -90,7 +91,13 @@ export const getDashboardMetrics = (t: any) => ({
       <MetricDashboardLayout
         title={tSafe(t, "technical.title", "Ops Control Plane")}
         subtitle={tSafe(t, "technical.subtitle", "Engineering velocity & stability")}
-        mainVisual={<UptimeTrend standalone={true} />}
+        mainVisual={
+          <FullVisual imageSrc="/images/dashboard/technical.png">
+            <div className="w-full h-full scale-110">
+              <UptimeTrend standalone={true} height={300} />
+            </div>
+          </FullVisual>
+        }
         stats={[
           {
             label: tSafe(t, "technical.stats.prs", "Pull Requests"),
@@ -133,7 +140,13 @@ export const getDashboardMetrics = (t: any) => ({
       <MetricDashboardLayout
         title={tSafe(t, "roi.title", "ROI Performance")}
         subtitle={tSafe(t, "roi.subtitle", "Real-time return on investment tracking")}
-        mainVisual={<LiveROIGauge value={342} />}
+        mainVisual={
+          <FullVisual imageSrc="/images/dashboard/roi.png">
+            <div className="scale-125">
+              <LiveROIGauge value={342} />
+            </div>
+          </FullVisual>
+        }
         stats={[
           {
             label: tSafe(t, "roi.stats.current", "Current ROI"),
@@ -176,7 +189,13 @@ export const getDashboardMetrics = (t: any) => ({
       <MetricDashboardLayout
         title={tSafe(t, "cost.title", "Cost Savings")}
         subtitle={tSafe(t, "cost.subtitle", "Multi-cloud cost optimization engine")}
-        mainVisual={<EnhancedCostSavingsChart />}
+        mainVisual={
+          <FullVisual imageSrc="/images/dashboard/roi.png">
+            <div className="w-full h-full p-4">
+              <EnhancedCostSavingsChart />
+            </div>
+          </FullVisual>
+        }
         stats={[
           {
             label: tSafe(t, "cost.stats.monthly", "Monthly Saved"),
@@ -219,7 +238,11 @@ export const getDashboardMetrics = (t: any) => ({
       <MetricDashboardLayout
         title={tSafe(t, "uptime.title", "System Uptime")}
         subtitle={tSafe(t, "uptime.subtitle", "30-day global availability")}
-        mainVisual={<UptimeTrend standalone={true} height={200} />}
+        mainVisual={
+          <FullVisual imageSrc="/images/dashboard/technical.png">
+            <UptimeTrend standalone={true} height={300} />
+          </FullVisual>
+        }
         stats={[
           {
             label: tSafe(t, "uptime.stats.availability", "Availability"),
@@ -262,7 +285,13 @@ export const getDashboardMetrics = (t: any) => ({
       <MetricDashboardLayout
         title={tSafe(t, "security.title", "Security Posture")}
         subtitle={tSafe(t, "security.subtitle", "Real-time compliance monitoring")}
-        mainVisual={<PulsingSecurityScore score={94} />}
+        mainVisual={
+          <FullVisual imageSrc="/images/dashboard/security.png">
+            <div className="scale-150 drop-shadow-[0_0_30px_rgba(16,185,129,0.3)]">
+              <PulsingSecurityScore score={94} />
+            </div>
+          </FullVisual>
+        }
         stats={[
           {
             label: tSafe(t, "security.stats.score", "Security Score"),
@@ -305,7 +334,13 @@ export const getDashboardMetrics = (t: any) => ({
       <MetricDashboardLayout
         title={tSafe(t, "resources.title", "Cluster Resources")}
         subtitle={tSafe(t, "resources.subtitle", "CPU, Memory, and Storage telemetry")}
-        mainVisual={<AnimatedResourceUtilization />}
+        mainVisual={
+          <FullVisual imageSrc="/images/dashboard/technical.png">
+            <div className="w-full h-full flex flex-col items-center justify-center p-6 scale-110">
+              <AnimatedResourceUtilization />
+            </div>
+          </FullVisual>
+        }
         stats={[
           {
             label: tSafe(t, "resources.stats.cpu", "CPU Usage"),
@@ -348,7 +383,11 @@ export const getDashboardMetrics = (t: any) => ({
       <MetricDashboardLayout
         title={tSafe(t, "deployment.title", "CI/CD Velocity")}
         subtitle={tSafe(t, "deployment.subtitle", "Pipeline throughput and failure rate")}
-        mainVisual={<LiveDeploymentFrequency />}
+        mainVisual={
+          <FullVisual imageSrc="/images/dashboard/technical.png">
+            <LiveDeploymentFrequency />
+          </FullVisual>
+        }
         stats={[
           {
             label: tSafe(t, "deployment.stats.deploys", "Deploys/Day"),
@@ -391,7 +430,11 @@ export const getDashboardMetrics = (t: any) => ({
       <MetricDashboardLayout
         title={tSafe(t, "scaling.title", "Scaling Activity")}
         subtitle={tSafe(t, "scaling.subtitle", "Dynamic provisioning log")}
-        mainVisual={<AutoScalingEvents />}
+        mainVisual={
+          <FullVisual imageSrc="/images/dashboard/executive.png">
+            <AutoScalingEvents />
+          </FullVisual>
+        }
         stats={[
           {
             label: tSafe(t, "scaling.stats.ups", "Scale Ups"),
@@ -434,7 +477,13 @@ export const getDashboardMetrics = (t: any) => ({
       <MetricDashboardLayout
         title={tSafe(t, "error.title", "Error & Anomalies")}
         subtitle={tSafe(t, "error.subtitle", "System-wide anomaly detection")}
-        mainVisual={<ErrorRateTrend />}
+        mainVisual={
+          <FullVisual imageSrc="/images/dashboard/security.png">
+            <div className="w-full h-full scale-110">
+              <ErrorRateTrend />
+            </div>
+          </FullVisual>
+        }
         stats={[
           {
             label: tSafe(t, "error.stats.errorRate", "Global Error %"),
