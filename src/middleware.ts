@@ -25,18 +25,20 @@ export async function middleware(request: NextRequest) {
     const isNonCanonicalHost = host !== new URL(canonicalOrigin).host;
 
     if (isHttp || isNonCanonicalHost) {
-      // If it's a root request on apex, go straight to default locale if needed 
+      // If it's a root request on apex, go straight to default locale if needed
       // (logic preserved from original, but simplified to just path preservation usually)
       const targetPath = url.pathname === "/" ? "/en" : url.pathname;
-      return NextResponse.redirect(`${canonicalOrigin}${targetPath}${url.search}`, 308);
+      const targetUrl = `${canonicalOrigin}${targetPath}${url.search}`;
+
+      // Loop prevention: If the target URL matches the current request URL, do not redirect
+      if (targetUrl.replace(/\/$/, "") !== request.url.replace(/\/$/, "")) {
+        return NextResponse.redirect(targetUrl, 308);
+      }
     }
   }
 
-  // 2. Direct base domain / to /en (handled by next-intl usually, but being explicit)
-  if (url.pathname === "/") {
-    url.pathname = "/en";
-    return NextResponse.redirect(url, 308);
-  }
+  // 2. Direct base domain / to /en - REMOVED (Handled by next-intl with localePrefix: 'always')
+
 
   // 3. Force canonical URLs (no trailing slashes except root)
   if (url.pathname.endsWith("/") && url.pathname !== "/") {

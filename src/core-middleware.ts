@@ -3,6 +3,7 @@ import type { NextRequest } from "next/server";
 import createMiddleware from "next-intl/middleware";
 
 import { APP_CONFIG } from "@/config/app-config";
+import { localePrefix } from "@/navigation";
 
 import { getRateLimiter } from "./lib/rate-limit";
 
@@ -11,6 +12,7 @@ const limiter = getRateLimiter();
 const intlMiddleware = createMiddleware({
   locales: APP_CONFIG.locales,
   defaultLocale: APP_CONFIG.defaultLocale,
+  localePrefix,
 });
 
 export async function coreMiddleware(request: NextRequest) {
