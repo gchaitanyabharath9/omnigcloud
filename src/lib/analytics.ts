@@ -20,7 +20,9 @@ interface EventProperties {
 }
 
 class Analytics {
-  private isDevelopment = process.env.NODE_ENV === "development";
+  private get isDevelopment() {
+    return process.env.NODE_ENV === "development";
+  }
 
   /**
    * Track a primary conversion event

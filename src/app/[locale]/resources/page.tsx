@@ -1,5 +1,6 @@
 import { redirect } from "next/navigation";
 
-export default function ResourcesPage({ params: { locale } }: { params: { locale: string } }) {
+export default async function ResourcesPage({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params;
   redirect(`/${locale}/docs`);
 }

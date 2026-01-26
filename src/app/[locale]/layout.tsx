@@ -35,7 +35,8 @@ const jakarta = Plus_Jakarta_Sans({
 const siteUrl = config.site.url;
 
 import { locales } from "@/navigation";
-import { generateSEOMetadata, SEO_KEYWORDS } from "@/utils/seo";
+import { generateSEOMetadata, SEO_KEYWORDS, getSafeBaseUrl } from "@/utils/seo";
+import { headers } from "next/headers";
 
 export async function generateMetadata({
   params,
@@ -51,8 +52,17 @@ export async function generateMetadata({
     return obj || key;
   };
 
-  const headersList = await import("next/headers").then((mod) => mod.headers());
-  const pathname = headersList.get("x-current-path") || `/${locale}`;
+  // Safe path resolution
+  let pathname = `/${locale}`;
+  try {
+    const headersList = await headers();
+    pathname = headersList.get("x-current-path") || pathname;
+  } catch (e) {
+    // Normal during build
+  }
+
+  // Safe origin resolution
+  const origin = await getSafeBaseUrl();
 
   return generateSEOMetadata(
     {
@@ -68,10 +78,11 @@ export async function generateMetadata({
         "AECP Engine",
         "Sovereign Cloud Governance",
       ],
-      canonical: `${config.site.url}${pathname}`,
+      canonical: `${origin}${pathname}`,
       ogType: "website",
     },
-    locale
+    locale,
+    origin
   );
 }
 

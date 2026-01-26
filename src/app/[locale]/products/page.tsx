@@ -1,7 +1,7 @@
 import { PageShell } from "@/components/layout/PageShell";
 import { Section } from "@/components/layout/Section";
 import { getTranslations, getLocale, setRequestLocale } from "next-intl/server";
-import { generateSEOMetadata, SEO_KEYWORDS } from "@/utils/seo";
+import { generateSEOMetadata, SEO_KEYWORDS, getSafeBaseUrl } from "@/utils/seo";
 import { Cpu, ArrowRight } from "lucide-react";
 import { Link, locales } from "@/navigation";
 import { PRODUCTS } from "@/data/products";
@@ -25,6 +25,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   const { locale } = await params;
   setRequestLocale(locale);
   const tm = await getTranslations({ locale, namespace: "Metadata.Products" });
+  const origin = await getSafeBaseUrl();
 
   return generateSEOMetadata(
     {
@@ -42,7 +43,8 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
       ogType: "website",
       canonical: `/${locale}/products`,
     },
-    locale
+    locale,
+    origin
   );
 }
 
