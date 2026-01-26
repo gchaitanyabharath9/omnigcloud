@@ -3730,6 +3730,74 @@
     }
   },
   "Industries": {
+    "healthcare": {
+      "paradox": {
+        "p1": "AI adoption in healthcare is hindered by data privacy concerns.",
+        "p2": "Sovereign clouds enable secure, compliant AI deployment.",
+        "features": {
+          "gating": {
+            "title": "Autonomous Gating",
+            "desc": "Prevent unauthorized data egress with policy-as-code."
+          },
+          "acceleration": {
+            "title": "Model Acceleration",
+            "desc": "Optimize inference latency on edge devices."
+          },
+          "ai": {
+            "title": "Clinical AI",
+            "desc": "Deploy diagnostic models with human-in-the-loop validation."
+          }
+        },
+        "badge": "PARADOX (JA)",
+        "title": "Paradox Title (JA)"
+      },
+      "faq": {
+        "item0": {
+          "q": "Is patient data secure?",
+          "a": "Yes, fully encrypted and sovereign."
+        },
+        "item1": {
+          "q": "Can we use public cloud models?",
+          "a": "Yes, via secure private endpoints."
+        },
+        "item2": {
+          "q": "What about compliance?",
+          "a": "We support HIPAA and GDPR natively."
+        },
+        "item3": {
+          "q": "How fast is deployment?",
+          "a": "Weeks instead of months."
+        },
+        "title": "Faq Title (JA)"
+      },
+      "description": "Healthcare description (JA)",
+      "footer": {
+        "aiDesc": "OmniGCloud Aidesc",
+        "aiLink": "OmniGCloud Ailink",
+        "aiTitle": "OmniGCloud Aititle",
+        "microservicesDesc": "OmniGCloud Microservicesdesc",
+        "microservicesLink": "OmniGCloud Microserviceslink",
+        "microservicesTitle": "OmniGCloud Microservicestitle"
+      },
+      "hero": {
+        "badge": "HERO (JA)",
+        "ctaPrimary": "OmniGCloud Ctaprimary",
+        "ctaSecondary": "OmniGCloud Ctasecondary",
+        "subtitle": "Hero description (JA)",
+        "title": "Hero Title (JA)"
+      },
+      "pillars": {
+        "item1Desc": "OmniGCloud Item1desc",
+        "item1Title": "OmniGCloud Item1title",
+        "item2Desc": "OmniGCloud Item2desc",
+        "item2Title": "OmniGCloud Item2title",
+        "item3Desc": "OmniGCloud Item3desc",
+        "item3Title": "OmniGCloud Item3title",
+        "title": "Pillars Title (JA)"
+      },
+      "sol": "HIPAA-compliant federated learning nodes. (JA)",
+      "title": "Healthcare Title (JA)"
+    },
     "allIndustries": "All Industries (JA)",
     "badge": "New (JA)",
     "challenges": "OmniGCloud Challenges",
@@ -3807,42 +3875,6 @@
     },
     "financial": {
       "sol": "Dedicated hardware shards for SWIFT payment rails. (JA)"
-    },
-    "healthcare": {
-      "description": "Healthcare description (JA)",
-      "faq": {
-        "title": "Faq Title (JA)"
-      },
-      "footer": {
-        "aiDesc": "OmniGCloud Aidesc",
-        "aiLink": "OmniGCloud Ailink",
-        "aiTitle": "OmniGCloud Aititle",
-        "microservicesDesc": "OmniGCloud Microservicesdesc",
-        "microservicesLink": "OmniGCloud Microserviceslink",
-        "microservicesTitle": "OmniGCloud Microservicestitle"
-      },
-      "hero": {
-        "badge": "HERO (JA)",
-        "ctaPrimary": "OmniGCloud Ctaprimary",
-        "ctaSecondary": "OmniGCloud Ctasecondary",
-        "subtitle": "Hero description (JA)",
-        "title": "Hero Title (JA)"
-      },
-      "paradox": {
-        "badge": "PARADOX (JA)",
-        "title": "Paradox Title (JA)"
-      },
-      "pillars": {
-        "item1Desc": "OmniGCloud Item1desc",
-        "item1Title": "OmniGCloud Item1title",
-        "item2Desc": "OmniGCloud Item2desc",
-        "item2Title": "OmniGCloud Item2title",
-        "item3Desc": "OmniGCloud Item3desc",
-        "item3Title": "OmniGCloud Item3title",
-        "title": "Pillars Title (JA)"
-      },
-      "sol": "HIPAA-compliant federated learning nodes. (JA)",
-      "title": "Healthcare Title (JA)"
     },
     "insurance": {
       "sol": "Actuarial data lakes with privacy-preserving analytics. (JA)"

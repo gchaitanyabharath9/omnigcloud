@@ -1,3 +1,4 @@
+import { Suspense } from "react";
 import ClientIntlProvider from "@/components/i18n/ClientIntlProvider";
 import { getMessages, setRequestLocale } from "next-intl/server";
 import type { Metadata, Viewport } from "next";
@@ -127,7 +128,9 @@ export default async function RootLayout({
           <ClientIntlProvider messages={messages} locale={locale}>
             <ObservabilityProvider locale={locale}>
               <UtmTracker />
-              <HashScrollHandler />
+              <Suspense fallback={null}>
+                <HashScrollHandler />
+              </Suspense>
               <Header />
               <main className="main-content">
                 <Breadcrumb />
