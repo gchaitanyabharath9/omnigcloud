@@ -4,7 +4,7 @@ import Image from "next/image";
 import styles from "./whitepaper.module.css";
 import { tSafe } from "@/lib/i18n/tSafe";
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://omnigcloud.com";
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://www.omnigcloud.com";
 
 export async function generateMetadata({
   params,

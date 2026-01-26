@@ -13,7 +13,24 @@ export type AppLocale = (typeof APP_LOCALES)[number];
 export const DEFAULT_LOCALE: AppLocale = "en";
 
 // Environment-aware URL configuration
-const ENV_SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://www.omnigcloud.com";
+// Environment-aware URL configuration
+const getBaseUrl = () => {
+    // 1. Explicitly defined public URL (Highest Priority)
+    if (process.env.NEXT_PUBLIC_SITE_URL) return process.env.NEXT_PUBLIC_SITE_URL;
+
+    // 2. Server-side internal URL (if needed)
+    if (process.env.SITE_URL) return process.env.SITE_URL;
+
+    // 3. Vercel Preview/Production URL (System assigned)
+    if (process.env.VERCEL_URL) {
+        return `https://${process.env.VERCEL_URL}`;
+    }
+
+    // 4. Default Fallback (Safety Net)
+    return "https://www.omnigcloud.com";
+};
+
+const ENV_SITE_URL = getBaseUrl();
 const ENV_ALTERNATE_URLS = (process.env.NEXT_PUBLIC_SITE_ALTERNATE_URLS || "").split(",").filter(Boolean);
 
 export const APP_CONFIG = {
