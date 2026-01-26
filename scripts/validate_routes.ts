@@ -49,8 +49,8 @@ async function validateRoutes() {
     }
 
     // Fallback: check if it's a dynamic research/papers route
-    if (!exists && route.path.startsWith("/research/papers/")) {
-      const dynamicPath = path.join(APP_DIR, "research", "papers", "[slug]", "page.tsx");
+    if (!exists && route.path.startsWith("/resources/papers/")) {
+      const dynamicPath = path.join(APP_DIR, "resources", "papers", "[slug]", "page.tsx");
       if (fs.existsSync(dynamicPath)) {
         exists = true;
       }
