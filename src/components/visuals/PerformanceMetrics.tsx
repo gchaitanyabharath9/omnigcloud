@@ -68,10 +68,10 @@ export const CostPerTransaction = () => {
       }}
     >
       <div style={{ textAlign: "center" }}>
-        <div style={{ fontSize: "2.5rem", fontWeight: 950, color: "var(--color-success)" }}>
+        <div style={{ fontSize: "3.5rem", fontWeight: 950, color: "var(--color-success)", letterSpacing: "-0.05em" }}>
           ${costs[costs.length - 1].toFixed(3)}
         </div>
-        <div style={{ fontSize: "0.65rem", opacity: 0.5, fontWeight: 700 }}>
+        <div style={{ fontSize: "0.85rem", opacity: 0.8, fontWeight: 950, letterSpacing: "0.1em", textTransform: "uppercase" }}>
           {tSafe(t, "costPerTransaction", "COST PER TRANSACTION")}
         </div>
       </div>
@@ -122,10 +122,10 @@ export const ErrorRateTrend = () => {
       }}
     >
       <div style={{ textAlign: "center" }}>
-        <div style={{ fontSize: "2rem", fontWeight: 950, color: "var(--color-success)" }}>
+        <div style={{ fontSize: "3rem", fontWeight: 950, color: "var(--color-success)", letterSpacing: "-0.05em" }}>
           {errorRates[errorRates.length - 1]}%
         </div>
-        <div style={{ fontSize: "0.65rem", opacity: 0.5, fontWeight: 700 }}>
+        <div style={{ fontSize: "0.85rem", opacity: 0.8, fontWeight: 950, letterSpacing: "0.1em", textTransform: "uppercase" }}>
           {tSafe(t, "errorRate", "ERROR RATE")}
         </div>
       </div>
@@ -175,7 +175,7 @@ export const QueryPerformance = () => {
     >
       {queries.map((query, i) => (
         <div key={i} style={{ display: "flex", alignItems: "center", gap: "0.75rem" }}>
-          <div style={{ width: "60px", fontSize: "0.65rem", fontWeight: 800, opacity: 0.7 }}>
+          <div style={{ width: "80px", fontSize: "0.85rem", fontWeight: 950, opacity: 0.9, letterSpacing: "0.05em" }}>
             {query.type}
           </div>
           <div
@@ -224,24 +224,24 @@ export const CacheHitRate = ({ hitRate = 94.5 }: { hitRate?: number }) => {
       }}
     >
       <div style={{ textAlign: "center" }}>
-        <div style={{ fontSize: "3rem", fontWeight: 950, color: "var(--primary)" }}>{hitRate}%</div>
-        <div style={{ fontSize: "0.7rem", opacity: 0.5, fontWeight: 700 }}>
+        <div style={{ fontSize: "4.5rem", fontWeight: 950, color: "var(--primary)", letterSpacing: "-0.05em", lineHeight: 1 }}>{hitRate}%</div>
+        <div style={{ fontSize: "1rem", opacity: 0.8, fontWeight: 950, letterSpacing: "0.2em", textTransform: "uppercase", marginTop: "0.5rem" }}>
           {tSafe(t, "cacheHitRate", "CACHE HIT RATE")}
         </div>
       </div>
       <div style={{ display: "flex", gap: "1rem", justifyContent: "center" }}>
         <div style={{ textAlign: "center" }}>
-          <div style={{ fontSize: "1.5rem", fontWeight: 900, color: "var(--color-success)" }}>
+          <div style={{ fontSize: "1.75rem", fontWeight: 950, color: "var(--color-success)", fontFamily: "var(--font-mono)" }}>
             {hitRate}%
           </div>
-          <div style={{ fontSize: "0.6rem", opacity: 0.5 }}>{tSafe(t, "hits", "Hits")}</div>
+          <div style={{ fontSize: "0.75rem", opacity: 0.7, fontWeight: 800, textTransform: "uppercase" }}>{tSafe(t, "hits", "Hits")}</div>
         </div>
-        <div style={{ width: "1px", background: "var(--card-border)" }}></div>
+        <div style={{ width: "1px", background: "rgba(255,255,255,0.1)" }}></div>
         <div style={{ textAlign: "center" }}>
-          <div style={{ fontSize: "1.5rem", fontWeight: 900, color: "var(--color-danger)" }}>
+          <div style={{ fontSize: "1.75rem", fontWeight: 950, color: "var(--color-danger)", fontFamily: "var(--font-mono)" }}>
             {(100 - hitRate).toFixed(1)}%
           </div>
-          <div style={{ fontSize: "0.6rem", opacity: 0.5 }}>{tSafe(t, "misses", "Misses")}</div>
+          <div style={{ fontSize: "0.75rem", opacity: 0.7, fontWeight: 800, textTransform: "uppercase" }}>{tSafe(t, "misses", "Misses")}</div>
         </div>
       </div>
     </div>
@@ -270,17 +270,17 @@ export const ServerlessInvocations = () => {
       }}
     >
       <div style={{ textAlign: "center" }}>
-        <div style={{ fontSize: "2rem", fontWeight: 950, color: "var(--primary)" }}>
+        <div style={{ fontSize: "3rem", fontWeight: 950, color: "var(--primary)", letterSpacing: "-0.05em", lineHeight: 1 }}>
           {(total / 1000).toFixed(0)}k
         </div>
-        <div style={{ fontSize: "0.65rem", opacity: 0.5, fontWeight: 700 }}>
+        <div style={{ fontSize: "0.85rem", opacity: 0.8, fontWeight: 950, letterSpacing: "0.1em", textTransform: "uppercase", marginTop: "0.5rem" }}>
           {tSafe(t, "totalInvocations", "TOTAL INVOCATIONS")}
         </div>
       </div>
       <div style={{ display: "flex", flexDirection: "column", gap: "0.5rem" }}>
         {functions.map((fn, i) => (
           <div key={i} style={{ display: "flex", alignItems: "center", gap: "0.75rem" }}>
-            <div style={{ width: "50px", fontSize: "0.65rem", opacity: 0.7, fontWeight: 700 }}>
+            <div style={{ width: "80px", fontSize: "0.85rem", opacity: 0.9, fontWeight: 900, textTransform: "lowercase" }}>
               {fn.name}
             </div>
             <div
@@ -302,7 +302,7 @@ export const ServerlessInvocations = () => {
               ></div>
             </div>
             <div
-              style={{ width: "40px", fontSize: "0.65rem", fontWeight: 900, textAlign: "right" }}
+              style={{ width: "60px", fontSize: "0.85rem", fontWeight: 950, textAlign: "right", fontFamily: "var(--font-mono)" }}
             >
               {(fn.invocations / 1000).toFixed(0)}k
             </div>
@@ -344,13 +344,14 @@ export const ContainerEfficiency = () => {
       }}
     >
       {metrics.map((metric, i) => (
-        <div key={i} style={{ display: "flex", flexDirection: "column", gap: "0.5rem" }}>
-          <div style={{ display: "flex", justifyContent: "space-between", fontSize: "0.7rem" }}>
-            <span style={{ opacity: 0.7, fontWeight: 700 }}>{metric.name}</span>
+        <div key={i} style={{ display: "flex", flexDirection: "column", gap: "0.75rem" }}>
+          <div style={{ display: "flex", justifyContent: "space-between", fontSize: "0.85rem" }}>
+            <span style={{ opacity: 0.8, fontWeight: 800, textTransform: "uppercase", letterSpacing: "0.1em" }}>{metric.name}</span>
             <span
               style={{
-                fontWeight: 900,
+                fontWeight: 950,
                 color: metric.value >= metric.target ? metric.color : "var(--color-warning)",
+                fontFamily: "var(--font-mono)"
               }}
             >
               {metric.value}%

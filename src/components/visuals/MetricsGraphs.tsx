@@ -123,9 +123,17 @@ export const ROIGauge = ({ value = 342 }: { value?: number }) => {
         </defs>
       </svg>
       <div style={{ position: "absolute", textAlign: "center" }}>
-        <div style={{ fontSize: "2.5rem", fontWeight: 950, color: "var(--primary)" }}>{value}%</div>
+        <div style={{
+          fontSize: "3.5rem",
+          fontWeight: 950,
+          background: "linear-gradient(to right, var(--primary), #10b981)",
+          WebkitBackgroundClip: "text",
+          WebkitTextFillColor: "transparent",
+          letterSpacing: "-0.05em",
+          lineHeight: 1
+        }}>{value}%</div>
         <div
-          style={{ fontSize: "0.7rem", opacity: 0.5, fontWeight: 700, textTransform: "uppercase" }}
+          style={{ fontSize: "0.85rem", opacity: 0.8, fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.2em", marginTop: "0.5rem" }}
         >
           {tSafe(t, "roi", "ROI")}
         </div>
@@ -180,17 +188,17 @@ export const CostBreakdownDonut = () => {
           return <path key={i} d={path} fill={seg.color} opacity="0.8" />;
         })}
       </svg>
-      <div style={{ display: "flex", flexDirection: "column", gap: "0.5rem" }}>
+      <div style={{ display: "flex", flexDirection: "column", gap: "1rem", flex: 1 }}>
         {segments.map((seg, i) => (
           <div
             key={i}
-            style={{ display: "flex", alignItems: "center", gap: "0.5rem", fontSize: "0.75rem" }}
+            style={{ display: "flex", alignItems: "center", gap: "1rem", fontSize: "0.95rem" }}
           >
             <div
-              style={{ width: "10px", height: "10px", borderRadius: "2px", background: seg.color }}
+              style={{ width: "14px", height: "14px", borderRadius: "3px", background: seg.color, boxShadow: `0 0 10px ${seg.color}40` }}
             ></div>
-            <span style={{ opacity: 0.7 }}>{seg.label}</span>
-            <span style={{ fontWeight: 800, marginLeft: "auto" }}>{seg.value}%</span>
+            <span style={{ opacity: 0.8, fontWeight: 600 }}>{seg.label}</span>
+            <span style={{ fontWeight: 950, marginLeft: "auto", fontFamily: "var(--font-mono)", color: seg.color }}>{seg.value}%</span>
           </div>
         ))}
       </div>
@@ -272,8 +280,8 @@ export const UptimeRing = ({ uptime = 99.99 }: { uptime?: number }) => {
         />
       </svg>
       <div style={{ position: "absolute", textAlign: "center" }}>
-        <div style={{ fontSize: "2rem", fontWeight: 950, color: "#10b981" }}>{uptime}%</div>
-        <div style={{ fontSize: "0.65rem", opacity: 0.5, fontWeight: 700 }}>
+        <div style={{ fontSize: "3rem", fontWeight: 950, color: "#10b981", letterSpacing: "-0.05em" }}>{uptime}%</div>
+        <div style={{ fontSize: "0.85rem", opacity: 0.8, fontWeight: 950, letterSpacing: "0.2em", textTransform: "uppercase" }}>
           {tSafe(t, "uptime", "UPTIME")}
         </div>
       </div>
@@ -302,10 +310,10 @@ export const ResourceUtilization = () => {
       }}
     >
       {resources.map((res, i) => (
-        <div key={i} style={{ display: "flex", flexDirection: "column", gap: "0.25rem" }}>
-          <div style={{ display: "flex", justifyContent: "space-between", fontSize: "0.7rem" }}>
-            <span style={{ opacity: 0.7, fontWeight: 700 }}>{res.name}</span>
-            <span style={{ fontWeight: 900, color: res.color }}>{res.value}%</span>
+        <div key={i} style={{ display: "flex", flexDirection: "column", gap: "0.5rem" }}>
+          <div style={{ display: "flex", justifyContent: "space-between", fontSize: "0.9rem" }}>
+            <span style={{ opacity: 0.8, fontWeight: 800, letterSpacing: "0.05em", textTransform: "uppercase" }}>{res.name}</span>
+            <span style={{ fontWeight: 950, color: res.color, fontFamily: "var(--font-mono)" }}>{res.value}%</span>
           </div>
           <div
             style={{
