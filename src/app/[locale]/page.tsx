@@ -71,7 +71,7 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
 
       <VisualSection
         pageKey="Home"
-        imageUrl="/images/seo/architecture.png"
+        imageUrl="/images/hero/architecture-premium.png"
         alt="OmniGCloud Autonomous Architecture"
         description={tSeo("VisualSection.description")}
       />

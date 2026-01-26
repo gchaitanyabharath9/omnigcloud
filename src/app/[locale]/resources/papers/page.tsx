@@ -30,9 +30,17 @@ export default async function PapersListingPage({ params }: { params: Promise<{ 
 
     return (
         <div className="pb-24">
-            <header className="relative py-20 border-b border-white/5 overflow-hidden">
-                <div className="absolute inset-0 bg-grid-white/[0.02] bg-[size:32px_32px]" />
-                <div className="absolute inset-0 bg-gradient-to-b from-primary/5 via-transparent to-transparent" />
+            <header className="relative py-28 border-b border-white/5 overflow-hidden">
+                <div className="absolute inset-0 z-0">
+                    <img
+                        src="/images/papers_hero_bg.png"
+                        alt="Background"
+                        className="w-full h-full object-cover opacity-30"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-b from-background via-background/80 to-background" />
+                </div>
+                <div className="absolute inset-0 bg-grid-white/[0.02] bg-[size:32px_32px] z-[1]" />
+                <div className="absolute inset-0 bg-gradient-to-b from-primary/5 via-transparent to-transparent z-[2]" />
 
                 <div className="container relative z-10 px-4">
                     <div className="badge badge-primary-subtle mb-6">{t('hero.badge')}</div>
