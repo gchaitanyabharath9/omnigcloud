@@ -1,6 +1,6 @@
 import { Code, Layers, BookOpen, ShieldCheck, ArrowLeft, ChevronRight } from "lucide-react";
 import Link from "next/link";
-import { getTranslations, getLocale } from "next-intl/server";
+import { getTranslations, getLocale, setRequestLocale } from "next-intl/server";
 import { notFound } from "next/navigation";
 import Footer from "@/components/Footer";
 import { Metadata } from "next";
@@ -14,16 +14,13 @@ interface DocMetadata {
 
 import { APP_CONFIG } from "@/config/app-config";
 
-// ... [imports]
-
-// ... [interface]
-
 export async function generateMetadata({
   params,
 }: {
   params: Promise<{ locale: string; slug: string }>;
 }): Promise<Metadata> {
   const { locale, slug } = await params;
+  setRequestLocale(locale);
   const t = await getTranslations({ locale, namespace: "Docs" });
 
   // Fallback if metadata is missing for a specific slug
@@ -46,9 +43,10 @@ export default async function DocDetailPage({
 }: {
   params: Promise<{ locale: string; slug: string }>;
 }) {
+  const { slug, locale } = await params;
+  setRequestLocale(locale);
   const t = await getTranslations("Docs");
-  const locale = await getLocale();
-  const { slug } = await params;
+  // const locale = await getLocale(); // Redundant if we have valid params locale
 
   const docs: DocMetadata[] = [
     { id: "architecture", key: "architecture", icon: <Layers size={40} /> },

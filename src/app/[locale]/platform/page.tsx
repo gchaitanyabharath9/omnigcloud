@@ -1,6 +1,6 @@
 import Footer from "@/components/Footer";
 import { Link } from "@/navigation";
-import { getTranslations } from "next-intl/server";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 import { ArrowRight } from "lucide-react";
 import PlatformHero from "@/components/sections/platform/PlatformHero";
 import ControlPlaneSection from "@/components/sections/platform/ControlPlaneSection";
@@ -17,6 +17,7 @@ export async function generateMetadata({
   params: Promise<{ locale: string }>;
 }): Promise<Metadata> {
   const { locale } = await params;
+  setRequestLocale(locale);
   const t = await getTranslations({ locale, namespace: "Metadata.Platform" });
   return {
     title: t("title"),
@@ -30,6 +31,7 @@ export function generateStaticParams() {
 
 export default async function PlatformPage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
+  setRequestLocale(locale);
   const t = await getTranslations({ locale, namespace: "Platform" });
   const tCommon = await getTranslations({ locale, namespace: "Common" });
   const tSeo = await getTranslations({ locale, namespace: "SEO_Content.Platform" });
