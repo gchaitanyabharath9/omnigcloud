@@ -5,7 +5,7 @@
 import fs from "fs";
 import path from "path";
 
-const MESSAGES_DIR = path.join(process.cwd(), "messages");
+const MESSAGES_DIR = path.join(process.cwd(), "src", "messages");
 const PRIMARY_LOCALE = "en";
 
 function getFlattenedKeys(obj: any, prefix = ""): string[] {
