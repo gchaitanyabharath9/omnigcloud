@@ -203,20 +203,32 @@ const Header = ({ hideNav }: { hideNav?: boolean }) => {
           </Suspense>
           <button
             onClick={handleContactSales}
-            className={`btn-secondary ${styles.contactBtn}`}
+            className={`btn-secondary ${styles.contactBtn} group overflow-hidden`}
             style={{
-              padding: "0.6rem 1.25rem",
-              borderRadius: "0.75rem",
-              fontSize: "0.85rem",
-              fontWeight: 700,
+              padding: "0.75rem 1.5rem",
+              borderRadius: "1rem",
+              fontSize: "1rem",
+              fontWeight: 950,
+              letterSpacing: "0.05em",
+              border: "1px solid rgba(255,255,255,0.1)",
+              background: "rgba(255,255,255,0.05)",
+              backdropFilter: "blur(10px)",
+              boxShadow: "0 10px 20px rgba(0,0,0,0.2)"
             }}
           >
             {translations.ctaLabel}
           </button>
           <Link
             href="/onboarding"
-            className={`btn-primary ${styles.onboardingBtn}`}
-            style={{ padding: "0.6rem 1.5rem", borderRadius: "0.75rem", fontSize: "0.85rem" }}
+            className={`btn-primary ${styles.onboardingBtn} group overflow-hidden`}
+            style={{
+              padding: "0.75rem 2rem",
+              borderRadius: "1rem",
+              fontSize: "1rem",
+              fontWeight: 950,
+              letterSpacing: "0.05em",
+              boxShadow: "0 10px 30px rgba(59,130,246,0.4)"
+            }}
           >
             {t("Header.nav.onboarding")}
           </Link>

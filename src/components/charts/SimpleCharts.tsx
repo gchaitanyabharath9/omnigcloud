@@ -45,20 +45,20 @@ const ChartCard = ({
         className={`flex flex-col items-center justify-center ${standalone ? "" : "glass-panel border-white/5"} p-4 text-center bg-white/[0.02]`}
         style={{ height }}
       >
-        <div className="text-[12px] font-mono text-primary/60 uppercase tracking-[0.2em] font-black mb-2">
-          {tSafe(t, "syncing", "Data Synchronizing")}
+        <div className="text-[14px] font-mono text-primary/60 uppercase tracking-[0.3em] font-black mb-2 animate-pulse">
+          {tSafe(t, "syncing", "SYNCING_BLOB...")}
         </div>
-        <div className="flex gap-1.5">
+        <div className="flex gap-2">
           <div
-            className="w-1.5 h-1.5 rounded-full bg-primary/30 animate-bounce"
+            className="w-2 h-2 rounded-full bg-primary/40 animate-bounce"
             style={{ animationDelay: "0ms" }}
           />
           <div
-            className="w-1.5 h-1.5 rounded-full bg-primary/30 animate-bounce"
+            className="w-2 h-2 rounded-full bg-primary/40 animate-bounce"
             style={{ animationDelay: "150ms" }}
           />
           <div
-            className="w-1.5 h-1.5 rounded-full bg-primary/30 animate-bounce"
+            className="w-2 h-2 rounded-full bg-primary/40 animate-bounce"
             style={{ animationDelay: "300ms" }}
           />
         </div>
@@ -72,7 +72,7 @@ const ChartCard = ({
         className="w-full relative overflow-hidden flex flex-col items-center justify-center group"
         style={{ height }}
       >
-        <div className="w-full h-full relative transition-transform duration-500 group-hover:scale-[1.01]">
+        <div className="w-full h-full relative transition-all duration-700 group-hover:scale-[1.03]">
           {children}
         </div>
       </div>
@@ -80,13 +80,16 @@ const ChartCard = ({
   }
 
   return (
-    <div className="glass-panel p-4 rounded-xl flex flex-col border-white/10 hover:border-primary/30 transition-all duration-300 group">
+    <div className="glass-panel p-6 rounded-[2.5rem] flex flex-col border-white/10 hover:border-primary/40 transition-all duration-500 group shadow-2xl bg-white/[0.01]">
       {title && (
-        <div className="flex items-center justify-between mb-4">
-          <h3 className="text-[13px] font-black uppercase opacity-80 tracking-[0.2em] font-mono text-primary">
+        <div className="flex items-center justify-between mb-6">
+          <h3 className="text-[14px] font-black uppercase opacity-90 tracking-[0.3em] font-mono text-primary drop-shadow-lg">
             {title}
           </h3>
-          <div className="w-2 h-2 rounded-full bg-primary/20 animate-pulse hidden group-hover:block" />
+          <div className="flex gap-1.5 items-center">
+            <div className="w-1.5 h-1.5 rounded-full bg-primary/30 animate-pulse shadow-[0_0_8px_var(--primary)]" />
+            <div className="w-1.5 h-1.5 rounded-full bg-primary/10" />
+          </div>
         </div>
       )}
       <div
@@ -124,64 +127,61 @@ export const LatencyLineChart = ({
     >
       <NoSSR>
         <ResponsiveContainer width="99%" height="100%" minWidth={0} minHeight={0}>
-          <LineChart data={data} margin={{ top: 10, right: 10, left: 0, bottom: 0 }}>
-            <defs>
-              <linearGradient id="lineGrad" x1="0" y1="0" x2="1" y2="0">
-                <stop offset="0%" stopColor="var(--primary)" />
-                <stop offset="100%" stopColor="#c084fc" />
-              </linearGradient>
-            </defs>
-            <CartesianGrid strokeDasharray="3 3" vertical={false} stroke="rgba(255,255,255,0.05)" />
+          <LineChart data={data} margin={{ top: 10, right: 10, left: 10, bottom: 5 }}>
+            <CartesianGrid strokeDasharray="3 3" vertical={false} stroke="rgba(255,255,255,0.08)" />
             <XAxis
               dataKey="hour"
               axisLine={false}
               tickLine={false}
               stroke="#94a3b8"
-              style={{ fontSize: "12px", fontWeight: 700, fontFamily: "var(--font-mono)" }}
+              style={{ fontSize: "12px", fontWeight: 900, fontFamily: "var(--font-mono)", textTransform: "uppercase", letterSpacing: "0.1em" }}
             />
             <YAxis
               axisLine={false}
               tickLine={false}
               stroke="#94a3b8"
-              style={{ fontSize: "12px", fontWeight: 700, fontFamily: "var(--font-mono)" }}
+              style={{ fontSize: "12px", fontWeight: 900, fontFamily: "var(--font-mono)" }}
             />
             <Tooltip
               contentStyle={{
-                background: "rgba(15, 23, 42, 0.9)",
-                border: "1px solid rgba(255,255,255,0.1)",
-                borderRadius: "12px",
-                backdropFilter: "blur(16px)",
-                boxShadow: "0 10px 15px -3px rgba(0, 0, 0, 0.5)",
+                background: "rgba(15, 23, 42, 0.95)",
+                border: "1px solid rgba(255,255,255,0.2)",
+                borderRadius: "20px",
+                backdropFilter: "blur(20px)",
+                boxShadow: "0 25px 50px -12px rgba(0, 0, 0, 0.7)",
+                padding: "12px 16px"
               }}
-              itemStyle={{ fontSize: "11px", fontWeight: 700 }}
+              itemStyle={{ fontSize: "14px", fontWeight: 900, textTransform: "uppercase" }}
+              labelStyle={{ color: "rgba(255,255,255,0.5)", fontWeight: 900, marginBottom: "8px", fontSize: "12px", fontFamily: "var(--font-mono)" }}
             />
             <Legend
               iconType="circle"
-              wrapperStyle={{ paddingTop: "20px", fontSize: "12px", fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.05em" }}
+              verticalAlign="bottom"
+              wrapperStyle={{ paddingTop: "25px", fontSize: "12px", fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.15em", fontFamily: "var(--font-mono)" }}
             />
             <Line
               type="monotone"
               dataKey="p50"
               stroke="#10b981"
-              strokeWidth={3}
+              strokeWidth={5}
               dot={false}
-              activeDot={{ r: 6, strokeWidth: 0 }}
+              activeDot={{ r: 8, strokeWidth: 0, fill: "#10b981" }}
             />
             <Line
               type="monotone"
               dataKey="p95"
               stroke="#f59e0b"
-              strokeWidth={3}
+              strokeWidth={5}
               dot={false}
-              activeDot={{ r: 6, strokeWidth: 0 }}
+              activeDot={{ r: 8, strokeWidth: 0, fill: "#f59e0b" }}
             />
             <Line
               type="monotone"
               dataKey="p99"
               stroke="#ef4444"
-              strokeWidth={3}
+              strokeWidth={5}
               dot={false}
-              activeDot={{ r: 6, strokeWidth: 0 }}
+              activeDot={{ r: 8, strokeWidth: 0, fill: "#ef4444" }}
             />
           </LineChart>
         </ResponsiveContainer>
@@ -213,49 +213,51 @@ export const CostSavingsArea = ({
     >
       <NoSSR>
         <ResponsiveContainer width="99%" height="100%" minWidth={0} minHeight={0}>
-          <AreaChart data={data} margin={{ top: 10, right: 10, left: 0, bottom: 0 }}>
+          <AreaChart data={data} margin={{ top: 10, right: 10, left: 10, bottom: 5 }}>
             <defs>
               <linearGradient id="colorTrad" x1="0" y1="0" x2="0" y2="1">
-                <stop offset="5%" stopColor="#ef4444" stopOpacity={0.3} />
+                <stop offset="5%" stopColor="#ef4444" stopOpacity={0.5} />
                 <stop offset="95%" stopColor="#ef4444" stopOpacity={0} />
               </linearGradient>
               <linearGradient id="colorOpt" x1="0" y1="0" x2="0" y2="1">
-                <stop offset="5%" stopColor="#3b82f6" stopOpacity={0.4} />
+                <stop offset="5%" stopColor="#3b82f6" stopOpacity={0.6} />
                 <stop offset="95%" stopColor="#3b82f6" stopOpacity={0} />
               </linearGradient>
             </defs>
-            <CartesianGrid strokeDasharray="3 3" vertical={false} stroke="rgba(255,255,255,0.05)" />
+            <CartesianGrid strokeDasharray="3 3" vertical={false} stroke="rgba(255,255,255,0.08)" />
             <XAxis
               dataKey="month"
               axisLine={false}
               tickLine={false}
               stroke="#94a3b8"
-              style={{ fontSize: "12px", fontWeight: 700, fontFamily: "var(--font-mono)" }}
+              style={{ fontSize: "12px", fontWeight: 900, fontFamily: "var(--font-mono)", textTransform: "uppercase" }}
             />
             <YAxis
               axisLine={false}
               tickLine={false}
               stroke="#94a3b8"
-              style={{ fontSize: "12px", fontWeight: 700, fontFamily: "var(--font-mono)" }}
+              style={{ fontSize: "12px", fontWeight: 900, fontFamily: "var(--font-mono)" }}
             />
             <Tooltip
               contentStyle={{
-                background: "rgba(15, 23, 42, 0.9)",
-                border: "1px solid rgba(255,255,255,0.1)",
-                borderRadius: "12px",
-                backdropFilter: "blur(16px)",
+                background: "rgba(15, 23, 42, 0.95)",
+                border: "1px solid rgba(255,255,255,0.2)",
+                borderRadius: "20px",
+                backdropFilter: "blur(20px)",
+                padding: "16px"
               }}
+              itemStyle={{ fontSize: "14px", fontWeight: 900 }}
             />
             <Legend
               iconType="circle"
-              wrapperStyle={{ paddingTop: "15px", fontSize: "10px", fontWeight: 700 }}
+              wrapperStyle={{ paddingTop: "20px", fontSize: "12px", fontWeight: 900, textTransform: "uppercase", fontFamily: "var(--font-mono)" }}
             />
             <Area
               type="monotone"
               dataKey="traditional"
               stackId="1"
               stroke="#ef4444"
-              strokeWidth={2}
+              strokeWidth={4}
               fill="url(#colorTrad)"
               fillOpacity={1}
             />
@@ -264,7 +266,7 @@ export const CostSavingsArea = ({
               dataKey="optimized"
               stackId="2"
               stroke="#3b82f6"
-              strokeWidth={2}
+              strokeWidth={4}
               fill="url(#colorOpt)"
               fillOpacity={1}
             />
@@ -297,37 +299,39 @@ export const RequestVolumeBar = ({
     >
       <NoSSR>
         <ResponsiveContainer width="99%" height="100%" minWidth={0} minHeight={0}>
-          <BarChart data={data} margin={{ top: 10, right: 10, left: 0, bottom: 0 }}>
+          <BarChart data={data} margin={{ top: 10, right: 10, left: 10, bottom: 5 }}>
             <defs>
               <linearGradient id="barGrad" x1="0" y1="0" x2="0" y2="1">
                 <stop offset="0%" stopColor="var(--primary)" stopOpacity={1} />
-                <stop offset="100%" stopColor="var(--primary)" stopOpacity={0.5} />
+                <stop offset="100%" stopColor="var(--primary)" stopOpacity={0.3} />
               </linearGradient>
             </defs>
-            <CartesianGrid strokeDasharray="3 3" vertical={false} stroke="rgba(255,255,255,0.05)" />
+            <CartesianGrid strokeDasharray="3 3" vertical={false} stroke="rgba(255,255,255,0.08)" />
             <XAxis
               dataKey="hour"
               axisLine={false}
               tickLine={false}
               stroke="#94a3b8"
-              style={{ fontSize: "12px", fontWeight: 700, fontFamily: "var(--font-mono)" }}
+              style={{ fontSize: "12px", fontWeight: 900, fontFamily: "var(--font-mono)" }}
             />
             <YAxis
               axisLine={false}
               tickLine={false}
               stroke="#94a3b8"
-              style={{ fontSize: "12px", fontWeight: 700, fontFamily: "var(--font-mono)" }}
+              style={{ fontSize: "12px", fontWeight: 900, fontFamily: "var(--font-mono)" }}
             />
             <Tooltip
               cursor={{ fill: "rgba(255,255,255,0.05)" }}
               contentStyle={{
-                background: "rgba(15, 23, 42, 0.9)",
-                border: "1px solid rgba(255,255,255,0.1)",
-                borderRadius: "12px",
-                backdropFilter: "blur(16px)",
+                background: "rgba(15, 23, 42, 0.95)",
+                border: "1px solid rgba(255,255,255,0.2)",
+                borderRadius: "20px",
+                backdropFilter: "blur(20px)",
+                padding: "16px"
               }}
+              itemStyle={{ fontWeight: 900 }}
             />
-            <Bar dataKey="requests" fill="url(#barGrad)" radius={[4, 4, 0, 0]} />
+            <Bar dataKey="requests" fill="url(#barGrad)" radius={[8, 8, 0, 0]} />
           </BarChart>
         </ResponsiveContainer>
       </NoSSR>
@@ -364,9 +368,9 @@ export const CloudDistributionPie = ({
               data={data}
               cx="50%"
               cy="50%"
-              innerRadius={height < 150 ? 25 : 45}
-              outerRadius={height < 150 ? 45 : 70}
-              paddingAngle={5}
+              innerRadius={height < 150 ? 30 : 60}
+              outerRadius={height < 150 ? 55 : 90}
+              paddingAngle={8}
               dataKey="value"
               stroke="none"
             >
@@ -374,18 +378,21 @@ export const CloudDistributionPie = ({
                 <Cell
                   key={`cell-${index}`}
                   fill={COLORS[index % COLORS.length]}
-                  style={{ filter: `drop-shadow(0 0 5px ${COLORS[index % COLORS.length]}40)` }}
+                  style={{ filter: `drop-shadow(0 0 15px ${COLORS[index % COLORS.length]}60)` }}
                 />
               ))}
             </Pie>
             <Tooltip
               contentStyle={{
-                background: "rgba(15, 23, 42, 0.9)",
-                border: "1px solid rgba(255,255,255,0.1)",
-                borderRadius: "12px",
-                backdropFilter: "blur(16px)",
+                background: "rgba(15, 23, 42, 0.95)",
+                border: "1px solid rgba(255,255,255,0.2)",
+                borderRadius: "20px",
+                backdropFilter: "blur(20px)",
+                padding: "12px 16px"
               }}
+              itemStyle={{ fontWeight: 900, fontSize: "16px" }}
             />
+            <Legend verticalAlign="bottom" wrapperStyle={{ paddingTop: "20px", fontSize: "14px", fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.1em" }} />
           </PieChart>
         </ResponsiveContainer>
       </NoSSR>
@@ -415,31 +422,33 @@ export const UptimeTrend = ({
     >
       <NoSSR>
         <ResponsiveContainer width="99%" height="100%" minWidth={0} minHeight={0}>
-          <LineChart data={data} margin={{ top: 10, right: 10, left: 0, bottom: 0 }}>
-            <CartesianGrid strokeDasharray="3 3" vertical={false} stroke="rgba(255,255,255,0.05)" />
+          <LineChart data={data} margin={{ top: 10, right: 10, left: 10, bottom: 5 }}>
+            <CartesianGrid strokeDasharray="3 3" vertical={false} stroke="rgba(255,255,255,0.08)" />
             <XAxis
               dataKey="day"
               axisLine={false}
               tickLine={false}
               stroke="#94a3b8"
-              style={{ fontSize: "12px", fontWeight: 700, fontFamily: "var(--font-mono)" }}
+              style={{ fontSize: "12px", fontWeight: 900, fontFamily: "var(--font-mono)" }}
             />
             <YAxis
               domain={[99.5, 100]}
               axisLine={false}
               tickLine={false}
               stroke="#94a3b8"
-              style={{ fontSize: "12px", fontWeight: 700, fontFamily: "var(--font-mono)" }}
+              style={{ fontSize: "12px", fontWeight: 900, fontFamily: "var(--font-mono)" }}
             />
             <Tooltip
               contentStyle={{
-                background: "rgba(15, 23, 42, 0.9)",
-                border: "1px solid rgba(255,255,255,0.1)",
-                borderRadius: "12px",
-                backdropFilter: "blur(16px)",
+                background: "rgba(15, 23, 42, 0.95)",
+                border: "1px solid rgba(255,255,255,0.2)",
+                borderRadius: "20px",
+                backdropFilter: "blur(20px)",
+                padding: "16px"
               }}
+              itemStyle={{ fontWeight: 900 }}
             />
-            <Line type="stepAfter" dataKey="uptime" stroke="#10b981" strokeWidth={3} dot={false} />
+            <Line type="stepAfter" dataKey="uptime" stroke="#10b981" strokeWidth={5} dot={false} />
           </LineChart>
         </ResponsiveContainer>
       </NoSSR>
@@ -474,12 +483,12 @@ export const ComplianceScoresBar = ({
           <BarChart
             data={data}
             layout="vertical"
-            margin={{ top: 10, right: 30, left: 0, bottom: 0 }}
+            margin={{ top: 10, right: 30, left: 20, bottom: 0 }}
           >
             <CartesianGrid
               strokeDasharray="3 3"
               horizontal={false}
-              stroke="rgba(255,255,255,0.05)"
+              stroke="rgba(255,255,255,0.08)"
             />
             <XAxis
               type="number"
@@ -487,7 +496,7 @@ export const ComplianceScoresBar = ({
               axisLine={false}
               tickLine={false}
               stroke="#94a3b8"
-              style={{ fontSize: "12px", fontWeight: 700, fontFamily: "var(--font-mono)" }}
+              style={{ fontSize: "12px", fontWeight: 900, fontFamily: "var(--font-mono)" }}
             />
             <YAxis
               dataKey="name"
@@ -495,23 +504,25 @@ export const ComplianceScoresBar = ({
               axisLine={false}
               tickLine={false}
               stroke="#94a3b8"
-              width={100}
-              style={{ fontSize: "12px", fontWeight: 700, fontFamily: "var(--font-mono)" }}
+              width={120}
+              style={{ fontSize: "14px", fontWeight: 950, fontFamily: "var(--font-mono)", textTransform: "uppercase" }}
             />
             <Tooltip
               contentStyle={{
-                background: "rgba(15, 23, 42, 0.9)",
-                border: "1px solid rgba(255,255,255,0.1)",
-                borderRadius: "12px",
-                backdropFilter: "blur(16px)",
+                background: "rgba(15, 23, 42, 0.95)",
+                border: "1px solid rgba(255,255,255,0.2)",
+                borderRadius: "20px",
+                backdropFilter: "blur(20px)",
+                padding: "16px"
               }}
+              itemStyle={{ fontWeight: 900 }}
             />
-            <Bar dataKey="score" radius={[0, 4, 4, 0]} barSize={height < 150 ? 8 : 12}>
+            <Bar dataKey="score" radius={[0, 10, 10, 0]} barSize={height < 150 ? 12 : 30}>
               {data.map((entry, index) => (
                 <Cell
                   key={`cell-${index}`}
                   fill={COLORS[index % COLORS.length]}
-                  fillOpacity={0.8}
+                  fillOpacity={0.9}
                 />
               ))}
             </Bar>
@@ -544,40 +555,42 @@ export const ErrorRateArea = ({
     >
       <NoSSR>
         <ResponsiveContainer width="99%" height="100%" minWidth={0} minHeight={0}>
-          <AreaChart data={data} margin={{ top: 10, right: 10, left: 0, bottom: 0 }}>
+          <AreaChart data={data} margin={{ top: 10, right: 10, left: 10, bottom: 5 }}>
             <defs>
               <linearGradient id="errorGrad" x1="0" y1="0" x2="0" y2="1">
-                <stop offset="5%" stopColor="#ef4444" stopOpacity={0.4} />
+                <stop offset="5%" stopColor="#ef4444" stopOpacity={0.6} />
                 <stop offset="95%" stopColor="#ef4444" stopOpacity={0} />
               </linearGradient>
             </defs>
-            <CartesianGrid strokeDasharray="3 3" vertical={false} stroke="rgba(255,255,255,0.05)" />
+            <CartesianGrid strokeDasharray="3 3" vertical={false} stroke="rgba(255,255,255,0.08)" />
             <XAxis
               dataKey="day"
               axisLine={false}
               tickLine={false}
               stroke="#94a3b8"
-              style={{ fontSize: "12px", fontWeight: 700, fontFamily: "var(--font-mono)" }}
+              style={{ fontSize: "12px", fontWeight: 900, fontFamily: "var(--font-mono)" }}
             />
             <YAxis
               axisLine={false}
               tickLine={false}
               stroke="#94a3b8"
-              style={{ fontSize: "12px", fontWeight: 700, fontFamily: "var(--font-mono)" }}
+              style={{ fontSize: "12px", fontWeight: 900, fontFamily: "var(--font-mono)" }}
             />
             <Tooltip
               contentStyle={{
-                background: "rgba(15, 23, 42, 0.9)",
-                border: "1px solid rgba(255,255,255,0.1)",
-                borderRadius: "12px",
-                backdropFilter: "blur(16px)",
+                background: "rgba(15, 23, 42, 0.95)",
+                border: "1px solid rgba(255,255,255,0.2)",
+                borderRadius: "20px",
+                backdropFilter: "blur(20px)",
+                padding: "16px"
               }}
+              itemStyle={{ fontWeight: 900 }}
             />
             <Area
               type="monotone"
               dataKey="errors"
               stroke="#ef4444"
-              strokeWidth={3}
+              strokeWidth={5}
               fill="url(#errorGrad)"
               fillOpacity={1}
             />
@@ -612,37 +625,39 @@ export const FeatureUsageBar = ({
     >
       <NoSSR>
         <ResponsiveContainer width="99%" height="100%" minWidth={0} minHeight={0}>
-          <BarChart data={data} margin={{ top: 10, right: 10, left: 0, bottom: 0 }}>
+          <BarChart data={data} margin={{ top: 10, right: 10, left: 10, bottom: 5 }}>
             <defs>
               <linearGradient id="usageGrad" x1="0" y1="0" x2="0" y2="1">
                 <stop offset="0%" stopColor="#8b5cf6" stopOpacity={1} />
-                <stop offset="100%" stopColor="#8b5cf6" stopOpacity={0.6} />
+                <stop offset="100%" stopColor="#8b5cf6" stopOpacity={0.4} />
               </linearGradient>
             </defs>
-            <CartesianGrid strokeDasharray="3 3" vertical={false} stroke="rgba(255,255,255,0.05)" />
+            <CartesianGrid strokeDasharray="3 3" vertical={false} stroke="rgba(255,255,255,0.08)" />
             <XAxis
               dataKey="feature"
               axisLine={false}
               tickLine={false}
               stroke="#94a3b8"
-              style={{ fontSize: "12px", fontWeight: 700, fontFamily: "var(--font-mono)" }}
+              style={{ fontSize: "11px", fontWeight: 950, fontFamily: "var(--font-mono)", textTransform: "uppercase" }}
             />
             <YAxis
               domain={[0, 100]}
               axisLine={false}
               tickLine={false}
               stroke="#94a3b8"
-              style={{ fontSize: "12px", fontWeight: 700, fontFamily: "var(--font-mono)" }}
+              style={{ fontSize: "12px", fontWeight: 900, fontFamily: "var(--font-mono)" }}
             />
             <Tooltip
               contentStyle={{
-                background: "rgba(15, 23, 42, 0.9)",
-                border: "1px solid rgba(255,255,255,0.1)",
-                borderRadius: "12px",
-                backdropFilter: "blur(16px)",
+                background: "rgba(15, 23, 42, 0.95)",
+                border: "1px solid rgba(255,255,255,0.2)",
+                borderRadius: "20px",
+                backdropFilter: "blur(20px)",
+                padding: "16px"
               }}
+              itemStyle={{ fontWeight: 900 }}
             />
-            <Bar dataKey="usage" fill="url(#usageGrad)" radius={[4, 4, 0, 0]} barSize={24} />
+            <Bar dataKey="usage" fill="url(#usageGrad)" radius={[10, 10, 0, 0]} barSize={36} />
           </BarChart>
         </ResponsiveContainer>
       </NoSSR>
