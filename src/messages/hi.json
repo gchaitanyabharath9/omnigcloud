@@ -496,7 +496,7 @@
     "a2-high-throughput-distributed-systems": "High-Throughput Distributed Systems",
     "a3-enterprise-observability": "Enterprise Observability",
     "a5-monolith-to-cloud-native-modernization": "Monolith to Cloud-Native Modernization",
-    "aecp": "AECP Engine",
+    "aecp": "AECP",
     "scholarly-article": "Scholarly Article",
     "automated-multilingual-quality-assurance": "Quality Assurance Research"
   },
@@ -2863,12 +2863,7 @@
           "desc": "Initiate a modernization workflow for a specific application or cluster."
         }
       },
-      "keywords": {
-        "0": "OmniGCloud API",
-        "1": "REST API v1",
-        "2": "Cloud Governance API",
-        "3": "Infrastructure as Code API"
-      },
+      "keywords": "API Documentation, REST API, Reference",
       "title": "OmniGCloud REST API",
       "versionLabel": "API Version: v1.0.4 (LTS)"
     },
@@ -2993,7 +2988,7 @@
           "title": "HIPAA Guardrails (HI)"
         },
         "3": {
-          "desc": "Comprehensive asset management and access control frameworks. (HI)",
+          "desc": "Comprehensive blueprint for sovereign governance.",
           "title": "ISO 27001 Controls (HI)"
         }
       },
@@ -3826,7 +3821,13 @@
       "title": "Finance Title (HI)"
     },
     "financial": {
-      "sol": "Dedicated hardware shards for SWIFT payment rails. (HI)"
+      "sol": "Dedicated hardware shards for SWIFT payment rails. (HI)",
+      "cs": {
+        "c3": "Case Study: Sovereign Wealth Fund"
+      },
+      "ai": {
+        "desc": "AI-driven financial modeling with privacy guarantees."
+      }
     },
     "healthcare": {
       "description": "Healthcare description (HI)",
@@ -3868,7 +3869,8 @@
       "sol": "Actuarial data lakes with privacy-preserving analytics. (HI)"
     },
     "logistics": {
-      "sol": "Real-time supply chain digital twins. (HI)"
+      "sol": "Real-time supply chain digital twins. (HI)",
+      "title": "Logistics"
     },
     "solution": "OmniGCloud Solution",
     "solutionLabel": "Solution (HI)",

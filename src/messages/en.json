@@ -439,7 +439,7 @@
     "a2-high-throughput-distributed-systems": "High-Throughput Distributed Systems",
     "a3-enterprise-observability": "Enterprise Observability",
     "a5-monolith-to-cloud-native-modernization": "Monolith to Cloud-Native Modernization",
-    "aecp": "AECP Engine",
+    "aecp": "AECP",
     "scholarly-article": "Scholarly Article",
     "automated-multilingual-quality-assurance": "Quality Assurance Research",
     "ai-data": "AI & Data",
@@ -454,7 +454,7 @@
     "compliance": "Compliance",
     "compliance_maps": "Compliance Maps",
     "contact": "OmniGCloud Contact",
-    "app": "OmniGCloud App",
+    "app": "App",
     "architecture": "Architecture",
     "api": "API Reference",
     "governance": "Governance",
@@ -2918,7 +2918,8 @@
           "desc": "Policy enforcement and compliance check endpoints."
         }
       },
-      "description": "Complete API reference for OmniGCloud platform services."
+      "description": "Complete API reference for OmniGCloud platform services.",
+      "keywords": "API Documentation, REST API, Reference"
     },
     "sections": {
       "autonomousGatingLogs": "Autonomous Gating Logs",
@@ -3016,7 +3017,7 @@
         },
         "3": {
           "title": "Hybrid Multi-Cloud Mesh",
-          "desc": "Unified governance across on-premise and public cloud clusters."
+          "desc": "Comprehensive blueprint for sovereign governance."
         }
       }
     },
@@ -3737,7 +3738,13 @@
       "title": "Finance"
     },
     "financial": {
-      "sol": "Dedicated hardware shards for SWIFT payment rails."
+      "sol": "Dedicated hardware shards for SWIFT payment rails.",
+      "cs": {
+        "c3": "Case Study: Sovereign Wealth Fund"
+      },
+      "ai": {
+        "desc": "AI-driven financial modeling with privacy guarantees."
+      }
     },
     "healthcare": {
       "description": "Healthcare",
@@ -3779,7 +3786,8 @@
       "sol": "Actuarial data lakes with privacy-preserving analytics."
     },
     "logistics": {
-      "sol": "Real-time supply chain digital twins."
+      "sol": "Real-time supply chain digital twins.",
+      "title": "Logistics"
     },
     "solution": "OmniGCloud Solution",
     "solutionLabel": "Solution",

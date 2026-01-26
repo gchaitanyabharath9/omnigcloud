@@ -13,8 +13,7 @@ export type AppLocale = (typeof APP_LOCALES)[number];
 export const DEFAULT_LOCALE: AppLocale = "en";
 
 // Environment-aware URL configuration
-const ENV_SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://www.omnigcloud.com";
-const ENV_ALTERNATE_URLS = (process.env.NEXT_PUBLIC_SITE_ALTERNATE_URLS || "").split(",").filter(Boolean);
+// We use getters to avoid top-level process.env access during module import (build-time safety)
 
 export const APP_CONFIG = {
     name: "OmniGCloud",
@@ -25,20 +24,25 @@ export const APP_CONFIG = {
      * The canonical base URL for this environment, without trailing slash.
      * Example: "https://omnigcloud.com" or "http://localhost:3000"
      */
-    siteUrl: normalizeUrl(ENV_SITE_URL),
+    get siteUrl() {
+        return normalizeUrl(process.env.NEXT_PUBLIC_SITE_URL || "https://www.omnigcloud.com");
+    },
 
     /**
      * Alternate URLs that should redirect to the canonical siteUrl.
      * Example: ["https://www.omnigcloud.com"]
      */
-    alternateUrls: ENV_ALTERNATE_URLS.map(normalizeUrl),
+    get alternateUrls() {
+        return (process.env.NEXT_PUBLIC_SITE_ALTERNATE_URLS || "").split(",").filter(Boolean).map(normalizeUrl);
+    },
 
     /**
      * Helper to generate absolute URLs using the canonical base.
      * Handles relative paths, or normalizes existing absolute URLs.
      */
     absoluteUrl: (pathOrUrl: string): string => {
-        if (!pathOrUrl) return APP_CONFIG.siteUrl;
+        const baseUrl = APP_CONFIG.siteUrl;
+        if (!pathOrUrl) return baseUrl;
 
         // If already absolute
         if (pathOrUrl.startsWith("http")) {
@@ -47,14 +51,14 @@ export const APP_CONFIG = {
             if (
                 isKnownHost(url.origin)
             ) {
-                return `${APP_CONFIG.siteUrl}${url.pathname}${url.search}${url.hash}`;
+                return `${baseUrl}${url.pathname}${url.search}${url.hash}`;
             }
             return pathOrUrl; // External URL, return as-is
         }
 
         // Relative path
         const path = pathOrUrl.startsWith("/") ? pathOrUrl : `/${pathOrUrl}`;
-        return `${APP_CONFIG.siteUrl}${path}`;
+        return `${baseUrl}${path}`;
     },
 
     isSupportedLocale: (locale: string): locale is AppLocale => {
