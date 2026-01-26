@@ -16,9 +16,9 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
     const t = await getTranslations({ locale, namespace: "Metadata" });
 
     return generateSEOMetadata({
-        title: "Technical Research & Publications",
-        description: "Scholarly articles and strategic research on digital sovereignty, distributed systems resilience, and autonomous governance frameworks.",
-        keywords: [...SEO_KEYWORDS.platform, "cloud-native research", "sovereign computing papers"],
+        title: t("Papers.title"),
+        description: t("Papers.description"),
+        keywords: [...SEO_KEYWORDS.platform, ...t.raw("Papers.keywords")],
         ogType: "website"
     }, locale);
 }
