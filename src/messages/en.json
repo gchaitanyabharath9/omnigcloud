@@ -478,7 +478,9 @@
     "terms": "Terms",
     "use-cases": "Use Cases",
     "visual-library": "Visual Library",
-    "whitepaper": "OmniGCloud Whitepaper"
+    "whitepaper": "OmniGCloud Whitepaper",
+    "app": "App",
+    "settings": "Settings"
   },
   "BusinessIdeas": {
     "cards": {
@@ -2982,7 +2984,25 @@
         "title": "Autonomous Governance",
         "description": "Ensure continuous compliance with zero operational overhead."
       },
-      "download": "Download Report"
+      "download": "Download Report",
+      "blueprints": {
+        "0": {
+          "title": "AWS Sovereign Control Plane",
+          "desc": "Automated landing zone with NIST 800-53 compliance guardrails."
+        },
+        "1": {
+          "title": "Azure Regulatory Hub",
+          "desc": "HIPAA-ready blueprint for healthcare workloads on Azure."
+        },
+        "2": {
+          "title": "OpenShift Compliance Operator",
+          "desc": "Automated CIS benchmarks for RedHat OpenShift clusters."
+        },
+        "3": {
+          "title": "Hybrid Multi-Cloud Mesh",
+          "desc": "Unified governance across on-premise and public cloud clusters."
+        }
+      }
     },
     "guide": {
       "title": "User Guide",
@@ -3811,7 +3831,20 @@
     },
     "opportunity": {
       "content": "OmniGCloud provides a unified control plane to enforce data sovereignty across all your cloud providers.",
-      "metrics": "OmniGCloud Metrics",
+      "metrics": {
+        "0": {
+          "label": "Market Cap",
+          "value": "$4.2T"
+        },
+        "1": {
+          "label": "Growth YoY",
+          "value": "+124%"
+        },
+        "2": {
+          "label": "Active Nodes",
+          "value": "15k+"
+        }
+      },
       "title": "Opportunity"
     },
     "sitemap": {
