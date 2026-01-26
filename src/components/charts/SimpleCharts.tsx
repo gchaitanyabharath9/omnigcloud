@@ -45,7 +45,7 @@ const ChartCard = ({
         className={`flex flex-col items-center justify-center ${standalone ? "" : "glass-panel border-white/5"} p-4 text-center bg-white/[0.02]`}
         style={{ height }}
       >
-        <div className="text-[9px] font-mono text-primary/40 uppercase tracking-widest mb-1">
+        <div className="text-[12px] font-mono text-primary/60 uppercase tracking-[0.2em] font-black mb-2">
           {tSafe(t, "syncing", "Data Synchronizing")}
         </div>
         <div className="flex gap-1.5">
@@ -82,8 +82,8 @@ const ChartCard = ({
   return (
     <div className="glass-panel p-4 rounded-xl flex flex-col border-white/10 hover:border-primary/30 transition-all duration-300 group">
       {title && (
-        <div className="flex items-center justify-between mb-3">
-          <h3 className="text-[10px] font-black uppercase opacity-50 tracking-[0.2em] font-mono text-primary">
+        <div className="flex items-center justify-between mb-4">
+          <h3 className="text-[13px] font-black uppercase opacity-80 tracking-[0.2em] font-mono text-primary">
             {title}
           </h3>
           <div className="w-2 h-2 rounded-full bg-primary/20 animate-pulse hidden group-hover:block" />
@@ -136,14 +136,14 @@ export const LatencyLineChart = ({
               dataKey="hour"
               axisLine={false}
               tickLine={false}
-              stroke="#64748b"
-              style={{ fontSize: "9px", fontWeight: 600 }}
+              stroke="#94a3b8"
+              style={{ fontSize: "12px", fontWeight: 700, fontFamily: "var(--font-mono)" }}
             />
             <YAxis
               axisLine={false}
               tickLine={false}
-              stroke="#64748b"
-              style={{ fontSize: "9px", fontWeight: 600 }}
+              stroke="#94a3b8"
+              style={{ fontSize: "12px", fontWeight: 700, fontFamily: "var(--font-mono)" }}
             />
             <Tooltip
               contentStyle={{
@@ -157,7 +157,7 @@ export const LatencyLineChart = ({
             />
             <Legend
               iconType="circle"
-              wrapperStyle={{ paddingTop: "15px", fontSize: "10px", fontWeight: 700 }}
+              wrapperStyle={{ paddingTop: "20px", fontSize: "12px", fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.05em" }}
             />
             <Line
               type="monotone"
@@ -229,14 +229,14 @@ export const CostSavingsArea = ({
               dataKey="month"
               axisLine={false}
               tickLine={false}
-              stroke="#64748b"
-              style={{ fontSize: "9px", fontWeight: 600 }}
+              stroke="#94a3b8"
+              style={{ fontSize: "12px", fontWeight: 700, fontFamily: "var(--font-mono)" }}
             />
             <YAxis
               axisLine={false}
               tickLine={false}
-              stroke="#64748b"
-              style={{ fontSize: "9px", fontWeight: 600 }}
+              stroke="#94a3b8"
+              style={{ fontSize: "12px", fontWeight: 700, fontFamily: "var(--font-mono)" }}
             />
             <Tooltip
               contentStyle={{
@@ -309,14 +309,14 @@ export const RequestVolumeBar = ({
               dataKey="hour"
               axisLine={false}
               tickLine={false}
-              stroke="#64748b"
-              style={{ fontSize: "9px", fontWeight: 600 }}
+              stroke="#94a3b8"
+              style={{ fontSize: "12px", fontWeight: 700, fontFamily: "var(--font-mono)" }}
             />
             <YAxis
               axisLine={false}
               tickLine={false}
-              stroke="#64748b"
-              style={{ fontSize: "9px", fontWeight: 600 }}
+              stroke="#94a3b8"
+              style={{ fontSize: "12px", fontWeight: 700, fontFamily: "var(--font-mono)" }}
             />
             <Tooltip
               cursor={{ fill: "rgba(255,255,255,0.05)" }}
@@ -421,15 +421,15 @@ export const UptimeTrend = ({
               dataKey="day"
               axisLine={false}
               tickLine={false}
-              stroke="#64748b"
-              style={{ fontSize: "9px", fontWeight: 600 }}
+              stroke="#94a3b8"
+              style={{ fontSize: "12px", fontWeight: 700, fontFamily: "var(--font-mono)" }}
             />
             <YAxis
               domain={[99.5, 100]}
               axisLine={false}
               tickLine={false}
-              stroke="#64748b"
-              style={{ fontSize: "9px", fontWeight: 600 }}
+              stroke="#94a3b8"
+              style={{ fontSize: "12px", fontWeight: 700, fontFamily: "var(--font-mono)" }}
             />
             <Tooltip
               contentStyle={{
@@ -486,17 +486,17 @@ export const ComplianceScoresBar = ({
               domain={[0, 100]}
               axisLine={false}
               tickLine={false}
-              stroke="#64748b"
-              style={{ fontSize: "9px", fontWeight: 600 }}
+              stroke="#94a3b8"
+              style={{ fontSize: "12px", fontWeight: 700, fontFamily: "var(--font-mono)" }}
             />
             <YAxis
               dataKey="name"
               type="category"
               axisLine={false}
               tickLine={false}
-              stroke="#64748b"
-              width={80}
-              style={{ fontSize: "9px", fontWeight: 600 }}
+              stroke="#94a3b8"
+              width={100}
+              style={{ fontSize: "12px", fontWeight: 700, fontFamily: "var(--font-mono)" }}
             />
             <Tooltip
               contentStyle={{
@@ -556,14 +556,14 @@ export const ErrorRateArea = ({
               dataKey="day"
               axisLine={false}
               tickLine={false}
-              stroke="#64748b"
-              style={{ fontSize: "9px", fontWeight: 600 }}
+              stroke="#94a3b8"
+              style={{ fontSize: "12px", fontWeight: 700, fontFamily: "var(--font-mono)" }}
             />
             <YAxis
               axisLine={false}
               tickLine={false}
-              stroke="#64748b"
-              style={{ fontSize: "9px", fontWeight: 600 }}
+              stroke="#94a3b8"
+              style={{ fontSize: "12px", fontWeight: 700, fontFamily: "var(--font-mono)" }}
             />
             <Tooltip
               contentStyle={{
@@ -624,15 +624,15 @@ export const FeatureUsageBar = ({
               dataKey="feature"
               axisLine={false}
               tickLine={false}
-              stroke="#64748b"
-              style={{ fontSize: "9px", fontWeight: 600 }}
+              stroke="#94a3b8"
+              style={{ fontSize: "12px", fontWeight: 700, fontFamily: "var(--font-mono)" }}
             />
             <YAxis
               domain={[0, 100]}
               axisLine={false}
               tickLine={false}
-              stroke="#64748b"
-              style={{ fontSize: "9px", fontWeight: 600 }}
+              stroke="#94a3b8"
+              style={{ fontSize: "12px", fontWeight: 700, fontFamily: "var(--font-mono)" }}
             />
             <Tooltip
               contentStyle={{

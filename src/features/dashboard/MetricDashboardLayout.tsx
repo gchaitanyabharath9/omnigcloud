@@ -39,9 +39,9 @@ export default function MetricDashboardLayout({
   };
 
   return (
-    <div className="w-full grid grid-cols-1 lg:grid-cols-2 gap-3 auto-rows-auto">
+    <div className="w-full grid grid-cols-1 lg:grid-cols-2 gap-6 auto-rows-auto">
       {/* QUADRANT 1: Main Visual (Top-Left) */}
-      <div className="glass-panel p-6 rounded-[2rem] flex flex-col relative overflow-hidden group transition-all duration-500 hover:border-primary/40 hover:shadow-2xl shadow-xl bg-gradient-to-br from-white/[0.03] to-transparent backdrop-blur-xl border border-white/10">
+      <div className="glass-panel p-8 rounded-[2.5rem] flex flex-col relative overflow-hidden group transition-all duration-500 hover:border-primary/40 hover:shadow-[0_0_50px_rgba(59,130,246,0.2)] shadow-2xl bg-gradient-to-br from-white/[0.04] to-transparent backdrop-blur-2xl border border-white/10">
         <div className="absolute top-0 right-0 p-4 z-10">
           <DemoBadge label={tSafe(t, "liveView", "Live View")} />
         </div>
