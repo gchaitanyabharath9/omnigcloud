@@ -1,4 +1,4 @@
-import { getTranslations, getLocale } from "next-intl/server";
+import { getTranslations, getLocale, setRequestLocale } from "next-intl/server";
 import Image from "next/image";
 import { Camera, ArrowRight, Layers, Shield, Zap, Globe } from "lucide-react";
 import { Link } from "@/navigation";
@@ -7,6 +7,7 @@ import { generateSEOMetadata, SEO_KEYWORDS } from "@/utils/seo";
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
+  setRequestLocale(locale);
   const tm = await getTranslations({ locale, namespace: "Metadata.VisualLibrary" });
 
   return generateSEOMetadata(
@@ -32,9 +33,11 @@ export function generateStaticParams() {
 
 export const revalidate = 86400; // Cache for 24 hours (ISR)
 
-export default async function VisualLibraryPage() {
+export default async function VisualLibraryPage({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params;
+  setRequestLocale(locale);
   const t = await getTranslations("SovereignGallery");
-  const locale = await getLocale();
+  // const locale = await getLocale(); // Replaced by params
 
   const items = [
     {

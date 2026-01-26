@@ -10,14 +10,16 @@ import {
   ArrowLeft,
 } from "lucide-react";
 import { Link } from "@/navigation";
-import { useTranslations } from "next-intl";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 
 export function generateStaticParams() {
   return ["en", "es", "fr", "de", "zh", "hi", "ja", "ko"].map((locale) => ({ locale }));
 }
 
-export default function OnboardingPage() {
-  const t = useTranslations("Auth.Onboarding");
+export default async function OnboardingPage({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params;
+  setRequestLocale(locale);
+  const t = await getTranslations("Auth.Onboarding");
 
   return (
     <div className="animate-fade-in" style={{ paddingBottom: "4rem" }}>

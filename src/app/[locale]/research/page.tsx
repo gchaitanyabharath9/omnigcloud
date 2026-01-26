@@ -11,7 +11,7 @@ import {
   Activity,
 } from "lucide-react";
 import Link from "next/link";
-import { getTranslations } from "next-intl/server";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 import { Metadata } from "next";
 
 export const revalidate = 86400; // Cache for 24 hours (ISR)
@@ -24,6 +24,7 @@ import { generateSEOMetadata, SEO_KEYWORDS } from "@/utils/seo";
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
+  setRequestLocale(locale);
   const tm = await getTranslations({ locale, namespace: "Metadata.Dashboard" }); // Using Dashboard for now or add Research
 
   return generateSEOMetadata(
@@ -48,6 +49,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
 
 export default async function ResearchHubPage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
+  setRequestLocale(locale);
   const t = await getTranslations("Research.page");
   const tp = await getTranslations("Papers");
 
