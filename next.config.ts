@@ -41,7 +41,7 @@ const nextConfig: any = {
     NEXT_PUBLIC_APP_ENV: appEnv,
     QUALITY_GATE: process.env.QUALITY_GATE || "false",
   },
-  reactCompiler: true,
+
   async headers() {
     // Content Security Policy
     // Start in Report-Only mode to monitor violations without breaking functionality
