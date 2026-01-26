@@ -1,42 +1,42 @@
 # i18n Coverage Report
 
-Generated on 2026-01-26T05:29:31.600Z
+Generated on 2026-01-26T21:54:50.836Z
 
 ## 🇬🇧 Base Locale (en.json) Health
-- **Total Keys:** 4443
+- **Total Keys:** 4623
 - ✅ All codebase keys found in en.json
 
 ### ✅ es - ✅ PASS
 - **Tier:** 1
-- **Total Keys:** 4508
+- **Total Keys:** 4687
 - **Missing/Untranslated relative to en.json:** 0
 
 ### ✅ fr - ✅ PASS
 - **Tier:** 1
-- **Total Keys:** 4508
+- **Total Keys:** 4687
 - **Missing/Untranslated relative to en.json:** 0
 
 ### ✅ de - ✅ PASS
 - **Tier:** 1
-- **Total Keys:** 4508
+- **Total Keys:** 4687
 - **Missing/Untranslated relative to en.json:** 0
 
 ### ✅ zh - ✅ PASS
 - **Tier:** 1
-- **Total Keys:** 4508
+- **Total Keys:** 4687
 - **Missing/Untranslated relative to en.json:** 0
 
 ### ✅ hi - ✅ PASS
 - **Tier:** 1
-- **Total Keys:** 4508
+- **Total Keys:** 4687
 - **Missing/Untranslated relative to en.json:** 0
 
 ### ✅ ja - ✅ PASS
 - **Tier:** 1
-- **Total Keys:** 4524
+- **Total Keys:** 4695
 - **Missing/Untranslated relative to en.json:** 0
 
 ### ✅ ko - ✅ PASS
 - **Tier:** 1
-- **Total Keys:** 4508
+- **Total Keys:** 4687
 - **Missing/Untranslated relative to en.json:** 0

@@ -13,12 +13,12 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
     const { locale } = await params;
     setRequestLocale(locale);
-    const t = await getTranslations({ locale, namespace: "Metadata" });
+    const tRoot = await getTranslations({ locale });
 
     return generateSEOMetadata({
-        title: t("Papers.title"),
-        description: t("Papers.description"),
-        keywords: [...SEO_KEYWORDS.platform, ...t.raw("Papers.keywords")],
+        title: tRoot("Metadata.Papers.title"),
+        description: tRoot("Metadata.Papers.description"),
+        keywords: [...SEO_KEYWORDS.platform, ...tRoot.raw("Metadata.Papers.keywords")],
         ogType: "website"
     }, locale);
 }
