@@ -2888,34 +2888,34 @@
       },
       "patterns": {
         "0": {
-          "description": "Decouples business intent from cloud-specific APIs. Ensures 100% provider neutrality via a standardized 'Logic-Driven Orchestration' model. (ZH)",
-          "explanation": "Image A displays the unified state tree across 32 geographic regions. Image B showcases the real-time translation of a single 'Intent' into distinct provider orchestrations. (ZH)",
-          "impact": "Innovation: 100% Provider Neutrality (ZH)",
-          "title": "Sovereign Control Plane (SCP) (ZH)"
+          "title": "Sovereign State Synchronization",
+          "description": "Ensures consistent state across distributed environments.",
+          "explanation": "Uses a distributed ledger to maintain state integrity.",
+          "impact": "Eliminates split-brain scenarios in multi-cloud deployments."
         },
         "1": {
-          "description": "Executes real-time compliance audits using Formal Verification Logic. Uniform enforcement of GDPR, HIPAA, and EU AI Act at sub-millisecond speeds. (ZH)",
-          "explanation": "In Image A, we see the PALM intercepting a cross-region API call. Image B confirms the 'Geofence Permit' was validated against active national mandates. (ZH)",
-          "impact": "Research: Real-time Compliance Logic (ZH)",
-          "title": "Policy-as-Logic Middleware (PALM) (ZH)"
+          "title": "Autonomous Drift Remediation",
+          "description": "Automatically corrects configuration drift.",
+          "explanation": "Comparing live state against defined blueprints.",
+          "impact": "Maintains continuous compliance without manual intervention."
         },
         "2": {
-          "description": "Resiliency pattern leveraging Byzantine Fault Tolerance to monitor regional cloud health. Triggers atomic failover across providers in under 240 seconds. (ZH)",
-          "explanation": "Image A captures the global latency map just before a regional provider failure. Image B displays the MCCB execution log as it re-reoutes 1,000+ nodes. (ZH)",
-          "impact": "Outcome: 99.999% Service Continuity (ZH)",
-          "title": "Multi-Cloud Circuit Breaker (MCCB) (ZH)"
+          "title": "Cross-Cloud Identity Mesh",
+          "description": "Unified identity management across providers.",
+          "explanation": "Federated identity using OIDC and SAML.",
+          "impact": "Single sign-on efficiency and improved security posture."
         },
         "3": {
-          "description": "Financial governance pattern performing real-time cost-analysis to predict expenditure and recommend 'Arbitrage Re-homing' based on global spot pricing. (ZH)",
-          "explanation": "In Image A, we see the predictive billing engine analyzing the next 12 months. Image B shows the EABF algorithm recommending a shift to OCI for a 34% cost reduction. (ZH)",
-          "impact": "Impact: 34% OpEx Reduction (ZH)",
-          "title": "Economic Arbitrage (EABF) (ZH)"
+          "title": "Zero-Trust Data Enclaves",
+          "description": "Secure data processing environments.",
+          "explanation": "Hardware-enforced isolation for sensitive workloads.",
+          "impact": "Meets highest security standards (FIPS 140-2)."
         },
         "4": {
-          "description": "Allows instantaneous transfer of production logic, state, and networking from one cloud provider to another without operational downtime. (ZH)",
-          "explanation": "Image A displays the initiation of a 5.2TB state migration. Image B captures the 'Verified Sovereign' status on the target provider 300 seconds later. (ZH)",
-          "impact": "Velocity: 100x Faster Migration (ZH)",
-          "title": "Atomic Cross-Cloud Migration (ACCM) (ZH)"
+          "title": "Global Traffic Steering",
+          "description": "Intelligent routing based on latency and health.",
+          "explanation": "Anycast architecture with automated failover.",
+          "impact": "99.999% availability and low-latency user experience."
         }
       },
       "title": "Reference Architecture (ZH)"

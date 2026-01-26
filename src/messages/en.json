@@ -2840,7 +2840,9 @@
         "introduction": "Introduction",
         "architecture": "Architecture",
         "whitepaper": "White Paper",
-        "security": "Security Model"
+        "security": "Security Model",
+        "api": "API Reference",
+        "guide": "User Guide"
       },
       "blueprints": "Blueprints",
       "blueprint_links": {
@@ -2848,7 +2850,8 @@
         "azure": "Azure Sovereign Hub",
         "openshift": "OpenShift on GCP",
         "hybrid": "Hybrid Mesh"
-      }
+      },
+      "customBriefingText": "Generate Custom Briefing"
     },
     "cards": {
       "architecture": {
@@ -2880,6 +2883,131 @@
       "title": "Governance Blueprints",
       "description": "Pre-configured compliance blueprints for SOC 2, HIPAA, and GDPR with automated drift remediation.",
       "cta": "Explore Blueprints"
+    },
+    "documentation_label": "Documentation",
+    "technicalLibrary": "Technical Library",
+    "api": {
+      "title": "API Reference",
+      "versionLabel": "Version",
+      "endpoints": {
+        "modernization": {
+          "desc": "Endpoints for automated legacy modernization workflows."
+        },
+        "discovery": {
+          "desc": "Automated service discovery endpoints."
+        },
+        "governance": {
+          "desc": "Policy enforcement and compliance check endpoints."
+        }
+      },
+      "description": "Complete API reference for OmniGCloud platform services."
+    },
+    "sections": {
+      "autonomousGatingLogs": "Autonomous Gating Logs",
+      "empiricalDataSet": "Empirical Data Set",
+      "empiricalDataSetDesc": "Raw telemetry data from the modernization events.",
+      "validationProtocols": "Validation Protocols"
+    },
+    "whitepaper": {
+      "charts": {
+        "compliance": {
+          "aso": "ASO Framework",
+          "autonomous": "Autonomous",
+          "figure": "Figure 1.1",
+          "legacy": "Legacy Manual",
+          "yAxis": "Compliance Score"
+        },
+        "cost": {
+          "yAxis": "Cost ($)",
+          "legacy": "Legacy",
+          "autonomous": "Autonomous",
+          "figure": "Figure 2. Cost Analysis",
+          "aso": "ASO Savings"
+        }
+      }
+    },
+    "architecture": {
+      "title": "System Architecture",
+      "description": "Cloud-agnostic architectural patterns and principles.",
+      "patterns": {
+        "0": {
+          "title": "Sovereign State Synchronization",
+          "description": "Ensures consistent state across distributed environments.",
+          "explanation": "Uses a distributed ledger to maintain state integrity.",
+          "impact": "Eliminates split-brain scenarios in multi-cloud deployments."
+        },
+        "1": {
+          "title": "Autonomous Drift Remediation",
+          "description": "Automatically corrects configuration drift.",
+          "explanation": "Comparing live state against defined blueprints.",
+          "impact": "Maintains continuous compliance without manual intervention."
+        },
+        "2": {
+          "title": "Cross-Cloud Identity Mesh",
+          "description": "Unified identity management across providers.",
+          "explanation": "Federated identity using OIDC and SAML.",
+          "impact": "Single sign-on efficiency and improved security posture."
+        },
+        "3": {
+          "title": "Zero-Trust Data Enclaves",
+          "description": "Secure data processing environments.",
+          "explanation": "Hardware-enforced isolation for sensitive workloads.",
+          "impact": "Meets highest security standards (FIPS 140-2)."
+        },
+        "4": {
+          "title": "Global Traffic Steering",
+          "description": "Intelligent routing based on latency and health.",
+          "explanation": "Anycast architecture with automated failover.",
+          "impact": "99.999% availability and low-latency user experience."
+        }
+      },
+      "hero": {
+        "badge": "Architecture",
+        "titlePart1": "Cloud-Native",
+        "titleHighlight": "Patterns",
+        "description": "Explore the foundational patterns that power OmniGCloud."
+      },
+      "compendium": {
+        "title": "Technical Compendium",
+        "description": "In-depth technical papers and specifications."
+      },
+      "cta": {
+        "whitepaper": "Read Whitepaper"
+      }
+    },
+    "governance": {
+      "title": "Governance Framework",
+      "description": "Automated compliance and policy management.",
+      "hero": {
+        "title": "Autonomous Governance",
+        "description": "Ensure continuous compliance with zero operational overhead."
+      },
+      "download": "Download Report"
+    },
+    "guide": {
+      "title": "User Guide",
+      "description": "Comprehensive guides for platform usage.",
+      "hero": {
+        "title": "Getting Started",
+        "cta": "Start Tutorial",
+        "step1": {
+          "title": "Installation",
+          "description": "Install the OmniGCloud CLI.",
+          "code": {
+            "install": "npm install -g omnigcloud-cli",
+            "login": "omni login"
+          }
+        },
+        "step2": {
+          "title": "Configuration",
+          "description": "Configure your first project."
+        }
+      }
+    },
+    "abstract": {
+      "title": "Abstract",
+      "paragraph1": "This paper introduces Autonomous Sovereign Orchestration (ASO).",
+      "paragraph2": "We demonstrate the efficacy of ASO in reducing operational toil."
     }
   },
   "Enrichment": {
