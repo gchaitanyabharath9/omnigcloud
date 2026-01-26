@@ -1,0 +1,13 @@
+
+> nascent-zodiac@0.1.0 i18n:keys:gate
+> npm run i18n:scan && node scripts/i18n_keys_gate.js
+
+
+> nascent-zodiac@0.1.0 i18n:scan
+> npx tsx scripts/i18n_scan.ts
+
+≡ƒöì Scanning src/ for i18n keys...
+Γ£à Found 1892 unique keys/literals.
+Writing to C:\Users\SOHAN\.gemini\antigravity\playground\nascent-zodiac\scripts\i18n_found_keys.json...
+≡ƒöì Running i18n Keys Gate...
+Γ£à i18n Keys Gate PASSED.

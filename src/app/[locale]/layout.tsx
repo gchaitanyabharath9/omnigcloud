@@ -44,6 +44,7 @@ export async function generateMetadata({
   params: Promise<{ locale: string }>;
 }): Promise<Metadata> {
   const { locale } = await params;
+  setRequestLocale(locale);
   const messages = await getMessages({ locale });
   const t = (key: string) => {
     const parts = key.split(".");
@@ -57,7 +58,7 @@ export async function generateMetadata({
   try {
     const headersList = await headers();
     pathname = headersList.get("x-current-path") || pathname;
-  } catch (e) {
+  } catch (_e) {
     // Normal during build
   }
 

@@ -9,7 +9,7 @@ let Resend: unknown = null;
 try {
   // @ts-ignore
   Resend = require("resend").Resend;
-} catch (_e) {}
+} catch (_e) { }
 
 export interface ContactSubmission {
   firstName: string;

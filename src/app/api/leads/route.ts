@@ -14,7 +14,7 @@ let Redis: any = null;
 try {
   // @ts-ignore - Optional dependency
   Redis = require("@upstash/redis").Redis;
-} catch (e) {
+} catch (_e) {
   // Redis not installed yet
 }
 
@@ -22,9 +22,9 @@ try {
 const redis =
   Redis && process.env.REDIS_URL && process.env.REDIS_TOKEN
     ? new Redis({
-        url: process.env.REDIS_URL,
-        token: process.env.REDIS_TOKEN,
-      })
+      url: process.env.REDIS_URL,
+      token: process.env.REDIS_TOKEN,
+    })
     : null;
 
 // Validation schema for query parameters

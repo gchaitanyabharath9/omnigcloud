@@ -54,7 +54,7 @@ class Analytics {
         const blob = new Blob([JSON.stringify(payload)], { type: "application/json" });
         navigator.sendBeacon("/api/telemetry", blob);
       }
-    } catch (e) {
+    } catch (_e) {
       // Fail silently to ensure no user-facing errors
       // Do not log to console to avoid test failures
     }

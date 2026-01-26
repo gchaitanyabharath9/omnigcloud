@@ -48,7 +48,7 @@ export async function getSafeBaseUrl(): Promise<string> {
     const proto = headersList.get("x-forwarded-proto") || "https";
     const host = headersList.get("x-forwarded-host") || headersList.get("host");
     if (host) return `${proto}://${host}`.replace(/\/$/, "");
-  } catch (e) {
+  } catch (_e) {
     // Normal during build/static generation
   }
 

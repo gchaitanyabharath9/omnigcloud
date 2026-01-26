@@ -56,16 +56,26 @@ export default function Breadcrumb() {
           className="hover:opacity-100 opacity-80"
         >
           <LayoutDashboard size={14} style={{ marginRight: "0.5rem" }} />
-          {t("home")}
+          {/* Safe home translation */}
+          {t.has("home") ? t("home") : "Home"}
         </Link>
         {breadcrumbSegments.map((segment, index) => {
           const path = `/${locale}/${breadcrumbSegments.slice(0, index + 1).join("/")}`;
           const isLast = index === breadcrumbSegments.length - 1;
 
-          // Try to translate the segment, fallback to formatted segment name
-          let name = t(segment);
-          if (name === `Breadcrumb.${segment}` || !name) {
-            const acronyms = ["CIO", "AI", "ML", "AWS", "GCP", "API", "IT", "ROI", "SLA"];
+          // Robust fallback strategy
+          let name = "";
+          try {
+            if (t.has(segment)) {
+              name = t(segment);
+            }
+          } catch (_e) {
+            // Ignore translation errors
+          }
+
+          // If still no name or returned key, fallback to title case
+          if (!name || name === `Breadcrumb.${segment}` || name.includes("MISSING_MESSAGE")) {
+            const acronyms = ["CIO", "AI", "ML", "AWS", "GCP", "API", "IT", "ROI", "SLA", "AECP", "ASO", "OCP", "AKS"];
             name = segment
               .split("-")
               .map((word) => {
