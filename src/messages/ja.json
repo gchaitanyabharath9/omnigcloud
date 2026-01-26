@@ -2888,67 +2888,67 @@
       },
       "patterns": {
         "0": {
-          "description": "Decouples business intent from cloud-specific APIs. Ensures 100% provider neutrality via a standardized 'Logic-Driven Orchestration' model. (JA)",
-          "explanation": "Image A displays the unified state tree across 32 geographic regions. Image B showcases the real-time translation of a single 'Intent' into distinct provider orchestrations. (JA)",
-          "impact": "Innovation: 100% Provider Neutrality (JA)",
-          "title": "Sovereign Control Plane (SCP) (JA)"
+          "title": "Sovereign State Synchronization",
+          "description": "Ensures consistent state across distributed environments.",
+          "explanation": "Uses a distributed ledger to maintain state integrity.",
+          "impact": "Eliminates split-brain scenarios in multi-cloud deployments."
         },
         "1": {
-          "description": "Executes real-time compliance audits using Formal Verification Logic. Uniform enforcement of GDPR, HIPAA, and EU AI Act at sub-millisecond speeds. (JA)",
-          "explanation": "In Image A, we see the PALM intercepting a cross-region API call. Image B confirms the 'Geofence Permit' was validated against active national mandates. (JA)",
-          "impact": "Research: Real-time Compliance Logic (JA)",
-          "title": "Policy-as-Logic Middleware (PALM) (JA)"
+          "title": "Autonomous Drift Remediation",
+          "description": "Automatically corrects configuration drift.",
+          "explanation": "Comparing live state against defined blueprints.",
+          "impact": "Maintains continuous compliance without manual intervention."
         },
         "2": {
-          "description": "Resiliency pattern leveraging Byzantine Fault Tolerance to monitor regional cloud health. Triggers atomic failover across providers in under 240 seconds. (JA)",
-          "explanation": "Image A captures the global latency map just before a regional provider failure. Image B displays the MCCB execution log as it re-reoutes 1,000+ nodes. (JA)",
-          "impact": "Outcome: 99.999% Service Continuity (JA)",
-          "title": "Multi-Cloud Circuit Breaker (MCCB) (JA)"
+          "title": "Cross-Cloud Identity Mesh",
+          "description": "Unified identity management across providers.",
+          "explanation": "Federated identity using OIDC and SAML.",
+          "impact": "Single sign-on efficiency and improved security posture."
         },
         "3": {
-          "description": "Financial governance pattern performing real-time cost-analysis to predict expenditure and recommend 'Arbitrage Re-homing' based on global spot pricing. (JA)",
-          "explanation": "In Image A, we see the predictive billing engine analyzing the next 12 months. Image B shows the EABF algorithm recommending a shift to OCI for a 34% cost reduction. (JA)",
-          "impact": "Impact: 34% OpEx Reduction (JA)",
-          "title": "Economic Arbitrage (EABF) (JA)"
+          "title": "Zero-Trust Data Enclaves",
+          "description": "Secure data processing environments.",
+          "explanation": "Hardware-enforced isolation for sensitive workloads.",
+          "impact": "Meets highest security standards (FIPS 140-2)."
         },
         "4": {
-          "description": "Allows instantaneous transfer of production logic, state, and networking from one cloud provider to another without operational downtime. (JA)",
-          "explanation": "Image A displays the initiation of a 5.2TB state migration. Image B captures the 'Verified Sovereign' status on the target provider 300 seconds later. (JA)",
-          "impact": "Velocity: 100x Faster Migration (JA)",
-          "title": "Atomic Cross-Cloud Migration (ACCM) (JA)"
+          "title": "Global Traffic Steering",
+          "description": "Intelligent routing based on latency and health.",
+          "explanation": "Anycast architecture with automated failover.",
+          "impact": "99.999% availability and low-latency user experience."
         }
       },
       "title": "Reference Architecture (JA)"
     },
     "banner": {
-      "cta": "Explore Blueprints (JA)",
-      "description": "Accelerate your path to compliance with pre-engineered blueprints for SOC2, GDPR, and HIPAA. (JA)",
-      "title": "Governance Blueprints (JA)"
+      "cta": "ブループリントを探索",
+      "description": "自動的なドリフト修正を備えた、SOC 2、HIPAA、GDPR向けの事前設定済みコンプライアンス・ブループリント。",
+      "title": "ガバナンス・ブループリント"
     },
     "cards": {
       "api": {
-        "cta": "View API (JA)",
-        "description": "RESTful endpoints for programmatic infrastructure control. (JA)",
-        "exhibit": "Exhibit D.4 (JA)",
-        "title": "API Reference (JA)"
+        "cta": "APIドキュメントを表示",
+        "description": "REST および GraphQL API の完全なドキュメント。",
+        "exhibit": "証拠展示 04",
+        "title": "API リファレンス"
       },
       "architecture": {
-        "cta": "View Patterns (JA)",
-        "description": "Explore the foundational design patterns of Autonomous Sovereign Orchestration. (JA)",
-        "exhibit": "Exhibit A.1 (JA)",
-        "title": "Architecture (JA)"
+        "cta": "パターンを表示",
+        "description": "高度な学術証拠のための主権パターン。",
+        "exhibit": "証拠展示 01",
+        "title": "デザインパターン"
       },
       "guide": {
-        "cta": "Get Started (JA)",
-        "description": "Step-by-step onboarding for cloud architects and DevOps engineers. (JA)",
-        "exhibit": "Exhibit C.3 (JA)",
-        "title": "Guides (JA)"
+        "cta": "ガイドを読む",
+        "description": "15分以内に OmniGCloud を稼働させます。",
+        "exhibit": "証拠展示 03",
+        "title": "クイックスタートガイド"
       },
       "whitepaper": {
-        "cta": "Read Paper (JA)",
-        "description": "Deep dive into the mathematical and technical core of our sovereign kernel. (JA)",
-        "exhibit": "Exhibit B.2 (JA)",
-        "title": "Whitepaper (JA)"
+        "cta": "論文を読む",
+        "description": "自律主権オーケストレーション (ASO) の形式化。",
+        "exhibit": "証拠展示 02",
+        "title": "学術ホワイトペーパー"
       }
     },
     "certifications": {
@@ -3006,19 +3006,19 @@
       "title": "Architect's Guide (JA)"
     },
     "hero": {
-      "badge": "LATEST STACK (JA)",
-      "description": "Build, deploy, and govern with the world's first sovereign cloud fabric. Comprehensive guides and reference architectures for the AI era. (JA)",
-      "title": "Developer Documentation (JA)"
+      "badge": "重大な意義を持つ独創的な貢献",
+      "description": "以下のドキュメントは、自律主権オーケストレーション (ASO) フレームワークを形式化したものです。この要覧は、学術的な審査のための主要な技術的証拠として機能し、クラウド・アグノスティックなガバナンスと複数インフラストラクチャの状態同期における画期的な進歩を実証しています。",
+      "title": "学術技術要覧"
     },
     "meta": {
-      "description": "Comprehensive technical documentation for the OmniGCloud platform. Access architecture patterns, APIs, and whitepapers. (JA)",
+      "description": "証拠に基づいたクラウド・アグノスティック・アーキテクチャ・ドキュメント。学術ホワイトペーパーを読み、自律的なオーケストレーション・パターンを探索してください。",
       "keywords": {
         "0": "ASO framework (JA)",
         "1": "cloud governance patterns (JA)",
         "2": "autonomous orchestration (JA)",
         "3": "scholarly whitepaper (JA)"
       },
-      "title": "Technical Documentation | OmniGCloud Platform (JA)"
+      "title": "OmniGCloud ドキュメント | 学術技術要覧"
     },
     "sections": {
       "autonomousGatingLogs": "Autonomous gating logs (JA)",
@@ -3097,20 +3097,20 @@
       "customBriefingTitle": "Need a customized briefing?",
       "quickLinksHeading": "Quick Links",
       "links": {
-        "introduction": "OmniGCloud Introduction",
-        "architecture": "OmniGCloud Architecture",
-        "whitepaper": "Technical Whitepaper",
-        "security": "Security & Governance",
+        "introduction": "導入",
+        "architecture": "アーキテクチャ",
+        "whitepaper": "ホワイトペーパー",
+        "security": "セキュリティモデル",
         "guide": "Architectural Guide",
         "api": "API Reference"
       },
-      "documentation": "OmniGCloud Documentation",
-      "blueprints": "GOVERNANCE BLUEPRINTS",
+      "documentation": "ドキュメント",
+      "blueprints": "ブループリント",
       "blueprint_links": {
-        "aws": "AWS Landing Zone",
-        "azure": "Azure Enterprise",
-        "openshift": "OpenShift Cluster",
-        "hybrid": "Hybrid Fabric"
+        "aws": "AWS モダナイゼーション",
+        "azure": "Azure 主権ハブ",
+        "openshift": "GCP上のOpenShift",
+        "hybrid": "ハイブリッドメッシュ"
       },
       "customBriefingText": "Generate a custom briefing document based on your selected stack."
     }
@@ -3730,6 +3730,74 @@
     }
   },
   "Industries": {
+    "healthcare": {
+      "paradox": {
+        "p1": "AI adoption in healthcare is hindered by data privacy concerns.",
+        "p2": "Sovereign clouds enable secure, compliant AI deployment.",
+        "features": {
+          "gating": {
+            "title": "Autonomous Gating",
+            "desc": "Prevent unauthorized data egress with policy-as-code."
+          },
+          "acceleration": {
+            "title": "Model Acceleration",
+            "desc": "Optimize inference latency on edge devices."
+          },
+          "ai": {
+            "title": "Clinical AI",
+            "desc": "Deploy diagnostic models with human-in-the-loop validation."
+          }
+        },
+        "badge": "PARADOX (JA)",
+        "title": "Paradox Title (JA)"
+      },
+      "faq": {
+        "item0": {
+          "q": "Is patient data secure?",
+          "a": "Yes, fully encrypted and sovereign."
+        },
+        "item1": {
+          "q": "Can we use public cloud models?",
+          "a": "Yes, via secure private endpoints."
+        },
+        "item2": {
+          "q": "What about compliance?",
+          "a": "We support HIPAA and GDPR natively."
+        },
+        "item3": {
+          "q": "How fast is deployment?",
+          "a": "Weeks instead of months."
+        },
+        "title": "Faq Title (JA)"
+      },
+      "description": "Healthcare description (JA)",
+      "footer": {
+        "aiDesc": "OmniGCloud Aidesc",
+        "aiLink": "OmniGCloud Ailink",
+        "aiTitle": "OmniGCloud Aititle",
+        "microservicesDesc": "OmniGCloud Microservicesdesc",
+        "microservicesLink": "OmniGCloud Microserviceslink",
+        "microservicesTitle": "OmniGCloud Microservicestitle"
+      },
+      "hero": {
+        "badge": "HERO (JA)",
+        "ctaPrimary": "OmniGCloud Ctaprimary",
+        "ctaSecondary": "OmniGCloud Ctasecondary",
+        "subtitle": "Hero description (JA)",
+        "title": "Hero Title (JA)"
+      },
+      "pillars": {
+        "item1Desc": "OmniGCloud Item1desc",
+        "item1Title": "OmniGCloud Item1title",
+        "item2Desc": "OmniGCloud Item2desc",
+        "item2Title": "OmniGCloud Item2title",
+        "item3Desc": "OmniGCloud Item3desc",
+        "item3Title": "OmniGCloud Item3title",
+        "title": "Pillars Title (JA)"
+      },
+      "sol": "HIPAA-compliant federated learning nodes. (JA)",
+      "title": "Healthcare Title (JA)"
+    },
     "allIndustries": "All Industries (JA)",
     "badge": "New (JA)",
     "challenges": "OmniGCloud Challenges",
@@ -3807,42 +3875,6 @@
     },
     "financial": {
       "sol": "Dedicated hardware shards for SWIFT payment rails. (JA)"
-    },
-    "healthcare": {
-      "description": "Healthcare description (JA)",
-      "faq": {
-        "title": "Faq Title (JA)"
-      },
-      "footer": {
-        "aiDesc": "OmniGCloud Aidesc",
-        "aiLink": "OmniGCloud Ailink",
-        "aiTitle": "OmniGCloud Aititle",
-        "microservicesDesc": "OmniGCloud Microservicesdesc",
-        "microservicesLink": "OmniGCloud Microserviceslink",
-        "microservicesTitle": "OmniGCloud Microservicestitle"
-      },
-      "hero": {
-        "badge": "HERO (JA)",
-        "ctaPrimary": "OmniGCloud Ctaprimary",
-        "ctaSecondary": "OmniGCloud Ctasecondary",
-        "subtitle": "Hero description (JA)",
-        "title": "Hero Title (JA)"
-      },
-      "paradox": {
-        "badge": "PARADOX (JA)",
-        "title": "Paradox Title (JA)"
-      },
-      "pillars": {
-        "item1Desc": "OmniGCloud Item1desc",
-        "item1Title": "OmniGCloud Item1title",
-        "item2Desc": "OmniGCloud Item2desc",
-        "item2Title": "OmniGCloud Item2title",
-        "item3Desc": "OmniGCloud Item3desc",
-        "item3Title": "OmniGCloud Item3title",
-        "title": "Pillars Title (JA)"
-      },
-      "sol": "HIPAA-compliant federated learning nodes. (JA)",
-      "title": "Healthcare Title (JA)"
     },
     "insurance": {
       "sol": "Actuarial data lakes with privacy-preserving analytics. (JA)"

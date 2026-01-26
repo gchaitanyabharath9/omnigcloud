@@ -16,7 +16,7 @@ import { Link } from "@/navigation";
 
 import Footer from "@/components/Footer";
 import type { Metadata } from "next";
-import { getTranslations } from "next-intl/server";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 import { generateSEOMetadata, SEO_KEYWORDS } from "@/utils/seo";
 
 export async function generateMetadata({
@@ -25,6 +25,7 @@ export async function generateMetadata({
   params: Promise<{ locale: string }>;
 }): Promise<Metadata> {
   const { locale } = await params;
+  setRequestLocale(locale);
   const tm = await getTranslations({ locale, namespace: "Metadata.Docs" });
 
   return generateSEOMetadata(
@@ -50,7 +51,9 @@ export function generateStaticParams() {
   return ["en", "es", "fr", "de", "zh", "hi", "ja", "ko"].map((locale) => ({ locale }));
 }
 
-export default async function DocsPage() {
+export default async function DocsPage({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params;
+  setRequestLocale(locale);
   const t = await getTranslations("Docs");
 
   return (

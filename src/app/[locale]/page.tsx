@@ -15,13 +15,14 @@ import dynamic from "next/dynamic";
 const EcosystemSection = dynamic(() => import("@/components/sections/home/EcosystemSection"));
 const DemoSection = dynamic(() => import("@/components/sections/home/DemoSection"));
 
-import { getTranslations } from "next-intl/server";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 import { generateSEOMetadata, SEO_KEYWORDS } from "@/utils/seo";
 
 export const revalidate = 3600;
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
+  setRequestLocale(locale);
   const tm = await getTranslations({ locale, namespace: "Metadata.Home" });
 
   return generateSEOMetadata(
@@ -52,6 +53,7 @@ export function generateStaticParams() {
 
 export default async function Home({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
+  setRequestLocale(locale);
   const tSeo = await getTranslations("SEO_Content.Home");
 
   return (

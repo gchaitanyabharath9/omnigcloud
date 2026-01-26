@@ -1,4 +1,4 @@
-import { getTranslations } from "next-intl/server";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 import { Shield, Bug, Lock, AlertTriangle, CheckCircle, Mail } from "lucide-react";
 import SecurityPerformanceSection from "@/components/sections/security/SecurityPerformanceSection";
 import Footer from "@/components/Footer";
@@ -17,7 +17,9 @@ export function generateStaticParams() {
 
 export const revalidate = 3600;
 
-export default async function SecurityPage() {
+export default async function SecurityPage({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params;
+  setRequestLocale(locale);
   const t = await getTranslations("Security");
   const pt = await getTranslations("Pages.Security");
 

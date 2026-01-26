@@ -7,7 +7,7 @@
 
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, Suspense } from "react";
 import { useTheme } from "next-themes";
 import { useLocale, useTranslations } from "next-intl";
 import { usePathname } from "next/navigation";
@@ -198,7 +198,9 @@ const Header = ({ hideNav }: { hideNav?: boolean }) => {
               <Moon size={18} />
             )}
           </button>
-          <LanguageSwitcher />
+          <Suspense fallback={null}>
+            <LanguageSwitcher />
+          </Suspense>
           <button
             onClick={handleContactSales}
             className={`btn-secondary ${styles.contactBtn}`}

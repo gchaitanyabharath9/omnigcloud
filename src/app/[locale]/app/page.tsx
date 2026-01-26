@@ -1,8 +1,12 @@
 import { auth } from "@/auth";
 import { redirect } from "next/navigation";
-import { getTranslations } from "next-intl/server";
+import { getTranslations, setRequestLocale } from "next-intl/server";
+
+export const revalidate = 0;
 
 export default async function DashboardPage({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params;
+  setRequestLocale(locale);
   const session = await auth();
   const t = await getTranslations("Dashboard");
 

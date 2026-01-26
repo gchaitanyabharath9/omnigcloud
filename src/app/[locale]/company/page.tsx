@@ -1,7 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import Footer from "@/components/Footer";
-import { getTranslations } from "next-intl/server";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 import { generateSEOMetadata, SEO_KEYWORDS } from "@/utils/seo";
 import {
   Users,
@@ -29,6 +29,7 @@ export const revalidate = 3600;
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
+  setRequestLocale(locale);
   const tm = await getTranslations({ locale, namespace: "Metadata.Company" });
 
   return generateSEOMetadata(
@@ -51,7 +52,9 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   );
 }
 
-export default async function CompanyPage() {
+export default async function CompanyPage({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params;
+  setRequestLocale(locale);
   const tInvestors = await getTranslations("Investors");
   const t = await getTranslations("Company");
   const tGlobal = await getTranslations("Global");

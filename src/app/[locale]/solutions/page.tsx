@@ -18,7 +18,7 @@ import {
   CheckCircle,
 } from "lucide-react";
 import { Link } from "@/navigation";
-import { getTranslations } from "next-intl/server";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 import { generateSEOMetadata, SEO_KEYWORDS } from "@/utils/seo";
 import { USE_CASES } from "@/data/use-cases";
 import Grid2x2Section from "@/components/layout/Grid2x2Section";
@@ -49,6 +49,7 @@ export const revalidate = 3600;
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
+  setRequestLocale(locale);
   const tm = await getTranslations({ locale, namespace: "Metadata.Solutions" });
 
   return generateSEOMetadata(
@@ -73,6 +74,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
 
 export default async function SolutionsPage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
+  setRequestLocale(locale);
   const t = await getTranslations("Industries");
   const uct = await getTranslations("UseCases");
   const st = await getTranslations("Solutions");

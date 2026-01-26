@@ -1,5 +1,5 @@
 import { Mail, Phone, MapPin, Globe } from "lucide-react";
-import { getTranslations, getLocale } from "next-intl/server";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 import ContactForm from "@/components/forms/ContactForm";
 import Footer from "@/components/Footer";
 import { generateSEOMetadata, SEO_KEYWORDS } from "@/utils/seo";
@@ -32,10 +32,12 @@ export function generateStaticParams() {
 
 export const revalidate = 3600;
 
-export default async function ContactPage() {
+export default async function ContactPage({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params;
+  setRequestLocale(locale);
   const t = await getTranslations("Company");
   const tContact = await getTranslations("Company.contact");
-  const locale = await getLocale();
+  // const locale = await getLocale(); // Replaced by params
 
   return (
     <div className="bg-background min-h-screen">

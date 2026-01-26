@@ -1,6 +1,6 @@
 import { PageShell } from "@/components/layout/PageShell";
 import { Section } from "@/components/layout/Section";
-import { getTranslations, getLocale } from "next-intl/server";
+import { getTranslations, getLocale, setRequestLocale } from "next-intl/server";
 import { generateSEOMetadata, SEO_KEYWORDS } from "@/utils/seo";
 import { Cpu, ArrowRight } from "lucide-react";
 import { Link, locales } from "@/navigation";
@@ -23,6 +23,7 @@ const PRODUCT_SECTION_IDS = [
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
+  setRequestLocale(locale);
   const tm = await getTranslations({ locale, namespace: "Metadata.Products" });
 
   return generateSEOMetadata(
@@ -51,9 +52,11 @@ export function generateStaticParams() {
 
 export const revalidate = 3600;
 
-export default async function ProductsPage() {
+export default async function ProductsPage({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params;
+  setRequestLocale(locale);
   const t = await getTranslations("Products");
-  const locale = await getLocale();
+  // const locale = await getLocale(); // Replaced by params
 
   return (
     <>

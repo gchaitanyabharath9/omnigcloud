@@ -1,7 +1,7 @@
 import fs from "fs";
 import path from "path";
 
-const EN_PATH = path.join(process.cwd(), "messages/en.json");
+const EN_PATH = path.join(process.cwd(), "src/messages/en.json");
 
 function cleanup() {
   const en = JSON.parse(fs.readFileSync(EN_PATH, "utf-8"));
@@ -63,7 +63,7 @@ function cleanup() {
     cards: {
       architecture: {
         title: "Design Patterns",
-        description: "Sovereign patterns for EB-1A scholarly evidence.",
+        description: "Sovereign patterns for advanced scholarly evidence.",
         exhibit: "EVIDENCE EXHIBIT 01",
         cta: "View Patterns",
       },

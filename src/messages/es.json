@@ -2888,67 +2888,67 @@
       },
       "patterns": {
         "0": {
-          "description": "Decouples business intent from cloud-specific APIs. Ensures 100% provider neutrality via a standardized 'Logic-Driven Orchestration' model. (ES)",
-          "explanation": "Image A displays the unified state tree across 32 geographic regions. Image B showcases the real-time translation of a single 'Intent' into distinct provider orchestrations. (ES)",
-          "impact": "Innovation: 100% Provider Neutrality (ES)",
-          "title": "Sovereign Control Plane (SCP) (ES)"
+          "title": "Sovereign State Synchronization",
+          "description": "Ensures consistent state across distributed environments.",
+          "explanation": "Uses a distributed ledger to maintain state integrity.",
+          "impact": "Eliminates split-brain scenarios in multi-cloud deployments."
         },
         "1": {
-          "description": "Executes real-time compliance audits using Formal Verification Logic. Uniform enforcement of GDPR, HIPAA, and EU AI Act at sub-millisecond speeds. (ES)",
-          "explanation": "In Image A, we see the PALM intercepting a cross-region API call. Image B confirms the 'Geofence Permit' was validated against active national mandates. (ES)",
-          "impact": "Research: Real-time Compliance Logic (ES)",
-          "title": "Policy-as-Logic Middleware (PALM) (ES)"
+          "title": "Autonomous Drift Remediation",
+          "description": "Automatically corrects configuration drift.",
+          "explanation": "Comparing live state against defined blueprints.",
+          "impact": "Maintains continuous compliance without manual intervention."
         },
         "2": {
-          "description": "Resiliency pattern leveraging Byzantine Fault Tolerance to monitor regional cloud health. Triggers atomic failover across providers in under 240 seconds. (ES)",
-          "explanation": "Image A captures the global latency map just before a regional provider failure. Image B displays the MCCB execution log as it re-reoutes 1,000+ nodes. (ES)",
-          "impact": "Outcome: 99.999% Service Continuity (ES)",
-          "title": "Multi-Cloud Circuit Breaker (MCCB) (ES)"
+          "title": "Cross-Cloud Identity Mesh",
+          "description": "Unified identity management across providers.",
+          "explanation": "Federated identity using OIDC and SAML.",
+          "impact": "Single sign-on efficiency and improved security posture."
         },
         "3": {
-          "description": "Financial governance pattern performing real-time cost-analysis to predict expenditure and recommend 'Arbitrage Re-homing' based on global spot pricing. (ES)",
-          "explanation": "In Image A, we see the predictive billing engine analyzing the next 12 months. Image B shows the EABF algorithm recommending a shift to OCI for a 34% cost reduction. (ES)",
-          "impact": "Impact: 34% OpEx Reduction (ES)",
-          "title": "Economic Arbitrage (EABF) (ES)"
+          "title": "Zero-Trust Data Enclaves",
+          "description": "Secure data processing environments.",
+          "explanation": "Hardware-enforced isolation for sensitive workloads.",
+          "impact": "Meets highest security standards (FIPS 140-2)."
         },
         "4": {
-          "description": "Allows instantaneous transfer of production logic, state, and networking from one cloud provider to another without operational downtime. (ES)",
-          "explanation": "Image A displays the initiation of a 5.2TB state migration. Image B captures the 'Verified Sovereign' status on the target provider 300 seconds later. (ES)",
-          "impact": "Velocity: 100x Faster Migration (ES)",
-          "title": "Atomic Cross-Cloud Migration (ACCM) (ES)"
+          "title": "Global Traffic Steering",
+          "description": "Intelligent routing based on latency and health.",
+          "explanation": "Anycast architecture with automated failover.",
+          "impact": "99.999% availability and low-latency user experience."
         }
       },
       "title": "Reference Architecture (ES)"
     },
     "banner": {
-      "cta": "Explore Blueprints (ES)",
-      "description": "Accelerate your path to compliance with pre-engineered blueprints for SOC2, GDPR, and HIPAA. (ES)",
-      "title": "Governance Blueprints (ES)"
+      "cta": "Explorar Planos",
+      "description": "Planos de cumplimiento preconfigurados para SOC 2, HIPAA y GDPR con remediación de desviación automática.",
+      "title": "Planos de Gobernanza"
     },
     "cards": {
       "api": {
-        "cta": "View API (ES)",
-        "description": "RESTful endpoints for programmatic infrastructure control. (ES)",
-        "exhibit": "Exhibit D.4 (ES)",
-        "title": "API Reference (ES)"
+        "cta": "Ver Docs de API",
+        "description": "Documentación completa para nuestras APIs REST y GraphQL.",
+        "exhibit": "EXHIBICIÓN DE EVIDENCIA 04",
+        "title": "Referencia de API"
       },
       "architecture": {
-        "cta": "View Patterns (ES)",
-        "description": "Explore the foundational design patterns of Autonomous Sovereign Orchestration. (ES)",
-        "exhibit": "Exhibit A.1 (ES)",
-        "title": "Architecture (ES)"
+        "cta": "Ver Patrones",
+        "description": "Patrones soberanos para la evidencia académica avanzada.",
+        "exhibit": "EXHIBICIÓN DE EVIDENCIA 01",
+        "title": "Patrones de Diseño"
       },
       "guide": {
-        "cta": "Get Started (ES)",
-        "description": "Step-by-step onboarding for cloud architects and DevOps engineers. (ES)",
-        "exhibit": "Exhibit C.3 (ES)",
-        "title": "Guides (ES)"
+        "cta": "Leer Guía",
+        "description": "Póngase en marcha con OmniGCloud en menos de 15 minutos.",
+        "exhibit": "EXHIBICIÓN DE EVIDENCIA 03",
+        "title": "Guía de Inicio Rápido"
       },
       "whitepaper": {
-        "cta": "Read Paper (ES)",
-        "description": "Deep dive into the mathematical and technical core of our sovereign kernel. (ES)",
-        "exhibit": "Exhibit B.2 (ES)",
-        "title": "Whitepaper (ES)"
+        "cta": "Leer Documento",
+        "description": "Formalización de la Orquestación Soberana Autónoma (ASO).",
+        "exhibit": "EXHIBICIÓN DE EVIDENCIA 02",
+        "title": "Libro Blanco Académico"
       }
     },
     "certifications": {
@@ -3006,19 +3006,19 @@
       "title": "Architect's Guide (ES)"
     },
     "hero": {
-      "badge": "LATEST STACK (ES)",
-      "description": "Build, deploy, and govern with the world's first sovereign cloud fabric. Comprehensive guides and reference architectures for the AI era. (ES)",
-      "title": "Developer Documentation (ES)"
+      "badge": "CONTRIBUCIÓN ORIGINAL DE GRAN SIGNIFICADO",
+      "description": "La siguiente documentación formaliza el marco de Orquestación Soberana Autónoma (ASO). Este compendio sirve como la evidencia técnica primaria para la revisión académica, demostrando un avance significativo en el gobierno agnóstico de la nube y la sincronización de estado de múltiples infraestructuras.",
+      "title": "Compendio Técnico Erudito"
     },
     "meta": {
-      "description": "Comprehensive technical documentation for the OmniGCloud platform. Access architecture patterns, APIs, and whitepapers. (ES)",
+      "description": "Documentación de arquitectura agnóstica de nube basada en evidencia. Lea el libro blanco académico y explore los patrones de orquestación autónoma.",
       "keywords": {
         "0": "ASO framework (ES)",
         "1": "cloud governance patterns (ES)",
         "2": "autonomous orchestration (ES)",
         "3": "scholarly whitepaper (ES)"
       },
-      "title": "Technical Documentation | OmniGCloud Platform (ES)"
+      "title": "Documentación de OmniGCloud | Compendio Técnico Erudito"
     },
     "sections": {
       "autonomousGatingLogs": "Autonomous gating logs (ES)",
@@ -3097,20 +3097,20 @@
       "customBriefingTitle": "Need a customized briefing?",
       "quickLinksHeading": "Quick Links",
       "links": {
-        "introduction": "OmniGCloud Introduction",
-        "architecture": "OmniGCloud Architecture",
-        "whitepaper": "Technical Whitepaper",
-        "security": "Security & Governance",
+        "introduction": "Introducción",
+        "architecture": "Arquitectura",
+        "whitepaper": "Libro Blanco",
+        "security": "Modelo de Seguridad",
         "guide": "Architectural Guide",
         "api": "API Reference"
       },
-      "documentation": "OmniGCloud Documentation",
-      "blueprints": "GOVERNANCE BLUEPRINTS",
+      "documentation": "Documentación",
+      "blueprints": "Planos",
       "blueprint_links": {
-        "aws": "AWS Landing Zone",
-        "azure": "Azure Enterprise",
-        "openshift": "OpenShift Cluster",
-        "hybrid": "Hybrid Fabric"
+        "aws": "Modernización de AWS",
+        "azure": "Azure Sovereign Hub",
+        "openshift": "OpenShift en GCP",
+        "hybrid": "Malla Híbrida"
       },
       "customBriefingText": "Generate a custom briefing document based on your selected stack."
     }

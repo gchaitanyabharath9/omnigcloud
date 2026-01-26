@@ -1,5 +1,5 @@
 import { PageShell } from "@/components/layout/PageShell";
-import { getTranslations } from "next-intl/server";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 import { generateSEOMetadata, generateProductSchema, SEO_KEYWORDS } from "@/utils/seo";
 import { Check, X, Shield, Globe, Cpu, Zap, Award, HelpCircle, ArrowRight } from "lucide-react";
 import { Link } from "@/navigation";
@@ -43,6 +43,7 @@ const PRICING_SECTION_IDS = [
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
+  setRequestLocale(locale);
   const tm = await getTranslations({ locale, namespace: "Metadata.Pricing" });
 
   let keywordsArray: string[] = [];
@@ -72,6 +73,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
 
 export default async function PricingPage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
+  setRequestLocale(locale);
   const t = await getTranslations("Pricing");
 
   const getRawArray = (key: string) => {

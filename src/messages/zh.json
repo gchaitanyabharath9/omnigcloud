@@ -2888,67 +2888,67 @@
       },
       "patterns": {
         "0": {
-          "description": "Decouples business intent from cloud-specific APIs. Ensures 100% provider neutrality via a standardized 'Logic-Driven Orchestration' model. (ZH)",
-          "explanation": "Image A displays the unified state tree across 32 geographic regions. Image B showcases the real-time translation of a single 'Intent' into distinct provider orchestrations. (ZH)",
-          "impact": "Innovation: 100% Provider Neutrality (ZH)",
-          "title": "Sovereign Control Plane (SCP) (ZH)"
+          "title": "Sovereign State Synchronization",
+          "description": "Ensures consistent state across distributed environments.",
+          "explanation": "Uses a distributed ledger to maintain state integrity.",
+          "impact": "Eliminates split-brain scenarios in multi-cloud deployments."
         },
         "1": {
-          "description": "Executes real-time compliance audits using Formal Verification Logic. Uniform enforcement of GDPR, HIPAA, and EU AI Act at sub-millisecond speeds. (ZH)",
-          "explanation": "In Image A, we see the PALM intercepting a cross-region API call. Image B confirms the 'Geofence Permit' was validated against active national mandates. (ZH)",
-          "impact": "Research: Real-time Compliance Logic (ZH)",
-          "title": "Policy-as-Logic Middleware (PALM) (ZH)"
+          "title": "Autonomous Drift Remediation",
+          "description": "Automatically corrects configuration drift.",
+          "explanation": "Comparing live state against defined blueprints.",
+          "impact": "Maintains continuous compliance without manual intervention."
         },
         "2": {
-          "description": "Resiliency pattern leveraging Byzantine Fault Tolerance to monitor regional cloud health. Triggers atomic failover across providers in under 240 seconds. (ZH)",
-          "explanation": "Image A captures the global latency map just before a regional provider failure. Image B displays the MCCB execution log as it re-reoutes 1,000+ nodes. (ZH)",
-          "impact": "Outcome: 99.999% Service Continuity (ZH)",
-          "title": "Multi-Cloud Circuit Breaker (MCCB) (ZH)"
+          "title": "Cross-Cloud Identity Mesh",
+          "description": "Unified identity management across providers.",
+          "explanation": "Federated identity using OIDC and SAML.",
+          "impact": "Single sign-on efficiency and improved security posture."
         },
         "3": {
-          "description": "Financial governance pattern performing real-time cost-analysis to predict expenditure and recommend 'Arbitrage Re-homing' based on global spot pricing. (ZH)",
-          "explanation": "In Image A, we see the predictive billing engine analyzing the next 12 months. Image B shows the EABF algorithm recommending a shift to OCI for a 34% cost reduction. (ZH)",
-          "impact": "Impact: 34% OpEx Reduction (ZH)",
-          "title": "Economic Arbitrage (EABF) (ZH)"
+          "title": "Zero-Trust Data Enclaves",
+          "description": "Secure data processing environments.",
+          "explanation": "Hardware-enforced isolation for sensitive workloads.",
+          "impact": "Meets highest security standards (FIPS 140-2)."
         },
         "4": {
-          "description": "Allows instantaneous transfer of production logic, state, and networking from one cloud provider to another without operational downtime. (ZH)",
-          "explanation": "Image A displays the initiation of a 5.2TB state migration. Image B captures the 'Verified Sovereign' status on the target provider 300 seconds later. (ZH)",
-          "impact": "Velocity: 100x Faster Migration (ZH)",
-          "title": "Atomic Cross-Cloud Migration (ACCM) (ZH)"
+          "title": "Global Traffic Steering",
+          "description": "Intelligent routing based on latency and health.",
+          "explanation": "Anycast architecture with automated failover.",
+          "impact": "99.999% availability and low-latency user experience."
         }
       },
       "title": "Reference Architecture (ZH)"
     },
     "banner": {
-      "cta": "Explore Blueprints (ZH)",
-      "description": "Accelerate your path to compliance with pre-engineered blueprints for SOC2, GDPR, and HIPAA. (ZH)",
-      "title": "Governance Blueprints (ZH)"
+      "cta": "探索蓝图",
+      "description": "预配置的 SOC 2、HIPAA 和 GDPR 合规性蓝图，具有自动漂移补救功能。",
+      "title": "治理蓝图"
     },
     "cards": {
       "api": {
-        "cta": "View API (ZH)",
-        "description": "RESTful endpoints for programmatic infrastructure control. (ZH)",
-        "exhibit": "Exhibit D.4 (ZH)",
-        "title": "API Reference (ZH)"
+        "cta": "查看 API 文档",
+        "description": "我们的 REST 和 GraphQL API 的完整文档。",
+        "exhibit": "证据展示 04",
+        "title": "API 参考"
       },
       "architecture": {
-        "cta": "View Patterns (ZH)",
-        "description": "Explore the foundational design patterns of Autonomous Sovereign Orchestration. (ZH)",
-        "exhibit": "Exhibit A.1 (ZH)",
-        "title": "Architecture (ZH)"
+        "cta": "查看模式",
+        "description": "用于高级学术证据的主权模式。",
+        "exhibit": "证据展示 01",
+        "title": "设计模式"
       },
       "guide": {
-        "cta": "Get Started (ZH)",
-        "description": "Step-by-step onboarding for cloud architects and DevOps engineers. (ZH)",
-        "exhibit": "Exhibit C.3 (ZH)",
-        "title": "Guides (ZH)"
+        "cta": "阅读指南",
+        "description": "在 15 分钟内快速上手 OmniGCloud。",
+        "exhibit": "证据展示 03",
+        "title": "快速入门指南"
       },
       "whitepaper": {
-        "cta": "Read Paper (ZH)",
-        "description": "Deep dive into the mathematical and technical core of our sovereign kernel. (ZH)",
-        "exhibit": "Exhibit B.2 (ZH)",
-        "title": "Whitepaper (ZH)"
+        "cta": "阅读论文",
+        "description": "自主主权编排 (ASO) 的正式化。",
+        "exhibit": "证据展示 02",
+        "title": "学术白皮书"
       }
     },
     "certifications": {
@@ -3006,19 +3006,19 @@
       "title": "Architect's Guide (ZH)"
     },
     "hero": {
-      "badge": "LATEST STACK (ZH)",
-      "description": "Build, deploy, and govern with the world's first sovereign cloud fabric. Comprehensive guides and reference architectures for the AI era. (ZH)",
-      "title": "Developer Documentation (ZH)"
+      "badge": "具有重大意义的原创性贡献",
+      "description": "以下文档正式确定了自主主权编排 (ASO) 框架。本纲要作为学术评审的主要技术依据，展示了在云原生治理和多基础设施状态同步方面的重大突破。",
+      "title": "学术技术纲要"
     },
     "meta": {
-      "description": "Comprehensive technical documentation for the OmniGCloud platform. Access architecture patterns, APIs, and whitepapers. (ZH)",
+      "description": "基于证据的云原生架构文档。阅读学术白皮书并探索自主编排模式。",
       "keywords": {
         "0": "ASO framework (ZH)",
         "1": "cloud governance patterns (ZH)",
         "2": "autonomous orchestration (ZH)",
         "3": "scholarly whitepaper (ZH)"
       },
-      "title": "Technical Documentation | OmniGCloud Platform (ZH)"
+      "title": "OmniGCloud 文档 | 学术技术纲要"
     },
     "sections": {
       "autonomousGatingLogs": "Autonomous gating logs (ZH)",
@@ -3097,20 +3097,20 @@
       "customBriefingTitle": "Need a customized briefing?",
       "quickLinksHeading": "Quick Links",
       "links": {
-        "introduction": "OmniGCloud Introduction",
-        "architecture": "OmniGCloud Architecture",
-        "whitepaper": "Technical Whitepaper",
-        "security": "Security & Governance",
+        "introduction": "简介",
+        "architecture": "架构",
+        "whitepaper": "白皮书",
+        "security": "安全模型",
         "guide": "Architectural Guide",
         "api": "API Reference"
       },
-      "documentation": "OmniGCloud Documentation",
-      "blueprints": "GOVERNANCE BLUEPRINTS",
+      "documentation": "文档",
+      "blueprints": "蓝图",
       "blueprint_links": {
-        "aws": "AWS Landing Zone",
-        "azure": "Azure Enterprise",
-        "openshift": "OpenShift Cluster",
-        "hybrid": "Hybrid Fabric"
+        "aws": "AWS 现代化",
+        "azure": "Azure 主权中心",
+        "openshift": "GCP 上的 OpenShift",
+        "hybrid": "混合网格"
       },
       "customBriefingText": "Generate a custom briefing document based on your selected stack."
     }

@@ -1,5 +1,6 @@
+import { Suspense } from "react";
 import ClientIntlProvider from "@/components/i18n/ClientIntlProvider";
-import { getMessages } from "next-intl/server";
+import { getMessages, setRequestLocale } from "next-intl/server";
 import type { Metadata, Viewport } from "next";
 import { Inter, Plus_Jakarta_Sans } from "next/font/google"; // Premium fonts
 import "../../styles/globals.css";
@@ -102,6 +103,7 @@ export default async function RootLayout({
   params: Promise<{ locale: string }>;
 }) {
   const { locale } = await params;
+  setRequestLocale(locale);
 
   const messages = await getMessages();
 
@@ -126,7 +128,9 @@ export default async function RootLayout({
           <ClientIntlProvider messages={messages} locale={locale}>
             <ObservabilityProvider locale={locale}>
               <UtmTracker />
-              <HashScrollHandler />
+              <Suspense fallback={null}>
+                <HashScrollHandler />
+              </Suspense>
               <Header />
               <main className="main-content">
                 <Breadcrumb />

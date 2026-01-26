@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import { Link } from "@/navigation";
 
 import { ArrowRight } from "lucide-react";
-import { getTranslations } from "next-intl/server";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 import ServicesHero from "@/components/sections/services/ServicesHero";
 import CloudFactorySection from "@/components/sections/services/CloudFactorySection";
 import AutomationStackSection from "@/components/sections/services/AutomationStackSection";
@@ -18,8 +18,8 @@ export async function generateMetadata({
   params: Promise<{ locale: string }>;
 }): Promise<Metadata> {
   const { locale } = await params;
+  setRequestLocale(locale);
   const tm = await getTranslations({ locale, namespace: "Metadata.Services" });
-
   return generateSEOMetadata(
     {
       title: tm("title"),
@@ -44,6 +44,7 @@ export function generateStaticParams() {
 
 export default async function ServicesPage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
+  setRequestLocale(locale);
   const t = await getTranslations({ locale, namespace: "Services" });
   const tCommon = await getTranslations({ locale, namespace: "Common" });
   const tSeo = await getTranslations({ locale, namespace: "SEO_Content.Services" });
