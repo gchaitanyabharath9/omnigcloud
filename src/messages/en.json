@@ -2982,7 +2982,25 @@
         "title": "Autonomous Governance",
         "description": "Ensure continuous compliance with zero operational overhead."
       },
-      "download": "Download Report"
+      "download": "Download Report",
+      "blueprints": {
+        "0": {
+          "title": "AWS Sovereign Control Plane",
+          "desc": "Automated landing zone with NIST 800-53 compliance guardrails."
+        },
+        "1": {
+          "title": "Azure Regulatory Hub",
+          "desc": "HIPAA-ready blueprint for healthcare workloads on Azure."
+        },
+        "2": {
+          "title": "OpenShift Compliance Operator",
+          "desc": "Automated CIS benchmarks for RedHat OpenShift clusters."
+        },
+        "3": {
+          "title": "Hybrid Multi-Cloud Mesh",
+          "desc": "Unified governance across on-premise and public cloud clusters."
+        }
+      }
     },
     "guide": {
       "title": "User Guide",
