@@ -29,6 +29,12 @@ const ErrorRateArea = dynamic(() =>
 const FeatureUsageBar = dynamic(() =>
   import("@/components/charts/SimpleCharts").then((mod) => mod.FeatureUsageBar)
 );
+const RequestVolumeBar = dynamic(() =>
+  import("@/components/charts/SimpleCharts").then((mod) => mod.RequestVolumeBar)
+);
+const CostSavingsArea = dynamic(() =>
+  import("@/components/charts/SimpleCharts").then((mod) => mod.CostSavingsArea)
+);
 const ComplianceScoresBar = dynamic(() =>
   import("@/components/charts/SimpleCharts").then((mod) => mod.ComplianceScoresBar)
 );
@@ -129,7 +135,7 @@ export const getDashboardMetrics = (t: any) => ({
           "technical.analysis",
           "Technical debt reduction sprint is showing results with improved build times and higher test coverage across core microservices."
         )}
-        secondaryVisual={<FeatureUsageBar standalone={true} />}
+        secondaryVisual={<RequestVolumeBar standalone={true} />}
       />
     ),
   },
@@ -178,7 +184,7 @@ export const getDashboardMetrics = (t: any) => ({
           "roi.analysis",
           "AI-driven arbitrage has optimised spot instance usage, resulting in a significantly lower TCO compared to on-demand provisioning this quarter."
         )}
-        secondaryVisual={<FeatureUsageBar standalone={true} />}
+        secondaryVisual={<CostSavingsArea standalone={true} />}
       />
     ),
   },
@@ -374,7 +380,7 @@ export const getDashboardMetrics = (t: any) => ({
           "resources.analysis",
           "Cluster auto-scaling is maintaining optimal bin packing, ensuring resources are utilized efficiently without over-provisioning."
         )}
-        secondaryVisual={<FeatureUsageBar standalone={true} />}
+        secondaryVisual={<CloudDistributionPie standalone={true} />}
       />
     ),
   },
@@ -423,7 +429,7 @@ export const getDashboardMetrics = (t: any) => ({
           "deployment.analysis",
           "CI/CD pipelines are operating at peak velocity with zero regressions detected in staging or production environments today."
         )}
-        secondaryVisual={<UptimeTrend standalone={true} />}
+        secondaryVisual={<LatencyLineChart standalone={true} />}
       />
     ),
   },
@@ -470,7 +476,7 @@ export const getDashboardMetrics = (t: any) => ({
           "scaling.analysis",
           "Predictive scaling preempted traffic spikes in EU-West-1, keeping latency below 50ms during global user wakeup."
         )}
-        secondaryVisual={<LatencyLineChart standalone={true} />}
+        secondaryVisual={<RequestVolumeBar standalone={true} />}
       />
     ),
   },

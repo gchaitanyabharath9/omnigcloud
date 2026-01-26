@@ -39,65 +39,90 @@ export default function MetricDashboardLayout({
   };
 
   return (
-    <div className="w-full grid grid-cols-1 lg:grid-cols-2 gap-8 auto-rows-auto">
-      {/* QUADRANT 1: Main Visual (Top-Left) */}
-      <div className="glass-panel p-10 rounded-[3rem] flex flex-col relative overflow-hidden group transition-all duration-700 hover:border-primary/40 hover:shadow-[0_0_80px_rgba(59,130,246,0.2)] shadow-2xl bg-gradient-to-br from-white/[0.05] to-transparent backdrop-blur-3xl border border-white/10">
-        <div className="absolute top-0 right-0 p-6 z-20">
-          <DemoBadge label={tSafe(t, "liveView", "Live View")} />
+    <div className="w-full grid grid-cols-1 lg:grid-cols-2 gap-8 auto-rows-auto p-4">
+      {/* COLUMN 1: Visual Identity */}
+      <div className="flex flex-col gap-8">
+        {/* QUADRANT 1: Main Visual */}
+        <div className="glass-panel p-10 rounded-[3rem] flex flex-col relative overflow-hidden group transition-all duration-700 hover:border-primary/40 hover:shadow-[0_0_80px_rgba(59,130,246,0.2)] shadow-2xl bg-gradient-to-br from-white/[0.05] to-transparent backdrop-blur-3xl border border-white/10">
+          <div className="absolute top-0 right-0 p-6 z-20">
+            <DemoBadge label={tSafe(t, "liveView", "Live View")} />
+          </div>
+
+          <div className="mb-10 relative z-10">
+            <h2
+              className="font-black tracking-tighter text-foreground mb-2 drop-shadow-2xl"
+              style={{ fontSize: "clamp(2.5rem, 5vw, 4rem)", lineHeight: 1, letterSpacing: "-0.04em" }}
+            >
+              {title}
+            </h2>
+            <p className="text-[14px] text-primary/80 font-mono font-black uppercase tracking-[0.4em] opacity-90 drop-shadow-md">
+              {subtitle}
+            </p>
+          </div>
+
+          <div className="flex-1 relative w-full min-h-[450px] flex items-center justify-center bg-black/40 rounded-[2rem] border border-white/10 shadow-2xl overflow-hidden group-hover:scale-[1.01] transition-transform duration-700">
+            <div
+              className="absolute inset-0 opacity-[0.07] pointer-events-none z-0"
+              style={{
+                backgroundImage: "radial-gradient(circle, white 1px, transparent 1px)",
+                backgroundSize: "32px 32px",
+              }}
+            />
+            <div className="w-full h-full flex items-center justify-center relative z-10">{mainVisual}</div>
+          </div>
         </div>
 
-        {/* Ambient background blob */}
-        <div className="absolute -top-20 -left-20 w-64 h-64 bg-primary/10 blur-[100px] rounded-full pointer-events-none" />
-
-        <div className="mb-10 relative z-10">
-          <h2
-            className="font-black tracking-tighter text-foreground mb-2 drop-shadow-2xl"
-            style={{ fontSize: "clamp(2rem, 4vw, 3rem)", lineHeight: 1.1, letterSpacing: "-0.04em" }}
-          >
-            {title}
-          </h2>
-          <p className="text-[14px] text-primary/80 font-mono font-black uppercase tracking-[0.4em] opacity-90 drop-shadow-md">
-            {subtitle}
-          </p>
-        </div>
-
-        <div className="flex-1 relative w-full min-h-[350px] flex items-center justify-center bg-black/40 rounded-[2rem] border border-white/10 shadow-2xl overflow-hidden group-hover:scale-[1.01] transition-transform duration-700">
-          <div
-            className="absolute inset-0 opacity-[0.07] pointer-events-none z-0"
-            style={{
-              backgroundImage: "radial-gradient(circle, white 1px, transparent 1px)",
-              backgroundSize: "32px 32px",
-            }}
-          />
-          <div className="w-full h-full flex items-center justify-center relative z-10">{mainVisual}</div>
+        {/* QUADRANT 3: Global Signals (Trend Analysis) */}
+        <div className="glass-panel p-8 rounded-[3rem] flex flex-col min-h-[350px] relative overflow-hidden border-white/5 bg-white/[0.01] shadow-2xl">
+          <div className="mb-8 flex items-center justify-between relative z-10 border-b border-white/10 pb-6">
+            <div className="flex flex-col gap-1">
+              <span className="text-[16px] font-black uppercase text-primary tracking-[0.4em] font-mono opacity-90 drop-shadow-lg">
+                {tSafe(t, "historicalTrend", "HISTORICAL TREND")}
+              </span>
+              <span className="text-[10px] text-muted-foreground font-black uppercase tracking-[0.2em]">
+                {tSafe(t, "realtimePerf", "Neural Synthesis v4.2")}
+              </span>
+            </div>
+            <div className="flex items-center gap-3 bg-emerald-500/10 px-4 py-2 rounded-full border border-emerald-500/30">
+              <div className="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse shadow-[0_0_15px_#10b981]" />
+              <span className="text-[11px] font-black text-emerald-400 font-mono tracking-widest">
+                STREAM_ACTIVE
+              </span>
+            </div>
+          </div>
+          <div className="flex-1 relative w-full overflow-hidden rounded-[2rem] bg-black/30 border border-white/5 backdrop-blur-3xl flex items-center justify-center p-6 mt-4">
+            <div className="w-full h-full relative z-0 flex items-center justify-center">
+              {secondaryVisual}
+            </div>
+          </div>
         </div>
       </div>
 
-      {/* QUADRANT 2: Key Stats (Top-Right) */}
-      <div className="grid grid-rows-2 gap-4">
-        {/* Top Half of Right Col: Big Stats */}
-        <div className="glass-panel p-8 rounded-[3rem] flex flex-col justify-center border-white/10 bg-white/[0.02]">
-          <div className="grid grid-cols-2 gap-4 h-full">
+      {/* COLUMN 2: Intelligence & Activity */}
+      <div className="flex flex-col gap-8">
+        {/* QUADRANT 2: Dense Stats */}
+        <div className="glass-panel p-10 rounded-[3rem] flex flex-col justify-center border-white/10 bg-white/[0.02] shadow-2xl min-h-[300px]">
+          <div className="grid grid-cols-2 gap-6">
             {stats.map((stat, idx) => (
               <div
                 key={idx}
-                className="bg-white/[0.04] rounded-2xl p-6 flex flex-col justify-center border border-white/10 hover:bg-white/[0.08] hover:border-primary/40 hover:scale-[1.05] transition-all duration-500 group/stat shadow-2xl relative overflow-hidden"
+                className="bg-white/[0.03] rounded-3xl p-8 flex flex-col justify-center border border-white/5 hover:bg-white/[0.08] hover:border-primary/40 hover:scale-[1.02] transition-all duration-500 group/stat shadow-xl relative overflow-hidden"
               >
-                <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover/stat:opacity-100 transition-opacity duration-500" />
-                <div className="flex justify-between items-start mb-2 relative z-10">
-                  <span className="text-[12px] text-muted-foreground/90 uppercase tracking-[0.3em] font-black group-hover/stat:text-primary transition-colors">
+                <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-transparent opacity-0 group-hover/stat:opacity-100 transition-opacity duration-500" />
+                <div className="flex justify-between items-start mb-4 relative z-10">
+                  <span className="text-[13px] text-muted-foreground/80 uppercase tracking-[0.3em] font-black group-hover/stat:text-primary transition-colors">
                     {stat.label}
                   </span>
                   {stat.trend && (
                     <div
-                      className={`px-3 py-1 rounded-full text-[11px] font-black ${stat.trendUp ? "bg-emerald-500/20 text-emerald-400 border border-emerald-500/30" : "bg-rose-500/20 text-rose-400 border border-rose-500/30"} flex items-center gap-1 shadow-lg`}
+                      className={`px-3 py-1 rounded-full text-[12px] font-black ${stat.trendUp ? "bg-emerald-500/20 text-emerald-400 border border-emerald-500/30" : "bg-rose-500/20 text-rose-400 border border-rose-500/30"} shadow-lg`}
                     >
                       {stat.trendUp ? "↑" : "↓"} {stat.trend}
                     </div>
                   )}
                 </div>
-                <div className="flex items-end gap-2 relative z-10">
-                  <span className="text-5xl font-mono font-black text-foreground leading-none tracking-tighter drop-shadow-[0_10px_10px_rgba(0,0,0,0.5)] saturate-200">
+                <div className="relative z-10">
+                  <span className="text-6xl font-mono font-black text-foreground drop-shadow-[0_10px_20px_rgba(0,0,0,0.6)] saturate-200">
                     {stat.value}
                   </span>
                 </div>
@@ -106,102 +131,89 @@ export default function MetricDashboardLayout({
           </div>
         </div>
 
-        {/* Bottom Half of Right Col: Analysis Text */}
-        <div className="glass-panel p-10 rounded-[2rem] border border-primary/20 bg-gradient-to-br from-primary/10 via-transparent to-transparent flex flex-col justify-center relative overflow-hidden group">
-          <div className="absolute -right-10 -top-10 w-40 h-40 bg-primary/15 blur-[80px] rounded-full pointer-events-none" />
-          <div className="absolute top-6 right-6">
-            <ArrowUpRight
-              className="text-primary/40 group-hover:text-primary group-hover:translate-x-1 group-hover:-translate-y-1 transition-all duration-500"
-              size={24}
-            />
-          </div>
-          <div className="flex items-center gap-3 mb-4">
-            <div className="w-1.5 h-8 bg-primary rounded-full shadow-[0_0_15px_rgba(59,130,246,0.6)]" />
-            <h3 className="text-sm font-black text-primary uppercase tracking-[0.3em]">
-              {tSafe(t, "aiAnalysis", "AI ANALYSIS")}
-            </h3>
-          </div>
-          <p
-            className="text-[16px] text-foreground leading-relaxed font-black italic opacity-95 pl-6 border-l-2 border-primary/40 drop-shadow-lg"
-            style={{ maxWidth: "95%" }}
-          >
-            " {analysis} "
-          </p>
-        </div>
-      </div>
-
-      {/* QUADRANT 3: Secondary Visual (Bottom-Left) */}
-      <div className="glass-panel p-8 rounded-[2rem] flex flex-col min-h-[300px] relative overflow-hidden border-white/5 bg-white/[0.01]">
-        <div className="mb-8 flex items-center justify-between relative z-10">
-          <span className="text-[14px] font-black uppercase text-primary tracking-[0.4em] font-mono opacity-90 drop-shadow-lg">
-            {tSafe(t, "historicalTrend", "HISTORICAL TREND")}
-          </span>
-          <div className="flex items-center gap-3 bg-emerald-500/20 px-4 py-1.5 rounded-full border border-emerald-500/40 shadow-2xl">
-            <div className="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse shadow-[0_0_15px_#10b981]" />
-            <span className="text-[11px] font-black text-emerald-400 font-mono tracking-widest">
-              {tSafe(t, "liveDataFeed", "LIVE_FEED_v4")}
-            </span>
-          </div>
-        </div>
-        <div className="flex-1 relative w-full overflow-hidden rounded-[2.5rem] bg-black/50 border border-white/10 backdrop-blur-3xl shadow-2xl flex items-center justify-center p-4">
-          <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-transparent to-transparent pointer-events-none z-10" />
-          <div className="w-full h-full relative z-0 flex items-center justify-center scale-105 group-hover:scale-110 transition-transform duration-1000">
-            {secondaryVisual}
-          </div>
-        </div>
-      </div>
-
-      {/* QUADRANT 4: Logs / Details (Bottom-Right) */}
-      <div className="glass-panel p-0 rounded-[2rem] flex flex-col overflow-hidden min-h-[300px] border-white/10 bg-black/40 shadow-2xl">
-        <div className="px-8 py-5 border-b border-white/10 bg-white/[0.03] flex items-center justify-between">
-          <div className="flex items-center gap-3">
-            <div className="w-2 h-2 rounded-full bg-primary animate-pulse shadow-[0_0_8px_var(--primary)]" />
-            <span className="text-[11px] font-black font-mono text-primary uppercase tracking-[0.3em]">
-              {tSafe(t, "systemLogs", "SYSTEM_LOG_v8.2")}
-            </span>
-          </div>
-          <div className="flex gap-2">
-            <div className="w-2.5 h-2.5 rounded-full bg-white/10" />
-            <div className="w-2.5 h-2.5 rounded-full bg-white/10" />
-            <div className="w-2.5 h-2.5 rounded-full bg-white/10" />
-          </div>
-        </div>
-        <div className="flex-1 p-10 font-mono text-[13px] text-muted-foreground/95 overflow-hidden relative">
-          <div className="absolute inset-0 p-8 space-y-4">
-            {[
-              { level: "info", msg: "optimizing", delay: 120 },
-              { level: "success", msg: "rebalanced", delay: 85 },
-              { level: "debug", msg: "checking", delay: 42 },
-              { level: "info", msg: "synced", delay: 28 },
-              { level: "success", msg: "verified", delay: 15 },
-              { level: "info", msg: "scaling", delay: 5 },
-            ].map((log, i) => (
-              <div
-                key={i}
-                className="flex gap-4 items-center animate-fade-in opacity-0"
-                style={{ animationDelay: `${i * 150}ms`, animationFillMode: "forwards" }}
-              >
-                <span className="text-[11px] opacity-60 font-black whitespace-nowrap min-w-[80px] text-primary/70">
-                  [{getTimestamp(log.delay)}]
+        {/* QUADRANT 4: Intelligence Hub (AI Analysis + Activity Stream) */}
+        <div className="glass-panel p-0 rounded-[3rem] flex flex-col overflow-hidden min-h-[500px] border border-primary/20 bg-black/60 shadow-[0_0_100px_rgba(59,130,246,0.15)] relative group">
+          {/* Neural Header */}
+          <div className="px-10 py-8 border-b border-white/10 bg-gradient-to-r from-primary/10 to-transparent flex items-center justify-between">
+            <div className="flex items-center gap-4">
+              <div className="relative">
+                <div className="w-8 h-8 rounded-lg bg-primary/20 flex items-center justify-center border border-primary/40 animate-pulse">
+                  <div className="w-3 h-3 rounded-full bg-primary shadow-[0_0_15px_var(--primary)]" />
+                </div>
+                <div className="absolute -top-1 -right-1 w-3 h-3 bg-emerald-500 rounded-full border-2 border-black" />
+              </div>
+              <div className="flex flex-col">
+                <span className="text-[14px] font-black font-mono text-primary uppercase tracking-[0.4em]">
+                  {tSafe(t, "aiAnalysis", "INTELLIGENCE_LAYER_v8")}
                 </span>
-                <span
-                  className={`px-3 py-1 rounded-md font-black text-[10px] tracking-[0.2em] min-w-[90px] text-center shadow-lg ${log.level === "success"
-                    ? "bg-emerald-500/30 text-emerald-400 border border-emerald-500/40"
-                    : log.level === "debug"
-                      ? "bg-purple-500/30 text-purple-400 border border-purple-500/40"
-                      : "bg-blue-500/30 text-blue-400 border border-blue-500/40"
-                    }`}
-                >
-                  {tSafe(t, `Logs.levels.${log.level}`, log.level.toUpperCase())}
-                </span>
-                <span className="leading-tight font-black tracking-tight text-foreground/90">
-                  {tSafe(t, `Logs.${log.msg}`, log.msg)}
+                <span className="text-[10px] text-muted-foreground font-black uppercase tracking-[0.2em] opacity-60">
+                  Autonomous Decision Engine
                 </span>
               </div>
-            ))}
+            </div>
+            <div className="flex gap-3">
+              <div className="w-2 h-2 rounded-full bg-primary/40 animate-ping" style={{ animationDuration: '3s' }} />
+              <div className="w-2 h-2 rounded-full bg-primary/20" />
+            </div>
           </div>
-          {/* Fade out bottom */}
-          <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-black/90 to-transparent pointer-events-none" />
+
+          <div className="flex-1 flex flex-col p-10 gap-10">
+            {/* AI Analysis Block */}
+            <div className="relative">
+              <ArrowUpRight
+                className="absolute -right-2 -top-2 text-primary/30 group-hover:text-primary group-hover:scale-125 transition-all duration-700"
+                size={32}
+              />
+              <p
+                className="text-[20px] text-foreground leading-relaxed font-black italic border-l-4 border-primary/60 pl-8 drop-shadow-xl"
+                style={{ maxWidth: "100%" }}
+              >
+                "{analysis}"
+              </p>
+            </div>
+
+            {/* Neural activity trace (Simplified Logs) */}
+            <div className="mt-auto border-t border-white/5 pt-10">
+              <div className="flex items-center gap-3 mb-6">
+                <span className="text-[11px] font-black font-mono text-muted-foreground uppercase tracking-[0.3em]">
+                  {tSafe(t, "systemLogs", "Neural Activity Trace")}
+                </span>
+                <div className="flex-1 h-px bg-gradient-to-r from-white/10 to-transparent" />
+              </div>
+
+              <div className="space-y-5 font-mono text-[13px]">
+                {[
+                  { level: "info", msg: "optimizing", delay: 120 },
+                  { level: "success", msg: "rebalanced", delay: 85 },
+                  { level: "debug", msg: "checking", delay: 42 },
+                  { level: "info", msg: "scaling", delay: 5 },
+                ].map((log, i) => (
+                  <div
+                    key={i}
+                    className="flex gap-6 items-center animate-fade-in"
+                    style={{ animationDelay: `${i * 150}ms` }}
+                  >
+                    <span className="text-[11px] opacity-40 font-black whitespace-nowrap text-primary/70">
+                      /{getTimestamp(log.delay)}/
+                    </span>
+                    <span
+                      className={`px-3 py-1 rounded-md font-black text-[10px] tracking-[0.2em] border shadow-lg ${log.level === "success"
+                        ? "bg-emerald-500/20 text-emerald-400 border-emerald-500/30"
+                        : log.level === "debug"
+                          ? "bg-purple-500/20 text-purple-400 border-purple-500/30"
+                          : "bg-blue-500/20 text-blue-400 border-blue-500/30"
+                        }`}
+                    >
+                      {tSafe(t, `Logs.levels.${log.level}`, log.level.toUpperCase())}
+                    </span>
+                    <span className="leading-tight font-black tracking-tight text-foreground/70 group-hover:text-foreground transition-colors duration-500 lowercase">
+                      {tSafe(t, `Logs.${log.msg}`, log.msg)}
+                    </span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
