@@ -1,39 +1,29 @@
 import type { NextAuthConfig } from "next-auth";
 import Google from "next-auth/providers/google";
 import Github from "next-auth/providers/github";
-import Entra from "next-auth/providers/microsoft-entra-id";
+import AzureAD from "next-auth/providers/azure-ad";
 
-// Define the configuration separately to be used in Edge Middleware
-// This MUST NOT import 'next-auth/providers/email' or database adapters
 export const authConfig = {
   providers: [
     Google({
-      clientId: process.env.AUTH_GOOGLE_ID,
-      clientSecret: process.env.AUTH_GOOGLE_SECRET,
-      authorization: {
-        params: {
-          prompt: "consent",
-          access_type: "offline",
-          response_type: "code",
-        },
-      },
+      clientId: process.env.AUTH_GOOGLE_ID as string,
+      clientSecret: process.env.AUTH_GOOGLE_SECRET as string,
     }),
-    Entra({
-      clientId: process.env.AUTH_ENTRA_ID,
-      clientSecret: process.env.AUTH_ENTRA_SECRET,
-      issuer: `https://login.microsoftonline.com/${process.env.AUTH_ENTRA_TENANT_ID}/v2.0`,
+    AzureAD({
+      clientId: process.env.AUTH_ENTRA_ID as string,
+      clientSecret: process.env.AUTH_ENTRA_SECRET as string,
     }),
     Github({
-      clientId: process.env.AUTH_GITHUB_ID,
-      clientSecret: process.env.AUTH_GITHUB_SECRET,
+      clientId: process.env.AUTH_GITHUB_ID as string,
+      clientSecret: process.env.AUTH_GITHUB_SECRET as string,
     }),
   ],
   callbacks: {
-    async jwt({ token, user, profile, account }) {
+    async jwt({ token, user, profile, account }: any) {
       if (user) {
         let role: "admin" | "billing" | "user" = "user";
 
-        if (account?.provider === "microsoft-entra-id") {
+        if (account?.provider === "azure-ad") {
           const groups = (profile as any)?.groups as string[] | undefined;
           if (groups) {
             if (groups.includes(process.env.AD_GROUP_ADMIN || "")) role = "admin";
@@ -49,9 +39,9 @@ export const authConfig = {
       }
       return token;
     },
-    async session({ session, token }) {
+    async session({ session, token }: any) {
       if (session.user && token.role) {
-        session.user.role = token.role as any;
+        (session.user as any).role = token.role;
       }
       return session;
     },

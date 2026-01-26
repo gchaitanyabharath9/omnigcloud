@@ -1,5 +1,5 @@
 import { getTranslations, getLocale } from "next-intl/server";
-import { ArrowLeft, CheckCircle } from "lucide-react";
+import { ArrowLeft } from "lucide-react";
 import { Link } from "@/navigation";
 import { notFound } from "next/navigation";
 import Footer from "@/components/Footer";
