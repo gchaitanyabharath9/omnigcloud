@@ -30,20 +30,19 @@ export default function LiveLatencyBadge() {
 
   return (
     <div
-      className="flex items-center gap-1.5 px-3 py-1 rounded-full text-[10px] font-mono font-bold tracking-wider select-none transition-all duration-300 hover:bg-blue-500/10 cursor-help group"
+      className="flex items-center gap-2 px-4 py-1.5 rounded-full text-[12px] font-mono font-black tracking-widest select-none transition-all duration-500 hover:bg-blue-500/20 cursor-help group shadow-[0_0_20px_rgba(59,130,246,0.3)]"
       style={{
-        background: "rgba(59, 130, 246, 0.08)",
-        border: "1px solid rgba(59, 130, 246, 0.15)",
-        boxShadow: "0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)",
-        backdropFilter: "blur(4px)",
+        background: "rgba(59, 130, 246, 0.12)",
+        border: "1px solid rgba(59, 130, 246, 0.4)",
+        backdropFilter: "blur(12px)",
       }}
     >
       <Zap
-        size={10}
-        className="text-primary animate-pulse group-hover:scale-110 transition-transform"
+        size={14}
+        className="text-primary animate-pulse group-hover:scale-125 transition-transform drop-shadow-[0_0_8px_var(--primary)]"
       />
-      <span className="text-primary/90 group-hover:text-primary transition-colors">
-        {t("latency_badge")}: <span className="text-primary">{latency}ms</span>
+      <span className="text-primary group-hover:text-white transition-colors">
+        {t("latency_badge")}: <span className="font-black text-white">{latency}ms</span>
       </span>
     </div>
   );

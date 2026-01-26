@@ -210,8 +210,8 @@ export default function DashboardShell({
           style={{
             display: "grid",
             gridTemplateColumns: "repeat(4, 1fr)",
-            gap: "2rem",
-            marginBottom: "3rem",
+            gap: "2.5rem",
+            marginBottom: "5rem",
           }}
         >
           {[
@@ -220,47 +220,45 @@ export default function DashboardShell({
               value: "142",
               icon: Server,
               color: "#60efff",
-              bg: "rgba(96, 239, 255, 0.05)",
-              border: "rgba(96, 239, 255, 0.3)",
+              bg: "rgba(96, 239, 255, 0.08)",
+              border: "rgba(96, 239, 255, 0.4)",
             },
             {
               label: t("revenueImpact"),
               value: "+18%",
               icon: Activity,
               color: "#10b981",
-              bg: "rgba(16, 185, 129, 0.05)",
-              border: "rgba(16, 185, 129, 0.3)",
+              bg: "rgba(16, 185, 129, 0.08)",
+              border: "rgba(16, 185, 129, 0.4)",
             },
             {
               label: t("cloudSpend"),
               value: "-40%",
               icon: Database,
               color: "#8b5cf6",
-              bg: "rgba(139, 92, 246, 0.05)",
-              border: "rgba(139, 92, 246, 0.3)",
+              bg: "rgba(139, 92, 246, 0.08)",
+              border: "rgba(139, 92, 246, 0.4)",
             },
             {
               label: t("activeAlerts"),
               value: activeAlerts.toString(),
               icon: activeAlerts > 0 ? AlertTriangle : CheckCircle,
               color: activeAlerts > 0 ? "#f59e0b" : "#10b981",
-              bg: activeAlerts > 0 ? "rgba(245, 158, 11, 0.05)" : "rgba(16, 185, 129, 0.05)",
-              border: activeAlerts > 0 ? "rgba(245, 158, 11, 0.3)" : "rgba(16, 185, 129, 0.3)",
+              bg: activeAlerts > 0 ? "rgba(245, 158, 11, 0.08)" : "rgba(16, 185, 129, 0.08)",
+              border: activeAlerts > 0 ? "rgba(245, 158, 11, 0.4)" : "rgba(16, 185, 129, 0.4)",
               subtext: activeAlerts > 0 ? t("requiresAttention") : t("nominal"),
             },
           ].map((item, idx) => (
             <div
               key={idx}
-              className="glass-panel group cursor-help transition-all duration-500 hover:scale-[1.05] hover:shadow-2xl"
+              className="glass-panel group cursor-help transition-all duration-700 hover:scale-[1.1] hover:shadow-[0_20px_60px_rgba(0,0,0,0.5)] bg-gradient-to-br from-white/[0.05] to-transparent backdrop-blur-3xl"
               style={{
-                padding: "1.5rem",
-                borderRadius: "1.25rem",
-                background: item.bg,
+                padding: "2rem",
+                borderRadius: "2rem",
                 border: `1px solid ${item.border}`,
-                boxShadow: "0 10px 30px -5px rgba(0, 0, 0, 0.2)",
+                boxShadow: "0 25px 50px -12px rgba(0, 0, 0, 0.5)",
                 position: "relative",
                 overflow: "hidden",
-                backdropFilter: "blur(20px)",
               }}
             >
               <div
@@ -270,7 +268,7 @@ export default function DashboardShell({
                   left: 0,
                   width: "100%",
                   height: "100%",
-                  background: `radial-gradient(circle at 100% 0%, ${item.color}15 0%, transparent 50%)`,
+                  background: `radial-gradient(circle at 100% 0%, ${item.color}25 0%, transparent 60%)`,
                   pointerEvents: "none",
                 }}
               ></div>
@@ -279,52 +277,66 @@ export default function DashboardShell({
                   display: "flex",
                   justifyContent: "space-between",
                   alignItems: "start",
-                  marginBottom: "0.75rem",
+                  marginBottom: "1rem",
                   position: "relative",
+                  zIndex: 10,
                 }}
               >
                 <div
                   style={{
-                    fontSize: "0.65rem",
-                    opacity: 0.5,
-                    fontWeight: 800,
+                    fontSize: "0.75rem",
+                    opacity: 0.9,
+                    fontWeight: 950,
                     textTransform: "uppercase",
-                    letterSpacing: "0.1em",
+                    letterSpacing: "0.25em",
+                    fontFamily: "var(--font-mono)",
+                    color: "white"
                   }}
                 >
                   {item.label}
                 </div>
                 <item.icon
-                  size={18}
+                  size={22}
                   color={item.color}
-                  style={{ filter: `drop-shadow(0 0 8px ${item.color}40)` }}
+                  style={{ filter: `drop-shadow(0 0 12px ${item.color})` }}
                 />
               </div>
               <div
                 style={{
-                  fontSize: "2rem",
+                  fontSize: "3.5rem",
                   fontWeight: 950,
-                  color: item.color,
-                  letterSpacing: "-0.05em",
+                  color: "white",
+                  letterSpacing: "-0.04em",
                   lineHeight: 1,
                   position: "relative",
+                  zIndex: 10,
+                  textShadow: `0 0 30px ${item.color}40`,
+                  filter: "saturate(200%)"
                 }}
               >
                 {item.value}
               </div>
               {item.subtext && (
                 <div
+                  className="animate-pulse"
                   style={{
                     fontSize: "0.7rem",
-                    opacity: 0.5,
-                    marginTop: "0.5rem",
-                    fontWeight: 700,
+                    color: item.color,
+                    marginTop: "0.75rem",
+                    fontWeight: 900,
                     position: "relative",
+                    zIndex: 10,
+                    textTransform: "uppercase",
+                    letterSpacing: "0.1em"
                   }}
                 >
                   {item.subtext}
                 </div>
               )}
+              {/* Progress bar simulation for density */}
+              <div className="mt-4 h-1 w-full bg-white/5 rounded-full overflow-hidden relative z-10">
+                <div className="h-full animate-shimmer" style={{ width: "70%", backgroundColor: item.color, boxShadow: `0 0 10px ${item.color}` }} />
+              </div>
             </div>
           ))}
         </div>

@@ -239,8 +239,10 @@ export const getDashboardMetrics = (t: any) => ({
         title={tSafe(t, "uptime.title", "System Uptime")}
         subtitle={tSafe(t, "uptime.subtitle", "30-day global availability")}
         mainVisual={
-          <FullVisual imageSrc="/images/dashboard/technical.png">
-            <UptimeTrend standalone={true} height={300} />
+          <FullVisual imageSrc="/images/dashboard/connectivity.png">
+            <div className="scale-150 drop-shadow-[0_0_40px_rgba(16,185,129,0.4)]">
+              <UptimeRing />
+            </div>
           </FullVisual>
         }
         stats={[
@@ -335,8 +337,8 @@ export const getDashboardMetrics = (t: any) => ({
         title={tSafe(t, "resources.title", "Cluster Resources")}
         subtitle={tSafe(t, "resources.subtitle", "CPU, Memory, and Storage telemetry")}
         mainVisual={
-          <FullVisual imageSrc="/images/dashboard/technical.png">
-            <div className="w-full h-full flex flex-col items-center justify-center p-6 scale-110">
+          <FullVisual imageSrc="/images/dashboard/infrastructure.png">
+            <div className="w-full h-full flex flex-col items-center justify-center p-6 scale-125">
               <AnimatedResourceUtilization />
             </div>
           </FullVisual>
@@ -384,8 +386,10 @@ export const getDashboardMetrics = (t: any) => ({
         title={tSafe(t, "deployment.title", "CI/CD Velocity")}
         subtitle={tSafe(t, "deployment.subtitle", "Pipeline throughput and failure rate")}
         mainVisual={
-          <FullVisual imageSrc="/images/dashboard/technical.png">
-            <LiveDeploymentFrequency />
+          <FullVisual imageSrc="/images/dashboard/deployment.png">
+            <div className="scale-125">
+              <LiveDeploymentFrequency />
+            </div>
           </FullVisual>
         }
         stats={[
@@ -478,8 +482,8 @@ export const getDashboardMetrics = (t: any) => ({
         title={tSafe(t, "error.title", "Error & Anomalies")}
         subtitle={tSafe(t, "error.subtitle", "System-wide anomaly detection")}
         mainVisual={
-          <FullVisual imageSrc="/images/dashboard/security.png">
-            <div className="w-full h-full scale-110">
+          <FullVisual imageSrc="/images/dashboard/anomalies.png">
+            <div className="w-full h-full scale-125">
               <ErrorRateTrend />
             </div>
           </FullVisual>

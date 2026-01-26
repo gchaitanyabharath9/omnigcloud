@@ -56,7 +56,7 @@ export default function MetricDashboardLayout({
           >
             {title}
           </h2>
-          <p className="text-[12px] text-primary/80 font-mono font-black uppercase tracking-[0.3em] opacity-80">
+          <p className="text-[14px] text-primary/80 font-mono font-black uppercase tracking-[0.4em] opacity-90 drop-shadow-md">
             {subtitle}
           </p>
         </div>
@@ -81,22 +81,23 @@ export default function MetricDashboardLayout({
             {stats.map((stat, idx) => (
               <div
                 key={idx}
-                className="bg-white/[0.04] rounded-2xl p-6 flex flex-col justify-center border border-white/10 hover:bg-white/[0.08] hover:border-primary/40 hover:scale-[1.05] transition-all duration-500 group/stat shadow-xl"
+                className="bg-white/[0.04] rounded-2xl p-6 flex flex-col justify-center border border-white/10 hover:bg-white/[0.08] hover:border-primary/40 hover:scale-[1.05] transition-all duration-500 group/stat shadow-2xl relative overflow-hidden"
               >
-                <div className="flex justify-between items-start mb-2">
-                  <span className="text-[11px] text-muted-foreground/90 uppercase tracking-[0.2em] font-black group-hover/stat:text-primary transition-colors">
+                <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover/stat:opacity-100 transition-opacity duration-500" />
+                <div className="flex justify-between items-start mb-2 relative z-10">
+                  <span className="text-[12px] text-muted-foreground/90 uppercase tracking-[0.3em] font-black group-hover/stat:text-primary transition-colors">
                     {stat.label}
                   </span>
                   {stat.trend && (
                     <div
-                      className={`px-2 py-0.75 rounded-full text-[10px] font-black ${stat.trendUp ? "bg-emerald-500/15 text-emerald-400 border border-emerald-500/30" : "bg-rose-500/15 text-rose-400 border border-rose-500/30"} flex items-center gap-1 shadow-lg`}
+                      className={`px-3 py-1 rounded-full text-[11px] font-black ${stat.trendUp ? "bg-emerald-500/20 text-emerald-400 border border-emerald-500/30" : "bg-rose-500/20 text-rose-400 border border-rose-500/30"} flex items-center gap-1 shadow-lg`}
                     >
                       {stat.trendUp ? "↑" : "↓"} {stat.trend}
                     </div>
                   )}
                 </div>
-                <div className="flex items-end gap-2">
-                  <span className="text-4xl font-mono font-black text-foreground leading-none tracking-tighter drop-shadow-2xl saturate-150">
+                <div className="flex items-end gap-2 relative z-10">
+                  <span className="text-5xl font-mono font-black text-foreground leading-none tracking-tighter drop-shadow-[0_10px_10px_rgba(0,0,0,0.5)] saturate-200">
                     {stat.value}
                   </span>
                 </div>
@@ -121,8 +122,8 @@ export default function MetricDashboardLayout({
             </h3>
           </div>
           <p
-            className="text-[13px] text-foreground leading-relaxed font-bold italic opacity-95 pl-5 border-l border-white/10"
-            style={{ maxWidth: "90%" }}
+            className="text-[16px] text-foreground leading-relaxed font-black italic opacity-95 pl-6 border-l-2 border-primary/40 drop-shadow-lg"
+            style={{ maxWidth: "95%" }}
           >
             " {analysis} "
           </p>
@@ -131,20 +132,22 @@ export default function MetricDashboardLayout({
 
       {/* QUADRANT 3: Secondary Visual (Bottom-Left) */}
       <div className="glass-panel p-8 rounded-[2rem] flex flex-col min-h-[300px] relative overflow-hidden border-white/5 bg-white/[0.01]">
-        <div className="mb-6 flex items-center justify-between relative z-10">
-          <span className="text-[11px] font-black uppercase text-primary tracking-[0.3em] font-mono opacity-80">
+        <div className="mb-8 flex items-center justify-between relative z-10">
+          <span className="text-[14px] font-black uppercase text-primary tracking-[0.4em] font-mono opacity-90 drop-shadow-lg">
             {tSafe(t, "historicalTrend", "HISTORICAL TREND")}
           </span>
-          <div className="flex items-center gap-2 bg-emerald-500/15 px-3 py-1 rounded-full border border-emerald-500/30 shadow-lg">
-            <div className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse shadow-[0_0_10px_#10b981]" />
-            <span className="text-[10px] font-black text-emerald-400 font-mono tracking-widest">
+          <div className="flex items-center gap-3 bg-emerald-500/20 px-4 py-1.5 rounded-full border border-emerald-500/40 shadow-2xl">
+            <div className="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse shadow-[0_0_15px_#10b981]" />
+            <span className="text-[11px] font-black text-emerald-400 font-mono tracking-widest">
               {tSafe(t, "liveDataFeed", "LIVE_FEED_v4")}
             </span>
           </div>
         </div>
-        <div className="flex-1 relative w-full overflow-hidden rounded-2xl bg-black/40 border border-white/10 backdrop-blur-md shadow-inner flex items-center justify-center">
-          <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent pointer-events-none z-10" />
-          <div className="w-full h-full relative z-0 flex items-center justify-center">{secondaryVisual}</div>
+        <div className="flex-1 relative w-full overflow-hidden rounded-[2.5rem] bg-black/50 border border-white/10 backdrop-blur-3xl shadow-2xl flex items-center justify-center p-4">
+          <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-transparent to-transparent pointer-events-none z-10" />
+          <div className="w-full h-full relative z-0 flex items-center justify-center scale-105 group-hover:scale-110 transition-transform duration-1000">
+            {secondaryVisual}
+          </div>
         </div>
       </div>
 
@@ -163,7 +166,7 @@ export default function MetricDashboardLayout({
             <div className="w-2.5 h-2.5 rounded-full bg-white/10" />
           </div>
         </div>
-        <div className="flex-1 p-8 font-mono text-[11px] text-muted-foreground/90 overflow-hidden relative">
+        <div className="flex-1 p-10 font-mono text-[13px] text-muted-foreground/95 overflow-hidden relative">
           <div className="absolute inset-0 p-8 space-y-4">
             {[
               { level: "info", msg: "optimizing", delay: 120 },
@@ -178,20 +181,20 @@ export default function MetricDashboardLayout({
                 className="flex gap-4 items-center animate-fade-in opacity-0"
                 style={{ animationDelay: `${i * 150}ms`, animationFillMode: "forwards" }}
               >
-                <span className="text-[10px] opacity-40 font-black whitespace-nowrap min-w-[70px]">
+                <span className="text-[11px] opacity-60 font-black whitespace-nowrap min-w-[80px] text-primary/70">
                   [{getTimestamp(log.delay)}]
                 </span>
                 <span
-                  className={`px-2 py-0.75 rounded-md font-black text-[9px] tracking-widest min-w-[75px] text-center shadow-sm ${log.level === "success"
-                    ? "bg-emerald-500/20 text-emerald-400 border border-emerald-500/20"
+                  className={`px-3 py-1 rounded-md font-black text-[10px] tracking-[0.2em] min-w-[90px] text-center shadow-lg ${log.level === "success"
+                    ? "bg-emerald-500/30 text-emerald-400 border border-emerald-500/40"
                     : log.level === "debug"
-                      ? "bg-purple-500/20 text-purple-400 border border-purple-500/20"
-                      : "bg-blue-500/20 text-blue-400 border border-blue-500/20"
+                      ? "bg-purple-500/30 text-purple-400 border border-purple-500/40"
+                      : "bg-blue-500/30 text-blue-400 border border-blue-500/40"
                     }`}
                 >
                   {tSafe(t, `Logs.levels.${log.level}`, log.level.toUpperCase())}
                 </span>
-                <span className="leading-tight font-medium tracking-tight text-foreground/80">
+                <span className="leading-tight font-black tracking-tight text-foreground/90">
                   {tSafe(t, `Logs.${log.msg}`, log.msg)}
                 </span>
               </div>
