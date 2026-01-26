@@ -65,19 +65,19 @@ export async function generateMetadata({
   // Safe origin resolution
   const origin = await getSafeBaseUrl();
 
+  // Fetch keywords from translation if they exist
+  const rawKeywords = t("Metadata.default.keywords");
+  const translatedKeywords = Array.isArray(rawKeywords) ? rawKeywords : [];
+
   return generateSEOMetadata(
     {
       title: t("Metadata.default.title"),
       description: t("Metadata.default.description"),
       keywords: [
-        "Cloud Modernization",
-        "Enterprise AI Architecture",
-        "RedHat OpenShift Modernization",
-        "Cloud Agnostic Discovery",
-        "Azure Cloud Migration",
-        "Cloud Cost Optimization",
-        "AECP Engine",
-        "Sovereign Cloud Governance",
+        ...translatedKeywords,
+        ...SEO_KEYWORDS.platform,
+        ...SEO_KEYWORDS.ai,
+        ...SEO_KEYWORDS.security,
       ],
       canonical: `${origin}${pathname}`,
       ogType: "website",
