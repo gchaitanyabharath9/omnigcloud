@@ -3833,7 +3833,23 @@
     "healthcare": {
       "description": "Healthcare description (FR)",
       "faq": {
-        "title": "Faq Title (FR)"
+        "title": "Healthcare FAQ",
+        "item0": {
+          "q": "How do you ensure HIPAA compliance?",
+          "a": "Our infrastructure is pre-hardened with HIPAA-compliant controls and continuous auditing."
+        },
+        "item1": {
+          "q": "Can we process PHI in the public cloud?",
+          "a": "Yes, using our Sovereign Nodes, PHI stays encrypted and local while compute can burst to the cloud."
+        },
+        "item2": {
+          "q": "Do you integrate with EHR systems?",
+          "a": "We support HL7 and FHIR standards for seamless integration with major EHR providers."
+        },
+        "item3": {
+          "q": "What about data residency for trials?",
+          "a": "We enforce strict geo-fencing to ensure clinical trial data never leaves the authorized jurisdiction."
+        }
       },
       "footer": {
         "aiDesc": "OmniGCloud Aidesc",
