@@ -36,7 +36,7 @@ const TRANSLATIONS: Record<string, Record<string, any>> = {
       cards: {
         architecture: {
           title: "Patrones de Diseño",
-          description: "Patrones soberanos para la evidencia académica EB-1A.",
+          description: "Patrones soberanos para la evidencia académica avanzada.",
           exhibit: "EXHIBICIÓN DE EVIDENCIA 01",
           cta: "Ver Patrones",
         },
@@ -99,7 +99,7 @@ const TRANSLATIONS: Record<string, Record<string, any>> = {
       cards: {
         architecture: {
           title: "Modèles de Conception",
-          description: "Modèles souverains pour les preuves académiques EB-1A.",
+          description: "Modèles souverains pour les preuves académiques avancées.",
           exhibit: "PIÈCE À CONCOURS 01",
           cta: "Voir les Modèles",
         },
@@ -162,7 +162,7 @@ const TRANSLATIONS: Record<string, Record<string, any>> = {
       cards: {
         architecture: {
           title: "Designmuster",
-          description: "Souveräne Muster für EB-1A wissenschaftliche Belege.",
+          description: "Souveräne Muster für fortgeschrittene wissenschaftliche Belege.",
           exhibit: "BEWEISSTÜCK 01",
           cta: "Muster anzeigen",
         },
@@ -224,7 +224,7 @@ const TRANSLATIONS: Record<string, Record<string, any>> = {
       cards: {
         architecture: {
           title: "设计模式",
-          description: "用于 EB-1A 学术证据的主权模式。",
+          description: "用于高级学术证据的主权模式。",
           exhibit: "证据展示 01",
           cta: "查看模式",
         },
@@ -286,7 +286,7 @@ const TRANSLATIONS: Record<string, Record<string, any>> = {
       cards: {
         architecture: {
           title: "डिजाइन पैटर्न",
-          description: "EB-1A विद्वतापूर्ण साक्ष्य के लिए संप्रभु पैटर्न।",
+          description: "उन्नत विद्वतापूर्ण साक्ष्य के लिए संप्रभु पैटर्न।",
           exhibit: "साक्ष्य प्रदर्शनी 01",
           cta: "पैटर्न देखें",
         },
@@ -349,7 +349,7 @@ const TRANSLATIONS: Record<string, Record<string, any>> = {
       cards: {
         architecture: {
           title: "デザインパターン",
-          description: "EB-1A 学術証拠のための主権パターン。",
+          description: "高度な学術証拠のための主権パターン。",
           exhibit: "証拠展示 01",
           cta: "パターンを表示",
         },
@@ -412,7 +412,7 @@ const TRANSLATIONS: Record<string, Record<string, any>> = {
       cards: {
         architecture: {
           title: "디자인 패턴",
-          description: "EB-1A 학술 증거를 위한 주권 패턴.",
+          description: "고급 학술 증거를 위한 주권 패턴。",
           exhibit: "증거 전시 01",
           cta: "패턴 보기",
         },

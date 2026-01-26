@@ -317,7 +317,6 @@ export const NAV_CONFIG: NavGroup[] = [
     labelKey: "Header.nav.docs",
     mainRoute: "/docs",
     items: [
-      // Research items removed for EB-1A Private Portfolio Strategy
       // (Only accessible via direct links)
       // Documentation
       {

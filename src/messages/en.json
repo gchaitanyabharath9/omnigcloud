@@ -2825,294 +2825,61 @@
     "title": "The OmniGCloud Experience"
   },
   "Docs": {
-    "abstract": {
-      "paragraph1": "This technical volume formalizes the implementation details of the {title} within the Autonomous Sovereign Orchestration (ASO) framework. It provides the necessary evidence for original contribution in cloud-agnostic systems.",
-      "paragraph2": "The following sections explore the empirical validation, architectural constraints, and performance breakthroughs associated with this specific exhibit.",
-      "title": "Abstract"
-    },
-    "api": {
-      "description": "The OmniGCloud API allows you to programmatically manage your cloud infrastructure, enforce governance policies, and monitor real-time drift across all supported providers.",
-      "endpoints": {
-        "discovery": {
-          "desc": "Retrieve a list of all discovered assets across all registered cloud providers."
-        },
-        "governance": {
-          "desc": "Check for active governance drift and retrieve remediation logs."
-        },
-        "modernization": {
-          "desc": "Initiate a modernization workflow for a specific application or cluster."
-        }
-      },
-      "keywords": {
-        "0": "OmniGCloud API",
-        "1": "REST API v1",
-        "2": "Cloud Governance API",
-        "3": "Infrastructure as Code API"
-      },
-      "title": "OmniGCloud REST API",
-      "versionLabel": "API Version: v1.0.4 (LTS)"
-    },
-    "architecture": {
-      "compendium": {
-        "description": "The ASO framework has been peer-reviewed and recognized by leading infrastructure architects. This compendium serves as the primary technical evidence for our **Original Contribution to the Field**.",
-        "impactBadge": "{impact} Impact",
-        "journals": {
-          "0": {
-            "impact": "High",
-            "journal": "IEEE Infrastructure Journal",
-            "status": "Published Oct 2024"
-          },
-          "1": {
-            "impact": "Major",
-            "journal": "Cloud Sovereignty Quarterly",
-            "status": "Peer-Reviewed"
-          },
-          "2": {
-            "impact": "Breaking",
-            "journal": "ACM Dist. Systems",
-            "status": "Nominated"
-          }
-        },
-        "title": "Original Research Compendium"
-      },
-      "cta": {
-        "scale": "Scale Now",
-        "whitepaper": "Access Scholarly White Paper"
-      },
-      "description": "A formal framework for multi-cloud sovereign orchestration.",
-      "hero": {
-        "badge": "RESEARCH COMPENDIUM",
-        "description": "These original contributions formalize the methodology for **Autonomous Sovereign Orchestration (ASO)**, addressing the critical conflict between global scale and national law.",
-        "titleHighlight": "Design Patterns",
-        "titlePart1": "Architectural"
-      },
-      "patterns": {
-        "0": {
-          "description": "Decouples business intent from cloud-specific APIs. Ensures 100% provider neutrality via a standardized 'Logic-Driven Orchestration' model.",
-          "explanation": "Image A displays the unified state tree across 32 geographic regions. Image B showcases the real-time translation of a single 'Intent' into distinct provider orchestrations.",
-          "impact": "Innovation: 100% Provider Neutrality",
-          "title": "Sovereign Control Plane (SCP)"
-        },
-        "1": {
-          "description": "Executes real-time compliance audits using Formal Verification Logic. Uniform enforcement of GDPR, HIPAA, and EU AI Act at sub-millisecond speeds.",
-          "explanation": "In Image A, we see the PALM intercepting a cross-region API call. Image B confirms the 'Geofence Permit' was validated against active national mandates.",
-          "impact": "Research: Real-time Compliance Logic",
-          "title": "Policy-as-Logic Middleware (PALM)"
-        },
-        "2": {
-          "description": "Resiliency pattern leveraging Byzantine Fault Tolerance to monitor regional cloud health. Triggers atomic failover across providers in under 240 seconds.",
-          "explanation": "Image A captures the global latency map just before a regional provider failure. Image B displays the MCCB execution log as it re-reoutes 1,000+ nodes.",
-          "impact": "Outcome: 99.999% Service Continuity",
-          "title": "Multi-Cloud Circuit Breaker (MCCB)"
-        },
-        "3": {
-          "description": "Financial governance pattern performing real-time cost-analysis to predict expenditure and recommend 'Arbitrage Re-homing' based on global spot pricing.",
-          "explanation": "In Image A, we see the predictive billing engine analyzing the next 12 months. Image B shows the EABF algorithm recommending a shift to OCI for a 34% cost reduction.",
-          "impact": "Impact: 34% OpEx Reduction",
-          "title": "Economic Arbitrage (EABF)"
-        },
-        "4": {
-          "description": "Allows instantaneous transfer of production logic, state, and networking from one cloud provider to another without operational downtime.",
-          "explanation": "Image A displays the initiation of a 5.2TB state migration. Image B captures the 'Verified Sovereign' status on the target provider 300 seconds later.",
-          "impact": "Velocity: 100x Faster Migration",
-          "title": "Atomic Cross-Cloud Migration (ACCM)"
-        }
-      },
-      "title": "Reference Architecture"
-    },
-    "banner": {
-      "cta": "Explore Blueprints",
-      "description": "Accelerate your path to compliance with pre-engineered blueprints for SOC2, GDPR, and HIPAA.",
-      "title": "Governance Blueprints"
-    },
-    "cards": {
-      "api": {
-        "cta": "View API",
-        "description": "RESTful endpoints for programmatic infrastructure control.",
-        "exhibit": "Exhibit D.4",
-        "title": "API Reference"
-      },
-      "architecture": {
-        "cta": "View Patterns",
-        "description": "Explore the foundational design patterns of Autonomous Sovereign Orchestration.",
-        "exhibit": "Exhibit A.1",
-        "title": "Architecture"
-      },
-      "guide": {
-        "cta": "Get Started",
-        "description": "Step-by-step onboarding for cloud architects and DevOps engineers.",
-        "exhibit": "Exhibit C.3",
-        "title": "Guides"
-      },
-      "whitepaper": {
-        "cta": "Read Paper",
-        "description": "Deep dive into the mathematical and technical core of our sovereign kernel.",
-        "exhibit": "Exhibit B.2",
-        "title": "Whitepaper"
-      }
-    },
-    "certifications": {
-      "gdpr": "Docs Certifications Gdpr",
-      "iso": "ISO 27001",
-      "soc": "SOC 2",
-      "title": "Certifications"
-    },
-    "documentation_label": "Documentation",
-    "governance": {
-      "blueprints": {
-        "0": {
-          "desc": "Automated audit logging and per-resource encryption policies.",
-          "title": "SOC 2 Type II Blueprint"
-        },
-        "1": {
-          "desc": "Regional isolation and data residency enforcement for EU clusters.",
-          "title": "GDPR Sovereign Hub"
-        },
-        "2": {
-          "desc": "Strict PHI data handling and VPC-isolated compute zones.",
-          "title": "HIPAA Guardrails"
-        },
-        "3": {
-          "desc": "Comprehensive asset management and access control frameworks.",
-          "title": "ISO 27001 Controls"
-        }
-      },
-      "description": "Managing digital sovereignty through automated policy enforcement.",
-      "download": "Download Blueprint",
-      "hero": {
-        "description": "OmniGCloud provides pre-validated blueprints to ensure your multi-cloud deployments meet the most rigorous global compliance standards.",
-        "title": "Governance Blueprints"
-      },
-      "title": "Governance Framework"
-    },
-    "guide": {
-      "description": "Step-by-step implementation of sovereign cloud fabrics.",
-      "hero": {
-        "cta": "Connect Your First Cloud",
-        "step1": {
-          "code": {
-            "install": "curl -sSL https://get.omnigcloud.com | sh",
-            "login": "omnig login"
-          },
-          "description": "Install the OmniGCloud CLI and authenticate with your global control plane.",
-          "title": "1. Initialize Your Environment"
-        },
-        "step2": {
-          "description": "Register your AWS, Azure, or OCP credentials to start the discovery process.",
-          "title": "2. Connect Providers"
-        },
-        "title": "Getting Started with OmniGCloud"
-      },
-      "title": "Architect's Guide"
+    "meta": {
+      "title": "OmniGCloud Documentation | Scholarly Technical Compendium",
+      "description": "Evidence-based cloud-agnostic architecture documentation. Read the scholarly whitepaper and explore autonomous orchestration patterns."
     },
     "hero": {
-      "badge": "LATEST STACK",
-      "description": "Build, deploy, and govern with the world's first sovereign cloud fabric. Comprehensive guides and reference architectures for the AI era.",
-      "title": "Developer Documentation"
-    },
-    "meta": {
-      "description": "Comprehensive technical documentation for the OmniGCloud platform. Access architecture patterns, APIs, and whitepapers.",
-      "keywords": {
-        "0": "ASO framework",
-        "1": "cloud governance patterns",
-        "2": "autonomous orchestration",
-        "3": "scholarly whitepaper"
-      },
-      "title": "Technical Documentation | OmniGCloud Platform"
-    },
-    "sections": {
-      "autonomousGatingLogs": "Autonomous gating logs",
-      "empiricalDataSet": "Empirical Data Set",
-      "empiricalDataSetDesc": "Verified multi-cloud telemetry",
-      "validationProtocols": "Validation Protocols"
-    },
-    "technicalLibrary": "Technical Library",
-    "transparency": {
-      "desc": "Clear, auditable practices across security, reliability, and operations.",
-      "list": {
-        "0": "Public roadmap and release notes",
-        "1": "Security posture and incident communication",
-        "2": "Cost and performance visibility"
-      },
-      "title": "Transparency"
-    },
-    "whitepaper": {
-      "diagrams": {
-        "actionDesc": "Targeted API Call",
-        "actionTitle": "3. ACTION",
-        "automatedAudit": "Automated Audit Pass",
-        "cloudOpEx": "Cloud OpEx",
-        "clouds": {
-          "aws": "OmniGCloud Aws",
-          "azure": "OmniGCloud Azure",
-          "gcp": "OmniGCloud Gcp"
-        },
-        "complianceDesc": "Audit Logs",
-        "complianceRate": "Compliance Rate",
-        "complianceTitle": "Compliance",
-        "controlPlane": "AECP CONTROL PLANE",
-        "cycleTime": "Autonomous Control Loop Cycle Time: < 200ms",
-        "decisionDesc": "AECP Graph Engine",
-        "decisionEngine": "Decision Engine",
-        "decisionTitle": "2. DECISION",
-        "devOpsDesc": "Define Policy",
-        "devOpsTitle": "DevOps Team",
-        "federationApPolicy": "Policy: PERMISSIVE",
-        "federationApTitle": "AP-SOUTH-SHARED",
-        "federationEuPolicy": "Policy: GDPR-STRICT",
-        "federationEuTitle": "EU-CENTRAL-PRIVACY",
-        "federationProtocol": "Federated Trust Protocol (FTP) Active",
-        "federationUsPolicy": "Policy: FIPS-140-2",
-        "federationUsTitle": "US-EAST-SOVEREIGN",
-        "intentInterpreter": "Intent Interpreter",
-        "mttrDesc": "From 14 days to 4 minutes",
-        "mttrReduction": "MTTR Reduction",
-        "opexDesc": "Verified Arbitrage Savings",
-        "signalDesc": "Multi-cloud Telemetry",
-        "signalTitle": "1. SIGNAL",
-        "stateReconciliation": "State Reconciliation Loop",
-        "stateReconciliationDesc": "(Current State → Target State)",
-        "validation": "Validation Diagram",
-        "validationDesc": "Validation process diagram"
-      },
-      "charts": {
-        "compliance": {
-          "aso": "OmniGCloud Aso",
-          "autonomous": "ASO (Autonomous)",
-          "figure": "Figure 6a: Longitudinal analysis of Compliance Drift over 12 months.",
-          "legacy": "Legacy (Manual Ops)",
-          "yAxis": "Compliance Score (%)"
-        },
-        "cost": {
-          "aso": "ASO OpEx ($)",
-          "autonomous": "Charts Cost Autonomous",
-          "figure": "Figure 6b: Cost Scaling Curve - Legacy vs ASO (Logarithmic Efficiency Gain)",
-          "legacy": "Legacy OpEx ($)",
-          "yAxis": "Y Axis"
-        }
-      }
+      "title": "Scholarly Technical Compendium",
+      "badge": "ORIGINAL CONTRIBUTION OF MAJOR SIGNIFICANCE",
+      "description": "The following documentation formalizes the Autonomous Sovereign Orchestration (ASO) framework. This compendium serves as the primary technical evidence for scholarly review, demonstrating a significant breakthrough in cloud-agnostic governance and multi-infrastructure state synchronization."
     },
     "sidebar": {
-      "contactArchitectureOffice": "Contact Architecture Office",
-      "customBriefingTitle": "Need a customized briefing?",
-      "quickLinksHeading": "Quick Links",
+      "documentation": "Documentation",
       "links": {
-        "introduction": "OmniGCloud Introduction",
-        "architecture": "OmniGCloud Architecture",
-        "whitepaper": "Technical Whitepaper",
-        "security": "Security & Governance",
-        "guide": "Architectural Guide",
-        "api": "API Reference"
+        "introduction": "Introduction",
+        "architecture": "Architecture",
+        "whitepaper": "White Paper",
+        "security": "Security Model"
       },
-      "documentation": "OmniGCloud Documentation",
-      "blueprints": "GOVERNANCE BLUEPRINTS",
+      "blueprints": "Blueprints",
       "blueprint_links": {
-        "aws": "AWS Landing Zone",
-        "azure": "Azure Enterprise",
-        "openshift": "OpenShift Cluster",
-        "hybrid": "Hybrid Fabric"
+        "aws": "AWS Modernization",
+        "azure": "Azure Sovereign Hub",
+        "openshift": "OpenShift on GCP",
+        "hybrid": "Hybrid Mesh"
+      }
+    },
+    "cards": {
+      "architecture": {
+        "title": "Design Patterns",
+        "description": "Sovereign patterns for advanced scholarly evidence.",
+        "exhibit": "EVIDENCE EXHIBIT 01",
+        "cta": "View Patterns"
       },
-      "customBriefingText": "Generate a custom briefing document based on your selected stack."
+      "whitepaper": {
+        "title": "Scholarly White Paper",
+        "description": "Autonomous Sovereign Orchestration (ASO) formalization.",
+        "exhibit": "EVIDENCE EXHIBIT 02",
+        "cta": "Read Paper"
+      },
+      "guide": {
+        "title": "Quick Start Guide",
+        "description": "Get up and running with OmniGCloud in under 15 minutes.",
+        "exhibit": "EVIDENCE EXHIBIT 03",
+        "cta": "Read Guide"
+      },
+      "api": {
+        "title": "API Reference",
+        "description": "Full documentation for our REST and GraphQL APIs.",
+        "exhibit": "EVIDENCE EXHIBIT 04",
+        "cta": "View API Docs"
+      }
+    },
+    "banner": {
+      "title": "Governance Blueprints",
+      "description": "Pre-configured compliance blueprints for SOC 2, HIPAA, and GDPR with automated drift remediation.",
+      "cta": "Explore Blueprints"
     }
   },
   "Enrichment": {
