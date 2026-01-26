@@ -205,11 +205,11 @@ const Header = ({ hideNav }: { hideNav?: boolean }) => {
             onClick={handleContactSales}
             className={`btn-secondary ${styles.contactBtn} group overflow-hidden`}
             style={{
-              padding: "0.75rem 1.5rem",
-              borderRadius: "1rem",
-              fontSize: "1rem",
-              fontWeight: 950,
-              letterSpacing: "0.05em",
+              padding: "0.6rem 1.25rem",
+              borderRadius: "0.75rem",
+              fontSize: "0.9rem",
+              fontWeight: 700,
+              letterSpacing: "0.02em",
               border: "1px solid rgba(255,255,255,0.1)",
               background: "rgba(255,255,255,0.05)",
               backdropFilter: "blur(10px)",
@@ -222,11 +222,11 @@ const Header = ({ hideNav }: { hideNav?: boolean }) => {
             href="/onboarding"
             className={`btn-primary ${styles.onboardingBtn} group overflow-hidden`}
             style={{
-              padding: "0.75rem 2rem",
-              borderRadius: "1rem",
-              fontSize: "1rem",
-              fontWeight: 950,
-              letterSpacing: "0.05em",
+              padding: "0.6rem 1.25rem",
+              borderRadius: "0.75rem",
+              fontSize: "0.9rem",
+              fontWeight: 700,
+              letterSpacing: "0.02em",
               boxShadow: "0 10px 30px rgba(59,130,246,0.4)"
             }}
           >
