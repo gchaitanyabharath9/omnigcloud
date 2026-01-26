@@ -41,57 +41,59 @@ export default function MetricDashboardLayout({
   return (
     <div className="w-full grid grid-cols-1 lg:grid-cols-2 gap-3 auto-rows-auto">
       {/* QUADRANT 1: Main Visual (Top-Left) */}
-      <div className="glass-panel p-4 rounded-xl flex flex-col relative overflow-hidden group transition-all duration-500 hover:border-primary/20 hover:shadow-[0_0_30px_rgba(59,130,246,0.1)]">
-        <div className="absolute top-0 right-0 p-2 z-10">
+      <div className="glass-panel p-6 rounded-[2rem] flex flex-col relative overflow-hidden group transition-all duration-500 hover:border-primary/40 hover:shadow-2xl shadow-xl bg-gradient-to-br from-white/[0.03] to-transparent backdrop-blur-xl border border-white/10">
+        <div className="absolute top-0 right-0 p-4 z-10">
           <DemoBadge label={tSafe(t, "liveView", "Live View")} />
         </div>
 
         {/* Subtle corner accent */}
-        <div className="absolute top-0 left-0 w-12 h-12 bg-gradient-to-br from-primary/10 to-transparent pointer-events-none" />
+        <div className="absolute top-0 left-0 w-32 h-32 bg-gradient-to-br from-primary/10 via-primary/5 to-transparent pointer-events-none blur-2xl" />
 
-        <div className="mb-3 relative z-10">
-          <h2 className="text-lg font-black tracking-tighter text-foreground mb-0.5">{title}</h2>
-          <p className="text-[9px] text-primary/50 font-mono font-bold uppercase tracking-[0.2em]">
+        <div className="mb-4 relative z-10">
+          <h2 className="text-2xl font-black tracking-tighter text-foreground mb-1 drop-shadow-lg">{title}</h2>
+          <p className="text-[10px] text-primary/70 font-mono font-bold uppercase tracking-[0.2em]">
             {subtitle}
           </p>
         </div>
 
-        <div className="flex-1 relative w-full min-h-[180px] flex items-center justify-center bg-black/10 rounded-lg border border-white/5">
+        <div className="flex-1 relative w-full min-h-[200px] flex items-center justify-center bg-gradient-to-b from-black/5 to-black/20 rounded-2xl border border-white/5 shadow-inner">
           <div
-            className="absolute inset-0 opacity-[0.03] pointer-events-none"
+            className="absolute inset-0 opacity-[0.05] pointer-events-none"
             style={{
               backgroundImage: "radial-gradient(circle, white 1px, transparent 1px)",
-              backgroundSize: "20px 20px",
+              backgroundSize: "24px 24px",
             }}
           />
-          <div className="w-full h-full flex items-center justify-center p-2">{mainVisual}</div>
+          <div className="w-full h-full flex items-center justify-center p-4">{mainVisual}</div>
         </div>
       </div>
 
       {/* QUADRANT 2: Key Stats (Top-Right) */}
       <div className="grid grid-rows-2 gap-3">
         {/* Top Half of Right Col: Big Stats */}
-        <div className="glass-panel p-4 rounded-xl flex flex-col justify-center border-white/10">
-          <div className="grid grid-cols-2 gap-2 h-full">
+        <div className="glass-panel p-4 rounded-[2rem] flex flex-col justify-center border-white/10 bg-white/[0.01]">
+          <div className="grid grid-cols-2 gap-3 h-full">
             {stats.map((stat, idx) => (
               <div
                 key={idx}
-                className="bg-white/[0.03] rounded-lg p-2.5 flex flex-col justify-center border border-white/5 hover:bg-white/[0.07] hover:border-primary/20 transition-all duration-300 group/stat"
+                className="bg-white/[0.03] rounded-xl p-4 flex flex-col justify-center border border-white/5 hover:bg-white/[0.07] hover:border-primary/30 hover:scale-[1.02] transition-all duration-300 group/stat shadow-lg"
               >
-                <span className="text-[9px] text-muted-foreground uppercase tracking-widest font-black mb-1 group-hover/stat:text-primary transition-colors">
-                  {stat.label}
-                </span>
-                <div className="flex items-end gap-1.5">
-                  <span className="text-xl font-mono font-black text-foreground leading-none tracking-tighter">
-                    {stat.value}
+                <div className="flex justify-between items-start mb-1">
+                  <span className="text-[10px] text-muted-foreground/80 uppercase tracking-widest font-black group-hover/stat:text-primary transition-colors">
+                    {stat.label}
                   </span>
                   {stat.trend && (
                     <div
-                      className={`px-1 py-0.5 rounded text-[9px] font-black ${stat.trendUp ? "bg-emerald-500/10 text-emerald-400" : "bg-rose-500/10 text-rose-400"} flex items-center gap-0.5 mb-0.5`}
+                      className={`px-1.5 py-0.5 rounded-full text-[9px] font-black ${stat.trendUp ? "bg-emerald-500/10 text-emerald-400 border border-emerald-500/20" : "bg-rose-500/10 text-rose-400 border border-rose-500/20"} flex items-center gap-0.5`}
                     >
                       {stat.trendUp ? "↑" : "↓"} {stat.trend}
                     </div>
                   )}
+                </div>
+                <div className="flex items-end gap-1.5">
+                  <span className="text-3xl font-mono font-black text-foreground leading-none tracking-tighter drop-shadow-xl saturate-150">
+                    {stat.value}
+                  </span>
                 </div>
               </div>
             ))}
@@ -174,13 +176,12 @@ export default function MetricDashboardLayout({
                   {getTimestamp(log.delay)}
                 </span>
                 <span
-                  className={`px-1.5 py-0.5 rounded-[4px] font-black text-[8px] tracking-tighter min-w-[55px] text-center ${
-                    log.level === "success"
-                      ? "bg-emerald-500/10 text-emerald-400"
-                      : log.level === "debug"
-                        ? "bg-purple-500/10 text-purple-400"
-                        : "bg-blue-500/10 text-blue-400"
-                  }`}
+                  className={`px-1.5 py-0.5 rounded-[4px] font-black text-[8px] tracking-tighter min-w-[55px] text-center ${log.level === "success"
+                    ? "bg-emerald-500/10 text-emerald-400"
+                    : log.level === "debug"
+                      ? "bg-purple-500/10 text-purple-400"
+                      : "bg-blue-500/10 text-blue-400"
+                    }`}
                 >
                   {tSafe(t, `Logs.levels.${log.level}`, log.level.toUpperCase())}
                 </span>
