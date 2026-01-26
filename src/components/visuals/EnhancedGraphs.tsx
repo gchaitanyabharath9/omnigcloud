@@ -33,8 +33,8 @@ export const EnhancedCostSavingsChart = ({ height = 180 }: { height?: number }) 
           position: "relative",
           display: "flex",
           alignItems: "flex-end",
-          gap: "0.5rem",
-          padding: "1rem 0",
+          gap: "0.75rem",
+          padding: "1rem 0.5rem",
         }}
       >
         {savings.map((val, i) => (
@@ -58,26 +58,31 @@ export const EnhancedCostSavingsChart = ({ height = 180 }: { height?: number }) 
                 background:
                   hoveredIndex === i
                     ? "linear-gradient(180deg, #60efff 0%, var(--primary) 100%)"
-                    : "linear-gradient(180deg, var(--primary) 0%, var(--color-accent-purple) 100%)",
-                borderRadius: "0.5rem 0.5rem 0 0",
+                    : "linear-gradient(180deg, var(--primary) 0%, rgba(139, 92, 246, 0.5) 100%)",
+                borderRadius: "0.75rem 0.75rem 0 0",
                 position: "relative",
-                minHeight: "20px",
-                transition: "all 0.3s cubic-bezier(0.4, 0, 0.2, 1)",
-                transform: hoveredIndex === i ? "scaleY(1.05)" : "scaleY(1)",
-                boxShadow: hoveredIndex === i ? "0 0 20px rgba(96, 239, 255, 0.5)" : "none",
+                minHeight: "24px",
+                transition: "all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275)",
+                transform: hoveredIndex === i ? "scaleY(1.05) translateY(-5px)" : "scaleY(1)",
+                boxShadow:
+                  hoveredIndex === i
+                    ? "0 0 30px rgba(96, 239, 255, 0.6)"
+                    : "0 4px 10px rgba(0,0,0,0.2)",
               }}
             >
               <div
                 style={{
                   position: "absolute",
-                  top: "-2rem",
+                  top: "-2.5rem",
                   left: "50%",
                   transform: "translateX(-50%)",
-                  fontSize: hoveredIndex === i ? "0.75rem" : "0.65rem",
+                  fontSize: hoveredIndex === i ? "0.85rem" : "0.75rem",
                   fontWeight: 900,
                   color: hoveredIndex === i ? "#60efff" : "var(--primary)",
                   whiteSpace: "nowrap",
                   transition: "all 0.3s ease",
+                  opacity: hoveredIndex === i ? 1 : 0,
+                  textShadow: "0 0 10px currentColor",
                 }}
               >
                 ${(val / 1000).toFixed(0)}k
@@ -85,10 +90,11 @@ export const EnhancedCostSavingsChart = ({ height = 180 }: { height?: number }) 
             </div>
             <div
               style={{
-                fontSize: "0.6rem",
-                opacity: hoveredIndex === i ? 1 : 0.5,
-                fontWeight: hoveredIndex === i ? 800 : 700,
+                fontSize: "0.65rem",
+                opacity: hoveredIndex === i ? 1 : 0.6,
+                fontWeight: hoveredIndex === i ? 800 : 600,
                 transition: "all 0.3s ease",
+                color: hoveredIndex === i ? "white" : "inherit",
               }}
             >
               {months[i]}
@@ -108,7 +114,6 @@ export const LiveROIGauge = ({ value = 342 }: { value?: number }) => {
   const t = useTranslations("Dashboard.Graphs");
   const [currentValue, setCurrentValue] = useState(0);
   const [isMounted, setIsMounted] = useState(false);
-  const percentage = Math.min((value / 500) * 100, 100);
 
   useEffect(() => {
     setIsMounted(true);
@@ -137,14 +142,27 @@ export const LiveROIGauge = ({ value = 342 }: { value?: number }) => {
         position: "relative",
       }}
     >
-      <svg width="180" height="180" viewBox="0 0 180 180">
+      <svg width="200" height="200" viewBox="0 0 180 180">
+        <defs>
+          <linearGradient id="roiGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" stopColor="var(--primary)" />
+            <stop offset="100%" stopColor="#10b981" />
+          </linearGradient>
+          <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+            <feGaussianBlur stdDeviation="4" result="coloredBlur" />
+            <feMerge>
+              <feMergeNode in="coloredBlur" />
+              <feMergeNode in="SourceGraphic" />
+            </feMerge>
+          </filter>
+        </defs>
         <circle
           cx="90"
           cy="90"
           r="70"
           fill="none"
-          stroke="rgba(255,255,255,0.05)"
-          strokeWidth="12"
+          stroke="rgba(255,255,255,0.03)"
+          strokeWidth="16"
         />
         <circle
           cx="90"
@@ -152,25 +170,26 @@ export const LiveROIGauge = ({ value = 342 }: { value?: number }) => {
           r="70"
           fill="none"
           stroke="url(#roiGradient)"
-          strokeWidth="12"
+          strokeWidth="16"
           strokeDasharray={`${2 * Math.PI * 70 * (currentValue / 500)} ${2 * Math.PI * 70}`}
           strokeLinecap="round"
           transform="rotate(-90 90 90)"
-          style={{ transition: "stroke-dasharray 0.5s ease-out" }}
+          style={{ transition: "stroke-dasharray 0.5s ease-out", filter: "url(#glow)" }}
         />
-        <defs>
-          <linearGradient id="roiGradient" x1="0%" y1="0%" x2="100%" y2="0%">
-            <stop offset="0%" stopColor="var(--primary)" />
-            <stop offset="100%" stopColor="#10b981" />
-          </linearGradient>
-        </defs>
       </svg>
       <div style={{ position: "absolute", textAlign: "center" }}>
-        <div style={{ fontSize: "2.5rem", fontWeight: 950, color: "var(--primary)" }}>
+        <div style={{
+          fontSize: "3rem",
+          fontWeight: 950,
+          background: "linear-gradient(to right, var(--primary), #10b981)",
+          WebkitBackgroundClip: "text",
+          WebkitTextFillColor: "transparent",
+          filter: "drop-shadow(0 0 10px rgba(16, 185, 129, 0.3))"
+        }}>
           {currentValue}%
         </div>
         <div
-          style={{ fontSize: "0.7rem", opacity: 0.5, fontWeight: 700, textTransform: "uppercase" }}
+          style={{ fontSize: "0.75rem", opacity: 0.7, fontWeight: 800, textTransform: "uppercase", letterSpacing: "0.1em" }}
         >
           {tSafe(t, "roi", "ROI")}
         </div>
@@ -213,17 +232,20 @@ export const PulsingSecurityScore = ({ score = 94 }: { score?: number }) => {
         display: "flex",
         flexDirection: "column",
         justifyContent: "center",
-        gap: "1rem",
+        gap: "1.5rem",
       }}
     >
       <div style={{ textAlign: "center", position: "relative" }}>
         <div
           style={{
-            fontSize: "3rem",
+            fontSize: "4rem",
             fontWeight: 950,
             color: getColor(score),
             transition: "all 0.3s ease",
-            transform: isPulsing ? "scale(1.1)" : "scale(1)",
+            transform: isPulsing ? "scale(1.05)" : "scale(1)",
+            textShadow: `0 0 30px ${getColor(score)}40`,
+            lineHeight: 1,
+            letterSpacing: "-0.05em"
           }}
         >
           {score}
@@ -234,8 +256,8 @@ export const PulsingSecurityScore = ({ score = 94 }: { score?: number }) => {
             top: "50%",
             left: "50%",
             transform: "translate(-50%, -50%)",
-            width: "80px",
-            height: "80px",
+            width: "120px",
+            height: "120px",
             borderRadius: "50%",
             border: `2px solid ${getColor(score)}`,
             animation: "pulse-ring 1s ease-out",
@@ -245,17 +267,19 @@ export const PulsingSecurityScore = ({ score = 94 }: { score?: number }) => {
         />
 
         <div
-          style={{ fontSize: "0.7rem", opacity: 0.5, fontWeight: 700, textTransform: "uppercase" }}
+          style={{ fontSize: "0.8rem", opacity: 0.7, fontWeight: 800, textTransform: "uppercase", marginTop: "0.5rem", letterSpacing: "0.1em" }}
         >
           {tSafe(t, "securityScore", "Security Score")}
         </div>
       </div>
       <div
         style={{
-          height: "12px",
-          background: "rgba(255,255,255,0.05)",
+          height: "16px",
+          background: "rgba(255,255,255,0.03)",
           borderRadius: "1rem",
           overflow: "hidden",
+          border: "1px solid rgba(255,255,255,0.05)",
+          margin: "0 10%"
         }}
       >
         <div
@@ -265,6 +289,7 @@ export const PulsingSecurityScore = ({ score = 94 }: { score?: number }) => {
             background: `linear-gradient(90deg, ${getColor(score)} 0%, ${getColor(score)}dd 100%)`,
             borderRadius: "1rem",
             transition: "width 1s ease",
+            boxShadow: `0 0 20px ${getColor(score)}60`
           }}
         ></div>
       </div>

@@ -43,28 +43,29 @@ export default function DashboardShell({
         paddingTop: "var(--header-height)",
       }}
     >
-      {/* PREMIUM BACKGROUND EFFECTS */}
-      <div
-        style={{
-          position: "absolute",
-          top: 0,
-          left: 0,
-          right: 0,
-          height: "500px",
-          background:
-            "radial-gradient(circle at 50% 0%, rgba(59, 130, 246, 0.15) 0%, transparent 70%)",
-          pointerEvents: "none",
-          zIndex: 0,
-        }}
-      ></div>
+      {/* AMBIENT VISUALS (From Products Page Design) */}
+      <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden">
+        <div
+          className="absolute top-[-10%] left-[20%] w-[800px] h-[800px] bg-primary/5 blur-[120px] rounded-full animate-pulse"
+          style={{ animationDuration: "10s" }}
+        />
+        <div
+          className="absolute top-[10%] right-[-10%] w-[600px] h-[600px] bg-purple-500/5 blur-[100px] rounded-full"
+        />
+        <div
+          className="absolute bottom-[-10%] left-[-10%] w-[600px] h-[600px] bg-cyan-500/5 blur-[100px] rounded-full"
+        />
+      </div>
+
+      {/* GRID OVERLAY */}
       <div
         className="absolute inset-0"
         style={{
-          backgroundImage: `radial-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px)`,
-          backgroundSize: "40px 40px",
+          backgroundImage: `radial-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px)`,
+          backgroundSize: "30px 30px",
           pointerEvents: "none",
           zIndex: 0,
-          maskImage: "linear-gradient(to bottom, black, transparent)",
+          maskImage: "linear-gradient(to bottom, black 40%, transparent 100%)",
         }}
       ></div>
 
@@ -98,11 +99,13 @@ export default function DashboardShell({
               </div>
               <h1
                 style={{
-                  fontSize: "2.25rem",
+                  fontSize: "clamp(2.5rem, 4vw, 4rem)",
                   fontWeight: 950,
                   margin: 0,
                   color: "var(--foreground)",
                   letterSpacing: "-0.03em",
+                  lineHeight: 1.1,
+                  textShadow: "0 0 40px rgba(255,255,255,0.1)",
                 }}
               >
                 {title}
@@ -126,22 +129,24 @@ export default function DashboardShell({
                     fontWeight: 950,
                     fontFamily: "var(--font-mono)",
                     letterSpacing: "-0.05em",
+                    textShadow: "0 0 20px rgba(96, 239, 255, 0.3)",
                   }}
                 >
                   {currentTime.toLocaleTimeString(locale, { hour12: false })}
                 </div>
                 <div
                   style={{
-                    fontSize: "0.65rem",
-                    opacity: 0.5,
+                    fontSize: "0.75rem",
+                    opacity: 0.7,
                     fontWeight: 700,
                     textTransform: "uppercase",
-                    letterSpacing: "0.05em",
+                    letterSpacing: "0.1em",
+                    color: "var(--primary)",
                   }}
                 >
                   {currentTime.toLocaleDateString(locale, {
-                    weekday: "short",
-                    month: "short",
+                    weekday: "long",
+                    month: "long",
                     day: "numeric",
                   })}
                 </div>
@@ -153,27 +158,28 @@ export default function DashboardShell({
                   gap: "0.75rem",
                   background:
                     systemStatus === "operational"
-                      ? "rgba(16, 185, 129, 0.08)"
-                      : "rgba(239, 68, 68, 0.08)",
-                  padding: "0.6rem 1.25rem",
-                  borderRadius: "1rem",
-                  border: `1px solid ${systemStatus === "operational" ? "rgba(16, 185, 129, 0.3)" : "rgba(239, 68, 68, 0.3)"}`,
+                      ? "rgba(16, 185, 129, 0.1)"
+                      : "rgba(239, 68, 68, 0.1)",
+                  padding: "0.8rem 1.5rem",
+                  borderRadius: "999px",
+                  border: `1px solid ${systemStatus === "operational" ? "rgba(16, 185, 129, 0.4)" : "rgba(239, 68, 68, 0.4)"}`,
+                  boxShadow: `0 0 20px ${systemStatus === "operational" ? "rgba(16, 185, 129, 0.2)" : "rgba(239, 68, 68, 0.2)"}`,
                   backdropFilter: "blur(10px)",
                 }}
               >
                 <div
                   className="animate-pulse"
                   style={{
-                    width: 10,
-                    height: 10,
+                    width: 8,
+                    height: 8,
                     background: systemStatus === "operational" ? "#10b981" : "#ef4444",
                     borderRadius: "50%",
-                    boxShadow: `0 0 15px ${systemStatus === "operational" ? "#10b981" : "#ef4444"}`,
+                    boxShadow: `0 0 10px ${systemStatus === "operational" ? "#10b981" : "#ef4444"}`,
                   }}
                 ></div>
                 <span
                   style={{
-                    fontSize: "0.75rem",
+                    fontSize: "0.8rem",
                     fontWeight: 900,
                     color: systemStatus === "operational" ? "#10b981" : "#ef4444",
                     textTransform: "uppercase",
@@ -204,7 +210,7 @@ export default function DashboardShell({
           style={{
             display: "grid",
             gridTemplateColumns: "repeat(4, 1fr)",
-            gap: "1.5rem",
+            gap: "2rem",
             marginBottom: "3rem",
           }}
         >
@@ -214,46 +220,47 @@ export default function DashboardShell({
               value: "142",
               icon: Server,
               color: "#60efff",
-              bg: "rgba(96, 239, 255, 0.03)",
-              border: "rgba(96, 239, 255, 0.2)",
+              bg: "rgba(96, 239, 255, 0.05)",
+              border: "rgba(96, 239, 255, 0.3)",
             },
             {
               label: t("revenueImpact"),
               value: "+18%",
               icon: Activity,
               color: "#10b981",
-              bg: "rgba(16, 185, 129, 0.03)",
-              border: "rgba(16, 185, 129, 0.2)",
+              bg: "rgba(16, 185, 129, 0.05)",
+              border: "rgba(16, 185, 129, 0.3)",
             },
             {
               label: t("cloudSpend"),
               value: "-40%",
               icon: Database,
               color: "#8b5cf6",
-              bg: "rgba(139, 92, 246, 0.03)",
-              border: "rgba(139, 92, 246, 0.2)",
+              bg: "rgba(139, 92, 246, 0.05)",
+              border: "rgba(139, 92, 246, 0.3)",
             },
             {
               label: t("activeAlerts"),
               value: activeAlerts.toString(),
               icon: activeAlerts > 0 ? AlertTriangle : CheckCircle,
               color: activeAlerts > 0 ? "#f59e0b" : "#10b981",
-              bg: activeAlerts > 0 ? "rgba(245, 158, 11, 0.03)" : "rgba(16, 185, 129, 0.03)",
-              border: activeAlerts > 0 ? "rgba(245, 158, 11, 0.2)" : "rgba(16, 185, 129, 0.2)",
+              bg: activeAlerts > 0 ? "rgba(245, 158, 11, 0.05)" : "rgba(16, 185, 129, 0.05)",
+              border: activeAlerts > 0 ? "rgba(245, 158, 11, 0.3)" : "rgba(16, 185, 129, 0.3)",
               subtext: activeAlerts > 0 ? t("requiresAttention") : t("nominal"),
             },
           ].map((item, idx) => (
             <div
               key={idx}
-              className="glass-panel group cursor-help transition-all duration-500 hover:scale-[1.02]"
+              className="glass-panel group cursor-help transition-all duration-500 hover:scale-[1.05] hover:shadow-2xl"
               style={{
-                padding: "1.25rem",
-                borderRadius: "1rem",
+                padding: "1.5rem",
+                borderRadius: "1.25rem",
                 background: item.bg,
                 border: `1px solid ${item.border}`,
-                boxShadow: "0 4px 6px -1px rgba(0, 0, 0, 0.1)",
+                boxShadow: "0 10px 30px -5px rgba(0, 0, 0, 0.2)",
                 position: "relative",
                 overflow: "hidden",
+                backdropFilter: "blur(20px)",
               }}
             >
               <div
@@ -327,6 +334,6 @@ export default function DashboardShell({
         </div>
       </div>
       <Footer />
-    </div>
+    </div >
   );
 }
