@@ -172,7 +172,7 @@ export default function MetricDashboardLayout({
                   {tSafe(t, "aiAnalysis", "INTELLIGENCE_LAYER_v8")}
                 </span>
                 <span className="text-[10px] text-muted-foreground font-black uppercase tracking-[0.2em] opacity-60">
-                  Autonomous Decision Engine
+                  {tSafe(t, "autoDecisionEngine", "Autonomous Decision Engine")}
                 </span>
               </div>
             </div>

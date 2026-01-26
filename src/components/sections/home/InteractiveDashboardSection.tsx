@@ -121,7 +121,7 @@ export default function InteractiveDashboardSection() {
             <div className="absolute inset-0 z-0">
               <Image
                 src="/images/dashboard/trend-bg.png"
-                alt="Trend Analytics"
+                alt={tSafe(t, "Charts.historicalTrend", "Trend Analytics")}
                 fill
                 className="object-cover opacity-10 group-hover:scale-110 transition-transform duration-[20s]"
               />
@@ -135,7 +135,7 @@ export default function InteractiveDashboardSection() {
                     {tSafe(t, "Charts.historicalTrend", "Historical Trend")}
                   </h4>
                   <p className="text-[9px] uppercase font-bold text-muted-foreground tracking-widest">
-                    Infrastructure Velocity
+                    {tSafe(t, "Charts.infraVelocity", "Infrastructure Velocity")}
                   </p>
                 </div>
                 <TrendingUp size={16} className="text-primary" />
@@ -152,7 +152,7 @@ export default function InteractiveDashboardSection() {
               <div className="mt-4 flex items-center justify-between">
                 <div className="flex gap-2">
                   <div className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
-                  <span className="text-[8px] font-black text-muted-foreground uppercase tracking-widest">Live Sync Alpha</span>
+                  <span className="text-[8px] font-black text-muted-foreground uppercase tracking-widest">{tSafe(t, "Charts.liveSyncAlpha", "Live Sync Alpha")}</span>
                 </div>
                 <span className="text-[10px] font-mono font-black text-primary saturate-150">↑ 12.4%</span>
               </div>
@@ -189,7 +189,7 @@ export default function InteractiveDashboardSection() {
             <div className="absolute inset-0 z-0">
               <Image
                 src="/images/dashboard/ai-bg.png"
-                alt="AI Analysis"
+                alt={tSafe(t, "Charts.aiAnalysis", "AI Analysis")}
                 fill
                 className="object-cover opacity-[0.05] group-hover:scale-110 transition-transform duration-[15s]"
               />
@@ -202,7 +202,7 @@ export default function InteractiveDashboardSection() {
                     {tSafe(t, "Charts.aiAnalysis", "AI Analysis")}
                   </h4>
                   <p className="text-[9px] uppercase font-bold text-muted-foreground tracking-widest">
-                    Autonomous Governance
+                    {tSafe(t, "Charts.autoGovernance", "Autonomous Governance")}
                   </p>
                 </div>
                 <Activity size={16} className="text-primary animate-pulse" />
@@ -221,7 +221,7 @@ export default function InteractiveDashboardSection() {
                     </div>
                   ))}
                   <div className="pt-2 italic text-muted-foreground opacity-80 leading-relaxed">
-                    "AI predictive scaling identified 42% cost inefficiency in AP-SOUTH-1. Auto-remediation triggered..."
+                    "{tSafe(t, "Charts.aiInsight", "AI predictive scaling identified 42% cost inefficiency in AP-SOUTH-1. Auto-remediation triggered...")}"
                   </div>
                 </div>
               </div>
