@@ -6,36 +6,9 @@ import { APP_CONFIG } from "@/config/app-config";
 
 export async function middleware(request: NextRequest) {
   const url = request.nextUrl.clone();
-  const host = request.headers.get("host");
-  const protocol = request.headers.get("x-forwarded-proto") || "https";
-
-  // 1. Enforce HTTPS and Canonical Host
-  // Redirect http -> https OR alternate host -> canonical host
-  // Only apply in production environments and NOT to localhost
-  const isProduction = process.env.NODE_ENV === "production";
-  const isLocalhost =
-    host && (host.includes("localhost") || host.includes("127.0.0.1") || host.includes("::1"));
-
-  if (isProduction && !isLocalhost && host) {
-    const currentOrigin = `${protocol}://${host}`;
-    const canonicalOrigin = APP_CONFIG.siteUrl;
-
-    // Check if we need to redirect due to protocol (http) or host (non-canonical)
-    const isHttp = protocol === "http";
-    const isNonCanonicalHost = host !== new URL(canonicalOrigin).host;
-
-    if (isHttp || isNonCanonicalHost) {
-      // If it's a root request on apex, go straight to default locale if needed
-      // (logic preserved from original, but simplified to just path preservation usually)
-      const targetPath = url.pathname === "/" ? "/en" : url.pathname;
-      const targetUrl = `${canonicalOrigin}${targetPath}${url.search}`;
-
-      // Loop prevention: If the target URL matches the current request URL, do not redirect
-      if (targetUrl.replace(/\/$/, "") !== request.url.replace(/\/$/, "")) {
-        return NextResponse.redirect(targetUrl, 308);
-      }
-    }
-  }
+  // 1. Enforce HTTPS and Canonical Host - REMOVED
+  // We delegate domain canonicalization (www vs apex) entirely to the Vercel platform.
+  // This prevents infinite redirect loops where Vercel redirects to www and App redirects to apex.
 
   // 2. Direct base domain / to /en - REMOVED (Handled by next-intl with localePrefix: 'always')
 
