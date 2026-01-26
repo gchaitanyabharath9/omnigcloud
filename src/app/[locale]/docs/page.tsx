@@ -17,7 +17,7 @@ import { Link } from "@/navigation";
 import Footer from "@/components/Footer";
 import type { Metadata } from "next";
 import { getTranslations, setRequestLocale } from "next-intl/server";
-import { generateSEOMetadata, SEO_KEYWORDS } from "@/utils/seo";
+import { generateSEOMetadata, SEO_KEYWORDS, getSafeBaseUrl } from "@/utils/seo";
 
 export async function generateMetadata({
   params,
@@ -27,6 +27,7 @@ export async function generateMetadata({
   const { locale } = await params;
   setRequestLocale(locale);
   const tm = await getTranslations({ locale, namespace: "Metadata.Docs" });
+  const origin = await getSafeBaseUrl();
 
   return generateSEOMetadata(
     {
@@ -43,7 +44,8 @@ export async function generateMetadata({
       ogImage: `/og-images/docs.png`,
       ogType: "website",
     },
-    locale
+    locale,
+    origin
   );
 }
 

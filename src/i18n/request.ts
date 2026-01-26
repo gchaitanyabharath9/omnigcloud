@@ -29,7 +29,7 @@ export async function getMessages(locale: string) {
   let defaultMessages = {};
   try {
     defaultMessages = (await import(`../messages/en.json`)).default;
-  } catch (e) {
+  } catch (_e) {
     console.error("Fatal: en.json missing");
   }
 
@@ -38,7 +38,7 @@ export async function getMessages(locale: string) {
   let userMessages = {};
   try {
     userMessages = (await import(`../messages/${locale}.json`)).default;
-  } catch (err) {
+  } catch (_err) {
     // Fallback to EN is handled by the merge base
   }
 

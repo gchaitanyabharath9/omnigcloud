@@ -20,7 +20,7 @@ export async function GET(request: NextRequest) {
     try {
       const redis = await getRedis();
       dependencies.redis.status = redis ? "UP" : "DEGRADED";
-    } catch (e) {
+    } catch (_e) {
       dependencies.redis.status = "DOWN";
     }
 
@@ -29,7 +29,7 @@ export async function GET(request: NextRequest) {
         // Try reading a known public or safe config key if any, or just check if it times out
         const testSecret = await getSecret("SYSTEM_HEALTH_CHECK");
         dependencies.vault.status = "UP";
-      } catch (e) {
+      } catch (_e) {
         dependencies.vault.status = "DOWN";
       }
     } else {

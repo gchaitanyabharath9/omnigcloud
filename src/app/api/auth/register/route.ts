@@ -67,7 +67,7 @@ export async function POST(request: NextRequest) {
         },
         201
       );
-    } catch (error) {
+    } catch (_error) {
       return createErrorResponse(requestId, "BAD_REQUEST", "Malformed JSON payload");
     }
   });

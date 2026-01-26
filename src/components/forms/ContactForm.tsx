@@ -46,7 +46,7 @@ export default function ContactForm({ translations }: { translations?: any }) {
         setErrorMessage(err.message || t("errorGeneric"));
         setStatus("error");
       }
-    } catch (err) {
+    } catch (_err) {
       setErrorMessage(t("errorMessage"));
       setStatus("error");
     }

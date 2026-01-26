@@ -2,7 +2,7 @@ import React from "react";
 import Link from "next/link";
 import Footer from "@/components/Footer";
 import { getTranslations, setRequestLocale } from "next-intl/server";
-import { generateSEOMetadata, SEO_KEYWORDS } from "@/utils/seo";
+import { generateSEOMetadata, SEO_KEYWORDS, getSafeBaseUrl } from "@/utils/seo";
 import {
   Users,
   Globe,
@@ -31,6 +31,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   const { locale } = await params;
   setRequestLocale(locale);
   const tm = await getTranslations({ locale, namespace: "Metadata.Company" });
+  const origin = await getSafeBaseUrl();
 
   return generateSEOMetadata(
     {
@@ -48,7 +49,8 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
       ogType: "website",
       canonical: `/${locale}/company`,
     },
-    locale
+    locale,
+    origin
   );
 }
 

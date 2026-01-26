@@ -433,8 +433,15 @@
     }
   },
   "Breadcrumb": {
-    "a1-cloud-native-enterprise-reference": "Cloud-Native Enterprise Reference",
+    "a1-cloud-native-enterprise-reference-architecture": "Cloud-Native Enterprise Reference",
     "a4-platform-governance-multicloud-hybrid": "Platform Governance & Hybrid Cloud",
+    "a6-adaptive-policy-enforcement": "Adaptive Policy Enforcement",
+    "a2-high-throughput-distributed-systems": "High-Throughput Distributed Systems",
+    "a3-enterprise-observability": "Enterprise Observability",
+    "a5-monolith-to-cloud-native-modernization": "Monolith to Cloud-Native Modernization",
+    "aecp": "AECP",
+    "scholarly-article": "Scholarly Article",
+    "automated-multilingual-quality-assurance": "Quality Assurance Research",
     "ai-data": "AI & Data",
     "blog": "OmniGCloud Blog",
     "business-ideas": "Business Ideas",
@@ -447,7 +454,18 @@
     "compliance": "Compliance",
     "compliance_maps": "Compliance Maps",
     "contact": "OmniGCloud Contact",
-    "dashboard": "OmniGCloud Dashboard",
+    "app": "App",
+    "architecture": "Architecture",
+    "api": "API Reference",
+    "governance": "Governance",
+    "deploy": "Deploy",
+    "nexus": "Nexus",
+    "sangam": "Sangam",
+    "workflows": "Workflows",
+    "guard": "Guard",
+    "knowledge": "Knowledge",
+    "guide": "Guide",
+    "settings": "Settings",
     "demo": "Demo",
     "devops-best-practices": "DevOps Practices",
     "distributed-systems-resilience": "Distributed Systems Resilience",
@@ -478,9 +496,7 @@
     "terms": "Terms",
     "use-cases": "Use Cases",
     "visual-library": "Visual Library",
-    "whitepaper": "OmniGCloud Whitepaper",
-    "app": "App",
-    "settings": "Settings"
+    "whitepaper": "OmniGCloud Whitepaper"
   },
   "BusinessIdeas": {
     "cards": {
@@ -2902,7 +2918,8 @@
           "desc": "Policy enforcement and compliance check endpoints."
         }
       },
-      "description": "Complete API reference for OmniGCloud platform services."
+      "description": "Complete API reference for OmniGCloud platform services.",
+      "keywords": "API Documentation, REST API, Reference"
     },
     "sections": {
       "autonomousGatingLogs": "Autonomous Gating Logs",
@@ -3000,7 +3017,7 @@
         },
         "3": {
           "title": "Hybrid Multi-Cloud Mesh",
-          "desc": "Unified governance across on-premise and public cloud clusters."
+          "desc": "Comprehensive blueprint for sovereign governance."
         }
       }
     },
@@ -3721,7 +3738,13 @@
       "title": "Finance"
     },
     "financial": {
-      "sol": "Dedicated hardware shards for SWIFT payment rails."
+      "sol": "Dedicated hardware shards for SWIFT payment rails.",
+      "cs": {
+        "c3": "Case Study: Sovereign Wealth Fund"
+      },
+      "ai": {
+        "desc": "AI-driven financial modeling with privacy guarantees."
+      }
     },
     "healthcare": {
       "description": "Healthcare",
@@ -3763,7 +3786,8 @@
       "sol": "Actuarial data lakes with privacy-preserving analytics."
     },
     "logistics": {
-      "sol": "Real-time supply chain digital twins."
+      "sol": "Real-time supply chain digital twins.",
+      "title": "Logistics"
     },
     "solution": "OmniGCloud Solution",
     "solutionLabel": "Solution",

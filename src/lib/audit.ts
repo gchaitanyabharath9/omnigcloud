@@ -105,7 +105,10 @@ class InMemoryAuditStorage implements AuditLogStorage {
  */
 class AuditLogger {
   private storage: AuditLogStorage;
-  private enabled = process.env.ENABLE_AUDIT_LOG !== "false";
+
+  private isEnabled(): boolean {
+    return process.env.ENABLE_AUDIT_LOG !== "false";
+  }
 
   constructor(storage?: AuditLogStorage) {
     this.storage = storage || new InMemoryAuditStorage();
@@ -130,7 +133,7 @@ class AuditLogger {
    * Log an audit event
    */
   async log(event: Omit<AuditEvent, "id" | "timestamp">): Promise<void> {
-    if (!this.enabled) return;
+    if (!this.isEnabled()) return;
 
     const auditEvent: AuditEvent = {
       id: this.generateId(),

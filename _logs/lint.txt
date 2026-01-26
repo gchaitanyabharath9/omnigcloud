@@ -1,0 +1,843 @@
+
+> nascent-zodiac@0.1.0 lint
+> npx eslint .
+
+
+C:\Users\SOHAN\.gemini\antigravity\playground\nascent-zodiac\next.config.ts
+   2:15  warning  'NextConfig' is defined but never used. Allowed unused vars must match /^_/u  @typescript-eslint/no-unused-vars
+  16:10  warning  'e' is defined but never used. Allowed unused caught errors must match /^_/u  @typescript-eslint/no-unused-vars
+  28:12  warning  'e' is defined but never used. Allowed unused caught errors must match /^_/u  @typescript-eslint/no-unused-vars
+  36:19  warning  Unexpected any. Specify a different type                                      @typescript-eslint/no-explicit-any
+
+C:\Users\SOHAN\.gemini\antigravity\playground\nascent-zodiac\qa-i18n\scripts\apply-translations.ts
+    6:51  warning  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  448:43  warning  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  448:72  warning  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+C:\Users\SOHAN\.gemini\antigravity\playground\nascent-zodiac\qa-i18n\scripts\audit-codebase.ts
+  80:40  warning  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+C:\Users\SOHAN\.gemini\antigravity\playground\nascent-zodiac\qa-i18n\scripts\finish-i18n.ts
+  11:44  warning  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  33:40  warning  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  51:42  warning  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  51:71  warning  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+C:\Users\SOHAN\.gemini\antigravity\playground\nascent-zodiac\qa-i18n\scripts\fix-tier1.ts
+  312:30  warning  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+C:\Users\SOHAN\.gemini\antigravity\playground\nascent-zodiac\qa-i18n\scripts\i18n-coverage.ts
+  24:42  warning  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+C:\Users\SOHAN\.gemini\antigravity\playground\nascent-zodiac\qa-i18n\scripts\i18n-fill-missing.ts
+  11:18  warning  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+C:\Users\SOHAN\.gemini\antigravity\playground\nascent-zodiac\qa-i18n\scripts\strict-i18n.ts
+  20:36  warning  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+C:\Users\SOHAN\.gemini\antigravity\playground\nascent-zodiac\qa-i18n\scripts\translate-placeholders.ts
+  43:47  warning  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+C:\Users\SOHAN\.gemini\antigravity\playground\nascent-zodiac\qa-i18n\scripts\unblock-tier1.ts
+  19:50  warning  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  19:79  warning  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+C:\Users\SOHAN\.gemini\antigravity\playground\nascent-zodiac\qa-i18n\tests\i18n.spec.ts
+   1:29  warning  'Page' is defined but never used. Allowed unused vars must match /^_/u        @typescript-eslint/no-unused-vars
+  97:20  warning  'e' is defined but never used. Allowed unused caught errors must match /^_/u  @typescript-eslint/no-unused-vars
+
+C:\Users\SOHAN\.gemini\antigravity\playground\nascent-zodiac\qa-i18n\tests\quality-gate.spec.ts
+  4:7  warning  'HOST' is assigned a value but never used. Allowed unused vars must match /^_/u  @typescript-eslint/no-unused-vars
+
+C:\Users\SOHAN\.gemini\antigravity\playground\nascent-zodiac\qa-perf\gate.ts
+  30:20  warning  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+C:\Users\SOHAN\.gemini\antigravity\playground\nascent-zodiac\qa-perf\playwright.config.ts
+  1:24  warning  'devices' is defined but never used. Allowed unused vars must match /^_/u  @typescript-eslint/no-unused-vars
+
+C:\Users\SOHAN\.gemini\antigravity\playground\nascent-zodiac\qa-perf\tests\perf.spec.ts
+  11:16  warning  Unexpected any. Specify a different type                                      @typescript-eslint/no-explicit-any
+  49:22  warning  'e' is defined but never used. Allowed unused caught errors must match /^_/u  @typescript-eslint/no-unused-vars
+  69:30  warning  Unexpected any. Specify a different type                                      @typescript-eslint/no-explicit-any
+  80:70  warning  Unexpected any. Specify a different type                                      @typescript-eslint/no-explicit-any
+  81:36  warning  Unexpected any. Specify a different type                                      @typescript-eslint/no-explicit-any
+  89:22  warning  'e' is defined but never used. Allowed unused caught errors must match /^_/u  @typescript-eslint/no-unused-vars
+  97:70  warning  Unexpected any. Specify a different type                                      @typescript-eslint/no-explicit-any
+  98:36  warning  Unexpected any. Specify a different type                                      @typescript-eslint/no-explicit-any
+
+C:\Users\SOHAN\.gemini\antigravity\playground\nascent-zodiac\qa-responsive\playwright.config.ts
+  1:24  warning  'devices' is defined but never used. Allowed unused vars must match /^_/u  @typescript-eslint/no-unused-vars
+
+C:\Users\SOHAN\.gemini\antigravity\playground\nascent-zodiac\qa-responsive\tests\audit.spec.ts
+   1:16  warning  'expect' is defined but never used. Allowed unused vars must match /^_/u  @typescript-eslint/no-unused-vars
+   1:24  warning  'Page' is defined but never used. Allowed unused vars must match /^_/u    @typescript-eslint/no-unused-vars
+  27:9   warning  Unexpected any. Specify a different type                                  @typescript-eslint/no-explicit-any
+
+C:\Users\SOHAN\.gemini\antigravity\playground\nascent-zodiac\scripts\check-i18n-keys.ts
+  11:32  warning  Unexpected any. Specify a different type                                             @typescript-eslint/no-explicit-any
+  31:9   warning  'enKeySet' is assigned a value but never used. Allowed unused vars must match /^_/u  @typescript-eslint/no-unused-vars
+
+C:\Users\SOHAN\.gemini\antigravity\playground\nascent-zodiac\scripts\check_forbidden_terms.ts
+  44:12  warning  'error' is defined but never used. Allowed unused caught errors must match /^_/u  @typescript-eslint/no-unused-vars
+
+C:\Users\SOHAN\.gemini\antigravity\playground\nascent-zodiac\scripts\check_wordcount.ts
+  30:9  warning  'paperPath' is assigned a value but never used. Allowed unused vars must match /^_/u  @typescript-eslint/no-unused-vars
+
+C:\Users\SOHAN\.gemini\antigravity\playground\nascent-zodiac\scripts\final-diagram-fix.js
+  5:7  warning  'inputPath' is assigned a value but never used. Allowed unused vars must match /^_/u  @typescript-eslint/no-unused-vars
+
+C:\Users\SOHAN\.gemini\antigravity\playground\nascent-zodiac\scripts\fix-missing-common-keys.js
+   2:7  warning  'foundKeys' is assigned a value but never used. Allowed unused vars must match /^_/u          @typescript-eslint/no-unused-vars
+   6:7  warning  'NAMESPACE_MAPPING' is assigned a value but never used. Allowed unused vars must match /^_/u  @typescript-eslint/no-unused-vars
+  28:7  warning  'enFlat' is assigned a value but never used. Allowed unused vars must match /^_/u             @typescript-eslint/no-unused-vars
+
+C:\Users\SOHAN\.gemini\antigravity\playground\nascent-zodiac\scripts\fix-remaining-keys.js
+  2:7  warning  'foundKeys' is assigned a value but never used. Allowed unused vars must match /^_/u  @typescript-eslint/no-unused-vars
+
+C:\Users\SOHAN\.gemini\antigravity\playground\nascent-zodiac\scripts\fix_en_placeholders.ts
+  116:39  warning  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  123:46  warning  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+C:\Users\SOHAN\.gemini\antigravity\playground\nascent-zodiac\scripts\fix_svg_palette.mjs
+  71:11  warning  'oldStyle' is assigned a value but never used. Allowed unused vars must match /^_/u  @typescript-eslint/no-unused-vars
+
+C:\Users\SOHAN\.gemini\antigravity\playground\nascent-zodiac\scripts\i18n_gate.ts
+  11:38  warning  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+C:\Users\SOHAN\.gemini\antigravity\playground\nascent-zodiac\scripts\i18n_scan.ts
+  17:7  warning  'USE_TRANS_PATTERN' is assigned a value but never used. Allowed unused vars must match /^_/u  @typescript-eslint/no-unused-vars
+  88:9  warning  'tMatch' is defined but never used. Allowed unused vars must match /^_/u                      @typescript-eslint/no-unused-vars
+
+C:\Users\SOHAN\.gemini\antigravity\playground\nascent-zodiac\scripts\i18n_sync_from_en.ts
+   8:25  warning  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  14:31  warning  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  14:44  warning  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  14:50  warning  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+C:\Users\SOHAN\.gemini\antigravity\playground\nascent-zodiac\scripts\perf-check.spec.ts
+  24:11  warning  'performanceTiming' is assigned a value but never used. Allowed unused vars must match /^_/u  @typescript-eslint/no-unused-vars
+  50:11  warning  Unexpected any. Specify a different type                                                      @typescript-eslint/no-explicit-any
+  52:61  warning  Unexpected any. Specify a different type                                                      @typescript-eslint/no-explicit-any
+
+C:\Users\SOHAN\.gemini\antigravity\playground\nascent-zodiac\scripts\perf_gate.mjs
+   74:14  warning  'e' is defined but never used. Allowed unused caught errors must match /^_/u              @typescript-eslint/no-unused-vars
+   82:5   warning  'chromeProcess' is assigned a value but never used. Allowed unused vars must match /^_/u  @typescript-eslint/no-unused-vars
+   92:12  warning  'e' is defined but never used. Allowed unused caught errors must match /^_/u              @typescript-eslint/no-unused-vars
+  115:12  warning  'e' is defined but never used. Allowed unused caught errors must match /^_/u              @typescript-eslint/no-unused-vars
+  158:16  warning  'e' is defined but never used. Allowed unused caught errors must match /^_/u              @typescript-eslint/no-unused-vars
+  161:16  warning  'e' is defined but never used. Allowed unused caught errors must match /^_/u              @typescript-eslint/no-unused-vars
+  177:16  warning  'e' is defined but never used. Allowed unused caught errors must match /^_/u              @typescript-eslint/no-unused-vars
+  180:16  warning  'e' is defined but never used. Allowed unused caught errors must match /^_/u              @typescript-eslint/no-unused-vars
+
+C:\Users\SOHAN\.gemini\antigravity\playground\nascent-zodiac\scripts\regenerate-scholarly.js
+  3:7  warning  'path' is assigned a value but never used. Allowed unused vars must match /^_/u  @typescript-eslint/no-unused-vars
+
+C:\Users\SOHAN\.gemini\antigravity\playground\nascent-zodiac\scripts\release_gate.mjs
+   9:7  warning  'isLocal' is assigned a value but never used. Allowed unused vars must match /^_/u  @typescript-eslint/no-unused-vars
+  10:7  warning  'isCI' is assigned a value but never used. Allowed unused vars must match /^_/u     @typescript-eslint/no-unused-vars
+
+C:\Users\SOHAN\.gemini\antigravity\playground\nascent-zodiac\scripts\release_gate.ts
+  7:37  warning  'existsSync' is defined but never used. Allowed unused vars must match /^_/u  @typescript-eslint/no-unused-vars
+
+C:\Users\SOHAN\.gemini\antigravity\playground\nascent-zodiac\scripts\remediate_i18n.ts
+  28:29  warning  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+C:\Users\SOHAN\.gemini\antigravity\playground\nascent-zodiac\scripts\remediate_i18n_fill.ts
+   55:24  warning  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  116:19  warning  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  122:50  warning  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  160:33  warning  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+C:\Users\SOHAN\.gemini\antigravity\playground\nascent-zodiac\scripts\security_gate.mjs
+  35:12  warning  'e' is defined but never used. Allowed unused caught errors must match /^_/u  @typescript-eslint/no-unused-vars
+
+C:\Users\SOHAN\.gemini\antigravity\playground\nascent-zodiac\scripts\seo-sanity.mjs
+   6:8   warning  'fs' is defined but never used. Allowed unused vars must match /^_/u    @typescript-eslint/no-unused-vars
+   7:8   warning  'path' is defined but never used. Allowed unused vars must match /^_/u  @typescript-eslint/no-unused-vars
+  29:45  warning  'loc' is defined but never used. Allowed unused args must match /^_/u   @typescript-eslint/no-unused-vars
+
+C:\Users\SOHAN\.gemini\antigravity\playground\nascent-zodiac\scripts\seo_gate.mjs
+   39:7   warning  'yellow' is assigned a value but never used. Allowed unused vars must match /^_/u  @typescript-eslint/no-unused-vars
+   69:16  warning  'e' is defined but never used. Allowed unused caught errors must match /^_/u       @typescript-eslint/no-unused-vars
+  108:16  warning  'e' is defined but never used. Allowed unused caught errors must match /^_/u       @typescript-eslint/no-unused-vars
+  180:18  warning  'e' is defined but never used. Allowed unused caught errors must match /^_/u       @typescript-eslint/no-unused-vars
+  230:16  warning  'e' is defined but never used. Allowed unused caught errors must match /^_/u       @typescript-eslint/no-unused-vars
+  291:18  warning  'e' is defined but never used. Allowed unused caught errors must match /^_/u       @typescript-eslint/no-unused-vars
+  296:18  warning  'e' is defined but never used. Allowed unused caught errors must match /^_/u       @typescript-eslint/no-unused-vars
+
+C:\Users\SOHAN\.gemini\antigravity\playground\nascent-zodiac\scripts\simplify-mermaid.js
+  21:13  warning  'subRegex' is assigned a value but never used. Allowed unused vars must match /^_/u  @typescript-eslint/no-unused-vars
+  29:16  warning  'full' is assigned a value but never used. Allowed unused vars must match /^_/u      @typescript-eslint/no-unused-vars
+
+C:\Users\SOHAN\.gemini\antigravity\playground\nascent-zodiac\scripts\smoke-check.mjs
+   4:10  warning  'spawn' is defined but never used. Allowed unused vars must match /^_/u              @typescript-eslint/no-unused-vars
+   5:8   warning  'http' is defined but never used. Allowed unused vars must match /^_/u               @typescript-eslint/no-unused-vars
+  26:9   warning  'queryRes' is assigned a value but never used. Allowed unused vars must match /^_/u  @typescript-eslint/no-unused-vars
+  27:9   warning  'queryLoc' is assigned a value but never used. Allowed unused vars must match /^_/u  @typescript-eslint/no-unused-vars
+
+C:\Users\SOHAN\.gemini\antigravity\playground\nascent-zodiac\scripts\translate_locales.ts
+  14:19  warning  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  38:30  warning  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  38:46  warning  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+C:\Users\SOHAN\.gemini\antigravity\playground\nascent-zodiac\scripts\validate-seo.mjs
+  9:7  warning  'LOCALES' is assigned a value but never used. Allowed unused vars must match /^_/u  @typescript-eslint/no-unused-vars
+
+C:\Users\SOHAN\.gemini\antigravity\playground\nascent-zodiac\scripts\verify-features.js
+  9:7  warning  'path' is assigned a value but never used. Allowed unused vars must match /^_/u  @typescript-eslint/no-unused-vars
+
+C:\Users\SOHAN\.gemini\antigravity\playground\nascent-zodiac\scripts\verify-responsive-products.spec.ts
+  28:19  warning  'text' is assigned a value but never used. Allowed unused vars must match /^_/u  @typescript-eslint/no-unused-vars
+
+C:\Users\SOHAN\.gemini\antigravity\playground\nascent-zodiac\scripts\verify.mjs
+    5:27  warning  'spawnSync' is defined but never used. Allowed unused vars must match /^_/u   @typescript-eslint/no-unused-vars
+    7:8   warning  'path' is defined but never used. Allowed unused vars must match /^_/u        @typescript-eslint/no-unused-vars
+   34:12  warning  'e' is defined but never used. Allowed unused caught errors must match /^_/u  @typescript-eslint/no-unused-vars
+   77:12  warning  'e' is defined but never used. Allowed unused caught errors must match /^_/u  @typescript-eslint/no-unused-vars
+  169:18  warning  'e' is defined but never used. Allowed unused caught errors must match /^_/u  @typescript-eslint/no-unused-vars
+
+C:\Users\SOHAN\.gemini\antigravity\playground\nascent-zodiac\src\app\[locale]\architecture\page.tsx
+   8:3  warning  'Zap' is defined but never used. Allowed unused vars must match /^_/u        @typescript-eslint/no-unused-vars
+  10:3  warning  'Server' is defined but never used. Allowed unused vars must match /^_/u     @typescript-eslint/no-unused-vars
+  11:3  warning  'Database' is defined but never used. Allowed unused vars must match /^_/u   @typescript-eslint/no-unused-vars
+  14:3  warning  'Code' is defined but never used. Allowed unused vars must match /^_/u       @typescript-eslint/no-unused-vars
+  15:3  warning  'Workflow' is defined but never used. Allowed unused vars must match /^_/u   @typescript-eslint/no-unused-vars
+  16:3  warning  'BarChart4' is defined but never used. Allowed unused vars must match /^_/u  @typescript-eslint/no-unused-vars
+
+C:\Users\SOHAN\.gemini\antigravity\playground\nascent-zodiac\src\app\[locale]\blog\page.tsx
+  78:29  warning  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+C:\Users\SOHAN\.gemini\antigravity\playground\nascent-zodiac\src\app\[locale]\business-ideas\page.tsx
+  2:22  warning  'Lightbulb' is defined but never used. Allowed unused vars must match /^_/u  @typescript-eslint/no-unused-vars
+
+C:\Users\SOHAN\.gemini\antigravity\playground\nascent-zodiac\src\app\[locale]\case-studies\page.tsx
+  4:3  warning  'ArrowRight' is defined but never used. Allowed unused vars must match /^_/u   @typescript-eslint/no-unused-vars
+  5:3  warning  'CheckCircle' is defined but never used. Allowed unused vars must match /^_/u  @typescript-eslint/no-unused-vars
+  6:3  warning  'TrendingUp' is defined but never used. Allowed unused vars must match /^_/u   @typescript-eslint/no-unused-vars
+  7:3  warning  'Shield' is defined but never used. Allowed unused vars must match /^_/u       @typescript-eslint/no-unused-vars
+  8:3  warning  'Zap' is defined but never used. Allowed unused vars must match /^_/u          @typescript-eslint/no-unused-vars
+  9:3  warning  'Terminal' is defined but never used. Allowed unused vars must match /^_/u     @typescript-eslint/no-unused-vars
+
+C:\Users\SOHAN\.gemini\antigravity\playground\nascent-zodiac\src\app\[locale]\command-center\page.tsx
+   7:3   warning  'Shield' is defined but never used. Allowed unused vars must match /^_/u                    @typescript-eslint/no-unused-vars
+   8:3   warning  'Globe' is defined but never used. Allowed unused vars must match /^_/u                     @typescript-eslint/no-unused-vars
+  11:3   warning  'Cloud' is defined but never used. Allowed unused vars must match /^_/u                     @typescript-eslint/no-unused-vars
+  24:10  warning  'DataTransferVolume' is defined but never used. Allowed unused vars must match /^_/u        @typescript-eslint/no-unused-vars
+  35:24  warning  'setActiveAlerts' is assigned a value but never used. Allowed unused vars must match /^_/u  @typescript-eslint/no-unused-vars
+  36:24  warning  'setSystemStatus' is assigned a value but never used. Allowed unused vars must match /^_/u  @typescript-eslint/no-unused-vars
+
+C:\Users\SOHAN\.gemini\antigravity\playground\nascent-zodiac\src\app\[locale]\community\page.tsx
+  2:25  warning  'Star' is defined but never used. Allowed unused vars must match /^_/u     @typescript-eslint/no-unused-vars
+  2:31  warning  'GitFork' is defined but never used. Allowed unused vars must match /^_/u  @typescript-eslint/no-unused-vars
+
+C:\Users\SOHAN\.gemini\antigravity\playground\nascent-zodiac\src\app\[locale]\company\page.tsx
+   2:8  warning  'Link' is defined but never used. Allowed unused vars must match /^_/u              @typescript-eslint/no-unused-vars
+   9:3  warning  'Target' is defined but never used. Allowed unused vars must match /^_/u            @typescript-eslint/no-unused-vars
+  10:3  warning  'Award' is defined but never used. Allowed unused vars must match /^_/u             @typescript-eslint/no-unused-vars
+  11:3  warning  'Briefcase' is defined but never used. Allowed unused vars must match /^_/u         @typescript-eslint/no-unused-vars
+  62:9  warning  'tGlobal' is assigned a value but never used. Allowed unused vars must match /^_/u  @typescript-eslint/no-unused-vars
+
+C:\Users\SOHAN\.gemini\antigravity\playground\nascent-zodiac\src\app\[locale]\dashboard\[metric]\page.tsx
+   6:3   warning  'EnhancedCostSavingsChart' is defined but never used. Allowed unused vars must match /^_/u     @typescript-eslint/no-unused-vars
+   7:3   warning  'LiveROIGauge' is defined but never used. Allowed unused vars must match /^_/u                 @typescript-eslint/no-unused-vars
+   8:3   warning  'PulsingSecurityScore' is defined but never used. Allowed unused vars must match /^_/u         @typescript-eslint/no-unused-vars
+   9:3   warning  'AnimatedResourceUtilization' is defined but never used. Allowed unused vars must match /^_/u  @typescript-eslint/no-unused-vars
+  10:3   warning  'LiveDeploymentFrequency' is defined but never used. Allowed unused vars must match /^_/u      @typescript-eslint/no-unused-vars
+  12:10  warning  'UptimeRing' is defined but never used. Allowed unused vars must match /^_/u                   @typescript-eslint/no-unused-vars
+  12:22  warning  'ResponseTimeTrend' is defined but never used. Allowed unused vars must match /^_/u            @typescript-eslint/no-unused-vars
+  14:3   warning  'ErrorRateTrend' is defined but never used. Allowed unused vars must match /^_/u               @typescript-eslint/no-unused-vars
+  15:3   warning  'QueryPerformance' is defined but never used. Allowed unused vars must match /^_/u             @typescript-eslint/no-unused-vars
+  16:3   warning  'AutoScalingEvents' is defined but never used. Allowed unused vars must match /^_/u            @typescript-eslint/no-unused-vars
+  19:3   warning  'TrendingUp' is defined but never used. Allowed unused vars must match /^_/u                   @typescript-eslint/no-unused-vars
+  20:3   warning  'Zap' is defined but never used. Allowed unused vars must match /^_/u                          @typescript-eslint/no-unused-vars
+  21:3   warning  'Globe' is defined but never used. Allowed unused vars must match /^_/u                        @typescript-eslint/no-unused-vars
+  22:3   warning  'Shield' is defined but never used. Allowed unused vars must match /^_/u                       @typescript-eslint/no-unused-vars
+  23:3   warning  'Activity' is defined but never used. Allowed unused vars must match /^_/u                     @typescript-eslint/no-unused-vars
+  24:3   warning  'Server' is defined but never used. Allowed unused vars must match /^_/u                       @typescript-eslint/no-unused-vars
+  25:3   warning  'Layers' is defined but never used. Allowed unused vars must match /^_/u                       @typescript-eslint/no-unused-vars
+  26:3   warning  'AlertTriangle' is defined but never used. Allowed unused vars must match /^_/u                @typescript-eslint/no-unused-vars
+  31:8   warning  'MetricDashboardLayout' is defined but never used. Allowed unused vars must match /^_/u        @typescript-eslint/no-unused-vars
+  33:3   warning  'LatencyLineChart' is defined but never used. Allowed unused vars must match /^_/u             @typescript-eslint/no-unused-vars
+  34:3   warning  'CloudDistributionPie' is defined but never used. Allowed unused vars must match /^_/u         @typescript-eslint/no-unused-vars
+  35:3   warning  'UptimeTrend' is defined but never used. Allowed unused vars must match /^_/u                  @typescript-eslint/no-unused-vars
+  36:3   warning  'ErrorRateArea' is defined but never used. Allowed unused vars must match /^_/u                @typescript-eslint/no-unused-vars
+  37:3   warning  'FeatureUsageBar' is defined but never used. Allowed unused vars must match /^_/u              @typescript-eslint/no-unused-vars
+  38:3   warning  'ComplianceScoresBar' is defined but never used. Allowed unused vars must match /^_/u          @typescript-eslint/no-unused-vars
+  49:11  warning  'locale' is assigned a value but never used. Allowed unused vars must match /^_/u              @typescript-eslint/no-unused-vars
+  51:66  warning  Unexpected any. Specify a different type                                                       @typescript-eslint/no-explicit-any
+
+C:\Users\SOHAN\.gemini\antigravity\playground\nascent-zodiac\src\app\[locale]\dashboard\executive\page.tsx
+  30:10  warning  'activeAlerts' is assigned a value but never used. Allowed unused vars must match /^_/u     @typescript-eslint/no-unused-vars
+  30:24  warning  'setActiveAlerts' is assigned a value but never used. Allowed unused vars must match /^_/u  @typescript-eslint/no-unused-vars
+  31:24  warning  'setSystemStatus' is assigned a value but never used. Allowed unused vars must match /^_/u  @typescript-eslint/no-unused-vars
+
+C:\Users\SOHAN\.gemini\antigravity\playground\nascent-zodiac\src\app\[locale]\dashboard\page.tsx
+   6:3   warning  'EnhancedCostSavingsChart' is defined but never used. Allowed unused vars must match /^_/u     @typescript-eslint/no-unused-vars
+   7:3   warning  'LiveROIGauge' is defined but never used. Allowed unused vars must match /^_/u                 @typescript-eslint/no-unused-vars
+   8:3   warning  'PulsingSecurityScore' is defined but never used. Allowed unused vars must match /^_/u         @typescript-eslint/no-unused-vars
+   9:3   warning  'AnimatedResourceUtilization' is defined but never used. Allowed unused vars must match /^_/u  @typescript-eslint/no-unused-vars
+  10:3   warning  'LiveDeploymentFrequency' is defined but never used. Allowed unused vars must match /^_/u      @typescript-eslint/no-unused-vars
+  12:10  warning  'UptimeRing' is defined but never used. Allowed unused vars must match /^_/u                   @typescript-eslint/no-unused-vars
+  12:22  warning  'ResponseTimeTrend' is defined but never used. Allowed unused vars must match /^_/u            @typescript-eslint/no-unused-vars
+  14:3   warning  'ErrorRateTrend' is defined but never used. Allowed unused vars must match /^_/u               @typescript-eslint/no-unused-vars
+  15:3   warning  'QueryPerformance' is defined but never used. Allowed unused vars must match /^_/u             @typescript-eslint/no-unused-vars
+  16:3   warning  'AutoScalingEvents' is defined but never used. Allowed unused vars must match /^_/u            @typescript-eslint/no-unused-vars
+  19:3   warning  'TrendingUp' is defined but never used. Allowed unused vars must match /^_/u                   @typescript-eslint/no-unused-vars
+  20:3   warning  'Zap' is defined but never used. Allowed unused vars must match /^_/u                          @typescript-eslint/no-unused-vars
+  21:3   warning  'Globe' is defined but never used. Allowed unused vars must match /^_/u                        @typescript-eslint/no-unused-vars
+  22:3   warning  'Shield' is defined but never used. Allowed unused vars must match /^_/u                       @typescript-eslint/no-unused-vars
+  23:3   warning  'Activity' is defined but never used. Allowed unused vars must match /^_/u                     @typescript-eslint/no-unused-vars
+  24:3   warning  'Server' is defined but never used. Allowed unused vars must match /^_/u                       @typescript-eslint/no-unused-vars
+  25:3   warning  'Layers' is defined but never used. Allowed unused vars must match /^_/u                       @typescript-eslint/no-unused-vars
+  26:3   warning  'AlertTriangle' is defined but never used. Allowed unused vars must match /^_/u                @typescript-eslint/no-unused-vars
+  36:66  warning  Unexpected any. Specify a different type                                                       @typescript-eslint/no-explicit-any
+
+C:\Users\SOHAN\.gemini\antigravity\playground\nascent-zodiac\src\app\[locale]\dashboard\technical\page.tsx
+   6:3   warning  'Zap' is defined but never used. Allowed unused vars must match /^_/u                       @typescript-eslint/no-unused-vars
+   7:3   warning  'Shield' is defined but never used. Allowed unused vars must match /^_/u                    @typescript-eslint/no-unused-vars
+   8:3   warning  'Globe' is defined but never used. Allowed unused vars must match /^_/u                     @typescript-eslint/no-unused-vars
+  11:3   warning  'Cloud' is defined but never used. Allowed unused vars must match /^_/u                     @typescript-eslint/no-unused-vars
+  33:24  warning  'setActiveAlerts' is assigned a value but never used. Allowed unused vars must match /^_/u  @typescript-eslint/no-unused-vars
+  34:24  warning  'setSystemStatus' is assigned a value but never used. Allowed unused vars must match /^_/u  @typescript-eslint/no-unused-vars
+
+C:\Users\SOHAN\.gemini\antigravity\playground\nascent-zodiac\src\app\[locale]\demo\page.tsx
+   3:8  warning  'Link' is defined but never used. Allowed unused vars must match /^_/u        @typescript-eslint/no-unused-vars
+   5:3  warning  'PlayCircle' is defined but never used. Allowed unused vars must match /^_/u  @typescript-eslint/no-unused-vars
+   8:3  warning  'Cloud' is defined but never used. Allowed unused vars must match /^_/u       @typescript-eslint/no-unused-vars
+   9:3  warning  'Cpu' is defined but never used. Allowed unused vars must match /^_/u         @typescript-eslint/no-unused-vars
+  10:3  warning  'Terminal' is defined but never used. Allowed unused vars must match /^_/u    @typescript-eslint/no-unused-vars
+  11:3  warning  'Activity' is defined but never used. Allowed unused vars must match /^_/u    @typescript-eslint/no-unused-vars
+  12:3  warning  'BarChart' is defined but never used. Allowed unused vars must match /^_/u    @typescript-eslint/no-unused-vars
+  13:3  warning  'Settings' is defined but never used. Allowed unused vars must match /^_/u    @typescript-eslint/no-unused-vars
+  15:3  warning  'ArrowRight' is defined but never used. Allowed unused vars must match /^_/u  @typescript-eslint/no-unused-vars
+  16:3  warning  'ArrowLeft' is defined but never used. Allowed unused vars must match /^_/u   @typescript-eslint/no-unused-vars
+
+C:\Users\SOHAN\.gemini\antigravity\playground\nascent-zodiac\src\app\[locale]\docs\[slug]\page.tsx
+  3:27  warning  'getLocale' is defined but never used. Allowed unused vars must match /^_/u  @typescript-eslint/no-unused-vars
+
+C:\Users\SOHAN\.gemini\antigravity\playground\nascent-zodiac\src\app\[locale]\docs\api\page.tsx
+   1:8   warning  'Link' is defined but never used. Allowed unused vars must match /^_/u             @typescript-eslint/no-unused-vars
+  29:11  warning  'locale' is assigned a value but never used. Allowed unused vars must match /^_/u  @typescript-eslint/no-unused-vars
+
+C:\Users\SOHAN\.gemini\antigravity\playground\nascent-zodiac\src\app\[locale]\docs\page.tsx
+   2:3  warning  'BookOpen' is defined but never used. Allowed unused vars must match /^_/u  @typescript-eslint/no-unused-vars
+   4:3  warning  'Cpu' is defined but never used. Allowed unused vars must match /^_/u       @typescript-eslint/no-unused-vars
+   7:3  warning  'Search' is defined but never used. Allowed unused vars must match /^_/u    @typescript-eslint/no-unused-vars
+  10:3  warning  'Settings' is defined but never used. Allowed unused vars must match /^_/u  @typescript-eslint/no-unused-vars
+  11:3  warning  'Globe' is defined but never used. Allowed unused vars must match /^_/u     @typescript-eslint/no-unused-vars
+  12:3  warning  'FileText' is defined but never used. Allowed unused vars must match /^_/u  @typescript-eslint/no-unused-vars
+
+C:\Users\SOHAN\.gemini\antigravity\playground\nascent-zodiac\src\app\[locale]\docs\whitepaper\page.tsx
+  27:11  warning  'locale' is assigned a value but never used. Allowed unused vars must match /^_/u  @typescript-eslint/no-unused-vars
+
+C:\Users\SOHAN\.gemini\antigravity\playground\nascent-zodiac\src\app\[locale]\founder\page.tsx
+   8:3   warning  'GraduationCap' is defined but never used. Allowed unused vars must match /^_/u  @typescript-eslint/no-unused-vars
+   9:11  warning  'LinkIcon' is defined but never used. Allowed unused vars must match /^_/u       @typescript-eslint/no-unused-vars
+  15:3   warning  'CheckCircle' is defined but never used. Allowed unused vars must match /^_/u    @typescript-eslint/no-unused-vars
+  16:3   warning  'Globe' is defined but never used. Allowed unused vars must match /^_/u          @typescript-eslint/no-unused-vars
+
+C:\Users\SOHAN\.gemini\antigravity\playground\nascent-zodiac\src\app\[locale]\industries\[slug]\page.tsx
+  15:9  warning  'locale' is assigned a value but never used. Allowed unused vars must match /^_/u  @typescript-eslint/no-unused-vars
+
+C:\Users\SOHAN\.gemini\antigravity\playground\nascent-zodiac\src\app\[locale]\industries\finance\page.tsx
+   6:3  warning  'Zap' is defined but never used. Allowed unused vars must match /^_/u           @typescript-eslint/no-unused-vars
+   8:3  warning  'Search' is defined but never used. Allowed unused vars must match /^_/u        @typescript-eslint/no-unused-vars
+  10:3  warning  'Code' is defined but never used. Allowed unused vars must match /^_/u          @typescript-eslint/no-unused-vars
+  12:3  warning  'BarChart3' is defined but never used. Allowed unused vars must match /^_/u     @typescript-eslint/no-unused-vars
+  13:3  warning  'Lock' is defined but never used. Allowed unused vars must match /^_/u          @typescript-eslint/no-unused-vars
+  14:3  warning  'CheckCircle2' is defined but never used. Allowed unused vars must match /^_/u  @typescript-eslint/no-unused-vars
+  16:3  warning  'Building2' is defined but never used. Allowed unused vars must match /^_/u     @typescript-eslint/no-unused-vars
+
+C:\Users\SOHAN\.gemini\antigravity\playground\nascent-zodiac\src\app\[locale]\industries\healthcare\page.tsx
+   7:3  warning  'Shield' is defined but never used. Allowed unused vars must match /^_/u        @typescript-eslint/no-unused-vars
+   8:3  warning  'Search' is defined but never used. Allowed unused vars must match /^_/u        @typescript-eslint/no-unused-vars
+  10:3  warning  'Code' is defined but never used. Allowed unused vars must match /^_/u          @typescript-eslint/no-unused-vars
+  12:3  warning  'BarChart3' is defined but never used. Allowed unused vars must match /^_/u     @typescript-eslint/no-unused-vars
+  14:3  warning  'CheckCircle2' is defined but never used. Allowed unused vars must match /^_/u  @typescript-eslint/no-unused-vars
+  15:3  warning  'Globe' is defined but never used. Allowed unused vars must match /^_/u         @typescript-eslint/no-unused-vars
+  16:3  warning  'Database' is defined but never used. Allowed unused vars must match /^_/u      @typescript-eslint/no-unused-vars
+
+C:\Users\SOHAN\.gemini\antigravity\playground\nascent-zodiac\src\app\[locale]\layout.tsx
+  35:7   warning  'siteUrl' is assigned a value but never used. Allowed unused vars must match /^_/u  @typescript-eslint/no-unused-vars
+  38:31  warning  'SEO_KEYWORDS' is defined but never used. Allowed unused vars must match /^_/u      @typescript-eslint/no-unused-vars
+  50:14  warning  Unexpected any. Specify a different type                                            @typescript-eslint/no-explicit-any
+  60:12  warning  'e' is defined but never used. Allowed unused caught errors must match /^_/u        @typescript-eslint/no-unused-vars
+
+C:\Users\SOHAN\.gemini\antigravity\playground\nascent-zodiac\src\app\[locale]\news\[slug]\page.tsx
+  75:39  warning  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+C:\Users\SOHAN\.gemini\antigravity\playground\nascent-zodiac\src\app\[locale]\onboarding\page.tsx
+  10:3   warning  'ArrowLeft' is defined but never used. Allowed unused vars must match /^_/u  @typescript-eslint/no-unused-vars
+  12:10  warning  'Link' is defined but never used. Allowed unused vars must match /^_/u       @typescript-eslint/no-unused-vars
+
+C:\Users\SOHAN\.gemini\antigravity\playground\nascent-zodiac\src\app\[locale]\platform\ai-engine\page.tsx
+   9:3  warning  'ShieldAlert' is defined but never used. Allowed unused vars must match /^_/u    @typescript-eslint/no-unused-vars
+  10:3  warning  'Workflow' is defined but never used. Allowed unused vars must match /^_/u       @typescript-eslint/no-unused-vars
+  11:3  warning  'BarChart4' is defined but never used. Allowed unused vars must match /^_/u      @typescript-eslint/no-unused-vars
+  12:3  warning  'MessageCircle' is defined but never used. Allowed unused vars must match /^_/u  @typescript-eslint/no-unused-vars
+
+C:\Users\SOHAN\.gemini\antigravity\playground\nascent-zodiac\src\app\[locale]\platform\observability\page.tsx
+   7:3  warning  'Search' is defined but never used. Allowed unused vars must match /^_/u  @typescript-eslint/no-unused-vars
+   9:3  warning  'Zap' is defined but never used. Allowed unused vars must match /^_/u     @typescript-eslint/no-unused-vars
+  10:3  warning  'Eye' is defined but never used. Allowed unused vars must match /^_/u     @typescript-eslint/no-unused-vars
+  11:3  warning  'Lock' is defined but never used. Allowed unused vars must match /^_/u    @typescript-eslint/no-unused-vars
+  12:3  warning  'Globe' is defined but never used. Allowed unused vars must match /^_/u   @typescript-eslint/no-unused-vars
+
+C:\Users\SOHAN\.gemini\antigravity\playground\nascent-zodiac\src\app\[locale]\platform\page.tsx
+  36:9  warning  'tCommon' is assigned a value but never used. Allowed unused vars must match /^_/u  @typescript-eslint/no-unused-vars
+
+C:\Users\SOHAN\.gemini\antigravity\playground\nascent-zodiac\src\app\[locale]\pricing\page.tsx
+   3:54  warning  'SEO_KEYWORDS' is defined but never used. Allowed unused vars must match /^_/u                  @typescript-eslint/no-unused-vars
+   4:17  warning  'X' is defined but never used. Allowed unused vars must match /^_/u                             @typescript-eslint/no-unused-vars
+   4:35  warning  'Cpu' is defined but never used. Allowed unused vars must match /^_/u                           @typescript-eslint/no-unused-vars
+   4:45  warning  'Award' is defined but never used. Allowed unused vars must match /^_/u                         @typescript-eslint/no-unused-vars
+   6:15  warning  'Metadata' is defined but never used. Allowed unused vars must match /^_/u                      @typescript-eslint/no-unused-vars
+  31:7   warning  'PRICING_SECTION_IDS' is assigned a value but never used. Allowed unused vars must match /^_/u  @typescript-eslint/no-unused-vars
+
+C:\Users\SOHAN\.gemini\antigravity\playground\nascent-zodiac\src\app\[locale]\products\[slug]\page.tsx
+  2:8  warning  'ProductDetailView' is defined but never used. Allowed unused vars must match /^_/u  @typescript-eslint/no-unused-vars
+
+C:\Users\SOHAN\.gemini\antigravity\playground\nascent-zodiac\src\app\[locale]\products\page.tsx
+   3:27  warning  'getLocale' is defined but never used. Allowed unused vars must match /^_/u                     @typescript-eslint/no-unused-vars
+   5:15  warning  'ArrowRight' is defined but never used. Allowed unused vars must match /^_/u                    @typescript-eslint/no-unused-vars
+  14:7   warning  'PRODUCT_SECTION_IDS' is assigned a value but never used. Allowed unused vars must match /^_/u  @typescript-eslint/no-unused-vars
+
+C:\Users\SOHAN\.gemini\antigravity\playground\nascent-zodiac\src\app\[locale]\register\page.tsx
+  82:19  warning  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+C:\Users\SOHAN\.gemini\antigravity\playground\nascent-zodiac\src\app\[locale]\research\automated-multilingual-quality-assurance\page.tsx
+  49:11  warning  'locale' is assigned a value but never used. Allowed unused vars must match /^_/u  @typescript-eslint/no-unused-vars
+
+C:\Users\SOHAN\.gemini\antigravity\playground\nascent-zodiac\src\app\[locale]\research\page.tsx
+  15:10  warning  'Metadata' is defined but never used. Allowed unused vars must match /^_/u     @typescript-eslint/no-unused-vars
+  28:9   warning  'tm' is assigned a value but never used. Allowed unused vars must match /^_/u  @typescript-eslint/no-unused-vars
+
+C:\Users\SOHAN\.gemini\antigravity\playground\nascent-zodiac\src\app\[locale]\research\papers\[slug]\page.tsx
+  4:26  warning  'PaperManifestItem' is defined but never used. Allowed unused vars must match /^_/u  @typescript-eslint/no-unused-vars
+
+C:\Users\SOHAN\.gemini\antigravity\playground\nascent-zodiac\src\app\[locale]\research\papers\a1-cloud-native-enterprise-reference\page.tsx
+  2:10  warning  'useTranslations' is defined but never used. Allowed unused vars must match /^_/u  @typescript-eslint/no-unused-vars
+
+C:\Users\SOHAN\.gemini\antigravity\playground\nascent-zodiac\src\app\[locale]\research\papers\a2-high-throughput-distributed-systems\page.tsx
+  4:48  warning  'Layers' is defined but never used. Allowed unused vars must match /^_/u  @typescript-eslint/no-unused-vars
+
+C:\Users\SOHAN\.gemini\antigravity\playground\nascent-zodiac\src\app\[locale]\resources\blog\cio-exit-strategy\page.tsx
+   5:3   warning  'TrendingUp' is defined but never used. Allowed unused vars must match /^_/u       @typescript-eslint/no-unused-vars
+   6:3   warning  'Shield' is defined but never used. Allowed unused vars must match /^_/u           @typescript-eslint/no-unused-vars
+   8:3   warning  'Code' is defined but never used. Allowed unused vars must match /^_/u             @typescript-eslint/no-unused-vars
+   9:3   warning  'MessageCircle' is defined but never used. Allowed unused vars must match /^_/u    @typescript-eslint/no-unused-vars
+  10:3   warning  'BarChart3' is defined but never used. Allowed unused vars must match /^_/u        @typescript-eslint/no-unused-vars
+  11:3   warning  'Lock' is defined but never used. Allowed unused vars must match /^_/u             @typescript-eslint/no-unused-vars
+  12:3   warning  'CheckCircle2' is defined but never used. Allowed unused vars must match /^_/u     @typescript-eslint/no-unused-vars
+  13:3   warning  'Globe' is defined but never used. Allowed unused vars must match /^_/u            @typescript-eslint/no-unused-vars
+  14:3   warning  'Bookmark' is defined but never used. Allowed unused vars must match /^_/u         @typescript-eslint/no-unused-vars
+  28:11  warning  'locale' is assigned a value but never used. Allowed unused vars must match /^_/u  @typescript-eslint/no-unused-vars
+
+C:\Users\SOHAN\.gemini\antigravity\playground\nascent-zodiac\src\app\[locale]\resources\blog\cloud-modernization-guide\page.tsx
+   5:3   warning  'BookOpen' is defined but never used. Allowed unused vars must match /^_/u         @typescript-eslint/no-unused-vars
+   6:3   warning  'Zap' is defined but never used. Allowed unused vars must match /^_/u              @typescript-eslint/no-unused-vars
+   8:3   warning  'Search' is defined but never used. Allowed unused vars must match /^_/u           @typescript-eslint/no-unused-vars
+  10:3   warning  'Code' is defined but never used. Allowed unused vars must match /^_/u             @typescript-eslint/no-unused-vars
+  11:3   warning  'MessageCircle' is defined but never used. Allowed unused vars must match /^_/u    @typescript-eslint/no-unused-vars
+  12:3   warning  'BarChart3' is defined but never used. Allowed unused vars must match /^_/u        @typescript-eslint/no-unused-vars
+  13:3   warning  'Lock' is defined but never used. Allowed unused vars must match /^_/u             @typescript-eslint/no-unused-vars
+  14:3   warning  'CheckCircle2' is defined but never used. Allowed unused vars must match /^_/u     @typescript-eslint/no-unused-vars
+  15:3   warning  'Globe' is defined but never used. Allowed unused vars must match /^_/u            @typescript-eslint/no-unused-vars
+  27:11  warning  'locale' is assigned a value but never used. Allowed unused vars must match /^_/u  @typescript-eslint/no-unused-vars
+
+C:\Users\SOHAN\.gemini\antigravity\playground\nascent-zodiac\src\app\[locale]\resources\blog\devops-best-practices\page.tsx
+   6:3   warning  'Zap' is defined but never used. Allowed unused vars must match /^_/u              @typescript-eslint/no-unused-vars
+   7:3   warning  'Shield' is defined but never used. Allowed unused vars must match /^_/u           @typescript-eslint/no-unused-vars
+   8:3   warning  'Search' is defined but never used. Allowed unused vars must match /^_/u           @typescript-eslint/no-unused-vars
+  11:3   warning  'MessageCircle' is defined but never used. Allowed unused vars must match /^_/u    @typescript-eslint/no-unused-vars
+  12:3   warning  'BarChart3' is defined but never used. Allowed unused vars must match /^_/u        @typescript-eslint/no-unused-vars
+  13:3   warning  'Lock' is defined but never used. Allowed unused vars must match /^_/u             @typescript-eslint/no-unused-vars
+  14:3   warning  'CheckCircle2' is defined but never used. Allowed unused vars must match /^_/u     @typescript-eslint/no-unused-vars
+  15:3   warning  'Globe' is defined but never used. Allowed unused vars must match /^_/u            @typescript-eslint/no-unused-vars
+  16:3   warning  'Bookmark' is defined but never used. Allowed unused vars must match /^_/u         @typescript-eslint/no-unused-vars
+  27:11  warning  'locale' is assigned a value but never used. Allowed unused vars must match /^_/u  @typescript-eslint/no-unused-vars
+
+C:\Users\SOHAN\.gemini\antigravity\playground\nascent-zodiac\src\app\[locale]\resources\blog\sovereignty-framework\page.tsx
+   6:3   warning  'Shield' is defined but never used. Allowed unused vars must match /^_/u           @typescript-eslint/no-unused-vars
+   9:3   warning  'MessageCircle' is defined but never used. Allowed unused vars must match /^_/u    @typescript-eslint/no-unused-vars
+  10:3   warning  'BarChart3' is defined but never used. Allowed unused vars must match /^_/u        @typescript-eslint/no-unused-vars
+  11:3   warning  'Lock' is defined but never used. Allowed unused vars must match /^_/u             @typescript-eslint/no-unused-vars
+  12:3   warning  'CheckCircle2' is defined but never used. Allowed unused vars must match /^_/u     @typescript-eslint/no-unused-vars
+  13:3   warning  'Globe' is defined but never used. Allowed unused vars must match /^_/u            @typescript-eslint/no-unused-vars
+  14:3   warning  'Bookmark' is defined but never used. Allowed unused vars must match /^_/u         @typescript-eslint/no-unused-vars
+  15:3   warning  'Cpu' is defined but never used. Allowed unused vars must match /^_/u              @typescript-eslint/no-unused-vars
+  28:11  warning  'locale' is assigned a value but never used. Allowed unused vars must match /^_/u  @typescript-eslint/no-unused-vars
+
+C:\Users\SOHAN\.gemini\antigravity\playground\nascent-zodiac\src\app\[locale]\security\page.tsx
+   2:29  warning  'AlertTriangle' is defined but never used. Allowed unused vars must match /^_/u                  @typescript-eslint/no-unused-vars
+  12:7   warning  'SECURITY_SECTION_IDS' is assigned a value but never used. Allowed unused vars must match /^_/u  @typescript-eslint/no-unused-vars
+
+C:\Users\SOHAN\.gemini\antigravity\playground\nascent-zodiac\src\app\[locale]\services\ai-cloud-platform\page.tsx
+   7:3  warning  'Zap' is defined but never used. Allowed unused vars must match /^_/u         @typescript-eslint/no-unused-vars
+   8:3  warning  'Search' is defined but never used. Allowed unused vars must match /^_/u      @typescript-eslint/no-unused-vars
+   9:3  warning  'ArrowRight' is defined but never used. Allowed unused vars must match /^_/u  @typescript-eslint/no-unused-vars
+  10:3  warning  'Share2' is defined but never used. Allowed unused vars must match /^_/u      @typescript-eslint/no-unused-vars
+  14:3  warning  'Sparkles' is defined but never used. Allowed unused vars must match /^_/u    @typescript-eslint/no-unused-vars
+  15:3  warning  'Database' is defined but never used. Allowed unused vars must match /^_/u    @typescript-eslint/no-unused-vars
+
+C:\Users\SOHAN\.gemini\antigravity\playground\nascent-zodiac\src\app\[locale]\services\application-modernization\page.tsx
+   6:3  warning  'Cpu' is defined but never used. Allowed unused vars must match /^_/u         @typescript-eslint/no-unused-vars
+   7:3  warning  'Zap' is defined but never used. Allowed unused vars must match /^_/u         @typescript-eslint/no-unused-vars
+   8:3  warning  'Search' is defined but never used. Allowed unused vars must match /^_/u      @typescript-eslint/no-unused-vars
+   9:3  warning  'ArrowRight' is defined but never used. Allowed unused vars must match /^_/u  @typescript-eslint/no-unused-vars
+  10:3  warning  'Layers' is defined but never used. Allowed unused vars must match /^_/u      @typescript-eslint/no-unused-vars
+
+C:\Users\SOHAN\.gemini\antigravity\playground\nascent-zodiac\src\app\[locale]\services\cloud-cost-optimization\page.tsx
+   8:3  warning  'Search' is defined but never used. Allowed unused vars must match /^_/u    @typescript-eslint/no-unused-vars
+  10:3  warning  'Shield' is defined but never used. Allowed unused vars must match /^_/u    @typescript-eslint/no-unused-vars
+  13:3  warning  'PieChart' is defined but never used. Allowed unused vars must match /^_/u  @typescript-eslint/no-unused-vars
+  14:3  warning  'Activity' is defined but never used. Allowed unused vars must match /^_/u  @typescript-eslint/no-unused-vars
+
+C:\Users\SOHAN\.gemini\antigravity\playground\nascent-zodiac\src\app\[locale]\services\cloud-migration\page.tsx
+   5:3  warning  'Globe' is defined but never used. Allowed unused vars must match /^_/u         @typescript-eslint/no-unused-vars
+   6:3  warning  'Zap' is defined but never used. Allowed unused vars must match /^_/u           @typescript-eslint/no-unused-vars
+   7:3  warning  'Shield' is defined but never used. Allowed unused vars must match /^_/u        @typescript-eslint/no-unused-vars
+  10:3  warning  'Code' is defined but never used. Allowed unused vars must match /^_/u          @typescript-eslint/no-unused-vars
+  13:3  warning  'Lock' is defined but never used. Allowed unused vars must match /^_/u          @typescript-eslint/no-unused-vars
+  14:3  warning  'CheckCircle2' is defined but never used. Allowed unused vars must match /^_/u  @typescript-eslint/no-unused-vars
+
+C:\Users\SOHAN\.gemini\antigravity\playground\nascent-zodiac\src\app\[locale]\services\cloud-modernization\page.tsx
+   7:3  warning  'Shield' is defined but never used. Allowed unused vars must match /^_/u        @typescript-eslint/no-unused-vars
+  12:3  warning  'BarChart3' is defined but never used. Allowed unused vars must match /^_/u     @typescript-eslint/no-unused-vars
+  13:3  warning  'Lock' is defined but never used. Allowed unused vars must match /^_/u          @typescript-eslint/no-unused-vars
+  14:3  warning  'CheckCircle2' is defined but never used. Allowed unused vars must match /^_/u  @typescript-eslint/no-unused-vars
+
+C:\Users\SOHAN\.gemini\antigravity\playground\nascent-zodiac\src\app\[locale]\services\devops\page.tsx
+   5:3  warning  'Settings' is defined but never used. Allowed unused vars must match /^_/u      @typescript-eslint/no-unused-vars
+   6:3  warning  'Zap' is defined but never used. Allowed unused vars must match /^_/u           @typescript-eslint/no-unused-vars
+   8:3  warning  'Search' is defined but never used. Allowed unused vars must match /^_/u        @typescript-eslint/no-unused-vars
+  10:3  warning  'Code' is defined but never used. Allowed unused vars must match /^_/u          @typescript-eslint/no-unused-vars
+  12:3  warning  'BarChart3' is defined but never used. Allowed unused vars must match /^_/u     @typescript-eslint/no-unused-vars
+  14:3  warning  'CheckCircle2' is defined but never used. Allowed unused vars must match /^_/u  @typescript-eslint/no-unused-vars
+  16:3  warning  'Layers' is defined but never used. Allowed unused vars must match /^_/u        @typescript-eslint/no-unused-vars
+
+C:\Users\SOHAN\.gemini\antigravity\playground\nascent-zodiac\src\app\[locale]\services\microservices\page.tsx
+   6:3  warning  'Zap' is defined but never used. Allowed unused vars must match /^_/u           @typescript-eslint/no-unused-vars
+   7:3  warning  'Shield' is defined but never used. Allowed unused vars must match /^_/u        @typescript-eslint/no-unused-vars
+  10:3  warning  'Code' is defined but never used. Allowed unused vars must match /^_/u          @typescript-eslint/no-unused-vars
+  12:3  warning  'BarChart3' is defined but never used. Allowed unused vars must match /^_/u     @typescript-eslint/no-unused-vars
+  13:3  warning  'Lock' is defined but never used. Allowed unused vars must match /^_/u          @typescript-eslint/no-unused-vars
+  14:3  warning  'CheckCircle2' is defined but never used. Allowed unused vars must match /^_/u  @typescript-eslint/no-unused-vars
+  15:3  warning  'Cpu' is defined but never used. Allowed unused vars must match /^_/u           @typescript-eslint/no-unused-vars
+
+C:\Users\SOHAN\.gemini\antigravity\playground\nascent-zodiac\src\app\[locale]\services\openshift-modernization\page.tsx
+   8:3  warning  'Search' is defined but never used. Allowed unused vars must match /^_/u     @typescript-eslint/no-unused-vars
+  10:3  warning  'Code' is defined but never used. Allowed unused vars must match /^_/u       @typescript-eslint/no-unused-vars
+  13:3  warning  'BarChart2' is defined but never used. Allowed unused vars must match /^_/u  @typescript-eslint/no-unused-vars
+
+C:\Users\SOHAN\.gemini\antigravity\playground\nascent-zodiac\src\app\[locale]\solutions\page.tsx
+   2:10  warning  'Section' is defined but never used. Allowed unused vars must match /^_/u      @typescript-eslint/no-unused-vars
+  15:3   warning  'Activity' is defined but never used. Allowed unused vars must match /^_/u     @typescript-eslint/no-unused-vars
+  16:3   warning  'BarChart3' is defined but never used. Allowed unused vars must match /^_/u    @typescript-eslint/no-unused-vars
+  17:3   warning  'Building2' is defined but never used. Allowed unused vars must match /^_/u    @typescript-eslint/no-unused-vars
+  18:3   warning  'CheckCircle' is defined but never used. Allowed unused vars must match /^_/u  @typescript-eslint/no-unused-vars
+
+C:\Users\SOHAN\.gemini\antigravity\playground\nascent-zodiac\src\app\[locale]\staffing\page.tsx
+  1:10  warning  'Users' is defined but never used. Allowed unused vars must match /^_/u       @typescript-eslint/no-unused-vars
+  1:32  warning  'UserCheck' is defined but never used. Allowed unused vars must match /^_/u   @typescript-eslint/no-unused-vars
+  1:43  warning  'Briefcase' is defined but never used. Allowed unused vars must match /^_/u   @typescript-eslint/no-unused-vars
+  1:54  warning  'Calculator' is defined but never used. Allowed unused vars must match /^_/u  @typescript-eslint/no-unused-vars
+
+C:\Users\SOHAN\.gemini\antigravity\playground\nascent-zodiac\src\app\[locale]\use-cases\[slug]\page.tsx
+   2:21  warning  'CheckCircle' is defined but never used. Allowed unused vars must match /^_/u      @typescript-eslint/no-unused-vars
+  17:9   warning  'locale' is assigned a value but never used. Allowed unused vars must match /^_/u  @typescript-eslint/no-unused-vars
+
+C:\Users\SOHAN\.gemini\antigravity\playground\nascent-zodiac\src\app\[locale]\visual-library\page.tsx
+  1:27  warning  'getLocale' is defined but never used. Allowed unused vars must match /^_/u   @typescript-eslint/no-unused-vars
+  3:18  warning  'ArrowRight' is defined but never used. Allowed unused vars must match /^_/u  @typescript-eslint/no-unused-vars
+  3:30  warning  'Layers' is defined but never used. Allowed unused vars must match /^_/u      @typescript-eslint/no-unused-vars
+  3:38  warning  'Shield' is defined but never used. Allowed unused vars must match /^_/u      @typescript-eslint/no-unused-vars
+
+C:\Users\SOHAN\.gemini\antigravity\playground\nascent-zodiac\src\app\api\auth\register\route.ts
+   1:23  warning  'NextResponse' is defined but never used. Allowed unused vars must match /^_/u    @typescript-eslint/no-unused-vars
+  70:14  warning  'error' is defined but never used. Allowed unused caught errors must match /^_/u  @typescript-eslint/no-unused-vars
+
+C:\Users\SOHAN\.gemini\antigravity\playground\nascent-zodiac\src\app\api\billing\route.ts
+  51:14  warning  'error' is defined but never used. Allowed unused caught errors must match /^_/u  @typescript-eslint/no-unused-vars
+
+C:\Users\SOHAN\.gemini\antigravity\playground\nascent-zodiac\src\app\api\csrf\route.ts
+  13:27  warning  'request' is defined but never used. Allowed unused args must match /^_/u  @typescript-eslint/no-unused-vars
+
+C:\Users\SOHAN\.gemini\antigravity\playground\nascent-zodiac\src\app\api\health\route.ts
+  15:40  warning  Unexpected any. Specify a different type                                               @typescript-eslint/no-explicit-any
+  23:14  warning  'e' is defined but never used. Allowed unused caught errors must match /^_/u           @typescript-eslint/no-unused-vars
+  30:15  warning  'testSecret' is assigned a value but never used. Allowed unused vars must match /^_/u  @typescript-eslint/no-unused-vars
+  32:16  warning  'e' is defined but never used. Allowed unused caught errors must match /^_/u           @typescript-eslint/no-unused-vars
+
+C:\Users\SOHAN\.gemini\antigravity\playground\nascent-zodiac\src\app\api\leads\route.ts
+  12:12  warning  Unexpected any. Specify a different type                                      @typescript-eslint/no-explicit-any
+  17:10  warning  'e' is defined but never used. Allowed unused caught errors must match /^_/u  @typescript-eslint/no-unused-vars
+
+C:\Users\SOHAN\.gemini\antigravity\playground\nascent-zodiac\src\app\global-error.tsx
+  14:3  warning  'error' is defined but never used. Allowed unused args must match /^_/u  @typescript-eslint/no-unused-vars
+
+C:\Users\SOHAN\.gemini\antigravity\playground\nascent-zodiac\src\auth.config.ts
+  37:38  warning  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  54:43  warning  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+C:\Users\SOHAN\.gemini\antigravity\playground\nascent-zodiac\src\auth.ts
+  45:25  warning  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  50:25  warning  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+C:\Users\SOHAN\.gemini\antigravity\playground\nascent-zodiac\src\components\Footer.tsx
+   6:10  warning  'Linkedin' is defined but never used. Allowed unused vars must match /^_/u         @typescript-eslint/no-unused-vars
+   6:20  warning  'Twitter' is defined but never used. Allowed unused vars must match /^_/u          @typescript-eslint/no-unused-vars
+   6:29  warning  'Github' is defined but never used. Allowed unused vars must match /^_/u           @typescript-eslint/no-unused-vars
+   6:37  warning  'MessageSquare' is defined but never used. Allowed unused vars must match /^_/u    @typescript-eslint/no-unused-vars
+  13:9   warning  'locale' is assigned a value but never used. Allowed unused vars must match /^_/u  @typescript-eslint/no-unused-vars
+
+C:\Users\SOHAN\.gemini\antigravity\playground\nascent-zodiac\src\components\LanguageSwitcher.tsx
+   3:10  warning  'Link' is defined but never used. Allowed unused vars must match /^_/u  @typescript-eslint/no-unused-vars
+  87:79  warning  Unexpected any. Specify a different type                                @typescript-eslint/no-explicit-any
+  88:56  warning  Unexpected any. Specify a different type                                @typescript-eslint/no-explicit-any
+  94:68  warning  Unexpected any. Specify a different type                                @typescript-eslint/no-explicit-any
+
+C:\Users\SOHAN\.gemini\antigravity\playground\nascent-zodiac\src\components\SchemaOrg.tsx
+  19:87  warning  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  23:86  warning  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  27:82  warning  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  31:82  warning  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+C:\Users\SOHAN\.gemini\antigravity\playground\nascent-zodiac\src\components\ScrollManager.tsx
+  38:15  warning  'currentScroll' is assigned a value but never used. Allowed unused vars must match /^_/u  @typescript-eslint/no-unused-vars
+
+C:\Users\SOHAN\.gemini\antigravity\playground\nascent-zodiac\src\components\charts\BusinessCharts.tsx
+  48:61  warning  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  89:61  warning  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+C:\Users\SOHAN\.gemini\antigravity\playground\nascent-zodiac\src\components\charts\MetricsCharts.tsx
+   29:52  warning  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+   34:30  warning  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+   50:48  warning  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  104:44  warning  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  133:50  warning  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+C:\Users\SOHAN\.gemini\antigravity\playground\nascent-zodiac\src\components\charts\TimeSeriesCharts.tsx
+  4:1  warning  Expected an assignment or function call and instead saw an expression  @typescript-eslint/no-unused-expressions
+
+C:\Users\SOHAN\.gemini\antigravity\playground\nascent-zodiac\src\components\forms\ContactForm.tsx
+   4:3   warning  'Mail' is defined but never used. Allowed unused vars must match /^_/u           @typescript-eslint/no-unused-vars
+   5:3   warning  'Phone' is defined but never used. Allowed unused vars must match /^_/u          @typescript-eslint/no-unused-vars
+   6:3   warning  'MapPin' is defined but never used. Allowed unused vars must match /^_/u         @typescript-eslint/no-unused-vars
+   8:3   warning  'MessageSquare' is defined but never used. Allowed unused vars must match /^_/u  @typescript-eslint/no-unused-vars
+   9:3   warning  'Globe' is defined but never used. Allowed unused vars must match /^_/u          @typescript-eslint/no-unused-vars
+  10:3   warning  'MessageCircle' is defined but never used. Allowed unused vars must match /^_/u  @typescript-eslint/no-unused-vars
+  11:3   warning  'Facebook' is defined but never used. Allowed unused vars must match /^_/u       @typescript-eslint/no-unused-vars
+  12:3   warning  'Instagram' is defined but never used. Allowed unused vars must match /^_/u      @typescript-eslint/no-unused-vars
+  13:3   warning  'Twitter' is defined but never used. Allowed unused vars must match /^_/u        @typescript-eslint/no-unused-vars
+  14:3   warning  'Linkedin' is defined but never used. Allowed unused vars must match /^_/u       @typescript-eslint/no-unused-vars
+  15:3   warning  'Github' is defined but never used. Allowed unused vars must match /^_/u         @typescript-eslint/no-unused-vars
+  16:3   warning  'Home' is defined but never used. Allowed unused vars must match /^_/u           @typescript-eslint/no-unused-vars
+  17:3   warning  'ArrowLeft' is defined but never used. Allowed unused vars must match /^_/u      @typescript-eslint/no-unused-vars
+  18:3   warning  'ChevronRight' is defined but never used. Allowed unused vars must match /^_/u   @typescript-eslint/no-unused-vars
+  23:39  warning  'translations' is defined but never used. Allowed unused args must match /^_/u   @typescript-eslint/no-unused-vars
+  23:72  warning  Unexpected any. Specify a different type                                         @typescript-eslint/no-explicit-any
+  49:14  warning  'err' is defined but never used. Allowed unused caught errors must match /^_/u   @typescript-eslint/no-unused-vars
+
+C:\Users\SOHAN\.gemini\antigravity\playground\nascent-zodiac\src\components\header\index.tsx
+  27:9  warning  'pathname' is assigned a value but never used. Allowed unused vars must match /^_/u  @typescript-eslint/no-unused-vars
+
+C:\Users\SOHAN\.gemini\antigravity\playground\nascent-zodiac\src\components\navigation\DocsSidebar.tsx
+   9:9   warning  'locale' is assigned a value but never used. Allowed unused vars must match /^_/u  @typescript-eslint/no-unused-vars
+  59:27  warning  Unexpected any. Specify a different type                                           @typescript-eslint/no-explicit-any
+
+C:\Users\SOHAN\.gemini\antigravity\playground\nascent-zodiac\src\components\navigation\HashScrollHandler.tsx
+  20:13  warning  'targetElement' is assigned a value but never used. Allowed unused vars must match /^_/u  @typescript-eslint/no-unused-vars
+
+C:\Users\SOHAN\.gemini\antigravity\playground\nascent-zodiac\src\components\navigation\NavLink.tsx
+  20:33  warning  'locale' is defined but never used. Allowed unused args must match /^_/u  @typescript-eslint/no-unused-vars
+
+C:\Users\SOHAN\.gemini\antigravity\playground\nascent-zodiac\src\components\observability\LatencyMonitor.tsx
+  4:10  warning  'Activity' is defined but never used. Allowed unused vars must match /^_/u  @typescript-eslint/no-unused-vars
+  4:20  warning  'Globe' is defined but never used. Allowed unused vars must match /^_/u     @typescript-eslint/no-unused-vars
+  4:32  warning  'Server' is defined but never used. Allowed unused vars must match /^_/u    @typescript-eslint/no-unused-vars
+
+C:\Users\SOHAN\.gemini\antigravity\playground\nascent-zodiac\src\components\papers\PaperLanding.tsx
+  13:9  warning  't' is assigned a value but never used. Allowed unused vars must match /^_/u  @typescript-eslint/no-unused-vars
+
+C:\Users\SOHAN\.gemini\antigravity\playground\nascent-zodiac\src\components\sections\enterprise\EnterpriseApproach.tsx
+  3:36  warning  'CheckCircle2' is defined but never used. Allowed unused vars must match /^_/u  @typescript-eslint/no-unused-vars
+
+C:\Users\SOHAN\.gemini\antigravity\playground\nascent-zodiac\src\components\sections\home\CertificationsSection.tsx
+  2:10  warning  'Cloud' is defined but never used. Allowed unused vars must match /^_/u   @typescript-eslint/no-unused-vars
+  2:31  warning  'Shield' is defined but never used. Allowed unused vars must match /^_/u  @typescript-eslint/no-unused-vars
+  2:39  warning  'Zap' is defined but never used. Allowed unused vars must match /^_/u     @typescript-eslint/no-unused-vars
+  2:44  warning  'Lock' is defined but never used. Allowed unused vars must match /^_/u    @typescript-eslint/no-unused-vars
+  2:50  warning  'Cpu' is defined but never used. Allowed unused vars must match /^_/u     @typescript-eslint/no-unused-vars
+
+C:\Users\SOHAN\.gemini\antigravity\playground\nascent-zodiac\src\components\sections\home\CommunityCallout.tsx
+  2:56  warning  'TrendingUp' is defined but never used. Allowed unused vars must match /^_/u  @typescript-eslint/no-unused-vars
+
+C:\Users\SOHAN\.gemini\antigravity\playground\nascent-zodiac\src\components\sections\home\CtaSection.tsx
+  14:9  warning  'locale' is assigned a value but never used. Allowed unused vars must match /^_/u  @typescript-eslint/no-unused-vars
+
+C:\Users\SOHAN\.gemini\antigravity\playground\nascent-zodiac\src\components\sections\home\HeroSection.tsx
+  7:10  warning  'cn' is defined but never used. Allowed unused vars must match /^_/u  @typescript-eslint/no-unused-vars
+
+C:\Users\SOHAN\.gemini\antigravity\playground\nascent-zodiac\src\components\sections\home\NewsroomSection.tsx
+  2:33  warning  'ExternalLink' is defined but never used. Allowed unused vars must match /^_/u  @typescript-eslint/no-unused-vars
+
+C:\Users\SOHAN\.gemini\antigravity\playground\nascent-zodiac\src\components\sections\platform\ControlPlaneSection.tsx
+  1:10  warning  'PlayCircle' is defined but never used. Allowed unused vars must match /^_/u  @typescript-eslint/no-unused-vars
+
+C:\Users\SOHAN\.gemini\antigravity\playground\nascent-zodiac\src\components\sections\platform\ObservabilitySection.tsx
+  4:38  warning  'Database' is defined but never used. Allowed unused vars must match /^_/u  @typescript-eslint/no-unused-vars
+
+C:\Users\SOHAN\.gemini\antigravity\playground\nascent-zodiac\src\components\sections\security\SecurityPerformanceSection.tsx
+   5:20  warning  'Server' is defined but never used. Allowed unused vars must match /^_/u             @typescript-eslint/no-unused-vars
+  11:7   warning  'RpsChart' is assigned a value but never used. Allowed unused vars must match /^_/u  @typescript-eslint/no-unused-vars
+  27:36  warning  Unexpected any. Specify a different type                                             @typescript-eslint/no-explicit-any
+
+C:\Users\SOHAN\.gemini\antigravity\playground\nascent-zodiac\src\components\sections\services\ServicesHero.tsx
+  1:17  warning  'BarChart' is defined but never used. Allowed unused vars must match /^_/u  @typescript-eslint/no-unused-vars
+
+C:\Users\SOHAN\.gemini\antigravity\playground\nascent-zodiac\src\components\seo\Enrichment.tsx
+   76:9  warning  'isHome' is assigned a value but never used. Allowed unused vars must match /^_/u  @typescript-eslint/no-unused-vars
+  132:3  warning  'pageKey' is defined but never used. Allowed unused args must match /^_/u          @typescript-eslint/no-unused-vars
+
+C:\Users\SOHAN\.gemini\antigravity\playground\nascent-zodiac\src\components\tools\CloudCostEstimator.tsx
+  11:46  warning  Unexpected any. Specify a different type                                                                           @typescript-eslint/no-explicit-any
+  38:6   warning  React Hook useEffect has a missing dependency: 'fetchEstimates'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+C:\Users\SOHAN\.gemini\antigravity\playground\nascent-zodiac\src\components\visuals\AdvancedMetrics.tsx
+  130:6  warning  React Hook React.useEffect has a missing dependency: 'hours'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+  494:6  warning  React Hook React.useEffect has a missing dependency: 'days'. Either include it or remove the dependency array   react-hooks/exhaustive-deps
+
+C:\Users\SOHAN\.gemini\antigravity\playground\nascent-zodiac\src\components\visuals\BillingForecast.tsx
+  3:27  warning  'useEffect' is defined but never used. Allowed unused vars must match /^_/u  @typescript-eslint/no-unused-vars
+
+C:\Users\SOHAN\.gemini\antigravity\playground\nascent-zodiac\src\components\visuals\CloudSwitchSim.tsx
+   4:21  warning  'ArrowRight' is defined but never used. Allowed unused vars must match /^_/u               @typescript-eslint/no-unused-vars
+  11:23  warning  'setTargetCloud' is assigned a value but never used. Allowed unused vars must match /^_/u  @typescript-eslint/no-unused-vars
+
+C:\Users\SOHAN\.gemini\antigravity\playground\nascent-zodiac\src\components\visuals\EnhancedGraphs.tsx
+    4:10  warning  'TrendingUp' is defined but never used. Allowed unused vars must match /^_/u           @typescript-eslint/no-unused-vars
+    4:22  warning  'TrendingDown' is defined but never used. Allowed unused vars must match /^_/u         @typescript-eslint/no-unused-vars
+    4:36  warning  'Activity' is defined but never used. Allowed unused vars must match /^_/u             @typescript-eslint/no-unused-vars
+    4:46  warning  'Zap' is defined but never used. Allowed unused vars must match /^_/u                  @typescript-eslint/no-unused-vars
+    4:51  warning  'AlertTriangle' is defined but never used. Allowed unused vars must match /^_/u        @typescript-eslint/no-unused-vars
+   15:44  warning  'height' is assigned a value but never used. Allowed unused args must match /^_/u      @typescript-eslint/no-unused-vars
+  111:9   warning  'percentage' is assigned a value but never used. Allowed unused vars must match /^_/u  @typescript-eslint/no-unused-vars
+
+C:\Users\SOHAN\.gemini\antigravity\playground\nascent-zodiac\src\components\visuals\MetricsGraphs.tsx
+   5:3  warning  'TrendingUp' is defined but never used. Allowed unused vars must match /^_/u    @typescript-eslint/no-unused-vars
+   6:3  warning  'TrendingDown' is defined but never used. Allowed unused vars must match /^_/u  @typescript-eslint/no-unused-vars
+   7:3  warning  'DollarSign' is defined but never used. Allowed unused vars must match /^_/u    @typescript-eslint/no-unused-vars
+   8:3  warning  'Zap' is defined but never used. Allowed unused vars must match /^_/u           @typescript-eslint/no-unused-vars
+   9:3  warning  'Clock' is defined but never used. Allowed unused vars must match /^_/u         @typescript-eslint/no-unused-vars
+  10:3  warning  'Shield' is defined but never used. Allowed unused vars must match /^_/u        @typescript-eslint/no-unused-vars
+  11:3  warning  'Database' is defined but never used. Allowed unused vars must match /^_/u      @typescript-eslint/no-unused-vars
+  12:3  warning  'Activity' is defined but never used. Allowed unused vars must match /^_/u      @typescript-eslint/no-unused-vars
+
+C:\Users\SOHAN\.gemini\antigravity\playground\nascent-zodiac\src\components\visuals\PerformanceMetrics.tsx
+   22:6  warning  React Hook React.useEffect has a missing dependency: 'hours'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+  111:9  warning  'days' is assigned a value but never used. Allowed unused vars must match /^_/u                                 @typescript-eslint/no-unused-vars
+
+C:\Users\SOHAN\.gemini\antigravity\playground\nascent-zodiac\src\config\index.ts
+   9:70  warning  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  17:24  warning  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  80:27  warning  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  81:17  warning  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+C:\Users\SOHAN\.gemini\antigravity\playground\nascent-zodiac\src\config\nav.ts
+  22:3   warning  'BookOpen' is defined but never used. Allowed unused vars must match /^_/u  @typescript-eslint/no-unused-vars
+  46:10  warning  Unexpected any. Specify a different type                                    @typescript-eslint/no-explicit-any
+
+C:\Users\SOHAN\.gemini\antigravity\playground\nascent-zodiac\src\core-middleware.ts
+  21:17  warning  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  58:45  warning  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+C:\Users\SOHAN\.gemini\antigravity\playground\nascent-zodiac\src\data\products.tsx
+  8:3  warning  'BarChart3' is defined but never used. Allowed unused vars must match /^_/u  @typescript-eslint/no-unused-vars
+
+C:\Users\SOHAN\.gemini\antigravity\playground\nascent-zodiac\src\features\dashboard\DashboardScroller.tsx
+   3:17  warning  'useEffect' is defined but never used. Allowed unused vars must match /^_/u     @typescript-eslint/no-unused-vars
+  12:3   warning  'activeMetric' is defined but never used. Allowed unused args must match /^_/u  @typescript-eslint/no-unused-vars
+
+C:\Users\SOHAN\.gemini\antigravity\playground\nascent-zodiac\src\features\dashboard\DashboardShell.tsx
+  20:3  warning  'hideNav' is assigned a value but never used. Allowed unused args must match /^_/u  @typescript-eslint/no-unused-vars
+
+C:\Users\SOHAN\.gemini\antigravity\playground\nascent-zodiac\src\features\dashboard\dashboardConfig.tsx
+  10:10  warning  'UptimeRing' is defined but never used. Allowed unused vars must match /^_/u  @typescript-eslint/no-unused-vars
+  37:40  warning  Unexpected any. Specify a different type                                      @typescript-eslint/no-explicit-any
+
+C:\Users\SOHAN\.gemini\antigravity\playground\nascent-zodiac\src\features\products\ProductDetailView.tsx
+   5:3  warning  'BadgeCheck' is defined but never used. Allowed unused vars must match /^_/u           @typescript-eslint/no-unused-vars
+   8:3  warning  'Zap' is defined but never used. Allowed unused vars must match /^_/u                  @typescript-eslint/no-unused-vars
+  11:3  warning  'Cpu' is defined but never used. Allowed unused vars must match /^_/u                  @typescript-eslint/no-unused-vars
+  13:3  warning  'Play' is defined but never used. Allowed unused vars must match /^_/u                 @typescript-eslint/no-unused-vars
+  14:3  warning  'ChevronRight' is defined but never used. Allowed unused vars must match /^_/u         @typescript-eslint/no-unused-vars
+  15:3  warning  'BarChart' is defined but never used. Allowed unused vars must match /^_/u             @typescript-eslint/no-unused-vars
+  18:8  warning  'Link' is defined but never used. Allowed unused vars must match /^_/u                 @typescript-eslint/no-unused-vars
+  23:7  warning  'MOCK_SPECS' is assigned a value but never used. Allowed unused vars must match /^_/u  @typescript-eslint/no-unused-vars
+  42:3  warning  'id' is defined but never used. Allowed unused args must match /^_/u                   @typescript-eslint/no-unused-vars
+
+C:\Users\SOHAN\.gemini\antigravity\playground\nascent-zodiac\src\features\products\ProductScroller.tsx
+   3:17  warning  'useEffect' is defined but never used. Allowed unused vars must match /^_/u      @typescript-eslint/no-unused-vars
+   8:13  warning  Unexpected any. Specify a different type                                         @typescript-eslint/no-explicit-any
+  11:43  warning  'activeProduct' is defined but never used. Allowed unused args must match /^_/u  @typescript-eslint/no-unused-vars
+
+C:\Users\SOHAN\.gemini\antigravity\playground\nascent-zodiac\src\features\resources\research\ResearchContent.tsx
+  2:22  warning  'Layers' is defined but never used. Allowed unused vars must match /^_/u  @typescript-eslint/no-unused-vars
+
+C:\Users\SOHAN\.gemini\antigravity\playground\nascent-zodiac\src\hooks\useContactSales.ts
+   3:33  warning  'useEffect' is defined but never used. Allowed unused vars must match /^_/u              @typescript-eslint/no-unused-vars
+  22:10  warning  'lastError' is assigned a value but never used. Allowed unused vars must match /^_/u     @typescript-eslint/no-unused-vars
+  22:21  warning  'setLastError' is assigned a value but never used. Allowed unused vars must match /^_/u  @typescript-eslint/no-unused-vars
+
+C:\Users\SOHAN\.gemini\antigravity\playground\nascent-zodiac\src\i18n\request.ts
+   5:25  warning  Unexpected any. Specify a different type                                        @typescript-eslint/no-explicit-any
+   9:28  warning  Unexpected any. Specify a different type                                        @typescript-eslint/no-explicit-any
+   9:41  warning  Unexpected any. Specify a different type                                        @typescript-eslint/no-explicit-any
+   9:47  warning  Unexpected any. Specify a different type                                        @typescript-eslint/no-explicit-any
+  32:12  warning  'e' is defined but never used. Allowed unused caught errors must match /^_/u    @typescript-eslint/no-unused-vars
+  41:12  warning  'err' is defined but never used. Allowed unused caught errors must match /^_/u  @typescript-eslint/no-unused-vars
+  51:46  warning  Unexpected any. Specify a different type                                        @typescript-eslint/no-explicit-any
+
+C:\Users\SOHAN\.gemini\antigravity\playground\nascent-zodiac\src\lib\analytics.ts
+  19:18  warning  Unexpected any. Specify a different type                                      @typescript-eslint/no-explicit-any
+  57:14  warning  'e' is defined but never used. Allowed unused caught errors must match /^_/u  @typescript-eslint/no-unused-vars
+
+C:\Users\SOHAN\.gemini\antigravity\playground\nascent-zodiac\src\lib\api-utils.ts
+    6:10  warning  'AppError' is defined but never used. Allowed unused vars must match /^_/u        @typescript-eslint/no-unused-vars
+    6:20  warning  'normalizeError' is defined but never used. Allowed unused vars must match /^_/u  @typescript-eslint/no-unused-vars
+    6:36  warning  'RateLimitError' is defined but never used. Allowed unused vars must match /^_/u  @typescript-eslint/no-unused-vars
+    8:34  warning  Unexpected any. Specify a different type                                          @typescript-eslint/no-explicit-any
+   80:19  warning  Unexpected any. Specify a different type                                          @typescript-eslint/no-explicit-any
+  146:39  warning  Unexpected any. Specify a different type                                          @typescript-eslint/no-explicit-any
+
+C:\Users\SOHAN\.gemini\antigravity\playground\nascent-zodiac\src\lib\audit.ts
+   34:29  warning  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  227:71  warning  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  227:87  warning  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+C:\Users\SOHAN\.gemini\antigravity\playground\nascent-zodiac\src\lib\errors.ts
+  42:42  warning  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  87:42  warning  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+C:\Users\SOHAN\.gemini\antigravity\playground\nascent-zodiac\src\lib\form-security.ts
+   32:9   warning  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  103:42  warning  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  103:48  warning  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  119:20  warning  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  141:9   warning  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+C:\Users\SOHAN\.gemini\antigravity\playground\nascent-zodiac\src\lib\i18n\tSafe.ts
+  23:26  warning  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+C:\Users\SOHAN\.gemini\antigravity\playground\nascent-zodiac\src\lib\security.ts
+  1:10  warning  'headers' is defined but never used. Allowed unused vars must match /^_/u  @typescript-eslint/no-unused-vars
+
+C:\Users\SOHAN\.gemini\antigravity\playground\nascent-zodiac\src\services\lead.service.ts
+  130:8  warning  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+C:\Users\SOHAN\.gemini\antigravity\playground\nascent-zodiac\src\utils\seo.ts
+  51:12  warning  'e' is defined but never used. Allowed unused caught errors must match /^_/u  @typescript-eslint/no-unused-vars
+
+Γ£û 520 problems (0 errors, 520 warnings)
+

@@ -2,7 +2,12 @@ import { Metadata } from "next";
 import { SALES_EMAIL } from "@/config/emails";
 import { config } from "@/config";
 
-const siteUrl = config.site.url;
+/**
+ * Safely resolves the site URL for SEO.
+ */
+function getSiteUrl(): string {
+  return (process.env.NEXT_PUBLIC_SITE_URL || process.env.SITE_URL || config.site.url || "https://www.omnigcloud.com").replace(/\/$/, "");
+}
 
 export const SUPPORTED_LOCALES = ["en", "es", "fr", "de", "zh", "hi", "ja", "ko", "pt"] as const;
 export type SupportedLocale = (typeof SUPPORTED_LOCALES)[number];
@@ -41,6 +46,7 @@ export function generatePageMetadata({
   image = "/og-image.png",
   noIndex = false,
 }: PageMetadataProps): Metadata {
+  const siteUrl = getSiteUrl();
   const canonical = `${siteUrl}/${locale}${path}`;
   const ogLocale = LOCALE_MAP[locale] || "en_US";
 
@@ -64,20 +70,20 @@ export function generatePageMetadata({
     },
     robots: noIndex
       ? {
-          index: false,
-          follow: false,
-        }
+        index: false,
+        follow: false,
+      }
       : {
+        index: true,
+        follow: true,
+        googleBot: {
           index: true,
           follow: true,
-          googleBot: {
-            index: true,
-            follow: true,
-            "max-video-preview": -1,
-            "max-image-preview": "large",
-            "max-snippet": -1,
-          },
+          "max-video-preview": -1,
+          "max-image-preview": "large",
+          "max-snippet": -1,
         },
+      },
     openGraph: {
       type: "website",
       locale: ogLocale,
@@ -108,6 +114,7 @@ export function generatePageMetadata({
  * Generate structured data (JSON-LD) for Organization
  */
 export function generateOrganizationSchema() {
+  const siteUrl = getSiteUrl();
   return {
     "@context": "https://schema.org",
     "@type": "Organization",
@@ -133,6 +140,7 @@ export function generateOrganizationSchema() {
  * Generate structured data (JSON-LD) for WebSite
  */
 export function generateWebSiteSchema(locale: string) {
+  const siteUrl = getSiteUrl();
   return {
     "@context": "https://schema.org",
     "@type": "WebSite",

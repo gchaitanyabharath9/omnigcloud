@@ -480,7 +480,25 @@
     "visual-library": "Visual Library",
     "whitepaper": "OmniGCloud Whitepaper",
     "app": "App",
-    "settings": "Settings"
+    "settings": "Settings",
+    "architecture": "Architecture",
+    "api": "API Reference",
+    "governance": "Governance",
+    "deploy": "Deploy",
+    "nexus": "Nexus",
+    "sangam": "Sangam",
+    "workflows": "Workflows",
+    "guard": "Guard",
+    "knowledge": "Knowledge",
+    "guide": "Guide",
+    "a1-cloud-native-enterprise-reference-architecture": "Cloud-Native Enterprise Reference",
+    "a6-adaptive-policy-enforcement": "Adaptive Policy Enforcement",
+    "a2-high-throughput-distributed-systems": "High-Throughput Distributed Systems",
+    "a3-enterprise-observability": "Enterprise Observability",
+    "a5-monolith-to-cloud-native-modernization": "Monolith to Cloud-Native Modernization",
+    "aecp": "AECP",
+    "scholarly-article": "Scholarly Article",
+    "automated-multilingual-quality-assurance": "Quality Assurance Research"
   },
   "BusinessIdeas": {
     "cards": {
@@ -2845,12 +2863,7 @@
           "desc": "Initiate a modernization workflow for a specific application or cluster."
         }
       },
-      "keywords": {
-        "0": "OmniGCloud API",
-        "1": "REST API v1",
-        "2": "Cloud Governance API",
-        "3": "Infrastructure as Code API"
-      },
+      "keywords": "API Documentation, REST API, Reference",
       "title": "OmniGCloud REST API",
       "versionLabel": "API Version: v1.0.4 (LTS)"
     },
@@ -2975,7 +2988,7 @@
           "title": "HIPAA Guardrails (DE)"
         },
         "3": {
-          "desc": "Comprehensive asset management and access control frameworks. (DE)",
+          "desc": "Comprehensive blueprint for sovereign governance.",
           "title": "ISO 27001 Controls (DE)"
         }
       },
@@ -3808,7 +3821,13 @@
       "title": "Finance Title (DE)"
     },
     "financial": {
-      "sol": "Dedicated hardware shards for SWIFT payment rails. (DE)"
+      "sol": "Dedicated hardware shards for SWIFT payment rails. (DE)",
+      "cs": {
+        "c3": "Case Study: Sovereign Wealth Fund"
+      },
+      "ai": {
+        "desc": "AI-driven financial modeling with privacy guarantees."
+      }
     },
     "healthcare": {
       "description": "Healthcare description (DE)",
@@ -3850,7 +3869,8 @@
       "sol": "Actuarial data lakes with privacy-preserving analytics. (DE)"
     },
     "logistics": {
-      "sol": "Real-time supply chain digital twins. (DE)"
+      "sol": "Real-time supply chain digital twins. (DE)",
+      "title": "Logistics"
     },
     "solution": "OmniGCloud Solution",
     "solutionLabel": "Solution (DE)",

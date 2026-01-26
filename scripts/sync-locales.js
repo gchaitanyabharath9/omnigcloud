@@ -1,43 +1,64 @@
-const fs = require("fs");
+const fs = require('fs');
+const path = require('path');
 
-const en = JSON.parse(fs.readFileSync("src/messages/en.json", "utf8"));
-const locales = ["es", "fr", "de", "zh", "hi", "ja", "ko"];
+const MESSAGES_DIR = path.join(__dirname, '../src/messages');
+const EN_PATH = path.join(MESSAGES_DIR, 'en.json');
 
-for (const locale of locales) {
-  const target = JSON.parse(fs.readFileSync(`src/messages/${locale}.json`, "utf8"));
-
-  // Copy all new keys from en to target
-  if (en.FloatingActions) target.FloatingActions = en.FloatingActions;
-  if (en.ChatWidget) target.ChatWidget = en.ChatWidget;
-  if (en.GlobalError) target.GlobalError = en.GlobalError;
-  if (en.Solutions) target.Solutions = en.Solutions;
-  if (en.Research) target.Research = en.Research;
-  if (en.ResearchPages) target.ResearchPages = en.ResearchPages;
-  if (en.Blog) target.Blog = en.Blog;
-
-  // Update nested keys
-  if (en.Products && en.Products.detail) {
-    if (!target.Products) target.Products = {};
-    target.Products.detail = en.Products.detail;
-  }
-
-  if (en.Services && en.Services.devops) {
-    if (!target.Services) target.Services = {};
-    target.Services.devops = en.Services.devops;
-  }
-
-  if (en.Whitepaper && en.Whitepaper.intro) {
-    if (!target.Whitepaper) target.Whitepaper = {};
-    target.Whitepaper.intro = en.Whitepaper.intro;
-  }
-
-  if (en.HomeSections && en.HomeSections.Cta) {
-    if (!target.HomeSections) target.HomeSections = {};
-    target.HomeSections.Cta = en.HomeSections.Cta;
-  }
-
-  fs.writeFileSync(`src/messages/${locale}.json`, JSON.stringify(target, null, 2));
-  console.log(`✅ Updated ${locale}.json`);
+function isObject(item) {
+  return item && typeof item === 'object' && !Array.isArray(item);
 }
 
-console.log("✅ All locales synced");
+/**
+ * Deep merges source into target, only adding missing keys.
+ */
+function deepMerge(target, source, stats) {
+  const output = { ...target };
+  if (isObject(source)) {
+    Object.keys(source).forEach((key) => {
+      if (isObject(source[key])) {
+        if (!(key in target) || !isObject(target[key])) {
+          output[key] = source[key];
+          stats.added++;
+        } else {
+          const subStats = { added: 0 };
+          output[key] = deepMerge(target[key], source[key], subStats);
+          stats.added += subStats.added;
+        }
+      } else {
+        if (!(key in target)) {
+          output[key] = source[key];
+          stats.added++;
+        }
+      }
+    });
+  }
+  return output;
+}
+
+try {
+  const en = JSON.parse(fs.readFileSync(EN_PATH, 'utf8'));
+  const files = fs.readdirSync(MESSAGES_DIR).filter(f => f.endsWith('.json') && f !== 'en.json');
+
+  console.log('🌍 Synchronizing i18n locales from en.json...');
+
+  files.forEach(file => {
+    const filePath = path.join(MESSAGES_DIR, file);
+    const localeData = JSON.parse(fs.readFileSync(filePath, 'utf8'));
+    const stats = { added: 0 };
+
+    // Merge EN keys into the target locale
+    const syncedData = deepMerge(localeData, en, stats);
+
+    fs.writeFileSync(filePath, JSON.stringify(syncedData, null, 2) + '\n');
+    if (stats.added > 0) {
+      console.log(`✅ ${file}: Added ${stats.added} missing keys.`);
+    } else {
+      console.log(`✅ ${file}: Already in sync.`);
+    }
+  });
+
+  console.log('✨ All locales synced successfully.');
+} catch (error) {
+  console.error('❌ Sync failed:', error.message);
+  process.exit(1);
+}

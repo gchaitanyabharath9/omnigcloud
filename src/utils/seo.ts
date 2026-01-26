@@ -10,6 +10,7 @@
  */
 
 import { Metadata } from "next";
+import { headers } from "next/headers";
 
 import { APP_CONFIG } from "@/config/app-config";
 
@@ -30,15 +31,45 @@ export interface SEOConfig {
 
 const SITE_NAME = "OmniGCloud";
 const SITE_FULL_NAME = "OmniGCloud Systems";
-// Use centralized config for site URL
-const SITE_URL = APP_CONFIG.siteUrl;
-const DEFAULT_OG_IMAGE = `${SITE_URL}/og-image.png`;
 const TWITTER_HANDLE = "@omnigcloud";
+
+/**
+ * Safely resolves the site origin without throwing.
+ * Priority: Env Var > Request Headers > Hard Default
+ */
+export async function getSafeBaseUrl(): Promise<string> {
+  // 1. Environment Variable
+  const envUrl = process.env.NEXT_PUBLIC_SITE_URL || process.env.SITE_URL;
+  if (envUrl) return envUrl.replace(/\/$/, "");
+
+  // 2. Request Headers - Guarded for static generation
+  try {
+    const headersList = await headers();
+    const proto = headersList.get("x-forwarded-proto") || "https";
+    const host = headersList.get("x-forwarded-host") || headersList.get("host");
+    if (host) return `${proto}://${host}`.replace(/\/$/, "");
+  } catch (_e) {
+    // Normal during build/static generation
+  }
+
+  // 3. Production Hard Fallback
+  return "https://www.omnigcloud.com";
+}
+
+/**
+ * Synchronous fallback for site URL when async is not possible.
+ */
+function getSiteUrlSync(): string {
+  return (process.env.NEXT_PUBLIC_SITE_URL || process.env.SITE_URL || APP_CONFIG.siteUrl || "https://www.omnigcloud.com").replace(/\/$/, "");
+}
 
 /**
  * Generate comprehensive metadata for a page
  */
-export function generateSEOMetadata(config: SEOConfig, locale: string = "en"): Metadata {
+export function generateSEOMetadata(config: SEOConfig, locale: string = "en", originSnippet?: string): Metadata {
+  const SITE_URL = originSnippet || getSiteUrlSync();
+  const DEFAULT_OG_IMAGE = `${SITE_URL}/og-image.png`;
+
   const {
     title,
     description,
@@ -157,6 +188,7 @@ export function generateSEOMetadata(config: SEOConfig, locale: string = "en"): M
  * Generate JSON-LD structured data for Organization
  */
 export function generateOrganizationSchema() {
+  const SITE_URL = getSiteUrlSync();
   return {
     "@context": "https://schema.org",
     "@type": "Organization",
@@ -192,6 +224,7 @@ export function generateOrganizationSchema() {
  * Generate JSON-LD structured data for WebSite
  */
 export function generateWebSiteSchema() {
+  const SITE_URL = getSiteUrlSync();
   return {
     "@context": "https://schema.org",
     "@type": "WebSite",
@@ -279,6 +312,8 @@ export function generateArticleSchema(config: {
   image?: string;
   url: string;
 }) {
+  const SITE_URL = getSiteUrlSync();
+  const DEFAULT_OG_IMAGE = `${SITE_URL}/og-image.png`;
   return {
     "@context": "https://schema.org",
     "@type": "Article",
@@ -320,6 +355,8 @@ export function generateProductSchema(config: {
     priceCurrency: string;
   };
 }) {
+  const SITE_URL = getSiteUrlSync();
+  const DEFAULT_OG_IMAGE = `${SITE_URL}/og-image.png`;
   return {
     "@context": "https://schema.org",
     "@type": "Product",
