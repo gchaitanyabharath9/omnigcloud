@@ -2433,358 +2433,441 @@
   },
   "Dashboard": {
     "Charts": {
+      "aiAnalysis": "AI Analysis",
+      "historicalTrend": "Historical Trend",
+      "liveDataFeed": "Live Data Feed",
+      "systemLogs": "System Logs",
+      "liveView": "Live View",
       "Logs": {
-        "checking": "Checking compliance policies for new buckets... (ES)",
         "levels": {
-          "debug": "OmniGCloud Debug",
-          "info": "OmniGCloud Info",
-          "pass": "OmniGCloud Pass",
-          "success": "OmniGCloud Success"
+          "info": "INFO",
+          "success": "SUCCESS",
+          "debug": "DEBUG",
+          "warn": "WARN",
+          "error": "ERROR",
+          "pass": "Logs Levels Pass"
         },
-        "optimizing": "[Orchestrator] Optimizing bin packing for region us-east-1... (ES)",
-        "rebalanced": "Rebalanced 4 nodes. Savings: $4.20/hr (ES)",
-        "scaling": "Scaling event triggered by load predictor. (ES)",
-        "synced": "Telemetry stream synced. Latency: 12ms (ES)",
-        "verified": "SOC2 Control 4.1 verified. (ES)"
+        "optimizing": "Optimizing bin packing for region us-east-1...",
+        "rebalanced": "Rebalanced 4 nodes. Savings: $4.20/hr",
+        "checking": "Checking compliance policies for new buckets...",
+        "synced": "Telemetry stream synced. Latency: 12ms",
+        "verified": "SOC2 Control 4.1 verified.",
+        "scaling": "Scaling event triggered by load predictor."
       },
-      "aiAnalysis": "AI Analysis (ES)",
-      "apiLatency": "API Latency (ms) (ES)",
-      "apiLatencyDistribution": "API Latency Distribution (ES)",
-      "complianceScores": "Compliance Framework Scores (ES)",
-      "errorRateTrend": "Error Rate Trend (%) (ES)",
-      "featureAdoption": "Feature Adoption Rate (%) (ES)",
-      "historicalTrend": "Historical Trend (ES)",
-      "hourlyRequestVolume": "Hourly Request Volume (ES)",
-      "latencyTrend": "API latency trend (ES)",
-      "liveView": "Live View (ES)",
-      "monthlyCost": "Monthly Cost Comparison ($) (ES)",
-      "multiCloudDistribution": "Multi-Cloud Distribution (%) (ES)",
-      "realtimePerf": "Real-time system performance metrics (ES)",
-      "systemLogs": "System Logs (ES)",
-      "uptime30Day": "30-Day Uptime (%) (ES)",
-      "liveDataFeed": "LIVE DATA FEED"
+      "common": {
+        "healthScore": "HEALTH SCORE"
+      },
+      "executive": {
+        "pageTitle": "Executive Overview",
+        "pageSubtitle": "Strategic alignment & KPI summary",
+        "title": "Strategic Alignment",
+        "subtitle": "Top-level business health indicators",
+        "analysis": "Overall system health is excellent. Strategic KPIs are trending positively with a significant reduction in operational overhead due to autonomous scaling.",
+        "stats": {
+          "activeUsers": "Active Users",
+          "mrr": "MRR",
+          "churn": "Churn",
+          "nps": "NPS"
+        }
+      },
+      "technical": {
+        "pageTitle": "Technical Operations",
+        "pageSubtitle": "System health & engineering metrics",
+        "title": "Ops Control Plane",
+        "subtitle": "Engineering velocity & stability",
+        "analysis": "Technical debt reduction sprint is showing results with improved build times and higher test coverage across core microservices.",
+        "stats": {
+          "prs": "Pull Requests",
+          "buildTime": "Avg Build",
+          "coverage": "Test Cov.",
+          "issues": "Issues"
+        }
+      },
+      "roi": {
+        "pageTitle": "ROI Performance",
+        "pageSubtitle": "Real-time return on investment",
+        "title": "ROI Performance",
+        "subtitle": "Real-time return on investment tracking",
+        "analysis": "AI-driven arbitrage has optimised spot instance usage, resulting in a significantly lower TCO compared to on-demand provisioning this quarter.",
+        "stats": {
+          "current": "Current ROI",
+          "savings": "Net Savings",
+          "efficiency": "Efficiency",
+          "projection": "Projection"
+        }
+      },
+      "cost": {
+        "pageTitle": "Cost Arbitrage",
+        "pageSubtitle": "Multi-cloud cost optimization",
+        "title": "Cost Savings",
+        "subtitle": "Multi-cloud cost optimization engine",
+        "analysis": "Multi-cloud routing is actively preventing vendor lock-in premiums by shifting non-critical workloads to OCI and Azure spot instances.",
+        "stats": {
+          "monthly": "Monthly Saved",
+          "avgNode": "Avg Cost/Node",
+          "spot": "Spot Usage",
+          "waste": "Waste Reduc."
+        }
+      },
+      "uptime": {
+        "pageTitle": "Global Connectivity",
+        "pageSubtitle": "Platform availability and uptime",
+        "title": "System Uptime",
+        "subtitle": "30-day global availability",
+        "analysis": "Global mesh routing automatically bypassed 3 regional carrier outages in the last 24 hours, preserving 100% application uptime.",
+        "stats": {
+          "availability": "Availability",
+          "downtime": "Downtime",
+          "mttr": "MTTR",
+          "incidents": "Incidents"
+        }
+      },
+      "security": {
+        "pageTitle": "Compliance Radar",
+        "pageSubtitle": "Security posture & threat protection",
+        "title": "Security Posture",
+        "subtitle": "Real-time compliance monitoring",
+        "analysis": "Automated compliance guardrails are active. No critical vulnerabilities detected in the latest continuous audit cycle.",
+        "stats": {
+          "score": "Security Score",
+          "threats": "Threats Blocked",
+          "compliance": "Compliance",
+          "issues": "Open Issues"
+        }
+      },
+      "apiLatency": "API Latency (ms)",
+      "apiLatencyDistribution": "API Latency Distribution",
+      "complianceScores": "Compliance Framework Scores",
+      "errorRateTrend": "Error Rate Trend (%)",
+      "featureAdoption": "Feature Adoption Rate (%)",
+      "hourlyRequestVolume": "Hourly Request Volume",
+      "latencyTrend": "API latency trend",
+      "monthlyCost": "Monthly Cost Comparison ($)",
+      "multiCloudDistribution": "Multi-Cloud Distribution (%)",
+      "realtimePerf": "Real-time system performance metrics",
+      "uptime30Day": "30-Day Uptime (%)"
     },
     "CommandCenter": {
-      "costDesc": "Monthly infrastructure optimization (ES)",
-      "costTitle": "Cost Savings Trend (ES)",
-      "deploymentTitle": "Deployment Activity (ES)",
-      "errorTrend": "Declining error trend (ES)",
-      "growing": "OmniGCloud Growing",
-      "responseTimeDesc": "API latency trend (ES)",
-      "responseTimeTitle": "Response Time (ES)",
-      "roiDesc": "Real-time return on investment (ES)",
-      "roiTitle": "ROI Performance (ES)",
-      "savings": "$45K SAVED THIS MONTH • 275% YOY INCREASE (ES)",
-      "securityDesc": "Compliance & threat protection (ES)",
-      "securityTitle": "Security Posture (ES)",
-      "title": "LIVE COMMAND & CONTROL (ES)",
-      "uptimeDesc": "30-day availability (ES)",
-      "uptimeTitle": "Platform Uptime (ES)"
+      "costDesc": "Monthly infrastructure optimization",
+      "costTitle": "Cost Savings Trend",
+      "deploymentTitle": "Deployment Activity",
+      "errorTrend": "Declining error trend",
+      "growing": "Dashboard Commandcenter Growing",
+      "responseTimeDesc": "API latency trend",
+      "responseTimeTitle": "Response Time",
+      "roiDesc": "Real-time return on investment",
+      "roiTitle": "ROI Performance",
+      "savings": "$45K SAVED THIS MONTH • 275% YOY INCREASE",
+      "securityDesc": "Compliance & threat protection",
+      "securityTitle": "Security Posture",
+      "title": "LIVE COMMAND & CONTROL",
+      "uptimeDesc": "30-day availability",
+      "uptimeTitle": "Platform Uptime"
     },
     "Common": {
-      "healthScore": "HEALTH SCORE (ES)"
+      "healthScore": "HEALTH SCORE"
     },
     "Distribution": {
       "badges": {
-        "audited": "OmniGCloud Audited",
-        "balanced": "OmniGCloud Balanced",
-        "global": "OmniGCloud Global",
-        "optimal": "OmniGCloud Optimal",
-        "tracked": "OmniGCloud Tracked"
+        "audited": "Distribution Badges Audited",
+        "balanced": "Distribution Badges Balanced",
+        "global": "Distribution Badges Global",
+        "optimal": "Distribution Badges Optimal",
+        "tracked": "Distribution Badges Tracked"
       },
-      "complianceDesc": "Current compliance status across all frameworks (ES)",
-      "complianceTitle": "Compliance Framework Scores (ES)",
-      "featureDesc": "Active usage of key platform features (ES)",
-      "featureTitle": "Feature Adoption Rate (ES)",
-      "multiCloudDesc": "Active workloads across cloud providers (ES)",
-      "multiCloudTitle": "Multi-Cloud Workload Distribution (ES)",
-      "performanceDesc": "Real-time system performance metrics (ES)",
-      "performanceTitle": "Performance Scorecard (ES)",
-      "regionalDesc": "Workload distribution across global regions (ES)",
-      "regionalTitle": "Regional Deployment Distribution (ES)"
+      "complianceDesc": "Current compliance status across all frameworks",
+      "complianceTitle": "Compliance Framework Scores",
+      "featureDesc": "Active usage of key platform features",
+      "featureTitle": "Feature Adoption Rate",
+      "multiCloudDesc": "Active workloads across cloud providers",
+      "multiCloudTitle": "Multi-Cloud Workload Distribution",
+      "performanceDesc": "Real-time system performance metrics",
+      "performanceTitle": "Performance Scorecard",
+      "regionalDesc": "Workload distribution across global regions",
+      "regionalTitle": "Regional Deployment Distribution"
     },
     "Executive": {
-      "activeAlerts": "Active Alerts (ES)",
-      "activeAssets": "Active Assets (ES)",
-      "activeNodes": "Active Nodes (ES)",
-      "activeNodesValue": "Active Nodes Value (ES)",
-      "avg": "OmniGCloud Avg",
-      "cloudSpend": "Cloud Spend (ES)",
+      "activeAlerts": "Active Alerts",
+      "activeAssets": "Active Assets",
+      "activeNodes": "Active Nodes",
+      "activeNodesValue": "Active Nodes Value",
+      "avg": "Dashboard Executive Avg",
+      "cloudSpend": "Cloud Spend",
       "compliance": {
-        "subtitle": "Real-time audit score (ES)",
-        "title": "Compliance Radar (ES)"
+        "subtitle": "Real-time audit score",
+        "title": "Compliance Radar"
       },
       "cost": {
-        "impactTemplate": "{amount} saved today ({percent}%) (ES)",
-        "subtitle": "Spot instance chart (ES)",
-        "title": "Cost Arbitrage (ES)"
+        "impactTemplate": "{amount} saved today ({percent}%)",
+        "subtitle": "Spot instance chart",
+        "title": "Cost Arbitrage"
       },
-      "dataTransfer": "Data Transfer (ES)",
-      "dataTransferValue": "Data Transfer Value (ES)",
-      "lastHour": "Last Hour (ES)",
-      "latencyDesc": "Latency Desc (ES)",
-      "latencyTitle": "Latency Title (ES)",
+      "dataTransfer": "Data Transfer",
+      "dataTransferValue": "Data Transfer Value",
+      "lastHour": "Last Hour",
+      "latencyDesc": "Latency Desc",
+      "latencyTitle": "Latency",
       "metrics": {
-        "activeAssets": "ACTIVE ASSETS (ES)",
-        "activeAssetsValue": "142 (ES)",
-        "cloudSpend": "CLOUD SPEND (ES)",
-        "cloudSpendValue": "-40% (ES)",
-        "healthStatus": "99.9% (ES)",
-        "revenueImpact": "REVENUE IMPACT (ES)",
-        "revenueImpactValue": "+18% (ES)",
-        "systemHealth": "SYSTEM HEALTH (ES)"
+        "activeAssets": "ACTIVE ASSETS",
+        "activeAssetsValue": "142",
+        "cloudSpend": "CLOUD SPEND",
+        "cloudSpendValue": "-40%",
+        "healthStatus": "99.9%",
+        "revenueImpact": "REVENUE IMPACT",
+        "revenueImpactValue": "+18%",
+        "systemHealth": "SYSTEM HEALTH"
       },
-      "nominal": "OmniGCloud Nominal",
-      "queryDesc": "Query Desc (ES)",
-      "queryTitle": "Query Title (ES)",
-      "requestsSec": "Requests Sec (ES)",
-      "requestsSecValue": "Requests Sec Value (ES)",
-      "requiresAttention": "Requires Attention (ES)",
-      "resourceDesc": "Resource Desc (ES)",
-      "resourceTitle": "Resource Title (ES)",
-      "revenueImpact": "Revenue Impact (ES)",
+      "nominal": "Dashboard Executive Nominal",
+      "queryDesc": "Query Desc",
+      "queryTitle": "Query",
+      "requestsSec": "Requests Sec",
+      "requestsSecValue": "Requests Sec Value",
+      "requiresAttention": "Requires Attention",
+      "resourceDesc": "Resource Desc",
+      "resourceTitle": "Resource",
+      "revenueImpact": "Revenue Impact",
       "roi": {
-        "badge": "+12.4% (ES)",
-        "subtitle": "Real-time value realization (ES)",
-        "title": "ROI Performance (ES)"
+        "badge": "+12.4%",
+        "subtitle": "Real-time value realization",
+        "title": "ROI Performance"
       },
-      "scalingDesc": "Scaling Desc (ES)",
-      "scalingTitle": "Scaling Title (ES)",
+      "scalingDesc": "Scaling Desc",
+      "scalingTitle": "Scaling",
       "status": {
-        "critical": "OmniGCloud Critical",
-        "degraded": "OmniGCloud Degraded",
-        "operational": "OmniGCloud Operational"
+        "critical": "Executive Status Critical",
+        "degraded": "Executive Status Degraded",
+        "operational": "Executive Status Operational"
       },
-      "subtitle": "Autonomous Multi-Cloud Fabric",
-      "threatDesc": "Threat Desc (ES)",
-      "threatTitle": "Threat Title (ES)",
-      "title": "EXECUTIVE OVERVIEW (ES)",
-      "trend": "OmniGCloud Trend",
+      "subtitle": "Autonomous Sovereign Cloud",
+      "threatDesc": "Threat Desc",
+      "threatTitle": "Threat",
+      "title": "EXECUTIVE OVERVIEW",
+      "trend": "Dashboard Executive Trend",
       "uptime": {
-        "subtitle": "Mesh uptime status (ES)",
-        "title": "Global Connectivity (ES)"
+        "subtitle": "Mesh uptime status",
+        "title": "Global Connectivity"
       },
-      "velocityDesc": "Velocity Desc (ES)",
-      "velocityTitle": "Velocity Title (ES)",
-      "version": "OMNIGCLOUD_BUSINESS_INTEL_v1.0 (ES)"
+      "velocityDesc": "Velocity Desc",
+      "velocityTitle": "Velocity",
+      "version": "OMNIGCLOUD_BUSINESS_INTEL_v1.0"
     },
     "Graphs": {
-      "cacheHitRate": "CACHE HIT RATE (ES)",
-      "costPerTransaction": "COST PER TRANSACTION (ES)",
-      "cpuEfficiency": "CPU Efficiency (ES)",
-      "errorRate": "ERROR RATE (ES)",
-      "hits": "OmniGCloud Hits",
-      "memoryEfficiency": "Memory Efficiency (ES)",
-      "misses": "OmniGCloud Misses",
-      "networkEfficiency": "Network Efficiency (ES)",
-      "roi": "OmniGCloud Roi",
-      "securityScore": "Security Score (ES)",
-      "totalInvocations": "TOTAL INVOCATIONS (ES)",
-      "uptime": "OmniGCloud Uptime"
+      "cacheHitRate": "CACHE HIT RATE",
+      "costPerTransaction": "COST PER TRANSACTION",
+      "cpuEfficiency": "CPU Efficiency",
+      "errorRate": "ERROR RATE",
+      "hits": "Dashboard Graphs Hits",
+      "memoryEfficiency": "Memory Efficiency",
+      "misses": "Dashboard Graphs Misses",
+      "networkEfficiency": "Network Efficiency",
+      "roi": "Dashboard Graphs Roi",
+      "securityScore": "Security Score",
+      "totalInvocations": "TOTAL INVOCATIONS",
+      "uptime": "Dashboard Graphs Uptime"
     },
     "Metrics": {
       "common": {
-        "healthScore": "HEALTH SCORE (ES)"
+        "healthScore": "HEALTH SCORE"
       },
       "cost": {
-        "analysis": "Multi-cloud routing is actively preventing vendor lock-in premiums by shifting non-critical workloads to OCI and Azure spot instances. (ES)",
-        "pageSubtitle": "Multi-cloud cost optimization (ES)",
-        "pageTitle": "Cost Arbitrage (ES)",
+        "analysis": "Multi-cloud routing is actively preventing vendor lock-in premiums by shifting non-critical workloads to OCI and Azure spot instances.",
+        "pageSubtitle": "Multi-cloud cost optimization",
+        "pageTitle": "Cost Arbitrage",
         "stats": {
-          "avgNode": "Avg Cost/Node (ES)",
-          "monthly": "Monthly Saved (ES)",
-          "spot": "Spot Usage (ES)",
-          "waste": "Waste Reduc. (ES)"
+          "avgNode": "Avg Cost/Node",
+          "monthly": "Monthly Saved",
+          "spot": "Spot Usage",
+          "waste": "Waste Reduc."
         },
-        "subtitle": "Multi-cloud cost optimization engine (ES)",
-        "title": "Cost Savings (ES)"
+        "subtitle": "Multi-cloud cost optimization engine",
+        "title": "Cost Savings"
       },
       "deployment": {
-        "analysis": "CI/CD pipelines are operating at peak velocity with zero regressions detected in staging or production environments today. (ES)",
-        "pageSubtitle": "Weekly deployment frequency (ES)",
-        "pageTitle": "Velocity Metrics (ES)",
+        "analysis": "CI/CD pipelines are operating at peak velocity with zero regressions detected in staging or production environments today.",
+        "pageSubtitle": "Weekly deployment frequency",
+        "pageTitle": "Velocity Metrics",
         "stats": {
-          "buildTime": "Build Time (ES)",
-          "deploys": "Deploys/Day (ES)",
-          "rollbacks": "OmniGCloud Rollbacks",
-          "success": "Success Rate (ES)"
+          "buildTime": "Build Time",
+          "deploys": "Deploys/Day",
+          "rollbacks": "Deployment Stats Rollbacks",
+          "success": "Success Rate"
         },
-        "subtitle": "Pipeline throughput and failure rate (ES)",
-        "title": "CI/CD Velocity (ES)"
+        "subtitle": "Pipeline throughput and failure rate",
+        "title": "CI/CD Velocity"
       },
       "error": {
-        "analysis": "Self-healing subsystems recovered 2 pods automatically after detecting memory leaks, preventing user-facing errors. (ES)",
-        "pageSubtitle": "Error rate & threat trend (ES)",
-        "pageTitle": "Threat Analysis (ES)",
+        "analysis": "Self-healing subsystems recovered 2 pods automatically after detecting memory leaks, preventing user-facing errors.",
+        "pageSubtitle": "Error rate & threat trend",
+        "pageTitle": "Threat Analysis",
         "stats": {
-          "5xx": "5xx Rates (ES)",
-          "anomalies": "OmniGCloud Anomalies",
-          "errorRate": "Global Error % (ES)",
-          "healed": "Self-Healed (ES)"
+          "5xx": "5xx Rates",
+          "anomalies": "Error Stats Anomalies",
+          "errorRate": "Global Error %",
+          "healed": "Self-Healed"
         },
-        "subtitle": "System-wide anomaly detection (ES)",
-        "title": "Error & Anomalies (ES)"
+        "subtitle": "System-wide anomaly detection",
+        "title": "Error & Anomalies"
       },
       "executive": {
-        "analysis": "Overall system health is excellent. Strategic KPIs are trending positively with a significant reduction in operational overhead due to autonomous scaling. (ES)",
-        "pageSubtitle": "Strategic alignment & KPI summary (ES)",
-        "pageTitle": "Executive Overview (ES)",
+        "analysis": "Overall system health is excellent. Strategic KPIs are trending positively with a significant reduction in operational overhead due to autonomous scaling.",
+        "pageSubtitle": "Strategic alignment & KPI summary",
+        "pageTitle": "Executive Overview",
         "stats": {
-          "activeUsers": "Active Users (ES)",
-          "churn": "OmniGCloud Churn",
-          "mrr": "OmniGCloud Mrr",
-          "nps": "OmniGCloud Nps"
+          "activeUsers": "Active Users",
+          "churn": "Executive Stats Churn",
+          "mrr": "Executive Stats Mrr",
+          "nps": "Executive Stats Nps"
         },
-        "subtitle": "Top-level business health indicators (ES)",
-        "title": "Strategic Alignment (ES)"
+        "subtitle": "Top-level business health indicators",
+        "title": "Strategic Alignment"
       },
       "resources": {
-        "analysis": "Cluster auto-scaling is maintaining optimal bin packing, ensuring resources are utilized efficiently without over-provisioning. (ES)",
-        "pageSubtitle": "Live infrastructure metrics (ES)",
-        "pageTitle": "Resource Telemetry (ES)",
+        "analysis": "Cluster auto-scaling is maintaining optimal bin packing, ensuring resources are utilized efficiently without over-provisioning.",
+        "pageSubtitle": "Live infrastructure metrics",
+        "pageTitle": "Resource Telemetry",
         "stats": {
-          "cpu": "CPU Usage (ES)",
-          "memory": "OmniGCloud Memory",
-          "nodes": "Node Count (ES)",
-          "pods": "Active Pods (ES)"
+          "cpu": "CPU Usage",
+          "memory": "Resources Stats Memory",
+          "nodes": "Node Count",
+          "pods": "Active Pods"
         },
-        "subtitle": "CPU, Memory, and Storage telemetry (ES)",
-        "title": "Cluster Resources (ES)"
+        "subtitle": "CPU, Memory, and Storage telemetry",
+        "title": "Cluster Resources"
       },
       "roi": {
-        "analysis": "AI-driven arbitrage has optimised spot instance usage, resulting in a significantly lower TCO compared to on-demand provisioning this quarter. (ES)",
-        "pageSubtitle": "Real-time return on investment (ES)",
-        "pageTitle": "ROI Performance (ES)",
+        "analysis": "AI-driven arbitrage has optimised spot instance usage, resulting in a significantly lower TCO compared to on-demand provisioning this quarter.",
+        "pageSubtitle": "Real-time return on investment",
+        "pageTitle": "ROI Performance",
         "stats": {
-          "current": "Current ROI (ES)",
-          "efficiency": "OmniGCloud Efficiency",
-          "projection": "OmniGCloud Projection",
-          "savings": "Net Savings (ES)"
+          "current": "Current ROI",
+          "efficiency": "Roi Stats Efficiency",
+          "projection": "Roi Stats Projection",
+          "savings": "Net Savings"
         },
-        "subtitle": "Real-time return on investment tracking (ES)",
-        "title": "ROI Performance (ES)"
+        "subtitle": "Real-time return on investment tracking",
+        "title": "ROI Performance"
       },
       "scaling": {
-        "analysis": "Predictive scaling preempted traffic spikes in EU-West-1, keeping latency below 50ms during global user wakeup. (ES)",
-        "pageSubtitle": "24-hour scaling activity (ES)",
-        "pageTitle": "Auto-Scale Events (ES)",
+        "analysis": "Predictive scaling preempted traffic spikes in EU-West-1, keeping latency below 50ms during global user wakeup.",
+        "pageSubtitle": "24-hour scaling activity",
+        "pageTitle": "Auto-Scale Events",
         "stats": {
-          "downs": "Scale Downs (ES)",
-          "nodes": "Max Nodes (ES)",
-          "savings": "Est. Savings (ES)",
-          "ups": "Scale Ups (ES)"
+          "downs": "Scale Downs",
+          "nodes": "Max Nodes",
+          "savings": "Est. Savings",
+          "ups": "Scale Ups"
         },
-        "subtitle": "Dynamic provisioning log (ES)",
-        "title": "Scaling Activity (ES)"
+        "subtitle": "Dynamic provisioning log",
+        "title": "Scaling Activity"
       },
       "security": {
-        "analysis": "Automated compliance guardrails are active. No critical vulnerabilities detected in the latest continuous audit cycle. (ES)",
-        "pageSubtitle": "Security posture & threat protection (ES)",
-        "pageTitle": "Compliance Radar (ES)",
+        "analysis": "Automated compliance guardrails are active. No critical vulnerabilities detected in the latest continuous audit cycle.",
+        "pageSubtitle": "Security posture & threat protection",
+        "pageTitle": "Compliance Radar",
         "stats": {
-          "compliance": "OmniGCloud Compliance",
-          "issues": "Open Issues (ES)",
-          "score": "Security Score (ES)",
-          "threats": "Threats Blocked (ES)"
+          "compliance": "Security Stats Compliance",
+          "issues": "Open Issues",
+          "score": "Security Score",
+          "threats": "Threats Blocked"
         },
-        "subtitle": "Real-time compliance monitoring (ES)",
-        "title": "Security Posture (ES)"
+        "subtitle": "Real-time compliance monitoring",
+        "title": "Security Posture"
       },
       "technical": {
-        "analysis": "Technical debt reduction sprint is showing results with improved build times and higher test coverage across core microservices. (ES)",
-        "pageSubtitle": "System health & engineering metrics (ES)",
-        "pageTitle": "Technical Operations (ES)",
+        "analysis": "Technical debt reduction sprint is showing results with improved build times and higher test coverage across core microservices.",
+        "pageSubtitle": "System health & engineering metrics",
+        "pageTitle": "Technical Operations",
         "stats": {
-          "buildTime": "Avg Build (ES)",
-          "coverage": "Test Cov. (ES)",
-          "issues": "OmniGCloud Issues",
-          "prs": "Pull Requests (ES)"
+          "buildTime": "Avg Build",
+          "coverage": "Test Cov.",
+          "issues": "Technical Stats Issues",
+          "prs": "Pull Requests"
         },
-        "subtitle": "Engineering velocity & stability (ES)",
-        "title": "Ops Control Plane (ES)"
+        "subtitle": "Engineering velocity & stability",
+        "title": "Ops Control Plane"
       },
       "uptime": {
-        "analysis": "Global mesh routing automatically bypassed 3 regional carrier outages in the last 24 hours, preserving 100% application uptime. (ES)",
-        "pageSubtitle": "Platform availability and uptime (ES)",
-        "pageTitle": "Global Connectivity (ES)",
+        "analysis": "Global mesh routing automatically bypassed 3 regional carrier outages in the last 24 hours, preserving 100% application uptime.",
+        "pageSubtitle": "Platform availability and uptime",
+        "pageTitle": "Global Connectivity",
         "stats": {
-          "availability": "OmniGCloud Availability",
-          "downtime": "OmniGCloud Downtime",
-          "incidents": "OmniGCloud Incidents",
-          "mttr": "OmniGCloud Mttr"
+          "availability": "Uptime Stats Availability",
+          "downtime": "Uptime Stats Downtime",
+          "incidents": "Uptime Stats Incidents",
+          "mttr": "Uptime Stats Mttr"
         },
-        "subtitle": "30-day global availability (ES)",
-        "title": "System Uptime (ES)"
+        "subtitle": "30-day global availability",
+        "title": "System Uptime"
       }
     },
     "Shell": {
-      "activeAlerts": "Active Alerts (ES)",
-      "activeAssets": "Active Assets (ES)",
-      "cloudSpend": "Cloud Spend (ES)",
-      "nominal": "All systems nominal (ES)",
-      "requiresAttention": "Requires attention (ES)",
-      "revenueImpact": "Revenue Impact (ES)"
+      "activeAlerts": "Active Alerts",
+      "activeAssets": "Active Assets",
+      "cloudSpend": "Cloud Spend",
+      "nominal": "All systems nominal",
+      "requiresAttention": "Requires attention",
+      "revenueImpact": "Revenue Impact"
     },
     "Technical": {
-      "activeNodes": "Active Nodes (ES)",
-      "activeNodesValue": "142 (ES)",
-      "avg": "Avg: 7.2k (ES)",
-      "dataTransfer": "Data Transfer (ES)",
-      "dataTransferValue": "2.1TB (ES)",
-      "lastHour": "Last hour (ES)",
-      "latencyDesc": "Real-time system latency metrics (ES)",
-      "latencyTitle": "Global Latency (ES)",
-      "queryDesc": "Database operations (ES)",
-      "queryTitle": "Query Performance (ES)",
-      "requestsSec": "Requests/sec (ES)",
-      "requestsSecValue": "8.4k (ES)",
-      "resourceDesc": "Live infrastructure metrics (ES)",
-      "resourceTitle": "Resource Telemetry (ES)",
-      "scalingDesc": "24-hour scaling activity (ES)",
-      "scalingTitle": "Auto-Scale Events (ES)",
-      "subtitle": "OMNIGCLOUD_CONTROL_PLANE_v4.2.1 (ES)",
-      "threatDesc": "Error rate & threat trend (ES)",
-      "threatTitle": "Threat Analysis (ES)",
-      "title": "TECHNICAL OPERATIONS (ES)",
-      "trend": "+8 (24h) (ES)",
-      "velocityDesc": "Weekly deployment frequency (ES)",
-      "velocityTitle": "Velocity Metrics (ES)"
+      "activeNodes": "Active Nodes",
+      "activeNodesValue": "142",
+      "avg": "Avg: 7.2k",
+      "dataTransfer": "Data Transfer",
+      "dataTransferValue": "2.1TB",
+      "lastHour": "Last hour",
+      "latencyDesc": "Real-time system latency metrics",
+      "latencyTitle": "Global Latency",
+      "queryDesc": "Database operations",
+      "queryTitle": "Query Performance",
+      "requestsSec": "Requests/sec",
+      "requestsSecValue": "8.4k",
+      "resourceDesc": "Live infrastructure metrics",
+      "resourceTitle": "Resource Telemetry",
+      "scalingDesc": "24-hour scaling activity",
+      "scalingTitle": "Auto-Scale Events",
+      "subtitle": "OMNIGCLOUD_CONTROL_PLANE_v4.2.1",
+      "threatDesc": "Error rate & threat trend",
+      "threatTitle": "Threat Analysis",
+      "title": "TECHNICAL OPERATIONS",
+      "trend": "+8 (24h)",
+      "velocityDesc": "Weekly deployment frequency",
+      "velocityTitle": "Velocity Metrics"
     },
     "TimeSeries": {
       "badges": {
-        "compliant": "✓ COMPLIANT (ES)",
-        "decreasing": "OmniGCloud Decreasing",
-        "live": "OmniGCloud Live",
-        "projected": "OmniGCloud Projected",
-        "realtime": "REAL-TIME (ES)"
+        "compliant": "✓ COMPLIANT",
+        "decreasing": "Timeseries Badges Decreasing",
+        "live": "Timeseries Badges Live",
+        "projected": "Timeseries Badges Projected",
+        "realtime": "REAL-TIME"
       },
-      "costDesc": "Monthly infrastructure costs showing significant savings (ES)",
-      "costTitle": "Cost Comparison: Traditional vs OmniGCloud (ES)",
-      "errorDesc": "30-day error rate showing improvement over time (ES)",
-      "errorTitle": "Error Rate Trend (ES)",
-      "latencyDesc": "P50, P95, and P99 latency metrics over 24 hours (ES)",
-      "latencyTitle": "API Latency Distribution (ES)",
-      "slaDesc": "Weekly SLA adherence tracking (target: 99.9%) (ES)",
-      "slaTitle": "SLA Compliance (ES)",
-      "throughputDesc": "Hourly request throughput with peak hour detection (ES)",
-      "throughputTitle": "Request Volume (ES)"
+      "costDesc": "Monthly infrastructure costs showing significant savings",
+      "costTitle": "Cost Comparison: Traditional vs OmniGCloud",
+      "errorDesc": "30-day error rate showing improvement over time",
+      "errorTitle": "Error Rate Trend",
+      "latencyDesc": "P50, P95, and P99 latency metrics over 24 hours",
+      "latencyTitle": "API Latency Distribution",
+      "slaDesc": "Weekly SLA adherence tracking (target: 99.9%)",
+      "slaTitle": "SLA Compliance",
+      "throughputDesc": "Hourly request throughput with peak hour detection",
+      "throughputTitle": "Request Volume"
     },
     "active": "OmniGCloud Active",
-    "badge": "New (ES)",
-    "globalHealth": "Global Health (ES)",
-    "infraSubtitle": "Global node status and uptime. (ES)",
-    "infraTitle": "Infrastructure Health (ES)",
-    "liveSubtitle": "Real-time system performance metrics. (ES)",
-    "liveTitle": "System Operational Status (ES)",
-    "logicMeshStatus": "Logic Mesh Status (ES)",
-    "optimizationSubtitle": "Global Resource Allocator (ES)",
-    "optimizationTitle": "Resource Optimization (ES)",
-    "roiSubtitle": "Projected savings and efficiency gains. (ES)",
-    "roiTitle": "Cost & ROI Analysis (ES)",
+    "badge": "New",
+    "globalHealth": "Global Health",
+    "infraSubtitle": "Global node status and uptime.",
+    "infraTitle": "Infrastructure Health",
+    "liveSubtitle": "Real-time system performance metrics.",
+    "liveTitle": "System Operational Status",
+    "logicMeshStatus": "Logic Mesh Status",
+    "optimizationSubtitle": "Global Resource Allocator",
+    "optimizationTitle": "Resource Optimization",
+    "roiSubtitle": "Projected savings and efficiency gains.",
+    "roiTitle": "Cost & ROI Analysis",
     "role": "OmniGCloud Role",
-    "title": "Dashboard (ES)",
-    "trustSubtitle": "Sovereign Compliance Monitor (ES)",
-    "trustTitle": "Trust Compliance Score (ES)",
+    "title": "Dashboard",
+    "trustSubtitle": "Sovereign Compliance Monitor",
+    "trustTitle": "Trust Compliance Score",
     "welcome": "OmniGCloud Welcome"
   },
   "Demo": {
@@ -7543,6 +7626,111 @@
         "stateReconciliationDesc": "(Current State → Target State) (ES)",
         "validation": "Validation Diagram (ES)",
         "validationDesc": "Validation process diagram (ES)"
+      }
+    },
+    "Dashboard": {
+      "Charts": {
+        "aiAnalysis": "AI Analysis",
+        "historicalTrend": "Historical Trend",
+        "liveDataFeed": "Live Data Feed",
+        "systemLogs": "System Logs",
+        "liveView": "Live View",
+        "Logs": {
+          "levels": {
+            "info": "INFO",
+            "success": "SUCCESS",
+            "debug": "DEBUG",
+            "warn": "WARN",
+            "error": "ERROR"
+          },
+          "optimizing": "Optimizing bin packing for region us-east-1...",
+          "rebalanced": "Rebalanced 4 nodes. Savings: $4.20/hr",
+          "checking": "Checking compliance policies for new buckets...",
+          "synced": "Telemetry stream synced. Latency: 12ms",
+          "verified": "SOC2 Control 4.1 verified.",
+          "scaling": "Scaling event triggered by load predictor."
+        },
+        "common": {
+          "healthScore": "HEALTH SCORE"
+        },
+        "executive": {
+          "pageTitle": "Executive Overview",
+          "pageSubtitle": "Strategic alignment & KPI summary",
+          "title": "Strategic Alignment",
+          "subtitle": "Top-level business health indicators",
+          "analysis": "Overall system health is excellent. Strategic KPIs are trending positively with a significant reduction in operational overhead due to autonomous scaling.",
+          "stats": {
+            "activeUsers": "Active Users",
+            "mrr": "MRR",
+            "churn": "Churn",
+            "nps": "NPS"
+          }
+        },
+        "technical": {
+          "pageTitle": "Technical Operations",
+          "pageSubtitle": "System health & engineering metrics",
+          "title": "Ops Control Plane",
+          "subtitle": "Engineering velocity & stability",
+          "analysis": "Technical debt reduction sprint is showing results with improved build times and higher test coverage across core microservices.",
+          "stats": {
+            "prs": "Pull Requests",
+            "buildTime": "Avg Build",
+            "coverage": "Test Cov.",
+            "issues": "Issues"
+          }
+        },
+        "roi": {
+          "pageTitle": "ROI Performance",
+          "pageSubtitle": "Real-time return on investment",
+          "title": "ROI Performance",
+          "subtitle": "Real-time return on investment tracking",
+          "analysis": "AI-driven arbitrage has optimised spot instance usage, resulting in a significantly lower TCO compared to on-demand provisioning this quarter.",
+          "stats": {
+            "current": "Current ROI",
+            "savings": "Net Savings",
+            "efficiency": "Efficiency",
+            "projection": "Projection"
+          }
+        },
+        "cost": {
+          "pageTitle": "Cost Arbitrage",
+          "pageSubtitle": "Multi-cloud cost optimization",
+          "title": "Cost Savings",
+          "subtitle": "Multi-cloud cost optimization engine",
+          "analysis": "Multi-cloud routing is actively preventing vendor lock-in premiums by shifting non-critical workloads to OCI and Azure spot instances.",
+          "stats": {
+            "monthly": "Monthly Saved",
+            "avgNode": "Avg Cost/Node",
+            "spot": "Spot Usage",
+            "waste": "Waste Reduc."
+          }
+        },
+        "uptime": {
+          "pageTitle": "Global Connectivity",
+          "pageSubtitle": "Platform availability and uptime",
+          "title": "System Uptime",
+          "subtitle": "30-day global availability",
+          "analysis": "Global mesh routing automatically bypassed 3 regional carrier outages in the last 24 hours, preserving 100% application uptime.",
+          "stats": {
+            "availability": "Availability",
+            "downtime": "Downtime",
+            "mttr": "MTTR",
+            "incidents": "Incidents"
+          }
+        },
+        "security": {
+          "pageTitle": "Compliance Radar",
+          "pageSubtitle": "Security posture & threat protection",
+          "title": "Security Posture",
+          "subtitle": "Real-time compliance monitoring",
+          "analysis": "Automated compliance guardrails are active. No critical vulnerabilities detected in the latest continuous audit cycle.",
+          "stats": {
+            "score": "Security Score",
+            "threats": "Threats Blocked",
+            "compliance": "Compliance",
+            "issues": "Open Issues"
+          }
+        }
       }
     }
   }
