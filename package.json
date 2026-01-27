@@ -49,6 +49,7 @@
     "i18n:leak:gate": "npx tsx scripts/i18n_leak_gate.ts",
     "gate:i18n:key-leak": "npx tsx scripts/i18n_no_key_leak_gate.ts",
     "gate:hardcoded": "npx tsx scripts/no_hardcoded_strings_gate.ts",
+    "gate:diagrams": "node scripts/validate-diagrams.js",
     "security:gate": "node scripts/security_gate.mjs",
     "health:routes": "npx tsx scripts/check-routes.ts",
     "health:i18n": "npx tsx scripts/check-i18n-keys.ts",
