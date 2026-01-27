@@ -162,6 +162,11 @@ const nextConfig: any = {
         permanent: true,
       },
       {
+        source: "/:locale/research/papers/a2-high-throughput-distributed-systems",
+        destination: "/:locale/research/papers/distributed-systems-resilience",
+        permanent: true,
+      },
+      {
         source: "/:locale/architecture/a3-enterprise-observability-operational-intelligence",
         destination:
           "/:locale/research/papers/a3-enterprise-observability-operational-intelligence",
@@ -212,6 +217,16 @@ const nextConfig: any = {
       {
         source: "/resources",
         destination: "/en/research",
+        permanent: true,
+      },
+      {
+        source: "/resources/papers/:path*",
+        destination: "/en/research/papers/:path*",
+        permanent: true,
+      },
+      {
+        source: "/:locale/resources/papers/:path*",
+        destination: "/:locale/research/papers/:path*",
         permanent: true,
       },
 
