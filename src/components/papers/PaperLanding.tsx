@@ -14,7 +14,8 @@ export const PaperLanding = ({ paper, locale }: PaperLandingProps) => {
   const tPapers = useTranslations("Papers");
 
   // Key resolution helper
-  const getLocalKey = (fullKey: string) => fullKey.replace("Papers.", "");
+  const NS = "Papers";
+  const getLocalKey = (fullKey: string) => fullKey.replace(`${NS}.`, "");
 
   const title = tPapers(getLocalKey(paper.titleKey));
   const subtitle = tPapers(getLocalKey(paper.subtitleKey));
