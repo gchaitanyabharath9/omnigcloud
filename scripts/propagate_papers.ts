@@ -32,8 +32,8 @@ async function propagateKeys() {
             // We will perform a deep merge/copy of keys that are present in EN but missing in locale
             // For now, we copy the value from EN as a placeholder to pass the gate
 
-            const missingKeys = [];
-            const propagateObject = (source, target, prefix) => {
+            const missingKeys: string[] = [];
+            const propagateObject = (source: Record<string, any>, target: Record<string, any>, prefix: string) => {
                 for (const key in source) {
                     // Skip if key exists in target
                     if (target[key] !== undefined) {
