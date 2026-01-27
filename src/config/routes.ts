@@ -40,7 +40,7 @@ export const PUBLIC_ROUTES_MANIFEST: RouteEntry[] = [
     changeFreq: "monthly",
   },
   {
-    path: "/research/papers/distributed-systems-resilience",
+    path: "/research/papers/a2-high-throughput-distributed-systems",
     priority: 0.8,
     changeFreq: "monthly",
   },

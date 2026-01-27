@@ -22,7 +22,7 @@ export default async function PublicationsPage({
     {
       title: "Automated Multilingual Quality Assurance for Global Web Applications",
       excerpt: "Methodology for automated release gating in decentralized i18n architectures.",
-      href: "/research/automated-multilingual-quality-assurance",
+      href: "/research/papers/automated-multilingual-quality-assurance",
       category: "Research",
       date: "2024-12-15",
     },

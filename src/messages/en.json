@@ -4960,7 +4960,8 @@
           }
         },
         "subtitle": "Proving Correctness in Partition-Tolerant Systems",
-        "title": "Formal Verification of Distributed Consensus in Sovereign Clouds"
+        "title": "Formal Verification of Distributed Consensus in Sovereign Clouds",
+        "abstract": "This scholarly article applies formal methods to verify the correctness of the OmniGCloud consensus algorithm under partition scenarios. Using TLA+ specifications, we prove safety and liveness properties, identifying edge cases where traditional eventual consistency models fail. Our findings contribute to the body of knowledge on fault-tolerant distributed systems, offering mathematical proofs of reliability for mission-critical sovereign infrastructure."
       },
       "qa1": {
         "abstract": "As modern web architectures shift toward distributed, server-side rendered (SSR) systems, ensuring consistent localized experiences has become computationally non-trivial. Conventional internationalization (i18n) frameworks prioritize \"graceful degradation,\" defaulting to English when localized assets are missing. This introduces \"Silent Regressions\"—defects undetectable to standard monitors. This paper presents an independent, system-level design for Deterministic Multilingual QA. By implementing a proprietary three-layer defense model, the framework guarantees 100% surface area verification prior to deployment.",

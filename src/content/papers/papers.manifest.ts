@@ -39,7 +39,7 @@ export const papersManifest: PaperManifestItem[] = [
   },
   {
     id: "a2",
-    slug: "distributed-systems-resilience",
+    slug: "a2-high-throughput-distributed-systems",
     titleKey: "Papers.Items.a2.title",
     subtitleKey: "Papers.Items.a2.subtitle",
     abstractKey: "Papers.Items.a2.abstract",
