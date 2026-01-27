@@ -682,6 +682,20 @@
         "requestFullTextDisclaimer": "Access provided for academic and review purposes.",
         "technicalReport": "Technical Report"
       },
+      "sample_banner": {
+        "badge": "Public Summary / Sample",
+        "description": "Full paper available for editorial/reviewer evaluation upon request.",
+        "cta": "Request Full Paper",
+        "email_subject_prefix": "Request for Full Paper",
+        "email_body": "I am interested in reviewing the full paper for editorial or academic purposes. Please provide access.\n\nThank you."
+      },
+      "figures_index": {
+        "heading": "Figures Index",
+        "column_id": "Figure ID",
+        "column_caption": "Caption",
+        "column_type": "Type",
+        "footer_note": "{count} figures total in this paper."
+      },
       "Items": {
         "a1": {
           "abstract": "This paper presents a comprehensive reference architecture for building cloud-native enterprises that prioritize data sovereignty and regulatory compliance. By decoupling business logic from underlying infrastructure through a unified control plane, organizations can achieve platform independence and mitigate vendor lock-in risks. We explore patterns for distributed state management, federated identity, and policy enforcement, providing a blueprint for resilient and compliant digital ecosystems in highly regulated industries.",

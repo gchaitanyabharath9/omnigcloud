@@ -4,6 +4,8 @@ import { ArrowRight, FileText, Globe, Library, ShieldCheck, Tag, Calendar } from
 import { Link } from "@/navigation";
 import { PaperManifestItem } from "@/content/papers/papers.manifest";
 import MermaidDiagram from "@/components/article/MermaidDiagram";
+import { PaperSampleBanner } from "@/components/papers/PaperSampleBanner";
+import { FiguresIndex, FigureMetadata } from "@/components/papers/FiguresIndex";
 
 interface PaperLandingProps {
   paper: PaperManifestItem;
@@ -24,6 +26,9 @@ export const PaperLanding = ({ paper, locale }: PaperLandingProps) => {
   const keywords = tPapers(getLocalKey(paper.keywordsKey));
   const diagram = paper.diagramKey ? tPapers(getLocalKey(paper.diagramKey)) : null;
   const caption = paper.diagramCaptionKey ? tPapers(getLocalKey(paper.diagramCaptionKey)) : null;
+
+  // Collect all figures for the figures index
+  const figures: FigureMetadata[] = [];
 
   return (
     <div className="min-h-screen bg-[#020617] text-slate-200">
@@ -68,6 +73,9 @@ export const PaperLanding = ({ paper, locale }: PaperLandingProps) => {
       <main className="container mx-auto px-4 py-20">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-16">
           <article className="lg:col-span-8">
+            {/* Sample Banner */}
+            <PaperSampleBanner paperId={paper.id} paperTitle={title} />
+
             {/* Content Sections */}
             <div className="space-y-16">
               {[0, 1, 2, 3].map((index) => {
@@ -82,6 +90,10 @@ export const PaperLanding = ({ paper, locale }: PaperLandingProps) => {
                 const sectionContent = tPapers(`${sectionKey}.content`);
                 const sectionDiagram = tPapers(`${sectionKey}.diagram`);
                 const sectionCaption = tPapers(`${sectionKey}.caption`);
+
+                // Check for additional diagrams (diagram2, caption2)
+                const sectionDiagram2 = tPapers(`${sectionKey}.diagram2`);
+                const sectionCaption2 = tPapers(`${sectionKey}.caption2`);
 
                 // If the returned title is just the key, and we are not on section 0, maybe skip?
                 // But we requested "4 diagrams per paper", so we assume 4 sections exist.
@@ -101,25 +113,99 @@ export const PaperLanding = ({ paper, locale }: PaperLandingProps) => {
                       ))}
                     </div>
 
-                    {sectionDiagram && sectionDiagram !== `${NS}.${sectionKey}.diagram` && (
-                      <div className="my-10 bg-white/[0.02] border border-white/5 rounded-2xl p-6 md:p-8">
-                        {sectionDiagram.startsWith("graph") || sectionDiagram.startsWith("sequenceDiagram") || sectionDiagram.startsWith("flowchart") || sectionDiagram.startsWith("C4") ? (
-                          <MermaidDiagram chart={sectionDiagram} caption={sectionCaption !== `${NS}.${sectionKey}.caption` ? sectionCaption : ""} figureId={`Fig-${paper.id.toUpperCase()}-${index + 1}`} />
-                        ) : (
-                          <figure>
-                            <div className="bg-card/50 border border-white/10 rounded-lg p-4 overflow-hidden flex justify-center items-center">
-                              <img src={sectionDiagram} alt={sectionCaption || "Diagram"} className="max-w-full h-auto rounded shadow-xl" />
-                            </div>
-                            {sectionCaption && sectionCaption !== `${NS}.${sectionKey}.caption` && (
-                              <figcaption className="mt-3 text-center text-sm text-muted-foreground font-mono">
-                                <span className="font-bold text-primary mr-2">Fig-{paper.id.toUpperCase()}-{index + 1}:</span>
-                                {sectionCaption}
-                              </figcaption>
-                            )}
-                          </figure>
-                        )}
-                      </div>
-                    )}
+                    {/* Primary diagram */}
+                    {sectionDiagram && sectionDiagram !== `${NS}.${sectionKey}.diagram` && (() => {
+                      const figId = `Fig-${paper.id.toUpperCase()}-${index + 1}a`;
+                      const figCaption = sectionCaption !== `${NS}.${sectionKey}.caption` ? sectionCaption : "";
+                      const isMermaid = sectionDiagram.startsWith("graph") || sectionDiagram.startsWith("sequenceDiagram") || sectionDiagram.startsWith("flowchart");
+                      const isC4 = sectionDiagram.startsWith("C4");
+
+                      // Collect figure metadata
+                      if (figCaption) {
+                        let diagramSubtype = "image";
+                        if (isMermaid) {
+                          const match = sectionDiagram.match(/^(graph\s+\w+|sequenceDiagram|flowchart\s+\w+)/);
+                          diagramSubtype = match ? match[1] : "mermaid";
+                        } else if (isC4) {
+                          const match = sectionDiagram.match(/^(C4\w+)/);
+                          diagramSubtype = match ? match[1] : "C4";
+                        }
+
+                        figures.push({
+                          id: figId,
+                          caption: figCaption,
+                          type: isC4 ? "c4" : isMermaid ? "mermaid" : "image",
+                          diagramSubtype
+                        });
+                      }
+
+                      return (
+                        <div className="my-10 bg-white/[0.02] border border-white/5 rounded-2xl p-6 md:p-8">
+                          {isMermaid || isC4 ? (
+                            <MermaidDiagram chart={sectionDiagram} caption={figCaption} figureId={figId} />
+                          ) : (
+                            <figure id={figId}>
+                              <div className="bg-card/50 border border-white/10 rounded-lg p-4 overflow-hidden flex justify-center items-center">
+                                <img src={sectionDiagram} alt={figCaption || "Diagram"} className="max-w-full h-auto rounded shadow-xl" />
+                              </div>
+                              {figCaption && (
+                                <figcaption className="mt-3 text-center text-sm text-muted-foreground font-mono">
+                                  <span className="font-bold text-primary mr-2">{figId}:</span>
+                                  {figCaption}
+                                </figcaption>
+                              )}
+                            </figure>
+                          )}
+                        </div>
+                      );
+                    })()}
+
+                    {/* Secondary diagram (if exists) */}
+                    {sectionDiagram2 && sectionDiagram2 !== `${NS}.${sectionKey}.diagram2` && (() => {
+                      const figId = `Fig-${paper.id.toUpperCase()}-${index + 1}b`;
+                      const figCaption = sectionCaption2 !== `${NS}.${sectionKey}.caption2` ? sectionCaption2 : "";
+                      const isMermaid = sectionDiagram2.startsWith("graph") || sectionDiagram2.startsWith("sequenceDiagram") || sectionDiagram2.startsWith("flowchart");
+                      const isC4 = sectionDiagram2.startsWith("C4");
+
+                      // Collect figure metadata
+                      if (figCaption) {
+                        let diagramSubtype = "image";
+                        if (isMermaid) {
+                          const match = sectionDiagram2.match(/^(graph\s+\w+|sequenceDiagram|flowchart\s+\w+)/);
+                          diagramSubtype = match ? match[1] : "mermaid";
+                        } else if (isC4) {
+                          const match = sectionDiagram2.match(/^(C4\w+)/);
+                          diagramSubtype = match ? match[1] : "C4";
+                        }
+
+                        figures.push({
+                          id: figId,
+                          caption: figCaption,
+                          type: isC4 ? "c4" : isMermaid ? "mermaid" : "image",
+                          diagramSubtype
+                        });
+                      }
+
+                      return (
+                        <div className="my-10 bg-white/[0.02] border border-white/5 rounded-2xl p-6 md:p-8">
+                          {isMermaid || isC4 ? (
+                            <MermaidDiagram chart={sectionDiagram2} caption={figCaption} figureId={figId} />
+                          ) : (
+                            <figure id={figId}>
+                              <div className="bg-card/50 border border-white/10 rounded-lg p-4 overflow-hidden flex justify-center items-center">
+                                <img src={sectionDiagram2} alt={figCaption || "Diagram"} className="max-w-full h-auto rounded shadow-xl" />
+                              </div>
+                              {figCaption && (
+                                <figcaption className="mt-3 text-center text-sm text-muted-foreground font-mono">
+                                  <span className="font-bold text-primary mr-2">{figId}:</span>
+                                  {figCaption}
+                                </figcaption>
+                              )}
+                            </figure>
+                          )}
+                        </div>
+                      );
+                    })()}
                   </section>
                 );
               })}
@@ -141,6 +227,9 @@ export const PaperLanding = ({ paper, locale }: PaperLandingProps) => {
                 ))}
               </div>
             </section>
+
+            {/* Figures Index */}
+            <FiguresIndex figures={figures} />
           </article>
 
           {/* Sidebar */}
