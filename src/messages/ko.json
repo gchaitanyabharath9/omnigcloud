@@ -4764,7 +4764,33 @@
         "subtitle": "The canonical A1 technical standard for implementing sovereign, multi-cloud platforms maximizing latency budgets and governance. (KO)",
         "title": "A1 Reference Architecture: Cloud-Native Enterprise Platforms (KO)",
         "caption": "Figure 1.1: The Four-Plane Sovereign Model isolating Data, Logic, Governance, and Execution.",
-        "diagram": "/images/research/a1-four-plane-model.png"
+        "diagram": "/images/research/a1-four-plane-model.png",
+        "sections": {
+          "0": {
+            "title": "Introduction",
+            "content": "In an era of increasing geopolitical fragmentation and regulatory stringency, the concept of 'digital sovereignty' has moved from a theoretical ideal to a business imperative. Enterprises operating across multiple jurisdictions face a complex matrix of data residency laws, such as GDPR in Europe, CCPA in California, and various localization mandates in Asia. Traditional cloud architectures, often deeply coupled with specific hyperscale providers (AWS, Azure, GCP), create significant vendor lock-in risks that threaten long-term operational autonomy.\n\nThis paper introduces a comprehensive reference architecture for the 'Cloud-Native Enterprise'—an organizational state where business logic is strictly decoupled from underlying infrastructure. By leveraging a unified control plane and standardized infrastructure adapters, organizations can achieve true portability and compliance resilience. We argue that sovereignty is not merely about where data is stored, but about who controls the keys, the identity provider, and the policy enforcement points.",
+            "diagram": "graph TD; A[Business Core] -->|API| B(Control Plane); B -->|Orchestrate| C{Infra Adapters}; C -->|Deploy| D[AWS Region A]; C -->|Deploy| E[Azure Region B]; C -->|Deploy| F[On-Premises]; style B fill:#f9f,stroke:#333,stroke-width:2px; style A fill:#ccf",
+            "caption": "Figure 1: High-Level Decoupling Architecture"
+          },
+          "1": {
+            "title": "The Decoupling Principle",
+            "content": "At the heart of our reference architecture lies the Decoupling Principle: no business logic component should directly consume a proprietary cloud API. Instead, all infrastructure interactions—be it storage, queuing, or compute—must be mediated through a sovereign abstraction layer. This layer, implemented as a set of Kubernetes Custom Resource Definitions (CRDs) and Crossplane compositions, translates abstract intents (e.g., 'PostgreSQL Database with High Availability') into provider-specific resources (e.g., AWS RDS or Azure SQL).\n\nThis abstraction serves two critical functions. First, it enables 'Write Once, Run Anywhere' for infrastructure, allowing teams to migrate workloads between clouds with zero code changes. Second, it embeds compliance guardrails directly into the provisioning process. A developer cannot mistakenly provision an unencrypted bucket if the abstraction layer enforces encryption by default. This 'Compliance-as-Code' approach shifts security left, reducing the burden on audit teams.",
+            "diagram": "classDiagram; class BusinessLogic { +processOrder() +manageInventory() }; class SovereignInterface { +storeData() +publishEvent() }; class AWSAdapter { +putItemDynamoDB() }; class AzureAdapter { +insertCosmosDB() }; BusinessLogic --> SovereignInterface; SovereignInterface <|-- AWSAdapter; SovereignInterface <|-- AzureAdapter;",
+            "caption": "Figure 2: Interface-Adapter Pattern for Cloud Resources"
+          },
+          "2": {
+            "title": "Distributed State & Identity",
+            "content": "State management in a sovereign cloud environment presents unique challenges. Data cannot simply be replicated globally; it must respect strict residency boundaries. We propose a 'Federated State Architecture' where data is sharded by jurisdiction. User data for European citizens resides solely in EU clusters, while US data remains in North America. To achieve this, we utilize a sharding layer at the application ingress, routing requests based on user attributes and consent metadata.\n\nIdentity management follows a similar federated pattern. A central Identity Provider (IdP) acts as a broker, trusting local IdPs within each sovereignty zone. This prevents a single point of failure and ensures that authentication tokens generated in one region do not carry excessive privileges in another. We explore the use of SPIFFE/SPIRE for workload identity, ensuring that zero-trust principles are applied not just to users, but to every service-to-service interaction.",
+            "diagram": "sequenceDiagram; participant User; participant GlobalIngress; participant EU_Cluster; participant US_Cluster; User->>GlobalIngress: Login Request (Region=EU); GlobalIngress->>EU_Cluster: Route Traffic; EU_Cluster->>EU_Cluster: Auth & Local Data; EU_Cluster-->>User: Response (Data stays in EU);",
+            "caption": "Figure 3: Jurisdiction-Aware Request Routing"
+          },
+          "3": {
+            "title": "Conclusion & Future Work",
+            "content": "The Cloud-Native Enterprise architecture offers a viable path forward for organizations navigating the complexities of the modern digital landscape. By prioritizing sovereignty and decoupling, enterprises can regain control over their digital destiny, mitigate regulatory risks, and foster a more competitive multi-vendor ecosystem. While the initial investment in building these abstractions is non-trivial, the long-term ROI in terms of agility and risk reduction is substantial.\n\nFuture work will focus on automating the testing of these sovereign abstractions (chaos engineering for compliance) and exploring the role of WebAssembly (Wasm) as a lighter-weight, sandboxed runtime for edge computing scenarios where sovereignty must be enforced at the device level.",
+            "diagram": "pie title ROI Breakdown; \"Vendor Leverage\" : 30; \"Compliance Efficiency\" : 40; \"Migration Speed\" : 20; \"Ops Reduction\" : 10",
+            "caption": "Figure 4: Long-term ROI of Sovereign Architecture"
+          }
+        }
       },
       "a2": {
         "abstract": "Explores the theoretical limits of message throughput in federated setups, proposing a novel 'Lattice-Mesh' topology that reduces cross-region latency by 40% compared to traditional hub-and-spoke models. Benchmarks demonstrate sustained throughput of 1M+ events/sec with guaranteed causal ordering. (KO)",
@@ -4773,7 +4799,33 @@
         "subtitle": "Architecting resilient, event-driven backbones for global-scale enterprise data fabrics. (KO)",
         "title": "High-Throughput Distributed Systems (KO)",
         "caption": "Figure 2.1: Lattice-Mesh Topology showing optimized data transmission paths between nodes.",
-        "diagram": "graph LR\n    subgraph \"Nodal Lattice\"\n    N1((n1)) <--> N2((n2))\n    N2 <--> N3((n3))\n    N1 <--> N4((n4))\n    N4 <--> N5((n5))\n    N3 <--> N6((n6))\n    N5 <--> N6\n    N2 <--> N5\n    end\n    style N1 fill:#1e293b,stroke:#3b82f6\n    style N2 fill:#1e293b,stroke:#3b82f6\n    style N3 fill:#1e293b,stroke:#3b82f6\n    style N4 fill:#1e293b,stroke:#3b82f6\n    style N5 fill:#1e102b,stroke:#f59e0b,stroke-width:3px\n    style N6 fill:#1e293b,stroke:#3b82f6"
+        "diagram": "graph LR\n    subgraph \"Nodal Lattice\"\n    N1((n1)) <--> N2((n2))\n    N2 <--> N3((n3))\n    N1 <--> N4((n4))\n    N4 <--> N5((n5))\n    N3 <--> N6((n6))\n    N5 <--> N6\n    N2 <--> N5\n    end\n    style N1 fill:#1e293b,stroke:#3b82f6\n    style N2 fill:#1e293b,stroke:#3b82f6\n    style N3 fill:#1e293b,stroke:#3b82f6\n    style N4 fill:#1e293b,stroke:#3b82f6\n    style N5 fill:#1e102b,stroke:#f59e0b,stroke-width:3px\n    style N6 fill:#1e293b,stroke:#3b82f6",
+        "sections": {
+          "0": {
+            "title": "The Bandwidth Bottleneck",
+            "content": "Traditional centralized message brokers (like Kafka or RabbitMQ) operate on a hub-and-spoke model. While effective for many use cases, this topology introduces a single bottleneck: the broker itself. In scenarios requiring ultra-low latency and massive throughput—such as high-frequency trading, IoT sensor networks, or real-time gaming—the network hops to and from the central broker become prohibitively expensive. As data volumes grow exponentially, the cost of scaling the central cluster grows super-linearly.\n\nThis paper validates the 'Lattice-Mesh' architecture, a decentralized approach where nodes communicate directly with peers to disseminate events. By removing the central broker for the data plane (keeping it only for the control plane), we can establish a system where throughput scales linearly with the number of nodes. We draw inspiration from gossip protocols and biologically inspired cellular automata.",
+            "diagram": "graph TD; A[Producer] -->|Hub-Spoke| B(Central Broker); B -->|Hub-Spoke| C[Consumer]; D[Node 1] <-->|Lattice-Mesh| E[Node 2]; E <-->|Lattice-Mesh| F[Node 3]; D <-->|Lattice-Mesh| F; style B fill:#faa,stroke:#333; style D fill:#afa,stroke:#333",
+            "caption": "Figure 1: Centralized vs. Lattice-Mesh Topology"
+          },
+          "1": {
+            "title": "Gossip Protocols & Consensus",
+            "content": "To maintain state consistency without a central authority, Lattice-Mesh relies on an optimized gossip protocol. Nodes randomly select peers to share information with, ensuring that reliable propagation occurs with logarithmic time complexity. We introduce a 'Weighted Gossip' mechanism where node selection is biased by network proximity and latency measurements, significantly reducing cross-datacenter traffic.\n\nFor ordering guarantees, which are notoriously difficult in peer-to-peer systems, we implement a conflict-free replicated data type (CRDT) approach for the event log. This allows nodes to merge divergent event streams deterministically without requiring expensive consensus algorithms like Raft or Paxos for every message. Strong consistency is relaxed in favor of Causal Consistency, which is sufficient for the target use cases.",
+            "diagram": "stateDiagram-v2; [*] --> Clean; Clean --> Infective : New Info; Infective --> Removed : Shared N times; Removed --> [*]; Infective --> Infective : Gossip to Peer",
+            "caption": "Figure 2: SIR Gossip Protocol State Machine"
+          },
+          "2": {
+            "title": "Performance Benchmarks",
+            "content": "We implemented a prototype of the Lattice-Mesh on a cluster of 500 commodity nodes. Benchmarks compared this against a standard 3-node Kafka cluster. The results were compelling: for payloads under 1KB, the Lattice-Mesh achieved a 40% reduction in end-to-end latency (P99). More importantly, the system continued to scale linearly as we added nodes, whereas the Kafka cluster began to show significant degradation due to partition leadership contention.\n\nBandwidth utilization was also more uniform across the network. By leveraging multicast where available and smart peer selection, the 'hotspot' effect seen in hub-and-spoke models was eliminated. This resilience to node failure is inherent; if any node goes down, the mesh simply routes around it.",
+            "diagram": "xychart-beta; title \"Latency vs Message Load\"; x-axis [Low, Med, High, Extreme]; y-axis \"Latency (ms)\" 0-->1000; line [20, 45, 120, 800] \"Kafka\"; line [15, 25, 40, 55] \"Lattice-Mesh\"",
+            "caption": "Figure 3: Latency Comparison Under Load"
+          },
+          "3": {
+            "title": "Conclusion",
+            "content": "Lattice-Mesh architectures represent a powerful alternative for next-generation distributed systems. While they introduce complexity in debugging and observability, the gains in raw throughput and fault tolerance make them indispensable for scale-critical applications. As edge computing proliferates, the ability to process data 'near the source' via a mesh rather than backhauling to a cloud core will become a standard architectural pattern.",
+            "diagram": "graph LR; Inputs-->Processing; Processing-->Outputs; style Processing fill:#f9f,stroke-dasharray: 5 5",
+            "caption": "Figure 4: Edge Processing Flow"
+          }
+        }
       },
       "a3": {
         "abstract": "Defines a standardized telemetry schema that unifies logs, metrics, and traces from disparate cloud providers into a single operational pane of glass. This approach enables AI-driven anomaly detection and automated root cause analysis across vendor boundaries. (KO)",
@@ -4782,7 +4834,33 @@
         "subtitle": "A unified framework for full-stack visibility in fragmented multi-cloud environments. (KO)",
         "title": "Enterprise Observability & Operational Intelligence (KO)",
         "caption": "Figure 3.1: The Observability Triangle - Unified Correlation of Logs, Metrics, and Traces.",
-        "diagram": "graph TD\n    A[Logs] --- O[AECP Insight]\n    O --- B[Metrics]\n    O --- C[Traces]\n    style O fill:#1e293b,stroke:#3b82f6,stroke-width:4px,color:#fff"
+        "diagram": "graph TD\n    A[Logs] --- O[AECP Insight]\n    O --- B[Metrics]\n    O --- C[Traces]\n    style O fill:#1e293b,stroke:#3b82f6,stroke-width:4px,color:#fff",
+        "sections": {
+          "0": {
+            "title": "The Noise Problem",
+            "content": "Modern microservices generate an overwhelming volume of telemetry data. Logs, metrics, and traces flood dashboarding tools, creating a 'noise' barrier that paradoxically makes it harder to identify real issues. Human operators cannot manually correlate a spike in CPU usage on Service A with an error log in Service B and a latency increase in Database C fast enough to prevent outages.\n\nThis paper proposes an 'Operational Intelligence' framework that moves beyond passive observability (dashboards) to active, AI-driven analysis. By treating operations data as a big data problem, we can apply machine learning techniques to detect anomalies, correlate events, and even trigger automated remediation.",
+            "diagram": "quadrantChart; title \"Observability Maturity\"; x-axis Passive --> Active; y-axis Reactive --> Proactive; \"Dashboards\" : [0.2, 0.2]; \"Alerting\" : [0.3, 0.4]; \"AIOps\" : [0.8, 0.8]; \"Self-Healing\" : [0.9, 0.9]",
+            "caption": "Figure 1: Maturity Model for Ops"
+          },
+          "1": {
+            "title": "Causal Inference Engines",
+            "content": "Correlation is not causation. A key innovation in our framework is the use of Causal Inference algorithms rather than simple statistical correlation. By building a directed acyclic graph (DAG) of system components based on tracing data (OpenTelemetry), the engine understands the structural dependencies of the system. When an anomaly is detected, the engine traverses this graph to find the upstream 'root' node.\n\nFor example, if the frontend is slow, the engine traces the dependency to the payment service, and then to the external payment gateway. If the gateway is reporting errors, it identifies the gateway as the root cause, suppressing alerts for the downstream symptoms. This 'Alert Separation' dramatically reduces pager fatigue.",
+            "diagram": "graph TD; A[Frontend Latency] --> B[Payment Service Error]; B --> C{Gateway Timeout}; C -->|Root Cause| D[External API]; style C fill:#f99,stroke:#333",
+            "caption": "Figure 2: Causal Graph Traversal"
+          },
+          "2": {
+            "title": "Dynamic Baselines",
+            "content": "Static thresholds (e.g., 'Alert if CPU > 80%') are obsolete in elastic cloud environments. Usage patterns follow daily, weekly, and seasonal seasonality. Our framework utilizes LSTM (Long Short-Term Memory) neural networks to learn the 'normal' behavior of every metric over time. It generates a dynamic baseline with confidence intervals. An alert is only fired if the metric deviates significantly from this predicted range.\n\nThis approach handles 'expected spikes' (like a 9 AM login storm) without triggering false alarms, while catching subtle degradations that might be within absolute limits but are statistically abnormal for that specific time context.",
+            "diagram": "xychart-beta; title \"Dynamic vs Static Thresholds\"; x-axis [08:00, 09:00, 10:00, 11:00]; y-axis \"Load\" 0-->100; line [20, 80, 40, 30] \"Actual\"; line [60, 90, 50, 40] \"Dynamic Upper Bound\"; line [50, 50, 50, 50] \"Static Threshold\"",
+            "caption": "Figure 3: LSTM Baseline Prediction"
+          },
+          "3": {
+            "title": "Automated Remediation",
+            "content": "The ultimate goal of Operational Intelligence is self-healing. Once a root cause is identified with high confidence, the system can trigger pre-approved remediation runbooks. For a memory leak, it might automatically restart the pod. For a database lock, it might kill the blocking query. Ideally, the human operator is notified *after* the issue has been resolved, turning operations into a supervisory role rather than a firefighter role.",
+            "diagram": "stateDiagram-v2; [*] --> Monitoring; Monitoring --> Anomaly : Detect; Anomaly --> Analysis : Context; Analysis --> Remediation : High Confidence; Remediation --> Resolved; Resolved --> [*]",
+            "caption": "Figure 4: Self-Healing Loop"
+          }
+        }
       },
       "a4": {
         "abstract": "Introduces the 'Governance-as-Code' paradigm, where policy definitions are version-controlled and enforced at the infrastructure provisioning layer. This ensures that every deployment, regardless of target environment, adheres to organizational security and compliance mandates by default. (KO)",
@@ -4791,7 +4869,33 @@
         "subtitle": "Enforcing compliance as code across on-premise, public, and sovereign clouds. (KO)",
         "title": "Platform Governance in Hybrid Environments (KO)",
         "caption": "Figure 4.1: The Four Gates of Autonomous Governance Enforcement.",
-        "diagram": "graph LR\n    G1[Policy] --> G2[Scrutiny]\n    G2 --> G3[Compliance]\n    G3 --> G4[Immutable Deploy]\n    style G1 fill:#1e293b,stroke:#3b82f6\n    style G2 fill:#1e293b,stroke:#3b82f6\n    style G3 fill:#1e293b,stroke:#3b82f6\n    style G4 fill:#1e293b,stroke:#10b981,stroke-width:3px"
+        "diagram": "graph LR\n    G1[Policy] --> G2[Scrutiny]\n    G2 --> G3[Compliance]\n    G3 --> G4[Immutable Deploy]\n    style G1 fill:#1e293b,stroke:#3b82f6\n    style G2 fill:#1e293b,stroke:#3b82f6\n    style G3 fill:#1e293b,stroke:#3b82f6\n    style G4 fill:#1e293b,stroke:#10b981,stroke-width:3px",
+        "sections": {
+          "0": {
+            "title": "The Compliance Tower of Babel",
+            "content": "Managing compliance in a multi-cloud environment is akin to speaking three different languages. AWS has SCPs and Config Rules; Azure has Azure Policy; GCP has Organization Policies and Forseti. For a global enterprise trying to enforce a simple rule like 'All storage must be encrypted', this fragmentation leads to inconsistent implementation, coverage gaps, and an inability to audit the estate holistically.\n\nThis paper validates a 'Policy-as-Code' (PaC) framework using Open Policy Agent (OPA) and Rego. By abstracting policy definitions into a unified language, we can compile and enforce these rules across any cloud provider, Kubernetes cluster, or even CI/CD pipeline.",
+            "diagram": "graph TB; A[Unified Policy Repo (Rego)] --> B[Compiler]; B --> C[AWS Config Rule]; B --> D[Azure Policy Definition]; B --> E[GCP Constraint]; B --> F[K8s Gatekeeper]; style A fill:#9f9,stroke:#333",
+            "caption": "Figure 1: Unified Policy Compilation"
+          },
+          "1": {
+            "title": "Shift-Left Governance",
+            "content": "Traditional governance is reactive: a resource is provisioned, a scanner detects a violation hours later, and a ticket is raised. This is inefficient and risky. Our framework shifts governance 'left' into the Pull Request (PR) stage. When a developer submits Terraform code, the CI pipeline evaluates the plan against the OPA policies. Violations block the merge immediately.\n\nThis feedback loop educates developers on security standards in real-time and prevents bad infrastructure from ever being deployed. It transforms security from a 'department of no' into an automated quality gate that enables speed with safety.",
+            "diagram": "sequenceDiagram; participant Dev; participant Git; participant CI_Policy_Check; participant Cloud; Dev->>Git: Push Terraform; Git->>CI_Policy_Check: Run OPA Eval; CI_Policy_Check-->>Dev: Barrier! S3 Bucket Public; Dev->>Git: Push Fix; CI_Policy_Check->>Cloud: Plan & Apply;",
+            "caption": "Figure 2: PR-Based Policy Enforcement"
+          },
+          "2": {
+            "title": "Continuous Audit & Drift Detection",
+            "content": "Even with shift-left, manual changes in the console ('ClickOps') can introduce drift. Therefore, the framework requires a continuous audit loop. An agent scans the live cloud environment periodically, exporting the state as JSON. This state is evaluated against the same Rego policies used in CI. This ensures that the 'runtime' reality matches the 'design-time' intent.\n\nWe implemented a 'GitOps for Compliance' dashboard where policy violations are instantly visualized as failing tests. Auditors can view the history of compliance as a commit log, satisfying requirements for SOC2 and ISO 27001 evidence gathering.",
+            "diagram": "pie title \"Violation Sources\"; \"Legacy Infra\" : 50; \"Manual Changes\" : 30; \"Exceptions\" : 20",
+            "caption": "Figure 3: Sources of Policy Drift"
+          },
+          "3": {
+            "title": "Conclusion",
+            "content": "Policy-as-Code is the only scalable way to secure modern cloud estates. By treating policy with the same rigor as software—versioning, testing, and automated deployment—organizations can achieve continuous compliance. The decoupling of policy logic from enforcement points prevents vendor lock-in even at the governance layer, future-proofing the security posture.",
+            "diagram": "graph LR; A[Policy Logic] -->|Decoupled From| B[Enforcement Point]; A -->|Decoupled From| C[Cloud Provider]; style A fill:#ccf",
+            "caption": "Figure 4: Decoupling Policy from Platform"
+          }
+        }
       },
       "a5": {
         "abstract": "Presents a risk-mitigated formulation for strangling legacy monoliths. By employing domain-driven design and the 'Strangler Fig' pattern, enterprises can incrementally migrate business capabilities to a cloud-native architecture without disrupting critical operations or data integrity. (KO)",
@@ -4800,7 +4904,33 @@
         "subtitle": "Strategic patterns for decomposing legacy systems into sovereign microservices. (KO)",
         "title": "Monolith to Cloud-Native Modernization (KO)",
         "caption": "Figure 5.1: Strangler Fig Pattern with Sovereign Facade Abstraction.",
-        "diagram": "graph TD\n    T[Traffic] --> F{Facade}\n    F --> M[Modern Microservices]\n    F --> L[Legacy Monolith]\n    style F fill:#1e293b,stroke:#f59e0b,stroke-width:2px"
+        "diagram": "graph TD\n    T[Traffic] --> F{Facade}\n    F --> M[Modern Microservices]\n    F --> L[Legacy Monolith]\n    style F fill:#1e293b,stroke:#f59e0b,stroke-width:2px",
+        "sections": {
+          "0": {
+            "title": "The Monolith Trap",
+            "content": "Legacy monoliths are often the core revenue generators for enterprises, yet they are brittle, hard to deploy, and impossible to scale efficiently. 'Big Bang' rewrites—attempting to replace the system in one go—have a failure rate near 100%. They consume years of budget with no deliverable value until the very end, by which time requirements have changed.\n\nThis paper advocates for evolutionary architecture. We explore patterns that allow for incremental modernization, where value is delivered in weeks, not years. The goal is not just 'microservices' for their own sake, but decoupling teams and technologies to increase velocity.",
+            "diagram": "graph TD; A[Big Bang Rewrite] -->|High Risk| B(Failure); C[Incremental Strangler] -->|Low Risk| D(Continuous Value); style C fill:#9f9,stroke:#333",
+            "caption": "Figure 1: Risk Profile of Migration Strategies"
+          },
+          "1": {
+            "title": "The Strangler Fig Pattern",
+            "content": "Named after the parasitic plant that grows around a host tree, eventually replacing it, the Strangler Fig pattern is the gold standard for modernization. We implement an interception layer (API Gateway/Facade) in front of the monolith. New functionality is built as microservices. Calls are routed to the new services where they exist, or fall back to the monolith.\n\nOver time, we 'strangle' the monolith by migrating features one by one. The monolith shrinks until it can be decommissioned or kept as a small legacy core. This pattern allows the business to continue operating without interruption during the multi-year migration process.",
+            "diagram": "graph TB; A[User] --> B[Facade / Proxy]; B -->|New Feature| C[Microservice A]; B -->|Legacy| D[Monolith]; B -->|New Feature| E[Microservice B]; style D fill:#ccc",
+            "caption": "Figure 2: Strangler Fig Implementation"
+          },
+          "2": {
+            "title": "Domain-Driven Decomposition",
+            "content": "How do you decide what to strangle first? We apply Domain-Driven Design (DDD) to identify 'Bounded Contexts'. We look for seams in the monolith where data coupling is loosest. High-churn areas—where business rules change frequently—are high-priority candidates for extraction.\n\nWe also discuss the 'Anti-Corruption Layer' pattern. When a new microservice needs to talk to the legacy system, it should not conform to the legacy data model. Instead, an adapter layer translates between the two, keeping the new service's domain model pure and unpolluted by technical debt.",
+            "diagram": "graph LR; A[Legacy Model] --> B(Anti-Corruption Layer); B --> C[Clean Domain Model]; style C fill:#ccf,stroke:#333",
+            "caption": "Figure 3: Anti-Corruption Layer"
+          },
+          "3": {
+            "title": "Data Database Migration",
+            "content": "Code extraction is easy; data extraction is hard. We present the 'Dual Write' pattern for migrating live databases. The application writes to both the old and new database simultaneously. We then run a backfill process to copy historical data. Once parity is verified, we flip the read path to the new database. Finally, we remove the write to the old database. This zero-downtime approach requires careful coordination but eliminates the 'maintenance window' constraint.",
+            "diagram": "sequenceDiagram; participant App; participant OldDB; participant NewDB; App->>OldDB: Write; App->>NewDB: Write (Async); Note right of NewDB: Backfill Historical; App->>NewDB: Read (verify);",
+            "caption": "Figure 4: Dual-Write Migration Strategy"
+          }
+        }
       },
       "a6": {
         "abstract": "Proposes an adaptive control loop that continuously monitors infrastructure state against defined policies. Using reinforcement learning, the system can automatically remediate drift and respond to emerging security threats in real-time, minimizing the window of vulnerability. (KO)",
@@ -4809,7 +4939,33 @@
         "subtitle": "AI-driven policy engines for dynamic threat response and compliance adherence. (KO)",
         "title": "Adaptive Policy Enforcement (KO)",
         "caption": "Figure 6.1: Autonomous OODA Loop for Sovereign Control Planes.",
-        "diagram": "graph TD\n    OB[Observe] --> OR[Orient]\n    OR --> DE[Decide]\n    DE --> AC[Act]\n    AC --> OB\n    style DE fill:#1e293b,stroke:#8b5cf6,stroke-width:3px"
+        "diagram": "graph TD\n    OB[Observe] --> OR[Orient]\n    OR --> DE[Decide]\n    DE --> AC[Act]\n    AC --> OB\n    style DE fill:#1e293b,stroke:#8b5cf6,stroke-width:3px",
+        "sections": {
+          "0": {
+            "title": "The Failure of Static Policy",
+            "content": "Static firewalls and role-based access control (RBAC) assume that trust is binary and permanent. Once a user is authenticated, they have access. In a world of compromised credentials and insider threats, this model is fatally flawed. Zero Trust argues that we must 'never trust, always verify'.\n\nHowever, strict verification introduces friction. If we challenge the user for MFA on every click, productivity collapses. We propose an 'Adaptive Security' model where the level of trust required fluctuates based on real-time context. A low-risk action (reading a public doc from the office) requires low assurance. A high-risk action (exporting customer data from a new IP) requires high assurance.",
+            "diagram": "xychart-beta; title \"Risk vs Friction\"; x-axis [Static, ZeroTrust, Adaptive]; y-axis \"User Friction\" 0-->100; line [10, 90, 30] \"Friction\"; line [30, 90, 85] \"Security\"",
+            "caption": "Figure 1: Balancing Security and User Experience"
+          },
+          "1": {
+            "title": "Risk Scoring Engine",
+            "content": "The core of our system is a Risk Engine that computes a score (0-100) for every request. Signals include: User Behavior Analytics (is this typical time/location?), Device Posture (is the OS patched? is EDR running?), and Data Sensitivity (is the target PII?).\n\nMachine Learning models (Random Forest and Isolation Forest) are trained on historical access logs to detect anomalies. If the risk score crosses a threshold, the policy engine dynamically generates a 'Step-Up' challenge (e.g., biometric auth) or blocks the request entirely. This happens at the milliseconds scale within the service mesh sidecar.",
+            "diagram": "graph TD; A[Request] --> B{Risk Engine}; B --> C[Signals: IP, Time, Device]; B --> D[ML Model]; D --> E{Score > 50?}; E -->|No| F[Allow]; E -->|Yes| G[MFA Challenge]; style B fill:#ff9,stroke:#333",
+            "caption": "Figure 2: Real-time Risk Evaluation Flow"
+          },
+          "2": {
+            "title": "Drift Detection & Automated Containment",
+            "content": "Beyond access control, adaptive security applies to infrastructure. If a container starts behaving strangely—spawning shells, scanning ports, accessing unexpected APIs—it is a sign of compromise. Our system monitors system calls (using eBPF) and network flows.\n\nUpon detection of 'Drift' from the known good profile (generated during CI/CD), the system can automatically quarantine the pod. It applies a network policy that cuts off internet access but keeps a forensic link open for the security team. This automated containment prevents lateral movement before a human analyst can even open the alert.",
+            "diagram": "graph LR; A[Normal Container] -->|Drift Detected| B(Quarantined); B -->|Block Egress| C[Internet]; B -->|Allow| D[Forensic Collector]; style B fill:#f99,stroke:#333",
+            "caption": "Figure 3: Automated Quarantine Workflow"
+          },
+          "3": {
+            "title": "Ethical AI & Explainability",
+            "content": "AI-driven security decisions can seem opaque. If a user is blocked, they need to know why. 'Computer says no' is not an acceptable error message. We implement key explainability features (SHAP values) that report *why* a risk score was high (e.g., 'Login from unusual country' + 'Device unpatched'). This allows users to self-remediate and meaningful oversight by audit teams to prevent bias in the algorithms.",
+            "diagram": "pie title \"Risk Factors\"; \"Location\" : 40; \"Device Health\" : 30; \"Time of Day\" : 10; \"Resource Sensitivity\" : 20",
+            "caption": "Figure 4: Explainable Risk Factors"
+          }
+        }
       },
       "aecp": {
         "abstract": "AECP effectively acts as a meta-operating system for the enterprise cloud. It abstracts the underlying infrastructure complexity, providing a unified API for provisioning, securing, and managing resources across any number of cloud providers. (KO)",
@@ -4818,7 +4974,33 @@
         "subtitle": "The kernel of the sovereign cloud operating system. (KO)",
         "title": "Autonomous Enterprise Control Plane (AECP) (KO)",
         "caption": "Figure 7.1: AECP Meta-OS Architecture abstraction layer.",
-        "diagram": "graph TD\n    I[Intent] --> CP[AECP Control Plane]\n    CP --> AWS[AWS Node]\n    CP --> AZ[Azure Node]\n    CP --> GCP[GCP Node]\n    style CP fill:#1e293b,stroke:#3b82f6,stroke-width:4px"
+        "diagram": "graph TD\n    I[Intent] --> CP[AECP Control Plane]\n    CP --> AWS[AWS Node]\n    CP --> AZ[Azure Node]\n    CP --> GCP[GCP Node]\n    style CP fill:#1e293b,stroke:#3b82f6,stroke-width:4px",
+        "sections": {
+          "0": {
+            "title": "The Sovereignty Gap",
+            "content": "Enterprises today are caught between the need for cloud agility and the mandate for digital sovereignty. Public clouds offer speed, but at the cost of control. Private clouds offer control, but at the cost of speed. The 'Sovereign Cloud' options provided by hyperscalers are often marketing wrappers around the same locked-in stack.\n\nThe Autonomous Enterprise Control Plane (AECP) bridges this gap. It is a vendor-neutral overlay that sits above the physical infrastructure. It provides a single API for provisioning, securing, and observing resources across *any* environment—be it AWS, Azure, or a bare-metal cluster in a secure bunker.",
+            "diagram": "graph TB; A[AECP] --> B[AWS]; A --> C[Azure]; A --> D[Private Cloud]; A --> E[Edge]; style A fill:#9f9,stroke:#333,stroke-width:4px",
+            "caption": "Figure 1: The AECP Abstraction Layer"
+          },
+          "1": {
+            "title": "Sovereign Gateway Architecture",
+            "content": "The enforcement point of the AECP is the 'Sovereign Gateway'. This is not just a proxy; it is an intelligent policy decision point. All data leaving the organization's boundary must pass through it. The gateway performs real-time inspection, redaction, and encryption.\n\nFor example, if a dataset containing PII is requested by a service hosted in a non-compliant region, the Gateway can dynamically mask the sensitive fields before the bytes leave the wire. It manages the encryption keys within a Hardware Security Module (HSM) controlled solely by the enterprise, ensuring that the cloud provider never sees plaintext data.",
+            "diagram": "graph LR; A[Internal App] --> B{Sovereign Gateway}; B -->|Encrypt| C[Public Cloud Storage]; B -->|Redact| D[External Analytics]; style B fill:#ccf,stroke:#333",
+            "caption": "Figure 2: Sovereign Gateway Data Flow"
+          },
+          "2": {
+            "title": "Immutable Audit Logs",
+            "content": "In a sovereign system, the audit log is as important as the data itself. AECP utilizes a tamper-evident, append-only ledger for all control plane actions. Every API call—who provisioned what, who changed a policy, who accessed a secret—is cryptographically chained.\n\nThis ledger is replicated across multiple failure domains. In the event of a breach or a dispute with a cloud provider, the enterprise has mathematical proof of the sequence of events. This capability is critical for post-incident forensics and regulatory reporting in finance and healthcare.",
+            "diagram": "block-beta; columns 4; space; block:Hash1; A; end; arrow; block:Hash2; B; end; arrow; block:Hash3; C; end; space;",
+            "caption": "Figure 3: Cryptographic Audit Chain"
+          },
+          "3": {
+            "title": "Future Roadmap",
+            "content": "The AECP is evolving to support 'Compute-to-Data' paradigms. Instead of moving massive datasets to the cloud for processing (incurring egress costs and sovereignty risks), the control plane will orchestrate the movement of ephemeral compute functions *to* the data's secure location. This federated learning approach allows enterprises to leverage the power of cloud AI without ever exposing their raw training data.",
+            "diagram": "graph TD; A[Cloud AI Model] -->|Ship Code| B[Secure Data Enclave]; B -->|Train| C[Local Data]; C -->|Update Weights| A; style B fill:#faa,stroke:#333",
+            "caption": "Figure 4: Compute-to-Data Model"
+          }
+        }
       },
       "arch": {
         "abstract": "A catalog of proven architectural patterns for solving common sovereignty challenges, including 'Data Residency Fence', 'Zero-Trust Injection', and 'Federated Identity Broker'. These patterns provide a blueprint for architects to build systems that are secure by design. (KO)",
@@ -4827,7 +5009,33 @@
         "subtitle": "Reusable design patterns for building compliant, resilient, and portable systems. (KO)",
         "title": "Architectural Patterns for Sovereignty (KO)",
         "caption": "Figure 8.1: The Sovereignty Iron Triangle - Balancing trade-offs in enterprise scale.",
-        "diagram": "graph TD\n    A[Sovereignty] --- B[Scale]\n    B --- C[Complexity]\n    C --- A\n    style A fill:#1e293b,stroke:#3b82f6\n    style B fill:#1e293b,stroke:#3b82f6\n    style C fill:#1e293b,stroke:#3b82f6"
+        "diagram": "graph TD\n    A[Sovereignty] --- B[Scale]\n    B --- C[Complexity]\n    C --- A\n    style A fill:#1e293b,stroke:#3b82f6\n    style B fill:#1e293b,stroke:#3b82f6\n    style C fill:#1e293b,stroke:#3b82f6",
+        "sections": {
+          "0": {
+            "title": "The Limits of Testing",
+            "content": "Distributed systems are notoriously difficult to get right. Race conditions, partial failures, and network partitions create a state space explosion that traditional unit and integration testing cannot cover. 'Eventual consistency' is often a euphemism for 'undefined behavior during failure'. For a sovereign control plane handling nation-scale critical infrastructure, 'good enough' is not enough.\n\nThis paper details the application of Formal Methods—specifically TLA+ (Temporal Logic of Actions)—to mathematically prove the correctness of the OmniGCloud consensus kernel. Unlike testing, which shows the presence of bugs, verification can prove their absence.",
+            "diagram": "graph LR; A[Testing] -->|Finds| B[Some Bugs]; C[Verification] -->|Proves| D[No Bugs (in logic)]; style C fill:#9f9,stroke:#333",
+            "caption": "Figure 1: Testing vs Verification"
+          },
+          "1": {
+            "title": "Modeling with TLA+",
+            "content": "We modeled the leader election and log replication protocols of our distributed store. The specification defines the 'Next' state relation for every possible transition. We defined invariants such as 'No two nodes can believe they are leader for the same term' and liveness properties like 'If the system is stable, a value committed will eventually be visible to all readers'.\n\nThe TLA+ model checker (TLC) exhaustively explored millions of states, simulating varying network delays and node crashes. It successfully identified a subtle livelock scenario in the original design where a partitioned node could endlessly trigger elections, preventing the cluster from stabilizing.",
+            "diagram": "stateDiagram-v2; [*] --> Follower; Follower --> Candidate : Timeout; Candidate --> Leader : Votes > N/2; Leader --> Follower : New Term; Candidate --> Follower : New Leader",
+            "caption": "Figure 2: Raft Consensus State Machine"
+          },
+          "2": {
+            "title": "Refinement Mappings",
+            "content": "A formal model is useless if the code doesn't match it. We utilized 'Refinement Mapping' to link our high-level TLA+ spec to the actual Go implementation. By annotating the code with assertions derived from the formal invariants, we created a runtime monitor that panics if the system ever enters an illegal state defined by the formal model.\n\nThis bridge between theory and practice ensures that as the codebase evolves, it does not drift away from the proven safety guarantees. It serves as a continuous formal verification pipeline.",
+            "diagram": "graph TD; A[TLA+ Spec] -->|Refinement| B[Go Implementation]; B -->|Runtime Check| C[Invariant Monitor]; C -->|Panic| D[Illegal State]; style A fill:#ccf",
+            "caption": "Figure 3: Spec-to-Code Refinement"
+          },
+          "3": {
+            "title": "Conclusion",
+            "content": "Formal verification is often viewed as too academic or expensive for industry. Our experience shows that for the 'hard kernel' of distributed systems, it is actually a time-saver. The time spent writing the spec was far less than the time that would have been spent debugging the complex race condition it found. As we move towards autonomous sovereign clouds, mathematical certainty in our core algorithms is a competitive differentiator.",
+            "diagram": "xychart-beta; title \"Dev Time Allocation\"; x-axis [Design, Coding, Debugging]; y-axis \"Hours\"; line [20, 50, 80] \"Traditional\"; line [50, 40, 10] \"Formal Methods\";",
+            "caption": "Figure 4: Impact on Engineering Lifecycle"
+          }
+        }
       }
     },
     "hero": {
