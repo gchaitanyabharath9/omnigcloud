@@ -39,7 +39,7 @@ export const PUBLIC_ROUTES_MANIFEST: RouteEntry[] = [
     changeFreq: "monthly",
   },
   {
-    path: "/research/papers/a2-high-throughput-distributed-systems",
+    path: "/research/papers/distributed-systems-resilience",
     priority: 0.8,
     changeFreq: "monthly",
   },
@@ -58,12 +58,15 @@ export const PUBLIC_ROUTES_MANIFEST: RouteEntry[] = [
     priority: 0.8,
     changeFreq: "monthly",
   },
-  { path: "/research/papers/a6-adaptive-policy-enforcement", priority: 0.8, changeFreq: "monthly" },
+  {
+    path: "/research/papers/a6-adaptive-policy-enforcement",
+    priority: 0.8,
+    changeFreq: "monthly",
+  },
   { path: "/research/papers/aecp", priority: 0.8, changeFreq: "monthly" },
   { path: "/research/papers/scholarly-article", priority: 0.8, changeFreq: "monthly" },
-  { path: "/research/distributed-systems-resilience", priority: 0.8, changeFreq: "monthly" },
   {
-    path: "/research/automated-multilingual-quality-assurance",
+    path: "/research/papers/automated-multilingual-quality-assurance",
     priority: 0.8,
     changeFreq: "monthly",
   },
