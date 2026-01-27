@@ -74,7 +74,7 @@ export const PaperLanding = ({ paper, locale }: PaperLandingProps) => {
                 // Try to get section data - using getTranslations might be better server side,
                 // but for client component we check if keys exist or just render blindly if we know structure matches.
                 // We'll trust the structure exists in en.json
-                const sectionKey = getLocalKey(`${paper.id}.sections.${index}`);
+                const sectionKey = `Items.${paper.id}.sections.${index}`;
 
                 // We use a try-safe approach or specific key check?
                 // next-intl returns the key if missing.
