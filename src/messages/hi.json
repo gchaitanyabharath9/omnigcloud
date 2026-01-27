@@ -4672,56 +4672,72 @@
         "authors": "Chaitanya Bharath Gopu (HI)",
         "keywords": "Cloud-Native, Distributed Systems, Sovereignty, Enterprise Architecture (HI)",
         "subtitle": "The canonical A1 technical standard for implementing sovereign, multi-cloud platforms maximizing latency budgets and governance. (HI)",
-        "title": "A1 Reference Architecture: Cloud-Native Enterprise Platforms (HI)"
+        "title": "A1 Reference Architecture: Cloud-Native Enterprise Platforms (HI)",
+        "caption": "Figure 1.1: The Four-Plane Sovereign Model isolating Data, Logic, Governance, and Execution.",
+        "diagram": "/images/research/a1-four-plane-model.png"
       },
       "a2": {
         "abstract": "Explores the theoretical limits of message throughput in federated setups, proposing a novel 'Lattice-Mesh' topology that reduces cross-region latency by 40% compared to traditional hub-and-spoke models. Benchmarks demonstrate sustained throughput of 1M+ events/sec with guaranteed causal ordering. (HI)",
         "authors": "Chaitanya Bharath Gopu (HI)",
         "keywords": "High-Throughput, Event-Driven, Lattice-Mesh, Resilience (HI)",
         "subtitle": "Architecting resilient, event-driven backbones for global-scale enterprise data fabrics. (HI)",
-        "title": "High-Throughput Distributed Systems (HI)"
+        "title": "High-Throughput Distributed Systems (HI)",
+        "caption": "Figure 2.1: Lattice-Mesh Topology showing optimized data transmission paths between nodes.",
+        "diagram": "graph LR\n    subgraph \"Nodal Lattice\"\n    N1((n1)) <--> N2((n2))\n    N2 <--> N3((n3))\n    N1 <--> N4((n4))\n    N4 <--> N5((n5))\n    N3 <--> N6((n6))\n    N5 <--> N6\n    N2 <--> N5\n    end\n    style N1 fill:#1e293b,stroke:#3b82f6\n    style N2 fill:#1e293b,stroke:#3b82f6\n    style N3 fill:#1e293b,stroke:#3b82f6\n    style N4 fill:#1e293b,stroke:#3b82f6\n    style N5 fill:#1e102b,stroke:#f59e0b,stroke-width:3px\n    style N6 fill:#1e293b,stroke:#3b82f6"
       },
       "a3": {
         "abstract": "Defines a standardized telemetry schema that unifies logs, metrics, and traces from disparate cloud providers into a single operational pane of glass. This approach enables AI-driven anomaly detection and automated root cause analysis across vendor boundaries. (HI)",
         "authors": "Chaitanya Bharath Gopu (HI)",
         "keywords": "Observability, Telemetry, AIOps, Operational Intelligence (HI)",
         "subtitle": "A unified framework for full-stack visibility in fragmented multi-cloud environments. (HI)",
-        "title": "Enterprise Observability & Operational Intelligence (HI)"
+        "title": "Enterprise Observability & Operational Intelligence (HI)",
+        "caption": "Figure 3.1: The Observability Triangle - Unified Correlation of Logs, Metrics, and Traces.",
+        "diagram": "graph TD\n    A[Logs] --- O[AECP Insight]\n    O --- B[Metrics]\n    O --- C[Traces]\n    style O fill:#1e293b,stroke:#3b82f6,stroke-width:4px,color:#fff"
       },
       "a4": {
         "abstract": "Introduces the 'Governance-as-Code' paradigm, where policy definitions are version-controlled and enforced at the infrastructure provisioning layer. This ensures that every deployment, regardless of target environment, adheres to organizational security and compliance mandates by default. (HI)",
         "authors": "Chaitanya Bharath Gopu (HI)",
         "keywords": "Governance, Compliance-as-Code, Hybrid Cloud, Security (HI)",
         "subtitle": "Enforcing compliance as code across on-premise, public, and sovereign clouds. (HI)",
-        "title": "Platform Governance in Hybrid Environments (HI)"
+        "title": "Platform Governance in Hybrid Environments (HI)",
+        "caption": "Figure 4.1: The Four Gates of Autonomous Governance Enforcement.",
+        "diagram": "graph LR\n    G1[Policy] --> G2[Scrutiny]\n    G2 --> G3[Compliance]\n    G3 --> G4[Immutable Deploy]\n    style G1 fill:#1e293b,stroke:#3b82f6\n    style G2 fill:#1e293b,stroke:#3b82f6\n    style G3 fill:#1e293b,stroke:#3b82f6\n    style G4 fill:#1e293b,stroke:#10b981,stroke-width:3px"
       },
       "a5": {
         "abstract": "Presents a risk-mitigated formulation for strangling legacy monoliths. By employing domain-driven design and the 'Strangler Fig' pattern, enterprises can incrementally migrate business capabilities to a cloud-native architecture without disrupting critical operations or data integrity. (HI)",
         "authors": "Chaitanya Bharath Gopu (HI)",
         "keywords": "Modernization, Microservices, Legacy Migration, Domain-Driven Design (HI)",
         "subtitle": "Strategic patterns for decomposing legacy systems into sovereign microservices. (HI)",
-        "title": "Monolith to Cloud-Native Modernization (HI)"
+        "title": "Monolith to Cloud-Native Modernization (HI)",
+        "caption": "Figure 5.1: Strangler Fig Pattern with Sovereign Facade Abstraction.",
+        "diagram": "graph TD\n    T[Traffic] --> F{Facade}\n    F --> M[Modern Microservices]\n    F --> L[Legacy Monolith]\n    style F fill:#1e293b,stroke:#f59e0b,stroke-width:2px"
       },
       "a6": {
         "abstract": "Proposes an adaptive control loop that continuously monitors infrastructure state against defined policies. Using reinforcement learning, the system can automatically remediate drift and respond to emerging security threats in real-time, minimizing the window of vulnerability. (HI)",
         "authors": "Chaitanya Bharath Gopu (HI)",
         "keywords": "Adaptive Policy, AI Security, Drift Detection, Automation (HI)",
         "subtitle": "AI-driven policy engines for dynamic threat response and compliance adherence. (HI)",
-        "title": "Adaptive Policy Enforcement (HI)"
+        "title": "Adaptive Policy Enforcement (HI)",
+        "caption": "Figure 6.1: Autonomous OODA Loop for Sovereign Control Planes.",
+        "diagram": "graph TD\n    OB[Observe] --> OR[Orient]\n    OR --> DE[Decide]\n    DE --> AC[Act]\n    AC --> OB\n    style DE fill:#1e293b,stroke:#8b5cf6,stroke-width:3px"
       },
       "aecp": {
         "abstract": "AECP effectively acts as a meta-operating system for the enterprise cloud. It abstracts the underlying infrastructure complexity, providing a unified API for provisioning, securing, and managing resources across any number of cloud providers. (HI)",
         "authors": "Chaitanya Bharath Gopu (HI)",
         "keywords": "AECP, Control Plane, Meta-OS, Sovereign Kernel (HI)",
         "subtitle": "The kernel of the sovereign cloud operating system. (HI)",
-        "title": "Autonomous Enterprise Control Plane (AECP) (HI)"
+        "title": "Autonomous Enterprise Control Plane (AECP) (HI)",
+        "caption": "Figure 7.1: AECP Meta-OS Architecture abstraction layer.",
+        "diagram": "graph TD\n    I[Intent] --> CP[AECP Control Plane]\n    CP --> AWS[AWS Node]\n    CP --> AZ[Azure Node]\n    CP --> GCP[GCP Node]\n    style CP fill:#1e293b,stroke:#3b82f6,stroke-width:4px"
       },
       "arch": {
         "abstract": "A catalog of proven architectural patterns for solving common sovereignty challenges, including 'Data Residency Fence', 'Zero-Trust Injection', and 'Federated Identity Broker'. These patterns provide a blueprint for architects to build systems that are secure by design. (HI)",
         "authors": "Chaitanya Bharath Gopu (HI)",
         "keywords": "Architecture Patterns, Design Patterns, Sovereignty, Security (HI)",
         "subtitle": "Reusable design patterns for building compliant, resilient, and portable systems. (HI)",
-        "title": "Architectural Patterns for Sovereignty (HI)"
+        "title": "Architectural Patterns for Sovereignty (HI)",
+        "caption": "Figure 8.1: The Sovereignty Iron Triangle - Balancing trade-offs in enterprise scale.",
+        "diagram": "graph TD\n    A[Sovereignty] --- B[Scale]\n    B --- C[Complexity]\n    C --- A\n    style A fill:#1e293b,stroke:#3b82f6\n    style B fill:#1e293b,stroke:#3b82f6\n    style C fill:#1e293b,stroke:#3b82f6"
       }
     },
     "hero": {

@@ -4672,56 +4672,72 @@
         "authors": "Chaitanya Bharath Gopu (FR)",
         "keywords": "Cloud-Native, Distributed Systems, Sovereignty, Enterprise Architecture (FR)",
         "subtitle": "The canonical A1 technical standard for implementing sovereign, multi-cloud platforms maximizing latency budgets and governance. (FR)",
-        "title": "A1 Reference Architecture: Cloud-Native Enterprise Platforms (FR)"
+        "title": "A1 Reference Architecture: Cloud-Native Enterprise Platforms (FR)",
+        "caption": "Figure 1.1: The Four-Plane Sovereign Model isolating Data, Logic, Governance, and Execution.",
+        "diagram": "/images/research/a1-four-plane-model.png"
       },
       "a2": {
         "abstract": "Explores the theoretical limits of message throughput in federated setups, proposing a novel 'Lattice-Mesh' topology that reduces cross-region latency by 40% compared to traditional hub-and-spoke models. Benchmarks demonstrate sustained throughput of 1M+ events/sec with guaranteed causal ordering. (FR)",
         "authors": "Chaitanya Bharath Gopu (FR)",
         "keywords": "High-Throughput, Event-Driven, Lattice-Mesh, Resilience (FR)",
         "subtitle": "Architecting resilient, event-driven backbones for global-scale enterprise data fabrics. (FR)",
-        "title": "High-Throughput Distributed Systems (FR)"
+        "title": "High-Throughput Distributed Systems (FR)",
+        "caption": "Figure 2.1: Lattice-Mesh Topology showing optimized data transmission paths between nodes.",
+        "diagram": "graph LR\n    subgraph \"Nodal Lattice\"\n    N1((n1)) <--> N2((n2))\n    N2 <--> N3((n3))\n    N1 <--> N4((n4))\n    N4 <--> N5((n5))\n    N3 <--> N6((n6))\n    N5 <--> N6\n    N2 <--> N5\n    end\n    style N1 fill:#1e293b,stroke:#3b82f6\n    style N2 fill:#1e293b,stroke:#3b82f6\n    style N3 fill:#1e293b,stroke:#3b82f6\n    style N4 fill:#1e293b,stroke:#3b82f6\n    style N5 fill:#1e102b,stroke:#f59e0b,stroke-width:3px\n    style N6 fill:#1e293b,stroke:#3b82f6"
       },
       "a3": {
         "abstract": "Defines a standardized telemetry schema that unifies logs, metrics, and traces from disparate cloud providers into a single operational pane of glass. This approach enables AI-driven anomaly detection and automated root cause analysis across vendor boundaries. (FR)",
         "authors": "Chaitanya Bharath Gopu (FR)",
         "keywords": "Observability, Telemetry, AIOps, Operational Intelligence (FR)",
         "subtitle": "A unified framework for full-stack visibility in fragmented multi-cloud environments. (FR)",
-        "title": "Enterprise Observability & Operational Intelligence (FR)"
+        "title": "Enterprise Observability & Operational Intelligence (FR)",
+        "caption": "Figure 3.1: The Observability Triangle - Unified Correlation of Logs, Metrics, and Traces.",
+        "diagram": "graph TD\n    A[Logs] --- O[AECP Insight]\n    O --- B[Metrics]\n    O --- C[Traces]\n    style O fill:#1e293b,stroke:#3b82f6,stroke-width:4px,color:#fff"
       },
       "a4": {
         "abstract": "Introduces the 'Governance-as-Code' paradigm, where policy definitions are version-controlled and enforced at the infrastructure provisioning layer. This ensures that every deployment, regardless of target environment, adheres to organizational security and compliance mandates by default. (FR)",
         "authors": "Chaitanya Bharath Gopu (FR)",
         "keywords": "Governance, Compliance-as-Code, Hybrid Cloud, Security (FR)",
         "subtitle": "Enforcing compliance as code across on-premise, public, and sovereign clouds. (FR)",
-        "title": "Platform Governance in Hybrid Environments (FR)"
+        "title": "Platform Governance in Hybrid Environments (FR)",
+        "caption": "Figure 4.1: The Four Gates of Autonomous Governance Enforcement.",
+        "diagram": "graph LR\n    G1[Policy] --> G2[Scrutiny]\n    G2 --> G3[Compliance]\n    G3 --> G4[Immutable Deploy]\n    style G1 fill:#1e293b,stroke:#3b82f6\n    style G2 fill:#1e293b,stroke:#3b82f6\n    style G3 fill:#1e293b,stroke:#3b82f6\n    style G4 fill:#1e293b,stroke:#10b981,stroke-width:3px"
       },
       "a5": {
         "abstract": "Presents a risk-mitigated formulation for strangling legacy monoliths. By employing domain-driven design and the 'Strangler Fig' pattern, enterprises can incrementally migrate business capabilities to a cloud-native architecture without disrupting critical operations or data integrity. (FR)",
         "authors": "Chaitanya Bharath Gopu (FR)",
         "keywords": "Modernization, Microservices, Legacy Migration, Domain-Driven Design (FR)",
         "subtitle": "Strategic patterns for decomposing legacy systems into sovereign microservices. (FR)",
-        "title": "Monolith to Cloud-Native Modernization (FR)"
+        "title": "Monolith to Cloud-Native Modernization (FR)",
+        "caption": "Figure 5.1: Strangler Fig Pattern with Sovereign Facade Abstraction.",
+        "diagram": "graph TD\n    T[Traffic] --> F{Facade}\n    F --> M[Modern Microservices]\n    F --> L[Legacy Monolith]\n    style F fill:#1e293b,stroke:#f59e0b,stroke-width:2px"
       },
       "a6": {
         "abstract": "Proposes an adaptive control loop that continuously monitors infrastructure state against defined policies. Using reinforcement learning, the system can automatically remediate drift and respond to emerging security threats in real-time, minimizing the window of vulnerability. (FR)",
         "authors": "Chaitanya Bharath Gopu (FR)",
         "keywords": "Adaptive Policy, AI Security, Drift Detection, Automation (FR)",
         "subtitle": "AI-driven policy engines for dynamic threat response and compliance adherence. (FR)",
-        "title": "Adaptive Policy Enforcement (FR)"
+        "title": "Adaptive Policy Enforcement (FR)",
+        "caption": "Figure 6.1: Autonomous OODA Loop for Sovereign Control Planes.",
+        "diagram": "graph TD\n    OB[Observe] --> OR[Orient]\n    OR --> DE[Decide]\n    DE --> AC[Act]\n    AC --> OB\n    style DE fill:#1e293b,stroke:#8b5cf6,stroke-width:3px"
       },
       "aecp": {
         "abstract": "AECP effectively acts as a meta-operating system for the enterprise cloud. It abstracts the underlying infrastructure complexity, providing a unified API for provisioning, securing, and managing resources across any number of cloud providers. (FR)",
         "authors": "Chaitanya Bharath Gopu (FR)",
         "keywords": "AECP, Control Plane, Meta-OS, Sovereign Kernel (FR)",
         "subtitle": "The kernel of the sovereign cloud operating system. (FR)",
-        "title": "Autonomous Enterprise Control Plane (AECP) (FR)"
+        "title": "Autonomous Enterprise Control Plane (AECP) (FR)",
+        "caption": "Figure 7.1: AECP Meta-OS Architecture abstraction layer.",
+        "diagram": "graph TD\n    I[Intent] --> CP[AECP Control Plane]\n    CP --> AWS[AWS Node]\n    CP --> AZ[Azure Node]\n    CP --> GCP[GCP Node]\n    style CP fill:#1e293b,stroke:#3b82f6,stroke-width:4px"
       },
       "arch": {
         "abstract": "A catalog of proven architectural patterns for solving common sovereignty challenges, including 'Data Residency Fence', 'Zero-Trust Injection', and 'Federated Identity Broker'. These patterns provide a blueprint for architects to build systems that are secure by design. (FR)",
         "authors": "Chaitanya Bharath Gopu (FR)",
         "keywords": "Architecture Patterns, Design Patterns, Sovereignty, Security (FR)",
         "subtitle": "Reusable design patterns for building compliant, resilient, and portable systems. (FR)",
-        "title": "Architectural Patterns for Sovereignty (FR)"
+        "title": "Architectural Patterns for Sovereignty (FR)",
+        "caption": "Figure 8.1: The Sovereignty Iron Triangle - Balancing trade-offs in enterprise scale.",
+        "diagram": "graph TD\n    A[Sovereignty] --- B[Scale]\n    B --- C[Complexity]\n    C --- A\n    style A fill:#1e293b,stroke:#3b82f6\n    style B fill:#1e293b,stroke:#3b82f6\n    style C fill:#1e293b,stroke:#3b82f6"
       }
     },
     "hero": {
@@ -7574,39 +7590,39 @@
     }
   },
   "WhitePaper": {
-    "badge": "LATEST RESEARCH",
+    "badge": "DERNIÈRE RECHERCHE",
     "caseStudies": {
       "finance": {
-        "badge": "FINANCIAL SERVICES",
-        "desc": "Tier-1 bank automated GDPR, PCI-DSS, and SOC2 compliance across 45 cloud accounts, reducing audit prep from 6 weeks to 48 hours.",
+        "badge": "SERVICES FINANCIERS",
+        "desc": "Une banque de premier niveau a automatisé la conformité GDPR, PCI-DSS et SOC2 sur 45 comptes cloud, réduisant la préparation à l'audit de 6 semaines à 48 heures.",
         "stat1": {
-          "label": "Annual Savings",
-          "value": "$2.4M"
+          "label": "Économies annuelles",
+          "value": "2,4 M$"
         },
         "stat2": {
-          "label": "Implementation",
-          "value": "14 days"
+          "label": "Mise en œuvre",
+          "value": "14 jours"
         },
-        "title": "Global Bank Achieves 99.99% Compliance"
+        "title": "Une banque mondiale atteint 99,99 % de conformité"
       },
       "healthcare": {
-        "badge": "HEALTHCARE",
-        "desc": "Multi-national healthcare provider achieved HIPAA compliance across AWS, Azure, and on-premise systems with zero-trust architecture.",
+        "badge": "SANTÉ",
+        "desc": "Un fournisseur de soins de santé multinational a atteint la conformité HIPAA sur les systèmes AWS, Azure et sur site avec une architecture zero-trust.",
         "stat1": {
-          "label": "HIPAA Compliant",
-          "value": "100%"
+          "label": "Conforme HIPAA",
+          "value": "100 %"
         },
         "stat2": {
-          "label": "Records Protected",
+          "label": "Dossiers protégés",
           "value": "3M+"
         },
-        "title": "Hospital Chain Secures Patient Data"
+        "title": "Une chaîne d'hôpitaux sécurise les données des patients"
       },
-      "title": "Featured Implementation Case Studies"
+      "title": "Études de cas de mise en œuvre en vedette"
     },
-    "contribution": "OmniGCloud Contribution",
-    "description": "A comprehensive framework for achieving mathematical certainty in data sovereignty across multi-cloud environments.",
-    "design_patterns": "Design Patterns",
+    "contribution": "Contribution OmniGCloud",
+    "description": "Un cadre complet pour atteindre la certitude mathématique de la souveraineté des données dans des environnements multi-cloud.",
+    "design_patterns": "Modèles de conception",
     "detailedDiagrams": {
       "context": {
         "clouds": {
@@ -7615,156 +7631,156 @@
           "gcp": "OmniGCloud Gcp"
         },
         "compliance": {
-          "desc": "Audit Logs",
-          "title": "Compliance"
+          "desc": "Journaux d'audit",
+          "title": "Conformité"
         },
-        "controlPlane": "AECP CONTROL PLANE",
-        "decisionEngine": "Decision Engine",
+        "controlPlane": "PLAN DE CONTRÔLE AECP",
+        "decisionEngine": "Moteur de décision",
         "devOps": {
-          "desc": "Define Policy",
-          "title": "DevOps Team"
+          "desc": "Définir la politique",
+          "title": "Équipe DevOps"
         },
-        "interpreter": "Intent Interpreter",
+        "interpreter": "Interpréteur d'intention",
         "reconciliation": {
-          "desc": "(Current State → Target State)",
-          "title": "State Reconciliation Loop"
+          "desc": "(État actuel → État cible)",
+          "title": "Boucle de réconciliation d'état"
         }
       },
       "federation": {
         "ap": {
-          "policy": "Policy: PERMISSIVE",
+          "policy": "Politique : PERMISSIVE",
           "title": "AP-SOUTH-SHARED"
         },
         "eu": {
-          "policy": "Policy: GDPR-STRICT",
+          "policy": "Politique : GDPR-STRICT",
           "title": "EU-CENTRAL-PRIVACY"
         },
-        "protocol": "Federated Trust Protocol (FTP) Active",
+        "protocol": "Protocole de confiance fédéré (FTP) actif",
         "us": {
-          "policy": "Policy: FIPS-140-2",
+          "policy": "Politique : FIPS-140-2",
           "title": "US-EAST-SOVEREIGN"
         }
       },
       "governance": {
         "action": {
-          "desc": "Targeted API Call",
+          "desc": "Appel d'API ciblé",
           "title": "3. ACTION"
         },
-        "cycleTime": "Autonomous Control Loop Cycle Time: < 200ms",
+        "cycleTime": "Temps de cycle de la boucle de contrôle autonome : < 200 ms",
         "decision": {
-          "desc": "AECP Graph Engine",
-          "title": "2. DECISION"
+          "desc": "Moteur de graphe AECP",
+          "title": "2. DÉCISION"
         },
         "signal": {
-          "desc": "Multi-cloud Telemetry",
+          "desc": "Télémétrie multi-cloud",
           "title": "1. SIGNAL"
         },
         "validation": {
-          "desc": "State Confirmed",
+          "desc": "État confirmé",
           "title": "4. VALIDATION"
         }
       },
       "impact": {
         "compliance": {
-          "desc": "Automated Audit Pass",
-          "title": "Compliance Rate",
-          "value": "99.7%"
+          "desc": "Réussite de l'audit automatisé",
+          "title": "Taux de conformité",
+          "value": "99,7 %"
         },
         "mttr": {
-          "desc": "From 14 days to 4 minutes",
-          "title": "MTTR Reduction",
-          "value": "-94%"
+          "desc": "De 14 jours à 4 minutes",
+          "title": "Réduction du MTTR",
+          "value": "-94 %"
         },
         "opex": {
-          "desc": "Verified Arbitrage Savings",
-          "title": "Cloud OpEx",
-          "value": "-31%"
+          "desc": "Économies d'arbitrage vérifiées",
+          "title": "OpEx Cloud",
+          "value": "-31 %"
         }
       },
       "security": {
         "audit": {
-          "desc": "Every state change is cryptographically signed and stored in ledger.",
-          "title": "Immutable Audit"
+          "desc": "Chaque changement d'état est signé cryptographiquement et stocké dans le ledger.",
+          "title": "Audit immuable"
         },
         "fence": {
-          "desc": "Geospatial policy enforcement prevents egress to non-compliant zones.",
-          "title": "Data Residency Fence"
+          "desc": "L'application de la politique géospatiale empêche la sortie vers des zones non conformes.",
+          "title": "Barrière de résidence des données"
         },
         "zeroTrust": {
-          "desc": "Identity is injected at runtime via SPIFFE/SPIRE. No static keys.",
-          "title": "Zero Trust Injection"
+          "desc": "L'identité est injectée au moment de l'exécution via SPIFFE/SPIRE. Pas de clés statiques.",
+          "title": "Injection Zero Trust"
         }
       }
     },
-    "download_subtitle": "Get the full technical specification, including architecture diagrams, decision frameworks, and implementation guides.",
-    "download_title": "Download the Whitepaper",
+    "download_subtitle": "Obtenez la spécification technique complète, y compris les diagrammes d'architecture, les cadres de décision et les guides de mise en œuvre.",
+    "download_title": "Télécharger le livre blanc",
     "footer": {
-      "_value": "Available in PDF / ePub formats.",
-      "copyright": "© 2026 OmniGCloud. All rights reserved.",
-      "lab": "Research Labs"
+      "_value": "Disponible aux formats PDF / ePub.",
+      "copyright": "© 2026 OmniGCloud. Tous droits réservés.",
+      "lab": "Laboratoires de recherche"
     },
     "impact": {
       "citations": {
-        "desc": "Referenced in cloud governance research",
-        "label": "Academic Citations",
+        "desc": "Référencé dans la recherche sur la gouvernance du cloud",
+        "label": "Citations académiques",
         "value": "847"
       },
       "downloads": {
-        "desc": "By CTOs, architects, and compliance officers",
-        "label": "Downloads",
+        "desc": "Par les directeurs technologiques, les architectes et les responsables de la conformité",
+        "label": "Téléchargements",
         "value": "12K+"
       },
       "implementations": {
-        "desc": "Framework adopted in production environments",
-        "label": "Enterprise Implementations",
+        "desc": "Cadre adopté dans les environnements de production",
+        "label": "Mises en œuvre en entreprise",
         "value": "340+"
       },
-      "title": "Research Impact & Citations"
+      "title": "Impact de la recherche et citations"
     },
     "pageCount": "42 Pages",
-    "peerReview": "Peer Reviewed",
-    "read_online": "Read Online",
-    "title": "The Autonomous Sovereign Cloud Protocol"
+    "peerReview": "Révisé par des pairs",
+    "read_online": "Lire en ligne",
+    "title": "Le protocole du cloud souverain autonome"
   },
   "docs": {
     "whitepaper": {
       "diagrams": {
-        "actionDesc": "Targeted API Call (FR)",
-        "actionTitle": "3. ACTION (FR)",
-        "automatedAudit": "Automated Audit Pass (FR)",
-        "cloudOpEx": "Cloud OpEx (FR)",
+        "actionDesc": "Appel d'API ciblé",
+        "actionTitle": "3. ACTION",
+        "automatedAudit": "Réussite de l'audit automatisé",
+        "cloudOpEx": "OpEx Cloud",
         "clouds": {
-          "aws": "AWS (US) (FR)",
-          "azure": "Azure (EU) (FR)",
-          "gcp": "GCP (Asia) (FR)"
+          "aws": "AWS (US)",
+          "azure": "Azure (EU)",
+          "gcp": "GCP (Asia)"
         },
-        "complianceDesc": "Audit Logs (FR)",
-        "complianceRate": "Compliance Rate (FR)",
-        "complianceTitle": "Compliance (FR)",
-        "controlPlane": "AECP CONTROL PLANE (FR)",
-        "cycleTime": "Autonomous Control Loop Cycle Time: < 200ms (FR)",
-        "decisionDesc": "AECP Graph Engine (FR)",
-        "decisionEngine": "Decision Engine (AI) (FR)",
-        "decisionTitle": "2. DECISION (FR)",
-        "devOpsDesc": "Define Policy (FR)",
-        "devOpsTitle": "DevOps Team (FR)",
-        "federationApPolicy": "Policy: PERMISSIVE (FR)",
-        "federationApTitle": "AP-SOUTH-SHARED (FR)",
-        "federationEuPolicy": "Policy: GDPR-STRICT (FR)",
-        "federationEuTitle": "EU-CENTRAL-PRIVACY (FR)",
-        "federationProtocol": "Federated Trust Protocol (FTP) Active (FR)",
-        "federationUsPolicy": "Policy: FIPS-140-2 (FR)",
-        "federationUsTitle": "US-EAST-SOVEREIGN (FR)",
-        "intentInterpreter": "Intent Interpreter (FR)",
-        "mttrDesc": "From 14 days to 4 minutes (FR)",
-        "mttrReduction": "MTTR Reduction (FR)",
-        "opexDesc": "Verified Arbitrage Savings (FR)",
-        "signalDesc": "Multi-cloud Telemetry (FR)",
-        "signalTitle": "1. SIGNAL (FR)",
-        "stateReconciliation": "State Reconciliation Loop (FR)",
-        "stateReconciliationDesc": "(Current State → Target State) (FR)",
-        "validation": "Validation Diagram (FR)",
-        "validationDesc": "Validation process diagram (FR)"
+        "complianceDesc": "Journaux d'audit",
+        "complianceRate": "Taux de conformité",
+        "complianceTitle": "Conformité",
+        "controlPlane": "PLAN DE CONTRÔLE AECP",
+        "cycleTime": "Temps de cycle de la boucle de contrôle autonome : < 200 ms",
+        "decisionDesc": "Moteur de graphe AECP",
+        "decisionEngine": "Moteur de décision (IA)",
+        "decisionTitle": "2. DÉCISION",
+        "devOpsDesc": "Définir la politique",
+        "devOpsTitle": "Équipe DevOps",
+        "federationApPolicy": "Politique : PERMISSIVE",
+        "federationApTitle": "AP-SOUTH-SHARED",
+        "federationEuPolicy": "Politique : GDPR-STRICT",
+        "federationEuTitle": "EU-CENTRAL-PRIVACY",
+        "federationProtocol": "Protocole de confiance fédéré (FTP) actif",
+        "federationUsPolicy": "Politique : FIPS-140-2",
+        "federationUsTitle": "US-EAST-SOVEREIGN",
+        "intentInterpreter": "Interpréteur d'intention",
+        "mttrDesc": "De 14 jours à 4 minutes",
+        "mttrReduction": "Réduction du MTTR",
+        "opexDesc": "Économies d'arbitrage vérifiées",
+        "signalDesc": "Télémétrie multi-cloud",
+        "signalTitle": "1. SIGNAL",
+        "stateReconciliation": "Boucle de réconciliation d'état",
+        "stateReconciliationDesc": "(État actuel → État cible)",
+        "validation": "Diagramme de validation",
+        "validationDesc": "Diagramme du processus de validation"
       }
     },
     "Dashboard": {
