@@ -25,20 +25,13 @@ import { generateSEOMetadata, SEO_KEYWORDS } from "@/utils/seo";
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
   setRequestLocale(locale);
-  const tm = await getTranslations({ locale, namespace: "Metadata.Dashboard" }); // Using Dashboard for now or add Research
+  const tm = await getTranslations({ locale, namespace: "Metadata.Research" });
 
   return generateSEOMetadata(
     {
-      title: "Research & Technical Specifications",
-      description:
-        "Explore OmniGCloud Systems research on cloud-native architecture, distributed systems, and sovereign governance.",
-      keywords: [
-        ...SEO_KEYWORDS.platform,
-        ...SEO_KEYWORDS.performance,
-        "technical research",
-        "architecture specifications",
-        "cloud governance research",
-      ],
+      title: tm("title"),
+      description: tm("description"),
+      keywords: tm.raw("keywords"),
       ogImage: `/og-images/research.png`,
       ogType: "website",
       canonical: `/${locale}/research`,
