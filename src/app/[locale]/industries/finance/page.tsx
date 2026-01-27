@@ -61,16 +61,25 @@ export default async function FinanceIndustryPage({
 
   return (
     <div className="bg-background min-h-screen">
-      <Section className="py-24 bg-gradient-to-b from-[#020617] to-[var(--background)]">
+      <section className="relative py-24 overflow-hidden border-b border-white/5">
+        <div className="absolute inset-0 z-0">
+          <img
+            src="/images/industries/finance-hero.png"
+            alt="Finance Technology Background"
+            className="w-full h-full object-cover opacity-20"
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-[#020617] via-[#020617]/80 to-[var(--background)]" />
+        </div>
+        <div className="absolute inset-0 bg-grid-white/[0.02] bg-[size:32px_32px] z-[1]" />
         <PageShell>
-          <div className="max-w-4xl">
+          <div className="max-w-4xl relative z-10">
             <div className="badge badge-primary-subtle mb-6 flex items-center gap-2">
               <Landmark size={14} /> {t("hero.badge")}
             </div>
-            <h1 className="text-6xl font-black mb-8 leading-tight tracking-tight">
+            <h1 className="text-6xl font-black mb-8 leading-tight tracking-tight text-white">
               {t("hero.title")}
             </h1>
-            <p className="text-xl opacity-70 mb-10 leading-relaxed max-w-2xl">
+            <p className="text-xl opacity-70 mb-10 leading-relaxed max-w-2xl text-slate-200">
               {t("hero.subtitle")}
             </p>
             <div className="flex flex-wrap gap-4">
@@ -89,7 +98,7 @@ export default async function FinanceIndustryPage({
             </div>
           </div>
         </PageShell>
-      </Section>
+      </section>
 
       {/* DETAILED CONTENT SECTION 1 */}
       <Section className="py-24 border-y border-white/5">

@@ -1,8 +1,9 @@
 import React from "react";
 import { useTranslations } from "next-intl";
-import { ArrowRight, FileText, Globe, Library } from "lucide-react";
-import Link from "next/link";
+import { ArrowRight, FileText, Globe, Library, ShieldCheck, Tag, Calendar } from "lucide-react";
+import { Link } from "@/navigation";
 import { PaperManifestItem } from "@/content/papers/papers.manifest";
+import MermaidDiagram from "@/components/article/MermaidDiagram";
 
 interface PaperLandingProps {
   paper: PaperManifestItem;
@@ -10,25 +11,22 @@ interface PaperLandingProps {
 }
 
 export const PaperLanding = ({ paper, locale }: PaperLandingProps) => {
-  const t = useTranslations();
-
-  // Helper to resolve nested keys since useTranslations('Papers') might not be deep enough
-  // or we want dynamic access.
-  // However, best practice with next-intl is to use the full path if we don't have a scoped t.
-  // Let's assume we pass full keys like 'Papers.Items.a1.title' and use a function to resolve.
-  // Actually, useTranslations can accept a namespace.
-  // Let's use 'Papers' namespace and strip the prefix.
-
-  // Simplification: We will use t with the full path if possible, or t('Items.a1.title') if we scope to Papers.
   const tPapers = useTranslations("Papers");
 
-  // Key resolution
-  // paper.titleKey is 'Papers.Items.a1.title'. We need 'Items.a1.title' for tPapers.
-  const getLocalKey = (fullKey: string) => fullKey.replace("Papers.", "");
+  // Key resolution helper
+  const NS = "Papers";
+  const getLocalKey = (fullKey: string) => fullKey.replace(`${NS}.`, "");
+
+  const title = tPapers(getLocalKey(paper.titleKey));
+  const subtitle = tPapers(getLocalKey(paper.subtitleKey));
+  const abstract = tPapers(getLocalKey(paper.abstractKey));
+  const authors = tPapers(getLocalKey(paper.authorsKey));
+  const keywords = tPapers(getLocalKey(paper.keywordsKey));
+  const diagram = paper.diagramKey ? tPapers(getLocalKey(paper.diagramKey)) : null;
+  const caption = paper.diagramCaptionKey ? tPapers(getLocalKey(paper.diagramCaptionKey)) : null;
 
   return (
     <div className="min-h-screen bg-[#020617] text-slate-200">
-      {/* Semantic Header */}
       <header className="relative py-24 overflow-hidden border-b border-white/5">
         <div className="absolute inset-0 bg-grid-white/[0.02] bg-[size:40px_40px]" />
         <div className="absolute inset-0 bg-gradient-to-b from-primary/5 via-transparent to-transparent" />
@@ -36,34 +34,32 @@ export const PaperLanding = ({ paper, locale }: PaperLandingProps) => {
         <div className="container relative z-10 mx-auto px-4">
           <div className="flex flex-wrap items-center gap-4 mb-8">
             <span className="flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 text-primary text-xs font-bold tracking-tighter uppercase">
-              <FileText size={12} />{" "}
-              {tPapers(getLocalKey(paper.titleKey)) /* Fallback or check if this works */}
+              <ShieldCheck size={12} /> {tPapers("Common.technicalReport")}
             </span>
             <span
-              className={`flex items-center gap-2 px-3 py-1 rounded-full border text-xs font-bold tracking-tighter uppercase ${
-                paper.status === "PUBLISHED"
-                  ? "bg-green-500/10 border-green-500/20 text-green-400"
-                  : "bg-yellow-500/10 border-yellow-500/20 text-yellow-400"
-              }`}
+              className={`flex items-center gap-2 px-3 py-1 rounded-full border text-xs font-bold tracking-tighter uppercase ${paper.status === "PUBLISHED"
+                ? "bg-green-500/10 border-green-500/20 text-green-400"
+                : "bg-yellow-500/10 border-yellow-500/20 text-yellow-400"
+                }`}
             >
               {paper.status}
             </span>
           </div>
 
-          <h1 className="text-3xl md:text-5xl font-black mb-8 tracking-tight text-white leading-[1.1] max-w-4xl">
-            {tPapers(getLocalKey(paper.titleKey))}
+          <h1 className="text-4xl md:text-6xl font-black mb-8 tracking-tight text-white leading-[1.1] max-w-4xl">
+            {title}
           </h1>
 
-          <p className="text-xl text-slate-400 max-w-2xl mb-8 leading-relaxed">
-            {tPapers(getLocalKey(paper.subtitleKey))}
+          <p className="text-xl text-slate-400 max-w-2xl mb-8 leading-relaxed font-medium">
+            {subtitle}
           </p>
 
           <div className="flex flex-wrap items-center gap-8 text-sm font-mono text-slate-500">
             <div className="flex items-center gap-2">
-              <Globe size={16} className="text-primary" /> {paper.lastUpdated}
+              <Calendar size={16} className="text-primary" /> {paper.lastUpdated}
             </div>
             <div className="flex items-center gap-2">
-              <Library size={16} className="text-primary" /> {tPapers("Common.technicalReport")}
+              <Tag size={16} className="text-primary" /> {paper.id.toUpperCase()}
             </div>
           </div>
         </div>
@@ -71,32 +67,55 @@ export const PaperLanding = ({ paper, locale }: PaperLandingProps) => {
 
       <main className="container mx-auto px-4 py-20">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-16">
-          {/* Abstract Content */}
           <article className="lg:col-span-8">
-            <section className="mb-12">
+            <section className="mb-16">
               <h2 className="text-2xl font-bold text-white mb-6 border-b border-white/5 pb-4 flex items-center gap-3">
+                <ArrowRight className="text-primary" size={24} />
                 {tPapers("Common.abstractHeading")}
               </h2>
-              <div className="prose prose-invert prose-lg text-slate-300 leading-loose">
-                <p>{tPapers(getLocalKey(paper.abstractKey))}</p>
+              <div className="prose prose-invert prose-lg text-slate-300 leading-relaxed">
+                {abstract.split("\n\n").map((para, i) => (
+                  <p key={i} className="mb-6 last:mb-0">
+                    {para}
+                  </p>
+                ))}
               </div>
             </section>
 
+            {diagram && (
+              <section className="mb-16 bg-white/[0.02] border border-white/5 rounded-2xl p-8">
+                {diagram.startsWith("graph") || diagram.startsWith("sequenceDiagram") ? (
+                  <MermaidDiagram chart={diagram} caption={caption || ""} figureId={`Fig-${paper.id.toUpperCase()}`} />
+                ) : (
+                  <figure className="my-10">
+                    <div className="bg-card/50 border border-white/10 rounded-lg p-6 overflow-hidden flex justify-center items-center">
+                      <img src={diagram} alt={caption || "Diagram"} className="max-w-full h-auto rounded shadow-2xl" />
+                    </div>
+                    {caption && (
+                      <figcaption className="mt-3 text-center text-sm text-muted-foreground font-mono">
+                        <span className="font-bold text-primary mr-2">Fig-{paper.id.toUpperCase()}:</span>
+                        {caption}
+                      </figcaption>
+                    )}
+                  </figure>
+                )}
+              </section>
+            )}
+
             <section className="mb-12">
-              <h3 className="text-lg font-bold text-white mb-4">
+              <h3 className="text-lg font-bold text-white mb-4 flex items-center gap-2">
+                <Tag size={18} className="text-primary" />
                 {tPapers("Common.keywordsHeading")}
               </h3>
               <div className="flex flex-wrap gap-2">
-                {tPapers(getLocalKey(paper.keywordsKey))
-                  .split(",")
-                  .map((kw, i) => (
-                    <span
-                      key={i}
-                      className="px-3 py-1 bg-white/5 rounded-full text-xs font-mono text-primary border border-white/5"
-                    >
-                      {kw.trim()}
-                    </span>
-                  ))}
+                {keywords.split(",").map((kw, i) => (
+                  <span
+                    key={i}
+                    className="px-3 py-1 bg-white/5 rounded-full text-xs font-mono text-primary border border-white/5"
+                  >
+                    {kw.trim()}
+                  </span>
+                ))}
               </div>
             </section>
           </article>

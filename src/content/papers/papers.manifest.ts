@@ -6,6 +6,8 @@ export interface PaperManifestItem {
   abstractKey: string;
   authorsKey: string;
   keywordsKey: string;
+  diagramKey?: string;
+  diagramCaptionKey?: string;
   status: "DRAFT" | "SUBMITTED" | "PUBLISHED";
   links: {
     arxiv?: string;
@@ -25,9 +27,10 @@ export const papersManifest: PaperManifestItem[] = [
     abstractKey: "Papers.Items.a1.abstract",
     authorsKey: "Papers.Items.a1.authors",
     keywordsKey: "Papers.Items.a1.keywords",
+    diagramKey: "Papers.Items.a1.diagram",
+    diagramCaptionKey: "Papers.Items.a1.caption",
     status: "PUBLISHED",
     links: {
-      // placeholders
       arxiv: "https://arxiv.org/submit/placeholder",
       ieee: "https://ieee.org/submit/placeholder",
       acm: "https://acm.org/submit/placeholder",
@@ -42,6 +45,8 @@ export const papersManifest: PaperManifestItem[] = [
     abstractKey: "Papers.Items.a2.abstract",
     authorsKey: "Papers.Items.a2.authors",
     keywordsKey: "Papers.Items.a2.keywords",
+    diagramKey: "Papers.Items.a2.diagram",
+    diagramCaptionKey: "Papers.Items.a2.caption",
     status: "PUBLISHED",
     links: {
       arxiv: "https://arxiv.org/submit/placeholder",
@@ -56,6 +61,8 @@ export const papersManifest: PaperManifestItem[] = [
     abstractKey: "Papers.Items.a3.abstract",
     authorsKey: "Papers.Items.a3.authors",
     keywordsKey: "Papers.Items.a3.keywords",
+    diagramKey: "Papers.Items.a3.diagram",
+    diagramCaptionKey: "Papers.Items.a3.caption",
     status: "PUBLISHED",
     links: {
       arxiv: "https://arxiv.org/submit/placeholder",
@@ -70,6 +77,8 @@ export const papersManifest: PaperManifestItem[] = [
     abstractKey: "Papers.Items.a4.abstract",
     authorsKey: "Papers.Items.a4.authors",
     keywordsKey: "Papers.Items.a4.keywords",
+    diagramKey: "Papers.Items.a4.diagram",
+    diagramCaptionKey: "Papers.Items.a4.caption",
     status: "PUBLISHED",
     links: {
       arxiv: "https://arxiv.org/submit/placeholder",
@@ -84,6 +93,8 @@ export const papersManifest: PaperManifestItem[] = [
     abstractKey: "Papers.Items.a5.abstract",
     authorsKey: "Papers.Items.a5.authors",
     keywordsKey: "Papers.Items.a5.keywords",
+    diagramKey: "Papers.Items.a5.diagram",
+    diagramCaptionKey: "Papers.Items.a5.caption",
     status: "PUBLISHED",
     links: {
       arxiv: "https://arxiv.org/submit/placeholder",
@@ -98,6 +109,8 @@ export const papersManifest: PaperManifestItem[] = [
     abstractKey: "Papers.Items.a6.abstract",
     authorsKey: "Papers.Items.a6.authors",
     keywordsKey: "Papers.Items.a6.keywords",
+    diagramKey: "Papers.Items.a6.diagram",
+    diagramCaptionKey: "Papers.Items.a6.caption",
     status: "PUBLISHED",
     links: {
       arxiv: "https://arxiv.org/submit/placeholder",
@@ -112,6 +125,8 @@ export const papersManifest: PaperManifestItem[] = [
     abstractKey: "Papers.Items.aecp.abstract",
     authorsKey: "Papers.Items.aecp.authors",
     keywordsKey: "Papers.Items.aecp.keywords",
+    diagramKey: "Papers.Items.aecp.diagram",
+    diagramCaptionKey: "Papers.Items.aecp.caption",
     status: "PUBLISHED",
     links: {
       arxiv: "https://arxiv.org/submit/placeholder",
@@ -120,12 +135,14 @@ export const papersManifest: PaperManifestItem[] = [
   },
   {
     id: "arch",
-    slug: "scholarly-article", // Assuming this is ARCH based on folder name heuristic
+    slug: "scholarly-article",
     titleKey: "Papers.Items.arch.title",
     subtitleKey: "Papers.Items.arch.subtitle",
     abstractKey: "Papers.Items.arch.abstract",
     authorsKey: "Papers.Items.arch.authors",
     keywordsKey: "Papers.Items.arch.keywords",
+    diagramKey: "Papers.Items.arch.diagram",
+    diagramCaptionKey: "Papers.Items.arch.caption",
     status: "PUBLISHED",
     links: {
       arxiv: "https://arxiv.org/submit/placeholder",

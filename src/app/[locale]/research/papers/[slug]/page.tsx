@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import { generateSEOMetadata } from "@/utils/seo";
 import { papersManifest, PaperManifestItem } from "@/content/papers/papers.manifest";
 import { PaperLanding } from "@/components/papers/PaperLanding";
+import { getTranslations } from "next-intl/server";
 
 // Generate params for all papers and locales
 export function generateStaticParams() {
@@ -30,25 +31,17 @@ export async function generateMetadata({
     return {};
   }
 
-  // Since we don't have access to t here easily without await getTranslations,
-  // and we want to keep it simple, we can use a hardcoded fallback or try to fetch.
-  // Ideally we use getTranslations from next-intl/server
+  const t = await getTranslations({ locale, namespace: "Papers" });
+  const getLocalKey = (fullKey: string) => fullKey.replace("Papers.", "");
 
-  // For now, let's use a generic description with the "Paper ID" or similar if we can't fully localize inside metadata easily
-  // without async. Actually we can await getTranslations.
-
-  // BUT, for speed/stability, let's use the English text or similar if mostly English for now?
-  // Or simpler: "Official Technical Report: [ID]"
-
-  const title = `Technical Report: ${paper.id.toUpperCase()}`;
-  const description = `Read the official technical report and reference architecture for ${paper.id.toUpperCase()}.`;
+  const title = t(getLocalKey(paper.titleKey));
+  const description = t(getLocalKey(paper.subtitleKey));
 
   return generateSEOMetadata(
     {
-      title,
+      title: `${title} | OmniGCloud Research`,
       description,
       canonical: `https://www.omnigcloud.com/${locale}/research/papers/${slug}`,
-      // ogImage: ... could map dynamically
     },
     locale
   );

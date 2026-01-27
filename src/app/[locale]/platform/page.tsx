@@ -78,7 +78,7 @@ export default async function PlatformPage({ params }: { params: Promise<{ local
 
       <VisualSection
         pageKey="Platform"
-        imageUrl="/images/seo/architecture.png"
+        imageUrl="/images/hero/architecture-premium.png"
         alt="OmniGCloud Platform Architecture"
         description={tSeo("VisualSection.description")}
       />

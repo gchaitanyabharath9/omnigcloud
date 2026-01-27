@@ -25,6 +25,10 @@ const LatencyLineChart = dynamic(
   () => import("@/components/charts/SimpleCharts").then((mod) => mod.LatencyLineChart),
   { ssr: false, loading: () => <ChartSkeleton /> }
 );
+const UptimeTrend = dynamic(
+  () => import("@/components/charts/SimpleCharts").then((mod) => mod.UptimeTrend),
+  { ssr: false, loading: () => <ChartSkeleton /> }
+);
 const CloudDistributionPie = dynamic(
   () => import("@/components/charts/SimpleCharts").then((mod) => mod.CloudDistributionPie),
   { ssr: false, loading: () => <ChartSkeleton /> }
@@ -33,6 +37,8 @@ const ComplianceScoresBar = dynamic(
   () => import("@/components/charts/SimpleCharts").then((mod) => mod.ComplianceScoresBar),
   { ssr: false, loading: () => <ChartSkeleton /> }
 );
+
+import { tSafe } from "@/lib/i18n/tSafe";
 
 export default function InteractiveDashboardSection() {
   const t = useTranslations("Dashboard");
@@ -110,34 +116,45 @@ export default function InteractiveDashboardSection() {
             </div>
           </div>
 
-          {/* TOP RIGHT: SYSTEM ARCHITECTURE (Image mix) */}
-          <div className="glass-panel p-5 rounded-2xl overflow-hidden relative min-h-[240px] border-white/5 flex flex-col justify-end group">
-            <Image
-              src="/images/home/data-center.png"
-              alt="Data Center"
-              fill
-              className="object-cover opacity-20 grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700"
-              sizes="(max-width: 768px) 100vw, 50vw"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-background via-background/60 to-transparent z-10" />
+          {/* TOP RIGHT: HISTORICAL TREND (Live Analytics) */}
+          <div className="glass-panel p-5 rounded-2xl overflow-hidden relative min-h-[240px] border-white/5 flex flex-col group">
+            <div className="absolute inset-0 z-0">
+              <Image
+                src="/images/dashboard/trend-bg.png"
+                alt={tSafe(t, "Charts.historicalTrend", "Trend Analytics")}
+                fill
+                className="object-cover opacity-10 group-hover:scale-110 transition-transform duration-[20s]"
+              />
+              <div className="absolute inset-0 bg-gradient-to-b from-slate-950 via-slate-950/60 to-slate-950" />
+            </div>
 
-            <div className="relative z-20">
-              <h4 className="text-base font-black text-foreground mb-1">{t("infraTitle")}</h4>
-              <p className="text-[10px] font-medium text-muted-foreground mb-4">
-                {t("infraSubtitle")}
-              </p>
-              <div className="bg-black/40 backdrop-blur-xl p-4 rounded-xl border border-white/10 shadow-2xl">
-                <div className="flex justify-between mb-1 items-center">
-                  <span className="text-[9px] text-primary font-black tracking-widest uppercase">
-                    {t("globalHealth")}
-                  </span>
-                  <span className="text-xs text-emerald-400 font-mono font-black animate-pulse">
-                    99.999%
-                  </span>
+            <div className="relative z-20 flex-1 flex flex-col">
+              <div className="flex justify-between items-start mb-4">
+                <div>
+                  <h4 className="text-base font-black text-foreground group-hover:text-primary transition-colors uppercase tracking-tight">
+                    {tSafe(t, "Charts.historicalTrend", "Historical Trend")}
+                  </h4>
+                  <p className="text-[9px] uppercase font-bold text-muted-foreground tracking-widest">
+                    {tSafe(t, "Charts.infraVelocity", "Infrastructure Velocity")}
+                  </p>
                 </div>
-                <div className="h-1 bg-white/5 rounded-full overflow-hidden">
-                  <div className="shimmer-effect w-[99.999%] h-full bg-emerald-500 rounded-full shadow-[0_0_10px_rgba(16,185,129,0.5)]" />
+                <TrendingUp size={16} className="text-primary" />
+              </div>
+
+              <div className="flex-1 w-full min-h-[140px] relative">
+                {isMounted && (
+                  <div className="absolute inset-0 scale-90">
+                    <UptimeTrend standalone height={140} />
+                  </div>
+                )}
+              </div>
+
+              <div className="mt-4 flex items-center justify-between">
+                <div className="flex gap-2">
+                  <div className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
+                  <span className="text-[8px] font-black text-muted-foreground uppercase tracking-widest">{tSafe(t, "Charts.liveSyncAlpha", "Live Sync Alpha")}</span>
                 </div>
+                <span className="text-[10px] font-mono font-black text-primary saturate-150">↑ 12.4%</span>
               </div>
             </div>
           </div>
@@ -167,28 +184,46 @@ export default function InteractiveDashboardSection() {
             </div>
           </div>
 
-          {/* BOTTOM RIGHT: SECURITY & COMPLIANCE (Metrics mix) */}
-          <div className="glass-panel p-5 rounded-2xl flex flex-col min-h-[240px] border-white/5 bg-white/[0.02] hover:border-primary/30 hover:bg-white/[0.04] transition-all duration-500 group">
-            <div className="flex justify-between items-start mb-2">
-              <div>
-                <h4 className="text-base font-black text-foreground group-hover:text-primary transition-colors">
-                  {t("trustTitle")}
-                </h4>
-                <p className="text-[9px] uppercase font-bold text-muted-foreground tracking-widest">
-                  {t("trustSubtitle")}
-                </p>
-              </div>
-              <div className="p-1.5 bg-emerald-500/10 rounded-lg text-emerald-500">
-                <ShieldCheck size={16} />
-              </div>
+          {/* BOTTOM RIGHT: AI ANALYSIS (Neural Layer) */}
+          <div className="glass-panel p-5 rounded-2xl flex flex-col min-h-[240px] border-white/5 bg-black/40 hover:border-primary/30 transition-all duration-500 group overflow-hidden relative">
+            <div className="absolute inset-0 z-0">
+              <Image
+                src="/images/dashboard/ai-bg.png"
+                alt={tSafe(t, "Charts.aiAnalysis", "AI Analysis")}
+                fill
+                className="object-cover opacity-[0.05] group-hover:scale-110 transition-transform duration-[15s]"
+              />
             </div>
-            <div className="flex-1 grid grid-cols-1 md:grid-cols-2 gap-4 items-start">
-              <div className="h-[160px] flex items-center justify-center relative">
-                <div className="absolute inset-0 bg-emerald-500/5 blur-3xl rounded-full" />
-                {isMounted && <PulsingSecurityScore score={94} />}
+
+            <div className="relative z-10 flex-1 flex flex-col">
+              <div className="flex justify-between items-start mb-4">
+                <div>
+                  <h4 className="text-base font-black text-foreground group-hover:text-primary transition-colors uppercase tracking-tight">
+                    {tSafe(t, "Charts.aiAnalysis", "AI Analysis")}
+                  </h4>
+                  <p className="text-[9px] uppercase font-bold text-muted-foreground tracking-widest">
+                    {tSafe(t, "Charts.autoGovernance", "Autonomous Governance")}
+                  </p>
+                </div>
+                <Activity size={16} className="text-primary animate-pulse" />
               </div>
-              <div className="h-[160px]">
-                {isMounted && <ComplianceScoresBar height={160} standalone />}
+
+              <div className="flex-1 bg-black/40 rounded-xl border border-white/5 p-4 font-mono text-[10px] overflow-hidden">
+                <div className="space-y-3">
+                  {[
+                    { cmd: "ANALYZE_NODES", status: "PASS", color: "text-emerald-400" },
+                    { cmd: "REBALANCE_CLUSTER", status: "ACTIVE", color: "text-blue-400" },
+                    { cmd: "DRIFT_DETECTION", status: "STABLE", color: "text-purple-400" },
+                  ].map((log, i) => (
+                    <div key={i} className="flex justify-between border-b border-white/5 pb-2">
+                      <span className="text-muted-foreground opacity-60 truncate mr-2">/usr/bin/{log.cmd}</span>
+                      <span className={`${log.color} font-black`}>{log.status}</span>
+                    </div>
+                  ))}
+                  <div className="pt-2 italic text-muted-foreground opacity-80 leading-relaxed">
+                    "{tSafe(t, "Charts.aiInsight", "AI predictive scaling identified 42% cost inefficiency in AP-SOUTH-1. Auto-remediation triggered...")}"
+                  </div>
+                </div>
               </div>
             </div>
           </div>

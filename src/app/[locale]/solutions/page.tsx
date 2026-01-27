@@ -130,18 +130,20 @@ export default async function SolutionsPage({ params }: { params: Promise<{ loca
             </div>
             <div className="relative justify-center" style={{ display: "flex" }}>
               <div
-                className="glass-panel"
+                className="glass-panel overflow-hidden"
                 style={{
-                  padding: "2rem",
+                  padding: "0",
                   borderRadius: "3rem",
                   border: "1px solid var(--primary-glow)",
+                  width: "480px",
+                  height: "320px",
+                  position: "relative"
                 }}
               >
-                <Globe
-                  size={240}
-                  className="text-[var(--primary)]"
-                  style={{ opacity: 0.3, margin: "0 auto" }}
-                  strokeWidth={1}
+                <img
+                  src="/images/hero/solutions-premium.png"
+                  alt="Enterprise Solutions Visualization"
+                  className="w-full h-full object-cover opacity-80"
                 />
               </div>
             </div>
@@ -386,7 +388,7 @@ export default async function SolutionsPage({ params }: { params: Promise<{ loca
 
       <VisualSection
         pageKey="Solutions"
-        imageUrl="/images/seo/architecture.png"
+        imageUrl="/images/hero/architecture-premium.png"
         alt={st("visual.alt")}
         description={st("visual.description")}
       />

@@ -1,7 +1,8 @@
 "use client";
 
 import React from "react";
-import { ArrowUpRight } from "lucide-react";
+import { ArrowUpRight, TrendingUp, Cpu } from "lucide-react";
+import Image from "next/image";
 
 interface MetricDashboardLayoutProps {
   title: string;
@@ -73,12 +74,25 @@ export default function MetricDashboardLayout({
         </div>
 
         {/* QUADRANT 3: Global Signals (Trend Analysis) */}
-        <div className="glass-panel p-8 rounded-[3rem] flex flex-col min-h-[350px] relative overflow-hidden border-white/5 bg-white/[0.01] shadow-2xl">
+        <div className="glass-panel p-8 rounded-[3rem] flex flex-col min-h-[350px] relative overflow-hidden border-white/5 bg-white/[0.01] shadow-2xl group">
+          <div className="absolute inset-0 z-0 pointer-events-none">
+            <Image
+              src="/images/dashboard/trend-bg.png"
+              alt="Historical Trend Analytics"
+              fill
+              className="object-cover opacity-20 group-hover:scale-110 transition-transform duration-[20s]"
+            />
+            <div className="absolute inset-0 bg-gradient-to-b from-slate-950 via-slate-950/40 to-slate-950" />
+          </div>
+
           <div className="mb-8 flex items-center justify-between relative z-10 border-b border-white/10 pb-6">
             <div className="flex flex-col gap-1">
-              <span className="text-[16px] font-black uppercase text-primary tracking-[0.4em] font-mono opacity-90 drop-shadow-lg">
-                {tSafe(t, "historicalTrend", "HISTORICAL TREND")}
-              </span>
+              <div className="flex items-center gap-2">
+                <TrendingUp size={16} className="text-primary" />
+                <span className="text-[16px] font-black uppercase text-primary tracking-[0.4em] font-mono opacity-90 drop-shadow-lg">
+                  {tSafe(t, "historicalTrend", "HISTORICAL TREND")}
+                </span>
+              </div>
               <span className="text-[10px] text-muted-foreground font-black uppercase tracking-[0.2em]">
                 {tSafe(t, "realtimePerf", "Neural Synthesis v4.2")}
               </span>
@@ -90,7 +104,7 @@ export default function MetricDashboardLayout({
               </span>
             </div>
           </div>
-          <div className="flex-1 relative w-full overflow-hidden rounded-[2rem] bg-black/30 border border-white/5 backdrop-blur-3xl flex items-center justify-center p-6 mt-4">
+          <div className="flex-1 relative w-full overflow-hidden rounded-[2rem] bg-black/40 border border-white/5 backdrop-blur-3xl flex items-center justify-center p-6 mt-2 z-10">
             <div className="w-full h-full relative z-0 flex items-center justify-center">
               {secondaryVisual}
             </div>
@@ -132,13 +146,24 @@ export default function MetricDashboardLayout({
         </div>
 
         {/* QUADRANT 4: Intelligence Hub (AI Analysis + Activity Stream) */}
-        <div className="glass-panel p-0 rounded-[3rem] flex flex-col overflow-hidden min-h-[500px] border border-primary/20 bg-black/60 shadow-[0_0_100px_rgba(59,130,246,0.15)] relative group">
+        <div className="glass-panel p-0 rounded-[3rem] flex flex-col overflow-hidden min-h-[500px] border border-primary/20 bg-black/80 shadow-[0_0_100px_rgba(59,130,246,0.15)] relative group">
+          {/* Neural Background */}
+          <div className="absolute inset-0 z-0 pointer-events-none">
+            <Image
+              src="/images/dashboard/ai-bg.png"
+              alt="Neural Analysis"
+              fill
+              className="object-cover opacity-10 group-hover:scale-105 transition-transform duration-[10s]"
+            />
+            <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black" />
+          </div>
+
           {/* Neural Header */}
-          <div className="px-10 py-8 border-b border-white/10 bg-gradient-to-r from-primary/10 to-transparent flex items-center justify-between">
+          <div className="px-10 py-8 border-b border-white/5 bg-gradient-to-r from-primary/10 to-transparent flex items-center justify-between relative z-10 backdrop-blur-sm">
             <div className="flex items-center gap-4">
               <div className="relative">
-                <div className="w-8 h-8 rounded-lg bg-primary/20 flex items-center justify-center border border-primary/40 animate-pulse">
-                  <div className="w-3 h-3 rounded-full bg-primary shadow-[0_0_15px_var(--primary)]" />
+                <div className="w-10 h-10 rounded-xl bg-primary/20 flex items-center justify-center border border-primary/40 animate-pulse">
+                  <Cpu className="text-primary h-5 w-5" />
                 </div>
                 <div className="absolute -top-1 -right-1 w-3 h-3 bg-emerald-500 rounded-full border-2 border-black" />
               </div>
@@ -147,7 +172,7 @@ export default function MetricDashboardLayout({
                   {tSafe(t, "aiAnalysis", "INTELLIGENCE_LAYER_v8")}
                 </span>
                 <span className="text-[10px] text-muted-foreground font-black uppercase tracking-[0.2em] opacity-60">
-                  Autonomous Decision Engine
+                  {tSafe(t, "autoDecisionEngine", "Autonomous Decision Engine")}
                 </span>
               </div>
             </div>

@@ -80,9 +80,9 @@ export default async function CompanyPage({ params }: { params: Promise<{ locale
           }}
         >
           <img
-            src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=1600&fit=crop&q=80"
-            alt="OmniGCloud Office"
-            style={{ width: "100%", height: "100%", objectFit: "cover", opacity: 0.2 }}
+            src="/images/company/hq-premium.png"
+            alt="OmniGCloud Global HQ"
+            style={{ width: "100%", height: "100%", objectFit: "cover", opacity: 0.25 }}
           />
           <div
             style={{
@@ -170,13 +170,13 @@ export default async function CompanyPage({ params }: { params: Promise<{ locale
               name: t("leadership.jyothsna.name"),
               role: t("leadership.jyothsna.role"),
               bio: t("leadership.jyothsna.bio"),
-              placeholder: t("leadership.jyothsna.placeholder"),
+              image: "/images/company/jyothsna-avatar.png",
             },
             {
               name: t("leadership.chaitanya.name"),
               role: t("leadership.chaitanya.role"),
               bio: t("leadership.chaitanya.bio"),
-              placeholder: t("leadership.chaitanya.placeholder"),
+              image: "/images/company/chaitanya-avatar.png",
             },
           ].map((leader, i) => (
             <div
@@ -190,15 +190,13 @@ export default async function CompanyPage({ params }: { params: Promise<{ locale
                   width: "100%",
                   overflow: "hidden",
                   background: "#1e293b",
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
                 }}
               >
-                <div style={{ textAlign: "center", opacity: 0.5, padding: "2rem" }}>
-                  <Users size={48} className="mx-auto mb-3" />
-                  <div style={{ fontSize: "0.9rem", fontWeight: 600 }}>{leader.placeholder}</div>
-                </div>
+                <img
+                  src={leader.image}
+                  alt={leader.name}
+                  style={{ width: "100%", height: "100%", objectFit: "cover" }}
+                />
               </div>
               <div style={{ padding: "2.5rem" }}>
                 <div
@@ -244,15 +242,15 @@ export default async function CompanyPage({ params }: { params: Promise<{ locale
           >
             {/* Background Image Addition */}
             <img
-              src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800&fit=crop"
-              alt="Global Operations"
+              src="/images/company/global-ops-premium.png"
+              alt="Global Sovereign Operations"
               style={{
                 position: "absolute",
                 inset: 0,
                 width: "100%",
                 height: "100%",
                 objectFit: "cover",
-                opacity: 0.1,
+                opacity: 0.15,
               }}
             />
 
