@@ -363,6 +363,28 @@ const nextConfig: any = {
         destination: "/en/research/papers/aecp",
         permanent: true,
       },
+
+      // FIX: Legacy individual paper paths -> unified dynamic route
+      {
+        source: "/:locale/research/distributed-systems-resilience",
+        destination: "/:locale/research/papers/distributed-systems-resilience",
+        permanent: true,
+      },
+      {
+        source: "/research/distributed-systems-resilience",
+        destination: "/en/research/papers/distributed-systems-resilience",
+        permanent: true,
+      },
+      {
+        source: "/:locale/research/automated-multilingual-quality-assurance",
+        destination: "/:locale/research/papers/automated-multilingual-quality-assurance",
+        permanent: true,
+      },
+      {
+        source: "/research/automated-multilingual-quality-assurance",
+        destination: "/en/research/papers/automated-multilingual-quality-assurance",
+        permanent: true,
+      },
     ];
   },
   images: {

@@ -217,17 +217,17 @@ export default async function ResearchHubPage({ params }: { params: Promise<{ lo
               locale={locale}
               href="/research/papers/a1-cloud-native-enterprise-reference"
               id="A1"
-              title={tp("A1.meta.title")}
-              desc={tp("A1.meta.description")}
+              title={tp("Items.a1.title")}
+              desc={tp("Items.a1.abstract")}
             />
 
             {/* A2 */}
             <PaperCard
               locale={locale}
-              href="/research/papers/a2-high-throughput-distributed-systems"
+              href="/research/papers/distributed-systems-resilience"
               id="A2"
-              title={tp("A2.meta.title")}
-              desc={tp("A2.meta.description")}
+              title={tp("Items.a2.title")}
+              desc={tp("Items.a2.abstract")}
             />
 
             {/* A3 */}
@@ -235,8 +235,8 @@ export default async function ResearchHubPage({ params }: { params: Promise<{ lo
               locale={locale}
               href="/research/papers/a3-enterprise-observability-operational-intelligence"
               id="A3"
-              title={tp("A3.meta.title")}
-              desc={tp("A3.meta.description")}
+              title={tp("Items.a3.title")}
+              desc={tp("Items.a3.abstract")}
             />
 
             {/* A4 */}
@@ -244,8 +244,8 @@ export default async function ResearchHubPage({ params }: { params: Promise<{ lo
               locale={locale}
               href="/research/papers/a4-platform-governance-multicloud-hybrid"
               id="A4"
-              title={tp("A4.meta.title")}
-              desc={tp("A4.meta.description")}
+              title={tp("Items.a4.title")}
+              desc={tp("Items.a4.abstract")}
             />
 
             {/* A5 */}
@@ -253,8 +253,8 @@ export default async function ResearchHubPage({ params }: { params: Promise<{ lo
               locale={locale}
               href="/research/papers/a5-monolith-to-cloud-native-modernization"
               id="A5"
-              title={tp("A5.meta.title")}
-              desc={tp("A5.meta.description")}
+              title={tp("Items.a5.title")}
+              desc={tp("Items.a5.abstract")}
             />
 
             {/* A6 */}
@@ -262,8 +262,8 @@ export default async function ResearchHubPage({ params }: { params: Promise<{ lo
               locale={locale}
               href="/research/papers/a6-adaptive-policy-enforcement"
               id="A6"
-              title={tp("A6.meta.title")}
-              desc={tp("A6.meta.description")}
+              title={tp("Items.a6.title")}
+              desc={tp("Items.a6.abstract")}
             />
           </div>
         </div>
