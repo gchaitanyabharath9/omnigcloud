@@ -5059,7 +5059,14 @@
         "abstract": "This paper presents a comprehensive framework for implementing sovereign cloud architectures at enterprise scale.",
         "authors": "Chaitanya Bharath Gopu, et al.",
         "keywords": "sovereignty, scale, complexity, formal framework",
-        "sections": {}
+        "sections": {
+          "0": {
+            "title": "System Landscape: Sovereign Ecosystem",
+            "content": "A **System Landscape** view of the Sovereign Cloud Ecosystem. It illustrates how the Sovereign Enterprise Control Plane mediates between the physical infrastructure of various nations (Digital Nations) and the Global Enterprise.",
+            "diagram": "graph TD\n    Ent[Global Enterprise] -->|Governs| Control[Sovereign Control Plane]\n    Control -->|Enforces| US[US Node (FIPS)]\n    Control -->|Enforces| EU[EU Node (GDPR)]\n    Control -->|Enforces| AP[APAC Node (Data Residency)]\n    style Control fill:#0f172a,color:#fff,stroke:#fff,stroke-width:4px\n    style US fill:#3b82f6,color:#fff\n    style EU fill:#3b82f6,color:#fff\n    style AP fill:#3b82f6,color:#fff",
+            "caption": "Figure 1: Sovereign Landscape (Level 1)"
+          }
+        }
       },
       "qa1": {
         "title": "Automated Multilingual Quality Assurance Framework",

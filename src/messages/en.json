@@ -4513,7 +4513,14 @@
         "abstract": "The definitive technical standard for implementing sovereign, multi-cloud platforms maximizing latency budgets and governance. Covers domain isolation, cell-based topology, and predictive capacity modeling.",
         "authors": "Chaitanya Bharath Gopu",
         "keywords": "cloud-native, reference architecture, enterprise, sovereignty",
-        "sections": {}
+        "sections": {
+          "0": {
+            "title": "C4 Model: System Context",
+            "content": "The High-Level Reference Architecture visualized as a **System Context** diagram. It depicts the Enterprise Platform as the central system of interest, interacting with key external entities: Enterprise Users, Public Cloud Providers (AWS/Azure), and On-Premise Data Centers.",
+            "diagram": "graph TD\n    User[Enterprise User] -->|Uses| Platform[Enterprise Platform]\n    Platform -->|Orchestrates| AWS[AWS Cloud]\n    Platform -->|Orchestrates| Azure[Azure Cloud]\n    Platform -->|Manages| OnPrem[On-Premises Data Center]\n    style Platform fill:#1d4ed8,color:#fff,stroke:#1e3a8a,stroke-width:2px,rx:10,ry:10\n    style User fill:#64748b,color:#fff,stroke:#334155\n    style AWS fill:#94a3b8,color:#000\n    style Azure fill:#94a3b8,color:#000\n    style OnPrem fill:#94a3b8,color:#000",
+            "caption": "Figure 1: System Context Diagram (Level 1)"
+          }
+        }
       },
       "a2": {
         "title": "Distributed Systems Resilience & Scalability Patterns",
@@ -4550,7 +4557,14 @@
         "abstract": "Beyond logging: Distributed tracing, correlation IDs, and AI-driven alerting approaches for modern distributed systems.",
         "authors": "Chaitanya Bharath Gopu",
         "keywords": "observability, distributed tracing, AI alerting, correlation ids",
-        "sections": {}
+        "sections": {
+          "0": {
+            "title": "C4 Model: Container View",
+            "content": "A **Container View** of the Observability Stack. This zooms into the platform to show the high-level deployable units: The Telemetry Collector, Time-Series Database (TSDB), and the AI Alerting Engine.",
+            "diagram": "graph TB\n    subgraph Observability Platform\n      Collector[Telemetry Collector]\n      TSDB[(Time-Series DB)]\n      AI[AI Alerting Engine]\n      Dash[Grafana Dashboard]\n    end\n    App[Microservices] -->|Push Metrics| Collector\n    Collector -->|Write| TSDB\n    TSDB -->|Read| AI\n    TSDB -->|Read| Dash\n    AI -->|Trigger| PagerDuty[PagerDuty]\n    style Collector fill:#1d4ed8,color:#fff,rx:10\n    style TSDB fill:#1d4ed8,color:#fff,shape:cylinder\n    style AI fill:#1d4ed8,color:#fff,rx:10\n    style Dash fill:#1d4ed8,color:#fff,rx:10",
+            "caption": "Figure 1: Observability Containers (Level 2)"
+          }
+        }
       },
       "a4": {
         "title": "A4: Platform Governance & Policy-as-Code",
@@ -4558,7 +4572,14 @@
         "abstract": "Decentralized enforcement of security policies across hybrid cloud estates. Implementing Policy-as-Code for scalable compliance.",
         "authors": "Chaitanya Bharath Gopu",
         "keywords": "governance, policy-as-code, security, decentralized enforcement",
-        "sections": {}
+        "sections": {
+          "0": {
+            "title": "C4 Model: Component View",
+            "content": "A **Component View** of the Policy Enforcement Engine. This details the internal logic of the Policy Guardrails, showing how GitOps pushes processed by the OPA (Open Policy Agent) Evaluator against a Policy Rego Store.",
+            "diagram": "graph LR\n    Dev[Developer] -->|Git Push| Repo[Git Repository]\n    Repo -->|Webhook| CI[CI Pipeline]\n    subgraph Policy Engine\n      OPA[OPA Evaluator]\n      Store[(Rego Policy Store)]\n    end\n    CI -->|Validate Manifest| OPA\n    OPA -->|Fetch Policy| Store\n    OPA -->|Allow/Deny| CI\n    style OPA fill:#1d4ed8,color:#fff,rx:5\n    style Store fill:#1d4ed8,color:#fff,shape:cylinder",
+            "caption": "Figure 1: Policy Engine Components (Level 3)"
+          }
+        }
       },
       "a5": {
         "title": "A5: Monolith Modernization Strategy",
@@ -4566,7 +4587,14 @@
         "abstract": "The Strangler Fig pattern applied to large-scale enterprise legacy systems. Strategies for incremental modernization without business disruption.",
         "authors": "Chaitanya Bharath Gopu",
         "keywords": "modernization, monolith, strangler fig, legacy systems",
-        "sections": {}
+        "sections": {
+          "0": {
+            "title": "Modernization Architecture (Strangler Fig)",
+            "content": "Visualizing the **Strangler Fig Pattern** using C4 notation. The core idea is to place an API Gateway Facade in front of the Legacy Monolith and the New Microservices, gradually shifting traffic percentage-wise.",
+            "diagram": "graph TD\n    Client[Mobile/Web Client] -->|HTTPS| Gateway[API Gateway Facade]\n    Gateway -->|90% Traffic| Legacy[Legacy Monolith]\n    Gateway -->|10% Traffic| Modern[New Microservice]\n    Legacy -.->|Read| DB[(Shared DB)]\n    Modern -->|Read/Write| DB\n    style Gateway fill:#1d4ed8,color:#fff,shape:hexagon\n    style Legacy fill:#dc2626,color:#fff\n    style Modern fill:#16a34a,color:#fff",
+            "caption": "Figure 1: Strangler Fig Traffic Split"
+          }
+        }
       },
       "a6": {
         "title": "A6: Adaptive Policy Enforcement",
@@ -4574,7 +4602,14 @@
         "abstract": "Adaptive policy enforcement mechanisms for dynamic cloud infrastructures. ensuring continuous compliance in rapidly changing environments.",
         "authors": "Chaitanya Bharath Gopu",
         "keywords": "policy enforcement, adaptive systems, real-time compliance",
-        "sections": {}
+        "sections": {
+          "0": {
+            "title": "Adaptive Policy Workflow",
+            "content": "An **Adaptive Control Loop** inspired by Control Theory. The System State is continuously monitored, compared against the Desired State (Policy), and Corrective Action is taken autonomously.",
+            "diagram": "graph LR\n    Sensor[State Sensor] -->|Telemetry| Controller[Adaptive Controller]\n    Controller -->|Compare| Policy[Policy Definition]\n    Controller -->|Actuate| Actuator[Config Actuator]\n    Actuator -->|Modify| System[Cloud Resource]\n    System -->|Feedback| Sensor\n    style Controller fill:#9333ea,color:#fff,rx:5\n    style Policy fill:#f59e0b,color:#000,shape:document",
+            "caption": "Figure 1: Closed-Loop Adaptive Policy"
+          }
+        }
       },
       "scholarly-article": {
         "title": "Reconciling Sovereignty, Scale, and Complexity",
@@ -4582,7 +4617,14 @@
         "abstract": "This paper presents a comprehensive framework for implementing sovereign cloud architectures at enterprise scale.",
         "authors": "Chaitanya Bharath Gopu, et al.",
         "keywords": "sovereignty, scale, complexity, formal framework",
-        "sections": {}
+        "sections": {
+          "0": {
+            "title": "System Landscape: Sovereign Ecosystem",
+            "content": "A **System Landscape** view of the Sovereign Cloud Ecosystem. It illustrates how the Sovereign Enterprise Control Plane mediates between the physical infrastructure of various nations (Digital Nations) and the Global Enterprise.",
+            "diagram": "graph TD\n    Ent[Global Enterprise] -->|Governs| Control[Sovereign Control Plane]\n    Control -->|Enforces| US[US Node (FIPS)]\n    Control -->|Enforces| EU[EU Node (GDPR)]\n    Control -->|Enforces| AP[APAC Node (Data Residency)]\n    style Control fill:#0f172a,color:#fff,stroke:#fff,stroke-width:4px\n    style US fill:#3b82f6,color:#fff\n    style EU fill:#3b82f6,color:#fff\n    style AP fill:#3b82f6,color:#fff",
+            "caption": "Figure 1: Sovereign Landscape (Level 1)"
+          }
+        }
       },
       "aecp": {
         "title": "Adaptive Enterprise Control Plane (AECP)",
@@ -4590,7 +4632,14 @@
         "abstract": "A methodology for managing entropy in hyper-scale systems. Establishes the 'Control Plane' as a sovereign primitive, using probabilistic failure injection and Policy-as-Code governance to guarantee partial availability.",
         "authors": "Chaitanya Bharath Gopu",
         "keywords": "control plane, entropy, hyper-scale, policy-as-code",
-        "sections": {}
+        "sections": {
+          "0": {
+            "title": "AECP Container Architecture",
+            "content": "The **Adaptive Enterprise Control Plane (AECP)** broken down into its core containers: The Entropy Monitor, the Governance Kernel, and the Multi-Cloud adaptor mesh.",
+            "diagram": "graph TB\n    subgraph AECP Core\n      Monitor[Entropy Monitor]\n      Kernel[Governance Kernel]\n      Mesh[Mesh Adaptor]\n    end\n    CloudA[AWS] <--> Mesh\n    CloudB[Azure] <--> Mesh\n    Monitor -->|Drift Signal| Kernel\n    Kernel -->|Remediation| Mesh\n    style Kernel fill:#ef4444,color:#fff,shape:diamond\n    style Monitor fill:#1d4ed8,color:#fff",
+            "caption": "Figure 1: AECP Internal Architecture"
+          }
+        }
       },
       "qa1": {
         "title": "Automated Multilingual Quality Assurance Framework",
