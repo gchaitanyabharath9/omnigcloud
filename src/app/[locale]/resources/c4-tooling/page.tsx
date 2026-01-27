@@ -31,9 +31,9 @@ export default async function C4ToolingPage({ params }: { params: Promise<{ loca
                         className="inline-flex items-center gap-2 text-sm text-slate-400 hover:text-primary transition-colors mb-8"
                     >
                         <ArrowLeft size={16} />
-                        Back to Research
+                        {t("back_to_research")}
                     </Link>
-                    <div className="badge badge-primary-subtle mb-6">Architecture Practices</div>
+                    <div className="badge badge-primary-subtle mb-6">{t("badge")}</div>
                     <h1 className="text-4xl md:text-5xl font-black tracking-tight text-white mb-6">
                         {t("title")}
                     </h1>
@@ -53,7 +53,7 @@ export default async function C4ToolingPage({ params }: { params: Promise<{ loca
                             <h2 className="text-2xl font-bold text-white">{t("section_choice_title")}</h2>
                         </div>
                         <p className="text-slate-300 leading-relaxed text-lg">
-                            {t("section_choice_text")} In high-velocity environments, the "perfect" diagram that takes days to update is effectively useless. The goal is to minimize the distance between the code (ground truth) and the map (architecture). When selecting a tool, prioritize <strong className="text-white">maintainability over aesthetics</strong>.
+                            {t("section_choice_text")} {t("section_choice_extra")} <strong className="text-white">{t("prioritize")}</strong>.
                         </p>
                     </section>
 
@@ -65,17 +65,17 @@ export default async function C4ToolingPage({ params }: { params: Promise<{ loca
                         </div>
                         <div className="grid md:grid-cols-2 gap-8">
                             <div>
-                                <h3 className="text-white font-bold mb-2">Diagramming (Drawing)</h3>
+                                <h3 className="text-white font-bold mb-2">{t("draw_title")}</h3>
                                 <p className="text-slate-400 text-sm leading-relaxed">
-                                    Creating static images. Think "digital whiteboard." Great for sketching and ephemeral discussions. Hard to maintain consistency across multiple views.
-                                    <br /><span className="text-xs text-slate-500 mt-2 block">Examples: Visio, Excalidraw</span>
+                                    {t("draw_desc")}
+                                    <br /><span className="text-xs text-slate-500 mt-2 block">{t("draw_examples")}</span>
                                 </p>
                             </div>
                             <div>
-                                <h3 className="text-white font-bold mb-2">Modelling (Engineering)</h3>
+                                <h3 className="text-white font-bold mb-2">{t("model_title")}</h3>
                                 <p className="text-slate-400 text-sm leading-relaxed">
-                                    {t("section_diff_text")} You define a "System" once, and then generate multiple views (Context, Container) from that single definition. Refactoring the model updates all diagrams instantly.
-                                    <br /><span className="text-xs text-slate-500 mt-2 block">Examples: Structurizr, PlantUML</span>
+                                    {t("section_diff_text")} {t("model_desc")}
+                                    <br /><span className="text-xs text-slate-500 mt-2 block">{t("model_examples")}</span>
                                 </p>
                             </div>
                         </div>
@@ -88,22 +88,22 @@ export default async function C4ToolingPage({ params }: { params: Promise<{ loca
                             <li className="flex items-start gap-3">
                                 <div className="mt-1.5 w-2 h-2 rounded-full bg-primary" />
                                 <div>
-                                    <strong className="text-white block">Audience Alignment</strong>
-                                    <span className="text-slate-400">{t("checklist_audience")} Executive stakeholders need high-level Context views; engineers need precise Component maps.</span>
+                                    <strong className="text-white block">{t("checklist_audience_title")}</strong>
+                                    <span className="text-slate-400">{t("checklist_audience_text")}</span>
                                 </div>
                             </li>
                             <li className="flex items-start gap-3">
                                 <div className="mt-1.5 w-2 h-2 rounded-full bg-primary" />
                                 <div>
-                                    <strong className="text-white block">Velocity vs. Fidelity</strong>
-                                    <span className="text-slate-400">{t("checklist_frequency")} If the system changes daily, manual diagramming will drift immediately. Prefer code-based generation.</span>
+                                    <strong className="text-white block">{t("checklist_frequency_title")}</strong>
+                                    <span className="text-slate-400">{t("checklist_frequency_text")}</span>
                                 </div>
                             </li>
                             <li className="flex items-start gap-3">
                                 <div className="mt-1.5 w-2 h-2 rounded-full bg-primary" />
                                 <div>
-                                    <strong className="text-white block">Standardization</strong>
-                                    <span className="text-slate-400">{t("checklist_syntax")} Adopting a strict ubiquitous language (like C4) reduces cognitive load for new team members.</span>
+                                    <strong className="text-white block">{t("checklist_syntax_title")}</strong>
+                                    <span className="text-slate-400">{t("checklist_syntax_text")}</span>
                                 </div>
                             </li>
                         </ul>
@@ -119,12 +119,12 @@ export default async function C4ToolingPage({ params }: { params: Promise<{ loca
                             </div>
                             <div className="grid gap-4">
                                 <div className="p-4 rounded-lg bg-slate-900 border border-slate-800">
-                                    <div className="font-bold text-white">Draw.io / Diagrams.net</div>
-                                    <div className="text-sm text-slate-400">Ubiquitous, free, and integrates with everything. Good for "Container" level diagrams that don't change often.</div>
+                                    <div className="font-bold text-white">{t("tool_name_draw_io")}</div>
+                                    <div className="text-sm text-slate-400">{t("tools_draw_io_desc")}</div>
                                 </div>
                                 <div className="p-4 rounded-lg bg-slate-900 border border-slate-800">
-                                    <div className="font-bold text-white">Excalidraw</div>
-                                    <div className="text-sm text-slate-400">Excellent sketch-style aesthetic. Best for identifying "System Context" during early design phases.</div>
+                                    <div className="font-bold text-white">{t("tool_name_excalidraw")}</div>
+                                    <div className="text-sm text-slate-400">{t("tools_excalidraw_desc")}</div>
                                 </div>
                             </div>
                         </div>
@@ -137,16 +137,16 @@ export default async function C4ToolingPage({ params }: { params: Promise<{ loca
                             </div>
                             <div className="grid gap-4">
                                 <div className="p-4 rounded-lg bg-slate-900 border border-slate-800">
-                                    <div className="font-bold text-white">Structurizr</div>
-                                    <div className="text-sm text-slate-400">The gold standard for C4. Defines architecture as code (Java/DSL) and renders consistent views automatically.</div>
+                                    <div className="font-bold text-white">{t("tool_name_structurizr")}</div>
+                                    <div className="text-sm text-slate-400">{t("tools_structurizr_desc")}</div>
                                 </div>
                                 <div className="p-4 rounded-lg bg-slate-900 border border-slate-800">
-                                    <div className="font-bold text-white">Mermaid.js</div>
-                                    <div className="text-sm text-slate-400">Markdown-native and widely supported in GitHub/GitLab. Perfect for keeping diagrams directly next to code.</div>
+                                    <div className="font-bold text-white">{t("tool_name_mermaid")}</div>
+                                    <div className="text-sm text-slate-400">{t("tools_mermaid_desc")}</div>
                                 </div>
                                 <div className="p-4 rounded-lg bg-slate-900 border border-slate-800">
-                                    <div className="font-bold text-white">IcePanel</div>
-                                    <div className="text-sm text-slate-400">Modern SaaS that facilitates interactive C4 zooming. Bridges the gap between designers and engineers.</div>
+                                    <div className="font-bold text-white">{t("tool_name_icepanel")}</div>
+                                    <div className="text-sm text-slate-400">{t("tools_icepanel_desc")}</div>
                                 </div>
                             </div>
                         </div>
