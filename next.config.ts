@@ -158,7 +158,7 @@ const nextConfig: any = {
       },
       {
         source: "/:locale/architecture/a2-high-throughput-distributed-systems",
-        destination: "/:locale/research/papers/a2-high-throughput-distributed-systems",
+        destination: "/:locale/research/papers/distributed-systems-resilience",
         permanent: true,
       },
       {
@@ -330,7 +330,7 @@ const nextConfig: any = {
       },
       {
         source: "/research/papers/a2-high-throughput-distributed-systems",
-        destination: "/en/research/papers/a2-high-throughput-distributed-systems",
+        destination: "/en/research/papers/distributed-systems-resilience",
         permanent: true,
       },
       {
