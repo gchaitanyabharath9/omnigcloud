@@ -4824,13 +4824,17 @@
             "caption": "Figure 3: Jurisdiction-Aware Request Routing",
             "content": "State management in a sovereign cloud environment presents unique challenges. Data cannot simply be replicated globally; it must respect strict residency boundaries. We propose a 'Federated State Architecture' where data is sharded by jurisdiction. User data for European citizens resides solely in EU clusters, while US data remains in North America. To achieve this, we utilize a sharding layer at the application ingress, routing requests based on user attributes and consent metadata.\n\nIdentity management follows a similar federated pattern. A central Identity Provider (IdP) acts as a broker, trusting local IdPs within each sovereignty zone. This prevents a single point of failure and ensures that authentication tokens generated in one region do not carry excessive privileges in another. We explore the use of SPIFFE/SPIRE for workload identity, ensuring that zero-trust principles are applied not just to users, but to every service-to-service interaction.",
             "diagram": "sequenceDiagram; participant User; participant GlobalIngress; participant EU_Cluster; participant US_Cluster; User->>GlobalIngress: Login Request (Region=EU); GlobalIngress->>EU_Cluster: Route Traffic; EU_Cluster->>EU_Cluster: Auth & Local Data; EU_Cluster-->>User: Response (Data stays in EU);",
-            "title": "Distributed State & Identity"
+            "title": "Distributed State & Identity",
+            "diagram2": "graph TB\\nsubgraph \"Policy Lifecycle\"\\n  Def[Define Policy in Rego] --> Test[Unit Test Policy]\\n  Test --> Release[Release Policy Bundle]\\n  Release --> Distribute[Distribute to Clusters]\\nend\\n\\nsubgraph \"Enforcement Points\"\\n  API[API Gateway]\\n  K8s[K8s Admission]\\n  Infra[Terraform Plan]\\nend\\n\\nDistribute --> API\\nDistribute --> K8s\\nDistribute --> Infra\\n\\nstyle Distribute fill:#bbf,stroke:#333,stroke-width:2px",
+            "caption2": "Figure A1-3b: Policy Lifecycle Management ensuring consistent policy versioning and distribution across all enforcement points."
           },
           "3": {
             "caption": "Figure 4: Long-term ROI of Sovereign Architecture",
             "content": "The Cloud-Native Enterprise architecture offers a viable path forward for organizations navigating the complexities of the modern digital landscape. By prioritizing sovereignty and decoupling, enterprises can regain control over their digital destiny, mitigate regulatory risks, and foster a more competitive multi-vendor ecosystem. While the initial investment in building these abstractions is non-trivial, the long-term ROI in terms of agility and risk reduction is substantial.\n\nFuture work will focus on automating the testing of these sovereign abstractions (chaos engineering for compliance) and exploring the role of WebAssembly (Wasm) as a lighter-weight, sandboxed runtime for edge computing scenarios where sovereignty must be enforced at the device level.",
             "diagram": "pie title ROI Breakdown; \"Vendor Leverage\" : 30; \"Compliance Efficiency\" : 40; \"Migration Speed\" : 20; \"Ops Reduction\" : 10",
-            "title": "Conclusion & Future Work"
+            "title": "Conclusion & Future Work",
+            "diagram2": "graph LR\\nState[Current State] -->|Decouple| Next[Cloud-Native Sovereign]\\nNext -->|Federate| Future[Intelligent Sovereign Interface]\\n\\nstyle Future fill:#af0,stroke:#333,stroke-width:2px",
+            "caption2": "Figure A1-4b: Evolutionary roadmap from current coupled architectures to the future intelligent sovereign enterprise."
           }
         },
         "subtitle": "The canonical A1 technical standard for implementing sovereign, multi-cloud platforms maximizing latency budgets and governance. (ES)",
