@@ -15,7 +15,7 @@ export const PAPERS_REGISTRY: PaperEntry[] = [
         publishedDate: "2026-01-21",
     },
     {
-        slug: "a2-high-throughput-distributed-systems",
+        slug: "distributed-systems-resilience",
         id: "a2",
         authors: "Chaitanya Bharath Gopu",
         keywords: ["High-Throughput", "Event-Driven", "Lattice-Mesh", "Resilience"],
