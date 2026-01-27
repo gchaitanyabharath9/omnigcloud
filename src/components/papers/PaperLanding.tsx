@@ -68,41 +68,64 @@ export const PaperLanding = ({ paper, locale }: PaperLandingProps) => {
       <main className="container mx-auto px-4 py-20">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-16">
           <article className="lg:col-span-8">
-            <section className="mb-16">
-              <h2 className="text-2xl font-bold text-white mb-6 border-b border-white/5 pb-4 flex items-center gap-3">
-                <ArrowRight className="text-primary" size={24} />
-                {tPapers("Common.abstractHeading")}
-              </h2>
-              <div className="prose prose-invert prose-lg text-slate-300 leading-relaxed">
-                {abstract.split("\n\n").map((para, i) => (
-                  <p key={i} className="mb-6 last:mb-0">
-                    {para}
-                  </p>
-                ))}
-              </div>
-            </section>
+            {/* Content Sections */}
+            <div className="space-y-16">
+              {[0, 1, 2, 3].map((index) => {
+                // Try to get section data - using getTranslations might be better server side,
+                // but for client component we check if keys exist or just render blindly if we know structure matches.
+                // We'll trust the structure exists in en.json
+                const sectionKey = getLocalKey(`${paper.id}.sections.${index}`);
 
-            {diagram && (
-              <section className="mb-16 bg-white/[0.02] border border-white/5 rounded-2xl p-8">
-                {diagram.startsWith("graph") || diagram.startsWith("sequenceDiagram") ? (
-                  <MermaidDiagram chart={diagram} caption={caption || ""} figureId={`Fig-${paper.id.toUpperCase()}`} />
-                ) : (
-                  <figure className="my-10">
-                    <div className="bg-card/50 border border-white/10 rounded-lg p-6 overflow-hidden flex justify-center items-center">
-                      <img src={diagram} alt={caption || "Diagram"} className="max-w-full h-auto rounded shadow-2xl" />
+                // We use a try-safe approach or specific key check?
+                // next-intl returns the key if missing.
+                const sectionTitle = tPapers(`${sectionKey}.title`);
+                const sectionContent = tPapers(`${sectionKey}.content`);
+                const sectionDiagram = tPapers(`${sectionKey}.diagram`);
+                const sectionCaption = tPapers(`${sectionKey}.caption`);
+
+                // If the returned title is just the key, and we are not on section 0, maybe skip?
+                // But we requested "4 diagrams per paper", so we assume 4 sections exist.
+
+                return (
+                  <section key={index} className="scroll-mt-24" id={`section-${index}`}>
+                    <h2 className="text-2xl font-bold text-white mb-6 border-b border-white/5 pb-4 flex items-center gap-3">
+                      {index === 0 ? <ArrowRight className="text-primary" size={24} /> : <span className="text-primary/50 font-mono text-lg">0{index + 1}.</span>}
+                      {sectionTitle}
+                    </h2>
+
+                    <div className="prose prose-invert prose-lg text-slate-300 leading-relaxed mb-8 text-justify">
+                      {sectionContent.split("\n\n").map((para, i) => (
+                        <p key={i} className="mb-6 last:mb-0">
+                          {para}
+                        </p>
+                      ))}
                     </div>
-                    {caption && (
-                      <figcaption className="mt-3 text-center text-sm text-muted-foreground font-mono">
-                        <span className="font-bold text-primary mr-2">Fig-{paper.id.toUpperCase()}:</span>
-                        {caption}
-                      </figcaption>
-                    )}
-                  </figure>
-                )}
-              </section>
-            )}
 
-            <section className="mb-12">
+                    {sectionDiagram && sectionDiagram !== `${NS}.${sectionKey}.diagram` && (
+                      <div className="my-10 bg-white/[0.02] border border-white/5 rounded-2xl p-6 md:p-8">
+                        {sectionDiagram.startsWith("graph") || sectionDiagram.startsWith("sequenceDiagram") || sectionDiagram.startsWith("flowchart") || sectionDiagram.startsWith("C4") ? (
+                          <MermaidDiagram chart={sectionDiagram} caption={sectionCaption !== `${NS}.${sectionKey}.caption` ? sectionCaption : ""} figureId={`Fig-${paper.id.toUpperCase()}-${index + 1}`} />
+                        ) : (
+                          <figure>
+                            <div className="bg-card/50 border border-white/10 rounded-lg p-4 overflow-hidden flex justify-center items-center">
+                              <img src={sectionDiagram} alt={sectionCaption || "Diagram"} className="max-w-full h-auto rounded shadow-xl" />
+                            </div>
+                            {sectionCaption && sectionCaption !== `${NS}.${sectionKey}.caption` && (
+                              <figcaption className="mt-3 text-center text-sm text-muted-foreground font-mono">
+                                <span className="font-bold text-primary mr-2">Fig-{paper.id.toUpperCase()}-{index + 1}:</span>
+                                {sectionCaption}
+                              </figcaption>
+                            )}
+                          </figure>
+                        )}
+                      </div>
+                    )}
+                  </section>
+                );
+              })}
+            </div>
+
+            <section className="mt-16 pt-16 border-t border-white/5">
               <h3 className="text-lg font-bold text-white mb-4 flex items-center gap-2">
                 <Tag size={18} className="text-primary" />
                 {tPapers("Common.keywordsHeading")}
