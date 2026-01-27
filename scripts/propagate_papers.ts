@@ -9,7 +9,7 @@ async function propagateKeys() {
 
     console.log("Reading en.json...");
     const enContent = JSON.parse(fs.readFileSync(enPath, "utf-8"));
-    const papersItems = enContent.Papers.Items;
+    const papersSource = enContent.Papers;
 
     const locales = ["es", "fr", "de", "zh", "hi", "ja", "ko"];
 
@@ -55,7 +55,7 @@ async function propagateKeys() {
                 }
             };
 
-            propagateObject(papersItems, localeContent.Papers.Items, "Papers.Items");
+            propagateObject(papersSource, localeContent.Papers, "Papers");
 
             if (missingKeys.length > 0) {
                 console.log(`  Added ${missingKeys.length} missing keys to ${locale}.json (e.g., ${missingKeys[0]})`);
