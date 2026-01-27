@@ -22,6 +22,7 @@ export const PUBLIC_ROUTES_MANIFEST: RouteEntry[] = [
 
   // Documentation & Resources
   { path: "/docs", priority: 0.9, changeFreq: "weekly" },
+  { path: "/resources/c4-tooling", priority: 0.8, changeFreq: "monthly" },
   { path: "/docs/whitepaper", priority: 0.9, changeFreq: "weekly" },
   { path: "/docs/architecture", priority: 0.8, changeFreq: "monthly" },
   { path: "/docs/governance", priority: 0.8, changeFreq: "monthly" },

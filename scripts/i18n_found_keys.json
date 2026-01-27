@@ -1041,6 +1041,14 @@
       "type": "t_call"
     },
     {
+      "file": "src\\components\\widgets\\PerformanceStatusWidget.tsx",
+      "line": 47,
+      "namespace": "Components.Widgets.PerformanceStatus",
+      "key": "connecting",
+      "fullKey": "Components.Widgets.PerformanceStatus.connecting",
+      "type": "t_call"
+    },
+    {
       "file": "src\\components\\visuals\\InteractiveTelemetry.tsx",
       "line": 29,
       "namespace": "Visuals.telemetry",
@@ -1222,14 +1230,6 @@
       "namespace": "Components.Visuals.AdvancedMetrics",
       "key": "reduction",
       "fullKey": "Components.Visuals.AdvancedMetrics.reduction",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\components\\widgets\\PerformanceStatusWidget.tsx",
-      "line": 47,
-      "namespace": "Components.Widgets.PerformanceStatus",
-      "key": "connecting",
-      "fullKey": "Components.Widgets.PerformanceStatus.connecting",
       "type": "t_call"
     },
     {
@@ -1641,6 +1641,38 @@
       "type": "t_call"
     },
     {
+      "file": "src\\components\\header\\MobileMenuOverlay.tsx",
+      "line": 44,
+      "namespace": "Common",
+      "key": "Header.menu_accessibility_label",
+      "fullKey": "Common.Header.menu_accessibility_label",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\components\\header\\MobileMenuOverlay.tsx",
+      "line": 123,
+      "namespace": "Common",
+      "key": "Header.nav.onboarding",
+      "fullKey": "Common.Header.nav.onboarding",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\components\\header\\index.tsx",
+      "line": 233,
+      "namespace": "Common",
+      "key": "Header.nav.onboarding",
+      "fullKey": "Common.Header.nav.onboarding",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\components\\header\\index.tsx",
+      "line": 238,
+      "namespace": "Common",
+      "key": "Header.menu_accessibility_label",
+      "fullKey": "Common.Header.menu_accessibility_label",
+      "type": "t_call"
+    },
+    {
       "file": "src\\components\\forms\\ContactForm.tsx",
       "line": 46,
       "namespace": "Contact.form",
@@ -1726,38 +1758,6 @@
       "namespace": "Contact.form",
       "key": "submit",
       "fullKey": "Contact.form.submit",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\components\\header\\MobileMenuOverlay.tsx",
-      "line": 44,
-      "namespace": "Common",
-      "key": "Header.menu_accessibility_label",
-      "fullKey": "Common.Header.menu_accessibility_label",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\components\\header\\MobileMenuOverlay.tsx",
-      "line": 123,
-      "namespace": "Common",
-      "key": "Header.nav.onboarding",
-      "fullKey": "Common.Header.nav.onboarding",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\components\\header\\index.tsx",
-      "line": 233,
-      "namespace": "Common",
-      "key": "Header.nav.onboarding",
-      "fullKey": "Common.Header.nav.onboarding",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\components\\header\\index.tsx",
-      "line": 238,
-      "namespace": "Common",
-      "key": "Header.menu_accessibility_label",
-      "fullKey": "Common.Header.menu_accessibility_label",
       "type": "t_call"
     },
     {
@@ -2577,326 +2577,6 @@
       "type": "t_call"
     },
     {
-      "file": "src\\app\\[locale]\\staffing\\page.tsx",
-      "line": 14,
-      "namespace": "Staffing",
-      "key": "title",
-      "fullKey": "Staffing.title",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\staffing\\page.tsx",
-      "line": 25,
-      "namespace": "Staffing",
-      "key": "subtitle",
-      "fullKey": "Staffing.subtitle",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\staffing\\page.tsx",
-      "line": 56,
-      "namespace": "Staffing",
-      "key": "visual.title",
-      "fullKey": "Staffing.visual.title",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\staffing\\page.tsx",
-      "line": 58,
-      "namespace": "Staffing",
-      "key": "visual.subtitle",
-      "fullKey": "Staffing.visual.subtitle",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\staffing\\page.tsx",
-      "line": 131,
-      "namespace": "Staffing",
-      "key": "roles.architects.title",
-      "fullKey": "Staffing.roles.architects.title",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\staffing\\page.tsx",
-      "line": 134,
-      "namespace": "Staffing",
-      "key": "roles.architects.desc",
-      "fullKey": "Staffing.roles.architects.desc",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\staffing\\page.tsx",
-      "line": 165,
-      "namespace": "Staffing",
-      "key": "roles.security.title",
-      "fullKey": "Staffing.roles.security.title",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\staffing\\page.tsx",
-      "line": 168,
-      "namespace": "Staffing",
-      "key": "roles.security.desc",
-      "fullKey": "Staffing.roles.security.desc",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\staffing\\page.tsx",
-      "line": 199,
-      "namespace": "Staffing",
-      "key": "roles.ai.title",
-      "fullKey": "Staffing.roles.ai.title",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\staffing\\page.tsx",
-      "line": 202,
-      "namespace": "Staffing",
-      "key": "roles.ai.desc",
-      "fullKey": "Staffing.roles.ai.desc",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\staffing\\page.tsx",
-      "line": 216,
-      "namespace": "Staffing",
-      "key": "engagement.contract.title",
-      "fullKey": "Staffing.engagement.contract.title",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\staffing\\page.tsx",
-      "line": 218,
-      "namespace": "Staffing",
-      "key": "engagement.contract.desc",
-      "fullKey": "Staffing.engagement.contract.desc",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\staffing\\page.tsx",
-      "line": 222,
-      "namespace": "Staffing",
-      "key": "engagement.managed.title",
-      "fullKey": "Staffing.engagement.managed.title",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\staffing\\page.tsx",
-      "line": 224,
-      "namespace": "Staffing",
-      "key": "engagement.managed.desc",
-      "fullKey": "Staffing.engagement.managed.desc",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\staffing\\page.tsx",
-      "line": 228,
-      "namespace": "Staffing",
-      "key": "engagement.consulting.title",
-      "fullKey": "Staffing.engagement.consulting.title",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\staffing\\page.tsx",
-      "line": 230,
-      "namespace": "Staffing",
-      "key": "engagement.consulting.desc",
-      "fullKey": "Staffing.engagement.consulting.desc",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\research\\page.tsx",
-      "line": 57,
-      "namespace": "Research.page",
-      "key": "badge",
-      "fullKey": "Research.page.badge",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\research\\page.tsx",
-      "line": 60,
-      "namespace": "Research.page",
-      "key": "title",
-      "fullKey": "Research.page.title",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\research\\page.tsx",
-      "line": 60,
-      "namespace": "Research.page",
-      "key": "titleHighlight",
-      "fullKey": "Research.page.titleHighlight",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\research\\page.tsx",
-      "line": 64,
-      "namespace": "Research.page",
-      "key": "subtitle",
-      "fullKey": "Research.page.subtitle",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\research\\page.tsx",
-      "line": 77,
-      "namespace": "Research.page",
-      "key": "featured.badge",
-      "fullKey": "Research.page.featured.badge",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\research\\page.tsx",
-      "line": 80,
-      "namespace": "Research.page",
-      "key": "featured.sectionTitle",
-      "fullKey": "Research.page.featured.sectionTitle",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\research\\page.tsx",
-      "line": 102,
-      "namespace": "Research.page",
-      "key": "newPublication",
-      "fullKey": "Research.page.newPublication",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\research\\page.tsx",
-      "line": 105,
-      "namespace": "Research.page",
-      "key": "featured.date",
-      "fullKey": "Research.page.featured.date",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\research\\page.tsx",
-      "line": 110,
-      "namespace": "Research.page",
-      "key": "featured.title",
-      "fullKey": "Research.page.featured.title",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\research\\page.tsx",
-      "line": 114,
-      "namespace": "Research.page",
-      "key": "featured.abstract",
-      "fullKey": "Research.page.featured.abstract",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\research\\page.tsx",
-      "line": 119,
-      "namespace": "Research.page",
-      "key": "featured.readArticle",
-      "fullKey": "Research.page.featured.readArticle",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\research\\page.tsx",
-      "line": 123,
-      "namespace": "Research.page",
-      "key": "featured.wordCount",
-      "fullKey": "Research.page.featured.wordCount",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\research\\page.tsx",
-      "line": 126,
-      "namespace": "Research.page",
-      "key": "featured.diagramCount",
-      "fullKey": "Research.page.featured.diagramCount",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\research\\page.tsx",
-      "line": 140,
-      "namespace": "Research.page",
-      "key": "frameworks.title",
-      "fullKey": "Research.page.frameworks.title",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\research\\page.tsx",
-      "line": 156,
-      "namespace": "Research.page",
-      "key": "frameworks.aecp.badge",
-      "fullKey": "Research.page.frameworks.aecp.badge",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\research\\page.tsx",
-      "line": 159,
-      "namespace": "Research.page",
-      "key": "frameworks.aecp.version",
-      "fullKey": "Research.page.frameworks.aecp.version",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\research\\page.tsx",
-      "line": 164,
-      "namespace": "Research.page",
-      "key": "frameworks.aecp.title",
-      "fullKey": "Research.page.frameworks.aecp.title",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\research\\page.tsx",
-      "line": 175,
-      "namespace": "Research.page",
-      "key": "frameworks.aecp.features.security",
-      "fullKey": "Research.page.frameworks.aecp.features.security",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\research\\page.tsx",
-      "line": 179,
-      "namespace": "Research.page",
-      "key": "frameworks.aecp.features.topology",
-      "fullKey": "Research.page.frameworks.aecp.features.topology",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\research\\page.tsx",
-      "line": 183,
-      "namespace": "Research.page",
-      "key": "frameworks.aecp.features.healing",
-      "fullKey": "Research.page.frameworks.aecp.features.healing",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\research\\page.tsx",
-      "line": 204,
-      "namespace": "Research.page",
-      "key": "appliedPapers.title",
-      "fullKey": "Research.page.appliedPapers.title",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\research\\page.tsx",
-      "line": 270,
-      "namespace": "Research.page",
-      "key": "footer.authorshipRequest",
-      "fullKey": "Research.page.footer.authorshipRequest",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\research\\page.tsx",
-      "line": 273,
-      "namespace": "Research.page",
-      "key": "footer.authorshipDisclaimer",
-      "fullKey": "Research.page.footer.authorshipDisclaimer",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\research\\page.tsx",
-      "line": 275,
-      "namespace": "Research.page",
-      "key": "footer.copyright",
-      "fullKey": "Research.page.footer.copyright",
-      "type": "t_call"
-    },
-    {
       "file": "src\\app\\[locale]\\register\\page.tsx",
       "line": 38,
       "namespace": "Auth.Register",
@@ -3497,6 +3177,326 @@
       "type": "t_call"
     },
     {
+      "file": "src\\app\\[locale]\\research\\page.tsx",
+      "line": 57,
+      "namespace": "Research.page",
+      "key": "badge",
+      "fullKey": "Research.page.badge",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\research\\page.tsx",
+      "line": 60,
+      "namespace": "Research.page",
+      "key": "title",
+      "fullKey": "Research.page.title",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\research\\page.tsx",
+      "line": 60,
+      "namespace": "Research.page",
+      "key": "titleHighlight",
+      "fullKey": "Research.page.titleHighlight",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\research\\page.tsx",
+      "line": 64,
+      "namespace": "Research.page",
+      "key": "subtitle",
+      "fullKey": "Research.page.subtitle",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\research\\page.tsx",
+      "line": 77,
+      "namespace": "Research.page",
+      "key": "featured.badge",
+      "fullKey": "Research.page.featured.badge",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\research\\page.tsx",
+      "line": 80,
+      "namespace": "Research.page",
+      "key": "featured.sectionTitle",
+      "fullKey": "Research.page.featured.sectionTitle",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\research\\page.tsx",
+      "line": 102,
+      "namespace": "Research.page",
+      "key": "newPublication",
+      "fullKey": "Research.page.newPublication",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\research\\page.tsx",
+      "line": 105,
+      "namespace": "Research.page",
+      "key": "featured.date",
+      "fullKey": "Research.page.featured.date",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\research\\page.tsx",
+      "line": 110,
+      "namespace": "Research.page",
+      "key": "featured.title",
+      "fullKey": "Research.page.featured.title",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\research\\page.tsx",
+      "line": 114,
+      "namespace": "Research.page",
+      "key": "featured.abstract",
+      "fullKey": "Research.page.featured.abstract",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\research\\page.tsx",
+      "line": 119,
+      "namespace": "Research.page",
+      "key": "featured.readArticle",
+      "fullKey": "Research.page.featured.readArticle",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\research\\page.tsx",
+      "line": 123,
+      "namespace": "Research.page",
+      "key": "featured.wordCount",
+      "fullKey": "Research.page.featured.wordCount",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\research\\page.tsx",
+      "line": 126,
+      "namespace": "Research.page",
+      "key": "featured.diagramCount",
+      "fullKey": "Research.page.featured.diagramCount",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\research\\page.tsx",
+      "line": 140,
+      "namespace": "Research.page",
+      "key": "frameworks.title",
+      "fullKey": "Research.page.frameworks.title",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\research\\page.tsx",
+      "line": 156,
+      "namespace": "Research.page",
+      "key": "frameworks.aecp.badge",
+      "fullKey": "Research.page.frameworks.aecp.badge",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\research\\page.tsx",
+      "line": 159,
+      "namespace": "Research.page",
+      "key": "frameworks.aecp.version",
+      "fullKey": "Research.page.frameworks.aecp.version",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\research\\page.tsx",
+      "line": 164,
+      "namespace": "Research.page",
+      "key": "frameworks.aecp.title",
+      "fullKey": "Research.page.frameworks.aecp.title",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\research\\page.tsx",
+      "line": 175,
+      "namespace": "Research.page",
+      "key": "frameworks.aecp.features.security",
+      "fullKey": "Research.page.frameworks.aecp.features.security",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\research\\page.tsx",
+      "line": 179,
+      "namespace": "Research.page",
+      "key": "frameworks.aecp.features.topology",
+      "fullKey": "Research.page.frameworks.aecp.features.topology",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\research\\page.tsx",
+      "line": 183,
+      "namespace": "Research.page",
+      "key": "frameworks.aecp.features.healing",
+      "fullKey": "Research.page.frameworks.aecp.features.healing",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\research\\page.tsx",
+      "line": 204,
+      "namespace": "Research.page",
+      "key": "appliedPapers.title",
+      "fullKey": "Research.page.appliedPapers.title",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\research\\page.tsx",
+      "line": 270,
+      "namespace": "Research.page",
+      "key": "footer.authorshipRequest",
+      "fullKey": "Research.page.footer.authorshipRequest",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\research\\page.tsx",
+      "line": 273,
+      "namespace": "Research.page",
+      "key": "footer.authorshipDisclaimer",
+      "fullKey": "Research.page.footer.authorshipDisclaimer",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\research\\page.tsx",
+      "line": 275,
+      "namespace": "Research.page",
+      "key": "footer.copyright",
+      "fullKey": "Research.page.footer.copyright",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\staffing\\page.tsx",
+      "line": 14,
+      "namespace": "Staffing",
+      "key": "title",
+      "fullKey": "Staffing.title",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\staffing\\page.tsx",
+      "line": 25,
+      "namespace": "Staffing",
+      "key": "subtitle",
+      "fullKey": "Staffing.subtitle",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\staffing\\page.tsx",
+      "line": 56,
+      "namespace": "Staffing",
+      "key": "visual.title",
+      "fullKey": "Staffing.visual.title",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\staffing\\page.tsx",
+      "line": 58,
+      "namespace": "Staffing",
+      "key": "visual.subtitle",
+      "fullKey": "Staffing.visual.subtitle",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\staffing\\page.tsx",
+      "line": 131,
+      "namespace": "Staffing",
+      "key": "roles.architects.title",
+      "fullKey": "Staffing.roles.architects.title",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\staffing\\page.tsx",
+      "line": 134,
+      "namespace": "Staffing",
+      "key": "roles.architects.desc",
+      "fullKey": "Staffing.roles.architects.desc",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\staffing\\page.tsx",
+      "line": 165,
+      "namespace": "Staffing",
+      "key": "roles.security.title",
+      "fullKey": "Staffing.roles.security.title",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\staffing\\page.tsx",
+      "line": 168,
+      "namespace": "Staffing",
+      "key": "roles.security.desc",
+      "fullKey": "Staffing.roles.security.desc",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\staffing\\page.tsx",
+      "line": 199,
+      "namespace": "Staffing",
+      "key": "roles.ai.title",
+      "fullKey": "Staffing.roles.ai.title",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\staffing\\page.tsx",
+      "line": 202,
+      "namespace": "Staffing",
+      "key": "roles.ai.desc",
+      "fullKey": "Staffing.roles.ai.desc",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\staffing\\page.tsx",
+      "line": 216,
+      "namespace": "Staffing",
+      "key": "engagement.contract.title",
+      "fullKey": "Staffing.engagement.contract.title",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\staffing\\page.tsx",
+      "line": 218,
+      "namespace": "Staffing",
+      "key": "engagement.contract.desc",
+      "fullKey": "Staffing.engagement.contract.desc",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\staffing\\page.tsx",
+      "line": 222,
+      "namespace": "Staffing",
+      "key": "engagement.managed.title",
+      "fullKey": "Staffing.engagement.managed.title",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\staffing\\page.tsx",
+      "line": 224,
+      "namespace": "Staffing",
+      "key": "engagement.managed.desc",
+      "fullKey": "Staffing.engagement.managed.desc",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\staffing\\page.tsx",
+      "line": 228,
+      "namespace": "Staffing",
+      "key": "engagement.consulting.title",
+      "fullKey": "Staffing.engagement.consulting.title",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\staffing\\page.tsx",
+      "line": 230,
+      "namespace": "Staffing",
+      "key": "engagement.consulting.desc",
+      "fullKey": "Staffing.engagement.consulting.desc",
+      "type": "t_call"
+    },
+    {
       "file": "src\\app\\[locale]\\platform\\page.tsx",
       "line": 23,
       "namespace": "Common",
@@ -3766,102 +3766,6 @@
       "namespace": "Partners",
       "key": "joint.cta.button",
       "fullKey": "Partners.joint.cta.button",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\newsroom\\page.tsx",
-      "line": 10,
-      "namespace": "Newsroom",
-      "key": "items.0.type",
-      "fullKey": "Newsroom.items.0.type",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\newsroom\\page.tsx",
-      "line": 11,
-      "namespace": "Newsroom",
-      "key": "items.0.date",
-      "fullKey": "Newsroom.items.0.date",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\newsroom\\page.tsx",
-      "line": 12,
-      "namespace": "Newsroom",
-      "key": "items.0.title",
-      "fullKey": "Newsroom.items.0.title",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\newsroom\\page.tsx",
-      "line": 17,
-      "namespace": "Newsroom",
-      "key": "items.1.type",
-      "fullKey": "Newsroom.items.1.type",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\newsroom\\page.tsx",
-      "line": 18,
-      "namespace": "Newsroom",
-      "key": "items.1.date",
-      "fullKey": "Newsroom.items.1.date",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\newsroom\\page.tsx",
-      "line": 19,
-      "namespace": "Newsroom",
-      "key": "items.1.title",
-      "fullKey": "Newsroom.items.1.title",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\newsroom\\page.tsx",
-      "line": 24,
-      "namespace": "Newsroom",
-      "key": "items.2.type",
-      "fullKey": "Newsroom.items.2.type",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\newsroom\\page.tsx",
-      "line": 25,
-      "namespace": "Newsroom",
-      "key": "items.2.date",
-      "fullKey": "Newsroom.items.2.date",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\newsroom\\page.tsx",
-      "line": 26,
-      "namespace": "Newsroom",
-      "key": "items.2.title",
-      "fullKey": "Newsroom.items.2.title",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\newsroom\\page.tsx",
-      "line": 60,
-      "namespace": "Newsroom",
-      "key": "hero.badge",
-      "fullKey": "Newsroom.hero.badge",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\newsroom\\page.tsx",
-      "line": 71,
-      "namespace": "Newsroom",
-      "key": "hero.title",
-      "fullKey": "Newsroom.hero.title",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\newsroom\\page.tsx",
-      "line": 162,
-      "namespace": "Newsroom",
-      "key": "readFull",
-      "fullKey": "Newsroom.readFull",
       "type": "t_call"
     },
     {
@@ -4166,6 +4070,102 @@
       "namespace": "Industries",
       "key": "cta.button",
       "fullKey": "Industries.cta.button",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\newsroom\\page.tsx",
+      "line": 10,
+      "namespace": "Newsroom",
+      "key": "items.0.type",
+      "fullKey": "Newsroom.items.0.type",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\newsroom\\page.tsx",
+      "line": 11,
+      "namespace": "Newsroom",
+      "key": "items.0.date",
+      "fullKey": "Newsroom.items.0.date",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\newsroom\\page.tsx",
+      "line": 12,
+      "namespace": "Newsroom",
+      "key": "items.0.title",
+      "fullKey": "Newsroom.items.0.title",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\newsroom\\page.tsx",
+      "line": 17,
+      "namespace": "Newsroom",
+      "key": "items.1.type",
+      "fullKey": "Newsroom.items.1.type",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\newsroom\\page.tsx",
+      "line": 18,
+      "namespace": "Newsroom",
+      "key": "items.1.date",
+      "fullKey": "Newsroom.items.1.date",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\newsroom\\page.tsx",
+      "line": 19,
+      "namespace": "Newsroom",
+      "key": "items.1.title",
+      "fullKey": "Newsroom.items.1.title",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\newsroom\\page.tsx",
+      "line": 24,
+      "namespace": "Newsroom",
+      "key": "items.2.type",
+      "fullKey": "Newsroom.items.2.type",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\newsroom\\page.tsx",
+      "line": 25,
+      "namespace": "Newsroom",
+      "key": "items.2.date",
+      "fullKey": "Newsroom.items.2.date",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\newsroom\\page.tsx",
+      "line": 26,
+      "namespace": "Newsroom",
+      "key": "items.2.title",
+      "fullKey": "Newsroom.items.2.title",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\newsroom\\page.tsx",
+      "line": 60,
+      "namespace": "Newsroom",
+      "key": "hero.badge",
+      "fullKey": "Newsroom.hero.badge",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\newsroom\\page.tsx",
+      "line": 71,
+      "namespace": "Newsroom",
+      "key": "hero.title",
+      "fullKey": "Newsroom.hero.title",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\newsroom\\page.tsx",
+      "line": 162,
+      "namespace": "Newsroom",
+      "key": "readFull",
+      "fullKey": "Newsroom.readFull",
       "type": "t_call"
     },
     {
@@ -4721,22 +4721,6 @@
       "type": "t_call"
     },
     {
-      "file": "src\\app\\[locale]\\dashboard\\layout.tsx",
-      "line": 18,
-      "namespace": "Common",
-      "key": "title",
-      "fullKey": "Common.title",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\dashboard\\layout.tsx",
-      "line": 19,
-      "namespace": "Common",
-      "key": "description",
-      "fullKey": "Common.description",
-      "type": "t_call"
-    },
-    {
       "file": "src\\app\\[locale]\\contact\\page.tsx",
       "line": 100,
       "namespace": "Company",
@@ -4753,275 +4737,19 @@
       "type": "t_call"
     },
     {
-      "file": "src\\app\\[locale]\\company\\page.tsx",
-      "line": 115,
-      "namespace": "Investors",
-      "key": "hero.badge",
-      "fullKey": "Investors.hero.badge",
+      "file": "src\\app\\[locale]\\dashboard\\layout.tsx",
+      "line": 18,
+      "namespace": "Common",
+      "key": "title",
+      "fullKey": "Common.title",
       "type": "t_call"
     },
     {
-      "file": "src\\app\\[locale]\\company\\page.tsx",
-      "line": 129,
-      "namespace": "Investors",
-      "key": "hero.title",
-      "fullKey": "Investors.hero.title",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\company\\page.tsx",
-      "line": 134,
-      "namespace": "Investors",
-      "key": "hero.title",
-      "fullKey": "Investors.hero.title",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\company\\page.tsx",
-      "line": 147,
-      "namespace": "Investors",
-      "key": "hero.subtitle",
-      "fullKey": "Investors.hero.subtitle",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\company\\page.tsx",
-      "line": 156,
-      "namespace": "Investors",
-      "key": "leadership.title",
-      "fullKey": "Investors.leadership.title",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\company\\page.tsx",
-      "line": 157,
-      "namespace": "Investors",
-      "key": "leadership.subtitle",
-      "fullKey": "Investors.leadership.subtitle",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\company\\page.tsx",
-      "line": 170,
-      "namespace": "Investors",
-      "key": "leadership.jyothsna.name",
-      "fullKey": "Investors.leadership.jyothsna.name",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\company\\page.tsx",
-      "line": 171,
-      "namespace": "Investors",
-      "key": "leadership.jyothsna.role",
-      "fullKey": "Investors.leadership.jyothsna.role",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\company\\page.tsx",
-      "line": 172,
-      "namespace": "Investors",
-      "key": "leadership.jyothsna.bio",
-      "fullKey": "Investors.leadership.jyothsna.bio",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\company\\page.tsx",
-      "line": 176,
-      "namespace": "Investors",
-      "key": "leadership.chaitanya.name",
-      "fullKey": "Investors.leadership.chaitanya.name",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\company\\page.tsx",
-      "line": 177,
-      "namespace": "Investors",
-      "key": "leadership.chaitanya.role",
-      "fullKey": "Investors.leadership.chaitanya.role",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\company\\page.tsx",
-      "line": 178,
-      "namespace": "Investors",
-      "key": "leadership.chaitanya.bio",
-      "fullKey": "Investors.leadership.chaitanya.bio",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\company\\page.tsx",
-      "line": 262,
-      "namespace": "Investors",
-      "key": "operations.title",
-      "fullKey": "Investors.operations.title",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\company\\page.tsx",
-      "line": 273,
-      "namespace": "Investors",
-      "key": "operations.description",
-      "fullKey": "Investors.operations.description",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\company\\page.tsx",
-      "line": 287,
-      "namespace": "Investors",
-      "key": "operations.headquarters",
-      "fullKey": "Investors.operations.headquarters",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\company\\page.tsx",
-      "line": 290,
-      "namespace": "Investors",
-      "key": "contact.addressLine1",
-      "fullKey": "Investors.contact.addressLine1",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\company\\page.tsx",
-      "line": 292,
-      "namespace": "Investors",
-      "key": "contact.addressLine2",
-      "fullKey": "Investors.contact.addressLine2",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\company\\page.tsx",
-      "line": 294,
-      "namespace": "Investors",
-      "key": "contact.country",
-      "fullKey": "Investors.contact.country",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\company\\page.tsx",
-      "line": 306,
-      "namespace": "Investors",
-      "key": "contact.phone",
-      "fullKey": "Investors.contact.phone",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\company\\page.tsx",
-      "line": 319,
-      "namespace": "Investors",
-      "key": "newsroom.title",
-      "fullKey": "Investors.newsroom.title",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\company\\page.tsx",
-      "line": 324,
-      "namespace": "Investors",
-      "key": "newsroom.items.0.title",
-      "fullKey": "Investors.newsroom.items.0.title",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\company\\page.tsx",
-      "line": 326,
-      "namespace": "Investors",
-      "key": "newsroom.items.0.desc",
-      "fullKey": "Investors.newsroom.items.0.desc",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\company\\page.tsx",
-      "line": 329,
-      "namespace": "Investors",
-      "key": "newsroom.items.1.title",
-      "fullKey": "Investors.newsroom.items.1.title",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\company\\page.tsx",
-      "line": 331,
-      "namespace": "Investors",
-      "key": "newsroom.items.1.desc",
-      "fullKey": "Investors.newsroom.items.1.desc",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\company\\page.tsx",
-      "line": 334,
-      "namespace": "Investors",
-      "key": "newsroom.items.2.title",
-      "fullKey": "Investors.newsroom.items.2.title",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\company\\page.tsx",
-      "line": 336,
-      "namespace": "Investors",
-      "key": "newsroom.items.2.desc",
-      "fullKey": "Investors.newsroom.items.2.desc",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\company\\page.tsx",
-      "line": 371,
-      "namespace": "Investors",
-      "key": "newsroom.readArticle",
-      "fullKey": "Investors.newsroom.readArticle",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\company\\page.tsx",
-      "line": 493,
-      "namespace": "Investors",
-      "key": "contact.title",
-      "fullKey": "Investors.contact.title",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\company\\page.tsx",
-      "line": 496,
-      "namespace": "Investors",
-      "key": "contact.description",
-      "fullKey": "Investors.contact.description",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\company\\page.tsx",
-      "line": 515,
-      "namespace": "Investors",
-      "key": "email",
-      "fullKey": "Investors.email",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\company\\page.tsx",
-      "line": 533,
-      "namespace": "Investors",
-      "key": "contact.phone",
-      "fullKey": "Investors.contact.phone",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\company\\page.tsx",
-      "line": 553,
-      "namespace": "Investors",
-      "key": "sitemap.title",
-      "fullKey": "Investors.sitemap.title",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\company\\page.tsx",
-      "line": 556,
-      "namespace": "Investors",
-      "key": "sitemap.directory",
-      "fullKey": "Investors.sitemap.directory",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\company\\page.tsx",
-      "line": 558,
-      "namespace": "Investors",
-      "key": "sitemap.directory",
-      "fullKey": "Investors.sitemap.directory",
+      "file": "src\\app\\[locale]\\dashboard\\layout.tsx",
+      "line": 19,
+      "namespace": "Common",
+      "key": "description",
+      "fullKey": "Common.description",
       "type": "t_call"
     },
     {
@@ -5689,6 +5417,278 @@
       "type": "t_call"
     },
     {
+      "file": "src\\app\\[locale]\\company\\page.tsx",
+      "line": 115,
+      "namespace": "Investors",
+      "key": "hero.badge",
+      "fullKey": "Investors.hero.badge",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\company\\page.tsx",
+      "line": 129,
+      "namespace": "Investors",
+      "key": "hero.title",
+      "fullKey": "Investors.hero.title",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\company\\page.tsx",
+      "line": 134,
+      "namespace": "Investors",
+      "key": "hero.title",
+      "fullKey": "Investors.hero.title",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\company\\page.tsx",
+      "line": 147,
+      "namespace": "Investors",
+      "key": "hero.subtitle",
+      "fullKey": "Investors.hero.subtitle",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\company\\page.tsx",
+      "line": 156,
+      "namespace": "Investors",
+      "key": "leadership.title",
+      "fullKey": "Investors.leadership.title",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\company\\page.tsx",
+      "line": 157,
+      "namespace": "Investors",
+      "key": "leadership.subtitle",
+      "fullKey": "Investors.leadership.subtitle",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\company\\page.tsx",
+      "line": 170,
+      "namespace": "Investors",
+      "key": "leadership.jyothsna.name",
+      "fullKey": "Investors.leadership.jyothsna.name",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\company\\page.tsx",
+      "line": 171,
+      "namespace": "Investors",
+      "key": "leadership.jyothsna.role",
+      "fullKey": "Investors.leadership.jyothsna.role",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\company\\page.tsx",
+      "line": 172,
+      "namespace": "Investors",
+      "key": "leadership.jyothsna.bio",
+      "fullKey": "Investors.leadership.jyothsna.bio",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\company\\page.tsx",
+      "line": 176,
+      "namespace": "Investors",
+      "key": "leadership.chaitanya.name",
+      "fullKey": "Investors.leadership.chaitanya.name",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\company\\page.tsx",
+      "line": 177,
+      "namespace": "Investors",
+      "key": "leadership.chaitanya.role",
+      "fullKey": "Investors.leadership.chaitanya.role",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\company\\page.tsx",
+      "line": 178,
+      "namespace": "Investors",
+      "key": "leadership.chaitanya.bio",
+      "fullKey": "Investors.leadership.chaitanya.bio",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\company\\page.tsx",
+      "line": 262,
+      "namespace": "Investors",
+      "key": "operations.title",
+      "fullKey": "Investors.operations.title",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\company\\page.tsx",
+      "line": 273,
+      "namespace": "Investors",
+      "key": "operations.description",
+      "fullKey": "Investors.operations.description",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\company\\page.tsx",
+      "line": 287,
+      "namespace": "Investors",
+      "key": "operations.headquarters",
+      "fullKey": "Investors.operations.headquarters",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\company\\page.tsx",
+      "line": 290,
+      "namespace": "Investors",
+      "key": "contact.addressLine1",
+      "fullKey": "Investors.contact.addressLine1",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\company\\page.tsx",
+      "line": 292,
+      "namespace": "Investors",
+      "key": "contact.addressLine2",
+      "fullKey": "Investors.contact.addressLine2",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\company\\page.tsx",
+      "line": 294,
+      "namespace": "Investors",
+      "key": "contact.country",
+      "fullKey": "Investors.contact.country",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\company\\page.tsx",
+      "line": 306,
+      "namespace": "Investors",
+      "key": "contact.phone",
+      "fullKey": "Investors.contact.phone",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\company\\page.tsx",
+      "line": 319,
+      "namespace": "Investors",
+      "key": "newsroom.title",
+      "fullKey": "Investors.newsroom.title",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\company\\page.tsx",
+      "line": 324,
+      "namespace": "Investors",
+      "key": "newsroom.items.0.title",
+      "fullKey": "Investors.newsroom.items.0.title",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\company\\page.tsx",
+      "line": 326,
+      "namespace": "Investors",
+      "key": "newsroom.items.0.desc",
+      "fullKey": "Investors.newsroom.items.0.desc",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\company\\page.tsx",
+      "line": 329,
+      "namespace": "Investors",
+      "key": "newsroom.items.1.title",
+      "fullKey": "Investors.newsroom.items.1.title",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\company\\page.tsx",
+      "line": 331,
+      "namespace": "Investors",
+      "key": "newsroom.items.1.desc",
+      "fullKey": "Investors.newsroom.items.1.desc",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\company\\page.tsx",
+      "line": 334,
+      "namespace": "Investors",
+      "key": "newsroom.items.2.title",
+      "fullKey": "Investors.newsroom.items.2.title",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\company\\page.tsx",
+      "line": 336,
+      "namespace": "Investors",
+      "key": "newsroom.items.2.desc",
+      "fullKey": "Investors.newsroom.items.2.desc",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\company\\page.tsx",
+      "line": 371,
+      "namespace": "Investors",
+      "key": "newsroom.readArticle",
+      "fullKey": "Investors.newsroom.readArticle",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\company\\page.tsx",
+      "line": 493,
+      "namespace": "Investors",
+      "key": "contact.title",
+      "fullKey": "Investors.contact.title",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\company\\page.tsx",
+      "line": 496,
+      "namespace": "Investors",
+      "key": "contact.description",
+      "fullKey": "Investors.contact.description",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\company\\page.tsx",
+      "line": 515,
+      "namespace": "Investors",
+      "key": "email",
+      "fullKey": "Investors.email",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\company\\page.tsx",
+      "line": 533,
+      "namespace": "Investors",
+      "key": "contact.phone",
+      "fullKey": "Investors.contact.phone",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\company\\page.tsx",
+      "line": 553,
+      "namespace": "Investors",
+      "key": "sitemap.title",
+      "fullKey": "Investors.sitemap.title",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\company\\page.tsx",
+      "line": 556,
+      "namespace": "Investors",
+      "key": "sitemap.directory",
+      "fullKey": "Investors.sitemap.directory",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\company\\page.tsx",
+      "line": 558,
+      "namespace": "Investors",
+      "key": "sitemap.directory",
+      "fullKey": "Investors.sitemap.directory",
+      "type": "t_call"
+    },
+    {
       "file": "src\\app\\[locale]\\case-studies\\page.tsx",
       "line": 39,
       "namespace": "CaseStudies",
@@ -5958,6 +5958,94 @@
       "namespace": "BusinessIdeas",
       "key": "cards.2.link",
       "fullKey": "BusinessIdeas.cards.2.link",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\blog\\page.tsx",
+      "line": 107,
+      "namespace": "Blog",
+      "key": "hero.tag",
+      "fullKey": "Blog.hero.tag",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\blog\\page.tsx",
+      "line": 117,
+      "namespace": "Blog",
+      "key": "hero.title",
+      "fullKey": "Blog.hero.title",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\blog\\page.tsx",
+      "line": 120,
+      "namespace": "Blog",
+      "key": "hero.subtitle",
+      "fullKey": "Blog.hero.subtitle",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\blog\\page.tsx",
+      "line": 135,
+      "namespace": "Blog",
+      "key": "hero.search",
+      "fullKey": "Blog.hero.search",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\blog\\page.tsx",
+      "line": 148,
+      "namespace": "Blog",
+      "key": "ui.filter",
+      "fullKey": "Blog.ui.filter",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\blog\\page.tsx",
+      "line": 307,
+      "namespace": "Blog",
+      "key": "ui.readMore",
+      "fullKey": "Blog.ui.readMore",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\blog\\page.tsx",
+      "line": 344,
+      "namespace": "Blog",
+      "key": "newsletter.title",
+      "fullKey": "Blog.newsletter.title",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\blog\\page.tsx",
+      "line": 346,
+      "namespace": "Blog",
+      "key": "newsletter.subtitle",
+      "fullKey": "Blog.newsletter.subtitle",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\blog\\page.tsx",
+      "line": 358,
+      "namespace": "Blog",
+      "key": "newsletter.placeholder",
+      "fullKey": "Blog.newsletter.placeholder",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\blog\\page.tsx",
+      "line": 369,
+      "namespace": "Blog",
+      "key": "newsletter.button",
+      "fullKey": "Blog.newsletter.button",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\blog\\page.tsx",
+      "line": 373,
+      "namespace": "Blog",
+      "key": "newsletter.footer",
+      "fullKey": "Blog.newsletter.footer",
       "type": "t_call"
     },
     {
@@ -6257,91 +6345,43 @@
       "type": "t_call"
     },
     {
-      "file": "src\\app\\[locale]\\blog\\page.tsx",
-      "line": 107,
-      "namespace": "Blog",
-      "key": "hero.tag",
-      "fullKey": "Blog.hero.tag",
+      "file": "src\\app\\[locale]\\app\\page.tsx",
+      "line": 19,
+      "namespace": "Dashboard",
+      "key": "title",
+      "fullKey": "Dashboard.title",
       "type": "t_call"
     },
     {
-      "file": "src\\app\\[locale]\\blog\\page.tsx",
-      "line": 117,
-      "namespace": "Blog",
-      "key": "hero.title",
-      "fullKey": "Blog.hero.title",
+      "file": "src\\app\\[locale]\\app\\page.tsx",
+      "line": 22,
+      "namespace": "Dashboard",
+      "key": "welcome",
+      "fullKey": "Dashboard.welcome",
       "type": "t_call"
     },
     {
-      "file": "src\\app\\[locale]\\blog\\page.tsx",
-      "line": 120,
-      "namespace": "Blog",
-      "key": "hero.subtitle",
-      "fullKey": "Blog.hero.subtitle",
+      "file": "src\\app\\[locale]\\app\\page.tsx",
+      "line": 26,
+      "namespace": "Dashboard",
+      "key": "role",
+      "fullKey": "Dashboard.role",
       "type": "t_call"
     },
     {
-      "file": "src\\app\\[locale]\\blog\\page.tsx",
-      "line": 135,
-      "namespace": "Blog",
-      "key": "hero.search",
-      "fullKey": "Blog.hero.search",
+      "file": "src\\app\\[locale]\\app\\page.tsx",
+      "line": 35,
+      "namespace": "Dashboard",
+      "key": "logicMeshStatus",
+      "fullKey": "Dashboard.logicMeshStatus",
       "type": "t_call"
     },
     {
-      "file": "src\\app\\[locale]\\blog\\page.tsx",
-      "line": 148,
-      "namespace": "Blog",
-      "key": "ui.filter",
-      "fullKey": "Blog.ui.filter",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\blog\\page.tsx",
-      "line": 307,
-      "namespace": "Blog",
-      "key": "ui.readMore",
-      "fullKey": "Blog.ui.readMore",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\blog\\page.tsx",
-      "line": 344,
-      "namespace": "Blog",
-      "key": "newsletter.title",
-      "fullKey": "Blog.newsletter.title",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\blog\\page.tsx",
-      "line": 346,
-      "namespace": "Blog",
-      "key": "newsletter.subtitle",
-      "fullKey": "Blog.newsletter.subtitle",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\blog\\page.tsx",
-      "line": 358,
-      "namespace": "Blog",
-      "key": "newsletter.placeholder",
-      "fullKey": "Blog.newsletter.placeholder",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\blog\\page.tsx",
-      "line": 369,
-      "namespace": "Blog",
-      "key": "newsletter.button",
-      "fullKey": "Blog.newsletter.button",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\blog\\page.tsx",
-      "line": 373,
-      "namespace": "Blog",
-      "key": "newsletter.footer",
-      "fullKey": "Blog.newsletter.footer",
+      "file": "src\\app\\[locale]\\app\\page.tsx",
+      "line": 38,
+      "namespace": "Dashboard",
+      "key": "active",
+      "fullKey": "Dashboard.active",
       "type": "t_call"
     },
     {
@@ -6550,46 +6590,6 @@
       "namespace": "AiData",
       "key": "cards.vision.desc",
       "fullKey": "AiData.cards.vision.desc",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\app\\page.tsx",
-      "line": 19,
-      "namespace": "Dashboard",
-      "key": "title",
-      "fullKey": "Dashboard.title",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\app\\page.tsx",
-      "line": 22,
-      "namespace": "Dashboard",
-      "key": "welcome",
-      "fullKey": "Dashboard.welcome",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\app\\page.tsx",
-      "line": 26,
-      "namespace": "Dashboard",
-      "key": "role",
-      "fullKey": "Dashboard.role",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\app\\page.tsx",
-      "line": 35,
-      "namespace": "Dashboard",
-      "key": "logicMeshStatus",
-      "fullKey": "Dashboard.logicMeshStatus",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\app\\page.tsx",
-      "line": 38,
-      "namespace": "Dashboard",
-      "key": "active",
-      "fullKey": "Dashboard.active",
       "type": "t_call"
     },
     {
@@ -6942,54 +6942,6 @@
       "namespace": "Services.Stack",
       "key": "ansible.desc",
       "fullKey": "Services.Stack.ansible.desc",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\components\\sections\\security\\SecurityPerformanceSection.tsx",
-      "line": 63,
-      "namespace": "Security.performance",
-      "key": "title",
-      "fullKey": "Security.performance.title",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\components\\sections\\security\\SecurityPerformanceSection.tsx",
-      "line": 64,
-      "namespace": "Security.performance",
-      "key": "description",
-      "fullKey": "Security.performance.description",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\components\\sections\\security\\SecurityPerformanceSection.tsx",
-      "line": 71,
-      "namespace": "Security.performance",
-      "key": "charts.latency.title",
-      "fullKey": "Security.performance.charts.latency.title",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\components\\sections\\security\\SecurityPerformanceSection.tsx",
-      "line": 73,
-      "namespace": "Security.performance",
-      "key": "charts.latency.badge",
-      "fullKey": "Security.performance.charts.latency.badge",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\components\\sections\\security\\SecurityPerformanceSection.tsx",
-      "line": 84,
-      "namespace": "Security.performance",
-      "key": "charts.waf.title",
-      "fullKey": "Security.performance.charts.waf.title",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\components\\sections\\security\\SecurityPerformanceSection.tsx",
-      "line": 86,
-      "namespace": "Security.performance",
-      "key": "charts.waf.badge",
-      "fullKey": "Security.performance.charts.waf.badge",
       "type": "t_call"
     },
     {
@@ -8721,6 +8673,54 @@
       "type": "t_call"
     },
     {
+      "file": "src\\components\\sections\\security\\SecurityPerformanceSection.tsx",
+      "line": 63,
+      "namespace": "Security.performance",
+      "key": "title",
+      "fullKey": "Security.performance.title",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\components\\sections\\security\\SecurityPerformanceSection.tsx",
+      "line": 64,
+      "namespace": "Security.performance",
+      "key": "description",
+      "fullKey": "Security.performance.description",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\components\\sections\\security\\SecurityPerformanceSection.tsx",
+      "line": 71,
+      "namespace": "Security.performance",
+      "key": "charts.latency.title",
+      "fullKey": "Security.performance.charts.latency.title",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\components\\sections\\security\\SecurityPerformanceSection.tsx",
+      "line": 73,
+      "namespace": "Security.performance",
+      "key": "charts.latency.badge",
+      "fullKey": "Security.performance.charts.latency.badge",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\components\\sections\\security\\SecurityPerformanceSection.tsx",
+      "line": 84,
+      "namespace": "Security.performance",
+      "key": "charts.waf.title",
+      "fullKey": "Security.performance.charts.waf.title",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\components\\sections\\security\\SecurityPerformanceSection.tsx",
+      "line": 86,
+      "namespace": "Security.performance",
+      "key": "charts.waf.badge",
+      "fullKey": "Security.performance.charts.waf.badge",
+      "type": "t_call"
+    },
+    {
       "file": "src\\components\\sections\\platform\\SecuritySection.tsx",
       "line": 36,
       "namespace": "Platform.security",
@@ -9961,6 +9961,478 @@
       "type": "t_call"
     },
     {
+      "file": "src\\app\\[locale]\\services\\cloud-migration\\page.tsx",
+      "line": 32,
+      "namespace": "Services.cloud-migration",
+      "key": "title",
+      "fullKey": "Services.cloud-migration.title",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\services\\cloud-migration\\page.tsx",
+      "line": 33,
+      "namespace": "Services.cloud-migration",
+      "key": "description",
+      "fullKey": "Services.cloud-migration.description",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\services\\cloud-migration\\page.tsx",
+      "line": 67,
+      "namespace": "Services.cloud-migration",
+      "key": "hero.badge",
+      "fullKey": "Services.cloud-migration.hero.badge",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\services\\cloud-migration\\page.tsx",
+      "line": 70,
+      "namespace": "Services.cloud-migration",
+      "key": "hero.title",
+      "fullKey": "Services.cloud-migration.hero.title",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\services\\cloud-migration\\page.tsx",
+      "line": 73,
+      "namespace": "Services.cloud-migration",
+      "key": "hero.subtitle",
+      "fullKey": "Services.cloud-migration.hero.subtitle",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\services\\cloud-migration\\page.tsx",
+      "line": 80,
+      "namespace": "Services.cloud-migration",
+      "key": "hero.ctaPrimary",
+      "fullKey": "Services.cloud-migration.hero.ctaPrimary",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\services\\cloud-migration\\page.tsx",
+      "line": 86,
+      "namespace": "Services.cloud-migration",
+      "key": "hero.ctaSecondary",
+      "fullKey": "Services.cloud-migration.hero.ctaSecondary",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\services\\cloud-migration\\page.tsx",
+      "line": 99,
+      "namespace": "Services.cloud-migration",
+      "key": "discovery.badge",
+      "fullKey": "Services.cloud-migration.discovery.badge",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\services\\cloud-migration\\page.tsx",
+      "line": 101,
+      "namespace": "Services.cloud-migration",
+      "key": "discovery.title",
+      "fullKey": "Services.cloud-migration.discovery.title",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\services\\cloud-migration\\page.tsx",
+      "line": 102,
+      "namespace": "Services.cloud-migration",
+      "key": "discovery.p1",
+      "fullKey": "Services.cloud-migration.discovery.p1",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\services\\cloud-migration\\page.tsx",
+      "line": 140,
+      "namespace": "Services.cloud-migration",
+      "key": "factory.title",
+      "fullKey": "Services.cloud-migration.factory.title",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\services\\cloud-migration\\page.tsx",
+      "line": 142,
+      "namespace": "Services.cloud-migration",
+      "key": "factory.step1Title",
+      "fullKey": "Services.cloud-migration.factory.step1Title",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\services\\cloud-migration\\page.tsx",
+      "line": 143,
+      "namespace": "Services.cloud-migration",
+      "key": "factory.step1Desc",
+      "fullKey": "Services.cloud-migration.factory.step1Desc",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\services\\cloud-migration\\page.tsx",
+      "line": 144,
+      "namespace": "Services.cloud-migration",
+      "key": "factory.step2Title",
+      "fullKey": "Services.cloud-migration.factory.step2Title",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\services\\cloud-migration\\page.tsx",
+      "line": 145,
+      "namespace": "Services.cloud-migration",
+      "key": "factory.step2Desc",
+      "fullKey": "Services.cloud-migration.factory.step2Desc",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\services\\cloud-migration\\page.tsx",
+      "line": 146,
+      "namespace": "Services.cloud-migration",
+      "key": "factory.step3Title",
+      "fullKey": "Services.cloud-migration.factory.step3Title",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\services\\cloud-migration\\page.tsx",
+      "line": 147,
+      "namespace": "Services.cloud-migration",
+      "key": "factory.step3Desc",
+      "fullKey": "Services.cloud-migration.factory.step3Desc",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\services\\cloud-migration\\page.tsx",
+      "line": 157,
+      "namespace": "Services.cloud-migration",
+      "key": "faq.title",
+      "fullKey": "Services.cloud-migration.faq.title",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\services\\cloud-migration\\page.tsx",
+      "line": 183,
+      "namespace": "Services.cloud-migration",
+      "key": "footer.costTitle",
+      "fullKey": "Services.cloud-migration.footer.costTitle",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\services\\cloud-migration\\page.tsx",
+      "line": 185,
+      "namespace": "Services.cloud-migration",
+      "key": "footer.costDesc",
+      "fullKey": "Services.cloud-migration.footer.costDesc",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\services\\cloud-migration\\page.tsx",
+      "line": 195,
+      "namespace": "Services.cloud-migration",
+      "key": "footer.factoryTitle",
+      "fullKey": "Services.cloud-migration.footer.factoryTitle",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\services\\cloud-migration\\page.tsx",
+      "line": 197,
+      "namespace": "Services.cloud-migration",
+      "key": "footer.factoryDesc",
+      "fullKey": "Services.cloud-migration.footer.factoryDesc",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\services\\cloud-cost-optimization\\page.tsx",
+      "line": 33,
+      "namespace": "Services.cloud-cost-optimization",
+      "key": "title",
+      "fullKey": "Services.cloud-cost-optimization.title",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\services\\cloud-cost-optimization\\page.tsx",
+      "line": 34,
+      "namespace": "Services.cloud-cost-optimization",
+      "key": "description",
+      "fullKey": "Services.cloud-cost-optimization.description",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\services\\cloud-cost-optimization\\page.tsx",
+      "line": 68,
+      "namespace": "Services.cloud-cost-optimization",
+      "key": "hero.badge",
+      "fullKey": "Services.cloud-cost-optimization.hero.badge",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\services\\cloud-cost-optimization\\page.tsx",
+      "line": 71,
+      "namespace": "Services.cloud-cost-optimization",
+      "key": "hero.title",
+      "fullKey": "Services.cloud-cost-optimization.hero.title",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\services\\cloud-cost-optimization\\page.tsx",
+      "line": 74,
+      "namespace": "Services.cloud-cost-optimization",
+      "key": "hero.subtitle",
+      "fullKey": "Services.cloud-cost-optimization.hero.subtitle",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\services\\cloud-cost-optimization\\page.tsx",
+      "line": 81,
+      "namespace": "Services.cloud-cost-optimization",
+      "key": "hero.ctaPrimary",
+      "fullKey": "Services.cloud-cost-optimization.hero.ctaPrimary",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\services\\cloud-cost-optimization\\page.tsx",
+      "line": 87,
+      "namespace": "Services.cloud-cost-optimization",
+      "key": "hero.ctaSecondary",
+      "fullKey": "Services.cloud-cost-optimization.hero.ctaSecondary",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\services\\cloud-cost-optimization\\page.tsx",
+      "line": 100,
+      "namespace": "Services.cloud-cost-optimization",
+      "key": "intelligence.badge",
+      "fullKey": "Services.cloud-cost-optimization.intelligence.badge",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\services\\cloud-cost-optimization\\page.tsx",
+      "line": 102,
+      "namespace": "Services.cloud-cost-optimization",
+      "key": "intelligence.title",
+      "fullKey": "Services.cloud-cost-optimization.intelligence.title",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\services\\cloud-cost-optimization\\page.tsx",
+      "line": 103,
+      "namespace": "Services.cloud-cost-optimization",
+      "key": "intelligence.p1",
+      "fullKey": "Services.cloud-cost-optimization.intelligence.p1",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\services\\cloud-cost-optimization\\page.tsx",
+      "line": 104,
+      "namespace": "Services.cloud-cost-optimization",
+      "key": "intelligence.p2",
+      "fullKey": "Services.cloud-cost-optimization.intelligence.p2",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\services\\cloud-cost-optimization\\page.tsx",
+      "line": 138,
+      "namespace": "Services.cloud-cost-optimization",
+      "key": "roadmap.title",
+      "fullKey": "Services.cloud-cost-optimization.roadmap.title",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\services\\cloud-cost-optimization\\page.tsx",
+      "line": 141,
+      "namespace": "Services.cloud-cost-optimization",
+      "key": "roadmap.item1Title",
+      "fullKey": "Services.cloud-cost-optimization.roadmap.item1Title",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\services\\cloud-cost-optimization\\page.tsx",
+      "line": 143,
+      "namespace": "Services.cloud-cost-optimization",
+      "key": "roadmap.item1Desc",
+      "fullKey": "Services.cloud-cost-optimization.roadmap.item1Desc",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\services\\cloud-cost-optimization\\page.tsx",
+      "line": 144,
+      "namespace": "Services.cloud-cost-optimization",
+      "key": "roadmap.item2Title",
+      "fullKey": "Services.cloud-cost-optimization.roadmap.item2Title",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\services\\cloud-cost-optimization\\page.tsx",
+      "line": 145,
+      "namespace": "Services.cloud-cost-optimization",
+      "key": "roadmap.item2Desc",
+      "fullKey": "Services.cloud-cost-optimization.roadmap.item2Desc",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\services\\cloud-cost-optimization\\page.tsx",
+      "line": 146,
+      "namespace": "Services.cloud-cost-optimization",
+      "key": "roadmap.item3Title",
+      "fullKey": "Services.cloud-cost-optimization.roadmap.item3Title",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\services\\cloud-cost-optimization\\page.tsx",
+      "line": 147,
+      "namespace": "Services.cloud-cost-optimization",
+      "key": "roadmap.item3Desc",
+      "fullKey": "Services.cloud-cost-optimization.roadmap.item3Desc",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\services\\cloud-cost-optimization\\page.tsx",
+      "line": 157,
+      "namespace": "Services.cloud-cost-optimization",
+      "key": "faq.title",
+      "fullKey": "Services.cloud-cost-optimization.faq.title",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\services\\cloud-cost-optimization\\page.tsx",
+      "line": 186,
+      "namespace": "Services.cloud-cost-optimization",
+      "key": "footer.modernizationTitle",
+      "fullKey": "Services.cloud-cost-optimization.footer.modernizationTitle",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\services\\cloud-cost-optimization\\page.tsx",
+      "line": 188,
+      "namespace": "Services.cloud-cost-optimization",
+      "key": "footer.modernizationDesc",
+      "fullKey": "Services.cloud-cost-optimization.footer.modernizationDesc",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\services\\cloud-cost-optimization\\page.tsx",
+      "line": 198,
+      "namespace": "Services.cloud-cost-optimization",
+      "key": "footer.devopsTitle",
+      "fullKey": "Services.cloud-cost-optimization.footer.devopsTitle",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\services\\cloud-cost-optimization\\page.tsx",
+      "line": 200,
+      "namespace": "Services.cloud-cost-optimization",
+      "key": "footer.devopsDesc",
+      "fullKey": "Services.cloud-cost-optimization.footer.devopsDesc",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\services\\ai-cloud-platform\\page.tsx",
+      "line": 31,
+      "namespace": "Services.ai-cloud-platform",
+      "key": "title",
+      "fullKey": "Services.ai-cloud-platform.title",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\services\\ai-cloud-platform\\page.tsx",
+      "line": 32,
+      "namespace": "Services.ai-cloud-platform",
+      "key": "description",
+      "fullKey": "Services.ai-cloud-platform.description",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\services\\ai-cloud-platform\\page.tsx",
+      "line": 64,
+      "namespace": "Services.ai-cloud-platform",
+      "key": "hero.badge",
+      "fullKey": "Services.ai-cloud-platform.hero.badge",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\services\\ai-cloud-platform\\page.tsx",
+      "line": 67,
+      "namespace": "Services.ai-cloud-platform",
+      "key": "hero.title",
+      "fullKey": "Services.ai-cloud-platform.hero.title",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\services\\ai-cloud-platform\\page.tsx",
+      "line": 70,
+      "namespace": "Services.ai-cloud-platform",
+      "key": "hero.subtitle",
+      "fullKey": "Services.ai-cloud-platform.hero.subtitle",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\services\\ai-cloud-platform\\page.tsx",
+      "line": 77,
+      "namespace": "Services.ai-cloud-platform",
+      "key": "hero.ctaPrimary",
+      "fullKey": "Services.ai-cloud-platform.hero.ctaPrimary",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\services\\ai-cloud-platform\\page.tsx",
+      "line": 83,
+      "namespace": "Services.ai-cloud-platform",
+      "key": "hero.ctaSecondary",
+      "fullKey": "Services.ai-cloud-platform.hero.ctaSecondary",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\services\\ai-cloud-platform\\page.tsx",
+      "line": 96,
+      "namespace": "Services.ai-cloud-platform",
+      "key": "challenge.badge",
+      "fullKey": "Services.ai-cloud-platform.challenge.badge",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\services\\ai-cloud-platform\\page.tsx",
+      "line": 98,
+      "namespace": "Services.ai-cloud-platform",
+      "key": "challenge.title",
+      "fullKey": "Services.ai-cloud-platform.challenge.title",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\services\\ai-cloud-platform\\page.tsx",
+      "line": 100,
+      "namespace": "Services.ai-cloud-platform",
+      "key": "challenge.p1",
+      "fullKey": "Services.ai-cloud-platform.challenge.p1",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\services\\ai-cloud-platform\\page.tsx",
+      "line": 112,
+      "namespace": "Services.ai-cloud-platform",
+      "key": "challenge.mesh",
+      "fullKey": "Services.ai-cloud-platform.challenge.mesh",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\services\\ai-cloud-platform\\page.tsx",
+      "line": 113,
+      "namespace": "Services.ai-cloud-platform",
+      "key": "challenge.quote",
+      "fullKey": "Services.ai-cloud-platform.challenge.quote",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\services\\ai-cloud-platform\\page.tsx",
+      "line": 123,
+      "namespace": "Services.ai-cloud-platform",
+      "key": "process.title",
+      "fullKey": "Services.ai-cloud-platform.process.title",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\services\\ai-cloud-platform\\page.tsx",
+      "line": 153,
+      "namespace": "Services.ai-cloud-platform",
+      "key": "faq.title",
+      "fullKey": "Services.ai-cloud-platform.faq.title",
+      "type": "t_call"
+    },
+    {
       "file": "src\\app\\[locale]\\services\\cloud-modernization\\page.tsx",
       "line": 31,
       "namespace": "Services.cloud-modernization",
@@ -10201,190 +10673,6 @@
       "type": "t_call"
     },
     {
-      "file": "src\\app\\[locale]\\services\\cloud-cost-optimization\\page.tsx",
-      "line": 33,
-      "namespace": "Services.cloud-cost-optimization",
-      "key": "title",
-      "fullKey": "Services.cloud-cost-optimization.title",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\services\\cloud-cost-optimization\\page.tsx",
-      "line": 34,
-      "namespace": "Services.cloud-cost-optimization",
-      "key": "description",
-      "fullKey": "Services.cloud-cost-optimization.description",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\services\\cloud-cost-optimization\\page.tsx",
-      "line": 68,
-      "namespace": "Services.cloud-cost-optimization",
-      "key": "hero.badge",
-      "fullKey": "Services.cloud-cost-optimization.hero.badge",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\services\\cloud-cost-optimization\\page.tsx",
-      "line": 71,
-      "namespace": "Services.cloud-cost-optimization",
-      "key": "hero.title",
-      "fullKey": "Services.cloud-cost-optimization.hero.title",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\services\\cloud-cost-optimization\\page.tsx",
-      "line": 74,
-      "namespace": "Services.cloud-cost-optimization",
-      "key": "hero.subtitle",
-      "fullKey": "Services.cloud-cost-optimization.hero.subtitle",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\services\\cloud-cost-optimization\\page.tsx",
-      "line": 81,
-      "namespace": "Services.cloud-cost-optimization",
-      "key": "hero.ctaPrimary",
-      "fullKey": "Services.cloud-cost-optimization.hero.ctaPrimary",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\services\\cloud-cost-optimization\\page.tsx",
-      "line": 87,
-      "namespace": "Services.cloud-cost-optimization",
-      "key": "hero.ctaSecondary",
-      "fullKey": "Services.cloud-cost-optimization.hero.ctaSecondary",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\services\\cloud-cost-optimization\\page.tsx",
-      "line": 100,
-      "namespace": "Services.cloud-cost-optimization",
-      "key": "intelligence.badge",
-      "fullKey": "Services.cloud-cost-optimization.intelligence.badge",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\services\\cloud-cost-optimization\\page.tsx",
-      "line": 102,
-      "namespace": "Services.cloud-cost-optimization",
-      "key": "intelligence.title",
-      "fullKey": "Services.cloud-cost-optimization.intelligence.title",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\services\\cloud-cost-optimization\\page.tsx",
-      "line": 103,
-      "namespace": "Services.cloud-cost-optimization",
-      "key": "intelligence.p1",
-      "fullKey": "Services.cloud-cost-optimization.intelligence.p1",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\services\\cloud-cost-optimization\\page.tsx",
-      "line": 104,
-      "namespace": "Services.cloud-cost-optimization",
-      "key": "intelligence.p2",
-      "fullKey": "Services.cloud-cost-optimization.intelligence.p2",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\services\\cloud-cost-optimization\\page.tsx",
-      "line": 138,
-      "namespace": "Services.cloud-cost-optimization",
-      "key": "roadmap.title",
-      "fullKey": "Services.cloud-cost-optimization.roadmap.title",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\services\\cloud-cost-optimization\\page.tsx",
-      "line": 141,
-      "namespace": "Services.cloud-cost-optimization",
-      "key": "roadmap.item1Title",
-      "fullKey": "Services.cloud-cost-optimization.roadmap.item1Title",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\services\\cloud-cost-optimization\\page.tsx",
-      "line": 143,
-      "namespace": "Services.cloud-cost-optimization",
-      "key": "roadmap.item1Desc",
-      "fullKey": "Services.cloud-cost-optimization.roadmap.item1Desc",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\services\\cloud-cost-optimization\\page.tsx",
-      "line": 144,
-      "namespace": "Services.cloud-cost-optimization",
-      "key": "roadmap.item2Title",
-      "fullKey": "Services.cloud-cost-optimization.roadmap.item2Title",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\services\\cloud-cost-optimization\\page.tsx",
-      "line": 145,
-      "namespace": "Services.cloud-cost-optimization",
-      "key": "roadmap.item2Desc",
-      "fullKey": "Services.cloud-cost-optimization.roadmap.item2Desc",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\services\\cloud-cost-optimization\\page.tsx",
-      "line": 146,
-      "namespace": "Services.cloud-cost-optimization",
-      "key": "roadmap.item3Title",
-      "fullKey": "Services.cloud-cost-optimization.roadmap.item3Title",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\services\\cloud-cost-optimization\\page.tsx",
-      "line": 147,
-      "namespace": "Services.cloud-cost-optimization",
-      "key": "roadmap.item3Desc",
-      "fullKey": "Services.cloud-cost-optimization.roadmap.item3Desc",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\services\\cloud-cost-optimization\\page.tsx",
-      "line": 157,
-      "namespace": "Services.cloud-cost-optimization",
-      "key": "faq.title",
-      "fullKey": "Services.cloud-cost-optimization.faq.title",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\services\\cloud-cost-optimization\\page.tsx",
-      "line": 186,
-      "namespace": "Services.cloud-cost-optimization",
-      "key": "footer.modernizationTitle",
-      "fullKey": "Services.cloud-cost-optimization.footer.modernizationTitle",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\services\\cloud-cost-optimization\\page.tsx",
-      "line": 188,
-      "namespace": "Services.cloud-cost-optimization",
-      "key": "footer.modernizationDesc",
-      "fullKey": "Services.cloud-cost-optimization.footer.modernizationDesc",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\services\\cloud-cost-optimization\\page.tsx",
-      "line": 198,
-      "namespace": "Services.cloud-cost-optimization",
-      "key": "footer.devopsTitle",
-      "fullKey": "Services.cloud-cost-optimization.footer.devopsTitle",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\services\\cloud-cost-optimization\\page.tsx",
-      "line": 200,
-      "namespace": "Services.cloud-cost-optimization",
-      "key": "footer.devopsDesc",
-      "fullKey": "Services.cloud-cost-optimization.footer.devopsDesc",
-      "type": "t_call"
-    },
-    {
       "file": "src\\app\\[locale]\\services\\application-modernization\\page.tsx",
       "line": 33,
       "namespace": "Services.application-modernization",
@@ -10497,182 +10785,6 @@
       "type": "t_call"
     },
     {
-      "file": "src\\app\\[locale]\\services\\cloud-migration\\page.tsx",
-      "line": 32,
-      "namespace": "Services.cloud-migration",
-      "key": "title",
-      "fullKey": "Services.cloud-migration.title",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\services\\cloud-migration\\page.tsx",
-      "line": 33,
-      "namespace": "Services.cloud-migration",
-      "key": "description",
-      "fullKey": "Services.cloud-migration.description",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\services\\cloud-migration\\page.tsx",
-      "line": 67,
-      "namespace": "Services.cloud-migration",
-      "key": "hero.badge",
-      "fullKey": "Services.cloud-migration.hero.badge",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\services\\cloud-migration\\page.tsx",
-      "line": 70,
-      "namespace": "Services.cloud-migration",
-      "key": "hero.title",
-      "fullKey": "Services.cloud-migration.hero.title",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\services\\cloud-migration\\page.tsx",
-      "line": 73,
-      "namespace": "Services.cloud-migration",
-      "key": "hero.subtitle",
-      "fullKey": "Services.cloud-migration.hero.subtitle",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\services\\cloud-migration\\page.tsx",
-      "line": 80,
-      "namespace": "Services.cloud-migration",
-      "key": "hero.ctaPrimary",
-      "fullKey": "Services.cloud-migration.hero.ctaPrimary",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\services\\cloud-migration\\page.tsx",
-      "line": 86,
-      "namespace": "Services.cloud-migration",
-      "key": "hero.ctaSecondary",
-      "fullKey": "Services.cloud-migration.hero.ctaSecondary",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\services\\cloud-migration\\page.tsx",
-      "line": 99,
-      "namespace": "Services.cloud-migration",
-      "key": "discovery.badge",
-      "fullKey": "Services.cloud-migration.discovery.badge",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\services\\cloud-migration\\page.tsx",
-      "line": 101,
-      "namespace": "Services.cloud-migration",
-      "key": "discovery.title",
-      "fullKey": "Services.cloud-migration.discovery.title",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\services\\cloud-migration\\page.tsx",
-      "line": 102,
-      "namespace": "Services.cloud-migration",
-      "key": "discovery.p1",
-      "fullKey": "Services.cloud-migration.discovery.p1",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\services\\cloud-migration\\page.tsx",
-      "line": 140,
-      "namespace": "Services.cloud-migration",
-      "key": "factory.title",
-      "fullKey": "Services.cloud-migration.factory.title",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\services\\cloud-migration\\page.tsx",
-      "line": 142,
-      "namespace": "Services.cloud-migration",
-      "key": "factory.step1Title",
-      "fullKey": "Services.cloud-migration.factory.step1Title",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\services\\cloud-migration\\page.tsx",
-      "line": 143,
-      "namespace": "Services.cloud-migration",
-      "key": "factory.step1Desc",
-      "fullKey": "Services.cloud-migration.factory.step1Desc",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\services\\cloud-migration\\page.tsx",
-      "line": 144,
-      "namespace": "Services.cloud-migration",
-      "key": "factory.step2Title",
-      "fullKey": "Services.cloud-migration.factory.step2Title",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\services\\cloud-migration\\page.tsx",
-      "line": 145,
-      "namespace": "Services.cloud-migration",
-      "key": "factory.step2Desc",
-      "fullKey": "Services.cloud-migration.factory.step2Desc",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\services\\cloud-migration\\page.tsx",
-      "line": 146,
-      "namespace": "Services.cloud-migration",
-      "key": "factory.step3Title",
-      "fullKey": "Services.cloud-migration.factory.step3Title",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\services\\cloud-migration\\page.tsx",
-      "line": 147,
-      "namespace": "Services.cloud-migration",
-      "key": "factory.step3Desc",
-      "fullKey": "Services.cloud-migration.factory.step3Desc",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\services\\cloud-migration\\page.tsx",
-      "line": 157,
-      "namespace": "Services.cloud-migration",
-      "key": "faq.title",
-      "fullKey": "Services.cloud-migration.faq.title",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\services\\cloud-migration\\page.tsx",
-      "line": 183,
-      "namespace": "Services.cloud-migration",
-      "key": "footer.costTitle",
-      "fullKey": "Services.cloud-migration.footer.costTitle",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\services\\cloud-migration\\page.tsx",
-      "line": 185,
-      "namespace": "Services.cloud-migration",
-      "key": "footer.costDesc",
-      "fullKey": "Services.cloud-migration.footer.costDesc",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\services\\cloud-migration\\page.tsx",
-      "line": 195,
-      "namespace": "Services.cloud-migration",
-      "key": "footer.factoryTitle",
-      "fullKey": "Services.cloud-migration.footer.factoryTitle",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\services\\cloud-migration\\page.tsx",
-      "line": 197,
-      "namespace": "Services.cloud-migration",
-      "key": "footer.factoryDesc",
-      "fullKey": "Services.cloud-migration.footer.factoryDesc",
-      "type": "t_call"
-    },
-    {
       "file": "src\\app\\[locale]\\resources\\papers\\page.tsx",
       "line": 46,
       "namespace": "Papers",
@@ -10697,6 +10809,134 @@
       "type": "t_call"
     },
     {
+      "file": "src\\app\\[locale]\\resources\\c4-tooling\\page.tsx",
+      "line": 14,
+      "namespace": "Resources.c4_tooling",
+      "key": "title",
+      "fullKey": "Resources.c4_tooling.title",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\resources\\c4-tooling\\page.tsx",
+      "line": 15,
+      "namespace": "Resources.c4_tooling",
+      "key": "subtitle",
+      "fullKey": "Resources.c4_tooling.subtitle",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\resources\\c4-tooling\\page.tsx",
+      "line": 38,
+      "namespace": "Resources.c4_tooling",
+      "key": "title",
+      "fullKey": "Resources.c4_tooling.title",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\resources\\c4-tooling\\page.tsx",
+      "line": 41,
+      "namespace": "Resources.c4_tooling",
+      "key": "subtitle",
+      "fullKey": "Resources.c4_tooling.subtitle",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\resources\\c4-tooling\\page.tsx",
+      "line": 53,
+      "namespace": "Resources.c4_tooling",
+      "key": "section_choice_title",
+      "fullKey": "Resources.c4_tooling.section_choice_title",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\resources\\c4-tooling\\page.tsx",
+      "line": 56,
+      "namespace": "Resources.c4_tooling",
+      "key": "section_choice_text",
+      "fullKey": "Resources.c4_tooling.section_choice_text",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\resources\\c4-tooling\\page.tsx",
+      "line": 64,
+      "namespace": "Resources.c4_tooling",
+      "key": "section_diff_title",
+      "fullKey": "Resources.c4_tooling.section_diff_title",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\resources\\c4-tooling\\page.tsx",
+      "line": 77,
+      "namespace": "Resources.c4_tooling",
+      "key": "section_diff_text",
+      "fullKey": "Resources.c4_tooling.section_diff_text",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\resources\\c4-tooling\\page.tsx",
+      "line": 86,
+      "namespace": "Resources.c4_tooling",
+      "key": "checklist_title",
+      "fullKey": "Resources.c4_tooling.checklist_title",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\resources\\c4-tooling\\page.tsx",
+      "line": 92,
+      "namespace": "Resources.c4_tooling",
+      "key": "checklist_audience",
+      "fullKey": "Resources.c4_tooling.checklist_audience",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\resources\\c4-tooling\\page.tsx",
+      "line": 99,
+      "namespace": "Resources.c4_tooling",
+      "key": "checklist_frequency",
+      "fullKey": "Resources.c4_tooling.checklist_frequency",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\resources\\c4-tooling\\page.tsx",
+      "line": 106,
+      "namespace": "Resources.c4_tooling",
+      "key": "checklist_syntax",
+      "fullKey": "Resources.c4_tooling.checklist_syntax",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\resources\\c4-tooling\\page.tsx",
+      "line": 118,
+      "namespace": "Resources.c4_tooling",
+      "key": "tools_visual_title",
+      "fullKey": "Resources.c4_tooling.tools_visual_title",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\resources\\c4-tooling\\page.tsx",
+      "line": 136,
+      "namespace": "Resources.c4_tooling",
+      "key": "tools_model_title",
+      "fullKey": "Resources.c4_tooling.tools_model_title",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\resources\\c4-tooling\\page.tsx",
+      "line": 157,
+      "namespace": "Resources.c4_tooling",
+      "key": "attribution",
+      "fullKey": "Resources.c4_tooling.attribution",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\resources\\c4-tooling\\page.tsx",
+      "line": 165,
+      "namespace": "Resources.c4_tooling",
+      "key": "link_text",
+      "fullKey": "Resources.c4_tooling.link_text",
+      "type": "t_call"
+    },
+    {
       "file": "src\\app\\[locale]\\resources\\blog\\page.tsx",
       "line": 51,
       "namespace": "ResourcesBlog",
@@ -10718,118 +10958,6 @@
       "namespace": "ResourcesBlog",
       "key": "viewPost",
       "fullKey": "ResourcesBlog.viewPost",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\services\\ai-cloud-platform\\page.tsx",
-      "line": 31,
-      "namespace": "Services.ai-cloud-platform",
-      "key": "title",
-      "fullKey": "Services.ai-cloud-platform.title",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\services\\ai-cloud-platform\\page.tsx",
-      "line": 32,
-      "namespace": "Services.ai-cloud-platform",
-      "key": "description",
-      "fullKey": "Services.ai-cloud-platform.description",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\services\\ai-cloud-platform\\page.tsx",
-      "line": 64,
-      "namespace": "Services.ai-cloud-platform",
-      "key": "hero.badge",
-      "fullKey": "Services.ai-cloud-platform.hero.badge",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\services\\ai-cloud-platform\\page.tsx",
-      "line": 67,
-      "namespace": "Services.ai-cloud-platform",
-      "key": "hero.title",
-      "fullKey": "Services.ai-cloud-platform.hero.title",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\services\\ai-cloud-platform\\page.tsx",
-      "line": 70,
-      "namespace": "Services.ai-cloud-platform",
-      "key": "hero.subtitle",
-      "fullKey": "Services.ai-cloud-platform.hero.subtitle",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\services\\ai-cloud-platform\\page.tsx",
-      "line": 77,
-      "namespace": "Services.ai-cloud-platform",
-      "key": "hero.ctaPrimary",
-      "fullKey": "Services.ai-cloud-platform.hero.ctaPrimary",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\services\\ai-cloud-platform\\page.tsx",
-      "line": 83,
-      "namespace": "Services.ai-cloud-platform",
-      "key": "hero.ctaSecondary",
-      "fullKey": "Services.ai-cloud-platform.hero.ctaSecondary",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\services\\ai-cloud-platform\\page.tsx",
-      "line": 96,
-      "namespace": "Services.ai-cloud-platform",
-      "key": "challenge.badge",
-      "fullKey": "Services.ai-cloud-platform.challenge.badge",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\services\\ai-cloud-platform\\page.tsx",
-      "line": 98,
-      "namespace": "Services.ai-cloud-platform",
-      "key": "challenge.title",
-      "fullKey": "Services.ai-cloud-platform.challenge.title",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\services\\ai-cloud-platform\\page.tsx",
-      "line": 100,
-      "namespace": "Services.ai-cloud-platform",
-      "key": "challenge.p1",
-      "fullKey": "Services.ai-cloud-platform.challenge.p1",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\services\\ai-cloud-platform\\page.tsx",
-      "line": 112,
-      "namespace": "Services.ai-cloud-platform",
-      "key": "challenge.mesh",
-      "fullKey": "Services.ai-cloud-platform.challenge.mesh",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\services\\ai-cloud-platform\\page.tsx",
-      "line": 113,
-      "namespace": "Services.ai-cloud-platform",
-      "key": "challenge.quote",
-      "fullKey": "Services.ai-cloud-platform.challenge.quote",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\services\\ai-cloud-platform\\page.tsx",
-      "line": 123,
-      "namespace": "Services.ai-cloud-platform",
-      "key": "process.title",
-      "fullKey": "Services.ai-cloud-platform.process.title",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\services\\ai-cloud-platform\\page.tsx",
-      "line": 153,
-      "namespace": "Services.ai-cloud-platform",
-      "key": "faq.title",
-      "fullKey": "Services.ai-cloud-platform.faq.title",
       "type": "t_call"
     },
     {
@@ -11321,30 +11449,6 @@
       "type": "t_call"
     },
     {
-      "file": "src\\app\\[locale]\\industries\\[slug]\\page.tsx",
-      "line": 43,
-      "namespace": "Industries",
-      "key": "allIndustries",
-      "fullKey": "Industries.allIndustries",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\industries\\[slug]\\page.tsx",
-      "line": 56,
-      "namespace": "Industries",
-      "key": "strategicChallenges",
-      "fullKey": "Industries.strategicChallenges",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\industries\\[slug]\\page.tsx",
-      "line": 81,
-      "namespace": "Industries",
-      "key": "solutionLabel",
-      "fullKey": "Industries.solutionLabel",
-      "type": "t_call"
-    },
-    {
       "file": "src\\app\\[locale]\\industries\\healthcare\\page.tsx",
       "line": 34,
       "namespace": "Industries.healthcare",
@@ -11713,91 +11817,27 @@
       "type": "t_call"
     },
     {
-      "file": "src\\app\\[locale]\\docs\\[slug]\\page.tsx",
-      "line": 27,
-      "namespace": "Docs",
-      "key": "meta.title",
-      "fullKey": "Docs.meta.title",
+      "file": "src\\app\\[locale]\\industries\\[slug]\\page.tsx",
+      "line": 43,
+      "namespace": "Industries",
+      "key": "allIndustries",
+      "fullKey": "Industries.allIndustries",
       "type": "t_call"
     },
     {
-      "file": "src\\app\\[locale]\\docs\\[slug]\\page.tsx",
-      "line": 28,
-      "namespace": "Docs",
-      "key": "meta.description",
-      "fullKey": "Docs.meta.description",
+      "file": "src\\app\\[locale]\\industries\\[slug]\\page.tsx",
+      "line": 56,
+      "namespace": "Industries",
+      "key": "strategicChallenges",
+      "fullKey": "Industries.strategicChallenges",
       "type": "t_call"
     },
     {
-      "file": "src\\app\\[locale]\\docs\\[slug]\\page.tsx",
-      "line": 71,
-      "namespace": "Docs",
-      "key": "technicalLibrary",
-      "fullKey": "Docs.technicalLibrary",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\docs\\[slug]\\page.tsx",
-      "line": 80,
-      "namespace": "Docs",
-      "key": "documentation_label",
-      "fullKey": "Docs.documentation_label",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\docs\\[slug]\\page.tsx",
-      "line": 91,
-      "namespace": "Docs",
-      "key": "abstract.title",
-      "fullKey": "Docs.abstract.title",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\docs\\[slug]\\page.tsx",
-      "line": 94,
-      "namespace": "Docs",
-      "key": "abstract.paragraph2",
-      "fullKey": "Docs.abstract.paragraph2",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\docs\\[slug]\\page.tsx",
-      "line": 104,
-      "namespace": "Docs",
-      "key": "sections.empiricalDataSet",
-      "fullKey": "Docs.sections.empiricalDataSet",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\docs\\[slug]\\page.tsx",
-      "line": 105,
-      "namespace": "Docs",
-      "key": "sections.empiricalDataSetDesc",
-      "fullKey": "Docs.sections.empiricalDataSetDesc",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\docs\\[slug]\\page.tsx",
-      "line": 119,
-      "namespace": "Docs",
-      "key": "sections.validationProtocols",
-      "fullKey": "Docs.sections.validationProtocols",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\docs\\[slug]\\page.tsx",
-      "line": 120,
-      "namespace": "Docs",
-      "key": "sections.autonomousGatingLogs",
-      "fullKey": "Docs.sections.autonomousGatingLogs",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\docs\\[slug]\\page.tsx",
-      "line": 93,
-      "namespace": "Docs",
-      "key": "abstract.paragraph1",
-      "fullKey": "Docs.abstract.paragraph1",
+      "file": "src\\app\\[locale]\\industries\\[slug]\\page.tsx",
+      "line": 81,
+      "namespace": "Industries",
+      "key": "solutionLabel",
+      "fullKey": "Industries.solutionLabel",
       "type": "t_call"
     },
     {
@@ -12793,6 +12833,238 @@
       "type": "t_call"
     },
     {
+      "file": "src\\app\\[locale]\\docs\\[slug]\\page.tsx",
+      "line": 27,
+      "namespace": "Docs",
+      "key": "meta.title",
+      "fullKey": "Docs.meta.title",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\docs\\[slug]\\page.tsx",
+      "line": 28,
+      "namespace": "Docs",
+      "key": "meta.description",
+      "fullKey": "Docs.meta.description",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\docs\\[slug]\\page.tsx",
+      "line": 71,
+      "namespace": "Docs",
+      "key": "technicalLibrary",
+      "fullKey": "Docs.technicalLibrary",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\docs\\[slug]\\page.tsx",
+      "line": 80,
+      "namespace": "Docs",
+      "key": "documentation_label",
+      "fullKey": "Docs.documentation_label",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\docs\\[slug]\\page.tsx",
+      "line": 91,
+      "namespace": "Docs",
+      "key": "abstract.title",
+      "fullKey": "Docs.abstract.title",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\docs\\[slug]\\page.tsx",
+      "line": 94,
+      "namespace": "Docs",
+      "key": "abstract.paragraph2",
+      "fullKey": "Docs.abstract.paragraph2",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\docs\\[slug]\\page.tsx",
+      "line": 104,
+      "namespace": "Docs",
+      "key": "sections.empiricalDataSet",
+      "fullKey": "Docs.sections.empiricalDataSet",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\docs\\[slug]\\page.tsx",
+      "line": 105,
+      "namespace": "Docs",
+      "key": "sections.empiricalDataSetDesc",
+      "fullKey": "Docs.sections.empiricalDataSetDesc",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\docs\\[slug]\\page.tsx",
+      "line": 119,
+      "namespace": "Docs",
+      "key": "sections.validationProtocols",
+      "fullKey": "Docs.sections.validationProtocols",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\docs\\[slug]\\page.tsx",
+      "line": 120,
+      "namespace": "Docs",
+      "key": "sections.autonomousGatingLogs",
+      "fullKey": "Docs.sections.autonomousGatingLogs",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\docs\\[slug]\\page.tsx",
+      "line": 93,
+      "namespace": "Docs",
+      "key": "abstract.paragraph1",
+      "fullKey": "Docs.abstract.paragraph1",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\docs\\api\\page.tsx",
+      "line": 16,
+      "namespace": "Docs.api",
+      "key": "title",
+      "fullKey": "Docs.api.title",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\docs\\api\\page.tsx",
+      "line": 17,
+      "namespace": "Docs.api",
+      "key": "description",
+      "fullKey": "Docs.api.description",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\docs\\api\\page.tsx",
+      "line": 35,
+      "namespace": "Docs.api",
+      "key": "title",
+      "fullKey": "Docs.api.title",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\docs\\api\\page.tsx",
+      "line": 37,
+      "namespace": "Docs.api",
+      "key": "versionLabel",
+      "fullKey": "Docs.api.versionLabel",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\docs\\api\\page.tsx",
+      "line": 38,
+      "namespace": "Docs.api",
+      "key": "description",
+      "fullKey": "Docs.api.description",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\docs\\api\\page.tsx",
+      "line": 41,
+      "namespace": "Docs.api",
+      "key": "endpoints.discovery.desc",
+      "fullKey": "Docs.api.endpoints.discovery.desc",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\docs\\api\\page.tsx",
+      "line": 45,
+      "namespace": "Docs.api",
+      "key": "endpoints.modernization.desc",
+      "fullKey": "Docs.api.endpoints.modernization.desc",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\docs\\api\\page.tsx",
+      "line": 47,
+      "namespace": "Docs.api",
+      "key": "endpoints.governance.desc",
+      "fullKey": "Docs.api.endpoints.governance.desc",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\docs\\guide\\page.tsx",
+      "line": 14,
+      "namespace": "Common",
+      "key": "title",
+      "fullKey": "Common.title",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\docs\\guide\\page.tsx",
+      "line": 15,
+      "namespace": "Common",
+      "key": "description",
+      "fullKey": "Common.description",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\docs\\guide\\page.tsx",
+      "line": 26,
+      "namespace": "Common",
+      "key": "hero.title",
+      "fullKey": "Common.hero.title",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\docs\\guide\\page.tsx",
+      "line": 28,
+      "namespace": "Common",
+      "key": "hero.step1.title",
+      "fullKey": "Common.hero.step1.title",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\docs\\guide\\page.tsx",
+      "line": 29,
+      "namespace": "Common",
+      "key": "hero.step1.description",
+      "fullKey": "Common.hero.step1.description",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\docs\\guide\\page.tsx",
+      "line": 31,
+      "namespace": "Common",
+      "key": "hero.step1.code.install",
+      "fullKey": "Common.hero.step1.code.install",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\docs\\guide\\page.tsx",
+      "line": 32,
+      "namespace": "Common",
+      "key": "hero.step1.code.login",
+      "fullKey": "Common.hero.step1.code.login",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\docs\\guide\\page.tsx",
+      "line": 35,
+      "namespace": "Common",
+      "key": "hero.step2.title",
+      "fullKey": "Common.hero.step2.title",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\docs\\guide\\page.tsx",
+      "line": 36,
+      "namespace": "Common",
+      "key": "hero.step2.description",
+      "fullKey": "Common.hero.step2.description",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\docs\\guide\\page.tsx",
+      "line": 37,
+      "namespace": "Common",
+      "key": "hero.cta",
+      "fullKey": "Common.hero.cta",
+      "type": "t_call"
+    },
+    {
       "file": "src\\app\\[locale]\\docs\\architecture\\page.tsx",
       "line": 18,
       "namespace": "Common",
@@ -13022,150 +13294,6 @@
       "namespace": "Common",
       "key": "cta.whitepaper",
       "fullKey": "Common.cta.whitepaper",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\docs\\guide\\page.tsx",
-      "line": 14,
-      "namespace": "Common",
-      "key": "title",
-      "fullKey": "Common.title",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\docs\\guide\\page.tsx",
-      "line": 15,
-      "namespace": "Common",
-      "key": "description",
-      "fullKey": "Common.description",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\docs\\guide\\page.tsx",
-      "line": 26,
-      "namespace": "Common",
-      "key": "hero.title",
-      "fullKey": "Common.hero.title",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\docs\\guide\\page.tsx",
-      "line": 28,
-      "namespace": "Common",
-      "key": "hero.step1.title",
-      "fullKey": "Common.hero.step1.title",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\docs\\guide\\page.tsx",
-      "line": 29,
-      "namespace": "Common",
-      "key": "hero.step1.description",
-      "fullKey": "Common.hero.step1.description",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\docs\\guide\\page.tsx",
-      "line": 31,
-      "namespace": "Common",
-      "key": "hero.step1.code.install",
-      "fullKey": "Common.hero.step1.code.install",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\docs\\guide\\page.tsx",
-      "line": 32,
-      "namespace": "Common",
-      "key": "hero.step1.code.login",
-      "fullKey": "Common.hero.step1.code.login",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\docs\\guide\\page.tsx",
-      "line": 35,
-      "namespace": "Common",
-      "key": "hero.step2.title",
-      "fullKey": "Common.hero.step2.title",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\docs\\guide\\page.tsx",
-      "line": 36,
-      "namespace": "Common",
-      "key": "hero.step2.description",
-      "fullKey": "Common.hero.step2.description",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\docs\\guide\\page.tsx",
-      "line": 37,
-      "namespace": "Common",
-      "key": "hero.cta",
-      "fullKey": "Common.hero.cta",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\docs\\api\\page.tsx",
-      "line": 16,
-      "namespace": "Docs.api",
-      "key": "title",
-      "fullKey": "Docs.api.title",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\docs\\api\\page.tsx",
-      "line": 17,
-      "namespace": "Docs.api",
-      "key": "description",
-      "fullKey": "Docs.api.description",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\docs\\api\\page.tsx",
-      "line": 35,
-      "namespace": "Docs.api",
-      "key": "title",
-      "fullKey": "Docs.api.title",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\docs\\api\\page.tsx",
-      "line": 37,
-      "namespace": "Docs.api",
-      "key": "versionLabel",
-      "fullKey": "Docs.api.versionLabel",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\docs\\api\\page.tsx",
-      "line": 38,
-      "namespace": "Docs.api",
-      "key": "description",
-      "fullKey": "Docs.api.description",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\docs\\api\\page.tsx",
-      "line": 41,
-      "namespace": "Docs.api",
-      "key": "endpoints.discovery.desc",
-      "fullKey": "Docs.api.endpoints.discovery.desc",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\docs\\api\\page.tsx",
-      "line": 45,
-      "namespace": "Docs.api",
-      "key": "endpoints.modernization.desc",
-      "fullKey": "Docs.api.endpoints.modernization.desc",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\docs\\api\\page.tsx",
-      "line": 47,
-      "namespace": "Docs.api",
-      "key": "endpoints.governance.desc",
-      "fullKey": "Docs.api.endpoints.governance.desc",
       "type": "t_call"
     },
     {
@@ -13425,6 +13553,142 @@
       "type": "t_call"
     },
     {
+      "file": "src\\app\\[locale]\\resources\\blog\\devops-best-practices\\page.tsx",
+      "line": 62,
+      "namespace": "Resources.Blog.devopsBestPractices",
+      "key": "hero.badge",
+      "fullKey": "Resources.Blog.devopsBestPractices.hero.badge",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\resources\\blog\\devops-best-practices\\page.tsx",
+      "line": 65,
+      "namespace": "Resources.Blog.devopsBestPractices",
+      "key": "hero.titlePrefix",
+      "fullKey": "Resources.Blog.devopsBestPractices.hero.titlePrefix",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\resources\\blog\\devops-best-practices\\page.tsx",
+      "line": 66,
+      "namespace": "Resources.Blog.devopsBestPractices",
+      "key": "hero.titleHighlight",
+      "fullKey": "Resources.Blog.devopsBestPractices.hero.titleHighlight",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\resources\\blog\\devops-best-practices\\page.tsx",
+      "line": 67,
+      "namespace": "Resources.Blog.devopsBestPractices",
+      "key": "hero.titleSuffix",
+      "fullKey": "Resources.Blog.devopsBestPractices.hero.titleSuffix",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\resources\\blog\\devops-best-practices\\page.tsx",
+      "line": 74,
+      "namespace": "Resources.Blog.devopsBestPractices",
+      "key": "hero.author",
+      "fullKey": "Resources.Blog.devopsBestPractices.hero.author",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\resources\\blog\\devops-best-practices\\page.tsx",
+      "line": 76,
+      "namespace": "Resources.Blog.devopsBestPractices",
+      "key": "hero.date",
+      "fullKey": "Resources.Blog.devopsBestPractices.hero.date",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\resources\\blog\\devops-best-practices\\page.tsx",
+      "line": 78,
+      "namespace": "Resources.Blog.devopsBestPractices",
+      "key": "hero.readTime",
+      "fullKey": "Resources.Blog.devopsBestPractices.hero.readTime",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\resources\\blog\\devops-best-practices\\page.tsx",
+      "line": 84,
+      "namespace": "Resources.Blog.devopsBestPractices",
+      "key": "intro.quote",
+      "fullKey": "Resources.Blog.devopsBestPractices.intro.quote",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\resources\\blog\\devops-best-practices\\page.tsx",
+      "line": 87,
+      "namespace": "Resources.Blog.devopsBestPractices",
+      "key": "body.introTitle",
+      "fullKey": "Resources.Blog.devopsBestPractices.body.introTitle",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\resources\\blog\\devops-best-practices\\page.tsx",
+      "line": 88,
+      "namespace": "Resources.Blog.devopsBestPractices",
+      "key": "body.p1",
+      "fullKey": "Resources.Blog.devopsBestPractices.body.p1",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\resources\\blog\\devops-best-practices\\page.tsx",
+      "line": 91,
+      "namespace": "Resources.Blog.devopsBestPractices",
+      "key": "body.dist1.title",
+      "fullKey": "Resources.Blog.devopsBestPractices.body.dist1.title",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\resources\\blog\\devops-best-practices\\page.tsx",
+      "line": 94,
+      "namespace": "Resources.Blog.devopsBestPractices",
+      "key": "body.dist2.title",
+      "fullKey": "Resources.Blog.devopsBestPractices.body.dist2.title",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\resources\\blog\\devops-best-practices\\page.tsx",
+      "line": 97,
+      "namespace": "Resources.Blog.devopsBestPractices",
+      "key": "body.dist3.title",
+      "fullKey": "Resources.Blog.devopsBestPractices.body.dist3.title",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\resources\\blog\\devops-best-practices\\page.tsx",
+      "line": 100,
+      "namespace": "Resources.Blog.devopsBestPractices",
+      "key": "body.dist4.title",
+      "fullKey": "Resources.Blog.devopsBestPractices.body.dist4.title",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\resources\\blog\\devops-best-practices\\page.tsx",
+      "line": 103,
+      "namespace": "Resources.Blog.devopsBestPractices",
+      "key": "faq.title",
+      "fullKey": "Resources.Blog.devopsBestPractices.faq.title",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\resources\\blog\\devops-best-practices\\page.tsx",
+      "line": 132,
+      "namespace": "Resources.Blog.devopsBestPractices",
+      "key": "nav.prev",
+      "fullKey": "Resources.Blog.devopsBestPractices.nav.prev",
+      "type": "t_call"
+    },
+    {
+      "file": "src\\app\\[locale]\\resources\\blog\\devops-best-practices\\page.tsx",
+      "line": 138,
+      "namespace": "Resources.Blog.devopsBestPractices",
+      "key": "nav.back",
+      "fullKey": "Resources.Blog.devopsBestPractices.nav.back",
+      "type": "t_call"
+    },
+    {
       "file": "src\\app\\[locale]\\resources\\blog\\cloud-modernization-guide\\page.tsx",
       "line": 62,
       "namespace": "Resources.Blog.cloudModernization",
@@ -13662,142 +13926,6 @@
       "namespace": "Resources.Blog.cloudModernization",
       "key": "related.readWhitepaper",
       "fullKey": "Resources.Blog.cloudModernization.related.readWhitepaper",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\resources\\blog\\devops-best-practices\\page.tsx",
-      "line": 62,
-      "namespace": "Resources.Blog.devopsBestPractices",
-      "key": "hero.badge",
-      "fullKey": "Resources.Blog.devopsBestPractices.hero.badge",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\resources\\blog\\devops-best-practices\\page.tsx",
-      "line": 65,
-      "namespace": "Resources.Blog.devopsBestPractices",
-      "key": "hero.titlePrefix",
-      "fullKey": "Resources.Blog.devopsBestPractices.hero.titlePrefix",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\resources\\blog\\devops-best-practices\\page.tsx",
-      "line": 66,
-      "namespace": "Resources.Blog.devopsBestPractices",
-      "key": "hero.titleHighlight",
-      "fullKey": "Resources.Blog.devopsBestPractices.hero.titleHighlight",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\resources\\blog\\devops-best-practices\\page.tsx",
-      "line": 67,
-      "namespace": "Resources.Blog.devopsBestPractices",
-      "key": "hero.titleSuffix",
-      "fullKey": "Resources.Blog.devopsBestPractices.hero.titleSuffix",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\resources\\blog\\devops-best-practices\\page.tsx",
-      "line": 74,
-      "namespace": "Resources.Blog.devopsBestPractices",
-      "key": "hero.author",
-      "fullKey": "Resources.Blog.devopsBestPractices.hero.author",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\resources\\blog\\devops-best-practices\\page.tsx",
-      "line": 76,
-      "namespace": "Resources.Blog.devopsBestPractices",
-      "key": "hero.date",
-      "fullKey": "Resources.Blog.devopsBestPractices.hero.date",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\resources\\blog\\devops-best-practices\\page.tsx",
-      "line": 78,
-      "namespace": "Resources.Blog.devopsBestPractices",
-      "key": "hero.readTime",
-      "fullKey": "Resources.Blog.devopsBestPractices.hero.readTime",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\resources\\blog\\devops-best-practices\\page.tsx",
-      "line": 84,
-      "namespace": "Resources.Blog.devopsBestPractices",
-      "key": "intro.quote",
-      "fullKey": "Resources.Blog.devopsBestPractices.intro.quote",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\resources\\blog\\devops-best-practices\\page.tsx",
-      "line": 87,
-      "namespace": "Resources.Blog.devopsBestPractices",
-      "key": "body.introTitle",
-      "fullKey": "Resources.Blog.devopsBestPractices.body.introTitle",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\resources\\blog\\devops-best-practices\\page.tsx",
-      "line": 88,
-      "namespace": "Resources.Blog.devopsBestPractices",
-      "key": "body.p1",
-      "fullKey": "Resources.Blog.devopsBestPractices.body.p1",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\resources\\blog\\devops-best-practices\\page.tsx",
-      "line": 91,
-      "namespace": "Resources.Blog.devopsBestPractices",
-      "key": "body.dist1.title",
-      "fullKey": "Resources.Blog.devopsBestPractices.body.dist1.title",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\resources\\blog\\devops-best-practices\\page.tsx",
-      "line": 94,
-      "namespace": "Resources.Blog.devopsBestPractices",
-      "key": "body.dist2.title",
-      "fullKey": "Resources.Blog.devopsBestPractices.body.dist2.title",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\resources\\blog\\devops-best-practices\\page.tsx",
-      "line": 97,
-      "namespace": "Resources.Blog.devopsBestPractices",
-      "key": "body.dist3.title",
-      "fullKey": "Resources.Blog.devopsBestPractices.body.dist3.title",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\resources\\blog\\devops-best-practices\\page.tsx",
-      "line": 100,
-      "namespace": "Resources.Blog.devopsBestPractices",
-      "key": "body.dist4.title",
-      "fullKey": "Resources.Blog.devopsBestPractices.body.dist4.title",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\resources\\blog\\devops-best-practices\\page.tsx",
-      "line": 103,
-      "namespace": "Resources.Blog.devopsBestPractices",
-      "key": "faq.title",
-      "fullKey": "Resources.Blog.devopsBestPractices.faq.title",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\resources\\blog\\devops-best-practices\\page.tsx",
-      "line": 132,
-      "namespace": "Resources.Blog.devopsBestPractices",
-      "key": "nav.prev",
-      "fullKey": "Resources.Blog.devopsBestPractices.nav.prev",
-      "type": "t_call"
-    },
-    {
-      "file": "src\\app\\[locale]\\resources\\blog\\devops-best-practices\\page.tsx",
-      "line": 138,
-      "namespace": "Resources.Blog.devopsBestPractices",
-      "key": "nav.back",
-      "fullKey": "Resources.Blog.devopsBestPractices.nav.back",
       "type": "t_call"
     },
     {
@@ -15883,6 +16011,20 @@
     "Resources.Blog.sovereigntyFramework.related.card2.title",
     "Resources.Blog.sovereigntyFramework.related.readPost",
     "Resources.Blog.sovereigntyFramework.related.title",
+    "Resources.c4_tooling.attribution",
+    "Resources.c4_tooling.checklist_audience",
+    "Resources.c4_tooling.checklist_frequency",
+    "Resources.c4_tooling.checklist_syntax",
+    "Resources.c4_tooling.checklist_title",
+    "Resources.c4_tooling.link_text",
+    "Resources.c4_tooling.section_choice_text",
+    "Resources.c4_tooling.section_choice_title",
+    "Resources.c4_tooling.section_diff_text",
+    "Resources.c4_tooling.section_diff_title",
+    "Resources.c4_tooling.subtitle",
+    "Resources.c4_tooling.title",
+    "Resources.c4_tooling.tools_model_title",
+    "Resources.c4_tooling.tools_visual_title",
     "ResourcesBlog.subtitle",
     "ResourcesBlog.title",
     "ResourcesBlog.viewPost",

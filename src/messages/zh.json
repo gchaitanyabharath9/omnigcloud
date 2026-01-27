@@ -5089,7 +5089,12 @@
       "viewAbstract": "View Abstract"
     },
     "title": "Technical Research & Publications",
-    "description": "Scholarly articles and strategic research on digital sovereignty."
+    "description": "Scholarly articles and strategic research on digital sovereignty.",
+    "tooling_card": {
+      "title": "Diagramming & Tooling",
+      "text": "Effective architectural communication requires selecting the right abstraction level.",
+      "cta": "View C4 Tooling Guide"
+    }
   },
   "Partners": {
     "ecosystem": {
@@ -6120,6 +6125,22 @@
           "title": "Strategy Resources (ZH)"
         }
       }
+    },
+    "c4_tooling": {
+      "title": "C4 Tooling Strategy Guide",
+      "subtitle": "Choosing the right instruments for architectural expression.",
+      "section_choice_title": "Selecting Your Toolchain",
+      "section_choice_text": "The longevity of an architectural artifact is often dictated by the friction required to update it.",
+      "section_diff_title": "Modelling vs. Drawing",
+      "section_diff_text": "Drawing is about pixels and placement. Modelling is about relationships and entities.",
+      "checklist_title": "Decision Matrix",
+      "checklist_audience": "Who constitutes the primary readership?",
+      "checklist_frequency": "What is the expected rate of change?",
+      "checklist_syntax": "Is strict C4 compliance mandatory?",
+      "tools_visual_title": "Visual-Centric Tools",
+      "tools_model_title": "Model-Centric Tools",
+      "attribution": "Inspired by the official C4 model tooling guidance.",
+      "link_text": "View Official List"
     }
   },
   "ResourcesBlog": {
