@@ -138,26 +138,45 @@ export default async function PaperDetailPage({ params }: { params: Promise<{ lo
 
                     {/* Sidebar (CTA) */}
                     <div className="space-y-6">
-                        <div className="glass-panel p-8 rounded-3xl border border-primary/20 bg-primary/5 sticky top-24">
-                            <div className="bg-primary/20 p-4 rounded-2xl inline-block mb-6">
-                                <FileText size={32} className="text-primary" />
+                        <div className="glass-panel p-8 rounded-3xl border border-primary/20 bg-primary/5 sticky top-24 space-y-8">
+                            <div>
+                                <div className="bg-primary/20 p-4 rounded-2xl inline-block mb-6">
+                                    <FileText size={32} className="text-primary" />
+                                </div>
+                                <h3 className="text-xl font-black text-white mb-4">
+                                    Full Paper Request
+                                </h3>
+                                <p className="text-slate-400 text-sm leading-relaxed mb-8">
+                                    {t("Common.requestFullTextDisclaimer")}
+                                </p>
+
+                                <Link
+                                    href={`mailto:office@omnigcloud.com?subject=Full Paper Request: ${paper.slug}`}
+                                    className="btn-primary w-full flex items-center justify-center gap-2 group underline-none"
+                                >
+                                    <Mail size={16} /> Contact Office
+                                </Link>
+
+                                <div className="mt-8 pt-8 border-t border-white/10 text-[10px] uppercase font-black text-slate-500 tracking-widest text-center">
+                                    Sovereign Access Only
+                                </div>
                             </div>
-                            <h3 className="text-xl font-black text-white mb-4">
-                                Full Paper Request
-                            </h3>
-                            <p className="text-slate-400 text-sm leading-relaxed mb-8">
-                                {t("Common.requestFullTextDisclaimer")}
-                            </p>
 
-                            <Link
-                                href={`mailto:office@omnigcloud.com?subject=Full Paper Request: ${paper.slug}`}
-                                className="btn-primary w-full flex items-center justify-center gap-2 group underline-none"
-                            >
-                                <Mail size={16} /> Contact Office
-                            </Link>
-
-                            <div className="mt-8 pt-8 border-t border-white/10 text-[10px] uppercase font-black text-slate-500 tracking-widest text-center">
-                                Sovereign Access Only
+                            {/* Tooling Cross-Link */}
+                            <div className="pt-6 border-t border-white/10">
+                                <div className="flex items-center gap-2 mb-3 text-white">
+                                    <BookOpen size={16} className="text-primary" />
+                                    <h4 className="text-sm font-black uppercase tracking-wider">{t("tooling_card.title")}</h4>
+                                </div>
+                                <p className="text-slate-400 text-[11px] leading-relaxed mb-4">
+                                    {t("tooling_card.text")}
+                                </p>
+                                <Link
+                                    href="/resources/c4-tooling"
+                                    className="text-xs font-bold text-primary hover:text-white transition-colors flex items-center gap-2 underline"
+                                >
+                                    {t("tooling_card.cta")} <ChevronRight size={14} />
+                                </Link>
                             </div>
                         </div>
                     </div>

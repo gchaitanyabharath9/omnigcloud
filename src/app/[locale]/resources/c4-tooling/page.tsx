@@ -58,7 +58,7 @@ export default async function C4ToolingPage({ params }: { params: Promise<{ loca
                     </section>
 
                     {/* Section 2: Drawing vs Modelling */}
-                    <section className="class-panel p-8 rounded-2xl border border-white/10 bg-white/5">
+                    <section className="glass-panel p-8 rounded-2xl border border-white/10 bg-white/5">
                         <div className="flex items-center gap-4 text-amber-400 mb-6">
                             <Layers size={32} />
                             <h2 className="text-2xl font-bold text-white">{t("section_diff_title")}</h2>
