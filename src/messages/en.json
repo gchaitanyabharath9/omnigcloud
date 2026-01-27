@@ -187,7 +187,7 @@
     },
     "security": {
       "badge": "Security-Integrated Design",
-      "desc": "Security is not a layer on top of OmniGCloud\u2014it is the material the framework is built from. We implement Adversary-Aware Pathing and Cryptographic Isolation for every service modernizing on our platform.",
+      "desc": "Security is not a layer on top of OmniGCloud—it is the material the framework is built from. We implement Adversary-Aware Pathing and Cryptographic Isolation for every service modernizing on our platform.",
       "items": {
         "0": {
           "d": "End-to-end encryption for metadata synchronization.",
@@ -576,7 +576,7 @@
         "metrics": {
           "0": {
             "l": "Provisioning Time",
-            "v": "8 Hours \u279c 12 Minutes"
+            "v": "8 Hours ➜ 12 Minutes"
           },
           "1": {
             "l": "Edge Latency",
@@ -2659,7 +2659,7 @@
       "responseTimeTitle": "Response Time",
       "roiDesc": "Real-time return on investment",
       "roiTitle": "ROI Performance",
-      "savings": "$45K SAVED THIS MONTH \u2022 275% YOY INCREASE",
+      "savings": "$45K SAVED THIS MONTH • 275% YOY INCREASE",
       "securityDesc": "Compliance & threat protection",
       "securityTitle": "Security Posture",
       "title": "LIVE COMMAND & CONTROL",
@@ -2937,7 +2937,7 @@
     },
     "TimeSeries": {
       "badges": {
-        "compliant": "\u2713 COMPLIANT",
+        "compliant": "✓ COMPLIANT",
         "decreasing": "Timeseries Badges Decreasing",
         "live": "Timeseries Badges Live",
         "projected": "Timeseries Badges Projected",
@@ -3386,11 +3386,11 @@
   "FloatingActions": {
     "chatSupport": {
       "actions": {
-        "bookDemo": "\ud83d\udcc5 Book a Platform Demo",
-        "connectSales": "\ud83d\udcac Connect with Sales",
-        "viewDocs": "\ud83d\udcda View Documentation"
+        "bookDemo": "📅 Book a Platform Demo",
+        "connectSales": "💬 Connect with Sales",
+        "viewDocs": "📚 View Documentation"
       },
-      "greeting": "\ud83d\udc4b Hi there! I'm your OmniGCloud assistant. How can I help you modernize your infrastructure today?",
+      "greeting": "👋 Hi there! I'm your OmniGCloud assistant. How can I help you modernize your infrastructure today?",
       "placeholder": "Type a message...",
       "replyTime": "Typically replies in 2m",
       "title": "Chat Support"
@@ -3419,7 +3419,7 @@
       "leadership": "OmniGCloud Leadership",
       "strategy": "Strategic Engineering"
     },
-    "copyright": "\u00a9 2026 OmniGCloud Inc. All rights reserved.",
+    "copyright": "© 2026 OmniGCloud Inc. All rights reserved.",
     "directory": "OmniGCloud Directory",
     "footerText": "OmniGCloud - Enforce Sovereignty.",
     "platform": {
@@ -3516,7 +3516,7 @@
     "readAnalysis": "Read Analysis",
     "roiInsights": "ROI INSIGHTS",
     "targetCloud": "Target Cloud",
-    "watermark": "\u00a9 CHAITANYA BHARATH GOPU \u2022 Exhibit A"
+    "watermark": "© CHAITANYA BHARATH GOPU • Exhibit A"
   },
   "GlobalError": {
     "cta": "Force Reboot",
@@ -3870,7 +3870,7 @@
           "q": "How do you handle PCI-DSS compliance in a multi-cloud setup?"
         },
         "item2": {
-          "a": "Absolutely. We help insurance firms automate 'catastrophic scaling'\u2014ensuring that during major events, their claims infrastructure can scale 10x instantly without violating data residency laws.",
+          "a": "Absolutely. We help insurance firms automate 'catastrophic scaling'—ensuring that during major events, their claims infrastructure can scale 10x instantly without violating data residency laws.",
           "q": "Can we use OmniGCloud for insurance claims processing?"
         },
         "item3": {
@@ -3915,7 +3915,7 @@
         "title": "Balancing Agility with Strict Governance"
       },
       "pillars": {
-        "item1Desc": "Most major banks still rely on COBOL or legacy Java monoliths for core ledgers. We provide the 'Modernization Factory'\u2014an AI-assisted pipeline that identifies business domains within the monolith and automatically generates containerized microservices blueprints to replace them incrementally.",
+        "item1Desc": "Most major banks still rely on COBOL or legacy Java monoliths for core ledgers. We provide the 'Modernization Factory'—an AI-assisted pipeline that identifies business domains within the monolith and automatically generates containerized microservices blueprints to replace them incrementally.",
         "item1Title": "1. Core Banking Deconstruction",
         "item2Desc": "We specialize in deploying RedHat OpenShift (OCP) and Azure Kubernetes (AKS) clusters with pre-hardened financial guardrails. We implement FIPS-validated encryption, strict VPC isolation, and automated secret rotations as part of the baseline platform build.",
         "item2Title": "2. Sovereign Managed Kubernetes",
@@ -3932,7 +3932,12 @@
       },
       "ai": {
         "desc": "AI-driven financial modeling with privacy guarantees."
-      }
+      },
+      "name": "Financial Services",
+      "desc": "Secure infrastructure for global banking, fintech, and digital assets with strict residency controls.",
+      "c1": "Escalating regulatory requirements for data localization and sovereignty.",
+      "c2": "High-frequency transactional integrity across distributed cloud regions.",
+      "c3": "Legacy monolith decomposition without disrupting core financial operations."
     },
     "healthcare": {
       "description": "Healthcare",
@@ -3984,21 +3989,41 @@
         "title": "Pillars"
       },
       "sol": "HIPAA-compliant federated learning nodes.",
-      "title": "Healthcare"
+      "title": "Healthcare",
+      "name": "Healthcare & Life Sciences",
+      "desc": "HIPAA-compliant foundations for electronic health records, clinical trials, and medical research.",
+      "c1": "Protecting PHI/PII while enabling cross-institutional research collaboration.",
+      "c2": "Ensuring high availability for mission-critical patient monitoring systems.",
+      "c3": "Interoperability between legacy EHR systems and modern cloud-native apps."
     },
     "insurance": {
-      "sol": "Actuarial data lakes with privacy-preserving analytics."
+      "sol": "Actuarial data lakes with privacy-preserving analytics.",
+      "name": "Insurance",
+      "desc": "Resilient platforms for claims processing and risk modeling with automated compliance guardrails.",
+      "c1": "Managing sensitive PII across diverse jurisdictional boundaries.",
+      "c2": "Scaling claims systems during catastrophic events without residency loss.",
+      "c3": "Modernizing actuarial data lakes for real-time risk assessment."
     },
     "logistics": {
       "sol": "Real-time supply chain digital twins.",
-      "title": "Logistics"
+      "title": "Logistics",
+      "name": "Logistics & Supply Chain",
+      "desc": "Real-time visibility and sovereign control for global trade networks and inventory management.",
+      "c1": "Maintaining data integrity across fragmented third-party logistics partners.",
+      "c2": "Real-time latency for automated warehouse and fulfillment centers.",
+      "c3": "Orchestrating cross-border trade documentation with immutable audit trails."
     },
-    "solution": "OmniGCloud Solution",
+    "solution": "Sovereign Solution",
     "solutionLabel": "Solution",
     "strategicChallenges": "Strategic Challenges",
-    "subtitle": "Empowering the next generation of regulated enterprise.",
+    "subtitle": "Providing the sovereign foundation for critical infrastructure across the world's most regulated sectors.",
     "telecom": {
-      "sol": "Carrier-grade NFV orchestration at the edge."
+      "sol": "Carrier-grade NFV orchestration at the edge.",
+      "name": "Telecommunications",
+      "desc": "Carrier-grade orchestration for 5G edge networks and high-throughput NFV deployments.",
+      "c1": "Low-latency orchestration across thousands of geo-distributed edge nodes.",
+      "c2": "Strict isolation of network functions for multi-tenant environments.",
+      "c3": "Seamless interoperation between public cloud and private radio access networks."
     },
     "title": "Industries"
   },
@@ -4090,7 +4115,7 @@
       "idLabel": "ID:",
       "messageLabel": "Message:",
       "nameLabel": "Name:",
-      "subject": "\ud83d\udd14 New Lead: {firstName} {lastName} - {submissionId}",
+      "subject": "🔔 New Lead: {firstName} {lastName} - {submissionId}",
       "submittedLabel": "Submitted:",
       "title": "New Lead Captured"
     },
@@ -4351,10 +4376,10 @@
       "docsLinkText": "Developer Portal",
       "impactDesc": "The deployment of these new protocols is already underway with our Tier-1 partners. We expect full rollout to the public Sovereign Cloud regions by Q3 2026.",
       "impactTitle": "Impact and Future Vision",
-      "intro": "LONDON, {date} \u2014 As enterprises face increasing pressure to maintain digital sovereignty while modernizing their infrastructure, OmniGCloud has released new capabilities addressing the critical needs of the {tag} sector.",
+      "intro": "LONDON, {date} — As enterprises face increasing pressure to maintain digital sovereignty while modernizing their infrastructure, OmniGCloud has released new capabilities addressing the critical needs of the {tag} sector.",
       "minRead": "5 min read",
       "quote": "This is not just about speed. It is about mathematical certainty that data never crosses a border it is not supposed to. We encode the law into the network layer.",
-      "quoteAuthor": "\u2014 Marcus Thorne, CTO",
+      "quoteAuthor": "— Marcus Thorne, CTO",
       "share": "Share Analysis",
       "solutionDesc": "By leveraging our new Autonomous Sovereign Orchestration (ASO) engine, we have demonstrated a reduction in cross-border latency by up to 40% while maintaining strict compliance locks.",
       "solutionTitle": "The OmniG Solution"
@@ -4448,15 +4473,15 @@
       "featureTitle": "REAL-TIME INSIGHT",
       "metrics": {
         "0": {
-          "l": "Azure East US \u279c OCP On-Prem",
+          "l": "Azure East US ➜ OCP On-Prem",
           "v": "12ms"
         },
         "1": {
-          "l": "AWS West 2 \u279c Azure Singapore",
+          "l": "AWS West 2 ➜ Azure Singapore",
           "v": "84ms"
         },
         "2": {
-          "l": "Privacy Node A \u279c Sovereign Mesh",
+          "l": "Privacy Node A ➜ Sovereign Mesh",
           "v": "4ms"
         }
       },
@@ -5039,7 +5064,7 @@
       "capability": "OmniGCloud Capability",
       "footer": {
         "_value": "Footer",
-        "copyright": "\u00a9 2026 OmniGCloud. All rights reserved."
+        "copyright": "© 2026 OmniGCloud. All rights reserved."
       },
       "legacy": "OmniGCloud Legacy",
       "limited": "OmniGCloud Limited",
@@ -5199,7 +5224,7 @@
       "title": "Value-Based Infrastructure Economy"
     },
     "footer": {
-      "legal": "NO CREDIT CARD REQUIRED \u2022 SOC-2 COMPLIANT ONBOARDING"
+      "legal": "NO CREDIT CARD REQUIRED • SOC-2 COMPLIANT ONBOARDING"
     },
     "hero": {
       "subtitle": "The standard for autonomous cloud governance.",
@@ -5311,12 +5336,12 @@
           "title": "Average ROI"
         },
         "comparison": {
-          "footer": "\u26a1 Switch to the most cost-effective provider automatically \u2022 50% average savings",
+          "footer": "⚡ Switch to the most cost-effective provider automatically • 50% average savings",
           "subtitle": "Average monthly spend for equivalent workloads across providers",
           "title": "Multi-Cloud Cost Comparison"
         },
         "costReduction": {
-          "savings": "\ud83d\udcb0 $45K+ Average Monthly Savings",
+          "savings": "💰 $45K+ Average Monthly Savings",
           "subtitle": "Average customer savings trajectory",
           "title": "Monthly Cost Reduction"
         }
@@ -5511,7 +5536,7 @@
       "backToRepository": "Back to Research Repository",
       "content": {
         "abstract": {
-          "text": "As modern web architectures shift toward distributed, server-side rendered (SSR) systems, ensuring consistent localized experiences has become computationally non-trivial. Conventional internationalization (i18n) frameworks prioritize \"graceful degradation,\" defaulting to English when localized assets are missing. This introduces \"Silent Regressions\"\u2014defects undetectable to standard monitors. This paper presents an independent, system-level design for <strong>Deterministic Multilingual QA</strong>. By implementing a proprietary three-layer defense model, the framework guarantees 100% surface area verification prior to deployment.",
+          "text": "As modern web architectures shift toward distributed, server-side rendered (SSR) systems, ensuring consistent localized experiences has become computationally non-trivial. Conventional internationalization (i18n) frameworks prioritize \"graceful degradation,\" defaulting to English when localized assets are missing. This introduces \"Silent Regressions\"—defects undetectable to standard monitors. This paper presents an independent, system-level design for <strong>Deterministic Multilingual QA</strong>. By implementing a proprietary three-layer defense model, the framework guarantees 100% surface area verification prior to deployment.",
           "title": "1. Abstract"
         },
         "contribution": {
@@ -5552,7 +5577,7 @@
         }
       },
       "footer": {
-        "copyright": "\u00a9 2026 CHAITANYA BHARATH GOPU. ALL RIGHTS RESERVED.",
+        "copyright": "© 2026 CHAITANYA BHARATH GOPU. ALL RIGHTS RESERVED.",
         "disclaimer1": "THIS RESEARCH IS PROTECTED BY INTERNATIONAL COPYRIGHT.",
         "disclaimer2": "UNAUTHORIZED REPRODUCTION IS STRICTLY PROHIBITED."
       },
@@ -5616,7 +5641,7 @@
       "footer": {
         "authorshipDisclaimer": "\"The software systems and architectural patterns documented herein were independently designed and implemented by CHAITANYA BHARATH GOPU to secure the global surface area of the OmniGCloud platform. Public dissemination is provided for technical knowledge sharing.\"",
         "authorshipRequest": "Authorship Declaration",
-        "copyright": "\u00a9 2026 CHAITANYA BHARATH GOPU. ALL RIGHTS RESERVED."
+        "copyright": "© 2026 CHAITANYA BHARATH GOPU. ALL RIGHTS RESERVED."
       },
       "frameworks": {
         "aecp": {
@@ -5691,7 +5716,7 @@
         "title": "4. Chaos Engineering"
       },
       "section5": {
-        "description": "Retrying failed requests is necessary but dangerous (retry storms). Smart clients use <strong>Exponential Backoff</strong> and <strong>Jitter</strong>. Crucially, the server must support <strong>Idempotency</strong>\u2014handling the same request multiple times without changing the result beyond the initial application.",
+        "description": "Retrying failed requests is necessary but dangerous (retry storms). Smart clients use <strong>Exponential Backoff</strong> and <strong>Jitter</strong>. Crucially, the server must support <strong>Idempotency</strong>—handling the same request multiple times without changing the result beyond the initial application.",
         "title": "5. Idempotency & Retry Strategies"
       }
     }
@@ -5700,7 +5725,7 @@
     "Blog": {
       "cioExitStrategy": {
         "economicTrap": {
-          "p1": "The most dangerous phrase in cloud procurement is \"It just works natively.\" Every native service consumed (AWS Athena, Azure CosmosDB, Google BigQuery) increases the technical and economic gravity of your data. For Global 2000 organizations, the 'Exit Cost'\u2014the combined cost of refactoring code, egressing data, and retraining staff\u2014now frequently exceeds the total OpEx of the cloud itself over a 5-year period.",
+          "p1": "The most dangerous phrase in cloud procurement is \"It just works natively.\" Every native service consumed (AWS Athena, Azure CosmosDB, Google BigQuery) increases the technical and economic gravity of your data. For Global 2000 organizations, the 'Exit Cost'—the combined cost of refactoring code, egressing data, and retraining staff—now frequently exceeds the total OpEx of the cloud itself over a 5-year period.",
           "p2": "This guide provides CIOs with a formal decision-making playbook to build <strong>Reversible Infrastructure</strong>.",
           "title": "The Economic Trap of 'Ease of Use'"
         },
@@ -5733,7 +5758,7 @@
               "q": "How do we talk to the board about the cost of portability?"
             },
             "2": {
-              "a": "Yes. In fact, that is the core of OmniGCloud\u2014using Generative Agents to autonomously map and refactor infrastructure intent into clean manifests for the next provider.",
+              "a": "Yes. In fact, that is the core of OmniGCloud—using Generative Agents to autonomously map and refactor infrastructure intent into clean manifests for the next provider.",
               "q": "Can we use AI to automate the exit strategy?"
             }
           },
@@ -5779,10 +5804,10 @@
       "cloudModernization": {
         "body": {
           "introTitle": "Introduction: Beyond Lift-and-Shift",
-          "p1": "For the last decade, the 'Cloud First' mantra led many organizations down a path of premature migration. Legacy applications\u2014often monolithic, stateful, and tightly coupled\u2014were 'lifted and shifted' into Virtual Machines (VMs) on public cloud providers. While this achieved data center closure, it failed to deliver the agility, scalability, and cost-efficiency promised by the cloud.",
+          "p1": "For the last decade, the 'Cloud First' mantra led many organizations down a path of premature migration. Legacy applications—often monolithic, stateful, and tightly coupled—were 'lifted and shifted' into Virtual Machines (VMs) on public cloud providers. While this achieved data center closure, it failed to deliver the agility, scalability, and cost-efficiency promised by the cloud.",
           "p2": "In 2026, the focus has shifted. The rise of sovereignty mandates (GDPR, EU AI Act) and the emergence of high-density container orchestration (OpenShift, Kubernetes) have made <strong>Modernization</strong> the primary vehicle for digital transformation. This guide outlines the strategic patterns required to deconstruct legacy systems and rebuild them for a multi-cloud, sovereign future.",
           "pillar1": {
-            "text": "Modernization cannot begin without a deep understanding of the current state. We advocate for 'Autonomous Discovery'\u2014using AI-driven scanners to map not just servers, but the transactional flows between services. This reveals the 'gravity' of your data and identifies natural fault lines for service decomposition.",
+            "text": "Modernization cannot begin without a deep understanding of the current state. We advocate for 'Autonomous Discovery'—using AI-driven scanners to map not just servers, but the transactional flows between services. This reveals the 'gravity' of your data and identifies natural fault lines for service decomposition.",
             "title": "1. Autonomous Discovery"
           },
           "pillar2": {
@@ -5790,7 +5815,7 @@
             "title": "2. The Strangler Fig Pattern"
           },
           "pillar3": {
-            "text": "Data is the most difficult thing to modernize. Moving from a single, massive Oracle or SQL Server instance to distributed, service-specific databases requires careful choreography. We recommend 'Database Shadowing'\u2014where new microservices write to their own schema while a synchronization engine keeps the legacy database updated in real-time until the cutover is complete.",
+            "text": "Data is the most difficult thing to modernize. Moving from a single, massive Oracle or SQL Server instance to distributed, service-specific databases requires careful choreography. We recommend 'Database Shadowing'—where new microservices write to their own schema while a synchronization engine keeps the legacy database updated in real-time until the cutover is complete.",
             "title": "3. Database Refactoring"
           },
           "pillar4": {
@@ -5814,7 +5839,7 @@
               "q": "What is the ROI on modernization vs. migration?"
             },
             "1": {
-              "a": "We utilize 'Data Kernels'\u2014managed, resilient storage layers that provide persistent volumes to containers while ensuring bi-directional state sync across regions.",
+              "a": "We utilize 'Data Kernels'—managed, resilient storage layers that provide persistent volumes to containers while ensuring bi-directional state sync across regions.",
               "q": "How do we handle stateful legacy workloads?"
             },
             "2": {
@@ -5853,7 +5878,7 @@
       "devopsBestPractices": {
         "body": {
           "dist1": {
-            "text": "Stop using imperative UI changes. Everything\u2014from firewall rules to ingress certificates\u2014must live in Git. We recommend the <strong>Pull-based GitOps model</strong> (using ArgoCD or Flux). This eliminates 'Config Drift' because the cluster itself is responsible for ensuring its state matches the repository, rather than a CI tool 'pushing' changes blindly.",
+            "text": "Stop using imperative UI changes. Everything—from firewall rules to ingress certificates—must live in Git. We recommend the <strong>Pull-based GitOps model</strong> (using ArgoCD or Flux). This eliminates 'Config Drift' because the cluster itself is responsible for ensuring its state matches the repository, rather than a CI tool 'pushing' changes blindly.",
             "title": "1. Standardize on Declarative GitOps"
           },
           "dist2": {
@@ -5899,7 +5924,7 @@
           "titleSuffix": "for the Sovereign Era"
         },
         "intro": {
-          "quote": "\"The transition from DevOps to Platform Engineering is not just a title change\u2014it's a fundamental shift from manual intervention to institutionalized automation.\""
+          "quote": "\"The transition from DevOps to Platform Engineering is not just a title change—it's a fundamental shift from manual intervention to institutionalized automation.\""
         },
         "nav": {
           "back": "Back to Impact Hub",
@@ -5908,7 +5933,7 @@
       },
       "sovereigntyFramework": {
         "body": {
-          "exitGateText": "Every architectural decision that utilizes a provider-specific service (like AWS Lambda or Azure CosmosDB) creates an 'Exit Debt.' The Sovereignty Framework mandates that for every $1 spent on proprietary services, the organization must maintain a 'Sovereign Shadow Plan'\u2014a validated architectural path for moving that service to an open-source or containerized equivalent.",
+          "exitGateText": "Every architectural decision that utilizes a provider-specific service (like AWS Lambda or Azure CosmosDB) creates an 'Exit Debt.' The Sovereignty Framework mandates that for every $1 spent on proprietary services, the organization must maintain a 'Sovereign Shadow Plan'—a validated architectural path for moving that service to an open-source or containerized equivalent.",
           "exitGateTitle": "Formalizing the Exit Gate",
           "frameworkStepsTitle": "Strategic Framework Steps",
           "grid": {
@@ -5922,7 +5947,7 @@
             }
           },
           "introTitle": "Foundations of Digital Sovereignty",
-          "mathBody": "Sovereignty_Index (Si) = \u03a3 (Pi / Ei) * Gi <br /><br /> <span class=\"opacity-50 text-[10px]\">Where:<br />Pi = Resource Portability (0-1)<br />Ei = Egress/Exit Cost (Logarithmic Scale)<br />Gi = Governance Alignment (Jurisdictional weight)</span>",
+          "mathBody": "Sovereignty_Index (Si) = Σ (Pi / Ei) * Gi <br /><br /> <span class=\"opacity-50 text-[10px]\">Where:<br />Pi = Resource Portability (0-1)<br />Ei = Egress/Exit Cost (Logarithmic Scale)<br />Gi = Governance Alignment (Jurisdictional weight)</span>",
           "mathTitle": "The Mathematical Constraint",
           "nodesText": "We transition away from 'Cloud Regions' to 'Sovereign Nodes.' A Sovereign Node is a self-contained unit of governance integrated into a global fabric. It encapsulates its own policy evaluation, data residency gates, and identity perimeter.",
           "nodesTitle": "Implementing Sovereign Nodes",
@@ -6342,7 +6367,7 @@
         },
         "mesh": "GPU_MESH",
         "p1": "AI teams are blocked by lack of GPU availability and high egress costs for large model training. OmniGCloud unifies distributed GPU capacity into a single, sovereign compute fabric.",
-        "quote": "\"OmniGCloud allowed us to use GPUs across three different providers as if they were in one data center, reducing training time by 60%.\" \u2014 Head of AI Engineering",
+        "quote": "\"OmniGCloud allowed us to use GPUs across three different providers as if they were in one data center, reducing training time by 60%.\" — Head of AI Engineering",
         "title": "Fragmented Compute"
       },
       "description": "Ai-cloud-platform",
@@ -6397,7 +6422,7 @@
           "3": "Complex inter-service coupling"
         },
         "p1": "Decades-old Java or .NET applications often contain millions of lines of tightly coupled logic. Manual refactoring is slow, error-prone, and expensive. OmniGCloud uses AI to deconstruct these monoliths into manageable services.",
-        "quote": "\"Our legacy CORE-banking system was a black box. OmniGCloud's AI scan mapped 4,000 hidden dependencies in 24 hours.\" \u2014 CTO, Regional Bank",
+        "quote": "\"Our legacy CORE-banking system was a black box. OmniGCloud's AI scan mapped 4,000 hidden dependencies in 24 hours.\" — CTO, Regional Bank",
         "title": "Fossilized Codebases"
       },
       "description": "Application-modernization",
@@ -6407,7 +6432,7 @@
           "q": "Which languages do you support?"
         },
         "item1": {
-          "a": "We focus on 'Managed Assistance'\u2014generating the boilerplate and refactoring suggestions that developers can review and commit using our G-Dev tools.",
+          "a": "We focus on 'Managed Assistance'—generating the boilerplate and refactoring suggestions that developers can review and commit using our G-Dev tools.",
           "q": "Do you provide automated code re-writing?"
         },
         "item2": {
@@ -6518,12 +6543,12 @@
             "title": "Unit Economics"
           }
         },
-        "p1": "Traditional cloud cost management is reactive\u2014you get a bill, and then you try to fix it. OmniGCloud introduces <strong>Proactive FinOps</strong>. Our engine integrates directly into your orchestration layer, adjusting resource allocation in real-time based on actual application demand and spot-market availability.",
-        "p2": "We don't just find 'Zombie VMs'; we identify 'Spectral Costs'\u2014hidden networking charges, egress fees, and underutilized storage tiers that often account for 20% of an enterprise's unmanaged spend.",
+        "p1": "Traditional cloud cost management is reactive—you get a bill, and then you try to fix it. OmniGCloud introduces <strong>Proactive FinOps</strong>. Our engine integrates directly into your orchestration layer, adjusting resource allocation in real-time based on actual application demand and spot-market availability.",
+        "p2": "We don't just find 'Zombie VMs'; we identify 'Spectral Costs'—hidden networking charges, egress fees, and underutilized storage tiers that often account for 20% of an enterprise's unmanaged spend.",
         "title": "Data-Driven Cost Mastery"
       },
       "roadmap": {
-        "item1Desc": "We implement our multi-cloud dashboard to provide a single pane of glass for your AWS, Azure, and OCI spend. We identify immediate 'low-hanging fruit'\u2014unused resources and unattached volumes.",
+        "item1Desc": "We implement our multi-cloud dashboard to provide a single pane of glass for your AWS, Azure, and OCI spend. We identify immediate 'low-hanging fruit'—unused resources and unattached volumes.",
         "item1Title": "Month 1: The Audit & Visibility Phase",
         "item2Desc": "We deploy automated policies that 'kill' non-compliant or idle developer environments after hours. We also initiate automated Reserved Instance (RI) and Savings Plan management to lock in the best rates.",
         "item2Title": "Month 2: Automated Governance",
@@ -6610,7 +6635,7 @@
         },
         "lostRoi": "LOST_ROI",
         "p1": "Studies show that 70% of cloud migrations fail to deliver expected ROI because organizations simply move legacy monoliths to VM-based cloud instances. This creates Cloud Technical Debt, higher latency, and redundant operational costs without any of the agility benefits of cloud-native architecture.",
-        "quote": "\"We moved 500 applications to AWS, but our hosting bill doubled and our release cycle didn't change.\" \u2014 Fortune 500 CIO",
+        "quote": "\"We moved 500 applications to AWS, but our hosting bill doubled and our release cycle didn't change.\" — Fortune 500 CIO",
         "title": "The 'Migration Trap' in Enterprise IT"
       },
       "description": "Cloud-modernization",
@@ -6654,7 +6679,7 @@
         "pattern1Title": "Containerization & Re-platforming",
         "pattern2Desc": "For mission-critical monoliths, we perform a deep deconvolution based on Domain-Driven Design (DDD). We identify 'Bounded Contexts' within the monolith and extract them into independent microservices. This eliminates the 'Spaghetti Dependency' problem, allowing your teams to deploy features 5x faster than before.",
         "pattern2Title": "Domain-Driven Decomposition",
-        "pattern3Desc": "In regulated industries, modernization must account for sovereignty. Our platform includes native 'Residency Gating'\u2014mechanisms that ensure your application state and user data remain within specific geographic boundaries (e.g., EU, UAE, or USA) regardless of where the compute nodes are located.",
+        "pattern3Desc": "In regulated industries, modernization must account for sovereignty. Our platform includes native 'Residency Gating'—mechanisms that ensure your application state and user data remain within specific geographic boundaries (e.g., EU, UAE, or USA) regardless of where the compute nodes are located.",
         "pattern3Title": "Data Residency Gating",
         "title": "Strategic Modernization Patterns"
       },
@@ -6681,7 +6706,7 @@
       "evolution": {
         "badge": "Transitioning to Platform Engineering",
         "description1": "For years, DevOps was synonymous with Jenkins and manual YAML configuration. In the era of sovereign cloud and AI-driven infrastructure, this approach creates bottlenecks. OmniGCloud introduces <strong>Autonomous DevOps</strong>: an engineering model where infrastructure as code (IaC) is not just written, but continuously validated against global compliance mandates in real-time.",
-        "description2": "Our engineers deconstruct your delivery bottlenecks. By implementing 100% immutable pipelines, we ensure that every deployment\u2014whether to a regional Azure node or a sovereign OpenShift cluster\u2014is identical, secure, and fully audited.",
+        "description2": "Our engineers deconstruct your delivery bottlenecks. By implementing 100% immutable pipelines, we ensure that every deployment—whether to a regional Azure node or a sovereign OpenShift cluster—is identical, secure, and fully audited.",
         "features": {
           "drift": {
             "desc": "Instantly detect and reverse unauthorized manual changes to infrastructure state.",
@@ -6819,7 +6844,7 @@
             "title": "API Gateway & Mesh"
           },
           "persistence": {
-            "desc": "Select the right database for the right service\u2014from PosgreSQL to high-speed Redis.",
+            "desc": "Select the right database for the right service—from PosgreSQL to high-speed Redis.",
             "title": "Polyglot Persistence"
           }
         },
@@ -6924,7 +6949,7 @@
     },
     "industries": {
       "badge": "VERTICALS",
-      "subtitle": "We don\u2019t just offer generic cloud services. We build compliance-native environments tailored to the specific regulatory frameworks of your industry.",
+      "subtitle": "We don’t just offer generic cloud services. We build compliance-native environments tailored to the specific regulatory frameworks of your industry.",
       "title": "Industry-Specific Constraints"
     },
     "research": {
@@ -7267,11 +7292,11 @@
     },
     "footer": {
       "_value": "Available in PDF / ePub formats.",
-      "copyright": "\u00a9 2026 OmniGCloud. All rights reserved.",
+      "copyright": "© 2026 OmniGCloud. All rights reserved.",
       "lab": "Research Labs"
     },
     "footerDetails": {
-      "copyright": "\u00a9 2026 OmniGCloud. All rights reserved.",
+      "copyright": "© 2026 OmniGCloud. All rights reserved.",
       "lab": "OmniGCloud Research Lab"
     },
     "impact": {
@@ -7347,11 +7372,11 @@
     },
     "section1": {
       "box": {
-        "content": "In plain terms, existing systems attempt to manage complexity by adding more human managers; this architecture proves that approach is mathematically impossible at scale. Instead, it removes the human operator entirely from the safety loop\u2014a counter-intuitive design choice that standard industry practices actively discourage.",
+        "content": "In plain terms, existing systems attempt to manage complexity by adding more human managers; this architecture proves that approach is mathematically impossible at scale. Instead, it removes the human operator entirely from the safety loop—a counter-intuitive design choice that standard industry practices actively discourage.",
         "title": "Analysis of Non-Obviousness:"
       },
       "p1": "This reference document establishes the <strong>Autonomous Enterprise Control Plane (AECP)</strong> as a distinct and original architectural class. It mandates a structural inversion of enterprise IT governance, defining a vendor-neutral, policy-driven layer where decision intelligence is strictly decoupled from execution mechanics.",
-      "p2": "The prevailing industry failure mode\u2014systemic compliance drift and security fragmentation\u2014is not an operational error but an architectural defect. The \"Human-in-the-Loop\" model has reached its mathematical limit in distributed systems, creating a vulnerability that threatens the integrity of critical digital infrastructure.",
+      "p2": "The prevailing industry failure mode—systemic compliance drift and security fragmentation—is not an operational error but an architectural defect. The \"Human-in-the-Loop\" model has reached its mathematical limit in distributed systems, creating a vulnerability that threatens the integrity of critical digital infrastructure.",
       "p3": "By embedding policy as executable logic, AECP provides the industry with the <strong>missing structural standard</strong> required to transition from manual orchestration to autonomous state reconciliation. This contribution renders non-compliant states architecturally unreachable.",
       "title": "1. Executive Analysis"
     },
@@ -7486,11 +7511,11 @@
         "content": "Prior to this work, \"Governance\" was a legal document referenced by engineers. This architecture transforms Governance into a physical constraint of the software itself. This implies that the field must now treat code not just as instructions, but as a binding legal contract, fundamentally changing how enterprise software is audited.",
         "title": "Shift in Field Governance:"
       },
-      "p1": "<strong>Judicial Weight:</strong> The formalization of AECP represents a shift from engineering implementation to <strong>architectural jurisprudence</strong>. By establishing the Decision Plane as an orthogonal, actuarial entity, this work demonstrates the expert judgment required to distinguish between <em>operational convenience</em> and <em>systemic integrity</em>\u2014a distinction that defines the boundary between standard DevOps and high-assurance Control Planes.",
+      "p1": "<strong>Judicial Weight:</strong> The formalization of AECP represents a shift from engineering implementation to <strong>architectural jurisprudence</strong>. By establishing the Decision Plane as an orthogonal, actuarial entity, this work demonstrates the expert judgment required to distinguish between <em>operational convenience</em> and <em>systemic integrity</em>—a distinction that defines the boundary between standard DevOps and high-assurance Control Planes.",
       "p2": "This architecture changes enterprise platform thinking by asserting that <strong>Policy is Code</strong> and <strong>Decision is Actuarial</strong>. It establishes a foundational standard for the field, providing the mathematical basis for the next generation of autonomous infrastructure. The significance is not in the optimization of existing workflows, but in the <strong>structural elimination</strong> of the entire category of \"operational toil,\" effectively changing the economic basis of software delivery.",
       "subsection": {
-        "p1": "In the domain of distributed systems engineering, the \"Path of Least Resistance\" is to build additive automation\u2014scripts that sit on top of existing cloud inputs to accelerate manual tasks. This approach is highly rewarded in standard engineering environments because it produces immediate, visible velocity gains. Consequently, virtually all platform teams drift toward \"faster imperatives\" rather than \"autonomous declaratives.\"",
-        "p2": "The AECP architecture required a deliberate and difficult rejection of this industry consensus. To insist on a \"Sovereign Control Plane\" is to effectively declare that the underlying cloud providers\u2014billion-dollar ecosystems engineered by the world's largest technology companies\u2014are untrustworthy at the governance layer. This is a judgment that very few architects are willing to make, as it incurs significant upfront political and technical friction.",
+        "p1": "In the domain of distributed systems engineering, the \"Path of Least Resistance\" is to build additive automation—scripts that sit on top of existing cloud inputs to accelerate manual tasks. This approach is highly rewarded in standard engineering environments because it produces immediate, visible velocity gains. Consequently, virtually all platform teams drift toward \"faster imperatives\" rather than \"autonomous declaratives.\"",
+        "p2": "The AECP architecture required a deliberate and difficult rejection of this industry consensus. To insist on a \"Sovereign Control Plane\" is to effectively declare that the underlying cloud providers—billion-dollar ecosystems engineered by the world's largest technology companies—are untrustworthy at the governance layer. This is a judgment that very few architects are willing to make, as it incurs significant upfront political and technical friction.",
         "p3": "Furthermore, separating \"Decision\" from \"Execution\" requires the architect to abandon the convenience of native vendor tools in favor of a mathematically rigorous, vendor-agnostic graph theory. This level of abstraction is rare because it demands a dual-competency: the practical engineering skill to understand the cloud substrates, combined with the theoretical discipline to reject their native control mechanisms. The resulting architecture is not merely a technical assembly; it is a product of extraordinary foresight, prioritizing long-term systemic survival over short-term operational ease.",
         "title": "Why This Architecture Required Extraordinary Judgment"
       },
@@ -7569,7 +7594,7 @@
         "title": "Figure 3: Differentiation of Responsibilities"
       },
       "p1": "The fundamental flaw in DevOps tooling is the conflation of \"Goal\" and \"Method.\" AECP mandates strict separation. The Control Plane decides; the Execution Plane obeys.",
-      "p2": "<strong>Architectural Judgment:</strong> The decision to strictly decouple these planes is non-trivial. While this separation increases initial integration complexity, it prevents the catastrophic \"State Contamination\" scenarios observed in coupled systems, where accidental drift becomes indistinguishable from authorized change\u2014an <strong>irreversible error</strong> in regulated environments.",
+      "p2": "<strong>Architectural Judgment:</strong> The decision to strictly decouple these planes is non-trivial. While this separation increases initial integration complexity, it prevents the catastrophic \"State Contamination\" scenarios observed in coupled systems, where accidental drift becomes indistinguishable from authorized change—an <strong>irreversible error</strong> in regulated environments.",
       "title": "5. Separation of Concerns: Decision vs. Execution"
     },
     "section6": {
@@ -7628,7 +7653,7 @@
     "title": "The Autonomous Sovereign Cloud Protocol",
     "version": "8.4 (Stable)",
     "version_label": "Whitepaper Version_label",
-    "watermark": "OMNIGCLOUD RESEARCH  \u2022  COPYRIGHT 2026",
+    "watermark": "OMNIGCLOUD RESEARCH  •  COPYRIGHT 2026",
     "badge": "LATEST RESEARCH",
     "caseStudies": {
       "finance": {
@@ -7681,7 +7706,7 @@
         },
         "interpreter": "Intent Interpreter",
         "reconciliation": {
-          "desc": "(Current State \u2192 Target State)",
+          "desc": "(Current State → Target State)",
           "title": "State Reconciliation Loop"
         }
       },
@@ -7832,7 +7857,7 @@
         },
         "interpreter": "Intent Interpreter",
         "reconciliation": {
-          "desc": "(Current State \u2192 Target State)",
+          "desc": "(Current State → Target State)",
           "title": "State Reconciliation Loop"
         }
       },
@@ -7906,7 +7931,7 @@
     "download_title": "Download the Whitepaper",
     "footer": {
       "_value": "Available in PDF / ePub formats.",
-      "copyright": "\u00a9 2026 OmniGCloud. All rights reserved.",
+      "copyright": "© 2026 OmniGCloud. All rights reserved.",
       "lab": "Research Labs"
     },
     "impact": {
@@ -7968,7 +7993,7 @@
         "signalDesc": "Multi-cloud Telemetry",
         "signalTitle": "1. SIGNAL",
         "stateReconciliation": "State Reconciliation Loop",
-        "stateReconciliationDesc": "(Current State \u2192 Target State)",
+        "stateReconciliationDesc": "(Current State → Target State)",
         "validation": "Validation Diagram",
         "validationDesc": "Validation process diagram"
       }
