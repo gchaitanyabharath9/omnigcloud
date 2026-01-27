@@ -83,6 +83,10 @@ export const PaperLanding = ({ paper, locale }: PaperLandingProps) => {
                 const sectionDiagram = tPapers(`${sectionKey}.diagram`);
                 const sectionCaption = tPapers(`${sectionKey}.caption`);
 
+                // Check for additional diagrams (diagram2, caption2)
+                const sectionDiagram2 = tPapers(`${sectionKey}.diagram2`);
+                const sectionCaption2 = tPapers(`${sectionKey}.caption2`);
+
                 // If the returned title is just the key, and we are not on section 0, maybe skip?
                 // But we requested "4 diagrams per paper", so we assume 4 sections exist.
 
@@ -101,10 +105,11 @@ export const PaperLanding = ({ paper, locale }: PaperLandingProps) => {
                       ))}
                     </div>
 
+                    {/* Primary diagram */}
                     {sectionDiagram && sectionDiagram !== `${NS}.${sectionKey}.diagram` && (
                       <div className="my-10 bg-white/[0.02] border border-white/5 rounded-2xl p-6 md:p-8">
                         {sectionDiagram.startsWith("graph") || sectionDiagram.startsWith("sequenceDiagram") || sectionDiagram.startsWith("flowchart") || sectionDiagram.startsWith("C4") ? (
-                          <MermaidDiagram chart={sectionDiagram} caption={sectionCaption !== `${NS}.${sectionKey}.caption` ? sectionCaption : ""} figureId={`Fig-${paper.id.toUpperCase()}-${index + 1}`} />
+                          <MermaidDiagram chart={sectionDiagram} caption={sectionCaption !== `${NS}.${sectionKey}.caption` ? sectionCaption : ""} figureId={`Fig-${paper.id.toUpperCase()}-${index + 1}a`} />
                         ) : (
                           <figure>
                             <div className="bg-card/50 border border-white/10 rounded-lg p-4 overflow-hidden flex justify-center items-center">
@@ -112,8 +117,29 @@ export const PaperLanding = ({ paper, locale }: PaperLandingProps) => {
                             </div>
                             {sectionCaption && sectionCaption !== `${NS}.${sectionKey}.caption` && (
                               <figcaption className="mt-3 text-center text-sm text-muted-foreground font-mono">
-                                <span className="font-bold text-primary mr-2">Fig-{paper.id.toUpperCase()}-{index + 1}:</span>
+                                <span className="font-bold text-primary mr-2">Fig-{paper.id.toUpperCase()}-{index + 1}a:</span>
                                 {sectionCaption}
+                              </figcaption>
+                            )}
+                          </figure>
+                        )}
+                      </div>
+                    )}
+
+                    {/* Secondary diagram (if exists) */}
+                    {sectionDiagram2 && sectionDiagram2 !== `${NS}.${sectionKey}.diagram2` && (
+                      <div className="my-10 bg-white/[0.02] border border-white/5 rounded-2xl p-6 md:p-8">
+                        {sectionDiagram2.startsWith("graph") || sectionDiagram2.startsWith("sequenceDiagram") || sectionDiagram2.startsWith("flowchart") || sectionDiagram2.startsWith("C4") ? (
+                          <MermaidDiagram chart={sectionDiagram2} caption={sectionCaption2 !== `${NS}.${sectionKey}.caption2` ? sectionCaption2 : ""} figureId={`Fig-${paper.id.toUpperCase()}-${index + 1}b`} />
+                        ) : (
+                          <figure>
+                            <div className="bg-card/50 border border-white/10 rounded-lg p-4 overflow-hidden flex justify-center items-center">
+                              <img src={sectionDiagram2} alt={sectionCaption2 || "Diagram"} className="max-w-full h-auto rounded shadow-xl" />
+                            </div>
+                            {sectionCaption2 && sectionCaption2 !== `${NS}.${sectionKey}.caption2` && (
+                              <figcaption className="mt-3 text-center text-sm text-muted-foreground font-mono">
+                                <span className="font-bold text-primary mr-2">Fig-{paper.id.toUpperCase()}-{index + 1}b:</span>
+                                {sectionCaption2}
                               </figcaption>
                             )}
                           </figure>
