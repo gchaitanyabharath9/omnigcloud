@@ -22,6 +22,7 @@ export const PUBLIC_ROUTES_MANIFEST: RouteEntry[] = [
 
   // Documentation & Resources
   { path: "/docs", priority: 0.9, changeFreq: "weekly" },
+  { path: "/resources/c4-tooling", priority: 0.8, changeFreq: "monthly" },
   { path: "/docs/whitepaper", priority: 0.9, changeFreq: "weekly" },
   { path: "/docs/architecture", priority: 0.8, changeFreq: "monthly" },
   { path: "/docs/governance", priority: 0.8, changeFreq: "monthly" },
@@ -58,12 +59,15 @@ export const PUBLIC_ROUTES_MANIFEST: RouteEntry[] = [
     priority: 0.8,
     changeFreq: "monthly",
   },
-  { path: "/research/papers/a6-adaptive-policy-enforcement", priority: 0.8, changeFreq: "monthly" },
+  {
+    path: "/research/papers/a6-adaptive-policy-enforcement",
+    priority: 0.8,
+    changeFreq: "monthly",
+  },
   { path: "/research/papers/aecp", priority: 0.8, changeFreq: "monthly" },
   { path: "/research/papers/scholarly-article", priority: 0.8, changeFreq: "monthly" },
-  { path: "/research/distributed-systems-resilience", priority: 0.8, changeFreq: "monthly" },
   {
-    path: "/research/automated-multilingual-quality-assurance",
+    path: "/research/papers/automated-multilingual-quality-assurance",
     priority: 0.8,
     changeFreq: "monthly",
   },

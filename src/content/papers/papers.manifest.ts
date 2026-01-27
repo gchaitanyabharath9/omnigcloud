@@ -51,7 +51,7 @@ export const papersManifest: PaperManifestItem[] = [
     links: {
       arxiv: "https://arxiv.org/submit/placeholder",
     },
-    lastUpdated: "2026-01-21",
+    lastUpdated: "2025-01-05",
   },
   {
     id: "a3",
@@ -148,5 +148,21 @@ export const papersManifest: PaperManifestItem[] = [
       arxiv: "https://arxiv.org/submit/placeholder",
     },
     lastUpdated: "2026-01-21",
+  },
+  {
+    id: "qa1",
+    slug: "automated-multilingual-quality-assurance",
+    titleKey: "Papers.Items.qa1.title",
+    subtitleKey: "Papers.Items.qa1.subtitle",
+    abstractKey: "Papers.Items.qa1.abstract",
+    authorsKey: "Papers.Items.qa1.authors",
+    keywordsKey: "Papers.Items.qa1.keywords",
+    diagramKey: "Papers.Items.qa1.diagram",
+    diagramCaptionKey: "Papers.Items.qa1.caption",
+    status: "PUBLISHED",
+    links: {
+      arxiv: "https://arxiv.org/submit/placeholder",
+    },
+    lastUpdated: "2024-12-01",
   },
 ];

@@ -231,6 +231,23 @@ export const PaperLanding = ({ paper, locale }: PaperLandingProps) => {
               </div>
             </div>
 
+            {/* Tooling Cross-Link */}
+            <div className="p-6 rounded-xl bg-gradient-to-br from-indigo-500/10 to-purple-500/10 border border-indigo-500/20">
+              <h3 className="text-sm font-bold text-white uppercase tracking-wider mb-2 flex items-center gap-2">
+                <Library size={14} className="text-indigo-400" />
+                {tPapers("tooling_card.title")}
+              </h3>
+              <p className="text-xs text-slate-400 mb-4 leading-relaxed">
+                {tPapers("tooling_card.text")}
+              </p>
+              <Link
+                href="/resources/c4-tooling"
+                className="inline-flex items-center gap-2 text-xs font-bold text-indigo-400 hover:text-indigo-300 transition-colors uppercase tracking-wide"
+              >
+                {tPapers("tooling_card.cta")} <ArrowRight size={12} />
+              </Link>
+            </div>
+
             {/* Citation */}
             <div className="p-6 rounded-xl bg-white/5 border border-white/10">
               <h3 className="text-sm font-bold text-white uppercase tracking-wider mb-4 border-b border-white/5 pb-2">
