@@ -135,12 +135,12 @@
     },
     "diagram": {
       "labels": {
-        "brain": "AI_BRAIN_V2 (HI)",
-        "mesh": "SOVEREIGN_MESH (HI)",
-        "sync": "POLICY_SYNC (HI)"
+        "brain": "Control Plane",
+        "mesh": "Service Mesh",
+        "sync": "State Sync"
       },
-      "subtitle": "Reference Model v8.4.2 // Autonomous Orchestration (HI)",
-      "title": "OmniGCloud Unified Control Plane (HI)"
+      "subtitle": "High-level architectural components",
+      "title": "System Model"
     },
     "hero": {
       "badge": "Architecture & System Design (HI)",
@@ -759,19 +759,19 @@
           "title": "Formal Verification of Distributed Consensus in Sovereign Clouds"
         }
       },
+      "figures_index": {
+        "column_caption": "Caption",
+        "column_id": "Figure ID",
+        "column_type": "Type",
+        "footer_note": "{count} figures total in this paper.",
+        "heading": "Figures Index"
+      },
       "sample_banner": {
         "badge": "Public Summary / Sample",
-        "description": "Full paper available for editorial/reviewer evaluation upon request.",
         "cta": "Request Full Paper",
-        "email_subject_prefix": "Request for Full Paper",
-        "email_body": "I am interested in reviewing the full paper for editorial or academic purposes. Please provide access.\n\nThank you."
-      },
-      "figures_index": {
-        "heading": "Figures Index",
-        "column_id": "Figure ID",
-        "column_caption": "Caption",
-        "column_type": "Type",
-        "footer_note": "{count} figures total in this paper."
+        "description": "Full paper available for editorial/reviewer evaluation upon request.",
+        "email_body": "I am interested in reviewing the full paper for editorial or academic purposes. Please provide access.\n\nThank you.",
+        "email_subject_prefix": "Request for Full Paper"
       }
     },
     "abstract": {
@@ -1965,7 +1965,8 @@
     "section4": {
       "description": "A deep dive into the mathematical foundations and performance breakthroughs of the AECP engine.",
       "diagram2": {
-        "title": "Sovereign Framework Control"
+        "caption": "System overview",
+        "title": "Architecture Diagram"
       },
       "hypothesis": "OmniGCloud Hypothesis",
       "hypothesisTitle": "OmniGCloud Hypothesistitle",
@@ -4806,35 +4807,35 @@
         "sections": {
           "0": {
             "caption": "Figure 1: High-Level Decoupling Architecture",
+            "caption2": "Figure A1-1b: Four-Plane Architecture Model showing Data, Control, Governance, and Persistence planes with synchronous and asynchronous communication patterns.",
             "content": "In an era of increasing geopolitical fragmentation and regulatory stringency, the concept of 'digital sovereignty' has moved from a theoretical ideal to a business imperative. Enterprises operating across multiple jurisdictions face a complex matrix of data residency laws, such as GDPR in Europe, CCPA in California, and various localization mandates in Asia. Traditional cloud architectures, often deeply coupled with specific hyperscale providers (AWS, Azure, GCP), create significant vendor lock-in risks that threaten long-term operational autonomy.\n\nThis paper introduces a comprehensive reference architecture for the 'Cloud-Native Enterprise'—an organizational state where business logic is strictly decoupled from underlying infrastructure. By leveraging a unified control plane and standardized infrastructure adapters, organizations can achieve true portability and compliance resilience. We argue that sovereignty is not merely about where data is stored, but about who controls the keys, the identity provider, and the policy enforcement points.",
             "diagram": "graph TD; A[Business Core] -->|API| B(Control Plane); B -->|Orchestrate| C{Infra Adapters}; C -->|Deploy| D[AWS Region A]; C -->|Deploy| E[Azure Region B]; C -->|Deploy| F[On-Premises]; style B fill:#f9f,stroke:#333,stroke-width:2px; style A fill:#ccf",
-            "title": "Introduction",
             "diagram2": "graph TB\\nsubgraph Data_Plane[Data Plane - Synchronous]\\n  API[API Gateway<br/>Rate Limiting]\\n  Services[Business Services<br/>Stateless]\\n  Mesh[Service Mesh<br/>Envoy Proxy]\\n  WASM[Local Policy Cache<br/>WASM Runtime]\\nend\\n\\nsubgraph Control_Plane[Control Plane - Asynchronous]\\n  Registry[Service Registry<br/>Consul/etcd]\\n  Config[Config Server<br/>Feature Flags]\\n  Health[Health Monitor<br/>Auto-scaling]\\nend\\n\\nsubgraph Governance_Plane[Governance Plane - Asynchronous]\\n  Compiler[Policy Compiler<br/>Rego → WASM]\\n  Audit[Audit Aggregator<br/>Compliance]\\n  Threat[Threat Intel<br/>CVE Feeds]\\nend\\n\\nsubgraph Persistence_Plane[Persistence Plane - Synchronous]\\n  DB[(Primary DB<br/>PostgreSQL)]\\n  Cache[(Redis Cache<br/>Hot Data)]\\n  Storage[(Object Storage<br/>S3/GCS)]\\nend\\n\\nAPI --> Services\\nServices --> Mesh\\nMesh --> WASM\\nServices --> DB\\nServices --> Cache\\n\\nConfig -.->|Async Push| Mesh\\nRegistry -.->|Service Discovery| Mesh\\nCompiler -.->|WASM Deploy| WASM\\nWASM -.->|Decision Log| Audit\\n\\nstyle Data_Plane fill:#E8F5E9,stroke:#4CAF50,stroke-width:3px\\nstyle Control_Plane fill:#E3F2FD,stroke:#2196F3,stroke-width:3px\\nstyle Governance_Plane fill:#FFF3E0,stroke:#FF9800,stroke-width:3px\\nstyle Persistence_Plane fill:#FCE4EC,stroke:#E91E63,stroke-width:3px",
-            "caption2": "Figure A1-1b: Four-Plane Architecture Model showing Data, Control, Governance, and Persistence planes with synchronous and asynchronous communication patterns."
+            "title": "Introduction"
           },
           "1": {
             "caption": "Figure 2: Interface-Adapter Pattern for Cloud Resources",
+            "caption2": "Figure A1-2b: Cellular Topology Architecture showing regional deployment with isolated failure domains, supporting 300k RPS total throughput with DB sharding.",
             "content": "At the heart of our reference architecture lies the Decoupling Principle: no business logic component should directly consume a proprietary cloud API. Instead, all infrastructure interactions—be it storage, queuing, or compute—must be mediated through a sovereign abstraction layer. This layer, implemented as a set of Kubernetes Custom Resource Definitions (CRDs) and Crossplane compositions, translates abstract intents (e.g., 'PostgreSQL Database with High Availability') into provider-specific resources (e.g., AWS RDS or Azure SQL).\n\nThis abstraction serves two critical functions. First, it enables 'Write Once, Run Anywhere' for infrastructure, allowing teams to migrate workloads between clouds with zero code changes. Second, it embeds compliance guardrails directly into the provisioning process. A developer cannot mistakenly provision an unencrypted bucket if the abstraction layer enforces encryption by default. This 'Compliance-as-Code' approach shifts security left, reducing the burden on audit teams.",
             "diagram": "classDiagram; class BusinessLogic { +processOrder() +manageInventory() }; class SovereignInterface { +storeData() +publishEvent() }; class AWSAdapter { +putItemDynamoDB() }; class AzureAdapter { +insertCosmosDB() }; BusinessLogic --> SovereignInterface; SovereignInterface <|-- AWSAdapter; SovereignInterface <|-- AzureAdapter;",
-            "title": "The Decoupling Principle",
             "diagram2": "graph TB\\nsubgraph Region_US_East[Region: US-East]\\n  subgraph Cell1[Cell 1 - 50k RPS]\\n    I1[Ingress] --> S1[Services]\\n    S1 --> D1[(DB Shard 0-31)]\\n  end\\n  subgraph Cell2[Cell 2 - 50k RPS]\\n    I2[Ingress] --> S2[Services]\\n    S2 --> D2[(DB Shard 32-63)]\\n  end\\nend\\n\\nsubgraph Region_US_West[Region: US-West]\\n  subgraph Cell3[Cell 3 - 50k RPS]\\n    I3[Ingress] --> S3[Services]\\n    S3 --> D3[(DB Shard 64-95)]\\n  end\\n  subgraph Cell4[Cell 4 - 50k RPS]\\n    I4[Ingress] --> S4[Services]\\n    S4 --> D4[(DB Shard 96-127)]\\n  end\\nend\\n\\nsubgraph Region_EU[Region: EU-Central]\\n  subgraph Cell5[Cell 5 - 50k RPS]\\n    I5[Ingress] --> S5[Services]\\n    S5 --> D5[(DB Shard 128-159)]\\n  end\\n  subgraph Cell6[Cell 6 - 50k RPS]\\n    I6[Ingress] --> S6[Services]\\n    S6 --> D6[(DB Shard 160-191)]\\n  end\\nend\\n\\nCell1 -.->|Failure Isolated| Cell2\\nCell3 -.->|Failure Isolated| Cell4\\nCell5 -.->|Failure Isolated| Cell6\\nRegion_US_East -.->|Async Replication| Region_EU\\nRegion_US_West -.->|Async Replication| Region_EU\\n\\nstyle Cell1 fill:#E8F5E9,stroke:#4CAF50,stroke-width:2px\\nstyle Cell2 fill:#E8F5E9,stroke:#4CAF50,stroke-width:2px\\nstyle Cell3 fill:#E3F2FD,stroke:#2196F3,stroke-width:2px\\nstyle Cell4 fill:#E3F2FD,stroke:#2196F3,stroke-width:2px\\nstyle Cell5 fill:#FFF3E0,stroke:#FF9800,stroke-width:2px\\nstyle Cell6 fill:#FFF3E0,stroke:#FF9800,stroke-width:2px",
-            "caption2": "Figure A1-2b: Cellular Topology Architecture showing regional deployment with isolated failure domains, supporting 300k RPS total throughput with DB sharding."
+            "title": "The Decoupling Principle"
           },
           "2": {
             "caption": "Figure 3: Jurisdiction-Aware Request Routing",
+            "caption2": "Figure A1-3b: Policy Lifecycle Management ensuring consistent policy versioning and distribution across all enforcement points.",
             "content": "State management in a sovereign cloud environment presents unique challenges. Data cannot simply be replicated globally; it must respect strict residency boundaries. We propose a 'Federated State Architecture' where data is sharded by jurisdiction. User data for European citizens resides solely in EU clusters, while US data remains in North America. To achieve this, we utilize a sharding layer at the application ingress, routing requests based on user attributes and consent metadata.\n\nIdentity management follows a similar federated pattern. A central Identity Provider (IdP) acts as a broker, trusting local IdPs within each sovereignty zone. This prevents a single point of failure and ensures that authentication tokens generated in one region do not carry excessive privileges in another. We explore the use of SPIFFE/SPIRE for workload identity, ensuring that zero-trust principles are applied not just to users, but to every service-to-service interaction.",
             "diagram": "sequenceDiagram; participant User; participant GlobalIngress; participant EU_Cluster; participant US_Cluster; User->>GlobalIngress: Login Request (Region=EU); GlobalIngress->>EU_Cluster: Route Traffic; EU_Cluster->>EU_Cluster: Auth & Local Data; EU_Cluster-->>User: Response (Data stays in EU);",
-            "title": "Distributed State & Identity",
             "diagram2": "graph TB\\nsubgraph \"Policy Lifecycle\"\\n  Def[Define Policy in Rego] --> Test[Unit Test Policy]\\n  Test --> Release[Release Policy Bundle]\\n  Release --> Distribute[Distribute to Clusters]\\nend\\n\\nsubgraph \"Enforcement Points\"\\n  API[API Gateway]\\n  K8s[K8s Admission]\\n  Infra[Terraform Plan]\\nend\\n\\nDistribute --> API\\nDistribute --> K8s\\nDistribute --> Infra\\n\\nstyle Distribute fill:#bbf,stroke:#333,stroke-width:2px",
-            "caption2": "Figure A1-3b: Policy Lifecycle Management ensuring consistent policy versioning and distribution across all enforcement points."
+            "title": "Distributed State & Identity"
           },
           "3": {
             "caption": "Figure 4: Long-term ROI of Sovereign Architecture",
+            "caption2": "Figure A1-4b: Evolutionary roadmap from current coupled architectures to the future intelligent sovereign enterprise.",
             "content": "The Cloud-Native Enterprise architecture offers a viable path forward for organizations navigating the complexities of the modern digital landscape. By prioritizing sovereignty and decoupling, enterprises can regain control over their digital destiny, mitigate regulatory risks, and foster a more competitive multi-vendor ecosystem. While the initial investment in building these abstractions is non-trivial, the long-term ROI in terms of agility and risk reduction is substantial.\n\nFuture work will focus on automating the testing of these sovereign abstractions (chaos engineering for compliance) and exploring the role of WebAssembly (Wasm) as a lighter-weight, sandboxed runtime for edge computing scenarios where sovereignty must be enforced at the device level.",
             "diagram": "pie title ROI Breakdown; \"Vendor Leverage\" : 30; \"Compliance Efficiency\" : 40; \"Migration Speed\" : 20; \"Ops Reduction\" : 10",
-            "title": "Conclusion & Future Work",
             "diagram2": "graph LR\\nState[Current State] -->|Decouple| Next[Cloud-Native Sovereign]\\nNext -->|Federate| Future[Intelligent Sovereign Interface]\\n\\nstyle Future fill:#af0,stroke:#333,stroke-width:2px",
-            "caption2": "Figure A1-4b: Evolutionary roadmap from current coupled architectures to the future intelligent sovereign enterprise."
+            "title": "Conclusion & Future Work"
           }
         },
         "subtitle": "The canonical A1 technical standard for implementing sovereign, multi-cloud platforms maximizing latency budgets and governance. (HI)",
@@ -4849,19 +4850,19 @@
         "sections": {
           "0": {
             "caption": "Figure 1: Centralized vs. Lattice-Mesh Topology",
+            "caption2": "Figure A2-1b: Shock Absorber Pattern using distributed log (Kafka/Pulsar) to decouple bursty ingress traffic from downstream database processing, enabling elastic scaling.",
             "content": "Traditional centralized message brokers (like Kafka or RabbitMQ) operate on a hub-and-spoke model. While effective for many use cases, this topology introduces a single bottleneck: the broker itself. In scenarios requiring ultra-low latency and massive throughput—such as high-frequency trading, IoT sensor networks, or real-time gaming—the network hops to and from the central broker become prohibitively expensive. As data volumes grow exponentially, the cost of scaling the central cluster grows super-linearly.\n\nThis paper validates the 'Lattice-Mesh' architecture, a decentralized approach where nodes communicate directly with peers to disseminate events. By removing the central broker for the data plane (keeping it only for the control plane), we can establish a system where throughput scales linearly with the number of nodes. We draw inspiration from gossip protocols and biologically inspired cellular automata.",
             "diagram": "graph TD; A[Producer] -->|Hub-Spoke| B(Central Broker); B -->|Hub-Spoke| C[Consumer]; D[Node 1] <-->|Lattice-Mesh| E[Node 2]; E <-->|Lattice-Mesh| F[Node 3]; D <-->|Lattice-Mesh| F; style B fill:#faa,stroke:#333; style D fill:#afa,stroke:#333",
-            "title": "The Bandwidth Bottleneck",
             "diagram2": "graph LR\\nClient[Client Requests<br/>Bursty Traffic] -->|HTTP POST| Ingress[Ingress Layer<br/>Stateless, Fast<br/>< 10ms]\\nIngress -->|Append| Log[Distributed Log<br/>Kafka/Pulsar<br/>Durable Buffer]\\nLog -->|Pull Batch| Consumer1[Consumer 1<br/>Partition 0]\\nLog -->|Pull Batch| Consumer2[Consumer 2<br/>Partition 1]\\nLog -->|Pull Batch| Consumer3[Consumer N<br/>Partition N]\\nConsumer1 --> DB1[(Database<br/>Shard 0)]\\nConsumer2 --> DB2[(Database<br/>Shard 1)]\\nConsumer3 --> DB3[(Database<br/>Shard N)]\\n\\nIngress -.->|HTTP 202 Accepted| Client\\n\\nstyle Ingress fill:#4CAF50,color:#fff\\nstyle Log fill:#2196F3,color:#fff\\nstyle Consumer1 fill:#FF9800,color:#fff\\nstyle Consumer2 fill:#FF9800,color:#fff\\nstyle Consumer3 fill:#FF9800,color:#fff",
-            "caption2": "Figure A2-1b: Shock Absorber Pattern using distributed log (Kafka/Pulsar) to decouple bursty ingress traffic from downstream database processing, enabling elastic scaling."
+            "title": "The Bandwidth Bottleneck"
           },
           "1": {
             "caption": "Figure 2: SIR Gossip Protocol State Machine",
+            "caption2": "Figure A2-2b: Partition Affinity using consistent hashing to ensure related messages (same user_id) route to the same partition, enabling stateful processing and cache locality.",
             "content": "To maintain state consistency without a central authority, Lattice-Mesh relies on an optimized gossip protocol. Nodes randomly select peers to share information with, ensuring that reliable propagation occurs with logarithmic time complexity. We introduce a 'Weighted Gossip' mechanism where node selection is biased by network proximity and latency measurements, significantly reducing cross-datacenter traffic.\n\nFor ordering guarantees, which are notoriously difficult in peer-to-peer systems, we implement a conflict-free replicated data type (CRDT) approach for the event log. This allows nodes to merge divergent event streams deterministically without requiring expensive consensus algorithms like Raft or Paxos for every message. Strong consistency is relaxed in favor of Causal Consistency, which is sufficient for the target use cases.",
             "diagram": "stateDiagram-v2; [*] --> Clean; Clean --> Infective : New Info; Infective --> Removed : Shared N times; Removed --> [*]; Infective --> Infective : Gossip to Peer",
-            "title": "Gossip Protocols & Consensus",
             "diagram2": "graph TB\\nsubgraph Partition_Strategy[Partition Affinity Strategy]\\n  MSG[Incoming Message<br/>user_id: 12345]\\n  HASH[Consistent Hash<br/>hash(user_id) mod N]\\n  ROUTE[Route to Partition]\\nend\\n\\nsubgraph Partitions[Kafka Partitions]\\n  P0[Partition 0<br/>Users 0-999]\\n  P1[Partition 1<br/>Users 1000-1999]\\n  P2[Partition 2<br/>Users 2000-2999]\\nend\\n\\nsubgraph Consumers[Consumer Group]\\n  C0[Consumer 0<br/>Sticky to P0]\\n  C1[Consumer 1<br/>Sticky to P1]\\n  C2[Consumer 2<br/>Sticky to P2]\\nend\\n\\nMSG --> HASH\\nHASH --> ROUTE\\nROUTE -->|user_id % 3 = 0| P0\\nROUTE -->|user_id % 3 = 1| P1\\nROUTE -->|user_id % 3 = 2| P2\\n\\nP0 --> C0\\nP1 --> C1\\nP2 --> C2\\n\\nstyle HASH fill:#4a9eff,stroke:#333,stroke-width:2px\\nstyle P0 fill:#51cf66,stroke:#333,stroke-width:2px\\nstyle P1 fill:#51cf66,stroke:#333,stroke-width:2px\\nstyle P2 fill:#51cf66,stroke:#333,stroke-width:2px",
-            "caption2": "Figure A2-2b: Partition Affinity using consistent hashing to ensure related messages (same user_id) route to the same partition, enabling stateful processing and cache locality."
+            "title": "Gossip Protocols & Consensus"
           },
           "2": {
             "caption": "Figure 3: Latency Comparison Under Load",
@@ -4900,11 +4901,11 @@
           },
           "2": {
             "caption": "Figure 3: LSTM Baseline Prediction",
+            "caption2": "Figure A3-3b: Sequence diagram showing end-to-end anomaly detection and automated remediation flow from metric spike through ML evaluation to runbook execution.",
             "content": "Static thresholds (e.g., 'Alert if CPU > 80%') are obsolete in elastic cloud environments. Usage patterns follow daily, weekly, and seasonal seasonality. Our framework utilizes LSTM (Long Short-Term Memory) neural networks to learn the 'normal' behavior of every metric over time. It generates a dynamic baseline with confidence intervals. An alert is only fired if the metric deviates significantly from this predicted range.\n\nThis approach handles 'expected spikes' (like a 9 AM login storm) without triggering false alarms, while catching subtle degradations that might be within absolute limits but are statistically abnormal for that specific time context.",
             "diagram": "xychart-beta; title \"Dynamic vs Static Thresholds\"; x-axis [08:00, 09:00, 10:00, 11:00]; y-axis \"Load\" 0-->100; line [20, 80, 40, 30] \"Actual\"; line [60, 90, 50, 40] \"Dynamic Upper Bound\"; line [50, 50, 50, 50] \"Static Threshold\"",
-            "title": "Dynamic Baselines",
             "diagram2": "sequenceDiagram\\n    participant Metric as Metric Stream\\n    participant Detector as Anomaly Detector\\n    participant Model as ML Model\\n    participant Alert as Alert Manager\\n    participant Runbook as Runbook Executor\\n    \\n    Metric->>Detector: CPU spike detected\\n    Detector->>Model: Evaluate pattern\\n    Model->>Model: Compare to baseline\\n    Model-->>Detector: Anomaly score: 0.92\\n    Detector->>Alert: Trigger alert (HIGH)\\n    Alert->>Runbook: Execute remediation\\n    Runbook->>Runbook: Scale pod replicas\\n    Runbook-->>Alert: Remediation success\\n    Alert-->>Metric: Monitor recovery",
-            "caption2": "Figure A3-3b: Sequence diagram showing end-to-end anomaly detection and automated remediation flow from metric spike through ML evaluation to runbook execution."
+            "title": "Dynamic Baselines"
           },
           "3": {
             "caption": "Figure 4: Self-Healing Loop",
@@ -4931,11 +4932,11 @@
           },
           "1": {
             "caption": "Figure 2: PR-Based Policy Enforcement",
+            "caption2": "Figure A4-2b: Policy compilation showing single DSL rule compiled into provider-specific enforcement primitives for AWS Config, Azure Policy, and GCP Organization Policies.",
             "content": "Traditional governance is reactive: a resource is provisioned, a scanner detects a violation hours later, and a ticket is raised. This is inefficient and risky. Our framework shifts governance 'left' into the Pull Request (PR) stage. When a developer submits Terraform code, the CI pipeline evaluates the plan against the OPA policies. Violations block the merge immediately.\n\nThis feedback loop educates developers on security standards in real-time and prevents bad infrastructure from ever being deployed. It transforms security from a 'department of no' into an automated quality gate that enables speed with safety.",
             "diagram": "sequenceDiagram; participant Dev; participant Git; participant CI_Policy_Check; participant Cloud; Dev->>Git: Push Terraform; Git->>CI_Policy_Check: Run OPA Eval; CI_Policy_Check-->>Dev: Barrier! S3 Bucket Public; Dev->>Git: Push Fix; CI_Policy_Check->>Cloud: Plan & Apply;",
-            "title": "Shift-Left Governance",
             "diagram2": "graph LR\\nsubgraph Policy_DSL[Policy Definition]\\n  RULE[Policy Rule<br/>\\\"Deny public S3 buckets\\\"]\\n  SCOPE[Scope: s3:*]\\n  CONDITION[Condition: publicAccess=true]\\nend\\n\\nsubgraph Compiler[Multi-Cloud Compiler]\\n  PARSE[Parser]\\n  VALIDATE[Validator]\\n  CODEGEN[Code Generator]\\nend\\n\\nsubgraph AWS_Output[AWS Config]\\n  AWS_RULE[Config Rule<br/>s3-bucket-public-read-prohibited]\\nend\\n\\nsubgraph Azure_Output[Azure Policy]\\n  AZ_DEF[Policy Definition<br/>Storage account public access]\\nend\\n\\nsubgraph GCP_Output[GCP Constraint]\\n  GCP_CONST[Constraint<br/>storage.buckets.publicAccess]\\nend\\n\\nRULE --> PARSE\\nSCOPE --> PARSE\\nCONDITION --> PARSE\\nPARSE --> VALIDATE\\nVALIDATE --> CODEGEN\\n\\nCODEGEN --> AWS_RULE\\nCODEGEN --> AZ_DEF\\nCODEGEN --> GCP_CONST\\n\\nstyle CODEGEN fill:#4a9eff,stroke:#333,stroke-width:2px\\nstyle AWS_RULE fill:#FF9900,stroke:#333,stroke-width:2px\\nstyle AZ_DEF fill:#0078D4,stroke:#333,stroke-width:2px\\nstyle GCP_CONST fill:#4285F4,stroke:#333,stroke-width:2px",
-            "caption2": "Figure A4-2b: Policy compilation showing single DSL rule compiled into provider-specific enforcement primitives for AWS Config, Azure Policy, and GCP Organization Policies."
+            "title": "Shift-Left Governance"
           },
           "2": {
             "caption": "Figure 3: Sources of Policy Drift",
@@ -4962,11 +4963,11 @@
         "sections": {
           "0": {
             "caption": "Figure 1: Risk Profile of Migration Strategies",
+            "caption2": "Figure A5-1b: Strangler Fig Pattern in action showing API Gateway routing traffic between legacy monolith (80%) and new microservices (20%) using feature flags for gradual migration.",
             "content": "Legacy monoliths are often the core revenue generators for enterprises, yet they are brittle, hard to deploy, and impossible to scale efficiently. 'Big Bang' rewrites—attempting to replace the system in one go—have a failure rate near 100%. They consume years of budget with no deliverable value until the very end, by which time requirements have changed.\n\nThis paper advocates for evolutionary architecture. We explore patterns that allow for incremental modernization, where value is delivered in weeks, not years. The goal is not just 'microservices' for their own sake, but decoupling teams and technologies to increase velocity.",
             "diagram": "graph TD; A[Big Bang Rewrite] -->|High Risk| B(Failure); C[Incremental Strangler] -->|Low Risk| D(Continuous Value); style C fill:#9f9,stroke:#333",
-            "title": "The Monolith Trap",
             "diagram2": "graph TB\\nsubgraph Legacy[Legacy Monolith]\\n  MON_UI[Monolithic UI]\\n  MON_BIZ[Business Logic]\\n  MON_DB[(Monolithic DB)]\\n  MON_UI --> MON_BIZ\\n  MON_BIZ --> MON_DB\\nend\\n\\nsubgraph Strangler[Strangler Fig Layer]\\n  GW[API Gateway<br/>Traffic Router]\\n  FF[Feature Flags<br/>Canary Control]\\nend\\n\\nsubgraph Modern[Cloud-Native Services]\\n  SVC1[Order Service]\\n  SVC2[Payment Service]\\n  SVC3[Inventory Service]\\n  DB1[(Order DB)]\\n  DB2[(Payment DB)]\\n  DB3[(Inventory DB)]\\n  SVC1 --> DB1\\n  SVC2 --> DB2\\n  SVC3 --> DB3\\nend\\n\\nMON_UI --> GW\\nGW --> FF\\nFF -->|20% traffic| SVC1\\nFF -->|20% traffic| SVC2\\nFF -->|80% traffic| MON_BIZ\\n\\nstyle GW fill:#4a9eff,stroke:#333,stroke-width:3px\\nstyle FF fill:#ffd43b,stroke:#333,stroke-width:2px\\nstyle MON_BIZ fill:#ff6b6b,stroke:#333,stroke-width:2px",
-            "caption2": "Figure A5-1b: Strangler Fig Pattern in action showing API Gateway routing traffic between legacy monolith (80%) and new microservices (20%) using feature flags for gradual migration."
+            "title": "The Monolith Trap"
           },
           "1": {
             "caption": "Figure 2: Strangler Fig Implementation",
@@ -5005,11 +5006,11 @@
           },
           "1": {
             "caption": "Figure 2: Real-time Risk Evaluation Flow",
+            "caption2": "Figure A6-2b: Detailed risk scoring pipeline showing how location, time, device, and IP signals feed into ML model to produce risk score and drive access decisions.",
             "content": "The core of our system is a Risk Engine that computes a score (0-100) for every request. Signals include: User Behavior Analytics (is this typical time/location?), Device Posture (is the OS patched? is EDR running?), and Data Sensitivity (is the target PII?).\n\nMachine Learning models (Random Forest and Isolation Forest) are trained on historical access logs to detect anomalies. If the risk score crosses a threshold, the policy engine dynamically generates a 'Step-Up' challenge (e.g., biometric auth) or blocks the request entirely. This happens at the milliseconds scale within the service mesh sidecar.",
             "diagram": "graph TD; A[Request] --> B{Risk Engine}; B --> C[Signals: IP, Time, Device]; B --> D[ML Model]; D --> E{Score > 50?}; E -->|No| F[Allow]; E -->|Yes| G[MFA Challenge]; style B fill:#ff9,stroke:#333",
-            "title": "Risk Scoring Engine",
             "diagram2": "graph TB\\nsubgraph Risk_Signals[Risk Signal Collection]\\n  LOC[Location<br/>Romania vs NY]\\n  TIME[Time<br/>3 AM vs 9 AM]\\n  DEVICE[Device<br/>Unmanaged laptop]\\n  IP[IP Reputation<br/>Threat feed match]\\nend\\n\\nsubgraph Scoring[ML Risk Scoring]\\n  FEATURES[Feature Vector<br/>[loc, time, device, ip]]\\n  MODEL[Random Forest<br/>Trained on incidents]\\n  SCORE[Risk Score<br/>0-100]\\nend\\n\\nsubgraph Decision[Access Decision]\\n  THRESHOLD{Score Threshold}\\n  ALLOW[Allow<br/>Score < 30]\\n  MFA[Require MFA<br/>Score 30-70]\\n  BLOCK[Block + Alert<br/>Score > 70]\\nend\\n\\nLOC --> FEATURES\\nTIME --> FEATURES\\nDEVICE --> FEATURES\\nIP --> FEATURES\\nFEATURES --> MODEL\\nMODEL --> SCORE\\nSCORE --> THRESHOLD\\n\\nTHRESHOLD -->|Low Risk| ALLOW\\nTHRESHOLD -->|Medium Risk| MFA\\nTHRESHOLD -->|High Risk| BLOCK\\n\\nstyle MODEL fill:#4a9eff,stroke:#333,stroke-width:2px\\nstyle BLOCK fill:#ff6b6b,stroke:#333,stroke-width:2px\\nstyle ALLOW fill:#51cf66,stroke:#333,stroke-width:2px",
-            "caption2": "Figure A6-2b: Detailed risk scoring pipeline showing how location, time, device, and IP signals feed into ML model to produce risk score and drive access decisions."
+            "title": "Risk Scoring Engine"
           },
           "2": {
             "caption": "Figure 3: Automated Quarantine Workflow",
@@ -5048,11 +5049,11 @@
           },
           "2": {
             "caption": "Figure 3: Cryptographic Audit Chain",
+            "caption2": "Figure AECP-3b: Sequence diagram showing cryptographic key generation flow from HSM through AECP to cloud provider, with blockchain attestation for compliance audit trail.",
             "content": "In a sovereign system, the audit log is as important as the data itself. AECP utilizes a tamper-evident, append-only ledger for all control plane actions. Every API call—who provisioned what, who changed a policy, who accessed a secret—is cryptographically chained.\n\nThis ledger is replicated across multiple failure domains. In the event of a breach or a dispute with a cloud provider, the enterprise has mathematical proof of the sequence of events. This capability is critical for post-incident forensics and regulatory reporting in finance and healthcare.",
             "diagram": "block-beta; columns 4; space; block:Hash1; A; end; arrow; block:Hash2; B; end; arrow; block:Hash3; C; end; space;",
-            "title": "Immutable Audit Logs",
             "diagram2": "sequenceDiagram\\n    participant App as Application\\n    participant AECP as AECP Gateway\\n    participant HSM as Hardware HSM\\n    participant Cloud as Cloud Provider\\n    \\n    App->>AECP: Deploy workload (EU region)\\n    AECP->>AECP: Validate GDPR policy\\n    AECP->>HSM: Request DEK (Data Encryption Key)\\n    HSM->>HSM: Generate DEK from Root Key\\n    HSM-->>AECP: DEK (wrapped with KEK)\\n    AECP->>Cloud: Provision encrypted storage\\n    Cloud-->>AECP: Storage created\\n    AECP->>AECP: Log to blockchain\\n    AECP-->>App: Deployment success + attestation",
-            "caption2": "Figure AECP-3b: Sequence diagram showing cryptographic key generation flow from HSM through AECP to cloud provider, with blockchain attestation for compliance audit trail."
+            "title": "Immutable Audit Logs"
           },
           "3": {
             "caption": "Figure 4: Compute-to-Data Model",
@@ -5079,11 +5080,11 @@
           },
           "1": {
             "caption": "Figure 2: Raft Consensus State Machine",
+            "caption2": "Figure ARCH-2b: TLA+ model checking workflow showing state space exploration, invariant checking, and iterative refinement when counterexamples are discovered.",
             "content": "We modeled the leader election and log replication protocols of our distributed store. The specification defines the 'Next' state relation for every possible transition. We defined invariants such as 'No two nodes can believe they are leader for the same term' and liveness properties like 'If the system is stable, a value committed will eventually be visible to all readers'.\n\nThe TLA+ model checker (TLC) exhaustively explored millions of states, simulating varying network delays and node crashes. It successfully identified a subtle livelock scenario in the original design where a partitioned node could endlessly trigger elections, preventing the cluster from stabilizing.",
             "diagram": "stateDiagram-v2; [*] --> Follower; Follower --> Candidate : Timeout; Candidate --> Leader : Votes > N/2; Leader --> Follower : New Term; Candidate --> Follower : New Leader",
-            "title": "Modeling with TLA+",
             "diagram2": "graph LR\\nsubgraph TLA_Spec[TLA+ Specification]\\n  INIT[Initial State<br/>All nodes: Follower]\\n  TRANS[State Transitions<br/>Election, Replication]\\n  INV[Invariants<br/>Safety properties]\\nend\\n\\nsubgraph Model_Checking[TLC Model Checker]\\n  EXPLORE[State Space<br/>Exploration]\\n  CHECK[Invariant<br/>Checking]\\n  RESULT{Violation?}\\nend\\n\\nsubgraph Output[Verification Output]\\n  PASS[Correctness Proven<br/>All states valid]\\n  COUNTER[Counterexample<br/>Bug trace]\\nend\\n\\nINIT --> EXPLORE\\nTRANS --> EXPLORE\\nINV --> CHECK\\nEXPLORE --> CHECK\\nCHECK --> RESULT\\n\\nRESULT -->|No| PASS\\nRESULT -->|Yes| COUNTER\\nCOUNTER -.->|Refine| TRANS\\n\\nstyle CHECK fill:#4a9eff,stroke:#333,stroke-width:2px\\nstyle COUNTER fill:#ff6b6b,stroke:#333,stroke-width:2px\\nstyle PASS fill:#51cf66,stroke:#333,stroke-width:2px",
-            "caption2": "Figure ARCH-2b: TLA+ model checking workflow showing state space exploration, invariant checking, and iterative refinement when counterexamples are discovered."
+            "title": "Modeling with TLA+"
           },
           "2": {
             "caption": "Figure 3: Spec-to-Code Refinement",
@@ -5113,10 +5114,10 @@
             "title": "Problem Landscape"
           },
           "1": {
+            "caption": "Figure QA1-2: Translation validation pipeline showing completeness checks across locales, static analysis of code for key usage, and pluralization/interpolation validation.",
             "content": "The Author independently designed and operationalized the Automated i18n QA Engine, introducing:\n\n1. Recursive Route Inventory Engine: Dynamic traversal of the file system without manual config.\n2. Deterministic CI Gating: Zero-tolerance policy for Tier-1 markets (ES, FR, DE).\n3. Combinatorial URL Expansion: Algorithms to generate the full R x L test matrix.",
-            "title": "Original Technical Contribution",
             "diagram": "graph TB\\nsubgraph \\\"Translation Files\\\"\\n  EN[en.json<br/>Source Locale]\\n  ES[es.json]\\n  FR[fr.json]\\n  DE[de.json]\\nend\\n\\nsubgraph \\\"Static Analysis\\\"\\n  PARSE[AST Parser]\\n  EXTRACT[Extract t() Calls]\\n  KEYS[Used Keys]\\nend\\n\\nsubgraph \\\"Validation Checks\\\"\\n  COMPLETE{Completeness}\\n  CONSIST{Consistency}\\n  PLURAL{Pluralization}\\n  INTERP{Interpolation}\\nend\\n\\nsubgraph \\\"Results\\\"\\n  MISSING[Missing Keys Report]\\n  UNUSED[Unused Keys Report]\\n  ERRORS[Validation Errors]\\nend\\n\\nEN --> COMPLETE\\nES --> COMPLETE\\nFR --> COMPLETE\\nDE --> COMPLETE\\n\\nPARSE --> EXTRACT\\nEXTRACT --> KEYS\\nKEYS --> CONSIST\\n\\nCOMPLETE -->|Gaps| MISSING\\nCONSIST -->|Orphans| UNUSED\\nPLURAL -->|Invalid| ERRORS\\nINTERP -->|Mismatch| ERRORS\\n\\nstyle COMPLETE fill:#4a9eff,stroke:#333,stroke-width:2px\\nstyle ERRORS fill:#ff6b6b,stroke:#333,stroke-width:2px",
-            "caption": "Figure QA1-2: Translation validation pipeline showing completeness checks across locales, static analysis of code for key usage, and pluralization/interpolation validation."
+            "title": "Original Technical Contribution"
           },
           "2": {
             "caption": "Architectural Diagram: Three-Layer Defense Model",
@@ -5125,12 +5126,12 @@
             "title": "Three-Layer Defense Model"
           },
           "3": {
-            "content": "The framework operates by recursively scanning the Next.js `app` directory to build a route map. It then cross-references this map with the `messages` directory to ensure every route has corresponding translations for all configured locales. Any discrepancy triggers a build failure, preventing incomplete implementations from reaching production.",
-            "title": "Implementation Strategy",
-            "diagram": "C4Component\\ntitle Component Diagram for Visual Regression Testing\\n\\nComponent(playwright, \\\"Playwright Runner\\\", \\\"Node.js\\\", \\\"Executes browser tests\\\")\\nComponent(capture, \\\"Screenshot Service\\\", \\\"Puppeteer\\\", \\\"Captures page renders\\\")\\nComponent(compare, \\\"Image Comparator\\\", \\\"Pixelmatch\\\", \\\"Detects visual diffs\\\")\\nComponent(ml, \\\"ML Classifier\\\", \\\"TensorFlow\\\", \\\"Classifies changes\\\")\\nComponent(report, \\\"Report Generator\\\", \\\"React\\\", \\\"Visual diff reports\\\")\\nComponentDb(baseline, \\\"Baseline Images\\\", \\\"S3\\\", \\\"Reference screenshots\\\")\\nComponentDb(results, \\\"Test Results\\\", \\\"PostgreSQL\\\", \\\"Historical data\\\")\\n\\nRel(playwright, capture, \\\"Navigates pages\\\", \\\"CDP\\\")\\nRel(capture, baseline, \\\"Compares against\\\", \\\"S3 API\\\")\\nRel(capture, compare, \\\"Sends images\\\", \\\"gRPC\\\")\\nRel(compare, ml, \\\"Classifies diffs\\\", \\\"REST\\\")\\nRel(ml, results, \\\"Stores\\\", \\\"SQL\\\")\\nRel(results, report, \\\"Queries\\\", \\\"GraphQL\\\")",
             "caption": "Figure QA1-4: C4 Component Diagram for visual regression testing showing Playwright automation, screenshot capture, image comparison, ML-based diff classification, and reporting. Maintained in Structurizr for QA infrastructure documentation.",
+            "caption2": "Figure QA1-4b: Visual regression testing pipeline showing multi-locale screenshot capture, pixel-level comparison, and ML-based classification to distinguish bugs from intentional design changes.",
+            "content": "The framework operates by recursively scanning the Next.js `app` directory to build a route map. It then cross-references this map with the `messages` directory to ensure every route has corresponding translations for all configured locales. Any discrepancy triggers a build failure, preventing incomplete implementations from reaching production.",
+            "diagram": "C4Component\\ntitle Component Diagram for Visual Regression Testing\\n\\nComponent(playwright, \\\"Playwright Runner\\\", \\\"Node.js\\\", \\\"Executes browser tests\\\")\\nComponent(capture, \\\"Screenshot Service\\\", \\\"Puppeteer\\\", \\\"Captures page renders\\\")\\nComponent(compare, \\\"Image Comparator\\\", \\\"Pixelmatch\\\", \\\"Detects visual diffs\\\")\\nComponent(ml, \\\"ML Classifier\\\", \\\"TensorFlow\\\", \\\"Classifies changes\\\")\\nComponent(report, \\\"Report Generator\\\", \\\"React\\\", \\\"Visual diff reports\\\")\\nComponentDb(baseline, \\\"Baseline Images\\\", \\\"S3\\\", \\\"Reference screenshots\\\")\\nComponentDb(results, \\\"Test Results\\\", \\\"PostgreSQL\\\", \\\"Historical data\\\")\\n\\nRel(playwright, capture, \\\"Navigates pages\\\", \\\"CDP\\\")\\nRel(capture, baseline, \\\"Compares against\\\", \\\"S3 API\\\")\\nRel(capture, compare, \\\"Sends images\\\", \\\"gRPC\\\")\\nRel(compare, ml, \\\"Classifies diffs\\\", \\\"REST\\\")\\nRel(ml, results, \\\"Stores\\\", \\\"SQL\\\")\\nRel(results, report, \\\"Queries\\\", \\\"GraphQL\\\")",
             "diagram2": "graph TB\\nsubgraph Test_Execution[Playwright Test Runner]\\n  BROWSER[Launch Browsers<br/>Chrome, Firefox, Safari]\\n  LOCALE[Switch Locale<br/>en, es, fr, de, ja]\\n  CAPTURE[Capture Screenshots<br/>1920x1080, 375x667]\\nend\\n\\nsubgraph Comparison[Visual Diff Engine]\\n  BASELINE[Load Baseline<br/>From S3]\\n  DIFF[Pixel Comparison<br/>Pixelmatch]\\n  THRESHOLD{Diff > 0.1%?}\\nend\\n\\nsubgraph ML_Classification[AI Classifier]\\n  FEATURES[Extract Features<br/>Layout, text, colors]\\n  MODEL[CNN Model<br/>Bug vs Design Change]\\n  CLASSIFY[Classification<br/>Bug/Change/False Positive]\\nend\\n\\nBROWSER --> LOCALE\\nLOCALE --> CAPTURE\\nCAPTURE --> BASELINE\\nBASELINE --> DIFF\\nDIFF --> THRESHOLD\\n\\nTHRESHOLD -->|Yes| FEATURES\\nTHRESHOLD -->|No| PASS[Test Passed]\\nFEATURES --> MODEL\\nMODEL --> CLASSIFY\\n\\nstyle THRESHOLD fill:#ffd43b,stroke:#333,stroke-width:2px\\nstyle MODEL fill:#4a9eff,stroke:#333,stroke-width:2px\\nstyle CLASSIFY fill:#51cf66,stroke:#333,stroke-width:2px",
-            "caption2": "Figure QA1-4b: Visual regression testing pipeline showing multi-locale screenshot capture, pixel-level comparison, and ML-based classification to distinguish bugs from intentional design changes."
+            "title": "Implementation Strategy"
           }
         },
         "subtitle": "A deterministic framework for automated multilingual quality assurance in global-scale web applications.",
@@ -5153,31 +5154,31 @@
       }
     },
     "description": "Scholarly articles and strategic research on digital sovereignty.",
+    "figures_index": {
+      "column_caption": "Caption",
+      "column_id": "Figure ID",
+      "column_type": "Type",
+      "footer_note": "{count} figures total in this paper.",
+      "heading": "Figures Index"
+    },
     "hero": {
       "badge": "RESOURCES",
       "subtitle": "A repository of peer-reviewed research, technical reports, and whitepapers formalizing the standards for Autonomous Sovereign Orchestration (ASO).",
       "title": "Technical <span class=\"text-primary italic\">Publications</span>",
       "viewAbstract": "View Abstract"
     },
+    "sample_banner": {
+      "badge": "Public Summary / Sample",
+      "cta": "Request Full Paper",
+      "description": "Full paper available for editorial/reviewer evaluation upon request.",
+      "email_body": "I am interested in reviewing the full paper for editorial or academic purposes. Please provide access.\n\nThank you.",
+      "email_subject_prefix": "Request for Full Paper"
+    },
     "title": "Technical Research & Publications",
     "tooling_card": {
       "cta": "View C4 Tooling Guide",
       "text": "Effective architectural communication requires selecting the right abstraction level.",
       "title": "Diagramming & Tooling"
-    },
-    "sample_banner": {
-      "badge": "Public Summary / Sample",
-      "description": "Full paper available for editorial/reviewer evaluation upon request.",
-      "cta": "Request Full Paper",
-      "email_subject_prefix": "Request for Full Paper",
-      "email_body": "I am interested in reviewing the full paper for editorial or academic purposes. Please provide access.\n\nThank you."
-    },
-    "figures_index": {
-      "heading": "Figures Index",
-      "column_id": "Figure ID",
-      "column_caption": "Caption",
-      "column_type": "Type",
-      "footer_note": "{count} figures total in this paper."
     }
   },
   "Partners": {
@@ -6552,9 +6553,9 @@
       "badge": "New (HI)",
       "cta": "Explore Hero (HI)",
       "errors": "OmniGCloud Errors",
-      "velocity": "OmniGCloud Velocity",
+      "subtitle": "Accelerate your journey to cloud-native.",
       "title": "Cloud Modernization",
-      "subtitle": "Accelerate your journey to cloud-native."
+      "velocity": "OmniGCloud Velocity"
     },
     "Migration": {
       "azure": {
