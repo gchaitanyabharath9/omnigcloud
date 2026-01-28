@@ -241,23 +241,7 @@ export default async function ResearchHubPage({ params }: { params: Promise<{ lo
               desc={tp("Items.a4.abstract")}
             />
 
-            {/* A5 */}
-            <PaperCard
-              locale={locale}
-              href="/research/papers/a5-monolith-to-cloud-native-modernization"
-              id="A5"
-              title={tp("Items.a5.title")}
-              desc={tp("Items.a5.abstract")}
-            />
 
-            {/* A6 */}
-            <PaperCard
-              locale={locale}
-              href="/research/papers/a6-adaptive-policy-enforcement"
-              id="A6"
-              title={tp("Items.a6.title")}
-              desc={tp("Items.a6.abstract")}
-            />
           </div>
         </div>
       </section>
