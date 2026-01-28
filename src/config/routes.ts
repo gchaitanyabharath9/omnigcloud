@@ -54,16 +54,6 @@ export const PUBLIC_ROUTES_MANIFEST: RouteEntry[] = [
     priority: 0.8,
     changeFreq: "monthly",
   },
-  {
-    path: "/research/papers/a5-monolith-to-cloud-native-modernization",
-    priority: 0.8,
-    changeFreq: "monthly",
-  },
-  {
-    path: "/research/papers/a6-adaptive-policy-enforcement",
-    priority: 0.8,
-    changeFreq: "monthly",
-  },
   { path: "/research/papers/aecp", priority: 0.8, changeFreq: "monthly" },
   { path: "/research/papers/scholarly-article", priority: 0.8, changeFreq: "monthly" },
   {
