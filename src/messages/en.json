@@ -133,6 +133,15 @@
       "title": "Peer-Reviewed architecture frameworks for regulated enterprise.",
       "whitepaper": "Read Whitepaper"
     },
+    "diagram": {
+      "labels": {
+        "brain": "Control Plane",
+        "mesh": "Service Mesh",
+        "sync": "State Sync"
+      },
+      "subtitle": "High-level architectural components",
+      "title": "System Model"
+    },
     "hero": {
       "badge": "Architecture & System Design",
       "subtitle": "OmniGCloud's architecture is built on the principle of Absolute Abstraction. Our framework disconnects policy from infrastructure, allowing enterprises to move workloads across any cloud provider while maintaining 100% governance continuity.",
@@ -1936,6 +1945,10 @@
     },
     "section4": {
       "description": "Comprehensive overview of the sovereign orchestration engine and frameworks.",
+      "diagram2": {
+        "caption": "System overview",
+        "title": "Architecture Diagram"
+      },
       "hypothesis": "OmniGCloud Hypothesis",
       "hypothesisTitle": "OmniGCloud Hypothesistitle",
       "p1": "OmniGCloud P1",
