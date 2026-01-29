@@ -175,7 +175,7 @@ export default function ArchitecturePage() {
               </Link>
 
               <Link
-                href="/research/papers/a2-high-throughput-distributed-systems"
+                href="/research/papers/distributed-systems-resilience"
                 className="glass-panel p-8 rounded-2xl group border border-white/5 hover:border-primary/50 transition-all"
               >
                 <span className="text-xs font-mono text-primary mb-4 block">

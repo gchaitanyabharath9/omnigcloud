@@ -39,7 +39,7 @@ export const seoConfig = {
         "capacity planning",
         "performance optimization",
       ],
-      canonicalUrl: "/research/papers/a2-high-throughput-distributed-systems",
+      canonicalUrl: "/research/papers/distributed-systems-resilience",
     },
     a3: {
       title: "Enterprise Observability & Operational Intelligence | Research",

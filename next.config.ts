@@ -158,7 +158,12 @@ const nextConfig: any = {
       },
       {
         source: "/:locale/architecture/a2-high-throughput-distributed-systems",
-        destination: "/:locale/research/papers/a2-high-throughput-distributed-systems",
+        destination: "/:locale/research/papers/distributed-systems-resilience",
+        permanent: true,
+      },
+      {
+        source: "/:locale/research/papers/a2-high-throughput-distributed-systems",
+        destination: "/:locale/research/papers/distributed-systems-resilience",
         permanent: true,
       },
       {
@@ -212,6 +217,16 @@ const nextConfig: any = {
       {
         source: "/resources",
         destination: "/en/research",
+        permanent: true,
+      },
+      {
+        source: "/resources/papers/:path*",
+        destination: "/en/research/papers/:path*",
+        permanent: true,
+      },
+      {
+        source: "/:locale/resources/papers/:path*",
+        destination: "/:locale/research/papers/:path*",
         permanent: true,
       },
 
@@ -330,7 +345,7 @@ const nextConfig: any = {
       },
       {
         source: "/research/papers/a2-high-throughput-distributed-systems",
-        destination: "/en/research/papers/a2-high-throughput-distributed-systems",
+        destination: "/en/research/papers/distributed-systems-resilience",
         permanent: true,
       },
       {

@@ -258,6 +258,8 @@ export default async function ResearchHubPage({ params }: { params: Promise<{ lo
               title={tp("Items.a6.title")}
               desc={tp("Items.a6.abstract")}
             />
+
+
           </div>
         </div>
       </section>

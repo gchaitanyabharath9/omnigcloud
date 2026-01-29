@@ -40,7 +40,7 @@ export const PUBLIC_ROUTES_MANIFEST: RouteEntry[] = [
     changeFreq: "monthly",
   },
   {
-    path: "/research/papers/a2-high-throughput-distributed-systems",
+    path: "/research/papers/distributed-systems-resilience",
     priority: 0.8,
     changeFreq: "monthly",
   },
@@ -106,15 +106,6 @@ export const PUBLIC_ROUTES_MANIFEST: RouteEntry[] = [
   { path: "/founder", priority: 0.5, changeFreq: "monthly" },
   { path: "/partners", priority: 0.5, changeFreq: "monthly" },
   { path: "/publications", priority: 0.5, changeFreq: "monthly" },
-  { path: "/resources/papers", priority: 0.9, changeFreq: "weekly" },
-  { path: "/resources/papers/a1-cloud-native-enterprise-reference", priority: 0.8, changeFreq: "monthly" },
-  { path: "/resources/papers/a2-high-throughput-distributed-systems", priority: 0.8, changeFreq: "monthly" },
-  { path: "/resources/papers/a3-enterprise-observability-operational-intelligence", priority: 0.8, changeFreq: "monthly" },
-  { path: "/resources/papers/a4-platform-governance-multicloud-hybrid", priority: 0.8, changeFreq: "monthly" },
-  { path: "/resources/papers/a5-monolith-to-cloud-native-modernization", priority: 0.8, changeFreq: "monthly" },
-  { path: "/resources/papers/a6-adaptive-policy-enforcement", priority: 0.8, changeFreq: "monthly" },
-  { path: "/resources/papers/aecp", priority: 0.8, changeFreq: "monthly" },
-  { path: "/resources/papers/scholarly-article", priority: 0.8, changeFreq: "monthly" },
 
   // News & Updates
   { path: "/news/bank", priority: 0.6, changeFreq: "monthly" },

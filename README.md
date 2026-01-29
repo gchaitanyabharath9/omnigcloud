@@ -357,7 +357,7 @@ Detailed documentation, verification reports, and project status tracking are lo
 
 - **Master Index**: [docs/00-index.md](./docs/00-index.md)
 - **Architecture**: [docs/architecture/patterns.md](./docs/architecture/patterns.md)
-- **Research & Observability**: [docs/research/OBSERVABILITY.md](./docs/research/OBSERVABILITY.md)
+- **Research**: This research program examines how large-scale cloud-native systems can be designed, scaled, and governed over their entire operational lifecycle.
 - **Trust & Compliance**: [docs/TRUST_PAGES.md](./docs/TRUST_PAGES.md)
 - **Security**: [SECURITY.md](./SECURITY.md)
 

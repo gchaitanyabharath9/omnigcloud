@@ -36,7 +36,7 @@ export default async function PublicationsPage({
     {
       title: "High-Throughput Distributed Systems (A2)",
       excerpt: "Patterns for building unbreakable distributed systems.",
-      href: "/research/papers/a2-high-throughput-distributed-systems",
+      href: "/research/papers/distributed-systems-resilience",
       category: "Research",
       date: "2025-01-05",
     },
