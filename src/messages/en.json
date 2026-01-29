@@ -7887,7 +7887,8 @@
           "gcp": "GCP Adapter"
         },
         "intent": "<strong>Declarative Intent:</strong> \"High-Availability Relational Store\"",
-        "title": "Figure 9: Abstracted Capability Model"
+        "title": "Figure 9: Abstracted Capability Model",
+        "caption": "Diagram 9 caption (TODO)"
       },
       "p1": "Portability is achieved by modeling infrastructure as generic capabilities. The AECP treats vendor APIs as interchangeable implementation details.",
       "p2": "This approach provides the architectural blueprint for Digital Sovereignty, ensuring that national critical infrastructure remains resilient and verifiable regardless of the underlying commercial vendor dynamics.",
@@ -7913,7 +7914,8 @@
             "policy": "Embedded Policy",
             "title": "LEGACY: EMBEDDED LOGIC"
           },
-          "title": "Figure 10: The Orthogonality of Decision and Execution"
+          "title": "Figure 10: The Orthogonality of Decision and Execution",
+          "caption": "Diagram 10 caption (TODO)"
         },
         "p1": "This reference confirms that the AECP <strong>cannot emerge via the composition</strong> of existing tools. The limitation is derived from <strong>architectural invariant constraints</strong>, not feature deficits.",
         "p2": "A system architected for <em>Execution</em> cannot structurally house the <em>Decision</em> logic required for its own governance. This introduces a recursive dependency (\"Judge-Jury Paradox\") that violates the fundamental requirement for conflict-free auditing.",
@@ -7983,7 +7985,8 @@
     },
     "section12": {
       "diagram11": {
-        "title": "Figure 11: Validated Economic & Operational Impact"
+        "title": "Figure 11: Validated Economic & Operational Impact",
+        "caption": "Diagram 11 caption (TODO)"
       },
       "p1": "The metrics observed in AECP implementations are not merely performance improvements but <strong>emergent properties</strong> caused by the removal of human latency from the control loop. The following data illustrates the structural economic shift that occurs when operations are transitioned from \"linear manual effort\" to \"logarithmic autonomous scaling.\"",
       "sectors": {
@@ -8015,14 +8018,16 @@
     },
     "section14": {
       "diagram12": {
-        "title": "Figure 12: Federated Sovereign Topologies"
+        "title": "Figure 12: Federated Sovereign Topologies",
+        "caption": "Diagram 12 caption (TODO)"
       },
       "p1": "The Autonomous Enterprise Control Plane defines the trajectory of enterprise architecture for the coming decade. As human operators retreat from the execution loop, they assume the role of policy architects. Autonomy, bounded by rigorous and mathematically verifiable governance, is the inevitable end-state for the global enterprise.",
       "title": "14. Future Direction & Sustained Relevance"
     },
     "section2": {
       "diagram1": {
-        "title": "Figure 1: Convergence of Market Forces"
+        "title": "Figure 1: Convergence of Market Forces",
+        "caption": "Diagram 1 caption (TODO)"
       },
       "list": {
         "deficit": "<strong>Observability Deficit:</strong> Current observability tools are passive observers; they lack the authority to mutate state, rendering them insufficient for control.",
@@ -8068,7 +8073,8 @@
     },
     "section4": {
       "diagram2": {
-        "title": "Figure 2: System Architecture Overview"
+        "title": "Figure 2: System Architecture Overview",
+        "caption": "Diagram 2 caption (TODO)"
       },
       "p1": "The system topology partitions the enterprise into three orthogonal planes. The AECP asserts sovereignty solely within the Decision Plane, treating all Execution Planes as commoditized substrates.",
       "title": "4. Reference Architecture Topology"
@@ -8079,7 +8085,8 @@
         "title": "Analysis of Design Difficulty:"
       },
       "diagram3": {
-        "title": "Figure 3: Differentiation of Responsibilities"
+        "title": "Figure 3: Differentiation of Responsibilities",
+        "caption": "Diagram 3 caption (TODO)"
       },
       "p1": "The fundamental flaw in DevOps tooling is the conflation of \"Goal\" and \"Method.\" AECP mandates strict separation. The Control Plane decides; the Execution Plane obeys.",
       "p2": "<strong>Architectural Judgment:</strong> The decision to strictly decouple these planes is non-trivial. While this separation increases initial integration complexity, it prevents the catastrophic \"State Contamination\" scenarios observed in coupled systems, where accidental drift becomes indistinguishable from authorized change—an <strong>irreversible error</strong> in regulated environments.",
@@ -8087,7 +8094,8 @@
     },
     "section6": {
       "diagram4": {
-        "title": "Figure 4: Autonomous Reconciliation Cycle"
+        "title": "Figure 4: Autonomous Reconciliation Cycle",
+        "caption": "Diagram 4 caption (TODO)"
       },
       "p1": "AECP rejects linear pipelines in favor of recursive cognitive loops. The system state is not a destination but a continuous process of reconciliation.",
       "title": "6. The Recursive Decision Loop"
@@ -8107,14 +8115,16 @@
           "solver": "CONSTRAINT SOLVER",
           "solverSub": "AECP Core"
         },
-        "title": "Figure 6: Governed Decision Flow"
+        "title": "Figure 6: Governed Decision Flow",
+        "caption": "Diagram 6 caption (TODO)"
       },
       "p1": "<strong>Critical Design Trade-off:</strong> The architecture deliberately rejects the inclusion of probabilistic Large Language Models (LLMs) in the direct actuation loop. While LLMs offer generative flexibility, their stochastic nature introduces unacceptable non-determinism. AECP prioritizes <strong>auditability over flexibility</strong>, utilizing deterministic constraint solvers to guarantee that every decision is mathematically traceable to a specific policy mandate.",
       "title": "7. Deterministic Decision Intelligence"
     },
     "section8": {
       "diagram7": {
-        "title": "Figure 7: Policy Injection Points"
+        "title": "Figure 7: Policy Injection Points",
+        "caption": "Diagram 7 caption (TODO)"
       },
       "p1": "Governance is not a veneer; it is the system's substrate. Policy injection occurs at the decision layer, rendering non-compliant infrastructure instantiations impossible.",
       "title": "8. Substrate-Level Governance"
@@ -8129,7 +8139,8 @@
           "text": "Pattern Unknown. Isolate Sector.",
           "title": "Protocol B: Containment"
         },
-        "title": "Figure 8: Fault Isolation Logic"
+        "title": "Figure 8: Fault Isolation Logic",
+        "caption": "Diagram 8 caption (TODO)"
       },
       "p1": "<strong>Risk Evaluation Strategy:</strong> In autonomous control, the cost of a \"Hallucinated Remediation\" (taking the wrong action) is existential. Therefore, AECP dictates a <strong>\"Safe-Fail\" protocol</strong>: in the event of any state ambiguity, the system chooses <strong>Isolation over Action</strong>, accepting reduced availability to preserve fatal integrity.",
       "title": "9. Safe-Fail Autonomy Protocols"
@@ -8295,5 +8306,6 @@
   "read_online": "Read Online",
   "steps": "OmniGCloud Steps",
   "subtitle": "The Sovereign Cloud Control Plane",
-  "title": "OmniGCloud Platform"
+  "title": "OmniGCloud Platform",
+  "unknown": "Unknown"
 }
