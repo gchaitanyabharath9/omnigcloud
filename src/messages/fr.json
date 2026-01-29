@@ -4082,7 +4082,23 @@
       "name": "Healthcare & Life Sciences",
       "paradox": {
         "badge": "PARADOX (FR)",
-        "title": "Paradox Title (FR)"
+        "title": "Paradox Title (FR)",
+        "p1": "Healthcare organizations face a unique paradox: they generate more data than any other sector but utilize the least due to regulatory paralysis.",
+        "p2": "The OmniGCloud Healthcare Plane resolves this by embedding HIPAA/GDPR compliance into the network layer, allowing secure data fluidity.",
+        "features": {
+          "gating": {
+            "title": "Sovereign Gating",
+            "desc": "Automated PHI redaction at the edge."
+          },
+          "acceleration": {
+            "title": "Clinical Acceleration",
+            "desc": "Reduce time-to-insight for patient outcomes."
+          },
+          "ai": {
+            "title": "Diagnostic AI",
+            "desc": "Federated learning on encrypted patient datasets."
+          }
+        }
       },
       "pillars": {
         "item1Desc": "OmniGCloud Item1desc",
@@ -5181,7 +5197,9 @@
           }
         },
         "subtitle": "A deterministic framework for automated multilingual quality assurance in global-scale web applications.",
-        "title": "Automated Multilingual Quality Assurance Framework"
+        "title": "Automated Multilingual Quality Assurance Framework",
+        "diagram": "QA Process Diagram",
+        "caption": "Figure: Automated Quality Assurance Flow"
       },
       "scholarly-article": {
         "abstract": "This paper presents a comprehensive framework for implementing sovereign cloud architectures at enterprise scale.",

@@ -3981,7 +3981,23 @@
       "name": "Healthcare & Life Sciences",
       "paradox": {
         "badge": "PARADOX",
-        "title": "Paradox"
+        "title": "Paradox",
+        "p1": "Healthcare organizations face a unique paradox: they generate more data than any other sector but utilize the least due to regulatory paralysis.",
+        "p2": "The OmniGCloud Healthcare Plane resolves this by embedding HIPAA/GDPR compliance into the network layer, allowing secure data fluidity.",
+        "features": {
+          "gating": {
+            "title": "Sovereign Gating",
+            "desc": "Automated PHI redaction at the edge."
+          },
+          "acceleration": {
+            "title": "Clinical Acceleration",
+            "desc": "Reduce time-to-insight for patient outcomes."
+          },
+          "ai": {
+            "title": "Diagnostic AI",
+            "desc": "Federated learning on encrypted patient datasets."
+          }
+        }
       },
       "pillars": {
         "item1Desc": "OmniGCloud Item1desc",
@@ -4736,7 +4752,9 @@
           }
         },
         "subtitle": "A comprehensive framework for sovereign, scalable, and resilient cloud systems",
-        "title": "Cloud-Native Enterprise Reference Architecture"
+        "title": "Cloud-Native Enterprise Reference Architecture",
+        "diagram": "System Architecture Diagram",
+        "caption": "Figure: Architecture Overview"
       },
       "a2": {
         "abstract": "In distributed systems, the network is unreliable, latency is non-zero, and bandwidth is finite. Accepting these fallacies is the first step toward resilience. This paper outlines patterns that enable systems to maintain availability and consistency in the face of partial failures.",
@@ -4777,7 +4795,9 @@
           }
         },
         "subtitle": "Optimizing Event Streaming with Peer-to-Peer Topologies",
-        "title": "High-Throughput Distributed Systems: Lattice-Mesh Architectures"
+        "title": "High-Throughput Distributed Systems: Lattice-Mesh Architectures",
+        "diagram": "System Architecture Diagram",
+        "caption": "Figure: Architecture Overview"
       },
       "a3": {
         "abstract": "Beyond logging: Distributed tracing, correlation IDs, and AI-driven alerting approaches for modern distributed systems.",
@@ -4818,7 +4838,9 @@
           }
         },
         "subtitle": "Automating Root Cause Analysis in Complex Systems",
-        "title": "Operational Intelligence: Bridging Observability and AIOps"
+        "title": "Operational Intelligence: Bridging Observability and AIOps",
+        "diagram": "System Architecture Diagram",
+        "caption": "Figure: Architecture Overview"
       },
       "a4": {
         "abstract": "Decentralized enforcement of security policies across hybrid cloud estates. Implementing Policy-as-Code for scalable compliance.",
@@ -4859,7 +4881,9 @@
           }
         },
         "subtitle": "Standardizing compliance across AWS, Azure, and Google Cloud",
-        "title": "Policy-as-Code: A Unified Framework for Multicloud Governance"
+        "title": "Policy-as-Code: A Unified Framework for Multicloud Governance",
+        "diagram": "System Architecture Diagram",
+        "caption": "Figure: Architecture Overview"
       },
       "a5": {
         "abstract": "The Strangler Fig pattern applied to large-scale enterprise legacy systems. Strategies for incremental modernization without business disruption.",
@@ -4900,7 +4924,9 @@
           }
         },
         "subtitle": "Incremental Migration Strategies for Legacy Systems",
-        "title": "Deconstructing the Monolith: Strategic Patterns for Modernization"
+        "title": "Deconstructing the Monolith: Strategic Patterns for Modernization",
+        "diagram": "System Architecture Diagram",
+        "caption": "Figure: Architecture Overview"
       },
       "a6": {
         "abstract": "Adaptive policy enforcement mechanisms for dynamic cloud infrastructures. ensuring continuous compliance in rapidly changing environments.",
@@ -4941,7 +4967,9 @@
           }
         },
         "subtitle": "Dynamic Access Control for Evolving Threat Landscapes",
-        "title": "Adaptive Security: AI-Driven Policy Enforcement in Zero-Trust"
+        "title": "Adaptive Security: AI-Driven Policy Enforcement in Zero-Trust",
+        "diagram": "System Architecture Diagram",
+        "caption": "Figure: Architecture Overview"
       },
       "aecp": {
         "abstract": "A methodology for managing entropy in hyper-scale systems. Establishes the 'Control Plane' as a sovereign primitive, using probabilistic failure injection and Policy-as-Code governance to guarantee partial availability.",
@@ -5064,7 +5092,9 @@
           }
         },
         "subtitle": "Ensuring Consistency Across Locales with AI-Driven Testing",
-        "title": "Automated Multilingual Quality Assurance for Cloud-Native Applications"
+        "title": "Automated Multilingual Quality Assurance for Cloud-Native Applications",
+        "diagram": "QA Process Diagram",
+        "caption": "Figure: Automated Quality Assurance Flow"
       },
       "scholarly-article": {
         "abstract": "This paper presents a comprehensive framework for implementing sovereign cloud architectures at enterprise scale.",
