@@ -43,7 +43,11 @@ async function startServer() {
   const server = spawn("npx", ["next", "start", "-p", PORT.toString()], {
     stdio: "pipe",
     shell: true,
-    env: { ...process.env, NODE_ENV: "production" },
+    env: {
+      ...process.env,
+      NODE_ENV: "production",
+      AUTH_SECRET: process.env.AUTH_SECRET || "dummy-secret-for-seo-gate",
+    },
   });
 
   server.stdout.on("data", (data) => {
