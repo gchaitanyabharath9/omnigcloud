@@ -2167,7 +2167,8 @@
     "watermark": "OmniGCloud",
     "welcome": "OmniGCloud Welcome",
     "yourRights": "Your Rights",
-    "yourRightsText": "Your Rights Text"
+    "yourRightsText": "Your Rights Text",
+    "unknown": "Unknown"
   },
   "Community": {
     "callout": {
@@ -5010,7 +5011,9 @@
           }
         },
         "subtitle": "Orchestrating Digital Sovereignty at Scale",
-        "title": "The Autonomous Enterprise Control Plane (AECP)"
+        "title": "The Autonomous Enterprise Control Plane (AECP)",
+        "diagram": "graph TD\n    I[Intent] --> CP[AECP Control Plane]\n    CP --> AWS[AWS Node]\n    CP --> AZ[Azure Node]\n    CP --> GCP[GCP Node]\n    style CP fill:#1e293b,stroke:#3b82f6,stroke-width:4px",
+        "caption": "Figure 7.1: AECP Meta-OS Architecture abstraction layer."
       },
       "arch": {
         "abstract": "This scholarly article applies formal methods to verify the correctness of the OmniGCloud consensus algorithm under partition scenarios. Using TLA+ specifications, we prove safety and liveness properties, identifying edge cases where traditional eventual consistency models fail. Our findings contribute to the body of knowledge on fault-tolerant distributed systems, offering mathematical proofs of reliability for mission-critical sovereign infrastructure.",
@@ -5051,7 +5054,9 @@
           }
         },
         "subtitle": "Proving Correctness in Partition-Tolerant Systems",
-        "title": "Formal Verification of Distributed Consensus in Sovereign Clouds"
+        "title": "Formal Verification of Distributed Consensus in Sovereign Clouds",
+        "diagram": "graph TD\n    A[Sovereignty] --- B[Scale]\n    B --- C[Complexity]\n    C --- A\n    style A fill:#1e293b,stroke:#3b82f6\n    style B fill:#1e293b,stroke:#3b82f6\n    style C fill:#1e293b,stroke:#3b82f6",
+        "caption": "Figure 8.1: The Sovereignty Iron Triangle - Balancing trade-offs in enterprise scale."
       },
       "qa1": {
         "abstract": "As cloud-native applications expand to global markets, maintaining quality across multiple languages and locales becomes increasingly complex. Traditional QA approaches—manual testing, locale-specific test suites—do not scale to dozens of languages and continuous deployment cycles. This paper presents an automated multilingual QA framework that leverages AI to detect localization bugs, validate translations, and ensure UI consistency across locales. Our approach integrates with CI/CD pipelines, providing real-time feedback on internationalization (i18n) issues before they reach production. Case studies demonstrate 80% reduction in localization defects and 50% faster time-to-market for international releases.",
@@ -5141,7 +5146,8 @@
       "DRAFT": "Draft",
       "SUBMITTED": "Submitted",
       "PUBLISHED": "Published"
-    }
+    },
+    "unknown": "Unknown"
   },
   "Partners": {
     "ecosystem": {
