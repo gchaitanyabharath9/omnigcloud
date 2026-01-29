@@ -4702,21 +4702,37 @@
         "authors": "Chaitanya Bharath Gopu",
         "keywords": "Cloud-Native, Sovereignty, Distributed Systems, Microservices",
         "sections": {
-          "0": {
+          "overview": {
             "content": "The transition to cloud-native architectures represents a fundamental shift in how enterprise software is designed, deployed, and managed. Traditional monolithic applications, characterized by tight coupling and manual operations, are ill-suited for the dynamic nature of modern cloud infrastructure. This paper introduces the **Cloud-Native Enterprise Reference Architecture**, a blueprint designed to address the specific needs of large-scale, regulated organizations.\n\nAt its core, this architecture prioritizes **Sovereignty**, **Scalability**, and **Resilience**. Sovereignty ensures that the organization retains absolute control over its data and logic, regardless of the underlying cloud provider. Scalability allows the system to handle fluctuating loads with linear resource usage. Resilience guarantees continuous operation even in the face of component failures.\n\nThe architecture is built upon the **G-Framework**, a proprietary methodology that separates the system into distinct 'planes' of operation: the Edge Plane, the Service Plane, the Data Plane, and the Control Plane. This separation allows for independent evolution and scaling of each layer.",
-            "title": "1. Introduction"
+            "title": "1. Introduction",
+            "diagram": "diagram_a1_section1.png",
+            "caption": "Figure 1: Caption for a1",
+            "diagram2": "diagram_a1_section1_b.png",
+            "caption2": "Figure 1b: Secondary Caption"
           },
-          "1": {
+          "methodology": {
             "content": "The G-Framework is the foundational organizing principle of this architecture. It enforces a strict hierarchy of controls and data flows to prevent the common 'distributed monolith' anti-pattern. \n\n**2.1 The Unified Control Plane**\nThe Control Plane is the brain of the system. It is responsible for storing the 'Intent' of the system—the desired state of all infrastructure and applications. Unlike traditional configuration management, the Control Plane is active; it continuously monitors the live state of the system and automatically remediates any drift from the desired state.\n\n**2.2 The Sovereign Data Fabric**\nData sovereignty is achieved through the Data Fabric, a layer that abstracts physical storage. It ensures that data is encrypted, replicated, and stored in compliance with local regulations (e.g., GDPR, CCPA) before it ever touches the disk.",
-            "title": "2. The G-Framework"
+            "title": "2. The G-Framework",
+            "diagram": "diagram_a1_section2.png",
+            "caption": "Figure 2: Caption for a1",
+            "diagram2": "diagram_a1_section2_b.png",
+            "caption2": "Figure 2b: Secondary Caption"
           },
-          "2": {
+          "implementation": {
             "content": "To achieve infinite horizontal scalability, the architecture employs a 'Cellular' design. A Cell is a self-contained unit of deployment that includes everything needed to run a specific portion of the workload—compute, storage, and networking. \n\n**3.1 Fault Isolation**\nBecause Cells are independent, a failure in one Cell (e.g., a bad deployment or a resource spike) is naturally contained. It cannot cascade to other Cells, ensuring that the blast radius of any incident is strictly limited.\n\n**3.2 Linear Scalability**\nScaling the system is as simple as adding more Cells. There are no shared bottlenecks or central contention points, allowing the system to grow linearly with demand.",
-            "title": "3. Cellular Architecture"
+            "title": "3. Cellular Architecture",
+            "diagram": "diagram_a1_section3.png",
+            "caption": "Figure 3: Caption for a1",
+            "diagram2": "diagram_a1_section3_b.png",
+            "caption2": "Figure 3b: Secondary Caption"
           },
-          "3": {
+          "conclusion": {
             "content": "The Cloud-Native Enterprise Reference Architecture provides a proven path for large organizations to adopt modern cloud practices without compromising on control or compliance. By leveraging the G-Framework and Cellular Architecture, enterprises can build systems that are not only robust and scalable but also fully sovereign.\n\nFuture revisions of this standard will address edge computing patterns and the integration of quantum-resistant cryptography.",
-            "title": "4. Conclusion"
+            "title": "4. Conclusion",
+            "diagram": "diagram_a1_section4.png",
+            "caption": "Figure 4: Caption for a1",
+            "diagram2": "diagram_a1_section4_b.png",
+            "caption2": "Figure 4b: Secondary Caption"
           }
         },
         "subtitle": "A comprehensive framework for sovereign, scalable, and resilient cloud systems",
@@ -4727,21 +4743,37 @@
         "authors": "Chaitanya Bharath Gopu",
         "keywords": "High-Throughput, Event-Driven, Lattice-Mesh, Resilience, C4 Model, Structurizr",
         "sections": {
-          "0": {
+          "overview": {
             "content": "High-throughput distributed systems must balance three competing concerns: latency, throughput, and fault tolerance. Traditional hub-and-spoke architectures centralize message routing through a single broker cluster, creating bottlenecks and single points of failure. As data volumes scale exponentially—from terabytes to petabytes daily—these architectures exhibit non-linear latency degradation.\\n\\nThe Lattice-Mesh architecture addresses these limitations through peer-to-peer message distribution combined with centralized coordination. Each node in the mesh maintains direct connections to a subset of peers, forming a structured overlay network. This topology minimizes network hops while preserving global ordering guarantees through vector clocks and causal consistency protocols.\\n\\nOur implementation leverages Apache Kafka for durable storage and Apache Flink for stream processing, augmented with custom routing logic. Performance benchmarks demonstrate 40% latency reduction and 3x throughput improvement compared to conventional architectures. These gains prove critical for real-time applications in financial trading, IoT telemetry, and operational analytics.",
-            "title": "Distributed Systems Resilience Fundamentals"
+            "title": "Distributed Systems Resilience Fundamentals",
+            "diagram": "diagram_a2_section1.png",
+            "caption": "Figure 1: Caption for a2",
+            "diagram2": "diagram_a2_section1_b.png",
+            "caption2": "Figure 1b: Secondary Caption"
           },
-          "1": {
+          "methodology": {
             "content": "Achieving exactly-once delivery semantics in distributed systems requires careful coordination between producers, brokers, and consumers. The Lattice-Mesh architecture implements a two-phase commit protocol optimized for high-throughput scenarios. Each message carries a unique identifier and vector clock timestamp, enabling idempotent processing and duplicate detection.\\n\\nBroker nodes maintain a distributed transaction log using Raft consensus. When a producer publishes a message, the coordinating broker initiates a prepare phase, replicating the message to quorum peers. Only after receiving acknowledgments does the broker commit the transaction and notify consumers. This protocol ensures atomicity even during network partitions or node failures.\\n\\nConsumer groups leverage Kafka's consumer offset mechanism, extended with application-level checkpointing. Each consumer periodically snapshots its processing state to a distributed key-value store (etcd or Consul). Upon failure recovery, consumers resume from the last committed checkpoint, reprocessing only uncommitted messages. Benchmarks show 99.999% delivery accuracy with sub-100ms latency at 1M messages/second.",
-            "title": "Exactly-Once Semantics at Scale"
+            "title": "Exactly-Once Semantics at Scale",
+            "diagram": "diagram_a2_section2.png",
+            "caption": "Figure 2: Caption for a2",
+            "diagram2": "diagram_a2_section2_b.png",
+            "caption2": "Figure 2b: Secondary Caption"
           },
-          "2": {
+          "implementation": {
             "content": "Static routing policies fail to adapt to dynamic workload patterns and infrastructure failures. The Lattice-Mesh architecture implements adaptive routing using reinforcement learning algorithms. Each broker node monitors latency, throughput, and error rates for peer connections, adjusting routing weights in real-time.\\n\\nThe routing algorithm employs a multi-armed bandit approach, balancing exploration (trying new routes) with exploitation (using known-good routes). Nodes exchange routing metrics via gossip protocols, converging on globally optimal paths within seconds of topology changes. This self-healing capability ensures resilience against cascading failures and network congestion.\\n\\nLoad balancing extends beyond simple round-robin distribution. The system considers message affinity (ensuring related messages route to the same consumer), consumer capacity (avoiding overload), and data locality (minimizing cross-region transfers). Advanced features include priority queues for latency-sensitive messages and backpressure mechanisms to prevent producer overrun. Production deployments demonstrate automatic recovery from 3-node failures in under 5 seconds with zero message loss.",
-            "title": "Adaptive Routing and Load Balancing"
+            "title": "Adaptive Routing and Load Balancing",
+            "diagram": "diagram_a2_section3.png",
+            "caption": "Figure 3: Caption for a2",
+            "diagram2": "diagram_a2_section3_b.png",
+            "caption2": "Figure 3b: Secondary Caption"
           },
-          "3": {
+          "conclusion": {
             "content": "Deploying Lattice-Mesh architectures in production requires robust operational tooling and clear architectural documentation. We leverage the C4 model and Structurizr to maintain architecture diagrams as code, ensuring documentation evolves with the system. This approach enables teams to visualize component relationships, deployment topologies, and data flows in a version-controlled manner.\\n\\nKubernetes serves as the container orchestration platform, with custom operators managing broker lifecycle and scaling policies. The C4 component diagram documents the deployment architecture, showing how mesh brokers, monitoring agents, and control plane components interact. Structurizr workspaces enable collaborative architecture reviews, with automatic diagram generation from DSL definitions.\\n\\nMonitoring integrates OpenTelemetry for distributed tracing, enabling end-to-end message flow visualization. Each message carries trace context, allowing operators to diagnose latency hotspots and routing inefficiencies. Prometheus collects broker metrics (queue depth, replication lag, consumer offset), while Grafana dashboards provide real-time operational visibility. Chaos engineering validates resilience claims through controlled failure injection using Chaos Mesh. Production telemetry from financial services deployments shows 99.99% uptime and consistent sub-50ms p99 latency at 5M messages/second sustained throughput.",
-            "title": "Operational Deployment with C4 and Structurizr"
+            "title": "Operational Deployment with C4 and Structurizr",
+            "diagram": "diagram_a2_section4.png",
+            "caption": "Figure 4: Caption for a2",
+            "diagram2": "diagram_a2_section4_b.png",
+            "caption2": "Figure 4b: Secondary Caption"
           }
         },
         "subtitle": "Optimizing Event Streaming with Peer-to-Peer Topologies",
@@ -4752,21 +4784,37 @@
         "authors": "Chaitanya Bharath Gopu",
         "keywords": "Observability, Telemetry, AIOps, Operational Intelligence, C4 Model, Structurizr",
         "sections": {
-          "0": {
+          "overview": {
             "content": "Modern distributed systems generate terabytes of telemetry data daily—logs, metrics, and traces from thousands of microservices. This data deluge creates a paradox: more visibility yields less insight. Traditional observability tools overwhelm operators with alerts, dashboards, and raw data, hindering effective incident response.\\n\\nOperational Intelligence (OI) transcends basic observability by applying AI/ML to automate root cause analysis. Instead of presenting raw metrics, OI systems identify anomalies, correlate symptoms across services, and recommend remediation actions. This shift from reactive monitoring to proactive intelligence reduces Mean Time to Resolution (MTTR) by 60-80% in production environments.\\n\\nOur framework integrates three pillars: telemetry normalization, AIOps-driven analysis, and automated remediation. Using the C4 model and Structurizr, we document the system architecture as code, ensuring alignment between design intent and operational reality. This approach enables teams to evolve their observability strategy alongside application complexity.",
-            "title": "The Observability Crisis in Modern Systems"
+            "title": "The Observability Crisis in Modern Systems",
+            "diagram": "diagram_a3_section1.png",
+            "caption": "Figure 1: Caption for a3",
+            "diagram2": "diagram_a3_section1_b.png",
+            "caption2": "Figure 1b: Secondary Caption"
           },
-          "1": {
+          "methodology": {
             "content": "Heterogeneous systems emit telemetry in diverse formats—Prometheus metrics, JSON logs, OpenTelemetry traces, and proprietary formats. The normalization layer transforms this chaos into a unified data model, enabling cross-signal correlation. We employ schema-on-read techniques, inferring structure from semi-structured logs using natural language processing.\\n\\nCorrelation engines link related signals using multiple strategies: temporal proximity (events within time windows), causal relationships (traced through distributed tracing), and semantic similarity (identified via embedding models). For example, a CPU spike (metric) correlates with increased error rates (logs) and slow request traces (spans), forming a coherent incident narrative.\\n\\nThe system maintains a dynamic topology graph, updated in real-time from service mesh telemetry and CMDB data. This graph enables impact analysis—when a database fails, the platform identifies all dependent services and predicts cascading failures. Graph algorithms (PageRank, community detection) prioritize alerts based on service criticality and blast radius.",
-            "title": "Telemetry Normalization and Correlation"
+            "title": "Telemetry Normalization and Correlation",
+            "diagram": "diagram_a3_section2.png",
+            "caption": "Figure 2: Caption for a3",
+            "diagram2": "diagram_a3_section2_b.png",
+            "caption2": "Figure 2b: Secondary Caption"
           },
-          "2": {
+          "implementation": {
             "content": "The AIOps engine applies machine learning to detect anomalies and diagnose root causes. We employ ensemble methods combining statistical models (ARIMA, Holt-Winters), unsupervised learning (Isolation Forest, DBSCAN), and deep learning (LSTMs for time-series prediction). This multi-model approach reduces false positives by 90% compared to static threshold alerts.\\n\\nAnomaly detection operates at multiple granularities: individual metrics (CPU, latency), service-level indicators (SLIs), and business KPIs (transaction success rate). The system learns normal behavior patterns during training periods, adapting to seasonal trends and gradual capacity growth. When anomalies occur, the platform generates confidence scores and explanations using SHAP (SHapley Additive exPlanations) values.\\n\\nRoot cause analysis leverages causal inference models trained on historical incident data. The system constructs a Bayesian network representing dependencies between services, infrastructure, and external factors (deployments, traffic spikes). When an incident occurs, probabilistic inference identifies the most likely root cause, ranked by posterior probability. SRE teams report 70% reduction in diagnostic time using these AI-generated hypotheses.",
-            "title": "AIOps: Anomaly Detection and Root Cause Analysis"
+            "title": "AIOps: Anomaly Detection and Root Cause Analysis",
+            "diagram": "diagram_a3_section3.png",
+            "caption": "Figure 3: Caption for a3",
+            "diagram2": "diagram_a3_section3_b.png",
+            "caption2": "Figure 3b: Secondary Caption"
           },
-          "3": {
+          "conclusion": {
             "content": "Operational Intelligence culminates in automated remediation—the system not only diagnoses problems but fixes them. Remediation actions range from simple (restarting failed pods) to complex (scaling infrastructure, rolling back deployments). Each action requires approval workflows and safety guardrails to prevent automation-induced outages.\\n\\nThe remediation engine integrates with Kubernetes operators, Terraform, and Ansible for infrastructure changes. Actions are defined as declarative playbooks, versioned in Git and subject to peer review. The system maintains a knowledge base of incident-action pairs, using reinforcement learning to optimize remediation strategies over time. Successful actions increase in confidence scores, while failures trigger human escalation.\\n\\nContinuous learning closes the feedback loop. Post-incident reviews feed back into model training, improving anomaly detection and root cause accuracy. The platform tracks key metrics: MTTR, false positive rate, automation success rate, and SRE toil reduction. Production deployments show 40% MTTR reduction and 50% decrease in manual incident response. Structurizr documentation captures the evolving architecture, ensuring knowledge transfer as the system matures.",
-            "title": "Automated Remediation and Continuous Learning"
+            "title": "Automated Remediation and Continuous Learning",
+            "diagram": "diagram_a3_section4.png",
+            "caption": "Figure 4: Caption for a3",
+            "diagram2": "diagram_a3_section4_b.png",
+            "caption2": "Figure 4b: Secondary Caption"
           }
         },
         "subtitle": "Automating Root Cause Analysis in Complex Systems",
@@ -4777,21 +4825,37 @@
         "authors": "Chaitanya Bharath Gopu",
         "keywords": "Governance, Compliance-as-Code, Hybrid Cloud, Security, Open Policy Agent, C4 Model, Structurizr",
         "sections": {
-          "0": {
+          "overview": {
             "content": "Enterprises operating across AWS, Azure, and Google Cloud face a governance nightmare: each provider offers distinct policy frameworks, compliance controls, and security primitives. AWS Config, Azure Policy, and GCP Organization Policies use incompatible languages and enforcement models, forcing teams to maintain separate rule sets for identical compliance requirements.\\n\\nThis fragmentation creates compliance drift—configurations that satisfy GDPR on AWS may violate it on Azure due to subtle differences in implementation. Auditors demand consistent evidence across all environments, yet traditional tools provide provider-specific reports that resist consolidation. The result: increased audit costs, delayed certifications, and elevated breach risks.\\n\\nPolicy-as-Code (PaC) offers a solution: define governance rules once in a declarative language, then compile them into provider-specific enforcement primitives. Our framework introduces a Domain-Specific Language (DSL) that abstracts compliance intent from infrastructure specifics. Using C4 diagrams and Structurizr, we document the policy architecture, enabling teams to visualize rule propagation across cloud boundaries.",
-            "title": "The Multi-Cloud Governance Challenge"
+            "title": "The Multi-Cloud Governance Challenge",
+            "diagram": "diagram_a4_section1.png",
+            "caption": "Figure 1: Caption for a4",
+            "diagram2": "diagram_a4_section1_b.png",
+            "caption2": "Figure 1b: Secondary Caption"
           },
-          "1": {
+          "methodology": {
             "content": "The Policy DSL balances expressiveness with simplicity. Policies declare WHAT must be enforced (e.g., 'all S3 buckets must encrypt data at rest') without specifying HOW (provider-specific API calls). The language supports hierarchical rule composition, allowing base policies (GDPR, HIPAA) to be extended with organization-specific requirements.\\n\\nEach policy consists of three components: scope (which resources), condition (when to apply), and action (enforce, audit, or alert). Scopes use resource selectors compatible with cloud-native query languages (JMESPath, JSONPath). Conditions evaluate resource attributes, tags, and contextual factors (region, environment). Actions determine enforcement mode—blocking non-compliant changes or generating audit logs for review.\\n\\nThe DSL compiler performs static analysis, detecting conflicts between policies and validating against provider capabilities. For example, a policy requiring 'deny public access to databases' translates to AWS RDS parameter groups, Azure SQL firewall rules, and GCP Cloud SQL authorized networks. The compiler ensures semantic equivalence across providers, preventing compliance gaps.",
-            "title": "Declarative Policy Language Design"
+            "title": "Declarative Policy Language Design",
+            "diagram": "diagram_a4_section2.png",
+            "caption": "Figure 2: Caption for a4",
+            "diagram2": "diagram_a4_section2_b.png",
+            "caption2": "Figure 2b: Secondary Caption"
           },
-          "2": {
+          "implementation": {
             "content": "Static policy enforcement is insufficient—infrastructure evolves continuously through deployments, configuration changes, and manual interventions. The Policy-as-Code platform implements continuous compliance monitoring, detecting drift within minutes of occurrence. Drift detection compares actual resource configurations against declared policy state, identifying violations and triggering remediation workflows.\\n\\nThe system employs a reconciliation loop pattern, inspired by Kubernetes controllers. Each policy has an associated controller that watches for resource changes via cloud provider event streams (AWS CloudTrail, Azure Activity Log, GCP Cloud Audit Logs). When drift occurs, the controller evaluates severity and triggers appropriate responses: auto-remediation for critical violations, approval workflows for moderate issues, and audit logs for informational findings.\\n\\nRemediation strategies vary by policy type. Preventive policies block non-compliant changes before they occur (e.g., denying public S3 bucket creation). Detective policies identify violations post-facto and trigger alerts. Corrective policies automatically revert configurations to compliant states. The platform tracks remediation success rates, policy coverage, and compliance scores, providing executives with real-time governance dashboards.",
-            "title": "Continuous Compliance and Drift Detection"
+            "title": "Continuous Compliance and Drift Detection",
+            "diagram": "diagram_a4_section3.png",
+            "caption": "Figure 3: Caption for a4",
+            "diagram2": "diagram_a4_section3_b.png",
+            "caption2": "Figure 3b: Secondary Caption"
           },
-          "3": {
+          "conclusion": {
             "content": "Our reference implementation leverages Open Policy Agent (OPA) as the policy engine, chosen for its declarative Rego language and cloud-native integration. OPA evaluates policies at decision points—API gateways, CI/CD pipelines, and infrastructure provisioning tools—providing consistent enforcement across the software delivery lifecycle.\\n\\nThe architecture follows a hub-and-spoke model: a central policy repository (Git) serves as the source of truth, with OPA agents deployed across cloud regions and environments. Policies propagate via GitOps workflows using ArgoCD, ensuring version control and audit trails. The C4 component diagram, maintained in Structurizr, documents the distribution topology and decision point integrations.\\n\\nCase studies from financial services and healthcare demonstrate 60% reduction in compliance audit preparation time and 99.9% policy enforcement accuracy. Organizations report faster cloud adoption, with confidence that governance scales automatically across new regions and services. The platform supports 50+ built-in compliance frameworks (GDPR, HIPAA, PCI-DSS, SOC2) and custom policy extensions. Production deployments manage 100,000+ cloud resources across 20+ AWS accounts, 15+ Azure subscriptions, and 10+ GCP projects with centralized governance.",
-            "title": "Implementation with Open Policy Agent and Structurizr"
+            "title": "Implementation with Open Policy Agent and Structurizr",
+            "diagram": "diagram_a4_section4.png",
+            "caption": "Figure 4: Caption for a4",
+            "diagram2": "diagram_a4_section4_b.png",
+            "caption2": "Figure 4b: Secondary Caption"
           }
         },
         "subtitle": "Standardizing compliance across AWS, Azure, and Google Cloud",
@@ -4802,21 +4866,37 @@
         "authors": "Chaitanya Bharath Gopu",
         "keywords": "Modernization, Microservices, Legacy Migration, Domain-Driven Design, Strangler Fig, C4 Model, Structurizr",
         "sections": {
-          "0": {
+          "overview": {
             "content": "Legacy monolithic applications represent both technical debt and business risk. Built over decades using outdated frameworks, these systems resist change, impede innovation, and consume disproportionate maintenance resources. Yet they often contain irreplaceable business logic and domain knowledge, making wholesale replacement infeasible.\\n\\nCloud-native modernization offers a middle path: incrementally decompose monoliths into microservices while preserving business continuity. This approach, exemplified by the Strangler Fig pattern, gradually replaces legacy components with cloud-native alternatives. Domain-Driven Design (DDD) provides the conceptual framework for identifying bounded contexts—natural seams along which to partition the monolith.\\n\\nOur reference architecture, documented using C4 diagrams and Structurizr, guides teams through the modernization journey. We address critical challenges: maintaining transactional integrity across distributed services, managing data migration, and ensuring zero-downtime deployments. Case studies demonstrate 40% reduction in time-to-market for new features post-modernization.",
-            "title": "The Modernization Imperative"
+            "title": "The Modernization Imperative",
+            "diagram": "diagram_a5_section1.png",
+            "caption": "Figure 1: Caption for a5",
+            "diagram2": "diagram_a5_section1_b.png",
+            "caption2": "Figure 1b: Secondary Caption"
           },
-          "1": {
+          "methodology": {
             "content": "The Strangler Fig pattern, named after the vine that gradually envelops and replaces host trees, provides a proven approach to monolith decomposition. The pattern operates in three phases: identify, intercept, and replace. First, identify a bounded context within the monolith—a cohesive set of features with minimal external dependencies. Second, intercept requests to this context using an API gateway or service mesh. Third, replace the legacy implementation with a new microservice, routing traffic to the new service while maintaining the legacy as fallback.\\n\\nImplementation requires careful orchestration. We employ feature flags to control traffic routing, enabling gradual rollout and instant rollback. The API gateway maintains dual routing rules, directing a percentage of traffic to the new service while monitoring error rates and latency. If metrics degrade, traffic automatically reverts to the legacy path. This canary deployment approach minimizes risk during migration.\\n\\nData migration presents unique challenges. The Strangler Fig pattern advocates for dual-write strategies: write to both legacy and new databases, read from the new database, and reconcile discrepancies asynchronously. This approach maintains data consistency while allowing independent schema evolution. Production deployments demonstrate zero-downtime migrations of systems processing 10M+ transactions daily.",
-            "title": "Strangler Fig Pattern Implementation"
+            "title": "Strangler Fig Pattern Implementation",
+            "diagram": "diagram_a5_section2.png",
+            "caption": "Figure 2: Caption for a5",
+            "diagram2": "diagram_a5_section2_b.png",
+            "caption2": "Figure 2b: Secondary Caption"
           },
-          "2": {
+          "implementation": {
             "content": "Identifying optimal service boundaries requires deep understanding of business domains. Domain-Driven Design (DDD) provides a systematic methodology for discovering bounded contexts—areas of the business with distinct language, rules, and data models. Each bounded context becomes a candidate microservice, ensuring services align with business capabilities rather than technical layers.\\n\\nThe DDD process begins with Event Storming workshops, bringing together domain experts and developers to map business processes. Participants identify domain events (order placed, payment processed), commands (create order, authorize payment), and aggregates (order, customer, inventory). These artifacts reveal natural boundaries where services can operate independently with minimal coordination.\\n\\nContext mapping documents relationships between bounded contexts. Some contexts share data via published events (event-driven integration), others expose APIs for synchronous queries (request-response), and some maintain separate data copies with eventual consistency (anti-corruption layer). The C4 component diagram, maintained in Structurizr, visualizes these integration patterns, guiding implementation teams. Production systems demonstrate 60% reduction in cross-service dependencies using DDD-driven decomposition.",
-            "title": "Domain-Driven Design for Service Boundaries"
+            "title": "Domain-Driven Design for Service Boundaries",
+            "diagram": "diagram_a5_section3.png",
+            "caption": "Figure 3: Caption for a5",
+            "diagram2": "diagram_a5_section3_b.png",
+            "caption2": "Figure 3b: Secondary Caption"
           },
-          "3": {
+          "conclusion": {
             "content": "Modernized microservices architectures introduce operational complexity: distributed tracing, service mesh configuration, and multi-database management. Ensuring operational readiness requires comprehensive observability, automated deployment pipelines, and chaos engineering validation.\\n\\nWe implement OpenTelemetry for distributed tracing, instrumenting every service to emit spans with correlation IDs. Traces flow through a centralized collector (Jaeger or Tempo), enabling end-to-end request visualization. This visibility proves critical for diagnosing latency issues that span multiple services and data stores. Service mesh (Istio or Linkerd) provides traffic management, circuit breaking, and mutual TLS authentication without application code changes.\\n\\nChaos engineering validates resilience claims. Using tools like Chaos Mesh and Gremlin, we inject failures—pod crashes, network latency, database unavailability—and verify graceful degradation. Automated tests ensure circuit breakers trip correctly, retries use exponential backoff, and fallback mechanisms activate. The C4 deployment diagram, maintained in Structurizr, documents the production topology including service mesh sidecars, observability agents, and chaos engineering injection points. Production metrics show 99.95% uptime and sub-200ms p99 latency across modernized services.",
-            "title": "Operational Readiness and Observability"
+            "title": "Operational Readiness and Observability",
+            "diagram": "diagram_a5_section4.png",
+            "caption": "Figure 4: Caption for a5",
+            "diagram2": "diagram_a5_section4_b.png",
+            "caption2": "Figure 4b: Secondary Caption"
           }
         },
         "subtitle": "Incremental Migration Strategies for Legacy Systems",
@@ -4827,21 +4907,37 @@
         "authors": "Chaitanya Bharath Gopu",
         "keywords": "Adaptive Policy, AI Security, Zero-Trust, Risk Scoring, Machine Learning, C4 Model, Structurizr",
         "sections": {
-          "0": {
+          "overview": {
             "content": "Traditional security policies operate on static rules: 'users in group X can access resource Y'. These policies fail to account for contextual factors—user behavior patterns, device security posture, network location, and threat intelligence. A legitimate user accessing sensitive data from an unfamiliar location at an unusual time may indicate account compromise, yet static policies grant access without question.\\n\\nZero-trust architectures demand continuous verification: 'never trust, always verify'. Every request undergoes authentication, authorization, and risk assessment, regardless of network location or previous access history. However, implementing zero-trust with static policies creates friction—users face constant authentication challenges, impeding productivity.\\n\\nAdaptive Policy Enforcement resolves this tension by dynamically adjusting access controls based on real-time risk scoring. Machine learning models analyze user behavior, device telemetry, and threat feeds to assign risk scores. Low-risk requests proceed seamlessly, moderate-risk requests trigger step-up authentication, and high-risk requests are blocked pending investigation. Using C4 diagrams and Structurizr, we document the adaptive policy architecture, enabling security teams to visualize decision flows and risk thresholds.",
-            "title": "The Limitations of Static Security Policies"
+            "title": "The Limitations of Static Security Policies",
+            "diagram": "diagram_a6_section1.png",
+            "caption": "Figure 1: Caption for a6",
+            "diagram2": "diagram_a6_section1_b.png",
+            "caption2": "Figure 1b: Secondary Caption"
           },
-          "1": {
+          "methodology": {
             "content": "The risk scoring engine combines multiple signals to assess request legitimacy. User behavior analytics (UBA) models learn normal patterns—typical login times, frequently accessed resources, common IP addresses. Deviations from these patterns increase risk scores. For example, a user who typically accesses HR systems during business hours from New York suddenly requesting financial data at 3 AM from Romania triggers high-risk alerts.\\n\\nDevice posture assessment evaluates endpoint security: operating system patch level, antivirus status, disk encryption, and firewall configuration. Devices failing security baselines receive elevated risk scores, potentially blocking access to sensitive resources. Network context considers connection type (corporate VPN, public WiFi, cellular) and geolocation, applying stricter policies for untrusted networks.\\n\\nThreat intelligence integration enriches risk assessment with external data. The system queries threat feeds for known malicious IPs, compromised credentials, and active attack campaigns. If a user's IP appears on a threat list, or their credentials match a recent breach dump, risk scores spike accordingly. Machine learning models continuously retrain on labeled data—security incidents, false positives, and approved exceptions—improving accuracy over time. Production deployments demonstrate 95% reduction in false positives compared to static rule-based systems.",
-            "title": "Real-Time Risk Scoring with Machine Learning"
+            "title": "Real-Time Risk Scoring with Machine Learning",
+            "diagram": "diagram_a6_section2.png",
+            "caption": "Figure 2: Caption for a6",
+            "diagram2": "diagram_a6_section2_b.png",
+            "caption2": "Figure 2b: Secondary Caption"
           },
-          "2": {
+          "implementation": {
             "content": "Adaptive policies must balance security with usability. Overly aggressive policies frustrate users and drive shadow IT adoption, while lenient policies expose organizations to breaches. The system implements dynamic policy adjustment, automatically tuning risk thresholds based on organizational context and threat landscape.\\n\\nDuring high-threat periods—active ransomware campaigns, nation-state attacks—the system tightens policies, requiring stronger authentication and limiting access to critical resources. Conversely, during low-threat periods with high business activity (quarter-end reporting), policies relax slightly to maintain productivity. Policy adjustments occur gradually, avoiding sudden disruptions that confuse users.\\n\\nExplainability is critical for user trust and regulatory compliance. When the system denies access or requires step-up authentication, it provides clear explanations: 'Access denied due to unusual login location (Romania) and device security posture (outdated antivirus)'. These explanations use SHAP (SHapley Additive exPlanations) values from the ML model, identifying which factors contributed most to the risk score. Security teams review explanations during incident investigations, validating model decisions and identifying false positives for retraining.",
-            "title": "Dynamic Policy Adjustment and Explainability"
+            "title": "Dynamic Policy Adjustment and Explainability",
+            "diagram": "diagram_a6_section3.png",
+            "caption": "Figure 3: Caption for a6",
+            "diagram2": "diagram_a6_section3_b.png",
+            "caption2": "Figure 3b: Secondary Caption"
           },
-          "3": {
+          "conclusion": {
             "content": "Deploying adaptive policy enforcement requires integration with zero-trust infrastructure: identity providers, network access controls, and endpoint management. Our reference architecture, documented using C4 diagrams in Structurizr, shows how components interact to enforce adaptive policies across the enterprise.\\n\\nThe Policy Enforcement Point (PEP) sits at critical access boundaries—API gateways, VPN concentrators, and application proxies. Each PEP intercepts requests and queries the Policy Decision Point (PDP) for authorization. The PDP evaluates adaptive policies, invoking the risk scoring engine and returning allow/deny/step-up decisions. This centralized decision model ensures consistent policy enforcement across heterogeneous systems.\\n\\nIntegration with existing security tools maximizes value. The system ingests logs from SIEM platforms (Splunk, Elastic Security), correlating access patterns with security events. It pushes high-risk users to SOAR platforms (Palo Alto Cortex, IBM Resilient) for automated investigation. Device management platforms (Microsoft Intune, Jamf) provide real-time posture data, enabling instant policy adjustments when devices fall out of compliance.\\n\\nProduction deployments in financial services and healthcare demonstrate 80% reduction in security incidents and 50% decrease in help desk tickets related to access issues. Users report improved experience—seamless access for routine activities, transparent security for risky requests. The system processes 10M+ access decisions daily with sub-50ms latency, proving that adaptive security scales to enterprise workloads.",
-            "title": "Implementation with Zero-Trust Architecture"
+            "title": "Implementation with Zero-Trust Architecture",
+            "diagram": "diagram_a6_section4.png",
+            "caption": "Figure 4: Caption for a6",
+            "diagram2": "diagram_a6_section4_b.png",
+            "caption2": "Figure 4b: Secondary Caption"
           }
         },
         "subtitle": "Dynamic Access Control for Evolving Threat Landscapes",
@@ -4852,21 +4948,37 @@
         "authors": "Chaitanya Bharath Gopu",
         "keywords": "AECP, Control Plane, Cloud Sovereignty, Cryptographic Isolation, Crossplane, C4 Model, Structurizr",
         "sections": {
-          "0": {
+          "overview": {
             "content": "Digital sovereignty—the ability to control where data resides, how it's processed, and who can access it—has emerged as a critical requirement for enterprises operating under GDPR, CCPA, and emerging regulations worldwide. Traditional cloud architectures delegate these controls to providers, creating compliance risks and vendor lock-in.\\n\\nThe Autonomous Enterprise Control Plane (AECP) inverts this model: sovereignty becomes an architectural primitive, not an afterthought. AECP sits above cloud providers, enforcing data residency, cryptographic isolation, and audit logging before workloads reach provider infrastructure. This abstraction enables enterprises to leverage public cloud economics while maintaining regulatory compliance.\\n\\nOur architecture, documented using C4 diagrams and Structurizr, defines AECP as a distributed control plane with regional gateways. Each gateway enforces sovereignty policies for its jurisdiction—GDPR rules for EU regions, CCPA for California, LGPD for Brazil. Workloads cannot cross jurisdictional boundaries without explicit policy approval and cryptographic attestation. This design ensures compliance-by-default, reducing audit burden and regulatory risk.",
-            "title": "The Sovereignty-by-Design Paradigm"
+            "title": "The Sovereignty-by-Design Paradigm",
+            "diagram": "diagram_aecp_section1.png",
+            "caption": "Figure 1: Caption for aecp",
+            "diagram2": "diagram_aecp_section1_b.png",
+            "caption2": "Figure 1b: Secondary Caption"
           },
-          "1": {
+          "methodology": {
             "content": "AECP implements sovereignty through regional gateways—dedicated control plane instances deployed within each regulatory jurisdiction. The EU gateway enforces GDPR requirements: data residency within EU borders, right-to-erasure workflows, and data processing agreements. The California gateway enforces CCPA: consumer privacy rights, opt-out mechanisms, and data sale restrictions.\\n\\nEach gateway maintains a policy engine that evaluates workload requests against jurisdictional rules. Policies specify allowed cloud providers (some regulations prohibit US-based providers), encryption requirements (FIPS 140-3 for government workloads), and data retention limits. The gateway translates approved requests into provider-specific API calls, abstracting sovereignty complexity from application teams.\\n\\nCross-border data flows require explicit approval and cryptographic attestation. When a workload in the EU gateway needs to access data in the US gateway, it must present a signed attestation proving compliance with GDPR Article 46 (safeguards for international transfers). The attestation includes purpose limitation, data minimization, and retention commitments. AECP validates attestations using blockchain-based smart contracts, creating an immutable audit trail for regulatory inspections.",
-            "title": "Regional Sovereignty Gateways"
+            "title": "Regional Sovereignty Gateways",
+            "diagram": "diagram_aecp_section2.png",
+            "caption": "Figure 2: Caption for aecp",
+            "diagram2": "diagram_aecp_section2_b.png",
+            "caption2": "Figure 2b: Secondary Caption"
           },
-          "2": {
+          "implementation": {
             "content": "AECP enforces cryptographic isolation: all data at rest and in transit is encrypted using customer-managed keys (CMK) stored in hardware security modules (HSMs). Cloud providers cannot access plaintext data, even with administrative privileges. This architecture satisfies the strictest sovereignty requirements, including those mandated by European GDPR Article 32 (security of processing) and Chinese Cybersecurity Law Article 37 (critical information infrastructure protection).\\n\\nKey management follows a hierarchical model. A root key, stored in a FIPS 140-3 Level 3 HSM, generates data encryption keys (DEKs) for each workload. DEKs are wrapped using key encryption keys (KEKs) specific to each cloud provider and region. This wrapping ensures that even if a provider's infrastructure is compromised, attackers cannot decrypt data without access to the root key.\\n\\nKey rotation, escrow, and destruction follow strict protocols aligned with NIST SP 800-57 guidelines. AECP automates key rotation on configurable schedules (daily, weekly, monthly), re-encrypting data with new keys and securely destroying old keys. Key escrow supports disaster recovery: encrypted key backups are split using Shamir's Secret Sharing and distributed to multiple custodians. Key destruction uses cryptographic erasure, rendering data permanently unrecoverable—critical for GDPR right-to-erasure compliance.",
-            "title": "Cryptographic Isolation and Key Management"
+            "title": "Cryptographic Isolation and Key Management",
+            "diagram": "diagram_aecp_section3.png",
+            "caption": "Figure 3: Caption for aecp",
+            "diagram2": "diagram_aecp_section3_b.png",
+            "caption2": "Figure 3b: Secondary Caption"
           },
-          "3": {
+          "conclusion": {
             "content": "AECP's reference implementation leverages Crossplane for cloud-agnostic infrastructure provisioning. Crossplane extends Kubernetes with custom resource definitions (CRDs) representing cloud resources—VMs, databases, storage buckets. AECP defines Crossplane compositions that encapsulate sovereignty policies: EU compositions enforce GDPR, US compositions enforce CCPA.\\n\\nDevelopers deploy workloads using standard Kubernetes manifests, unaware of underlying sovereignty complexity. AECP's admission webhooks intercept deployments, validating compliance with jurisdictional policies. Non-compliant deployments are rejected with clear explanations: 'Deployment rejected: data residency policy requires EU region, but manifest specifies us-east-1'. This shift-left approach prevents compliance violations before they reach production.\\n\\nThe C4 component diagram, maintained in Structurizr, documents AECP's internal architecture: policy engine, key management service, audit logger, and Crossplane integration. Structurizr enables collaborative architecture reviews, with automatic diagram generation from DSL definitions. Production deployments demonstrate 99.99% policy enforcement accuracy and zero compliance violations across 50,000+ workloads spanning 15 regulatory jurisdictions. Audit preparation time decreased by 70%, and regulatory certification cycles shortened from 6 months to 6 weeks.",
-            "title": "Implementation with Crossplane and Structurizr"
+            "title": "Implementation with Crossplane and Structurizr",
+            "diagram": "diagram_aecp_section4.png",
+            "caption": "Figure 4: Caption for aecp",
+            "diagram2": "diagram_aecp_section4_b.png",
+            "caption2": "Figure 4b: Secondary Caption"
           }
         },
         "subtitle": "Orchestrating Digital Sovereignty at Scale",
@@ -4877,21 +4989,37 @@
         "authors": "Chaitanya Bharath Gopu",
         "keywords": "Formal Methods, TLA+, Distributed Consensus, Verification, Raft, C4 Model, Structurizr",
         "sections": {
-          "0": {
+          "overview": {
             "content": "Distributed consensus protocols—Raft, Paxos, Byzantine Fault Tolerance—form the foundation of reliable cloud infrastructure. Yet these protocols are notoriously difficult to implement correctly. Subtle bugs in consensus logic can lead to data loss, split-brain scenarios, and Byzantine failures. Traditional testing approaches (unit tests, integration tests) cannot exhaustively validate correctness across all possible execution paths.\\n\\nFormal methods offer a solution: mathematically prove that a protocol satisfies safety and liveness properties under all conditions. TLA+ (Temporal Logic of Actions) provides a specification language for modeling distributed systems and a model checker (TLC) for exhaustive state space exploration. By specifying the OmniGCloud consensus algorithm in TLA+, we prove that it maintains data consistency even during network partitions and node failures.\\n\\nOur formal verification process, documented using C4 diagrams and Structurizr, follows three phases: specification, model checking, and refinement. We specify the protocol's state machine, invariants (properties that must always hold), and temporal properties (eventual consistency guarantees). The TLC model checker explores all reachable states, verifying that invariants hold and temporal properties are satisfied. When violations are discovered, we refine the specification and re-verify, iterating until correctness is proven.",
-            "title": "Formal Methods for Distributed Consensus"
+            "title": "Formal Methods for Distributed Consensus",
+            "diagram": "diagram_arch_section1.png",
+            "caption": "Figure 1: Caption for arch",
+            "diagram2": "diagram_arch_section1_b.png",
+            "caption2": "Figure 1b: Secondary Caption"
           },
-          "1": {
+          "methodology": {
             "content": "The TLA+ specification models the consensus protocol as a state machine with well-defined transitions. The state includes: node status (leader, follower, candidate), log entries, commit index, and network messages. Transitions represent protocol actions: leader election, log replication, and commit acknowledgment.\\n\\nInvariants capture safety properties that must hold in all reachable states. Key invariants include: (1) Election Safety—at most one leader per term, (2) Leader Append-Only—leaders never overwrite committed log entries, (3) Log Matching—if two logs contain an entry with the same index and term, they are identical up to that index, and (4) State Machine Safety—if a server has applied a log entry at a given index, no other server will apply a different entry at that index.\\n\\nTemporal properties capture liveness guarantees: eventual consistency, leader election termination, and log replication progress. These properties use temporal operators (eventually, always, leads-to) to express conditions that must hold over time. For example, 'if a majority of nodes are reachable, a leader will eventually be elected' is a liveness property critical for availability.",
-            "title": "TLA+ Specification of Consensus Protocol"
+            "title": "TLA+ Specification of Consensus Protocol",
+            "diagram": "diagram_arch_section2.png",
+            "caption": "Figure 2: Caption for arch",
+            "diagram2": "diagram_arch_section2_b.png",
+            "caption2": "Figure 2b: Secondary Caption"
           },
-          "2": {
+          "implementation": {
             "content": "The TLC model checker exhaustively explores the protocol's state space, verifying that all invariants hold and temporal properties are satisfied. Model checking is computationally expensive—the state space grows exponentially with the number of nodes and log entries. We employ state space reduction techniques: symmetry reduction (treating identical nodes as equivalent), partial order reduction (ignoring irrelevant message orderings), and abstraction (modeling infinite domains as finite sets).\\n\\nWhen TLC discovers an invariant violation, it generates a counterexample—a sequence of states and transitions leading to the violation. Counterexamples are invaluable for debugging: they reveal edge cases that traditional testing would miss. For example, TLC discovered a subtle bug in our initial specification: during network partitions, a minority partition could elect a leader with a stale log, violating State Machine Safety. The counterexample showed the exact sequence of message delays and node failures triggering the bug.\\n\\nWe refine the specification to fix violations, adding constraints or modifying transition logic. After each refinement, we re-run TLC to verify correctness. This iterative process continues until TLC reports no violations across the entire state space. The final specification serves as a blueprint for implementation, guiding developers to avoid the pitfalls identified during verification.",
-            "title": "Model Checking and Counterexample Analysis"
+            "title": "Model Checking and Counterexample Analysis",
+            "diagram": "diagram_arch_section3.png",
+            "caption": "Figure 3: Caption for arch",
+            "diagram2": "diagram_arch_section3_b.png",
+            "caption2": "Figure 3b: Secondary Caption"
           },
-          "3": {
+          "conclusion": {
             "content": "Formal verification proves correctness of the specification, but implementation bugs can still introduce errors. We bridge the gap using refinement mappings and trace validation. A refinement mapping relates the abstract TLA+ specification to the concrete implementation (written in Go or Rust). By instrumenting the implementation to emit execution traces, we validate that traces conform to the specification's allowed behaviors.\\n\\nTrace validation uses TLC's trace checker mode: given a concrete execution trace, TLC verifies that the trace satisfies the specification's invariants and temporal properties. This technique catches implementation bugs that violate the verified design. For example, a race condition in the Go implementation caused log entries to be applied out-of-order, violating the State Machine Safety invariant. Trace validation detected the violation, enabling rapid debugging.\\n\\nThe C4 component diagram, maintained in Structurizr, documents the relationship between TLA+ specification, model checking infrastructure, and production implementation. This architecture-as-code approach ensures that formal verification artifacts remain synchronized with system evolution. Production deployments demonstrate zero data loss across 1,000+ simulated failure scenarios, including network partitions, Byzantine faults, and cascading node failures. The formal verification process reduced consensus-related bugs by 95% compared to traditional testing approaches.",
-            "title": "From Specification to Implementation"
+            "title": "From Specification to Implementation",
+            "diagram": "diagram_arch_section4.png",
+            "caption": "Figure 4: Caption for arch",
+            "diagram2": "diagram_arch_section4_b.png",
+            "caption2": "Figure 4b: Secondary Caption"
           }
         },
         "subtitle": "Proving Correctness in Partition-Tolerant Systems",
@@ -4902,21 +5030,37 @@
         "authors": "Chaitanya Bharath Gopu",
         "keywords": "Quality Assurance, Internationalization, Localization, AI Testing, CI/CD, C4 Model, Structurizr",
         "sections": {
-          "0": {
+          "overview": {
             "content": "Modern SaaS applications support 20+ languages to reach global audiences. Each locale introduces unique challenges: text expansion (German strings are 30% longer than English), right-to-left layouts (Arabic, Hebrew), character encoding (Chinese, Japanese), and cultural conventions (date formats, currency symbols). Traditional QA approaches test each locale independently, requiring N×M effort for N features across M locales.\\n\\nAutomated multilingual QA reduces this complexity by detecting locale-agnostic bugs (layout overflow, missing translations, hardcoded strings) and locale-specific issues (incorrect pluralization, cultural insensitivity). Our framework integrates with next-intl, react-intl, and i18next libraries, analyzing translation files and runtime behavior to identify defects.\\n\\nThe architecture, documented using C4 diagrams and Structurizr, shows how the QA framework integrates with CI/CD pipelines. Every pull request triggers automated checks: translation completeness, key consistency, and visual regression testing across locales. This shift-left approach prevents i18n bugs from reaching production, reducing customer-reported defects by 80%.",
-            "title": "The Multilingual QA Challenge"
+            "title": "The Multilingual QA Challenge",
+            "diagram": "diagram_qa1_section1.png",
+            "caption": "Figure 1: Caption for qa1",
+            "diagram2": "diagram_qa1_section1_b.png",
+            "caption2": "Figure 1b: Secondary Caption"
           },
-          "1": {
+          "methodology": {
             "content": "The first QA gate validates translation completeness: every key in the source locale (typically English) must exist in all target locales. Missing keys cause runtime errors or display untranslated text to users. Our framework parses JSON, YAML, and PO translation files, comparing key sets across locales and reporting discrepancies.\\n\\nKey consistency checks ensure that translation keys used in code match those defined in translation files. Developers often rename keys during refactoring, breaking translations. We employ static analysis—parsing JSX/TSX files to extract useTranslations() and t() calls—and cross-reference extracted keys against translation files. Unused keys (defined but never referenced) are flagged for removal, reducing translation maintenance burden.\\n\\nPluralization and interpolation validation ensures that translations correctly handle dynamic content. For example, '{count} items' requires plural forms in many languages (one, few, many). We validate that all locales define required plural forms and that interpolation variables match across translations. This prevents runtime errors where missing variables cause template rendering failures.",
-            "title": "Translation Completeness and Key Consistency"
+            "title": "Translation Completeness and Key Consistency",
+            "diagram": "diagram_qa1_section2.png",
+            "caption": "Figure 2: Caption for qa1",
+            "diagram2": "diagram_qa1_section2_b.png",
+            "caption2": "Figure 2b: Secondary Caption"
           },
-          "2": {
+          "implementation": {
             "content": "Beyond structural validation, we assess translation quality using AI models. Machine translation quality estimation (MTQE) models predict translation accuracy without reference translations. These models, trained on millions of human-annotated translation pairs, assign quality scores (0-100) to each translated string.\\n\\nLow-scoring translations trigger human review workflows. We integrate with translation management systems (Crowdin, Lokalise) to flag suspect translations for professional review. This hybrid approach—AI screening followed by human validation—reduces translation costs by 60% while maintaining quality.\\n\\nCultural appropriateness checks use NLP models to detect potentially offensive or culturally insensitive content. For example, idioms that work in English may be inappropriate in other cultures. We maintain a database of cultural guidelines per locale and use semantic similarity models to flag violations. Production deployments prevented 15+ cultural incidents that would have damaged brand reputation in international markets.",
-            "title": "AI-Driven Translation Quality Assessment"
+            "title": "AI-Driven Translation Quality Assessment",
+            "diagram": "diagram_qa1_section3.png",
+            "caption": "Figure 3: Caption for qa1",
+            "diagram2": "diagram_qa1_section3_b.png",
+            "caption2": "Figure 3b: Secondary Caption"
           },
-          "3": {
+          "conclusion": {
             "content": "Text expansion and layout changes can break UI across locales. German strings are 30% longer than English, causing button text to overflow or wrap unexpectedly. Arabic and Hebrew require right-to-left layouts, flipping entire page structures. Visual regression testing validates that UI renders correctly across all locales.\\n\\nOur framework integrates with Playwright for automated browser testing. For each locale, we capture screenshots of key pages and compare them against baseline images. Differences trigger visual diffs, highlighting layout shifts, text overflow, and alignment issues. Machine learning models classify differences as intentional (design changes) or bugs (layout breaks), reducing false positives by 90%.\\n\\nThe C4 component diagram, maintained in Structurizr, documents the visual regression pipeline: Playwright test runner, screenshot capture service, image comparison engine, and ML classifier. Production deployments test 50+ locales across 200+ pages in under 10 minutes, providing rapid feedback to developers. This automation enabled a Fortune 500 client to expand from 5 to 25 supported locales in 6 months, with zero locale-specific UI bugs reaching production.",
-            "title": "Visual Regression Testing Across Locales"
+            "title": "Visual Regression Testing Across Locales",
+            "diagram": "diagram_qa1_section4.png",
+            "caption": "Figure 4: Caption for qa1",
+            "diagram2": "diagram_qa1_section4_b.png",
+            "caption2": "Figure 4b: Secondary Caption"
           }
         },
         "subtitle": "Ensuring Consistency Across Locales with AI-Driven Testing",
@@ -4962,6 +5106,11 @@
       "cta": "View C4 Tooling Guide",
       "text": "Learn how to document your system architecture using C4 diagrams and Structurizr for version-controlled, collaborative design.",
       "title": "Architecture Documentation"
+    },
+    "Status": {
+      "DRAFT": "Draft",
+      "SUBMITTED": "Submitted",
+      "PUBLISHED": "Published"
     }
   },
   "Partners": {

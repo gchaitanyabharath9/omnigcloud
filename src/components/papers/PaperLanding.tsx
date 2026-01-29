@@ -47,7 +47,7 @@ export const PaperLanding = ({ paper, locale }: PaperLandingProps) => {
                 : "bg-yellow-500/10 border-yellow-500/20 text-yellow-400"
                 }`}
             >
-              {paper.status}
+              {tPapers(`Status.${paper.status}`)}
             </span>
           </div>
 
@@ -78,11 +78,16 @@ export const PaperLanding = ({ paper, locale }: PaperLandingProps) => {
 
             {/* Content Sections */}
             <div className="space-y-16">
-              {[0, 1, 2, 3].map((index) => {
+              {[
+                "overview",
+                "methodology",
+                "implementation",
+                "conclusion",
+              ].map((key, index) => {
                 // Try to get section data - using getTranslations might be better server side,
                 // but for client component we check if keys exist or just render blindly if we know structure matches.
                 // We'll trust the structure exists in en.json
-                const sectionKey = `Items.${paper.id}.sections.${index}`;
+                const sectionKey = `Items.${paper.id}.sections.${key}`;
 
                 // We use a try-safe approach or specific key check?
                 // next-intl returns the key if missing.
